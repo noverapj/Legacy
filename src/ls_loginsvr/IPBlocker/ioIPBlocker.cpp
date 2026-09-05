@@ -7,11 +7,11 @@ BOOL tokenize(const std::string& str, const std::string& delimiters, std::vector
 {
 	tokens.clear();
 
-	string::size_type lastPos = str.find_first_not_of(delimiters, 0);
-	string::size_type pos = str.find_first_of(delimiters, lastPos);
+	std::string::size_type lastPos = str.find_first_not_of(delimiters, 0);
+	std::string::size_type pos = str.find_first_of(delimiters, lastPos);
 	
 	std::string token;
-	while (string::npos != pos || string::npos != lastPos)
+	while (std::string::npos != pos || std::string::npos != lastPos)
 	{
 		token = str.substr(lastPos, pos - lastPos);
 
@@ -92,11 +92,11 @@ BOOL ioIPBlocker::Tokenize(const std::string& str, const std::string& delimiters
 {
 	m_IPs.clear();
 
-	string::size_type lastPos = str.find_first_not_of(delimiters, 0);
-	string::size_type pos = str.find_first_of(delimiters, lastPos);
+	std::string::size_type lastPos = str.find_first_not_of(delimiters, 0);
+	std::string::size_type pos = str.find_first_of(delimiters, lastPos);
 	
 	std::string token;
-	while (string::npos != pos || string::npos != lastPos)
+	while (std::string::npos != pos || std::string::npos != lastPos)
 	{
 		token = str.substr(lastPos, pos - lastPos);
 		

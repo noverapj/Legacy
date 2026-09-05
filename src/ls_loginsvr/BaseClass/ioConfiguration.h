@@ -14,7 +14,7 @@ public:
 
 	void ReadLoadConfig();
 	void SetDefault();
-	void Tokenize(const string& str,vector<string>& tokens,	const string& delimiters = " ");
+	void Tokenize(const std::string& str,std::vector<std::string>& tokens,	const std::string& delimiters = " ");
 	BOOL CheckBlackList(char* IP);
 	BOOL CheckWhiteList(char* IP);
 

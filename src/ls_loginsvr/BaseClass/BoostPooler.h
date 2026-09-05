@@ -1,6 +1,12 @@
 #pragma once
 
+#pragma push_macro("min")
+#pragma push_macro("max")
+#undef min
+#undef max
 #include <boost/pool/singleton_pool.hpp>
+#pragma pop_macro("min")
+#pragma pop_macro("max")
 
 template<class T>
 class BoostPooler

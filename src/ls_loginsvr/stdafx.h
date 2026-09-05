@@ -23,10 +23,15 @@
 #include <boost/thread.hpp>
 #include <boost/asio.hpp>
 #include <boost/asio/deadline_timer.hpp>
-#include <boost/timer.hpp>
 #include <boost/chrono.hpp>
+#pragma push_macro("min")
+#pragma push_macro("max")
+#undef min
+#undef max
 #include <boost/pool/pool_alloc.hpp>
 #include <boost/pool/singleton_pool.hpp>
+#pragma pop_macro("min")
+#pragma pop_macro("max")
 #include <boost/thread/once.hpp>
 #include "BaseClass/locking_queue.h"
 #include <boost/date_time/microsec_time_clock.hpp>

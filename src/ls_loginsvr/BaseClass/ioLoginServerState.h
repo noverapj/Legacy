@@ -52,11 +52,13 @@ public:
 	{
 		if(m_testCount == 0)
 		{
-			if(m_timestate == false)
+			if (m_timestate == false)
+			{
+				m_startEl = std::chrono::steady_clock::now();
+			}
 
-				m_startEl.restart();
 			InterlockedIncrement(&m_testCount);
-			m_el.restart();
+			m_el = std::chrono::steady_clock::now();
 			m_timestate = true;
 			return;
 		}
@@ -92,8 +94,8 @@ protected:
 	int m_dllAcceptCount;
 	int m_dllAcceptTime;
 	long m_testCount;
-	boost::timer m_el;
-	boost::timer m_startEl;
+	std::chrono::steady_clock::time_point m_el;
+	std::chrono::steady_clock::time_point m_startEl;
 	boost::mutex m_lock;
 	int m_sys;
 	CPU m_cpuTime;

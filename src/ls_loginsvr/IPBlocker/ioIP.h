@@ -2,13 +2,13 @@
 
 #include <vector>
 
-typedef vector<int> TOKENS;
+typedef std::vector<int> TOKENS;
 
 class ioIP
 {
 public:
 	ioIP(void);
-	ioIP(const string IP);
+	ioIP(const std::string IP);
 	ioIP(const UINT begin, const UINT end);
 	~ioIP(void);
 
@@ -17,16 +17,16 @@ public:
 
 public:
 	ioIP& operator=(const ioIP& IP);
-	ioIP& operator=(const string& IP);
-	bool operator==(const string& IP);
+	ioIP& operator=(const std::string& IP);
+	bool operator==(const std::string& IP);
 
 public:
-	void GetIP(string& IP);
+	void GetIP(std::string& IP);
 
 protected:
-	void SetIP(const string& IP);
+	void SetIP(const std::string& IP);
 	void SetIP(const UINT begin, const UINT end);
-	void Tokenize(const string& str, const string& delimiters, TOKENS& tokens);
+	void Tokenize(const std::string& str, const std::string& delimiters, TOKENS& tokens);
 
 protected:
 	BOOL m_range;

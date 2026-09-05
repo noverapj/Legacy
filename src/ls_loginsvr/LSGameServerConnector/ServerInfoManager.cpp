@@ -128,7 +128,7 @@ int ServerInfoManager::GetUserCount()
 	return userCount;
 }
 
-typedef pair<int, int>					SERVERTOUSERCOUNT;
+typedef std::pair<int, int>					SERVERTOUSERCOUNT;
 typedef std::vector<SERVERTOUSERCOUNT>	SERVERTOUSERCOUNTS;
 
 bool CounterSort(const SERVERTOUSERCOUNT& lhs, const SERVERTOUSERCOUNT& rhs) 
@@ -165,7 +165,7 @@ ServerInfo_* ServerInfoManager::GetIdleNode()
 		if(!IsActive(serverInfo))
 			continue;
 
-		Counters.push_back( make_pair(serverInfo.serverId, serverInfo.userCount) );
+		Counters.push_back( std::make_pair(serverInfo.serverId, serverInfo.userCount) );
 	}
 
 	int serverId = SortByUserCount(Counters, FREE_SERVERCOUNT);
