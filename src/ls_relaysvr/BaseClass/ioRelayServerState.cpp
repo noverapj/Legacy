@@ -1,5 +1,6 @@
 #include "StdAfx.h"
 #include "ioRelayServerState.h"
+#include <chrono>
 
 
 ioRelayServerState::ioRelayServerState(void)
@@ -25,6 +26,9 @@ ioRelayServerState::ioRelayServerState(void)
 	m_256UsingCount = 0;
 	m_1024UsingCount = 0;
 	m_sendCount = 0;
+
+	m_elaplsedTime = std::chrono::steady_clock::now();
+	m_startTime = std::chrono::steady_clock::now();
 }
 
 ioRelayServerState::~ioRelayServerState(void)
@@ -34,15 +38,27 @@ ioRelayServerState::~ioRelayServerState(void)
 void ioRelayServerState::PrintTime()
 {
 	m_cpuTime.GetUsage(&m_sys,NULL);
-	float ftime = m_elaplsedTime.elapsed();
+	float ftime = std::chrono::duration<float>(
+		std::chrono::steady_clock::now() - m_elaplsedTime
+	).count();
+
 	ReportLOG.PrintTimeAndLog(0,"TestCount : %0.3f(%d)[%0.3f]",ftime,m_sys,(float)100000/ftime);
 	InterlockedExchange(&m_testCount,0);
-	m_elaplsedTime.restart();
+
+	m_elaplsedTime = std::chrono::steady_clock::now();
 }
 
 void ioRelayServerState::PrintLowTime()
 {
-	ReportLOG.PrintTimeAndLog(0,"Lowmemory time : %0.3f",m_startTime.elapsed());
+	float elapsed = std::chrono::duration<float>(
+		std::chrono::steady_clock::now() - m_startTime
+	).count();
+
+	ReportLOG.PrintTimeAndLog(
+		0,
+		"Lowmemory time : %0.3f",
+		elapsed
+	);
 }
 
 long ioRelayServerState::GetUserCount() const
@@ -57,19 +73,18 @@ long ioRelayServerState::RoomCount() const
 
 void ioRelayServerState::IncrementTestCount()
 {
-	if(m_testCount == 0)
+	if (m_testCount == 0)
 	{
-		if(m_timestate == false)
+		if (m_timestate == false)
+			m_startTime = std::chrono::steady_clock::now();
 
-			m_startTime.restart();
 		InterlockedIncrement(&m_testCount);
-		m_elaplsedTime.restart();
+
+		m_elaplsedTime = std::chrono::steady_clock::now();
+
 		m_timestate = true;
 		return;
 	}
+
 	InterlockedIncrement(&m_testCount);
 }
-
-
-
- 

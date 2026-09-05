@@ -8,11 +8,11 @@ bool tokenize(const std::string str, const std::string delimiters, std::vector<s
 {
 	tokens.clear();
 
-	string::size_type lastPos = str.find_first_not_of(delimiters, 0);
-	string::size_type pos = str.find_first_of(delimiters, lastPos);
+	std::string::size_type lastPos = str.find_first_not_of(delimiters, 0);
+	std::string::size_type pos = str.find_first_of(delimiters, lastPos);
 
 	std::string token;
-	while (string::npos != pos || string::npos != lastPos)
+	while (std::string::npos != pos || std::string::npos != lastPos)
 	{
 		token = str.substr(lastPos, pos - lastPos);
 		tokens.push_back(token);
@@ -93,7 +93,7 @@ bool Manager::Init()
 	}
 
 	g_UDPModule(); g_UDPNode();
-	g_UDPNode()->InitMemory(3000,16384*2,6000,6000,1000);
+	g_UDPNode()->InitMemory(3000, 16384 * 2, 6000, 6000, 6000, 1000, 10);
 	std::vector<int>& m_ports = g_Config()->GetUdpPorts();
 	
 	std::string tmp ="0.0.0.0";

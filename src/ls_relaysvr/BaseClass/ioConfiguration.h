@@ -25,7 +25,7 @@ public:
 	DWORD StrToDwordIP(char* publicIP);
 	void ReadLoadConfig();
 	void SetDefault();
-	void Tokenize(const string& str,vector<string>& tokens,	const string& delimiters = " ");
+	void Tokenize(const std::string& str,std::vector<std::string>& tokens,	const std::string& delimiters = " ");
 	void GetMyIP(std::string &ipAddr);
 	bool GetLocalIpAddress();
 

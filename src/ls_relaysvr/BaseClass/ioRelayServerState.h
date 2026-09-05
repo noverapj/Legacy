@@ -97,8 +97,8 @@ protected:
 	long m_testSendCount;
 
 protected:
-	boost::timer m_elaplsedTime;
-	boost::timer m_startTime;
+	std::chrono::steady_clock::time_point m_elaplsedTime;
+	std::chrono::steady_clock::time_point m_startTime;
 	boost::mutex m_lock;
 	int m_sys;
 	CPU m_cpuTime;

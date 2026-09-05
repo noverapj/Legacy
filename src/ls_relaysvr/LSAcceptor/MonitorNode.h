@@ -2,7 +2,6 @@
 
 
 #include "../iocpsocketdll\socketmodules\connectnode.h"
-#include <boost/timer.hpp>
 
 class MonitorNode :
 	public CConnectNode

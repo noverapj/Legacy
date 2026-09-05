@@ -94,7 +94,9 @@ void ioConfiguration::AcceptorInfoLoad( const char* szINI )
 	else
 		SetPort(m_udpPorts[0]);
 
-	SetSIpAddr("0.0.0.0");
+	TCHAR szTmpIP[64];
+	GetPrivateProfileString("Default", "IP", "0.0.0.0", szTmpIP, sizeof(szTmpIP), szINI);
+	SetSIpAddr(szTmpIP);
 
 	std::string szValue;
 	for(int i=1; i< 100000; i++)
@@ -186,7 +188,7 @@ void ioConfiguration::ReadLoadConfig()
 	SetNagleTime( kLoader.LoadInt( "NAGLE", "Nagle_Time", 30 ) );
 }
 
-void ioConfiguration::Tokenize( const std::string& str,std::vector<string>& tokens, const std::string& delimiters /*= " "*/ )
+void ioConfiguration::Tokenize( const std::string& str,std::vector<std::string>& tokens, const std::string& delimiters /*= " "*/ )
 {
 	// Skip delimiters at beginning.
 	std::string::size_type lastPos = str.find_first_not_of(delimiters, 0);
