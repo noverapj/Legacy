@@ -1,0 +1,51 @@
+#pragma once
+
+#include "CostumeEnumType.h"
+
+class ioUserCostume
+{
+public:
+	enum
+	{
+		MAX_SLOT_CNT = 500,
+	};
+
+protected:
+	CostumeSlotList m_CostumeSlotList;
+
+public:
+	//µ¿±âÈ­
+	void ApplyCostumeSlotData( SP2Packet &rkPacket );
+
+public:
+	//½½·Ô Ãß°¡
+	void AddCostumeSlotData( const CostumeSlot &sNewSlot );
+	//½½·Ô »èÁ¦
+	bool DeleteCostumeSlotData( int nSlotIndex );
+	//½½·Ô º¯°æ
+	void SetCostumeSlot( const CostumeSlot &sCostumeSlot );
+
+public:
+	//ÀåÂø ¼³Á¤
+	void SetCostumeEquip( int nSlotIndex, bool bEquip );
+
+public:
+	//½½·Ô ¾ò±â(½½·Ô ÀÎµ¦½º)
+	bool GetCostumeSlot( int nSlotIndex, CostumeSlot &sCostumeSlot );
+	//½½·Ô ¾ò±â(½½·Ô ¹è¿­)
+	bool GetCostumeSlotArray( int nArray, CostumeSlot &sCostumeSlot );
+	//½½·Ô °³¼ö ¾ò±â
+	int GetCostumeSlotCnt();
+	//½½·Ô »óÅÂ È®ÀÎ
+	bool IsSlotFull();
+	//Á¤·Ä
+	bool SlotSort();
+
+	int GetCostumeCode( int nSlotIndex );
+	void GetUseInfo( int nSlotIndex, ioHashString &rsInfo );
+
+public:
+	ioUserCostume();
+	virtual ~ioUserCostume();
+};
+

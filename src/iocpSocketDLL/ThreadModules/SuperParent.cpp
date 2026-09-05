@@ -1,0 +1,27 @@
+#include "../iocpSocketDLL.h"
+#include "SuperParent.h"
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+SuperParent::SuperParent()
+{
+	InitializeCriticalSection(&m_critical_section);
+}
+
+SuperParent::~SuperParent()
+{
+	DeleteCriticalSection(&m_critical_section);
+}
+
+//////////////////////////////////////////////////////////////////////////
+NetworkParent::NetworkParent() 
+{
+
+}
+
+NetworkParent::~NetworkParent()
+{
+
+}

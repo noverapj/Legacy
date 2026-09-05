@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6A41E78B-8FB0-46FB-8B66-E81011A4DD4D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ls_main</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\..\..\build\Server\ls_mainsvr\</OutDir>
+    <IntDir>./$(ProjectName)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)D</TargetName>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\..\build\Server\ls_mainsvr\</OutDir>
+    <IntDir>./$(ProjectName)\$(Configuration)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>__OHTG_PRACTICE_MERGE_WORK__;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>./$(ProjectName)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>./$(ProjectName)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>./$(ProjectName)\$(Configuration)\</ProgramDataBaseFileName>
+      <AdditionalIncludeDirectories>C:\Boost\boost_1_84_0</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../../lib;C:\Boost\boost_1_84_0\lib32-msvc-14.3</AdditionalLibraryDirectories>
+      <AdditionalDependencies>INID.lib;iocpSocketDDLL.lib;FrameTimerDDLL.lib;logD.lib;Psapi.lib;dbghelp.lib;winmm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ProgramDatabaseFile>../../../build/zone_dev/pdb/$(TargetName)d.pdb</ProgramDatabaseFile>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetDir)\$(TargetName)$(TargetExt)" "$(TargetDir)\$(TargetExt)"</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>"../../Tools/VCSGen.exe"  "../../src/ls_mainsvr/" "../../src/ls_mainsvr/TSvnVersion.tmpl" "../../src/ls_mainsvr/Version.h"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>__OHTG_PRACTICE_MERGE_WORK__;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>./$(ProjectName)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>./$(ProjectName)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>./$(ProjectName)\$(Configuration)\</ProgramDataBaseFileName>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>C:\Boost\boost_1_84_0</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>../../lib;C:\Boost\boost_1_84_0\lib32-msvc-14.3</AdditionalLibraryDirectories>
+      <AdditionalDependencies>iocpSocketDLL.lib;FrameTimerDLL.lib;log.lib;Psapi.lib;dbghelp.lib;winmm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;../../lib/INI.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ProgramDatabaseFile>../../../build/zone_dist/pdb/$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetDir)\$(TargetName)$(TargetExt)" "$(TargetDir)\$(TargetExt)"
+copy "$(TargetDir)\$(TargetName)$(TargetExt)" "$(TargetDir)\..\..\zone_dist\ls_mainsvr\$(TargetName)$(TargetExt)"
+xcopy /y ..\..\..\build\zone_dist\pdb\$(TargetName).pdb ..\..\..\build\zone_dist\ls_mainsvr\</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>"../../Tools/VCSGen.exe"  "../../src/ls_mainsvr/" "../../src/ls_mainsvr/TSvnVersion.tmpl" "../../src/ls_mainsvr/Version.h"
+</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\..\src\ls_mainsvr\CrashFind.dll" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\ls_mainsvr\common.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\CrashFind\BugslayerUtil.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\CrashFind\CrashHandler.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\CrashFind\DiagAssert.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\CrashFind\MemDumperValidator.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\CrashFind\MemStress.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\CrashFind\MSJDBG.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\CrashFind\SymbolEngine.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\DataBase\DBClient.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\DataBase\LogDBClient.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\Define.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\Encode\seed.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\EtcHelpFunc.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\ioPacketChecker.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\ioProcessChecker.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\Languages\ioLanguages.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\MainProcess.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\Manager.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\MiniDump\File.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\MiniDump\MiniDump.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\Network\GameServer.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\Network\iocpHandler.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\Network\ioPacketQueue.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\Network\SP2Packet.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\AcceptorMgrToolNode.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\AcceptorServerNode.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\CampManager.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\EventGoodsManager.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\ExtraItemGrowthCatalystMgr.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\GuildRoomInfos.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\GuildNode.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\GuildNodeManager.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\MatchNodeManager.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\MatchNode.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\MgrToolNode.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\MgrToolNodeManager.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\NodeInfoManager.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\PracticeNode.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\PracticeNodeManager.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\RelativeGradeManager.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\ServerNode.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\ServerNodeManager.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\SpecialShopManager.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\SuperGashponLimitManager.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\TournamentManager.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\TournamentNode.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\TournamentTeamNode.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\TradeNode.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\TradeNodeManager.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\Protocol.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\QueryData\QueryData.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\QueryData\QueryResultData.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\resource.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\Scheduler\Scheduler.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\Scheduler\SchedulerNode.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\ServerCloseManager.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\Service.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\ServiceLS.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\stdafx.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\targetver.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\Util\cBuffer.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\Util\cSerialize.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\Util\ioEncrypted.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\Util\ioHashString.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\Util\IORandom.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\Util\ioStringConverter.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\Util\ioVectorIterator.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\Util\Singleton.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\WemadeLog\ioLogSerialize.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\WemadeLog\ioWemadeLogger.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\WemadeLog\WemadeLog.h" />
+    <ClInclude Include="BoostPooler.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\ls_mainsvr\DataBase\DBClient.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\DataBase\LogDBClient.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\Encode\seed.c" />
+    <ClCompile Include="..\..\src\ls_mainsvr\Encode\seedenc.c" />
+    <ClCompile Include="..\..\src\ls_mainsvr\EtcHelpFunc.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\ioPacketChecker.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\ioProcessChecker.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\Languages\ioLanguages.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\ls_mainsvr.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\MainProcess.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\Manager.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\MiniDump\File.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\MiniDump\MiniDump.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\Network\GameServer.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\Network\iocpHandler.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\Network\ioPacketQueue.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\Network\SP2Packet.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\AcceptorMgrToolNode.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\AcceptorServerNode.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\CampManager.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\EventGoodsManager.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\ExtraItemGrowthCatalystMgr.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\GuildRoomInfos.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\GuildNode.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\GuildNodeManager.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\MatchNodeManager.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\MatchNode.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\MgrToolNode.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\MgrToolNodeManager.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\NodeInfoManager.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\PracticeNode.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\PracticeNodeManager.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\RelativeGradeManager.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\ServerNode.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\ServerNodeManager.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\SpecialShopManager.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\SuperGashponLimitManager.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\TournamentManager.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\TournamentNode.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\TournamentTeamNode.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\TradeNode.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\TradeNodeManager.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\QueryData\QueryData.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\QueryData\QueryResultData.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\Scheduler\Scheduler.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\Scheduler\SchedulerNode.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\ServerCloseManager.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\Service.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\ServiceLS.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\Util\cBuffer.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\Util\ioEncrypted.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\Util\ioHashString.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\Util\IORandom.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\Util\ioStringConverter.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\Util\Singleton.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\WemadeLog\ioLogSerialize.cpp" />
+    <ClCompile Include="..\..\src\ls_mainsvr\WemadeLog\ioWemadeLogger.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\..\src\ls_mainsvr\CrashFind.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\src\ls_mainsvr\ls_mainsvr.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

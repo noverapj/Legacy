@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Messages>
+	<Language value="EN">
+		<Error code="990001">
+			<![CDATA[
+					Your account has not been verified.
+				]]>
+		</Error>
+		<Error code="110021">
+			<![CDATA[
+					The account information provided is not valid.
+				]]>
+		</Error>
+		<Error code="110025">
+			<![CDATA[
+					The account information provided is not valid.
+				]]>
+		</Error>
+		<Error code="110039">
+			<![CDATA[
+					This account is not registered to any game service.
+				]]>
+		</Error>
+		<Error code="110040">
+			<![CDATA[
+					Unfortunately you are connecting from a country that is not in our service area.
+				]]>
+		</Error>
+		<Error code="110042">
+			<![CDATA[
+					The terms of use have been changed. Please log into the NEXON Europe website and agree to the new terms.
+				]]>
+		</Error>
+		<Error code="110043">
+			<![CDATA[
+					This account is blocked because of a charge back issue. Please log into the website and contact NEXON Europe support.
+				]]>
+		</Error>
+		<Error code="110046">
+			<![CDATA[
+					Your new NEXON Europe account has not yet been activated. Please complete the email certification process.
+				]]>
+		</Error>
+		<Error code="110047">
+			<![CDATA[
+					You have entered the wrong password too many times. For security reasons, your account has been blocked temporarily. You can use the game service normally after securely logging into the NEXON Europe Portal by entering the security codes.
+				]]>
+		</Error>
+		<Error code="110051">
+			<![CDATA[
+					This account has been locked due to suspicious activity. Please go to the webpage, login and follow the instructions.
+				]]>
+		</Error>
+	</Language>
+	<Language value="DE">
+		<Error code="990001">
+			<![CDATA[
+					Dieser Account ist noch nicht verifiziert worden.
+				]]>
+		</Error>
+		<Error code="110021">
+			<![CDATA[
+					Die eingegebenen Accountinformationen sind ungültig.
+				]]>
+		</Error>
+		<Error code="110025">
+			<![CDATA[
+					Die eingegebenen Accountinformationen sind ungültig.
+				]]>
+		</Error>
+		<Error code="110039">
+			<![CDATA[
+					Dieser Account ist bei keinem unserer Spielservices registriert.
+				]]>
+		</Error>
+		<Error code="110040">
+			<![CDATA[
+				Leider versuchst du dich von einem Land aus zu verbinden, dass sich außerhalb unseres Servicegebietes befindet.
+				]]>
+		</Error>
+		<Error code="110042">
+			<![CDATA[
+				Die Nutzungsbedingungen sind modifiziert worden. Bitte logge dich auf der Webseite von Nexon Europe ein und stimme den neuen Bedingungen zu.
+				]]>
+		</Error>
+		<Error code="110043">
+			<![CDATA[
+				Dieser Account ist wegen eines Chargeback-Problems gesperrt worden. Bitte logge dich auf der Webseite von Nexon Europe ein und kontaktiere den Support.
+				]]>
+		</Error>
+		<Error code="110046">
+			<![CDATA[
+				Dein neuer Nexon Europe Account ist noch nicht aktiviert worden. Bitte schließe den Email-Bestätigungsprozess ab.
+				]]>
+		</Error>
+		<Error code="110047">
+			<![CDATA[
+				Das Passwort wurde zu oft falsch eingegeben. Aus Sicherheitsgründen ist dieser Account temporär gesperrt worden. Du kannst die Spieleservices wieder normal nutzen, nachdem du dich mit den Sicherheitscodes im Portal von Nexon Europe eingeloggt hast.
+				]]>
+		</Error>
+		<Error code="110051">
+			<![CDATA[
+				Dieser Account ist wegen verdächtiger Aktivitäten gesperrt worden. Bitte die Webseite aufrufen, einloggen und den Anweisungen dort folgen.
+				]]>
+		</Error>
+	</Language>
+	<Language value="FR">
+		<Error code="990001">
+			<![CDATA[
+				Votre compte n'a pas été vérifié.
+				]]>
+		</Error>
+		<Error code="110021">
+			<![CDATA[
+				L'information saisie de votre compte est incorrecte.
+				]]>
+		</Error>
+		<Error code="110025">
+			<![CDATA[
+				L'information saisie de votre compte est incorrecte.
+				]]>
+		</Error>
+		<Error code="110039">
+			<![CDATA[
+				Ce compte n'est inscrit à aucun jeu.
+				]]>
+		</Error>
+		<Error code="110040">
+			<![CDATA[
+				Malheureusement, vous êtes connecté depuis un pays qui ne se trouve pas dans notre zone de service.
+				]]>
+		</Error>
+		<Error code="110042">
+			<![CDATA[
+				Les Conditions d'utilisation ont été changées. Veuillez-vous connecter sur le site web de Nexon Europe et accepter les nouvelles conditions.
+				]]>
+		</Error>
+		<Error code="110043">
+			<![CDATA[
+				Ce compte a été bloqué à cause d'un problème de remboursement. Veuillez-vous connecter sur le site web et contactez le service de Support de Nexon Europe.
+				]]>
+		</Error>
+		<Error code="110046">
+			<![CDATA[
+				Votre nouveau compte Nexon Europe n'a pas encore été activé. Veuillez terminer la procédure de vérification.
+				]]>
+		</Error>
+		<Error code="110047">
+			<![CDATA[
+				Vous avez saisi un mot de passe incorrect trop souvent. Pour raisons de sécurité, votre compte a été bloqué provisoirement. Vous pourrez jouer à nouveau dès que vous vous connecterez en sécurité sur le portail de Nexon Europe en saisissant les codes de sécurité.
+				]]>
+		</Error>
+		<Error code="110051">
+			<![CDATA[
+				Ce compte a été bloqué à cause d'activité soupçonneuse. Veuillez-vous connecter sur le site web et suivre les instructions.
+				]]>
+		</Error>
+	</Language>
+	<Language value="NL">
+		<Error code="990001">
+			<![CDATA[
+				Dit account is niet geverifiëerd
+				]]>
+		</Error>
+		<Error code="110021">
+			<![CDATA[
+				De accountinformatie is niet geldig.
+				]]>
+		</Error>
+		<Error code="110025">
+			<![CDATA[
+				De accountinformatie is niet geldig.
+				]]>
+		</Error>
+		<Error code="110039">
+			<![CDATA[
+				Dit account is nog niet bij een speldienst geregistreerd.
+				]]>
+		</Error>
+		<Error code="110040">
+			<![CDATA[
+				Dit account is niet geregisteerd bij onze speldiensten.
+				]]>
+		</Error>
+		<Error code="110042">
+			<![CDATA[
+				Helaas maak je een verbinding uit een land dat niet in ons servicegebied ligt.
+				]]>
+		</Error>
+		<Error code="110043">
+			<![CDATA[
+				Dit account is geblokkeerd vanwege chargeback. Log in op de website en neem contact op met Nexon Europe support.
+				]]>
+		</Error>
+		<Error code="110046">
+			<![CDATA[
+				Je nieuwe Nexon Europe account is nog niet geactiveerd. Maak het email verificatieproces eerst af.
+				]]>
+		</Error>
+		<Error code="110047">
+			<![CDATA[
+				Je hebt te vaak het verkeerde wachtwoord ingevoerd. Voor veiligheidsredenen is het account nu tijdelijk geblokkeerd. Je kunt de speldienst normaal gebruiken nadat je ingelogd bent in het Nexon Europe portaal door de beveiligingscodes in te voeren.
+				]]>
+		</Error>
+		<Error code="110051">
+			<![CDATA[
+				Dit account is geblokkeerd vanwege verdachte activiteiten. Ga naar de website, log in en volg de instructies.
+				]]>
+		</Error>
+	</Language>
+	<Language value="ES">
+		<Error code="990001">
+			<![CDATA[
+				Tu cuenta no ha sido verificada.
+				]]>
+		</Error>
+		<Error code="110021">
+			<![CDATA[
+				Los datos introducidos de tu cuenta no son correctos.
+				]]>
+		</Error>
+		<Error code="110025">
+			<![CDATA[
+				Los datos introducidos de tu cuenta no son correctos.
+				]]>
+		</Error>
+		<Error code="110039">
+			<![CDATA[
+				Esta cuenta no está registrada en ningún juego.
+				]]>
+		</Error>
+		<Error code="110040">
+			<![CDATA[
+				Lamentablemente, te estás conectando desde un país que no se encuentra en nuestra área de servicio.
+				]]>
+		</Error>
+		<Error code="110042">
+			<![CDATA[
+				Los Términos de uso han sido cambiados. Por favor, inicia sesión en la página web de Nexon Europe y acepta los nuevos términos.
+				]]>
+		</Error>
+		<Error code="110043">
+			<![CDATA[
+				Esta cuenta ha sido bloqueada a causa de un problema de reembolso. Por favor, inicia sesión en la página web y contacta con el servicio de Soporte de Nexon Europe.
+				]]>
+		</Error>
+		<Error code="110046">
+			<![CDATA[
+				Tu nueva cuenta Nexon Europe todavía no ha sido activada. Por favor, completa el proceso de verificación.
+				]]>
+		</Error>
+		<Error code="110047">
+			<![CDATA[
+				Has introducido una contraseña incorrecta demasiadas veces. Por motivos de seguridad, tu cuenta ha sido bloqueada temporalmente. Podrás volver a jugar en cuanto inicies sesión de manera segura en el portal de Nexon Europe introduciendo los códigos de seguridad.
+				]]>
+		</Error>
+		<Error code="110051">
+			<![CDATA[
+				Esta cuenta ha sido bloqueada a causa de actividad sospechosa. Por favor, inicia sesión en la página web y sigue las instrucciones.
+				]]>
+		</Error>
+	</Language>
+	<Language value="TR">
+		<Error code="990001">
+			<![CDATA[
+				Hesabınız henüz onaylanmadı.
+				]]>
+		</Error>
+		<Error code="110021">
+			<![CDATA[
+				Sağlanan hesap bilgileri geçerli değil.
+				]]>
+		</Error>
+		<Error code="110025">
+			<![CDATA[
+				Sağlanan hesap bilgileri geçerli değil.
+				]]>
+		</Error>
+		<Error code="110039">
+			<![CDATA[
+				Bu hesap herhangi bir oyun servisine kayıtlı değil.
+				]]>
+		</Error>
+		<Error code="110040">
+			<![CDATA[
+				Ne yazık ki, hizmet alanımız içinde olmayan bir ülkeden bağlanıyorsunuz.
+				]]>
+		</Error>
+		<Error code="110042">
+			<![CDATA[
+				Kullanım şartları değiştirildi. Nexon Europe web sitesinde oturum açın ve yeni şartları kabul ediniz.
+				]]>
+		</Error>
+		<Error code="110043">
+			<![CDATA[
+				Bu hesap, geri ödeme sorunu nedeniyle engellendi. Web sitesine giriş yapın ve Nexon Europe destekle iletişime geçiniz.
+				]]>
+		</Error>
+		<Error code="110046">
+			<![CDATA[
+				Yeni Nexon Europe hesabınız henüz aktif değil. E-posta sertifikasyon işlemini tamamlayınız.
+				]]>
+		</Error>
+		<Error code="110047">
+			<![CDATA[
+				Bir çok kez yanlış şifre girdiniz. Güvenlik nedenleriyle, hesabınız geçici olarak bloke olmuştur. Güvenlik kodlarını girerek güvenli bir şekilde Nexon Europe portalına giriş yaptıktan sonra normal olarak oyun servisini kullanabilirsiniz. 
+				]]>
+		</Error>
+		<Error code="110051">
+			<![CDATA[
+				Bu hesap, şüpheli eylemden dolayı kilitlendi. Web sayfasına gidin, giriş yapın ve talimatları takip edin.
+				]]>
+		</Error>
+	</Language>
+	<Language value="IT">
+		<Error code="990001">
+			<![CDATA[
+					Il tuo account non è stato verificato.
+				]]>
+		</Error>
+		<Error code="110021">
+			<![CDATA[
+					I dati inseriti del tuo account non sono validi.
+				]]>
+		</Error>
+		<Error code="110025">
+			<![CDATA[
+					I dati inseriti del tuo account non sono validi.
+				]]>
+		</Error>
+		<Error code="110039">
+			<![CDATA[
+					Questo account non è registrato in nessun gioco.
+				]]>
+		</Error>
+		<Error code="110040">
+			<![CDATA[
+					Purtroppo, ti stai collegando da un paese che non si trova nella nostra area di servizio.
+				]]>
+		</Error>
+		<Error code="110042">
+			<![CDATA[
+					Le Condizioni di utilizzo sono state cambiate. Per favore, fai il login sul sito web di Nexon Europe e accetta le nuove condizioni.
+				]]>
+		</Error>
+		<Error code="110043">
+			<![CDATA[
+					Questo account è stato bloccato a causa di un problema di storno di addebito. Per favore, fai il login sul sito web e contatta il servizio di Supporto di Nexon Europe.
+				]]>
+		</Error>
+		<Error code="110046">
+			<![CDATA[
+					Il tuo nuovo account Nexon Europe non è ancora stato attivato. Per favore, completa il procedimento di verifica.
+				]]>
+		</Error>
+		<Error code="110047">
+			<![CDATA[
+					Hai inserito una password sbagliata troppe volte. Per motivi di sicurezza, il tuo account è stato bloccato temporaneamente. Potrai giocare di nuovo non appena farai il login in modo sicuro sul portale di Nexon Europe inserendo i codici di sicurezza.
+				]]>
+		</Error>
+		<Error code="110051">
+			<![CDATA[
+					Questo account è stato bloccato a causa di attività sospettosa. Per favore, fai il login sul sito web e segui le istruzioni.
+				]]>
+		</Error>
+	</Language>
+	<Language value="PL">
+		<Error code="990001">
+			<![CDATA[
+					Twoje konto nie zostało zweryfikowane.
+				]]>
+		</Error>
+		<Error code="110021">
+			<![CDATA[
+					Informacje o koncie, które podałeś, nie są prawidłowe.
+				]]>
+		</Error>
+		<Error code="110025">
+			<![CDATA[
+					Informacje o koncie, które podałeś, nie są prawidłowe.
+				]]>
+		</Error>
+		<Error code="110039">
+			<![CDATA[
+					To konto nie jest przypisane do żadnej gry.
+				]]>
+		</Error>
+		<Error code="110040">
+			<![CDATA[
+					Przykro nam, ale łączysz się z kraju, który nie jest przez nas obsługiwany. 
+				]]>
+		</Error>
+		<Error code="110042">
+			<![CDATA[
+					Warunki użytkowania się zmieniły. Proszę zalogować się na nową stronę Nexon Europa i zaakceptować nowe warunki użytkowania.
+				]]>
+		</Error>
+		<Error code="110043">
+			<![CDATA[
+					To konto zostało zablokowane przez problem z doładowaniem. Zaloguj się na stronę i skontaktuj się z obsługą klienta Nexon Europa.
+				]]>
+		</Error>
+		<Error code="110046">
+			<![CDATA[
+					Twoje nowe konto Nexon Europa nie zostało jeszcze aktywowane. Proszę ukończyć proces weryfikacji email.
+				]]>
+		</Error>
+		<Error code="110047">
+			<![CDATA[
+					Wprowadziłeś złe hasło zbyt wiele razy. Z powodów bezpieczeństwa, twoje konto zostało tymczasowo zablokowane. Po tym, jak wpiszesz kody bezpieczeństwa i bezpiecznie zalogujesz się na swoje konto, będziesz mógł korzystać z naszych usług ponownie.
+				]]>
+		</Error>
+		<Error code="110051">
+			<![CDATA[
+					To konto zostało zablokowane przez podejrzaną aktywność. Przejdź na stronę, zaloguj się i podążaj za instrukcjami.
+				]]>
+		</Error>
+	</Language>
+	<Language value="PT">
+		<Error code="990001">
+			<![CDATA[
+					A tua conta ainda não foi verificada.
+				]]>
+		</Error>
+		<Error code="110021">
+			<![CDATA[
+					A informação de conta fornecida não é válida
+				]]>
+		</Error>
+		<Error code="110025">
+			<![CDATA[
+					A informação de conta fornecida não é válida
+				]]>
+		</Error>
+		<Error code="110039">
+			<![CDATA[
+					Esta conta não se encontra registada em nenhum jogo.
+				]]>
+		</Error>
+		<Error code="110040">
+			<![CDATA[
+					Infelizmente estás a ligar-te a partir de um país fora da nossa área de serviço.
+				]]>
+		</Error>
+		<Error code="110042">
+			<![CDATA[
+					Os termos de utilização foram alterados. Por favor faz login no website da Nexon Europe e concorda com os novos termos.
+				]]>
+		</Error>
+		<Error code="110043">
+			<![CDATA[
+					Esta conta está bloqueada devido a situações de charge back. Por favor, faz login no website e contacta o suporte da Nexon Europe.
+				]]>
+		</Error>
+		<Error code="110046">
+			<![CDATA[
+					A tua nova conta Nexon Europe ainda não foi ativada. Por favor conclui o processo de certificação de email.
+				]]>
+		</Error>
+		<Error code="110047">
+			<![CDATA[
+					Introduziste uma password errada demasiadas vezes. Por razões de segurança a tua conta foi bloqueada temporariamente. Podes utilizar o serviço do jogo normalmente após efetuares login no portal da Nexon Europe introduzindo os códigos de segurança.
+				]]>
+		</Error>
+		<Error code="110051">
+			<![CDATA[
+					Esta conta foi bloqueada devido a suspeitas na sua atividade. Por favor, vai ao website, faz login e segue as instruções.
+				]]>
+		</Error>
+	</Language>
+</Messages>
+

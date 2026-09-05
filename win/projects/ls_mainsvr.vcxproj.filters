@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="MiniDump">
+      <UniqueIdentifier>{5fff4906-8ac3-4df9-b2f0-36a52d0f6e5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Service">
+      <UniqueIdentifier>{de626ef7-ea8a-4901-9215-4675b87cff4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NodeInfo">
+      <UniqueIdentifier>{129a2c11-eaad-460a-abd8-850b75900ed6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataBase">
+      <UniqueIdentifier>{43f86d05-3412-4c57-a46b-cf5cf35e41c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network">
+      <UniqueIdentifier>{5b84d8c2-5e2d-4568-a60d-c26826e89b8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NodeInfo\AcceptorNode">
+      <UniqueIdentifier>{121904ce-06c0-4733-8ecf-b753fa8ef599}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NodeInfo\GuildNode">
+      <UniqueIdentifier>{a72e0640-40d0-4138-83b1-07f7ad82dee2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NodeInfo\MgrNode">
+      <UniqueIdentifier>{4cb20189-7970-4c26-868b-4d89fa5dc07d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NodeInfo\ServerNode">
+      <UniqueIdentifier>{71ff8b22-481b-49ba-9b81-f19c5ba2608a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NodeInfo\TradeNode">
+      <UniqueIdentifier>{32b1c07c-55cb-43ea-ae60-cc751f230190}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UtilClass">
+      <UniqueIdentifier>{992aafba-5a97-407e-997b-c3a30d1bfc71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scheduler">
+      <UniqueIdentifier>{f308a681-629b-4712-9fa8-92c898c7710b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Encdoe">
+      <UniqueIdentifier>{df8d08ce-c8bc-4f28-aff0-dc5163596856}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CrashFind">
+      <UniqueIdentifier>{95dc4ec4-dfbe-4db6-a72b-eab26c6f2184}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{4224caa1-abdb-4c99-805e-1c9c9673b931}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NodeInfo\TournamentNode">
+      <UniqueIdentifier>{ac339a38-355c-4fef-a3b8-f026b31bf865}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataBase\WemadeLog">
+      <UniqueIdentifier>{1c37d121-4504-4d83-99b7-904c5fa8bf49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataBase\QueryData">
+      <UniqueIdentifier>{9922bc88-2143-437c-a036-3fef0d9f2d57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Languages">
+      <UniqueIdentifier>{643b4c2a-16ac-4c47-afe9-36cef94dc652}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NodeInfo\SpecialShop">
+      <UniqueIdentifier>{13b6ebf7-f454-4b22-97aa-89ed9f6a138b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NodeInfo\GuildRoomInfos">
+      <UniqueIdentifier>{0c696eed-af0c-44d6-94a0-9c0a1a8b9c74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NodeInfo\Practice">
+      <UniqueIdentifier>{5e8df015-3d61-4e26-8c96-0f3083312bc3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="..\..\src\ls_mainsvr\CrashFind.dll">
+      <Filter>CrashFind</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\ls_mainsvr\MiniDump\File.h">
+      <Filter>MiniDump</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\MiniDump\MiniDump.h">
+      <Filter>MiniDump</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\ServiceLS.h">
+      <Filter>소스 파일\Service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\Service.h">
+      <Filter>소스 파일\Service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\CampManager.h">
+      <Filter>NodeInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\EventGoodsManager.h">
+      <Filter>NodeInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\ExtraItemGrowthCatalystMgr.h">
+      <Filter>NodeInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\DataBase\DBClient.h">
+      <Filter>DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\DataBase\LogDBClient.h">
+      <Filter>DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\Network\GameServer.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\Network\iocpHandler.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\Network\ioPacketQueue.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\Network\SP2Packet.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\AcceptorServerNode.h">
+      <Filter>NodeInfo\AcceptorNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\AcceptorMgrToolNode.h">
+      <Filter>NodeInfo\AcceptorNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\GuildNode.h">
+      <Filter>NodeInfo\GuildNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\GuildNodeManager.h">
+      <Filter>NodeInfo\GuildNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\MgrToolNodeManager.h">
+      <Filter>NodeInfo\MgrNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\MgrToolNode.h">
+      <Filter>NodeInfo\MgrNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\ServerNodeManager.h">
+      <Filter>NodeInfo\ServerNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\ServerNode.h">
+      <Filter>NodeInfo\ServerNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\TradeNodeManager.h">
+      <Filter>NodeInfo\TradeNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\TradeNode.h">
+      <Filter>NodeInfo\TradeNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\Util\cBuffer.h">
+      <Filter>UtilClass</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\Util\cSerialize.h">
+      <Filter>UtilClass</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\Util\ioEncrypted.h">
+      <Filter>UtilClass</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\Util\ioHashString.h">
+      <Filter>UtilClass</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\Util\IORandom.h">
+      <Filter>UtilClass</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\Util\ioStringConverter.h">
+      <Filter>UtilClass</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\Util\ioVectorIterator.h">
+      <Filter>UtilClass</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\Util\Singleton.h">
+      <Filter>UtilClass</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\QueryData\QueryData.h">
+      <Filter>DataBase\QueryData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\QueryData\QueryResultData.h">
+      <Filter>DataBase\QueryData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\Scheduler\Scheduler.h">
+      <Filter>Scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\Scheduler\SchedulerNode.h">
+      <Filter>Scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\Encode\seed.h">
+      <Filter>Encdoe</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\CrashFind\BugslayerUtil.h">
+      <Filter>CrashFind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\CrashFind\CrashHandler.h">
+      <Filter>CrashFind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\CrashFind\DiagAssert.h">
+      <Filter>CrashFind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\CrashFind\MemDumperValidator.h">
+      <Filter>CrashFind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\CrashFind\MemStress.h">
+      <Filter>CrashFind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\CrashFind\MSJDBG.h">
+      <Filter>CrashFind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\CrashFind\SymbolEngine.h">
+      <Filter>CrashFind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\resource.h">
+      <Filter>리소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\EtcHelpFunc.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\ioPacketChecker.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\ioProcessChecker.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\MainProcess.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\Manager.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\ServerCloseManager.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\Protocol.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\TournamentManager.h">
+      <Filter>NodeInfo\TournamentNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\TournamentNode.h">
+      <Filter>NodeInfo\TournamentNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\TournamentTeamNode.h">
+      <Filter>NodeInfo\TournamentNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\NodeInfoManager.h">
+      <Filter>NodeInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\WemadeLog\ioLogSerialize.h">
+      <Filter>DataBase\WemadeLog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\WemadeLog\ioWemadeLogger.h">
+      <Filter>DataBase\WemadeLog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\WemadeLog\WemadeLog.h">
+      <Filter>DataBase\WemadeLog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\RelativeGradeManager.h">
+      <Filter>NodeInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\SuperGashponLimitManager.h">
+      <Filter>NodeInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\Define.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\common.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\Languages\ioLanguages.h">
+      <Filter>Languages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\SpecialShopManager.h">
+      <Filter>NodeInfo\SpecialShop</Filter>
+    </ClInclude>
+    <ClInclude Include="BoostPooler.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\GuildRoomInfos.h">
+      <Filter>NodeInfo\GuildRoomInfos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\MatchNodeManager.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\MatchNode.h" />
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\PracticeNodeManager.h">
+      <Filter>NodeInfo\Practice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_mainsvr\NodeInfo\PracticeNode.h">
+      <Filter>NodeInfo\Practice</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\ls_mainsvr\stdafx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\MiniDump\File.cpp">
+      <Filter>MiniDump</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\MiniDump\MiniDump.cpp">
+      <Filter>MiniDump</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\Service.cpp">
+      <Filter>소스 파일\Service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\ServiceLS.cpp">
+      <Filter>소스 파일\Service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\MainProcess.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\Manager.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\EventGoodsManager.cpp">
+      <Filter>NodeInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\ExtraItemGrowthCatalystMgr.cpp">
+      <Filter>NodeInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\DataBase\DBClient.cpp">
+      <Filter>DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\DataBase\LogDBClient.cpp">
+      <Filter>DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\Network\GameServer.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\Network\iocpHandler.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\Network\ioPacketQueue.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\Network\SP2Packet.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\AcceptorMgrToolNode.cpp">
+      <Filter>NodeInfo\AcceptorNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\AcceptorServerNode.cpp">
+      <Filter>NodeInfo\AcceptorNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\GuildNode.cpp">
+      <Filter>NodeInfo\GuildNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\GuildNodeManager.cpp">
+      <Filter>NodeInfo\GuildNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\MgrToolNode.cpp">
+      <Filter>NodeInfo\MgrNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\MgrToolNodeManager.cpp">
+      <Filter>NodeInfo\MgrNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\ServerNode.cpp">
+      <Filter>NodeInfo\ServerNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\ServerNodeManager.cpp">
+      <Filter>NodeInfo\ServerNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\TradeNode.cpp">
+      <Filter>NodeInfo\TradeNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\TradeNodeManager.cpp">
+      <Filter>NodeInfo\TradeNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\ioPacketChecker.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\ioProcessChecker.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\ServerCloseManager.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\EtcHelpFunc.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\Util\cBuffer.cpp">
+      <Filter>UtilClass</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\Util\ioEncrypted.cpp">
+      <Filter>UtilClass</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\Util\ioHashString.cpp">
+      <Filter>UtilClass</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\Util\IORandom.cpp">
+      <Filter>UtilClass</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\Util\ioStringConverter.cpp">
+      <Filter>UtilClass</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\Util\Singleton.cpp">
+      <Filter>UtilClass</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\QueryData\QueryData.cpp">
+      <Filter>DataBase\QueryData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\QueryData\QueryResultData.cpp">
+      <Filter>DataBase\QueryData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\Scheduler\Scheduler.cpp">
+      <Filter>Scheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\Scheduler\SchedulerNode.cpp">
+      <Filter>Scheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\Encode\seed.c">
+      <Filter>Encdoe</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\Encode\seedenc.c">
+      <Filter>Encdoe</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\ls_mainsvr.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\TournamentManager.cpp">
+      <Filter>NodeInfo\TournamentNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\TournamentNode.cpp">
+      <Filter>NodeInfo\TournamentNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\TournamentTeamNode.cpp">
+      <Filter>NodeInfo\TournamentNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\NodeInfoManager.cpp">
+      <Filter>NodeInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\WemadeLog\ioLogSerialize.cpp">
+      <Filter>DataBase\WemadeLog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\WemadeLog\ioWemadeLogger.cpp">
+      <Filter>DataBase\WemadeLog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\RelativeGradeManager.cpp">
+      <Filter>NodeInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\SuperGashponLimitManager.cpp">
+      <Filter>NodeInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\Languages\ioLanguages.cpp">
+      <Filter>Languages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\CampManager.cpp">
+      <Filter>NodeInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\SpecialShopManager.cpp">
+      <Filter>NodeInfo\SpecialShop</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\GuildRoomInfos.cpp">
+      <Filter>NodeInfo\GuildRoomInfos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\MatchNodeManager.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\MatchNode.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\PracticeNode.cpp">
+      <Filter>NodeInfo\Practice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_mainsvr\NodeInfo\PracticeNodeManager.cpp">
+      <Filter>NodeInfo\Practice</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\..\src\ls_mainsvr\CrashFind.lib">
+      <Filter>CrashFind</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\src\ls_mainsvr\ls_mainsvr.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

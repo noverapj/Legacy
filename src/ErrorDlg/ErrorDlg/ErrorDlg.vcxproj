@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3DD7AD59-A087-4D9A-B9F8-8580DEEF916E}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ErrorDlg</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28October 2006%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28October 2006%29\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28October 2006%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28October 2006%29\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);d3dx9.lib;d3d9.lib;winmm.lib</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /y C:\Users\KwonYoungsam\Desktop\ErrorDlg\Debug\ErrorDlg.exe D:\Overseas\INDONESIA\cla\LostSagaIDDev\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ErrorDlg.ico" />
+    <None Include="ReadMe.txt" />
+    <None Include="res\Admin.ico" />
+    <None Include="res\error_back.bmp" />
+    <None Include="res\error_back.rgn" />
+    <None Include="res\error_back_id.bmp" />
+    <None Include="res\error_back_jp.bmp" />
+    <None Include="res\error_back_th.bmp" />
+    <None Include="res\error_back_tw.bmp" />
+    <None Include="res\error_back_us.bmp" />
+    <None Include="res\error_btn_exit_c.bmp" />
+    <None Include="res\error_btn_exit_c_id.bmp" />
+    <None Include="res\error_btn_exit_c_jp.bmp" />
+    <None Include="res\error_btn_exit_c_th.bmp" />
+    <None Include="res\error_btn_exit_c_tw.bmp" />
+    <None Include="res\error_btn_exit_c_us.bmp" />
+    <None Include="res\error_btn_exit_n.bmp" />
+    <None Include="res\error_btn_exit_n_id.bmp" />
+    <None Include="res\error_btn_exit_n_jp.bmp" />
+    <None Include="res\error_btn_exit_n_th.bmp" />
+    <None Include="res\error_btn_exit_n_tw.bmp" />
+    <None Include="res\error_btn_exit_n_us.bmp" />
+    <None Include="res\error_btn_exit_o.bmp" />
+    <None Include="res\error_btn_exit_o_id.bmp" />
+    <None Include="res\error_btn_exit_o_jp.bmp" />
+    <None Include="res\error_btn_exit_o_th.bmp" />
+    <None Include="res\error_btn_exit_o_tw.bmp" />
+    <None Include="res\error_btn_exit_o_us.bmp" />
+    <None Include="res\error_btn_solution_c.bmp" />
+    <None Include="res\error_btn_solution_c_id.bmp" />
+    <None Include="res\error_btn_solution_c_jp.bmp" />
+    <None Include="res\error_btn_solution_c_th.bmp" />
+    <None Include="res\error_btn_solution_c_tw.bmp" />
+    <None Include="res\error_btn_solution_c_us.bmp" />
+    <None Include="res\error_btn_solution_n.bmp" />
+    <None Include="res\error_btn_solution_n_id.bmp" />
+    <None Include="res\error_btn_solution_n_jp.bmp" />
+    <None Include="res\error_btn_solution_n_th.bmp" />
+    <None Include="res\error_btn_solution_n_tw.bmp" />
+    <None Include="res\error_btn_solution_n_us.bmp" />
+    <None Include="res\error_btn_solution_o.bmp" />
+    <None Include="res\error_btn_solution_o_id.bmp" />
+    <None Include="res\error_btn_solution_o_jp.bmp" />
+    <None Include="res\error_btn_solution_o_th.bmp" />
+    <None Include="res\error_btn_solution_o_tw.bmp" />
+    <None Include="res\error_btn_solution_o_us.bmp" />
+    <None Include="res\error_btn_x_c.bmp" />
+    <None Include="res\error_btn_x_n.bmp" />
+    <None Include="res\error_btn_x_o.bmp" />
+    <None Include="res\Shipping.ico" />
+    <None Include="res\Version.rc2" />
+    <None Include="res\web_exit_button.bmp" />
+    <None Include="res\web_outline.bmp" />
+    <None Include="res\web_title_cash.bmp" />
+    <None Include="res\web_title_cash_jp.bmp" />
+    <None Include="res\web_title_cash_th.bmp" />
+    <None Include="res\web_title_cash_tw.bmp" />
+    <None Include="res\web_title_cash_us.bmp" />
+    <None Include="res\web_title_entry.bmp" />
+    <None Include="res\web_title_entry_jp.bmp" />
+    <None Include="res\web_title_entry_th.bmp" />
+    <None Include="res\web_title_entry_tw.bmp" />
+    <None Include="res\web_title_entry_us.bmp" />
+    <None Include="res\web_title_guild.bmp" />
+    <None Include="res\web_title_guild_mark.bmp" />
+    <None Include="res\web_title_guild_mark_th.bmp" />
+    <None Include="res\web_title_guild_mark_tw.bmp" />
+    <None Include="res\web_title_guild_mark_us.bmp" />
+    <None Include="res\web_title_guild_th.bmp" />
+    <None Include="res\web_title_guild_tw.bmp" />
+    <None Include="res\web_title_guild_us.bmp" />
+    <None Include="res\web_title_home.bmp" />
+    <None Include="res\web_title_home_jp.bmp" />
+    <None Include="res\web_title_home_th.bmp" />
+    <None Include="res\web_title_home_tw.bmp" />
+    <None Include="res\web_title_home_us.bmp" />
+    <None Include="res\web_title_losa.bmp" />
+    <None Include="res\web_title_losa_jp.bmp" />
+    <None Include="res\web_title_losa_tw.bmp" />
+    <None Include="res\web_title_losa_us.bmp" />
+    <None Include="small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ErrorDlg.h" />
+    <ClInclude Include="HackShield\HShield.h" />
+    <ClInclude Include="HackShield\HSUpChk.h" />
+    <ClInclude Include="HackShield\ioHackShield.h" />
+    <ClInclude Include="io3DEngine\ioLocalManagerParent.h" />
+    <ClInclude Include="io3DEngine\ioPrerequisites.h" />
+    <ClInclude Include="io3DEngine\ioSingleton.h" />
+    <ClInclude Include="Local\ioLocalChina.h" />
+    <ClInclude Include="Local\ioLocalChinaLanguage.h" />
+    <ClInclude Include="Local\ioLocalIndonesia.h" />
+    <ClInclude Include="Local\ioLocalJapan.h" />
+    <ClInclude Include="Local\ioLocalJapanLanguage.h" />
+    <ClInclude Include="Local\ioLocalKorea.h" />
+    <ClInclude Include="Local\ioLocalManager.h" />
+    <ClInclude Include="Local\ioLocalParent.h" />
+    <ClInclude Include="Local\ioLocalTaiwan.h" />
+    <ClInclude Include="Local\ioLocalTaiwanLanguage.h" />
+    <ClInclude Include="Local\ioLocalThailand.h" />
+    <ClInclude Include="Local\ioLocalThailandLanguage.h" />
+    <ClInclude Include="Local\ioLocalUS.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="skin.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="StringManager\ioHashString.h" />
+    <ClInclude Include="StringManager\ioSingleton.h" />
+    <ClInclude Include="StringManager\ioStringManager.h" />
+    <ClInclude Include="StringManager\Safesprintf.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Version.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ErrorDlg.cpp" />
+    <ClCompile Include="HackShield\ioHackShield.cpp" />
+    <ClCompile Include="io3DEngine\ioLocalManagerParent.cpp" />
+    <ClCompile Include="io3DEngine\ioSingleton.cpp" />
+    <ClCompile Include="Local\ioLocalChina.cpp" />
+    <ClCompile Include="Local\ioLocalChinaLanguage.cpp" />
+    <ClCompile Include="Local\ioLocalIndonesia.cpp" />
+    <ClCompile Include="Local\ioLocalJapan.cpp" />
+    <ClCompile Include="Local\ioLocalJapanLanguage.cpp" />
+    <ClCompile Include="Local\ioLocalKorea.cpp" />
+    <ClCompile Include="Local\ioLocalManager.cpp" />
+    <ClCompile Include="Local\ioLocalParent.cpp" />
+    <ClCompile Include="Local\ioLocalTaiwan.cpp" />
+    <ClCompile Include="Local\ioLocalTaiwanLanguage.cpp" />
+    <ClCompile Include="Local\ioLocalThailand.cpp" />
+    <ClCompile Include="Local\ioLocalThailandLanguage.cpp" />
+    <ClCompile Include="Local\ioLocalUS.cpp" />
+    <ClCompile Include="skin.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="StringManager\ioHashString.cpp" />
+    <ClCompile Include="StringManager\ioSingleton.cpp" />
+    <ClCompile Include="StringManager\ioStringManager.cpp" />
+    <ClCompile Include="StringManager\Safesprintf.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ErrorDlg.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

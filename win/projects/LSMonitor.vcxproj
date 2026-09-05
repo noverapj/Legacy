@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A3988DC6-58D8-4F72-B4D8-21A29BA58FB6}</ProjectGuid>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../../build/zone_office/LSMonitor/</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./$(ProjectName)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../../build/zone_office/LSMonitor/</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./$(ProjectName)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">LSMonitorD</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">LSMonitor</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>../../src</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <PrecompiledHeaderOutputFile>./$(ProjectName)\$(Configuration)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerOutput>All</AssemblerOutput>
+      <AssemblerListingLocation>./$(ProjectName)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>./$(ProjectName)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>./$(ProjectName)\$(Configuration)\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <PreBuildEvent>
+      <Command>"c:\Program Files\TortoiseSVN\bin\SubWCRev.exe" "../../src/LSMonitor/" "../../src/LSMonitor/TSvnVersion.tmpl" "../../src/LSMonitor/Version.h"</Command>
+    </PreBuildEvent>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>../../src</AdditionalIncludeDirectories>
+      <PrecompiledHeaderOutputFile>./$(ProjectName)\$(Configuration)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <PreBuildEvent>
+      <Command>"c:\Program Files\TortoiseSVN\bin\SubWCRev.exe" "../../src/LSMonitor/" "../../src/LSMonitor/TSvnVersion.tmpl" "../../src/LSMonitor/Version.h"</Command>
+    </PreBuildEvent>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="../../src/LSMonitor/AnnounceDlg.cpp" />
+    <ClCompile Include="../../src/LSMonitor/ClientVersionDlg.cpp" />
+    <ClCompile Include="../../src/LSMonitor/ControlDlg.cpp" />
+    <ClCompile Include="../../src/LSMonitor/LSMonitor.cpp" />
+    <ClCompile Include="../../src/LSMonitor/LSMonitorDlg.cpp" />
+    <ClCompile Include="../../src/LSMonitor/ServerInfoDlg.cpp" />
+    <ClCompile Include="../../src/LSMonitor/SMSDlg.cpp" />
+    <ClCompile Include="../../src/LSMonitor/stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/TCPSocketTable.cpp" />
+    <ClCompile Include="../../src/LSMonitor/Sms\ioINILoaderAU.cpp" />
+    <ClCompile Include="../../src/LSMonitor/Sms\SMSRuleManager.cpp" />
+    <ClCompile Include="../../src/LSMonitor/Sms\SMSSender.cpp" />
+    <ClCompile Include="../../src/LSMonitor/HttpApp.cpp" />
+    <ClCompile Include="../../src/LSMonitor/ioHashString.cpp" />
+    <ClCompile Include="../../src/LSMonitor/NetWork\ioSP2TCPSocket.cpp" />
+    <ClCompile Include="../../src/LSMonitor/NetWork\SP2Packet.cpp" />
+    <ClCompile Include="../../src/LSMonitor/NetWork\SystemInfoUDPMsg.cpp" />
+    <ClCompile Include="../../src/LSMonitor/NetWork\SystemInfoUDPSocket.cpp" />
+    <ClCompile Include="../../src/LSMonitor/QueryData\QueryData.cpp" />
+    <ClCompile Include="../../src/LSMonitor/QueryData\QueryResultData.cpp" />
+    <ClCompile Include="../../src/LSMonitor/Local\ioLocalGermany.cpp" />
+    <ClCompile Include="../../src/LSMonitor/Local\ioLocalIndonesia.cpp" />
+    <ClCompile Include="../../src/LSMonitor/Local\ioLocalJapan.cpp" />
+    <ClCompile Include="../../src/LSMonitor/Local\ioLocalKorea.cpp" />
+    <ClCompile Include="../../src/LSMonitor/Local\ioLocalManager.cpp" />
+    <ClCompile Include="../../src/LSMonitor/Local\ioLocalParent.cpp" />
+    <ClCompile Include="../../src/LSMonitor/Local\ioLocalTaiwan.cpp" />
+    <ClCompile Include="../../src/LSMonitor/Local\ioLocalThailand.cpp" />
+    <ClCompile Include="../../src/LSMonitor/Local\ioLocalUS.cpp" />
+    <ClCompile Include="../../src/LSMonitor/Local\ioSingleton.cpp" />
+    <ClCompile Include="../../src/LSMonitor/Resize\ETSLayout.cpp" />
+    <ClCompile Include="../../src/LSMonitor/ThreadModules\SuperParent.cpp" />
+    <ClCompile Include="../../src/LSMonitor/ThreadModules\Thread.cpp" />
+    <ClCompile Include="../../src/LSMonitor/ThreadModules\ThreadManager.cpp" />
+    <ClCompile Include="../../src/LSMonitor/ThreadModules\ThreadSync.cpp" />
+    <ClCompile Include="..\..\src\LSMonitor\LoingPanel.cpp" />
+    <ClCompile Include="..\..\src\LSMonitor\LS_ServerInfoDlg.cpp" />
+    <ClCompile Include="..\..\src\LSMonitor\NagleRefCountDlg.cpp" />
+    <ClCompile Include="..\..\src\LSMonitor\OXToolTipCtrl.cpp" />
+    <ClCompile Include="..\..\src\LSMonitor\ScrollPanel.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="../../src/LSMonitor/AnnounceDlg.h" />
+    <ClInclude Include="../../src/LSMonitor/ClientVersionDlg.h" />
+    <ClInclude Include="../../src/LSMonitor/ControlDlg.h" />
+    <ClInclude Include="../../src/LSMonitor/Define.h" />
+    <ClInclude Include="../../src/LSMonitor/LSMonitor.h" />
+    <ClInclude Include="../../src/LSMonitor/LSMonitorDlg.h" />
+    <ClInclude Include="../../src/LSMonitor/Resource.h" />
+    <ClInclude Include="../../src/LSMonitor/ServerInfoDlg.h" />
+    <ClInclude Include="../../src/LSMonitor/SMSDlg.h" />
+    <ClInclude Include="../../src/LSMonitor/stdafx.h" />
+    <ClInclude Include="../../src/LSMonitor/TCPSocketTable.h" />
+    <ClInclude Include="../../src/LSMonitor/Version.h" />
+    <ClInclude Include="../../src/LSMonitor/Sms\ioINILoaderAU.h" />
+    <ClInclude Include="../../src/LSMonitor/Sms\SMSRuleManager.h" />
+    <ClInclude Include="../../src/LSMonitor/Sms\SMSSender.h" />
+    <ClInclude Include="../../src/LSMonitor/HttpApp.h" />
+    <ClInclude Include="../../src/LSMonitor/ioHashString.h" />
+    <ClInclude Include="../../src/LSMonitor/NetWork\ioSP2TCPSocket.h" />
+    <ClInclude Include="../../src/LSMonitor/NetWork\Protocol.h" />
+    <ClInclude Include="../../src/LSMonitor/NetWork\SP2Packet.h" />
+    <ClInclude Include="../../src/LSMonitor/NetWork\SystemInfoUDPMsg.h" />
+    <ClInclude Include="../../src/LSMonitor/NetWork\SystemInfoUDPSocket.h" />
+    <ClInclude Include="../../src/LSMonitor/QueryData\QueryData.h" />
+    <ClInclude Include="../../src/LSMonitor/QueryData\QueryResultData.h" />
+    <ClInclude Include="../../src/LSMonitor/IOSocketDLL\IOSocketDLL.h" />
+    <ClInclude Include="../../src/LSMonitor/IOSocketDLL\Encrypt\cryption.h" />
+    <ClInclude Include="../../src/LSMonitor/IOSocketDLL\Encrypt\FSM.h" />
+    <ClInclude Include="../../src/LSMonitor/IOSocketDLL\Encrypt\md5.h" />
+    <ClInclude Include="../../src/LSMonitor/IOSocketDLL\IncludeDLL\LogDLL.h" />
+    <ClInclude Include="../../src/LSMonitor/IOSocketDLL\IOSocket\CClientObject.h" />
+    <ClInclude Include="../../src/LSMonitor/IOSocketDLL\IOSocket\cclienttcpsocket.h" />
+    <ClInclude Include="../../src/LSMonitor/IOSocketDLL\IOSocket\cgenericmessage.h" />
+    <ClInclude Include="../../src/LSMonitor/IOSocketDLL\IOSocket\cgenericsocket.h" />
+    <ClInclude Include="../../src/LSMonitor/IOSocketDLL\IOSocket\cservertcpsocket.h" />
+    <ClInclude Include="../../src/LSMonitor/IOSocketDLL\IOSocket\cudpsocket.h" />
+    <ClInclude Include="../../src/LSMonitor/IOSocketDLL\IOSocket\RecvBuffer.h" />
+    <ClInclude Include="../../src/LSMonitor/IOSocketDLL\IOSocket\SendBuffer.h" />
+    <ClInclude Include="../../src/LSMonitor/Local\ioLocalGermany.h" />
+    <ClInclude Include="../../src/LSMonitor/Local\ioLocalIndonesia.h" />
+    <ClInclude Include="../../src/LSMonitor/Local\ioLocalJapan.h" />
+    <ClInclude Include="../../src/LSMonitor/Local\ioLocalKorea.h" />
+    <ClInclude Include="../../src/LSMonitor/Local\ioLocalManager.h" />
+    <ClInclude Include="../../src/LSMonitor/Local\ioLocalParent.h" />
+    <ClInclude Include="../../src/LSMonitor/Local\ioLocalTaiwan.h" />
+    <ClInclude Include="../../src/LSMonitor/Local\ioLocalThailand.h" />
+    <ClInclude Include="../../src/LSMonitor/Local\ioLocalUS.h" />
+    <ClInclude Include="../../src/LSMonitor/Local\ioSingleton.h" />
+    <ClInclude Include="../../src/LSMonitor/Resize\ETSLayout.h" />
+    <ClInclude Include="../../src/LSMonitor/ThreadModules\SuperParent.h" />
+    <ClInclude Include="../../src/LSMonitor/ThreadModules\Thread.h" />
+    <ClInclude Include="../../src/LSMonitor/ThreadModules\ThreadManager.h" />
+    <ClInclude Include="../../src/LSMonitor/ThreadModules\ThreadSync.h" />
+    <ClInclude Include="..\..\src\LSMonitor\common.h" />
+    <ClInclude Include="..\..\src\LSMonitor\LoingPanel.h" />
+    <ClInclude Include="..\..\src\LSMonitor\LS_ServerInfoDlg.h" />
+    <ClInclude Include="..\..\src\LSMonitor\NagleRefCountDlg.h" />
+    <ClInclude Include="..\..\src\LSMonitor\OXDllExt.h" />
+    <ClInclude Include="..\..\src\LSMonitor\OXToolTipCtrl.h" />
+    <ClInclude Include="..\..\src\LSMonitor\ScrollPanel.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../../src/LSMonitor/res\LSMonitor.ico" />
+    <None Include="../../src/LSMonitor/res\Version.rc2" />
+    <None Include="../../src/LSMonitor/ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="../../src/LSMonitor/LSMonitor.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

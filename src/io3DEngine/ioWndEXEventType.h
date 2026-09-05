@@ -1,0 +1,73 @@
+//----------------------------------------------------------------------------------
+/*
+Filename	: ioWndEXEventType.h
+Author		: megamegy
+Date		: 2013.11.21
+*/
+//----------------------------------------------------------------------------------
+
+#ifndef _IOWNDEXEVENTTYPE_H_
+#define _IOWNDEXEVENTTYPE_H_
+
+enum WNDEX_EVENT_TYPE
+{
+	// ioWndEX
+	WEVT_CREATE,
+	WEVT_DESTROY,
+	WEVT_SHOW,
+	WEVT_HIDE,
+	WEVT_ESC,
+	WEVT_SPACEBAR,
+	WEVT_LBUTTONDOWN,
+	WEVT_LBUTTONUP,
+	WEVT_LBUTTONDBCLICK,
+	WEVT_RBUTTONDOWN,
+	WEVT_RBUTTONUP,
+	WEVT_MOUSEOVER,
+	WEVT_MOUSEMOVE,
+	WEVT_MOUSELEAVE,
+	WEVT_WHEEL,
+
+	// ioRadioWndEX
+	WEVT_RADIOCHECK,
+
+	// ioTabWndEX
+	WEVT_TABCHECK,
+
+	// ioScrollBarEX
+	WEVT_SB_CLICK_DECREASE,
+	WEVT_SB_CLICK_INCREASE,
+	WEVT_SB_SCROLL,
+
+	// max
+	WEVT_MAX,
+};
+
+static const char* g_wndexeventtype[ WEVT_MAX ] =
+{
+	"WEVT_CREATE",
+	"WEVT_DESTROY",
+	"WEVT_SHOW",
+	"WEVT_HIDE",
+	"WEVT_ESC",
+	"WEVT_SPACEBAR",
+	"WEVT_LBUTTONDOWN",
+	"WEVT_LBUTTONUP",
+	"WEVT_LBUTTONDBCLICK",
+	"WEVT_RBUTTONDOWN",
+	"WEVT_RBUTTONUP",
+	"WEVT_MOUSEOVER",
+	"WEVT_MOUSEMOVE",
+	"WEVT_MOUSELEAVE",
+	"WEVT_WHEEL",
+
+	"WEVT_RADIOCHECK",
+
+	"WEVT_TABCHECK",
+
+	"WEVT_SB_CLICK_DECREASE",
+	"WEVT_SB_CLICK_INCREASE",
+	"WEVT_SB_SCROLL"
+};
+
+#endif // _IOWNDEXEVENTTYPE_H_

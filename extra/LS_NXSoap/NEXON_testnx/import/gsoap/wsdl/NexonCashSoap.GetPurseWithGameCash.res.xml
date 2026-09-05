@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+  xmlns:SOAP-ENV="http://www.w3.org/2003/05/soap-envelope"
+  xmlns:SOAP-ENC="http://www.w3.org/2003/05/soap-encoding"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:ns1="http://testsoap.nexon.com/remoting_version_2/">
+ <SOAP-ENV:Header>
+ </SOAP-ENV:Header>
+ <SOAP-ENV:Body>
+  <ns1:GetPurseWithGameCashResponse>
+   <ns1:GetPurseWithGameCashResult>false</ns1:GetPurseWithGameCashResult>
+   <ns1:paidBalance></ns1:paidBalance>
+   <ns1:freeBalance></ns1:freeBalance>
+   <ns1:gamecashBalance></ns1:gamecashBalance>
+  </ns1:GetPurseWithGameCashResponse>
+ </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

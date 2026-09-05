@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{765468d2-bce1-4f62-a349-62e005d78cd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NetWork">
+      <UniqueIdentifier>{bdd7f9ef-359c-4c83-8123-233ddadd677f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LogTable">
+      <UniqueIdentifier>{607001a4-108b-4663-b924-d37bee363ed8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CrashFind">
+      <UniqueIdentifier>{77675fc8-bd38-44d5-8fb6-62d384685844}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QueryData">
+      <UniqueIdentifier>{94e735b3-2345-4d80-b00b-b397d00c8609}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\LSLogClient\LSLogClient.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LSLogClient\LSLogClientDlg.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LSLogClient\stdafx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LSLogClient\Util\cBuffer.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LSLogClient\ioHashString.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LSLogClient\ioINILoader.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LSLogClient\QueryData\QueryData.cpp">
+      <Filter>QueryData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LSLogClient\QueryData\QueryResultData.cpp">
+      <Filter>QueryData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LSLogClient\NetWork\DBClientSocket.cpp">
+      <Filter>NetWork</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LSLogClient\NetWork\ioSP2TCPSocket.cpp">
+      <Filter>NetWork</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LSLogClient\NetWork\SP2Packet.cpp">
+      <Filter>NetWork</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LSLogClient\LogTable.cpp">
+      <Filter>LogTable</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\LSLogClient\Define.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LSLogClient\LSLogClient.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LSLogClient\LSLogClientDlg.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LSLogClient\Resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LSLogClient\stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LSLogClient\Version.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LSLogClient\Util\cBuffer.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LSLogClient\Util\cSerialize.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LSLogClient\ioHashString.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LSLogClient\ioINILoader.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LSLogClient\QueryData\QueryData.h">
+      <Filter>QueryData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LSLogClient\QueryData\QueryResultData.h">
+      <Filter>QueryData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LSLogClient\NetWork\DBClientSocket.h">
+      <Filter>NetWork</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\TownPortal\include\ioClientTCPSocket.h">
+      <Filter>NetWork</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LSLogClient\NetWork\ioSP2TCPSocket.h">
+      <Filter>NetWork</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LSLogClient\NetWork\Protocol.h">
+      <Filter>NetWork</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LSLogClient\NetWork\SP2Packet.h">
+      <Filter>NetWork</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LSLogClient\LogTable.h">
+      <Filter>LogTable</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LSLogClient\CrashFind\BugslayerUtil.h">
+      <Filter>CrashFind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LSLogClient\CrashFind\CrashHandler.h">
+      <Filter>CrashFind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LSLogClient\CrashFind\DiagAssert.h">
+      <Filter>CrashFind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LSLogClient\CrashFind\MemDumperValidator.h">
+      <Filter>CrashFind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LSLogClient\CrashFind\MemStress.h">
+      <Filter>CrashFind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LSLogClient\CrashFind\MSJDBG.h">
+      <Filter>CrashFind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LSLogClient\CrashFind\SymbolEngine.h">
+      <Filter>CrashFind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LSLogClient\ConsoleTextColorDefine.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\src\LSLogClient\res\icon1.ico">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\src\LSLogClient\res\LSLogClient.ico">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\src\LSLogClient\res\LSLogClient.rc2">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\src\LSLogClient\res\Version.rc2">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\src\LSLogClient\ReadMe.txt" />
+    <None Include="..\..\src\LSLogClient\CrashFind.dll">
+      <Filter>CrashFind</Filter>
+    </None>
+    <None Include="..\..\src\LSLogClient\dbghelp.dll">
+      <Filter>CrashFind</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\src\LSLogClient\LSLogClient.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\..\src\LSLogClient\CrashFind.lib">
+      <Filter>CrashFind</Filter>
+    </Library>
+    <Library Include="..\..\src\LSLogClient\DbgHelp.Lib">
+      <Filter>CrashFind</Filter>
+    </Library>
+  </ItemGroup>
+</Project>

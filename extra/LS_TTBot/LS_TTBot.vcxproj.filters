@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+    <Filter Include="네트워크">
+      <UniqueIdentifier>{027f3021-f4f7-4097-9b0b-a37ab1ac8da4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="네트워크\전송">
+      <UniqueIdentifier>{55da98d8-a07d-4093-87d3-09351e2f523e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="테스트케이스">
+      <UniqueIdentifier>{416f4c52-fa59-4366-beb7-75f61a4dece3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QueryData">
+      <UniqueIdentifier>{9a5461bc-54fd-46e6-b750-94fefa3c94fd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="LS_TTBot.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="LS_TTBotDlg.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="cBuffer.cpp">
+      <Filter>네트워크</Filter>
+    </ClCompile>
+    <ClCompile Include="ioClientSocketTCP.cpp">
+      <Filter>네트워크</Filter>
+    </ClCompile>
+    <ClCompile Include="ioClientSocketUDP.cpp">
+      <Filter>네트워크</Filter>
+    </ClCompile>
+    <ClCompile Include="network\cryption.cpp">
+      <Filter>네트워크\전송</Filter>
+    </ClCompile>
+    <ClCompile Include="network\FSM.cpp">
+      <Filter>네트워크\전송</Filter>
+    </ClCompile>
+    <ClCompile Include="network\ioHashString.cpp">
+      <Filter>네트워크\전송</Filter>
+    </ClCompile>
+    <ClCompile Include="network\md5.cpp">
+      <Filter>네트워크\전송</Filter>
+    </ClCompile>
+    <ClCompile Include="network\NetworkSecurity.cpp">
+      <Filter>네트워크\전송</Filter>
+    </ClCompile>
+    <ClCompile Include="network\Packet.cpp">
+      <Filter>네트워크\전송</Filter>
+    </ClCompile>
+    <ClCompile Include="network\SecurityTCP.cpp">
+      <Filter>네트워크\전송</Filter>
+    </ClCompile>
+    <ClCompile Include="network\SecurityUDP.cpp">
+      <Filter>네트워크\전송</Filter>
+    </ClCompile>
+    <ClCompile Include="network\SP2Packet.cpp">
+      <Filter>네트워크\전송</Filter>
+    </ClCompile>
+    <ClCompile Include="ioTestBot.cpp">
+      <Filter>테스트케이스</Filter>
+    </ClCompile>
+    <ClCompile Include="ioTestCase.cpp">
+      <Filter>테스트케이스</Filter>
+    </ClCompile>
+    <ClCompile Include="ioTestClient.cpp">
+      <Filter>테스트케이스</Filter>
+    </ClCompile>
+    <ClCompile Include="ioTestConnection.cpp">
+      <Filter>테스트케이스</Filter>
+    </ClCompile>
+    <ClCompile Include="ioTestEcho.cpp">
+      <Filter>테스트케이스</Filter>
+    </ClCompile>
+    <ClCompile Include="ioTestLogin.cpp">
+      <Filter>테스트케이스</Filter>
+    </ClCompile>
+    <ClCompile Include="ioTestSend.cpp">
+      <Filter>테스트케이스</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryData\QueryData.cpp">
+      <Filter>QueryData</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryData\QueryResultData.cpp">
+      <Filter>QueryData</Filter>
+    </ClCompile>
+    <ClCompile Include="ioTestQuerySend1.cpp">
+      <Filter>테스트케이스</Filter>
+    </ClCompile>
+    <ClCompile Include="ioTestQuerySend2.cpp">
+      <Filter>테스트케이스</Filter>
+    </ClCompile>
+    <ClCompile Include="ioTestls_loginsvr.cpp">
+      <Filter>테스트케이스</Filter>
+    </ClCompile>
+    <ClCompile Include="ioTestUDPSend.cpp">
+      <Filter>테스트케이스</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\common.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="LS_TTBot.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="LS_TTBotDlg.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="cBuffer.h">
+      <Filter>네트워크</Filter>
+    </ClInclude>
+    <ClInclude Include="ioClientSocketTCP.h">
+      <Filter>네트워크</Filter>
+    </ClInclude>
+    <ClInclude Include="ioClientSocketUDP.h">
+      <Filter>네트워크</Filter>
+    </ClInclude>
+    <ClInclude Include="network\cryption.h">
+      <Filter>네트워크\전송</Filter>
+    </ClInclude>
+    <ClInclude Include="network\FSM.h">
+      <Filter>네트워크\전송</Filter>
+    </ClInclude>
+    <ClInclude Include="network\ioHashString.h">
+      <Filter>네트워크\전송</Filter>
+    </ClInclude>
+    <ClInclude Include="network\md5.h">
+      <Filter>네트워크\전송</Filter>
+    </ClInclude>
+    <ClInclude Include="network\NetworkSecurity.h">
+      <Filter>네트워크\전송</Filter>
+    </ClInclude>
+    <ClInclude Include="network\Packet.h">
+      <Filter>네트워크\전송</Filter>
+    </ClInclude>
+    <ClInclude Include="network\SecurityTCP.h">
+      <Filter>네트워크\전송</Filter>
+    </ClInclude>
+    <ClInclude Include="network\SecurityUDP.h">
+      <Filter>네트워크\전송</Filter>
+    </ClInclude>
+    <ClInclude Include="network\SP2Packet.h">
+      <Filter>네트워크\전송</Filter>
+    </ClInclude>
+    <ClInclude Include="ioTestBot.h">
+      <Filter>테스트케이스</Filter>
+    </ClInclude>
+    <ClInclude Include="ioTestCase.h">
+      <Filter>테스트케이스</Filter>
+    </ClInclude>
+    <ClInclude Include="ioTestClient.h">
+      <Filter>테스트케이스</Filter>
+    </ClInclude>
+    <ClInclude Include="ioTestConnection.h">
+      <Filter>테스트케이스</Filter>
+    </ClInclude>
+    <ClInclude Include="ioTestEcho.h">
+      <Filter>테스트케이스</Filter>
+    </ClInclude>
+    <ClInclude Include="ioTestLogin.h">
+      <Filter>테스트케이스</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol.h">
+      <Filter>테스트케이스</Filter>
+    </ClInclude>
+    <ClInclude Include="ioTestSend.h">
+      <Filter>테스트케이스</Filter>
+    </ClInclude>
+    <ClInclude Include="QueryData\QueryData.h">
+      <Filter>QueryData</Filter>
+    </ClInclude>
+    <ClInclude Include="QueryData\cSerialize.h">
+      <Filter>QueryData</Filter>
+    </ClInclude>
+    <ClInclude Include="QueryData\QueryResultData.h">
+      <Filter>QueryData</Filter>
+    </ClInclude>
+    <ClInclude Include="ioTestQuerySend1.h">
+      <Filter>테스트케이스</Filter>
+    </ClInclude>
+    <ClInclude Include="ioTestQuerySend2.h">
+      <Filter>테스트케이스</Filter>
+    </ClInclude>
+    <ClInclude Include="ioTestls_loginsvr.h">
+      <Filter>테스트케이스</Filter>
+    </ClInclude>
+    <ClInclude Include="ioTestUDPSend.h">
+      <Filter>테스트케이스</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\LS_TTBot.ico">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\LS_TTBot.rc2">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="LS_TTBot.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="res\LS_TTBot.manifest" />
+  </ItemGroup>
+</Project>

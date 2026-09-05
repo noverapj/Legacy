@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2A2800DF-064B-490B-8176-3CEDE3A8D507}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ls_billingsvr</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>../../../build/Server/ls_billingsvr/</OutDir>
+    <TargetName>$(ProjectName)D</TargetName>
+    <PreBuildEventUseInBuild>true</PreBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>../../../build/Server/ls_billingsvr/</OutDir>
+    <PreBuildEventUseInBuild>true</PreBuildEventUseInBuild>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>../../src/ls_billingsvr;../../src/ls_billingsvr/Openssl</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>./$(ProjectName)\$(Configuration)\</ProgramDataBaseFileName>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>dbghelp.lib;INID.lib;crashfind.lib;psapi.lib;frametimerddll.lib;iocpSocketDDLL.lib;LogD.lib;tinyxmlD.lib;LS_HTTPD.lib;winmm.lib;ws2_32.lib;crypt32.lib;secur32.lib;normaliz.lib;wldap32.lib;iphlpapi.lib;bcrypt.lib;../../extra/lib/LS_NXSoapD.lib;../../extra/lib/ls_restapid.lib;./../src/ls_billingsvr/Openssl/libeay32MD.lib;../../src/ls_billingsvr/Openssl/ssleay32MD.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../lib;</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>../../../build/zone_dev/pdb/$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+    <PreBuildEvent>
+      <Command>"../../Tools/VCSGen.exe"  "../../src/ls_billingsvr/" "../../src/ls_billingsvr/TSvnVersion.tmpl" "../../src/ls_billingsvr/Version.h"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>../src/ls_billingsvr;../../src/ls_billingsvr/Openssl</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>../../lib;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>dbghelp.lib;crashfind.lib;psapi.lib;frametimerdll.lib;iocpSocketDLL.lib;Log.lib;tinyxml.lib;LS_HTTP.lib;winmm.lib;ws2_32.lib;crypt32.lib;secur32.lib;normaliz.lib;wldap32.lib;iphlpapi.lib;bcrypt.lib;../../extra/lib/LS_NXSoap.lib;../../extra/lib/ls_restapi.lib;./../src/ls_billingsvr/Openssl/libeay32MD.lib;../../src/ls_billingsvr/Openssl/ssleay32MD.lib;ini.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ProgramDatabaseFile>../../../build/zone_dev/pdb/$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+    <PreBuildEvent>
+      <Command>"../../Tools/VCSGen.exe"  "../../src/ls_billingsvr/" "../../src/ls_billingsvr/TSvnVersion.tmpl" "../../src/ls_billingsvr/Version.h"</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\extra\tinyxml\tinyxml\tinystr.h" />
+    <ClInclude Include="..\..\extra\tinyxml\tinyxml\tinyxml.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeDaum.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeHangame.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeNexonBuy_v2.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeWemadeCashLink.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Define.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\EtcHelpFunc.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\GoogleDump\GoogleDump.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\ioProcessChecker.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Local\ioLocalEU.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Local\ioLocalLatin.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\MainProcess.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\NexonEUDefine.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\NexonEUSessionServer\NexonEUSessionServer.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\NexonNISMSServer\NexonNISMSServer.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\NexonServer\NexonSessionServer.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\NodeInfo\AcceptorMgrToolNode.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\NodeInfo\AcceptorMonitorNode.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\NodeInfo\AcceptorServerNode.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\NodeInfo\BillInfoManager.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\NodeInfo\GoodsManager.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\NodeInfo\MemInfoManager.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\NodeInfo\MgrToolNode.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\NodeInfo\MgrToolNodeManager.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\NodeInfo\ServerNode.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\NodeInfo\ServerNodeManager.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\NodeInfo\TestCashManager.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\NodeInfo\UserInfoManager.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Operation\LSLogicHandler.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Operation\LSLogicOperations.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Operation\Manager.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Operation\Scheduler.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Operation\SchedulerNode.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\QueryData\QueryData.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\QueryData\QueryResultData.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Service\Service.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Service\ServiceLS.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\TestThread.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\ThailandBillingServer\ThailandBillingGetServer.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\ThailandBillingServer\ThailandBillingSetServer.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\ThailandIPBonusServer\ThailandIPBonusOutServer.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\ThailandIPBonusServer\ThailandIPBonusServer.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\BaseClass\Handler.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\BaseClass\Operation.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeDaum_v2.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeManager.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeMgame.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeNaver.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeNexonBuy.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeParent.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeTooniland.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeWemadeBuy.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\CrashFind\BugslayerUtil.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\CrashFind\CrashHandler.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\CrashFind\DiagAssert.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\CrashFind\MemDumperValidator.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\CrashFind\MemStress.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\CrashFind\MSJDBG.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\CrashFind\SymbolEngine.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\DataBase\LogDBClient.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\FrameTimerDLL\CFrameTimer.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Local\ioLocalChina.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Local\ioLocalIndonesia.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Local\ioLocalJapan.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Local\ioLocalKorea.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Local\ioLocalManager.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Local\ioLocalParent.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Local\ioLocalTaiwan.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Local\ioLocalThailand.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Local\ioLocalUS.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\LoginManager\LoginManager.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\MgameBillingServer\MgameBillingServer.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Minidump\File.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Minidump\MiniDump.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\MonitoringServerNode\MonitoringNode.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\MonitoringServerNode\MonitoringNodeManager.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Network\ConnectAssist.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Network\GameServer.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Network\iocpHandler.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Network\ioPacketQueue.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Network\SP2Packet.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\stdafx.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\targetver.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\ThailandLoginServer\ThailandLoginServer.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\ThailandLoginServer\ThailandUser.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\ThailandOTPServer\ThailandOTPNode.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\ThailandOTPServer\ThailandOTPNodeManager.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\ThreadPool\ioThreadPool.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\ThreadPool\NexonThreadPool.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\ToonilandBillingServer\ToonilandBillingServer.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\USBillingServer\USBillingServer.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Util\cJSON.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Util\ioHashString.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Util\IORandom.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Util\md5.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Util\RingBuffer.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Util\SHA1.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\Util\Singleton.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\WemadeBillingServer\WemadeBuyServer.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\XML\ioXMLDocument.h" />
+    <ClInclude Include="..\..\src\ls_billingsvr\XML\ioXMLElement.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeDaum.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeHangame.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeNexonBuy_v2.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeWemadeCashLink.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\EtcHelpFunc.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\ioProcessChecker.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Local\ioLocalEU.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Local\ioLocalLatin.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\MainProcess.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\NexonEUSessionServer\NexonEUSessionServer.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\NexonNISMSServer\NexonNISMSServer.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\NexonServer\NexonSessionServer.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\NodeInfo\AcceptorMgrToolNode.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\NodeInfo\AcceptorMonitorNode.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\NodeInfo\AcceptorServerNode.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\NodeInfo\BillInfoManager.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\NodeInfo\GoodsManager.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\NodeInfo\MemInfoManager.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\NodeInfo\MgrToolNode.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\NodeInfo\MgrToolNodeManager.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\NodeInfo\ServerNode.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\NodeInfo\ServerNodeManager.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\NodeInfo\TestCashManager.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\NodeInfo\UserInfoManager.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Operation\LSLogicHandler.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Operation\LSLogicOperations.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Operation\Manager.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Operation\Scheduler.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Operation\SchedulerNode.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\QueryData\QueryData.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\QueryData\QueryResultData.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Service\Service.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Service\ServiceLS.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\TestThread.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\ThailandBillingServer\ThailandBillingGetServer.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\ThailandBillingServer\ThailandBillingSetServer.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\ThailandIPBonusServer\ThailandIPBonusOutServer.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\ThailandIPBonusServer\ThailandIPBonusServer.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\BaseClass\Handler.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\BaseClass\Operation.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeDaum_v2.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeManager.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeMgame.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeNaver.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeNexonBuy.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeParent.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeTooniland.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeWemadeBuy.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\DataBase\LogDBClient.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Local\ioLocalChina.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Local\ioLocalIndonesia.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Local\ioLocalJapan.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Local\ioLocalKorea.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Local\ioLocalManager.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Local\ioLocalParent.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Local\ioLocalTaiwan.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Local\ioLocalThailand.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Local\ioLocalUS.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\LoginManager\LoginManager.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\ls_billingsvr.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\MgameBillingServer\MgameBillingServer.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Minidump\File.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Minidump\MiniDump.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\MonitoringServerNode\MonitoringNode.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\MonitoringServerNode\MonitoringNodeManager.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Network\ConnectAssist.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Network\GameServer.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Network\iocpHandler.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Network\ioPacketQueue.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Network\SP2Packet.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\ThailandLoginServer\ThailandLoginServer.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\ThailandLoginServer\ThailandUser.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\ThailandOTPServer\ThailandOTPNode.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\ThailandOTPServer\ThailandOTPNodeManager.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\ThreadPool\ioThreadPool.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\ThreadPool\NexonThreadPool.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\ToonilandBillingServer\ToonilandBillingServer.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\USBillingServer\USBillingServer.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Util\cJSON.c" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Util\ioHashString.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Util\IORandom.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Util\md5.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Util\RingBuffer.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Util\SHA1.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\Util\Singleton.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\WemadeBillingServer\WemadeBuyServer.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\XML\ioXMLDocument.cpp" />
+    <ClCompile Include="..\..\src\ls_billingsvr\XML\ioXMLElement.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\src\ls_billingsvr\ls_billingsvr.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+  xmlns:SOAP-ENV="http://www.w3.org/2003/05/soap-envelope"
+  xmlns:SOAP-ENC="http://www.w3.org/2003/05/soap-encoding"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:ns1="https://nxsoap.nexon.com/remoting_version_2/">
+ <SOAP-ENV:Header>
+ </SOAP-ENV:Header>
+ <SOAP-ENV:Body>
+   <ns1:ApprovalCashChange_Channeling>
+    <ns1:chargeInfo>
+     <ns1:LiabilityType>0</ns1:LiabilityType>
+     <ns1:LiabilityTypeCode></ns1:LiabilityTypeCode>
+     <ns1:BillingId></ns1:BillingId>
+     <ns1:ChargeType>0</ns1:ChargeType>
+     <ns1:Amount></ns1:Amount>
+     <ns1:OrderId></ns1:OrderId>
+    </ns1:chargeInfo>
+    <ns1:channelingInfo>
+     <ns1:ChannelingId></ns1:ChannelingId>
+     <ns1:ChannelingUserKey></ns1:ChannelingUserKey>
+     <ns1:Amount></ns1:Amount>
+     <ns1:ItemId></ns1:ItemId>
+     <ns1:OrderId></ns1:OrderId>
+     <ns1:RemoteIP></ns1:RemoteIP>
+    </ns1:channelingInfo>
+   </ns1:ApprovalCashChange_Channeling>
+
+ </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

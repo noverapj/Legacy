@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug Static Patch|Win32">
+      <Configuration>Debug Static Patch</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Static|Win32">
+      <Configuration>Debug Static</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Static Patch|Win32">
+      <Configuration>Release Static Patch</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Static|Win32">
+      <Configuration>Release Static</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BC591588-6F20-4E92-9380-7CB846E5F22D}</ProjectGuid>
+    <SccProjectName />
+    <SccLocalPath />
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Static Patch|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Static Patch|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug Static Patch|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release Static Patch|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'">.\Bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'">.\Release Static\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'">.\Bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'">.\Debug Static\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release Static Patch|Win32'">.\Bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release Static Patch|Win32'">.\Release Static\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug Static Patch|Win32'">.\Bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug Static Patch|Win32'">.\Debug Static Patch\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;EXPORT_PAC_API;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Release/ioPac.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/IGNORE:4089 %(AdditionalOptions)</AdditionalOptions>
+      <OutputFile>.\Bin/ioPac.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>.\Bin/ioPac.pdb</ProgramDatabaseFile>
+      <ImportLibrary>.\Bin/ioPac.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Bin/ioPac.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <PreBuildEvent>
+      <Command>"c:\Program Files\TortoiseSVN\bin\SubWCRev.exe" "$(ProjectDir)\" "$(ProjectDir)TSvnVersion.tmpl" "$(ProjectDir)Version.h"</Command>
+    </PreBuildEvent>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>copy "$(OutDir)\ioPac.dll" "$(TargetDir)\..\..\..\lib\"
+copy "$(OutDir)\ioPac.pdb" "$(TargetDir)\..\..\..\lib\"
+copy "$(OutDir)\ioPac.lib" "$(TargetDir)\..\..\..\lib\"
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;EXPORT_PAC_API;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Debug/ioPac.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <ForceConformanceInForLoopScope>false</ForceConformanceInForLoopScope>
+    </ClCompile>
+    <Link>
+      <OutputFile>Bin/ioPacd.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Bin/ioPacd.pdb</ProgramDatabaseFile>
+      <ImportLibrary>.\Bin/ioPacd.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Bin/ioPac.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <PreBuildEvent>
+      <Command>"c:\Program Files\TortoiseSVN\bin\SubWCRev.exe" "$(ProjectDir)\" "$(ProjectDir)TSvnVersion.tmpl" "$(ProjectDir)Version.h"</Command>
+    </PreBuildEvent>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>copy "$(OutDir)\ioPacd.dll" "$(TargetDir)\..\..\..\lib\"
+copy "$(OutDir)\ioPacd.pdb" "$(TargetDir)\..\..\..\lib\"
+copy "$(OutDir)\ioPacd.lib" "$(TargetDir)\..\..\..\lib\"
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'">
+    <ClCompile>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PreprocessorDefinitions>STATIC_PAC_API;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <AssemblerListingLocation>.\Release Static/</AssemblerListingLocation>
+      <ObjectFileName>.\Release Static/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release Static/ioPacStatic.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Lib>
+      <OutputFile>.\Bin\ioPacStatic.lib</OutputFile>
+    </Lib>
+    <PreBuildEvent>
+      <Command>"c:\Program Files\TortoiseSVN\bin\SubWCRev.exe" "$(ProjectDir)\" "$(ProjectDir)TSvnVersion.tmpl" "$(ProjectDir)Version.h"</Command>
+    </PreBuildEvent>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>STATIC_PAC_API;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <AssemblerListingLocation>.\Debug Static/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug Static/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug Static/ioPacStaticd.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>Bin\ioPacStaticd.lib</OutputFile>
+    </Lib>
+    <PreBuildEvent>
+      <Command>"c:\Program Files\TortoiseSVN\bin\SubWCRev.exe" "$(ProjectDir)\" "$(ProjectDir)TSvnVersion.tmpl" "$(ProjectDir)Version.h"</Command>
+    </PreBuildEvent>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+      <ResourceOutputFileName>$(IntDir)%(Filename).res</ResourceOutputFileName>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Static Patch|Win32'">
+    <ClCompile>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PreprocessorDefinitions>STATIC_PAC_API;WIN32;NDEBUG;_LIB;PATCH_PAC_API;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <AssemblerListingLocation>.\Release Static Patch/</AssemblerListingLocation>
+      <ObjectFileName>.\Release Static Patch/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release Static Patch/ioPacStaticPatch.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Lib>
+      <OutputFile>.\Bin\ioPacStaticPatch.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Static Patch|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>STATIC_PAC_API;WIN32;_DEBUG;_LIB;PATCH_PAC_API;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <AssemblerListingLocation>.\Debug Static Patch/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug Static Patch/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug Static Patch/ioPacStaticPatchd.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>Bin\ioPacStaticPatchd.lib</OutputFile>
+    </Lib>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="BigPac.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EXPORT_PAC_API;WIN32;_DEBUG;_WINDOWS;_MBCS;_USRDLL;IOPAC_EXPORTS</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">EXPORT_PAC_API;WIN32;NDEBUG;_WINDOWS;_MBCS;_USRDLL;IOPAC_EXPORTS</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="ioPac.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EXPORT_PAC_API;WIN32;_DEBUG;_WINDOWS;_MBCS;_USRDLL;IOPAC_EXPORTS</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">EXPORT_PAC_API;WIN32;NDEBUG;_WINDOWS;_MBCS;_USRDLL;IOPAC_EXPORTS</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EXPORT_PAC_API;WIN32;_DEBUG;_WINDOWS;_MBCS;_USRDLL;IOPAC_EXPORTS</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">EXPORT_PAC_API;WIN32;NDEBUG;_WINDOWS;_MBCS;_USRDLL;IOPAC_EXPORTS</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="PacErrorReport.cpp" />
+    <ClCompile Include="PacUtil.cpp" />
+    <ClCompile Include="PiecePac.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EXPORT_PAC_API;WIN32;_DEBUG;_WINDOWS;_MBCS;_USRDLL;IOPAC_EXPORTS</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">EXPORT_PAC_API;WIN32;NDEBUG;_WINDOWS;_MBCS;_USRDLL;IOPAC_EXPORTS</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EXPORT_PAC_API;WIN32;_DEBUG;_WINDOWS;_MBCS;_USRDLL;IOPAC_EXPORTS</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">EXPORT_PAC_API;WIN32;NDEBUG;_WINDOWS;_MBCS;_USRDLL;IOPAC_EXPORTS</PreprocessorDefinitions>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BigPac.h" />
+    <ClInclude Include="ioPac.h" />
+    <ClInclude Include="PacErrorReport.h" />
+    <ClInclude Include="PacUtil.h" />
+    <ClInclude Include="PiecePac.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="Version.h" />
+    <ClInclude Include="ZipArchive\_features.h" />
+    <ClInclude Include="ZipArchive\_platform.h" />
+    <ClInclude Include="ZipArchive\Aes.h" />
+    <ClInclude Include="ZipArchive\BaseLibCompressor.h" />
+    <ClInclude Include="ZipArchive\BytesWriter.h" />
+    <ClInclude Include="ZipArchive\Bzip2Compressor.h" />
+    <ClInclude Include="ZipArchive\DeflateCompressor.h" />
+    <ClInclude Include="ZipArchive\DirEnumerator.h" />
+    <ClInclude Include="ZipArchive\FileFilter.h" />
+    <ClInclude Include="ZipArchive\FileInfo.h" />
+    <ClInclude Include="ZipArchive\Hmac.h" />
+    <ClInclude Include="ZipArchive\RandomPool.h" />
+    <ClInclude Include="ZipArchive\resource.h" />
+    <ClInclude Include="ZipArchive\Sha1.h" />
+    <ClInclude Include="ZipArchive\std_stl.h" />
+    <ClInclude Include="ZipArchive\stdafx.h" />
+    <ClInclude Include="ZipArchive\Wildcard.h" />
+    <ClInclude Include="ZipArchive\ZipAbstractFile.h" />
+    <ClInclude Include="ZipArchive\ZipAesCryptograph.h" />
+    <ClInclude Include="ZipArchive\ZipArchive.h" />
+    <ClInclude Include="ZipArchive\ZipAutoBuffer.h" />
+    <ClInclude Include="ZipArchive\ZipBaseException.h" />
+    <ClInclude Include="ZipArchive\ZipCallback.h" />
+    <ClInclude Include="ZipArchive\ZipCallbackProvider.h" />
+    <ClInclude Include="ZipArchive\ZipCentralDir.h" />
+    <ClInclude Include="ZipArchive\ZipCollections.h" />
+    <ClInclude Include="ZipArchive\ZipCollections_stl.h" />
+    <ClInclude Include="ZipArchive\ZipCompatibility.h" />
+    <ClInclude Include="ZipArchive\ZipCompressor.h" />
+    <ClInclude Include="ZipArchive\ZipCrc32Cryptograph.h" />
+    <ClInclude Include="ZipArchive\ZipCryptograph.h" />
+    <ClInclude Include="ZipArchive\ZipException.h" />
+    <ClInclude Include="ZipArchive\ZipExport.h" />
+    <ClInclude Include="ZipArchive\ZipExtraData.h" />
+    <ClInclude Include="ZipArchive\ZipExtraField.h" />
+    <ClInclude Include="ZipArchive\ZipFile.h" />
+    <ClInclude Include="ZipArchive\ZipFile_mfc.h" />
+    <ClInclude Include="ZipArchive\ZipFile_stl.h" />
+    <ClInclude Include="ZipArchive\ZipFileHeader.h" />
+    <ClInclude Include="ZipArchive\ZipFileMapping.h" />
+    <ClInclude Include="ZipArchive\ZipFileMapping_lnx.h" />
+    <ClInclude Include="ZipArchive\ZipFileMapping_win.h" />
+    <ClInclude Include="ZipArchive\ZipMemFile.h" />
+    <ClInclude Include="ZipArchive\ZipMutex.h" />
+    <ClInclude Include="ZipArchive\ZipMutex_win.h" />
+    <ClInclude Include="ZipArchive\ZipPathComponent.h" />
+    <ClInclude Include="ZipArchive\ZipPlatform.h" />
+    <ClInclude Include="ZipArchive\ZipStorage.h" />
+    <ClInclude Include="ZipArchive\ZipString.h" />
+    <ClInclude Include="ZipArchive\ZipString_stl.h" />
+    <ClInclude Include="ZipArchive\ZipStringStoreSettings.h" />
+    <ClInclude Include="ZipArchive\zlib\crc32.h" />
+    <ClInclude Include="ZipArchive\zlib\deflate.h" />
+    <ClInclude Include="ZipArchive\zlib\inffast.h" />
+    <ClInclude Include="ZipArchive\zlib\inffixed.h" />
+    <ClInclude Include="ZipArchive\zlib\inflate.h" />
+    <ClInclude Include="ZipArchive\zlib\inftrees.h" />
+    <ClInclude Include="ZipArchive\zlib\trees.h" />
+    <ClInclude Include="ZipArchive\zlib\zconf.h" />
+    <ClInclude Include="ZipArchive\zlib\zlib.h" />
+    <ClInclude Include="ZipArchive\zlib\zutil.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Script1.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\Version.rc2" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

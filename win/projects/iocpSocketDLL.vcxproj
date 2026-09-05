@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{259BA8A3-900D-4F7E-AFCA-AA448E37ABB1}</ProjectGuid>
+    <SccProjectName />
+    <SccLocalPath />
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../lib/</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./$(ProjectName)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../lib/</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./$(ProjectName)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">iocpSocketDDLL</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">iocpSocketDLL</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PreprocessorDefinitions>EXPORT_IOCP_SOCKET;WIN32;NDEBUG;_WINDOWS;_USRDLL;IOCPSOCKETDLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>./$(ProjectName)\$(Configuration)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>./$(ProjectName)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>./$(ProjectName)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>./$(ProjectName)\$(Configuration)\</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <AdditionalOptions>/Ylsymbol %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Kernel32.lib;%(AdditionalDependencies);</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>../../../build/zone_dev/pdb/$(ProjectName).pdb</ProgramDatabaseFile>
+      <ImportLibrary>
+      </ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>../../lib</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\bin/iocpSocketDLL.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>"../../Tools/VCSGen.exe"  "../../src/iocpSocketDLL/" "../../src/iocpSocketDll/TSvnVersion.tmpl" "../../src/iocpSocketDll/Version.h"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>EXPORT_IOCP_SOCKET;WIN32;_DEBUG;_WINDOWS;_USRDLL;IOCPSOCKETDLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>./$(ProjectName)\$(Configuration)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>./$(ProjectName)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>./$(ProjectName)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>./$(ProjectName)\$(Configuration)\</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+      <AdditionalOptions>/Ylsymbol %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>../../../build/zone_dev/pdb/$(ProjectName)d.pdb</ProgramDatabaseFile>
+      <ImportLibrary>
+      </ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>../../lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\bin/iocpSocketDLL.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>"../../Tools/VCSGen.exe"  "../../src/iocpSocketDLL/" "../../src/iocpSocketDll/TSvnVersion.tmpl" "../../src/iocpSocketDll/Version.h"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\iocpSocketDLL\Encrypt\cryption.cpp" />
+    <ClCompile Include="..\..\src\iocpSocketDLL\Encrypt\FSM.cpp" />
+    <ClCompile Include="..\..\src\iocpSocketDLL\Encrypt\md5.cpp" />
+    <ClCompile Include="..\..\src\iocpSocketDLL\iocpSocketDLL.cpp" />
+    <ClCompile Include="..\..\src\iocpSocketDLL\IOCP\CompletionHandler.cpp" />
+    <ClCompile Include="..\..\src\iocpSocketDLL\IOCP\LogicThread.cpp" />
+    <ClCompile Include="..\..\src\iocpSocketDLL\IOCP\UDPCompletionHandler.cpp" />
+    <ClCompile Include="..\..\src\iocpSocketDLL\IOCP\UDPWorkerThread.cpp" />
+    <ClCompile Include="..\..\src\iocpSocketDLL\IOCP\WorkerThread.cpp" />
+    <ClCompile Include="..\..\src\iocpSocketDLL\Processor\Processor.cpp" />
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\AcceptorNode.cpp" />
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\cIocpQueue.cpp" />
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\ConnectNode.cpp" />
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\MPSCQueue.cpp" />
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\MPSCRecvQueue.cpp" />
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\Packet.cpp" />
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\PacketPool.cpp" />
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\PacketQueue.cpp" />
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\ReceiveIO.cpp" />
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\RecvQueue.cpp" />
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\SendBuffer.cpp" />
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\SendBufferManager.cpp" />
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\SendIO.cpp" />
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\ServerSocket.cpp" />
+    <ClCompile Include="..\..\src\iocpSocketDLL\ThreadModules\SuperParent.cpp" />
+    <ClCompile Include="..\..\src\iocpSocketDLL\ThreadModules\Thread.cpp" />
+    <ClCompile Include="..\..\src\iocpSocketDLL\ThreadModules\ThreadManager.cpp" />
+    <ClCompile Include="..\..\src\iocpSocketDLL\ThreadModules\ThreadSync.cpp" />
+    <ClCompile Include="..\..\src\iocpSocketDLL\Util\NetworkSecurity.cpp" />
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\UDPNode.cpp" />
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\ioUDPSecurity.cpp" />
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\ioUDPModule.cpp" />
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\BufferPool.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\include\cCriticalSection.h" />
+    <ClInclude Include="..\..\src\include\common.h" />
+    <ClInclude Include="..\..\src\include\MemPooler.h" />
+    <ClInclude Include="..\..\src\include\MPMCMemPool.h" />
+    <ClInclude Include="..\..\src\include\MPMCQueue.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\Encrypt\cryption.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\Encrypt\FSM.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\Encrypt\md5.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\iocpSocketDLL.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\IOCP\CompletionHandler.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\IOCP\LogicThread.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\IOCP\WorkerThread.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\Processor\Processor.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\resource.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\AcceptorNode.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\cIocpQueue.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\ConnectNode.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\IOCP.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\MPSCQueue.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\MPSCRecvQueue.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\Packet.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\PacketPool.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\PacketQueue.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\ReceiveIO.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\RecvQueue.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\SendBuffer.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\SendBufferManager.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\SendIO.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\ServerSocket.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\ThreadModules\SuperParent.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\ThreadModules\Thread.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\ThreadModules\ThreadManager.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\ThreadModules\ThreadSync.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\Util\NetworkSecurity.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\UserTypeDefine.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\UDPNode.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\ioUDPSecurity.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\IOCP\UDPCompletionHandler.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\IOCP\UDPWorkerThread.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\ioUDPModule.h" />
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\BufferPool.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\src\iocpSocketDLL\iocpSocket.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

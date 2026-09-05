@@ -1,0 +1,33 @@
+[event_3]
+
+active = 1
+type   = 3
+
+start_year  = 2012
+start_month = 11
+start_date  = 3
+start_hour  = 0
+
+end_year  = 2012
+end_month = 11
+end_date  = 3
+end_hour  = 24
+
+max_value = 7
+; bonus로 지급되는 경험치 % , 20이면 20%의 경험치를 더준다.
+value_1   = 300
+
+; 요일 (일 월 화 수 목 금 토 : 1 - 이벤트 없음, 2 - 이벤트 있음) 
+value_2   = 1111112
+; 시작 & 종료 시간
+value_3   = 12
+value_4   = 13
+
+value_5   = 1111111
+value_6   = 18
+value_7   = 20
+
+;// 이벤트를 사용하는 채널링 타입 ( -1 : 모두 이용 / 0 : 일반 유저만 이용 / 300 : mgame 유저만 이용 )
+max_use_channeling_type = 1
+use_channeling_type1    = -1
+

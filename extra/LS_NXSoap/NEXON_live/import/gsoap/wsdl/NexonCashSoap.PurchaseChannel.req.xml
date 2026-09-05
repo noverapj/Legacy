@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+  xmlns:SOAP-ENV="http://www.w3.org/2003/05/soap-envelope"
+  xmlns:SOAP-ENC="http://www.w3.org/2003/05/soap-encoding"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:ns1="https://nxsoap.nexon.com/remoting_version_2/">
+ <SOAP-ENV:Header>
+  <ns1:SecurityHeader>
+   <ns1:Created></ns1:Created>
+   <ns1:HashKey></ns1:HashKey>
+   <ns1:Data></ns1:Data>
+   <ns1:Key>0</ns1:Key>
+   <ns1:CheckSum>0</ns1:CheckSum>
+  </ns1:SecurityHeader>
+ </SOAP-ENV:Header>
+ <SOAP-ENV:Body>
+   <ns1:PurchaseChannel>
+    <ns1:liabilityType>0</ns1:liabilityType>
+    <ns1:nexonID></ns1:nexonID>
+    <ns1:transactionID></ns1:transactionID>
+    <ns1:productType>0</ns1:productType>
+    <ns1:amount></ns1:amount>
+    <ns1:productCode></ns1:productCode>
+    <ns1:gameID></ns1:gameID>
+    <ns1:data2></ns1:data2>
+    <ns1:data3></ns1:data3>
+    <ns1:reason>0</ns1:reason>
+    <ns1:actionUserIP></ns1:actionUserIP>
+   </ns1:PurchaseChannel>
+
+ </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

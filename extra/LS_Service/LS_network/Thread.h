@@ -1,0 +1,11 @@
+#pragma once
+
+
+typedef enum E_THREADID
+{
+	E_THREADID_WORKER = 1,
+	E_THREADID_COMMAND,
+	E_THREADID_CONNECTOR
+};
+
+

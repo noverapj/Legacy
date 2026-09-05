@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SuvivalProject2", "..\src\LSClient\SurvivalProject2.vcxproj", "{95A446A1-1CC0-44B6-AE87-E041EEFDF1CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		Shipping|Win32 = Shipping|Win32
+		ShippingHackShield|Win32 = ShippingHackShield|Win32
+		ShippingNProtect|Win32 = ShippingNProtect|Win32
+		ShippingXigncode|Win32 = ShippingXigncode|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95A446A1-1CC0-44B6-AE87-E041EEFDF1CD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{95A446A1-1CC0-44B6-AE87-E041EEFDF1CD}.Debug|Win32.Build.0 = Debug|Win32
+		{95A446A1-1CC0-44B6-AE87-E041EEFDF1CD}.Release|Win32.ActiveCfg = Release|Win32
+		{95A446A1-1CC0-44B6-AE87-E041EEFDF1CD}.Release|Win32.Build.0 = Release|Win32
+		{95A446A1-1CC0-44B6-AE87-E041EEFDF1CD}.Shipping|Win32.ActiveCfg = Shipping|Win32
+		{95A446A1-1CC0-44B6-AE87-E041EEFDF1CD}.Shipping|Win32.Build.0 = Shipping|Win32
+		{95A446A1-1CC0-44B6-AE87-E041EEFDF1CD}.ShippingHackShield|Win32.ActiveCfg = ShippingHackShield|Win32
+		{95A446A1-1CC0-44B6-AE87-E041EEFDF1CD}.ShippingHackShield|Win32.Build.0 = ShippingHackShield|Win32
+		{95A446A1-1CC0-44B6-AE87-E041EEFDF1CD}.ShippingNProtect|Win32.ActiveCfg = ShippingNProtect|Win32
+		{95A446A1-1CC0-44B6-AE87-E041EEFDF1CD}.ShippingNProtect|Win32.Build.0 = ShippingNProtect|Win32
+		{95A446A1-1CC0-44B6-AE87-E041EEFDF1CD}.ShippingXigncode|Win32.ActiveCfg = ShippingXigncode|Win32
+		{95A446A1-1CC0-44B6-AE87-E041EEFDF1CD}.ShippingXigncode|Win32.Build.0 = ShippingXigncode|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

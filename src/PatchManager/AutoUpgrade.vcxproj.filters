@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{7a6ffa3c-95fb-4285-a809-020a168fdded}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{14d8921b-e367-422c-aabb-0304c9f80ea1}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{34203ae7-fb32-4d35-bcb5-7acf0fe5bdf5}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="ThreadModules">
+      <UniqueIdentifier>{f7a4523e-0155-49ca-b83b-8cf0794166ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UTIL">
+      <UniqueIdentifier>{6887f93d-80e6-46f5-8031-6c56a2c4a89e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FTP">
+      <UniqueIdentifier>{3ef95585-2279-4a44-9e78-2ef1264e86b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CRC32">
+      <UniqueIdentifier>{860e8863-2475-4ba3-b2f0-cad182d9a91b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Local">
+      <UniqueIdentifier>{b46af996-1526-4d7e-84a9-a20ffcb66006}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MiniZip">
+      <UniqueIdentifier>{34c73396-0bec-49ea-913b-0f3097de4aeb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MiniZip\Zlib">
+      <UniqueIdentifier>{19002925-1b77-4ec2-9c68-1b6caa127306}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutoUpgrade.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoUpgradeDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FtpApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HttpApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InterfaceManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PatchManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadModules\SuperParent.cpp">
+      <Filter>ThreadModules</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadModules\Thread.cpp">
+      <Filter>ThreadModules</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadModules\ThreadManager.cpp">
+      <Filter>ThreadModules</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadModules\ThreadSync.cpp">
+      <Filter>ThreadModules</Filter>
+    </ClCompile>
+    <ClCompile Include="ioINILoaderAU.cpp">
+      <Filter>UTIL</Filter>
+    </ClCompile>
+    <ClCompile Include="FTP\BlockingSocket.cpp">
+      <Filter>FTP</Filter>
+    </ClCompile>
+    <ClCompile Include="FTP\FTPClient.cpp">
+      <Filter>FTP</Filter>
+    </ClCompile>
+    <ClCompile Include="FTP\FTPDataTypes.cpp">
+      <Filter>FTP</Filter>
+    </ClCompile>
+    <ClCompile Include="FTP\FTPFileState.cpp">
+      <Filter>FTP</Filter>
+    </ClCompile>
+    <ClCompile Include="FTP\FTPListParse.cpp">
+      <Filter>FTP</Filter>
+    </ClCompile>
+    <ClCompile Include="Crc32Static.cpp">
+      <Filter>CRC32</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioLocalChina.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioLocalGermany.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioLocalIndonesia.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioLocalJapan.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioLocalKorea.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioLocalManager.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioLocalParent.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioLocalTaiwan.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioLocalThailand.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioLocalUS.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioSingleton.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioLocalEu.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioLocalLatin.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioLocalSingapore.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="EditDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GetTextDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MiniZip\ioapi.c">
+      <Filter>MiniZip</Filter>
+    </ClCompile>
+    <ClCompile Include="MiniZip\unzip.c">
+      <Filter>MiniZip</Filter>
+    </ClCompile>
+    <ClCompile Include="MiniZip\Zlib\adler32.c">
+      <Filter>MiniZip\Zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="MiniZip\Zlib\crc32.c">
+      <Filter>MiniZip\Zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="MiniZip\Zlib\infback.c">
+      <Filter>MiniZip\Zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="MiniZip\Zlib\inffast.c">
+      <Filter>MiniZip\Zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="MiniZip\Zlib\inflate.c">
+      <Filter>MiniZip\Zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="MiniZip\Zlib\inftrees.c">
+      <Filter>MiniZip\Zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="MiniZip\Zlib\zutil.c">
+      <Filter>MiniZip\Zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioLocalBrazil.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="AutoUpgrade.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutoUpgrade.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AutoUpgradeDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FtpApp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HttpApp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InterfaceManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PatchManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadModules\SuperParent.h">
+      <Filter>ThreadModules</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadModules\Thread.h">
+      <Filter>ThreadModules</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadModules\ThreadManager.h">
+      <Filter>ThreadModules</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadModules\ThreadSync.h">
+      <Filter>ThreadModules</Filter>
+    </ClInclude>
+    <ClInclude Include="ioINILoaderAU.h">
+      <Filter>UTIL</Filter>
+    </ClInclude>
+    <ClInclude Include="FTP\BlockingSocket.h">
+      <Filter>FTP</Filter>
+    </ClInclude>
+    <ClInclude Include="FTP\Definements.h">
+      <Filter>FTP</Filter>
+    </ClInclude>
+    <ClInclude Include="FTP\FTPClient.h">
+      <Filter>FTP</Filter>
+    </ClInclude>
+    <ClInclude Include="FTP\FTPDataTypes.h">
+      <Filter>FTP</Filter>
+    </ClInclude>
+    <ClInclude Include="FTP\FTPFileState.h">
+      <Filter>FTP</Filter>
+    </ClInclude>
+    <ClInclude Include="FTP\FTPListParse.h">
+      <Filter>FTP</Filter>
+    </ClInclude>
+    <ClInclude Include="FTP\rc_smart_ptr.h">
+      <Filter>FTP</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>CRC32</Filter>
+    </ClInclude>
+    <ClInclude Include="Crc32Static.h">
+      <Filter>CRC32</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioLocalChina.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioLocalGermany.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioLocalIndonesia.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioLocalJapan.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioLocalKorea.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioLocalManager.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioLocalParent.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioLocalTaiwan.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioLocalThailand.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioLocalUS.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioSingleton.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioLocalEu.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioLocalLatin.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioLocalSingapore.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="EditDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GetTextDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MiniZip\ioapi.h">
+      <Filter>MiniZip</Filter>
+    </ClInclude>
+    <ClInclude Include="MiniZip\iowin32.h">
+      <Filter>MiniZip</Filter>
+    </ClInclude>
+    <ClInclude Include="MiniZip\unzip.h">
+      <Filter>MiniZip</Filter>
+    </ClInclude>
+    <ClInclude Include="MiniZip\zconf.h">
+      <Filter>MiniZip</Filter>
+    </ClInclude>
+    <ClInclude Include="MiniZip\Zlib\crc32.h">
+      <Filter>MiniZip\Zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="MiniZip\Zlib\inffast.h">
+      <Filter>MiniZip\Zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="MiniZip\Zlib\inffixed.h">
+      <Filter>MiniZip\Zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="MiniZip\Zlib\inflate.h">
+      <Filter>MiniZip\Zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="MiniZip\Zlib\inftrees.h">
+      <Filter>MiniZip\Zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="MiniZip\Zlib\zconf.h">
+      <Filter>MiniZip\Zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="MiniZip\Zlib\zlib.h">
+      <Filter>MiniZip\Zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="MiniZip\Zlib\zutil.h">
+      <Filter>MiniZip\Zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioLocalBrazil.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\AutoUpgrade.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Version.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

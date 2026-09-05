@@ -1,0 +1,812 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D9875B43-CC67-41E9-AD48-15232FAF201D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ls_gamesvr</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>../../../build/Server/ls_gamesvr/</OutDir>
+    <IntDir>./$(ProjectName)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)D</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>../../../build/Server/ls_gamesvr/</OutDir>
+    <IntDir>./$(ProjectName)\$(Configuration)\</IntDir>
+    <IncludePath>C:\Program Files\boost\boost_1_50\;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files\boost\boost_1_50\lib;$(LibraryPath)</LibraryPath>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>__OHTG_BILLING_VALOFE_ADD__;__OHTG_PRACTICE_MERGE_WORK__;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>./$(ProjectName)\$(Configuration)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>./$(ProjectName)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>./$(ProjectName)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>./$(ProjectName)\$(Configuration)\</ProgramDataBaseFileName>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>../../src/ls_gamesvr;C:\Boost\boost_1_84_0</AdditionalIncludeDirectories>
+      <MinimalRebuild>false</MinimalRebuild>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalOptions>-Zm120 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../../lib;C:\Boost\boost_1_84_0\lib32-msvc-14.3</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>../../../build/zone_dev/pdb/$(TargetName)d.pdb</ProgramDatabaseFile>
+      <AdditionalDependencies>INID.lib;logD.lib;Psapi.lib;wininet.lib;dbghelp.lib;CrashFind.lib;winmm.lib;ws2_32.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);FrameTimerDDLL.lib;iocpSocketDDLL.lib;NMCrypt.lib</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries);libc.lib;</IgnoreSpecificDefaultLibraries>
+      <StackReserveSize>10485760</StackReserveSize>
+      <AdditionalOptions>/NODEFAULTLIB:msvcrt %(AdditionalOptions)</AdditionalOptions>
+      <StackReserveSize>10000000</StackReserveSize>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>"../../Tools/VCSGen.exe"  "../../src/ls_gamesvr/" "../../src/ls_gamesvr/TSvnVersion.tmpl" "../../src/ls_gamesvr/Version.h"
+REM "$(ProjectDir)..\..\src\ls_gamesvr\CTPKTDefineToStringParser.exe" "$(ProjectDir)..\..\src\ls_gamesvr\Protocol.h" "$(ProjectDir)..\..\src\ls_gamesvr\ProtocolHelper.h"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <PreprocessorDefinitions>__OHTG_BILLING_VALOFE_ADD__;__OHTG_PCBANG_EVENT_CASH__;__OHTG_PRACTICE_MERGE_WORK__;WIN32;NDEBUG;_CONSOLE;_AFXDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>./$(ProjectName)\$(Configuration)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>./$(ProjectName)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>./$(ProjectName)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>./$(ProjectName)\$(Configuration)\</ProgramDataBaseFileName>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+      <AssemblerOutput>All</AssemblerOutput>
+      <BrowseInformation>false</BrowseInformation>
+      <StringPooling>true</StringPooling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <AdditionalIncludeDirectories>../../src/ls_gamesvr;C:\Boost\boost_1_84_0</AdditionalIncludeDirectories>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>../../lib;C:\Boost\boost_1_84_0\lib32-msvc-14.3</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>../../../build/zone_dist/pdb/$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalDependencies>INI.lib;log.lib;Psapi.lib;wininet.lib;dbghelp.lib;CrashFind.lib;winmm.lib;ws2_32.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);FrameTimerDLL.lib;iocpSocketDLL.lib;NMCrypt.lib</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries);libc.lib;</IgnoreSpecificDefaultLibraries>
+      <StackReserveSize>10485760</StackReserveSize>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetDir)\$(TargetName)$(TargetExt)" "$(TargetDir)\..\..\zone_dist\ls_gamesvr\$(TargetName)$(TargetExt)"
+copy "$(TargetDir)\$(TargetName)$(TargetExt)" "$(TargetDir)\..\..\zone_dist\ls_gamesvr\$(TargetName)1$(TargetExt)"
+copy "$(TargetDir)\$(TargetName)$(TargetExt)" "$(TargetDir)\..\..\zone_dist\ls_gamesvr\$(TargetName)2$(TargetExt)"</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>"../../Tools/VCSGen.exe"  "../../src/ls_gamesvr/" "../../src/ls_gamesvr/TSvnVersion.tmpl" "../../src/ls_gamesvr/Version.h"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\..\src\ls_gamesvr\CrashFind.dll" />
+    <None Include="..\..\src\ls_gamesvr\dbghelp.dll" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="../../src/ls_gamesvr/common.h" />
+    <ClInclude Include="../../src/ls_gamesvr/Manager.h" />
+    <ClInclude Include="../../src/ls_gamesvr/MiniDump\File.h" />
+    <ClInclude Include="../../src/ls_gamesvr/MiniDump\MiniDump.h" />
+    <ClInclude Include="../../src/ls_gamesvr/Network\GameServer.h" />
+    <ClInclude Include="../../src/ls_gamesvr/Network\iocpHandler.h" />
+    <ClInclude Include="../../src/ls_gamesvr/Network\ioPacketQueue.h" />
+    <ClInclude Include="../../src/ls_gamesvr/Network\ioServerSecurity.h" />
+    <ClInclude Include="../../src/ls_gamesvr/Network\SP2Packet.h" />
+    <ClInclude Include="../../src/ls_gamesvr/NodeInfo\Scheduler.h" />
+    <ClInclude Include="../../src/ls_gamesvr/NodeInfo\SchedulerNode.h" />
+    <ClInclude Include="../../src/ls_gamesvr/Service.h" />
+    <ClInclude Include="../../src/ls_gamesvr/ServiceLS.h" />
+    <ClInclude Include="../../src/ls_gamesvr/stdafx.h" />
+    <ClInclude Include="../../src/ls_gamesvr/targetver.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\BillingRelayServer\BillingRelayServer.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\BoostPooler.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Channeling\ioChannelingNodeDaum.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Channeling\ioChannelingNodeHangame.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Channeling\ioChannelingNodeHappyTuk.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Channeling\ioChannelingNodeManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Channeling\ioChannelingNodeMgame.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Channeling\ioChannelingNodeNaver.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Channeling\ioChannelingNodeNexonBuy.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Channeling\ioChannelingNodeParent.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Channeling\ioChannelingNodeSteam.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Channeling\ioChannelingNodeTooniland.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Channeling\ioChannelingNodeValofe.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Channeling\ioChannelingNodeWemadeBuy.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\CrashFind\BugslayerUtil.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\CrashFind\CrashHandler.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\CrashFind\DiagAssert.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\CrashFind\MemDumperValidator.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\CrashFind\MemStress.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\CrashFind\MSJDBG.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\CrashFind\SymbolEngine.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\DataBase\DBClient.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\DataBase\LogDBClient.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\DataHeaders\BaseDataManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\DataHeaders\ioExcelReader.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\DataHeaders\ioTableMgr.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\DataHeaders\LSC_Excavation_grade.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\DataHeaders\LSC_Excavation_info.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\DataHeaders\LSC_heroitem_info.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\DataHeaders\LSC_heroweapon.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\DataHeaders\LSC_New_Gashapon_info.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\DataHeaders\LSC_Practice.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Define.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Encode\KISA_SEED_CBC.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Encode\seed.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\EtcHelpFunc.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Filter\WordFilterManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\HackCheck.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\HackShield\AntiCpXSvr.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\HackShield\ioHackShield.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\INILoader\BaseDataManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\ioCriticalError.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\ioEtcLogManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\ioPacketChecker.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\ioPacketStatistics.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\ioProcessChecker.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\IPBlocker\cFile.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\IPBlocker\ioIP.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\IPBlocker\ioIPBlocker.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\IPBlocker\IPBlockerManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Languages\ioLanguages.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Local\ioLocalBrazil.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Local\ioLocalChina.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Local\ioLocalChinaLanguage.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Local\ioLocalIndonesia.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Local\ioLocalJapan.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Local\ioLocalJapanLanguage.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Local\ioLocalKorea.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Local\ioLocalManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Local\ioLocalParent.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Local\ioLocalPhilippine.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Local\ioLocalTaiwan.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Local\ioLocalTaiwanLanguage.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Local\ioLocalThailand.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Local\ioLocalThailandLanguage.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Local\ioLocalUS.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\MainProcess.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\MainServerNode\MainServerNode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\MonitoringServerNode\MonitoringNode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\MonitoringServerNode\MonitoringNodeManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Netmarble\NMCrypt.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Network\GameSvrUDPModule.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Network\GameSvrUDPNode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Network\ioBroadCastRelayModule.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\AcceptorMonitorNode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\AcceptorServerNode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\AcceptorUserNode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\Accessory.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\AccessoryManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\AnnounceMgr.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ArenaMode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ArenaModeHelp.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ArenaModeManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\BattleMode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\BattleModeHelp.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\BattleRoomCopyNode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\BattleRoomManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\BattleRoomNode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\BattleRoomParent.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\BlockNode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\BonusCashInfo.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\BonusCashManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\BossMode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\BossModeHelp.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\CardMatching.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\CardMatchingManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\CatchMode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\CatchModeHelp.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\CatchRunningManMode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\CBTMode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ChannelCopyNode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ChannelNode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ChannelNodeManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ChannelParent.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\CompensationMgr.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\CopyNodeParent.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\Costume.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\CostumeManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\CostumeShopGoodsManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\CustomMedal.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\DefaultTitleData.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\DiceGame.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\DiceGameManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\DoubleCrownMode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\DoubleCrownModeHelp.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\DungeonAMode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\FarmingMode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\FightClubMode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\FightClubModeHelp.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\FishingManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\FlagMode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\FlagModeHelp.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\FootballMode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\FootballModeHelp.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\GangsiMode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\GangsiModeHelp.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\GrowthManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\HomeModeBlockManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioBlockPropertyManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\HouseMode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioCustomMedal.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioExcavationManager_Ex.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioHeroManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioOakBarrel.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioOakBarrelManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioPirateRoulette.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioPirateRouletteManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioRandomBoxManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioSpiritManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioTimeGate.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioTimeGateManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioUserAccessory.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioUserCoin.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioUserExcavation.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioUserMatch.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioUserPractice.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioUserSpirit.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\MatchManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\PersonalHomeInfo.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\PersonalHQInven.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\PracticeManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\PracticeMode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\RaidMode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ServerGuildInvenInfo.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\GuildRoomsBlockManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\GuildRoomInfos.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\GuildRewardManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\HeadquartersMode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\HeadquartersModeHelp.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\HeroMatchMode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\HeroMatchModeHelp.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\HeroRankManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\HiddenkingMode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\HiddenkingModeHelp.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioAlchemicInventory.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioAlchemicMgr.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioAttendanceRewardManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioAward.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioBingo.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioBingoManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioBlockDBInfos.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioCharacter.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioCharAwakeManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioCharRentalData.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioClassExpert.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioClover.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioDBDataController.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioDecorationPrice.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioEquipSlot.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioEtcItem.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioEtcItemHelp.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioEtcItemManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioEventManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioEventUserManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioEventUserNode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioExcavationManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioExerciseCharIndexManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioExtraItemGrowthCatalystMgr.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioExtraItemInfoManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioFirstSoldierManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioFriend.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioINIManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioInventory.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioItemCompoundManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioItemInfoManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioItemInitializeControl.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioItemRechargeManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioMedalItemInfoManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioMission.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioMonsterMapLoadMgr.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioMyLevelMgr.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioPetGashaponManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioPetInfoManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioPowerUpManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioPresentHelper.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioQuest.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioQuestManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioRelativeGradeManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioRelayGroupInfoMgr.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioRelayRoomInfoMgr.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioSaleManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioSetItemInfo.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioSetItemInfoManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioShutDownManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioSuperGashaponMgr.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioTimeStamp.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioUserAttendance.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioUserCostume.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioUserEtcItem.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioUserExpandMedalSlot.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioUserExtraItem.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioUserFishingItem.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioUserGrowthLevel.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioUserGuild.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioUserMedalItem.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioUserPcRoom.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioUserPet.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioUserPresent.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioUserRecord.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioUserRollBook.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioUserSelectShutDown.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioUserSubscription.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ioUserTournament.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\Item.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\KickOutVoteHelp.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\LadderTeamCopyNode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\LadderTeamManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\LadderTeamNode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\LadderTeamParent.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\LevelMatchManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\LicenseManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\MemoNodeManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\Mission.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\MissionData.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\MissionManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\Mode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ModeCreator.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ModeDefine.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ModeHelp.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ModeItemCrator.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ModeSelectManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\MonsterSurvivalMode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\MonsterSurvivalModeHelp.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\NewPublicIDRefresher.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\NodeHelpStructDefine.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\QuestVariety.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\RollBookManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\Room.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\RoomCopyNode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\RoomNodeManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\RoomParent.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ServerNode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ServerNodeManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ShuffleBonusMode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ShuffleBonusModeHelp.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ShuffleRoomCopyNode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ShuffleRoomManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ShuffleRoomNode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ShuffleRoomParent.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ShuffleRoomReserveMgr.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\ShuffleUserGroup.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\SpecialGoodsManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\SuccessionMode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\SuccessionModeHelp.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\SurvivalMode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\SurvivalModeHelp.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\SymbolMode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\SymbolModeHelp.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\TeamSurvivalAIMode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\TeamSurvivalMode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\TeamSurvivalModeHelp.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\TestNodeManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\TimeCashManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\UnderwearMode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\TradeSyncManger.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\UserBonusCash.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\UserTimeCashTable.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\TitleData.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\TitleManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\TitleTriggerBase.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\TitleTriggerExtend.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\TowerDefMode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\TournamentManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\TradeInfoManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\TrainingMode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\TrainingModeHelp.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\TrainingModeRoulette.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\MissionTriggerBase.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\MissionTriggerExtend.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\User.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\UserCopyNode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\UserNodeManager.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\UserParent.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\UserTitleInfo.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\NodeInfo\UserTitleInven.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\nProtect\ggsrv25.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\nProtect\ioNProtect.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Protocol.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\ProtocolHelper.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\QueryData\QueryData.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\QueryData\QueryResultData.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\resource.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Shutdown.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Util\cBuffer.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Util\cSerialize.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Util\ioEncrypted.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Util\ioHashString.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Util\IORandom.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Util\ioStringConverter.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Util\ioVectorIterator.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Util\md5.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Util\RingBuffer.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Util\Singleton.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\WemadeLog\ioLogSerialize.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\WemadeLog\ioWemadeLogger.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\WemadeLog\WemadeLog.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\XignCode\ioXignCode.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\XignCode\xtypes.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\XignCode\zwave_sdk_errors.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\XignCode\zwave_sdk_helper.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\XignCode\zwave_sdk_linker.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Xtrap\ioXtrap.h" />
+    <ClInclude Include="..\..\src\ls_gamesvr\Xtrap\XTrap4Server.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../src/ls_gamesvr/ls_gamesvr.cpp" />
+    <ClCompile Include="../../src/ls_gamesvr/Manager.cpp" />
+    <ClCompile Include="../../src/ls_gamesvr/MiniDump\File.cpp" />
+    <ClCompile Include="../../src/ls_gamesvr/MiniDump\MiniDump.cpp" />
+    <ClCompile Include="../../src/ls_gamesvr/Network\GameServer.cpp" />
+    <ClCompile Include="../../src/ls_gamesvr/Network\iocpHandler.cpp" />
+    <ClCompile Include="../../src/ls_gamesvr/Network\ioPacketQueue.cpp" />
+    <ClCompile Include="../../src/ls_gamesvr/Network\ioServerSecurity.cpp" />
+    <ClCompile Include="../../src/ls_gamesvr/Network\SP2Packet.cpp" />
+    <ClCompile Include="../../src/ls_gamesvr/NodeInfo\Scheduler.cpp" />
+    <ClCompile Include="../../src/ls_gamesvr/NodeInfo\SchedulerNode.cpp" />
+    <ClCompile Include="../../src/ls_gamesvr/Service.cpp" />
+    <ClCompile Include="../../src/ls_gamesvr/ServiceLS.cpp" />
+    <ClCompile Include="../../src/ls_gamesvr/stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_gamesvr\BillingRelayServer\BillingRelayServer.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Channeling\ioChannelingNodeDaum.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Channeling\ioChannelingNodeHangame.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Channeling\ioChannelingNodeHappyTuk.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Channeling\ioChannelingNodeManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Channeling\ioChannelingNodeMgame.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Channeling\ioChannelingNodeNaver.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Channeling\ioChannelingNodeNexonBuy.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Channeling\ioChannelingNodeParent.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Channeling\ioChannelingNodeSteam.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Channeling\ioChannelingNodeTooniland.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Channeling\ioChannelingNodeValofe.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Channeling\ioChannelingNodeWemadeBuy.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\DataBase\DBClient.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\DataBase\LogDBClient.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\DataHeaders\ioExcelReader.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\DataHeaders\ioTableMgr.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Encode\KISA_SEED_CBC.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Encode\seed.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Encode\seedenc.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\EtcHelpFunc.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Filter\WordFilterManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\HackCheck.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\HackShield\ioHackShield.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\ioCriticalError.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\ioEtcLogManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\ioPacketChecker.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\ioPacketStatistics.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\ioProcessChecker.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\IPBlocker\cFile.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\IPBlocker\ioIP.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\IPBlocker\ioIPBlocker.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\IPBlocker\IPBlockerManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Languages\ioLanguages.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Local\ioLocalBrazil.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Local\ioLocalChina.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Local\ioLocalIndonesia.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Local\ioLocalJapan.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Local\ioLocalKorea.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Local\ioLocalManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Local\ioLocalParent.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Local\ioLocalPhilippine.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Local\ioLocalTaiwan.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Local\ioLocalThailand.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Local\ioLocalUS.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\MainProcess.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\MainServerNode\MainServerNode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\MonitoringServerNode\MonitoringNode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\MonitoringServerNode\MonitoringNodeManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Network\GameSvrUDPModule.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Network\GameSvrUDPNode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Network\ioBroadCastRelayModule.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\AcceptorMonitorNode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\AcceptorServerNode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\AcceptorUserNode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\Accessory.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\AccessoryManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\AnnounceMgr.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ArenaMode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ArenaModeManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\BattleMode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\BattleRoomCopyNode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\BattleRoomManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\BattleRoomNode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\BattleRoomParent.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\BlockNode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\BonusCashInfo.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\BonusCashManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\BossMode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\CardMatching.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\CardMatchingManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\CatchMode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\CatchRunningManMode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\CBTMode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ChannelCopyNode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ChannelNode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ChannelNodeManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ChannelParent.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\CompensationMgr.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\CopyNodeParent.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\Costume.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\CostumeManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\CostumeShopGoodsManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\CustomMedal.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\DefaultTitleData.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\DiceGame.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\DiceGameManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\DoubleCrownMode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\DungeonAMode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\FarmingMode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\FightClubMode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\FishingManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\FlagMode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\FootballMode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\GangsiMode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\GrowthManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\HomeModeBlockManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioBlockPropertyManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\HouseMode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioCustomMedal.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioExcavationManager_Ex.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioHeroManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioOakBarrel.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioOakBarrelManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioPirateRoulette.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioPirateRouletteManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioRandomBoxManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioSpiritManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioTimeGate.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioTimeGateManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioUserAccessory.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioUserCoin.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioUserExcavation.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioUserMatch.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioUserPractice.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioUserSpirit.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\MatchManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\PersonalHomeInfo.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\PersonalHQInven.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\PracticeManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\PracticeMode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\RaidMode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ServerGuildInvenInfo.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\GuildRoomsBlockManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\GuildRoomInfos.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\GuildRewardManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\HeadquartersMode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\HeroMatchMode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\HeroRankManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\HiddenkingMode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioAlchemicInventory.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioAlchemicMgr.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioAttendanceRewardManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioAward.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioBingo.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioBingoManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioBlockDBInfos.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioCharacter.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioCharAwakeManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioCharRentalData.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioClassExpert.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioClover.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioDecorationPrice.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioEquipSlot.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioEtcItem.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioEtcItemManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioEventManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioEventUserManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioEventUserNode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioExcavationManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioExerciseCharIndexManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioExtraItemGrowthCatalystMgr.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioExtraItemInfoManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioFirstSoldierManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioFriend.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioINIManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioInventory.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioItemCompoundManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioItemInfoManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioItemInitializeControl.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioItemRechargeManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioMedalItemInfoManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioMission.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioMonsterMapLoadMgr.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioMyLevelMgr.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioPetGashaponManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioPetInfoManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioPowerUpManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioPresentHelper.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioQuest.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioQuestManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioRelativeGradeManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioRelayGroupInfoMgr.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioRelayRoomInfoMgr.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioSaleManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioSetItemInfo.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioSetItemInfoManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioShutDownManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioSuperGashaponMgr.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioTimeStamp.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioUserAttendance.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioUserCostume.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioUserEtcItem.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioUserExpandMedalSlot.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioUserExtraItem.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioUserFishingItem.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioUserGrowthLevel.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioUserGuild.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioUserMedalItem.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioUserPcRoom.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioUserPet.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioUserPresent.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioUserRecord.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioUserRollBook.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioUserSelectShutDown.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioUserSubscription.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ioUserTournament.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\Item.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\KickOutVoteHelp.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\LadderTeamCopyNode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\LadderTeamManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\LadderTeamNode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\LadderTeamParent.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\LevelMatchManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\LicenseManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\MemoNodeManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\Mission.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\MissionData.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\MissionManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\Mode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ModeCreator.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ModeHelp.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ModeItemCrator.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ModeSelectManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\MonsterSurvivalMode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\NewPublicIDRefresher.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\QuestVariety.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\RollBookManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\Room.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\RoomCopyNode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\RoomNodeManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\RoomParent.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ServerNode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ServerNodeManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ShuffleBonusMode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ShuffleRoomCopyNode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ShuffleRoomManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ShuffleRoomNode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ShuffleRoomParent.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\ShuffleRoomReserveMgr.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\SpecialGoodsManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\SuccessionMode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\SurvivalMode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\SymbolMode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\TeamSurvivalAIMode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\TeamSurvivalMode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\TestNodeManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\TimeCashManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\UnderwearMode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\TradeSyncManger.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\UserBonusCash.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\UserTimeCashTable.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\TitleData.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\TitleManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\TitleTriggerBase.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\TitleTriggerExtend.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\TowerDefMode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\TournamentManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\TradeInfoManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\TrainingMode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\TrainingModeRoulette.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\MissionTriggerBase.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\MissionTriggerExtend.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\User.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\UserCopyNode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\UserNodeManager.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\UserParent.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\UserTitleInfo.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\NodeInfo\UserTitleInven.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\nProtect\ioNProtect.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\QueryData\QueryData.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\QueryData\QueryResultData.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Util\cBuffer.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Util\ioEncrypted.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Util\ioHashString.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Util\IORandom.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Util\ioStringConverter.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Util\md5.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Util\RingBuffer.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Util\Singleton.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\WemadeLog\ioLogSerialize.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\WemadeLog\ioWemadeLogger.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\XignCode\ioXignCode.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\XignCode\zwave_sdk_linker.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Xtrap\ioXtrap.cpp" />
+    <ClCompile Include="..\..\src\ls_gamesvr\Xtrap\XTrap4Server.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\..\src\ls_gamesvr\CrashFind.lib" />
+    <Library Include="..\..\src\ls_gamesvr\DbgHelp.Lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\src\ls_gamesvr\ls_gamesvr.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

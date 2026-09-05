@@ -1,0 +1,376 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 한국어(대한민국) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)\r\n"
+    "LANGUAGE 18, 1\r\n"
+    "#pragma code_page(949)\r\n"
+    "#include ""res\\Version.rc2""  // Microsoft Visual C++에서 편집되지 않은 리소스\r\n"
+    "#include ""afxres.rc""         // 표준 구성 요소\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\LSMonitor.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_LSMONITOR_DIALOG DIALOGEX 0, 0, 333, 119
+STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "LSMonitor"
+FONT 8, "Tahoma", 400, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_TAB_ZONE,"SysTabControl32",0x0,7,7,319,71
+    CONTROL         "",IDC_LIST_SERVERINFO,"SysListView32",LVS_REPORT | WS_BORDER | WS_TABSTOP,13,25,307,23
+    CONTROL         "",IDC_LIST_SYSTEMINFO,"SysListView32",LVS_REPORT | WS_BORDER | WS_TABSTOP,13,51,307,22
+    PUSHBUTTON      "Announce",ID_BTN_ANNOUNCE,275,96,50,16
+    PUSHBUTTON      "System SMS",ID_BTN_SYSTEM_SMS,115,96,50,16
+    DEFPUSHBUTTON   "Sever SMS",ID_BTN_SERVER_SMS,60,96,50,16
+    LTEXT           "Version",IDC_STATIC_STRING,9,83,247,8
+    PUSHBUTTON      "Version",ID_BTN_VERSION,169,96,50,16
+    PUSHBUTTON      "Control",ID_BTN_CONTROL,222,96,50,16
+    PUSHBUTTON      "Connect Log",ID_BTN_CONNECT_LOG,7,96,50,16
+END
+
+IDD_ANNOUNCE DIALOGEX 0, 0, 382, 257
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Announce"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Send",IDSend,163,233,55,17
+    EDITTEXT        IDC_EDIT_ANNOUNCE,14,21,353,93,ES_CENTER | ES_MULTILINE | ES_AUTOVSCROLL | ES_WANTRETURN
+    GROUPBOX        "1. Announce",IDC_STATIC,7,7,368,125
+    LTEXT           "* Pressing enter is next line.",IDC_STATIC,141,118,95,8
+    GROUPBOX        "2. User ID ( Nickname )",IDC_STATIC,7,138,368,45
+    EDITTEXT        IDC_EDIT_USER_ID,13,150,98,14,ES_AUTOHSCROLL
+    CONTROL         "Disconnect",IDC_CHECK_DIS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,125,150,99,10
+    LTEXT           "* The blank space sends all of users.",IDC_STATIC,126,171,129,8
+    GROUPBOX        "3. Password",IDC_STATIC,7,191,368,35
+    EDITTEXT        IDC_EDIT_PASSWORD,13,203,99,14,ES_PASSWORD | ES_AUTOHSCROLL
+END
+
+IDD_SMS DIALOGEX 0, 0, 323, 117
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "SMS"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Start",IDSTART,22,66,51,17
+    PUSHBUTTON      "Stop 1 Hour",IDSTOP1H,95,66,51,16
+    COMBOBOX        IDC_COMBO_SERVER,54,24,256,86,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Select:",IDC_STATIC,27,26,22,8
+    PUSHBUTTON      "Stop",IDC_CUSTOMSTOP,258,67,50,14
+    EDITTEXT        IDC_EDIT_CUSTOM_STOP,192,67,50,14,ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "Default Control",IDC_STATIC,15,52,139,40
+    LTEXT           "Min",IDC_STATIC,245,71,12,8
+    GROUPBOX        "Custom Control",IDC_STATIC,182,55,134,36
+END
+
+IDD_CLIENT_VERSION DIALOGEX 0, 0, 182, 150
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Client Version"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Send",ID_SEND,65,129,50,14
+    EDITTEXT        IDC_EDIT_VERSION,20,55,138,15,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT_PASSWORD,22,97,136,14,ES_PASSWORD | ES_AUTOHSCROLL
+    CONTROL         "Use",IDC_CHECK_USE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,22,21,84,11
+    GROUPBOX        "3.Password",IDC_STATIC,7,84,168,35
+    GROUPBOX        "2.Client Version",IDC_STATIC,7,43,168,33
+    GROUPBOX        "1. Version Checking",IDC_STATIC,7,10,168,27
+END
+
+IDD_CONTROL DIALOGEX 0, 0, 418, 302
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Control"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_VERSION,14,252,154,15,ES_AUTOHSCROLL | ES_NUMBER
+    PUSHBUTTON      "Send Copy",IDC_BUTTON_SEND_COPY,16,281,50,14
+    PUSHBUTTON      "Send Load",IDC_BUTTON_SEND_LOAD,179,281,50,14
+    PUSHBUTTON      "Send Info",IDC_BUTTON_SEND_INFO,350,281,50,14
+    EDITTEXT        IDC_EDIT_IP,13,185,155,14,ES_AUTOHSCROLL
+    LISTBOX         IDC_LIST_INFO,7,7,402,164,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "The Blank is All.",IDC_STATIC,180,187,63,8
+    GROUPBOX        "Server IP",IDC_STATIC,7,175,402,30
+    GROUPBOX        "Version",IDC_STATIC,7,243,402,29
+    EDITTEXT        IDC_EDIT_CHANGE,13,219,154,14,ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "Change Version",IDC_STATIC,7,210,402,28
+    CONTROL         "Active",IDC_CHECK_SERVERIP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,365,188,36,10
+    CONTROL         "Active",IDC_CHECK_CHANGE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,365,223,36,10
+END
+
+IDD_SERVER_INFO DIALOGEX 0, 0, 307, 298
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Server Info."
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,193,277,50,14
+    PUSHBUTTON      "취소",IDCANCEL,250,277,50,14
+    EDITTEXT        IDC_EDIT,7,22,293,249,ES_MULTILINE | ES_AUTOHSCROLL | WS_VSCROLL,WS_EX_STATICEDGE
+    PUSHBUTTON      "Refresh",IDC_BUTTON_REFRESH,7,277,50,14
+    LTEXT           "Static",IDC_STATIC_INFO,7,7,97,8
+END
+
+IDD_NAGLE_REFCOUNT_DIALOG DIALOGEX 0, 0, 123, 46
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Nagle Info"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,7,25,50,14
+    PUSHBUTTON      "취소",IDCANCEL,66,25,50,14
+    EDITTEXT        IDC_EDIT_NAGLECOUNT,7,7,109,14,ES_AUTOHSCROLL | ES_NUMBER,WS_EX_RIGHT
+END
+
+IDD_DIALOG_LoginPanel DIALOGEX 0, 0, 451, 249
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | WS_POPUP | WS_CLIPCHILDREN | WS_CAPTION | WS_VSCROLL | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW | WS_EX_WINDOWEDGE
+CAPTION "Server State Panel"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,387,4,50,14,NOT WS_VISIBLE | WS_DISABLED
+END
+
+IDD_DIALOG_MONITOR DIALOGEX 0, 0, 44, 78
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | WS_CHILD | WS_BORDER | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",PBS_SMOOTH | PBS_VERTICAL | WS_BORDER,8,15,26,43
+    LTEXT           "127.0.0.1:9888",IDC_STATIC_SVRINFO,4,2,36,10
+    LTEXT           "Static",IDC_STATIC_MAXUSER,4,63,39,11
+END
+
+IDD_DIALOG_PANEL DIALOGEX 0, 0, 318, 183
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_VSCROLL | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_TOPMOST | WS_EX_CLIENTEDGE
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_LSMONITOR_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 326
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+
+    IDD_ANNOUNCE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 375
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 250
+    END
+
+    IDD_SMS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 316
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 110
+    END
+
+    IDD_CLIENT_VERSION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 175
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 143
+    END
+
+    IDD_CONTROL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 409
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 295
+    END
+
+    IDD_SERVER_INFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 300
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 291
+    END
+
+    IDD_NAGLE_REFCOUNT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 116
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+
+    IDD_DIALOG_LoginPanel, DIALOG
+    BEGIN
+        RIGHTMARGIN, 437
+    END
+
+    IDD_DIALOG_MONITOR, DIALOG
+    BEGIN
+        VERTGUIDE, 28
+    END
+
+    IDD_DIALOG_PANEL, DIALOG
+    BEGIN
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU MENU
+BEGIN
+    POPUP "MainServer"
+    BEGIN
+        MENUITEM "MainServer InfoDraw",         ID_MAINSERVER_INFODRAW
+        MENUITEM "MainServer Exit",             ID_MAINSERVER_MAINSERVEREXIT
+        MENUITEM "Quick All Exit",              ID_MAINSERVER_QUICKALLEXIT
+        MENUITEM "Safety All Exit",             ID_MAINSERVER_SAFETYALLEXIT
+        MENUITEM "ReloadCloseInfo",             ID_MAINSERVER_RELOADCLOSEINFO
+        MENUITEM "DBAgentExtend",               ID_MAINSERVER_DBAGENTEXTEND
+        MENUITEM "GameServerOption",            ID_MAINSERVER_GAMESERVEROPTION
+        MENUITEM "GS Reload INI",               ID_MAINSERVER_GSRELOADINI
+        MENUITEM "GS Set Nagle Time",           ID_MAINSERVER_GSSETNAGLETIME
+        MENUITEM "GS Set Nagle RefCount",       ID_MAINSERVER_GSSETNAGLEREFCOUNT
+        MENUITEM "Extra Item INI",              ID_MAINSERVER_EXTRAITEMINI
+        MENUITEM "Event Shop INI",              ID_MAINSERVER_EVENTSHOPINI
+    END
+    POPUP "GameServer"
+    BEGIN
+        MENUITEM "InfoDraw",                    ID_GAMESERVER_INFODRAW
+        MENUITEM "ViewList",                    ID_GAMESERVER_GAMESERVERVI, INACTIVE
+        MENUITEM "Reload Hack Constant",        ID_GAMESERVER_RELOADHACKCONSTANT
+        MENUITEM "Reload User Dispersion",      ID_GAMESERVER_RELOADUSERDISPERSION
+        MENUITEM "Reload Process INI",          ID_GAMESERVER_RELOADPROCESSINI
+        MENUITEM "Reload INI Class",            ID_GAMESERVER_RELOADINICLASS
+        MENUITEM "Reload INI Deco",             ID_GAMESERVER_RELOADINIDECO
+        MENUITEM "Reload INI Etc",              ID_GAMESERVER_RELOADINIETC
+        MENUITEM "Reload INI Event",            ID_GAMESERVER_RELOADINIEVENT
+        MENUITEM "Reload Quest INI",            ID_GAMESERVER_RELOADQUESTINI
+        MENUITEM "Reload Mode INI",             ID_GAMESERVER_RELOADPRESENTINI
+        MENUITEM "Reload Present INI",          ID_GAMESERVER_RELOADPRESENTINI
+        MENUITEM "Reload Fishing INI",          ID_GAMESERVER_RELOADFISHINGINI
+        MENUITEM "Reload Excavation INI",       ID_GAMESERVER_RELOADEXCA
+        MENUITEM "Reload Item Compound INI",    ID_GAMESERVER_RELOADITEMCOMPOUNDINI
+        MENUITEM "Reload Extra Item INI",       ID_GAMESERVER_RELOADEXTRAITEMINI
+        MENUITEM "Reload Trade INI",            ID_GAMESERVER_RELOADTRADEINI
+        MENUITEM "Reload LevelMatch INI",       ID_GAMESERVER_RELOADLEVELMATCHINI
+        MENUITEM "Reload Item Init Control",    ID_GAMESERVER_RELOADITEMINITCONTROL
+        MENUITEM "Reload Config INI",           ID_GAMESERVER_RELOADCONFIGINI
+        MENUITEM "Quick Exit",                  ID_GAMESERVER_QUICKEXIT
+        MENUITEM "Safety Exit",                 ID_GAMESERVER_SAFETYEXIT
+    END
+    POPUP "LoginServer"
+    BEGIN
+        MENUITEM "LoginServer_Panel",           ID_LOGINSERVER_LOGINSERVERINFODRAW
+        MENUITEM "LoginServer Infodraw",        ID_LOGINSERVER_LOGINSERVERIN_FILL
+    END
+    POPUP "LSPanel"
+    BEGIN
+        MENUITEM "EnableAllServer",             ID_ENABLE_ALLSERVER
+        MENUITEM "DisableAllServer",            ID_DISALBE_ALLSERVER
+    END
+    POPUP "LSLoginServerInfo"
+    BEGIN
+        MENUITEM "아이피",                         ID_LOGINSERVERID, INACTIVE
+        MENUITEM SEPARATOR
+        MENUITEM "ServerBlock On",              ID_ENABLE_CURRNETSERVER
+        MENUITEM "SerberBlock Off",             ID_DISABLE_CURRENTSERVER
+    END
+END
+
+#endif    // 한국어(대한민국) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE 18, 1
+#pragma code_page(949)
+#include "res\Version.rc2"  // Microsoft Visual C++에서 편집되지 않은 리소스
+#include "afxres.rc"         // 표준 구성 요소
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

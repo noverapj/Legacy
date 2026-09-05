@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2524459F-08B9-409D-A939-DF93AB33B1A6}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ls_filewritesvr</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>../../../build/Server/ls_filewritesvr/</OutDir>
+    <IntDir>./$(ProjectName)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)D</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>../../../build/Server/ls_filewritesvr/</OutDir>
+    <IntDir>./$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>./$(ProjectName)\$(Configuration)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>./$(ProjectName)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>./$(ProjectName)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>./$(ProjectName)\$(Configuration)\</ProgramDataBaseFileName>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>../../src/ls_filewritesvr</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../../lib;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>INID.lib;logD.lib;Psapi.lib;wininet.lib;dbghelp.lib;CrashFind.lib;winmm.lib;ws2_32.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);FrameTimerDDLL.lib;iocpSocketDDLL.lib;NMCrypt.lib;gdiplus.lib</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries);libc.lib;</IgnoreSpecificDefaultLibraries>
+      <ProgramDatabaseFile>../../../build/zone_dev/pdb/$(TargetName)d.pdb</ProgramDatabaseFile>
+      <AdditionalOptions>/NODEFAULTLIB:msvcrt %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <PreBuildEvent>
+      <Command>"../../Tools/VCSGen.exe"  "../../src/ls_gamesvr/" "../../src/ls_gamesvr/TSvnVersion.tmpl" "../../src/ls_filewritesvr/Version.h"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>./$(ProjectName)\$(Configuration)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerOutput>All</AssemblerOutput>
+      <AssemblerListingLocation>./$(ProjectName)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>./$(ProjectName)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>./$(ProjectName)\$(Configuration)\</ProgramDataBaseFileName>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>../../src/ls_filewritesvr</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>../../lib;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>INI.lib;log.lib;Psapi.lib;wininet.lib;dbghelp.lib;CrashFind.lib;winmm.lib;ws2_32.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);FrameTimerDLL.lib;iocpSocketDLL.lib;NMCrypt.lib;gdiplus.lib</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries);libc.lib;</IgnoreSpecificDefaultLibraries>
+      <ProgramDatabaseFile>../../../build/zone_dev/pdb/$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+    <PreBuildEvent>
+      <Command>"../../Tools/VCSGen.exe"  "../../src/ls_gamesvr/" "../../src/ls_gamesvr/TSvnVersion.tmpl" "../../src/ls_filewritesvr/Version.h"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="../../src/ls_filewritesvr/ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="../../src/ls_filewritesvr/stdafx.h" />
+    <ClInclude Include="../../src/ls_filewritesvr/targetver.h" />
+    <ClInclude Include="..\..\src\include\common.h" />
+    <ClInclude Include="..\..\src\ls_filewritesvr\CrashFind\BugslayerUtil.h" />
+    <ClInclude Include="..\..\src\ls_filewritesvr\CrashFind\CrashHandler.h" />
+    <ClInclude Include="..\..\src\ls_filewritesvr\CrashFind\DiagAssert.h" />
+    <ClInclude Include="..\..\src\ls_filewritesvr\CrashFind\MemDumperValidator.h" />
+    <ClInclude Include="..\..\src\ls_filewritesvr\CrashFind\MemStress.h" />
+    <ClInclude Include="..\..\src\ls_filewritesvr\CrashFind\MSJDBG.h" />
+    <ClInclude Include="..\..\src\ls_filewritesvr\CrashFind\SymbolEngine.h" />
+    <ClInclude Include="..\..\src\ls_filewritesvr\Define.h" />
+    <ClInclude Include="..\..\src\ls_filewritesvr\MiniDump\File.h" />
+    <ClInclude Include="..\..\src\ls_filewritesvr\MiniDump\MiniDump.h" />
+    <ClInclude Include="..\..\src\ls_filewritesvr\network\iocpHandler.h" />
+    <ClInclude Include="..\..\src\ls_filewritesvr\network\ioPacketQueue.h" />
+    <ClInclude Include="..\..\src\ls_filewritesvr\network\ioServerSecurity.h" />
+    <ClInclude Include="..\..\src\ls_filewritesvr\network\Protocol.h" />
+    <ClInclude Include="..\..\src\ls_filewritesvr\network\SP2Packet.h" />
+    <ClInclude Include="..\..\src\ls_filewritesvr\NodeInfo\AcceptorUserNode.h" />
+    <ClInclude Include="..\..\src\ls_filewritesvr\NodeInfo\User.h" />
+    <ClInclude Include="..\..\src\ls_filewritesvr\NodeInfo\UserNodeManager.h" />
+    <ClInclude Include="..\..\src\ls_filewritesvr\scheduler\Scheduler.h" />
+    <ClInclude Include="..\..\src\ls_filewritesvr\scheduler\SchedulerNode.h" />
+    <ClInclude Include="..\..\src\ls_filewritesvr\service\Manager.h" />
+    <ClInclude Include="..\..\src\ls_filewritesvr\service\Service.h" />
+    <ClInclude Include="..\..\src\ls_filewritesvr\service\ServiceLS.h" />
+    <ClInclude Include="..\..\src\ls_filewritesvr\ioMainProcess.h" />
+    <ClInclude Include="..\..\src\ls_filewritesvr\Shutdown.h" />
+    <ClInclude Include="..\..\src\ls_filewritesvr\Util\Crc32Static.h" />
+    <ClInclude Include="..\..\src\ls_filewritesvr\Util\ioHashString.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../src/ls_filewritesvr/ls_filewritesvr.cpp" />
+    <ClCompile Include="../../src/ls_filewritesvr/stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_filewritesvr\MiniDump\File.cpp" />
+    <ClCompile Include="..\..\src\ls_filewritesvr\MiniDump\MiniDump.cpp" />
+    <ClCompile Include="..\..\src\ls_filewritesvr\network\iocpHandler.cpp" />
+    <ClCompile Include="..\..\src\ls_filewritesvr\network\ioPacketQueue.cpp" />
+    <ClCompile Include="..\..\src\ls_filewritesvr\network\ioServerSecurity.cpp" />
+    <ClCompile Include="..\..\src\ls_filewritesvr\network\SP2Packet.cpp" />
+    <ClCompile Include="..\..\src\ls_filewritesvr\NodeInfo\AcceptorUserNode.cpp" />
+    <ClCompile Include="..\..\src\ls_filewritesvr\NodeInfo\User.cpp" />
+    <ClCompile Include="..\..\src\ls_filewritesvr\NodeInfo\UserNodeManager.cpp" />
+    <ClCompile Include="..\..\src\ls_filewritesvr\scheduler\Scheduler.cpp" />
+    <ClCompile Include="..\..\src\ls_filewritesvr\scheduler\SchedulerNode.cpp" />
+    <ClCompile Include="..\..\src\ls_filewritesvr\service\Manager.cpp" />
+    <ClCompile Include="..\..\src\ls_filewritesvr\service\Service.cpp" />
+    <ClCompile Include="..\..\src\ls_filewritesvr\service\ServiceLS.cpp" />
+    <ClCompile Include="..\..\src\ls_filewritesvr\ioMainProcess.cpp" />
+    <ClCompile Include="..\..\src\ls_filewritesvr\Util\Crc32Static.cpp" />
+    <ClCompile Include="..\..\src\ls_filewritesvr\Util\ioHashString.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

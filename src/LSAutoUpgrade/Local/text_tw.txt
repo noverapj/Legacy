@@ -1,0 +1,158 @@
+|EXE_CAutoUpgradeApp::IsDuplication_1|\r\n\r\n      [王牌對決]已執行\r\n\r\n      請結束[王牌對決]後再執行\r\n\r\n\r\n      (錯誤編號:201)|
+|EXE_CAutoUpgradeDlg::OnCopyData_1|連線遊戲伺服器中.|
+|EXE_CAutoUpgradeDlg::OnCopyData_2|UDP 連線中|
+|EXE_CAutoUpgradeDlg::OnCopyData_3|遊戲伺服器連線失敗|
+|EXE_CAutoUpgradeDlg::OnTimer_1|遊戲執行中|
+|EXE_CAutoUpgradeDlg::OnTimer_2|10分鐘內遊戲執行失敗\r\n(錯誤編號:210)|
+|EXE_CAutoUpgradeDlg::OnTimer_3|遊戲伺服器連線失敗|
+|EXE_CAutoUpgradeDlg::OnTimer_4|最佳化中|
+|EXE_CAutoUpgradeDlg::OnTimer_5|最佳化中|
+|EXE_CAutoUpgradeDlg::OnTimer_6|遊戲自動開始|
+|EXE_CAutoUpgradeDlg::OnTimer_7|遊戲自動開始|
+|EXE_CAutoUpgradeDlg::OnTimer_8|執行主程式失敗\r\n(錯誤編號:226)|
+|EXE_CAutoUpgradeDlg::OnTimer_9|執行主程式失敗|
+|EXE_CAutoUpgradeDlg::SetWantEndDialog_1|結束中，請稍候.|
+|EXE_Help::CheckRightHDDSpace_1|更新王牌對決需要至少%1MB以上的\r\n硬碟空間。\r\n(錯誤編號:207)\r\n\r\n總空間:%2M, 剩餘空間:%3M, 王牌對決所需求的空間:%4M|
+|EXE_Help::CheckDownloadedFile_1|檔案更新失敗\r\n|
+|EXE_Help::CheckDownloadedFile_2|下載檔案錯誤\r\n檔名:%1\r\n檔案CRC:%2, 檔案大小:%3,GetLastError:%4|
+|EXE_HTTPManager::_Run_1|更新檔讀取中|
+|EXE_HTTPManager::_Run_2|安裝的 DirectX版本不符\r\n請更新至最新版本DirectX\r\n請確認顯示卡驅動程式是否為最新版本\r\n(錯誤編號:211)|
+|EXE_HTTPManager::_Run_3|%1號 iop 開啟失敗\r\n檔案刪除失敗\r\n檔名:%2, GetLastError:%3\r\n請重新安裝程式後執行\r\n(錯誤編號:222)\r\n\r\n|
+|EXE_HTTPManager::_Run_4|資料檔案下載失敗\r\n更新伺服器擁擠\r\n請稍候再嘗試\r\n(錯誤編號:203)\r\n\r\n|
+|EXE_HTTPManager::_Run_5|檔案毀損\r\n更新伺服器擁擠\r\n請稍候再試\r\n(錯誤編號:215)\r\n\r\n|
+|EXE_HTTPManager::_Run_6|資訊檔案解壓縮失敗\r\n請確認更新檔同步是否有問題後\r\n 重新執行\r\n(錯誤編號:204)\r\n\r\n|
+|EXE_HTTPManager::_Run_7|資訊檔案分析失敗\r\n 請重新執行程式\r\n(錯誤編號:205)\r\n\r\n|
+|EXE_HTTPManager::_Run_8|請確認硬碟空間\r\n硬碟空間是否充足\r\n確認完後\r\n再嘗試\r\n(錯誤編號:223)\r\n\r\nGetLastError:%1|
+|EXE_HTTPManager::_Run_9|檔案下載更新失敗(重複100次都失敗).\r\n請重新執行程式\r\n若持續發生問題\r\n請刪除王牌對決後檢查是否有病毒\r\n或是確認是否網路狀態正常後重新安裝主程式\r\n(錯誤編號:206)\r\n\r\n|
+|EXE_HTTPManager::DeleteGarbage_1|更新進行中 [%1/%2]|
+|EXE_HTTPManager::_RunAdmin_1|%1號檔按錯誤\r\n\r\n%2|
+|EXE_HTTPManager::_RunAdmin_2|已完成|
+|EXE_HTTPManager::_RunAdmin_3|資料夾複製過程中發生錯誤\r\n\r\n|
+|EXE_HTTPManager::_RunOptionCopyFolder_1|錯誤原資料夾|
+|EXE_HTTPManager::_RunOptionCopyFolder_2|錯誤目標資料夾|
+|EXE_HTTPManager::_RunOptionCopyFolder_3|資料夾複製中|
+|EXE_HTTPManager::_RunOptionCopyFolder_4|已完成|
+|EXE_HTTPManager::AddPacFile_1|合成中:%1號檔案|
+|EXE_HTTPManager::AddPacFile_2|檔案合成錯誤:%1.|
+|EXE_HTTPManager::AddPacFile_3|檔案合成錯誤\r\n檔名:%1\r\n封包檔案內檔名:%2\r\n封包檔案:%3 , 檔案 CRC:%4, GetLastError參數:%5, Exception:%6, |
+|EXE_HTTPManager::AddPacFile_4|檔案處理失敗\r\n檔名:%1\r\nGetLastError:%2, |
+|EXE_HTTPManager::CheckPac_1|錯誤 NULL.|
+|EXE_HTTPManager::CheckPac_2|確認使用的參數為NULL.\r\nGetLastError:%1\r\n|
+|EXE_HTTPManager::CheckPac_3|檔案檢查中:%1/%2號檔案[%3%%].|
+|EXE_HTTPManager::CopyVersionupFiles_1|manual patch:[%1%%].|
+|EXE_HTTPManager::CreateAllNewPacFile_1|%1號檔案最佳化失敗\r\n請重新執行程式\r\n(錯誤編號:212)\r\n\r\n%2|
+|EXE_HTTPManager::CreateNewPacFile_1|刪除舊檔案失敗\r\n檔名:%1\r\nGetLastError:%2|
+|EXE_HTTPManager::CreateNewPacFile_2|儲存錯誤|
+|EXE_HTTPManager::CreateNewPacFile_3|開啟新檔案失敗\r\n|
+|EXE_HTTPManager::CreateNewPacFile_4|錯誤檔案 NULL.|
+|EXE_HTTPManager::CreateNewPacFile_5|處理檔案所需 iop檔案參數為 NULL\r\n檔名:%1\r\nGetLastError:%2|
+|EXE_HTTPManager::CreateNewPacFile_6|錯誤檔案|
+|EXE_HTTPManager::CreateNewPacFile_7|處理檔案所需 iop檔案開始失敗\r\n檔名:%1\r\nGetLastError:%2,Exception:%3|
+|EXE_HTTPManager::CreateNewPacFile_8|錯誤檔案|
+|EXE_HTTPManager::CreateNewPacFile_9|處理檔案所需 iop檔案資訊初始化失敗\r\n檔名:%1\r\nGetLastError:%2|
+|EXE_HTTPManager::CreateNewPacFile_10|錯誤檔案 NULL 2.|
+|EXE_HTTPManager::CreateNewPacFile_11|處理檔案所需 iop檔案參數為 NULL \r\n檔名:%1\r\nGetLastError:%2|
+|EXE_HTTPManager::CreateNewPacFile_12|錯誤檔案2.|
+|EXE_HTTPManager::CreateNewPacFile_13|處理檔案所需 iop檔案開始失敗\r\n檔名:%1\r\nGetLastError:%2, 檔案CRC:%3, Exception:%4|
+|EXE_HTTPManager::CreateNewPacFile_14|最佳化中:%1/%2號檔案[%3%%].|
+|EXE_HTTPManager::CreateNewPacFile_15|錯誤檔案資訊|
+|EXE_HTTPManager::CreateNewPacFile_16|處理檔案所需舊iop檔案讀取失敗\r\n檔名:%1\r\nGetLastError:%2,array:%3,Exception:%4|
+|EXE_HTTPManager::CreateNewPacFile_17|錯誤檔案資訊|
+|EXE_HTTPManager::CreateNewPacFile_18|處理檔案所需舊iop檔案讀取失敗\r\n檔名:%1\r\n檔案hash:%2,檔案index:%3,檔案壓縮大小:%4,檔案大小:%5,GetLastError:%6,array:%7,Exception:%8|
+|EXE_HTTPManager::CreateNewPacFile_19|檔案合成錯誤|
+|EXE_HTTPManager::CreateNewPacFile_20|新 rs.iop裡檔案合成失敗\r\n檔名:%1\r\n檔案hash:%2, 檔案index:%3, 檔案壓縮大小:%4, 檔案大小:%5,GetLastError:%6, array:%7,Exception:%8|
+|EXE_HTTPManager::CreateNewPacFile_21|錯誤檔案大小|
+|EXE_HTTPManager::CreateNewPacFile_22|處理檔案所需舊iop檔案資訊大小為0\r\n檔名:%1\r\n檔案hash:%2,檔案index:%3,檔案壓縮大小:%4,檔案大小:%5,GetLastError:%6,array:%7,Exception:%8|
+|EXE_HTTPManager::CreateNewPacFile_23|錯誤檔案複製|
+|EXE_HTTPManager::CreateNewPacFile_24|新iop 複製錯誤\r\n檔名:%1\r\n新檔名:%2\r\nGetLastError:%3|
+|EXE_HTTPManager::CreateNewPacFile_25|錯誤檔案刪除|
+|EXE_HTTPManager::CreateNewPacFile_26|複製新檔案完成後刪除舊檔失敗\r\n檔名:%1\r\nGetLastError:%2|
+|EXE_HTTPManager::DownLoadProcess_1|下載中:%1號檔案|
+|EXE_HTTPManager::DownLoadProcess_2|錯誤 OpenUrl:%1.|
+|EXE_HTTPManager::DownLoadProcess_3|OpenURL失敗\r\n檔名:%1\r\n錯誤:%2|
+|EXE_HTTPManager::DownLoadProcess_4|錯誤 OpenUrl NULL:%1.|
+|EXE_HTTPManager::DownLoadProcess_5|CInternetFile參數為 NULL\r\n檔名:%1\r\nGetLastError:%2|
+|EXE_HTTPManager::DownLoadProcess_6|檔案下載時刪除舊檔失敗\r\n檔名:%1\r\nGetLastError:%2|
+|EXE_HTTPManager::DownLoadProcess_7|檔案開啟錯誤:%1.|
+|EXE_HTTPManager::DownLoadProcess_8|開啟檔案前刪除舊檔失敗\r\n|
+|EXE_HTTPManager::DownLoadProcess_9|%1 下載中:[%2%%].|
+|EXE_HTTPManager::DownLoadProcess_10|錯誤檔案寫入:%1.|
+|EXE_HTTPManager::DownLoadProcess_11|檔案儲存前刪除舊檔失敗\r\n|
+|EXE_HTTPManager::DownLoadProcess_12|錯誤檔案獲取:%1.|
+|EXE_HTTPManager::DownLoadProcess_13|檔案儲存前取得檔案失敗\r\n|
+|EXE_HTTPManager::FileCopy_1|錯誤檔案複製:%1.|
+|EXE_HTTPManager::FileCopy_2|檔案複製失敗\r\n檔名:%1\r\n新檔名:%2\r\nGetLastError:%3, |
+|EXE_HTTPManager::GetUpdateFile_1|確認下載中|
+|EXE_HTTPManager::GetUpdateFile_2|更新確認中[%1%%].|
+|EXE_HTTPManager::InitPac_1|記憶體分割失敗\r\n請重新執行程式\r\n(錯誤編號:213)\r\n\r\narray:%1, GetLastError:%2|
+|EXE_HTTPManager::OpenAllBigPacForGarbageSize_1|%1號 iop 開啟失敗\r\n檔名:%2, GetLastError:%3\r\n請重新執行程式\r\n(錯誤編號:225)\r\n\r\n|
+|EXE_HTTPManager::ParseDeleteFileList_1|檔案刪除分析中|
+|EXE_HTTPManager::ParsePatchFile_1|檔案開啟失敗\r\n檔名:%1\r\nGetLastError:%2|
+|EXE_HTTPManager::ParsePatchFile_2|檔案刪除失敗\r\n檔名:%1\r\nGetLastError:%2|
+|EXE_HTTPManager::ProcessCheckPac_1|主程式發生問題\r\n\r\n請按[確認]檢查全部檔案\r\n\r\n若還是有錯誤請重新下載主程式|
+|EXE_HTTPManager::ProcessCheckPac_2|主程式發生錯誤\r\n\r\n主程式重新下載|
+|EXE_HTTPManager::ProcessCheckPac_3|%1號 iop 開啟失敗\r\n檔案刪除失敗\r\n檔名:%2, GetLastError:%3\r\n請重新執行程式\r\n(錯誤編號:224)\r\n\r\n|
+|EXE_HTTPManager::ProcessNewPacFile_1|已完成最佳化|
+|EXE_HTTPManager::ProcessNewPacFile_2|已完成最佳化|
+|EXE_HTTPManager::Run_1|發生意外錯誤\r\n 請重新執行程式\r\n(錯誤編號:209)\r\n\r\n|
+|EXE_HTTPManager::SetTextWaitNewPac_1|最佳化中[%1]|
+|EXE_HTTPManager::SetupFull_1|%1號檔案發生錯誤\r\n\r\n%2|
+|EXE_HTTPManager::SetupFull_2|安裝版本刪除作業失敗\r\n檔名:%1\r\nGetLastError:%2|
+|EXE_HTTPManager::SetupFull_3|安裝版本開啟檔案失敗\r\n|
+|EXE_HTTPManager::SetupFull_4|檔案開始錯誤|
+|EXE_HTTPManager::SetupFull_5|安裝後%1號 iop檔開啟失敗\r\n檔名:%2\r\nGetLastError:%3, 檔案CRC:%4, Exception:%5, |
+|EXE_HTTPManager::StartGame_1|遊戲執行中|
+|EXE_HTTPManager::StartGame_2|登入有效時間已過期\r\n\r\n         請重新\r\n\r\n            進行登入|
+|EXE_HTTPManager::StartGame_3|遊戲自動開始[%1]|
+|EXE_HTTPManager::StartGame_4|請按開始鍵執行遊戲|
+|EXE_HTTPManager::UnFull_1|錯誤設定NULL.|
+|EXE_HTTPManager::UnFull_2|安裝版本使用的參數為 NULL \r\nGetLastError:%1, |
+|EXE_HTTPManager::UnFull_3|錯誤安裝|
+|EXE_HTTPManager::UnFull_4|安裝版本開啟失敗\r\n檔名:%1\r\nGetLastError:%2, 檔案CRC:%3, Exception:%4, |
+|EXE_HTTPManager::UnFull_5|錯誤安裝|
+|EXE_HTTPManager::UnFull_6|安裝資訊讀取失敗\r\n檔名:%1\r\nGetLastError:%2, 檔案CRC:%3, 檔案array:%4, Exception:%5, |
+|EXE_HTTPManager::UnFull_7|解壓縮中:%1號檔案[%2%%].|
+|EXE_HTTPManager::UnFull_8|安裝版本刪除舊檔失敗\r\n檔名:%1\r\nGetLastError:%2, |
+|EXE_HTTPManager::UnFull_9|錯誤安裝解除:%1.|
+|EXE_HTTPManager::UnFull_10|安裝版本解壓縮失敗\r\n檔名:%1\r\nGetLastError:%2, 安裝檔CRC:%3, array:%4, Exception:%5, |
+|EXE_HTTPManager::UnFull_11|安裝版本刪除失敗\r\n檔名:%1\r\nGetLastError:%2, |
+|EXE_HTTPManager::UnPac_1|錯誤封包 NULL.|
+|EXE_HTTPManager::UnPac_2|解封包所需 rs.iop檔案參數為 NULL\r\n檔名:%1\r\nGetLastError:%2|
+|EXE_HTTPManager::UnPac_3|檔案開啟錯誤|
+|EXE_HTTPManager::UnPac_4|解壓縮所需 rs.iop檔案開啟失敗\r\n檔名:%1\r\nGetLastError:%2,Exception:%3|
+|EXE_HTTPManager::UnPac_5|錯誤封包INIT.|
+|EXE_HTTPManager::UnPac_6|解壓封包所需 rs.iop檔案資訊初始化失敗\r\n檔名:%1\r\nGetLastError:%2|
+|EXE_HTTPManager::UnPac_7|錯誤封包資訊|
+|EXE_HTTPManager::UnPac_8|封包解壓縮所需rs.iop檔案資訊讀取失敗\r\n檔名:%1\r\nGetLastError:%2,array:%3,Exception:%4|
+|EXE_HTTPManager::UnPac_9|IOP解壓中:%1/%2號檔案[%3%%].|
+|EXE_HTTPManager::UnPac_10|解封包前刪除舊檔失敗\r\n檔名:%1\r\nGetLastError:%2|
+|EXE_HTTPManager::UnPac_11|錯誤解壓封包|
+|EXE_HTTPManager::UnPac_12|封包檔案解壓失敗\r\n檔名:%1\r\n檔案hash:%2,檔案index:%3,檔案壓縮大小:%4,GetLastError:%5,array:%6,Exception:%7|
+|EXE_HTTPManager::UnPacPieceFile_1|解壓中:%1號檔案|
+|EXE_HTTPManager::UnPacPieceFile_2|解壓前舊檔刪除失敗\r\n檔名:%1\r\nGetLastError:%2|
+|EXE_HTTPManager::UnPacPieceFile_3|解壓檔案不存在\r\n檔名:%1\r\nGetLastError:%2|
+|EXE_HTTPManager::UnPacPieceFile_4|錯誤檔案:%1.|
+|EXE_HTTPManager::UnPacPieceFile_5|解壓檔案失敗\r\n檔名:%1\r\n錯誤回傳參數:%2, 檔案CRC參數:%3, GetLastError參數:%4, Exception:%5|
+|EXE_HTTPManager::UnPacPieceFile_6|解壓檔案前刪除舊檔失敗\r\n檔名:%1\r\nGetLastError:%2|
+|EXE_HTTPManager::UpdateFileLoop_1|分析下載檔案資訊中|
+|EXE_HTTPManager::UpdateFileLoop_2|發生錯誤，重新嘗試中:%1/%2.|
+|EXE_HTTPManager::UpdateOneFile_1|下載檔案發生錯誤\r\n自動重新嘗試(總共100次)\r\n若要結束程式\r\n請按自動更新的X按鍵\r\n(錯誤編號:218)\r\n\r\n|
+|EXE_HTTPManager::UpdateOneFile_2|下載檔案毀損錯誤.:%1.|
+|EXE_HTTPManager::UpdateOneFile_3|下載檔案毀損\r\n更新伺服器擁擠\r\n自動重新嘗試(總共100次)\r\n若要結束程式\r\n請按自動更新的X按鍵\r\n(錯誤編號:216)\r\n\r\n|
+|EXE_HTTPManager::UpdateOneFile_4|下載檔案大小錯誤|
+|EXE_HTTPManager::UpdateOneFile_5|檔案大小不一致\r\n檔名:%1\r\n伺服器檔案大小:%2, 下載 檔案大小:%3, 伺服器檔案CRC:%4, 已下載檔案CRC:%5|
+|EXE_HTTPManager::UpdateOneFile_6|下載檔案大小已變更\r\n更新檔資訊無法更新\r\n請確認是否有病毒\r\n若持續發生問題請重新安裝主程式|
+|EXE_HTTPManager::UpdateOneFile_7|伺服器檔案大小:%1, 下載的檔案大小:%2, 伺服器檔案CRC:%3|
+|EXE_HTTPManager::UpdateOneFile_8|檔案合成時發生錯誤\r\n自動重新嘗試(總共100次)\r\n若要結束程式\r\n請按自動更新的X按鍵\r\n(錯誤編號:219)\r\n\r\n|
+|EXE_HTTPManager::UpdateOneFile_9|伺服器檔案大小:%1, 下載檔案大小:%2, 伺服器檔案CRC:%3|
+|EXE_HTTPManager::UpdateOneFile_10|檔案解壓縮發生錯誤\r\n自動重新嘗試(總共100次)\r\n若要結束程式\r\n請按自動更新的X按鍵\r\n(錯誤編號:220)\r\n\r\n|
+|EXE_HTTPManager::UpdateOneFile_11|伺服器檔案大小:%1, 下載檔案大小:%2, 伺服器檔案CRC:%3|
+|EXE_HTTPManager::UpdateOneFile_12|檔案複製錯誤\r\n自動重新嘗試(總共100次)\r\n若要結束程式\r\n請按自動更新的X按鍵\r\n(錯誤編號:221)\r\n\r\n|
+|EXE_HTTPManager::UpdateOneFile_13|伺服器檔案大小:%1, 下載檔案大小:%2|
+|EXE_HTTPManager::UpdateOneFile_14|版本安裝錯誤\r\n自動重新嘗試(總共100次)\r\n若要結束程式\r\n請按自動更新的X按鍵\r\n(錯誤編號:217)\r\n\r\n|
+|EXE_ioErrorDlg::ShowErrorDlg_1|Ver : %1\r\n--- 系統規格 ---\r\n%2\r\n\r\n--- 系統訊息 ---\r\n%3|
+|EXE_ioLoginDlg::FirstConnectServer_1|與%1伺服器網路連線中.|
+|EXE_ioLoginDlg::OnTimer_1|%1伺服器回應逾時正連線到 %2伺服器中.|
+|EXE_ioLoginDlg::OnTimer_2|%1伺服器無回應故連線中止, 與%2伺服器網路連線中.|
+|EXE_ioLoginDlg::SendServer_1|%1伺服器的登入訊息傳送完畢，等待伺服器回應中.|
+|EXE_ioLoginDlg::SetTextNetworkConnected_1|與%1伺服器連線成功.|

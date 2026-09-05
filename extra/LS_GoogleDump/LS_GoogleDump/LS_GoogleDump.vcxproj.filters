@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="GuidString.cpp">
+      <Filter>Common\GuidString</Filter>
+    </ClCompile>
+    <ClCompile Include="CrashClient.cpp">
+      <Filter>CrashClient</Filter>
+    </ClCompile>
+    <ClCompile Include="ExceptionHandler.cpp">
+      <Filter>Exception_Handler</Filter>
+    </ClCompile>
+    <ClCompile Include="MinidumpGenerator.cpp">
+      <Filter>minidumpGenerator</Filter>
+    </ClCompile>
+    <ClCompile Include="GoogleDump.cpp">
+      <Filter>GoogleDump</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GuidString.h">
+      <Filter>Common\GuidString</Filter>
+    </ClInclude>
+    <ClInclude Include="MinidumpExceptionLinux.h">
+      <Filter>Common\MiniDumpException</Filter>
+    </ClInclude>
+    <ClInclude Include="MinidumpExceptionWin32.h">
+      <Filter>Common\MiniDumpException</Filter>
+    </ClInclude>
+    <ClInclude Include="MinidumpExceptionMac.h">
+      <Filter>Common\MiniDumpException</Filter>
+    </ClInclude>
+    <ClInclude Include="MinidumpExceptionPs3.h">
+      <Filter>Common\MiniDumpException</Filter>
+    </ClInclude>
+    <ClInclude Include="MinidumpExceptionSolaris.h">
+      <Filter>Common\MiniDumpException</Filter>
+    </ClInclude>
+    <ClInclude Include="CpuAmd64.h">
+      <Filter>Common\MiniDumpFormat</Filter>
+    </ClInclude>
+    <ClInclude Include="CpuX86.h">
+      <Filter>Common\MiniDumpFormat</Filter>
+    </ClInclude>
+    <ClInclude Include="CpuArm.h">
+      <Filter>Common\MiniDumpFormat</Filter>
+    </ClInclude>
+    <ClInclude Include="CpuMips.h">
+      <Filter>Common\MiniDumpFormat</Filter>
+    </ClInclude>
+    <ClInclude Include="CpuPpc.h">
+      <Filter>Common\MiniDumpFormat</Filter>
+    </ClInclude>
+    <ClInclude Include="CpuPpc64.h">
+      <Filter>Common\MiniDumpFormat</Filter>
+    </ClInclude>
+    <ClInclude Include="CpuSparc.h">
+      <Filter>Common\MiniDumpFormat</Filter>
+    </ClInclude>
+    <ClInclude Include="autoCriticalSection.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="BreakpadTypes.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="IpcProtocol.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="MinidumpFormat.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="ScopedPtr.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="StringUtils-inl.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="CrashClient.h">
+      <Filter>CrashClient</Filter>
+    </ClInclude>
+    <ClInclude Include="ExceptionHandler.h">
+      <Filter>Exception_Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="MinidumpGenerator.h">
+      <Filter>minidumpGenerator</Filter>
+    </ClInclude>
+    <ClInclude Include="GoogleDump.h">
+      <Filter>GoogleDump</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{397a2ed1-4fc1-4771-b3ef-f96fce76b372}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\GuidString">
+      <UniqueIdentifier>{bb96b08d-0019-4ddd-9b05-cb7a3ccf7ced}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\MiniDumpException">
+      <UniqueIdentifier>{899b2ab4-db13-44b0-b741-e9073720f247}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\MiniDumpFormat">
+      <UniqueIdentifier>{de72d54f-ddab-4a64-a2f1-f29b50569fa4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CrashClient">
+      <UniqueIdentifier>{b8c83043-fe10-4aff-aacb-a4f3b8e67836}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Exception_Handler">
+      <UniqueIdentifier>{db546706-7017-41be-a593-27b2be39151f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="minidumpGenerator">
+      <UniqueIdentifier>{9e00bdc7-392c-42bd-8698-2bf800007968}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GoogleDump">
+      <UniqueIdentifier>{113d1a5f-c43c-495b-b619-75be2c54447c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

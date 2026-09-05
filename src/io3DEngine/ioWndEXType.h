@@ -1,0 +1,102 @@
+//----------------------------------------------------------------------------------
+/*
+Filename	: ioWndEXType.h
+Author		: megamegy
+Date		: 2013.11.21
+*/
+//----------------------------------------------------------------------------------
+
+#ifndef _IOWNDEXTYPE_H_
+#define _IOWNDEXTYPE_H_
+
+enum IOWNDEX_TYPE
+{
+	IWEXT_WND,
+	IWEXT_LABEL,
+	IWEXT_FRAME,
+	IWEXT_IMAGE,
+	IWEXT_FRAMEBUTTON,
+	IWEXT_IMAGEBUTTON,
+	IWEXT_CHECKBOX,
+	IWEXT_FLASHPLAYER,	
+	IWEXT_RADIOWND,
+	IWEXT_RADIOFRAMEBUTTON,
+	IWEXT_RADIOIMAGEBUTTON,
+	IWEXT_TABFRAMEBUTTON,
+	IWEXT_TABWND,
+	IWEXT_SCROLLBAR,
+	IWEXT_RICHLABEL,
+
+	IWEXT_MAX,
+};
+
+static const char* g_iowndextype[ IWEXT_MAX ] =
+{
+	"IWEXT_WND",
+	"IWEXT_LABEL",
+	"IWEXT_FRAME",
+	"IWEXT_IMAGE",
+	"IWEXT_FRAMEBUTTON",
+	"IWEXT_IMAGEBUTTON",
+	"IWEXT_CHECKBOX",
+	"IWEXT_FLASHPLAYER",	
+	"IWEXT_RADIOWND",
+	"IWEXT_RADIOFRAMEBUTTON",
+	"IWEXT_RADIOIMAGEBUTTON",
+	"IWEXT_TABFRAMEBUTTON",
+	"IWEXT_TABWND",
+	"IWEXT_SCROLLBAR",
+	"IWEXT_RICHLABEL"
+};
+
+
+enum ALIGN_STYLE_EX
+{
+	ASE_RECT,
+	ASE_POINT,	
+
+	ASE_MAX
+};
+
+static const char* g_alignstyleex[ ASE_MAX ] =
+{
+	"ASE_RECT",
+	"ASE_POINT"	
+};
+
+
+enum BUTTONEX_TYPE
+{
+	BEXT_NORMAL,
+	BEXT_TOGGLE,
+	BEXT_RADIO,
+
+	BEXT_MAX
+};
+
+static const char* g_iobuttonextype[ BEXT_MAX ] =
+{
+	"BEXT_NORMAL",
+	"BEXT_TOGGLE",
+	"BEXT_RADIO"
+};
+
+enum REVERSEFORMAT_TYPE
+{
+	REVERSEFORMAT_TYPE_NONE,
+	REVERSEFORMAT_TYPE_HORZ,
+	REVERSEFORMAT_TYPE_VERT,
+	REVERSEFORMAT_TYPE_HORZ_VERT,
+
+	REVERSEFORMAT_TYPE_MAX
+};
+
+static const char* g_reserverformattype[ REVERSEFORMAT_TYPE_MAX ] =
+{
+	"REVERSEFORMAT_TYPE_NONE",
+	"REVERSEFORMAT_TYPE_HORZ",
+	"REVERSEFORMAT_TYPE_VERT",
+	"REVERSEFORMAT_TYPE_HORZ_VERT"
+};
+
+#endif // _IOWNDEX_H_

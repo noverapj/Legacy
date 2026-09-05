@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "io3DEngine", "..\src\io3DEngine\io3DEngine.vcxproj", "{41A2C24C-19EF-4A26-B443-E8A3DDF60321}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		Shipping|Win32 = Shipping|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{41A2C24C-19EF-4A26-B443-E8A3DDF60321}.Debug|Win32.ActiveCfg = Debug|Win32
+		{41A2C24C-19EF-4A26-B443-E8A3DDF60321}.Debug|Win32.Build.0 = Debug|Win32
+		{41A2C24C-19EF-4A26-B443-E8A3DDF60321}.Release|Win32.ActiveCfg = Release|Win32
+		{41A2C24C-19EF-4A26-B443-E8A3DDF60321}.Release|Win32.Build.0 = Release|Win32
+		{41A2C24C-19EF-4A26-B443-E8A3DDF60321}.Shipping|Win32.ActiveCfg = Shipping|Win32
+		{41A2C24C-19EF-4A26-B443-E8A3DDF60321}.Shipping|Win32.Build.0 = Shipping|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

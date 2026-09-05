@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LS_HTTP", "LS_HTTP\LS_HTTP.vcxproj", "{6011AA87-DD99-46AB-BFD4-3DB1C23E08FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Dbg_GA|Win32 = Dbg_GA|Win32
+		Debug|Win32 = Debug|Win32
+		Rel_GA|Win32 = Rel_GA|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6011AA87-DD99-46AB-BFD4-3DB1C23E08FF}.Dbg_GA|Win32.ActiveCfg = Dbg_GA|Win32
+		{6011AA87-DD99-46AB-BFD4-3DB1C23E08FF}.Dbg_GA|Win32.Build.0 = Dbg_GA|Win32
+		{6011AA87-DD99-46AB-BFD4-3DB1C23E08FF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6011AA87-DD99-46AB-BFD4-3DB1C23E08FF}.Debug|Win32.Build.0 = Debug|Win32
+		{6011AA87-DD99-46AB-BFD4-3DB1C23E08FF}.Rel_GA|Win32.ActiveCfg = Rel_GA|Win32
+		{6011AA87-DD99-46AB-BFD4-3DB1C23E08FF}.Rel_GA|Win32.Build.0 = Rel_GA|Win32
+		{6011AA87-DD99-46AB-BFD4-3DB1C23E08FF}.Release|Win32.ActiveCfg = Release|Win32
+		{6011AA87-DD99-46AB-BFD4-3DB1C23E08FF}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

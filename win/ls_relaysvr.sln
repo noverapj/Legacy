@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ls_relaysvr", "projects\ls_relaysvr.vcxproj", "{7F4A5B62-56BF-4002-8A06-B44A95ACC6FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F4A5B62-56BF-4002-8A06-B44A95ACC6FA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7F4A5B62-56BF-4002-8A06-B44A95ACC6FA}.Debug|Win32.Build.0 = Debug|Win32
+		{7F4A5B62-56BF-4002-8A06-B44A95ACC6FA}.Release|Win32.ActiveCfg = Release|Win32
+		{7F4A5B62-56BF-4002-8A06-B44A95ACC6FA}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

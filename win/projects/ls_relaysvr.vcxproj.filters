@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Service">
+      <UniqueIdentifier>{5c96d37f-fe44-45d4-955c-4cafa42c1561}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BaseClass">
+      <UniqueIdentifier>{3e77c43e-f070-46b1-9dd2-8aab323defe0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network">
+      <UniqueIdentifier>{1d847a9d-9b58-41ce-bcea-164c83aa47d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic">
+      <UniqueIdentifier>{21815827-9f66-4ab5-8827-48449fcc88db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic\Scheduler">
+      <UniqueIdentifier>{b054ba67-c874-4274-8145-049bd590e324}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Test">
+      <UniqueIdentifier>{3dd41c3e-bab9-4e4f-92d9-23fa0ded4ae8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Defines">
+      <UniqueIdentifier>{bbea3615-5d3d-48b3-90a3-cd07c2aa618b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config&amp;State">
+      <UniqueIdentifier>{b90a79ad-4661-4d86-9d15-a02152ff74c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\LSAcceptor">
+      <UniqueIdentifier>{f4c39a9a-3ba3-4e32-9af7-c702f1f4bc20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\LSGameServerConnector">
+      <UniqueIdentifier>{4f6b548e-b361-4148-952c-ab43489981c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BaseClass\Minidump">
+      <UniqueIdentifier>{b1a1d686-3300-49e1-9644-3abf5391e335}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NodeInfo">
+      <UniqueIdentifier>{cf14b710-3e49-4ebc-b32a-e7ee05b89d88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NodeInfo\GameServer">
+      <UniqueIdentifier>{c3f53f05-c891-4264-aae4-f9c2caed0bc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NodeInfo\UDP">
+      <UniqueIdentifier>{daa5cc00-7f9f-43ef-83ed-8c17c5e0a511}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NodeInfo\Monitor">
+      <UniqueIdentifier>{47c6d8d8-2c28-4e00-8ded-da588776ddbc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="../../src/ls_relaysvr/stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_relaysvr/targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_relaysvr/Minidump\File.h">
+      <Filter>BaseClass\Minidump</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_relaysvr/Minidump\MiniDump.h">
+      <Filter>BaseClass\Minidump</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_relaysvr/Manager.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_relaysvr/BaseClass\Handler.h">
+      <Filter>BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_relaysvr/BaseClass\locking_queue.h">
+      <Filter>BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_relaysvr/BaseClass\LSTimer.h">
+      <Filter>BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_relaysvr/BaseClass\LSTimerMgr.h">
+      <Filter>BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_relaysvr/BaseClass\Operation.h">
+      <Filter>BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_relaysvr/BaseClass\OpMemPool.h">
+      <Filter>BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_relaysvr/BaseClass\Singleton.h">
+      <Filter>BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_relaysvr/Logic\LSLogic.h">
+      <Filter>Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_relaysvr/Logic\LSLogicHandler.h">
+      <Filter>Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_relaysvr/Logic\LSLogicOperations.h">
+      <Filter>Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_relaysvr/Logic\LSPacketQueue.h">
+      <Filter>Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_relaysvr/LSAcceptor\AcceptorMgr.h">
+      <Filter>Network\LSAcceptor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_relaysvr/Network\IOCPHandler.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_relaysvr/Network\SP2Packet.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_relaysvr/Service\Service.h">
+      <Filter>Service</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_relaysvr/Service\ServiceLS.h">
+      <Filter>Service</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_relaysvr/Scheduler\Scheduler.h">
+      <Filter>Logic\Scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_relaysvr/Scheduler\SchedulerNode.h">
+      <Filter>Logic\Scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_relaysvr/BaseClass\ioPacketChecker.h">
+      <Filter>BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_relaysvr/BaseClass\ioProcessChecker.h">
+      <Filter>BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_relaysvr/resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_relaysvr/LSGameServerConnector\ConnectAssist.h">
+      <Filter>Network\LSGameServerConnector</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_relaysvr\BaseClass\BoostPooler.h">
+      <Filter>BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_relaysvr\Network\ioServerSecurity.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_relaysvr\BaseClass\CPU.h">
+      <Filter>BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_relaysvr\LSAcceptor\ioRelayServerBind.h">
+      <Filter>Network\LSAcceptor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_relaysvr\BaseClass\HackCheck.h">
+      <Filter>BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_relaysvr/BaseClass\ioTestClass.h">
+      <Filter>Test</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_relaysvr/UserDefine.h">
+      <Filter>Defines</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_relaysvr/UserDefineSingleton.h">
+      <Filter>Defines</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_relaysvr/UserDefineType.h">
+      <Filter>Defines</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_relaysvr/BaseClass\ioConfiguration.h">
+      <Filter>Config&amp;State</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_relaysvr\BaseClass\ioRelayServerState.h">
+      <Filter>Config&amp;State</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_relaysvr\LSGameServerConnector\GameServerNode.h">
+      <Filter>NodeInfo\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_relaysvr\Network\RelayServerUDPModule.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_relaysvr\Network\RelayServerUDPNode.h">
+      <Filter>NodeInfo\UDP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_relaysvr\LSAcceptor\MonitorNode.h">
+      <Filter>NodeInfo\Monitor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_relaysvr\LSAcceptor\MonitorsManager.h">
+      <Filter>NodeInfo\Monitor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_relaysvr/LSGameServerConnector\ServerConnectorMgr.h">
+      <Filter>NodeInfo\GameServer</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../src/ls_relaysvr/stdafx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_relaysvr/main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_relaysvr/Minidump\File.cpp">
+      <Filter>BaseClass\Minidump</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_relaysvr/Minidump\MiniDump.cpp">
+      <Filter>BaseClass\Minidump</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_relaysvr/Manager.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_relaysvr/BaseClass\Handler.cpp">
+      <Filter>BaseClass</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_relaysvr/BaseClass\LSTimer.cpp">
+      <Filter>BaseClass</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_relaysvr/BaseClass\LSTimerMgr.cpp">
+      <Filter>BaseClass</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_relaysvr/BaseClass\Operation.cpp">
+      <Filter>BaseClass</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_relaysvr/BaseClass\OpMemPool.cpp">
+      <Filter>BaseClass</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_relaysvr/Logic\LSLogic.cpp">
+      <Filter>Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_relaysvr/Logic\LSLogicHandler.cpp">
+      <Filter>Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_relaysvr/Logic\LSLogicOperations.cpp">
+      <Filter>Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_relaysvr/Logic\LSPacketQueue.cpp">
+      <Filter>Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_relaysvr/LSAcceptor\AcceptorMgr.cpp">
+      <Filter>Network\LSAcceptor</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_relaysvr/Network\IOCPHandler.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_relaysvr/Network\SP2Packet.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_relaysvr/Service\Service.cpp">
+      <Filter>Service</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_relaysvr/Service\ServiceLS.cpp">
+      <Filter>Service</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_relaysvr/Scheduler\Scheduler.cpp">
+      <Filter>Logic\Scheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_relaysvr/Scheduler\SchedulerNode.cpp">
+      <Filter>Logic\Scheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_relaysvr/BaseClass\ioPacketChecker.cpp">
+      <Filter>BaseClass</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_relaysvr/BaseClass\ioProcessChecker.cpp">
+      <Filter>BaseClass</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_relaysvr/LSGameServerConnector\ConnectAssist.cpp">
+      <Filter>Network\LSGameServerConnector</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_relaysvr\Network\ioServerSecurity.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_relaysvr\Utility.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_relaysvr\BaseClass\CPU.cpp">
+      <Filter>BaseClass</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_relaysvr\LSAcceptor\ioRelayServerBind.cpp">
+      <Filter>Network\LSAcceptor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_relaysvr\BaseClass\HackCheck.cpp">
+      <Filter>BaseClass</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_relaysvr/BaseClass\ioTestClass.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_relaysvr/BaseClass\ioConfiguration.cpp">
+      <Filter>Config&amp;State</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_relaysvr\BaseClass\ioRelayServerState.cpp">
+      <Filter>Config&amp;State</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_relaysvr\LSGameServerConnector\GameServerNode.cpp">
+      <Filter>NodeInfo\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_relaysvr\Network\RelayServerUDPModule.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_relaysvr\Network\RelayServerUDPNode.cpp">
+      <Filter>NodeInfo\UDP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_relaysvr\LSAcceptor\MonitorNode.cpp">
+      <Filter>NodeInfo\Monitor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_relaysvr\LSAcceptor\MonitorsManager.cpp">
+      <Filter>NodeInfo\Monitor</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_relaysvr/LSGameServerConnector\ServerConnectorMgr.cpp">
+      <Filter>NodeInfo\GameServer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="../../src/ls_relaysvr/ls_relaysvr.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

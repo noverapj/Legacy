@@ -1,0 +1,80 @@
+#pragma once
+
+#include "ioNormalSkill.h"
+#include "WeaponAttribute.h"
+
+class ioCreateMultipleObjectItemSkill :	public ioNormalSkill
+{
+public:
+	enum CreateState
+	{
+		RS_NONE,
+		RS_ACTION,
+		RS_LOOP,
+		RS_END,
+	};
+
+	typedef std::vector< D3DXVECTOR3 > vVectorList;
+
+protected:
+	CreateState m_CreateState;
+
+	ioHashString m_LoopAnimation;
+	DWORD m_dwLoopStartTime;
+	DWORD m_dwLoopTime;
+
+	DWORD m_dwLoopProtectDuration;
+	DWORD m_dwProtectTime;
+
+	ioHashString m_EndAnimation;
+	float m_fEndAniRate;
+	DWORD m_dwEndAniStartTime;
+	DWORD m_dwEndAniEndTime;
+
+	bool m_bImmediatelyEquip;
+	ioHashString m_StartHandMesh;
+
+	vVectorList	m_vDummyOffsetList;
+
+protected:
+	ioHashString m_CreateEffect;
+	DWORDVec     m_vObjectItemList;
+
+public:
+	virtual void LoadProperty( ioINILoader &rkLoader );
+	virtual ioSkill* Clone();
+
+public:
+	virtual bool IsProtected( int iDefenseBreakType ) const;
+	virtual bool IsCanUseSkill( ioBaseChar *pChar, bool bHelpMsg );
+	virtual bool IsSkillMotionEnd( DWORD dwActionStop, ioBaseChar* pOwner ) const;
+
+public:
+	virtual bool OnSkillStart( ioBaseChar *pChar );
+	virtual void OnProcessState( ioBaseChar *pChar, ioPlayStage *pStage );
+	virtual void OnSkillEnd( ioBaseChar *pChar );
+
+	virtual void StartPreDelayEffect( ioBaseChar *pChar );
+	virtual void EndPreDelayEffect( ioBaseChar *pChar );
+
+	virtual bool CheckUseItemMesh();
+
+protected:
+	void SetActionState( ioBaseChar *pChar );
+	void SetLoopState( ioBaseChar *pChar, ioPlayStage *pStage );
+	void SetEndState( ioBaseChar *pChar );
+
+public:
+	ioCreateMultipleObjectItemSkill(void);
+	ioCreateMultipleObjectItemSkill( const ioCreateMultipleObjectItemSkill& rhs );
+	virtual ~ioCreateMultipleObjectItemSkill(void);
+};
+
+inline ioCreateMultipleObjectItemSkill* ToCreateMultipleObjectItemSkill( ioSkill *pSkill )
+{
+	ioNormalSkill *pNormal = ToNormalSkill( pSkill );
+	if( !pNormal || pNormal->GetSubSkillType() != NST_CREATE_MULTIPLE_OBJECT_ITEM )
+		return NULL;
+
+	return dynamic_cast< ioCreateMultipleObjectItemSkill* >( pSkill );
+}

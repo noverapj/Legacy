@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="LS_launcher.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="AddIPDialog.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="BackupDialog.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="cEncrypt.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientSocket.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="cPacket.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="InstallDialog.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="LauncherListCtrl.cpp">
+      <Filter>UI\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="LauncherTabCtrl.cpp">
+      <Filter>UI\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="cBuffer.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="cFile.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="MD5.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerDialog.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="LS_launcherDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="MsgBox.cpp" />
+    <ClCompile Include="Minidump\File.cpp">
+      <Filter>Minidump</Filter>
+    </ClCompile>
+    <ClCompile Include="Minidump\MiniDump.cpp">
+      <Filter>Minidump</Filter>
+    </ClCompile>
+    <ClCompile Include="PerfMonDlg.cpp">
+      <Filter>UI\Monitor</Filter>
+    </ClCompile>
+    <ClCompile Include="MonitorCtrl.cpp">
+      <Filter>UI\Monitor</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessCtrl.cpp">
+      <Filter>UI\Monitor</Filter>
+    </ClCompile>
+    <ClCompile Include="Batch\Batch.cpp">
+      <Filter>Batch</Filter>
+    </ClCompile>
+    <ClCompile Include="Batch\BatchManager.cpp">
+      <Filter>Batch</Filter>
+    </ClCompile>
+    <ClCompile Include="Batch\BatchScanner.cpp">
+      <Filter>Batch\Scanner</Filter>
+    </ClCompile>
+    <ClCompile Include="Batch\FileReader.cpp">
+      <Filter>Batch\File</Filter>
+    </ClCompile>
+    <ClCompile Include="Batch\PlayCommand.cpp">
+      <Filter>Batch\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Batch\StopCommand.cpp">
+      <Filter>Batch\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Batch\SyncCommand.cpp">
+      <Filter>Batch\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Batch\UninstallCommand.cpp">
+      <Filter>Batch\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Batch\InstallCommand.cpp">
+      <Filter>Batch\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="OptionManager.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Batch\QuitCommand.cpp">
+      <Filter>Batch\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Batch\BaseCommand.cpp">
+      <Filter>Batch\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="BatchDialog.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Batch\ListCtrlEx.cpp">
+      <Filter>UI\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Batch\TextProgressCtrl.cpp">
+      <Filter>UI\Controls</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LS_launcher.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="BackupDialog.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="AddIPDialog.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="cEncrypt.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientSocket.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="cPacket.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="InstallDialog.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="LauncherTabCtrl.h">
+      <Filter>UI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="LauncherListCtrl.h">
+      <Filter>UI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="cFile.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="cBuffer.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="MD5.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerDialog.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="LS_launcherDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\Protocol.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Server.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>UI\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="WinMessage.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="cHeader.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="MsgBox.h" />
+    <ClInclude Include="Minidump\File.h">
+      <Filter>Minidump</Filter>
+    </ClInclude>
+    <ClInclude Include="Minidump\MiniDump.h">
+      <Filter>Minidump</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton.h" />
+    <ClInclude Include="UserDefine.h" />
+    <ClInclude Include="Timer.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="PerfMonDlg.h">
+      <Filter>UI\Monitor</Filter>
+    </ClInclude>
+    <ClInclude Include="MonitorCtrl.h">
+      <Filter>UI\Monitor</Filter>
+    </ClInclude>
+    <ClInclude Include="ProcessCtrl.h">
+      <Filter>UI\Monitor</Filter>
+    </ClInclude>
+    <ClInclude Include="Batch\Batch.h">
+      <Filter>Batch</Filter>
+    </ClInclude>
+    <ClInclude Include="Batch\BatchCompileDefine.h">
+      <Filter>Batch</Filter>
+    </ClInclude>
+    <ClInclude Include="Batch\BatchManager.h">
+      <Filter>Batch</Filter>
+    </ClInclude>
+    <ClInclude Include="Batch\BatchScanner.h">
+      <Filter>Batch\Scanner</Filter>
+    </ClInclude>
+    <ClInclude Include="Batch\FileReader.h">
+      <Filter>Batch\File</Filter>
+    </ClInclude>
+    <ClInclude Include="Batch\PlayCommand.h">
+      <Filter>Batch\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Batch\InstallCommand.h">
+      <Filter>Batch\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Batch\StopCommand.h">
+      <Filter>Batch\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Batch\SyncCommand.h">
+      <Filter>Batch\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Batch\UninstallCommand.h">
+      <Filter>Batch\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionManager.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Batch\QuitCommand.h">
+      <Filter>Batch\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Batch\BaseCommand.h">
+      <Filter>Batch\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="BatchDialog.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Batch\ListCtrlEx.h">
+      <Filter>UI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Batch\TextProgressCtrl.h">
+      <Filter>UI\Controls</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\bitmap1.bmp">
+      <Filter>UI\Resource</Filter>
+    </None>
+    <None Include="res\demonOn.bmp">
+      <Filter>UI\Resource</Filter>
+    </None>
+    <None Include="res\off.bmp">
+      <Filter>UI\Resource</Filter>
+    </None>
+    <None Include="res\on.bmp">
+      <Filter>UI\Resource</Filter>
+    </None>
+    <None Include="res\serviceOn.bmp">
+      <Filter>UI\Resource</Filter>
+    </None>
+    <None Include="res\LS_launcher.rc2">
+      <Filter>UI\Resource</Filter>
+    </None>
+    <None Include="res\LS_launcher.ico">
+      <Filter>UI\Resource</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="UI">
+      <UniqueIdentifier>{5f961548-3b59-4c72-bb9e-5b1c5ee20d43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Resource">
+      <UniqueIdentifier>{3d73a0c1-09c9-463c-8cf5-c850b395bec4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network">
+      <UniqueIdentifier>{d6c719ce-3903-445a-bbab-63ea93fec6f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{e4960be1-81e8-40ac-9ba5-9c96aa2080e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include">
+      <UniqueIdentifier>{84f5aa68-0ad8-4a07-afe3-1ec04691124f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Monitor">
+      <UniqueIdentifier>{627426c3-1126-4fcb-8484-1c3ea221b07c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Minidump">
+      <UniqueIdentifier>{e765722a-2bc1-435b-8c53-97b855c77e9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Controls">
+      <UniqueIdentifier>{69dbf32e-5656-4ade-a02f-bbdebfe9fe37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Batch">
+      <UniqueIdentifier>{34a07e64-53ce-48eb-9740-f48b2c0f30de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Batch\Scanner">
+      <UniqueIdentifier>{0d4623b9-2c89-4492-8d88-e2a1a329be84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Batch\Command">
+      <UniqueIdentifier>{61fa37ec-6f71-498d-9eab-3c8be376d3cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Batch\File">
+      <UniqueIdentifier>{a093ba4d-c323-4b33-83d6-12de248650d0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="LS_launcher.rc">
+      <Filter>UI\Resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

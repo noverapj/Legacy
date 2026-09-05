@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+  xmlns:SOAP-ENV="http://www.w3.org/2003/05/soap-envelope"
+  xmlns:SOAP-ENC="http://www.w3.org/2003/05/soap-encoding"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:ns1="http://testsoap.nexon.com/remoting_version_2/">
+ <SOAP-ENV:Header>
+ </SOAP-ENV:Header>
+ <SOAP-ENV:Body>
+  <ns1:ApprovalCashChange_ChannelingResponse>
+   <ns1:ApprovalCashChange_ChannelingResult>
+    <ns1:Command></ns1:Command>
+    <ns1:Result>false</ns1:Result>
+    <ns1:Code>0</ns1:Code>
+    <ns1:strCode></ns1:strCode>
+    <ns1:Message></ns1:Message>
+    <ns1:ApprovalNo></ns1:ApprovalNo>
+    <ns1:ApprovalAmount></ns1:ApprovalAmount>
+    <ns1:Balance></ns1:Balance>
+    <ns1:ApvSn>0</ns1:ApvSn>
+   </ns1:ApprovalCashChange_ChannelingResult>
+  </ns1:ApprovalCashChange_ChannelingResponse>
+ </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

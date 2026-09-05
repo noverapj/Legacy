@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Log">
+      <UniqueIdentifier>{c1181d6f-a7d5-465b-9eab-069081474b25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{3b3f8412-d4eb-46e1-a612-f908b22d3845}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Log\File">
+      <UniqueIdentifier>{2fb27da0-bcfc-474c-b0fa-bf133977b1bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Etc">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Log\Thread">
+      <UniqueIdentifier>{308d6d11-4b2f-44f0-ac4c-7907222aa341}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Log\Queue">
+      <UniqueIdentifier>{64d09068-abc5-401e-845e-f46c13c54986}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Log\Pool">
+      <UniqueIdentifier>{49e91024-d08e-48be-b399-ed6b0e6abb0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network">
+      <UniqueIdentifier>{b9612de2-4427-486d-971b-f210b8899320}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\include\common.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\MemPooler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\cCriticalSection.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Log\ioQueue.h">
+      <Filter>Log\Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Log\ioFile.h">
+      <Filter>Log\File</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\cSingleton.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Log\ioDefine.h">
+      <Filter>Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Log\targetver.h">
+      <Filter>Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Log\stdafx.h">
+      <Filter>Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Log\ioLogDataPool.h">
+      <Filter>Log\Pool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Log\ioLogQueue.h">
+      <Filter>Log\Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Log\LogData.h">
+      <Filter>Log\Pool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Log\ioThread.h">
+      <Filter>Log\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Log\ioLogThread.h">
+      <Filter>Log\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Log\ioILogger.h">
+      <Filter>Log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Log\ioLogger.h">
+      <Filter>Log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\Log.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Log\LOGPacket.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Log\ioTCPConnectNode.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Log\ioLogReceiveIO.h">
+      <Filter>Etc</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\Log\ioQueue.cpp">
+      <Filter>Log\Queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Log\ioFile.cpp">
+      <Filter>Log\File</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Log\stdafx.cpp">
+      <Filter>Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Log\ioLogDataPool.cpp">
+      <Filter>Log\Pool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Log\ioLogQueue.cpp">
+      <Filter>Log\Queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Log\ioLogThread.cpp">
+      <Filter>Log\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Log\ioThread.cpp">
+      <Filter>Log\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Log\ioILogger.cpp">
+      <Filter>Log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Log\Log.cpp">
+      <Filter>Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Log\LOGPacket.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Log\ioLogger.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Log\ioTCPConnectNode.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Log\ioLogReceiveIO.cpp">
+      <Filter>Etc</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

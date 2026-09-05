@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Service">
+      <UniqueIdentifier>{5c96d37f-fe44-45d4-955c-4cafa42c1561}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network">
+      <UniqueIdentifier>{1d847a9d-9b58-41ce-bcea-164c83aa47d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App">
+      <UniqueIdentifier>{1128530b-7fda-4690-9ac2-bd671f9c694a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Service\Minidump">
+      <UniqueIdentifier>{b1a1d686-3300-49e1-9644-3abf5391e335}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App\LSGameServerConnector">
+      <UniqueIdentifier>{4f6b548e-b361-4148-952c-ab43489981c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App\LSAcceptor">
+      <UniqueIdentifier>{f4c39a9a-3ba3-4e32-9af7-c702f1f4bc20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App\Logic">
+      <UniqueIdentifier>{21815827-9f66-4ab5-8827-48449fcc88db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App\Logic\Scheduler">
+      <UniqueIdentifier>{b054ba67-c874-4274-8145-049bd590e324}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App\LogAssist">
+      <UniqueIdentifier>{99016d77-9538-4a1c-b7b7-a5807c45790d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App\BaseClass">
+      <UniqueIdentifier>{3e77c43e-f070-46b1-9dd2-8aab323defe0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App\IPBlocker">
+      <UniqueIdentifier>{5a92fa22-c000-4751-b9fc-1cb81903dfb8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="../../src/ls_loginsvr/stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/Minidump\File.h">
+      <Filter>Service\Minidump</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/Minidump\MiniDump.h">
+      <Filter>Service\Minidump</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/UserDefineSingleton.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/UserDefine.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/UserDefineType.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/Manager.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/BaseClass\Handler.h">
+      <Filter>App\BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/BaseClass\ioConfiguration.h">
+      <Filter>App\BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/BaseClass\ioTestClass.h">
+      <Filter>App\BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/BaseClass\locking_queue.h">
+      <Filter>App\BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/BaseClass\LSTimer.h">
+      <Filter>App\BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/BaseClass\LSTimerMgr.h">
+      <Filter>App\BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/BaseClass\Operation.h">
+      <Filter>App\BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/BaseClass\OpMemPool.h">
+      <Filter>App\BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/BaseClass\Singleton.h">
+      <Filter>App\BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/Logic\LSLogic.h">
+      <Filter>App\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/Logic\LSLogicHandler.h">
+      <Filter>App\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/Logic\LSLogicOperations.h">
+      <Filter>App\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/Logic\LSPacketQueue.h">
+      <Filter>App\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/LSAcceptor\AcceptorMgr.h">
+      <Filter>App\LSAcceptor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/LSAcceptor\ClientNode.h">
+      <Filter>App\LSAcceptor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/LSAcceptor\ClientsManager.h">
+      <Filter>App\LSAcceptor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/LSAcceptor\iologinsvrBind.h">
+      <Filter>App\LSAcceptor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/Network\IOCPHandler.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/Network\SP2Packet.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/LSGameServerConnector\LSConnector.h">
+      <Filter>App\LSGameServerConnector</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/LSGameServerConnector\ServerConnectorMgr.h">
+      <Filter>App\LSGameServerConnector</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/LSLogAssist\LSLogAssist.h">
+      <Filter>App\LogAssist</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/Service\Service.h">
+      <Filter>Service</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/Service\ServiceLS.h">
+      <Filter>Service</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/Scheduler\Scheduler.h">
+      <Filter>App\Logic\Scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/Scheduler\SchedulerNode.h">
+      <Filter>App\Logic\Scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/BaseClass\ioPacketChecker.h">
+      <Filter>App\BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/BaseClass\ioProcessChecker.h">
+      <Filter>App\BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_loginsvr/LSGameServerConnector\ConnectAssist.h">
+      <Filter>App\LSGameServerConnector</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_loginsvr\LSGameServerConnector\ServerInfoManager.h">
+      <Filter>App\LSGameServerConnector</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_loginsvr\LSAcceptor\UserInfoManager.h">
+      <Filter>App\LSAcceptor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_loginsvr\BaseClass\BoostPooler.h">
+      <Filter>App\BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_loginsvr\Network\ioServerSecurity.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_loginsvr\BaseClass\ioLoginServerState.h">
+      <Filter>App\BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_loginsvr\BaseClass\CPU.h">
+      <Filter>App\BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_loginsvr\IPBlocker\ioIPBlocker.h">
+      <Filter>App\IPBlocker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_loginsvr\IPBlocker\cFile.h">
+      <Filter>App\IPBlocker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_loginsvr\IPBlocker\ioIP.h">
+      <Filter>App\IPBlocker</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../src/ls_loginsvr/stdafx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_loginsvr/main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_loginsvr/Minidump\File.cpp">
+      <Filter>Service\Minidump</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_loginsvr/Minidump\MiniDump.cpp">
+      <Filter>Service\Minidump</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_loginsvr/Manager.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_loginsvr/BaseClass\Handler.cpp">
+      <Filter>App\BaseClass</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_loginsvr/BaseClass\ioConfiguration.cpp">
+      <Filter>App\BaseClass</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_loginsvr/BaseClass\ioTestClass.cpp">
+      <Filter>App\BaseClass</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_loginsvr/BaseClass\LSTimer.cpp">
+      <Filter>App\BaseClass</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_loginsvr/BaseClass\LSTimerMgr.cpp">
+      <Filter>App\BaseClass</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_loginsvr/BaseClass\Operation.cpp">
+      <Filter>App\BaseClass</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_loginsvr/BaseClass\OpMemPool.cpp">
+      <Filter>App\BaseClass</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_loginsvr/Logic\LSLogic.cpp">
+      <Filter>App\Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_loginsvr/Logic\LSLogicHandler.cpp">
+      <Filter>App\Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_loginsvr/Logic\LSLogicOperations.cpp">
+      <Filter>App\Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_loginsvr/Logic\LSPacketQueue.cpp">
+      <Filter>App\Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_loginsvr/LSAcceptor\AcceptorMgr.cpp">
+      <Filter>App\LSAcceptor</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_loginsvr/LSAcceptor\ClientNode.cpp">
+      <Filter>App\LSAcceptor</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_loginsvr/LSAcceptor\ClientsManager.cpp">
+      <Filter>App\LSAcceptor</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_loginsvr/LSAcceptor\iologinsvrBind.cpp">
+      <Filter>App\LSAcceptor</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_loginsvr/Network\IOCPHandler.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_loginsvr/Network\SP2Packet.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_loginsvr/LSGameServerConnector\LSConnector.cpp">
+      <Filter>App\LSGameServerConnector</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_loginsvr/LSGameServerConnector\ServerConnectorMgr.cpp">
+      <Filter>App\LSGameServerConnector</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_loginsvr/LSLogAssist\LSLogAssist.cpp">
+      <Filter>App\LogAssist</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_loginsvr/Service\Service.cpp">
+      <Filter>Service</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_loginsvr/Service\ServiceLS.cpp">
+      <Filter>Service</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_loginsvr/Scheduler\Scheduler.cpp">
+      <Filter>App\Logic\Scheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_loginsvr/Scheduler\SchedulerNode.cpp">
+      <Filter>App\Logic\Scheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_loginsvr/BaseClass\ioPacketChecker.cpp">
+      <Filter>App\BaseClass</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_loginsvr/BaseClass\ioProcessChecker.cpp">
+      <Filter>App\BaseClass</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_loginsvr/LSGameServerConnector\ConnectAssist.cpp">
+      <Filter>App\LSGameServerConnector</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_loginsvr\LSGameServerConnector\ServerInfoManager.cpp">
+      <Filter>App\LSGameServerConnector</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_loginsvr\LSAcceptor\UserInfoManager.cpp">
+      <Filter>App\LSAcceptor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_loginsvr\Network\ioServerSecurity.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_loginsvr\Utility.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_loginsvr\BaseClass\ioLoginServerState.cpp">
+      <Filter>App\BaseClass</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_loginsvr\BaseClass\CPU.cpp">
+      <Filter>App\BaseClass</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_loginsvr\IPBlocker\ioIPBlocker.cpp">
+      <Filter>App\IPBlocker</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_loginsvr\IPBlocker\cFile.cpp">
+      <Filter>App\IPBlocker</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_loginsvr\IPBlocker\ioIP.cpp">
+      <Filter>App\IPBlocker</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="../../src/ls_loginsvr/ls_loginsvr.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,773 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{805f2958-d57c-49eb-ab0b-da5d50027cd1}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{0f587dd0-2fdd-4b34-9d96-fcf802e4362f}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{ca051345-307e-4722-8b8e-19193eb7faab}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="ThreadModules">
+      <UniqueIdentifier>{db2c4cb6-f770-4416-84c7-9151f9551092}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Skin">
+      <UniqueIdentifier>{e8807fb1-9c1f-4e1b-ad1f-68dbdcd7188f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CRC32">
+      <UniqueIdentifier>{34771b24-3d3d-4b5e-8fa0-f61c3e671bce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NetWork">
+      <UniqueIdentifier>{7772bae5-0035-4eba-845e-9127c4526620}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Xtrap">
+      <UniqueIdentifier>{6f817293-5134-47fd-8c82-269e1935cc04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StringManager">
+      <UniqueIdentifier>{b0cd6809-f2f3-440b-af2a-4884e53be6db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Local">
+      <UniqueIdentifier>{5703772f-0f5b-48a0-8352-2d63fbd4e9d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Channeling">
+      <UniqueIdentifier>{f01e6c80-e4b6-4705-b425-36dac0cb4995}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{bf5738e1-8cbc-49c1-b7d7-99aa82f57b0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XML">
+      <UniqueIdentifier>{407255dc-6ece-4ac6-a4da-3911b2cafa30}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutoUpgrade.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoUpgradeDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CopyFolder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cpu_info.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateShortcut.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HelpFunc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HttpApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HTTPManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ioDaumDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ioErrorDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ioINILoaderAU.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ioLoginDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ioOTPDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadModules\SuperParent.cpp">
+      <Filter>ThreadModules</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadModules\Thread.cpp">
+      <Filter>ThreadModules</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadModules\ThreadManager.cpp">
+      <Filter>ThreadModules</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadModules\ThreadSync.cpp">
+      <Filter>ThreadModules</Filter>
+    </ClCompile>
+    <ClCompile Include="skin\CxStatic.cpp">
+      <Filter>Skin</Filter>
+    </ClCompile>
+    <ClCompile Include="skin\HoverButton.cpp">
+      <Filter>Skin</Filter>
+    </ClCompile>
+    <ClCompile Include="skin\ioProgressBar.cpp">
+      <Filter>Skin</Filter>
+    </ClCompile>
+    <ClCompile Include="skin\URLLinkButton.cpp">
+      <Filter>Skin</Filter>
+    </ClCompile>
+    <ClCompile Include="skin\WebBrowser.cpp">
+      <Filter>Skin</Filter>
+    </ClCompile>
+    <ClCompile Include="Crc32Static.cpp">
+      <Filter>CRC32</Filter>
+    </ClCompile>
+    <ClCompile Include="NetWork\ioClientSocket.cpp">
+      <Filter>NetWork</Filter>
+    </ClCompile>
+    <ClCompile Include="NetWork\ioClientUDPSocket.cpp">
+      <Filter>NetWork</Filter>
+    </ClCompile>
+    <ClCompile Include="NetWork\SP2Packet.cpp">
+      <Filter>NetWork</Filter>
+    </ClCompile>
+    <ClCompile Include="Xtrap\ioXtrap.cpp">
+      <Filter>Xtrap</Filter>
+    </ClCompile>
+    <ClCompile Include="StringManager\ioHashString.cpp">
+      <Filter>StringManager</Filter>
+    </ClCompile>
+    <ClCompile Include="StringManager\ioSingleton.cpp">
+      <Filter>StringManager</Filter>
+    </ClCompile>
+    <ClCompile Include="StringManager\ioStringManager.cpp">
+      <Filter>StringManager</Filter>
+    </ClCompile>
+    <ClCompile Include="StringManager\Safesprintf.cpp">
+      <Filter>StringManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioLocalChina.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioLocalIndonesia.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioLocalJapan.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioLocalJapanLanguage.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioLocalKorea.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioLocalManager.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioLocalParent.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioLocalTaiwan.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioLocalTaiwanLanguage.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioLocalThailand.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioLocalThailandLanguage.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioLocalUS.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="Channeling\ioChannelingNodeBuddy.cpp">
+      <Filter>Channeling</Filter>
+    </ClCompile>
+    <ClCompile Include="Channeling\ioChannelingNodeDaum.cpp">
+      <Filter>Channeling</Filter>
+    </ClCompile>
+    <ClCompile Include="Channeling\ioChannelingNodeManager.cpp">
+      <Filter>Channeling</Filter>
+    </ClCompile>
+    <ClCompile Include="Channeling\ioChannelingNodeMgame.cpp">
+      <Filter>Channeling</Filter>
+    </ClCompile>
+    <ClCompile Include="Channeling\ioChannelingNodeNaver.cpp">
+      <Filter>Channeling</Filter>
+    </ClCompile>
+    <ClCompile Include="Channeling\ioChannelingNodeNormal.cpp">
+      <Filter>Channeling</Filter>
+    </ClCompile>
+    <ClCompile Include="Channeling\ioChannelingNodeParent.cpp">
+      <Filter>Channeling</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\ioHttpManager.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\md5.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="ioBalancer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WaitingDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioLocalEU.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioLocalLatin.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="skin\CDialogSK.cpp">
+      <Filter>Skin</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\ioXMLDocument.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\ioXMLElement.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\tinystr.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\tinyxml.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\tinyxmlerror.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\tinyxmlparser.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioLocalLatinLanguage.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioLocalChinaLanguage.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioLocalSingapore.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioLocalBrazil.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="Local\ioLocalPhilippine.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="AutoUpgrade.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutoUpgrade.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AutoUpgradeDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CopyFolder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cpu_info.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateShortcut.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HelpFunc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HttpApp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HTTPManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ioDaumDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ioErrorDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ioINILoaderAU.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ioLoginDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ioOTPDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadModules\SuperParent.h">
+      <Filter>ThreadModules</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadModules\Thread.h">
+      <Filter>ThreadModules</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadModules\ThreadManager.h">
+      <Filter>ThreadModules</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadModules\ThreadSync.h">
+      <Filter>ThreadModules</Filter>
+    </ClInclude>
+    <ClInclude Include="skin\CDialogSK.h">
+      <Filter>Skin</Filter>
+    </ClInclude>
+    <ClInclude Include="skin\CxStatic.h">
+      <Filter>Skin</Filter>
+    </ClInclude>
+    <ClInclude Include="skin\HoverButton.h">
+      <Filter>Skin</Filter>
+    </ClInclude>
+    <ClInclude Include="skin\ioProgressBar.h">
+      <Filter>Skin</Filter>
+    </ClInclude>
+    <ClInclude Include="skin\MemDC.h">
+      <Filter>Skin</Filter>
+    </ClInclude>
+    <ClInclude Include="skin\URLLinkButton.h">
+      <Filter>Skin</Filter>
+    </ClInclude>
+    <ClInclude Include="skin\WebBrowser.h">
+      <Filter>Skin</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>CRC32</Filter>
+    </ClInclude>
+    <ClInclude Include="Crc32Static.h">
+      <Filter>CRC32</Filter>
+    </ClInclude>
+    <ClInclude Include="NetWork\ioClientSocket.h">
+      <Filter>NetWork</Filter>
+    </ClInclude>
+    <ClInclude Include="NetWork\ioClientUDPSocket.h">
+      <Filter>NetWork</Filter>
+    </ClInclude>
+    <ClInclude Include="NetWork\Protocol.h">
+      <Filter>NetWork</Filter>
+    </ClInclude>
+    <ClInclude Include="NetWork\SP2Packet.h">
+      <Filter>NetWork</Filter>
+    </ClInclude>
+    <ClInclude Include="Xtrap\ioXtrap.h">
+      <Filter>Xtrap</Filter>
+    </ClInclude>
+    <ClInclude Include="Xtrap\XTrap4Launcher.h">
+      <Filter>Xtrap</Filter>
+    </ClInclude>
+    <ClInclude Include="StringManager\ioHashString.h">
+      <Filter>StringManager</Filter>
+    </ClInclude>
+    <ClInclude Include="StringManager\ioSingleton.h">
+      <Filter>StringManager</Filter>
+    </ClInclude>
+    <ClInclude Include="StringManager\ioStringManager.h">
+      <Filter>StringManager</Filter>
+    </ClInclude>
+    <ClInclude Include="StringManager\Safesprintf.h">
+      <Filter>StringManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioLocalChina.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioLocalIndonesia.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioLocalJapan.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioLocalJapanLanguage.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioLocalKorea.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioLocalManager.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioLocalParent.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioLocalTaiwan.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioLocalTaiwanLanguage.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioLocalThailand.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioLocalThailandLanguage.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioLocalUS.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Channeling\ioChannelingNodeBuddy.h">
+      <Filter>Channeling</Filter>
+    </ClInclude>
+    <ClInclude Include="Channeling\ioChannelingNodeDaum.h">
+      <Filter>Channeling</Filter>
+    </ClInclude>
+    <ClInclude Include="Channeling\ioChannelingNodeManager.h">
+      <Filter>Channeling</Filter>
+    </ClInclude>
+    <ClInclude Include="Channeling\ioChannelingNodeMgame.h">
+      <Filter>Channeling</Filter>
+    </ClInclude>
+    <ClInclude Include="Channeling\ioChannelingNodeNaver.h">
+      <Filter>Channeling</Filter>
+    </ClInclude>
+    <ClInclude Include="Channeling\ioChannelingNodeNormal.h">
+      <Filter>Channeling</Filter>
+    </ClInclude>
+    <ClInclude Include="Channeling\ioChannelingNodeParent.h">
+      <Filter>Channeling</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\ioHttpManager.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\md5.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="ioBalancer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WaitingDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioLocalEU.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioLocalLatin.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\ioXMLDocument.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\ioXMLElement.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\tinystr.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\tinyxml.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioLocalLatinLanguage.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioLocalChinaLanguage.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioLocalSingapore.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioLocalBrazil.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Local\ioLocalPhilippine.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\Admin.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\back.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\back_error.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\back_error_id.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\back_error_jp.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\back_error_th.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\back_error_tw.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\back_error_us.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\back_id.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\back_jp.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\back_th.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\back_tw.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\back_us.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\bitmap4.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\cancel_btn.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\error_x_btn.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\exit_btn.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\exit_btn_id.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\exit_btn_jp.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\exit_btn_th.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\exit_btn_tw.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\exit_btn_us.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\login.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\login_edit_normal.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\login_edit_pw_normal.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\login_edit_pw_select.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\login_edit_select.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\login_enter_btn.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\login_enter_btn_th.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\login_enter_btn_tw.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\login_entry_btn.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\login_entry_btn_th.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\login_entry_btn_tw.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\login_findid_btn.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\login_findid_btn_th.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\login_findid_btn_tw.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\login_findpw_btn.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\login_findpw_btn_th.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\login_findpw_btn_tw.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\login_idsave_btn.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\login_tw.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\login_x_btn.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\optimize_btn.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\optimize_btn_id.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\optimize_btn_jp.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\optimize_btn_th.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\optimize_btn_tw.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\optimize_btn_us.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\progressbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\progressbar_back.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Shipping.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\solution_btn.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\solution_btn_id.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\solution_btn_jp.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\solution_btn_th.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\solution_btn_tw.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\start_btn.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\start_btn_id.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\start_btn_jp.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\start_btn_th.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\start_btn_tw.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\start_btn_us.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\text_back.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Version.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ReadMe.txt" />
+    <None Include="res\login_textbox.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\login_enter_btn_us.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\login_entry_btn_us.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\login_findid_btn_us.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\login_findpw_btn_us.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\solution_btn_us.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\login_us.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\login_id.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\back_error_sa.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\exit_btn_sa.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\solution_btn_sa.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\start_btn_sa.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\back_sa.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\NXEUErrorMessage.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\progressbar_optimization.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Local\text_tw.txt">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Local\text.txt">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Local\text_eu.txt">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Local\text_id.txt">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Local\text_na.txt">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Local\text_sa.txt">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Local\text_th.txt">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\login_entry_btn_sea.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\login_findid_btn_us_sea.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\migrationL.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\migrationBk.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\migrationR.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\login_x_btn2.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Confirm_btn.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\login_findpw_btn_sea.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

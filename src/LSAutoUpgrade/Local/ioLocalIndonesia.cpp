@@ -1,0 +1,482 @@
+#include "../stdafx.h"
+#include "../resource.h"
+#include "../HelpFunc.h"
+#include ".\ioLocalIndonesia.h"
+#include "../Util/md5.h"
+#include <winsock.h>
+#include "../Util/ioHttpManager.h"
+#include <strsafe.h>
+#include "../HttpApp.h"
+#include "../StringManager/ioHashString.h"
+#include "../AutoUpgradeDlg.h"
+
+ioLocalIndonesia::ioLocalIndonesia(void)
+{	
+	ZeroMemory( m_szRegKey, sizeof( m_szRegKey ) );
+	ZeroMemory( m_szStartURL, sizeof( m_szStartURL ) );
+	ZeroMemory( m_szLoginID, sizeof( m_szLoginID ) );
+	ZeroMemory( m_szLoginEncodePW, sizeof( m_szLoginEncodePW ) );
+	ZeroMemory( m_szServerID, sizeof( m_szServerID ) );
+}
+
+ioLocalIndonesia::~ioLocalIndonesia(void)
+{
+}
+
+ioLocalManager::LocalType ioLocalIndonesia::GetType()
+{
+	return ioLocalManager::LCT_INDONESIA;
+}
+
+const char * ioLocalIndonesia::GetTextListFileName()
+{
+	return "text_id.txt";
+}
+
+const char * ioLocalIndonesia::GetMemTextList()
+{
+	return  "|EXE_CAutoUpgradeApp::IsDuplication_1|\r\n\r\n      [Lost Saga] sudah berjalan.\r\n\r\n      Silahkan coba lagi setelah menutup [Lost Saga]\r\n\r\n\r\n      (Error Code:201)|"
+			"|EXE_CAutoUpgradeDlg::OnCopyData_1|Sedang menyambungkan ke Server.|"
+			"|EXE_CAutoUpgradeDlg::OnCopyData_2|Sedang menyambungkan UDP.|"
+			"|EXE_CAutoUpgradeDlg::OnCopyData_3|Gagal menyambungkan ke Game Server.|"
+			"|EXE_CAutoUpgradeDlg::OnTimer_1|Sedang menjalankan Game.|"
+			"|EXE_CAutoUpgradeDlg::OnTimer_2|Gagal menjalankan Game selama 10 menit.\r\n(Error Code:210)|"
+			"|EXE_CAutoUpgradeDlg::OnTimer_3|Gagal menyambungkan ke Game Server.|"
+			"|EXE_CAutoUpgradeDlg::OnTimer_4|Sedang mengecek optimasi.|"
+			"|EXE_CAutoUpgradeDlg::OnTimer_5|Sedang mengecek optimasi.|"
+			"|EXE_CAutoUpgradeDlg::OnTimer_6|Game akan dimulai secara otomatis.|"
+			"|EXE_CAutoUpgradeDlg::OnTimer_7|Game akan dimulai secara otomatis.|"
+			"|EXE_CAutoUpgradeDlg::OnTimer_8|Gagal menjalankan Client.\r\n(Error Code:226)|"
+			"|EXE_CAutoUpgradeDlg::OnTimer_9|Gagal menjalankan Client.|"
+			"|EXE_CAutoUpgradeDlg::SetWantEndDialog_1|Sedang menutup Game. Silahkan menunggu.|"
+			"|EXE_Help::CheckRightHDDSpace_1|Untuk mengupdate Lost Saga membutuhkan  %1MB lebih \r\n Space Harddisk.\r\n(Error Code:207)\r\n\r\nAll:%2M, Tersisa:%3M, Yang diperlukan:%4M|"
+			"|EXE_Help::CheckDownloadedFile_1|Gagal membuka file untuk pengecekan.\r\n|"
+			"|EXE_Help::CheckDownloadedFile_2|File yang download ada error.\r\nNama File:%1\r\nFileCRC:%2, Ukuran File:%3,GetLastError:%4|"
+			"|EXE_HTTPManager::_Run_1|Sedang membaca info patch lokal.|"
+			"|EXE_HTTPManager::_Run_2|Versi DirectX yang terinstal terlalu rendah.\r\nSilahkan install DirectX versi terbaru.\r\nSilahkan mengecek versi Driver Graphic Card juga.\r\n(Error Code:211)|"
+			"|EXE_HTTPManager::_Run_3|Telah gagal membuka iop %1.\r\ndan gagal menghapus file.\r\nNama File:%2, GetLastError:%3\r\nSilahkan menjalankan Program lagi.\r\n(Error Code:222)\r\n\r\n|"
+			"|EXE_HTTPManager::_Run_4|Gagal mendownload File info.\r\nServer patch mungkin sedang full.\r\nSilahkan mencoba beberapa saat lagi.\r\n(Error Code:203)\r\n\r\n|"
+			"|EXE_HTTPManager::_Run_5|File Info korup.\r\nServer patch mungkin sedang full.\r\nSilahkan mencoba beberapa saat lagi.\r\n(Error Code:215)\r\n\r\n|"
+			"|EXE_HTTPManager::_Run_6|Gagal mendekompres File Info pack.\r\nSilahkan mengecek hasil sinkronisasi Patch File\r\n Silahkan menjalankan Program lagi.\r\n(Error Code:204)\r\n\r\n|"
+			"|EXE_HTTPManager::_Run_7|Gagal menganalisa File Info.\r\n Silahkan menjalankan Program lagi.\r\n(Error Code:205)\r\n\r\n|"
+			"|EXE_HTTPManager::_Run_8|Gagal mengecek sisa Harddisk.\r\nAda kemungkinan Sisa Hardisk kamu\r\ntidak cukup.\r\nJika terjadi error yang sama silahkan coba membuat space Harddisk lebih.\r\n(Error Code:223)\r\n\r\nGetLastError:%1|"
+			"|EXE_HTTPManager::_Run_9|Gagal mendownload File(Gagal 100 kali).\r\nSilahkan menjalankan Program lagi.\r\nJika terjadi terus silahkan uninstall LostSaga di\r\nControl Panel dan menscan virus.\r\nDan juga silahkan mengecek koneksi Internet.\r\n(Error Code:206)\r\n\r\n|"
+			"|EXE_HTTPManager::_Run_10|Now Patch Apply.|"
+			"|EXE_HTTPManager::DeleteGarbage_1| Patch Apply [%1/%2]|"
+			"|EXE_HTTPManager::_RunAdmin_1|Terjadi error dalam proses mendekompres File Pack %1.\r\n\r\n%2|"
+			"|EXE_HTTPManager::_RunAdmin_2|Selesai.|"
+			"|EXE_HTTPManager::_RunAdmin_3|Terjadi error dalam proses Copy Folder.\r\n\r\n|"
+			"|EXE_HTTPManager::_RunOptionCopyFolder_1|Error Source Folder.|"
+			"|EXE_HTTPManager::_RunOptionCopyFolder_2|Error Target Folder.|"
+			"|EXE_HTTPManager::_RunOptionCopyFolder_3|Sedang proses copy Folder.|"
+			"|EXE_HTTPManager::_RunOptionCopyFolder_4|Selesai.|"
+			"|EXE_HTTPManager::AddPacFile_1|Sedang proses penggabungan:File %1.|"
+			"|EXE_HTTPManager::AddPacFile_2|Error penggabungan File:%1.|"
+			"|EXE_HTTPManager::AddPacFile_3|Gagal menggabungkan File\r\nNama File:%1\r\nNama File dalam File Pack:%2\r\nArray File Pack:%3 , File CRC:%4, GetLastError:%5, Exception:%6, |"
+			"|EXE_HTTPManager::AddPacFile_4|Gagal menghapus file download saat penggabungan file.\r\nNama File:%1\r\nGetLastError:%2, |"
+			"|EXE_HTTPManager::CheckPac_1|Error Check Pack NULL.|"
+			"|EXE_HTTPManager::CheckPac_2|Variabel Pack untuk pengecekan adalah NULL.\r\nGetLastError:%1\r\n|"
+			"|EXE_HTTPManager::CheckPac_3|Dalam proses pengecekan File:%1/File %2[%3%%].|"
+			"|EXE_HTTPManager::CopyVersionupFiles_1|manual patch:[%1%%].|"
+			"|EXE_HTTPManager::CreateAllNewPacFile_1|Gagal mengoptimasi File %1.\r\n Silahkan menjalankan Program lagi.\r\n(Error Code:212)\r\n\r\n%2|"
+			"|EXE_HTTPManager::CreateNewPacFile_1|Gagal menghapus file yang lama untuk membuat File pack baru.\r\nNama File:%1\r\nGetLastError:%2|"
+			"|EXE_HTTPManager::CreateNewPacFile_2|Error meyimpan Pack baru.|"
+			"|EXE_HTTPManager::CreateNewPacFile_3|Gagal membuat dan membuka File Pack baru.\r\n|"
+			"|EXE_HTTPManager::CreateNewPacFile_4|Error Pack baru NULL.|"
+			"|EXE_HTTPManager::CreateNewPacFile_5|Variabel File iop untuk membuat File pack baru adalah NULL.\r\nNama File:%1\r\nGetLastError:%2|"
+			"|EXE_HTTPManager::CreateNewPacFile_6|Error membuka Pack baru.|"
+			"|EXE_HTTPManager::CreateNewPacFile_7|Gagal membuka file iop untuk membuat file pack baru.\r\nNama File:%1\r\nGetLastError:%2,Exception:%3|"
+			"|EXE_HTTPManager::CreateNewPacFile_8|Error Info Pack baru.|"
+			"|EXE_HTTPManager::CreateNewPacFile_9|Gagal mereset info file iop untuk membuat file pack baru.\r\nNama File:%1\r\nGetLastError:%2|"
+			"|EXE_HTTPManager::CreateNewPacFile_10|Error Pack baru NULL 2.|"
+			"|EXE_HTTPManager::CreateNewPacFile_11|Variabel iop yang akan dibuat adalah NULL.\r\nNama File:%1\r\nGetLastError:%2|"
+			"|EXE_HTTPManager::CreateNewPacFile_12|Error membuka pack baru 2.|"
+			"|EXE_HTTPManager::CreateNewPacFile_13|Gagal membuka file iop yang baru dibuat.\r\nNama File:%1\r\nGetLastError:%2, FileCRC:%3, Exception:%4|"
+			"|EXE_HTTPManager::CreateNewPacFile_14|Proses Optimisasi:%1/File %2[%3%%].|"
+			"|EXE_HTTPManager::CreateNewPacFile_15|Error Info file Pack baru.|"
+			"|EXE_HTTPManager::CreateNewPacFile_16|Gagal mencari info file iop yang lama untuk membuat file pack baru.\r\nNama File:%1\r\nGetLastError:%2,Array:%3,Exception:%4|"
+			"|EXE_HTTPManager::CreateNewPacFile_17|Error data file Pack baru.|"
+			"|EXE_HTTPManager::CreateNewPacFile_18|Gagal membaca data file iop yang lama untuk membuat file pack baru.\r\nNama file:%1\r\nFile Hash:%2,File Index:%3,Ukuran Kompresi File:%4,Ukuran File:%5,GetLastError:%6,Array:%7,Exception:%8|"
+			"|EXE_HTTPManager::CreateNewPacFile_19|Error penggabunagn File Pack baru.|"
+			"|EXE_HTTPManager::CreateNewPacFile_20|Gagal menggabungkan file baru rs.iop.\r\nNama File:%1\r\nFile Hash:%2,File Index:%3,Ukuran kompresi File:%4,Ukuran File:%5,GetLastError:%6,Array:%7,Exception:%8|"
+			"|EXE_HTTPManager::CreateNewPacFile_21|Error ukuran pack baru.|"
+			"|EXE_HTTPManager::CreateNewPacFile_22|Ukuran file iop yang lama adalah 0.\r\nNama File:%1\r\nFile Hash:%2,File Index:%3,Ukuran kompresi File:%4,Ukuran File:%5,GetLastError:%6,Array:%7,Exception:%8|"
+			"|EXE_HTTPManager::CreateNewPacFile_23|Error Copy Pack baru.|"
+			"|EXE_HTTPManager::CreateNewPacFile_24|Gagal copy file iop baru.\r\nNama File:%1\r\nNama File baru:%2\r\nGetLastError:%3|"
+			"|EXE_HTTPManager::CreateNewPacFile_25|Error menghapus pack baru.|"
+			"|EXE_HTTPManager::CreateNewPacFile_26|Setelah selesai copy pack baru,gagal menghapus file pack yang lama.\r\nNama File:%1\r\nGetLastError:%2|"
+			"|EXE_HTTPManager::DownLoadProcess_1|Proses Download:File %1.|"
+			"|EXE_HTTPManager::DownLoadProcess_2|Error OpenUrl:%1.|"
+			"|EXE_HTTPManager::DownLoadProcess_3|Gagal OpenURL.\r\nNama File:%1\r\nError:%2|"
+			"|EXE_HTTPManager::DownLoadProcess_4|Error OpenUrl NULL:%1.|"
+			"|EXE_HTTPManager::DownLoadProcess_5|Nila file CInternetFile adalah NULL.\r\nNama File:%1\r\nGetLastError:%2|"
+			"|EXE_HTTPManager::DownLoadProcess_6|Gagal menghapus file lama selama download file.\r\nNama File:%1\r\nGetLastError:%2|"
+			"|EXE_HTTPManager::DownLoadProcess_7|Error membuka file:%1.|"
+			"|EXE_HTTPManager::DownLoadProcess_8|Gagal membuka file untuk menyimpan file.\r\n|"
+			"|EXE_HTTPManager::DownLoadProcess_9|Proses Download:%1 File [%2%%].|"
+			"|EXE_HTTPManager::DownLoadProcess_10|Error membuat file:%1.|"
+			"|EXE_HTTPManager::DownLoadProcess_11|Gagal membuat file untuk menyimpan.\r\n|"
+			"|EXE_HTTPManager::DownLoadProcess_12|Error menerima file:%1.|"
+			"|EXE_HTTPManager::DownLoadProcess_13|Gagal menerima file untuk menyimpan.\r\n|"
+			"|EXE_HTTPManager::DownLoadProcess_14|Checking download file :%1 file[%2%%].|"
+			"|EXE_HTTPManager::FileCopy_1|Error Copy File:%1.|"
+			"|EXE_HTTPManager::FileCopy_2|Gagal Copy file.\r\nNama File:%1\r\nNama File Baru:%2\r\nGetLastError:%3, |"
+			"|EXE_HTTPManager::GetUpdateFile_1|Proses pengecekan Download.|"
+			"|EXE_HTTPManager::GetUpdateFile_2|Proses pengecekan update[%1%%].|"
+			"|EXE_HTTPManager::InitPac_1|Gagal mengatur memory untuk Pack Library.\r\n Silahkan jalankan program ulang.\r\n(Error Code:213)\r\n\r\nArray:%1, GetLastError:%2|"
+			"|EXE_HTTPManager::OpenAllBigPacForGarbageSize_1|Gagal membuka file iop %1.\r\nNama File:%2, GetLastError:%3\r\nSilahkan jalankan program ulang.\r\n(Error Code:225)\r\n\r\n|"
+			"|EXE_HTTPManager::ParseDeleteFileList_1|Proses analisa file yang dihapus.|"
+			"|EXE_HTTPManager::ParsePatchFile_1|Gagal membuka file.\r\nNama File:%1\r\nGetLastError:%2|"
+			"|EXE_HTTPManager::ParsePatchFile_2|Gagal menghapus file yang lama.\r\nNama File:%1\r\nGetLastError:%2|"
+			"|EXE_HTTPManager::ProcessCheckPac_1|Ada masalah di file Client.\r\n\r\nSilahkan tekan [Ya] untuk melakukan pengecekan file \r\n\r\ndan jika menemukan error akan mendownload ulang Client.|"
+			"|EXE_HTTPManager::ProcessCheckPac_2|Ada masalah di file Client.\r\n\r\nAkan mendownload ulang client.|"
+			"|EXE_HTTPManager::ProcessCheckPac_3|Gagal membuka file iop %1.\r\ndan gagal menghapus file.\r\nNama File:%2, GetLastError:%3\r\nSilahkan jalankan program ulang.\r\n(Error Code:224)\r\n\r\n|"
+			"|EXE_HTTPManager::ProcessNewPacFile_1|Sudah di-optimasi.|"
+			"|EXE_HTTPManager::ProcessNewPacFile_2|Sudah di-optimasi.|"
+			"|EXE_HTTPManager::Run_1|Terjadi error di main root.\r\n Silahkan jalankan program ulang.\r\n(Error Code:209)\r\n\r\n|"
+			"|EXE_HTTPManager::SetTextWaitNewPac_1|Sedang mengecek optimasi.[%1]|"
+			"|EXE_HTTPManager::SetupFull_1|Terjadi error saat membuka file Pack %1.\r\n\r\n%2|"
+			"|EXE_HTTPManager::SetupFull_2|Gagal menghapus file info versi.\r\nNama File:%1\r\nGetLastError:%2|"
+			"|EXE_HTTPManager::SetupFull_3|Gagal membuka file info versi.\r\n|"
+			"|EXE_HTTPManager::SetupFull_4|Error membuka pack file.|"
+			"|EXE_HTTPManager::SetupFull_5|Gagal membuka file iop %1 setelah install.\r\nNama File:%2\r\nGetLastError:%3, FileCRC:%4, Exception:%5, |"
+			"|EXE_HTTPManager::StartGame_1|Sedang menjalankan Game.|"
+			"|EXE_HTTPManager::StartGame_2|Waktu berlaku untuk Login Key telah habis.\r\n\r\n         Untuk keamanan login\r\n\r\n            Silahkan login ulang.|"
+			"|EXE_HTTPManager::StartGame_3|Game akan dimulai secara otomatis.[%1]|"
+			"|EXE_HTTPManager::StartGame_4|Silahkan tekan tombol Start untuk memulai game|"
+			"|EXE_HTTPManager::StartGame_5|Web Broker Version is low. Please restart the game.|"
+			"|EXE_HTTPManager::StartGame_6|Web Broker Error!!|"
+			"|EXE_HTTPManager::UnFull_1|Error Full Install NULL.|"
+			"|EXE_HTTPManager::UnFull_2|Variabel Pack yang akan digunakan untuk versi install adalah NULL.\r\nGetLastError:%1, |"
+			"|EXE_HTTPManager::UnFull_3|Error membuka Full Install.|"
+			"|EXE_HTTPManager::UnFull_4|Gagal membuka versi install.\r\nNama File:%1\r\nGetLastError:%2, FileCRC:%3, Exception:%4, |"
+			"|EXE_HTTPManager::UnFull_5|Error info Full Install.|"
+			"|EXE_HTTPManager::UnFull_6|Gagal membaca info install.\r\nNama File:%1\r\nGetLastError:%2, FileCRC:%3, File Array:%4, Exception:%5, |"
+			"|EXE_HTTPManager::UnFull_7|Proses dekompres File:File %1[%2%%].|"
+			"|EXE_HTTPManager::UnFull_8|Gagal menghapus file versi lama.\r\nNama File:%1\r\nGetLastError:%2, |"
+			"|EXE_HTTPManager::UnFull_9|Error menginstall Full:%1.|"
+			"|EXE_HTTPManager::UnFull_10|Gagal mendekompres info file install.\r\nNama File:%1\r\nGetLastError:%2, File Install CRC:%3, Array:%4, Exception:%5, |"
+			"|EXE_HTTPManager::UnFull_11|Gagal menghapus info file install.\r\nNama File:%1\r\nGetLastError:%2, |"
+			"|EXE_HTTPManager::UnPac_1|Error Full PackNULL.|"
+			"|EXE_HTTPManager::UnPac_2|Variabel rs.iop untuk membuka pack file adalah NULL.\r\nNama File:%1\r\nGetLastError:%2|"
+			"|EXE_HTTPManager::UnPac_3|Error membuka Full Pack.|"
+			"|EXE_HTTPManager::UnPac_4|Gagal membuka file rs.iop untuk membuka pack file.\r\nNama File:%1\r\nGetLastError:%2,Exception:%3|"
+			"|EXE_HTTPManager::UnPac_5|Erorr Full Pack INIT.|"
+			"|EXE_HTTPManager::UnPac_6|Gagal mereset info file rs.iop untuk membuka pack file.\r\nNama File:%1\r\nGetLastError:%2|"
+			"|EXE_HTTPManager::UnPac_7|Error Info Full Pack.|"
+			"|EXE_HTTPManager::UnPac_8|Gagal membaca info file rs.iop yang lama untuk membuka file pack.\r\nNama File:%1\r\nGetLastError:%2,Array:%3,Exception:%4|"
+			"|EXE_HTTPManager::UnPac_9|Proses membuka file IOP:%1/%2[%3%%].|"
+			"|EXE_HTTPManager::UnPac_10|Gagal menghapus file yang lama untuk membuka pack file.\r\nNama File:%1\r\nGetLastError:%2|"
+			"|EXE_HTTPManager::UnPac_11|Error membuka Full Pack.|"
+			"|EXE_HTTPManager::UnPac_12|Gagal membuka file ntuk pack file.\r\nNama File:%1\r\nFile Hash:%2,File Index:%3,Ukuran File:%4,GetLastError:%5,Array:%6,Exception:%7|"
+			"|EXE_HTTPManager::UnPacPieceFile_1|Proses dekompres file:File %1.|"
+			"|EXE_HTTPManager::UnPacPieceFile_2|Gagal menghapus file yang lama saat dekompres file.\r\nNama File:%1\r\nGetLastError:%2|"
+			"|EXE_HTTPManager::UnPacPieceFile_3|Tidak dapat menemukan file untuk dekompres.\r\nNama File:%1\r\nGetLastError:%2|"
+			"|EXE_HTTPManager::UnPacPieceFile_4|Error File Pack:%1.|"
+			"|EXE_HTTPManager::UnPacPieceFile_5|Gagal dekompres file.\r\nNama File:%1\r\nError Return:%2, FileCRC:%3, GetLastError값:%4, Exception:%5|"
+			"|EXE_HTTPManager::UnPacPieceFile_6|Gagal menghapus file saat dekompres file.\r\nNama File:%1\r\nGetLastError:%2|"
+			"|EXE_HTTPManager::UpdateFileLoop_1|Proses analisa file download.|"
+			"|EXE_HTTPManager::UpdateFileLoop_2|Proses ulang karena terjadi error:%1/%2.|"
+			"|EXE_HTTPManager::UpdateOneFile_1|Terjadi error saat download file.\r\nAkan download ulang secara otomatis.(Total 100kali)\r\nJika ingin menutup program\r\nSilahkan click tombol X di Auto Update.\r\n(Error Code:218)\r\n\r\n|"
+			"|EXE_HTTPManager::UpdateOneFile_2|Error korupsi file download.:%1.|"
+			"|EXE_HTTPManager::UpdateOneFile_3|File yang telah didownload korupsi.\r\nAda kemungkinan Server patch sedang sibuk.\r\nAkan coba lagi secara otomatis.(Total 100 kali)\r\nJika ingin menutup program\r\nSilahkan click tombol X di Auto Update.\r\n(Error Code:216)\r\n\r\n|"
+			"|EXE_HTTPManager::UpdateOneFile_4|Error Ukuran file Download.|"
+			"|EXE_HTTPManager::UpdateOneFile_5|Ukuran file berbeda.\r\nNama File:%1\r\nUkuran File Server:%2, Ukuran File Download:%3, Server FileCRC:%4, File Download CRC:%5|"
+			"|EXE_HTTPManager::UpdateOneFile_6|Ukuran file download telah berubah.\r\nBukan info patch file terbabru atau\r\nterkena virus.\r\nJika error ini terulang terus silahkan coba cara dibawah ini.\r\n\r\n1. Menghapus Folder yang terinstall [Lost Saga].\r\n   Internet Explorer 7 Tools->Internet Option->General Tab->Delete->Delete All->[Advenced silahkan pilih Saved file dan setting] Check->Yes\r\n   Internet Exploer 6 Tool->Internet Option->General Tab->Delete Cookie->Confirm\r\n                                   Tool->Internet Option->General Tab->Delete File->[Delete all Offline Contents] Check->|"
+			"|EXE_HTTPManager::UpdateOneFile_7|Ukuran File Server:%1, Ukuran file download:%2, Server File CRC:%3|"
+			"|EXE_HTTPManager::UpdateOneFile_8|Terjadi error saat menggabungkan file.\r\nAkan mencoba ulang secara otomatis.(Total 100 kali)\r\nJika ingin menutup program\r\nSilahkan click tombol X di Auto Update.\r\n(Error Code:219)\r\n\r\n|"
+			"|EXE_HTTPManager::UpdateOneFile_9|Ukuran Server File:%1, Ukuran File Download:%2, Server File CRC:%3|"
+			"|EXE_HTTPManager::UpdateOneFile_10|Terjadi error saat dekompres file.\r\nAkan mencoba ulang secara otomatis.(Total 100 kali)\r\nJika ingin menutup program\r\nSilahkan click tombol X di Auto Update.\r\n(Error Code:220)\r\n\r\n|"
+			"|EXE_HTTPManager::UpdateOneFile_11|Ukuran File Server:%1, Ukuran File Download:%2, Server File CRC:%3|"
+			"|EXE_HTTPManager::UpdateOneFile_12|Terjadi error saat mengcopy file.\r\nAkan mencoba ulang secara otomatis.(Total 100 kali)\r\nJika ingin menutup program\r\nSilahkan click tombol X di Auto Update.\r\n(Error Code:221)\r\n\r\n|"
+			"|EXE_HTTPManager::UpdateOneFile_13|Ukuran Server File:%1, Ukuran File Download:%2|"
+			"|EXE_HTTPManager::UpdateOneFile_14|Gagal menginstall versi full.\r\nAkan mencoba ulang secara otomatis.(Total 100 kali)\r\nJika ingin menutup program\r\nSilahkan click tombol X di Auto Update.\r\n(Error Code:217)\r\n\r\n|"
+			"|EXE_ioErrorDlg::ShowErrorDlg_1|Ver : %1\r\n--- Spesifikasi System ---\r\n%2\r\n\r\n--- Info Error ---\r\n%3|"
+			"|EXE_ioLoginDlg::FirstConnectServer_1|Menyambungkan koneksi ke Server %1.|"
+			"|EXE_ioLoginDlg::OnTimer_1|Tidak ada respon dari %1 server, Menyambungkan koneksi ke Server %2.|"
+			"|EXE_ioLoginDlg::OnTimer_2|Koneksi tertutup dari server karena tidak ada respon dari %1 server, Menyambungkan koneksi ke Server %2.|"
+			"|EXE_ioLoginDlg::SendServer_1|Berhasil request login ke server %1 ,Menunggu login server.|"
+			"|EXE_ioLoginDlg::SetTextNetworkConnected_1|Berhasil bergabung ke server %1.|";
+}
+
+void ioLocalIndonesia::GetPacPassword( OUT char *szPassword, IN const int iPasswordSize, IN const int iPasswordType /*=0*/ )
+{
+#ifdef SHIPPING
+	// 인도네시아
+	if( iPasswordType == 0 )
+	{
+		// password : T*$f40FRjfoe*(fl304d
+		char szEncPassWord[MAX_PASSWORD]={ -86, 53, 59, 108, 105, 17, 42, -12, 44, 65, 111, 66, 108, -114, 10, 77, 110, 58, 43, 123 };
+		EncryptDecryptData( szPassword, iPasswordSize, szEncPassWord, MAX_PASSWORD, true );
+	}
+	else if( iPasswordType == 1 )
+	{
+		// password : Mfe$%2049eFeodk*&31Z
+		char szEncPassWord[MAX_PASSWORD]={ -77, 121, 122, 46, 120, 19, 92, -110, 127, 66, 70, 66, 41, -62, 7, 11, 123, 57, 46, 69 };
+		EncryptDecryptData( szPassword, iPasswordSize, szEncPassWord, MAX_PASSWORD, true );
+	}
+#else
+	// 테스트때문에 디버그는 한국것 추가
+	if( iPasswordType == 0 )
+	{
+		// password 0: iosuccess#@
+		char szEncPassWord[MAX_PASSWORD]={ -105, 112, 108, 127, 62, 66, 9, -43, 53, 4, 64, 39, 70, -90, 108, 33, 93, 10, 31, 31 };
+		EncryptDecryptData( szPassword, iPasswordSize, szEncPassWord, MAX_PASSWORD, true );
+	}
+	else if( iPasswordType == 1 )
+	{
+		// password 1: XrFrI0%3BF%!0Dcx$30-
+		char szEncPassWord[MAX_PASSWORD]={ -90, 109, 89, 120, 20, 17, 73, -107, 4, 97, 37, 6, 118, -30, 15, 89, 121, 57, 47, 50 };
+		EncryptDecryptData( szPassword, iPasswordSize, szEncPassWord, MAX_PASSWORD, true );
+	}
+#endif
+}
+
+DWORD ioLocalIndonesia::GetResourceIDBackBmp()
+{
+	return IDB_BACK_ID;
+}
+
+DWORD ioLocalIndonesia::GetResourceIDOptimizeBtnBmp()
+{
+	return IDB_OPTIMIZE_BTN_ID;
+}
+
+DWORD ioLocalIndonesia::GetResourceIDStartBtnBmp()
+{
+	return IDB_START_ID;
+}
+
+DWORD ioLocalIndonesia::GetResourceIDErrorBackBtnBmp()
+{
+	return IDB_ERROR_BACK_ID;
+}
+
+DWORD ioLocalIndonesia::GetResourceIDErrorSolutionBtnBmp()
+{
+	return IDB_SOLUTIONBTN_ID;
+}
+
+DWORD ioLocalIndonesia::GetResourceIDErrorExitBtnBmp()
+{
+	return IDB_EXITBTN_ID;
+}
+
+const char * ioLocalIndonesia::GetRegKey()
+{
+	return "Software\\SP2ClientID\\";
+}
+
+const char * ioLocalIndonesia::GetFontName()
+{
+	return "Tahoma";
+}
+
+void ioLocalIndonesia::CreateShortcuts( const CString &rszRootDir, const CString &rszShortcutName, const CString &rszLoginURL )
+{
+	Help::CreateShortcutOnDeskTop( rszRootDir, rszShortcutName, rszLoginURL );
+	Help::CreateMenuIcon( rszShortcutName );
+
+	CString szClientPath = "lostsaga.exe";
+	CString szFullPath;
+	Help::SetFullPath( rszRootDir, szClientPath, szFullPath);
+
+	char szVersionName[MAX_PATH*2]="";
+	Help::GetFileVesrion((LPCTSTR)szFullPath, szVersionName, sizeof(szVersionName), false );
+	Help::CreateUninstallRegInfo( rszRootDir, szVersionName );
+}
+
+const char * ioLocalIndonesia::GetErrorSolutionURL()
+{
+	return "http://forum.gemscool.com/forum-143.html";
+}
+
+bool ioLocalIndonesia::GetNewCmdLine( IN const char *szCmd, OUT char *szNewCmd, IN int iNewCmdSize )
+{
+	if( strcmp( m_szLoginID, "" ) == 0 )
+	{
+		StringCbCopy( szNewCmd, iNewCmdSize, "LoginID is empty." );
+		return false;
+	}
+
+	if( strcmp( m_szLoginEncodePW, "" ) == 0 )
+	{
+		StringCbCopy( szNewCmd, iNewCmdSize, "LoginPW is empty." );
+		return false;
+	}
+
+	char szCurCmd[4096]="";
+	ZeroMemory( szCurCmd, sizeof( szCurCmd ) );
+	StringCbCopy( szCurCmd, sizeof( szCurCmd ), szCmd );
+
+	enum 
+	{ 
+		MAX_LOOP           = 5, 
+		TYPE_EXPAND_KEY    = 0, 
+		TYPE_KEY_VALUE     = 1,
+		TYPE_GAMESERVER_ID = 3,
+	};
+
+	// parsing main token
+	for (int i = 0; i < MAX_LOOP ; i++)
+	{
+		char *pPos = NULL;
+		if( i == 0 )
+			pPos = strtok( szCurCmd, CMD_SECTION_TOKEN );
+		else
+			pPos = strtok( NULL, CMD_SECTION_TOKEN );
+
+		if( pPos == NULL )
+			break;
+
+		if( i == TYPE_EXPAND_KEY )
+		{
+			StringCbCat( szNewCmd, iNewCmdSize, " " );  // cmd 라인 빈칸 입력 a.exe aaaa
+			StringCbCat( szNewCmd, iNewCmdSize, pPos );
+			StringCbCat( szNewCmd, iNewCmdSize, CMD_EXPAND_SECTION_TOKEN );
+			StringCbCat( szNewCmd, iNewCmdSize, m_szLoginEncodePW );
+		}
+		else if( i == TYPE_KEY_VALUE )
+		{
+			// 인도네시아 키값은 0으로 쓰레기 값이므로 복사하지 않는다.
+			StringCbCat( szNewCmd, iNewCmdSize, CMD_SECTION_TOKEN );
+			StringCbCat( szNewCmd, iNewCmdSize, m_szLoginID );
+		}
+		else if( i == TYPE_GAMESERVER_ID )
+		{
+			// 정상 접속이 되는 서버ID를 넣는다.
+			StringCbCat( szNewCmd, iNewCmdSize, CMD_SECTION_TOKEN );
+			StringCbCat( szNewCmd, iNewCmdSize, m_szServerID ); 
+		}
+		else 
+		{
+			StringCbCat( szNewCmd, iNewCmdSize, CMD_SECTION_TOKEN );
+			StringCbCat( szNewCmd, iNewCmdSize, pPos );
+		}
+	}
+
+	return true;
+}
+
+bool ioLocalIndonesia::GetLoginResultPostData( OUT char *szError, IN int iErrorSize, const char *szURL, const char *szID, const char *szPW )
+{
+	return true;
+}
+
+int ioLocalIndonesia::GetLoginKeyLiveTime()
+{
+	return ( LOGIN_KEY_LIVE_TIME*100 ); // 서버에서 로그인을 하므로 로그인키 생존 시간이 필요 없기때문에 아주길게 설정
+}
+
+void ioLocalIndonesia::SetLoginData( const char *szLoginID, const char *szLoginEncodePW )
+{
+	if( szLoginID == NULL )
+		return;
+	if( szLoginEncodePW == NULL )
+		return;
+
+	StringCbCopy( m_szLoginID, sizeof( m_szLoginID ), szLoginID );
+	StringCbCopy( m_szLoginEncodePW, sizeof( m_szLoginEncodePW ), szLoginEncodePW );
+}
+
+void ioLocalIndonesia::SetServerID( const char *szServerID )
+{
+	if( szServerID == NULL )
+		return;
+
+	StringCbCopy( m_szServerID, sizeof( m_szServerID ), szServerID );
+}
+
+bool ioLocalIndonesia::IsRightID( const char *szID )
+{
+	enum { MIN_LENGTH = 6,  };
+
+	int iSize = strlen( szID );
+	if ( iSize < MIN_LENGTH || iSize > GetMaxIDSize() )
+		return false;
+
+	for (int i=0; i<iSize; i++)
+	{
+		if ((!COMPARE(szID[i], 'A', 'Z'+1)) &&
+			(!COMPARE(szID[i], 'a', 'z'+1)) &&
+			(!COMPARE(szID[i], '0', '9'+1)) &&
+			(szID[i]!='-') &&
+			(szID[i]!='_') )
+		{
+			return false;
+		}
+	}
+	return true;
+}
+
+bool ioLocalIndonesia::IsRightPW( const char *szPW )
+{
+	enum { MIN_LENGTH = 6,  };
+
+	int iSize = strlen( szPW );
+	if ( iSize < MIN_LENGTH || iSize > GetMaxPWSize() )
+		return false;
+
+	for (int i=0; i<iSize; i++)
+	{
+		if ((!COMPARE(szPW[i], 'A', 'Z'+1)) &&
+			(!COMPARE(szPW[i], 'a', 'z'+1)) &&
+			(!COMPARE(szPW[i], '0', '9'+1)) &&
+			(szPW[i]!='-') &&
+			(szPW[i]!='_') )
+		{
+			return false;
+		}
+	}
+	return true;
+}
+
+const char * ioLocalIndonesia::GetConnectFailMent()
+{
+	return "Tidak dapat tersambung ke server.\r\n\r\nKarena pilihan program jaringan \r\n server tidak dapat tersambung.(Koneksi TCP gagal)\r\n(Error Code:227)";
+}
+
+const char * ioLocalIndonesia::GetLoginWrongIDMent()
+{
+	return "Wrong ID";
+}
+
+const char * ioLocalIndonesia::GetLoginWrongPWMent()
+{
+	return "Wrong Password";
+}
+
+const char * ioLocalIndonesia::GetServerFullMent()
+{
+	return "Server saat ini sedang penuh. \r\n\r\nSilakan coba login kembali beberapa saat lagi.\r\n(Error Code:228)";
+}
+
+const char * ioLocalIndonesia::GetEntryURL()
+{
+	return "http://lostsaga.gemscool.com/index.php?act=1";
+}
+
+const char * ioLocalIndonesia::GetFindIDURL()
+{
+	return "http://www.gemscool.com/registration/index.php";
+}
+
+const char * ioLocalIndonesia::GetFindPWURL()
+{
+	return "http://www.gemscool.com/forgot/index.php";
+}
+
+void ioLocalIndonesia::FillLoginData( OUT SP2Packet &rkPacket )
+{
+#ifdef MAC_ADDRESS
+	char szMacAddress[MAX_PATH]="";
+	char szKey[MAX_PATH]=""; 
+
+	Help::GetMacAddress( szMacAddress, sizeof( szMacAddress ) );
+	Help::RegReadString( REG_SHCU, "SOFTWARE\\Gemscool\\Premium","Key","",szKey,sizeof(szKey));
+
+	rkPacket << szMacAddress;
+	rkPacket << szKey;
+
+#endif
+}

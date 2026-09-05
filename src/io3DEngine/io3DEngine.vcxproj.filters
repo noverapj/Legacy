@@ -1,0 +1,1585 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{696a9a18-8a78-494e-b1c8-f220de32bd97}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{925d0d41-a68a-476b-b3f8-37dd8a1456a1}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{f602110c-1e1a-40b5-82d7-f2c3aa78118a}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="io3DEngine">
+      <UniqueIdentifier>{e10b5bbc-9a42-4ffa-832d-b9954507abc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io3DEngine\Resource Class">
+      <UniqueIdentifier>{96785eb6-1a66-44fc-9e57-6c488e899c48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io3DEngine\Instance Class">
+      <UniqueIdentifier>{d306605d-2aa9-4e46-9b84-601b51232b8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io3DEngine\Manager Class">
+      <UniqueIdentifier>{b7731a3b-ae08-4825-9a4d-e3f23a43afdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io3DEngine\Buffer Class">
+      <UniqueIdentifier>{a1f6d5f3-43b4-4065-8892-8761dbb26122}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io3DEngine\Buffer Class\VertexBuffer">
+      <UniqueIdentifier>{6326f1dd-06d6-4c55-8de1-0386fd32a855}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io3DEngine\Buffer Class\IndexBuffer">
+      <UniqueIdentifier>{3b004128-7cae-4332-bc20-c696a00b7ec9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io3DEngine\SceneManager Class">
+      <UniqueIdentifier>{96d2c004-9887-4bfb-a758-a6a18e5e23b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io3DEngine\Collision Object">
+      <UniqueIdentifier>{d133eb8d-35b9-42fe-86e9-4a5f398e9b59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io3DEngine\Camera">
+      <UniqueIdentifier>{10530640-e7ca-46bc-840e-d645ba4eaf17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io3DEngine\Camera\Controller">
+      <UniqueIdentifier>{38536983-7237-49e6-b304-ee1203e4ce60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io3DEngine\LandScape">
+      <UniqueIdentifier>{5032b8e3-083c-4ea6-82a9-8b8243a0edee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io3DEngine\Util Class">
+      <UniqueIdentifier>{dc4aaead-88bd-48df-8833-ac3f4cac5b3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io3DEngine\Util Class\Mesh">
+      <UniqueIdentifier>{bc553c72-7e06-42ed-afa8-25077635b31f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io3DEngine\Util Class\Other">
+      <UniqueIdentifier>{105363b0-440d-4355-a925-4f0dcfe8eaef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io3DEngine\Effect Class">
+      <UniqueIdentifier>{239bac42-3a6f-46d5-97c2-103f558b1039}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io3DEngine\Effect Class\Particle System">
+      <UniqueIdentifier>{6684ac9c-c91e-4a32-b978-71bb3e718a7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io3DEngine\Effect Class\Particle System\Affector">
+      <UniqueIdentifier>{13bb8f2b-eaac-4de8-ab99-8a0800242117}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io3DEngine\Effect Class\Model Particle System">
+      <UniqueIdentifier>{63c04359-623a-4c20-b578-6b507620ba11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io3DEngine\Effect Class\Model Particle System\Model Affector">
+      <UniqueIdentifier>{aa2b4e08-86c9-49f1-a58e-e25b30c51b9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io3DEngine\Effect Class\EffectRendering">
+      <UniqueIdentifier>{7eb992e1-b957-4e1d-87d7-bcc11eed55f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io3DEngine\ioWnd3D">
+      <UniqueIdentifier>{ee92f456-c733-4941-a71b-ccc21a795a81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io3DEngine\ioWnd3D\UIRender">
+      <UniqueIdentifier>{a4f309c6-273d-436a-a39c-12beb12f475b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io3DEngine\InputBox">
+      <UniqueIdentifier>{a1ffc1f9-032d-4799-82e3-257b79ecfb05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io3DEngine\RenderSystem">
+      <UniqueIdentifier>{d1f768fc-784c-4ac2-8a14-4fa47dac799a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io3DEngine\String Processing">
+      <UniqueIdentifier>{e8df17da-9503-47f9-b8ca-84bbd8d9bbdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io3DEngine\Texture Effect">
+      <UniqueIdentifier>{6a65900b-2b32-480f-adb7-510439b0010c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io3DEngine\Post Process">
+      <UniqueIdentifier>{16149150-06b6-456a-9e1e-dd8adc8c57cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io3DEngine\CPU">
+      <UniqueIdentifier>{45b190eb-d586-477e-a090-8e6f43567c04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io3DEngine\XML">
+      <UniqueIdentifier>{eeffbf2d-cce5-4122-a9ea-b3dcec093e71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sound">
+      <UniqueIdentifier>{0a8d87ca-f5b0-4fae-a6a4-78332fd1467f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Squish">
+      <UniqueIdentifier>{96560650-9c5e-4366-ace5-8a4e6a760325}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io3DEngine\ioWnd3D\ioWndEX">
+      <UniqueIdentifier>{84a4c639-381d-4a3b-92e6-3211c5d0c129}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="io3DEngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ErrorReport.cpp">
+      <Filter>io3DEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="HelpFunc.cpp">
+      <Filter>io3DEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="ioEntityGroupBuilder.cpp">
+      <Filter>io3DEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="ioSingleton.cpp">
+      <Filter>io3DEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="ioRc2DImage.cpp">
+      <Filter>io3DEngine\Resource Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioRcAnimateFX.cpp">
+      <Filter>io3DEngine\Resource Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioRcAnimation.cpp">
+      <Filter>io3DEngine\Resource Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioRcAniTrack.cpp">
+      <Filter>io3DEngine\Resource Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioRcBiped.cpp">
+      <Filter>io3DEngine\Resource Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioRcSkeleton.cpp">
+      <Filter>io3DEngine\Resource Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioResource.cpp">
+      <Filter>io3DEngine\Resource Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioResourceLoader.cpp">
+      <Filter>io3DEngine\Resource Class</Filter>
+    </ClCompile>
+    <ClCompile Include="io2DImage.cpp">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioAniController.cpp">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioAniEventHandler.cpp">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioAnimateFX.cpp">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioAnimation.cpp">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioAniTrack.cpp">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioAutoShaderParamSource.cpp">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioBiped.cpp">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioEdgeRender.cpp">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioFont.cpp">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioFontWorkSpace.cpp">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioLight.cpp">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioMaterial.cpp">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioMesh.cpp">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioMeshControlPoint.cpp">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioMeshTrailer.cpp">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioPass.cpp">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioRenderTexture.cpp">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioShader.cpp">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioShaderDefine.cpp">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioShaderGroup.cpp">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioShaderParameter.cpp">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioSkeleton.cpp">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioSubMesh.cpp">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioTechnique.cpp">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioTexture.cpp">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioTextureUnitState.cpp">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClCompile>
+    <ClCompile Include="io2DImageManager.cpp">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioAnimateFXManager.cpp">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioAnimationManager.cpp">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioFontManager.cpp">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioGUIManager.cpp">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioMaterialManager.cpp">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioMaterialSerializer.cpp">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioMeshManager.cpp">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioMeshTrailDataManager.cpp">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioOpcodeManagerImpl.cpp">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioResourceManager.cpp">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioShaderManager.cpp">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioSkeletonManager.cpp">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioTextureEffectManager.cpp">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioTextureManager.cpp">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioThreadTaskManager.cpp">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioMeshData.cpp">
+      <Filter>io3DEngine\Buffer Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioVertexBufferBinder.cpp">
+      <Filter>io3DEngine\Buffer Class\VertexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="ioVertexBufferHeap.cpp">
+      <Filter>io3DEngine\Buffer Class\VertexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="ioVertexBufferInstance.cpp">
+      <Filter>io3DEngine\Buffer Class\VertexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="ioVertexBufferManager.cpp">
+      <Filter>io3DEngine\Buffer Class\VertexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="ioVertexDeclaration.cpp">
+      <Filter>io3DEngine\Buffer Class\VertexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="ioVtxBuffer.cpp">
+      <Filter>io3DEngine\Buffer Class\VertexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="ioIdxBuffer.cpp">
+      <Filter>io3DEngine\Buffer Class\IndexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="ioIndexBufferHeap.cpp">
+      <Filter>io3DEngine\Buffer Class\IndexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="ioIndexBufferInstance.cpp">
+      <Filter>io3DEngine\Buffer Class\IndexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="ioIndexBufferManager.cpp">
+      <Filter>io3DEngine\Buffer Class\IndexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="ioEntity.cpp">
+      <Filter>io3DEngine\SceneManager Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioEntityGroup.cpp">
+      <Filter>io3DEngine\SceneManager Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioMovableObject.cpp">
+      <Filter>io3DEngine\SceneManager Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioNode.cpp">
+      <Filter>io3DEngine\SceneManager Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioSceneManager.cpp">
+      <Filter>io3DEngine\SceneManager Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioSceneNode.cpp">
+      <Filter>io3DEngine\SceneManager Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioSceneShadowBox.cpp">
+      <Filter>io3DEngine\SceneManager Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioSubEntity.cpp">
+      <Filter>io3DEngine\SceneManager Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioAxisAlignBox.cpp">
+      <Filter>io3DEngine\Collision Object</Filter>
+    </ClCompile>
+    <ClCompile Include="ioCylinder.cpp">
+      <Filter>io3DEngine\Collision Object</Filter>
+    </ClCompile>
+    <ClCompile Include="ioOpcodeShapeImpl.cpp">
+      <Filter>io3DEngine\Collision Object</Filter>
+    </ClCompile>
+    <ClCompile Include="ioOrientBox.cpp">
+      <Filter>io3DEngine\Collision Object</Filter>
+    </ClCompile>
+    <ClCompile Include="ioPlane.cpp">
+      <Filter>io3DEngine\Collision Object</Filter>
+    </ClCompile>
+    <ClCompile Include="ioPolygonMesh.cpp">
+      <Filter>io3DEngine\Collision Object</Filter>
+    </ClCompile>
+    <ClCompile Include="ioRay.cpp">
+      <Filter>io3DEngine\Collision Object</Filter>
+    </ClCompile>
+    <ClCompile Include="ioSegment.cpp">
+      <Filter>io3DEngine\Collision Object</Filter>
+    </ClCompile>
+    <ClCompile Include="ioSphere.cpp">
+      <Filter>io3DEngine\Collision Object</Filter>
+    </ClCompile>
+    <ClCompile Include="ioCamera.cpp">
+      <Filter>io3DEngine\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="ioCameraController.cpp">
+      <Filter>io3DEngine\Camera\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="ioFPSCameraController.cpp">
+      <Filter>io3DEngine\Camera\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="ioLookAtCameraController.cpp">
+      <Filter>io3DEngine\Camera\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="ioSlerpCameraController.cpp">
+      <Filter>io3DEngine\Camera\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="ioTargetLookAtCameraController.cpp">
+      <Filter>io3DEngine\Camera\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="ioLandScape.cpp">
+      <Filter>io3DEngine\LandScape</Filter>
+    </ClCompile>
+    <ClCompile Include="ioPatch.cpp">
+      <Filter>io3DEngine\LandScape</Filter>
+    </ClCompile>
+    <ClCompile Include="ioPatchDefault.cpp">
+      <Filter>io3DEngine\LandScape</Filter>
+    </ClCompile>
+    <ClCompile Include="ioPatchMorphSW.cpp">
+      <Filter>io3DEngine\LandScape</Filter>
+    </ClCompile>
+    <ClCompile Include="AxisXYZ.cpp">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Grid3D.cpp">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioBulletHelper.cpp">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioCurveGenerator.cpp">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioDataChunk.cpp">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioDecal.cpp">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioDecalMaker.cpp">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioFrameTimer.cpp">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioHashString.cpp">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioINILoader.cpp">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioINIParser.cpp">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioLineRender.cpp">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioMath.cpp">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioMemFile.cpp">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioRandomCreator.cpp">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioRopeSpringCurve.cpp">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioSkyDome.cpp">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioStream.cpp">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioTimer.cpp">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioTimeRateFactor.cpp">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClCompile>
+    <ClCompile Include="QuaternionCompression.cpp">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioDivisionMesh.cpp">
+      <Filter>io3DEngine\Util Class\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="ioProgressiveMesh.cpp">
+      <Filter>io3DEngine\Util Class\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="ioSubDivisionMesh.cpp">
+      <Filter>io3DEngine\Util Class\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="IntersectionUtility.cpp">
+      <Filter>io3DEngine\Util Class\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="TriangleAndAABBTest.cpp">
+      <Filter>io3DEngine\Util Class\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="ioEffect.cpp">
+      <Filter>io3DEngine\Effect Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioEffectFactory.cpp">
+      <Filter>io3DEngine\Effect Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioEmitPointGenerator.cpp">
+      <Filter>io3DEngine\Effect Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioLightSystem.cpp">
+      <Filter>io3DEngine\Effect Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioParticleColorTable.cpp">
+      <Filter>io3DEngine\Effect Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioEmitterCommands.cpp">
+      <Filter>io3DEngine\Effect Class\Particle System</Filter>
+    </ClCompile>
+    <ClCompile Include="ioParticle.cpp">
+      <Filter>io3DEngine\Effect Class\Particle System</Filter>
+    </ClCompile>
+    <ClCompile Include="ioParticleEmitter.cpp">
+      <Filter>io3DEngine\Effect Class\Particle System</Filter>
+    </ClCompile>
+    <ClCompile Include="ioParticleIterator.cpp">
+      <Filter>io3DEngine\Effect Class\Particle System</Filter>
+    </ClCompile>
+    <ClCompile Include="ioParticleSystem.cpp">
+      <Filter>io3DEngine\Effect Class\Particle System</Filter>
+    </ClCompile>
+    <ClCompile Include="ioBipedTrailAffector.cpp">
+      <Filter>io3DEngine\Effect Class\Particle System\Affector</Filter>
+    </ClCompile>
+    <ClCompile Include="ioEmitAffector.cpp">
+      <Filter>io3DEngine\Effect Class\Particle System\Affector</Filter>
+    </ClCompile>
+    <ClCompile Include="ioLinearForceAffector.cpp">
+      <Filter>io3DEngine\Effect Class\Particle System\Affector</Filter>
+    </ClCompile>
+    <ClCompile Include="ioParticleAffector.cpp">
+      <Filter>io3DEngine\Effect Class\Particle System\Affector</Filter>
+    </ClCompile>
+    <ClCompile Include="ioRotationAffector.cpp">
+      <Filter>io3DEngine\Effect Class\Particle System\Affector</Filter>
+    </ClCompile>
+    <ClCompile Include="ioScaleAffector.cpp">
+      <Filter>io3DEngine\Effect Class\Particle System\Affector</Filter>
+    </ClCompile>
+    <ClCompile Include="ioTexRotationAffector.cpp">
+      <Filter>io3DEngine\Effect Class\Particle System\Affector</Filter>
+    </ClCompile>
+    <ClCompile Include="ioModelEmitCommand.cpp">
+      <Filter>io3DEngine\Effect Class\Model Particle System</Filter>
+    </ClCompile>
+    <ClCompile Include="ioModelEmitter.cpp">
+      <Filter>io3DEngine\Effect Class\Model Particle System</Filter>
+    </ClCompile>
+    <ClCompile Include="ioModelParticle.cpp">
+      <Filter>io3DEngine\Effect Class\Model Particle System</Filter>
+    </ClCompile>
+    <ClCompile Include="ioModelParticleIterator.cpp">
+      <Filter>io3DEngine\Effect Class\Model Particle System</Filter>
+    </ClCompile>
+    <ClCompile Include="ioModelParticleSystem.cpp">
+      <Filter>io3DEngine\Effect Class\Model Particle System</Filter>
+    </ClCompile>
+    <ClCompile Include="ioModelBipedTrailAffector.cpp">
+      <Filter>io3DEngine\Effect Class\Model Particle System\Model Affector</Filter>
+    </ClCompile>
+    <ClCompile Include="ioModelEmitAffector.cpp">
+      <Filter>io3DEngine\Effect Class\Model Particle System\Model Affector</Filter>
+    </ClCompile>
+    <ClCompile Include="ioModelLinearForceAffector.cpp">
+      <Filter>io3DEngine\Effect Class\Model Particle System\Model Affector</Filter>
+    </ClCompile>
+    <ClCompile Include="ioModelParticleAffector.cpp">
+      <Filter>io3DEngine\Effect Class\Model Particle System\Model Affector</Filter>
+    </ClCompile>
+    <ClCompile Include="ioModelRotateAffector.cpp">
+      <Filter>io3DEngine\Effect Class\Model Particle System\Model Affector</Filter>
+    </ClCompile>
+    <ClCompile Include="ioModelScaleAffector.cpp">
+      <Filter>io3DEngine\Effect Class\Model Particle System\Model Affector</Filter>
+    </ClCompile>
+    <ClCompile Include="ioEffectBufferManager.cpp">
+      <Filter>io3DEngine\Effect Class\EffectRendering</Filter>
+    </ClCompile>
+    <ClCompile Include="ioParticleRenderable.cpp">
+      <Filter>io3DEngine\Effect Class\EffectRendering</Filter>
+    </ClCompile>
+    <ClCompile Include="ioButton.cpp">
+      <Filter>io3DEngine\ioWnd3D</Filter>
+    </ClCompile>
+    <ClCompile Include="ioDragItem.cpp">
+      <Filter>io3DEngine\ioWnd3D</Filter>
+    </ClCompile>
+    <ClCompile Include="ioEdit.cpp">
+      <Filter>io3DEngine\ioWnd3D</Filter>
+    </ClCompile>
+    <ClCompile Include="ioList.cpp">
+      <Filter>io3DEngine\ioWnd3D</Filter>
+    </ClCompile>
+    <ClCompile Include="ioMouse.cpp">
+      <Filter>io3DEngine\ioWnd3D</Filter>
+    </ClCompile>
+    <ClCompile Include="ioProgressBar.cpp">
+      <Filter>io3DEngine\ioWnd3D</Filter>
+    </ClCompile>
+    <ClCompile Include="ioScroll.cpp">
+      <Filter>io3DEngine\ioWnd3D</Filter>
+    </ClCompile>
+    <ClCompile Include="ioTabControl.cpp">
+      <Filter>io3DEngine\ioWnd3D</Filter>
+    </ClCompile>
+    <ClCompile Include="ioWnd.cpp">
+      <Filter>io3DEngine\ioWnd3D</Filter>
+    </ClCompile>
+    <ClCompile Include="ioUIFrameManager.cpp">
+      <Filter>io3DEngine\ioWnd3D\UIRender</Filter>
+    </ClCompile>
+    <ClCompile Include="ioUIImage.cpp">
+      <Filter>io3DEngine\ioWnd3D\UIRender</Filter>
+    </ClCompile>
+    <ClCompile Include="ioUIImageSet.cpp">
+      <Filter>io3DEngine\ioWnd3D\UIRender</Filter>
+    </ClCompile>
+    <ClCompile Include="ioUIImageSetManager.cpp">
+      <Filter>io3DEngine\ioWnd3D\UIRender</Filter>
+    </ClCompile>
+    <ClCompile Include="ioUIRenderElement.cpp">
+      <Filter>io3DEngine\ioWnd3D\UIRender</Filter>
+    </ClCompile>
+    <ClCompile Include="ioUIRenderer.cpp">
+      <Filter>io3DEngine\ioWnd3D\UIRender</Filter>
+    </ClCompile>
+    <ClCompile Include="ioUIRenderFrame.cpp">
+      <Filter>io3DEngine\ioWnd3D\UIRender</Filter>
+    </ClCompile>
+    <ClCompile Include="ioUIRenderImage.cpp">
+      <Filter>io3DEngine\ioWnd3D\UIRender</Filter>
+    </ClCompile>
+    <ClCompile Include="ioUITitle.cpp">
+      <Filter>io3DEngine\ioWnd3D\UIRender</Filter>
+    </ClCompile>
+    <ClCompile Include="EditBox.cpp">
+      <Filter>io3DEngine\InputBox</Filter>
+    </ClCompile>
+    <ClCompile Include="InputBox.cpp">
+      <Filter>io3DEngine\InputBox</Filter>
+    </ClCompile>
+    <ClCompile Include="ioIME.cpp">
+      <Filter>io3DEngine\InputBox</Filter>
+    </ClCompile>
+    <ClCompile Include="ioEnumDisplayMode.cpp">
+      <Filter>io3DEngine\RenderSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="ioRenderable.cpp">
+      <Filter>io3DEngine\RenderSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="ioRenderableList.cpp">
+      <Filter>io3DEngine\RenderSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="ioRenderQueue.cpp">
+      <Filter>io3DEngine\RenderSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="ioRenderQueueGroup.cpp">
+      <Filter>io3DEngine\RenderSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="ioRenderStateDesc.cpp">
+      <Filter>io3DEngine\RenderSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="ioRenderSystem.cpp">
+      <Filter>io3DEngine\RenderSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="ioLocalManagerParent.cpp">
+      <Filter>io3DEngine\String Processing</Filter>
+    </ClCompile>
+    <ClCompile Include="ioStringConverter.cpp">
+      <Filter>io3DEngine\String Processing</Filter>
+    </ClCompile>
+    <ClCompile Include="ioStringInterface.cpp">
+      <Filter>io3DEngine\String Processing</Filter>
+    </ClCompile>
+    <ClCompile Include="ioStringManager.cpp">
+      <Filter>io3DEngine\String Processing</Filter>
+    </ClCompile>
+    <ClCompile Include="Safesprintf.cpp">
+      <Filter>io3DEngine\String Processing</Filter>
+    </ClCompile>
+    <ClCompile Include="ioTextureAnimationEffect.cpp">
+      <Filter>io3DEngine\Texture Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="ioTextureColorTransformEffect.cpp">
+      <Filter>io3DEngine\Texture Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="ioTextureEffect.cpp">
+      <Filter>io3DEngine\Texture Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="ioTextureRotateEffect.cpp">
+      <Filter>io3DEngine\Texture Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="ioTextureScrollEffect.cpp">
+      <Filter>io3DEngine\Texture Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="ioTextureTransformEffect.cpp">
+      <Filter>io3DEngine\Texture Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="ioGlowPostProcess.cpp">
+      <Filter>io3DEngine\Post Process</Filter>
+    </ClCompile>
+    <ClCompile Include="ioPostFilter.cpp">
+      <Filter>io3DEngine\Post Process</Filter>
+    </ClCompile>
+    <ClCompile Include="ioPostOveray.cpp">
+      <Filter>io3DEngine\Post Process</Filter>
+    </ClCompile>
+    <ClCompile Include="CPUSpeedCheck.cpp">
+      <Filter>io3DEngine\CPU</Filter>
+    </ClCompile>
+    <ClCompile Include="FastAssemFunc.cpp">
+      <Filter>io3DEngine\CPU</Filter>
+    </ClCompile>
+    <ClCompile Include="ioCPU.cpp">
+      <Filter>io3DEngine\CPU</Filter>
+    </ClCompile>
+    <ClCompile Include="ioSIMDGeneric.cpp">
+      <Filter>io3DEngine\CPU</Filter>
+    </ClCompile>
+    <ClCompile Include="ioSIMDSSE.cpp">
+      <Filter>io3DEngine\CPU</Filter>
+    </ClCompile>
+    <ClCompile Include="ioXMLDocument.cpp">
+      <Filter>io3DEngine\XML</Filter>
+    </ClCompile>
+    <ClCompile Include="ioXMLElement.cpp">
+      <Filter>io3DEngine\XML</Filter>
+    </ClCompile>
+    <ClCompile Include="ioOggCallBack.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="ioOggSound.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="ioSound.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="ioSoundManager.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="ioWaveFile.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="ioAnimationEventManager.cpp">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioAnimationEvent.cpp">
+      <Filter>io3DEngine\Resource Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ioWndEXEventHandler.cpp">
+      <Filter>io3DEngine\ioWnd3D\ioWndEX</Filter>
+    </ClCompile>
+    <ClCompile Include="ioCustomWnd.cpp">
+      <Filter>io3DEngine\ioWnd3D\ioWndEX</Filter>
+    </ClCompile>
+    <ClCompile Include="ioCheckBoxEX.cpp">
+      <Filter>io3DEngine\ioWnd3D\ioWndEX</Filter>
+    </ClCompile>
+    <ClCompile Include="ioPaperDoll.cpp">
+      <Filter>io3DEngine\ioWnd3D\ioWndEX</Filter>
+    </ClCompile>
+    <ClCompile Include="ioLabelWndEX.cpp">
+      <Filter>io3DEngine\ioWnd3D\ioWndEX</Filter>
+    </ClCompile>
+    <ClCompile Include="ioFrameWndEX.cpp">
+      <Filter>io3DEngine\ioWnd3D\ioWndEX</Filter>
+    </ClCompile>
+    <ClCompile Include="ioRadioButtonEX.cpp">
+      <Filter>io3DEngine\ioWnd3D\ioWndEX</Filter>
+    </ClCompile>
+    <ClCompile Include="ioImageWndEX.cpp">
+      <Filter>io3DEngine\ioWnd3D\ioWndEX</Filter>
+    </ClCompile>
+    <ClCompile Include="ioTabWndEX.cpp">
+      <Filter>io3DEngine\ioWnd3D\ioWndEX</Filter>
+    </ClCompile>
+    <ClCompile Include="ioComplexStringPrinterBase.cpp">
+      <Filter>io3DEngine\ioWnd3D\ioWndEX</Filter>
+    </ClCompile>
+    <ClCompile Include="ioFlashPlayer.cpp">
+      <Filter>io3DEngine\ioWnd3D\ioWndEX</Filter>
+    </ClCompile>
+    <ClCompile Include="ioRichLabel.cpp">
+      <Filter>io3DEngine\ioWnd3D\ioWndEX</Filter>
+    </ClCompile>
+    <ClCompile Include="ioScrollBarEX.cpp">
+      <Filter>io3DEngine\ioWnd3D\ioWndEX</Filter>
+    </ClCompile>
+    <ClCompile Include="ioButtonWndEX.cpp">
+      <Filter>io3DEngine\ioWnd3D\ioWndEX</Filter>
+    </ClCompile>
+    <ClCompile Include="ioWndEX.cpp">
+      <Filter>io3DEngine\ioWnd3D\ioWndEX</Filter>
+    </ClCompile>
+    <ClCompile Include="ioMovingWnd.cpp">
+      <Filter>io3DEngine\ioWnd3D</Filter>
+    </ClCompile>
+    <ClCompile Include="ioUI3DEffectRender.cpp">
+      <Filter>io3DEngine\ioWnd3D\UIRender</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="io3DCommon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ioPrerequisites.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ErrorReport.h">
+      <Filter>io3DEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="HelpFunc.h">
+      <Filter>io3DEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ioEntityGroupBuilder.h">
+      <Filter>io3DEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ioSingleton.h">
+      <Filter>io3DEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ioVertexFormat.h">
+      <Filter>io3DEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ioDataProcessor.h">
+      <Filter>io3DEngine\Resource Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioRc2DImage.h">
+      <Filter>io3DEngine\Resource Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioRcAnimateFX.h">
+      <Filter>io3DEngine\Resource Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioRcAnimation.h">
+      <Filter>io3DEngine\Resource Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioRcAniTrack.h">
+      <Filter>io3DEngine\Resource Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioRcBiped.h">
+      <Filter>io3DEngine\Resource Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioRcSkeleton.h">
+      <Filter>io3DEngine\Resource Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioResource.h">
+      <Filter>io3DEngine\Resource Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioResourceLoader.h">
+      <Filter>io3DEngine\Resource Class</Filter>
+    </ClInclude>
+    <ClInclude Include="io2DImage.h">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioAniController.h">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioAniEventHandler.h">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioAnimateFX.h">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioAnimation.h">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioAniTrack.h">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioAutoShaderParamSource.h">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioBiped.h">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioEdgeRender.h">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioFont.h">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioFontWorkSpace.h">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioLight.h">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioMaterial.h">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioMesh.h">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioMeshControlPoint.h">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioMeshTrailer.h">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioPass.h">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioRenderTexture.h">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioShader.h">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioShaderDefine.h">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioShaderGroup.h">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioShaderParameter.h">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioSkeleton.h">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioSubMesh.h">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioTechnique.h">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioTexture.h">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioTextureUnitState.h">
+      <Filter>io3DEngine\Instance Class</Filter>
+    </ClInclude>
+    <ClInclude Include="io2DImageManager.h">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioAnimateFXManager.h">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioAnimationManager.h">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioFileTokenDefine.h">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioFontManager.h">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioGUIManager.h">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioMaterialManager.h">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioMaterialSerializer.h">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioMeshManager.h">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioMeshTrailDataManager.h">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioOpcodeManager.h">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioOpcodeManagerImpl.h">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioResourceManager.h">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioShaderManager.h">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioSkeletonManager.h">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioTextureEffectManager.h">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioTextureManager.h">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioThreadTaskManager.h">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioMeshData.h">
+      <Filter>io3DEngine\Buffer Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioVertexBufferBinder.h">
+      <Filter>io3DEngine\Buffer Class\VertexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="ioVertexBufferHeap.h">
+      <Filter>io3DEngine\Buffer Class\VertexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="ioVertexBufferInstance.h">
+      <Filter>io3DEngine\Buffer Class\VertexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="ioVertexBufferManager.h">
+      <Filter>io3DEngine\Buffer Class\VertexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="ioVertexDeclaration.h">
+      <Filter>io3DEngine\Buffer Class\VertexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="ioVtxBuffer.h">
+      <Filter>io3DEngine\Buffer Class\VertexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="ioIdxBuffer.h">
+      <Filter>io3DEngine\Buffer Class\IndexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="ioIndexBufferHeap.h">
+      <Filter>io3DEngine\Buffer Class\IndexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="ioIndexBufferInstance.h">
+      <Filter>io3DEngine\Buffer Class\IndexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="ioIndexBufferManager.h">
+      <Filter>io3DEngine\Buffer Class\IndexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="ioEntity.h">
+      <Filter>io3DEngine\SceneManager Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioEntityGroup.h">
+      <Filter>io3DEngine\SceneManager Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioEntityParent.h">
+      <Filter>io3DEngine\SceneManager Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioMaterialModifier.h">
+      <Filter>io3DEngine\SceneManager Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioMovableObject.h">
+      <Filter>io3DEngine\SceneManager Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioNode.h">
+      <Filter>io3DEngine\SceneManager Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioSceneManager.h">
+      <Filter>io3DEngine\SceneManager Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioSceneNode.h">
+      <Filter>io3DEngine\SceneManager Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioSceneShadowBox.h">
+      <Filter>io3DEngine\SceneManager Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioSubEntity.h">
+      <Filter>io3DEngine\SceneManager Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioAxisAlignBox.h">
+      <Filter>io3DEngine\Collision Object</Filter>
+    </ClInclude>
+    <ClInclude Include="ioCylinder.h">
+      <Filter>io3DEngine\Collision Object</Filter>
+    </ClInclude>
+    <ClInclude Include="ioOpcodeShape.h">
+      <Filter>io3DEngine\Collision Object</Filter>
+    </ClInclude>
+    <ClInclude Include="ioOpcodeShapeImpl.h">
+      <Filter>io3DEngine\Collision Object</Filter>
+    </ClInclude>
+    <ClInclude Include="ioOrientBox.h">
+      <Filter>io3DEngine\Collision Object</Filter>
+    </ClInclude>
+    <ClInclude Include="ioPlane.h">
+      <Filter>io3DEngine\Collision Object</Filter>
+    </ClInclude>
+    <ClInclude Include="ioPolygonMesh.h">
+      <Filter>io3DEngine\Collision Object</Filter>
+    </ClInclude>
+    <ClInclude Include="ioRay.h">
+      <Filter>io3DEngine\Collision Object</Filter>
+    </ClInclude>
+    <ClInclude Include="ioSegment.h">
+      <Filter>io3DEngine\Collision Object</Filter>
+    </ClInclude>
+    <ClInclude Include="ioSphere.h">
+      <Filter>io3DEngine\Collision Object</Filter>
+    </ClInclude>
+    <ClInclude Include="ioCamera.h">
+      <Filter>io3DEngine\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="ioCameraController.h">
+      <Filter>io3DEngine\Camera\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="ioFPSCameraController.h">
+      <Filter>io3DEngine\Camera\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="ioLookAtCameraController.h">
+      <Filter>io3DEngine\Camera\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="ioSlerpCameraController.h">
+      <Filter>io3DEngine\Camera\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="ioTargetLookAtCameraController.h">
+      <Filter>io3DEngine\Camera\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="ioLandScape.h">
+      <Filter>io3DEngine\LandScape</Filter>
+    </ClInclude>
+    <ClInclude Include="ioPatch.h">
+      <Filter>io3DEngine\LandScape</Filter>
+    </ClInclude>
+    <ClInclude Include="ioPatchDefault.h">
+      <Filter>io3DEngine\LandScape</Filter>
+    </ClInclude>
+    <ClInclude Include="ioPatchMorphSW.h">
+      <Filter>io3DEngine\LandScape</Filter>
+    </ClInclude>
+    <ClInclude Include="AxisXYZ.h">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Grid3D.h">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioBulletHelper.h">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioCurveGenerator.h">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioDataChunk.h">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioDecal.h">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioDecalMaker.h">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioFrameTimer.h">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioHashString.h">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioINILoader.h">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioINIParser.h">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioLineRender.h">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioListIterator.h">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioMapIterator.h">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioMath.h">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioMemFile.h">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioMemoryPool.h">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioRandomCreator.h">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioRopeSpringCurve.h">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioSharedPtr.h">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioSkyDome.h">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioStream.h">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioTimer.h">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioTimeRateFactor.h">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioTPtrArray.h">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioVectorIterator.h">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClInclude>
+    <ClInclude Include="QuaternionCompression.h">
+      <Filter>io3DEngine\Util Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioDivisionMesh.h">
+      <Filter>io3DEngine\Util Class\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="ioProgressiveMesh.h">
+      <Filter>io3DEngine\Util Class\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="ioSubDivisionMesh.h">
+      <Filter>io3DEngine\Util Class\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="FastQuaternionSlerp.h">
+      <Filter>io3DEngine\Util Class\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="IntersectionUtility.h">
+      <Filter>io3DEngine\Util Class\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="ioEffect.h">
+      <Filter>io3DEngine\Effect Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioEffectFactory.h">
+      <Filter>io3DEngine\Effect Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioEmitPointGenerator.h">
+      <Filter>io3DEngine\Effect Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioLightSystem.h">
+      <Filter>io3DEngine\Effect Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioParticleColorTable.h">
+      <Filter>io3DEngine\Effect Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioEmitterCommands.h">
+      <Filter>io3DEngine\Effect Class\Particle System</Filter>
+    </ClInclude>
+    <ClInclude Include="ioParticle.h">
+      <Filter>io3DEngine\Effect Class\Particle System</Filter>
+    </ClInclude>
+    <ClInclude Include="ioParticleEmitter.h">
+      <Filter>io3DEngine\Effect Class\Particle System</Filter>
+    </ClInclude>
+    <ClInclude Include="ioParticleIterator.h">
+      <Filter>io3DEngine\Effect Class\Particle System</Filter>
+    </ClInclude>
+    <ClInclude Include="ioParticleSystem.h">
+      <Filter>io3DEngine\Effect Class\Particle System</Filter>
+    </ClInclude>
+    <ClInclude Include="ioBipedTrailAffector.h">
+      <Filter>io3DEngine\Effect Class\Particle System\Affector</Filter>
+    </ClInclude>
+    <ClInclude Include="ioEmitAffector.h">
+      <Filter>io3DEngine\Effect Class\Particle System\Affector</Filter>
+    </ClInclude>
+    <ClInclude Include="ioLinearForceAffector.h">
+      <Filter>io3DEngine\Effect Class\Particle System\Affector</Filter>
+    </ClInclude>
+    <ClInclude Include="ioParticleAffector.h">
+      <Filter>io3DEngine\Effect Class\Particle System\Affector</Filter>
+    </ClInclude>
+    <ClInclude Include="ioRotationAffector.h">
+      <Filter>io3DEngine\Effect Class\Particle System\Affector</Filter>
+    </ClInclude>
+    <ClInclude Include="ioScaleAffector.h">
+      <Filter>io3DEngine\Effect Class\Particle System\Affector</Filter>
+    </ClInclude>
+    <ClInclude Include="ioTexRotationAffector.h">
+      <Filter>io3DEngine\Effect Class\Particle System\Affector</Filter>
+    </ClInclude>
+    <ClInclude Include="ioModelEmitCommand.h">
+      <Filter>io3DEngine\Effect Class\Model Particle System</Filter>
+    </ClInclude>
+    <ClInclude Include="ioModelEmitter.h">
+      <Filter>io3DEngine\Effect Class\Model Particle System</Filter>
+    </ClInclude>
+    <ClInclude Include="ioModelParticle.h">
+      <Filter>io3DEngine\Effect Class\Model Particle System</Filter>
+    </ClInclude>
+    <ClInclude Include="ioModelParticleIterator.h">
+      <Filter>io3DEngine\Effect Class\Model Particle System</Filter>
+    </ClInclude>
+    <ClInclude Include="ioModelParticleSystem.h">
+      <Filter>io3DEngine\Effect Class\Model Particle System</Filter>
+    </ClInclude>
+    <ClInclude Include="ioModelBipedTrailAffector.h">
+      <Filter>io3DEngine\Effect Class\Model Particle System\Model Affector</Filter>
+    </ClInclude>
+    <ClInclude Include="ioModelEmitAffector.h">
+      <Filter>io3DEngine\Effect Class\Model Particle System\Model Affector</Filter>
+    </ClInclude>
+    <ClInclude Include="ioModelLinearForceAffector.h">
+      <Filter>io3DEngine\Effect Class\Model Particle System\Model Affector</Filter>
+    </ClInclude>
+    <ClInclude Include="ioModelParticleAffector.h">
+      <Filter>io3DEngine\Effect Class\Model Particle System\Model Affector</Filter>
+    </ClInclude>
+    <ClInclude Include="ioModelRotateAffector.h">
+      <Filter>io3DEngine\Effect Class\Model Particle System\Model Affector</Filter>
+    </ClInclude>
+    <ClInclude Include="ioModelScaleAffector.h">
+      <Filter>io3DEngine\Effect Class\Model Particle System\Model Affector</Filter>
+    </ClInclude>
+    <ClInclude Include="ioEffectBufferManager.h">
+      <Filter>io3DEngine\Effect Class\EffectRendering</Filter>
+    </ClInclude>
+    <ClInclude Include="ioParticleRenderable.h">
+      <Filter>io3DEngine\Effect Class\EffectRendering</Filter>
+    </ClInclude>
+    <ClInclude Include="ioButton.h">
+      <Filter>io3DEngine\ioWnd3D</Filter>
+    </ClInclude>
+    <ClInclude Include="ioDragItem.h">
+      <Filter>io3DEngine\ioWnd3D</Filter>
+    </ClInclude>
+    <ClInclude Include="ioEdit.h">
+      <Filter>io3DEngine\ioWnd3D</Filter>
+    </ClInclude>
+    <ClInclude Include="ioList.h">
+      <Filter>io3DEngine\ioWnd3D</Filter>
+    </ClInclude>
+    <ClInclude Include="ioMouse.h">
+      <Filter>io3DEngine\ioWnd3D</Filter>
+    </ClInclude>
+    <ClInclude Include="ioProgressBar.h">
+      <Filter>io3DEngine\ioWnd3D</Filter>
+    </ClInclude>
+    <ClInclude Include="ioScroll.h">
+      <Filter>io3DEngine\ioWnd3D</Filter>
+    </ClInclude>
+    <ClInclude Include="ioTabControl.h">
+      <Filter>io3DEngine\ioWnd3D</Filter>
+    </ClInclude>
+    <ClInclude Include="ioWnd.h">
+      <Filter>io3DEngine\ioWnd3D</Filter>
+    </ClInclude>
+    <ClInclude Include="ioWndType.h">
+      <Filter>io3DEngine\ioWnd3D</Filter>
+    </ClInclude>
+    <ClInclude Include="ioUIFrameManager.h">
+      <Filter>io3DEngine\ioWnd3D\UIRender</Filter>
+    </ClInclude>
+    <ClInclude Include="ioUIImage.h">
+      <Filter>io3DEngine\ioWnd3D\UIRender</Filter>
+    </ClInclude>
+    <ClInclude Include="ioUIImageSet.h">
+      <Filter>io3DEngine\ioWnd3D\UIRender</Filter>
+    </ClInclude>
+    <ClInclude Include="ioUIImageSetManager.h">
+      <Filter>io3DEngine\ioWnd3D\UIRender</Filter>
+    </ClInclude>
+    <ClInclude Include="ioUIRenderElement.h">
+      <Filter>io3DEngine\ioWnd3D\UIRender</Filter>
+    </ClInclude>
+    <ClInclude Include="ioUIRenderer.h">
+      <Filter>io3DEngine\ioWnd3D\UIRender</Filter>
+    </ClInclude>
+    <ClInclude Include="ioUIRenderFrame.h">
+      <Filter>io3DEngine\ioWnd3D\UIRender</Filter>
+    </ClInclude>
+    <ClInclude Include="ioUIRenderImage.h">
+      <Filter>io3DEngine\ioWnd3D\UIRender</Filter>
+    </ClInclude>
+    <ClInclude Include="ioUITitle.h">
+      <Filter>io3DEngine\ioWnd3D\UIRender</Filter>
+    </ClInclude>
+    <ClInclude Include="EditBox.h">
+      <Filter>io3DEngine\InputBox</Filter>
+    </ClInclude>
+    <ClInclude Include="InputBox.h">
+      <Filter>io3DEngine\InputBox</Filter>
+    </ClInclude>
+    <ClInclude Include="ioIME.h">
+      <Filter>io3DEngine\InputBox</Filter>
+    </ClInclude>
+    <ClInclude Include="ioEnumDisplayMode.h">
+      <Filter>io3DEngine\RenderSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="ioRenderable.h">
+      <Filter>io3DEngine\RenderSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="ioRenderableList.h">
+      <Filter>io3DEngine\RenderSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="ioRenderOperation.h">
+      <Filter>io3DEngine\RenderSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="ioRenderQueue.h">
+      <Filter>io3DEngine\RenderSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="ioRenderQueueGroup.h">
+      <Filter>io3DEngine\RenderSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="ioRenderStateDesc.h">
+      <Filter>io3DEngine\RenderSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="ioRenderSystem.h">
+      <Filter>io3DEngine\RenderSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="ioLocalManagerParent.h">
+      <Filter>io3DEngine\String Processing</Filter>
+    </ClInclude>
+    <ClInclude Include="ioStringConverter.h">
+      <Filter>io3DEngine\String Processing</Filter>
+    </ClInclude>
+    <ClInclude Include="ioStringInterface.h">
+      <Filter>io3DEngine\String Processing</Filter>
+    </ClInclude>
+    <ClInclude Include="ioStringManager.h">
+      <Filter>io3DEngine\String Processing</Filter>
+    </ClInclude>
+    <ClInclude Include="Safesprintf.h">
+      <Filter>io3DEngine\String Processing</Filter>
+    </ClInclude>
+    <ClInclude Include="ioTextureAnimationEffect.h">
+      <Filter>io3DEngine\Texture Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="ioTextureColorTransformEffect.h">
+      <Filter>io3DEngine\Texture Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="ioTextureEffect.h">
+      <Filter>io3DEngine\Texture Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="ioTextureRotateEffect.h">
+      <Filter>io3DEngine\Texture Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="ioTextureScrollEffect.h">
+      <Filter>io3DEngine\Texture Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="ioTextureTransformEffect.h">
+      <Filter>io3DEngine\Texture Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="ioGlowPostProcess.h">
+      <Filter>io3DEngine\Post Process</Filter>
+    </ClInclude>
+    <ClInclude Include="ioPostFilter.h">
+      <Filter>io3DEngine\Post Process</Filter>
+    </ClInclude>
+    <ClInclude Include="ioPostOveray.h">
+      <Filter>io3DEngine\Post Process</Filter>
+    </ClInclude>
+    <ClInclude Include="CPUSpeedCheck.h">
+      <Filter>io3DEngine\CPU</Filter>
+    </ClInclude>
+    <ClInclude Include="FastAssemFunc.h">
+      <Filter>io3DEngine\CPU</Filter>
+    </ClInclude>
+    <ClInclude Include="ioCPU.h">
+      <Filter>io3DEngine\CPU</Filter>
+    </ClInclude>
+    <ClInclude Include="ioSIMDGeneric.h">
+      <Filter>io3DEngine\CPU</Filter>
+    </ClInclude>
+    <ClInclude Include="ioSIMDSSE.h">
+      <Filter>io3DEngine\CPU</Filter>
+    </ClInclude>
+    <ClInclude Include="ioXMLDocument.h">
+      <Filter>io3DEngine\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="ioXMLElement.h">
+      <Filter>io3DEngine\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="ioOggCallBack.h">
+      <Filter>Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="ioOggSound.h">
+      <Filter>Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="ioSound.h">
+      <Filter>Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="ioSoundManager.h">
+      <Filter>Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="ioWaveFile.h">
+      <Filter>Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Squish\alpha.h">
+      <Filter>Squish</Filter>
+    </ClInclude>
+    <ClInclude Include="Squish\clusterfit.h">
+      <Filter>Squish</Filter>
+    </ClInclude>
+    <ClInclude Include="Squish\colourblock.h">
+      <Filter>Squish</Filter>
+    </ClInclude>
+    <ClInclude Include="Squish\colourfit.h">
+      <Filter>Squish</Filter>
+    </ClInclude>
+    <ClInclude Include="Squish\colourset.h">
+      <Filter>Squish</Filter>
+    </ClInclude>
+    <ClInclude Include="Squish\config.h">
+      <Filter>Squish</Filter>
+    </ClInclude>
+    <ClInclude Include="Squish\maths.h">
+      <Filter>Squish</Filter>
+    </ClInclude>
+    <ClInclude Include="Squish\rangefit.h">
+      <Filter>Squish</Filter>
+    </ClInclude>
+    <ClInclude Include="Squish\simd.h">
+      <Filter>Squish</Filter>
+    </ClInclude>
+    <ClInclude Include="Squish\simd_float.h">
+      <Filter>Squish</Filter>
+    </ClInclude>
+    <ClInclude Include="Squish\simd_sse.h">
+      <Filter>Squish</Filter>
+    </ClInclude>
+    <ClInclude Include="Squish\simd_ve.h">
+      <Filter>Squish</Filter>
+    </ClInclude>
+    <ClInclude Include="Squish\singlecolourfit.h">
+      <Filter>Squish</Filter>
+    </ClInclude>
+    <ClInclude Include="Squish\squish.h">
+      <Filter>Squish</Filter>
+    </ClInclude>
+    <ClInclude Include="ioAnimationEventManager.h">
+      <Filter>io3DEngine\Manager Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioAnimationEvent.h">
+      <Filter>io3DEngine\Resource Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ioPaperDoll.h">
+      <Filter>io3DEngine\ioWnd3D\ioWndEX</Filter>
+    </ClInclude>
+    <ClInclude Include="ioCheckBoxEX.h">
+      <Filter>io3DEngine\ioWnd3D\ioWndEX</Filter>
+    </ClInclude>
+    <ClInclude Include="ioCustomWnd.h">
+      <Filter>io3DEngine\ioWnd3D\ioWndEX</Filter>
+    </ClInclude>
+    <ClInclude Include="ioLabelWndEX.h">
+      <Filter>io3DEngine\ioWnd3D\ioWndEX</Filter>
+    </ClInclude>
+    <ClInclude Include="ioFrameWndEX.h">
+      <Filter>io3DEngine\ioWnd3D\ioWndEX</Filter>
+    </ClInclude>
+    <ClInclude Include="ioWndEXEventType.h">
+      <Filter>io3DEngine\ioWnd3D\ioWndEX</Filter>
+    </ClInclude>
+    <ClInclude Include="ioTabWndEX.h">
+      <Filter>io3DEngine\ioWnd3D\ioWndEX</Filter>
+    </ClInclude>
+    <ClInclude Include="ioWndEXEventHandler.h">
+      <Filter>io3DEngine\ioWnd3D\ioWndEX</Filter>
+    </ClInclude>
+    <ClInclude Include="ioRadioButtonEX.h">
+      <Filter>io3DEngine\ioWnd3D\ioWndEX</Filter>
+    </ClInclude>
+    <ClInclude Include="ioImageWndEX.h">
+      <Filter>io3DEngine\ioWnd3D\ioWndEX</Filter>
+    </ClInclude>
+    <ClInclude Include="ioComplexStringPrinterBase.h">
+      <Filter>io3DEngine\ioWnd3D\ioWndEX</Filter>
+    </ClInclude>
+    <ClInclude Include="ioWndEXType.h">
+      <Filter>io3DEngine\ioWnd3D\ioWndEX</Filter>
+    </ClInclude>
+    <ClInclude Include="ioFlashPlayer.h">
+      <Filter>io3DEngine\ioWnd3D\ioWndEX</Filter>
+    </ClInclude>
+    <ClInclude Include="ioRichLabel.h">
+      <Filter>io3DEngine\ioWnd3D\ioWndEX</Filter>
+    </ClInclude>
+    <ClInclude Include="ioScrollBarEX.h">
+      <Filter>io3DEngine\ioWnd3D\ioWndEX</Filter>
+    </ClInclude>
+    <ClInclude Include="ioButtonWndEX.h">
+      <Filter>io3DEngine\ioWnd3D\ioWndEX</Filter>
+    </ClInclude>
+    <ClInclude Include="ioWndEX.h">
+      <Filter>io3DEngine\ioWnd3D\ioWndEX</Filter>
+    </ClInclude>
+    <ClInclude Include="ioMovingWnd.h">
+      <Filter>io3DEngine\ioWnd3D</Filter>
+    </ClInclude>
+    <ClInclude Include="ioUI3DEffectRender.h">
+      <Filter>io3DEngine\ioWnd3D\UIRender</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="io3DEngine.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\Version.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Squish\squish.lib">
+      <Filter>Squish</Filter>
+    </Library>
+    <Library Include="Squish\squishd.lib">
+      <Filter>Squish</Filter>
+    </Library>
+  </ItemGroup>
+</Project>

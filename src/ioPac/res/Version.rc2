@@ -1,0 +1,67 @@
+//
+// AUTOUPGRADE.RC2 - resources Microsoft Visual C++ does not edit directly
+//
+
+
+#ifdef APSTUDIO_INVOKED
+	#error this file is not editable by Microsoft Visual C++
+#endif //APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+// Add manually edited resources here...
+
+/////////////////////////////////////////////////////////////////////////////
+
+#include "Version.h"
+
+
+#define DESCRIPTION         "로스트사가"
+#define PRODUCTVER           0,0,0,1
+#define STRPRODUCTVER       "0,0,0,1"
+
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION FILEVER
+ PRODUCTVERSION PRODUCTVER
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041204b0"
+        BEGIN
+			VALUE "FileDescription", DESCRIPTION
+     		VALUE "CompanyName", "IO Entertainment Co., Ltd."
+            VALUE "FileVersion", STRFILEVER
+            VALUE "LegalCopyright", "IO Entertainment Co., Ltd."
+            VALUE "ProductVersion", STRPRODUCTVER
+			VALUE "InternalName", STRINTERNALNAME
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x412, 1200
+    END
+END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

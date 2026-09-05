@@ -1,0 +1,66 @@
+TSvnVersion.tmpl   - 루트 폴더에 추가 , svn 추가
+Vesion.rc2         - res 폴더를 만들어 추가  , svn 추가, 솔루션의 Resource Files에 추가
+Version.h          - 솔루션의 header Files에 추가
+*.rc               - 파일을 열어서 아래 부분 추가
+
+-----------------------------------------------------------------------------------
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""res\\Version.rc2""\r\n" <---추가되는 부분
+    "\r\n"
+    "\0"
+END
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\Version.rc2"  <---추가되는 부분
+
+---------------------------------------------------------------------------------------
+rc 파일에 아래 항목이 있으면 삭제
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041203b5"
+        BEGIN
+            VALUE "CompanyName", "TODO: <회사 이름>"
+            VALUE "FileDescription", "TODO: <파일 설명>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "LSMonitor.exe"
+            VALUE "LegalCopyright", "TODO: (c) <회사 이름>.  All rights reserved."
+            VALUE "OriginalFilename", "LSMonitor.exe"
+            VALUE "ProductName", "TODO: <제품 이름>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "변환", 0x412, 949
+    END
+END
+
+
+-------------------------------------------------------------------------------------------
+
+빌드 전 이벤트 명령줄 추가
+"c:\Program Files\TortoiseSVN\bin\SubWCRev.exe" "$(ProjectDir)\" "$(ProjectDir)TSvnVersion.tmpl" "$(ProjectDir)Version.h"

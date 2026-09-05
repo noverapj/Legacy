@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="System">
+      <UniqueIdentifier>{e16f246a-8897-4536-b351-e5084e5ef742}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Module">
+      <UniqueIdentifier>{a3e95b38-4f39-4e87-9ef8-8cd3c7e3ccce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Module\Thread">
+      <UniqueIdentifier>{b266f50d-ef3d-41b3-80dd-8616cd8d781f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Communicator">
+      <UniqueIdentifier>{51010f03-92bf-4efa-be8c-efc35e14380c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Communicator\Queue">
+      <UniqueIdentifier>{7125662f-5734-45fc-9555-784d9e34450d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\IOCP">
+      <UniqueIdentifier>{dc9fa1a9-faec-419a-9780-bc517d57f4fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\IOCP\Context">
+      <UniqueIdentifier>{23dfd981-7754-4223-a95a-2ed5a5f81d7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\IOCP\Overlapped">
+      <UniqueIdentifier>{eb89b0cb-f88e-4431-9871-77074455a144}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Network">
+      <UniqueIdentifier>{0c69a32c-7e1a-4bfe-92f4-bbce0d4cc01d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Network\Socket">
+      <UniqueIdentifier>{2e65f9bf-8a24-4697-9296-545a16172882}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Network\Packet">
+      <UniqueIdentifier>{5a4650d8-a865-4bbb-ae97-738eba1d2364}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Network\Connector">
+      <UniqueIdentifier>{225721ee-f19b-4950-97f1-03e6266bea72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Network\Pooler">
+      <UniqueIdentifier>{3a989e02-caae-4eb2-ad5e-8ae50220b92e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Etc">
+      <UniqueIdentifier>{70ba6b9f-0eeb-4e30-9d01-1faa067695c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Etc\Interface">
+      <UniqueIdentifier>{1d5bd7ac-fd3c-4cc2-b9ae-5a080822d0c6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="cSystem.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="cModule.cpp">
+      <Filter>System\Module</Filter>
+    </ClCompile>
+    <ClCompile Include="cBaseThread.cpp">
+      <Filter>System\Module\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="cCommandThread.cpp">
+      <Filter>System\Module\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="cConnectorThread.cpp">
+      <Filter>System\Module\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="cWorkerThread.cpp">
+      <Filter>System\Module\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="cCommunicator.cpp">
+      <Filter>System\Communicator</Filter>
+    </ClCompile>
+    <ClCompile Include="cBaseQueueElem.cpp">
+      <Filter>System\Communicator\Queue</Filter>
+    </ClCompile>
+    <ClCompile Include="cCommandQueue.cpp">
+      <Filter>System\Communicator\Queue</Filter>
+    </ClCompile>
+    <ClCompile Include="cCommandQueueElem.cpp">
+      <Filter>System\Communicator\Queue</Filter>
+    </ClCompile>
+    <ClCompile Include="cConnectorQueue.cpp">
+      <Filter>System\Communicator\Queue</Filter>
+    </ClCompile>
+    <ClCompile Include="cConnectorQueueElem.cpp">
+      <Filter>System\Communicator\Queue</Filter>
+    </ClCompile>
+    <ClCompile Include="cIocpQueue.cpp">
+      <Filter>System\Communicator\Queue</Filter>
+    </ClCompile>
+    <ClCompile Include="cIOCP.cpp">
+      <Filter>System\IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="cIocpContext.cpp">
+      <Filter>System\IOCP\Context</Filter>
+    </ClCompile>
+    <ClCompile Include="cSocket.cpp">
+      <Filter>System\IOCP\Context</Filter>
+    </ClCompile>
+    <ClCompile Include="cStorage.cpp">
+      <Filter>System\IOCP\Context</Filter>
+    </ClCompile>
+    <ClCompile Include="cIocpOv.cpp">
+      <Filter>System\IOCP\Overlapped</Filter>
+    </ClCompile>
+    <ClCompile Include="cNetwork.cpp">
+      <Filter>System\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="cClientSocket.cpp">
+      <Filter>System\Network\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="cServerSocket.cpp">
+      <Filter>System\Network\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="cServerSocketManager.cpp">
+      <Filter>System\Network\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="cEncrypt.cpp">
+      <Filter>System\Network\Packet</Filter>
+    </ClCompile>
+    <ClCompile Include="cPacket.cpp">
+      <Filter>System\Network\Packet</Filter>
+    </ClCompile>
+    <ClCompile Include="cConnector.cpp">
+      <Filter>System\Network\Connector</Filter>
+    </ClCompile>
+    <ClCompile Include="cConnectorManager.cpp">
+      <Filter>System\Network\Connector</Filter>
+    </ClCompile>
+    <ClCompile Include="cPooler.cpp">
+      <Filter>System\Network\Pooler</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="INetwork.cpp">
+      <Filter>Etc\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="ISystem.cpp">
+      <Filter>Etc\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="cDoubleOV.cpp">
+      <Filter>System\IOCP\Overlapped</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cSystem.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="cModule.h">
+      <Filter>System\Module</Filter>
+    </ClInclude>
+    <ClInclude Include="cBaseThread.h">
+      <Filter>System\Module\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="cCommandThread.h">
+      <Filter>System\Module\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="cConnectorThread.h">
+      <Filter>System\Module\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="cWorkerThread.h">
+      <Filter>System\Module\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="cCommunicator.h">
+      <Filter>System\Communicator</Filter>
+    </ClInclude>
+    <ClInclude Include="cBaseQueueElem.h">
+      <Filter>System\Communicator\Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="cCommandQueue.h">
+      <Filter>System\Communicator\Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="cCommandQueueElem.h">
+      <Filter>System\Communicator\Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="cConnectorQueue.h">
+      <Filter>System\Communicator\Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="cConnectorQueueElem.h">
+      <Filter>System\Communicator\Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="cIocpQueue.h">
+      <Filter>System\Communicator\Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="cIOCP.h">
+      <Filter>System\IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="cIocpContext.h">
+      <Filter>System\IOCP\Context</Filter>
+    </ClInclude>
+    <ClInclude Include="cSocket.h">
+      <Filter>System\IOCP\Context</Filter>
+    </ClInclude>
+    <ClInclude Include="cStorage.h">
+      <Filter>System\IOCP\Context</Filter>
+    </ClInclude>
+    <ClInclude Include="cIocpOv.h">
+      <Filter>System\IOCP\Overlapped</Filter>
+    </ClInclude>
+    <ClInclude Include="cOverlapped.h">
+      <Filter>System\IOCP\Overlapped</Filter>
+    </ClInclude>
+    <ClInclude Include="cNetwork.h">
+      <Filter>System\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="cClientSocket.h">
+      <Filter>System\Network\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="cServerSocket.h">
+      <Filter>System\Network\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="cServerSocketManager.h">
+      <Filter>System\Network\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="cEncrypt.h">
+      <Filter>System\Network\Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="cHeader.h">
+      <Filter>System\Network\Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="cPacket.h">
+      <Filter>System\Network\Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="cConnector.h">
+      <Filter>System\Network\Connector</Filter>
+    </ClInclude>
+    <ClInclude Include="cConnectorManager.h">
+      <Filter>System\Network\Connector</Filter>
+    </ClInclude>
+    <ClInclude Include="cPooler.h">
+      <Filter>System\Network\Pooler</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="include\IIocpContext.h">
+      <Filter>Etc\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="include\INetwork.h">
+      <Filter>Etc\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="include\IProcessor.h">
+      <Filter>Etc\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ISystem.h">
+      <Filter>Etc\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="cDoubleOV.h">
+      <Filter>System\IOCP\Overlapped</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,20 @@
+// SuperParent.cpp: implementation of the SuperParent class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "../stdafx.h"
+#include "SuperParent.h"
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+SuperParent::SuperParent()
+{
+	InitializeCriticalSection(&m_critical_section);
+}
+
+SuperParent::~SuperParent()
+{
+	DeleteCriticalSection(&m_critical_section);
+}

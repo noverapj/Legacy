@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="service">
+      <UniqueIdentifier>{a9cd57f8-b684-4d4d-aaa7-c375d8f04519}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="minidump">
+      <UniqueIdentifier>{69e591f3-e40c-4f6f-be86-220bcd1b350a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="util">
+      <UniqueIdentifier>{0dd7f31e-9c48-4b28-9acb-7f95e65b46e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scheduler">
+      <UniqueIdentifier>{7c84dad6-530d-40bf-ab87-dd9061df23ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="network">
+      <UniqueIdentifier>{09cf901e-477d-4f54-826d-95bc25418ea9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crashfind">
+      <UniqueIdentifier>{9c64f4ad-60b8-48c7-8b5d-9d5285cb748c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NodeInfo">
+      <UniqueIdentifier>{65afaf5d-c698-410e-b02a-37625bbaf6c0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../../src/ls_filewritesvr/ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="../../src/ls_filewritesvr/stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/ls_filewritesvr/targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_filewritesvr\service\Service.h">
+      <Filter>service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_filewritesvr\service\ServiceLS.h">
+      <Filter>service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_filewritesvr\service\Manager.h">
+      <Filter>service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\common.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_filewritesvr\MiniDump\File.h">
+      <Filter>minidump</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_filewritesvr\MiniDump\MiniDump.h">
+      <Filter>minidump</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_filewritesvr\ioMainProcess.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_filewritesvr\Util\ioHashString.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_filewritesvr\Shutdown.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_filewritesvr\scheduler\Scheduler.h">
+      <Filter>scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_filewritesvr\scheduler\SchedulerNode.h">
+      <Filter>scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_filewritesvr\network\SP2Packet.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_filewritesvr\Define.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_filewritesvr\network\Protocol.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_filewritesvr\network\ioPacketQueue.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_filewritesvr\CrashFind\BugslayerUtil.h">
+      <Filter>crashfind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_filewritesvr\CrashFind\CrashHandler.h">
+      <Filter>crashfind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_filewritesvr\CrashFind\DiagAssert.h">
+      <Filter>crashfind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_filewritesvr\CrashFind\MemDumperValidator.h">
+      <Filter>crashfind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_filewritesvr\CrashFind\MemStress.h">
+      <Filter>crashfind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_filewritesvr\CrashFind\MSJDBG.h">
+      <Filter>crashfind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_filewritesvr\CrashFind\SymbolEngine.h">
+      <Filter>crashfind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_filewritesvr\NodeInfo\User.h">
+      <Filter>NodeInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_filewritesvr\NodeInfo\UserNodeManager.h">
+      <Filter>NodeInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_filewritesvr\network\ioServerSecurity.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_filewritesvr\Util\Crc32Static.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_filewritesvr\network\iocpHandler.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_filewritesvr\NodeInfo\AcceptorUserNode.h">
+      <Filter>NodeInfo</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../src/ls_filewritesvr/ls_filewritesvr.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/ls_filewritesvr/stdafx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_filewritesvr\service\Service.cpp">
+      <Filter>service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_filewritesvr\service\ServiceLS.cpp">
+      <Filter>service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_filewritesvr\service\Manager.cpp">
+      <Filter>service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_filewritesvr\MiniDump\File.cpp">
+      <Filter>minidump</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_filewritesvr\MiniDump\MiniDump.cpp">
+      <Filter>minidump</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_filewritesvr\ioMainProcess.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_filewritesvr\Util\ioHashString.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_filewritesvr\scheduler\Scheduler.cpp">
+      <Filter>scheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_filewritesvr\scheduler\SchedulerNode.cpp">
+      <Filter>scheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_filewritesvr\network\SP2Packet.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_filewritesvr\network\ioPacketQueue.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_filewritesvr\NodeInfo\User.cpp">
+      <Filter>NodeInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_filewritesvr\NodeInfo\UserNodeManager.cpp">
+      <Filter>NodeInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_filewritesvr\network\ioServerSecurity.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_filewritesvr\Util\Crc32Static.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_filewritesvr\network\iocpHandler.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_filewritesvr\NodeInfo\AcceptorUserNode.cpp">
+      <Filter>NodeInfo</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

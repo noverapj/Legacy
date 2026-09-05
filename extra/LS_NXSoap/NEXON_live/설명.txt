@@ -1,0 +1,49 @@
+
+https://nxsoap.nexon.com/remoting_version_2/Nexoncash.asmx?WSDL
+
+
+
+
+
+
+
+
+1.Gsoap 라이브러리 다운로드 후 설치
+http://sourceforge.net/projects/gsoap2/files/
+
+
+
+2.wsdl을 이용하기 위한 환경설정
+gsoap/gsoap/stdsoap2.h,  stdsoap2.cpp
+gsoap/gsoap/bin/win32/wsdl2h.exe, soapcpp2.exe  
+
+
+
+
+을 하나의 폴더에 복사
+
+3.header 파일 생성
+명령창 : wsdl2h.exe -o NXSoap.h Nexoncash.xml
+NXSoap.h 파일 생성 확인
+
+
+
+
+
+4.NXSoap.h 파일을 이용한 stub코드 생성
+ 명령창 : soapcpp2 -i -C -Iimport NXSoap.h
+
+
+
+
+
+5.생성된 파일들로 폴더구조 생성
+import/gsoap/wsdl
+
+
+
+
+
+
+
+참고 URL : http://j2enty.com/97

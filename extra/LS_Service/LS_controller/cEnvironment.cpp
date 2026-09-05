@@ -1,0 +1,22 @@
+// cEnvironment.cpp: implementation of the cEnvironment class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+#include "cEnvironment.h"
+#include "../include/cSingleton.h"
+#include <iostream>
+
+
+cEnvironment g_environment;
+
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+cEnvironment::cEnvironment() : 
+	m_maxSession(0),
+	m_flushTime(0)
+{
+}

@@ -1,0 +1,159 @@
+|EXE_CAutoUpgradeApp::IsDuplication_1|\r\n\r\n      [LostSaga] est?abierto.\r\n\r\n      Int?talo nuevamente cuando cierres [Lost Saga].\r\n\r\n\r\n      (C?igo de error:201)|
+|EXE_CAutoUpgradeDlg::OnCopyData_1|Connecting to the Lost Saga server...|
+|EXE_CAutoUpgradeDlg::OnCopyData_2|Connecting to UDP...|
+|EXE_CAutoUpgradeDlg::OnCopyData_3|Error al conectar al servidor de Lost Saga..|
+|EXE_CAutoUpgradeDlg::OnTimer_1|Lost Saga is running...|
+|EXE_CAutoUpgradeDlg::OnTimer_2|Lost Saga was unable to launch for 10 minutes.\r\n(C?igo de error:210)|
+|EXE_CAutoUpgradeDlg::OnTimer_3|Error al conectar al servidor de Lost Saga..|
+|EXE_CAutoUpgradeDlg::OnTimer_4|Verifying optimization...|
+|EXE_CAutoUpgradeDlg::OnTimer_5|Verifying optimization...|
+|EXE_CAutoUpgradeDlg::OnTimer_6|Lost Saga will be started automatically.|
+|EXE_CAutoUpgradeDlg::OnTimer_7|Lost Saga will be started automatically.|
+|EXE_CAutoUpgradeDlg::OnTimer_8|Ha ocurrido un error al ejecutar el cliente.\r\n(C?igo de error:226)|
+|EXE_CAutoUpgradeDlg::OnTimer_9|Ha ocurrido un error al ejecutar el cliente.|
+|EXE_CAutoUpgradeDlg::SetWantEndDialog_1|Exiting... Please wait.|
+|EXE_Help::CheckRightHDDSpace_1|Se requiere que haya %1 megas libres en tu disco duro para que \r\nla actualizaci? de Lost Saga pueda proceder.\r\n(error code:207)\r\n\r\nTama? total:%2M, tama? restante:%3M, tama? necesario:%4M|
+|EXE_Help::CheckDownloadedFile_1|Unable to open files for integrity tests.\r\n|
+|EXE_Help::CheckDownloadedFile_2|The downloaded file contains webpage errors.\r\nFile name: %1\r\nFileCRC: %2, Size: %3,GetLastError: %4|
+|EXE_HTTPManager::_Run_1|Reuniendo informaci? de Parche...|
+|EXE_HTTPManager::_Run_2|La versi? instalada del DirectX est?desactualizada.\r\nInstala la ?tima versi? del DirectX, tarjeta gr?ica y controlador.\r\n(C?igo de error:211)|
+|EXE_HTTPManager::_Run_3|Se ha fallado al abir el iop n?ero %1. Y ocurri?un error al eliminar el archivo.\r\nNombre del archivo:%2, GetLastError:%3 Vuelve a ejecutar el programa.\r\n(C?igo de error:222)\r\n\r\n|
+|EXE_HTTPManager::_Run_4|La descarga de los archivos ha fallado.\r\nPuede que los archivos del parchese hayan amontonado.\r\nVuelve a intentarlo m? tarde.\r\n(C?igo de error:203)\r\n\r\n|
+|EXE_HTTPManager::_Run_5|Los archivos est? da?dos.\r\nPuede que los archivos del parche se hayan amontonado.\r\nVuelve a ejecutar el programa m? tarde.\r\n(C?igo de error:215)\r\n\r\n|
+|EXE_HTTPManager::_Run_6|No se ha podido abrir el paquete de archivos.\r\nVerifica si hay alg? problema con la sincronizaci? de\r\nlos archivos del parche y vuelve a intentarlo.\r\n(C?igo de error:204)\r\n\r\n|
+|EXE_HTTPManager::_Run_7|Hubo un error con el an?isis de los archivos.\r\n Vuelve a ejecutar el programa.\r\n(C?igo de error:205)\r\n\r\n|
+|EXE_HTTPManager::_Run_8|Ha ocurrido un error al verificar cu?to espacio hay en el disco duro.\r\nAl parecer hay suficiente espacio\r\nen el disco duro para continuar con el procedimiento.\r\nSi el problema continua, recupera el espacio del disco.\r\n(C?igo de error: 223)\r\n\r\nGetLastError:%1|
+|EXE_HTTPManager::_Run_9|La descarga y reanudaci? del archivo ha fallado (Ha fallado 100 veces).\r\nVuelve a ejecutar el programa.\r\nSi el problema persiste, ingresa al men?de\r\nprogramas y elimina Lost Saga. Luego verifica que est? libre de virus.\r\nNo te olvides de verificar la conexi? de internet.\r\n(C?igo de error: 206)\r\n\r\n|
+|EXE_HTTPManager::_Run_10|applying a patch|
+|EXE_HTTPManager::DeleteGarbage_1| applying a patch [%1/%2]|
+|EXE_HTTPManager::_RunAdmin_1|Error extracting the package file number %1.\r\n\r\n%2|
+|EXE_HTTPManager::_RunAdmin_2|Completed.|
+|EXE_HTTPManager::_RunAdmin_3|Error copying folder(s).\r\n\r\n|
+|EXE_HTTPManager::_RunOptionCopyFolder_1|Original folder.|
+|EXE_HTTPManager::_RunOptionCopyFolder_2|Destination folder.|
+|EXE_HTTPManager::_RunOptionCopyFolder_3|Copying folder(s).|
+|EXE_HTTPManager::_RunOptionCopyFolder_4|Completed.|
+|EXE_HTTPManager::AddPacFile_1|Merging: #%1 file.|
+|EXE_HTTPManager::AddPacFile_2|Error merging files: %1.|
+|EXE_HTTPManager::AddPacFile_3|Failed to merge files.\r\nFile name: %1\r\nFile name in the package file: %2\r\nPackage file array: %3 , File CRC: %4, GetLastErrorValue: %5, Exception: %6, |
+|EXE_HTTPManager::AddPacFile_4|Failed to delete downloaded files while merging files.\r\nFile name: %1\r\nGetLastError:%2, |
+|EXE_HTTPManager::CheckPac_1|Error checking package is NULL.|
+|EXE_HTTPManager::CheckPac_2|The package parameter for checking is NULL.\r\nGetLastError: %1\r\n|
+|EXE_HTTPManager::CheckPac_3|Verifying %1/%2 files: File [%3%%].|
+|EXE_HTTPManager::CopyVersionupFiles_1|Processing manual patching: [%1%%].|
+|EXE_HTTPManager::CreateAllNewPacFile_1|La optimizaci? %1 de los archivos ha fallado.\r\n Vuelve a ejecutar el programa.\r\n(C?igo de error: 212)\r\n\r\n%2|
+|EXE_HTTPManager::CreateNewPacFile_1|Failed to delete old files to create a new package file.\r\nFile name: %1\r\nGetLastError: %2|
+|EXE_HTTPManager::CreateNewPacFile_2|Error saving the new package.|
+|EXE_HTTPManager::CreateNewPacFile_3|Failed to create and open a new package file.\r\n|
+|EXE_HTTPManager::CreateNewPacFile_4|Error: The new package is NULL.|
+|EXE_HTTPManager::CreateNewPacFile_5|The iop file parameter for the new package is NULL.\r\nFile name: %1\r\nGetLastError: %2|
+|EXE_HTTPManager::CreateNewPacFile_6|Error opening a new package.|
+|EXE_HTTPManager::CreateNewPacFile_7|Failed to open the iop file for a new package.\r\nFile name: %1\r\nGetLastError: %2,Exception: %3|
+|EXE_HTTPManager::CreateNewPacFile_8|New package information error.|
+|EXE_HTTPManager::CreateNewPacFile_9|Failed to initialize the file information of the iop file for a new package.\r\nFile name: %1\r\nGetLastError: %2|
+|EXE_HTTPManager::CreateNewPacFile_10|New package NULL 2 error.|
+|EXE_HTTPManager::CreateNewPacFile_11|The new iop parameter value is NULL.\r\nFile name: %1\r\nGetLastError: %2|
+|EXE_HTTPManager::CreateNewPacFile_12|Error opening the new package 2.|
+|EXE_HTTPManager::CreateNewPacFile_13|Failed to open the new iop file.\r\nFile name: %1\r\nGetLastError: %2, File CRC: %3, Exception: %4|
+|EXE_HTTPManager::CreateNewPacFile_14|Optimizando:%1/%2 files [%3%%].|
+|EXE_HTTPManager::CreateNewPacFile_15|New package information error.|
+|EXE_HTTPManager::CreateNewPacFile_16|Failed to read the old iop file information to create a new package .\r\nFile name: %1\r\nGetLastError: %2,Array: %3,Exception: %4|
+|EXE_HTTPManager::CreateNewPacFile_17|New package file data error.|
+|EXE_HTTPManager::CreateNewPacFile_18|Failed to read the old iop file data to create a new package.\r\nFile name: %1\r\nFile hash: %2,File index: %3,Compressed file size: %4,File size: %5,GetLastError: %6,Array: %7,Exception: %8|
+|EXE_HTTPManager::CreateNewPacFile_19|New package file merging error.|
+|EXE_HTTPManager::CreateNewPacFile_20|Failed to merge files into a new rs.iop.\r\nFile name: %1\r\n????: %2,File index: %3,Compressed file size: %4,File size: %5,GetLastError: %6,Array: %7,Exception: %8|
+|EXE_HTTPManager::CreateNewPacFile_21|New package size error.|
+|EXE_HTTPManager::CreateNewPacFile_22|The size of the old iop file for creating a new package is 0.\r\nFile name: %1\r\nFile hash: %2,File index: %3,Compressed file size: %4,File size: %5,GetLastError: %6,Array: %7,Exception: %8|
+|EXE_HTTPManager::CreateNewPacFile_23|Error copying the new package.|
+|EXE_HTTPManager::CreateNewPacFile_24|Failed to copy the new iop.\r\nFile name: %1\r\nNewFile name: %2\r\nGetLastError: %3|
+|EXE_HTTPManager::CreateNewPacFile_25|Error deleting the new package.|
+|EXE_HTTPManager::CreateNewPacFile_26|Failed to delete the original file after completing copy.\r\nFile name: %1\r\nGetLastError: %2|
+|EXE_HTTPManager::DownLoadProcess_1|Downloading #%1 file.|
+|EXE_HTTPManager::DownLoadProcess_2|OpenUrl error: %1.|
+|EXE_HTTPManager::DownLoadProcess_3|OpenURL failed.\r\nFile name: %1\r\nError: %2|
+|EXE_HTTPManager::DownLoadProcess_4|Error OpenUrl NULL: %1.|
+|EXE_HTTPManager::DownLoadProcess_5|The CInternetFile value is NULL.\r\nFile name: %1\r\nGetLastError: %2|
+|EXE_HTTPManager::DownLoadProcess_6|Failed to delete the old files while downloading.\r\nFile name: %1\r\nGetLastError: %2|
+|EXE_HTTPManager::DownLoadProcess_7|Error opening file: %1.|
+|EXE_HTTPManager::DownLoadProcess_8|Failed to open files to save.\r\n|
+|EXE_HTTPManager::DownLoadProcess_9|Downloading %1 file[%2%%].|"
+|EXE_HTTPManager::DownLoadProcess_10|Error writing file: %1.|
+|EXE_HTTPManager::DownLoadProcess_11|Failed to write files to save.\r\n|
+|EXE_HTTPManager::DownLoadProcess_12|Error receiving file: %1.|
+|EXE_HTTPManager::DownLoadProcess_13|Failed to receive files to save.\r\n|
+|EXE_HTTPManager::FileCopy_1|Error copying file: %1.|
+|EXE_HTTPManager::FileCopy_2|Failed to copy files.\r\nFile name: %1\r\nNew file name: %2\r\nGetLastError: %3, |
+|EXE_HTTPManager::GetUpdateFile_1|Verifying downloads.|
+|EXE_HTTPManager::GetUpdateFile_2|Verifying updates [%1%%].|
+|EXE_HTTPManager::InitPac_1|La asignaci? del paquete de biblioteca de memorias ha fallado.\r\n Vuelve a ejecutar el programa.\r\n(C?igo de error: 213)\r\n\r\nArray: %1, GetLastError: %2|
+|EXE_HTTPManager::OpenAllBigPacForGarbageSize_1|Se ha fallado al abir el iop n?ero %1.\r\nNombre del archivo:%2, GetLastError:%3 Vuelve a ejecutar el programa.\r\n(C?igo de error: 225)\r\n\r\n|
+|EXE_HTTPManager::ParseDeleteFileList_1|Analizando archivos para eliminarlos.|
+|EXE_HTTPManager::ParsePatchFile_1|Failed to open files to parse.\r\nFile name: %1\r\nGetLastError: %2|
+|EXE_HTTPManager::ParsePatchFile_2|Failed to delete the old files after parsing.\r\nFile name: %1\r\nGetLastError: %2|
+|EXE_HTTPManager::ProcessCheckPac_1|Problem in client files.\r\n\r\nPress [Yes] to run a complete diagnosis \r\n\r\nand download the client if errors are found.|
+|EXE_HTTPManager::ProcessCheckPac_2|Errors found in client files.\r\n\r\nDownload the client again.|
+|EXE_HTTPManager::ProcessCheckPac_3|Failed to open #%1 iop.\r\nFailed to delete the file.\r\nFile name: %2, GetLastError: %3\r\nPlease run the program again.\r\n(C?igo de error: 224)\r\n\r\n|
+|EXE_HTTPManager::ProcessNewPacFile_1|Ya fue optimizado.|
+|EXE_HTTPManager::ProcessNewPacFile_2|Ya fue optimizado.|
+|EXE_HTTPManager::Run_1|Ha ocurrido un error en la Sincronizaci? Principal.\r\n Vuelve a ejecutar el programa.\r\n(C?igo de error: 209)\r\n\r\n|
+|EXE_HTTPManager::SetTextWaitNewPac_1|Verificando optimizaci?.[%1]|
+|EXE_HTTPManager::SetupFull_1|Error extracting #%1 package.\r\n\r\n%2|
+|EXE_HTTPManager::SetupFull_2|Failed to delete the installed file version information.\r\nFile name: %1\r\nGetLastError: %2|
+|EXE_HTTPManager::SetupFull_3|Failed to open the installed version information file.\r\n|
+|EXE_HTTPManager::SetupFull_4|Error opening the package file.|
+|EXE_HTTPManager::SetupFull_5|Failed to open #%1 iop file after the installation.\r\nFile name: %2\r\nGetLastError: %3, File CRC: %4, Exception: %5, |
+|EXE_HTTPManager::StartGame_1|Se est? ejecutando el juego.|
+|EXE_HTTPManager::StartGame_2|The login key has expired.\r\n\r\n         Please log in again\r\n\r\n            for safety.|
+|EXE_HTTPManager::StartGame_3|The game will be started automatically.[%1]|
+|EXE_HTTPManager::StartGame_4|Presionar [Espacio] para iniciar el juego.|
+|EXE_HTTPManager::UnFull_1|Error: Full installation is NULL.|
+|EXE_HTTPManager::UnFull_2|The package variable to be used by the installation version is NULL.\r\nGetLastError: %1, |
+|EXE_HTTPManager::UnFull_3|Error opening the full installation.|
+|EXE_HTTPManager::UnFull_4|Failed to open the full installation.\r\nFile name: %1\r\nGetLastError: %2, File CRC: %3, Exception: %4, |
+|EXE_HTTPManager::UnFull_5|Information error: Full installation.|
+|EXE_HTTPManager::UnFull_6|Failed to read the installation information.\r\nFile name: %1\r\nGetLastError: %2, File CRC: %3, File array: %4, Exception: %5, |
+|EXE_HTTPManager::UnFull_7|Extracting #%1 file[%2%%].|
+|EXE_HTTPManager::UnFull_8|Failed to delete the older version files.\r\nFile name: %1\r\nGetLastError: %2, |
+|EXE_HTTPManager::UnFull_9|Error extracting the full installation: %1.|
+|EXE_HTTPManager::UnFull_10|Failed to extract the full installation file.\r\nFile name: %1\r\nGetLastError: %2, Installation file CRC: %3, Array: %4, Exception: %5, |
+|EXE_HTTPManager::UnFull_11|Failed to delete the installed version.\r\nFile name: %1\r\nGetLastError: %2, |
+|EXE_HTTPManager::UnPac_1|Error: Full package is NULL.|
+|EXE_HTTPManager::UnPac_2|The rs.iop file variable used to extract package files is NULL.\r\nFile name: %1\r\nGetLastError: %2|
+|EXE_HTTPManager::UnPac_3|Error opening the full package.|
+|EXE_HTTPManager::UnPac_4|Failed to open the rs.iop file used to extract package files.\r\nFile name: %1\r\nGetLastError: %2,Exception: %3|
+|EXE_HTTPManager::UnPac_5|Full package INIT error.|
+|EXE_HTTPManager::UnPac_6|Failed to initialize the rs.iop file to extract package files.\r\nFile name: %1\r\nGetLastError: %2|
+|EXE_HTTPManager::UnPac_7|Full package information error.|
+|EXE_HTTPManager::UnPac_8|Failed to read the old rs.iop file information to extract package files.\r\nFile name: %1\r\nGetLastError: %2,Array: %3,Exception: %4|
+|EXE_HTTPManager::UnPac_9|Extracting IOP: %1/%2 file [%3%%].|
+|EXE_HTTPManager::UnPac_10|Error deleting the old file to extract package files.\r\nFile name: %1\r\nGetLastError: %2|
+|EXE_HTTPManager::UnPac_11|Error extracting the full package.|
+|EXE_HTTPManager::UnPac_12|Failed to extract files to extract package files.\r\nFile name: %1\r\nFile hash: %2,File index: %3,Compressed file size: %4,GetLastError: %5,Array: %6,Exception: %7|
+|EXE_HTTPManager::UnPacPieceFile_1|Extracting #%1 file.|
+|EXE_HTTPManager::UnPacPieceFile_2|Failed to delete old files during individual extraction.\r\nFile name: %1\r\nGetLastError: %2|
+|EXE_HTTPManager::UnPacPieceFile_3|Failed to find the files to extract during individual extraction.\r\nFile name: %1\r\nGetLastError: %2|
+|EXE_HTTPManager::UnPacPieceFile_4|Error extracting individual file: %1.|
+|EXE_HTTPManager::UnPacPieceFile_5|Failed to extract individual files.\r\nFile name: %1\r\nError return value: %2, File CRC: %3, GetLastError: %4, Exception: %5|
+|EXE_HTTPManager::UnPacPieceFile_6|Failed to delete downloaded files during individual extraction.\r\nFile name: %1\r\nGetLastError: %2|
+|EXE_HTTPManager::UpdateFileLoop_1|Parsing files to download.|
+|EXE_HTTPManager::UpdateFileLoop_2|Retrying due to error: %1/%2.|
+|EXE_HTTPManager::UpdateOneFile_1|Ha ocurrido un error en la descarga del archivo.\r\nComenzaremos con la reconstrucci? autom?ica.(total 100 veces)\r\nSi quieres cerrar el programa\r\npresiona X en el bot? actualizaci? autom?ica.\r\n(C?igo de error: 218)\r\n\r\n|
+|EXE_HTTPManager::UpdateOneFile_2|Error: Downloaded file corruption: %1.|
+|EXE_HTTPManager::UpdateOneFile_3|The downloaded file is damaged.\r\nThe patch server might be busy.\r\nThe program will retry downloading the file. (max. 100 times)\r\nClick the X button\r\nto close the program.\r\n(C?igo de error: 216)\r\n\r\n|
+|EXE_HTTPManager::UpdateOneFile_4|Downloaded file size error.|
+|EXE_HTTPManager::UpdateOneFile_5|Invalid file size.\r\nFile name: %1\r\nServer file size: %2, Downloaded file size: %3, Server file CRC: %4, Downloaded file CRC: %5|
+|EXE_HTTPManager::UpdateOneFile_6|Se ha cambiado el tama? del archivo descargado.\r\nNo se ha renovado los archivos del parche\r\no ha sido infectado por virus.\r\nSi el problema persiste, procede con las siguientes pautas.\r\n\r\n1. Eliminar la carpeta que [LostSaga] ha instalado.\r\n   Herramientas de Internet Explorer 7->Opciones de internet->Pesta?: General->Eliminar...->Eliminar todo->[Eliminar tambi? los archivos guardados y los ajustes]->Ejemplo,\r\n   Herramientas de Internet Explorer 7->Opciones de internet->Pesta?: General->Eliminar Cookies->Aceptar\r\n                                   Herramientas->Opciones de internet->Pesta?: General->Eliminar archivos->[Eliminar todos los art?ulos offline]->Aceptar|
+|EXE_HTTPManager::UpdateOneFile_7|Sever file size: %1, Downloaded file size: %2, Server file CRC: %3|
+|EXE_HTTPManager::UpdateOneFile_8|Ha ocurrido un error al juntar todos los archivos.\r\nComenzaremos con la reconstrucci? autom?ica.(total 100 veces)\r\nSi quieres cerrar el programa\r\npresiona X en el bot? actualizaci? autom?ica.\r\n(C?igo de error: 219)\r\n\r\n|
+|EXE_HTTPManager::UpdateOneFile_9|Server file size: %1, Downloaded file size: %2, Server file CRC: %3|
+|EXE_HTTPManager::UpdateOneFile_10|Ha ocurrido un error al abrir los archivos individualmente.\r\nComenzaremos con la reconstrucci? autom?ica.(total 100 veces)\r\nSi quieres cerrar el programa\r\npresiona X en el bot? actualizaci? autom?ica.\r\n(C?igo de error: 220)\r\n\r\n|
+|EXE_HTTPManager::UpdateOneFile_11|Server file size: %1, Downloaded file size: %2, Server file CRC: %3|
+|EXE_HTTPManager::UpdateOneFile_12|Ha ocurrido un error al copiarse los archivos.\r\nComenzaremos con la reconstrucci? autom?ica.(total 100 veces)\r\nSi quieres cerrar el programa\r\npresiona X en el bot? actualizaci? autom?ica.\r\n(C?igo de error: 221)\r\n\r\n|
+|EXE_HTTPManager::UpdateOneFile_13|Server file size: %1, Downloaded file size: %2|
+|EXE_HTTPManager::UpdateOneFile_14|La instalaci? de la versi? completa ha fallado.\r\nComenzaremos con la reconstrucci? autom?ica.(total 100 veces)\r\npresiona X en el bot? actualizaci? autom?ica\r\nSi quieres cerrar el programa.\r\n(C?igo de error: 217)\r\n\r\n|
+|EXE_ioErrorDlg::ShowErrorDlg_1|Ver : %1\r\n--- System Requirements ---\r\n%2\r\n\r\n--- Error Information ---\r\n%3|
+|EXE_ioLoginDlg::FirstConnectServer_1|Connecting to the %1 server.|
+|EXE_ioLoginDlg::OnTimer_1|%1 server not responding, connecting to the %2 server.|
+|EXE_ioLoginDlg::OnTimer_2|%1 server not responding, connecting to the %2 server.|
+|EXE_ioLoginDlg::SendServer_1|The login request is sent to the %1 server, waiting for response.|
+|EXE_ioLoginDlg::SetTextNetworkConnected_1|Connected to the %1 server.|

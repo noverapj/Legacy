@@ -1,0 +1,695 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="BaseClass">
+      <UniqueIdentifier>{aff6fc59-46ef-4b3a-b3a0-6dcade5c2553}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Channeling">
+      <UniqueIdentifier>{fecf11d0-e370-4e6e-b2f5-3c511d18d57e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CrashFind">
+      <UniqueIdentifier>{de2d874b-d875-476c-a390-828feed756d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataBase">
+      <UniqueIdentifier>{a91db092-3931-4a71-afcf-cb3e19a2043d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FrameTimerDLL">
+      <UniqueIdentifier>{e547ea01-0819-4da2-8a29-a55248a16f6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Local">
+      <UniqueIdentifier>{e12a1ff6-36ae-4739-ab8e-ab3e461b8505}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LoginManager">
+      <UniqueIdentifier>{2f4cb5c6-a889-4117-98fd-6373cc2b587b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Minidump">
+      <UniqueIdentifier>{a1ce8018-5162-4c2f-8ee9-0af0e7171e24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MonitoringServerNode">
+      <UniqueIdentifier>{f64d6390-3426-492d-baa4-dda507328cbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network">
+      <UniqueIdentifier>{92c3f1d0-79dd-4ffb-9d22-346f6c8b0537}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NodeInfo">
+      <UniqueIdentifier>{fab41687-2af7-437d-a7eb-20f2ae4c3e65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OGPAPI">
+      <UniqueIdentifier>{4cf237ed-067b-4bfc-87ed-43822cc7e210}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Operation">
+      <UniqueIdentifier>{69449344-0efd-4f15-a1ea-20acd3719e6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QueryData">
+      <UniqueIdentifier>{38eacd5d-a8d2-4384-a5f2-5f9f6df2741d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThailandBillingServer">
+      <UniqueIdentifier>{6c2597fa-0fc0-41cd-9ba4-a537bd4ad0d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThailandIPBonusServer">
+      <UniqueIdentifier>{253623e2-d449-4824-a00c-ebaf36e9d2cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThailandLoginServer">
+      <UniqueIdentifier>{8e3f10f1-fb79-48e1-b4b0-888878020208}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThailandOTPServer">
+      <UniqueIdentifier>{498b8ecb-d5f5-4ef7-91a2-ebd679e013f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThreadPool">
+      <UniqueIdentifier>{034f6ef3-5991-48cd-872f-45f192e26bcd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="USBillingServer">
+      <UniqueIdentifier>{712a9ef1-d01f-4c00-a26e-1205fd2d3d75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{883e6099-5f41-4591-b096-cf46b6659b03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XML">
+      <UniqueIdentifier>{3a4a0ce2-f538-4c1a-a6fd-25a0e5e4edf6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Service">
+      <UniqueIdentifier>{f302cb41-86e3-42f7-b14a-b90666acb477}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NodeInfo\MgrNode">
+      <UniqueIdentifier>{1090a29c-02b0-458a-b058-231668ee34c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Channeling\MgameBillingServer">
+      <UniqueIdentifier>{41fc9489-e93d-4958-ab99-8b4be55047c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Channeling\ToonilandBillingServer">
+      <UniqueIdentifier>{f06f2653-d19a-4ad9-a9f9-5fa0bb76f794}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Channeling\WemadeBillingServer">
+      <UniqueIdentifier>{5fad2028-f0b2-41e5-a58a-4147910ce8b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Channeling\NexonServer">
+      <UniqueIdentifier>{787baf21-4c9a-4cc6-993a-798c8d80b19c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Channeling\NexonNISMSServer">
+      <UniqueIdentifier>{6ea5857f-c927-4dd2-aba2-b634f44f2216}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Channeling\NexonEUSessionServer">
+      <UniqueIdentifier>{ba45295e-e08a-46f3-a42a-2b7d6a5a6084}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GoogleDump">
+      <UniqueIdentifier>{5acf81d8-2e22-4e9b-9d19-b521e52420ce}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\ls_billingsvr\stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\BaseClass\Handler.h">
+      <Filter>BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\BaseClass\Operation.h">
+      <Filter>BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeManager.h">
+      <Filter>Channeling</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeMgame.h">
+      <Filter>Channeling</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeNaver.h">
+      <Filter>Channeling</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeNexonBuy.h">
+      <Filter>Channeling</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeParent.h">
+      <Filter>Channeling</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeTooniland.h">
+      <Filter>Channeling</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\CrashFind\BugslayerUtil.h">
+      <Filter>CrashFind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\CrashFind\CrashHandler.h">
+      <Filter>CrashFind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\CrashFind\DiagAssert.h">
+      <Filter>CrashFind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\CrashFind\MemDumperValidator.h">
+      <Filter>CrashFind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\CrashFind\MemStress.h">
+      <Filter>CrashFind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\CrashFind\MSJDBG.h">
+      <Filter>CrashFind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\CrashFind\SymbolEngine.h">
+      <Filter>CrashFind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\DataBase\LogDBClient.h">
+      <Filter>DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\FrameTimerDLL\CFrameTimer.h">
+      <Filter>FrameTimerDLL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Local\ioLocalChina.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Local\ioLocalIndonesia.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Local\ioLocalJapan.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Local\ioLocalKorea.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Local\ioLocalManager.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Local\ioLocalParent.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Local\ioLocalTaiwan.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Local\ioLocalThailand.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Local\ioLocalUS.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\LoginManager\LoginManager.h">
+      <Filter>LoginManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\MgameBillingServer\MgameBillingServer.h">
+      <Filter>Channeling\MgameBillingServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Minidump\File.h">
+      <Filter>Minidump</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Minidump\MiniDump.h">
+      <Filter>Minidump</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\MonitoringServerNode\MonitoringNode.h">
+      <Filter>MonitoringServerNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\MonitoringServerNode\MonitoringNodeManager.h">
+      <Filter>MonitoringServerNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Network\ConnectAssist.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Network\GameServer.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Network\iocpHandler.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Network\ioPacketQueue.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Network\SP2Packet.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\ThailandLoginServer\ThailandLoginServer.h">
+      <Filter>ThailandLoginServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\ThailandLoginServer\ThailandUser.h">
+      <Filter>ThailandLoginServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\ThailandOTPServer\ThailandOTPNode.h">
+      <Filter>ThailandOTPServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\ThailandOTPServer\ThailandOTPNodeManager.h">
+      <Filter>ThailandOTPServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\ThreadPool\ioThreadPool.h">
+      <Filter>ThreadPool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\ThreadPool\NexonThreadPool.h">
+      <Filter>ThreadPool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\ToonilandBillingServer\ToonilandBillingServer.h">
+      <Filter>Channeling\ToonilandBillingServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\USBillingServer\USBillingServer.h">
+      <Filter>USBillingServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Util\cJSON.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Util\ioHashString.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Util\md5.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Util\RingBuffer.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Util\SHA1.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Util\Singleton.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\WemadeBillingServer\WemadeBuyServer.h">
+      <Filter>Channeling\WemadeBillingServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\XML\ioXMLDocument.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\XML\ioXMLElement.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extra\tinyxml\tinyxml\tinystr.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extra\tinyxml\tinyxml\tinyxml.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Operation\Manager.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\MainProcess.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\ioProcessChecker.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\EtcHelpFunc.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\ThailandBillingServer\ThailandBillingGetServer.h">
+      <Filter>ThailandBillingServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\ThailandBillingServer\ThailandBillingSetServer.h">
+      <Filter>ThailandBillingServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\ThailandIPBonusServer\ThailandIPBonusOutServer.h">
+      <Filter>ThailandIPBonusServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\ThailandIPBonusServer\ThailandIPBonusServer.h">
+      <Filter>ThailandIPBonusServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\NodeInfo\AcceptorMonitorNode.h">
+      <Filter>NodeInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\NodeInfo\AcceptorServerNode.h">
+      <Filter>NodeInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\QueryData\QueryResultData.h">
+      <Filter>QueryData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\QueryData\QueryData.h">
+      <Filter>QueryData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Operation\LSLogicOperations.h">
+      <Filter>Operation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Operation\LSLogicHandler.h">
+      <Filter>Operation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\NexonServer\NexonSessionServer.h">
+      <Filter>Channeling\NexonServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\NodeInfo\ServerNodeManager.h">
+      <Filter>NodeInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\NodeInfo\ServerNode.h">
+      <Filter>NodeInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\NodeInfo\UserInfoManager.h">
+      <Filter>NodeInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Operation\SchedulerNode.h">
+      <Filter>Operation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Operation\Scheduler.h">
+      <Filter>Operation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\NodeInfo\GoodsManager.h">
+      <Filter>NodeInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\NodeInfo\MemInfoManager.h">
+      <Filter>NodeInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\NodeInfo\TestCashManager.h">
+      <Filter>NodeInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Service\Service.h">
+      <Filter>Service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Service\ServiceLS.h">
+      <Filter>Service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\TestThread.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\NodeInfo\AcceptorMgrToolNode.h">
+      <Filter>NodeInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\NodeInfo\MgrToolNode.h">
+      <Filter>NodeInfo\MgrNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\NodeInfo\MgrToolNodeManager.h">
+      <Filter>NodeInfo\MgrNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\NodeInfo\BillInfoManager.h">
+      <Filter>NodeInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Local\ioLocalEU.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\NexonEUDefine.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\NexonNISMSServer\NexonNISMSServer.h">
+      <Filter>Channeling\NexonNISMSServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeWemadeBuy.h">
+      <Filter>Channeling</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Local\ioLocalLatin.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\NexonEUSessionServer\NexonEUSessionServer.h">
+      <Filter>Channeling\NexonEUSessionServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Util\IORandom.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeWemadeCashLink.h">
+      <Filter>Channeling</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\GoogleDump\GoogleDump.h">
+      <Filter>GoogleDump</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeDaum_v2.h">
+      <Filter>Channeling</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeDaum.h">
+      <Filter>Channeling</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeNexonBuy_v2.h">
+      <Filter>Channeling</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeHangame.h">
+      <Filter>Channeling</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_billingsvr\Define.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\ls_billingsvr\stdafx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\ls_billingsvr.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\BaseClass\Handler.cpp">
+      <Filter>BaseClass</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\BaseClass\Operation.cpp">
+      <Filter>BaseClass</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeManager.cpp">
+      <Filter>Channeling</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeMgame.cpp">
+      <Filter>Channeling</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeNaver.cpp">
+      <Filter>Channeling</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeNexonBuy.cpp">
+      <Filter>Channeling</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeParent.cpp">
+      <Filter>Channeling</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeTooniland.cpp">
+      <Filter>Channeling</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeWemadeBuy.cpp">
+      <Filter>Channeling</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\DataBase\LogDBClient.cpp">
+      <Filter>DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Local\ioLocalChina.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Local\ioLocalIndonesia.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Local\ioLocalJapan.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Local\ioLocalKorea.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Local\ioLocalManager.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Local\ioLocalParent.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Local\ioLocalTaiwan.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Local\ioLocalThailand.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Local\ioLocalUS.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\LoginManager\LoginManager.cpp">
+      <Filter>LoginManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\MgameBillingServer\MgameBillingServer.cpp">
+      <Filter>Channeling\MgameBillingServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Minidump\File.cpp">
+      <Filter>Minidump</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Minidump\MiniDump.cpp">
+      <Filter>Minidump</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\MonitoringServerNode\MonitoringNode.cpp">
+      <Filter>MonitoringServerNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\MonitoringServerNode\MonitoringNodeManager.cpp">
+      <Filter>MonitoringServerNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Network\ConnectAssist.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Network\GameServer.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Network\iocpHandler.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Network\ioPacketQueue.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Network\SP2Packet.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\ThailandLoginServer\ThailandLoginServer.cpp">
+      <Filter>ThailandLoginServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\ThailandLoginServer\ThailandUser.cpp">
+      <Filter>ThailandLoginServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\ThailandOTPServer\ThailandOTPNode.cpp">
+      <Filter>ThailandOTPServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\ThailandOTPServer\ThailandOTPNodeManager.cpp">
+      <Filter>ThailandOTPServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\ThreadPool\ioThreadPool.cpp">
+      <Filter>ThreadPool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\ThreadPool\NexonThreadPool.cpp">
+      <Filter>ThreadPool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\ToonilandBillingServer\ToonilandBillingServer.cpp">
+      <Filter>Channeling\ToonilandBillingServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\USBillingServer\USBillingServer.cpp">
+      <Filter>USBillingServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Util\cJSON.c">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Util\ioHashString.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Util\md5.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Util\RingBuffer.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Util\SHA1.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Util\Singleton.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\WemadeBillingServer\WemadeBuyServer.cpp">
+      <Filter>Channeling\WemadeBillingServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\XML\ioXMLDocument.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\XML\ioXMLElement.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Operation\Manager.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\MainProcess.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\ioProcessChecker.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\EtcHelpFunc.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\ThailandBillingServer\ThailandBillingGetServer.cpp">
+      <Filter>ThailandBillingServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\ThailandBillingServer\ThailandBillingSetServer.cpp">
+      <Filter>ThailandBillingServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\ThailandIPBonusServer\ThailandIPBonusOutServer.cpp">
+      <Filter>ThailandIPBonusServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\ThailandIPBonusServer\ThailandIPBonusServer.cpp">
+      <Filter>ThailandIPBonusServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\NodeInfo\AcceptorMonitorNode.cpp">
+      <Filter>NodeInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\NodeInfo\AcceptorServerNode.cpp">
+      <Filter>NodeInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\QueryData\QueryResultData.cpp">
+      <Filter>QueryData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\QueryData\QueryData.cpp">
+      <Filter>QueryData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Operation\LSLogicOperations.cpp">
+      <Filter>Operation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Operation\LSLogicHandler.cpp">
+      <Filter>Operation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\NexonServer\NexonSessionServer.cpp">
+      <Filter>Channeling\NexonServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\NodeInfo\ServerNodeManager.cpp">
+      <Filter>NodeInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\NodeInfo\ServerNode.cpp">
+      <Filter>NodeInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\NodeInfo\UserInfoManager.cpp">
+      <Filter>NodeInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Operation\Scheduler.cpp">
+      <Filter>Operation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Operation\SchedulerNode.cpp">
+      <Filter>Operation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\NodeInfo\GoodsManager.cpp">
+      <Filter>NodeInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\NodeInfo\MemInfoManager.cpp">
+      <Filter>NodeInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\NodeInfo\TestCashManager.cpp">
+      <Filter>NodeInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Service\Service.cpp">
+      <Filter>Service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Service\ServiceLS.cpp">
+      <Filter>Service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\TestThread.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\NodeInfo\AcceptorMgrToolNode.cpp">
+      <Filter>NodeInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\NodeInfo\MgrToolNode.cpp">
+      <Filter>NodeInfo\MgrNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\NodeInfo\MgrToolNodeManager.cpp">
+      <Filter>NodeInfo\MgrNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\NodeInfo\BillInfoManager.cpp">
+      <Filter>NodeInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Local\ioLocalEU.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\NexonNISMSServer\NexonNISMSServer.cpp">
+      <Filter>Channeling\NexonNISMSServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Local\ioLocalLatin.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\NexonEUSessionServer\NexonEUSessionServer.cpp">
+      <Filter>Channeling\NexonEUSessionServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Util\IORandom.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeWemadeCashLink.cpp">
+      <Filter>Channeling</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeDaum_v2.cpp">
+      <Filter>Channeling</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeDaum.cpp">
+      <Filter>Channeling</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeNexonBuy_v2.cpp">
+      <Filter>Channeling</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_billingsvr\Channeling\ioChannelingNodeHangame.cpp">
+      <Filter>Channeling</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\src\ls_billingsvr\ls_billingsvr.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

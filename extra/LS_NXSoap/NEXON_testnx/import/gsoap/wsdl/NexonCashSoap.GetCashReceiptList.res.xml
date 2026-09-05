@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+  xmlns:SOAP-ENV="http://www.w3.org/2003/05/soap-envelope"
+  xmlns:SOAP-ENC="http://www.w3.org/2003/05/soap-encoding"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:ns1="http://testsoap.nexon.com/remoting_version_2/">
+ <SOAP-ENV:Header>
+ </SOAP-ENV:Header>
+ <SOAP-ENV:Body>
+  <ns1:GetCashReceiptListResponse>
+   <ns1:GetCashReceiptListResult>
+    <xsd:schema></xsd:schema>
+    <!-- extensibility element(s) -->
+
+   </ns1:GetCashReceiptListResult>
+   <ns1:errorCode>0</ns1:errorCode>
+  </ns1:GetCashReceiptListResponse>
+ </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

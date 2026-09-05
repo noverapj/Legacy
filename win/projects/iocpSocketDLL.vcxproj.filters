@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{33baf5ea-8186-4657-9f89-361fcdea5ab3}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{e64507f1-ab85-4a1f-b80b-c72e1ddc679d}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{927b818a-7031-4321-b843-1614da3cac0d}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="ThreadModules">
+      <UniqueIdentifier>{ab0f4b89-a2ef-45e3-815f-6962359c4bb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IOCP">
+      <UniqueIdentifier>{94ebb55d-aae9-4a58-adbe-6a5a82bbda5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SocketModules">
+      <UniqueIdentifier>{34ccb9df-9987-4bfa-b88d-c823d772d351}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{5932ddb5-24a1-4488-8417-0f1ad0b70b17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Encrypt">
+      <UniqueIdentifier>{95f45c99-6548-4bd9-a1f8-fa9193a30bc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Processor">
+      <UniqueIdentifier>{61181d9a-52e2-4368-ade0-a48a61d2bd00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{bf4cf972-579c-410d-81ec-e2435c5f2cbf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\iocpSocketDLL\Encrypt\cryption.cpp">
+      <Filter>Encrypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iocpSocketDLL\Encrypt\FSM.cpp">
+      <Filter>Encrypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iocpSocketDLL\Encrypt\md5.cpp">
+      <Filter>Encrypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iocpSocketDLL\IOCP\CompletionHandler.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iocpSocketDLL\IOCP\LogicThread.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iocpSocketDLL\IOCP\WorkerThread.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iocpSocketDLL\Processor\Processor.cpp">
+      <Filter>Processor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\AcceptorNode.cpp">
+      <Filter>SocketModules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\cIocpQueue.cpp">
+      <Filter>SocketModules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\ConnectNode.cpp">
+      <Filter>SocketModules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\Packet.cpp">
+      <Filter>SocketModules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\PacketPool.cpp">
+      <Filter>SocketModules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\PacketQueue.cpp">
+      <Filter>SocketModules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\ReceiveIO.cpp">
+      <Filter>SocketModules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\RecvQueue.cpp">
+      <Filter>SocketModules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\ServerSocket.cpp">
+      <Filter>SocketModules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iocpSocketDLL\iocpSocketDLL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iocpSocketDLL\ThreadModules\SuperParent.cpp">
+      <Filter>ThreadModules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iocpSocketDLL\ThreadModules\Thread.cpp">
+      <Filter>ThreadModules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iocpSocketDLL\ThreadModules\ThreadManager.cpp">
+      <Filter>ThreadModules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iocpSocketDLL\ThreadModules\ThreadSync.cpp">
+      <Filter>ThreadModules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iocpSocketDLL\Util\NetworkSecurity.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\SendBuffer.cpp">
+      <Filter>SocketModules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\SendBufferManager.cpp">
+      <Filter>SocketModules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\SendIO.cpp">
+      <Filter>SocketModules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\MPSCQueue.cpp">
+      <Filter>SocketModules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\MPSCRecvQueue.cpp">
+      <Filter>SocketModules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iocpSocketDLL\IOCP\UDPCompletionHandler.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iocpSocketDLL\IOCP\UDPWorkerThread.cpp">
+      <Filter>IOCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\UDPNode.cpp">
+      <Filter>SocketModules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\ioUDPModule.cpp">
+      <Filter>SocketModules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\BufferPool.cpp">
+      <Filter>SocketModules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iocpSocketDLL\SocketModules\ioUDPSecurity.cpp">
+      <Filter>SocketModules</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\iocpSocketDLL\Encrypt\cryption.h">
+      <Filter>Encrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\Encrypt\FSM.h">
+      <Filter>Encrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\Encrypt\md5.h">
+      <Filter>Encrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\iocpSocketDLL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\IOCP\CompletionHandler.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\IOCP\LogicThread.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\IOCP\WorkerThread.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\Processor\Processor.h">
+      <Filter>Processor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\AcceptorNode.h">
+      <Filter>SocketModules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\cIocpQueue.h">
+      <Filter>SocketModules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\ConnectNode.h">
+      <Filter>SocketModules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\IOCP.h">
+      <Filter>SocketModules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\Packet.h">
+      <Filter>SocketModules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\PacketPool.h">
+      <Filter>SocketModules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\PacketQueue.h">
+      <Filter>SocketModules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\ReceiveIO.h">
+      <Filter>SocketModules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\RecvQueue.h">
+      <Filter>SocketModules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\ServerSocket.h">
+      <Filter>SocketModules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\ThreadModules\SuperParent.h">
+      <Filter>ThreadModules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\ThreadModules\Thread.h">
+      <Filter>ThreadModules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\ThreadModules\ThreadManager.h">
+      <Filter>ThreadModules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\ThreadModules\ThreadSync.h">
+      <Filter>ThreadModules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\Util\NetworkSecurity.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\SendBuffer.h">
+      <Filter>SocketModules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\SendBufferManager.h">
+      <Filter>SocketModules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\SendIO.h">
+      <Filter>SocketModules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\common.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\cCriticalSection.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\MemPooler.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\MPSCQueue.h">
+      <Filter>SocketModules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\MPSCRecvQueue.h">
+      <Filter>SocketModules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\IOCP\UDPCompletionHandler.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\IOCP\UDPWorkerThread.h">
+      <Filter>IOCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\UDPNode.h">
+      <Filter>SocketModules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\UserTypeDefine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\ioUDPModule.h">
+      <Filter>SocketModules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\BufferPool.h">
+      <Filter>SocketModules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iocpSocketDLL\SocketModules\ioUDPSecurity.h">
+      <Filter>SocketModules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\MPMCMemPool.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\MPMCQueue.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\src\iocpSocketDLL\iocpSocket.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

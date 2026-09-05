@@ -1,0 +1,200 @@
+#pragma once
+
+enum AIDefElemType
+{
+	AI_DE_ERROR,
+	AI_DE_NPCAI_DEF,
+	AI_DE_INFO,
+	AI_DE_MENT,
+	AI_DE_BRAIN,
+};
+
+enum AIBrainElemType
+{
+	AI_BE_ERROR,
+	AI_BE_FSM,
+	AI_BE_DESCRIPTION,
+	AI_BE_BEHAVIOR,
+	AI_BE_TRANS_LIST,
+	AI_BE_TRANS,
+	AI_BE_STATE,
+	AI_BE_AIDIRECTOR,
+};
+
+enum	AIDatabaseType
+{
+	AI_DT_ERROR,
+	AI_DT_DESCRIPTION,
+	AI_DT_TARGETINGDB,
+	AI_DT_ACTIONDB,
+	AI_DT_MOVEMENTDB,
+	AI_DT_BEHAVIORDB,
+	AI_DT_BUFFLISTDB,
+	AI_DT_STATELISTDB,
+	AI_DT_KEYSEQLISTDB,
+};
+
+enum AIBvTNodeType
+{
+	AI_BvT_NT_ERROR,
+	AI_BvT_NT_SEQUENCE,
+	AI_BvT_NT_SELECT,
+	AI_BvT_NT_ACTION,
+	AI_BvT_NT_REPEAT,
+	AI_BvT_NT_RANDOM,
+	AI_BvT_NT_DECIDE,
+	AI_BvT_NT_IMPORT,
+};
+
+enum AIBvTHaltType
+{
+	AI_BvT_HT_ERROR,
+	AI_BvT_HT_NONE,
+	AI_BvT_HT_ON_TRUE,
+	AI_BvT_HT_ON_FALSE,
+};
+
+enum AIBvTRoleType
+{
+	AI_BvT_RT_ERROR,
+	AI_BvT_RT_DEFAULT,
+	AI_BvT_RT_DEC_QUERY,
+	AI_BvT_RT_DEC_ON_TRUE,
+	AI_BvT_RT_DEC_ON_FALSE,
+};
+
+enum AIKeyInputType
+{
+	AI_BvT_KIT_MOVE_CENTER = -1,
+
+	AI_BvT_KIT_MOVE_DOWN,
+	AI_BvT_KIT_MOVE_DN_LT,
+	AI_BvT_KIT_MOVE_LEFT,
+	AI_BvT_KIT_MOVE_UP_LT,
+	AI_BvT_KIT_MOVE_UP,
+	AI_BvT_KIT_MOVE_UP_RT,
+	AI_BvT_KIT_MOVE_RIGHT,
+	AI_BvT_KIT_MOVE_DN_RT,
+
+	AI_BvT_KIT_JUMP_A		= 101,
+	AI_BvT_KIT_DEFENSE_S,
+	AI_BvT_KIT_ATTACK_D,
+	AI_BvT_KIT_CLOAK_AS,
+	AI_BvT_KIT_HELMET_AD,
+	AI_BvT_KIT_WEAPON_ASD,
+	AI_BvT_KIT_ARMOR_SD,
+
+	AI_BvT_KIT_ERROR		= 10000
+};
+
+enum AICompareType
+{
+	AI_CMP_ERROR,
+	AI_CMP_BIGGER,
+	AI_CMP_SMALLER,
+	AI_CMP_EQUAL,
+	AI_CMP_BETWEEN,
+	AI_CMP_NOTIN,
+	AI_CMP_ONEOF,
+	AI_CMP_EXCEPT,
+};
+
+enum AIKeyStateType
+{
+	AI_BvT_KST_NONE		= KEY_NONE,
+	AI_BvT_KST_RELEASE	= KEY_RELEASE,
+	AI_BvT_KST_PRESS	= KEY_PRESS,
+	AI_BvT_KST_REPEAT	= KEY_REPEAT
+};
+
+enum AIConfigType
+{
+	AI_CT_ERROR,
+	AI_CT_DESCRIPTION,
+	AI_CT_KEYSEQUENCEDB,
+	AI_CT_BEHAVIORTREEDB,
+	AI_CT_KEYSEQUENCE,
+	AI_CT_KEY,
+	AI_CT_BEHAVIOR,
+};
+
+enum AIExecVariableType
+{
+	AI_BvT_AVT_ERROR,
+	AI_BvT_AVT_MYSELF,
+	AI_BvT_AVT_TARGET,
+	AI_BvT_AVT_GLOBAL,
+};
+
+enum AIExecOperatorType
+{
+	AI_BvT_AOT_NOOP,
+	AI_BvT_AOT_NOT,
+};
+
+enum AIExecMethodType
+{
+	AI_BvT_AMT_ERROR			= 0,
+
+	// MYSELF only
+	AI_BvT_AMT_DoKeySeq			= 1001,
+	AI_BvT_AMT_StopAllActions	= 1002,
+	AI_BvT_AMT_Move				= 1003,
+	AI_BvT_AMT_ShowChat			= 1004,
+	AI_BvT_AMT_Turn				= 1005,
+	AI_BvT_AMT_Idle				= 1006,
+	AI_BvT_AMT_IsCombo			= 1007,
+	AI_BvT_AMT_CanDoCombo		= 1008,
+	AI_BvT_AMT_WaitForCombo		= 1009,
+	AI_BvT_AMT_DoMotion			= 1010,
+
+	// Target only
+	AI_BvT_AMT_IsTargetValid	= 2001,
+	AI_BvT_AMT_IsDistance		= 2002,
+
+	// target-myself
+	AI_BvT_AMT_IsHP				= 3001,
+	AI_BvT_AMT_IsCurrentState	= 3002,
+	
+	// GLOBAL
+	AI_BvT_AMT_GetTarget		= 4001,
+	AI_BvT_AMT_GetTargetByHP	= 4002,
+	AI_BvT_AMT_IsTarget			= 4003,
+};
+
+enum	AIExecElemType
+{
+	AI_EXEC_NONE,
+
+	AI_EXEC_MYSELF_IsHP,
+	AI_EXEC_MYSELF_IsCurrentState,
+	AI_EXEC_MYSELF_DoKeySeq,
+	AI_EXEC_MYSELF_StopAllActions,
+	AI_EXEC_MYSELF_Move,
+	AI_EXEC_MYSELF_Turn,
+	AI_EXEC_MYSELF_ShowChat,
+	AI_EXEC_MYSELF_Idle,
+	AI_EXEC_MYSELF_IsSkillAvailable,
+	AI_EXEC_MYSELF_IsCombo,
+	AI_EXEC_MYSELF_CanDoCombo,
+	AI_EXEC_MYSELF_WaitForCombo,
+	AI_EXEC_MYSELF_DoMotion,
+
+	AI_EXEC_TARGET_IsHP,
+	AI_EXEC_TARGET_IsCurrentState,
+	AI_EXEC_TARGET_IsTargetValid,
+	AI_EXEC_TARGET_IsDistance,
+
+	AI_EXEC_GLOBAL_GetTarget,
+	AI_EXEC_GLOBAL_Counter,
+	AI_EXEC_GLOBAL_GetTargetByHP,
+	AI_EXEC_GLOBAL_IsTarget,
+};
+
+enum	CharStateCheckType
+{
+	AI_CS_CHECK_ERROR,
+	AI_CS_CHECK_NORMAL,
+	AI_CS_CHECK_IN_WOUND,
+	AI_CS_CHECK_IN_DOWN,
+};

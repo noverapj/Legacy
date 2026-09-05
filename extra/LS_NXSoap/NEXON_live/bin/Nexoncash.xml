@@ -1,0 +1,1725 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="https://nxsoap.nexon.com/remoting_version_2/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="https://nxsoap.nexon.com/remoting_version_2/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://nxsoap.nexon.com/remoting_version_2/">
+      <s:element name="InitializeSoap">
+        <s:complexType />
+      </s:element>
+      <s:element name="InitializeSoapResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InitializeSoapResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Header" type="tns:Header" />
+      <s:complexType name="Header">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IPAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MD5Hash" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="SecurityHeader" type="tns:SecurityHeader" />
+      <s:complexType name="SecurityHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Created" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HashKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Data" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Key" type="s:unsignedInt" />
+          <s:element minOccurs="1" maxOccurs="1" name="CheckSum" type="s:unsignedInt" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="ApprovalInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nexonID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="chargeType" type="s:short" />
+            <s:element minOccurs="0" maxOccurs="1" name="startDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="reason" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="actionUserIP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ApprovalInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApprovalInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="errorCode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ApprovalPaidInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="reason" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="actionUserIP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ApprovalPaidInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApprovalPaidInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="errorCode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UsageInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nexonID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="productType" type="s:short" />
+            <s:element minOccurs="0" maxOccurs="1" name="startDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="reason" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="actionUserIP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UsageInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UsageInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="errorCode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LastUsageInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="productType" type="s:short" />
+            <s:element minOccurs="1" maxOccurs="1" name="reason" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="actionUserIP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LastUsageInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LastUsageInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="errorCode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ISBillingUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nexonID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="reason" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="actionUserIP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ISBillingUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ISBillingUserResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="errorCode" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtLastPaymentDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPurse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nexonID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="reason" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="actionUserIP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPurseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetPurseResult" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="errorCode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPurseByChannel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nexonID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="liabilityType" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="reason" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="actionUserIP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPurseByChannelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetPurseByChannelResult" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="errorCode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Purchase">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nexonID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="transactionID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="productType" type="s:short" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="productCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gameID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data3" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="reason" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="actionUserIP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PurchaseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PurchaseResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="errorCode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PurchaseChannel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="liabilityType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nexonID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="transactionID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="productType" type="s:short" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="productCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gameID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data3" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="reason" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="actionUserIP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PurchaseChannelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PurchaseChannelResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="errorCode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PurchaseExtend">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nexonID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="transactionID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="productType" type="s:short" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="extraCashAmount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="productCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gameID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data3" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="reason" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="actionUserIP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PurchaseExtendResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PurchaseExtendResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="errorCode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Purchase_Ex">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="argument" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAnyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ResultT">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Command" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Result" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Code" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="strCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApprovalNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApprovalAmount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Balance" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ApvSn" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Purchase_ExResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Purchase_ExResult" type="tns:ResultT" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ApprovalCashChange_Channeling">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="chargeInfo" type="tns:ChargeT" />
+            <s:element minOccurs="0" maxOccurs="1" name="channelingInfo" type="tns:UsageT" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ChargeT">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="LiabilityType" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="LiabilityTypeCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillingId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ChargeType" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UsageT">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ChannelingId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChannelingUserKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Amount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ItemId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RemoteIP" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ApprovalCashChange_ChannelingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApprovalCashChange_ChannelingResult" type="tns:ResultT" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Present">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nexonID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="transactionID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="productType" type="s:short" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="productCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gameID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="giftGameID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="age" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="data2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data3" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="reason" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="actionUserIP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PresentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PresentResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="errorCode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PresentExtend">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nexonID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="transactionID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="productType" type="s:short" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="extraCashAmount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="productCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gameID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="receiveNexonID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="receiveGameID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data3" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="reason" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="actionUserIP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PresentExtendResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PresentExtendResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="errorCode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckUsage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="productType" type="s:short" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="itemCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="receiverId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="actionUserIP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckUsageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckUsageResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="errorCode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCashReceiptList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nexonID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="reason" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="actionUserIP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCashReceiptListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCashReceiptListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="errorCode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChargeForNeopleCoupon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nexonId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="couponNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="requestIp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChargeForNeopleCouponResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChargeForNeopleCouponResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UsageCancelForLunia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nexonID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="transactionID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="refundAmount" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UsageCancelForLuniaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UsageCancelForLuniaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UsageCancel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nexonID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="productType" type="s:short" />
+            <s:element minOccurs="0" maxOccurs="1" name="transactionID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="refundAmount" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UsageCancelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UsageCancelResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPurchaseAmount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nexonID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="transactionID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="productType" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPurchaseAmountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPurchaseAmountResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="errorCode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UsageRollback">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="usageSn" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UsageRollbackResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UsageRollbackResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RequestEventCharge">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="serviceCode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RequestEventChargeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RequestEventChargeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ApprovalCashChange">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="serviceCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="tns:ChangeUserInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="order" type="tns:OrderInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ChangeUserInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SourceId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TargetId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GameId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RequestIP" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OrderInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="OrderId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="CashChangeTypeSn" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ApprovalCashChangeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ApprovalCashChangeResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="returnCode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ApprovalSendCash">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="cashChangeType" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="liabilityType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requestId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="requestIP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ApprovalSendCashResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ApprovalSendCashResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="errorCode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UseCoupon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="argument" type="tns:CouponArgument" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CouponArgument">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="tns:ArrayOfAnyType" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UseCouponResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UseCouponResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="returnCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRemainAmount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="liabilityType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="actionUserIP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRemainAmountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetRemainAmountResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="liabilitiesAmount" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ERPLiabilitiesAmount" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPurseWithGameCash">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="productType" type="s:short" />
+            <s:element minOccurs="0" maxOccurs="1" name="actionUserIP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPurseWithGameCashResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetPurseWithGameCashResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="paidBalance" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="freeBalance" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="gamecashBalance" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChargeGameCash">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cryptoString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChargeGameCashResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChargeGameCashResult" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="errorCode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUserMappingData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="nexonSn" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="reason" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="actionUserIP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUserMappingDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetUserMappingDataResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="InitializeSoapSoapIn">
+    <wsdl:part name="parameters" element="tns:InitializeSoap" />
+  </wsdl:message>
+  <wsdl:message name="InitializeSoapSoapOut">
+    <wsdl:part name="parameters" element="tns:InitializeSoapResponse" />
+  </wsdl:message>
+  <wsdl:message name="InitializeSoapHeader">
+    <wsdl:part name="Header" element="tns:Header" />
+  </wsdl:message>
+  <wsdl:message name="InitializeSoapSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="ApprovalInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:ApprovalInfo" />
+  </wsdl:message>
+  <wsdl:message name="ApprovalInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:ApprovalInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApprovalInfoSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="ApprovalPaidInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:ApprovalPaidInfo" />
+  </wsdl:message>
+  <wsdl:message name="ApprovalPaidInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:ApprovalPaidInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApprovalPaidInfoSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="UsageInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:UsageInfo" />
+  </wsdl:message>
+  <wsdl:message name="UsageInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:UsageInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="UsageInfoSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="LastUsageInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:LastUsageInfo" />
+  </wsdl:message>
+  <wsdl:message name="LastUsageInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:LastUsageInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="LastUsageInfoSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="ISBillingUserSoapIn">
+    <wsdl:part name="parameters" element="tns:ISBillingUser" />
+  </wsdl:message>
+  <wsdl:message name="ISBillingUserSoapOut">
+    <wsdl:part name="parameters" element="tns:ISBillingUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISBillingUserSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetPurseSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPurse" />
+  </wsdl:message>
+  <wsdl:message name="GetPurseSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPurseResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPurseSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetPurseByChannelSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPurseByChannel" />
+  </wsdl:message>
+  <wsdl:message name="GetPurseByChannelSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPurseByChannelResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPurseByChannelSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="PurchaseSoapIn">
+    <wsdl:part name="parameters" element="tns:Purchase" />
+  </wsdl:message>
+  <wsdl:message name="PurchaseSoapOut">
+    <wsdl:part name="parameters" element="tns:PurchaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="PurchaseSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="PurchaseChannelSoapIn">
+    <wsdl:part name="parameters" element="tns:PurchaseChannel" />
+  </wsdl:message>
+  <wsdl:message name="PurchaseChannelSoapOut">
+    <wsdl:part name="parameters" element="tns:PurchaseChannelResponse" />
+  </wsdl:message>
+  <wsdl:message name="PurchaseChannelSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="PurchaseExtendSoapIn">
+    <wsdl:part name="parameters" element="tns:PurchaseExtend" />
+  </wsdl:message>
+  <wsdl:message name="PurchaseExtendSoapOut">
+    <wsdl:part name="parameters" element="tns:PurchaseExtendResponse" />
+  </wsdl:message>
+  <wsdl:message name="PurchaseExtendSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="Purchase_ExSoapIn">
+    <wsdl:part name="parameters" element="tns:Purchase_Ex" />
+  </wsdl:message>
+  <wsdl:message name="Purchase_ExSoapOut">
+    <wsdl:part name="parameters" element="tns:Purchase_ExResponse" />
+  </wsdl:message>
+  <wsdl:message name="Purchase_ExSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="ApprovalCashChange_ChannelingSoapIn">
+    <wsdl:part name="parameters" element="tns:ApprovalCashChange_Channeling" />
+  </wsdl:message>
+  <wsdl:message name="ApprovalCashChange_ChannelingSoapOut">
+    <wsdl:part name="parameters" element="tns:ApprovalCashChange_ChannelingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApprovalCashChange_ChannelingSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="PresentSoapIn">
+    <wsdl:part name="parameters" element="tns:Present" />
+  </wsdl:message>
+  <wsdl:message name="PresentSoapOut">
+    <wsdl:part name="parameters" element="tns:PresentResponse" />
+  </wsdl:message>
+  <wsdl:message name="PresentSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="PresentExtendSoapIn">
+    <wsdl:part name="parameters" element="tns:PresentExtend" />
+  </wsdl:message>
+  <wsdl:message name="PresentExtendSoapOut">
+    <wsdl:part name="parameters" element="tns:PresentExtendResponse" />
+  </wsdl:message>
+  <wsdl:message name="PresentExtendSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="CheckUsageSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckUsage" />
+  </wsdl:message>
+  <wsdl:message name="CheckUsageSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckUsageResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckUsageSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetCashReceiptListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCashReceiptList" />
+  </wsdl:message>
+  <wsdl:message name="GetCashReceiptListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCashReceiptListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCashReceiptListSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="ChargeForNeopleCouponSoapIn">
+    <wsdl:part name="parameters" element="tns:ChargeForNeopleCoupon" />
+  </wsdl:message>
+  <wsdl:message name="ChargeForNeopleCouponSoapOut">
+    <wsdl:part name="parameters" element="tns:ChargeForNeopleCouponResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChargeForNeopleCouponSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="UsageCancelForLuniaSoapIn">
+    <wsdl:part name="parameters" element="tns:UsageCancelForLunia" />
+  </wsdl:message>
+  <wsdl:message name="UsageCancelForLuniaSoapOut">
+    <wsdl:part name="parameters" element="tns:UsageCancelForLuniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="UsageCancelForLuniaSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="UsageCancelSoapIn">
+    <wsdl:part name="parameters" element="tns:UsageCancel" />
+  </wsdl:message>
+  <wsdl:message name="UsageCancelSoapOut">
+    <wsdl:part name="parameters" element="tns:UsageCancelResponse" />
+  </wsdl:message>
+  <wsdl:message name="UsageCancelSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetPurchaseAmountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPurchaseAmount" />
+  </wsdl:message>
+  <wsdl:message name="GetPurchaseAmountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPurchaseAmountResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPurchaseAmountSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="UsageRollbackSoapIn">
+    <wsdl:part name="parameters" element="tns:UsageRollback" />
+  </wsdl:message>
+  <wsdl:message name="UsageRollbackSoapOut">
+    <wsdl:part name="parameters" element="tns:UsageRollbackResponse" />
+  </wsdl:message>
+  <wsdl:message name="UsageRollbackSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="RequestEventChargeSoapIn">
+    <wsdl:part name="parameters" element="tns:RequestEventCharge" />
+  </wsdl:message>
+  <wsdl:message name="RequestEventChargeSoapOut">
+    <wsdl:part name="parameters" element="tns:RequestEventChargeResponse" />
+  </wsdl:message>
+  <wsdl:message name="RequestEventChargeSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="ApprovalCashChangeSoapIn">
+    <wsdl:part name="parameters" element="tns:ApprovalCashChange" />
+  </wsdl:message>
+  <wsdl:message name="ApprovalCashChangeSoapOut">
+    <wsdl:part name="parameters" element="tns:ApprovalCashChangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApprovalCashChangeSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="ApprovalSendCashSoapIn">
+    <wsdl:part name="parameters" element="tns:ApprovalSendCash" />
+  </wsdl:message>
+  <wsdl:message name="ApprovalSendCashSoapOut">
+    <wsdl:part name="parameters" element="tns:ApprovalSendCashResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApprovalSendCashSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="UseCouponSoapIn">
+    <wsdl:part name="parameters" element="tns:UseCoupon" />
+  </wsdl:message>
+  <wsdl:message name="UseCouponSoapOut">
+    <wsdl:part name="parameters" element="tns:UseCouponResponse" />
+  </wsdl:message>
+  <wsdl:message name="UseCouponSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetRemainAmountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRemainAmount" />
+  </wsdl:message>
+  <wsdl:message name="GetRemainAmountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRemainAmountResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRemainAmountSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetPurseWithGameCashSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPurseWithGameCash" />
+  </wsdl:message>
+  <wsdl:message name="GetPurseWithGameCashSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPurseWithGameCashResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPurseWithGameCashSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="ChargeGameCashSoapIn">
+    <wsdl:part name="parameters" element="tns:ChargeGameCash" />
+  </wsdl:message>
+  <wsdl:message name="ChargeGameCashSoapOut">
+    <wsdl:part name="parameters" element="tns:ChargeGameCashResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChargeGameCashSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="SetUserMappingDataSoapIn">
+    <wsdl:part name="parameters" element="tns:SetUserMappingData" />
+  </wsdl:message>
+  <wsdl:message name="SetUserMappingDataSoapOut">
+    <wsdl:part name="parameters" element="tns:SetUserMappingDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetUserMappingDataSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:portType name="NexonCashSoap">
+    <wsdl:operation name="InitializeSoap">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">InitializeSoap</wsdl:documentation>
+      <wsdl:input message="tns:InitializeSoapSoapIn" />
+      <wsdl:output message="tns:InitializeSoapSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ApprovalInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ApprovalInfo</wsdl:documentation>
+      <wsdl:input message="tns:ApprovalInfoSoapIn" />
+      <wsdl:output message="tns:ApprovalInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ApprovalPaidInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ApprovalPaidInfo</wsdl:documentation>
+      <wsdl:input message="tns:ApprovalPaidInfoSoapIn" />
+      <wsdl:output message="tns:ApprovalPaidInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UsageInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">UsageInfo</wsdl:documentation>
+      <wsdl:input message="tns:UsageInfoSoapIn" />
+      <wsdl:output message="tns:UsageInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LastUsageInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">LastUsageInfo</wsdl:documentation>
+      <wsdl:input message="tns:LastUsageInfoSoapIn" />
+      <wsdl:output message="tns:LastUsageInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ISBillingUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ISBillingUser</wsdl:documentation>
+      <wsdl:input message="tns:ISBillingUserSoapIn" />
+      <wsdl:output message="tns:ISBillingUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPurse">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">GetPurse</wsdl:documentation>
+      <wsdl:input message="tns:GetPurseSoapIn" />
+      <wsdl:output message="tns:GetPurseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPurseByChannel">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">GetPurseByChannel</wsdl:documentation>
+      <wsdl:input message="tns:GetPurseByChannelSoapIn" />
+      <wsdl:output message="tns:GetPurseByChannelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Purchase">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Purchase</wsdl:documentation>
+      <wsdl:input message="tns:PurchaseSoapIn" />
+      <wsdl:output message="tns:PurchaseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseChannel">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Purchase</wsdl:documentation>
+      <wsdl:input message="tns:PurchaseChannelSoapIn" />
+      <wsdl:output message="tns:PurchaseChannelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseExtend">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">PurchaseExtend</wsdl:documentation>
+      <wsdl:input message="tns:PurchaseExtendSoapIn" />
+      <wsdl:output message="tns:PurchaseExtendSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Purchase_Ex">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Purchase</wsdl:documentation>
+      <wsdl:input message="tns:Purchase_ExSoapIn" />
+      <wsdl:output message="tns:Purchase_ExSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ApprovalCashChange_Channeling">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ApprovalCashChange_Channeling</wsdl:documentation>
+      <wsdl:input message="tns:ApprovalCashChange_ChannelingSoapIn" />
+      <wsdl:output message="tns:ApprovalCashChange_ChannelingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Present">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Present</wsdl:documentation>
+      <wsdl:input message="tns:PresentSoapIn" />
+      <wsdl:output message="tns:PresentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PresentExtend">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">PresentExtend</wsdl:documentation>
+      <wsdl:input message="tns:PresentExtendSoapIn" />
+      <wsdl:output message="tns:PresentExtendSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckUsage">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">CheckUsage</wsdl:documentation>
+      <wsdl:input message="tns:CheckUsageSoapIn" />
+      <wsdl:output message="tns:CheckUsageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCashReceiptList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">GetCashReceiptList</wsdl:documentation>
+      <wsdl:input message="tns:GetCashReceiptListSoapIn" />
+      <wsdl:output message="tns:GetCashReceiptListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChargeForNeopleCoupon">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ChargeForNeopleCoupon</wsdl:documentation>
+      <wsdl:input message="tns:ChargeForNeopleCouponSoapIn" />
+      <wsdl:output message="tns:ChargeForNeopleCouponSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UsageCancelForLunia">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">UsageCancelForLunia</wsdl:documentation>
+      <wsdl:input message="tns:UsageCancelForLuniaSoapIn" />
+      <wsdl:output message="tns:UsageCancelForLuniaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UsageCancel">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">UsageCancel</wsdl:documentation>
+      <wsdl:input message="tns:UsageCancelSoapIn" />
+      <wsdl:output message="tns:UsageCancelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPurchaseAmount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">GetUsageAmount</wsdl:documentation>
+      <wsdl:input message="tns:GetPurchaseAmountSoapIn" />
+      <wsdl:output message="tns:GetPurchaseAmountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UsageRollback">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">UsageRollback</wsdl:documentation>
+      <wsdl:input message="tns:UsageRollbackSoapIn" />
+      <wsdl:output message="tns:UsageRollbackSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestEventCharge">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">RequestEventCharge</wsdl:documentation>
+      <wsdl:input message="tns:RequestEventChargeSoapIn" />
+      <wsdl:output message="tns:RequestEventChargeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ApprovalCashChange">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ApprovalCashChange</wsdl:documentation>
+      <wsdl:input message="tns:ApprovalCashChangeSoapIn" />
+      <wsdl:output message="tns:ApprovalCashChangeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ApprovalSendCash">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ApprovalSendCash</wsdl:documentation>
+      <wsdl:input message="tns:ApprovalSendCashSoapIn" />
+      <wsdl:output message="tns:ApprovalSendCashSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UseCoupon">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">UseCoupon</wsdl:documentation>
+      <wsdl:input message="tns:UseCouponSoapIn" />
+      <wsdl:output message="tns:UseCouponSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRemainAmount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">GetRemainAmount</wsdl:documentation>
+      <wsdl:input message="tns:GetRemainAmountSoapIn" />
+      <wsdl:output message="tns:GetRemainAmountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPurseWithGameCash">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">GetPurseWithGameCash</wsdl:documentation>
+      <wsdl:input message="tns:GetPurseWithGameCashSoapIn" />
+      <wsdl:output message="tns:GetPurseWithGameCashSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChargeGameCash">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ChargeGameCash</wsdl:documentation>
+      <wsdl:input message="tns:ChargeGameCashSoapIn" />
+      <wsdl:output message="tns:ChargeGameCashSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserMappingData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">SetUserMappingData</wsdl:documentation>
+      <wsdl:input message="tns:SetUserMappingDataSoapIn" />
+      <wsdl:output message="tns:SetUserMappingDataSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NexonCashSoap" type="tns:NexonCashSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InitializeSoap">
+      <soap:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/InitializeSoap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:InitializeSoapHeader" part="Header" use="literal" />
+        <soap:header message="tns:InitializeSoapSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:InitializeSoapSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApprovalInfo">
+      <soap:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/ApprovalInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ApprovalInfoSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApprovalPaidInfo">
+      <soap:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/ApprovalPaidInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ApprovalPaidInfoSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsageInfo">
+      <soap:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/UsageInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:UsageInfoSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LastUsageInfo">
+      <soap:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/LastUsageInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:LastUsageInfoSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISBillingUser">
+      <soap:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/ISBillingUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ISBillingUserSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPurse">
+      <soap:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/GetPurse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetPurseSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPurseByChannel">
+      <soap:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/GetPurseByChannel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetPurseByChannelSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Purchase">
+      <soap:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/Purchase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PurchaseSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseChannel">
+      <soap:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/PurchaseChannel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PurchaseChannelSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseExtend">
+      <soap:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/PurchaseExtend" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PurchaseExtendSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Purchase_Ex">
+      <soap:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/Purchase_Ex" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Purchase_ExSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApprovalCashChange_Channeling">
+      <soap:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/ApprovalCashChange_Channeling" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ApprovalCashChange_ChannelingSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Present">
+      <soap:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/Present" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PresentSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PresentExtend">
+      <soap:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/PresentExtend" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PresentExtendSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUsage">
+      <soap:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/CheckUsage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:CheckUsageSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCashReceiptList">
+      <soap:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/GetCashReceiptList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCashReceiptListSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChargeForNeopleCoupon">
+      <soap:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/ChargeForNeopleCoupon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ChargeForNeopleCouponSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsageCancelForLunia">
+      <soap:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/UsageCancelForLunia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:UsageCancelForLuniaSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsageCancel">
+      <soap:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/UsageCancel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:UsageCancelSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPurchaseAmount">
+      <soap:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/GetPurchaseAmount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetPurchaseAmountSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsageRollback">
+      <soap:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/UsageRollback" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:UsageRollbackSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestEventCharge">
+      <soap:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/RequestEventCharge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:RequestEventChargeSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApprovalCashChange">
+      <soap:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/ApprovalCashChange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ApprovalCashChangeSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApprovalSendCash">
+      <soap:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/ApprovalSendCash" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ApprovalSendCashSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UseCoupon">
+      <soap:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/UseCoupon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:UseCouponSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemainAmount">
+      <soap:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/GetRemainAmount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetRemainAmountSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPurseWithGameCash">
+      <soap:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/GetPurseWithGameCash" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetPurseWithGameCashSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChargeGameCash">
+      <soap:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/ChargeGameCash" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ChargeGameCashSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserMappingData">
+      <soap:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/SetUserMappingData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SetUserMappingDataSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NexonCashSoap12" type="tns:NexonCashSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InitializeSoap">
+      <soap12:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/InitializeSoap" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:InitializeSoapHeader" part="Header" use="literal" />
+        <soap12:header message="tns:InitializeSoapSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:InitializeSoapSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApprovalInfo">
+      <soap12:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/ApprovalInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ApprovalInfoSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApprovalPaidInfo">
+      <soap12:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/ApprovalPaidInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ApprovalPaidInfoSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsageInfo">
+      <soap12:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/UsageInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:UsageInfoSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LastUsageInfo">
+      <soap12:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/LastUsageInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:LastUsageInfoSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISBillingUser">
+      <soap12:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/ISBillingUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ISBillingUserSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPurse">
+      <soap12:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/GetPurse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetPurseSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPurseByChannel">
+      <soap12:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/GetPurseByChannel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetPurseByChannelSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Purchase">
+      <soap12:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/Purchase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PurchaseSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseChannel">
+      <soap12:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/PurchaseChannel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PurchaseChannelSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseExtend">
+      <soap12:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/PurchaseExtend" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PurchaseExtendSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Purchase_Ex">
+      <soap12:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/Purchase_Ex" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:Purchase_ExSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApprovalCashChange_Channeling">
+      <soap12:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/ApprovalCashChange_Channeling" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ApprovalCashChange_ChannelingSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Present">
+      <soap12:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/Present" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PresentSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PresentExtend">
+      <soap12:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/PresentExtend" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PresentExtendSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUsage">
+      <soap12:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/CheckUsage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:CheckUsageSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCashReceiptList">
+      <soap12:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/GetCashReceiptList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCashReceiptListSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChargeForNeopleCoupon">
+      <soap12:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/ChargeForNeopleCoupon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ChargeForNeopleCouponSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsageCancelForLunia">
+      <soap12:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/UsageCancelForLunia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:UsageCancelForLuniaSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsageCancel">
+      <soap12:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/UsageCancel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:UsageCancelSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPurchaseAmount">
+      <soap12:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/GetPurchaseAmount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetPurchaseAmountSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsageRollback">
+      <soap12:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/UsageRollback" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:UsageRollbackSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestEventCharge">
+      <soap12:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/RequestEventCharge" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:RequestEventChargeSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApprovalCashChange">
+      <soap12:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/ApprovalCashChange" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ApprovalCashChangeSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApprovalSendCash">
+      <soap12:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/ApprovalSendCash" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ApprovalSendCashSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UseCoupon">
+      <soap12:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/UseCoupon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:UseCouponSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemainAmount">
+      <soap12:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/GetRemainAmount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetRemainAmountSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPurseWithGameCash">
+      <soap12:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/GetPurseWithGameCash" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetPurseWithGameCashSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChargeGameCash">
+      <soap12:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/ChargeGameCash" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ChargeGameCashSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserMappingData">
+      <soap12:operation soapAction="https://nxsoap.nexon.com/remoting_version_2/SetUserMappingData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SetUserMappingDataSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NexonCash">
+    <wsdl:port name="NexonCashSoap" binding="tns:NexonCashSoap">
+      <soap:address location="https://nxsoap.nexon.com/remoting_version_2/Nexoncash.asmx" />
+    </wsdl:port>
+    <wsdl:port name="NexonCashSoap12" binding="tns:NexonCashSoap12">
+      <soap12:address location="https://nxsoap.nexon.com/remoting_version_2/Nexoncash.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

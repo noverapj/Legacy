@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+  xmlns:SOAP-ENV="http://www.w3.org/2003/05/soap-envelope"
+  xmlns:SOAP-ENC="http://www.w3.org/2003/05/soap-encoding"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:ns1="https://nxsoap.nexon.com/remoting_version_2/">
+ <SOAP-ENV:Header>
+  <ns1:SecurityHeader>
+   <ns1:Created></ns1:Created>
+   <ns1:HashKey></ns1:HashKey>
+   <ns1:Data></ns1:Data>
+   <ns1:Key>0</ns1:Key>
+   <ns1:CheckSum>0</ns1:CheckSum>
+  </ns1:SecurityHeader>
+ </SOAP-ENV:Header>
+ <SOAP-ENV:Body>
+   <ns1:ApprovalSendCash>
+    <ns1:cashChangeType>0</ns1:cashChangeType>
+    <ns1:liabilityType>0</ns1:liabilityType>
+    <ns1:id></ns1:id>
+    <ns1:requestId></ns1:requestId>
+    <ns1:orderId></ns1:orderId>
+    <ns1:amount></ns1:amount>
+    <ns1:requestIP></ns1:requestIP>
+   </ns1:ApprovalSendCash>
+
+ </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

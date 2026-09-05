@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+    <Filter Include="SMS">
+      <UniqueIdentifier>{f131762b-22b0-471b-8b21-80d61eae6cdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UTIL">
+      <UniqueIdentifier>{621502cc-d115-4e6b-b763-343580e79f12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NetWork">
+      <UniqueIdentifier>{84e1c4c3-ebaa-4901-b4ce-e290b0a9fbe5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QueryData">
+      <UniqueIdentifier>{0493f4d0-67d0-4ae6-8c53-5fdf6e516fb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IOSocketLL">
+      <UniqueIdentifier>{2cbf86ed-ff06-4c91-be97-21ab362bf3c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IOSocketLL\Encrypt">
+      <UniqueIdentifier>{db01b419-37d4-44e8-904d-32bcf3fcb62f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IOSocketLL\IncludeDLL">
+      <UniqueIdentifier>{e71b8973-e838-42bb-bd77-7fe7362bad59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IOSocketLL\IOSocket">
+      <UniqueIdentifier>{450e33c9-03c9-44d8-9083-ff9dbdca9ce7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Local">
+      <UniqueIdentifier>{a0b24d52-5ba1-4b68-875c-3fbecfab4de9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resize">
+      <UniqueIdentifier>{81ab97af-c046-4c28-9210-b6d4624a7eda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThreadModules">
+      <UniqueIdentifier>{821b7e52-997c-4ba9-8b81-95474a115f86}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../src/LSMonitor/AnnounceDlg.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/ClientVersionDlg.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/ControlDlg.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/LSMonitor.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/LSMonitorDlg.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/ServerInfoDlg.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/SMSDlg.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/stdafx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/TCPSocketTable.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/Sms\ioINILoaderAU.cpp">
+      <Filter>SMS</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/Sms\SMSRuleManager.cpp">
+      <Filter>SMS</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/Sms\SMSSender.cpp">
+      <Filter>SMS</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/HttpApp.cpp">
+      <Filter>UTIL</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/ioHashString.cpp">
+      <Filter>UTIL</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/NetWork\ioSP2TCPSocket.cpp">
+      <Filter>NetWork</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/NetWork\SP2Packet.cpp">
+      <Filter>NetWork</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/NetWork\SystemInfoUDPMsg.cpp">
+      <Filter>NetWork</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/NetWork\SystemInfoUDPSocket.cpp">
+      <Filter>NetWork</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/QueryData\QueryData.cpp">
+      <Filter>QueryData</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/QueryData\QueryResultData.cpp">
+      <Filter>QueryData</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/Local\ioLocalGermany.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/Local\ioLocalIndonesia.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/Local\ioLocalJapan.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/Local\ioLocalKorea.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/Local\ioLocalManager.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/Local\ioLocalParent.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/Local\ioLocalTaiwan.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/Local\ioLocalThailand.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/Local\ioLocalUS.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/Local\ioSingleton.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/Resize\ETSLayout.cpp">
+      <Filter>Resize</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/ThreadModules\SuperParent.cpp">
+      <Filter>ThreadModules</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/ThreadModules\Thread.cpp">
+      <Filter>ThreadModules</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/ThreadModules\ThreadManager.cpp">
+      <Filter>ThreadModules</Filter>
+    </ClCompile>
+    <ClCompile Include="../../src/LSMonitor/ThreadModules\ThreadSync.cpp">
+      <Filter>ThreadModules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LSMonitor\NagleRefCountDlg.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LSMonitor\LoingPanel.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LSMonitor\LS_ServerInfoDlg.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LSMonitor\ScrollPanel.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LSMonitor\OXToolTipCtrl.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="../../src/LSMonitor/AnnounceDlg.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/ClientVersionDlg.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/ControlDlg.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/Define.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/LSMonitor.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/LSMonitorDlg.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/Resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/ServerInfoDlg.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/SMSDlg.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/TCPSocketTable.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/Version.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/Sms\ioINILoaderAU.h">
+      <Filter>SMS</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/Sms\SMSRuleManager.h">
+      <Filter>SMS</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/Sms\SMSSender.h">
+      <Filter>SMS</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/HttpApp.h">
+      <Filter>UTIL</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/ioHashString.h">
+      <Filter>UTIL</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/NetWork\ioSP2TCPSocket.h">
+      <Filter>NetWork</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/NetWork\Protocol.h">
+      <Filter>NetWork</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/NetWork\SP2Packet.h">
+      <Filter>NetWork</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/NetWork\SystemInfoUDPMsg.h">
+      <Filter>NetWork</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/NetWork\SystemInfoUDPSocket.h">
+      <Filter>NetWork</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/QueryData\QueryData.h">
+      <Filter>QueryData</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/QueryData\QueryResultData.h">
+      <Filter>QueryData</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/IOSocketDLL\IOSocketDLL.h">
+      <Filter>IOSocketLL</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/IOSocketDLL\Encrypt\cryption.h">
+      <Filter>IOSocketLL\Encrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/IOSocketDLL\Encrypt\FSM.h">
+      <Filter>IOSocketLL\Encrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/IOSocketDLL\Encrypt\md5.h">
+      <Filter>IOSocketLL\Encrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/IOSocketDLL\IncludeDLL\LogDLL.h">
+      <Filter>IOSocketLL\IncludeDLL</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/IOSocketDLL\IOSocket\CClientObject.h">
+      <Filter>IOSocketLL\IOSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/IOSocketDLL\IOSocket\cclienttcpsocket.h">
+      <Filter>IOSocketLL\IOSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/IOSocketDLL\IOSocket\cgenericmessage.h">
+      <Filter>IOSocketLL\IOSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/IOSocketDLL\IOSocket\cgenericsocket.h">
+      <Filter>IOSocketLL\IOSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/IOSocketDLL\IOSocket\cservertcpsocket.h">
+      <Filter>IOSocketLL\IOSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/IOSocketDLL\IOSocket\cudpsocket.h">
+      <Filter>IOSocketLL\IOSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/IOSocketDLL\IOSocket\RecvBuffer.h">
+      <Filter>IOSocketLL\IOSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/IOSocketDLL\IOSocket\SendBuffer.h">
+      <Filter>IOSocketLL\IOSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/Local\ioLocalGermany.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/Local\ioLocalIndonesia.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/Local\ioLocalJapan.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/Local\ioLocalKorea.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/Local\ioLocalManager.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/Local\ioLocalParent.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/Local\ioLocalTaiwan.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/Local\ioLocalThailand.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/Local\ioLocalUS.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/Local\ioSingleton.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/Resize\ETSLayout.h">
+      <Filter>Resize</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/ThreadModules\SuperParent.h">
+      <Filter>ThreadModules</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/ThreadModules\Thread.h">
+      <Filter>ThreadModules</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/ThreadModules\ThreadManager.h">
+      <Filter>ThreadModules</Filter>
+    </ClInclude>
+    <ClInclude Include="../../src/LSMonitor/ThreadModules\ThreadSync.h">
+      <Filter>ThreadModules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LSMonitor\common.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LSMonitor\NagleRefCountDlg.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LSMonitor\LoingPanel.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LSMonitor\LS_ServerInfoDlg.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LSMonitor\ScrollPanel.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LSMonitor\OXDllExt.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LSMonitor\OXToolTipCtrl.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../../src/LSMonitor/res\LSMonitor.ico">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="../../src/LSMonitor/res\Version.rc2">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="../../src/LSMonitor/ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="../../src/LSMonitor/LSMonitor.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

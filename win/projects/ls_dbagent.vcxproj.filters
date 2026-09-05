@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="resource">
+      <UniqueIdentifier>{8a8e126b-6647-4124-9cf0-31c7156ae888}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System">
+      <UniqueIdentifier>{0518a5c0-7451-41c5-b13e-a0a8f470b742}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application">
+      <UniqueIdentifier>{72a06753-2ca6-42fc-99a3-bc5a8e7c4bdb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Network">
+      <UniqueIdentifier>{6a05561e-9bcd-4a32-9ac4-b08da16a3156}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Network\LOG">
+      <UniqueIdentifier>{36ba2ad1-c91e-4e3b-9861-93afc247618d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Network\DBAgent">
+      <UniqueIdentifier>{9349d13c-c264-4fbf-94e3-cbd910ce355c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Database">
+      <UniqueIdentifier>{148a6dab-62e1-4f0e-a311-957675948968}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Database\QueryData">
+      <UniqueIdentifier>{73994f5a-6a1c-42b9-ba87-b38bfc51d341}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Thread">
+      <UniqueIdentifier>{3f6ef91d-c2b1-4c92-b314-f5ebf04a311a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Nodes">
+      <UniqueIdentifier>{44d597f1-7a14-474c-b6fb-815cc2e92a32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Utility">
+      <UniqueIdentifier>{7ef7eea9-c5cc-4eb9-b302-f55b2b4fde08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Main">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>h;cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Application\Main\Service">
+      <UniqueIdentifier>{2345f82e-9e77-4cbd-af14-cefd440a6414}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Main\Minidump">
+      <UniqueIdentifier>{ec9dfa48-ab4a-4ddb-a7ca-8c9ade8e6b8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Main\Statistics">
+      <UniqueIdentifier>{c48d540d-d7b2-40cd-ae9d-da65d2d14e76}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="..\..\src\ls_dbagent\Database\msado15.dll">
+      <Filter>System\Database</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\ls_dbagent\stdafx.cpp">
+      <Filter>Application\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_dbagent\Database\cDatabaseADO.cpp">
+      <Filter>System\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_dbagent\Database\cExecuter.cpp">
+      <Filter>System\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_dbagent\Database\cQueryManager.cpp">
+      <Filter>System\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_dbagent\Database\cTable.cpp">
+      <Filter>System\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_dbagent\QueryData\QueryData.cpp">
+      <Filter>System\Database\QueryData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_dbagent\QueryData\QueryResultData.cpp">
+      <Filter>System\Database\QueryData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_dbagent\Network\iocpHandler.cpp">
+      <Filter>System\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_dbagent\Network\ioPacketQueue.cpp">
+      <Filter>System\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_dbagent\Network\SP2Packet.cpp">
+      <Filter>System\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_dbagent\Util\cBuffer.cpp">
+      <Filter>Application\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_dbagent\Util\ioHashString.cpp">
+      <Filter>Application\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_dbagent\Util\ioStringConverter.cpp">
+      <Filter>Application\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_dbagent\ThreadPool\ioThreadPool.cpp">
+      <Filter>System\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_dbagent\MainProcess.cpp">
+      <Filter>Application\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_dbagent\ReportUtil.cpp">
+      <Filter>Application\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_dbagent\main.cpp">
+      <Filter>Application\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_dbagent\Manager.cpp">
+      <Filter>Application\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_dbagent\Minidump\MiniDump.cpp">
+      <Filter>Application\Main\Minidump</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_dbagent\Minidump\File.cpp">
+      <Filter>Application\Main\Minidump</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_dbagent\Util\Utility.cpp">
+      <Filter>Application\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_dbagent\Service.cpp">
+      <Filter>Application\Main\Service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_dbagent\ServiceLS.cpp">
+      <Filter>Application\Main\Service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_dbagent\Network\DBServer.cpp">
+      <Filter>System\Network\DBAgent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_dbagent\Network\ioLogServer.cpp">
+      <Filter>System\Network\LOG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_dbagent\ioStatistics.cpp">
+      <Filter>Application\Main\Statistics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_dbagent\NodeInfo\AcceptorUserNode.cpp">
+      <Filter>Application\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_dbagent\NodeInfo\User.cpp">
+      <Filter>Application\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_dbagent\NodeInfo\UserNodeManager.cpp">
+      <Filter>Application\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_dbagent\NodeInfo\AcceptorLogNode.cpp">
+      <Filter>Application\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_dbagent\NodeInfo\LogNode.cpp">
+      <Filter>Application\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_dbagent\NodeInfo\LogNodeManager.cpp">
+      <Filter>Application\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls_dbagent\Database\cQueryTable.cpp">
+      <Filter>System\Database</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\ls_dbagent\Database\ado.h">
+      <Filter>System\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\Database\cDatabaseADO.h">
+      <Filter>System\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\Database\cExecuter.h">
+      <Filter>System\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\Database\cQueryManager.h">
+      <Filter>System\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\Database\cTable.h">
+      <Filter>System\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\Database\Database.h">
+      <Filter>System\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\QueryData\QueryData.h">
+      <Filter>System\Database\QueryData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\QueryData\QueryResultData.h">
+      <Filter>System\Database\QueryData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\Network\iocpHandler.h">
+      <Filter>System\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\Network\ioPacketQueue.h">
+      <Filter>System\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\Network\SP2Packet.h">
+      <Filter>System\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\Util\cBuffer.h">
+      <Filter>Application\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\Util\cSerialize.h">
+      <Filter>Application\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\Util\ioHashString.h">
+      <Filter>Application\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\Util\ioStringConverter.h">
+      <Filter>Application\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\Util\ioVectorIterator.h">
+      <Filter>Application\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\ThreadPool\ioThreadPool.h">
+      <Filter>System\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\stdafx.h">
+      <Filter>Application\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\DBHeader.h">
+      <Filter>Application\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\MainProcess.h">
+      <Filter>Application\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\Protocol.h">
+      <Filter>Application\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\ReportUtil.h">
+      <Filter>Application\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\Manager.h">
+      <Filter>Application\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\Minidump\MiniDump.h">
+      <Filter>Application\Main\Minidump</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\Minidump\File.h">
+      <Filter>Application\Main\Minidump</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\Service.h">
+      <Filter>Application\Main\Service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\ServiceLS.h">
+      <Filter>Application\Main\Service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\resource.h">
+      <Filter>resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\include\common.h">
+      <Filter>Application\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\Network\DBServer.h">
+      <Filter>System\Network\DBAgent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\Network\ioLogServer.h">
+      <Filter>System\Network\LOG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\ioStatistics.h">
+      <Filter>Application\Main\Statistics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\targetver.h" />
+    <ClInclude Include="resource.h">
+      <Filter>resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\NodeInfo\UserNodeManager.h">
+      <Filter>Application\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\NodeInfo\AcceptorUserNode.h">
+      <Filter>Application\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\NodeInfo\User.h">
+      <Filter>Application\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\NodeInfo\LogNodeManager.h">
+      <Filter>Application\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\NodeInfo\AcceptorLogNode.h">
+      <Filter>Application\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\NodeInfo\LogNode.h">
+      <Filter>Application\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ls_dbagent\Database\cQueryTable.h">
+      <Filter>System\Database</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\src\ls_dbagent\ls_dbagent.rc">
+      <Filter>resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
