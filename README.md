@@ -2,8 +2,7 @@
 
 **Copyright NOVERA OSS.** A revived and modernized server suite for the classic
 Korean action-brawler *Lost Saga* — migrated from its original VS2008 / C++98
-codebase to **Visual Studio 2022, C++17**, validated end-to-end with the
-original game client.
+codebase to **Visual Studio 2022, C++17**.
 
 > ⚠️ **Disclaimer** — This project is released for **educational and
 > game-preservation purposes only**. It is not affiliated with, endorsed by,
@@ -13,13 +12,13 @@ original game client.
 
 ---
 
-## 📖 About
+## About
 
 This repository contains the complete server-side software stack for running a
 Lost Saga game service: 7 server executables, 4 shared libraries, 4 auxiliary
-libraries, database schemas, and deployment tooling.
+libraries, database schemas, and tooling.
 
-In 2026 the codebase was migrated from C++98 / Visual Studio 2008 projects to:
+The full suite was migrated from C++98 / Visual Studio 2008 projects to:
 
 | | |
 |---|---|
@@ -28,13 +27,14 @@ In 2026 the codebase was migrated from C++98 / Visual Studio 2008 projects to:
 | Platform | Win32 (x86, 32-bit) — required by the legacy binary protocol |
 | Network | IPv4 only |
 
-The full suite was rebuilt (Debug + Release), then validated in-game: client
-login, lobby, rooms, gameplay, and database persistence all work against the
-modernized binaries with **zero changes to the game client**.
+The core gameplay path (client login, lobby, rooms, gameplay, database
+persistence) was validated end-to-end against the modernized binaries with
+**zero changes to the game client**. The auxiliary servers were migrated and
+rebuild-verified in the same pass.
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 All servers share the same core pattern: an IOCP worker pool feeds a
 lock-free MPSC queue drained by a **single logic thread** per server, which
@@ -73,26 +73,28 @@ DB-proxy process.
 | `ls_billingsvr` | exe | **Billing relay** — cash queries, regional partners |
 | `ls_dbagent` | exe | **DB proxy** — ADO/Stored procedures, run ×2 (game + log) |
 | `ls_filewritesvr` | exe | **Upload server** — player skin images |
-| `ls_loginsvr` | exe | Load balancer for the AutoUpgrade launcher *(not yet modernized)* |
-| `ls_relaysvr` | exe | Dedicated UDP relay *(optional; not yet modernized)* |
+| `ls_loginsvr` | exe | Load balancer for the AutoUpgrade launcher *(optional)* |
+| `ls_relaysvr` | exe | Dedicated UDP relay *(optional)* |
 
 ### Modernization status
 
-| Server | Status |
+All libraries and all 7 server executables are migrated to v143 / C++17.
+
+| Scope | Status |
 |---|---|
-| iocpSocketDLL, Log, ioINILoader, FrameTimerDLL, tinyxml, LS_HTTP, LS_NXSoap, LS_RestAPI | ✅ migrated, Debug + Release |
+| Libraries (iocpSocketDLL, Log, ioINILoader, FrameTimerDLL, tinyxml, LS_HTTP, LS_NXSoap, LS_RestAPI) | ✅ migrated, Debug + Release |
 | ls_gamesvr, ls_mainsvr, ls_billingsvr, ls_dbagent, ls_filewritesvr | ✅ migrated + in-game validated |
-| ls_relaysvr, ls_loginsvr | ⏳ original VS2008 sources included, migration pending (optional for gameplay) |
+| ls_loginsvr, ls_relaysvr | ✅ migrated, Debug + Release build-verified |
 
 ---
 
-## 🔧 Build Requirements
+## Build Requirements
 
 1. **Visual Studio 2022** with the *Desktop development with C++* workload
    **and the "C++ ATL" component** (used by `atltime.h` / LS_HTTP).
 2. **Boost 1.84** (prebuilt Windows binaries) installed at `C:\Boost\boost_1_84_0`
-   (headers used by `BoostPooler` / `boost::unordered` / date_time; the
-   `lib32-msvc-14.3` folder is only needed if you modernize relaysvr/loginsvr).
+   — including the `lib32-msvc-14.3` libs (required by `ls_loginsvr` /
+   `ls_relaysvr`, which link boost thread / asio / date_time / filesystem).
 3. **vcpkg** with a static 32-bit libcurl (used by `LS_RestAPI`):
    ```powershell
    git clone https://github.com/microsoft/vcpkg D:\Tools\vcpkg
@@ -110,21 +112,22 @@ All projects target **Win32** with `PlatformToolset=v143` and
 
 ---
 
-## 🛠️ Building
+## Building
 
 Project files live in `win\projects\*.vcxproj` (solutions in `win\`).
 Build in this order (each step: Debug **and** Release):
 
 ```
-1.  iocpSocketDLL          5.  tinyxml          9.  ls_dbagent
-2.  Log                    6.  LS_HTTP          10. ls_billingsvr
-3.  ioINILoader            7.  LS_NXSoap        11. ls_mainsvr
-4.  FrameTimerDLL          8.  LS_RestAPI       12. ls_gamesvr
-                                              (13. ls_filewritesvr)
+ 1. iocpSocketDLL          6. LS_HTTP          11. ls_gamesvr
+ 2. Log                    7. LS_NXSoap        12. ls_filewritesvr
+ 3. ioINILoader            8. LS_RestAPI       13. ls_loginsvr
+ 4. FrameTimerDLL          9. ls_dbagent       14. ls_relaysvr
+ 5. tinyxml               10. ls_billingsvr    (10b. ls_mainsvr)
 ```
 
 Notes:
 
+- `ls_mainsvr` builds before `ls_gamesvr`; both link the same shared libs.
 - `ls_gamesvr` links with `/SAFESEH:NO` (a bundled legacy static library is
   not SAFESEH-compatible).
 - Windows SDK libs required by `ls_billingsvr` beyond the defaults:
@@ -132,7 +135,7 @@ Notes:
 
 ---
 
-## 🗄️ Database Setup
+## Database Setup
 
 Requires **SQL Server** (runs fine on SQL Server for Linux).
 
@@ -162,31 +165,61 @@ The two `ls_dbagent` instances are configured through:
 | `ls_dbagent_log.ini` | Log DB agent — logger mode (`LogServerPort` set) |
 | `ls_query.ini` | Query registry — maps query IDs to stored procedures |
 
+`ls_dbagent` also has a small utility mode to encode credentials:
+`ls_dbagent.exe -x <password>` prints the encoded string for use in the
+dbagent INI.
+
 ---
 
-## 🚀 Deployment & Running
+## Deployment & Running
 
-Binaries and configs are deployed under `build\Server\`:
+Each server project outputs to `build\Server\ls_<name>\` (Release exe, plus a
+`D`-suffixed Debug exe). Note that `build\` is **not tracked by git** — it is
+generated locally, and **no starter scripts are included in the repository**.
+Create your own deployment folder / scripts and copy the binaries, DLLs, and
+config INIs there.
+
+### Running (console mode)
+
+Every server runs in console mode with `-c <config.ini>` — the INI path is
+resolved relative to the folder you launch from:
 
 ```
-build\Server\
-├── global_define.ini          # inter-server topology (IPs/ports)
-├── start_all.bat             # launches everything in dependency order
-├── start_dbagent_game.bat    # individual starters (console mode, -c INI)
-├── start_dbagent_log.bat
-├── start_billingsvr.bat
-├── start_mainsvr.bat
-├── start_gamesvr.bat
-├── start_filewritesvr.bat
-└── ls_<server>\              # exe (Debug+Release) + required DLLs + INIs
+ls_dbagent.exe -c ls_dbagent_game.ini
+ls_dbagent.exe -c ls_dbagent_log.ini
+ls_billingsvr.exe -c <config.ini>
+ls_mainsvr.exe   -c <config.ini>
+ls_gamesvr.exe   -c ls_gamesvr_1.ini
+ls_filewritesvr.exe -c <config.ini>
+ls_loginsvr.exe  -c <config.ini>
+ls_relaysvr.exe  -c <config.ini>
 ```
+
+Alternatively, each exe can be registered as a Windows Service
+(`exe -i <svcname> "<display name>"`), then started with
+`sc start <svcname> <config.ini> <logfile>` (the INI argument is
+**mandatory** in service mode).
+
+### Bind address (ls_loginsvr / ls_relaysvr)
+
+Both accept an optional `IP` key in the `[Default]` section of their config
+INI to control the TCP bind address (default `0.0.0.0` = all interfaces):
+
+```ini
+[Default]
+IP=10.0.0.5
+Port=55001
+```
+
+An invalid/unavailable address fails loudly at startup (bind error).
 
 ### Runtime DLLs (must sit next to each exe)
 
 | Server | Required DLLs |
 |---|---|
 | all | `iocpSocketDLL.dll`, `iocpSocketDDLL.dll`, `dbghelp.dll` |
-| all except dbagent | `CrashFind.dll`, `frametimerdll.dll`, `frametimerddll.dll` |
+| 5 core servers (not dbagent, not loginsvr/relaysvr) | + `CrashFind.dll` |
+| all except dbagent | + `frametimerdll.dll`, `frametimerddll.dll` |
 | ls_billingsvr | + `libeay32.dll`, `ssleay32.dll` (bundled in `src\ls_billingsvr\Openssl`) |
 
 (`D`-suffixed DLLs are the Debug variants; both are needed when both exe
@@ -195,9 +228,11 @@ with Windows.)
 
 ### Start order
 
-`start_all.bat` handles this: **dbagent (game) → dbagent (log) → billingsvr
-→ mainsvr → gamesvr → filewritesvr**. Gamesvr requires mainsvr, billingsvr
-and the dbagents to be reachable before players can log in.
+Start in dependency order: **dbagent (game) → dbagent (log) → billingsvr →
+mainsvr → gamesvr → filewritesvr**. Gamesvr requires mainsvr, billingsvr and
+the dbagents to be reachable before players can log in. `ls_loginsvr` and
+`ls_relaysvr` are optional and reconnect automatically, so they can be
+started any time after the core set is up.
 
 ### Operations
 
@@ -216,7 +251,7 @@ design.
 
 ---
 
-## 📄 License
+## License
 
 Copyright NOVERA OSS. Licensed under the **GNU General Public License v3** —
 see [LICENSE](LICENSE) for details.
