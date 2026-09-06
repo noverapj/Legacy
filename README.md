@@ -1,4 +1,4 @@
-# NOVERA OSS — Lost Saga Server
+# NOVERA Legacy
 
 **Copyright NOVERA OSS.** A revived and modernized server suite for the classic
 Korean action-brawler *Lost Saga* — migrated from its original VS2008 / C++98
@@ -21,7 +21,6 @@ libraries, database schemas, and deployment tooling.
 
 In 2026 the codebase was migrated from C++98 / Visual Studio 2008 projects to:
 
-| | |
 |---|---|
 | Toolset | Visual Studio 2022 (`v143`) |
 | Language | C++17 |
