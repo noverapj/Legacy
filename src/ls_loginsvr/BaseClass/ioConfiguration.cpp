@@ -27,7 +27,10 @@ bool ioConfiguration::Init()
 
 	NPort( port );
 	SetPartition( partition );
-	SIpAddr("0.0.0.0");
+
+	TCHAR szTmpIP[64];
+	GetPrivateProfileString("Default", "IP", "0.0.0.0", szTmpIP, sizeof(szTmpIP), szINI);
+	SIpAddr(szTmpIP);
 
 	m_blackList.Load( "ls_blacklist.ini", TRUE );
 	m_whiteList.Load( "ls_whitelist.ini" );
