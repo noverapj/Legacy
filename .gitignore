@@ -50,6 +50,7 @@ Shipping/
 Debug/
 Release/
 List_*
+obj/
 
 # CMake generated files
 CMakeFiles/
