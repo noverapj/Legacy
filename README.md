@@ -22,6 +22,7 @@ libraries, database schemas, and deployment tooling.
 In 2026 the codebase was migrated from C++98 / Visual Studio 2008 projects to:
 
 | | |
+|---|---|
 | Toolset | Visual Studio 2022 (`v143`) |
 | Language | C++17 |
 | Platform | Win32 (x86, 32-bit) — required by the legacy binary protocol |
