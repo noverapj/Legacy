@@ -1214,6 +1214,7 @@ public:
 	bool OnLadderTeamProcessPacket( SP2Packet &rkPacket );
 
 	void OnClose( SP2Packet &packet );
+	void OnAuth(SP2Packet& packet);
 	void OnConnect( SP2Packet &packet );
 	void OnMovingServer( SP2Packet &rkPacket );
 	void OnJoinServerLobbyInfo( SP2Packet &rkPacket );

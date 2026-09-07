@@ -5,7 +5,8 @@
 
 //CLIENT SEND TCP PACKET
 //                                0x0001
-#define CTPK_CONNECT              0x0002
+#define CTPK_CONNECT              0x055f
+//#define CTPK_CONNECT              0x0002 //old ones
 #define CTPK_CHAR_CREATE          0x0003
 #define CTPK_LOGOUT               0x0004
 #define CTPK_CHAR_DELETE          0x0005

@@ -7275,6 +7275,7 @@ void User::FillConnectUserData( SP2Packet &rkPacket )
 	PACKET_GUARD_VOID( rkPacket.Write(m_user_data.m_iExcavationExp) ); 
 	PACKET_GUARD_VOID( rkPacket.Write(m_user_data.m_iAccrueHeroExpert) ); 
 	PACKET_GUARD_VOID( rkPacket.Write(m_user_data.m_iHeroExpert) );
+	PACKET_GUARD_VOID( rkPacket.Write(0) );
 
 	// 상대계급 정보
 	PACKET_GUARD_VOID( rkPacket.Write(m_user_relative_grade_data.m_init_code) );
@@ -8066,15 +8067,15 @@ void User::PacketParsing( CPacket &packet )
 	SP2Packet &kPacket = (SP2Packet&)packet;
 
 	// 패킷 로그 남기기
-	/*{
+	{
 		const char *p;
 		GetStringOfCTPCKPacket(packet.GetPacketID(), p);
 
 		std::string str;
 		kPacket.GetStringOfStream(str);
 
-		printf( "ShowLogOfPacket : Id: %s, %s, Stream: %s \n", this->GetPrivateID().c_str(), p, str.c_str());
-	}*/
+		RateCheckLOG.PrintTimeAndLog( 0,"ShowLogOfPacket : Id: %s, %s, Stream: %s \n", this->GetPrivateID().c_str(), p, str.c_str());
+	}
 
 	if( RoomBroadCast( kPacket ) )
 		return;
@@ -8091,6 +8092,9 @@ void User::PacketParsing( CPacket &packet )
 	case CTPK_CLOSE_SESSION:
 		OnClose( kPacket );
 		break;
+	/*case CTPK_AUTH:
+		OnAuth(kPacket);
+		break;*/
 	case CTPK_CONNECT:            // 첫 접속
 		OnConnect( kPacket );//로그인 무조간 보내고 
 		break;
@@ -9188,121 +9192,202 @@ void User::OnClose(SP2Packet &packet)
 	}
 }
 
-void User::OnConnect(SP2Packet &packet)
+void User::OnAuth(SP2Packet& packet)
+{
+	ioHashString szEncLoginKeyAndID;
+	PACKET_GUARD_VOID(packet.Read(szEncLoginKeyAndID));
+
+	LOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "[%s] User[%s] 0x55F cred[%s]",
+		__FUNCTION__, GetPublicID().c_str(), szEncLoginKeyAndID.c_str());
+
+	ioLocalParent* pLocal = g_LocalMgr.GetLocal(ioLocalManager::GetLocalType());
+	if (!pLocal)
+	{
+		LOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "[%S] pLocal == NULL", __FUNCTION__);
+		return;
+	}
+
+	ioHashString sPrivateID;
+	char szLoginKey[MAX_PATH] = "";
+
+	if (pLocal->IsDecryptID())
+	{
+		char szDecryptID[DATA_LEN] = "";
+		if (!pLocal->ParseLoginData(szEncLoginKeyAndID, szLoginKey, sizeof(szLoginKey), szDecryptID, sizeof(szDecryptID)))
+		{
+			LOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "[%S] ParseLoginData false", __FUNCTION__);
+			return;
+		}
+		sPrivateID = szDecryptID;
+	}
+	else
+	{
+		sPrivateID = szEncLoginKeyAndID;
+	}
+
+	if (pLocal->IsPrivateLowerID())
+		sPrivateID.MakeLower();
+
+	if (!pLocal->IsRightID(sPrivateID.c_str()))
+	{
+		LOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "[%S] Wrong ID :%s", __FUNCTION__, sPrivateID.c_str());
+		return;
+	}
+
+#if 0   
+
+	{
+		bool bLoginAuthed = g_UserNodeManager.IsLoginAuthorized(sPrivateID);
+		LOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "[ls_loginsvr] connect user[%s] loginsvr_authorized=%d",
+			sPrivateID.c_str(), bLoginAuthed ? 1 : 0);
+		if (!bLoginAuthed)
+		{
+			SP2Packet kReturn(STPK_CONNECT);
+			PACKET_GUARD_VOID(kReturn.Write(CONNECT_ID_NOT));
+			PACKET_GUARD_VOID(kReturn.Write(sPrivateID));
+			SendMessage(kReturn);
+			LOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "[ls_loginsvr] REJECT (skip loginsvr) user[%s]", sPrivateID.c_str());
+			return;
+		}
+	}
+#endif
+
+	SAFEDELETE(m_pEncLoginKey);
+	m_pEncLoginKey = new ioHashString;
+	*m_pEncLoginKey = szLoginKey;
+
+	if (g_UserNodeManager.IsConnectUser(sPrivateID))
+	{
+		LOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "[%S] CONNECT_ID_ALREADY :%s", __FUNCTION__, sPrivateID.c_str());
+		SAFEDELETE(m_pEncLoginKey);
+		return;
+	}
+
+	SetPrivateID(sPrivateID);
+	m_dwDBAgentID = Help::GetUserDBAgentID(GetPrivateID());
+
+	if (!pLocal->SendLoginData(this))
+	{
+		g_DBClient.OnSelectUserLoginInfo(GetUserDBAgentID(), GetAgentThreadID(), GetGUID(), sPrivateID);
+	}
+
+}
+
+void User::OnConnect(SP2Packet& packet)
 {
 	// 게임서버 종료 처리 중
-	if(g_App.IsReserveLogOut())
+	if (g_App.IsReserveLogOut())
 	{
-		SP2Packet kPacket( STPK_CONNECT );
-	 
-		PACKET_GUARD_VOID( kPacket.Write(CONNECT_EXITING_SERVER));
-		PACKET_GUARD_VOID( kPacket.Write("") );
+		SP2Packet kPacket(STPK_CONNECT);
 
-		SendMessage( kPacket ); 
+		PACKET_GUARD_VOID(kPacket.Write(CONNECT_EXITING_SERVER));
+		PACKET_GUARD_VOID(kPacket.Write(""));
+
+		SendMessage(kPacket);
 		return;
 	}
 
-	if( g_UserNodeManager.GetNodeSize() > g_UserNodeManager.GetMaxConnection() )
+	if (g_UserNodeManager.GetNodeSize() > g_UserNodeManager.GetMaxConnection())
 	{
-		SP2Packet kPacket( STPK_CONNECT );
+		SP2Packet kPacket(STPK_CONNECT);
 
-		PACKET_GUARD_VOID( kPacket.Write(CONNECT_GAMESERVER_FULL) );
-		PACKET_GUARD_VOID( kPacket.Write("") );
+		PACKET_GUARD_VOID(kPacket.Write(CONNECT_GAMESERVER_FULL));
+		PACKET_GUARD_VOID(kPacket.Write(""));
 
-		SendMessage( kPacket );
-		WemadeLOG.PrintTimeAndLog( LOG_DEBUG_LEVEL, "%s | Gameserver is full.", __FUNCTION__ );
+		SendMessage(kPacket);
+		WemadeLOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "%s | Gameserver is full.", __FUNCTION__);
 		return;
 	}
-	
+
 #ifdef __OHTG_LOGIN_IP_CHECK__
 	ioHashString szEncLoginKeyAndID, szIPKey, szPrivateIP;
 #else //__OHTG_LOGIN_IP_CHECK__
 	ioHashString szEncLoginKeyAndID, szPrivateIP;
 #endif //__OHTG_LOGIN_IP_CHECK__
 	int iUserClientVersion = 0;
-	int iLocalVersion      = 0;
+	int iLocalVersion = 0;
 
-	PACKET_GUARD_VOID( packet.Read(szEncLoginKeyAndID) );
+	PACKET_GUARD_VOID(packet.Read(szEncLoginKeyAndID));
 #ifdef __OHTG_LOGIN_IP_CHECK__
-	PACKET_GUARD_VOID( packet.Read(szIPKey) );
+	PACKET_GUARD_VOID(packet.Read(szIPKey));
 #endif //__OHTG_LOGIN_IP_CHECK__
-	PACKET_GUARD_VOID( packet.Read(szPrivateIP) );
-	PACKET_GUARD_VOID( packet.Read(iUserClientVersion) );
-	PACKET_GUARD_VOID( packet.Read(iLocalVersion) );
-	 
+	PACKET_GUARD_VOID(packet.Read(szPrivateIP));
+	PACKET_GUARD_VOID(packet.Read(iUserClientVersion));
+	PACKET_GUARD_VOID(packet.Read(iLocalVersion));
+
 	char peerIP[64];
 	int peerPort;
-	CConnectNode::GetPeerIP( peerIP, sizeof(peerIP), peerPort );
+	CConnectNode::GetPeerIP(peerIP, sizeof(peerIP), peerPort);
 
 	//IP 체크
-	if( !g_IPBlock.CheckWhiteList(peerIP) )
+	if (!g_IPBlock.CheckWhiteList(peerIP))
 	{
-		WemadeLOG.PrintTimeAndLog( LOG_DEBUG_LEVEL, "%s | IP is not whitelistIP.", __FUNCTION__ );
+		WemadeLOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "%s | IP is not whitelistIP.", __FUNCTION__);
 
-		SP2Packet kPacket( STPK_CONNECT );
-		PACKET_GUARD_VOID( kPacket.Write(CONNECT_BLOCK_IP) );
-		PACKET_GUARD_VOID( kPacket.Write("") );
-		SendMessage( kPacket );
+		SP2Packet kPacket(STPK_CONNECT);
+		PACKET_GUARD_VOID(kPacket.Write(CONNECT_BLOCK_IP));
+		PACKET_GUARD_VOID(kPacket.Write(""));
+		SendMessage(kPacket);
 
 		return;
 	}
 
-	if( g_IPBlock.CheckBlackList(peerIP) )
+	if (g_IPBlock.CheckBlackList(peerIP))
 	{
-		WemadeLOG.PrintTimeAndLog( LOG_DEBUG_LEVEL, "%s | IP is blacklistIP.", __FUNCTION__ );
+		WemadeLOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "%s | IP is blacklistIP.", __FUNCTION__);
 
-		SP2Packet kPacket( STPK_CONNECT );
-		PACKET_GUARD_VOID( kPacket.Write(CONNECT_BLOCK_IP) );
-		PACKET_GUARD_VOID( kPacket.Write("") );
-		SendMessage( kPacket );
+		SP2Packet kPacket(STPK_CONNECT);
+		PACKET_GUARD_VOID(kPacket.Write(CONNECT_BLOCK_IP));
+		PACKET_GUARD_VOID(kPacket.Write(""));
+		SendMessage(kPacket);
 
 		return;
 	}
 
-	RateCheckLOG.PrintTimeAndLog( LOG_DEBUG_LEVEL, "OnConnect-%s-%s(%s)-%s-%s-%d", szEncLoginKeyAndID.c_str(), szPrivateIP.c_str(), peerIP
-		                 ,g_App.GetSecondKey().c_str(), GetGUID().c_str(), iLocalVersion );
+	RateCheckLOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "OnConnect-%s-%s(%s)-%s-%s-%d", szEncLoginKeyAndID.c_str(), szPrivateIP.c_str(), peerIP
+		, g_App.GetSecondKey().c_str(), GetGUID().c_str(), iLocalVersion);
 
-	WemadeLOG.PrintTimeAndLog( LOG_DEBUG_LEVEL, "OnConnect-%s-%s(%s)-%s-%s-%d", szEncLoginKeyAndID.c_str(), szPrivateIP.c_str(), peerIP
-		                 ,g_App.GetSecondKey().c_str(), GetGUID().c_str(), iLocalVersion );
+	WemadeLOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "OnConnect-%s-%s(%s)-%s-%s-%d", szEncLoginKeyAndID.c_str(), szPrivateIP.c_str(), peerIP
+		, g_App.GetSecondKey().c_str(), GetGUID().c_str(), iLocalVersion);
 
 
 
-	ioLocalParent *pLocal = g_LocalMgr.GetLocal( ioLocalManager::GetLocalType() );
-	if( !pLocal )
+	ioLocalParent* pLocal = g_LocalMgr.GetLocal(ioLocalManager::GetLocalType());
+	if (!pLocal)
 	{
-		WemadeLOG.PrintTimeAndLog( LOG_DEBUG_LEVEL,"CLogin::OnConnect - pLocal == NULL. %d", (int) ioLocalManager::GetLocalType() );
+		WemadeLOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "CLogin::OnConnect - pLocal == NULL. %d", (int)ioLocalManager::GetLocalType());
 
-		SP2Packet kPacket( STPK_CONNECT );
+		SP2Packet kPacket(STPK_CONNECT);
 
-		PACKET_GUARD_VOID( kPacket.Write(CONNECT_EXCEPT) );
-		PACKET_GUARD_VOID( kPacket.Write("OnConnect - pLocal == NULL") );
+		PACKET_GUARD_VOID(kPacket.Write(CONNECT_EXCEPT));
+		PACKET_GUARD_VOID(kPacket.Write("OnConnect - pLocal == NULL"));
 
-		SendMessage( kPacket );
+		SendMessage(kPacket);
 
 		m_sync_time = TIMEGETTIME();
 		return;
 	}
 
 	ioHashString sPrivateID;
-	char szLoginKey[MAX_PATH]="";
-	
+	char szLoginKey[MAX_PATH] = "";
+
 #ifdef __OHTG_LOGIN_IP_CHECK__
 	ioHashString sPrivateIP;
-	char szLoginIPKey[MAX_PATH]="";
+	char szLoginIPKey[MAX_PATH] = "";
 #endif //__OHTG_LOGIN_IP_CHECK__
 
-	if( pLocal->IsDecryptID() )
+	if (pLocal->IsDecryptID())
 	{
-		char szDecryptID[DATA_LEN]="";
-		if(!pLocal->ParseLoginData( szEncLoginKeyAndID, szLoginKey, sizeof( szLoginKey ), szDecryptID, sizeof( szDecryptID ) ) )
+		char szDecryptID[DATA_LEN] = "";
+		if (!pLocal->ParseLoginData(szEncLoginKeyAndID, szLoginKey, sizeof(szLoginKey), szDecryptID, sizeof(szDecryptID)))
 		{
-			WemadeLOG.PrintTimeAndLog( LOG_DEBUG_LEVEL,"CLogin::OnConnect - ParseLoginData() - false :%s",szPrivateIP.c_str());
-			SP2Packet kPacket( STPK_CONNECT );
+			WemadeLOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "CLogin::OnConnect - ParseLoginData() - false :%s", szPrivateIP.c_str());
+			SP2Packet kPacket(STPK_CONNECT);
 
-			PACKET_GUARD_VOID( kPacket.Write(CONNECT_EXCEPT) );
-			PACKET_GUARD_VOID( kPacket.Write("OnConnect - ParseLoginData") );
+			PACKET_GUARD_VOID(kPacket.Write(CONNECT_EXCEPT));
+			PACKET_GUARD_VOID(kPacket.Write("OnConnect - ParseLoginData"));
 
-			SendMessage( kPacket );
+			SendMessage(kPacket);
 
 			m_sync_time = TIMEGETTIME();
 			return;
@@ -9311,16 +9396,16 @@ void User::OnConnect(SP2Packet &packet)
 		sPrivateID = szDecryptID;
 
 #ifdef __OHTG_LOGIN_IP_CHECK__
-		char szDecryptIP[DATA_LEN]="";
-		if(!pLocal->ParseLoginData( szIPKey, szLoginIPKey, sizeof( szLoginIPKey ), szDecryptIP, sizeof( szDecryptIP ) ) )
+		char szDecryptIP[DATA_LEN] = "";
+		if (!pLocal->ParseLoginData(szIPKey, szLoginIPKey, sizeof(szLoginIPKey), szDecryptIP, sizeof(szDecryptIP)))
 		{
-			WemadeLOG.PrintTimeAndLog( LOG_DEBUG_LEVEL,"CLogin::OnConnect - ParseLoginData() - false :%s",szPrivateIP.c_str());
-			SP2Packet kPacket( STPK_CONNECT );
+			WemadeLOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "CLogin::OnConnect - ParseLoginData() - false :%s", szPrivateIP.c_str());
+			SP2Packet kPacket(STPK_CONNECT);
 
-			PACKET_GUARD_VOID( kPacket.Write(CONNECT_EXCEPT) );
-			PACKET_GUARD_VOID( kPacket.Write("OnConnect - ParseLoginData - IP") );
+			PACKET_GUARD_VOID(kPacket.Write(CONNECT_EXCEPT));
+			PACKET_GUARD_VOID(kPacket.Write("OnConnect - ParseLoginData - IP"));
 
-			SendMessage( kPacket );
+			SendMessage(kPacket);
 
 			m_sync_time = TIMEGETTIME();
 			return;
@@ -9338,20 +9423,20 @@ void User::OnConnect(SP2Packet &packet)
 	sPrivateID = szEncLoginKeyAndID;
 #endif
 
-	if( pLocal->IsPrivateLowerID() )
+	if (pLocal->IsPrivateLowerID())
 	{
 		sPrivateID.MakeLower();
 	}
 
-	if( !pLocal->IsRightID( sPrivateID.c_str() ) )
+	if (!pLocal->IsRightID(sPrivateID.c_str()))
 	{
-		WemadeLOG.PrintTimeAndLog( LOG_DEBUG_LEVEL,"%s - Wrong ID :%s", __FUNCTION__, sPrivateID.c_str());
-		SP2Packet kPacket( STPK_CONNECT );
+		WemadeLOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "%s - Wrong ID :%s", __FUNCTION__, sPrivateID.c_str());
+		SP2Packet kPacket(STPK_CONNECT);
 
-		PACKET_GUARD_VOID( kPacket.Write(CONNECT_ID_NOT) );
-		PACKET_GUARD_VOID( kPacket.Write(sPrivateID) );
+		PACKET_GUARD_VOID(kPacket.Write(CONNECT_ID_NOT));
+		PACKET_GUARD_VOID(kPacket.Write(sPrivateID));
 
-		SendMessage( kPacket );
+		SendMessage(kPacket);
 
 		m_sync_time = TIMEGETTIME();
 		return;
@@ -9362,77 +9447,81 @@ void User::OnConnect(SP2Packet &packet)
 	*m_pEncLoginKey = szLoginKey;
 
 #ifndef _ITEST
-	if( iLocalVersion != ioLocalManager::GetLocalType() )
+	/*if (iLocalVersion != ioLocalManager::GetLocalType())
 	{
-		SP2Packet kPacket( STPK_CONNECT );
+		SP2Packet kPacket(STPK_CONNECT);
 
-		PACKET_GUARD_VOID( kPacket.Write(CONNECT_WRONG_LOCAL_VER) );
-		PACKET_GUARD_VOID( kPacket.Write(sPrivateID) );
-	
-		SendMessage( kPacket );
+		PACKET_GUARD_VOID(kPacket.Write(CONNECT_WRONG_LOCAL_VER));
+		PACKET_GUARD_VOID(kPacket.Write(sPrivateID));
+
+		SendMessage(kPacket);
 
 		SAFEDELETE(m_pEncLoginKey);
 		m_sync_time = TIMEGETTIME();
-		WemadeLOG.PrintTimeAndLog( LOG_DEBUG_LEVEL, "%s Wrong local ver : %s : %d", __FUNCTION__, sPrivateID.c_str(), iLocalVersion );
+		WemadeLOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "%s Wrong local ver : %s : %d", __FUNCTION__, sPrivateID.c_str(), iLocalVersion);
 		return;
 	}
 
-	if( !g_MainServer.IsRightClientVersion( iUserClientVersion ) )
+	if (!g_MainServer.IsRightClientVersion(iUserClientVersion))
 	{
-		SP2Packet kPacket( STPK_CONNECT );
+		SP2Packet kPacket(STPK_CONNECT);
 
-		PACKET_GUARD_VOID( kPacket.Write(CONNECT_WRONG_CLIENT_VER) );
-		PACKET_GUARD_VOID( kPacket.Write(sPrivateID) );
-	 
-		SendMessage( kPacket );
+		PACKET_GUARD_VOID(kPacket.Write(CONNECT_WRONG_CLIENT_VER));
+		PACKET_GUARD_VOID(kPacket.Write(sPrivateID));
+
+		SendMessage(kPacket);
 
 		SAFEDELETE(m_pEncLoginKey);
 		m_sync_time = TIMEGETTIME();
 		return;
-	}
+	}*/
 #endif //_ITEST
 
-	if( g_UserNodeManager.IsConnectUser( sPrivateID ) )   //접속중..
+	if (g_UserNodeManager.IsConnectUser(sPrivateID))   //접속중..
 	{
-		SP2Packet kPacket( STPK_CONNECT );
-		
-		PACKET_GUARD_VOID( kPacket.Write(CONNECT_ID_ALREADY) );
-		PACKET_GUARD_VOID( kPacket.Write(sPrivateID) );
-	 
-		SendMessage( kPacket );
-		WemadeLOG.PrintTimeAndLog( LOG_DEBUG_LEVEL,"CONNECT_ID_ALREADY (%s)", sPrivateID.c_str());
+		SP2Packet kPacket(STPK_CONNECT);
+
+		PACKET_GUARD_VOID(kPacket.Write(CONNECT_ID_ALREADY));
+		PACKET_GUARD_VOID(kPacket.Write(sPrivateID));
+
+		SendMessage(kPacket);
+		WemadeLOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "CONNECT_ID_ALREADY (%s)", sPrivateID.c_str());
 		SAFEDELETE(m_pEncLoginKey);
 		m_sync_time = TIMEGETTIME();
 		return;
 	}
 
-	pLocal->ApplyConnect( this, packet ); // 에러체크 이후에 값을 셋팅
+	pLocal->ApplyConnect(this, packet); // 에러체크 이후에 값을 셋팅
 
 #ifdef __OHTG_LOGIN_IP_CHECK__
-	SetIPMapping( sPrivateIP.c_str() );
-	LOG.PrintTimeAndLog( LOG_DEBUG_LEVEL, "DB  USER ID NOT :%s-%s-%s",sPrivateID.c_str(), szIPKey.c_str(), sPrivateIP.c_str());
+	SetIPMapping(sPrivateIP.c_str());
+	LOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "DB  USER ID NOT :%s-%s-%s", sPrivateID.c_str(), szIPKey.c_str(), sPrivateIP.c_str());
 #else //__OHTG_LOGIN_IP_CHECK__
-	SetIPMapping( szPrivateIP.c_str() );
+	SetIPMapping(szPrivateIP.c_str());
 #endif //__OHTG_LOGIN_IP_CHECK__
-	SetPrivateID( sPrivateID );
-	m_dwDBAgentID = Help::GetUserDBAgentID( GetPrivateID() );	
-	if( !pLocal->SendLoginData( this ) )
+	SetPrivateID(sPrivateID);
+	m_dwDBAgentID = Help::GetUserDBAgentID(GetPrivateID());
+	LOG.PrintTimeAndLog(0, "%s - PrivateID: %s", __FUNCTION__, sPrivateID.c_str());
+	if (!pLocal->SendLoginData(this))
 	{
-		g_DBClient.OnSelectUserLoginInfo( GetUserDBAgentID(), GetAgentThreadID(), GetGUID(), sPrivateID );
+		g_DBClient.OnSelectUserLoginInfo(GetUserDBAgentID(), GetAgentThreadID(), GetGUID(), sPrivateID);
 	}
+
 	m_sync_time = TIMEGETTIME();
 
-	if(strcmp(sPrivateID.c_str(),"segeni") == 0)
+	if (strcmp(sPrivateID.c_str(), "segeni") == 0)
 	{
-		WemadeLOG.PrintTimeAndLog( 0, "OnConnect-%s-%s(%s)-%s-%s-%d-ClientVersion:%d", szEncLoginKeyAndID.c_str(), szPrivateIP.c_str(), peerIP
-			,g_App.GetSecondKey().c_str(), GetGUID().c_str(), iLocalVersion, iUserClientVersion);
+		WemadeLOG.PrintTimeAndLog(0, "OnConnect-%s-%s(%s)-%s-%s-%d-ClientVersion:%d", szEncLoginKeyAndID.c_str(), szPrivateIP.c_str(), peerIP
+			, g_App.GetSecondKey().c_str(), GetGUID().c_str(), iLocalVersion, iUserClientVersion);
 	}
 
 
 #ifdef XIGNCODE
-	g_ioXignCode.SetUserInformation( this, GetPublicIP(), GetPrivateID().c_str() );
+	g_ioXignCode.SetUserInformation(this, GetPublicIP(), GetPrivateID().c_str());
 #endif
 }
+
+
 
 void User::OnMovingServer( SP2Packet &rkPacket )
 {

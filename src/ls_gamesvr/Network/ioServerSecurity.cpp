@@ -66,7 +66,7 @@ bool ioServerSecurity::UpdateReceiveCount()
 void ioServerSecurity::EncryptMsg( CPacket &rkPacket )
 {
 	// Check Sum
-	DWORD dwResult = MakeDigest(  (BYTE*)rkPacket.GetBuffer(), rkPacket.GetBufferSize()  );
+	DWORD dwResult = MakeDigestSHA256(  (BYTE*)rkPacket.GetBuffer(), rkPacket.GetBufferSize()  );
 	rkPacket.SetCheckSum( dwResult );
 	
 	// Encryption
@@ -91,7 +91,7 @@ bool ioServerSecurity::IsCheckSum( CPacket &rkPacket )
 	DWORD	dwTemp = rkPacket.GetCheckSum();   //임시 저장.
 	rkPacket.SetCheckSum( 0 );
 	
-	DWORD dwResult = MakeDigest( (BYTE*)rkPacket.GetBuffer(), rkPacket.GetBufferSize() );
+	DWORD dwResult = MakeDigestSHA256( (BYTE*)rkPacket.GetBuffer(), rkPacket.GetBufferSize() );
 
 	rkPacket.SetCheckSum( dwTemp );
 	
