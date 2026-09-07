@@ -13,4 +13,12 @@ struct ServerEntry
     HANDLE  m_hProcess = nullptr;
     DWORD   m_dwPid = 0;
     bool    m_bRunning = false;
+
+    // Watchdog
+    bool    m_bWatchdog = true;         // eligible for auto-restart (per-service config)
+    bool    m_bExpectStop = false;      // intentional stop in progress (not a crash)
+    bool    m_bWatchdogDisabled = false; // tripped by crash-loop protection
+    int     m_nCrashCount = 0;          // crashes this session (display column)
+    DWORD   m_arrCrashTicks[3] = {};   // last 3 crash times (loop detection window)
+    int     m_nCrashTickCount = 0;
 };

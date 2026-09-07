@@ -37,6 +37,7 @@ protected:
 	CComboBox     m_cboLog;
 	CComboBox     m_cboFile;
 	CRichEditCtrl m_edLog;
+	CButton       m_chkWatchdog;
 	CLogTailer    m_tailer;
 
 	// Start All sequencer (staggered, timer driven: one server per tick)
@@ -48,10 +49,14 @@ protected:
 	bool m_bStopping = false;
 	std::vector<CString> m_arrStopResults;   // written by the stop thread
 
+	// Watchdog: pending auto-restarts (entry index -> ready tick)
+	std::vector<std::pair<int, DWORD>> m_arrPendingRestarts;
+
 	enum
 	{
 		IDT_STATUS   = 1,   // 1s status polling
 		IDT_STARTALL = 2,   // Start All stagger
+		IDT_WATCHDOG = 3,   // pending restart scheduler
 	};
 
 	static const UINT WM_APP_LOGDATA;   // posted by the log tailer thread
@@ -63,6 +68,7 @@ protected:
 	void LoadConfig();
 	void SetupList();
 	void RefreshStatus();
+	void OnServerCrashed(int nIdx, ServerEntry& e);
 	void UpdateButtons();
 	void StartAllBegin();
 	void StartAllNext();

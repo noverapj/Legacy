@@ -8,9 +8,13 @@ CString ConfigLoader::ReadString(const CString& strSection, const CString& strKe
     return CString(buf);
 }
 
-bool ConfigLoader::Load(const CString& strPath, std::vector<ServerEntry>& arrOut, CString& strError)
+bool ConfigLoader::Load(const CString& strPath, std::vector<ServerEntry>& arrOut, CString& strError,
+                        bool& rbWatchdogDefault)
 {
     arrOut.clear();
+
+    // [common] Watchdog = global auto-restart checkbox default (0/1)
+    rbWatchdogDefault = (_ttoi(ReadString(_T("common"), _T("Watchdog"), strPath)) != 0);
 
     const CString strMax = ReadString(_T("common"), _T("MaxService"), strPath);
     const int nMax = _ttoi(strMax);
@@ -29,11 +33,15 @@ bool ConfigLoader::Load(const CString& strPath, std::vector<ServerEntry>& arrOut
         CString strExe  = ReadString(strSection, _T("Exe"), strPath);
         CString strIni  = ReadString(strSection, _T("INI"), strPath);
         CString strName = ReadString(strSection, _T("Name"), strPath);
+        CString strWD   = ReadString(strSection, _T("Watchdog"), strPath);
         const int nOrder = _ttoi(ReadString(strSection, _T("Order"), strPath));
 
         // Empty/skipped sections are tolerated
         if (strExe.IsEmpty())
             continue;
+
+        // Per-service watchdog opt-out (absent = eligible)
+        const bool bWatchdog = strWD.IsEmpty() ? true : (_ttoi(strWD) != 0);
 
         ServerEntry entry;
         entry.m_nOrder = nOrder;
@@ -65,6 +73,7 @@ bool ConfigLoader::Load(const CString& strPath, std::vector<ServerEntry>& arrOut
             strName = (nDot > 0) ? strFile.Left(nDot) : strFile;
         }
         entry.m_strName = strName;
+        entry.m_bWatchdog = bWatchdog;
 
         arrOut.push_back(entry);
     }

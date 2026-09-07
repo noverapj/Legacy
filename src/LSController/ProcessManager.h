@@ -8,7 +8,10 @@ public:
     // Spawns "<Exe> -c <INI>" hidden, with the server's folder as working directory.
     // CREATE_NO_WINDOW        : hidden console (child still owns one; required for ctrl events)
     // CREATE_NEW_PROCESS_GROUP: allows GenerateConsoleCtrlEvent(CTRL_BREAK_EVENT, pid)
-    static bool Start(ServerEntry& entry, CString* pstrError = nullptr);
+    // bManual = true for user-initiated starts: clears the expect-stop flag and
+    // re-arms the watchdog (resets the crash window). Watchdog restarts keep the
+    // crash window intact so loop protection still works.
+    static bool Start(ServerEntry& entry, CString* pstrError = nullptr, bool bManual = false);
 
     // Graceful stop: attaches to the child's console (required for ctrl events
     // to be routed from a GUI process), sends CTRL_BREAK_EVENT (all ls_ servers

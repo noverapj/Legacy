@@ -8,13 +8,20 @@ CString ProcessManager::BuildCommandLine(const ServerEntry& entry)
     return strCmd;
 }
 
-bool ProcessManager::Start(ServerEntry& entry, CString* pstrError /* = nullptr */)
+bool ProcessManager::Start(ServerEntry& entry, CString* pstrError /* = nullptr */, bool bManual /* = false */)
 {
     if (UpdateStatus(entry))
     {
         if (pstrError)
             pstrError->Format(_T("%s is already running (PID %u)."), entry.m_strName.GetString(), entry.m_dwPid);
         return false;
+    }
+
+    entry.m_bExpectStop = false;
+    if (bManual)
+    {
+        entry.m_bWatchdogDisabled = false;
+        entry.m_nCrashTickCount = 0;
     }
 
     CString strCmd = BuildCommandLine(entry);
@@ -88,6 +95,10 @@ bool ProcessManager::StopGraceful(ServerEntry& entry, DWORD dwTimeoutMs /* = 100
 {
     if (!UpdateStatus(entry))
         return true;    // already stopped
+
+    // Mark this as an intentional stop so the watchdog does not treat the
+    // upcoming exit as a crash
+    entry.m_bExpectStop = true;
 
     if (!SendCtrlBreak(entry.m_dwPid))
         return false;   // could not deliver the signal

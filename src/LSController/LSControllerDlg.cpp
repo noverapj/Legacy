@@ -71,6 +71,7 @@ void CLSControllerDlg::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_CBO_LOG, m_cboLog);
 	DDX_Control(pDX, IDC_CBO_FILE, m_cboFile);
 	DDX_Control(pDX, IDC_EDT_LOG, m_edLog);
+	DDX_Control(pDX, IDC_CHK_WATCHDOG, m_chkWatchdog);
 }
 
 BEGIN_MESSAGE_MAP(CLSControllerDlg, CDialogEx)
@@ -187,6 +188,7 @@ void CLSControllerDlg::SetupList()
 	m_list.InsertColumn(2, _T("PID"),    LVCFMT_LEFT, 60);
 	m_list.InsertColumn(3, _T("Order"), LVCFMT_LEFT, 45);
 	m_list.InsertColumn(4, _T("Config"), LVCFMT_LEFT, 120);
+	m_list.InsertColumn(5, _T("Crash"), LVCFMT_LEFT, 45);
 
 	m_edLog.LimitText(0);
 	m_edLog.SetWindowText(_T("Select a server and a log file to tail."));
@@ -202,10 +204,13 @@ void CLSControllerDlg::LoadConfig()
 	strPath = CString(szExe) + _T("config.ini");
 
 	CString strError;
-	if (!ConfigLoader::Load(strPath, m_arrServers, strError))
+	bool bWatchdogDefault = false;
+	if (!ConfigLoader::Load(strPath, m_arrServers, strError, bWatchdogDefault))
 	{
 		AfxMessageBox(strError, MB_ICONWARNING | MB_OK);
 	}
+
+	m_chkWatchdog.SetCheck(bWatchdogDefault ? BST_CHECKED : BST_UNCHECKED);
 
 	// Populate rows (row index == m_arrServers index)
 	for (size_t i = 0; i < m_arrServers.size(); ++i)
@@ -219,6 +224,7 @@ void CLSControllerDlg::LoadConfig()
 		strOrder.Format(_T("%d"), e.m_nOrder);
 		m_list.SetItemText(nRow, 3, strOrder);
 		m_list.SetItemText(nRow, 4, e.m_strIni);
+		m_list.SetItemText(nRow, 5, _T("0"));
 	}
 
 	PopulateLogCombo();
@@ -374,7 +380,21 @@ void CLSControllerDlg::RefreshStatus()
 	for (size_t i = 0; i < m_arrServers.size(); ++i)
 	{
 		ServerEntry& e = m_arrServers[i];
-		ProcessManager::UpdateStatus(e);
+
+		const bool bWasRunning = e.m_bRunning;
+		const bool bStillRunning = ProcessManager::UpdateStatus(e);
+
+		if (bWasRunning && !bStillRunning)
+		{
+			if (e.m_bExpectStop)
+			{
+				e.m_bExpectStop = false;   // intended stop completed
+			}
+			else
+			{
+				OnServerCrashed(static_cast<int>(i), e);
+			}
+		}
 
 		const int nRow = static_cast<int>(i);
 		m_list.SetItemText(nRow, 1, e.m_bRunning ? _T("Running") : _T("Stopped"));
@@ -384,7 +404,51 @@ void CLSControllerDlg::RefreshStatus()
 		else
 			strPid = _T("-");
 		m_list.SetItemText(nRow, 2, strPid);
+		CString strCrash;
+		strCrash.Format(_T("%d"), e.m_nCrashCount);
+		m_list.SetItemText(nRow, 5, strCrash);
 	}
+}
+
+void CLSControllerDlg::OnServerCrashed(int nIdx, ServerEntry& e)
+{
+	e.m_nCrashCount++;
+
+	// Crash-loop window: 3 crashes within 5 minutes trip the watchdog for this entry
+	e.m_arrCrashTicks[0] = e.m_arrCrashTicks[1];
+	e.m_arrCrashTicks[1] = e.m_arrCrashTicks[2];
+	e.m_arrCrashTicks[2] = ::GetTickCount();
+	if (e.m_nCrashTickCount < 3)
+		++e.m_nCrashTickCount;
+
+	if (e.m_nCrashTickCount >= 3 &&
+	    (e.m_arrCrashTicks[2] - e.m_arrCrashTicks[0]) < (5u * 60u * 1000u))
+	{
+		e.m_bWatchdogDisabled = true;
+		e.m_nCrashTickCount = 0;
+
+		CString strMsg;
+		strMsg.Format(_T("%s crashed 3 times within 5 minutes.\nAuto-restart is disabled for this server - start it manually to re-arm the watchdog."),
+		              e.m_strName.GetString());
+		AfxMessageBox(strMsg, MB_ICONWARNING | MB_OK);
+		return;
+	}
+
+	if (m_bStopping || !e.m_bWatchdog || e.m_bWatchdogDisabled)
+		return;
+
+	if (m_chkWatchdog.GetCheck() != BST_CHECKED)
+		return;
+
+	// Schedule the auto-restart (+3 s); re-uses the slot if already pending
+	for (auto& pr : m_arrPendingRestarts)
+	{
+		if (pr.first == nIdx)
+			return;
+	}
+	m_arrPendingRestarts.push_back(std::make_pair(nIdx, ::GetTickCount() + 3000));
+	m_list.SetItemText(nIdx, 1, _T("Restarting..."));
+	SetTimer(IDT_WATCHDOG, 1000, nullptr);
 }
 
 void CLSControllerDlg::UpdateButtons()
@@ -431,6 +495,40 @@ void CLSControllerDlg::OnTimer(UINT_PTR nIDEvent)
 	{
 		StartAllNext();
 	}
+	else if (nIDEvent == IDT_WATCHDOG)
+	{
+		if (!m_bStopping)
+		{
+			const DWORD dwNow = ::GetTickCount();
+			for (auto it = m_arrPendingRestarts.begin(); it != m_arrPendingRestarts.end(); )
+			{
+				if (dwNow >= it->second)
+				{
+					ServerEntry& e = m_arrServers[it->first];
+					// Only restart when it is still stopped and not being stopped by the user
+					if (!ProcessManager::UpdateStatus(e) && !e.m_bExpectStop)
+					{
+						CString strError;
+						if (!ProcessManager::Start(e, &strError))
+						{
+							e.m_bWatchdogDisabled = true;
+							CString strMsg;
+							strMsg.Format(_T("%s - auto-restart failed: %s\nAuto-restart disabled for this server."),
+							              e.m_strName.GetString(), strError.GetString());
+							AfxMessageBox(strMsg, MB_ICONWARNING | MB_OK);
+						}
+					}
+					it = m_arrPendingRestarts.erase(it);
+				}
+				else
+				{
+					++it;
+				}
+			}
+			if (m_arrPendingRestarts.empty())
+				KillTimer(IDT_WATCHDOG);
+		}
+	}
 
 	CDialogEx::OnTimer(nIDEvent);
 }
@@ -442,7 +540,7 @@ void CLSControllerDlg::OnBnClickedStart()
 		return;
 
 	CString strError;
-	if (!ProcessManager::Start(m_arrServers[nIdx], &strError))
+	if (!ProcessManager::Start(m_arrServers[nIdx], &strError, true))
 		AfxMessageBox(strError, MB_ICONERROR | MB_OK);
 
 	RefreshStatus();
@@ -501,7 +599,7 @@ void CLSControllerDlg::StartAllNext()
 		if (!ProcessManager::UpdateStatus(m_arrServers[nIdx]))
 		{
 			CString strError;
-			if (!ProcessManager::Start(m_arrServers[nIdx], &strError))
+			if (!ProcessManager::Start(m_arrServers[nIdx], &strError, true))
 				AfxMessageBox(strError, MB_ICONERROR | MB_OK);
 			break;   // wait for the next tick before starting the next one
 		}
@@ -545,6 +643,16 @@ void CLSControllerDlg::BeginStopThread(std::vector<int> arrIndices, int nRestart
 
 	m_bStopping = true;
 
+	// Cancel any pending watchdog auto-restart for the entries being stopped
+	for (const int nIdx : arrIndices)
+	{
+		m_arrPendingRestarts.erase(std::remove_if(m_arrPendingRestarts.begin(), m_arrPendingRestarts.end(),
+			[nIdx](const std::pair<int, DWORD>& pr) { return pr.first == nIdx; }),
+			m_arrPendingRestarts.end());
+		if (m_arrPendingRestarts.empty())
+			KillTimer(IDT_WATCHDOG);
+	}
+
 	// Mark rows so the user sees what is happening
 	for (const int nIdx : arrIndices)
 	{
@@ -575,7 +683,7 @@ void CLSControllerDlg::BeginStopThread(std::vector<int> arrIndices, int nRestart
 			if (nIdx == nRestartIdx)
 			{
 				CString strError;
-				if (!ProcessManager::Start(e, &strError))
+				if (!ProcessManager::Start(e, &strError, true))
 				{
 					CString strMsg;
 					strMsg.Format(_T("%s - start failed: %s"), e.m_strName.GetString(), strError.GetString());
