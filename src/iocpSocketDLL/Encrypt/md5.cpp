@@ -56,6 +56,17 @@ void MD5Init(MD5Context *ctx)
     ctx->bits[1] = 0;
 }
 
+void SHA256Init(MD5Context* ctx)
+{
+    ctx->buf[0] = 0x6A09E667;
+    ctx->buf[1] = 0xBB67AE85;
+    ctx->buf[2] = 0x3C6EF372;
+    ctx->buf[3] = 0xA54FF53A;
+
+    ctx->bits[0] = 0;
+    ctx->bits[1] = 0;
+}
+
 /*
  * Update context to reflect the concatenation of another buffer full
  * of bytes.

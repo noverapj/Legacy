@@ -10,6 +10,7 @@ typedef struct tagMD5Context
 }MD5Context;
 
 void MD5Init( MD5Context *context );
+void SHA256Init( MD5Context *context );
 void MD5Update( MD5Context *context, unsigned char const *buf,
 			    unsigned len );
 void MD5Final( unsigned char digest[16], MD5Context *context );

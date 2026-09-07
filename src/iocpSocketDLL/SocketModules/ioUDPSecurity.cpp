@@ -32,7 +32,7 @@ void ioUDPSecurity::RcvPeerInfo( sockaddr_in *peer_addr )
 void ioUDPSecurity::EncryptMsg( CPacket &rkPacket )
 {
 	// Check Sum
-	DWORD dwResult = MakeDigest(  (BYTE*)rkPacket.GetBuffer(), rkPacket.GetBufferSize()  );
+	DWORD dwResult = MakeDigestSHA256(  (BYTE*)rkPacket.GetBuffer(), rkPacket.GetBufferSize()  );
 	rkPacket.SetCheckSum( dwResult );
 
 	// Encryption
@@ -55,7 +55,7 @@ bool ioUDPSecurity::IsCheckSum( CPacket &rkPacket )
 	DecryptMsg( rkPacket );
 	DWORD	dwTemp = rkPacket.GetCheckSum();   //임시 저장.
 	rkPacket.SetCheckSum( 0 );
-	DWORD dwResult = MakeDigest( (BYTE*)rkPacket.GetBuffer(), rkPacket.GetBufferSize() );
+	DWORD dwResult = MakeDigestSHA256( (BYTE*)rkPacket.GetBuffer(), rkPacket.GetBufferSize() );
 	rkPacket.SetCheckSum( dwTemp );
 	if( dwResult != rkPacket.GetCheckSum() )
 	{

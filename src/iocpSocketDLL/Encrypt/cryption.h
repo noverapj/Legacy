@@ -5,4 +5,5 @@
 IOCP_SOCKET_API void  Encrypt( BYTE *szSrc, int len );
 IOCP_SOCKET_API void  Decrypt( BYTE *szSrc, int len );
 IOCP_SOCKET_API DWORD MakeDigest( BYTE *szSrc, int len );
+IOCP_SOCKET_API DWORD MakeDigestSHA256( BYTE *szSrc, int len );
 #endif
