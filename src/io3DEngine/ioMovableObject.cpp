@@ -23,9 +23,10 @@ ioMovableObject::ioMovableObject()
 	m_RenderQueueID = RENDER_MAIN;
 
 	m_bVisible = true;
-	m_bRenderSkip = false;
 	m_bShadowCastEnable = false;
 	m_bShadowRecvEnable = false;
+	m_bRenderSkip = false;
+
 }
 
 ioMovableObject::~ioMovableObject()

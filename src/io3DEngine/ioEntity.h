@@ -48,11 +48,12 @@ protected:
 
 	bool m_bVisible;	// 외부에서 강제로 출력 여부를 결정
 	bool m_bCulled;		// EntityGroup에서 카메라로 컬링되었는지를 저장, SetEachEntityCullEnable시에만
-	bool m_bRenderSkip;
 	bool m_bSoftSkinningMeshData;
 	bool m_bDoneEntityBuild;
 	bool m_bUpdateBufferOK;
 	bool m_bVisibleChangePass;	// 외부에서 강제로 출력 여부 변경시 적용 여부(true : 미적용, false : 적용)
+	bool m_bRenderSkip;
+
 
 public:
 	void SetVisible( bool bVisible ) { m_bVisible = bVisible; }

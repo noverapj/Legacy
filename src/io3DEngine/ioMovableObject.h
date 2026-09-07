@@ -25,21 +25,20 @@ protected:
 
 	RenderGroupID m_RenderQueueID;
 	bool	m_bVisible;
-	bool	m_bRenderSkip;
 	bool	m_bShadowCastEnable;
 	bool	m_bShadowRecvEnable;
+	bool	m_bRenderSkip;
+
 
 private:
 	static UniqueObjID m_sNextUniqueID;
 
 public:
 	virtual void SetVisible( bool bVisible );
-	virtual void SetRenderSkip( bool bSkip );
 	virtual void SetShadowCastEnable( bool bEnable );
 	virtual void SetShadowRecvEnable( bool bEnable );
 
 	virtual bool IsVisible() const { return m_bVisible; }
-	virtual bool IsRenderSkip() const { return m_bRenderSkip; }
 	virtual bool IsShadowCastEnable() const { return m_bShadowCastEnable; }
 	virtual bool IsShadowRecvEnable() const { return m_bShadowRecvEnable; }
 
@@ -68,6 +67,8 @@ public:
 
 	virtual const ioAxisAlignBox& GetBoundBox() const = 0;
 	virtual float GetBoundRadius() const = 0;
+	virtual void SetRenderSkip( bool bSkip );
+	virtual bool IsRenderSkip() const { return m_bRenderSkip; }
 
 public:
 	const ioAxisAlignBox& GetWorldBoundBox( bool bDerive = false );
