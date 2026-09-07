@@ -48,6 +48,7 @@ protected:
 
 	bool m_bVisible;	// 외부에서 강제로 출력 여부를 결정
 	bool m_bCulled;		// EntityGroup에서 카메라로 컬링되었는지를 저장, SetEachEntityCullEnable시에만
+	bool m_bRenderSkip;
 	bool m_bSoftSkinningMeshData;
 	bool m_bDoneEntityBuild;
 	bool m_bUpdateBufferOK;
@@ -56,6 +57,7 @@ protected:
 public:
 	void SetVisible( bool bVisible ) { m_bVisible = bVisible; }
 	void SetCulled( bool bCulled ) { m_bCulled = bCulled; }
+	void SetRenderSkip( bool bSkip ) { m_bRenderSkip = bSkip; }
 	void SetAlphaRate( int iAlphaRate ) { m_iAlphaRate = iAlphaRate; }
 	void SetDiffuseRate( const D3DCOLORVALUE &rkColor ) { m_DiffuseRate = rkColor; }
 	void SetMaterialName( const ioHashString &name );
@@ -70,6 +72,7 @@ public:
 	inline int GetAlphaRate() const { return m_iAlphaRate; }
 	inline bool IsVisible() const { return m_bVisible; }
 	inline bool IsCulled() const { return m_bCulled; }
+	inline bool IsRenderSkip() const { return m_bRenderSkip; }
 	inline bool IsVisibleChangePass() const { return m_bVisibleChangePass; }
 
 public:

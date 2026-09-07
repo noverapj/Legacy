@@ -16,6 +16,8 @@ template<> ioTextureManager* Singleton< ioTextureManager >::ms_Singleton = 0;
 ioTextureManager::ioTextureManager( IDirect3DDevice9 *pDevice )
 {
 	SetDefaultErasePolicy( EP_MANUAL );
+	InitializeCriticalSection(&m_NotifiedListSection);
+
 
 	m_pD3DDevice = pDevice;
 	m_pD3DDevice->AddRef();
@@ -33,6 +35,7 @@ ioTextureManager::ioTextureManager( IDirect3DDevice9 *pDevice )
 ioTextureManager::~ioTextureManager()
 {
 	SAFERELEASE( m_pD3DDevice );
+	DeleteCriticalSection(&m_NotifiedListSection);
 }
 
 void ioTextureManager::ReLoadUpdateFiles()
@@ -67,6 +70,43 @@ void ioTextureManager::ReLoadUpdateFiles()
 			ReLoadImpl( iter->first );
 			iter->second = kFileTime;
 		}
+	}
+}
+
+void ioTextureManager::UpdateNotifiedResources()
+{
+	if (m_NotifiedRequestList.empty())
+		return;
+
+	NotifiedRequestList vTempRequestList;
+	EnterCriticalSection(&m_NotifiedListSection);
+	vTempRequestList = m_NotifiedRequestList;
+	m_NotifiedRequestList.erase(m_NotifiedRequestList.begin(), m_NotifiedRequestList.end());
+	LeaveCriticalSection(&m_NotifiedListSection);
+
+	NotifiedRequestList::iterator iter = vTempRequestList.begin();
+	for (; iter != vTempRequestList.end(); ++iter)
+	{
+		NotifiedRequest& rkRequest = *iter;
+
+		if (rkRequest.m_dwLoadState == RLS_LOADED)
+		{
+			if (LoadFileInternal(rkRequest.m_pTexture, rkRequest.m_pStream))
+			{
+				rkRequest.m_pTexture->SetLoadState(RLS_LOADED);
+				AddMem(rkRequest.m_pTexture->GetName(), rkRequest.m_pStream->GetSize());
+			}
+			else
+			{
+				rkRequest.m_pTexture->SetLoadState(RLS_FAILED);
+			}
+		}
+		else
+		{
+			rkRequest.m_pTexture->SetLoadState(RLS_FAILED);
+		}
+
+		SAFEDELETE(rkRequest.m_pStream);
 	}
 }
 
@@ -125,29 +165,20 @@ void ioTextureManager::ReLoadImpl( ioTexture *pTexture )
 	}
 }
 
-void ioTextureManager::NotifyLoadDone( ioStream *pStream, void *pParam, bool bLoaded )
+void ioTextureManager::NotifyLoadDone(ioStream* pStream, void* pParam, bool bLoaded)
 {
-	ioTexture *pTexture = static_cast< ioTexture* >( pParam );
+	NotifiedRequest kRequest;
+	kRequest.m_pStream = dynamic_cast<ioBinaryStream*>(pStream);
+	kRequest.m_pTexture = static_cast<ioTexture*>(pParam);
 
-	if( bLoaded )
-	{
-		if( LoadFileInternal( pTexture, pStream ) )
-		{
-			pTexture->SetLoadState( RLS_LOADED );
-			AddMem( pTexture->GetName(), pStream->GetSize() );
-		}
-		else
-		{
-			pTexture->SetLoadState( RLS_FAILED );
-		}
-	}
+	if (bLoaded)
+		kRequest.m_dwLoadState = RLS_LOADED;
 	else
-	{
-		pTexture->SetLoadState( RLS_FAILED );
-	}
+		kRequest.m_dwLoadState = RLS_FAILED;
 
-	delete pStream;
-	pStream = NULL;
+	EnterCriticalSection(&m_NotifiedListSection);
+	m_NotifiedRequestList.push_back(kRequest);
+	LeaveCriticalSection(&m_NotifiedListSection);
 }
 
 void ioTextureManager::SetGrayScaleRate( int iRate )

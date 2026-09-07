@@ -25,6 +25,7 @@ protected:
 
 	RenderGroupID m_RenderQueueID;
 	bool	m_bVisible;
+	bool	m_bRenderSkip;
 	bool	m_bShadowCastEnable;
 	bool	m_bShadowRecvEnable;
 
@@ -33,10 +34,12 @@ private:
 
 public:
 	virtual void SetVisible( bool bVisible );
+	virtual void SetRenderSkip( bool bSkip );
 	virtual void SetShadowCastEnable( bool bEnable );
 	virtual void SetShadowRecvEnable( bool bEnable );
 
 	virtual bool IsVisible() const { return m_bVisible; }
+	virtual bool IsRenderSkip() const { return m_bRenderSkip; }
 	virtual bool IsShadowCastEnable() const { return m_bShadowCastEnable; }
 	virtual bool IsShadowRecvEnable() const { return m_bShadowRecvEnable; }
 

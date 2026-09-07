@@ -355,6 +355,7 @@ public:	// ioMovableObject
 	virtual float GetBoundRadius() const;
 
 	virtual void SetVisible( bool bVisible );
+	virtual void SetRenderSkip(bool bSkip);
 	void SetVisibleNow( bool bVisible, bool bVisibleChangePass );
 	void SetVisibleAllMesh( bool bVisible );
 

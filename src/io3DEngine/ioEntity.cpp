@@ -53,6 +53,7 @@ ioEntity::ioEntity( ioEntityParent *pParent, ioMesh *pMesh )
 
 	m_bVisible = true;
 	m_bCulled = false;
+	m_bRenderSkip = false;
 	m_bVisibleChangePass = false;
 
 	m_bSoftSkinningMeshData = false;
@@ -355,6 +356,8 @@ void ioEntity::UpdateLightList( const ioLightList &rkList,
 
 void ioEntity::UpdateRenderQueue( ioRenderQueue &queue, RenderGroupID eGroupID )
 {
+	if (m_bRenderSkip) return;
+
 	if( !m_bDoneEntityBuild )
 		return;
 
@@ -375,6 +378,8 @@ void ioEntity::UpdateRenderQueue( ioRenderQueue &queue, RenderGroupID eGroupID )
 
 void ioEntity::UpdateGenShadowMapToQueue( ioRenderQueue &queue, RenderGroupID eGroupID )
 {
+	if (m_bRenderSkip) return;
+
 	if( !m_bDoneEntityBuild )	return;
 
 	// 소프트스키닝인데 버퍼가 제대로 업데이트 되지 못했다.

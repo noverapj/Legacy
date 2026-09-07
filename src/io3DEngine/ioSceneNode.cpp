@@ -202,7 +202,7 @@ void ioSceneNode::FindVisibleObjects( ioCamera *pCamera,
 		{
 			pObj->NotifyCurrentCamera( pCamera );
 
-			if( pObj->IsVisible() )
+			if (pObj->IsVisible() && !pObj->IsRenderSkip())
 			{
 				pObj->UpdateRenderQueue( queue );
 			}
@@ -228,7 +228,7 @@ void ioSceneNode::FindShadowCasterObjects( ioRenderQueue &queue, ioSceneShadowBo
 		ioMovableObject *pObj = iterObj->second;
 		if( pObj )
 		{
-			if( pObj->IsVisible() )
+			if (pObj->IsVisible() && !pObj->IsRenderSkip())
 			{
 				if( pObj->IsShadowCastEnable() && kSceneBox.AddShadowCaster( pObj ) )
 				{

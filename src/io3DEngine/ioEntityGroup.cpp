@@ -1699,6 +1699,27 @@ void ioEntityGroup::SetVisible( bool bVisible )
 	}
 }
 
+void ioEntityGroup::SetRenderSkip(bool bSkip)
+{
+	m_bRenderSkip = bSkip;
+
+	EntityList::iterator iEntity;
+	for (iEntity = m_EntityList.begin(); iEntity != m_EntityList.end(); ++iEntity)
+	{
+		ioEntity* pEntity = *iEntity;
+		pEntity->SetRenderSkip(bSkip);
+	}
+
+	AttachedEffectList::iterator iter = m_AttachedEffectList.begin();
+	while (iter != m_AttachedEffectList.end())
+	{
+		ioEffect* pEffect = *iter;
+		if (pEffect && pEffect->IsLive())
+			pEffect->SetRenderSkip(bSkip);
+		++iter;
+	}
+}
+
 void ioEntityGroup::SetVisibleNow( bool bVisible, bool bVisibleChangePass )
 {
 	EntityList::iterator iEntity;

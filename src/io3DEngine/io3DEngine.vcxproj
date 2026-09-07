@@ -240,7 +240,7 @@ copy "$(TargetDir)\io3DEngine.pdb" "$(TargetDir)\..\..\..\lib\"</Command>
       </HeaderFileName>
     </Midl>
     <PreBuildEvent>
-      <Command>"c:\Program Files\TortoiseSVN\bin\SubWCRev.exe" "$(ProjectDir)\" "$(ProjectDir)TSvnVersion.tmpl" "$(ProjectDir)Version.h"</Command>
+      <Command>"../../Tools/VCSGen.exe" "$(ProjectDir)\" "$(ProjectDir)TSvnVersion.tmpl" "$(ProjectDir)Version.h"</Command>
     </PreBuildEvent>
     <ResourceCompile>
       <PreprocessorDefinitions>NDEBUG;SHIPPING;%(PreprocessorDefinitions)</PreprocessorDefinitions>

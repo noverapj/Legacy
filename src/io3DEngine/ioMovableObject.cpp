@@ -23,6 +23,7 @@ ioMovableObject::ioMovableObject()
 	m_RenderQueueID = RENDER_MAIN;
 
 	m_bVisible = true;
+	m_bRenderSkip = false;
 	m_bShadowCastEnable = false;
 	m_bShadowRecvEnable = false;
 }
@@ -39,6 +40,11 @@ ioMovableObject::~ioMovableObject()
 void ioMovableObject::SetVisible( bool bVisible )
 {
 	m_bVisible = bVisible;
+}
+
+void ioMovableObject::SetRenderSkip(bool bSkip)
+{
+	m_bRenderSkip = bSkip;
 }
 
 void ioMovableObject::SetShadowCastEnable( bool bEnable )

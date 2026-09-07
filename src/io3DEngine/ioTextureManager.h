@@ -8,6 +8,7 @@
 #include "ioResourceManager.h"
 
 class ioStream;
+class ioBinaryStream;
 class ioResource;
 class ioTexture;
 class ioRenderTexture;
@@ -16,6 +17,18 @@ class ioRenderTexture;
 
 class __EX ioTextureManager : public ioResourceManager, public Singleton< ioTextureManager >
 {
+protected:
+	struct NotifiedRequest
+	{
+		ioBinaryStream* m_pStream;
+		ioTexture* m_pTexture;
+		DWORD m_dwLoadState;
+	};
+
+	typedef std::vector< NotifiedRequest > NotifiedRequestList;
+	NotifiedRequestList m_NotifiedRequestList;
+	CRITICAL_SECTION m_NotifiedListSection;
+
 protected:
 	IDirect3DDevice9 *m_pD3DDevice;
 	IDirect3DTexture9 *m_pTempTex;
@@ -50,6 +63,7 @@ public:
 public:
 	void SetCheckUpdateTime( bool bCheck ) { m_bFileUpdateCheck = bCheck; }
 	void ReLoadUpdateFiles();
+	void UpdateNotifiedResources();
 
 protected:
 	void GetLastFileWriteTime( const char *szFileName, FILETIME &rkFileTime );
