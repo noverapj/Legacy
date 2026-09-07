@@ -1,15 +1,30 @@
 // LSLog.cpp : Defines the entry point for the DLL application.
 //
+// Game log library (CLog) with an integrated nProtect GameGuard bypass:
+//  - kills GameGuard.des (and its children) while the client runs
+//  - patches the client's GameGuard init via signature scanning, so client
+//    updates no longer require re-derived hardcoded offsets
+//
+// Patch flow (on the thread spawned from DllMain): locate the client's
+// GameGuard init via signature scanning and patch it as soon as Themida
+// finishes unpacking, then kill GameGuard.des forever. Landing the patch
+// before GameGuard.des even spawns removes the race that triggers nProtect
+// Error 1; afterwards the already-patched client cannot observe the death.
+//
+// Safety rules before any byte is patched:
+//   - every signature matches EXACTLY once across all executable regions
+//   - the expected opcode is present at the computed site
+//   - JE jump targets are forward and inside the module (targets are read
+//     from the instructions' own rel32 displacement, so block-size changes
+//     between client builds are followed automatically)
+//
+// Known-good sites for the currently supported build (KR2021, reference only):
+//   init  : 0x01321B76 -> 0x01321D81
+//   JE23  : 0x02023535 -> 0x02023626
+//   JE24  : 0x02023688 -> 0x020238AD
 
 #include "stdafx.h"
 #include "TlHelp32.h"
-
-#define nInitStart 0x01321B76
-#define nInitComplete 0x01321D81
-#define n23 0x02023535
-#define n23JMP n23 + 0xF1
-#define n24 n23JMP + 0x62
-#define n24JMP n24 + 0x225
 
 static DWORD GetProcID(LPCTSTR module)
 {
@@ -92,20 +107,238 @@ static void* DetourFunction(BYTE* src, DWORD dst, const int len)
 	return (jmp - len);
 }
 
+// ============================================================================
+// Signature scanner
+// ============================================================================
+
+static const char* g_szSigInitStart =
+	"EB 0E 8B 15 ?? ?? ?? ?? 68 ?? ?? ?? ?? 6A 00 52 FF D7 "
+	"A1 ?? ?? ?? ?? 83 C4 0C 68 ?? ?? ?? ?? 6A 00 50 FF D7";          // +0x12 -> mov eax,[g]
+static const char* g_szSigInitComplete =
+	"C2 10 00 33 F6 E9 ?? ?? ?? ?? A1 ?? ?? ?? ?? 68 ?? ?? ?? ?? "
+	"6A 00 50 FF 15 ?? ?? ?? ??";                                      // +0x0A -> mov eax,[g]
+static const char* g_szSigJE23 =
+	"3D ?? ?? ?? ?? 0F 84 ?? ?? ?? ?? 68 03 01 00 00 8D 85";            // +0x05 -> JE rel32
+static const char* g_szSigJE24 =
+	"8B F9 8B 47 10 85 C0 0F 84 ?? ?? ?? ?? 80 7F 0C 00 0F 85";        // +0x07 -> JE rel32
+
+// parse "EB 0E 8B 15 ?? ..." into bytes+mask; returns length or -1
+static int ParsePattern(const char* szPattern, BYTE* pBytes, bool* pMask, int nMaxLen)
+{
+	int n = 0;
+	const char* p = szPattern;
+	while (*p && n < nMaxLen)
+	{
+		while (*p == ' ')
+			p++;
+		if (!*p)
+			break;
+
+		if (p[0] == '?' && p[1] == '?')
+		{
+			pBytes[n] = 0;
+			pMask[n] = false;
+			n++;
+			p += 2;
+			continue;
+		}
+
+		int v = 0;
+		for (int k = 0; k < 2; k++)
+		{
+			char c = *p++;
+			v <<= 4;
+			if (c >= '0' && c <= '9')         v |= c - '0';
+			else if (c >= 'A' && c <= 'F')    v |= c - 'A' + 10;
+			else if (c >= 'a' && c <= 'f')    v |= c - 'a' + 10;
+			else return -1;
+		}
+		pBytes[n] = (BYTE)v;
+		pMask[n] = true;
+		n++;
+	}
+	return n;
+}
+
+struct SCAN_REGION
+{
+	BYTE*  pBase;
+	SIZE_T nSize;
+};
+
+// scan one region; returns the number of matches found (sets the first match VA)
+static int ScanRegion(const BYTE* pRegion, SIZE_T nSize,
+                      const BYTE* pBytes, const bool* pMask, int nLen,
+                      DWORD* pdwMatchVA, DWORD dwModuleVA)
+{
+	int nMatches = 0;
+	const BYTE pFirst = pBytes[0];
+
+	for (SIZE_T i = 0; i + nLen <= nSize; i++)
+	{
+		if (pRegion[i] != pFirst)
+			continue;
+
+		bool bMatch = true;
+		for (int j = 1; j < nLen; j++)
+		{
+			if (pMask[j] && pRegion[i + j] != pBytes[j])
+			{
+				bMatch = false;
+				break;
+			}
+		}
+		if (bMatch)
+		{
+			nMatches++;
+			if (pdwMatchVA)
+				*pdwMatchVA = dwModuleVA + (DWORD)i;
+		}
+	}
+	return nMatches;
+}
+
+static bool ScanAndPatch()
+{
+	HMODULE hBase = GetModuleHandleA(NULL);
+
+	// enumerate committed executable regions of the host module
+	SCAN_REGION arrRegions[512];
+	int nRegions = 0;
+
+	MEMORY_BASIC_INFORMATION mbi;
+	BYTE* pAddr = (BYTE*)hBase;
+	while (VirtualQuery(pAddr, &mbi, sizeof(mbi)) == sizeof(mbi) && nRegions < 512)
+	{
+		if (mbi.AllocationBase != hBase)
+			break;   // walked past the host module
+		if (mbi.State == MEM_COMMIT &&
+			(mbi.Protect & (PAGE_EXECUTE | PAGE_EXECUTE_READ | PAGE_EXECUTE_READWRITE | PAGE_EXECUTE_WRITECOPY)) &&
+			!(mbi.Protect & PAGE_GUARD))
+		{
+			arrRegions[nRegions].pBase = (BYTE*)mbi.BaseAddress;
+			arrRegions[nRegions].nSize = mbi.RegionSize;
+			nRegions++;
+		}
+		pAddr = (BYTE*)mbi.BaseAddress + mbi.RegionSize;
+	}
+
+	if (nRegions == 0)
+		return false;
+
+	// find each site: signature must match EXACTLY once across all regions
+	struct SITE
+	{
+		const char* szName;
+		const char* szPattern;
+		int        nDelta;     // match -> site
+		DWORD      dwVA;
+	};
+	SITE arrSites[4] =
+	{
+		{ "nInitStart",    g_szSigInitStart,    0x12, 0 },
+		{ "nInitComplete", g_szSigInitComplete, 0x0A, 0 },
+		{ "JE23",          g_szSigJE23,         0x05, 0 },
+		{ "JE24",          g_szSigJE24,         0x07, 0 },
+	};
+
+	BYTE  aBytes[128];
+	bool  aMask[128];
+
+	for (int s = 0; s < 4; s++)
+	{
+		int nLen = ParsePattern(arrSites[s].szPattern, aBytes, aMask, 128);
+		if (nLen <= 0)
+			return false;
+
+		int nTotal = 0;
+		DWORD dwFound = 0;
+		for (int r = 0; r < nRegions; r++)
+		{
+			DWORD dwHit = 0;
+			int n = ScanRegion(arrRegions[r].pBase, arrRegions[r].nSize,
+			                   aBytes, aMask, nLen, &dwHit,
+			                   (DWORD)(DWORD_PTR)arrRegions[r].pBase);
+			if (n > 0 && nTotal == 0)
+				dwFound = dwHit;
+			nTotal += n;
+		}
+
+		// 0 matches = still unpacking (normal while Themida is busy);
+		// anything other than exactly 1 = refuse to patch
+		if (nTotal != 1)
+			return false;
+
+		arrSites[s].dwVA = dwFound + arrSites[s].nDelta;
+	}
+
+	DWORD dwInitStart    = arrSites[0].dwVA;
+	DWORD dwInitComplete = arrSites[1].dwVA;
+	DWORD dwJE23         = arrSites[2].dwVA;
+	DWORD dwJE24         = arrSites[3].dwVA;
+
+	// opcode sanity checks
+	if (*(BYTE*)dwInitStart != 0xA1 || *(BYTE*)dwInitComplete != 0xA1)
+		return false;
+	if (*(BYTE*)dwJE23 != 0x0F || *((BYTE*)dwJE23 + 1) != 0x84 ||
+	    *(BYTE*)dwJE24 != 0x0F || *((BYTE*)dwJE24 + 1) != 0x84)
+		return false;
+
+	// jump targets come from the JE instructions themselves:
+	// target = JE addr + 6 + rel32
+	DWORD dw23Target = dwJE23 + 6 + *(int*)(dwJE23 + 2);
+	DWORD dw24Target = dwJE24 + 6 + *(int*)(dwJE24 + 2);
+
+	DWORD dwModuleEnd = (DWORD)(DWORD_PTR)arrRegions[0].pBase;
+	for (int r = 0; r < nRegions; r++)
+	{
+		DWORD dwEnd = (DWORD)(DWORD_PTR)arrRegions[r].pBase + (DWORD)arrRegions[r].nSize;
+		if (dwEnd > dwModuleEnd)
+			dwModuleEnd = dwEnd;
+	}
+
+	if (dw23Target <= dwJE23 || dw23Target >= dwModuleEnd ||
+	    dw24Target <= dwJE24 || dw24Target >= dwModuleEnd)
+		return false;
+
+	DetourFunction((PBYTE)dwInitStart, dwInitComplete, 5);
+	DetourFunction((PBYTE)dwJE23, dw23Target, 5);
+	DetourFunction((PBYTE)dwJE24, dw24Target, 5);
+
+	return true;
+}
 
 static void NProtectBypass()
 {
-  
-    while (1)
-    {
-        if (TerminateProcessByName("GameGuard.des")) {
-            DetourFunction((PBYTE)nInitStart, (DWORD)nInitComplete, 5);
-            DetourFunction((PBYTE)n23, (DWORD)n23JMP, 5);
-            DetourFunction((PBYTE)n24, (DWORD)n24JMP, 5);
-        }
+	// patch as early as possible (before GameGuard even spawns): the scan
+	// fails quietly while Themida is still unpacking and succeeds the moment
+	// unpacking is done - typically several seconds BEFORE GameGuard.des
+	// is created
+	bool bPatched = false;
+	int  nScanAttempts = 0;
 
-        Sleep(20);
-    }
+	while (!bPatched)
+	{
+		if (ScanAndPatch())
+		{
+			bPatched = true;
+			break;
+		}
+
+		nScanAttempts++;
+		if (nScanAttempts >= 3000)   // ~5 minutes at 100 ms
+			break;                   // unsupported build - fall through to the GameGuard killer
+
+		Sleep(100);
+	}
+
+	// GameGuard killer - forever. The client is already patched (or the
+	// scan gave up), so killing GameGuard at leisure cannot be observed.
+	while (1)
+	{
+		TerminateProcessByName("GameGuard.des");
+		Sleep(20);
+	}
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule,
