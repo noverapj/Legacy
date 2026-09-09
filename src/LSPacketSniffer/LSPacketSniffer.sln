@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37203.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LSPacketSniffer", "LSPacketSniffer.vcxproj", "{735CDFCA-BEF6-0AC2-0446-68F4BFE71C30}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{735CDFCA-BEF6-0AC2-0446-68F4BFE71C30}.Debug|x86.ActiveCfg = Debug|Win32
+		{735CDFCA-BEF6-0AC2-0446-68F4BFE71C30}.Debug|x86.Build.0 = Debug|Win32
+		{735CDFCA-BEF6-0AC2-0446-68F4BFE71C30}.Release|x86.ActiveCfg = Release|Win32
+		{735CDFCA-BEF6-0AC2-0446-68F4BFE71C30}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4DA7636A-0D19-4B8C-B74F-A1BD78617300}
+	EndGlobalSection
+EndGlobal
