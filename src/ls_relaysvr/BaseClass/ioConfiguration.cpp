@@ -94,9 +94,7 @@ void ioConfiguration::AcceptorInfoLoad( const char* szINI )
 	else
 		SetPort(m_udpPorts[0]);
 
-	TCHAR szTmpIP[64];
-	GetPrivateProfileString("Default", "IP", "0.0.0.0", szTmpIP, sizeof(szTmpIP), szINI);
-	SetSIpAddr(szTmpIP);
+	SetSIpAddr("0.0.0.0");
 
 	std::string szValue;
 	for(int i=1; i< 100000; i++)
@@ -169,7 +167,10 @@ void ioConfiguration::ClientInfoLoad( ioINILoader &kLoader )
 		((struct in_addr *)(fHost->h_addr))->S_un.S_un_b.s_b4
 		);
 	strcpy_s(m_IP,buffer);
-	GetLocalIpAddress();
+	//GetLocalIpAddress();
+	kLoader.SetTitle("NETWORK");
+	kLoader.LoadString("PublicIP", "127.0.0.1", m_publicIP, sizeof(m_publicIP));
+	kLoader.LoadString("PrivateIP", "127.0.0.1", m_privateIP, sizeof(m_privateIP));
 	m_dwIP = StrToDwordIP( m_publicIP );
 }
 
