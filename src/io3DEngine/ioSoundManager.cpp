@@ -599,6 +599,8 @@ void ioSoundManager::SetVolume3D(int iVolume)
 void ioSoundManager::SetVolumeStream(int iVolume)
 {
 	m_iVolumeStream = min(max(iVolume, DSBVOLUME_MIN), 0 );
+	if( m_pOggStream )
+		m_pOggStream->SetVolume( m_iVolumeStream );
 }
 
 void ioSoundManager::SetVolumePiece( int iVolume )

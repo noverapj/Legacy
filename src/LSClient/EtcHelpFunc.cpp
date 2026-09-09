@@ -1567,6 +1567,9 @@ void LoadVolumesRate()
 
 int GetDSVolume( int iVolume , VolumeType eVolumeType )
 {
+	if( iVolume <= 0 )
+		return DSBVOLUME_MIN;
+
 	int iDSVolumePerMax = (DSBVOLUME_MIN/(MAX_VOLUME-1));
 	iDSVolumePerMax /=4; // 볼륨이 4단계 정도로 구분되어 수치를 좀더 작게.
 
