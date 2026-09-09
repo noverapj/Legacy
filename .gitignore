@@ -76,3 +76,6 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+
+# Auto-generated version files (from prebuild step)
+Version.h
