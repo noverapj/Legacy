@@ -111,7 +111,7 @@ void ioItem::FillFieldItemInfo( SP2Packet &rkPacket )
 	PACKET_GUARD_VOID( rkPacket.Write(m_fItemCurGauge) );
 
 #ifdef FLAG_MODE_BY_BCKIM_DEBUG		// FillFieldItemInfo
-	LOG.PrintTimeAndLog(0,"[FLAG_MODE_BY_BCKIM:FillFieldItemInfo] m_ItemData.m_item_code[%d]m_iGameIndex[%d]m_OwnerName[%S]m_ItemPos[%f,%f,%f]"\
+	LOG.PrintTimeAndLog(0,"[FLAG_MODE_BY_BCKIM:FillFieldItemInfo] m_ItemData.m_item_code[%d]m_iGameIndex[%d]m_OwnerName[%s]m_ItemPos[%f,%f,%f]"\
 		,m_ItemData.m_item_code,	m_iGameIndex,m_OwnerName.c_str(),m_ItemPos.x,m_ItemPos.y,m_ItemPos.z);
 #endif // FLAG_MODE_BY_BCKIM_DEBUG
 

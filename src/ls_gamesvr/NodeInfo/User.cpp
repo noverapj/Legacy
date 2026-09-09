@@ -7275,7 +7275,7 @@ void User::FillConnectUserData( SP2Packet &rkPacket )
 	PACKET_GUARD_VOID( rkPacket.Write(m_user_data.m_iExcavationExp) ); 
 	PACKET_GUARD_VOID( rkPacket.Write(m_user_data.m_iAccrueHeroExpert) ); 
 	PACKET_GUARD_VOID( rkPacket.Write(m_user_data.m_iHeroExpert) );
-	PACKET_GUARD_VOID( rkPacket.Write(0) );
+	PACKET_GUARD_VOID( rkPacket.Write(1500) );
 
 	// 상대계급 정보
 	PACKET_GUARD_VOID( rkPacket.Write(m_user_relative_grade_data.m_init_code) );
@@ -8067,14 +8067,16 @@ void User::PacketParsing( CPacket &packet )
 	SP2Packet &kPacket = (SP2Packet&)packet;
 
 	// 패킷 로그 남기기
+	if (!COMPARE(packet.GetPacketID(), CUPK_CONNECT, 0x5000))
 	{
-		const char *p;
+		const char* p;
 		GetStringOfCTPCKPacket(packet.GetPacketID(), p);
 
 		std::string str;
 		kPacket.GetStringOfStream(str);
 
-		RateCheckLOG.PrintTimeAndLog( 0,"ShowLogOfPacket : Id: %s, %s, Stream: %s \n", this->GetPrivateID().c_str(), p, str.c_str());
+		RateCheckLOG.PrintTimeAndLog(0, "ShowLogOfPacket : Id: %s, %s, Stream: %s \n",
+			this->GetPrivateID().c_str(), p, str.c_str());
 	}
 
 	if( RoomBroadCast( kPacket ) )
@@ -9203,7 +9205,7 @@ void User::OnAuth(SP2Packet& packet)
 	ioLocalParent* pLocal = g_LocalMgr.GetLocal(ioLocalManager::GetLocalType());
 	if (!pLocal)
 	{
-		LOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "[%S] pLocal == NULL", __FUNCTION__);
+		LOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "[%s] pLocal == NULL", __FUNCTION__);
 		return;
 	}
 
@@ -9215,7 +9217,7 @@ void User::OnAuth(SP2Packet& packet)
 		char szDecryptID[DATA_LEN] = "";
 		if (!pLocal->ParseLoginData(szEncLoginKeyAndID, szLoginKey, sizeof(szLoginKey), szDecryptID, sizeof(szDecryptID)))
 		{
-			LOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "[%S] ParseLoginData false", __FUNCTION__);
+			LOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "[%s] ParseLoginData false", __FUNCTION__);
 			return;
 		}
 		sPrivateID = szDecryptID;
@@ -9230,7 +9232,7 @@ void User::OnAuth(SP2Packet& packet)
 
 	if (!pLocal->IsRightID(sPrivateID.c_str()))
 	{
-		LOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "[%S] Wrong ID :%s", __FUNCTION__, sPrivateID.c_str());
+		LOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "[%s] Wrong ID :%s", __FUNCTION__, sPrivateID.c_str());
 		return;
 	}
 
@@ -9258,7 +9260,7 @@ void User::OnAuth(SP2Packet& packet)
 
 	if (g_UserNodeManager.IsConnectUser(sPrivateID))
 	{
-		LOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "[%S] CONNECT_ID_ALREADY :%s", __FUNCTION__, sPrivateID.c_str());
+		LOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "[%s] CONNECT_ID_ALREADY :%s", __FUNCTION__, sPrivateID.c_str());
 		SAFEDELETE(m_pEncLoginKey);
 		return;
 	}
@@ -9497,6 +9499,9 @@ void User::OnConnect(SP2Packet& packet)
 	SetIPMapping(sPrivateIP.c_str());
 	LOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "DB  USER ID NOT :%s-%s-%s", sPrivateID.c_str(), szIPKey.c_str(), sPrivateIP.c_str());
 #else //__OHTG_LOGIN_IP_CHECK__
+	if (szPrivateIP.IsEmpty())
+		szPrivateIP = peerIP;
+
 	SetIPMapping(szPrivateIP.c_str());
 #endif //__OHTG_LOGIN_IP_CHECK__
 	SetPrivateID(sPrivateID);
@@ -30711,7 +30716,7 @@ ioUserSelectShutDown &User::GetUserSelectShutDown()
 
 bool User::GetPeerIP(char* remoteIP, const int size, int& remotePort)
 {
-	SOCKADDR_IN sockAddr;
+	/*SOCKADDR_IN sockAddr;
 	int len = sizeof(SOCKADDR_IN);
 
 	int result = getpeername( GetSocketHandle(), (SOCKADDR *)&sockAddr, &len );
@@ -30721,7 +30726,9 @@ bool User::GetPeerIP(char* remoteIP, const int size, int& remotePort)
 		remotePort = ntohs(sockAddr.sin_port);
 		return true;
 	}
-	return false;
+	return false;*/
+
+	return CConnectNode::GetPeerIP(remoteIP, size, remotePort);
 }
 
 void User::EventProcessTime()

@@ -19,7 +19,7 @@
 #define CARD_MATCHING_BY_BCKIM_DEBUG	// 2018-06-18 by bckim, 카드 짝 마추기 이벤트 추가 _DEBUG
 
 #define __OHTG_POWERDOWNMMANAGER__
-//#define __OHTG_LOGIN_IP_CHECK__
+#define __OHTG_LOGIN_IP_CHECK__
 #define __OHTG_PRACTICE_MACRO_ADD__
 #define NEXON_NEW_CASH_URL
 #define __OHTG_BATTLEROOM_MONSTER_COIN_CHECK__
