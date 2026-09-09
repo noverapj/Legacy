@@ -498,7 +498,7 @@ void ioTCPClientSecurity::InitState()
 void ioTCPClientSecurity::EncryptMsg( CPacket &rkPacket )
 {
 	// Check Sum
-	DWORD dwResult = MakeDigest(  (BYTE*)rkPacket.GetBuffer(), rkPacket.GetBufferSize()  );
+	DWORD dwResult = MakeDigestSHA256(  (BYTE*)rkPacket.GetBuffer(), rkPacket.GetBufferSize()  );
 	rkPacket.SetCheckSum( dwResult );
 	
 	// Encryption
@@ -523,7 +523,7 @@ bool ioTCPClientSecurity::IsCheckSum( CPacket &rkPacket )
 	DWORD	dwTemp = rkPacket.GetCheckSum();   //임시 저장.
 	rkPacket.SetCheckSum( 0 );
 	
-	DWORD dwResult = MakeDigest( (BYTE*)rkPacket.GetBuffer(), rkPacket.GetBufferSize() );
+	DWORD dwResult = MakeDigestSHA256( (BYTE*)rkPacket.GetBuffer(), rkPacket.GetBufferSize() );
 
 	rkPacket.SetCheckSum( dwTemp );
 

@@ -48,3 +48,18 @@ DWORD MakeDigest( BYTE *szSrc, int len )
 	
 	return dwResult;
 }
+
+DWORD MakeDigestSHA256(BYTE* szSrc, int len)
+{
+	MD5Context md5_ctx;
+	DWORD	dwDigest[4];
+
+	SHA256Init(&md5_ctx);
+	MD5Update(&md5_ctx, (unsigned char const*)szSrc, len);
+	MD5Final((BYTE*)&dwDigest, &md5_ctx);
+
+	DWORD dwResult;
+	dwResult = dwDigest[0] ^ dwDigest[1] ^ dwDigest[2] ^ dwDigest[3];
+
+	return dwResult;
+}

@@ -5,4 +5,5 @@
 TOWN_PORTAL_API void Encrypt(BYTE *szSrc, int len);
 TOWN_PORTAL_API void Decrypt(BYTE *szSrc, int len);
 TOWN_PORTAL_API DWORD MakeDigest( BYTE *szSrc, int len );
+TOWN_PORTAL_API DWORD MakeDigestSHA256( BYTE *szSrc, int len );
 #endif
