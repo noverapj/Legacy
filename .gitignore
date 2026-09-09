@@ -79,3 +79,7 @@ Testing/
 
 # Auto-generated version files (from prebuild step)
 Version.h
+
+# DXSDK (bundled for developers without DirectX SDK install)
+!lib/DXSDK/
+!lib/DXSDK/**

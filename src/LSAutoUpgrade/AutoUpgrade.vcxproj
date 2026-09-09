@@ -240,10 +240,10 @@
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Ship_ID|Win32'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Ship_PH|Win32'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Ship_SEA|Win32'">false</LinkIncremental>
-    <IncludePath Condition="'$(Configuration)|$(Platform)'=='ShippingNoXtrap|Win32'">$(IncludePath);DXSDK_DIR\include\\</IncludePath>
-    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Ship_TH|Win32'">$(IncludePath);DXSDK_DIR\include\\</IncludePath>
-    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Ship_SA|Win32'">$(IncludePath);DXSDK_DIR\include\\</IncludePath>
-    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Ship_EU|Win32'">$(IncludePath);DXSDK_DIR\include\\</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='ShippingNoXtrap|Win32'">$(IncludePath);..\..\lib\DXSDK\include</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Ship_TH|Win32'">$(IncludePath);..\..\lib\DXSDK\include</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Ship_SA|Win32'">$(IncludePath);..\..\lib\DXSDK\include</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Ship_EU|Win32'">$(IncludePath);..\..\lib\DXSDK\include</IncludePath>
     <LibraryPath Condition="'$(Configuration)|$(Platform)'=='ShippingNoXtrap|Win32'">$(LibraryPath)</LibraryPath>
     <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Ship_TH|Win32'">$(LibraryPath)</LibraryPath>
     <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Ship_SA|Win32'">$(LibraryPath)</LibraryPath>
@@ -260,11 +260,11 @@
     <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Shipping|Win32'">$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(FrameworkSDKDir)\lib</LibraryPath>
     <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Ship_NA|Win32'">$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(FrameworkSDKDir)\lib</LibraryPath>
     <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Ship_BR|Win32'">$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(FrameworkSDKDir)\lib</LibraryPath>
-    <IncludePath Condition="'$(Configuration)|$(Platform)'=='ShippingMac|Win32'">$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(FrameworkSDKDir)\include$(IncludePath);DXSDK_DIR\include\</IncludePath>
-    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Ship_TW|Win32'">$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(FrameworkSDKDir)\include$(IncludePath);DXSDK_DIR\include\</IncludePath>
-    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Ship_ID|Win32'">$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(FrameworkSDKDir)\include$(IncludePath);DXSDK_DIR\include\</IncludePath>
-    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Ship_PH|Win32'">$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(FrameworkSDKDir)\include$(IncludePath);DXSDK_DIR\include\</IncludePath>
-    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Ship_SEA|Win32'">$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(FrameworkSDKDir)\include$(IncludePath);DXSDK_DIR\include\\</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='ShippingMac|Win32'">$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(FrameworkSDKDir)\include$(IncludePath);..\..\lib\DXSDK\include</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Ship_TW|Win32'">$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(FrameworkSDKDir)\include$(IncludePath);..\..\lib\DXSDK\include</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Ship_ID|Win32'">$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(FrameworkSDKDir)\include$(IncludePath);..\..\lib\DXSDK\include</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Ship_PH|Win32'">$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(FrameworkSDKDir)\include$(IncludePath);..\..\lib\DXSDK\include</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Ship_SEA|Win32'">$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(FrameworkSDKDir)\include$(IncludePath);..\..\lib\DXSDK\include</IncludePath>
     <LibraryPath Condition="'$(Configuration)|$(Platform)'=='ShippingMac|Win32'">$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(FrameworkSDKDir)\lib$(LibraryPath)</LibraryPath>
     <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Ship_TW|Win32'">$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(FrameworkSDKDir)\lib$(LibraryPath)</LibraryPath>
     <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Ship_ID|Win32'">$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(FrameworkSDKDir)\lib$(LibraryPath)</LibraryPath>

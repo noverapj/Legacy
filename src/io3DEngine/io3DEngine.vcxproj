@@ -62,12 +62,12 @@
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Shipping|Win32'">Shipping\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Shipping|Win32'">Shipping\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Shipping|Win32'">false</LinkIncremental>
-    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FrameworkSdkDir)include;$(DXSDK_DIR)Include;..\OggVorbis\include;$(IncludePath)</IncludePath>
-    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FrameworkSdkDir)include;$(DXSDK_DIR)Include;..\OggVorbis\include;$(IncludePath)</IncludePath>
-    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Shipping|Win32'">$(FrameworkSdkDir)include;$(DXSDK_DIR)Include;..\OggVorbis\include;$(IncludePath)</IncludePath>
-    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DXSDK_DIR)lib\x86;$(DXSDK_DIR)lib;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib;..\OggVorbis\lib</LibraryPath>
-    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DXSDK_DIR)lib\x86;$(DXSDK_DIR)lib;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib;..\OggVorbis\lib</LibraryPath>
-    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Shipping|Win32'">$(DXSDK_DIR)lib\x86;$(DXSDK_DIR)lib;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib;..\OggVorbis\lib</LibraryPath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FrameworkSdkDir)include;..\..\lib\DXSDK\include;..\OggVorbis\include;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FrameworkSdkDir)include;..\..\lib\DXSDK\include;..\OggVorbis\include;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Shipping|Win32'">$(FrameworkSdkDir)include;..\..\lib\DXSDK\include;..\OggVorbis\include;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\lib\DXSDK\lib\x86;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib;..\OggVorbis\lib</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\lib\DXSDK\lib\x86;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib;..\OggVorbis\lib</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Shipping|Win32'">..\..\lib\DXSDK\lib\x86;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib;..\OggVorbis\lib</LibraryPath>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">io3DEngined</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
