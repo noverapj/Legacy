@@ -752,7 +752,7 @@ BOOL CZipArcDoc::OpenZipFile(LPCTSTR lpszZipFileName, long iMode, long iVolumeSi
 
 //				LocalType eLocalType = LCT_CHINA;
 
-				LocalType eLocalType = LCT_BRAZIL;
+				LocalType eLocalType = LCT_KOREA;
 
 
 
