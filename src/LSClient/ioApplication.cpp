@@ -3122,6 +3122,9 @@ void ioApplication::UpdateLoadedResource()
 	if( m_pMeshMgr )
 		m_pMeshMgr->UpdateNotifiedResources();
 
+	if (m_pTextureMgr)
+		m_pTextureMgr->UpdateNotifiedResources();
+
 	if( m_pSoundMgr )
 		m_pSoundMgr->UpdateNotifiedResources( m_pSceneMgr );
 }

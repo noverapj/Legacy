@@ -74,15 +74,15 @@ namespace DateHelp
 	const CTime& GetCurrTime()
 	{
 		static CTime kCurrTime;
-		if( P2PNetwork::IsNetworkPlaying() )
+		if (P2PNetwork::IsNetworkPlaying())
 		{
 			SYSTEMTIME rkServerTime;
-			g_MyInfo.GetServerTime( rkServerTime );	
-			kCurrTime = CTime( rkServerTime.wYear, rkServerTime.wMonth, rkServerTime.wDay, rkServerTime.wHour, rkServerTime.wMinute, rkServerTime.wSecond );
+			g_MyInfo.GetServerTime(rkServerTime);
+			kCurrTime = CTime(rkServerTime.wYear, rkServerTime.wMonth, rkServerTime.wDay, rkServerTime.wHour, rkServerTime.wMinute, rkServerTime.wSecond);
 		}
 		else
 		{
-			kCurrTime = CTime( GetTodayOfYear(), GetTodayOfMon(), GetTodayOfDay(), GetTodayOfHour(), GetTodayOfMin(), GetTodayOfSec() );
+			kCurrTime = CTime(GetTodayOfYear(), GetTodayOfMon(), GetTodayOfDay(), GetTodayOfHour(), GetTodayOfMin(), GetTodayOfSec());
 		}
 
 		return kCurrTime;

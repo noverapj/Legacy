@@ -316,7 +316,7 @@
       <AdditionalOptions>-Zm256 %(AdditionalOptions)</AdditionalOptions>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <PreprocessorDefinitions>NEXON_IP;NPROTECT_CSAUTH3;NPROTECT;WIN32;NDEBUG;_WINDOWS;BALANCE_RENEWAL;SHIPPING;POPUPSTORE;ICEMAWANG_AI_MODE;USE_GA;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;BALANCE_RENEWAL;SHIPPING;ICEMAWANG_AI_MODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -365,7 +365,7 @@
       </HeaderFileName>
     </Midl>
     <PreBuildEvent>
-      <Command>"c:\Program Files\TortoiseSVN\bin\SubWCRev.exe" "$(ProjectDir)\" "$(ProjectDir)TSvnVersion.tmpl" "$(ProjectDir)Version.h"</Command>
+      <Command>"../../Tools/VCSGen.exe" "$(ProjectDir)\" "$(ProjectDir)TSvnVersion.tmpl" "$(ProjectDir)Version.h"</Command>
     </PreBuildEvent>
     <ResourceCompile>
       <PreprocessorDefinitions>NDEBUG;SHIPPING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
