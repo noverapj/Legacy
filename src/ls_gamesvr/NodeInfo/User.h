@@ -69,11 +69,6 @@
 #include "ArenaModeManager.h"	// 2018-07-25 by bckim, 아레나 모드 추가
 #include "DiceGame.h"			// 2018-08-30 by bckim, 주사위 이벤트 추가  
 
-
-#ifdef XTRAP
-#include "../Xtrap/ioXtrap.h"
-#endif
-
 #ifdef NPROTECT
 #ifdef NPROTECT_CSAUTH3
 	#include "../nProtect/ggsrv30.h"
@@ -426,11 +421,6 @@ protected:      //서버 이동 정보
 
 protected:      //길드 마크 변경 웹페이지 암호
 	DWORD m_dwGuildMarkChangeKeyValue;
-
-#ifdef XTRAP
-	BYTE  m_XtrapSessionBuf[ioXtrap::MAX_SESSION_BUF];
-	DWORD m_dwXtrapCheckTime;
-#endif
 
 #ifdef NPROTECT
 #ifdef NPROTECT_CSAUTH3
@@ -788,10 +778,6 @@ public: // 친구
 	void SendBestFriendPacket( int iLastIndex );
 	bool SendFriendServerMove( int iLastIndex, int iSendCount, SP2Packet &rkPacket );
 
-#ifdef XTRAP
-	bool SendXtrapStep1();
-	bool SendXtrapStep1forHackDetect();
-#endif
 #ifdef NPROTECT
 	bool SendNProtectCheck();
 #endif 
@@ -947,9 +933,7 @@ public:
 	inline DWORD GetSaveCheckTime() const { return m_dwSaveCheckTime; }
 	inline DWORD GetSyncTime() const { return m_sync_time; }
 	inline DWORD GetSyncCheckTime() const { return m_dwSyncCheckTime; }
-#ifdef XTRAP
-	inline DWORD GetXtrapCheckTime() const { return m_dwXtrapCheckTime; }
-#endif
+
 #ifdef NPROTECT
 	inline DWORD GetNProtectCheckTime() const { return m_dwNProtectCheckTime; }
 	inline int   GetSentNProtectCheckCnt() const { return m_iSentNProtectCheckCnt; }

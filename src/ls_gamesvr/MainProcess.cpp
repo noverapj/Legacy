@@ -93,9 +93,7 @@
 #include "EtcHelpFunc.h"
 #include "Version.h"
 #include "Shutdown.h"
-#ifdef XTRAP
-#include "Xtrap/ioXtrap.h"
-#endif
+
 #include "channeling/iochannelingnodemanager.h"
 #include "local/iolocalmanager.h"
 #include "Local/ioLocalParent.h"
@@ -666,21 +664,6 @@ BOOL ioMainProcess::LoadINI()
 	g_ShuffleRoomReserveMgr.Initialize();
 
 	LoadNotMakeID();
-
-
-	//
-#ifdef XTRAP
-	kLoader.SetTitle("Xtrap");
-	bool bXtrapUse = kLoader.LoadBool( "use", false );
-	if( !g_ioXtrap.LoadDll( bXtrapUse ) )
-		return false;
-
-	if( !g_ioXtrap.LoadCS3File() )
-		return false;
-
-	if( !g_ioXtrap.Start( m_szPublicIP.c_str() ) )
-		return false;
-#endif
 
 #ifdef NPROTECT
 	kLoader.SetTitle("NProtect");
@@ -1333,11 +1316,6 @@ void ioMainProcess::DrawModule( GAMESERVERINFO& rInfo )
 	rInfo.IsBillingRelayServerActive = g_BillingRelayServer.IsActive();
 	strcpy_s( rInfo.BillingIP, ( g_BillingRelayServer.GetBillingIP() ).c_str() );
 	rInfo.BillingPort = g_BillingRelayServer.GetBillingPort();
-
-	// XTRAP
-#ifdef XTRAP
-	g_ioXtrap.GetTextCS3Version( rInfo.XtrapVersion, sizeof( rInfo.XtrapVersion ) );
-#endif
 
 	// Expiration dates
 	rInfo.LicenseDate = 0;

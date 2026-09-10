@@ -96,9 +96,7 @@ private:
 	//
 	DWORD                   m_dwNodeGhostCheckTime;
 	DWORD                   m_dwNodeSaveCheckTime;
-#ifdef XTRAP
-	DWORD                   m_dwNodeXtrapCheckTime;
-#endif
+
 #ifdef NPROTECT
 	DWORD                   m_dwNodeNProtectCheckTime;
 #endif 
@@ -541,9 +539,6 @@ public:
 	// test
 	void SendMessageTest( SP2Packet &rkPacket, User *pOnwer = NULL );
 
-#ifdef XTRAP
-	void UserNode_XtrapCheck();
-#endif
 #ifdef NPROTECT
 	void UserNode_NProtectCheck();
 #endif 

@@ -400,10 +400,6 @@ void User::InitData()
 	Help::GetGUID(szTempGUID, sizeof(szTempGUID) );
 	m_szGUID = szTempGUID;
 
-#ifdef XTRAP
-	ZeroMemory( m_XtrapSessionBuf, sizeof( m_XtrapSessionBuf ) );
-	m_dwXtrapCheckTime = 0;
-#endif
 #ifdef NPROTECT
 	m_dwNProtectCheckTime  = 0;
 	m_iSentNProtectCheckCnt= 0;
@@ -1928,11 +1924,6 @@ void User::OnCreate()
 
 	m_eSessionState = SS_CONNECT;
 	m_EventUserMgr.Init();
-	
-#ifdef XTRAP
-	m_dwXtrapCheckTime = TIMEGETTIME();
-	g_ioXtrap.Init( m_XtrapSessionBuf, GetPublicID().c_str(), GetPublicIP(), GetGradeLevel() );
-#endif
 
 #ifdef NPROTECT
 
@@ -2370,35 +2361,6 @@ bool User::SendFriendServerMove( int iLastIndex, int iSendCount, SP2Packet &rkPa
 		return false;
 	return true;
 }
-
-#ifdef XTRAP
-bool User::SendXtrapStep1()
-{
-	if( !g_ioXtrap.IsUse() )
-		return true;
-
-	XtrapPacket kXtrapPacket;
-	bool bRet = g_ioXtrap.Step1( m_XtrapSessionBuf, kXtrapPacket.m_XTrapPacket, GetPublicID().c_str(), GetPublicIP(), GetGradeLevel() );
-
-	SP2Packet kPacket( STPK_PROTECT_CHECK );
-	kPacket << kXtrapPacket;
-	SendMessage( kPacket );
-	m_dwXtrapCheckTime = TIMEGETTIME();
-
-	return bRet;
-}
-
-bool User::SendXtrapStep1forHackDetect()
-{
-	if( !g_ioXtrap.IsUse() )
-		return true;
-
-	XtrapPacket kXtrapPacket;
-	bool bRet = g_ioXtrap.Step1( m_XtrapSessionBuf, kXtrapPacket.m_XTrapPacket, GetPublicID().c_str(), GetPublicIP(), GetGradeLevel() );
-
-	return bRet;
-}
-#endif
 
 #ifdef NPROTECT
 bool User::SendNProtectCheck()
@@ -20738,26 +20700,6 @@ void User::OnWebGetCash( SP2Packet &rkPacket )
 
 void User::OnProtectCheck( SP2Packet &rkPacket )
 {
-#ifdef XTRAP
-	if( !g_ioXtrap.IsUse() )
-		return;
-
-	XtrapPacket kXtrapPacket;
-	rkPacket >> kXtrapPacket;
-
-	DWORD dwResult = 0;
-	g_ioXtrap.Step3( m_XtrapSessionBuf, kXtrapPacket.m_XTrapPacket, GetPublicID().c_str(), GetPublicIP(), GetGradeLevel() );
-	
-	//HRYOON 사용하지 않음
-	//// XTRAP_API_RETURN_DETECTHACK	15
-	//if( dwResult == 15 )
-	//{
-	//	LOG.PrintTimeAndLog(0, "User::OnProtectCheck Fail :%s:%d:%d", GetPublicID().c_str(), GetUserIndex(), dwResult );
-
-	//	if( SendXtrapStep1forHackDetect() )
-	//		ExceptionClose( 0 );
-	//}
-#endif
 #ifdef NPROTECT
 	if( !g_ioNProtect.IsUse() )
 	{

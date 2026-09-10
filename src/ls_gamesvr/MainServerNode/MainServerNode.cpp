@@ -57,10 +57,6 @@
 #include <strsafe.h>
 #include <algorithm>
 
-#ifdef XTRAP
-#include "../Xtrap/ioXtrap.h"
-#endif
-
 extern CLog TradeLOG;
 extern ioWemadeLogger g_WemadeLogger;
 extern BOOL tokenize(const std::string& str, const std::string& delimiters, std::vector<std::string>& tokens);
@@ -1468,18 +1464,13 @@ void MainServerNode::OnLoadCS3File( SP2Packet &rkPacket )
 	rkPacket >> szGUID;
 	rkPacket >> iVersion;
 	rkPacket >> iChange;
-#ifdef XTRAP
-	g_ioXtrap.OpenCS3File( szGUID, iVersion, iChange );
-#endif
 }
 
 void MainServerNode::OnCS3FileVersion( SP2Packet &rkPacket )
 {
 	ioHashString szGUID;
 	rkPacket >> szGUID;
-#ifdef XTRAP
-	g_ioXtrap.SendCS3Version( szGUID );
-#endif
+
 }
 
 void MainServerNode::OnAutoCloseAnnounce( SP2Packet &rkPacket )

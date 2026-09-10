@@ -86,9 +86,6 @@ UserNodeManager::UserNodeManager() : m_dwNodeGhostCheckTime(0), m_dwNodeSaveChec
 {
 	m_vUserNode.reserve(1500);	
 	InitChannelingUserCntMap();
-#ifdef XTRAP
-	m_dwNodeXtrapCheckTime = 0; 
-#endif
 
 #ifdef NPROTECT
 	m_dwNodeNProtectCheckTime = 0;
@@ -1636,38 +1633,6 @@ void UserNodeManager::SendMessageTest( SP2Packet &rkPacket, User *pOnwer /*= NUL
 		pUser->SendMessage( rkPacket );
 	}
 }
-
-#ifdef XTRAP
-void UserNodeManager::UserNode_XtrapCheck()
-{
-	//if( TIMEGETTIME() - m_dwNodeXtrapCheckTime < 10 ) return;
-
-	FUNCTION_TIME_CHECKER( 100000.0f, 0 );          // 0.1 초 이상 걸리면로그 남김
-
-	/************************************************************************/
-	/* 이 함수에서 작업하길 원한다면 최초 유저 정보를 모두 로드했는지 확인  */
-	/************************************************************************/	
-	LOOP_GUARD();
-	for(uUser_iter iter = m_uUserNode.begin() ; iter != m_uUserNode.end() ; ++iter)
-	{
-		User *item = iter->second;
-		if( item->GetSyncTime() == 0 ) continue;
-		if( !item->IsConnectState() ) continue;
-		if( IP_CLOUD == item->GetUserIPType() ) continue;
-
-		// Xtrap 정보 확인
-		if( TIMEGETTIME() - item->GetXtrapCheckTime() >= ioXtrap::CHECK_TIME )
-		{
-			if( !item->SendXtrapStep1() )
-				item->ExceptionClose( 0 );
-
-			//break;   // 한명씩 처리
-		}		
-	}
-	LOOP_GUARD_CLEAR();
-	m_dwNodeXtrapCheckTime = TIMEGETTIME();
-}
-#endif
 
 #ifdef NPROTECT
 void UserNodeManager::UserNode_NProtectCheck()

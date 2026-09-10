@@ -180,11 +180,6 @@ void SchedulerNode::OnShuffleRoomProcess( SP2Packet &packet )
 void SchedulerNode::OnTimerProcess( SP2Packet &packet )
 {
 
-#ifdef XTRAP
-	//유저 XTRAP 확인
-	g_UserNodeManager.UserNode_XtrapCheck();
-#endif
-
 #ifdef NPROTECT
 	g_UserNodeManager.UserNode_NProtectCheck();
 #endif 
@@ -211,9 +206,7 @@ void SchedulerNode::OnTimerProcess( SP2Packet &packet )
 	g_EventMgr.ProcessTime();
 
 	g_ProcessChecker.Process();
-#ifdef XTRAP
-	g_ioXtrap.DivideLoadCS3File();
-#endif
+
 	g_SaleMgr.ProcessTime();
 	g_QuestMgr.ProcessQuest();
 	g_HeroRankManager.UpdateProcess();

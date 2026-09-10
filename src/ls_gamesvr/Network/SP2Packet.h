@@ -1,10 +1,6 @@
 #ifndef _SP2Packet_h_
 #define _SP2Packet_h_
 
-#ifdef XTRAP
-#include "../Xtrap/ioXtrap.h"
-#endif
-
 #ifdef NPROTECT
 #include "../nProtect/ioNProtect.h"
 #ifndef NPROTECT_CSAUTH3
@@ -78,9 +74,7 @@ public:
 	SP2Packet&  operator << ( const Quaternion &arg );
 	SP2Packet&  operator << (CQueryData &arg);
 	SP2Packet&  operator << (CQueryResultData &arg);
-#ifdef XTRAP
-	SP2Packet&  operator << ( const XtrapPacket &arg );
-#endif
+
 	SP2Packet&  operator << ( const ControlKeys &arg );
 #ifdef NPROTECT
 #ifdef NPROTECT_CSAUTH3
@@ -123,9 +117,7 @@ public:
 	SP2Packet&  operator >> ( Quaternion &arg );
 	SP2Packet&  operator >> (CQueryData &arg);
 	SP2Packet&  operator >> (CQueryResultData &arg);
-#ifdef XTRAP
-	SP2Packet&  operator >> ( XtrapPacket &arg );
-#endif
+
 	SP2Packet&  operator >> ( ControlKeys &arg );
 #ifdef NPROTECT
 #ifdef NPROTECT_CSAUTH3

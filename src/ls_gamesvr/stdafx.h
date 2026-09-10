@@ -105,9 +105,6 @@ void io_random_shuffle(_It first, _It last)
 
 //#define NPROTECT
 //#define NPROTECT_CSAUTH3
-#ifndef NPROTECT
-	//#define XTRAP
-#endif
 
 // TODO: 프로그램에 필요한 추가 헤더는 여기에서 참조합니다.
 #include "../include/common.h"
