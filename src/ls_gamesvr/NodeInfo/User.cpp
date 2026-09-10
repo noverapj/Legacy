@@ -7275,7 +7275,6 @@ void User::FillConnectUserData( SP2Packet &rkPacket )
 	PACKET_GUARD_VOID( rkPacket.Write(m_user_data.m_iExcavationExp) ); 
 	PACKET_GUARD_VOID( rkPacket.Write(m_user_data.m_iAccrueHeroExpert) ); 
 	PACKET_GUARD_VOID( rkPacket.Write(m_user_data.m_iHeroExpert) );
-	PACKET_GUARD_VOID( rkPacket.Write(1500) );
 
 	// 상대계급 정보
 	PACKET_GUARD_VOID( rkPacket.Write(m_user_relative_grade_data.m_init_code) );
