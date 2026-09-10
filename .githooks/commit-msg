@@ -1,0 +1,20 @@
+#!/bin/sh
+
+COMMIT_MSG_FILE="$1"
+COMMIT_MSG=$(head -n 1 "$COMMIT_MSG_FILE")
+
+PATTERN='^(feat|fix|refactor|perf|docs|test|build|chore|revert)\((client|engine|gamesvr|mainsvr|billingsvr|dbagent|filewritesvr|loginsvr|relaysvr|launcher|tools|sql|build|deps|docs)\): .+'
+
+if echo "$COMMIT_MSG" | grep -Eq "$PATTERN"; then
+    exit 0
+fi
+
+echo ""
+echo "ERROR: Invalid commit message."
+echo "Expected: type(scope): description"
+echo ""
+echo "Example:"
+echo "  fix(client): fix BGM volume"
+echo ""
+
+exit 1
