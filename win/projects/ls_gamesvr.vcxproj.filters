@@ -39,9 +39,6 @@
     <Filter Include="Encode">
       <UniqueIdentifier>{e6c48423-a075-4a9d-a110-a91ffc1e218b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="HackShield">
-      <UniqueIdentifier>{7eaf9a5b-7f6d-486b-8415-b24a876a1340}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Local">
       <UniqueIdentifier>{2b188851-e183-4c9f-8a80-c98631f6c917}</UniqueIdentifier>
     </Filter>
@@ -95,12 +92,6 @@
     </Filter>
     <Filter Include="UtilClass">
       <UniqueIdentifier>{244d8466-fc40-4fd2-845a-102503dadb26}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="XignCode">
-      <UniqueIdentifier>{7e222789-f61c-471d-8e0a-8a9347fdf571}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Xtrap">
-      <UniqueIdentifier>{5535716c-82ca-457b-93b6-49e52a7dec50}</UniqueIdentifier>
     </Filter>
     <Filter Include="DataBase\QueryData">
       <UniqueIdentifier>{7ce919ee-4ceb-4d69-8b54-349f492a58a4}</UniqueIdentifier>
@@ -332,12 +323,6 @@
     </ClInclude>
     <ClInclude Include="..\..\src\ls_gamesvr\Encode\seed.h">
       <Filter>Encode</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\ls_gamesvr\HackShield\AntiCpXSvr.h">
-      <Filter>HackShield</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\ls_gamesvr\HackShield\ioHackShield.h">
-      <Filter>HackShield</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\ls_gamesvr\Define.h">
       <Filter>헤더 파일</Filter>
@@ -785,27 +770,6 @@
     </ClInclude>
     <ClInclude Include="..\..\src\ls_gamesvr\Util\Singleton.h">
       <Filter>UtilClass</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\ls_gamesvr\XignCode\ioXignCode.h">
-      <Filter>XignCode</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\ls_gamesvr\XignCode\xtypes.h">
-      <Filter>XignCode</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\ls_gamesvr\XignCode\zwave_sdk_errors.h">
-      <Filter>XignCode</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\ls_gamesvr\XignCode\zwave_sdk_helper.h">
-      <Filter>XignCode</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\ls_gamesvr\XignCode\zwave_sdk_linker.h">
-      <Filter>XignCode</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\ls_gamesvr\Xtrap\ioXtrap.h">
-      <Filter>Xtrap</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\ls_gamesvr\Xtrap\XTrap4Server.h">
-      <Filter>Xtrap</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\ls_gamesvr\MainProcess.h">
       <Filter>헤더 파일</Filter>
@@ -1370,9 +1334,6 @@
     <ClCompile Include="..\..\src\ls_gamesvr\Encode\seedenc.cpp">
       <Filter>Encode</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\ls_gamesvr\HackShield\ioHackShield.cpp">
-      <Filter>HackShield</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\ls_gamesvr\EtcHelpFunc.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -1750,18 +1711,6 @@
     </ClCompile>
     <ClCompile Include="..\..\src\ls_gamesvr\Util\Singleton.cpp">
       <Filter>UtilClass</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\ls_gamesvr\XignCode\ioXignCode.cpp">
-      <Filter>XignCode</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\ls_gamesvr\XignCode\zwave_sdk_linker.cpp">
-      <Filter>XignCode</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\ls_gamesvr\Xtrap\ioXtrap.cpp">
-      <Filter>Xtrap</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\ls_gamesvr\Xtrap\XTrap4Server.cpp">
-      <Filter>Xtrap</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\ls_gamesvr\MainProcess.cpp">
       <Filter>소스 파일</Filter>

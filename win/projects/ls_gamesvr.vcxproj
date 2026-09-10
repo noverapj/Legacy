@@ -198,8 +198,6 @@ copy "$(TargetDir)\$(TargetName)$(TargetExt)" "$(TargetDir)\..\..\zone_dist\ls_g
     <ClInclude Include="..\..\src\ls_gamesvr\EtcHelpFunc.h" />
     <ClInclude Include="..\..\src\ls_gamesvr\Filter\WordFilterManager.h" />
     <ClInclude Include="..\..\src\ls_gamesvr\HackCheck.h" />
-    <ClInclude Include="..\..\src\ls_gamesvr\HackShield\AntiCpXSvr.h" />
-    <ClInclude Include="..\..\src\ls_gamesvr\HackShield\ioHackShield.h" />
     <ClInclude Include="..\..\src\ls_gamesvr\INILoader\BaseDataManager.h" />
     <ClInclude Include="..\..\src\ls_gamesvr\ioCriticalError.h" />
     <ClInclude Include="..\..\src\ls_gamesvr\ioEtcLogManager.h" />
@@ -486,13 +484,6 @@ copy "$(TargetDir)\$(TargetName)$(TargetExt)" "$(TargetDir)\..\..\zone_dist\ls_g
     <ClInclude Include="..\..\src\ls_gamesvr\WemadeLog\ioLogSerialize.h" />
     <ClInclude Include="..\..\src\ls_gamesvr\WemadeLog\ioWemadeLogger.h" />
     <ClInclude Include="..\..\src\ls_gamesvr\WemadeLog\WemadeLog.h" />
-    <ClInclude Include="..\..\src\ls_gamesvr\XignCode\ioXignCode.h" />
-    <ClInclude Include="..\..\src\ls_gamesvr\XignCode\xtypes.h" />
-    <ClInclude Include="..\..\src\ls_gamesvr\XignCode\zwave_sdk_errors.h" />
-    <ClInclude Include="..\..\src\ls_gamesvr\XignCode\zwave_sdk_helper.h" />
-    <ClInclude Include="..\..\src\ls_gamesvr\XignCode\zwave_sdk_linker.h" />
-    <ClInclude Include="..\..\src\ls_gamesvr\Xtrap\ioXtrap.h" />
-    <ClInclude Include="..\..\src\ls_gamesvr\Xtrap\XTrap4Server.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="../../src/ls_gamesvr/ls_gamesvr.cpp" />
@@ -535,7 +526,6 @@ copy "$(TargetDir)\$(TargetName)$(TargetExt)" "$(TargetDir)\..\..\zone_dist\ls_g
     <ClCompile Include="..\..\src\ls_gamesvr\EtcHelpFunc.cpp" />
     <ClCompile Include="..\..\src\ls_gamesvr\Filter\WordFilterManager.cpp" />
     <ClCompile Include="..\..\src\ls_gamesvr\HackCheck.cpp" />
-    <ClCompile Include="..\..\src\ls_gamesvr\HackShield\ioHackShield.cpp" />
     <ClCompile Include="..\..\src\ls_gamesvr\ioCriticalError.cpp" />
     <ClCompile Include="..\..\src\ls_gamesvr\ioEtcLogManager.cpp" />
     <ClCompile Include="..\..\src\ls_gamesvr\ioPacketChecker.cpp" />
@@ -784,13 +774,6 @@ copy "$(TargetDir)\$(TargetName)$(TargetExt)" "$(TargetDir)\..\..\zone_dist\ls_g
     <ClCompile Include="..\..\src\ls_gamesvr\Util\Singleton.cpp" />
     <ClCompile Include="..\..\src\ls_gamesvr\WemadeLog\ioLogSerialize.cpp" />
     <ClCompile Include="..\..\src\ls_gamesvr\WemadeLog\ioWemadeLogger.cpp" />
-    <ClCompile Include="..\..\src\ls_gamesvr\XignCode\ioXignCode.cpp" />
-    <ClCompile Include="..\..\src\ls_gamesvr\XignCode\zwave_sdk_linker.cpp" />
-    <ClCompile Include="..\..\src\ls_gamesvr\Xtrap\ioXtrap.cpp" />
-    <ClCompile Include="..\..\src\ls_gamesvr\Xtrap\XTrap4Server.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Library Include="..\..\src\ls_gamesvr\CrashFind.lib" />
