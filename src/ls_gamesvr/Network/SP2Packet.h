@@ -8,10 +8,6 @@
 #endif 
 #endif // NPROTECT
 
-#ifdef XIGNCODE
-#include "XignCode/ioXignCode.h"
-#endif 
-
 #ifdef HACKSHIELD
 #include "HackShield/AntiCpXSvr.h"
 #endif
@@ -83,9 +79,7 @@ public:
 	SP2Packet&  operator << ( const GG_AUTH_DATA &arg );
 #endif
 #endif // NPROTECT
-#ifdef XIGNCODE
-	SP2Packet&  operator << ( const XignCodePacket &arg );
-#endif
+
 #ifdef HACKSHIELD
 	SP2Packet&  operator << ( const AHNHS_TRANS_BUFFER &arg );
 #endif
@@ -126,9 +120,7 @@ public:
 	SP2Packet&  operator >> ( GG_AUTH_DATA &arg );
 #endif
 #endif // NPROTECT
-#ifdef XIGNCODE
-	SP2Packet&  operator >> ( XignCodePacket &arg );
-#endif
+
 #ifdef HACKSHIELD
 	SP2Packet&  operator >> ( AHNHS_TRANS_BUFFER &arg );
 #endif

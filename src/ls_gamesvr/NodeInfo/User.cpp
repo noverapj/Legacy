@@ -123,9 +123,7 @@
 #ifdef NPROTECT
 #include "../nProtect/ionprotect.h"
 #endif
-#ifdef XIGNCODE
-#include "../XignCode/ioXignCode.h"
-#endif
+
 #ifdef HACKSHIELD
 #include "../HackShield/ioHackShield.h"
 #endif
@@ -1937,9 +1935,6 @@ void User::OnCreate()
 	m_iSentNProtectCheckCnt = 0;
 #endif // NPROTECT
 
-#ifdef XIGNCODE
-	g_ioXignCode.OnAccept( this );
-#endif 
 
 #ifdef HACKSHIELD
 	m_hHackShield = g_ioHackShield.CreateClient();
@@ -2021,10 +2016,6 @@ void User::OnSessionDestroy()
 #endif
 
 #endif // NPRPTECT
-
-#ifdef XIGNCODE
-	g_ioXignCode.OnDisconnect( this );
-#endif 
 
 #ifdef HACKSHIELD
 	g_ioHackShield.CloseClient( m_hHackShield );
@@ -9481,10 +9472,6 @@ void User::OnConnect(SP2Packet& packet)
 			, g_App.GetSecondKey().c_str(), GetGUID().c_str(), iLocalVersion, iUserClientVersion);
 	}
 
-
-#ifdef XIGNCODE
-	g_ioXignCode.SetUserInformation(this, GetPublicIP(), GetPrivateID().c_str());
-#endif
 }
 
 
@@ -20780,14 +20767,6 @@ void User::OnProtectCheck( SP2Packet &rkPacket )
 
 #endif // NPROTECT
 
-#ifdef XIGNCODE
-	if( !g_ioXignCode.IsUse() )
-		return;
-
-	XignCodePacket kPacket;
-	rkPacket >> kPacket;
-	g_ioXignCode.OnReceive( this, kPacket.m_XignCodePacket );
-#endif
 #ifdef HACKSHIELD
 	if( !g_ioHackShield.IsUse() )
 		return;

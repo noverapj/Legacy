@@ -315,18 +315,6 @@ SP2Packet& SP2Packet::operator << ( const GG_AUTH_DATA &arg )
 
 #endif // NPROTECT
 
-#ifdef XIGNCODE
-SP2Packet& SP2Packet::operator << ( const XignCodePacket &arg )
-{
-	if( !CheckLeftPacketSize( sizeof(XignCodePacket) ) ) return *this;
-
-	memcpy(&m_pBuffer[m_currentPos],&arg,sizeof(XignCodePacket));
-	m_currentPos += sizeof(XignCodePacket);
-	*m_packet_header.m_Size = m_currentPos;
-
-	return *this;
-}
-#endif
 
 #ifdef HACKSHIELD
 SP2Packet& SP2Packet::operator << ( const AHNHS_TRANS_BUFFER &arg )
@@ -712,21 +700,7 @@ SP2Packet& SP2Packet::operator >> ( GG_AUTH_DATA &arg )
 }
 #endif
 #endif // NPROTECT
-#ifdef XIGNCODE
-SP2Packet& SP2Packet::operator >> ( XignCodePacket &arg )
-{
-	if( !CheckRightPacketSize( sizeof(XignCodePacket) ) )
-	{
-		ZeroMemory( &arg, sizeof( XignCodePacket ) );
-		return *this;
-	}
 
-	memcpy(&arg,&m_pBuffer[m_currentPos],sizeof(XignCodePacket));
-	m_currentPos += sizeof(XignCodePacket);
-
-	return *this;
-}
-#endif 
 #ifdef HACKSHIELD
 SP2Packet& SP2Packet::operator >> ( AHNHS_TRANS_BUFFER &arg )
 {

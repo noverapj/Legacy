@@ -672,13 +672,6 @@ BOOL ioMainProcess::LoadINI()
 		return false;
 #endif
 
-#ifdef XIGNCODE
-	kLoader.SetTitle("Xigncode");
-	bool bXigncodeUse = kLoader.LoadBool( "use", false );
-	if( !g_ioXignCode.Start( bXigncodeUse ) )
-		return false;
-#endif
-
 #ifdef HACKSHIELD
 	kLoader.SetTitle("HackShield");
 	bool bHackShieldUse = kLoader.LoadBool( "use", false );
