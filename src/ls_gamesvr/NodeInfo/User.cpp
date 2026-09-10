@@ -124,10 +124,6 @@
 #include "../nProtect/ionprotect.h"
 #endif
 
-#ifdef HACKSHIELD
-#include "../HackShield/ioHackShield.h"
-#endif
-
 //////////////////////////////////////////////////////////////////////
 // Construction/Destruction
 //////////////////////////////////////////////////////////////////////
@@ -402,10 +398,7 @@ void User::InitData()
 	m_dwNProtectCheckTime  = 0;
 	m_iSentNProtectCheckCnt= 0;
 #endif 
-#ifdef HACKSHIELD
-	m_hHackShield = ANTICPX_INVALID_HANDLE_VALUE;
-	m_dwHackShieldCheckTime = 0;
-#endif 
+
 	m_szBillingGUID.Clear();
 	m_bJoinServerLobby = false;
 
@@ -1935,11 +1928,6 @@ void User::OnCreate()
 	m_iSentNProtectCheckCnt = 0;
 #endif // NPROTECT
 
-
-#ifdef HACKSHIELD
-	m_hHackShield = g_ioHackShield.CreateClient();
-	m_dwHackShieldCheckTime = TIMEGETTIME();
-#endif
 }
 
 void User::OnDestroy()
@@ -2017,9 +2005,6 @@ void User::OnSessionDestroy()
 
 #endif // NPRPTECT
 
-#ifdef HACKSHIELD
-	g_ioHackShield.CloseClient( m_hHackShield );
-#endif
 }
 
 void User::OnNameChageSync()
@@ -2420,22 +2405,6 @@ bool User::SendNProtectCheck()
 }
 #endif // NPROTECT
 
-#ifdef HACKSHIELD
-bool User::SendHackShieldCheck()
-{
-	AHNHS_TRANS_BUFFER kBuf;
-	if( !g_ioHackShield.MakeRequest( m_hHackShield, kBuf ) )
-		return false;
-
-	SP2Packet kPacket( STPK_PROTECT_CHECK );
-	kPacket << kBuf;
-	SendMessage( kPacket );
-
-	m_dwHackShieldCheckTime = TIMEGETTIME();
-	//LOG.PrintTimeAndLog( LOG_DEBUG_LEVEL, "%s %s", __FUNCTION__ , GetPublicID().c_str() );
-	return true;
-}
-#endif
 
 void User::EnterRoom( Room *pRoom )
 {
@@ -20767,19 +20736,6 @@ void User::OnProtectCheck( SP2Packet &rkPacket )
 
 #endif // NPROTECT
 
-#ifdef HACKSHIELD
-	if( !g_ioHackShield.IsUse() )
-		return;
-
-	AHNHS_TRANS_BUFFER kBuf;
-	rkPacket >> kBuf;
-	if( !g_ioHackShield.VerifyRespose( m_hHackShield, kBuf ) )
-	{
-		LOG.PrintTimeAndLog( LOG_DEBUG_LEVEL, "%s : Error : %s:%s:%d", __FUNCTION__, GetPublicID().c_str(), GetPrivateID().c_str(), GetUserIndex() );
-		ExceptionClose( 0 );
-	}
-	//LOG.PrintTimeAndLog( LOG_DEBUG_LEVEL, "%s %s", __FUNCTION__ , GetPublicID().c_str() );
-#endif
 }
 
 void User::OnRoomStealthEnter( SP2Packet &rkPacket )

@@ -80,9 +80,6 @@
 #endif
 #endif // NPROTECT
 
-#ifdef HACKSHIELD
-#include "../HackShield/ioHackShield.h"
-#endif
 
 class Room;
 class BattleRoomParent;
@@ -432,10 +429,6 @@ protected:      //길드 마크 변경 웹페이지 암호
 	int       m_iSentNProtectCheckCnt;
 #endif // NPROTECT
 
-#ifdef HACKSHIELD
-	AHNHS_CLIENT_HANDLE m_hHackShield;
-	DWORD               m_dwHackShieldCheckTime;
-#endif
 	bool  m_bFirstChangeID;
 
 	DWORD m_dwExcavatingTime;
@@ -781,9 +774,6 @@ public: // 친구
 #ifdef NPROTECT
 	bool SendNProtectCheck();
 #endif 
-#ifdef HACKSHIELD
-	bool SendHackShieldCheck();
-#endif 
 
 	// Ex Info Fun
 	void  AddAward( int iCategory, int iPoint );
@@ -938,9 +928,7 @@ public:
 	inline DWORD GetNProtectCheckTime() const { return m_dwNProtectCheckTime; }
 	inline int   GetSentNProtectCheckCnt() const { return m_iSentNProtectCheckCnt; }
 #endif 
-#ifdef HACKSHIELD
-	inline DWORD GetHackShieldCheckTime() const { return m_dwHackShieldCheckTime; }
-#endif
+
 	inline TeamType GetTeam() const { return m_Team; }
 	inline TeamType GetShamBattleTeam() const { return m_ShamBattleTeam; }
 	inline int GetSelectChar() const { return m_select_char; }

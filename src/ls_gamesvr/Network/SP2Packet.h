@@ -8,10 +8,6 @@
 #endif 
 #endif // NPROTECT
 
-#ifdef HACKSHIELD
-#include "HackShield/AntiCpXSvr.h"
-#endif
-
 #ifdef SRC_LATIN
 #include "Apex/ioApex.h"
 #endif
@@ -80,9 +76,6 @@ public:
 #endif
 #endif // NPROTECT
 
-#ifdef HACKSHIELD
-	SP2Packet&  operator << ( const AHNHS_TRANS_BUFFER &arg );
-#endif
 #ifdef SRC_LATIN
 	SP2Packet&  operator << ( const ApexPacket &arg );
 #endif
@@ -121,9 +114,6 @@ public:
 #endif
 #endif // NPROTECT
 
-#ifdef HACKSHIELD
-	SP2Packet&  operator >> ( AHNHS_TRANS_BUFFER &arg );
-#endif
 #ifdef SRC_LATIN
 	SP2Packet&  operator >> ( ApexPacket &arg );
 #endif

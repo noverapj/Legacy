@@ -672,13 +672,6 @@ BOOL ioMainProcess::LoadINI()
 		return false;
 #endif
 
-#ifdef HACKSHIELD
-	kLoader.SetTitle("HackShield");
-	bool bHackShieldUse = kLoader.LoadBool( "use", false );
-	if( !g_ioHackShield.Start( bHackShieldUse ) )
-		return false;
-#endif
-
 #ifdef SRC_LATIN
 	kLoader.SetTitle("Apex");
 	bool bApexUse = kLoader.LoadBool( "use", true );

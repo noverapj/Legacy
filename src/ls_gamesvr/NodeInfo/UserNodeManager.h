@@ -100,9 +100,7 @@ private:
 #ifdef NPROTECT
 	DWORD                   m_dwNodeNProtectCheckTime;
 #endif 
-#ifdef HACKSHIELD
-	DWORD                   m_dwNodeHackShieldCheckTime;
-#endif 
+
 	DWORD                   m_dwNodeRefillMonsterCoinTime;
 	DWORD                   m_dwNodeTimeGashaponCheckTime;
 	DWORD                   m_dwNodeSyncTime;
@@ -542,9 +540,7 @@ public:
 #ifdef NPROTECT
 	void UserNode_NProtectCheck();
 #endif 
-#ifdef HACKSHIELD
-	void UserNode_HackShieldCheck();
-#endif 
+
 	void UserNode_RefillMonsterCoin(); 
 	void UserNode_RefillClover(); 
 	void UserNode_RefillRaidCoin(); 

@@ -91,10 +91,6 @@ UserNodeManager::UserNodeManager() : m_dwNodeGhostCheckTime(0), m_dwNodeSaveChec
 	m_dwNodeNProtectCheckTime = 0;
 #endif 
 
-#ifdef HACKSHIELD
-	m_dwNodeHackShieldCheckTime = 0;
-#endif
-
 	CTime curTime = CTime::GetCurrentTime();
 	m_OakBarrelInitTime = Help::GetSafeValueForCTimeConstructor( curTime.GetYear(), curTime.GetMonth(), curTime.GetDay(), 0, 0, 0 );
 }
@@ -1670,37 +1666,6 @@ void UserNodeManager::UserNode_NProtectCheck()
 }
 #endif
 
-#ifdef HACKSHIELD
-void UserNodeManager::UserNode_HackShieldCheck()
-{
-	if( TIMEGETTIME() - m_dwNodeHackShieldCheckTime < 10 ) return;
-
-	FUNCTION_TIME_CHECKER( 100000.0f, 0 );          // 0.1 초 이상 걸리면로그 남김
-
-	DWORD dwCheckTime = 0;
-	/************************************************************************/
-	/* 이 함수에서 작업하길 원한다면 최초 유저 정보를 모두 로드했는지 확인  */
-	/************************************************************************/	
-	LOOP_GUARD();
-	for(uUser_iter iter = m_uUserNode.begin() ; iter != m_uUserNode.end() ; ++iter)
-	{
-		User *item = iter->second;
-		if( item->GetSyncTime() == 0 ) continue;
-		if( !item->IsConnectState() ) continue;
-
-		// 정보 확인
-		if( TIMEGETTIME() - item->GetHackShieldCheckTime() >= ioHackShield::CHECK_TIME )
-		{
-			if( !item->SendHackShieldCheck() )
-				item->ExceptionClose( 0 );
-
-			break;   // 한명씩 처리
-		}		
-	}
-	LOOP_GUARD_CLEAR();
-	m_dwNodeHackShieldCheckTime = TIMEGETTIME();
-}
-#endif
 void UserNodeManager::UserNode_RefillMonsterCoin()
 {
 	if( TIMEGETTIME() - m_dwNodeRefillMonsterCoinTime < 30000 ) return;

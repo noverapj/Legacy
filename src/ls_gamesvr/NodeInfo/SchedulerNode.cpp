@@ -184,10 +184,6 @@ void SchedulerNode::OnTimerProcess( SP2Packet &packet )
 	g_UserNodeManager.UserNode_NProtectCheck();
 #endif 
 
-#ifdef HACKSHIELD
-	g_UserNodeManager.UserNode_HackShieldCheck();
-#endif 
-
 	// 프로세스.
 	g_UserNodeManager.UserNode_DataSync();
 	g_BattleRoomManager.UpdateProcess();
