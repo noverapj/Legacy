@@ -14503,14 +14503,8 @@ LRESULT ioApplication::MsgProc( HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lPar
 		}
 		break;
 	case WM_DESTROY:
-#ifdef SHIPPING
-		if( !g_bHappenCrash && !g_bHappenError )
-			Help::ExcuteWeb( m_pBrowserMgr->GetChannelingURL().c_str() );
-
 #if defined( USE_GA )
-		SetGAStart( false );
-#endif
-
+		SetGAStart(false);
 #endif
 
 		ReleaseAll();
