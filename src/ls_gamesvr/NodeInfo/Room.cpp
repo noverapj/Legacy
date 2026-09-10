@@ -2952,9 +2952,7 @@ void Room::OnDropDie( User *pSend, SP2Packet &rkPacket )
 
 	ioHashString szDieChar;
 	rkPacket >> szDieChar;
-	BYTE unknown = 0;
-	rkPacket >> unknown;
-	LOG.PrintTimeAndLog(0, "[%s] field = %d",__FUNCTION__, unknown);
+
 	ModeRecord *pRecord = m_pMode->FindModeRecord( szDieChar );
 	if( pRecord )
 	{
@@ -2974,9 +2972,6 @@ void Room::OnWeaponDie( User *pSend, SP2Packet &rkPacket )
 
 	ioHashString szDieChar;
 	rkPacket >> szDieChar;
-	BYTE unknown = 0;
-	rkPacket >> unknown;
-	LOG.PrintTimeAndLog(0, "[%s] field = %d", __FUNCTION__, unknown);
 
 	ModeRecord *pRecord = m_pMode->FindModeRecord( szDieChar );
 	if( pRecord )
