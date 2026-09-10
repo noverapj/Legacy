@@ -10,10 +10,6 @@
 #include "nProtect/ioNProtect.h"
 #endif 
  
-#ifdef XIGNCODE
-#include "XignCode/ioXignCode.h"
-#endif
- 
 #ifdef HACKSHIELD
 #include "HackShield/ioHackShield.h"
 #endif
@@ -161,27 +157,7 @@ int WINAPI WinMain( HINSTANCE hInstance,
 		return 0;
 	}
 	LOG.PrintTimeAndLog(0, "[Main] - nProtect Init Complete");
-#endif 
-#ifdef XIGNCODE
-	LOG.PrintTimeAndLog(0, "[Main] - XignCode Init Start");
-	if( !g_ioXignCode.Start() )
-	{
-		ioLocalParent *pLocal = g_LocalMgr.GetLocal( ioLocalManager::GetLocalType() );
-		ioStringManager *pStringMgr = new ioStringManager;
-		if( pStringMgr && pLocal )
-			pStringMgr->LoadData( "", "", pLocal->GetMemTextList(), true );
-
-		MessageBox( NULL, STR(1), "LostSaga_Client - Error", MB_TOPMOST );
-		SAFEDELETE( pLocalMgr );
-		SAFEDELETE( pStringMgr );
-		SAFEDELETE( pStatics );
-		g_ioXignCode.Cleanup();
-		ioXignCode::ReleaseInstance();
-		LOG.PrintTimeAndLog(0, "[Main] - XignCode Error : Start() failed" );
-		return 0;
-	}
-	LOG.PrintTimeAndLog(0, "[Main] - XignCode Init Complete");
-#endif 
+#endif
 
 #ifdef HACKSHIELD
 	LOG.PrintTimeAndLog(0, "[Main] - HackShield Init Start");
@@ -224,10 +200,7 @@ int WINAPI WinMain( HINSTANCE hInstance,
 #ifdef NPROTECT
 		ioNProtect::ReleaseInstance();
 #endif
-#ifdef XIGNCODE
-		g_ioXignCode.Cleanup();
-		ioXignCode::ReleaseInstance();
-#endif
+
 #ifdef HACKSHIELD
 		g_ioHackShield.End();
 		ioHackShield::ReleaseInstance();
@@ -250,10 +223,7 @@ int WINAPI WinMain( HINSTANCE hInstance,
 #ifdef NPROTECT
 		ioNProtect::ReleaseInstance();
 #endif
-#ifdef XIGNCODE
-		g_ioXignCode.Cleanup();
-		ioXignCode::ReleaseInstance();
-#endif
+
 #ifdef HACKSHIELD
 		g_ioHackShield.End();
 		ioHackShield::ReleaseInstance();
@@ -287,10 +257,7 @@ int WINAPI WinMain( HINSTANCE hInstance,
 #ifdef NPROTECT
 		ioNProtect::ReleaseInstance();
 #endif
-#ifdef XIGNCODE
-		g_ioXignCode.Cleanup();
-		ioXignCode::ReleaseInstance();
-#endif
+
 #ifdef HACKSHIELD
 		g_ioHackShield.End();
 		ioHackShield::ReleaseInstance();
@@ -320,10 +287,7 @@ int WINAPI WinMain( HINSTANCE hInstance,
 #ifdef NPROTECT
 		ioNProtect::ReleaseInstance();
 #endif
-#ifdef XIGNCODE
-		g_ioXignCode.Cleanup();
-		ioXignCode::ReleaseInstance();
-#endif
+
 #ifdef HACKSHIELD
 		g_ioHackShield.End();
 		ioHackShield::ReleaseInstance();
@@ -351,10 +315,7 @@ int WINAPI WinMain( HINSTANCE hInstance,
 #ifdef NPROTECT
 		ioNProtect::ReleaseInstance();
 #endif
-#ifdef XIGNCODE
-		g_ioXignCode.Cleanup();
-		ioXignCode::ReleaseInstance();
-#endif
+
 #ifdef HACKSHIELD
 		g_ioHackShield.End();
 		ioHackShield::ReleaseInstance();
@@ -438,10 +399,7 @@ int WINAPI WinMain( HINSTANCE hInstance,
 #ifdef NPROTECT
 		ioNProtect::ReleaseInstance();
 #endif
-#ifdef XIGNCODE
-		g_ioXignCode.Cleanup();
-		ioXignCode::ReleaseInstance();
-#endif
+
 #ifdef HACKSHIELD
 		g_ioHackShield.End();
 		ioHackShield::ReleaseInstance();
@@ -469,10 +427,7 @@ int WINAPI WinMain( HINSTANCE hInstance,
 #ifdef NPROTECT
 		ioNProtect::ReleaseInstance();
 #endif
-#ifdef XIGNCODE
-		g_ioXignCode.Cleanup();
-		ioXignCode::ReleaseInstance();
-#endif
+
 #ifdef HACKSHIELD
 		g_ioHackShield.End();
 		ioHackShield::ReleaseInstance();

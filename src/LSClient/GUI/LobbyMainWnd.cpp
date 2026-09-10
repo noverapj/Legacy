@@ -1163,10 +1163,6 @@ void LobbyWnd::OnRender()
 		szProtect = "HACKSHIELD";
 #endif
 
-#ifdef XIGNCODE
-		szProtect = "XIGNCODE";
-#endif
-
 		int iLicentDate = 0;
 		ioLocalParent *pLocal = g_LocalMgr.GetLocal( ioLocalManager::GetLocalType() );
 		if( pLocal )

@@ -21,10 +21,6 @@
 #include "nProtect/ioNProtect.h"
 #endif 
 
-#ifdef XIGNCODE
-#include "XignCode/ioXignCode.h"
-#endif 
-
 extern bool g_bHappenError;
 extern int  g_iErrorNumber;
 extern char g_szErrorLog[2048];
@@ -708,9 +704,7 @@ bool CLogin::_OnConnectOK( const ioHashString &szID, SP2Packet &rkPacket )
 #ifdef NPROTECT
 	g_ioNProtect.SendPrivateID( szID.c_str() );
 #endif 
-#ifdef XIGNCODE
-	g_ioXignCode.OnConnect();
-#endif 
+
 	if( g_MyInfo.GetBlockType() == BKT_BLOCK ||
 		g_MyInfo.GetBlockType() == BKT_NONE )
 	{

@@ -2835,9 +2835,6 @@
     <ClCompile Include="nProtect\ioNProtect.cpp">
       <Filter>nProtect</Filter>
     </ClCompile>
-    <ClCompile Include="XignCode\ioXignCode.cpp">
-      <Filter>XignCode</Filter>
-    </ClCompile>
     <ClCompile Include="HackShield\ioHackShield.cpp">
       <Filter>HackShield</Filter>
     </ClCompile>
@@ -8236,18 +8233,6 @@
     </ClInclude>
     <ClInclude Include="nProtect\NPGameLib.h">
       <Filter>nProtect</Filter>
-    </ClInclude>
-    <ClInclude Include="XignCode\ioXignCode.h">
-      <Filter>XignCode</Filter>
-    </ClInclude>
-    <ClInclude Include="XignCode\xtypes.h">
-      <Filter>XignCode</Filter>
-    </ClInclude>
-    <ClInclude Include="XignCode\zcwave_errors.h">
-      <Filter>XignCode</Filter>
-    </ClInclude>
-    <ClInclude Include="XignCode\zwave_sdk_client.h">
-      <Filter>XignCode</Filter>
     </ClInclude>
     <ClInclude Include="HackShield\HShield.h">
       <Filter>HackShield</Filter>

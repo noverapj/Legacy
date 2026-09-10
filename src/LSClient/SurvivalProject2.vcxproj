@@ -5467,7 +5467,6 @@
     <ClCompile Include="ioUserMedalItem.cpp" />
     <ClCompile Include="TradeInfoManager.cpp" />
     <ClCompile Include="nProtect\ioNProtect.cpp" />
-    <ClCompile Include="XignCode\ioXignCode.cpp" />
     <ClCompile Include="HackShield\ioHackShield.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -7567,10 +7566,6 @@
     <ClInclude Include="TradeInfoManager.h" />
     <ClInclude Include="nProtect\ioNProtect.h" />
     <ClInclude Include="nProtect\NPGameLib.h" />
-    <ClInclude Include="XignCode\ioXignCode.h" />
-    <ClInclude Include="XignCode\xtypes.h" />
-    <ClInclude Include="XignCode\zcwave_errors.h" />
-    <ClInclude Include="XignCode\zwave_sdk_client.h" />
     <ClInclude Include="HackShield\HShield.h" />
     <ClInclude Include="HackShield\HSUpChk.h" />
     <ClInclude Include="HackShield\ioHackShield.h" />

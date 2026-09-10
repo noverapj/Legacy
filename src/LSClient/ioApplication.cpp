@@ -111,10 +111,6 @@
 #include "nProtect/ioNProtect.h"
 #endif 
 
-#ifdef XIGNCODE
-#include "XignCode/ioXignCode.h"
-#endif 
-
 #ifdef HACKSHIELD
 #include "HackShield/ioHackShield.h"
 #endif
@@ -751,10 +747,6 @@ void ioApplication::ReleaseAll()
 	CVoiceChat::ReleaseInstance();
 	UserInfoToolTip::Clear();
 
-#ifdef XIGNCODE
-	g_ioXignCode.OnDisconnect();
-#endif 
-
 	SAFEDELETE(m_pEffectFac);
 	SAFEDELETE(m_pTrailDataMgr);
 
@@ -823,10 +815,6 @@ void ioApplication::ReleaseAll()
 	ioNProtect::ReleaseInstance();
 #endif 
 
-#ifdef XIGNCODE
-	g_ioXignCode.Cleanup();
-	ioXignCode::ReleaseInstance();
-#endif
 #ifdef HACKSHIELD
 	g_ioHackShield.End();
 	ioHackShield::ReleaseInstance();
@@ -3352,11 +3340,6 @@ void ioApplication::MainLoop()
 
 #ifdef NPROTECT
 		g_ioNProtect.Process();
-		ErrorReport::SetPosition( 1000, 29 );
-#endif
-
-#ifdef XIGNCODE
-		g_ioXignCode.Process();
 		ErrorReport::SetPosition( 1000, 29 );
 #endif
 
@@ -12489,11 +12472,7 @@ void ioApplication::OnProtectCheck( SP2Packet &rkPacket )
 	g_ioNProtect.OnRecieveCheck( kAuthData );
 #endif
 #endif // NPROTECT
-#ifdef XIGNCODE
-	XignCodePacket kPacket;
-	rkPacket >> kPacket;
-	g_ioXignCode.OnRecieveCheck( kPacket );
-#endif
+
 #ifdef HACKSHIELD
 	HackShieldPacket kRecvBuf;
 	rkPacket >> kRecvBuf;

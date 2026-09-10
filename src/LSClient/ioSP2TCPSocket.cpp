@@ -360,11 +360,7 @@ void ioTCPSocketManager::CompleteChangeServer()
 
 	//SetChangeStateText("%s번게임서버와 TCP 데이터 처리 완료.");
 	SetChangeStateText("Sukses mengirim TCP data ke game server %s.");
-
-#ifdef XIGNCODE
-	g_ioXignCode.OnDisconnect();
-	g_ioXignCode.OnConnect();
-#endif 
+ 
 }
 
 void ioTCPSocketManager::ChangeServerStateEnd()
