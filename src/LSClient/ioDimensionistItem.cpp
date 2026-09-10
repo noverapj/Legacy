@@ -463,7 +463,6 @@ void ioDimensionistItem::SetExtraInfoToWeapon( ioWeapon *pWeapon, bool bJumpAtta
 
 void ioDimensionistItem::OnItemGaugeCancel( ioBaseChar *pOwner, SP2Packet &rkPacket )
 {
-	int iCircleType;
 	int iState;
 	rkPacket >> iState;
 	rkPacket >> m_iCurCombo;

@@ -62,7 +62,6 @@ void ioMagneticDash::LoadProperty( ioINILoader &rkLoader )
 {
 	ioExtendDash::LoadProperty( rkLoader );
 
-	char szKey[MAX_PATH];
 	char szBuf[MAX_PATH];
 
 	// 차지 동작
