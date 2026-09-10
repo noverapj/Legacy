@@ -14512,7 +14512,7 @@ LRESULT ioApplication::MsgProc( HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lPar
 #ifdef SHIPPING
 		if( !g_bHappenCrash && !g_bHappenError )
 		{
-			Help::MinimizeAllWindows(false);
+			//Help::MinimizeAllWindows(false); //annoying, no need
 			ioLocalParent *pLocal = g_LocalMgr.GetLocal( ioLocalManager::GetLocalType() );
 			if( pLocal && pLocal->IsExecuteLuncher() )
 				ExecuteLuncher();
