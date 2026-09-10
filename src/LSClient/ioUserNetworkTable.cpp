@@ -195,7 +195,13 @@ UserNetworkInfo* ioUserNetworkTable::AddNewUser( const DWORD dwUserIndex,
 
 		strncpy( pInfo->m_addrSend.m_IP, pInfo->m_addrPublic.m_IP, LENGTH_IP );
 		pInfo->m_addrSend.m_Port = pInfo->m_addrPublic.m_Port;
-	}	
+	}
+
+	if (Help::IsOnlyServerRelay())
+	{
+		strncpy(pInfo->m_addrSend.m_IP, pInfo->m_addrTransfer.m_IP, LENGTH_IP);
+		pInfo->m_addrSend.m_Port = pInfo->m_addrTransfer.m_Port;
+	}
 
 	pInfo->m_bHoleSendComplete = true;
 	pInfo->m_bHoleRecvComplete = true;
@@ -290,7 +296,7 @@ void ioUserNetworkTable::ClientToClientPortChange( const ioHashString &rkName, c
 		if( g_App.IsMeDeveloper() )
 			g_ChatMgr.SetSystemMsg( szLog );
 
-		if( pInfo->m_bHoleSendComplete )
+		if( pInfo->m_bHoleSendComplete && !Help::IsOnlyServerRelay())
 		{
 			strncpy( pInfo->m_addrP2pHole.m_IP, szRcvIP, LENGTH_IP );
 			pInfo->m_addrP2pHole.m_Port= iRcvPort;
@@ -658,8 +664,12 @@ void ioUserNetworkTable::HoleSendComplete( const ioHashString &rkName, const ioH
 	if( pInfo )
 	{
 		pInfo->m_bHoleSendComplete = true;
-		strncpy( pInfo->m_addrSend.m_IP, szIP.c_str(), LENGTH_IP );
-		pInfo->m_addrSend.m_Port = iPort;  
+		if (!Help::IsOnlyServerRelay())
+		{
+			strncpy(pInfo->m_addrSend.m_IP, szIP.c_str(), LENGTH_IP);
+			pInfo->m_addrSend.m_Port = iPort;
+		}
+
 		if( g_App.IsMeDeveloper() )
 		{
 			char szLog[MAX_PATH*2] = "";
