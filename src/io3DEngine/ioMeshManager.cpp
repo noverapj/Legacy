@@ -1,5 +1,3 @@
-S
-
 #include "stdafx.h"
 
 #include "ioResource.h"
