@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <LostSagaLib>C:\Bonus\lib\</LostSagaLib>
+    <WorkingDir>C:\LosaMyDev</WorkingDir>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup>
+    <PostBuildEvent>
+      <Command>copy "$(TargetDir)lostsaga.exe" "$(WorkingDir)\" 
+copy "$(TargetDir)lostsaga.pdb" "$(WorkingDir)\" 
+copy "$(LostSagaLib)io3dengined.dll" "$(WorkingDir)\" 
+copy "$(LostSagaLib)io3dengined.pdb" "$(WorkingDir)\" </Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>../../lib/imc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="LostSagaLib">
+      <Value>$(LostSagaLib)</Value>
+    </BuildMacro>
+    <BuildMacro Include="WorkingDir">
+      <Value>$(WorkingDir)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

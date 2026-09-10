@@ -1,0 +1,13 @@
+#pragma once
+
+#define ANN_DEFAULT		10
+#define ANN_GET_ITEM	10
+#define ANN_SYMBOL_DESTROY	10
+#define ANN_LEVELUP		10
+
+#define ANN_DEFENSE_SYMBOL	6
+#define ANN_ROUND_TIMELIMIT 5
+
+#define ANN_EXIT_PRISONERMODE 8
+#define ANN_REVIVAL		20
+#define ANN_GAME_READY	30

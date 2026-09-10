@@ -1,0 +1,203 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 한국어 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_WEB_TITLE_CASH_US   BITMAP                  "res\\web_title_cash_us.bmp"
+IDB_WEB_TITLE_ENTRY_US  BITMAP                  "res\\web_title_entry_us.bmp"
+IDB_WEB_TITLE_GUILD_US  BITMAP                  "res\\web_title_guild_us.bmp"
+IDB_WEB_TITLE_GUILD_MARK_US BITMAP                  "res\\web_title_guild_mark_us.bmp"
+IDB_WEB_TITLE_HOME_US   BITMAP                  "res\\web_title_home_us.bmp"
+IDB_WINDOW_TITLE_LOSA_US BITMAP                  "res\\web_title_losa_us.bmp"
+IDB_EXIT_BUTTON         BITMAP                  "res\\web_exit_button.bmp"
+IDB_WEB_OUTLINE         BITMAP                  "res\\web_outline.bmp"
+IDB_WEB_TITLE_HOME      BITMAP                  "res\\web_title_home.BMP"
+IDB_WEB_TITLE_ENTRY     BITMAP                  "res\\web_title_entry.bmp"
+IDB_WEB_TITLE_GUILD     BITMAP                  "res\\web_title_guild.bmp"
+IDB_WEB_TITLE_GUILD_MARK BITMAP                  "res\\web_title_guild_mark.bmp"
+IDB_WINDOW_TITLE_LOSA   BITMAP                  "res\\web_title_losa.bmp"
+IDB_WEB_TITLE_CASH      BITMAP                  "res\\web_title_cash.bmp"
+IDB_BACK_ERROR          BITMAP                  "res\\error_back.bmp"
+IDB_EXIT_C              BITMAP                  "res\\error_btn_exit_c.bmp"
+IDB_EXIT_N              BITMAP                  "res\\error_btn_exit_n.bmp"
+IDB_EXIT_O              BITMAP                  "res\\error_btn_exit_o.bmp"
+IDB_SOLUTION_C          BITMAP                  "res\\error_btn_solution_c.bmp"
+IDB_SOLUTION_N          BITMAP                  "res\\error_btn_solution_n.bmp"
+IDB_SOLUTION_O          BITMAP                  "res\\error_btn_solution_o.bmp"
+IDB_X_C                 BITMAP                  "res\\error_btn_x_c.bmp"
+IDB_X_N                 BITMAP                  "res\\error_btn_x_n.bmp"
+IDB_X_O                 BITMAP                  "res\\error_btn_x_o.bmp"
+IDB_BACK_ERROR_TW       BITMAP                  "res\\error_back_tw.bmp"
+IDB_EXIT_C_TW           BITMAP                  "res\\error_btn_exit_c_tw.bmp"
+IDB_EXIT_N_TW           BITMAP                  "res\\error_btn_exit_n_tw.bmp"
+IDB_EXIT_O_TW           BITMAP                  "res\\error_btn_exit_o_tw.bmp"
+IDB_SOLUTION_C_TW       BITMAP                  "res\\error_btn_solution_c_tw.bmp"
+IDB_SOLUTION_N_TW       BITMAP                  "res\\error_btn_solution_n_tw.bmp"
+IDB_SOLUTION_O_TW       BITMAP                  "res\\error_btn_solution_o_tw.bmp"
+IDB_WEB_TITLE_CASH_TW   BITMAP                  "res\\web_title_cash_tw.bmp"
+IDB_WEB_TITLE_ENTRY_TW  BITMAP                  "res\\web_title_entry_tw.bmp"
+IDB_WEB_TITLE_GUILD_TW  BITMAP                  "res\\web_title_guild_tw.bmp"
+IDB_WEB_TITLE_GUILD_MARK_TW BITMAP                  "res\\web_title_guild_mark_tw.bmp"
+IDB_WEB_TITLE_HOME_TW   BITMAP                  "res\\web_title_home_tw.bmp"
+IDB_BACK_ERROR_ID       BITMAP                  "res\\error_back_id.bmp"
+IDB_EXIT_C_ID           BITMAP                  "res\\error_btn_exit_c_id.bmp"
+IDB_EXIT_N_ID           BITMAP                  "res\\error_btn_exit_n_id.bmp"
+IDB_EXIT_O_ID           BITMAP                  "res\\error_btn_exit_o_id.bmp"
+IDB_SOLUTION_C_ID       BITMAP                  "res\\error_btn_solution_c_id.bmp"
+IDB_SOLUTION_N_ID       BITMAP                  "res\\error_btn_solution_n_id.bmp"
+IDB_SOLUTION_O_ID       BITMAP                  "res\\error_btn_solution_o_id.bmp"
+IDB_BACK_ERROR_JP       BITMAP                  "res\\error_back_jp.bmp"
+IDB_EXIT_C_JP           BITMAP                  "res\\error_btn_exit_c_jp.bmp"
+IDB_EXIT_N_JP           BITMAP                  "res\\error_btn_exit_n_jp.bmp"
+IDB_EXIT_O_JP           BITMAP                  "res\\error_btn_exit_o_jp.bmp"
+IDB_SOLUTION_C_JP       BITMAP                  "res\\error_btn_solution_c_jp.bmp"
+IDB_SOLUTION_N_JP       BITMAP                  "res\\error_btn_solution_n_jp.bmp"
+IDB_SOLUTION_O_JP       BITMAP                  "res\\error_btn_solution_o_jp.bmp"
+IDB_WEB_TITLE_CASH_JP   BITMAP                  "res\\web_title_cash_jp.bmp"
+IDB_WEB_TITLE_ENTRY_JP  BITMAP                  "res\\web_title_entry_jp.bmp"
+IDB_WEB_TITLE_HOME_JP   BITMAP                  "res\\web_title_home_jp.bmp"
+IDB_WINDOW_TITLE_LOSA_JP BITMAP                  "res\\web_title_losa_jp.bmp"
+IDB_BACK_ERROR_TH       BITMAP                  "res\\error_back_th.bmp"
+IDB_EXIT_C_TH           BITMAP                  "res\\error_btn_exit_c_th.bmp"
+IDB_EXIT_N_TH           BITMAP                  "res\\error_btn_exit_n_th.bmp"
+IDB_EXIT_O_TH           BITMAP                  "res\\error_btn_exit_o_th.bmp"
+IDB_SOLUTION_C_TH       BITMAP                  "res\\error_btn_solution_c_th.bmp"
+IDB_SOLUTION_N_TH       BITMAP                  "res\\error_btn_solution_n_th.bmp"
+IDB_SOLUTION_O_TH       BITMAP                  "res\\error_btn_solution_o_th.bmp"
+IDB_WEB_TITLE_CASH_TH   BITMAP                  "res\\web_title_cash_th.bmp"
+IDB_WEB_TITLE_ENTRY_TH  BITMAP                  "res\\web_title_entry_th.bmp"
+IDB_WEB_TITLE_GUILD_MARK_TH BITMAP                  "res\\web_title_guild_mark_th.bmp"
+IDB_WEB_TITLE_GUILD_TH  BITMAP                  "res\\web_title_guild_th.bmp"
+IDB_WEB_TITLE_HOME_TH   BITMAP                  "res\\web_title_home_th.bmp"
+IDB_WINDOW_TITLE_LOSA_TW BITMAP                  "res\\web_title_losa_tw.bmp"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""res\\Version.rc2""\r\n"
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ERROR_DLG DIALOGEX 0, 0, 311, 186
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP
+EXSTYLE WS_EX_APPWINDOW
+FONT 9, "MS Shell Dlg", 400, 0, 0x81
+BEGIN
+    CONTROL         "확인",IDOK,"Button",BS_OWNERDRAW | WS_TABSTOP,225,165,
+                    79,14
+    EDITTEXT        IDC_ERROR_EDIT,41,35,202,94,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER | WS_VSCROLL
+    CONTROL         "문제해결",IDC_SOLUTION,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,49,165,81,14
+    CONTROL         "X",IDC_X,"Button",BS_OWNERDRAW | WS_TABSTOP,272,6,32,14
+END
+
+IDD_DISCONNECT DIALOGEX 0, 0, 159, 77
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "LostSaga_Client - Error"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "예",ID_DISCONNECT,13,56,50,14
+    PUSHBUTTON      "아니오",ID_NO_DISCONNECT,95,56,50,14
+    LTEXT           "static",IDC_DISCONNECT,17,12,125,30
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ERROR_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 304
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 179
+    END
+
+    IDD_DISCONNECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 152
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 70
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// BINARY
+//
+
+IDR_BINARY1             BINARY                  "res\\error_back.rgn"
+#endif    // 한국어 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\Version.rc2"
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
