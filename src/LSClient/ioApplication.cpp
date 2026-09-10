@@ -111,10 +111,6 @@
 #include "nProtect/ioNProtect.h"
 #endif 
 
-#ifdef HACKSHIELD
-#include "HackShield/ioHackShield.h"
-#endif
-
 #include "resource.h"
 #include "GameStage/Mode/Practice/IoPracticeManager.h"
 #include "GameStage/Mode/Practice/IoPracticeMode.h"
@@ -815,10 +811,6 @@ void ioApplication::ReleaseAll()
 	ioNProtect::ReleaseInstance();
 #endif 
 
-#ifdef HACKSHIELD
-	g_ioHackShield.End();
-	ioHackShield::ReleaseInstance();
-#endif
 	g_PracticeMgr.ReleaseInstance();
 	g_TableDataMgr.ReleaseInstance();
 
@@ -3343,10 +3335,6 @@ void ioApplication::MainLoop()
 		ErrorReport::SetPosition( 1000, 29 );
 #endif
 
-#ifdef HACKSHIELD
-		g_ioHackShield.Process();
-		ErrorReport::SetPosition( 1000, 29 );
-#endif
 		g_MyInfo.ProcessAnnounceGameAddiction();
 		g_MyInfo.ProcessSelectShutDownAnnouncer();
 		ErrorReport::SetPosition( 1000, 30 );
@@ -12473,17 +12461,6 @@ void ioApplication::OnProtectCheck( SP2Packet &rkPacket )
 #endif
 #endif // NPROTECT
 
-#ifdef HACKSHIELD
-	HackShieldPacket kRecvBuf;
-	rkPacket >> kRecvBuf;
-	HackShieldPacket SendBuf;
-	if( g_ioHackShield.OnRecieveCheck( kRecvBuf, SendBuf ) )
-	{
-		SP2Packet kPacket( CTPK_PROTECT_CHECK );
-		kPacket << SendBuf;
-		TCPNetwork::SendToServer( kPacket );
-	}
-#endif
 }
 
 void ioApplication::OnProtect( SP2Packet &rkPacket )
@@ -17623,10 +17600,6 @@ LONG __stdcall ExceptCallBack ( EXCEPTION_POINTERS * pExPtrs )
 		return EXCEPTION_EXECUTE_HANDLER;
 
 	g_bHappenCrash = true;
-
-#ifdef HACKSHIELD
-	g_ioHackShield.End();
-#endif 
 	
 	Help::CaptureScreenWithJPEG();
 

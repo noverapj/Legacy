@@ -906,18 +906,6 @@ SP2Packet& SP2Packet::operator << ( const GG_AUTH_DATA &arg )
 #endif 
 #endif // NPROTECT
 
-#ifdef HACKSHIELD
-SP2Packet& SP2Packet::operator << ( const HackShieldPacket &arg )
-{
-	if( !CheckLeftPacketSize( sizeof(HackShieldPacket) ) ) return *this;
-
-	memcpy(&m_pBuffer[m_currentPos],&arg,sizeof(HackShieldPacket));
-	m_currentPos += sizeof(HackShieldPacket);
-	*m_packet_header.m_Size = m_currentPos;
-
-	return *this;
-}
-#endif
 //-----------------------------------------------------------------
 SP2Packet&  SP2Packet::operator >> (BYTE &arg)
 {
@@ -1256,15 +1244,3 @@ SP2Packet& SP2Packet::operator >> ( GG_AUTH_DATA &arg )
 }
 #endif // NPROTECT
 #endif
-
-#ifdef HACKSHIELD
-SP2Packet& SP2Packet::operator >> ( HackShieldPacket &arg )
-{
-	if( !CheckRightPacketSize( sizeof(HackShieldPacket) ) ) return *this;
-
-	memcpy(&arg,&m_pBuffer[m_currentPos],sizeof(HackShieldPacket));
-	m_currentPos += sizeof(HackShieldPacket);
-
-	return *this;
-}
-#endif 

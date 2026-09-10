@@ -1159,10 +1159,6 @@ void LobbyWnd::OnRender()
 #endif
 #endif // NPROTECT 
 
-#ifdef HACKSHIELD
-		szProtect = "HACKSHIELD";
-#endif
-
 		int iLicentDate = 0;
 		ioLocalParent *pLocal = g_LocalMgr.GetLocal( ioLocalManager::GetLocalType() );
 		if( pLocal )

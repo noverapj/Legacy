@@ -10,10 +10,6 @@
 #include "nProtect/ioNProtect.h"
 #endif 
  
-#ifdef HACKSHIELD
-#include "HackShield/ioHackShield.h"
-#endif
-
 //#define _USE_TCMALLOC
 #ifdef _USE_TCMALLOC
 #include "../gperftools-2.1/src/windows/gperftools/tcmalloc.h"
@@ -159,30 +155,6 @@ int WINAPI WinMain( HINSTANCE hInstance,
 	LOG.PrintTimeAndLog(0, "[Main] - nProtect Init Complete");
 #endif
 
-#ifdef HACKSHIELD
-	LOG.PrintTimeAndLog(0, "[Main] - HackShield Init Start");
-	if( !g_ioHackShield.Update() || !g_ioHackShield.Start() )
-	{
-		ioLocalParent *pLocal = g_LocalMgr.GetLocal( ioLocalManager::GetLocalType() );
-		ioStringManager *pStringMgr = new ioStringManager;
-		if( pStringMgr && pLocal )
-			pStringMgr->LoadData( "", "", pLocal->GetMemTextList(), true );
-
-		char szError[MAX_PATH*2]="";
-		SafeSprintf( szError, sizeof( szError ), STR(6) , g_ioHackShield.GetStartErrorType() );
-
-		MessageBox( NULL, szError, "LostSaga_Client - Error", MB_TOPMOST );
-		SAFEDELETE( pLocalMgr );
-		SAFEDELETE( pStringMgr );
-		SAFEDELETE( pStatics );
-		g_ioHackShield.End();
-		ioHackShield::ReleaseInstance();
-		LOG.PrintTimeAndLog(0, "[Main] - HackShield Error : Start() failed" );
-		return 0;
-	}
-	LOG.PrintTimeAndLog(0, "[Main] - HackShield Init Complete" );
-#endif
-
 	ioLocalParent *pLocal = g_LocalMgr.GetLocal( ioLocalManager::GetLocalType() );
 	ioStringManager *pStringMgr = new ioStringManager;
 	if( pStringMgr && pLocal )
@@ -199,11 +171,6 @@ int WINAPI WinMain( HINSTANCE hInstance,
 
 #ifdef NPROTECT
 		ioNProtect::ReleaseInstance();
-#endif
-
-#ifdef HACKSHIELD
-		g_ioHackShield.End();
-		ioHackShield::ReleaseInstance();
 #endif
 
 		LOG.PrintTimeAndLog(0, "[Main] - license Error" );
@@ -224,10 +191,6 @@ int WINAPI WinMain( HINSTANCE hInstance,
 		ioNProtect::ReleaseInstance();
 #endif
 
-#ifdef HACKSHIELD
-		g_ioHackShield.End();
-		ioHackShield::ReleaseInstance();
-#endif
 		LOG.PrintTimeAndLog( 0, "[Main] - Mutex Create Failed" );
 		return 0;
 	}
@@ -258,10 +221,6 @@ int WINAPI WinMain( HINSTANCE hInstance,
 		ioNProtect::ReleaseInstance();
 #endif
 
-#ifdef HACKSHIELD
-		g_ioHackShield.End();
-		ioHackShield::ReleaseInstance();
-#endif
 		MessageBox( NULL, "Get DX Info Error!", "IOEnter", MB_OK );
 		LOG.PrintTimeAndLog( 0, "[Main] - Get DX Info Error" );
 		return 0;
@@ -288,10 +247,6 @@ int WINAPI WinMain( HINSTANCE hInstance,
 		ioNProtect::ReleaseInstance();
 #endif
 
-#ifdef HACKSHIELD
-		g_ioHackShield.End();
-		ioHackShield::ReleaseInstance();
-#endif
 		MessageBox( NULL, "DX Version Error!", "IOEnter", MB_OK );
 		LOG.PrintTimeAndLog( 0, "[Main] - DX Version Error!" );
 
@@ -314,11 +269,6 @@ int WINAPI WinMain( HINSTANCE hInstance,
  
 #ifdef NPROTECT
 		ioNProtect::ReleaseInstance();
-#endif
-
-#ifdef HACKSHIELD
-		g_ioHackShield.End();
-		ioHackShield::ReleaseInstance();
 #endif
 		
 		MessageBox( NULL, "Create App Error!", "IOEnter", MB_OK );
@@ -399,11 +349,6 @@ int WINAPI WinMain( HINSTANCE hInstance,
 #ifdef NPROTECT
 		ioNProtect::ReleaseInstance();
 #endif
-
-#ifdef HACKSHIELD
-		g_ioHackShield.End();
-		ioHackShield::ReleaseInstance();
-#endif
 		
 		MessageBox( NULL, "App Cmd Error!", "IOEnter", MB_OK );
 		LOG.PrintTimeAndLog( 0, "[Main] - App Cmd Error!" );
@@ -428,10 +373,6 @@ int WINAPI WinMain( HINSTANCE hInstance,
 		ioNProtect::ReleaseInstance();
 #endif
 
-#ifdef HACKSHIELD
-		g_ioHackShield.End();
-		ioHackShield::ReleaseInstance();
-#endif
 		MessageBox( NULL, "App Option Error!", "IOEnter", MB_OK );
 		LOG.PrintTimeAndLog( 0, "[Main] - Process Option Start Failed" );
 		return 0;

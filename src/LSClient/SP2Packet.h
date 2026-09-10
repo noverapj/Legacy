@@ -12,10 +12,6 @@
 #endif
 #endif // NPROTECT 
 
-#ifdef HACKSHIELD
-#include "HackShield/ioHackShield.h"
-#endif
-
 struct CHARACTER;
 struct ControlKeys;
 
@@ -105,10 +101,6 @@ public:
 #endif 
 #endif // NPROTECT
 
-#ifdef HACKSHIELD
-	SP2Packet&  operator << ( const HackShieldPacket &arg );
-#endif
-
 public:
 	SP2Packet& operator >> (BYTE &arg);
 	SP2Packet& operator >> (bool &arg);
@@ -147,10 +139,6 @@ public:
 	SP2Packet&  operator >> ( GG_AUTH_DATA &arg );
 #endif
 #endif // NPROTECT
-
-#ifdef HACKSHIELD
-	SP2Packet&  operator >> ( HackShieldPacket &arg );
-#endif
 
 public:
 	SP2Packet();

@@ -310,9 +310,6 @@
     <Filter Include="XignCode">
       <UniqueIdentifier>{3f652ab0-094c-46fd-8048-d839b2f65dea}</UniqueIdentifier>
     </Filter>
-    <Filter Include="HackShield">
-      <UniqueIdentifier>{e9447c48-e1a3-438f-b228-54c2a417b94f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Item\CounterAttack">
       <UniqueIdentifier>{deea3e8a-2835-4ac3-b377-6ea0df577e7f}</UniqueIdentifier>
     </Filter>
@@ -2834,9 +2831,6 @@
     </ClCompile>
     <ClCompile Include="nProtect\ioNProtect.cpp">
       <Filter>nProtect</Filter>
-    </ClCompile>
-    <ClCompile Include="HackShield\ioHackShield.cpp">
-      <Filter>HackShield</Filter>
     </ClCompile>
     <ClCompile Include="ioTraceMineStateBuff.cpp">
       <Filter>Buff\StateBuff</Filter>
@@ -8233,15 +8227,6 @@
     </ClInclude>
     <ClInclude Include="nProtect\NPGameLib.h">
       <Filter>nProtect</Filter>
-    </ClInclude>
-    <ClInclude Include="HackShield\HShield.h">
-      <Filter>HackShield</Filter>
-    </ClInclude>
-    <ClInclude Include="HackShield\HSUpChk.h">
-      <Filter>HackShield</Filter>
-    </ClInclude>
-    <ClInclude Include="HackShield\ioHackShield.h">
-      <Filter>HackShield</Filter>
     </ClInclude>
     <ClInclude Include="ioTraceMineStateBuff.h">
       <Filter>Buff\StateBuff</Filter>

@@ -244,7 +244,5 @@ void ioLocalThailand::ExitAction()
 
 void ioLocalThailand::ShowHackShieldErrorDlg( const ioHashString &rsPrivateID )
 {
-#ifdef HACKSHIELD
-	g_ioHackShield.ShowErrorDlg( rsPrivateID );
-#endif
+
 }
