@@ -126,7 +126,7 @@ void ioAttackRangeCheckBuff::CheckRange()
 
 	if( fRange > m_fBuffEnableRange )
 	{
-		for( int i = 0; i < m_vRangeOverBuff.size(); i++ )
+		for( int i = 0; i < (int)m_vRangeOverBuff.size(); i++ )
 		{
 			ioBuff* pBuff = pOwner->GetBuff( m_vRangeOverBuff[i] );
 		
@@ -136,7 +136,7 @@ void ioAttackRangeCheckBuff::CheckRange()
 	}
 	else
 	{
-		for( int i = 0; i < m_vRangeOverBuff.size(); i++ )
+		for( int i = 0; i < (int)m_vRangeOverBuff.size(); i++ )
 		{
 			ioBuff* pBuff = pOwner->GetBuff( m_vRangeOverBuff[i] );
 

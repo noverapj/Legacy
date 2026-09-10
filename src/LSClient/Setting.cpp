@@ -467,7 +467,7 @@ void Setting::CheckSystemInfo()
 		int iStart, iEnd;
 		iStart = 0;
 		iEnd = strlen(strSerialNumber) - 1;
-		for( int i = 0; i < strlen(strSerialNumber); i++ )
+		for( int i = 0; i < (int)strlen(strSerialNumber); i++ )
 		{
 			if( strSerialNumber[i] == 32 )
 				iStart = i + 1;

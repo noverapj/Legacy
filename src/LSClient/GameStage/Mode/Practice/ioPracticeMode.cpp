@@ -879,7 +879,7 @@ void ioPracticeMode::OnPracticeResult(  SP2Packet &rkPacket )
 	if(iResult == PRACTICE_RESULT_SUCCESS)
 	{
 		int iCurrent = g_PracticeMgr.GetMyRankInfo().iPracticeRank;
-		if(dwRank < iCurrent || iCurrent == 0)
+		if((int)dwRank < iCurrent || iCurrent == 0)
 		{
 			PracticeUpdateRank *pPracticeResultWnd = static_cast<PracticeUpdateRank *>( g_GUIMgr.FindWnd( PRACTICE_UPDATE_RESULT_WND ) );
 			if(pPracticeResultWnd)

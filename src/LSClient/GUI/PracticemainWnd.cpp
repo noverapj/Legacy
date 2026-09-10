@@ -1485,7 +1485,7 @@ void PracticeRankingWnd::iwm_show()
 	{
 		//전시즌 보상받을 수련장 갯수
 		size_t iPresentCount = g_PracticeMgr.GetMyPreRankInfo()[i].vecPresent.size();
-		for( int j = 0; j < iPresentCount; ++j )
+		for( int j = 0; j < (int)iPresentCount; ++j )
 		{
 			int iRewardCount = g_PracticeMgr.GetMyPreRankInfo()[i].vecPresent[j].iRewardCount;
 			if(iRewardCount == 0)
