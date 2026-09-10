@@ -3,7 +3,7 @@
 COMMIT_MSG_FILE="$1"
 COMMIT_MSG=$(head -n 1 "$COMMIT_MSG_FILE")
 
-PATTERN='^(feat|fix|refactor|perf|docs|test|build|chore|revert)\((client|engine|gamesvr|mainsvr|billingsvr|dbagent|filewritesvr|loginsvr|relaysvr|launcher|tools|sql|solution|tooling|ci|deps|readme)\): .+'
+PATTERN='^(feat|fix|style|refactor|perf|docs|test|build|chore|revert)\((client|engine|gamesvr|mainsvr|billingsvr|dbagent|filewritesvr|loginsvr|relaysvr|launcher|tools|sql|solution|tooling|ci|deps|readme)\): .+'
 
 if echo "$COMMIT_MSG" | grep -Eq "$PATTERN"; then
     exit 0
@@ -14,7 +14,7 @@ echo "ERROR: Invalid commit message."
 echo "Expected: type(scope): description"
 echo ""
 echo "Valid types:"
-echo "  feat fix refactor perf docs test build chore revert"
+echo "  feat fix style refactor perf docs test build chore revert"
 echo ""
 echo "Examples:"
 echo "  feat(client): add new hero skill handler"
