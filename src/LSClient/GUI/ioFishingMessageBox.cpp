@@ -1604,7 +1604,7 @@ bool FishingDropZoneInduceWnd::SetAlarmType( AlarmType eAlarmType )
 
 	if( m_AlarmType == AT_NEW_FISHING_CONTENTS_ALARM )
 	{
-		m_bCheckPopup = (bool)g_GUIMgr.EtcValueLoadInt( "FishingDropZoneInduceWnd", "once_popup" );
+		m_bCheckPopup = (g_GUIMgr.EtcValueLoadInt("FishingDropZoneInduceWnd", "once_popup") != 0);
 		if( m_bCheckPopup )
 			return false;
 	}
