@@ -315,19 +315,6 @@ SP2Packet& SP2Packet::operator << ( const GG_AUTH_DATA &arg )
 
 #endif // NPROTECT
 
-#ifdef SRC_LATIN
-SP2Packet& SP2Packet::operator << ( const ApexPacket &arg )
-{
-	if( !CheckLeftPacketSize( sizeof(ApexPacket) ) ) return *this;
-
-	memcpy(&m_pBuffer[m_currentPos],&arg,sizeof(ApexPacket));
-	m_currentPos += sizeof(ApexPacket);
-	*m_packet_header.m_Size = m_currentPos;
-
-	return *this;
-}
-#endif
-
 SP2Packet& SP2Packet::operator << ( const ControlKeys &arg )
 {
 	if( !CheckLeftPacketSize( sizeof(ControlKeys) ) ) return *this;
@@ -686,22 +673,6 @@ SP2Packet& SP2Packet::operator >> ( GG_AUTH_DATA &arg )
 }
 #endif
 #endif // NPROTECT
-
-#ifdef SRC_LATIN
-SP2Packet& SP2Packet::operator >> ( ApexPacket &arg )
-{
-	if( !CheckRightPacketSize( sizeof(ApexPacket) ) ) 
-	{
-		ZeroMemory( &arg, sizeof( ApexPacket ) );
-		return *this;
-	}
-
-	memcpy(&arg,&m_pBuffer[m_currentPos],sizeof(ApexPacket));
-	m_currentPos += sizeof(ApexPacket);
-
-	return *this;
-}
-#endif 
 
 
 SP2Packet& SP2Packet::operator >> ( ControlKeys &arg )

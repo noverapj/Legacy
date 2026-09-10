@@ -8,10 +8,6 @@
 #endif 
 #endif // NPROTECT
 
-#ifdef SRC_LATIN
-#include "Apex/ioApex.h"
-#endif
-
 #include "MonitoringServerNode/MonitoringNode.h"
 
 class CPacket;
@@ -76,9 +72,6 @@ public:
 #endif
 #endif // NPROTECT
 
-#ifdef SRC_LATIN
-	SP2Packet&  operator << ( const ApexPacket &arg );
-#endif
 	SP2Packet&  operator << ( const MonitorStatusRequest &arg );
 	SP2Packet&  operator << ( const MonitorStatusResult &arg );
 	SP2Packet&  operator << ( const MonitorChangeRequest &arg );
@@ -114,9 +107,6 @@ public:
 #endif
 #endif // NPROTECT
 
-#ifdef SRC_LATIN
-	SP2Packet&  operator >> ( ApexPacket &arg );
-#endif
 	SP2Packet&  operator >> ( MonitorStatusRequest &arg );
 	SP2Packet&  operator >> ( MonitorStatusResult &arg );
 	SP2Packet&  operator >> ( MonitorChangeRequest &arg );

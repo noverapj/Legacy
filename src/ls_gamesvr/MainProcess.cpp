@@ -672,15 +672,6 @@ BOOL ioMainProcess::LoadINI()
 		return false;
 #endif
 
-#ifdef SRC_LATIN
-	kLoader.SetTitle("Apex");
-	bool bApexUse = kLoader.LoadBool( "use", true );
-	int nResult = g_ioApex.Start( bApexUse );
-	LOG.PrintTimeAndLog(0, "Apex Start %d", nResult);
-	if( nResult != 0 )
-		return false;
-#endif
-
 	// Nagle
 	kLoader.SetTitle( "Nagle" );
 	m_NagleTime = kLoader.LoadInt( "Nagle_Time", 30 );
@@ -1658,9 +1649,6 @@ void ioMainProcess::ProcessTime()
 	ConnectUserCountUpdate();
 	ProcessCreateNewLog();
 
-#ifdef SRC_LATIN
-	g_ioApex.GetDataFromAS();
-#endif
 }
 
 void ioMainProcess::CheckLogAllSave()
