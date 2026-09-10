@@ -6,10 +6,6 @@
 #include "skin.h"
 #include "ioAISymbolTable.h"
 
-#ifdef XTRAP
-#include "Xtrap/ioXtrap.h"
-#endif    
-
 #ifdef NPROTECT
 #include "nProtect/ioNProtect.h"
 #endif 
@@ -131,26 +127,6 @@ int WINAPI WinMain( HINSTANCE hInstance,
 		LOG.PrintTimeAndLog(0, "[Main] - Local Manager Init Failed");
 	}
 
-#ifdef XTRAP
-	LOG.PrintTimeAndLog(0, "[Main] - XTrap Init Start");
-	if( !g_ioXtrap.Start() )
-	{
-		ioLocalParent *pLocal = g_LocalMgr.GetLocal( ioLocalManager::GetLocalType() );
-		ioStringManager *pStringMgr = new ioStringManager;
-		if( pStringMgr && pLocal )
-			pStringMgr->LoadData( "", "", pLocal->GetMemTextList(), true );
-
-		MessageBox( NULL, STR(1), "LostSaga_Client - Error", MB_TOPMOST );
-		SAFEDELETE( pLocalMgr );
-		SAFEDELETE( pStringMgr );
-		SAFEDELETE( pStatics );
-		ioXtrap::ReleaseInstance();
-		LOG.PrintTimeAndLog(0, "[Main] - XTrap Error : Start() failed" );
-		return 0;
-	}
-	LOG.PrintTimeAndLog(0, "[Main] - XTrap Init Complete" );
-#endif 
-
 #ifdef NPROTECT
 	LOG.PrintTimeAndLog(0, "[Main] - nProtect Init Start" );
 	if( !g_ioNProtect.Start() )
@@ -244,9 +220,7 @@ int WINAPI WinMain( HINSTANCE hInstance,
 		SAFEDELETE( pLocalMgr );
 		SAFEDELETE( pStringMgr );
 		SAFEDELETE( pStatics );
-#ifdef XTRAP
-		ioXtrap::ReleaseInstance();
-#endif 
+
 #ifdef NPROTECT
 		ioNProtect::ReleaseInstance();
 #endif
@@ -272,9 +246,7 @@ int WINAPI WinMain( HINSTANCE hInstance,
 		SAFEDELETE( pLocalMgr );
 		SAFEDELETE( pStringMgr );
 		SAFEDELETE( pStatics );
-#ifdef XTRAP
-		ioXtrap::ReleaseInstance();
-#endif 
+
 #ifdef NPROTECT
 		ioNProtect::ReleaseInstance();
 #endif
@@ -311,9 +283,7 @@ int WINAPI WinMain( HINSTANCE hInstance,
 		SAFEDELETE( pLocalMgr );
 		SAFEDELETE( pStringMgr );
 		SAFEDELETE( pStatics );
-#ifdef XTRAP
-		ioXtrap::ReleaseInstance();
-#endif 
+
 #ifdef NPROTECT
 		ioNProtect::ReleaseInstance();
 #endif
@@ -346,9 +316,7 @@ int WINAPI WinMain( HINSTANCE hInstance,
 		SAFEDELETE( pLocalMgr );
 		SAFEDELETE( pStringMgr );
 		SAFEDELETE( pStatics );
-#ifdef XTRAP
-		ioXtrap::ReleaseInstance();
-#endif 
+
 #ifdef NPROTECT
 		ioNProtect::ReleaseInstance();
 #endif
@@ -379,9 +347,7 @@ int WINAPI WinMain( HINSTANCE hInstance,
 		SAFEDELETE( pLocalMgr );
 		SAFEDELETE( pStringMgr );
 		SAFEDELETE( pStatics );
-#ifdef XTRAP
-		ioXtrap::ReleaseInstance();
-#endif 
+ 
 #ifdef NPROTECT
 		ioNProtect::ReleaseInstance();
 #endif
@@ -468,9 +434,7 @@ int WINAPI WinMain( HINSTANCE hInstance,
 		SAFEDELETE( pLocalMgr );
 		SAFEDELETE( pStringMgr );
 		SAFEDELETE( pStatics );
-#ifdef XTRAP
-		ioXtrap::ReleaseInstance();
-#endif 
+
 #ifdef NPROTECT
 		ioNProtect::ReleaseInstance();
 #endif
@@ -501,9 +465,7 @@ int WINAPI WinMain( HINSTANCE hInstance,
 		SAFEDELETE( pLocalMgr );
 		SAFEDELETE( pStringMgr );
 		SAFEDELETE( pStatics );
-#ifdef XTRAP
-		ioXtrap::ReleaseInstance();
-#endif 
+
 #ifdef NPROTECT
 		ioNProtect::ReleaseInstance();
 #endif

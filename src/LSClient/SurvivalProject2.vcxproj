@@ -333,7 +333,7 @@
       <ForceConformanceInForLoopScope>false</ForceConformanceInForLoopScope>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
-      <AdditionalIncludeDirectories>../io3DEngine</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../LSClient;../io3DEngine</AdditionalIncludeDirectories>
       <MinimalRebuild>false</MinimalRebuild>
     </ClCompile>
     <Link>
@@ -5431,7 +5431,6 @@
     <ClCompile Include="ioMovieMaker.cpp" />
     <ClCompile Include="TournamentNode.cpp" />
     <ClCompile Include="TournamentPacketParser.cpp" />
-    <ClCompile Include="Xtrap\ioXtrap.cpp" />
     <ClCompile Include="ioGrowthInfoManager.cpp" />
     <ClCompile Include="ioGrowthLevel.cpp" />
     <ClCompile Include="ioGrowthUpInfo.cpp" />
@@ -7531,10 +7530,6 @@
     <ClInclude Include="ioTalismanMaker.h" />
     <ClInclude Include="bandicap.h" />
     <ClInclude Include="ioMovieMaker.h" />
-    <ClInclude Include="Xtrap\ioXtrap.h" />
-    <ClInclude Include="Xtrap\XTrap4Client.h" />
-    <ClInclude Include="Xtrap\XTrap4ClientExt1.h" />
-    <ClInclude Include="Xtrap\XTrapSDK_Integrity.h" />
     <ClInclude Include="ioGrowthInfoManager.h" />
     <ClInclude Include="ioGrowthLevel.h" />
     <ClInclude Include="ioGrowthUpInfo.h" />

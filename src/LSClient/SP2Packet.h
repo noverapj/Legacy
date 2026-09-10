@@ -4,9 +4,6 @@
 #include "EncryptValue.h"
 #include "ioCustomSoundDefine.h"
 #include "ioFileWriteClient.h"
-#ifdef XTRAP
-#include "Xtrap/ioXtrap.h"
-#endif 
 
 #ifdef NPROTECT
 #include "nProtect/ioNProtect.h"
@@ -101,9 +98,7 @@ public:
 	SP2Packet& operator << (CEncrypt<__int64> &arg);
 	SP2Packet& operator << (CEncrypt<double> &arg);
 	SP2Packet& operator << (CEncrypt<float> &arg);
-#ifdef XTRAP
-	SP2Packet& operator << ( const XtrapPacket &arg );
-#endif 
+
 	SP2Packet& operator << ( const FilePacket &arg );
 	SP2Packet& operator << ( const ControlKeys &arg );
 #ifdef NPROTECT
@@ -148,9 +143,7 @@ public:
 	SP2Packet& operator >> (CEncrypt<__int64> &arg);
 	SP2Packet& operator >> (CEncrypt<double> &arg);
 	SP2Packet& operator >> (CEncrypt<float> &arg);
-#ifdef XTRAP
-	SP2Packet& operator >> ( XtrapPacket &arg );
-#endif 
+
 	SP2Packet& operator >> ( FilePacket &arg );
 	SP2Packet& operator >> ( ControlKeys &arg );
 #ifdef NPROTECT

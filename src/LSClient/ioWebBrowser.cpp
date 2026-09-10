@@ -11,9 +11,6 @@
 #include "ioBrowserManager.h"
 #include "BrowserWndProc.h"
 #include "resource.h"
-#ifdef XTRAP
-#include "Xtrap/ioXtrap.h"
-#endif 
 
 #include <comutil.h>
 
@@ -113,11 +110,6 @@ bool ioWebBrowser::Initialize( HWND hClient, HINSTANCE hInstance )
 									 &m_dwAdviceCookie );
 
 	SetNoScroll();
-
-#ifdef XTRAP
-	if( m_BrowsePageType == BROWSE_FILL_CASH )
-		g_ioXtrap.StartPayment();
-#endif 
 
 	return bResult;
 }
@@ -230,11 +222,6 @@ void ioWebBrowser::HideProcess()
 
 	if( m_BrowsePageType == BROWSE_FILL_CASH )
 	{
-		
-#ifdef XTRAP
-			if( !m_bNoCloseXTrap )
-				g_ioXtrap.EndPayment();
-#endif 
 		
 		ioLocalParent *pLocal = g_LocalMgr.GetLocal( ioLocalManager::GetLocalType() );
 		if( pLocal )

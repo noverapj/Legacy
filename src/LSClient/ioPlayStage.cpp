@@ -349,9 +349,7 @@ ioPlayStage::~ioPlayStage()
 	ErrorReport::SetPosition( 1100, 833 );
 	g_CustomSoundMgr.ClearExceptMe();
 	ErrorReport::SetPosition( 1100, 834 );
-#ifdef XTRAP
-	g_ioXtrap.EndPayment();
-#endif 
+
 	ErrorReport::SetPosition( 1100, 835 );
 #ifdef NPROTECT
 	g_ioNProtect.Check( true );

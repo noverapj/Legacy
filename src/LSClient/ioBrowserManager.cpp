@@ -176,9 +176,7 @@ void ioBrowserManager::ProcessSeeIEProcess()
 			TCPNetwork::SendToServer( kPacket );
 			LOG.PrintTimeAndLog( 0, "~~~~~Send GOLD CASH INFO~~~~~");
 			TCPNetwork::MouseBusy( true );
-#ifdef XTRAP
-			g_ioXtrap.EndPayment();
-#endif
+
 		}
 	}
 }
@@ -187,10 +185,6 @@ void ioBrowserManager::ProcessSeeIEProcess()
 void ioBrowserManager::SetSeeIEProcessID( DWORD dwIEId)
 {
 	m_dwSeeProcess = dwIEId;
-
-#ifdef XTRAP
-	g_ioXtrap.StartPayment();
-#endif
 }
 
 

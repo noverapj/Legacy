@@ -1150,9 +1150,6 @@ void LobbyWnd::OnRender()
 #endif 
 	{
 		ioHashString szProtect;
-#ifdef XTRAP
-		szProtect = "XTRAP";
-#endif 
 
 #ifdef NPROTECT
 #ifdef NPROTECT_CSAUTH3

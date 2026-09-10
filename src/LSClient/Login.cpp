@@ -9,9 +9,7 @@
 #include "Version.h"
 
 #include "Login.h"
-#ifdef XTRAP
-#include "Xtrap/ioXtrap.h"
-#endif 
+
 #include "Local/ioLocalUS.h"
 #include "ioSP2TCPSocket.h"
 
@@ -706,9 +704,7 @@ bool CLogin::_OnConnectOK( const ioHashString &szID, SP2Packet &rkPacket )
 	g_MyInfo.SetUserData( rkPacket, dwPublicIDHashCode );	
 	Setting::Initialize( g_MyInfo.GetPublicID() );
 	LOG.PrintTimeAndLog(0, "Public ID - %s", g_MyInfo.GetPublicID().c_str() );
-#ifdef XTRAP
-	g_ioXtrap.SetUserInfo( szID.c_str(), g_TCPSocketMgr.GetConnectedIP(), g_MyInfo.GetPublicID().c_str(), STRFILEVER, g_MyInfo.GetGradeLevel() );
-#endif 
+
 #ifdef NPROTECT
 	g_ioNProtect.SendPrivateID( szID.c_str() );
 #endif 

@@ -857,19 +857,7 @@ SP2Packet&  SP2Packet::operator << (CEncrypt<float> &arg)
 	*m_packet_header.m_Size = m_currentPos;
 	return *this;
 }
-
-#ifdef XTRAP
-SP2Packet& SP2Packet::operator << ( const XtrapPacket &arg )
-{
-	if( !CheckLeftPacketSize( sizeof(XtrapPacket) ) ) return *this;
-
-	memcpy(&m_pBuffer[m_currentPos],&arg,sizeof(XtrapPacket));
-	m_currentPos += sizeof(XtrapPacket);
-	*m_packet_header.m_Size = m_currentPos;
-
-	return *this;
-}
-#endif 
+ 
 SP2Packet& SP2Packet::operator << ( const FilePacket &arg )
 {
 	if( !CheckLeftPacketSize( sizeof(FilePacket) ) ) return *this;
@@ -1234,17 +1222,6 @@ SP2Packet&  SP2Packet::operator >> (CEncrypt<float> &arg)
 	return *this;
 }
 
-#ifdef XTRAP
-SP2Packet& SP2Packet::operator >> ( XtrapPacket &arg )
-{
-	if( !CheckRightPacketSize( sizeof(XtrapPacket) ) ) return *this;
-
-	memcpy(&arg,&m_pBuffer[m_currentPos],sizeof(XtrapPacket));
-	m_currentPos += sizeof(XtrapPacket);
-
-	return *this;
-}
-#endif 
 SP2Packet& SP2Packet::operator >> ( FilePacket &arg )
 {
 	if( !CheckRightPacketSize( sizeof(FilePacket) ) ) return *this;

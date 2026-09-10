@@ -104,11 +104,6 @@
 #include "Housing/ioBlockEventAgency.h"
 #include "Housing/ioBlockWorld.h"
 
-#ifdef XTRAP
-#include "Xtrap/ioXtrap.h"
-#include "Xtrap/ThemidaSDK.h"
-#endif 
-
 #include "Channeling/ioChannelingNodeManager.h"
 #include "Channeling/ioChannelingNodeParent.h"
 
@@ -824,10 +819,6 @@ void ioApplication::ReleaseAll()
 	SAFEDELETE(m_pGlobalTimer);
 	SAFEDELETE(m_pFrameTimer);
 
-#ifdef XTRAP
-	ioXtrap::ReleaseInstance();
-#endif 
-
 #ifdef NPROTECT
 	ioNProtect::ReleaseInstance();
 #endif 
@@ -909,9 +900,6 @@ bool ioApplication::InitWindow( HINSTANCE hInstance, const ioHashString &szKeyOn
     wc.lpszClassName	= APPLICATION_NAME;
 
     RegisterClass( &wc );
-#ifdef XTRAP
-	g_ioXtrap.KeepAlive();
-#endif 
 	
 	HWND hWnd;
 	hWnd = CreateWindowEx( 0,
@@ -3361,10 +3349,6 @@ void ioApplication::MainLoop()
 
 		ErrorReport::SetPosition( 1000, 28 );
 
-#ifdef XTRAP
-		g_ioXtrap.Process();
- 		ErrorReport::SetPosition( 1000, 29 );
-#endif
 
 #ifdef NPROTECT
 		g_ioNProtect.Process();
@@ -12494,18 +12478,6 @@ void ioApplication::OnEventDataUpdate( SP2Packet &rkPacket )
 
 void ioApplication::OnProtectCheck( SP2Packet &rkPacket )
 {
-#ifdef XTRAP
-	XtrapPacket kXtrapPacket;
-	rkPacket >> kXtrapPacket;
-
-	XtrapPacket kReturnPacket;
-	if( g_ioXtrap.Step2( kXtrapPacket.m_XTrapPacket, kReturnPacket.m_XTrapPacket ) )
-	{
-		SP2Packet kPacket( CTPK_PROTECT_CHECK );
-		kPacket << kReturnPacket;
-		TCPNetwork::SendToServer( kPacket );
-	}
-#endif 
 #ifdef NPROTECT
 #ifdef NPROTECT_CSAUTH3
 	NProtectPacket kAuthData;
@@ -17665,26 +17637,6 @@ void ioApplication::ChangeSwitch()
 		g_GUIMgr.SetSwitch( SATICS_ON );
 	}
 }
-
-#ifdef XTRAP
-
-__declspec(noinline) unsigned int Themida_Check_Code_Integrity(void)
-{
-	unsigned int uCheckCode = 0;
-	VM_START
-		CHECK_CODE_INTEGRITY(uCheckCode, 01/*»ó¼ö°ª 01~10*/);
-	VM_END
-
-	return uCheckCode;
-}
-
-class COptimizationPrevent 
-{ 
-public : COptimizationPrevent(){ Themida_Check_Code_Integrity(); } 
-} DontUseThisVariable;
-
-
-#endif
 
 LONG __stdcall ExceptCallBack ( EXCEPTION_POINTERS * pExPtrs )
 {

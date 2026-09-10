@@ -295,9 +295,6 @@
     <Filter Include="Talisman">
       <UniqueIdentifier>{180fb171-5e0c-430a-88c3-c5811dc6c160}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Xtrap">
-      <UniqueIdentifier>{25fe5f57-0ad1-4749-85ac-3008be674eb6}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Channeling">
       <UniqueIdentifier>{7193c12f-dba3-4d29-a662-caf25ee877a6}</UniqueIdentifier>
     </Filter>
@@ -2732,9 +2729,6 @@
     </ClCompile>
     <ClCompile Include="ioMovieMaker.cpp">
       <Filter>MovieMaker</Filter>
-    </ClCompile>
-    <ClCompile Include="Xtrap\ioXtrap.cpp">
-      <Filter>Xtrap</Filter>
     </ClCompile>
     <ClCompile Include="ioGrowthInfoManager.cpp">
       <Filter>System\GrowthInfo</Filter>
@@ -8134,18 +8128,6 @@
     </ClInclude>
     <ClInclude Include="ioMovieMaker.h">
       <Filter>MovieMaker</Filter>
-    </ClInclude>
-    <ClInclude Include="Xtrap\ioXtrap.h">
-      <Filter>Xtrap</Filter>
-    </ClInclude>
-    <ClInclude Include="Xtrap\XTrap4Client.h">
-      <Filter>Xtrap</Filter>
-    </ClInclude>
-    <ClInclude Include="Xtrap\XTrap4ClientExt1.h">
-      <Filter>Xtrap</Filter>
-    </ClInclude>
-    <ClInclude Include="Xtrap\XTrapSDK_Integrity.h">
-      <Filter>Xtrap</Filter>
     </ClInclude>
     <ClInclude Include="ioGrowthInfoManager.h">
       <Filter>System\GrowthInfo</Filter>
