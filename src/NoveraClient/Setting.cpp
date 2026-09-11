@@ -1050,7 +1050,7 @@ void Setting::LoadSettingAlways( ioINILoader &rkLoader )
 	}
 	else
 	{
-		SetCurResolution( 800, 600 );
+		SetCurResolution(1024, 768);
 	}	
 
 	SetSlotItem( rkLoader.LoadInt_e("ItemSlot", 0x01024100));  // default set   hp potion / sp potion / revive
@@ -1233,8 +1233,8 @@ void Setting::SetOptionBySpec( SettingOption &rkOption, Spec eSpec )
 
 		rkOption.m_FilterType = FILTER_NONE;
 		rkOption.m_OverayType = OVERAY_NONE;
-		rkOption.m_iWidth  = 800;
-		rkOption.m_iHeight = 600;
+		rkOption.m_iWidth = 1024;
+		rkOption.m_iHeight = 768;
 		break;
 	case MIDDLE_SPEC:
 		rkOption.m_bFullScreen = bFullScreen;
@@ -1256,8 +1256,8 @@ void Setting::SetOptionBySpec( SettingOption &rkOption, Spec eSpec )
 
 		rkOption.m_FilterType = FILTER_NONE;
 		rkOption.m_OverayType = OVERAY_NONE;
-		rkOption.m_iWidth  = 800;
-		rkOption.m_iHeight = 600;
+		rkOption.m_iWidth = 1024;
+		rkOption.m_iHeight = 768;
 		break;
 	case LOW_SPEC:
 		rkOption.m_bFullScreen = bFullScreen;
@@ -1279,8 +1279,8 @@ void Setting::SetOptionBySpec( SettingOption &rkOption, Spec eSpec )
 
 		rkOption.m_FilterType = FILTER_NONE;
 		rkOption.m_OverayType = OVERAY_NONE;
-		rkOption.m_iWidth  = 800;
-		rkOption.m_iHeight = 600;
+		rkOption.m_iWidth = 1024;
+		rkOption.m_iHeight = 768;
 		break;
 	case MINIMUM_SPEC:
 		rkOption.m_bFullScreen = bFullScreen;
@@ -1302,8 +1302,8 @@ void Setting::SetOptionBySpec( SettingOption &rkOption, Spec eSpec )
 
 		rkOption.m_FilterType = FILTER_NONE;
 		rkOption.m_OverayType = OVERAY_NONE;
-		rkOption.m_iWidth  = 800;
-		rkOption.m_iHeight = 600;
+		rkOption.m_iWidth = 1024;
+		rkOption.m_iHeight = 768;
 		break;
 	case VERY_HIGH_SPEC:
 		rkOption.m_bFullScreen = bFullScreen;
