@@ -276,7 +276,7 @@ QuestParent *ioQuestManager::CreateQuest( const ioHashString &rClassName )
 
 void ioQuestManager::LoadINIData()
 {
-	LOG.PrintTimeAndLog( 0, "Start - Quest Data Load" );
+	LOG( 0, "Start - Quest Data Load" );
 	ClearQuestVariety();
 
 	{
@@ -459,7 +459,7 @@ void ioQuestManager::LoadINIData()
 //		LOG.PrintTimeAndLog( 0, "Max Quest Help : %d", (int)m_QuestHelpListMap.size() );
 	}
 
-	LOG.PrintTimeAndLog( 0, "End - Quest Data Load" );
+	LOG( 0, "End - Quest Data Load" );
 }
 
 void ioQuestManager::SetPlayStage( ioPlayStage *pPlayStage )

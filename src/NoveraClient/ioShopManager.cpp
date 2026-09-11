@@ -210,7 +210,7 @@ void ioShopManager::LoadADProductLink( ioINILoader& rkLoader, ADProductLink& Lin
 	if( eType != ADPT_SOLDIER && eType != ADPT_EXTRA && eType != ADPT_DECO && eType != ADPT_ETC && eType != ADPT_COSTUME )
 	{
 		Link.m_eADProductType = ADPT_NONE;
-		LOG.PrintTimeAndLog(0, "[SP2_SHOP_ERROR] : [%d] INVAILD TYPE", (int)eType );
+		LOG(0, "[SP2_SHOP_ERROR] : [%d] INVAILD TYPE", (int)eType );
 	}
 	else
 	{

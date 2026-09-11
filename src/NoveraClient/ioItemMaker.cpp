@@ -31,8 +31,9 @@ ioItem::ItemType ConvertStringToItemType( const char *szType )
 		return ioItem::IT_BRACELET;
 	
 
-	LOG.PrintTimeAndLog( 0, "ExitProgram - 16" );
-	LOG.PrintTimeAndLog( 0, "ConvertStringToItemType - %s UnknownType", szType );
+	LOG( 0, "ExitProgram - 16" );
+	LOG( 0, "%s UnknownType", szType );
+
 	return ioItem::IT_NONE;
 }
 
@@ -248,8 +249,9 @@ ioItem* ioItemMaker::CreateItem( DWORD dwCode )
 	}
 
 
-	LOG.PrintTimeAndLog( 0, "ExitProgram - 17" );
-	LOG.PrintTimeAndLog( 0, "ioItemMaker::CreatItem - %d Not Exist Item", dwCode );
+	LOG( 0, "ExitProgram - 17" );
+	LOG( 0, "%d Not Exist Item", dwCode );
+
 	return NULL;
 }
 
@@ -265,8 +267,8 @@ ioItem* ioItemMaker::CreateItem( const ioHashString &rkName )
 	}
 
 
-	LOG.PrintTimeAndLog( 0, "ExitProgram - 18" );
-	LOG.PrintTimeAndLog( 0, "ioItemMaker::CreateItem - %s Not Exist Item", rkName.c_str() );
+	LOG( 0, "ExitProgram - 18" );
+	LOG( 0, "%s Not Exist Item", rkName.c_str() );
 	return NULL;
 }
 
@@ -540,21 +542,21 @@ const ioItem* ioItemMaker::GetItemConst( DWORD dwCode, const ioHashString& szFun
 			int k = 0;
 			int result = 56 / k;
 
-			LOG.PrintTimeAndLog( 0, "ExitProgram - 19" );
-			LOG.PrintTimeAndLog( 0, "ioItemMaker::GetItemConst - %d Not Exist Item", dwCode );
+			LOG( 0, "ExitProgram - 19" );
+			LOG( 0, "%d Not Exist Item", dwCode );
 		}
 	}
 	__except (ExceptCallBack(GetExceptionInformation()))
 	{
 	}
 	
-	LOG.PrintTimeAndLog( 0, "ExitProgram - 19" );
-	LOG.PrintTimeAndLog( 0, "ioItemMaker::GetItemConst - %d Not Exist Item", dwCode );
+	LOG( 0, "ExitProgram - 19" );
+	LOG( 0, "%d Not Exist Item", dwCode );
 	
 #ifdef __DEV_QA__
-	LOG.PrintTimeAndLog( 0, "ioItemMaker::GetItemConst - %d Not Exist Item, Func : %s", dwCode, szFuncName.c_str() );
+	LOG( 0, "%d Not Exist Item, Func : %s", dwCode, szFuncName.c_str() );
 #else
-	LOG.PrintTimeAndLog( 0, "ioItemMaker::GetItemConst - %d Not Exist Item", dwCode );
+	LOG( 0, "%d Not Exist Item", dwCode );
 #endif
 	return NULL;
 }
@@ -571,11 +573,11 @@ const ioItem* ioItemMaker::GetItemConst( const ioHashString &rkName, const ioHas
 	}
 
 
-	LOG.PrintTimeAndLog( 0, "ExitProgram - 20" );
+	LOG( 0, "ExitProgram - 20" );
 #ifdef __DEV_QA__
-	LOG.PrintTimeAndLog( 0, "ioItemMaker::GetItemConst - %s Not Exist Item, Func : %s", rkName.c_str(), szFuncName.c_str() );
+	LOG( 0, "%s Not Exist Item, Func : %s", rkName.c_str(), szFuncName.c_str() );
 #else
-	LOG.PrintTimeAndLog( 0, "ioItemMaker::GetItemConst - %s Not Exist Item", rkName.c_str() );
+	LOG( 0, "%s Not Exist Item", rkName.c_str() );
 #endif
 
 	return NULL;
@@ -1041,7 +1043,7 @@ ioItem* ioItemMaker::CreateWeaponItemTemplete( ioINILoader &rkLoader )
 	if( !strcmp( "TAOIST_ITEM", szBuf ) )
 		return new ioTaoistItem;
 
-	LOG.PrintTimeAndLog( 0, "ioItemMaker::CreateWeaponItemTesmplete - %s Unknown SubType", szBuf );
+	LOG( 0, "%s Unknown SubType", szBuf );
 	return NULL;
 }
 
@@ -1055,7 +1057,7 @@ ioItem* ioItemMaker::CreateWearItemTemplete( ioINILoader &rkLoader )
 	else if( !strcmp( "CLOAK", szBuf ) )
 		return new ioCloakWearItem;
 
-	LOG.PrintTimeAndLog( 0, "ioItemMaker::CreateWearItemTemplete - %s Unknown SubType", szBuf );
+	LOG( 0, "%s Unknown SubType", szBuf );
 	return NULL;
 }
 
@@ -1127,7 +1129,7 @@ ioItem* ioItemMaker::CreateObjectItemTemplete( ioINILoader &rkLoader )
 	else if( !strcmp( "BANKRUPTCY", szBuf ) )
 		return new ioObjectBankruptcyItem;	// 2020-06-08
 
-	LOG.PrintTimeAndLog( 0, "ioItemMaker::CreateObjectItemTemplete - %s Unknown SubType", szBuf );
+	LOG( 0, "%s Unknown SubType", szBuf );
 	return NULL;
 }
 
