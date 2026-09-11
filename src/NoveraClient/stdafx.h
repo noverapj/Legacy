@@ -123,6 +123,8 @@ __forceinline unsigned int return_PI() { __asm mov eax,   3141592654 };
 #include "ConsoleTextColorDefine.h"
 #include "../LSLog/include/LSLog.h"
 
+#define LOG(lv, fmt, ...)  LOG.PrintTimeAndLog(lv, "[%s] " fmt, __FUNCTION__, __VA_ARGS__)
+
 #include "../io3DEngine/io3DCommon.h"
 #include "../io3DEngine/ioVertexFormat.h"
 #include "../io3DEngine/ioFrameTimer.h"

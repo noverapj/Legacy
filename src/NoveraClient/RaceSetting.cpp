@@ -348,7 +348,7 @@ namespace RaceSetting
 		if( COMPARE( iIndex, 0, GetNumSkinColor() ) )
 			return m_RaceTable[m_RaceType].m_SkinColorList[iIndex];
 
-		LOG.PrintTimeAndLog( 0, "RaceSetting::GetSkinColor - %d Race Overflow(%d/%d)",
+		LOG( 0, "GetSkinColor - %d Race Overflow(%d/%d)",
 								m_RaceType, iIndex, GetNumSkinColor() );
 
 		if( GetNumSkinColor() > 0 )
@@ -367,7 +367,7 @@ namespace RaceSetting
 		if( COMPARE( iIndex, 0, GetNumSkinOutLineColor() ) )
 			return m_RaceTable[m_RaceType].m_SkinOutLineColorList[iIndex];
 
-		LOG.PrintTimeAndLog( 0, "RaceSetting::GetSkinColor - %d Race Overflow(%d/%d)",
+		LOG( 0, "GetSkinColor - %d Race Overflow(%d/%d)",
 								m_RaceType, iIndex, GetNumSkinOutLineColor() );
 
 		if( GetNumSkinOutLineColor() > 0 )
@@ -390,14 +390,14 @@ namespace RaceSetting
 	{
 		if( !COMPARE( iHairIndex, 0, GetNumHairParts() ) )
 		{
-			LOG.PrintTimeAndLog( 0, "RaceSetting::GetHairColorTex - %d Race %d Hair Not Exist",
+			LOG( 0, "GetHairColorTex - %d Race %d Hair Not Exist",
 									m_RaceType, iHairIndex );
 			return ioHashString();
 		}
 
 		if( !COMPARE( iIndex, 0, GetNumHairColor( iHairIndex ) ) )
 		{
-			LOG.PrintTimeAndLog( 0, "RaceSetting::GetHairColorTex - %d Race %d-%d Hair Color Not Exist",
+			LOG( 0, "GetHairColorTex - %d Race %d-%d Hair Color Not Exist",
 									m_RaceType, iHairIndex, iIndex );
 			return ioHashString();
 		}
@@ -409,7 +409,7 @@ namespace RaceSetting
 	{
 		if( !COMPARE( iHairIndex, 0, GetNumHairParts() ) )
 		{
-			LOG.PrintTimeAndLog( 0, "RaceSetting::GetHairOutLineColor - %d Race %d Hair Not Exist",
+			LOG( 0, "GetHairOutLineColor - %d Race %d Hair Not Exist",
 									m_RaceType, iHairIndex );
 
 			D3DCOLORVALUE kBlackColor;
@@ -419,7 +419,7 @@ namespace RaceSetting
 
 		if( !COMPARE( iIndex, 0, GetNumHairColor( iHairIndex ) ) )
 		{
-			LOG.PrintTimeAndLog( 0, "RaceSetting::GetHairOutLineColor - %d Race %d-%d Hair Color Not Exist",
+			LOG( 0, "GetHairOutLineColor - %d Race %d-%d Hair Color Not Exist",
 									m_RaceType, iHairIndex, iIndex );
 
 			D3DCOLORVALUE kBlackColor;
@@ -440,7 +440,7 @@ namespace RaceSetting
 		if( COMPARE( iIndex, 0, GetNumBeardParts() ) )
 			return m_RaceTable[m_RaceType].m_BeardList[iIndex].m_BeardMesh;
 
-		LOG.PrintTimeAndLog( 0, "RaceSetting::GetBeardParts - %d Race Overflow(%d/%d)",
+		LOG( 0, "GetBeardParts - %d Race Overflow(%d/%d)",
 								m_RaceType, iIndex, GetNumBeardParts() );
 
 		return ioHashString();
@@ -460,14 +460,14 @@ namespace RaceSetting
 	{
 		if( !COMPARE( iBeardIndex, 0, GetNumBeardParts() ) )
 		{
-			LOG.PrintTimeAndLog( 0, "RaceSetting::GetBeardColorTex - %d Race overflow(%d/%d)",
+			LOG( 0, "GetBeardColorTex - %d Race overflow(%d/%d)",
 									m_RaceType, iBeardIndex, GetNumBeardParts() );
 			return ioHashString();
 		}
 
 		if( !COMPARE( iIndex, 0, GetNumBeardColor( iBeardIndex ) ) )
 		{
-			LOG.PrintTimeAndLog( 0, "RaceSetting::GetBeardColorTex - %d Race %d-%d Not Exist",
+			LOG( 0, "GetBeardColorTex - %d Race %d-%d Not Exist",
 									m_RaceType, iBeardIndex, iIndex );
 			return ioHashString();
 		}
@@ -479,7 +479,7 @@ namespace RaceSetting
 	{
 		if( !COMPARE( iBeardIndex, 0, GetNumBeardParts() ) )
 		{
-			LOG.PrintTimeAndLog( 0, "RaceSetting::GetBeardOutLineColor - %d Race %d Beard Not Exist",
+			LOG( 0, "GetBeardOutLineColor - %d Race %d Beard Not Exist",
 									m_RaceType, iBeardIndex );
 
 			D3DCOLORVALUE kBlackColor;
@@ -489,7 +489,7 @@ namespace RaceSetting
 
 		if( !COMPARE( iIndex, 0, GetNumBeardColor( iBeardIndex ) ) )
 		{
-			LOG.PrintTimeAndLog( 0, "RaceSetting::GetBeardOutLineColor - %d Race %d-%d Beard Color Not Exist",
+			LOG( 0, "GetBeardOutLineColor - %d Race %d-%d Beard Color Not Exist",
 									m_RaceType, iBeardIndex, iIndex );
 
 			D3DCOLORVALUE kBlackColor;
@@ -510,7 +510,7 @@ namespace RaceSetting
 		if( COMPARE( iIndex, 0, GetNumFaceParts() ) )
 			return m_RaceTable[m_RaceType].m_FaceList[iIndex];
 
-		LOG.PrintTimeAndLog( 0, "RaceSetting::GetFaceParts - %d Race Overflow(%d/%d)",
+		LOG( 0, "GetFaceParts - %d Race Overflow(%d/%d)",
 								m_RaceType, iIndex, GetNumFaceParts() );
 
 		return ioHashString();
@@ -521,7 +521,7 @@ namespace RaceSetting
 		if( COMPARE( iIndex, 0, GetNumFaceParts() ) )
 			return m_RaceTable[m_RaceType].m_FaceEffectList[iIndex];
 
-		LOG.PrintTimeAndLog( 0, "RaceSetting::GetFaceEffect - %d Race Overflow(%d/%d)",
+		LOG( 0, "GetFaceEffect - %d Race Overflow(%d/%d)",
 			m_RaceType, iIndex, GetNumFaceParts() );
 
 		return ioHashString();
@@ -537,7 +537,7 @@ namespace RaceSetting
 		if( COMPARE( iIndex, 0, GetNumHairParts() ) )
 			return m_RaceTable[m_RaceType].m_HairList[iIndex].m_HairMesh;
 
-		LOG.PrintTimeAndLog( 0, "RaceSetting::GetHairParts - %d Race Overflow(%d/%d)",
+		LOG( 0, "GetHairParts - %d Race Overflow(%d/%d)",
 								m_RaceType, iIndex, GetNumHairParts() );
 
 		return ioHashString();
@@ -548,7 +548,7 @@ namespace RaceSetting
 		if( COMPARE( iIndex, 0, GetNumHairParts() ) )
 			return m_RaceTable[m_RaceType].m_HairEffectList[iIndex];
 
-		LOG.PrintTimeAndLog( 0, "RaceSetting::GetHairEffect - %d Race Overflow(%d/%d)",
+		LOG( 0, "GetHairEffect - %d Race Overflow(%d/%d)",
 			m_RaceType, iIndex, GetNumHairParts() );
 
 		return ioHashString();
@@ -564,7 +564,7 @@ namespace RaceSetting
 		if( COMPARE( iIndex, 0, GetNumAccessoryParts() ) )
 			return m_RaceTable[m_RaceType].m_AccessoryList[iIndex];
 
-		LOG.PrintTimeAndLog( 0, "RaceSetting::GetAccessoryParts - %d Race Overflow(%d/%d)",
+		LOG( 0, "GetAccessoryParts - %d Race Overflow(%d/%d)",
 								m_RaceType, iIndex, GetNumAccessoryParts() );
 
 		return ioHashString();
@@ -580,7 +580,7 @@ namespace RaceSetting
 		if( COMPARE( iIndex, 0, GetNumUnderwearParts() ) )
 			return m_RaceTable[m_RaceType].m_UnderwearList[iIndex];
 
-		LOG.PrintTimeAndLog( 0, "RaceSetting::GetUnderwearParts - %d Race Overflow(%d/%d)",
+		LOG( 0, "GetUnderwearParts - %d Race Overflow(%d/%d)",
 			m_RaceType, iIndex, GetNumUnderwearParts() );
 
 		return ioHashString();

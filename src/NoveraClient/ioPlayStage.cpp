@@ -2848,7 +2848,7 @@ void ioPlayStage::UpdateCamera( ioCamera *pCamera )
 	ioLookAtCameraController *pCtrl = ToLookAtCtrl( pCamera->GetController() );
 	if( !pCtrl )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::UpdateCamera - Not LookAt Controller" );
+		LOG.PrintTimeAndLog( 0, "UpdateCamera - Not LookAt Controller" );
 		return;
 	}
 
@@ -3677,7 +3677,7 @@ void ioPlayStage::UpdateCameraPos( ioCamera *pCamera, ioBaseChar *pTarget, D3DXV
 	ioLookAtCameraController *pCtrl = ToLookAtCtrl( pCamera->GetController() );
 	if( !pCtrl )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::UpdateCtrlPos - Not LookAt Controller" );
+		LOG.PrintTimeAndLog( 0, "UpdateCtrlPos - Not LookAt Controller" );
 		return;
 	}
 
@@ -3840,7 +3840,7 @@ void ioPlayStage::UpdateObserverCameraPos( ioCamera *pCamera, ioBaseChar *pTarge
 	ioLookAtCameraController *pCtrl = ToLookAtCtrl( pCamera->GetController() );
 	if( !pCtrl )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::UpdateCtrlPos - Not LookAt Controller" );
+		LOG.PrintTimeAndLog( 0, "UpdateCtrlPos - Not LookAt Controller" );
 		return;
 	}
 
@@ -4728,7 +4728,7 @@ void ioPlayStage::UpdateEndSceneCamera( ioCamera *pCamera )
 	ioLookAtCameraController *pCtrl = ToLookAtCtrl( pCamera->GetController() );
 	if( !pCtrl )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::UpdateEndSceneCamera - Not LookAt Controller" );
+		LOG.PrintTimeAndLog( 0, "UpdateEndSceneCamera - Not LookAt Controller" );
 		return;
 	}
 
@@ -8811,7 +8811,7 @@ void ioPlayStage::ChangePlayMode( ModeType eType, PlazaType ePlazaType )
 
 	if( !m_pPlayMode )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::ChangePlayMode - %d Unknown ModeType", eType );
+		LOG.PrintTimeAndLog( 0, "ChangePlayMode - %d Unknown ModeType", eType );
 		return;
 	}
 
@@ -9330,7 +9330,7 @@ ioWorldDecoration* ioPlayStage::CreateWorldDecoration( const ioHashString &kFile
 	ioEntityGroup *pGrp = CreateEntityGrpAndSceneNode( kFileName, true );
 	if( !pGrp )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::CreateWorldDecoration - %s Create Failed", kFileName.c_str() );
+		LOG.PrintTimeAndLog( 0, "CreateWorldDecoration - %s Create Failed", kFileName.c_str() );
 		return NULL;
 	}
 	
@@ -9421,7 +9421,7 @@ ioFieldRewardItem* ioPlayStage::CreateFieldRewardItem( int iFieldRewardUniqueInd
 	ioEntityGroup *pGrp = CreateEntityGrpAndSceneNode( kMeshName, true );
 	if( !pGrp )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::CreateFieldRewardItem - %s Create Failed", kMeshName.c_str() );
+		LOG.PrintTimeAndLog( 0, "CreateFieldRewardItem - %s Create Failed", kMeshName.c_str() );
 		return NULL;
 	}
 
@@ -9517,7 +9517,7 @@ ioFieldItem* ioPlayStage::CreateFieldItem( ioItem *pItem, bool bAddList )
 	ioEntityGroup *pGrp = CreateEntityGrpAndSceneNode( pItem->GetFieldEntityGrp(), true );
 	if( !pGrp )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::CreateFieldItem - %s Create Failed",
+		LOG.PrintTimeAndLog( 0, "CreateFieldItem - %s Create Failed",
 								pItem->GetFieldEntityGrp().c_str() );
 		return NULL;
 	}
@@ -9573,7 +9573,7 @@ void ioPlayStage::PickFieldItem( const D3DXVECTOR3 &vDropPos,
 	ioFieldItem *pFieldItem = GetFieldItemByIndex( iPickItemIndex );
 	if( !pFieldItem )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::PickFieldItem - %s/%d Not Exist",
+		LOG.PrintTimeAndLog( 0, "PickFieldItem - %s/%d Not Exist",
 								pChar->GetCharName().c_str(),
 								iPickItemIndex );
 		return;
@@ -9946,7 +9946,7 @@ const ioHashString& ioPlayStage::GetOwnerName()
 	if( pOwner )
 		return pOwner->GetCharName();
 
-	LOG.PrintTimeAndLog( 0, "ioPlayStage::GetOwnerName() - OwnerChar is not Exist" );
+	LOG.PrintTimeAndLog( 0, "GetOwnerName() - OwnerChar is not Exist" );
 
 	static ioHashString szEmpty;
 	return szEmpty;
@@ -10694,7 +10694,7 @@ ioBaseChar* ioPlayStage::ChangeCharModel( const ioHashString &rkName, DWORD dwCh
 	ioBaseChar *pChar = CreateBaseChar( szFileName );
 	if( !pChar )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::ChangeCharModel Failed" );
+		LOG.PrintTimeAndLog( 0, "ChangeCharModel Failed" );
 		return NULL;
 	}
 
@@ -10866,7 +10866,7 @@ ioBaseChar* ioPlayStage::AddNewUser( const ioHashString &rkName, SP2Packet &rkPa
 	ioBaseChar *pChar = CreateBaseChar( szFileName );
 	if( !pChar )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::AddNewUser Failed" );
+		LOG.PrintTimeAndLog( 0, "AddNewUser Failed" );
 		return NULL;
 	}
 
@@ -11002,7 +11002,7 @@ void ioPlayStage::RemoveUser( const ioHashString &rkName, bool isRoomOut )
 		}
 		else
 		{
-			LOG.PrintTimeAndLog( 0, "ioPlayStage::RemoveUser - Critical Error - %s User Not Exist In BaseCharList", rkName.c_str() );
+			LOG.PrintTimeAndLog( 0, "RemoveUser - Critical Error - %s User Not Exist In BaseCharList", rkName.c_str() );
 		}
 
 		EraseGameEntity( iter );
@@ -12310,7 +12310,7 @@ bool ioPlayStage::ProcessTCPPacket( SP2Packet &rkPacket )
 			}
 			else
 			{
-				LOG.PrintTimeAndLog( 0, "ioPlayStage::ProcessTCPPacket - PlayMode is NULL(%x)",
+				LOG.PrintTimeAndLog( 0, "ProcessTCPPacket - PlayMode is NULL(%x)",
 					rkPacket.GetPacketID() );
 			}
 		}
@@ -12935,13 +12935,13 @@ void ioPlayStage::OnJoinUserData( SP2Packet &rkPacket )
 		ioBaseChar* pRecordChar = m_pPlayMode->GetRecordChar( szName );
 		if( pRecordChar )
 		{
-			LOG.PrintTimeAndLog( 0, "ioPlayStage::OnJoinUserData - OverLap AddNewUer( %s )", szName );
+			LOG.PrintTimeAndLog( 0, "OnJoinUserData - OverLap AddNewUer( %s )", szName );
 			return;
 		}
 	}
 	else
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnJoinUserData - No Mode" );
+		LOG.PrintTimeAndLog( 0, "OnJoinUserData - No Mode" );
 	}
 
 	ioBaseChar *pChar = GetBaseChar( szName );
@@ -14540,7 +14540,7 @@ void ioPlayStage::OnCharEquipData( SP2Packet &rkPacket )
 	ioBaseChar *pChar = GetBaseChar( szName );
 	if( !pChar )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnCharEquipData - %s Not Exist", szName.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnCharEquipData - %s Not Exist", szName.c_str() );
 		return;
 	}
 
@@ -14727,7 +14727,7 @@ void ioPlayStage::OnFieldItemSupply( SP2Packet &rkPacket )
 		}
 		else
 		{
-			LOG.PrintTimeAndLog( 0, "ioPlayStage::OnFieldItemSupply - CreateFieldItem Fail: %s", szCreateItem.c_str() );
+			LOG.PrintTimeAndLog( 0, "OnFieldItemSupply - CreateFieldItem Fail: %s", szCreateItem.c_str() );
 			delete pItem;
 		}
 	}
@@ -14803,7 +14803,7 @@ void ioPlayStage::OnBadPingCrownDrop( SP2Packet &rkPacket )
 	ioBaseChar *pChar = GetBaseChar( szDroper );
 	if( !pChar )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnBadPingCrownDrop - %s Not Exist User",
+		LOG.PrintTimeAndLog( 0, "OnBadPingCrownDrop - %s Not Exist User",
 								szDroper.c_str() );
 	}
 
@@ -14813,7 +14813,7 @@ void ioPlayStage::OnBadPingCrownDrop( SP2Packet &rkPacket )
 	{
 		ioItem *pDropItem = pChar->ReleaseItemExplicit( dwItemCode, iCreateIndex, ES_WEAR );
 		if( !pDropItem )
-			LOG.PrintTimeAndLog( 0, "ioPlayStage::OnBadPingCrownDrop - Crown Drop Fail!" );
+			LOG.PrintTimeAndLog( 0, "OnBadPingCrownDrop - Crown Drop Fail!" );
 		else
 			SAFEDELETE( pDropItem );
 
@@ -14823,7 +14823,7 @@ void ioPlayStage::OnBadPingCrownDrop( SP2Packet &rkPacket )
 	ioItem *pItem = CreateItem( dwItemCode );
 	if( !pItem )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnBadPingCrownDrop - Crown Create Fail!" );
+		LOG.PrintTimeAndLog( 0, "OnBadPingCrownDrop - Crown Create Fail!" );
 		return;
 	}
 
@@ -14861,7 +14861,7 @@ void ioPlayStage::OnBadPingCrownDrop( SP2Packet &rkPacket )
 	}
 	else
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnBadPingCrownDrop - Crown Field Drop Fail!" );
+		LOG.PrintTimeAndLog( 0, "OnBadPingCrownDrop - Crown Field Drop Fail!" );
 	}
 }
 
@@ -14873,7 +14873,7 @@ void ioPlayStage::OnFishingState( SP2Packet &rkPacket )
 	ioBaseChar *pChar = GetBaseChar( szName );
 	if( !pChar )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnFishingState - %s Not Exist User", szName.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnFishingState - %s Not Exist User", szName.c_str() );
 		return;
 	}
 
@@ -14993,7 +14993,7 @@ void ioPlayStage::OnDropItem( SP2Packet &rkPacket )
 	ioBaseChar *pChar = GetBaseChar( szName );
 	if( !pChar )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnDropItem - %s Not Exist User",
+		LOG.PrintTimeAndLog( 0, "OnDropItem - %s Not Exist User",
 								szName.c_str() );
 		return;
 	}
@@ -15038,7 +15038,7 @@ void ioPlayStage::OnDropItem( SP2Packet &rkPacket )
 		pPreItem = pChar->ReleaseItemExplicit( dwItemCode, iItemCreateIndex, iSlot );
 	if( !pPreItem )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnDropItem - %s Not Has Item(%d)",
+		LOG.PrintTimeAndLog( 0, "OnDropItem - %s Not Has Item(%d)",
 								szName.c_str(), dwItemCode );
 		return;
 	}
@@ -15081,7 +15081,7 @@ void ioPlayStage::OnDropItem( SP2Packet &rkPacket )
 	ioFieldItem *pDropItem = DropFieldItem( vDropStartPos, pPreItem, pChar );
 	if( !pDropItem )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnDropItem - Create FieldItem Error" );
+		LOG.PrintTimeAndLog( 0, "OnDropItem - Create FieldItem Error" );
 		delete pPreItem;
 		return;
 	}
@@ -15127,7 +15127,7 @@ void ioPlayStage::OnItemMoveDrop( SP2Packet &rkPacket )
 	ioBaseChar *pChar = GetBaseChar( szName );
 	if( !pChar )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnItemMoveDrop - %s Not Exist User", szName.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnItemMoveDrop - %s Not Exist User", szName.c_str() );
 		return;
 	}
 
@@ -15143,7 +15143,7 @@ void ioPlayStage::OnItemMoveDrop( SP2Packet &rkPacket )
 	ioItem *pPreItem = pChar->ReleaseItemExplicit( dwItemCode, iItemCreateIndex, iSlot );
 	if( !pPreItem )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnItemMoveDrop - %s Not Has Item(%d)", szName.c_str(), dwItemCode );
+		LOG.PrintTimeAndLog( 0, "OnItemMoveDrop - %s Not Has Item(%d)", szName.c_str(), dwItemCode );
 		return;
 	}
 
@@ -15170,7 +15170,7 @@ void ioPlayStage::OnItemMoveDrop( SP2Packet &rkPacket )
 	ioFieldItem *pDropItem = MoveDropFieldItem( szAttacker, szSkillName, vDropStartPos, vTargetPos, fMoveSpeed, pPreItem, pChar );
 	if( !pDropItem )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnItemMoveDrop - Create FieldItem Error" );
+		LOG.PrintTimeAndLog( 0, "OnItemMoveDrop - Create FieldItem Error" );
 		delete pPreItem;
 		return;
 	}
@@ -15184,7 +15184,7 @@ void ioPlayStage::OnDropItemFail( SP2Packet &rkPacket )
 	ioBaseChar *pChar = GetBaseChar( szName );
 	if( !pChar )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnDropItemFail - %s Not Exist User",
+		LOG.PrintTimeAndLog( 0, "OnDropItemFail - %s Not Exist User",
 								szName.c_str() );
 		return;
 	}
@@ -15203,7 +15203,7 @@ void ioPlayStage::OnAllItemDrop( SP2Packet &rkPacket )
 	ioBaseChar *pChar = GetBaseChar( szName );
 	if( !pChar )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnAllItemDrop - %s Not Exist User", szName.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnAllItemDrop - %s Not Exist User", szName.c_str() );
 		return;
 	}
 
@@ -15230,14 +15230,14 @@ void ioPlayStage::OnAllItemDrop( SP2Packet &rkPacket )
 
 		if(	dwItemCode == 0 )
 		{
-			LOG.PrintTimeAndLog( 0, "ioPlayStage::OnAllItemDrop - %s Not Has Item(%d)", szName.c_str(), dwItemCode );
+			LOG.PrintTimeAndLog( 0, "OnAllItemDrop - %s Not Has Item(%d)", szName.c_str(), dwItemCode );
 			continue;
 		}
 
 		ioItem *pPreItem = pChar->ReleaseItemExplicit( dwItemCode, iItemCreateIndex, iSlot );
 		if( !pPreItem )
 		{
-			LOG.PrintTimeAndLog( 0, "ioPlayStage::OnAllItemDrop - %s Not Has Item(%d)", szName.c_str(), dwItemCode );
+			LOG.PrintTimeAndLog( 0, "OnAllItemDrop - %s Not Has Item(%d)", szName.c_str(), dwItemCode );
 			continue;
 		}
 
@@ -15255,7 +15255,7 @@ void ioPlayStage::OnAllItemDrop( SP2Packet &rkPacket )
 		ioFieldItem *pDropItem = DropFieldItem( vDropStartPos, pPreItem, pChar );
 		if( !pDropItem )
 		{
-			LOG.PrintTimeAndLog( 0, "ioPlayStage::OnAllItemDrop - Create FieldItem Error" );
+			LOG.PrintTimeAndLog( 0, "OnAllItemDrop - Create FieldItem Error" );
 			delete pPreItem;
 			continue;
 		}
@@ -15292,7 +15292,7 @@ void ioPlayStage::OnImmediatelyEquipItem( SP2Packet &rkPacket )
 	ioBaseChar *pChar = GetBaseChar( szName );
 	if( !pChar )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnImmediatelyEquipItem - %s Not Exist User", szName.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnImmediatelyEquipItem - %s Not Exist User", szName.c_str() );
 		return;
 	}
 
@@ -15393,7 +15393,7 @@ void ioPlayStage::OnImmediatelyEquipItem( SP2Packet &rkPacket )
 			pPreItem = pChar->EquipItem( pItem );
 		if( pPreItem )
 		{
-			LOG.PrintTimeAndLog( 0, "ioPlayStage::OnImmediatelyEquipItem() - PreItem is Exist : %d", pPreItem->GetItemCode() );
+			LOG.PrintTimeAndLog( 0, "OnImmediatelyEquipItem() - PreItem is Exist : %d", pPreItem->GetItemCode() );
 		}
 	}
 	else if( eObjectCreateType == ioObjectItem::OCT_STEAL_EQUIP_BUFF )
@@ -15428,7 +15428,7 @@ void ioPlayStage::OnEtcItemUse( SP2Packet &rkPacket )
 		if( pInvenWnd && pInvenWnd->IsShow() )
 			pInvenWnd->UpdateTab( false, true );
 
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnEtcITemUse - UserEtcItem == NULL" );
+		LOG.PrintTimeAndLog( 0, "OnEtcITemUse - UserEtcItem == NULL" );
 		return;
 	}
 
@@ -15441,7 +15441,7 @@ void ioPlayStage::OnEtcItemUse( SP2Packet &rkPacket )
 
 		// 임시 : 특별아이템 없어지는 경우가 자주 발생하여 일단 차단.
 		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnEtcITemUse - Exception" );
+		LOG.PrintTimeAndLog( 0, "OnEtcITemUse - Exception" );
 		return;
 	}
 	else if( iResult == ETCITEM_USE_DONT_HAVE )
@@ -15544,7 +15544,7 @@ void ioPlayStage::OnEtcItemUse( SP2Packet &rkPacket )
 	{
 		// 임시 : 특별아이템 없어지는 경우가 자주 발생하여 일단 차단.
 		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(7) );
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnEtcITemUse - Error :%d", iResult );
+		LOG.PrintTimeAndLog( 0, "OnEtcITemUse - Error :%d", iResult );
 		return;
 	}
 	
@@ -15615,7 +15615,7 @@ void ioPlayStage::OnEtcItemSell( SP2Packet &rkPacket )
 	ioUserEtcItem *pUserEtcItem = g_MyInfo.GetUserEtcItem();
 	if( !pUserEtcItem )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnEtcItemSell - UserEtcItem == NULL" );
+		LOG.PrintTimeAndLog( 0, "OnEtcItemSell - UserEtcItem == NULL" );
 		return;
 	}
 
@@ -15651,7 +15651,7 @@ void ioPlayStage::OnEtcItemSell( SP2Packet &rkPacket )
 	ioEtcItem *pEtcItem = g_EtcItemMgr.FindEtcItem( iType );
 	if( !pEtcItem )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnEtcItemSell pEtcItem == NULL" );
+		LOG.PrintTimeAndLog( 0, "OnEtcItemSell pEtcItem == NULL" );
 		return;
 	}
 	pEtcItem->OnSell( iType, rkPacket, pUserEtcItem );
@@ -15763,7 +15763,7 @@ void ioPlayStage::OnChatModeState( SP2Packet &rkPacket )
 	ioBaseChar *pChar = GetBaseChar( szName );
 	if( !pChar )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnChatModeState - %s Not Exist", szName.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnChatModeState - %s Not Exist", szName.c_str() );
 		return;
 	}
 
@@ -15803,7 +15803,7 @@ void ioPlayStage::OnExperienceModeState( SP2Packet &rkPacket )
 	ioBaseChar *pChar = GetBaseChar( kName );
 	if( !pChar )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnExperienceModeState - %s Not Exist", kName.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnExperienceModeState - %s Not Exist", kName.c_str() );
 		return;
 	}
 
@@ -15985,7 +15985,7 @@ void ioPlayStage::OnPickItem( SP2Packet &rkPacket )
 	ioBaseChar *pChar = GetBaseChar( szName );
 	if( !pChar )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnPickItem - %s Not Exist User", szName.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnPickItem - %s Not Exist User", szName.c_str() );
 		return;
 	}
 
@@ -16014,7 +16014,7 @@ void ioPlayStage::OnPickItemFail( SP2Packet &rkPacket )
 	ioBaseChar *pChar = GetBaseChar( szName );
 	if( !pChar )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnPickItemFail - %s Not Exist User",
+		LOG.PrintTimeAndLog( 0, "OnPickItemFail - %s Not Exist User",
 								szName.c_str() );
 		return;
 	}
@@ -16030,7 +16030,7 @@ void ioPlayStage::OnPickItemFail( SP2Packet &rkPacket )
 	ioFieldItem *pFieldItem = GetFieldItemByIndex( iCreateIndex );
 	if( !pFieldItem )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnPickItemFail - %s/%d Not Exist",
+		LOG.PrintTimeAndLog( 0, "OnPickItemFail - %s/%d Not Exist",
 								pChar->GetCharName().c_str(), iCreateIndex );
 		return;
 	}
@@ -16044,7 +16044,7 @@ void ioPlayStage::OnDeleteFieldItem( SP2Packet &rkPacket )
 	ioBaseChar *pChar = GetBaseChar( szName );
 	if( !pChar )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnDeleteFieldItem - %s Not Exist User", szName.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnDeleteFieldItem - %s Not Exist User", szName.c_str() );
 		return;
 	}
 
@@ -16061,7 +16061,7 @@ void ioPlayStage::OnDeleteFieldItemFail( SP2Packet &rkPacket )
 	ioBaseChar *pChar = GetBaseChar( szName );
 	if( !pChar )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnDeleteFieldItemFail - %s Not Exist User",
+		LOG.PrintTimeAndLog( 0, "OnDeleteFieldItemFail - %s Not Exist User",
 								szName.c_str() );
 		return;
 	}
@@ -16071,7 +16071,7 @@ void ioPlayStage::OnDeleteFieldItemFail( SP2Packet &rkPacket )
 	ioFieldItem *pFieldItem = GetFieldItemByIndex( iCreateIndex );
 	if( !pFieldItem )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnDeleteFieldItemFail - %s/%d Not Exist",
+		LOG.PrintTimeAndLog( 0, "OnDeleteFieldItemFail - %s/%d Not Exist",
 								pChar->GetCharName().c_str(), iCreateIndex );
 		return;
 	}
@@ -16089,7 +16089,7 @@ void ioPlayStage::OnPickRewardItem( SP2Packet &rkPacket )
 		ioFieldRewardItem *pFieldRewardItem = GetFieldRewardItemByIndex( iFieldRewardUniqueIndex );
 		if( !pFieldRewardItem )
 		{
-			LOG.PrintTimeAndLog( 0, "ioPlayStage::OnPickRewardItem - %s/%d Not Exist",
+			LOG.PrintTimeAndLog( 0, "OnPickRewardItem - %s/%d Not Exist",
 									kCharName.c_str(), iFieldRewardUniqueIndex );
 			return;
 		}
@@ -16254,7 +16254,7 @@ void ioPlayStage::OnRevivalTime( SP2Packet &rkPacket )
 
 	if( szDier.IsEmpty() )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnRevivalTime() - Dier Name is NULL" );
+		LOG.PrintTimeAndLog( 0, "OnRevivalTime() - Dier Name is NULL" );
 		return;
 	}
 
@@ -16567,7 +16567,7 @@ ioBaseChar *ioPlayStage::_OnChangeChar( SP2Packet &rkPacket )
 		pChar = GetBaseChar( szName );
 		if( !pChar )
 		{
-			LOG.PrintTimeAndLog( 0, "ioPlayStage::OnChangeChar - %s Add Failed(1)", szName.c_str() );
+			LOG.PrintTimeAndLog( 0, "OnChangeChar - %s Add Failed(1)", szName.c_str() );
 			return NULL;
 		}
 		StatusValue eHP = pChar->GetHP();
@@ -18789,7 +18789,7 @@ void ioPlayStage::OnItemGrowthCatalyst( SP2Packet &rkPacket )
 				}
 				else
 				{
-					LOG.PrintTimeAndLog( 0, "ioPlayStage::OnItemGrowthCatalyst - Target Error" );
+					LOG.PrintTimeAndLog( 0, "OnItemGrowthCatalyst - Target Error" );
 				}
 			}
 		}
@@ -18851,7 +18851,7 @@ void ioPlayStage::OnItemCompoundEx( SP2Packet &rkPacket )
 				}
 				else
 				{
-					LOG.PrintTimeAndLog( 0, "ioPlayStage::OnItemCompoundEx - Target Error" );
+					LOG.PrintTimeAndLog( 0, "OnItemCompoundEx - Target Error" );
 				}
 			}
 		}
@@ -18894,7 +18894,7 @@ void ioPlayStage::OnRouletteStartAni( SP2Packet &rkPacket )
 	ioBaseChar *pChar = GetBaseChar( szName );
 	if( !pChar )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnRouletteStartAni - %s Not Exist User", szName.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnRouletteStartAni - %s Not Exist User", szName.c_str() );
 		return;
 	}
 
@@ -19962,7 +19962,7 @@ void ioPlayStage::OnNewUserInfo( SP2Packet &rkPacket )
 	}
 	else
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnNewUserInfo - %s Not Exist", szName.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnNewUserInfo - %s Not Exist", szName.c_str() );
 		return;
 	}
 
@@ -19987,7 +19987,7 @@ void ioPlayStage::OnExistUserInfo( SP2Packet &rkPacket )
 	}
 	else
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnExistUserInfo - %s Not Exist", szName.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnExistUserInfo - %s Not Exist", szName.c_str() );
 	}
 }
 
@@ -20355,7 +20355,7 @@ void ioPlayStage::OnUseSkill( SP2Packet &rkPacket )
 	rkPacket >> dwCharIndex;
 	if( pChar->GetIndex() != dwCharIndex )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnUseSkill(%s) Not Match CharIndex : %d - %d", 
+		LOG.PrintTimeAndLog( 0, "OnUseSkill(%s) Not Match CharIndex : %d - %d", 
 								pChar->GetCharName().c_str(), pChar->GetIndex(), dwCharIndex );
 
 		pChar->AddChangeCharPacketReserve( dwCharIndex, rkPacket );
@@ -20489,7 +20489,7 @@ void ioPlayStage::OnWeaponDefense( SP2Packet &rkPacket )
 
 	if( !pAttacker )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnWeaponDefense - %s Not Exist", szAttacker.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnWeaponDefense - %s Not Exist", szAttacker.c_str() );
 		return;
 	}
 
@@ -20829,7 +20829,7 @@ void ioPlayStage::OnWeaponWounded( SP2Packet &rkPacket )
 
 	if( !pAttacker )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnWeaponWounded - Attacker %s Not Exist", szAttacker.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnWeaponWounded - Attacker %s Not Exist", szAttacker.c_str() );
 		return;
 	}
 
@@ -21462,7 +21462,7 @@ void ioPlayStage::OnPushStructMove( SP2Packet &rkPacket )
 	ioPushStruct *pPushStruct = g_PushStructListMgr.FindPushStruct( iPushIndex );
 	if( !pPushStruct )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnPushStructMove - %d PushStruct Not Exist", iPushIndex );
+		LOG.PrintTimeAndLog( 0, "OnPushStructMove - %d PushStruct Not Exist", iPushIndex );
 		return;
 	}
 
@@ -21492,7 +21492,7 @@ void ioPlayStage::OnPushStructDelay( SP2Packet &rkPacket )
 	ioPushStruct *pPushStruct = g_PushStructListMgr.FindPushStruct( iPushIndex );
 	if( !pPushStruct )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnPushStructDelay - %d PushStruct Not Exist", iPushIndex );
+		LOG.PrintTimeAndLog( 0, "OnPushStructDelay - %d PushStruct Not Exist", iPushIndex );
 		return;
 	}
 
@@ -21510,7 +21510,7 @@ void ioPlayStage::OnDropDieMotion( SP2Packet &rkPacket )
 	ioBaseChar *pChar = GetBaseChar( szName );
 	if( !pChar )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnDropDieMotion() - %s is not Exist", szName.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnDropDieMotion() - %s is not Exist", szName.c_str() );
 		return;
 	}
 
@@ -21570,7 +21570,7 @@ void ioPlayStage::OnMineWaitExplosion( SP2Packet &rkPacket )
 	ioBaseChar *pAttacker = GetBaseChar( szAttacker );
 	if( !pAttacker )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnMineWaitExplosion - Attacker %s Not Exist", szAttacker.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnMineWaitExplosion - Attacker %s Not Exist", szAttacker.c_str() );
 		return;
 	}
 
@@ -21609,7 +21609,7 @@ void ioPlayStage::OnNormalDeadMine( SP2Packet &rkPacket )
 	ioBaseChar *pAttacker = GetBaseChar( szAttacker );
 	if( !pAttacker )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnNormalDeadMine - Attacker %s Not Exist", szAttacker.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnNormalDeadMine - Attacker %s Not Exist", szAttacker.c_str() );
 		return;
 	}
 
@@ -21640,7 +21640,7 @@ void ioPlayStage::OnMineExplosion( SP2Packet &rkPacket )
 	ioBaseChar *pAttacker = GetBaseChar( szAttacker );
 	if( !pAttacker )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnMineExplosion - Attacker %s Not Exist",
+		LOG.PrintTimeAndLog( 0, "OnMineExplosion - Attacker %s Not Exist",
 								szAttacker.c_str() );
 		return;
 	}
@@ -21667,7 +21667,7 @@ void ioPlayStage::OnPassage( SP2Packet &rkPacket )
 
 	if( szTarget != g_MyInfo.GetPublicID() )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnPassage - %s Not Me", szTarget.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnPassage - %s Not Me", szTarget.c_str() );
 		return;
 	}
 
@@ -21701,7 +21701,7 @@ void ioPlayStage::OnPassage( SP2Packet &rkPacket )
 		ioBaseChar *pChar = GetBaseChar( szSender );
 		if( !pChar )
 		{
-			LOG.PrintTimeAndLog( 0, "ioPlayStage::OnPassage - Sender %s Not Exist", szSender.c_str() );
+			LOG.PrintTimeAndLog( 0, "OnPassage - Sender %s Not Exist", szSender.c_str() );
 			return;
 		}
 
@@ -23189,7 +23189,7 @@ void ioPlayStage::OnNpcStuckState( SP2Packet &rkPacket )
 	ioNpcChar *pNpcChar = ToNpcChar( GetBaseChar( kNpcName ) );
 	if( !pNpcChar )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnNpcStuckState None Npc : %s", kNpcName.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnNpcStuckState None Npc : %s", kNpcName.c_str() );
 		return;
 	}
 
@@ -24028,7 +24028,7 @@ void ioPlayStage::OnPushStructInfo( SP2Packet &rkPacket )
 	ioPushStruct *pPushStruct = g_PushStructListMgr.FindPushStruct( iIndex );
 	if( !pPushStruct )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnPushStructInfo - %d PushStruct Not Exist", iIndex );
+		LOG.PrintTimeAndLog( 0, "OnPushStructInfo - %d PushStruct Not Exist", iIndex );
 		return;
 	}
 
@@ -24043,7 +24043,7 @@ void ioPlayStage::OnPushStructCreateWeapon( SP2Packet &rkPacket )
 	ioPushStruct *pPushStruct = g_PushStructListMgr.FindPushStruct( iIndex );
 	if( !pPushStruct )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnPushStructCreateWeapon - %d PushStruct Not Exist", iIndex );
+		LOG.PrintTimeAndLog( 0, "OnPushStructCreateWeapon - %d PushStruct Not Exist", iIndex );
 		return;
 	}
 
@@ -24072,7 +24072,7 @@ void ioPlayStage::OnPushStructSearchState( SP2Packet &rkPacket )
 	ioPushStruct *pPushStruct = g_PushStructListMgr.FindPushStruct( iIndex );
 	if( !pPushStruct )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnPushStructSearchState - %d PushStruct Not Exist", iIndex );
+		LOG.PrintTimeAndLog( 0, "OnPushStructSearchState - %d PushStruct Not Exist", iIndex );
 		return;
 	}
 
@@ -24094,7 +24094,7 @@ void ioPlayStage::OnPushStructTracingState( SP2Packet &rkPacket )
 	ioPushStruct *pPushStruct = g_PushStructListMgr.FindPushStruct( iIndex );
 	if( !pPushStruct )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnPushStructTracingState - %d PushStruct Not Exist", iIndex );
+		LOG.PrintTimeAndLog( 0, "OnPushStructTracingState - %d PushStruct Not Exist", iIndex );
 		return;
 	}
 
@@ -24121,7 +24121,7 @@ void ioPlayStage::OnPushStructFireState( SP2Packet &rkPacket )
 	ioPushStruct *pPushStruct = g_PushStructListMgr.FindPushStruct( iIndex );
 	if( !pPushStruct )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnPushStructFireState - %d PushStruct Not Exist", iIndex );
+		LOG.PrintTimeAndLog( 0, "OnPushStructFireState - %d PushStruct Not Exist", iIndex );
 		return;
 	}
 
@@ -29157,7 +29157,7 @@ void ioPlayStage::OnItemCompound( SP2Packet &rkPacket )
 			{
 				if( !pExtraItem->DeleteExtraItemData( iVictimSlot ) )
 				{
-					LOG.PrintTimeAndLog( 0, "ioPlayStage::OnItemCompound - Victim Error" );
+					LOG.PrintTimeAndLog( 0, "OnItemCompound - Victim Error" );
 				}
 
 				EXTRAITEMSLOT kTargetSlot;
@@ -29169,7 +29169,7 @@ void ioPlayStage::OnItemCompound( SP2Packet &rkPacket )
 				}
 				else
 				{
-					LOG.PrintTimeAndLog( 0, "ioPlayStage::OnItemCompound - Target Error" );
+					LOG.PrintTimeAndLog( 0, "OnItemCompound - Target Error" );
 				}
 			}
 		}
@@ -29191,13 +29191,13 @@ void ioPlayStage::OnItemCompound( SP2Packet &rkPacket )
 			rkPacket >> iItem1 >> iItem2 >> iItem3;
 			ioUserExtraItem *pExtraItem = g_MyInfo.GetUserExtraItem();
 			if( iItem1 > 0 && !pExtraItem->DeleteExtraItemData( iItem1 ) )
-				LOG.PrintTimeAndLog( 0, "ioPlayStage::OnItemCompound - ItemDel Error(1)" );
+				LOG.PrintTimeAndLog( 0, "OnItemCompound - ItemDel Error(1)" );
 
 			if( iItem2 > 0 && !pExtraItem->DeleteExtraItemData( iItem2 ) )
-				LOG.PrintTimeAndLog( 0, "ioPlayStage::OnItemCompound - ItemDel Error(2)" );
+				LOG.PrintTimeAndLog( 0, "OnItemCompound - ItemDel Error(2)" );
 
 			if( iItem3 > 0 && !pExtraItem->DeleteExtraItemData( iItem3 ) )
-				LOG.PrintTimeAndLog( 0, "ioPlayStage::OnItemCompound - ItemDel Error(3)" );
+				LOG.PrintTimeAndLog( 0, "OnItemCompound - ItemDel Error(3)" );
 
 			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2), iErrorNum );
 		}
@@ -29227,7 +29227,7 @@ void ioPlayStage::OnItemCompound( SP2Packet &rkPacket )
 			{
 				if( !pExtraItem->DeleteExtraItemData( iItem1 ) )
 				{
-					LOG.PrintTimeAndLog( 0, "ioPlayStage::OnItemCompound - ItemDel Error(1)" );
+					LOG.PrintTimeAndLog( 0, "OnItemCompound - ItemDel Error(1)" );
 				}
 			}
 
@@ -29235,7 +29235,7 @@ void ioPlayStage::OnItemCompound( SP2Packet &rkPacket )
 			{
 				if( !pExtraItem->DeleteExtraItemData( iItem2 ) )
 				{
-					LOG.PrintTimeAndLog( 0, "ioPlayStage::OnItemCompound - ItemDel Error(2)" );
+					LOG.PrintTimeAndLog( 0, "OnItemCompound - ItemDel Error(2)" );
 				}
 			}
 
@@ -29243,7 +29243,7 @@ void ioPlayStage::OnItemCompound( SP2Packet &rkPacket )
 			{
 				if( !pExtraItem->DeleteExtraItemData( iItem3 ) )
 				{
-					LOG.PrintTimeAndLog( 0, "ioPlayStage::OnItemCompound - ItemDel Error(3)" );
+					LOG.PrintTimeAndLog( 0, "OnItemCompound - ItemDel Error(3)" );
 				}
 			}
 
@@ -29265,13 +29265,13 @@ void ioPlayStage::OnItemCompound( SP2Packet &rkPacket )
 			{
 				// 삭제
 				if( iItem1 > 0 && !pUserExtraItem->DeleteExtraItemData( iItem1 ) )
-					LOG.PrintTimeAndLog( 0, "ioPlayStage::OnItemCompound - ItemDel Error(1)" );
+					LOG.PrintTimeAndLog( 0, "OnItemCompound - ItemDel Error(1)" );
 
 				if( iItem2 > 0 && !pUserExtraItem->DeleteExtraItemData( iItem2 ) )
-					LOG.PrintTimeAndLog( 0, "ioPlayStage::OnItemCompound - ItemDel Error(2)" );
+					LOG.PrintTimeAndLog( 0, "OnItemCompound - ItemDel Error(2)" );
 
 				if( iItem3 > 0 && !pUserExtraItem->DeleteExtraItemData( iItem3 ) )
-					LOG.PrintTimeAndLog( 0, "ioPlayStage::OnItemCompound - ItemDel Error(3)" );
+					LOG.PrintTimeAndLog( 0, "OnItemCompound - ItemDel Error(3)" );
 
 				// 추가
 				EXTRAITEMSLOT kSlot;
@@ -29712,7 +29712,7 @@ void ioPlayStage::OnTraceWeaponTrace( SP2Packet &rkPacket )
 	ioBaseChar *pAttacker = GetBaseChar( szAttacker );
 	if( !pAttacker )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnTraceWeaponTrace - Attacker %s Not Exist", szAttacker.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnTraceWeaponTrace - Attacker %s Not Exist", szAttacker.c_str() );
 		return;
 	}
 
@@ -30403,7 +30403,7 @@ void ioPlayStage::UpdateTPSCameraPos( ioCamera *pCamera, ioBaseChar *pTarget, D3
 	ioLookAtCameraController *pCtrl = ToLookAtCtrl( pCamera->GetController() );
 	if( !pCtrl )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::UpdateCtrlPos - Not LookAt Controller" );
+		LOG.PrintTimeAndLog( 0, "UpdateCtrlPos - Not LookAt Controller" );
 		return;
 	}
 
@@ -30469,7 +30469,7 @@ void ioPlayStage::OnTraceWeaponWait( SP2Packet &rkPacket )
 	ioBaseChar *pAttacker = GetBaseChar( szAttacker );
 	if( !pAttacker )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnTraceWeaponWait - Attacker %s Not Exist", szAttacker.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnTraceWeaponWait - Attacker %s Not Exist", szAttacker.c_str() );
 		return;
 	}
 
@@ -30768,7 +30768,7 @@ void ioPlayStage::OnPushStructBomber( SP2Packet &rkPacket )
 	{
 		if( Help::CheckEnableTimeGapUser() )
 		{
-			LOG.PrintTimeAndLog( 0, "ioPlayStage::OnPushStructBomber - %d : %d, %d", iIndex, iNum, iTestValue );
+			LOG.PrintTimeAndLog( 0, "OnPushStructBomber - %d : %d, %d", iIndex, iNum, iTestValue );
 		}
 		return;
 	}
@@ -30884,7 +30884,7 @@ void ioPlayStage::OnThrowBombBound( SP2Packet &rkPacket )
 	ioBaseChar *pAttacker = GetBaseChar( szAttacker );
 	if( !pAttacker )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnThrowBombBound - Attacker %s Not Exist", szAttacker.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnThrowBombBound - Attacker %s Not Exist", szAttacker.c_str() );
 		return;
 	}
 
@@ -30918,7 +30918,7 @@ void ioPlayStage::OnSmartBombBound( SP2Packet &rkPacket )
 	ioBaseChar *pAttacker = GetBaseChar( szAttacker );
 	if( !pAttacker )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnSmartBombBound - Attacker %s Not Exist", szAttacker.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnSmartBombBound - Attacker %s Not Exist", szAttacker.c_str() );
 		return;
 	}
 
@@ -31059,7 +31059,7 @@ void ioPlayStage::OnWeaponSync( SP2Packet &rkPacket )
 	ioBaseChar *pAttacker = GetBaseChar( szAttacker );
 	if( !pAttacker )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnWeaponSync - Attacker %s Not Exist", szAttacker.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnWeaponSync - Attacker %s Not Exist", szAttacker.c_str() );
 		return;
 	}
 
@@ -31982,7 +31982,7 @@ void ioPlayStage::OnMachineStructUDP( SP2Packet &rkPacket )
 	ioMachineStruct *pMachineStruct = g_MachineStructMgr.FindMachineStruct( iIndex );
 	if( !pMachineStruct )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnMachineStructUDP - %d MachineStruct Not Exist", iIndex );
+		LOG.PrintTimeAndLog( 0, "OnMachineStructUDP - %d MachineStruct Not Exist", iIndex );
 		return;
 	}
 
@@ -32168,7 +32168,7 @@ void ioPlayStage::OnTraceMineWaitExplosion( SP2Packet &rkPacket )
 	ioBaseChar *pAttacker = GetBaseChar( szAttacker );
 	if( !pAttacker )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnTraceMineWaitExplosion - Attacker %s Not Exist", szAttacker.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnTraceMineWaitExplosion - Attacker %s Not Exist", szAttacker.c_str() );
 		return;
 	}
 
@@ -32194,7 +32194,7 @@ void ioPlayStage::OnTraceMineFlyTraceStart( SP2Packet &rkPacket )
 	ioBaseChar *pAttacker = GetBaseChar( szAttacker );
 	if( !pAttacker )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnTraceMineFlyTraceStart - Attacker %s Not Exist", szAttacker.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnTraceMineFlyTraceStart - Attacker %s Not Exist", szAttacker.c_str() );
 		return;
 	}
 
@@ -32225,7 +32225,7 @@ void ioPlayStage::OnTraceMineNormalDead( SP2Packet &rkPacket )
 	ioBaseChar *pAttacker = GetBaseChar( szAttacker );
 	if( !pAttacker )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnNormalDeadMine2 - Attacker %s Not Exist", szAttacker.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnNormalDeadMine2 - Attacker %s Not Exist", szAttacker.c_str() );
 		return;
 	}
 
@@ -32251,7 +32251,7 @@ void ioPlayStage::OnTraceMineExplosion( SP2Packet &rkPacket )
 	ioBaseChar *pAttacker = GetBaseChar( szAttacker );
 	if( !pAttacker )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnTraceMineExplosion - Attacker %s Not Exist", szAttacker.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnTraceMineExplosion - Attacker %s Not Exist", szAttacker.c_str() );
 		return;
 	}
 
@@ -32278,7 +32278,7 @@ void ioPlayStage::OnTrace2MineDelay( SP2Packet &rkPacket )
 	ioBaseChar *pAttacker = GetBaseChar( szAttacker );
 	if( !pAttacker )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnTrace2MineDelay - Attacker %s Not Exist", szAttacker.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnTrace2MineDelay - Attacker %s Not Exist", szAttacker.c_str() );
 		return;
 	}
 
@@ -32305,7 +32305,7 @@ void ioPlayStage::OnTrace2MineNormalDead( SP2Packet &rkPacket )
 	ioBaseChar *pAttacker = GetBaseChar( szAttacker );
 	if( !pAttacker )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnTrace2MineNormalDead - Attacker %s Not Exist", szAttacker.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnTrace2MineNormalDead - Attacker %s Not Exist", szAttacker.c_str() );
 		return;
 	}
 
@@ -32331,7 +32331,7 @@ void ioPlayStage::OnTrace2MineWaitExplosion( SP2Packet &rkPacket )
 	ioBaseChar *pAttacker = GetBaseChar( szAttacker );
 	if( !pAttacker )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnTrace2MineWaitExplosion - Attacker %s Not Exist", szAttacker.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnTrace2MineWaitExplosion - Attacker %s Not Exist", szAttacker.c_str() );
 		return;
 	}
 
@@ -32357,7 +32357,7 @@ void ioPlayStage::OnTrace2MineExplosion( SP2Packet &rkPacket )
 	ioBaseChar *pAttacker = GetBaseChar( szAttacker );
 	if( !pAttacker )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnTrace2MineExplosion - Attacker %s Not Exist", szAttacker.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnTrace2MineExplosion - Attacker %s Not Exist", szAttacker.c_str() );
 		return;
 	}
 
@@ -32383,7 +32383,7 @@ void ioPlayStage::OnAirMineWaitExplosion( SP2Packet &rkPacket )
 	ioBaseChar *pAttacker = GetBaseChar( szAttacker );
 	if( !pAttacker )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnAirMineWaitExplosion - Attacker %s Not Exist", szAttacker.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnAirMineWaitExplosion - Attacker %s Not Exist", szAttacker.c_str() );
 		return;
 	}
 
@@ -32409,7 +32409,7 @@ void ioPlayStage::OnAirNormalDeadMine( SP2Packet &rkPacket )
 	ioBaseChar *pAttacker = GetBaseChar( szAttacker );
 	if( !pAttacker )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnAirNormalDeadMine - Attacker %s Not Exist", szAttacker.c_str() );
+		LOG.PrintTimeAndLog( 0, "OnAirNormalDeadMine - Attacker %s Not Exist", szAttacker.c_str() );
 		return;
 	}
 
@@ -32436,7 +32436,7 @@ void ioPlayStage::OnAirMineExplosion( SP2Packet &rkPacket )
 	ioBaseChar *pAttacker = GetBaseChar( szAttacker );
 	if( !pAttacker )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnAirMineExplosion - Attacker %s Not Exist",
+		LOG.PrintTimeAndLog( 0, "OnAirMineExplosion - Attacker %s Not Exist",
 			szAttacker.c_str() );
 		return;
 	}
@@ -33108,7 +33108,7 @@ void ioPlayStage::OnReinforceExtraItem( SP2Packet &rkPacket )
 					pExtraItem->SetExtraItem( kTargetSlot );
 				}
 				else
-					LOG.PrintTimeAndLog( 0, "ioPlayStage::OnItemMaterialCompound - Target Error" );
+					LOG.PrintTimeAndLog( 0, "OnItemMaterialCompound - Target Error" );
 			}
 		}
 		return;
@@ -33785,7 +33785,7 @@ void ioPlayStage::OnItemMaterialCompound( SP2Packet &rkPacket )
 					pExtraItem->SetExtraItem( kTargetSlot );
 				}
 				else
-					LOG.PrintTimeAndLog( 0, "ioPlayStage::OnItemMaterialCompound - Target Error" );
+					LOG.PrintTimeAndLog( 0, "OnItemMaterialCompound - Target Error" );
 			}
 		}
 		return;
@@ -33885,14 +33885,14 @@ void ioPlayStage::OnPlayingUserDataInfo( SP2Packet &rkPacket )
 			rkPacket >> szNewUser;
 			RemoveUser( szNewUser, true );
 			OnJoinUserData( rkPacket );
-			LOG.PrintTimeAndLog( 0, "ioPlayStage::OnPlayingUserDataInfo - PLAYING_USER_INFO" );
+			LOG.PrintTimeAndLog( 0, "OnPlayingUserDataInfo - PLAYING_USER_INFO" );
 		}
 		break;
 	case NOT_PLAYING_ROOM:
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnPlayingUserDataInfo - NOT_PLAYING_ROOM" );
+		LOG.PrintTimeAndLog( 0, "OnPlayingUserDataInfo - NOT_PLAYING_ROOM" );
 		break;
 	case NOT_PLAYING_USER:
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnPlayingUserDataInfo - NOT_PLAYING_USER" );
+		LOG.PrintTimeAndLog( 0, "OnPlayingUserDataInfo - NOT_PLAYING_USER" );
 		break;
 	}
 }
@@ -34164,7 +34164,7 @@ void ioPlayStage::OnBadPingFlagDrop( SP2Packet &rkPacket )
 	ioBaseChar *pChar = GetBaseChar( szDroper );
 	if( !pChar )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnBadPingFlagDrop - %s Not Exist User",
+		LOG.PrintTimeAndLog( 0, "OnBadPingFlagDrop - %s Not Exist User",
 			szDroper.c_str() );
 	}
 
@@ -34174,7 +34174,7 @@ void ioPlayStage::OnBadPingFlagDrop( SP2Packet &rkPacket )
 	{
 		ioItem *pDropItem = pChar->ReleaseItemExplicit( dwItemCode, iCreateIndex, ES_WEAR );
 		if( !pDropItem )
-			LOG.PrintTimeAndLog( 0, "ioPlayStage::OnBadPingFlagDrop - Flag Drop Fail!" );
+			LOG.PrintTimeAndLog( 0, "OnBadPingFlagDrop - Flag Drop Fail!" );
 		else
 			SAFEDELETE( pDropItem );
 
@@ -34184,7 +34184,7 @@ void ioPlayStage::OnBadPingFlagDrop( SP2Packet &rkPacket )
 	ioItem *pItem = CreateItem( dwItemCode );
 	if( !pItem )
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnBadPingFlagDrop - Flag Create Fail!" );
+		LOG.PrintTimeAndLog( 0, "OnBadPingFlagDrop - Flag Create Fail!" );
 		return;
 	}
 
@@ -34207,7 +34207,7 @@ void ioPlayStage::OnBadPingFlagDrop( SP2Packet &rkPacket )
 	}
 	else
 	{
-		LOG.PrintTimeAndLog( 0, "ioPlayStage::OnBadPingFlagDrop - Flag Field Drop Fail!" );
+		LOG.PrintTimeAndLog( 0, "OnBadPingFlagDrop - Flag Field Drop Fail!" );
 	}
 }
 

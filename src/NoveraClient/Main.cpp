@@ -97,7 +97,7 @@ int WINAPI WinMain( HINSTANCE hInstance,
 	LOG.OpenLog( 0, szBuff );
 #endif
 
-	LOG.PrintTimeAndLog(0, "[Main] - Game Start");
+	LOG(0, "Game Start");
 
 	ioINIMemoryStatic* pStatics = new ioINIMemoryStatic;
 	ioLocalManager *pLocalMgr = new ioLocalManager;
@@ -105,11 +105,11 @@ int WINAPI WinMain( HINSTANCE hInstance,
 	{		
 		pLocalMgr->Init();
 		pLocalMgr->ParseCmd( lpCmdLine );
-		LOG.PrintTimeAndLog(0, "[Main] - Local Manager Init Complete");
+		LOG(0, "Local Manager Init Complete");
 	}
 
 #ifdef NPROTECT
-	LOG.PrintTimeAndLog(0, "[Main] - nProtect Init Start" );
+	LOG(0, "nProtect Init Start" );
 	if( !g_ioNProtect.Start() )
 	{
 		ioLocalParent *pLocal = g_LocalMgr.GetLocal( ioLocalManager::GetLocalType() );
@@ -127,7 +127,7 @@ int WINAPI WinMain( HINSTANCE hInstance,
 		SAFEDELETE( pStringMgr );
 		SAFEDELETE( pStatics );
 		ioNProtect::ReleaseInstance();
-		LOG.PrintTimeAndLog(0, "[Main] - nProtect Error : %s:%s", szError, szTitle );
+		LOG(0, "nProtect Error : %s:%s", szError, szTitle );
 		
 		//오토 업그레이드 에러 세팅
 		SendMsgToAutoUpgrade( WM_MY_MSG_C_ERROR );
@@ -141,7 +141,7 @@ int WINAPI WinMain( HINSTANCE hInstance,
 
 		return 0;
 	}
-	LOG.PrintTimeAndLog(0, "[Main] - nProtect Init Complete");
+	LOG(0, "nProtect Init Complete");
 #endif
 
 	ioLocalParent *pLocal = g_LocalMgr.GetLocal( ioLocalManager::GetLocalType() );
@@ -161,7 +161,7 @@ int WINAPI WinMain( HINSTANCE hInstance,
 		ioNProtect::ReleaseInstance();
 #endif
 
-		LOG.PrintTimeAndLog(0, "[Main] - license Error" );
+		LOG(0, "license Error" );
 		return 0;
 	}
 
@@ -179,7 +179,7 @@ int WINAPI WinMain( HINSTANCE hInstance,
 		ioNProtect::ReleaseInstance();
 #endif
 
-		LOG.PrintTimeAndLog( 0, "[Main] - Mutex Create Failed" );
+		LOG( 0, "Mutex Create Failed" );
 		return 0;
 	}
 #endif
@@ -210,7 +210,7 @@ int WINAPI WinMain( HINSTANCE hInstance,
 #endif
 
 		MessageBox( NULL, "Get DX Info Error!", "Novera", MB_OK );
-		LOG.PrintTimeAndLog( 0, "[Main] - Get DX Info Error" );
+		LOG( 0, "Get DX Info Error" );
 		return 0;
 	}
 
@@ -236,7 +236,7 @@ int WINAPI WinMain( HINSTANCE hInstance,
 #endif
 
 		MessageBox( NULL, "DX Version Error!", "Novera", MB_OK );
-		LOG.PrintTimeAndLog( 0, "[Main] - DX Version Error!" );
+		LOG( 0, "DX Version Error!" );
 
 		return 0;
 	}
@@ -260,7 +260,7 @@ int WINAPI WinMain( HINSTANCE hInstance,
 #endif
 		
 		MessageBox( NULL, "Create App Error!", "Novera", MB_OK );
-		LOG.PrintTimeAndLog( 0, "[Main] - Create App Error!" );
+		LOG( 0, "Create App Error!" );
 
 		return 0;
 	}
@@ -284,14 +284,14 @@ int WINAPI WinMain( HINSTANCE hInstance,
 #endif
 		
 		MessageBox( NULL, "App Cmd Error!", "Novera", MB_OK );
-		LOG.PrintTimeAndLog( 0, "[Main] - App Cmd Error!" );
+		LOG( 0, "App Cmd Error!" );
 
 		return 0;
 	}
 
 	InitOnWinMain( szOptionsOnCmd );
 	
-	LOG.PrintTimeAndLog( 0, "[Main] - Process Option Start" );
+	LOG( 0, "Process Option Start" );
 
 #ifdef _DEBUG
 	if (!pApp->ProcessOptions(false, true))
@@ -312,11 +312,11 @@ int WINAPI WinMain( HINSTANCE hInstance,
 #endif
 
 		MessageBox( NULL, "App Option Error!", "Novera", MB_OK );
-		LOG.PrintTimeAndLog( 0, "[Main] - Process Option Start Failed" );
+		LOG( 0, "Process Option Start Failed" );
 		return 0;
 	}
 
-	LOG.PrintTimeAndLog( 0, "[Main] - Process Option Start Complete" );
+	LOG( 0, "Process Option Start Complete" );
 
 	// For Sticky Keys Disable
 	// 초기값 백업
@@ -330,19 +330,19 @@ int WINAPI WinMain( HINSTANCE hInstance,
 	//윈도우가 생성 됬을 경우에만 다음 로직을 수행하도록 변경
 	if( pApp->InitWindow( hInstance, szKeyOnCmd ) )
 	{
-		LOG.PrintTimeAndLog( 0, "[Main] - InitWindow Complete" );
+		LOG( 0, "InitWindow Complete" );
 
 		if (!pApp->SetupNetwork(szIPOnCmd, iPortOncmd))
 		{
-			LOG.PrintTimeAndLog(0, "[Main] - Setup Network Failed");
+			LOG(0, "Setup Network Failed");
 			MessageBox(NULL, "Failed to setup network", "Novera", MB_OK);
-
+			return 0;
 		}
 
 		//소켓 생성과 초기화에 성공한 경우에만 실행 하도록 변경
 		if( pApp->SetupBeforeLogin() )
 		{
-			LOG.PrintTimeAndLog( 0, "[Main] - Setup Before Login Complete" );
+			LOG( 0, "Setup Before Login Complete" );
 
 			if( pApp->LoginLoop( szKeyOnCmd, szIPKeyOnCmd ) )
 			{
@@ -356,24 +356,24 @@ int WINAPI WinMain( HINSTANCE hInstance,
 				ioINIMemoryStatic::GetSingleton().SetSwitch( SATICS_ON );
 				g_MemoryLOG.OpenLog( 0, "info/pp_mem.log");
 #endif
-				LOG.PrintTimeAndLog( 0, "[Main] - Run Call" );
+				LOG( 0, "Run Call" );
 				iRet = pApp->Run();
 			}
 			else
 			{
-				LOG.PrintTimeAndLog(0, "[Main] - App LoginLoop Error" );
+				LOG(0, "App LoginLoop Error" );
 				MessageBox( NULL, "App LoginLoop Error!", "Novera", MB_OK );
 			}
 		}
 		else
 		{
-			LOG.PrintTimeAndLog(0, "[Main] - App SetupBeforeLogin Error" );
+			LOG(0, "App SetupBeforeLogin Error" );
 			MessageBox( NULL, "App SetupBeforeLogin Error!", "Novera", MB_OK );
 		}
 	}
 	else
 	{
-		LOG.PrintTimeAndLog(0, "[Main] - App InitWindow Error" );
+		LOG(0, "App InitWindow Error" );
 		MessageBox( NULL, "App InitWindow Error!", "Novera", MB_OK );
 	}
 	
