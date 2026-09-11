@@ -1347,6 +1347,14 @@ void ioHeadquartersMode::ApplyModeInfo( SP2Packet &rkPacket )
 		rkPacket >> iPosArray;
 		m_SingleTeamPosArray.push_back( iPosArray );
 	}
+
+	if (m_szMasterName == g_MyInfo.GetPublicID() && m_dwCharState != STATE_UNITE_CHAR)
+	{
+		SP2Packet kPacket2(CTPK_HEADQUARTERS_STATE_CHANGE);
+		kPacket2 << (int)ioHeadquartersMode::STATE_UNITE_CHAR;
+		TCPNetwork::SendToServer(kPacket2);
+		TCPNetwork::MouseBusy(true);
+	}
 }
 
 void ioHeadquartersMode::ApplyCharModeInfo( const ioHashString &rkName, SP2Packet &rkPacket, bool bDieCheck )
