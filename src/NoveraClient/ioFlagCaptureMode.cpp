@@ -2224,13 +2224,6 @@ void ioFlagCaptureMode::FillLastPlayRecordInfo( SP2Packet &rkPacket )
 			pRecord->GetUniqueTotalKill(), pRecord->GetUniqueTotalDeath() );
 #endif
 
-#if defined( USE_GA )
-		if( g_MyInfo.GetPublicID() == pRecord->pChar->GetCharName() )
-		{
-			g_HttpMng.SetKill( pRecord->GetUniqueTotalKill() );
-			g_HttpMng.SetDeath( pRecord->GetUniqueTotalDeath() );
-		}
-#endif
 	}
 }
 
@@ -2811,19 +2804,6 @@ void ioFlagCaptureMode::OnRoundEnd( SP2Packet &rkPacket )
 	rkPacket >> m_iRedRoundWinCnt;
 	rkPacket >> m_iBlueRoundWinCnt;
 
-#if defined( USE_GA )
-	bool		bWin		= false;
-	ioBaseChar *pGAOwner	= GetOwnerChar();
-	if( pGAOwner )
-	{
-		if( IsWinTeam( (WinTeamType)iWinTeam, pGAOwner->GetTeam() ) )
-			bWin = true;
-		else
-			bWin = false;
-	}
-
-	g_HttpMng.SetWin( bWin );
-#endif
 
 	rkPacket >> m_fCurRedFlagPoint;
 	rkPacket >> m_fCurBlueFlagPoint;

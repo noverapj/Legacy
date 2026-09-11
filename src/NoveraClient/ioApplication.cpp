@@ -395,9 +395,6 @@ ioApplication::ioApplication()
 	m_pNamedTitleInfoManager= NULL;
 
 	m_bPractice = false;
-#if defined( USE_GA )
-	m_pHttpMng				= NULL;
-#endif
 	m_pRenderTargetMgr		= NULL;
 	m_pGuildBlockStorage	= NULL;
 	m_pHomeBlockStorage		= NULL;
@@ -495,13 +492,6 @@ ioApplication::ioApplication()
 		m_dwSuccessionEndTime[i] = 2300;
 	}
 
-#if defined( USE_GA )
-	m_bGAStart			= false;
-	m_bGAUser			= false;
-	m_dwGAAliveTime		= 0;
-	m_bGAFirstCash		= true;
-	m_bFirstUnMouseBusy = true;
-#endif
 
 #ifdef _DEBUG
 	m_dwCurPacketPrintCount = 0;
@@ -556,9 +546,6 @@ void ioApplication::ReleaseAll()
 		m_hWindowOutLine = NULL;
 	}
 
-#if defined( USE_GA )
-	SAFEDELETE( m_pHttpMng );
-#endif
 	
 	SAFEDELETE( m_pShopMgr );
 	SAFEDELETE( m_pSpecialShopMgr );
@@ -1392,11 +1379,6 @@ bool ioApplication::Setup()
 		}
 	}
 
-#if defined( USE_GA )
-	m_pHttpMng = new ioHttpMng;	
-	m_pHttpMng->LoadINI();
-	m_pHttpMng->InitGALocal();
-#endif
 
 	ErrorReport::SetPosition( 1070, 1 );
 	m_pRenderSystem = &RenderSystem();
@@ -1772,26 +1754,6 @@ bool ioApplication::Setup()
 					SafeSprintf( g_szErrorLog, sizeof(g_szErrorLog), STR(4) );
 					LOG.PrintTimeAndLog(0, "%s", g_szSendErrorLog );
 
-#if defined( USE_GA )
-					if( GetGAStart() == true )
-					{
-						char chLabel[32] = {0,};
-
-						if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-							sprintf_e( chLabel, "%d", 331 );
-						else
-							SafeSprintf( chLabel, sizeof(chLabel), "%1", 331 );
-
-						// GAME_END_ERR_POS
-						g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-							, "Game"
-							, "Error"
-							, chLabel
-							, 1
-							, "%2FGAME%2FOVER%2FERR"
-							, 1 );
-					}		
-#endif
 
 					return false;
 				}
@@ -2239,30 +2201,6 @@ bool ioApplication::Setup()
 
 	SendINILog();
 
-#if defined( USE_GA )
-	// GA 전송할 유저 판단. ex> ( User Index % 100 == 0 ), 1% 만 sampling
-	int iUID = (int)g_MyInfo.GetUserIndex();
-	if( iUID % m_pHttpMng->GetGAGameDataSampling() == 0 )
-		m_bGAUser = true;
-
-	char chResolution[32]	= {0,};
-	char chOS[128]			= {0,};
-
-	if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-	{
-		sprintf_e( chOS, "OS : %s", Setting::GetOSVersion() );
-		sprintf_e( chResolution, "%dx%d", Setting::Width(), Setting::Height() );
-	}
-	else
-	{
-		SafeSprintf( chOS, sizeof(chOS), "OS : %1", Setting::GetOSVersion() );
-		SafeSprintf( chResolution, sizeof(chResolution), "%1x%2", Setting::Width(), Setting::Height() );
-	}	
-
-	// ACCOUNT_LOGIN
-	g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FACCOUNT%2FLOGIN", 1, "", 0, chOS, chResolution );
-
-#endif
 
 	DeleteLSCFile();
 
@@ -2610,10 +2548,6 @@ void ioApplication::OpenMannerWnd( const char *szNickName, bool bOnline ,ChatTyp
 			pMannerWnd->SetMannerValuationInfo( szNickName, bOnline, ioMannerTrialChatManager::TT_NORMAL_CHAT );
 		pMannerWnd->ShowWnd();
 
-#if defined( USE_GA )
-		// WND_USERINFO
-		g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FWND%2FUSERINFO" );
-#endif
 	}
 }
 
@@ -3363,49 +3297,6 @@ void ioApplication::MainLoop()
 			}
 		}
 
-#if defined( USE_GA )
-		// GA Alive check
-		if( GetGAStart() == true )
-		{
-			DWORD dwGATime = REALGETTIME();
-			if( m_dwGAAliveTime + g_HttpMng.GetAliveTime() < dwGATime )
-			{				
-				g_HttpMng.GA_AliveCheck();
-
-				m_dwGAAliveTime = dwGATime;
-			}
-
-			// 강제적으로 클라이언트에서 Mouse UnBusy 한 부분 체크
-			if( m_bFirstUnMouseBusy == true )
-			{
-				if( m_Mouse.GetCompulsionUnMouseBusy() == true )
-				{
-					m_bFirstUnMouseBusy = false;
-
-					// el(EventLabel) 에 비정상 패킷 아이디를 넣는다
-					char chLabel[32] = {0,};
-
-					if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-						sprintf_e( chLabel, "%d", (int)m_Mouse.GetPacketID() );
-					else
-						SafeSprintf( chLabel, sizeof(chLabel), "%1", (int)m_Mouse.GetPacketID() );
-
-					// GAME_MOUSE_UNBUSY
-					g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-						, "Game"
-						, "MouseUnBusy"
-						, chLabel
-						, 1
-						, "%2FGAME%2FMOUSE%2FUNBUSY"
-						, 2 );
-
-					g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FGAME%2FMOUSE%2FUNBUSY", 10 );
-
-					m_Mouse.SetCompulsionUnMouseBusy( false );
-				}
-			}			
-		}
-#endif
 		if( g_App.GetCurrentStage() >= ioGameStage::GS_LOBBY && m_pExcavationMgr )
 		{
 			m_pExcavationMgr->ProcessRecharge();
@@ -4557,28 +4448,6 @@ void ioApplication::QueryEndSessionProcess()
 	{
 		LOG.PrintTimeAndLog( 0, "ExitProgram - 1" );
 
-#if defined( USE_GA )
-		if( GetGAStart() == true )
-		{
-			char chLabel[32] = {0,};
-
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chLabel, "%d", 1 );
-			else
-				SafeSprintf( chLabel, sizeof(chLabel), "%1", 1 );
-
-			// GAME_END_ERR_POS
-			g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-				, "Game"
-				, "Error"
-				, chLabel
-				, 1
-				, "%2FGAME%2FOVER%2FERR"
-				, 1 );
-
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FGAME%2FOVER%2FERR", 6, chLabel );
-		}		
-#endif
 
 		SetExitProgram();
 		return;
@@ -5412,28 +5281,6 @@ void ioApplication::CheckLanConnected()
 					MBox( NULL, STR(1), STR(2) );
 					LOG.PrintTimeAndLog( 0, "ExitProgram - 2" );
 
-#if defined( USE_GA )
-					if( GetGAStart() == true )
-					{
-						char chLabel[32] = {0,};
-
-						if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-							sprintf_e( chLabel, "%d", 2 );
-						else
-							SafeSprintf( chLabel, sizeof(chLabel), "%1", 2 );
-
-						// GAME_END_ERR_POS
-						g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-							, "Game"
-							, "Error"
-							, chLabel
-							, 1
-							, "%2FGAME%2FOVER%2FERR"
-							, 1 );
-
-						g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FGAME%2FOVER%2FERR", 6, chLabel );
-					}					
-#endif
 
 					SetExitProgram();
 				}
@@ -7901,16 +7748,6 @@ void ioApplication::OnCharCreate( SP2Packet &rkPacket )
 	if( iMoney != g_MyInfo.GetMoney() || iCash != g_MyInfo.GetCash() )
 		g_ExSoundMgr.PlaySound( ExSound::EST_SHOP_BUY_SUCCESS );
 
-#if defined( USE_GA )
-	bool bGACash	= false;
-	bool bGAMoney	= false;
-	int iPesoPrice	= g_MyInfo.GetMoney() - iMoney;
-	int iCashPrice	= g_MyInfo.GetCash() - iCash;
-	if( iCashPrice > 0 && iCashPrice < 1000000 )
-		bGACash		= true;
-	if( iPesoPrice > 0 )
-		bGAMoney	= true;
-#endif
 	
 	g_MyInfo.SetMoney( iMoney );
 	g_MyInfo.SetCash( iCash );
@@ -8023,51 +7860,6 @@ void ioApplication::OnCharCreate( SP2Packet &rkPacket )
 
 	g_MyInfo.RestoreReferenceCharacterData();
 
-#if defined( USE_GA )
-	char chLabel[32] = {0,};
-
-	if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-		sprintf_e( chLabel, "%d", kCharData.m_data.m_class_type );
-	else
-		SafeSprintf( chLabel, sizeof(chLabel), "%1", kCharData.m_data.m_class_type );
-
-	// CHAR_CREATE
-	g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-		, "Character"
-		, "Create"
-		, chLabel
-		, 1
-		, "%2FCHAR%2FCREATE" );
-
-	if( bGACash )
-	{
-		if( kCharData.m_data.m_ePeriodType == CPT_MORTMAIN )
-			iCashPrice = g_ClassPrice.GetMortmainCharCash( kCharData.m_data.m_class_type );
-		else
-			iCashPrice = g_ClassPrice.GetClassBuyCash( kCharData.m_data.m_class_type, kCharData.m_data.m_iLimitSecond );
-
-		// GOLD_USE_HERO
-		g_HttpMng.GA_ItemHitTracking( g_MyInfo.GetUserIndex() 
-			, "Hero"
-			, iCashPrice
-			, 1
-			, kCharData.m_data.m_class_type
-			, "Gold"
-			, "%2FGOLD%2FUSE%2FHERO"
-			, true );
-	}
-	if( bGAMoney )
-	{
-		// PESO_USE_HERO
-		g_HttpMng.GA_ItemHitTracking( g_MyInfo.GetUserIndex() 
-			, "Hero"
-			, iPesoPrice
-			, 1
-			, kCharData.m_data.m_class_type
-			, "Peso"
-			, "%2FPESO%2FUSE%2FHERO" );
-	}			
-#endif
 }
 
 void ioApplication::OnCharLoad( SP2Packet &rkPacket )
@@ -8307,22 +8099,6 @@ void ioApplication::OnTimeGrowthCheck( SP2Packet &rkPacket )
 				g_MyInfo.AddTimeGrowthEndInfo( iClassType, iSlot, bConfirm );
 				g_QuestMgr.QuestCompleteTerm( QC_TIME_GROWTH_SUCCESS, pLevel->GetCharGrowthLevel( iClassType, iSlot, true ) );
 
-#if defined( USE_GA )
-				char chLabel[32] = {0,};
-
-				if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-					sprintf_e( chLabel, "%d", iClassType );
-				else
-					SafeSprintf( chLabel, sizeof(chLabel), "%1", iClassType );
-
-				// CHAR_GROWTH_TIME_END
-				g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-					, "Character"
-					, "End"
-					, chLabel
-					, 1
-					, "%2FCHAR%2FGROWTH%2FTIME%2FEND" );
-#endif
 			}
 		}
 	}
@@ -8755,32 +8531,6 @@ void ioApplication::OnCharDelete( SP2Packet &rkPacket )
 			g_GUIMgr.ShowWnd( BANKRUPTCY_CHAR_WND );
 		}
 
-#if defined( USE_GA )
-		char chCharIndex[32]	= {0,};
-		char chSlash[16]		= {0,};
-		char chPostData[256]	= {0,};
-
-		if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-		{
-			sprintf_e( chCharIndex, "%d", dwCharIndex );
-			sprintf_e( chSlash, "%%2F" );
-			sprintf_e( chPostData, "%sPESO%sGET%sHERO%s%s", chSlash, chSlash, chSlash, chSlash, chCharIndex );
-		}
-		else
-		{
-			SafeSprintf( chCharIndex, sizeof(chCharIndex), "%1", dwCharIndex );
-			SafeSprintf( chSlash, sizeof(chSlash), "%2F" );
-			SafeSprintf( chPostData, sizeof(chPostData), "%1PESO%2GET%3HERO%4%5", chSlash, chSlash, chSlash, chSlash, chCharIndex );
-		}		
-
-		// PESO_GET_HERO
-		g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-			, "Peso"
-			, "Hero"
-			, ""
-			, iResellPeso
-			, chPostData );
-#endif
 	}
 
 	SoldierSelectWnd *pSelectWnd = dynamic_cast<SoldierSelectWnd*>(g_GUIMgr.FindWnd( SOLDIER_SELECT_WND ));
@@ -9047,16 +8797,6 @@ void ioApplication::OnCharDecorationBuy( SP2Packet &rkPacket )
 	iPrevMoney = g_MyInfo.GetMoney();
 	rkPacket >> iMoney >> iCash >> iChannelingCash >> iType >> iCode >> dwCharIndex >> kCharInfo >> iBonusPeso;
 
-#if defined( USE_GA )
-	bool bGACash	= false;
-	bool bGAMoney	= false;
-	int iPesoPrice	= g_MyInfo.GetMoney() - iMoney;
-	int iCashPrice	= g_MyInfo.GetCash() - iCash;
-	if( iCashPrice > 0 && iCashPrice < 1000000 )
-		bGACash		= true;
-	if( iPesoPrice > 0 )
-		bGAMoney	= true;
-#endif
 
 	g_MyInfo.ChangeReferenceCharacterData( MT_NONE );
 	g_MyInfo.SetMoney( iMoney );
@@ -9112,59 +8852,6 @@ void ioApplication::OnCharDecorationBuy( SP2Packet &rkPacket )
 		pMiniSoldierWnd->SettingMiniSoldierBtn();
 	}
 
-#if defined( USE_GA )
-	char chType[32]		= {0,};
-	char chParse[32]	= {0,};
-	char chCode[32]		= {0,};
-	int iSendCode		= 0;
-
-	if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-		sprintf_e( chType, "%d", iType );
-	else
-		SafeSprintf( chType, sizeof(chType), "%1", iType );
-
-	int iSize = strlen( chType ) - 4;
-	strncpy( chParse, chType + iSize, 4 );
-
-	// 코드 조합
-	// "7 (치장)" + "000X(남자) or 100X(여자), (X는 치장 종류, ex> 머리모양, 피부색.. )," + "치장 종류에 따른 index (ex>머리모양 1,2,3..)"
-	// ex> 710031 -> 7 치장 + 1003 여자, 피부색 + 1 피부색 중 첫번쨰 아이템.
-	// 1 표정, 2 머리모양, 3 피부색, 4 머리색, 7 속옷
-	if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-		sprintf_e( chCode, "%d%s%d", 7, chParse, iCode );
-	else
-		SafeSprintf( chCode, sizeof(chCode), "%1%2%3", 7, chParse, iCode );
-
-	iSendCode = ioStringConverter::ParseInt( chCode );
-
-	if( bGACash )
-	{
-		iCashPrice = g_DecorationPrice.GetDecoCashByType( iType, iCode ); 
-		if( iCashPrice > 0 )
-		{
-			// GOLD_USE_DECORATE
-			g_HttpMng.GA_ItemHitTracking( g_MyInfo.GetUserIndex() 
-				, "Deco"
-				, iCashPrice
-				, 1
-				, iSendCode
-				, "Gold"
-				, "%2FGOLD%2FUSE%2FDECORATE"
-				, true );
-		}		
-	}
-	if( bGAMoney )
-	{
-		// PESO_USE_DECORATE
-		g_HttpMng.GA_ItemHitTracking( g_MyInfo.GetUserIndex() 
-			, "Deco"
-			, iPesoPrice
-			, 1
-			, iSendCode
-			, "Peso"
-			, "%2FPESO%2FUSE%2FDECORATE" );
-	}	
-#endif
 }
 
 void ioApplication::OnCharExtend( SP2Packet &rkPacket )
@@ -9245,16 +8932,6 @@ void ioApplication::OnCharExtend( SP2Packet &rkPacket )
 	int iBonusPeso = 0;
 	rkPacket >> iMoney >> iCash >> iChannelingCash >> iCharArray >> iBonusPeso;
 
-#if defined( USE_GA )
-	bool bGACash	= false;
-	bool bGAMoney	= false;
-	int iPesoPrice	= g_MyInfo.GetMoney() - iMoney;
-	int iCashPrice	= g_MyInfo.GetCash() - iCash;
-	if( iCashPrice > 0 && iCashPrice < 1000000 )
-		bGACash		= true;
-	if( iPesoPrice > 0 )
-		bGAMoney	= true;
-#endif
 
 	g_MyInfo.ChangeReferenceCharacterData( MT_NONE );
 	g_MyInfo.SetMoney( iMoney );
@@ -9306,33 +8983,6 @@ void ioApplication::OnCharExtend( SP2Packet &rkPacket )
 		pHelpWnd->ReCreateWindow();
 	}
 
-#if defined( USE_GA )
-	if( bGACash )
-	{
-		iCashPrice = g_ClassPrice.GetClassBuyCash( g_MyInfo.GetClassType( iCharArray ), g_HttpMng.GetHeroLimitDate() );
-
-		// GOLD_USE_HERO
-		g_HttpMng.GA_ItemHitTracking( g_MyInfo.GetUserIndex() 
-			, "Hero"
-			, iCashPrice
-			, 1
-			, g_MyInfo.GetClassType( iCharArray )
-			, "Gold"
-			, "%2FGOLD%2FUSE%2FHERO"
-			, true );
-	}
-	if( bGAMoney )
-	{
-		// PESO_USE_HERO
-		g_HttpMng.GA_ItemHitTracking( g_MyInfo.GetUserIndex() 
-			, "Hero"
-			, iPesoPrice
-			, 1
-			, g_MyInfo.GetClassType( iCharArray )
-			, "Peso"
-			, "%2FPESO%2FUSE%2FHERO" );
-	}			
-#endif
 }
 
 void ioApplication::OnCharCharge( SP2Packet &rkPacket )
@@ -9436,10 +9086,6 @@ void ioApplication::OnAnnounce( SP2Packet &rkPacket )
 
 void ioApplication::OnLogOut( SP2Packet &rkPacket )
 {
-#if defined( USE_GA )
-	// GAME_END_NORMAL
-	g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FGAME%2FOVER", 2 );
-#endif
 
 	LOG.PrintTimeAndLog( 0, "ExitProgram - 3" );
 	SetExitProgram();
@@ -11083,13 +10729,6 @@ void ioApplication::OnPCRoomAuthority( SP2Packet &rkPacket )
 	rkPacket >> iExcercisePCRoomCharMax;
 	g_MyInfo.SetPCRoomAuthority( dwPcroom, iExcercisePCRoomCharMax );
 
-#if defined( USE_GA )
-	if( dwPcroom > 0 )
-	{
-		// ACCOUNT_PC_ROOM
-		g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FACCOUNT%2FPC_ROOM", 8 );
-	}
-#endif
 
 	if( !g_MyInfo.GetPCRoomAuthority() )
 		return;
@@ -11386,28 +11025,6 @@ void ioApplication::KickToHeadQuater( int iKickType, bool bOpenSpace )
 	{
 		LOG.PrintTimeAndLog( 0, "ExitProgram - 4" );
 
-#if defined( USE_GA )
-		if( GetGAStart() == true )
-		{
-			char chLabel[32] = {0,};
-
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chLabel, "%d", 4 );
-			else
-				SafeSprintf( chLabel, sizeof(chLabel), "%1", 4 );
-
-			// GAME_END_ERR_POS
-			g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-				, "Game"
-				, "Error"
-				, chLabel
-				, 1
-				, "%2FGAME%2FOVER%2FERR"
-				, 1 );
-
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FGAME%2FOVER%2FERR", 6, chLabel );
-		}		
-#endif
 
 		SetExitProgram();
 	}
@@ -11417,28 +11034,6 @@ void ioApplication::KickToHeadQuater( int iKickType, bool bOpenSpace )
 		{
 			LOG.PrintTimeAndLog( 0, "ExitProgram - 5" );
 
-#if defined( USE_GA )
-			if( GetGAStart() == true )
-			{
-				char chLabel[32] = {0,};
-
-				if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-					sprintf_e( chLabel, "%d", 5 );
-				else
-					SafeSprintf( chLabel, sizeof(chLabel), "%1", 5 );
-
-				// GAME_END_ERR_POS
-				g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-					, "Game"
-					, "Error"
-					, chLabel
-					, 1
-					, "%2FGAME%2FOVER%2FERR"
-					, 1 );
-
-				g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FGAME%2FOVER%2FERR", 6, chLabel );
-			}
-#endif
 
 			SetExitProgram();	// 서버에서 방에 있는 경우만 체크하기 때문에 실제 여기까지 오지는 않는다..
 		}
@@ -12909,25 +12504,6 @@ void ioApplication::OnCampChangePos( SP2Packet &rkPacket )
 		}
 	}
 
-#if defined( USE_GA )
-	if( iCampPosition != 0 )
-	{
-		char chLabel[32] = {0,};
-
-		if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-			sprintf_e( chLabel, "%d", iCampPosition );
-		else
-			SafeSprintf( chLabel, sizeof(chLabel), "%1", iCampPosition );
-
-		// CHAR_CAMP_SELECT
-		g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-			, "Character"
-			, "Select"
-			, chLabel
-			, 1
-			, "%2FCHAR%2FCAMP_SELECT" );
-	}	
-#endif
 }
 
 void ioApplication::OnRefreshLadderPointNRecord( SP2Packet &rkPacket )
@@ -13133,16 +12709,6 @@ void ioApplication::OnCharChangePeriod( SP2Packet &rkPacket )
 	bool bCash;
 	rkPacket >> iMoney >> iCash >> iChannelingCash >> iCharArray >> iResellPeso >> iBonusPeso >> bCash;
 
-#if defined( USE_GA )
-	bool bGACash	= false;
-	bool bGAMoney	= false;
-	int iPesoPrice	= g_MyInfo.GetMoney() - iMoney;
-	int iCashPrice	= g_MyInfo.GetCash() - iCash;
-	if( iCashPrice > 0 && iCashPrice < 1000000 )
-		bGACash		= true;
-	if( iPesoPrice > 0 )
-		bGAMoney	= true;
-#endif
 
 	g_MyInfo.ChangeReferenceCharacterData( MT_NONE );
 	g_MyInfo.SetCash( iCash ); 
@@ -13199,33 +12765,6 @@ void ioApplication::OnCharChangePeriod( SP2Packet &rkPacket )
 
 	g_MyInfo.RestoreReferenceCharacterData();
 
-#if defined( USE_GA )
-	if( bGACash )
-	{
-		iCashPrice = g_ClassPrice.GetMortmainCharCash( g_MyInfo.GetClassType( iCharArray ) );
-
-		// GOLD_USE_HERO
-		g_HttpMng.GA_ItemHitTracking( g_MyInfo.GetUserIndex() 
-			, "Hero"
-			, iCashPrice
-			, 1
-			, g_MyInfo.GetClassType( iCharArray )
-			, "Gold"
-			, "%2FGOLD%2FUSE%2FHERO"
-			, true );
-	}
-	if( bGAMoney )
-	{
-		// PESO_USE_HERO
-		g_HttpMng.GA_ItemHitTracking( g_MyInfo.GetUserIndex() 
-			, "Hero"
-			, iPesoPrice
-			, 1
-			, g_MyInfo.GetClassType( iCharArray )
-			, "Peso"
-			, "%2FPESO%2FUSE%2FHERO" );
-	}			
-#endif
 }
 
 void ioApplication::OnChangeUserName( SP2Packet &rkPacket )
@@ -13273,28 +12812,6 @@ void ioApplication::OnBlockType( SP2Packet &rkPacket )
 			MBox( NULL, STR(3), STR(4) );
 			LOG.PrintTimeAndLog( 0, "ExitProgram - 6" );
 
-#if defined( USE_GA )
-			if( GetGAStart() == true )
-			{
-				char chLabel[32] = {0,};
-
-				if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-					sprintf_e( chLabel, "%d", 6 );
-				else
-					SafeSprintf( chLabel, sizeof(chLabel), "%1", 6 );
-
-				// GAME_END_ERR_POS
-				g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-					, "Game"
-					, "Error"
-					, chLabel
-					, 1
-					, "%2FGAME%2FOVER%2FERR"
-					, 1 );
-
-				g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FGAME%2FOVER%2FERR", 6, chLabel );
-			}			
-#endif
 
 			g_App.SetExitProgram();
 		}
@@ -13370,10 +12887,6 @@ void ioApplication::OnFirstChangeID( SP2Packet &rkPacket )
 
 		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );
 
-#if defined( USE_GA )
-		// ACCOUNT_CREATE
-		g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FACCOUNT%2FCREATE", 5 );
-#endif
 	}
 	else
 	{
@@ -13730,30 +13243,6 @@ void ioApplication::OnEventShopGoodsBuy( SP2Packet &rkPacket )
 			rkPacket >> dwGoodsIndex >> dwEtcItemType >> iNeedCoin;
 			g_EventGoodsMgr.BuyGoodsComplete( dwGoodsIndex, dwEtcItemType, iNeedCoin );
 
-#if defined( USE_GA )
-			if( dwEtcItemType == 1001913 )
-			{
-				// ITEM_CLOVER_BUY
-				g_HttpMng.GA_ItemHitTracking( g_MyInfo.GetUserIndex() 
-					, "CloverBuy"
-					, iNeedCoin
-					, 1
-					, dwGoodsIndex
-					, "Item"
-					, "%2FITEM%2FCLOVER%2FBUY" );
-			}
-			if( dwEtcItemType == 1000049 )
-			{
-				// ITEM_EVENT_BUY
-				g_HttpMng.GA_ItemHitTracking( g_MyInfo.GetUserIndex() 
-					, "EventBuy"
-					, iNeedCoin
-					, 1
-					, dwGoodsIndex
-					, "Item"
-					, "%2FITEM%2FEVENT%2FBUY" );
-			}
-#endif
 		}
 		break;
 	case EVENT_SHOP_GOODS_BUY_CLOSE:       // 상점 종료
@@ -13825,28 +13314,6 @@ void ioApplication::OnShutDownUser( SP2Packet &rkPacket )
 	{
 		LOG.PrintTimeAndLog( 0, "ExitProgram - 7" );
 
-#if defined( USE_GA )
-		if( GetGAStart() == true )
-		{
-			char chLabel[32] = {0,};
-
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chLabel, "%d", 7 );
-			else
-				SafeSprintf( chLabel, sizeof(chLabel), "%1", 7 );
-
-			// GAME_END_ERR_POS
-			g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-				, "Game"
-				, "Error"
-				, chLabel
-				, 1
-				, "%2FGAME%2FOVER%2FERR"
-				, 1 );
-
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FGAME%2FOVER%2FERR", 6, chLabel );
-		}		
-#endif
 
 		SetExitProgram();
 		Setting::Initialize("error");
@@ -13887,28 +13354,6 @@ void ioApplication::OnSelectShutDownUser( SP2Packet &rkPacket )
 	{
 		LOG.PrintTimeAndLog( 0, "ExitProgram - 8" );
 
-#if defined( USE_GA )
-		if( GetGAStart() == true )
-		{
-			char chLabel[32] = {0,};
-
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chLabel, "%d", 8 );
-			else
-				SafeSprintf( chLabel, sizeof(chLabel), "%1", 8 );
-
-			// GAME_END_ERR_POS
-			g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-				, "Game"
-				, "Error"
-				, chLabel
-				, 1
-				, "%2FGAME%2FOVER%2FERR"
-				, 1 );
-
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FGAME%2FOVER%2FERR", 6, chLabel );
-		}		
-#endif
 
 		SetExitProgram();
 		Setting::Initialize("error");
@@ -14508,9 +13953,6 @@ LRESULT ioApplication::MsgProc( HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lPar
 		}
 		break;
 	case WM_DESTROY:
-#if defined( USE_GA )
-		SetGAStart(false);
-#endif
 
 		ReleaseAll();
 
@@ -16791,28 +16233,6 @@ void ioApplication::OnNexonSessionMsg( SP2Packet &rkPacket )
 	{
 		LOG.PrintTimeAndLog( 0, "ExitProgram - 26" );
 
-#if defined( USE_GA )
-		if( GetGAStart() == true )
-		{
-			char chLabel[32] = {0,};
-
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chLabel, "%d", 26 );
-			else
-				SafeSprintf( chLabel, sizeof(chLabel), "%1", 26 );
-
-			// GAME_END_ERR_POS
-			g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-				, "Game"
-				, "Error"
-				, chLabel
-				, 1
-				, "%2FGAME%2FOVER%2FERR"
-				, 1 );
-
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FGAME%2FOVER%2FERR", 6, chLabel );
-		}		
-#endif
 
 		SetExitProgram();
 		Setting::Initialize("error");
@@ -18064,65 +17484,6 @@ void ioApplication::OnPenalty( SP2Packet& rkPacket )
 	return;
 }
 
-#if defined( USE_GA )
-void ioApplication::SetGAEtcSubInfo( int iSubCode, int iCash )
-{
-	if( iSubCode == 0 || iCash == 0 )
-		return;
-
-	stGAEtcInfo GAEtcInfo;
-	GAEtcInfo.iSubCode	= iSubCode;
-	GAEtcInfo.iCash		= iCash;
-
-	m_vecGAEtcInfo.push_back( GAEtcInfo );
-}
-
-void ioApplication::SetGAEtcMainInfo( int iMainCode )
-{
-	if( iMainCode == 0 || m_vecGAEtcInfo.size() == 0 )
-		return;
-
-	GAEtcInfoVec vecEtcInfo = m_vecGAEtcInfo;
-
-	m_mapGAEtcInfo.insert( GAEtcInfoMap::value_type( iMainCode, vecEtcInfo ) );
-
-	m_vecGAEtcInfo.clear();
-}
-
-int ioApplication::GetGAEtcCash( int iMainCode, int iSubCode )
-{
-	GAEtcInfoMap::iterator iter = m_mapGAEtcInfo.find( iMainCode );
-	if( iter != m_mapGAEtcInfo.end() )
-	{
-		GAEtcInfoVec vecEtcInfo = iter->second;
-
-		GAEtcInfoVec::iterator iter2 = vecEtcInfo.begin();
-		for( ; iter2 != vecEtcInfo.end(); ++iter2 )
-		{
-			if( iter2->iSubCode == iSubCode )
-			{
-				return iter2->iCash;
-			}
-		}
-	}
-
-	return 0;
-}
-
-int ioApplication::GetGAEtcCash2( int iMainCode, int iNum )
-{
-	GAEtcInfoMap::iterator iter = m_mapGAEtcInfo.find( iMainCode );
-	if( iter != m_mapGAEtcInfo.end() )
-	{
-		GAEtcInfoVec vecEtcInfo = iter->second;
-
-		GAEtcInfoVec::iterator iter2 = vecEtcInfo.begin() + iNum;
-		return iter2->iCash;
-	}
-
-	return 0;
-}
-#endif
 
 void ioApplication::SetRegHotKey( HWND hWnd )
 {
@@ -18576,22 +17937,6 @@ void ioApplication::OnSpiritDecompose( SP2Packet &rkPacket )
 			g_GUIMgr.ShowWnd( BANKRUPTCY_CHAR_WND );
 		}
 
-#if defined( USE_GA )
- 		char chLabel[32] = {0,};
-
-		if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-			sprintf_e( chLabel, "%d", dwCharIndex );
-		else
-			SafeSprintf( chLabel, sizeof(chLabel), "%1", dwCharIndex );
-
- 		// CHAR_DISASSEMBLE
- 		g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
- 			, "Character"
- 			, "Disassemble"
- 			, chLabel
- 			, 1
- 			, "%2FCHAR%2FDISASSEMBLE" );
-#endif
 	}
 
 	SoldierSelectWnd *pSelectWnd = dynamic_cast<SoldierSelectWnd*>(g_GUIMgr.FindWnd( SOLDIER_SELECT_WND ));

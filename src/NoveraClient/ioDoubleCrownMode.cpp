@@ -2512,13 +2512,6 @@ void ioDoubleCrownMode::FillLastPlayRecordInfo( SP2Packet &rkPacket )
 		rkPacket << pRecord->GetUniqueTotalDeath();
 		rkPacket << g_VictoriesMgr.GetVictories( pRecord->pChar->GetCharName() );
 
-#if defined( USE_GA )
-		if( g_MyInfo.GetPublicID() == pRecord->pChar->GetCharName() )
-		{
-			g_HttpMng.SetKill( pRecord->GetUniqueTotalKill() );
-			g_HttpMng.SetDeath( pRecord->GetUniqueTotalDeath() );
-		}
-#endif
 	}
 }
 
@@ -3209,19 +3202,6 @@ void ioDoubleCrownMode::OnRoundEnd( SP2Packet &rkPacket )
 	rkPacket >> m_iRedRoundWinCnt;
 	rkPacket >> m_iBlueRoundWinCnt;
 
-#if defined( USE_GA )
-	bool		bWin		= false;
-	ioBaseChar *pGAOwner	= GetOwnerChar();
-	if( pGAOwner )
-	{
-		if( IsWinTeam( (WinTeamType)iWinTeam, pGAOwner->GetTeam() ) )
-			bWin = true;
-		else
-			bWin = false;
-	}
-
-	g_HttpMng.SetWin( bWin );
-#endif
 
 	rkPacket >> m_fCurRedCrownPoint;
 	rkPacket >> m_fCurBlueCrownPoint;

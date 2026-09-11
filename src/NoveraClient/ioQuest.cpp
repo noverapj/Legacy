@@ -311,32 +311,6 @@ void ioQuest::AddQuestData( QuestData &rkData )
 			{
 				g_QuestMgr.AddQuestAttainList( pQuestParent );
 
-#if defined( USE_GA )
-				char chQuestIndex[32]	= {0,};
-				char chSlash[16]		= {0,};
-				char chPostData[256]	= {0,};
-
-				if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				{
-					sprintf_e( chQuestIndex, "%d-%d", (int)rkData.GetMainIndex(), (int)rkData.GetSubIndex() );
-					sprintf_e( chSlash, "%%2F" );
-					sprintf_e( chPostData, "%sQUEST%sCOMPLETE%s%s", chSlash, chSlash, chSlash, chQuestIndex );
-				}
-				else
-				{
-					SafeSprintf( chQuestIndex, sizeof(chQuestIndex), "%1-%2", (int)rkData.GetMainIndex(), (int)rkData.GetSubIndex() );
-					SafeSprintf( chSlash, sizeof(chSlash), "%2F" );
-					SafeSprintf( chPostData, sizeof(chPostData), "%1QUEST%2COMPLETE%3%4", chSlash, chSlash, chSlash, chQuestIndex );
-				}				
-
-				// QUEST_STATE_COMPLETE
-				g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-					, "Quest"
-					, "Complete"
-					, ""
-					, 1
-					, chPostData );
-#endif
 
 			}
 			

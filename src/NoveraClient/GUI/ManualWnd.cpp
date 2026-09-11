@@ -1399,10 +1399,6 @@ void ManualListWnd::iwm_show()
 
 	ShowWndByCurManual( m_iSelectIndex );
 
-#if defined( USE_GA )
-	// WND_GUIDE
-	g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FWND%2FGUIDE" );
-#endif
 
 }
 

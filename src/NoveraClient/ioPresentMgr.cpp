@@ -1371,32 +1371,6 @@ void ioPresentMgr::ApplyPresentSell( SP2Packet &rkPacket )
 															-1, iReinforce, bExtraItemCustom, bIsCostume, nGradeType );
 					}
 
-#if defined( USE_GA )
-					char chItemIndex[32]	= {0,};
-					char chSlash[16]		= {0,};
-					char chPostData[256]	= {0,};
-
-					if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-					{
-						sprintf_e( chItemIndex, "%d", rkData.m_dwIndex );
-						sprintf_e( chSlash, "%%2F" );
-						sprintf_e( chPostData, "%sPESO_GET_GIFT_ITEM_SELL%s%s", chSlash, chSlash, chItemIndex );
-					}
-					else
-					{
-						SafeSprintf( chItemIndex, sizeof(chItemIndex), "%1", rkData.m_dwIndex );
-						SafeSprintf( chSlash, sizeof(chSlash), "%2F" );
-						SafeSprintf( chPostData, sizeof(chPostData), "%1PESO_GET_GIFT_ITEM_SELL%2%3", chSlash, chSlash, chItemIndex );
-					}					
-
-					// PESO_GET_GIFT_ITEM_SELL
-					g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-						, "Peso"
-						, "Gear"
-						, ""
-						, iResellPeso
-						, chPostData );
-#endif
 
 					return;
 				}

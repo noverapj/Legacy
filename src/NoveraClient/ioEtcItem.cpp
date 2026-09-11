@@ -121,9 +121,6 @@ void ioEtcItem::LoadProperty( ioINILoader &rkLoader )
 			break;
 		m_vValueList.push_back( iKeyValue );
 
-#if defined( USE_GA )		
-		int iSubCode = iKeyValue;
-#endif
 
 		StringCbPrintf_e( szKeyName, sizeof(szKeyName), "peso%d", i+1 );
 		m_vPesoList.push_back( rkLoader.LoadInt( szKeyName, 0 ) );
@@ -131,9 +128,6 @@ void ioEtcItem::LoadProperty( ioINILoader &rkLoader )
 		StringCbPrintf_e( szKeyName, sizeof(szKeyName), "cash%d", i+1 );
 		m_vCashList.push_back( rkLoader.LoadInt( szKeyName, 0 ) );
 
-#if defined( USE_GA )
-		int iCash = rkLoader.LoadInt( szKeyName, 0 );
-#endif
 
 		StringCbPrintf_e( szKeyName, sizeof(szKeyName), "bonus_peso%d", i+1 );
 		m_vBonusPesoList.push_back( rkLoader.LoadInt( szKeyName, 0 ) );	
@@ -161,12 +155,6 @@ void ioEtcItem::LoadProperty( ioINILoader &rkLoader )
 		StringCbPrintf_e( szKeyName, sizeof(szKeyName), "active%d", i+1 );
 		m_vActiveList.push_back( rkLoader.LoadInt( szKeyName, 1 ) );
 
-#if defined( USE_GA )
-		// 상점 목록에 활성화 되어있는 품목만 넣도록 한다
-		int iActive = rkLoader.LoadInt( szKeyName, 1 );
-		if( iCash > 0 && iActive == 1 )
-			g_App.SetGAEtcSubInfo( iSubCode, iCash );
-#endif
 
 		StringCbPrintf_e( szKeyName, sizeof(szKeyName), "shop_mark_type%d", i+1 );
 		m_vShopMarkTypeList.push_back( rkLoader.LoadInt( szKeyName, 0 ) ); // SHOP_MARK_TYPE_NONE
@@ -198,9 +186,6 @@ void ioEtcItem::LoadProperty( ioINILoader &rkLoader )
 	rkLoader.LoadString_e( "alarm_ment3", "", szBuf, MAX_PATH );
 	m_szAlarmMent3 = szBuf; 
 
-#if defined( USE_GA )
-	g_App.SetGAEtcMainInfo( m_dwType );
-#endif
 
 	int nOnlyBtnType = rkLoader.LoadInt_e( "buy_type", 0 );
 	switch ( nOnlyBtnType )
@@ -427,32 +412,6 @@ void ioEtcItem::OnSell( int iType, SP2Packet &rkPacket, ioUserEtcItem *pUserEtcI
 		pInvenWnd->ShowItemRecvSellInfoWnd( ItemRecvSellInfoWnd::ITEM_SELL, ItemRecvSellInfoWnd::ITEM_ETCITEM, szIconName, szSubIconName, vTitle, vDesc, -1, 0, false, false, GetGradeType() );
 	}
 
-#if defined( USE_GA )
-	char chItemIndex[32]	= {0,};
-	char chSlash[16]		= {0,};
-	char chPostData[256]	= {0,};
-
-	if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-	{
-		sprintf_e( chItemIndex, "%d", iType );
-		sprintf_e( chSlash, "%%2F" );
-		sprintf_e( chPostData, "%sPESO_GET_BUY_ETC_ITEM%s%s", chSlash, chSlash, chItemIndex );
-	}
-	else
-	{
-		SafeSprintf( chItemIndex, sizeof(chItemIndex), "%1", iType );
-		SafeSprintf( chSlash, sizeof(chSlash), "%2F" );
-		SafeSprintf( chPostData, sizeof(chPostData), "%1PESO_GET_BUY_ETC_ITEM%2%3", chSlash, chSlash, chItemIndex );
-	}	
-
-	// PESO_GET_BUY_ETC_ITEM
-	g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-		, "Peso"
-		, "Etc"
-		, ""
-		, iResellPeso
-		, chPostData );
-#endif
 
 }
 

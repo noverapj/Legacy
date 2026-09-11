@@ -851,42 +851,6 @@ void ioSoldierAwakeManager::ApplyAwake( SP2Packet &rkPacket )
 
 		g_MyInfo.RestoreReferenceCharacterData();
 
-#if defined( USE_GA )
-		if( iAwakeType == 1 )
-		{
-			char chLabel[32] = {0,};
-
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chLabel, "%d", iCharIndex );
-			else
-				SafeSprintf( chLabel, sizeof(chLabel), "%1", iCharIndex );
-
-			// CHAR_WAKEUP_NORMAL
-			g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-				, "Character"
-				, "Normal"
-				, chLabel
-				, 1
-				, "%2FCHAR%2FWAKEUP%2FNORMAL" );
-		}
-		if( iAwakeType == 2 )
-		{
-			char chLabel[32] = {0,};
-
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chLabel, "%d", iCharIndex );
-			else
-				SafeSprintf( chLabel, sizeof(chLabel), "%1", iCharIndex );
-
-			// CHAR_WAKEUP_SPECIAL
-			g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-				, "Character"
-				, "Special"
-				, chLabel
-				, 1
-				, "%2FCHAR%2FWAKEUP%2FSPECIAL" );
-		}		
-#endif
 
 	}
 	else if( eResult == AWAKE_OTHER_OK )
@@ -983,42 +947,6 @@ void ioSoldierAwakeManager::ApplyAwakeExtend( SP2Packet &rkPacket )
 
 		g_MyInfo.RestoreReferenceCharacterData();
 
-#if defined( USE_GA )
-		if( pCharData->m_data.m_iAwakeType == 1 )
-		{
-			char chLabel[32] = {0,};
-
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chLabel, "%d", iCharIndex );
-			else
-				SafeSprintf( chLabel, sizeof(chLabel), "%1", iCharIndex );
-
-			// CHAR_WAKEUP_NORMAL_EXTEND
-			g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-				, "Character"
-				, "Normal_Extend"
-				, chLabel
-				, 1
-				, "%2FCHAR%2FWAKEUP%2FNORMAL%2FEXTEND" );
-		}
-		if( pCharData->m_data.m_iAwakeType == 2 )
-		{
-			char chLabel[32] = {0,};
-
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chLabel, "%d", iCharIndex );
-			else
-				SafeSprintf( chLabel, sizeof(chLabel), "%1", iCharIndex );
-
-			// CHAR_WAKEUP_SPECIAL_EXTEND
-			g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-				, "Character"
-				, "Special_Extend"
-				, chLabel
-				, 1
-				, "%2FCHAR%2FWAKEUP%2FSPECIAL%2FEXTEND" );
-		}		
-#endif
 
 	}
 	else

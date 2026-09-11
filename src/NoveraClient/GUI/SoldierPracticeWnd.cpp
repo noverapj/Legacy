@@ -852,22 +852,6 @@ void SoldierPracticeSelectWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 					pOwner->SetChangeWaitState( iCharArray, true );
 				}
 
-#if defined( USE_GA )
-				char chLabel[32] = {0,};
-
-				if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-					sprintf_e( chLabel, "%d", iClassType );
-				else
-					SafeSprintf( chLabel, sizeof(chLabel), "%1", iClassType );
-
-				// PLAY_HQ_TRAINING
-				g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-					, "Play"
-					, "Trainig"
-					, chLabel
-					, 1
-					, "%2FPLAY%2FHQ%2FTRAINING" );
-#endif
 			}
 			PracticeHelpWnd *pPracticeHelp = dynamic_cast<PracticeHelpWnd *>( g_GUIMgr.FindWnd(PRACTICE_HELP_WND) );
 			if( pPracticeHelp )

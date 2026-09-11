@@ -3472,19 +3472,6 @@ void ioPlayMode::OnRoundEnd( SP2Packet &rkPacket )
 	rkPacket >> m_iRedRoundWinCnt;
 	rkPacket >> m_iBlueRoundWinCnt;
 
-#if defined( USE_GA )
-	bool		bWin		= false;
-	ioBaseChar *pGAOwner	= GetOwnerChar();
-	if( pGAOwner )
-	{
-		if( IsWinTeam( (WinTeamType)iWinTeam, pGAOwner->GetTeam() ) )
-			bWin = true;
-		else
-			bWin = false;
-	}
-
-	g_HttpMng.SetWin( bWin );
-#endif
 
 	ErrorReport::SetPosition( 1080, 101 );
 
@@ -4121,22 +4108,6 @@ void ioPlayMode::OnFinalRoundResult( SP2Packet &rkPacket )
 	if( pTotalResult )			
 		pTotalResult->SetSpiritRewardInfo( iSpiritCode, iSpiritCount );
 
-#if defined( USE_GA )
-	char chLabel[32] = {0,};
-
-	if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-		sprintf_e( chLabel, "%d", iMyMoney );
-	else
-		SafeSprintf( chLabel, sizeof(chLabel), "%1", iMyMoney );
-
-	// PESO_GET_BATTLE
-	g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-		, "Peso"
-		, "End"
-		, chLabel
-		, 1
-		, "%2FPESO_GET_BATTLE" );
-#endif
 }
 
 void ioPlayMode::OnRoundJoin( SP2Packet &rkPacket )

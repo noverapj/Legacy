@@ -1847,22 +1847,6 @@ void ExtraItemFuncWnd::SetReinforceResultInfo( bool bSuccess, int nTargetSlot, i
 
 	g_QuestMgr.QuestCompleteTermReserve( QC_EXTRA_ITEM_REINFORCE_SUCCESS, m_nResultReinforce, m_nItemCode );
 
-#if defined( USE_GA )
-	char chLabel[32] = {0,};
-
-	if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-		sprintf_e( chLabel, "%d", m_nItemCode );
-	else
-		SafeSprintf( chLabel, sizeof(chLabel), "%1", m_nItemCode );
-
-	// ITEM_ENHANCE_MATERIAL
-	g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-		, "Item"
-		, "Material"
-		, chLabel
-		, 1
-		, "%2FITEM%2FENHANCE%2FMATERIAL" );
-#endif
 }
 
 void ExtraItemFuncWnd::SetFailExp( int nPreFailExp, int nCurFailExp )

@@ -897,19 +897,6 @@ void ioTowerDefMode::OnRoundEnd( SP2Packet &rkPacket )
 	rkPacket >> m_iRedRoundWinCnt;
 	rkPacket >> m_iBlueRoundWinCnt;
 
-#if defined( USE_GA )
-	bool		bWin		= false;
-	ioBaseChar *pGAOwner	= GetOwnerChar();
-	if( pGAOwner )
-	{
-		if( IsWinTeam( (WinTeamType)iWinTeam, pGAOwner->GetTeam() ) )
-			bWin = true;
-		else
-			bWin = false;
-	}
-
-	g_HttpMng.SetWin( bWin );
-#endif
 
 	int i = 0;
 	int iRecordCnt = GetRecordCharCnt();

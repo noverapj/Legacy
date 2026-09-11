@@ -2122,13 +2122,6 @@ void ioGangsiMode::FillLastPlayRecordInfo( SP2Packet &rkPacket )
 		rkPacket << pRecord->GetUniqueTotalDeath();
 		rkPacket << g_VictoriesMgr.GetVictories( pRecord->pChar->GetCharName() );
 
-#if defined( USE_GA )
-		if( g_MyInfo.GetPublicID() == pRecord->pChar->GetCharName() )
-		{
-			g_HttpMng.SetKill( pRecord->GetUniqueTotalKill() );
-			g_HttpMng.SetDeath( pRecord->GetUniqueTotalDeath() );
-		}
-#endif
 	}
 }
 

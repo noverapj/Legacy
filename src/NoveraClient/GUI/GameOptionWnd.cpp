@@ -1639,10 +1639,6 @@ void GameOptionWnd::iwm_show()
 		ChangeWindow( ID_VOLUME_TAB_BTN );
 	}
 
-#if defined( USE_GA )
-	// WND_OPTION
-	g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FWND%2FOPTION" );
-#endif
 
 }
 

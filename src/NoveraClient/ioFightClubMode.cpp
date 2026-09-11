@@ -1404,13 +1404,6 @@ void ioFightClubMode::OnRoundEnd( SP2Packet &rkPacket )
 			if( fHPRate >= FLOAT1 )
 				iRoundEndType = FightClubRoundEndWnd::ROUNDEND_PERFECT;
 
-#if defined( USE_GA )
-			bool bWin = false;
-			if( g_MyInfo.GetPublicID() == pTimeGauge->GetChampionUserName() )
-				bWin = true;
-
-			g_HttpMng.SetWin( bWin );
-#endif
 		}
 		else 
 		{
@@ -2116,13 +2109,6 @@ void ioFightClubMode::FillLastPlayRecordInfo( SP2Packet &rkPacket )
 		rkPacket << pRecord->GetUniqueTotalDeath();
 		rkPacket << g_VictoriesMgr.GetVictories( pRecord->pChar->GetCharName() );
 
-#if defined( USE_GA )
-		if( g_MyInfo.GetPublicID() == pRecord->pChar->GetCharName() )
-		{
-			g_HttpMng.SetKill( pRecord->GetUniqueTotalKill() );
-			g_HttpMng.SetDeath( pRecord->GetUniqueTotalDeath() );
-		}
-#endif
 	}
 }
 

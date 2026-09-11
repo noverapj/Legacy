@@ -1,4 +1,4 @@
-ï»¿#include "StdAfx.h"
+#include "StdAfx.h"
 
 #include "../ioTournamentManager.h"
 #include "../ioShuffleRoomMgr.h"
@@ -195,23 +195,23 @@ void LobbyBtn::OnRender()
 			g_FontMgr.SetBkColor( TCT_DEFAULT_DARKGRAY );
 			g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
 			if( m_bClicked )
-				g_FontMgr.PrintText( iXPos + 59, iYPos + 18, FONT_SIZE_16, "ìˆ˜ë ¨ì¥" );
+				g_FontMgr.PrintText( iXPos + 59, iYPos + 18, FONT_SIZE_16, "¼ö·ÃÀå" );
 			else
-				g_FontMgr.PrintText( iXPos + 54, iYPos + 12, FONT_SIZE_16, "ìˆ˜ë ¨ì¥" );
+				g_FontMgr.PrintText( iXPos + 54, iYPos + 12, FONT_SIZE_16, "¼ö·ÃÀå" );
 
 			g_FontMgr.SetBkColor( TCT_DEFAULT_GRAY );
 			g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
 			if(m_bClicked)
-				g_FontMgr.PrintText( iXPos + 59, iYPos + 39, FONT_SIZE_10, "ìˆ˜ë ¨ëª¨ë“œ" );
+				g_FontMgr.PrintText( iXPos + 59, iYPos + 39, FONT_SIZE_10, "¼ö·Ã¸ğµå" );
 			else
-				g_FontMgr.PrintText( iXPos + 54, iYPos + 32, FONT_SIZE_10, "ìˆ˜ë ¨ëª¨ë“œ" );
+				g_FontMgr.PrintText( iXPos + 54, iYPos + 32, FONT_SIZE_10, "¼ö·Ã¸ğµå" );
 		}
 		break;
 	case LobbyWnd::ID_CAMP_BTN:
 		{
 			if( g_CampMgr.GetNextTodayBattleSec() == -1 )
 			{
-				// íœ´ì‹ì¤‘
+				// ÈŞ½ÄÁß
 				if( m_pStateRedFrm )
 					m_pStateRedFrm->Render( iXPos, iYPos );
 				g_FontMgr.SetTextStyle( TS_NORMAL );
@@ -222,7 +222,7 @@ void LobbyBtn::OnRender()
 			}
 			else
 			{
-				// ì§„í–‰ì¤‘
+				// ÁøÇàÁß
 				if( m_pStateGreenFrm )
 					m_pStateGreenFrm->Render( iXPos, iYPos );
 				g_FontMgr.SetTextStyle( TS_NORMAL );
@@ -253,7 +253,7 @@ void LobbyBtn::OnRender()
 		{
 			if( g_CampMgr.GetNextTodayBattleSec() == -1 )
 			{
-				// íœ´ì‹ì¤‘
+				// ÈŞ½ÄÁß
 				if( m_pStateRedFrm )
 					m_pStateRedFrm->Render( iXPos, iYPos );
 				g_FontMgr.SetTextStyle( TS_NORMAL );
@@ -264,7 +264,7 @@ void LobbyBtn::OnRender()
 			}
 			else
 			{
-				// ì§„í–‰ì¤‘
+				// ÁøÇàÁß
 				if( m_pStateGreenFrm )
 					m_pStateGreenFrm->Render( iXPos, iYPos );
 				g_FontMgr.SetTextStyle( TS_NORMAL );
@@ -332,7 +332,7 @@ void LobbyBtn::OnRender()
 	case LobbyWnd::ID_TOURNAMENT_BTN:
 		{
 			int iState = g_TournamentMgr.GetRegularState();
-			if( iState != -1 )       // ì•„ì§ ì •ë³´ê°€ ë„ì°©í•˜ì§€ ì•Šì•˜ìŒ.
+			if( iState != -1 )       // ¾ÆÁ÷ Á¤º¸°¡ µµÂøÇÏÁö ¾Ê¾ÒÀ½.
 			{
 				g_FontMgr.SetTextStyle( TS_NORMAL );
 				g_FontMgr.SetAlignType( TAT_CENTER );
@@ -345,7 +345,7 @@ void LobbyBtn::OnRender()
 						m_pStateGreenFrm->Render( iXPos, iYPos, UI_RENDER_GRAY_LIGHT );
 
 					g_FontMgr.SetTextColor( TCT_DEFAULT_LIGHTGRAY );
-					g_FontMgr.PrintText( iXPos + 27, iYPos + 9, FONT_SIZE_10, "íœ´ì‹ì¤‘" );
+					g_FontMgr.PrintText( iXPos + 27, iYPos + 9, FONT_SIZE_10, "ÈŞ½ÄÁß" );
 				}
 				else
 				{
@@ -354,14 +354,14 @@ void LobbyBtn::OnRender()
 						if( m_pStateOrangeFrm )
 							m_pStateOrangeFrm->Render( iXPos, iYPos );
 
-						g_FontMgr.PrintText( iXPos + 27, iYPos + 9, FONT_SIZE_10, "ëª¨ì§‘ì¤‘" );
+						g_FontMgr.PrintText( iXPos + 27, iYPos + 9, FONT_SIZE_10, "¸ğÁıÁß" );
 					}
 					else if( iState == TournamentNode::STATE_TEAM_DELAY )
 					{
 						if( m_pStatePinkFrm )
 							m_pStatePinkFrm->Render( iXPos, iYPos );
 
-						g_FontMgr.PrintText( iXPos + 27, iYPos + 9, FONT_SIZE_10, "ì‘ì›ì¤‘" );
+						g_FontMgr.PrintText( iXPos + 27, iYPos + 9, FONT_SIZE_10, "ÀÀ¿øÁß" );
 
 					}
 					else
@@ -369,7 +369,7 @@ void LobbyBtn::OnRender()
 						if( m_pStateGreenFrm )
 							m_pStateGreenFrm->Render( iXPos, iYPos );
 
-						g_FontMgr.PrintText( iXPos + 27, iYPos + 9, FONT_SIZE_10, "ëŒ€íšŒì¤‘" );
+						g_FontMgr.PrintText( iXPos + 27, iYPos + 9, FONT_SIZE_10, "´ëÈ¸Áß" );
 					}
 				}
 			}
@@ -388,9 +388,9 @@ void LobbyBtn::OnRender()
 				g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
 			}
 			if(m_bClicked)
-				g_FontMgr.PrintText( iXPos + 59, iYPos + 18, FONT_SIZE_16, "ëŒ€íšŒ" );
+				g_FontMgr.PrintText( iXPos + 59, iYPos + 18, FONT_SIZE_16, "´ëÈ¸" );
 			else
-				g_FontMgr.PrintText( iXPos + 54, iYPos + 12, FONT_SIZE_16, "ëŒ€íšŒ" );
+				g_FontMgr.PrintText( iXPos + 54, iYPos + 12, FONT_SIZE_16, "´ëÈ¸" );
 
 			if( g_TournamentMgr.IsRegularDisableTournament() )
 			{
@@ -403,9 +403,9 @@ void LobbyBtn::OnRender()
 				g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
 			}
 			if(m_bClicked)
-				g_FontMgr.PrintText( iXPos + 59, iYPos + 39, FONT_SIZE_10, "í† ë„ˆë¨¼íŠ¸" );
+				g_FontMgr.PrintText( iXPos + 59, iYPos + 39, FONT_SIZE_10, "Åä³Ê¸ÕÆ®" );
 			else
-				g_FontMgr.PrintText( iXPos + 54, iYPos + 32, FONT_SIZE_10, "í† ë„ˆë¨¼íŠ¸" );
+				g_FontMgr.PrintText( iXPos + 54, iYPos + 32, FONT_SIZE_10, "Åä³Ê¸ÕÆ®" );
 		}
 		break;
 	}
@@ -510,7 +510,7 @@ void IconBtn::OnRender()
 	int iXPos = GetDerivedPosX();
 	int iYPos = GetDerivedPosY();
 
-	// x, y offsetì€ xmlì—ì„œ ì¡°ì • 
+	// x, y offsetÀº xml¿¡¼­ Á¶Á¤ 
 	if( m_pIconBack )
 	{
 		m_pIconBack->SetScale( m_fIconBackScale );		
@@ -729,7 +729,7 @@ void LobbyWnd::ChangeRadioWnd( DWORD dwID )
 					if( pCampMainWnd )
 					{
 						pCampMainWnd->ShowWnd();
-						// ê°€ì…í–ˆì„ ë•ŒëŠ” ì§„ì˜ ì •ë³´ë¥¼ ë³´ì—¬ì¤€ë‹¤.
+						// °¡ÀÔÇßÀ» ¶§´Â Áø¿µ Á¤º¸¸¦ º¸¿©ÁØ´Ù.
 						if( iPrevMyCampPos == CAMP_NONE )     
 							pCampMainWnd->CheckCampButton( CampMainWnd::ID_CAMP_INFO_BTN );
 					}
@@ -796,12 +796,12 @@ void LobbyWnd::OnCreateHeadquarters()
 
 	if( g_ShuffleRoomMgr.IsShuffleRoom() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "ì˜¤ëŠ˜ì˜ ëª¨ë“œ ì¤‘ì—ëŠ” ì…ì¥ì´ ë¶ˆê°€ëŠ¥í•©ë‹ˆë‹¤" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, "¿À´ÃÀÇ ¸ğµå Áß¿¡´Â ÀÔÀåÀÌ ºÒ°¡´ÉÇÕ´Ï´Ù" );
 		return;
 	}
 	if( g_RankBattleMgr.IsRankBattlePlaying() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "ë­í‚¹ì „ ì¤‘ì—ëŠ” ì…ì¥ì´ ë¶ˆê°€ëŠ¥í•©ë‹ˆë‹¤" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, "·©Å·Àü Áß¿¡´Â ÀÔÀåÀÌ ºÒ°¡´ÉÇÕ´Ï´Ù" );
 		return;
 	}
 
@@ -819,24 +819,24 @@ void LobbyWnd::OnCreateGuildHeadquarters()
 
 	if( g_BattleRoomMgr.IsBattleRoom() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "ì „íˆ¬ ì¤‘ì—ëŠ” ì…ì¥ì´ ë¶ˆê°€ëŠ¥í•©ë‹ˆë‹¤." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, "ÀüÅõ Áß¿¡´Â ÀÔÀåÀÌ ºÒ°¡´ÉÇÕ´Ï´Ù." );
 		return;
 	}
 
 	if( g_LadderTeamMgr.IsLadderTeam() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "ì§„ì˜/ë˜ë” ì¤‘ì—ëŠ” ì…ì¥ì´ ë¶ˆê°€ëŠ¥í•©ë‹ˆë‹¤" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, "Áø¿µ/·¡´õ Áß¿¡´Â ÀÔÀåÀÌ ºÒ°¡´ÉÇÕ´Ï´Ù" );
 		return;
 	}
 
 	if( g_ShuffleRoomMgr.IsShuffleRoom() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "ì˜¤ëŠ˜ì˜ ëª¨ë“œ ì¤‘ì—ëŠ” ì…ì¥ì´ ë¶ˆê°€ëŠ¥í•©ë‹ˆë‹¤" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, "¿À´ÃÀÇ ¸ğµå Áß¿¡´Â ÀÔÀåÀÌ ºÒ°¡´ÉÇÕ´Ï´Ù" );
 		return;
 	}
 	if( g_RankBattleMgr.IsRankBattlePlaying() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "ë­í‚¹ì „ ì¤‘ì—ëŠ” ì…ì¥ì´ ë¶ˆê°€ëŠ¥í•©ë‹ˆë‹¤" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, "·©Å·Àü Áß¿¡´Â ÀÔÀåÀÌ ºÒ°¡´ÉÇÕ´Ï´Ù" );
 		return;
 	}
 
@@ -853,24 +853,24 @@ void LobbyWnd::OnCreateHouse()
 
 	if( g_BattleRoomMgr.IsBattleRoom() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "ì „íˆ¬ ì¤‘ì—ëŠ” ì…ì¥ì´ ë¶ˆê°€ëŠ¥í•©ë‹ˆë‹¤" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, "ÀüÅõ Áß¿¡´Â ÀÔÀåÀÌ ºÒ°¡´ÉÇÕ´Ï´Ù" );
 		return;
 	}
 
 	if( g_LadderTeamMgr.IsLadderTeam() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "ë˜ë” ì¤‘ì—ëŠ” ì…ì¥ì´ ë¶ˆê°€ëŠ¥í•©ë‹ˆë‹¤" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, "·¡´õ Áß¿¡´Â ÀÔÀåÀÌ ºÒ°¡´ÉÇÕ´Ï´Ù" );
 		return;
 	}
 
 	if( g_ShuffleRoomMgr.IsShuffleRoom() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "ì˜¤ëŠ˜ì˜ ëª¨ë“œ ì¤‘ì—ëŠ” ì…ì¥ì´ ë¶ˆê°€ëŠ¥í•©ë‹ˆë‹¤" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, "¿À´ÃÀÇ ¸ğµå Áß¿¡´Â ÀÔÀåÀÌ ºÒ°¡´ÉÇÕ´Ï´Ù" );
 		return;
 	}
 	if( g_RankBattleMgr.IsRankBattlePlaying() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "ë­í‚¹ì „ ì¤‘ì—ëŠ” ì…ì¥ì´ ë¶ˆê°€ëŠ¥í•©ë‹ˆë‹¤" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, "·©Å·Àü Áß¿¡´Â ÀÔÀåÀÌ ºÒ°¡´ÉÇÕ´Ï´Ù" );
 		return;
 	}
 
@@ -938,11 +938,11 @@ void LobbyWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 					}
 				}
 				else
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "ê¸¸ë“œì¥ë§Œì´ í™œì„±í™” í•  ìˆ˜ ìˆëŠ” ê¸°ëŠ¥ì…ë‹ˆë‹¤." );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, "±æµåÀå¸¸ÀÌ È°¼ºÈ­ ÇÒ ¼ö ÀÖ´Â ±â´ÉÀÔ´Ï´Ù." );
 			}
 			else
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "ê°€ì…ëœ ê¸¸ë“œê°€ ì—†ìŠµë‹ˆë‹¤." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, "°¡ÀÔµÈ ±æµå°¡ ¾ø½À´Ï´Ù." );
 			}
 		}
 		break;
@@ -1018,7 +1018,7 @@ void LobbyWnd::OnRender()
 	if( m_pTabBack1 )
 		m_pTabBack1->Render( iXPos + 2, iYPos + 2, UI_RENDER_MULTIPLY );
 	if( m_pTabBack2 )
-	{//uië°±ê·¸ë¼ìš´ë“œëŠ” ì´ê±°
+	{//ui¹é±×¶ó¿îµå´Â ÀÌ°Å
 		for(int i = 0;i < 6;i++)
 		{
 			//m_pTabBack2->Render( iXPos + 2, iYPos + 49 + i * 71, UI_RENDER_MULTIPLY );
@@ -1098,9 +1098,9 @@ void LobbyWnd::OnRender()
 		kPrinter.SetTextColor( 130, 198, 255 );	
 		ioEtcItem *pEtcItem = g_EtcItemMgr.FindEtcItem( ioEtcItem::EIT_ETC_CLOVER );
 		if( pEtcItem )
-			kPrinter.AddTextPiece( FONT_SIZE_11, "%s : %sê°œ", pEtcItem->GetName().c_str(), szClover );
+			kPrinter.AddTextPiece( FONT_SIZE_11, "%s : %s°³", pEtcItem->GetName().c_str(), szClover );
 		else
-			kPrinter.AddTextPiece( FONT_SIZE_11, "í´ë¡œë²„ : %sê°œ", szClover );
+			kPrinter.AddTextPiece( FONT_SIZE_11, "Å¬·Î¹ö : %s°³", szClover );
 		kPrinter.SetTextColor( TCT_DEFAULT_LIGHTGRAY );		
 		kPrinter.AddTextPiece( FONT_SIZE_11, " / " );
 	}
@@ -1116,7 +1116,7 @@ void LobbyWnd::OnRender()
 	ioButton* pBonusCashBtn = dynamic_cast<ioButton*>(FindChildWnd( ID_BONUS_CASH_BTN ));
 	if ( pBonusCashBtn && pBonusCashBtn->IsShow() )
 	{
-		//ë§ˆì¼ë¦¬ì§€ê°€ ì¡´ì¬í•œë‹¤ë©´
+		//¸¶ÀÏ¸®Áö°¡ Á¸ÀçÇÑ´Ù¸é
 		if ( iMaxMileage <= 0 )
 			pBonusCashBtn->SetWndPos( pBonusCashBtn->GetXPos() - 2 , pBonusCashBtn->GetYPos() + 6 );
 		kPrinter.PrintFullText( iXPos + X_OFFSET2, iYPos + Y_OFFSET-iAdd_OffsetY, TAT_RIGHT );
@@ -1292,7 +1292,7 @@ void LobbyWnd::RenderGradeExp( int iXPos, int iYPos )
 	}
 
 	m_pMinorGrade->SetScale( 0.80f );
-	// í•˜ì‚¬ ~ ëŒ€ë ¹
+	// ÇÏ»ç ~ ´ë·É
 	if( COMPARE( iGradeLevel, 5, 49 ) )
 	{
 		int iMinorGrade = iGradeLevel % 5;
@@ -1342,7 +1342,7 @@ void LobbyWnd::RenderGradeExp( int iXPos, int iYPos )
 	int iGaugeWidth = 0;
 	if( g_MyInfo.IsGeneralGrade() )
 	{
-		kPrinter.AddTextPiece( FONT_SIZE_12, " %dìœ„", g_MyInfo.GetUserRanking() );
+		kPrinter.AddTextPiece( FONT_SIZE_12, " %dÀ§", g_MyInfo.GetUserRanking() );
 		iGaugeWidth = m_pGauge->GetWidth();
 	}
 	else
@@ -1604,7 +1604,7 @@ void LobbyMainWnd::iwm_show()
 
 	g_BackgroundMgr.SetBackground( BGT_LOBBY );
 
-	// ë¡œë¹„ ì…ì¥
+	// ·Îºñ ÀÔÀå
 	
 	SP2Packet kPacket( CTPK_JOIN_SERVER_LOBBY_INFO );
 	kPacket << true;
@@ -1645,7 +1645,7 @@ void LobbyMainWnd::iwm_hide()
 		pQuickTooltip->SetModeHelpTooltip(NULL, -1);
 
 
-	// ë¡œë¹„ í‡´ì¥
+	// ·Îºñ ÅğÀå
 	SP2Packet kPacket( CTPK_JOIN_SERVER_LOBBY_INFO );
 	kPacket << false;
 	TCPNetwork::SendToServer( kPacket );
@@ -1802,10 +1802,6 @@ case LobbyWnd::ID_PRACTICE_BTN:
 			HideChildWnd( ID_TRADE_INFO_WND );
 			HideChildWnd( ID_TOURNAMENT_INFO_WND );
 
-#if defined( USE_GA )
-			// WND_LOBBY_BATTLE
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FWND%2FLOBBY%2FBATTLE" );
-#endif
 		}
 		break;
 	case LobbyWnd::ID_CAMP_BTN:
@@ -1819,10 +1815,6 @@ case LobbyWnd::ID_PRACTICE_BTN:
 			HideChildWnd( ID_TOURNAMENT_INFO_WND );
 			HideChildWnd( ID_PRACTICE_INFO_WND );
 
-#if defined( USE_GA )
-			// WND_LOBBY_FACTION
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FWND%2FLOBBY%2FFACTION" );
-#endif
 		}
 		break;
 	case LobbyWnd::ID_HERO_MAIN_BTN:
@@ -1845,10 +1837,6 @@ case LobbyWnd::ID_PRACTICE_BTN:
 			HideChildWnd( ID_TOURNAMENT_INFO_WND );
 			HideChildWnd( ID_PRACTICE_INFO_WND );
 
-#if defined( USE_GA )
-			// WND_LOBBY_PLAZA
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FWND%2FLOBBY%2FPLAZA" );
-#endif
 		}
 		break;
 	case LobbyWnd::ID_TRADE_BTN:
@@ -1860,10 +1848,6 @@ case LobbyWnd::ID_PRACTICE_BTN:
 			ShowChildWnd( ID_TRADE_INFO_WND );
 			HideChildWnd( ID_TOURNAMENT_INFO_WND );
 			HideChildWnd( ID_PRACTICE_INFO_WND );
-#if defined( USE_GA )
-			// WND_LOBBY_MARKET
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FWND%2FLOBBY%2FMARKET" );
-#endif
 		}
 		break;
 	case LobbyWnd::ID_TOURNAMENT_BTN:
@@ -1876,10 +1860,6 @@ case LobbyWnd::ID_PRACTICE_BTN:
 			HideChildWnd( ID_PRACTICE_INFO_WND );
 			ShowChildWnd( ID_TOURNAMENT_INFO_WND );
 
-#if defined( USE_GA )
-			// WND_LOBBY_TOURNAMENT
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FWND%2FLOBBY%2FTOURNAMENT" );
-#endif
 		}
 		break;
 	}

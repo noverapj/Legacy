@@ -187,9 +187,6 @@ class ioCostumeInfoManager;
 class ioMissionManager;
 class ioUIImageRenderManager;
 
-#if defined( USE_GA )
-class ioHttpMng;
-#endif
 class ioShopManager;
 class ioRenderTargetManager;
 class ioRSoldierInfoManager;
@@ -438,9 +435,6 @@ protected:
 	ioAccessoryInfoManager	 *m_pAccessoryInfoMgr;
 	ioUIGuide				 *m_pUIGuide;
 
-#if defined( USE_GA )
-	ioHttpMng				 *m_pHttpMng;;
-#endif
 
 	ioHashString m_ReserveOpenHeadQuater;
 
@@ -1239,54 +1233,6 @@ public:
 	void ProcessMemoryUsageLOG( int iRefreshType = RT_PROCESS );
 	void ChangeSwitch();
 
-#if defined( USE_GA )
-	// GA On, Off
-	bool m_bGAStart;
-	void SetGAStart( bool bOn ){ m_bGAStart = bOn; }
-	bool GetGAStart(){ return m_bGAStart; }
-
-	// GA 전송할 유저 ( Sampling )
-	bool m_bGAUser;
-	bool GetGAUser(){ return m_bGAUser; }
-
-	DWORD m_dwGAAliveTime;
-
-	// GA 에서 처음 내려주는 케시 정보는 스킵
-	bool m_bGAFirstCash;
-	void SetGAFirstCash( bool bFirst ){ m_bGAFirstCash = bFirst; }
-	bool GetGAFirstCash(){ return m_bGAFirstCash; }
-
-	// ETC 아이템 index, cash 정보
-	struct stGAEtcInfo
-	{
-		int iSubCode;
-		int iCash;
-
-		stGAEtcInfo()
-		{
-			iSubCode	= 0;
-			iCash		= 0;
-		}
-	};
-	typedef std::vector< stGAEtcInfo > GAEtcInfoVec;
-	GAEtcInfoVec m_vecGAEtcInfo;
-
-	typedef std::map< int, GAEtcInfoVec > GAEtcInfoMap;
-	GAEtcInfoMap m_mapGAEtcInfo;
-
-	// Item code, Quantity 로 데이터 세팅
-	void SetGAEtcSubInfo( int iSubCode, int iCash );
-	void SetGAEtcMainInfo( int iMainCode );
-
-	// Item code, Quantity 로 Cash 값 받아온다.
-	int GetGAEtcCash( int iMainCode, int iSubCode );
-
-	// Item code, 상점 세팅 순서로 Cash 값 받아온다.
-	int GetGAEtcCash2( int iMainCode, int iNum );
-
-	// Compulsion Mouse UnBusy First check
-	bool m_bFirstUnMouseBusy;
-#endif
 
 
 public:

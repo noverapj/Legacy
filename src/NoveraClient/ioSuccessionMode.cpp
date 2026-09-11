@@ -1804,13 +1804,6 @@ void ioSuccessionMode::FillLastPlayRecordInfo( SP2Packet &rkPacket )
 		rkPacket << pRecord->GetUniqueTotalDeath();
 		rkPacket << g_VictoriesMgr.GetVictories( pRecord->pChar->GetCharName() );
 
-#if defined( USE_GA )
-		if( g_MyInfo.GetPublicID() == pRecord->pChar->GetCharName() )
-		{
-			g_HttpMng.SetKill( pRecord->GetUniqueTotalKill() );
-			g_HttpMng.SetDeath( pRecord->GetUniqueTotalDeath() );
-		}
-#endif
 	}
 }
 
@@ -2647,20 +2640,4 @@ void ioSuccessionMode::OnFinalRoundResult( SP2Packet &rkPacket )
 		m_pCreator->ReserveNextModeType( (ModeType)iNextModeType, iNextModeSubNum, iNextMapIndex );
 	}
 
-#if defined( USE_GA )
-	char chLabel[32] = {0,};
-
-	if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-		sprintf_e( chLabel, "%d", iMyMoney );
-	else
-		SafeSprintf( chLabel, sizeof(chLabel), "%1", iMyMoney );
-
-	// PESO_GET_BATTLE
-	g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-		, "Peso"
-		, "End"
-		, chLabel
-		, 1
-		, "%2FPESO_GET_BATTLE" );
-#endif
 }

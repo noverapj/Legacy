@@ -285,7 +285,7 @@
       <MinimalRebuild>false</MinimalRebuild>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>Psapi.lib;DbgHelp.lib;Imagehlp.lib;wininet.lib;Urlmon.lib;Iphlpapi.lib;Version.lib;dinput8.lib;d3d9.lib;dxguid.lib;d3dx9.lib;winmm.lib;ws2_32.lib;odbc32.lib;odbccp32.lib;Xinput.lib;Iepmapi.lib;LS_HTTP_Client.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Psapi.lib;DbgHelp.lib;Imagehlp.lib;wininet.lib;Urlmon.lib;Iphlpapi.lib;Version.lib;dinput8.lib;d3d9.lib;dxguid.lib;d3dx9.lib;winmm.lib;ws2_32.lib;odbc32.lib;odbccp32.lib;Xinput.lib;Iepmapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>Shipping/LostSaga.exe</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>

@@ -556,32 +556,6 @@ int PopupStoreWnd::OnBtnShow()
 void PopupStoreWnd::OnBuySuccess()
 {
 
-#if defined( USE_GA )
-	int nSize = m_vecPopupItemInfo.size();
-	for( int i = 0; i < nSize; ++i )
-	{
-		if( m_vecPopupItemInfo[i].iIndex == m_iPopupIndex )
-		{
-			int iCashPrice	= m_vecPopupItemInfo[i].iCash;
-			int iItemCode	= m_vecPopupItemInfo[i].iPresentValue1;
-
-			if( iCashPrice != 0 && iItemCode != 0 )
-			{
-				// GOLD_USE_POPUP
-				g_HttpMng.GA_ItemHitTracking( g_MyInfo.GetUserIndex() 
-					, "PopUp"
-					, iCashPrice
-					, 1
-					, iItemCode
-					, "Gold"
-					, "%2FGOLD%2FUSE%2FPOPUP"
-					, true );
-			}
-
-			break;
-		}
-	}
-#endif
 
 	
 	OnPage2();

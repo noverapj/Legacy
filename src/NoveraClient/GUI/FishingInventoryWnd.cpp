@@ -812,15 +812,6 @@ void FishingInventoryWnd::iwm_show()
 	g_GUIMgr.HideWnd( SKILL_LIST_WND );
 	g_GUIMgr.HideWnd( MINI_SOLDIER_SELECT_WND );
 
-#if defined( USE_GA )
-	// PLAY_PLAZA_FISHING_START
-	g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-		, "Play"
-		, "Start"
-		, ""
-		, 1
-		, "%2FPLAY%2FPLAZA%2FFISHING%2FSTART" );
-#endif
 }
 
 void FishingInventoryWnd::iwm_hide()

@@ -36,9 +36,6 @@ extern char g_szErrorLog[2048];
 
 CLog g_MemoryLOG;
 
-#if defined( USE_GA )
-CLog g_GALog;
-#endif
 
 // error dlg skin
 #define ERROR_DLG_WIDTH       410

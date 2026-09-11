@@ -205,28 +205,6 @@ StatAttribute* ioStatAttribute::FindAttribute( int iAttributeID )
 
 	LOG.PrintTimeAndLog( 0, "ExitProgram - 11" );
 
-#if defined( USE_GA )
-	if( g_App.GetGAStart() == true )
-	{
-		char chLabel[32] = {0,};
-
-		if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-			sprintf_e( chLabel, "%d", 11 );
-		else
-			SafeSprintf( chLabel, sizeof(chLabel), "%1", 11 );
-
-		// GAME_END_ERR_POS
-		g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-			, "Game"
-			, "Error"
-			, chLabel
-			, 1
-			, "%2FGAME%2FOVER%2FERR"
-			, 1 );
-
-		g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FGAME%2FOVER%2FERR", 6, chLabel );
-	}
-#endif
 
 	g_App.SetExitProgram();
 	LOG.PrintTimeAndLog( 0, "ioStatAttribute::FindAttribute - %d Attribute Not Exist", iAttributeID );

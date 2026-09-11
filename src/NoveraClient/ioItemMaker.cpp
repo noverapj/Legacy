@@ -30,28 +30,6 @@ ioItem::ItemType ConvertStringToItemType( const char *szType )
 	else if( !strcmp( "BRACELET", szType ) )
 		return ioItem::IT_BRACELET;
 	
-#if defined( USE_GA )
-	if( g_App.GetGAStart() == true )
-	{
-		char chLabel[32] = {0,};
-
-		if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-			sprintf_e( chLabel, "%d", 16 );
-		else
-			SafeSprintf( chLabel, sizeof(chLabel), "%1", 16 );
-
-		// GAME_END_ERR_POS
-		g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-			, "Game"
-			, "Error"
-			, chLabel
-			, 1
-			, "%2FGAME%2FOVER%2FERR"
-			, 1 );
-
-		g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FGAME%2FOVER%2FERR", 6, chLabel );
-	}	
-#endif
 
 	LOG.PrintTimeAndLog( 0, "ExitProgram - 16" );
 	LOG.PrintTimeAndLog( 0, "ConvertStringToItemType - %s UnknownType", szType );
@@ -269,30 +247,6 @@ ioItem* ioItemMaker::CreateItem( DWORD dwCode )
 		}
 	}
 
-#if defined( USE_GA )
-	if( g_App.GetGAStart() == true )
-	{
-		char chLabel[32] = {0,};
-
-		if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-			sprintf_e( chLabel, "%d", 17 );
-		else
-			SafeSprintf( chLabel, sizeof(chLabel), "%1", 17 );
-
-		g_HttpMng.SetSubErrCode( dwCode );
-
-		// GAME_END_ERR_POS
-		g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-			, "Game"
-			, "Error"
-			, chLabel
-			, 1
-			, "%2FGAME%2FOVER%2FERR"
-			, 1 );
-
-		g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FGAME%2FOVER%2FERR", 6, chLabel );
-	}	
-#endif
 
 	LOG.PrintTimeAndLog( 0, "ExitProgram - 17" );
 	LOG.PrintTimeAndLog( 0, "ioItemMaker::CreatItem - %d Not Exist Item", dwCode );
@@ -310,28 +264,6 @@ ioItem* ioItemMaker::CreateItem( const ioHashString &rkName )
 		return CreateCloneItem( pItem );
 	}
 
-#if defined( USE_GA )
-	if( g_App.GetGAStart() == true )
-	{
-		char chLabel[32] = {0,};
-
-		if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-			sprintf_e( chLabel, "%d", 18 );
-		else
-			SafeSprintf( chLabel, sizeof(chLabel), "%1", 18 );
-
-		// GAME_END_ERR_POS
-		g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-			, "Game"
-			, "Error"
-			, chLabel
-			, 1
-			, "%2FGAME%2FOVER%2FERR"
-			, 1 );
-
-		g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FGAME%2FOVER%2FERR", 6, chLabel );
-	}	
-#endif
 
 	LOG.PrintTimeAndLog( 0, "ExitProgram - 18" );
 	LOG.PrintTimeAndLog( 0, "ioItemMaker::CreateItem - %s Not Exist Item", rkName.c_str() );
@@ -596,37 +528,6 @@ const ioItem* ioItemMaker::GetItemConst( DWORD dwCode, const ioHashString& szFun
 		return pItem;
 	}
 
-#if defined( USE_GA )
-	if( g_App.GetGAStart() == true )
-	{
-		char chCD5[32] = {0,};
-		char chLabel[128] = {0,};
-
-		if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-		{
-			sprintf_e( chCD5, "%d", 19 );
-			sprintf_e( chLabel, "%d_%s", 19, szFuncName.c_str() );
-		}
-		else
-		{
-			SafeSprintf( chCD5, sizeof(chCD5), "%1", 19 );
-			SafeSprintf( chLabel, sizeof(chLabel), "%1_%2", 19, szFuncName.c_str() );
-		}
-
-		g_HttpMng.SetSubErrCode( dwCode );
-
-		// GAME_END_ERR_POS
-		g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-			, "Game"
-			, "Error"
-			, chLabel
-			, 1
-			, "%2FGAME%2FOVER%2FERR"
-			, 1 );
-
-		g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FGAME%2FOVER%2FERR", 6, chCD5 );
-	}	
-#endif
 
 	__try
 	{
@@ -669,35 +570,6 @@ const ioItem* ioItemMaker::GetItemConst( const ioHashString &rkName, const ioHas
 		return pItem;
 	}
 
-#if defined( USE_GA )
-	if( g_App.GetGAStart() == true )
-	{
-		char chCD5[32] = {0,};
-		char chLabel[128] = {0,};
-
-		if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-		{
-			sprintf_e( chCD5, "%d", 20 );
-			sprintf_e( chLabel, "%d_%s_%s", 20, szFuncName.c_str(), rkName.c_str() );
-		}
-		else
-		{
-			SafeSprintf( chCD5, sizeof(chCD5), "%1", 20 );
-			SafeSprintf( chLabel, sizeof(chLabel), "%1_%2_%3", 20, szFuncName.c_str(), rkName.c_str() );
-		}
-
-		// GAME_END_ERR_POS
-		g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-			, "Game"
-			, "Error"
-			, chLabel
-			, 1
-			, "%2FGAME%2FOVER%2FERR"
-			, 1 );
-
-		g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FGAME%2FOVER%2FERR", 6, chCD5 );
-	}	
-#endif
 
 	LOG.PrintTimeAndLog( 0, "ExitProgram - 20" );
 #ifdef __DEV_QA__

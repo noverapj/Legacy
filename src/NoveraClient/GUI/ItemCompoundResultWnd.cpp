@@ -225,22 +225,6 @@ void ItemCompoundResultWnd::SetCompoundResultInfo( bool bSuccess, int iTargetSlo
 
 	g_QuestMgr.QuestCompleteTermReserve( QC_EXTRA_ITEM_REINFORCE_SUCCESS, m_iResultReinforce, m_iItemCode );
 
-#if defined( USE_GA )
-	char chLabel[32] = {0,};
-
-	if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-		sprintf_e( chLabel, "%d", m_iItemCode );
-	else
-		SafeSprintf( chLabel, sizeof(chLabel), "%1", m_iItemCode );
-
-	// ITEM_ENHANCE_ITEM
-	g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-		, "Item"
-		, "Item"
-		, chLabel
-		, 1
-		, "%2FITEM%2FENHANCE%2FITEM" );
-#endif
 }
 
 void ItemCompoundResultWnd::OnProcess( float fTimePerSec )
@@ -1664,22 +1648,6 @@ void ItemCompoundExResultWnd::SetItemCompoundExInfo( bool bSuccess, int iTargetS
 
 	g_QuestMgr.QuestCompleteTermReserve( QC_EXTRA_ITEM_REINFORCE_SUCCESS, m_iResultReinforce, m_iItemCode );
 
-#if defined( USE_GA )
-	char chLabel[32] = {0,};
-
-	if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-		sprintf_e( chLabel, "%d", m_iItemCode );
-	else
-		SafeSprintf( chLabel, sizeof(chLabel), "%1", m_iItemCode );
-
-	// ITEM_ENHANCE_CARD
-	g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-		, "Item"
-		, "Card"
-		, chLabel
-		, 1
-		, "%2FITEM%2FENHANCE%2FCARD" );
-#endif
 }
 
 void ItemCompoundExResultWnd::OnProcess( float fTimePerSec )

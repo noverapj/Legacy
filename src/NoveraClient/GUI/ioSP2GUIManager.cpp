@@ -1960,22 +1960,6 @@ void ioSP2GUIManager::ShowReserveMsgBox( int iReserveMsgBox /* = -1  */ )
 					SetPrevMsgListBox( NULL, MB_OK, NULL, kPrinter );
 					g_MyInfo.ClearKickedInfo();
 
-#if defined( USE_GA )
-					char chLabel[32] = {0,};
-
-					if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-						sprintf_e( chLabel, "%d", m_iPenaltyPeso );
-					else
-						SafeSprintf( chLabel, sizeof(chLabel), "%1", m_iPenaltyPeso );
-
-					// PESO_USE_PENALTY
-					g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-						, "Peso"
-						, "Penalty"
-						, chLabel
-						, 1
-						, "%2FPESO%2FUSE%2FPENALTY" );
-#endif
 				}
 				break;
 			case MB_RESERVE_OPEN_SPACE_ABUSE:
@@ -2022,22 +2006,6 @@ void ioSP2GUIManager::ShowReserveMsgBox( int iReserveMsgBox /* = -1  */ )
 
 					SetPrevMsgListBox( NULL, MB_OK, NULL, kPrinter );
 
-#if defined( USE_GA )
-					char chLabel[32] = {0,};
-
-					if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-						sprintf_e( chLabel, "%d", m_iPenaltyPeso );
-					else
-						SafeSprintf( chLabel, sizeof(chLabel), "%1", m_iPenaltyPeso );
-
-					// PESO_USE_PENALTY
-					g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-						, "Peso"
-						, "Penalty"
-						, chLabel
-						, 1
-						, "%2FPESO_USE_PENALTY" );
-#endif
 
 				}
 				break;

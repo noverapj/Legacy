@@ -630,46 +630,9 @@ void ioMyInfo::SetUserState( int iState )
 { 
 	bool bTutorialUser = IsTutorialUser();
 
-#if defined( USE_GA )
-	int iBeforeState = m_user_data.m_user_state;
-#endif
 
 	m_user_data.m_user_state = iState;
 
-#if defined( USE_GA )	
-	if( g_HttpMng.GetTutorialStart() == true )
-	{
-		// 듀토리얼 종료된 유저 state 값
-		if( iState == US_TUTORIAL_CLEAR )
-		{
-			// ACCOUNT_TUTORIAL_END
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FACCOUNT%2FTUTORIAL%2FEND" );
-
-			g_HttpMng.SetTutorialStart( false );
-		}
-	}
-	else
-	{
-		// 듀토리얼 시작
-		if( iState != US_TUTORIAL_CLEAR )
-		{
-			g_HttpMng.SetTutorialStart( true );
-
-			// ACCOUNT_TUTORIAL_START
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FACCOUNT%2FTUTORIAL%2FSTART" );
-		}		
-
-		// 듀토리얼 중간에 강제 종료등으로 인해 iState : US_TUTORIAL_CLEAR 값으로 내려오고,
-		// 그 전 iState 값이 1204 ( 듀토리얼 종료 직전 스탭 ) 인 경우.
-		if( iState == US_TUTORIAL_CLEAR && iBeforeState == 1204 )
-		{
-			// ACCOUNT_TUTORIAL_START
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FACCOUNT%2FTUTORIAL%2FSTART" );
-			// ACCOUNT_TUTORIAL_END
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FACCOUNT%2FTUTORIAL%2FEND" );
-		}
-	}
-#endif
 }
 
 bool ioMyInfo::IsTutorialUser()
@@ -977,41 +940,9 @@ void ioMyInfo::SetGrade( int iGradeLevel, int iExp )
 {
 	if( m_user_data.m_grade_level != iGradeLevel )
 	{
-#if defined( USE_GA )
-		char chLabel[32] = {0,};
-
-		if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-			sprintf_e( chLabel, "%d", iGradeLevel );
-		else
-			SafeSprintf( chLabel, sizeof(chLabel), "%1", iGradeLevel );
-
-		// ACCOUNT_LV_UP
-		g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-			, "Account"
-			, "LevelUp"
-			, chLabel
-			, 1
-			, "%2FACCOUNT%2FLEVEL_UP" );
-#endif
 	}
 	else
 	{
-#if defined( USE_GA )
-		char chLabel[32] = {0,};
-
-		if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-			sprintf_e( chLabel, "%d", iExp );
-		else
-			SafeSprintf( chLabel, sizeof(chLabel), "%1", iExp );
-
-		// ACCOUNT_GET_EXP
-		g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-			, "Account"
-			, "GetExp"
-			, chLabel
-			, 1
-			, "%2FACCOUNT%2FGET_EXP" );
-#endif
 	}
 
 	m_user_data.m_grade_level = iGradeLevel;
@@ -1955,67 +1886,9 @@ void ioMyInfo::AddClassExp( int iClassType, int iExp )
 			}
 		}
 
-#if defined( USE_GA )
-		char chClassType[32]	= {0,};
-		char chLabel[32]		= {0,};
-		char chSlash[16]		= {0,};
-		char chPostData[256]	= {0,};
-
-		if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-		{
-			sprintf_e( chClassType, "%d", iClassType );
-			sprintf_e( chLabel, "%d", GetClassLevel( iClassType, true ) );
-			sprintf_e( chSlash, "%%2F" );
-			sprintf_e( chPostData, "%sCHAR%sLEVEL_UP%s%s", chSlash, chSlash, chSlash, chClassType );
-		}
-		else
-		{
-			SafeSprintf( chClassType, sizeof(chClassType), "%1", iClassType );
-			SafeSprintf( chLabel, sizeof(chLabel), "%1", GetClassLevel( iClassType, true ) );
-			SafeSprintf( chSlash, sizeof(chSlash), "%2F" );
-			SafeSprintf( chPostData, sizeof(chPostData), "%1CHAR%2LEVEL_UP%3%4", chSlash, chSlash, chSlash, chClassType );
-		}		
-
-		// CHAR_LV_UP
-		g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-			, "Character"
-			, "LevelUp"
-			, chLabel
-			, 1
-			, chPostData );
-#endif
 	}
 	else
 	{
-#if defined( USE_GA )
- 		char chClassType[32]	= {0,};
- 		char chLabel[32]		= {0,};
- 		char chSlash[16]		= {0,};
- 		char chPostData[256]	= {0,};
- 
-		if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-		{
-			sprintf_e( chClassType, "%d", iClassType );
-			sprintf_e( chLabel, "%d", iExp );
-			sprintf_e( chSlash, "%%2F" );
-			sprintf_e( chPostData, "%sCHAR%sGET_EXP%s%s", chSlash, chSlash, chSlash, chClassType );
-		}
-		else
-		{
-			SafeSprintf( chClassType, sizeof(chClassType), "%1", iClassType );
-			SafeSprintf( chLabel, sizeof(chLabel), "%1", iExp );
-			SafeSprintf( chSlash, sizeof(chSlash), "%2F" );
-			SafeSprintf( chPostData, sizeof(chPostData), "%1CHAR%2GET_EXP%3%4", chSlash, chSlash, chSlash, chClassType );
-		}		
-
- 		// CHAR_GET_EXP
- 		g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-			, "Character"
-			, "GetExp"
-			, chLabel
- 			, 1
- 			, chPostData );
-#endif
 	}
 }
 
@@ -2103,67 +1976,9 @@ void ioMyInfo::SetClassExpNLevel( int iClassType, int iExp, int iLevel )
 			}
 		}
 
-#if defined( USE_GA )
-		char chClassType[32]	= {0,};
-		char chLabel[32]		= {0,};
-		char chSlash[16]		= {0,};
-		char chPostData[256]	= {0,};
-
-		if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-		{
-			sprintf_e( chClassType, "%d", iClassType );
-			sprintf_e( chLabel, "%d", GetClassLevel( iClassType, true ) );
-			sprintf_e( chSlash, "%%2F" );
-			sprintf_e( chPostData, "%sCHAR%sLEVEL_UP%s%s", chSlash, chSlash, chSlash, chClassType );
-		}
-		else
-		{
-			SafeSprintf( chClassType, sizeof(chClassType), "%1", iClassType );
-			SafeSprintf( chLabel, sizeof(chLabel), "%1", GetClassLevel( iClassType, true ) );
-			SafeSprintf( chSlash, sizeof(chSlash), "%2F" );
-			SafeSprintf( chPostData, sizeof(chPostData), "%1CHAR%2LEVEL_UP%3%4", chSlash, chSlash, chSlash, chClassType );
-		}		
-
-		// CHAR_LV_UP
-		g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-			, "Character"
-			, "LevelUp"
-			, chLabel
-			, 1
-			, chPostData );
-#endif
 	}
 	else
 	{
-#if defined( USE_GA )
-		char chClassType[32]	= {0,};
-		char chLabel[32]		= {0,};
-		char chSlash[16]		= {0,};
-		char chPostData[256]	= {0,};
-
-		if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-		{
-			sprintf_e( chClassType, "%d", iClassType );
-			sprintf_e( chLabel, "%d", iExp );
-			sprintf_e( chSlash, "%%2F" );
-			sprintf_e( chPostData, "%sCHAR%sGET_EXP%s%s", chSlash, chSlash, chSlash, chClassType );
-		}
-		else
-		{
-			SafeSprintf( chClassType, sizeof(chClassType), "%1", iClassType );
-			SafeSprintf( chLabel, sizeof(chLabel), "%1", iExp );
-			SafeSprintf( chSlash, sizeof(chSlash), "%2F" );
-			SafeSprintf( chPostData, sizeof(chPostData), "%1CHAR%2GET_EXP%3%4", chSlash, chSlash, chSlash, chClassType );
-		}		
-
-		// CHAR_GET_EXP
-		g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-			, "Character"
-			, "GetExp"
-			, chLabel
-			, 1
-			, chPostData );
-#endif
 	}
 }
 
@@ -2747,19 +2562,10 @@ void ioMyInfo::ApplyCharExtend( int iCharArray, SP2Packet &rkPacket )
 	if( !COMPARE( iCharArray, 0, GetCharCount() ) )
 		return;
 
-#if defined( USE_GA )
-	int iBeforeSec	= m_pCharData->at(iCharArray).m_data.m_iLimitSecond;
-#endif
 
 	rkPacket >> m_pCharData->at(iCharArray).m_data.m_bActive;
 	rkPacket >> m_pCharData->at(iCharArray).m_data.m_iLimitSecond;		
 
-#if defined( USE_GA )
-	int iAfterSec	= m_pCharData->at(iCharArray).m_data.m_iLimitSecond;
-	int iLimitDate	= iAfterSec - iBeforeSec;
-
-	g_HttpMng.SetHeroLimitDate( iLimitDate );
-#endif
 
 	int iHour = m_pCharData->at(iCharArray).m_data.m_iLimitSecond / 3600;
 	int iMin = ( m_pCharData->at(iCharArray).m_data.m_iLimitSecond % 3600 ) / 60;
@@ -3844,15 +3650,6 @@ void ioMyInfo::SetLevelUP( int iBonusType, int iValue1, int iValue2, int iValue3
 	kInfo.m_iValue3    = iValue3;
 	m_vLevelUPList.push_back( kInfo );
 
-#if defined( USE_GA )
-	// PESO_GET_LV_UP
-	g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-		, "Peso"
-		, "LevelUp"
-		, ""
-		, iValue2
-		, "%2FPESO_GET_LV_UP" );
-#endif
 }
 
 bool ioMyInfo::IsGradeLevelUP()
@@ -6179,28 +5976,6 @@ void ioMyInfo::SendMgameShutDownDate()
  	{
 		LOG.PrintTimeAndLog( 0, "ExitProgram - 10" );
 
-#if defined( USE_GA )
-		if( g_App.GetGAStart() == true )
-		{
-			char chLabel[32] = {0,};
-
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chLabel, "%d", 10 );
-			else
-				SafeSprintf( chLabel, sizeof(chLabel), "%1", 10 );
-
-			// GAME_END_ERR_POS
-			g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-				, "Game"
-				, "Error"
-				, chLabel
-				, 1
-				, "%2FGAME%2FOVER%2FERR"
-				, 1 );
-
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FGAME%2FOVER%2FERR", 6, chLabel );
-		}
-#endif
 
  		g_App.SetExitProgram();
  		return;

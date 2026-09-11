@@ -1022,22 +1022,6 @@ void ioPowerUpManager::ApplyCharPowerUp( int iIndex, int iCode, byte eGrade )
 	int iClassType = g_MyInfo.GetClassType( (DWORD)iIndex );
 	m_iReinforcedCode = iClassType;
 
-#if defined( USE_GA )
-	char chLabel[32] = {0,};
-
-	if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-		sprintf_e( chLabel, "%d", iIndex );
-	else
-		SafeSprintf( chLabel, sizeof(chLabel), "%1", iIndex );
-
-	// CHAR_EVOLUTION_CHAR
-	g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-		, "Character"
-		, "Gold"
-		, chLabel
-		, 1
-		, "%2FCHAR%2FEVOLUTION%2FGOLD" );
-#endif
 }
 
 void ioPowerUpManager::ApplyItemPowerUp( int iIndex, int iCode )
@@ -1079,22 +1063,6 @@ void ioPowerUpManager::ApplyItemPowerUp( int iIndex, int iCode )
 	m_iReinforcedItemIndex = iIndex;
 	m_iReinforcedCode = iCode;
 
-#if defined( USE_GA )
-	char chLabel[32] = {0,};
-
-	if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-		sprintf_e( chLabel, "%d", iIndex );
-	else
-		SafeSprintf( chLabel, sizeof(chLabel), "%1", iIndex );
-
-	// CHAR_EVOLUTION_ITEM
-	g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-		, "Character"
-		, "Item"
-		, chLabel
-		, 1
-		, "%2FCHAR%2FEVOLUTION%2FITEM" );
-#endif
 }
 
 ioHashString ioPowerUpManager::GetCharGardeString( const int iClassType )

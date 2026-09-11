@@ -87,10 +87,6 @@ void PetWnd::iwm_show()
 		pPetViewWnd->ShowWnd();
 	}
 
-#if defined( USE_GA )
-	// WND_PET
-	g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FWND%2FPET" );
-#endif
 
 	if( g_MyInfo.GetChannelingType() == CNT_NEXON )
 	{

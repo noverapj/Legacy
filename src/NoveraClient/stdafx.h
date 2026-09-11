@@ -497,7 +497,3 @@ extern "C" {
 #include "GUI/ioAlarmManager.h"
 #include "GUI/ioWndEXEventHandlerEX.h"
 #include "GUI/Tooltip/ToolTipManager.h"
-
-#if defined ( USE_GA )
-#include "ioHttpMng.h"
-#endif

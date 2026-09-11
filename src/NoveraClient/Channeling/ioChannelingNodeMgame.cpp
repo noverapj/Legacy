@@ -36,33 +36,6 @@ bool ioChannelingNodeMgame::OnRecieveGetCash( SP2Packet &rkReceivePacket )
 	int iChannelingCash = 0;
 	rkReceivePacket >> iCash >> iChannelingCash;
 
-#if defined( USE_GA )
-	if( g_App.GetGAFirstCash() == false )
-	{
-		// GOLD_CHARGE
-		int iChargeCash = iChannelingCash - g_MyInfo.GetPurchasedCash();
-		if( iChargeCash > 0 )
-		{
-			/*
-			g_HttpMng.GA_ItemHitTracking( g_MyInfo.GetUserIndex() 
-				, "Charge"
-				, iChargeCash
-				, 1
-				, 0
-				, "Gold"
-				, "%2FGOLD%2FCHARGE"
-				, true );
-			*/
-
-			// Gold charge page view 로 전환
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FGOLD%2FCHARGE", 4, "", iChargeCash );
-		}
-	}
-	else
-	{
-		g_App.SetGAFirstCash( false );
-	}
-#endif
 
 	g_MyInfo.SetCash( iCash );
 	g_MyInfo.SetPurchasedCash( iCash ); // 캐쉬가 실재 구매한 캐쉬와 동일하다

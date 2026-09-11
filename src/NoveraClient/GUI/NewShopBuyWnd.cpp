@@ -3979,96 +3979,6 @@ bool NewShopBuyWnd::SendPresentBuy( short isPresentType, int iPresentValue1, int
 	kPacket << pSendWnd->GetRecvPublicID();
 	TCPNetwork::SendToServer( kPacket );
 
-#if defined( USE_GA )
-	int iCashPrice	= 0;
-	int iItemCode	= 0;
-
-	g_HttpMng.SetGiftIndex( 0 );
-	g_HttpMng.SetGiftCash( 0 );
-
-	switch( isPresentType )
-	{
-	case PRESENT_SOLDIER:
-		{
-			if( iPresentValue2 == 0 )
-				iCashPrice = g_ClassPrice.GetMortmainCharCash( iPresentValue1 );
-			else
-				iCashPrice = g_ClassPrice.GetClassBuyCash( iPresentValue1, iPresentValue2 );
-
-			if( iCashPrice > 0 )
-			{
-				g_HttpMng.SetGiftIndex( iPresentValue1 );
-				g_HttpMng.SetGiftCash( iCashPrice );
-			}
-		}
-		break;
-		
-	case PRESENT_EXTRAITEM_BOX:
-		{
-			RandomMachineInfo *pInfo = g_ExtraItemInfoMgr.GetRandomMachineInfo( iPresentValue1 );
-			if( pInfo )
-			{
-				iCashPrice	= pInfo->GetNeedCash();
-				iItemCode	= pInfo->GetItemCode( 0 );
-				if( iCashPrice > 0 )
-				{
-					g_HttpMng.SetGiftIndex( iItemCode );
-					g_HttpMng.SetGiftCash( iCashPrice );
-				}
-			}
-		}
-		break;
-
-	case PRESENT_DECORATION:
-		{
-			char chType[32]		= {0,};
-			char chParse[32]	= {0,};
-			char chCode[32]		= {0,};
-			int iSendCode		= 0;
-
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chType, "%d", iPresentValue1 );
-			else
-				SafeSprintf( chType, sizeof(chType), "%1", iPresentValue1 );
-
-			int iSize = strlen( chType ) - 4;
-			strncpy( chParse, chType + iSize, 4 );
-
-			// 코드 조합
-			// "7 (치장)" + "000X(남자) or 100X(여자), (X는 치장 종류, ex> 머리모양, 피부색.. )," + "치장 종류에 따른 index (ex>머리모양 1,2,3..)"
-			// ex> 710031 -> 7 치장 + 1003 여자, 피부색 + 1 피부색 중 첫번쨰 아이템.
-			// 1 표정, 2 머리모양, 3 피부색, 4 머리색, 7 속옷
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chCode, "%d%s%d", 7, chParse, iPresentValue2 );
-			else
-				SafeSprintf( chCode, sizeof(chCode), "%1%2%3", 7, chParse, iPresentValue2 );
-
-			iSendCode = ioStringConverter::ParseInt( chCode );
-			
-			iCashPrice = g_DecorationPrice.GetDecoCashByType( iPresentValue1, iPresentValue2 ); 
-			if( iCashPrice > 0 )
-			{
-				g_HttpMng.SetGiftIndex( iSendCode );
-				g_HttpMng.SetGiftCash( iCashPrice );
-			}
-		}
-		break;
-
-	case PRESENT_ETC_ITEM:
-		{
-			iCashPrice = g_App.GetGAEtcCash2( iPresentValue1, iPresentValue2 );
-			if( iCashPrice > 0 )
-			{
-				g_HttpMng.SetGiftIndex( iPresentValue1 );
-				g_HttpMng.SetGiftCash( iCashPrice );
-			}
-		}
-		break;
-
-	default:
-		break;
-	}
-#endif
 
 	return true;
 }
@@ -4081,13 +3991,6 @@ bool NewShopBuyWnd::SendSubscriptionBuy( short isPresentType, int iPresentValue1
 	kPacket << iPresentValue2;
 	TCPNetwork::SendToServer( kPacket );
 
-#if defined( USE_GA )
-	if( g_App.GetGAStart() == true )
-	{
-		g_HttpMng.SetScripHeroIndex( iPresentValue1 );
-		g_HttpMng.SetScripHeroLimitDate( iPresentValue2 );
-	}
-#endif
 
 	return true;
 }

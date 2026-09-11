@@ -43654,22 +43654,6 @@ void ioBaseChar::OnFishingSell( SP2Packet &rkPacket )
 	// ÆÇ¸Å
 	g_QuestMgr.QuestOccurTerm( QO_FISHING_SELL );
 
-#if defined( USE_GA )
-	char chLabel[32] = {0,};
-
-	if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-		sprintf_e( chLabel, "%d", iSellPeso );
-	else
-		SafeSprintf( chLabel, sizeof(chLabel), "%1", iSellPeso );
-
-	// PESO_GET_FISHING
-	g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-		, "Peso"
-		, "Fish"
-		, chLabel
-		, 1
-		, "%2FPESO_GET_FISHING" );
-#endif
 
 }
 
