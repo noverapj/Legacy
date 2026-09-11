@@ -48,29 +48,6 @@ void DisconnectWnd::iwm_hide()
 	{
 		LOG.PrintTimeAndLog( 0, "ExitProgram - 14 ( %d )", m_iType );
 
-#if defined( USE_GA )
-		if( g_App.GetGAStart() == true )
-		{
-			char chLabel[32] = {0,};
-
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chLabel, "%d_%d", 14, m_iType );
-			else
-				SafeSprintf( chLabel, sizeof(chLabel), "%1_%2", 14, m_iType );
-
-			// GAME_END_ERR_POS
-			g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-				, "Game"
-				, "Error"
-				, chLabel
-				, 1
-				, "%2FGAME%2FOVER%2FERR"
-				, 1 );
-
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FGAME%2FOVER%2FERR", 6, chLabel );
-		}		
-#endif
-
 		g_App.SetExitProgram();
 	}
 	else if( m_iType == TYPE_NETWORK_EXIT ||

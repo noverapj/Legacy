@@ -12400,470 +12400,6 @@ void ioPlayStage::OnJoinRoomData( SP2Packet &rkPacket )
 		g_ResourceLoader.ResumeLoadingThread();
 	}
 
-#if defined( USE_GA )
-	char chClassType[32]	= {0,};
-	char chLabel[32]		= {0,};
-	char chSlash[16]		= {0,};
-	char chPostData[256]	= {0,};
-	char chMapIndex[32]		= {0,};
-	char chBattleType[32]	= {0,};
-	
-	// CHAR_SELECT_MAJOR
-	for( int i = 0; i < 3; ++i )
-	{
-
-		if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-		{
-			sprintf_e( chSlash, "%%2F" );
-			sprintf_e( chLabel, "%d", i );
-			sprintf_e( chClassType, "%d", g_MyInfo.GetClassType( g_MyInfo.GetCharSlotIndexToArray( i ) ) );
-			sprintf_e( chPostData, "%sCHAR%sSELECT_MAJOR%s%s", chSlash, chSlash, chSlash, chClassType );
-		}
-		else
-		{
-			SafeSprintf( chSlash, sizeof(chSlash), "%2F" );
-			SafeSprintf( chLabel, sizeof(chLabel), "%1", i );
-			SafeSprintf( chClassType, sizeof(chClassType), "%1", g_MyInfo.GetClassType( g_MyInfo.GetCharSlotIndexToArray( i ) ) );
-			SafeSprintf( chPostData, sizeof(chPostData), "%1CHAR%2SELECT_MAJOR%3%4", chSlash, chSlash, chSlash, chClassType );
-		}
-		
-		g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-			, "Character"
-			, "Pick"
-			, chLabel
-			, 1
-			, chPostData );
-	}	
-
-	// PLAY_CAMP_<MODE>
-	if( g_LadderTeamMgr.IsLadderTeam() )
-		SafeSprintf( chBattleType, sizeof(chBattleType), "CAMP" );
-	// PLAY_LADDER_<MODE>
-	else if( g_LadderTeamMgr.IsHeroMatchMode() )
-		SafeSprintf( chBattleType, sizeof(chBattleType), "LADDER" );
-	// PLAY_BATTLE_<MODE>
-	else
-		SafeSprintf( chBattleType, sizeof(chBattleType), "BATTLE" );
-
-	// battle type setting
-	g_HttpMng.SetBattleType( chBattleType );
-
-	// <MapIndex SubMapIndex>
-	if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-		sprintf_e( chMapIndex, "%s%d%s%d", chSlash, m_iModeMapIndex, chSlash, m_iModeSubNum );
-	else
-		SafeSprintf( chMapIndex, sizeof(chMapIndex), "%1%2%3%4", chSlash, m_iModeMapIndex, chSlash, m_iModeSubNum );
-
-	// set battle start time;
-	int iTime = (int)REALGETTIME() / 1000;
-	g_HttpMng.SetBattleStartTime( iTime );
-
-	// battle mode initialize
-	g_HttpMng.SetBattleMode( "NONE" );
-
-	// choice hero duration time, index initialize;
-	g_HttpMng.SetHeroStartTime( 0 );
-	g_HttpMng.SetHeroEndTime( 0 );
-	g_HttpMng.SetHeroIndex( 0 );
-
-	// 용병 교체 관련 데이터 전송 flag
-	g_HttpMng.SetSendHeroChange( true );
-
-	switch( iModeType )
-	{
-	case MT_SYMBOL:
-		{
-			// PLAY_CAMP_POWERSTONE_<MapIndex-SubMapIndex>
-			// PLAY_LADDER_POWERSTONE_<MapIndex-SubMapIndex>
-			// PLAY_BATTLE_POWERSTONE_<MapIndex-SubMapIndex>
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chPostData, "%sPLAY%s%s%sPOWERSTONE%s", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-			else
-				SafeSprintf( chPostData, sizeof(chPostData), "%1PLAY%2%3%4POWERSTONE%5", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), chPostData );
-
-			// battle mode setting
-			g_HttpMng.SetBattleMode( "POWERSTONE" );
-		}
-		break;
-	case MT_CATCH:
-		{
-			// PLAY_CAMP_PRISONER_<MapIndex-SubMapIndex>
-			// PLAY_LADDER_PRISONER_<MapIndex-SubMapIndex>
-			// PLAY_BATTLE_PRISONER_<MapIndex-SubMapIndex>
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chPostData, "%sPLAY%s%s%sPRISONER%s", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-			else
-				SafeSprintf( chPostData, sizeof(chPostData), "%1PLAY%2%3%4PRISONER%5", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), chPostData );
-
-			// battle mode setting
-			g_HttpMng.SetBattleMode( "PRISONER" );
-		}
-		break;
-	case MT_UNDERWEAR:
-		{
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chPostData, "%sPLAY%s%s%sUNDERWEAR%s", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-			else
-				SafeSprintf( chPostData, sizeof(chPostData), "%1PLAY%2%3%4UNDERWEAR%5", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), chPostData );
-
-			// battle mode setting
-			g_HttpMng.SetBattleMode( "UNDERWEAR" );
-		}
-		break;
-
-	case MT_CBT:
-		{
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chPostData, "%sPLAY%s%s%sCBT%s", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-			else
-				SafeSprintf( chPostData, sizeof(chPostData), "%1PLAY%2%3%4CBT%5", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), chPostData );
-
-			// battle mode setting
-			g_HttpMng.SetBattleMode( "CBT" );
-		}
-		break;
-
-	case MT_KING:
-		{
-			// PLAY_CAMP_HIDENCROWN_<MapIndex-SubMapIndex>
-			// PLAY_LADDER_HIDENCROWN_<MapIndex-SubMapIndex>
-			// PLAY_BATTLE_HIDENCROWN_<MapIndex-SubMapIndex>
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chPostData, "%sPLAY%s%s%sHIDENCROWN%s", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-			else
-				SafeSprintf( chPostData, sizeof(chPostData), "%1PLAY%2%3%4HIDENCROWN%5", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), chPostData );
-
-			// battle mode setting
-			g_HttpMng.SetBattleMode( "HIDENCROWN" );
-		}
-		break;
-	case MT_TRAINING:
-		{
-			// PLAY_PLAZA_CONNECT_<MapIndex-SubMapIndex>
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chPostData, "%sPLAY%sPLAZA%sCONNECT%s", chSlash, chSlash, chSlash, chMapIndex );
-			else
-				SafeSprintf( chPostData, sizeof(chPostData), "%1PLAY%2PLAZA%3CONNECT%4", chSlash, chSlash, chSlash, chMapIndex );
-
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), chPostData );
-
-			// battle mode setting
-			g_HttpMng.SetBattleMode( "PLAZA" );
-
-			// 용병 교체 관련 데이터 전송 flag
-			g_HttpMng.SetSendHeroChange( false );
-		}
-		break;
-	case MT_SURVIVAL:
-		{
-			// PLAY_CAMP_DEATH_<MapIndex-SubMapIndex>
-			// PLAY_LADDER_DEATH_<MapIndex-SubMapIndex>
-			// PLAY_BATTLE_DEATH_<MapIndex-SubMapIndex>
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chPostData, "%sPLAY%s%s%sDEATH%s", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-			else
-				SafeSprintf( chPostData, sizeof(chPostData), "%1PLAY%2%3%4DEATH%5", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), chPostData );
-
-			// battle mode setting
-			g_HttpMng.SetBattleMode( "DEATH" );
-		}
-		break;
-	case MT_TEAM_SURVIVAL:
-		{
-			// PLAY_CAMP_TEAMDEATH_<MapIndex-SubMapIndex>
-			// PLAY_LADDER_TEAMDEATH_<MapIndex-SubMapIndex>
-			// PLAY_BATTLE_TEAMDEATH_<MapIndex-SubMapIndex>
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chPostData, "%sPLAY%s%s%sTEAMDEATH%s", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-			else
-				SafeSprintf( chPostData, sizeof(chPostData), "%1PLAY%2%3%4TEAMDEATH%5", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), chPostData );
-
-			// battle mode setting
-			g_HttpMng.SetBattleMode( "TEAMDEATH" );
-		}
-		break;
-	case MT_BOSS:
-		{
-			// PLAY_CAMP_BOSSRAID_<MapIndex-SubMapIndex>
-			// PLAY_LADDER_BOSSRAID_<MapIndex-SubMapIndex>
-			// PLAY_BATTLE_BOSSRAID_<MapIndex-SubMapIndex>
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chPostData, "%sPLAY%s%s%sBOSSRAID%s", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-			else
-				SafeSprintf( chPostData, sizeof(chPostData), "%1PLAY%2%3%4BOSSRAID%5", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), chPostData );
-
-			// battle mode setting
-			g_HttpMng.SetBattleMode( "BOSSRAID" );
-		}
-		break;
-	case MT_MONSTER_SURVIVAL:
-		{
-			// PLAY_BATTLE_SKELETON
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FPLAY%2FBATTLE%2FSKELETON" );
-
-			// battle mode setting
-			g_HttpMng.SetBattleMode( "SKELETON" );
-		}
-		break;
-	case MT_FOOTBALL:
-		{
-			// PLAY_CAMP_SOCCER_<MapIndex-SubMapIndex>
-			// PLAY_LADDER_SOCCER_<MapIndex-SubMapIndex>
-			// PLAY_BATTLE_SOCCER_<MapIndex-SubMapIndex>
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chPostData, "%sPLAY%s%s%sSOCCER%s", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-			else
-				SafeSprintf( chPostData, sizeof(chPostData), "%1PLAY%2%3%4SOCCER%5", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), chPostData );
-
-			// battle mode setting
-			g_HttpMng.SetBattleMode( "SOCCER" );
-		}
-		break;
-	case MT_HEROMATCH:
-		{
-			// PLAY_CAMP_LADDER_<MapIndex-SubMapIndex>
-			// PLAY_LADDER_LADDER_<MapIndex-SubMapIndex>
-			// PLAY_BATTLE_LADDER_<MapIndex-SubMapIndex>
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chPostData, "%sPLAY%s%s%sLADDER%s", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-			else
-				SafeSprintf( chPostData, sizeof(chPostData), "%1PLAY%2%3%4LADDER%5", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), chPostData );
-
-			// battle mode setting
-			g_HttpMng.SetBattleMode( "LADDER" );
-		}
-		break;
-	case MT_GANGSI:
-		{
-			// PLAY_CAMP_GANGSI_<MapIndex-SubMapIndex>
-			// PLAY_LADDER_GANGSI_<MapIndex-SubMapIndex>
-			// PLAY_BATTLE_GANGSI_<MapIndex-SubMapIndex>
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chPostData, "%sPLAY%s%s%sGANGSI%s", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-			else
-				SafeSprintf( chPostData, sizeof(chPostData), "%1PLAY%2%3%4GANGSI%5", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), chPostData );
-
-			// battle mode setting
-			g_HttpMng.SetBattleMode( "GANGSI" );
-		}
-		break;
-	case MT_HEADQUARTERS:
-		{
-			// PLAY_HQ_CONNECT
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FPLAY%2FHQ%2FCONNECT" );
-
-			// battle mode setting
-			g_HttpMng.SetBattleMode( "HQ" );
-
-			// 용병 교체 관련 데이터 전송 flag
-			g_HttpMng.SetSendHeroChange( false );
-		}
-		break;
-	case MT_CATCH_RUNNINGMAN:
-		{
-			// PLAY_CAMP_DWARF_<MapIndex-SubMapIndex>
-			// PLAY_LADDER_DWARF_<MapIndex-SubMapIndex>
-			// PLAY_BATTLE_DWARF_<MapIndex-SubMapIndex>
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chPostData, "%sPLAY%s%s%sDWARF%s", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-			else
-				SafeSprintf( chPostData, sizeof(chPostData), "%1PLAY%2%3%4DWARF%5", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), chPostData );
-
-			// battle mode setting
-			g_HttpMng.SetBattleMode( "DWARF" );
-		}
-		break;
-	case MT_FIGHT_CLUB:
-		{
-			// PLAY_CAMP_CHAMP_<MapIndex-SubMapIndex>
-			// PLAY_LADDER_CHAMP_<MapIndex-SubMapIndex>
-			// PLAY_BATTLE_CHAMP_<MapIndex-SubMapIndex>
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chPostData, "%sPLAY%s%s%sCHAMP%s", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-			else
-				SafeSprintf( chPostData, sizeof(chPostData), "%1PLAY%2%3%4CHAMP%5", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), chPostData );
-
-			// battle mode setting
-			g_HttpMng.SetBattleMode( "CHAMP" );
-		}
-		break;
-	case MT_TOWER_DEFENSE:
-		{
-			// PLAY_BATTLE_FOREST
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FPLAY%2FBATTLE%2FFOREST" );
-
-			// battle mode setting
-			g_HttpMng.SetBattleMode( "FOREST" );
-		}
-		break;
-	case MT_DARK_XMAS:
-		{
-			// PLAY_BATTLE_SNOW
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FPLAY%2FBATTLE%2FSNOW" );
-
-			// battle mode setting
-			g_HttpMng.SetBattleMode( "SNOW" );
-		}
-		break;
-	case MT_FIRE_TEMPLE:
-		{
-			// PLAY_BATTLE_FIRE
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FPLAY%2FBATTLE%2FFIRE" );
-
-			// battle mode setting
-			g_HttpMng.SetBattleMode( "FIRE" );
-		}
-		break;
-	case MT_DOUBLE_CROWN:
-		{
-			// PLAY_CAMP_DOUBLECROWN_<MapIndex-SubMapIndex>
-			// PLAY_LADDER_DOUBLECROWN_<MapIndex-SubMapIndex>
-			// PLAY_BATTLE_DOUBLECROWN_<MapIndex-SubMapIndex>
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chPostData, "%sPLAY%s%s%sDOUBLECROWN%s", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-			else
-				SafeSprintf( chPostData, sizeof(chPostData), "%1PLAY%2%3%4DOUBLECROWN%5", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), chPostData );
-
-			// battle mode setting
-			g_HttpMng.SetBattleMode( "DOUBLECROWN" );
-		}
-		break;
-	case MT_SHUFFLE_BONUS:
-		{
-			// PLAY_CAMP_BONUS_<MapIndex-SubMapIndex>
-			// PLAY_LADDER_BONUS_<MapIndex-SubMapIndex>
-			// PLAY_BATTLE_BONUS_<MapIndex-SubMapIndex>
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chPostData, "%sPLAY%s%s%sBONUS%s", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-			else
-				SafeSprintf( chPostData, sizeof(chPostData), "%1PLAY%2%3%4BONUS%5", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), chPostData );
-
-			// battle mode setting
-			g_HttpMng.SetBattleMode( "BONUS" );
-		}
-		break;
-	case MT_FACTORY:
-		{
-			// PLAY_BATTLE_FACTORY
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FPLAY%2FBATTLE%2FFACTORY" );
-
-			// battle mode setting
-			g_HttpMng.SetBattleMode( "FACTORY" );
-		}
-		break;
-	case MT_TEAM_SURVIVAL_AI:
-		{
-			// PLAY_CAMP_TEAMDEATH_AI_<MapIndex-SubMapIndex>
-			// PLAY_LADDER_TEAMDEATH_AI_<MapIndex-SubMapIndex>
-			// PLAY_BATTLE_TEAMDEATH_AI_<MapIndex-SubMapIndex>
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chPostData, "%sPLAY%s%s%sTEAMDEATH_AI%s", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-			else
-				SafeSprintf( chPostData, sizeof(chPostData), "%1PLAY%2%3%4TEAMDEATH_AI%5", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), chPostData );
-
-			// battle mode setting
-			g_HttpMng.SetBattleMode( "TEAMDEATH_AI" );
-		}
-		break;
-	case MT_HOUSE:
-		break;
-	case MT_RAID:
-		break;
-	case MT_FLAG_CAPTURE:
-		{
-			// PLAY_CAMP_DOUBLECROWN_<MapIndex-SubMapIndex>
-			// PLAY_LADDER_DOUBLECROWN_<MapIndex-SubMapIndex>
-			// PLAY_BATTLE_DOUBLECROWN_<MapIndex-SubMapIndex>
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chPostData, "%sPLAY%s%s%sFLAGCAPTURE%s", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-			else
-				SafeSprintf( chPostData, sizeof(chPostData), "%1PLAY%2%3%4FLAGCAPTURE%5", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), chPostData );
-
-			// battle mode setting
-			g_HttpMng.SetBattleMode( "FLAGCAPTURE" );
-		}
-		break;
-	case MT_ARENA:
-		{
-			// PLAY_CAMP_PRISONER_<MapIndex-SubMapIndex>
-			// PLAY_LADDER_PRISONER_<MapIndex-SubMapIndex>
-			// PLAY_BATTLE_PRISONER_<MapIndex-SubMapIndex>
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chPostData, "%sPLAY%s%s%sPRISONER%s", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-			else
-				SafeSprintf( chPostData, sizeof(chPostData), "%1PLAY%2%3%4PRISONER%5", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), chPostData );
-
-			// battle mode setting
-			g_HttpMng.SetBattleMode( "ARENA" );
-		}
-		break;
-	case MT_BATTLE:
-		{
-			// PLAY_CAMP_TEAMDEATH_<MapIndex-SubMapIndex>
-			// PLAY_LADDER_TEAMDEATH_<MapIndex-SubMapIndex>
-			// PLAY_BATTLE_TEAMDEATH_<MapIndex-SubMapIndex>
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chPostData, "%sPLAY%s%s%sBATTLE%s", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-			else
-				SafeSprintf( chPostData, sizeof(chPostData), "%1PLAY%2%3%4BATTLE%5", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), chPostData );
-
-			// battle mode setting
-			g_HttpMng.SetBattleMode( "BATTLE" );
-		}
-		break;
-	case MT_FARMING:
-		{
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chPostData, "%sPLAY%s%s%sFARMING%s", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-			else
-				SafeSprintf( chPostData, sizeof(chPostData), "%1PLAY%2%3%4FARMING%5", chSlash, chSlash, chBattleType, chSlash, chMapIndex );
-
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), chPostData );
-
-			// battle mode setting
-			g_HttpMng.SetBattleMode( "FARMING" );
-		}
-		break;
-	}
-#endif
 }
 
 void ioPlayStage::OnHostUserID( SP2Packet &rkPacket )
@@ -13601,59 +13137,6 @@ void ioPlayStage::OnExitRoom( SP2Packet &rkPacket )
 	rkPacket >> iSubNum;
 	rkPacket >> bPenalty;
 
-#if defined( USE_GA )
-
-	if( GetModeType() != MT_NONE && 
-		GetModeType() != MT_TRAINING &&
-		GetModeType() != MT_HEADQUARTERS &&
-		GetModeType() != MT_HOUSE &&
-		g_HttpMng.GetSendHeroChange() == true )
-	{
-		if( g_HttpMng.GetHeroStartTime() != 0 )
-		{
-			// end choice hero duration time;
-			int iTime = (int)REALGETTIME() / 1000;
-			g_HttpMng.SetHeroEndTime( iTime );
-
-			char chSlash[16]		= {0,};
-			char chType[64]			= {0,};
-			char chMode[64]			= {0,};
-			char chPostData[256]	= {0,};
-
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-			{
-				sprintf_e( chSlash, "%%2F" );
-				sprintf_e( chType, "%s%s", chSlash, g_HttpMng.GetBattleType() );
-				sprintf_e( chMode, "%s%s", chSlash, g_HttpMng.GetBattleMode() );
-				sprintf_e( chPostData, "%sPLAY%s%s%sHERO_CHANGE", chSlash, chType, chMode, chSlash );
-			}
-			else
-			{
-				SafeSprintf( chSlash, sizeof(chSlash), "%2F" );
-				SafeSprintf( chType, sizeof(chType), "%1%2", chSlash, g_HttpMng.GetBattleType() );
-				SafeSprintf( chMode, sizeof(chMode), "%1%2", chSlash, g_HttpMng.GetBattleMode() );
-				SafeSprintf( chPostData, sizeof(chPostData), "%1PLAY%2%3%4HERO_CHANGE", chSlash, chType, chMode, chSlash );
-			}
-
-			// PLAY_<TYPE>_<MODE>_HERO_CHANGE
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), chPostData, 9 );
-
-			g_HttpMng.SetSendHeroChange( false );
-			g_HttpMng.SetHeroStartTime( 0 );
-			g_HttpMng.SetHeroEndTime( 0 );
-			g_HttpMng.SetHeroIndex( 0 );
-		}
-		else
-		{
-			// start choice hero duration time;
-			int iTime = (int)REALGETTIME() / 1000;
-			g_HttpMng.SetHeroStartTime( iTime );				
-			g_HttpMng.SetHeroIndex( g_MyInfo.GetClassType() );
-		}
-	}	
-
-#endif
-
 	char szCall[MAX_PATH];
 	sprintf_s( szCall, "%s - (%d) - (%d)" ,__FUNCTION__, iResult, iSubNum );
 
@@ -13693,10 +13176,7 @@ void ioPlayStage::OnExitRoom( SP2Packet &rkPacket )
 				g_GUIMgr.SetReserveMsgBox( MB_INFOMATION_PENALTY );
 			}
 
-#if defined( USE_GA )
-			// PLAY_LOBBY_CONNECT
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FPLAY%2FLOBBY%2FCONNECT" );
-#endif
+
 		}
 		break;		
 	case EXIT_ROOM_CHAR_LIMIT:
@@ -13848,10 +13328,6 @@ void ioPlayStage::OnExitRoom( SP2Packet &rkPacket )
 				g_GUIMgr.SetReserveMsgBox( MB_INFOMATION_PENALTY );
 			}
 
-#if defined( USE_GA )
-			// PLAY_LOBBY_CONNECT
-			g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FPLAY%2FLOBBY%2FCONNECT" );
-#endif
 		}
 		break;
 	case EXIT_ROOM_SAFETY_KICK:
@@ -14890,16 +14366,6 @@ void ioPlayStage::OnFishingState( SP2Packet &rkPacket )
 		break;
 	case FISHING_RESULT:
 		pChar->OnFishingResult( rkPacket );
-
-#if defined( USE_GA )
-		// PLAY_PLAZA_FISHING_END
-		g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-			, "Play"
-			, "End"
-			, ""
-			, 1
-			, "%2FPLAY%2FPLAZA%2FFISHING%2FEND" );
-#endif
 		break;
 	case FISHING_END:
 		if( GetModeType() == MT_TRAINING )
@@ -16342,63 +15808,6 @@ void ioPlayStage::OnParentChangeChar( SP2Packet &rkPacket, bool bUdp )
 			TCPNetwork::SendToServer( kPacket );
 		}
 	}
-
-#if defined( USE_GA )
-	if( pChar )
-	{
-		if( pChar->GetCharName() == g_MyInfo.GetPublicID() )
-		{
-			if( g_HttpMng.GetHeroIndex() != g_MyInfo.GetClassType() )
-			{
-				if( GetModeType() == MT_NONE			|| 
-					GetModeType() == MT_TRAINING		||
-					GetModeType() == MT_HEADQUARTERS	||
-					GetModeType() == MT_HOUSE			||
-					GetModeType() == MT_PRACTICE )
-					return;
-
-				if( g_HttpMng.GetHeroStartTime() != 0 )
-				{
-					// end choice hero duration time;
-					int iTime = (int)REALGETTIME() / 1000;
-					g_HttpMng.SetHeroEndTime( iTime );
-				}
-				else
-				{
-					// start choice hero duration time;
-					int iTime = (int)REALGETTIME() / 1000;
-					g_HttpMng.SetHeroStartTime( iTime );				
-					g_HttpMng.SetHeroIndex( g_MyInfo.GetClassType() );
-
-					return;
-				}			
-
-				char chSlash[16]		= {0,};
-				char chType[64]			= {0,};
-				char chMode[64]			= {0,};
-				char chPostData[256]	= {0,};
-
-				if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				{
-					sprintf_e( chSlash, "%%2F" );
-					sprintf_e( chType, "%s%s", chSlash, g_HttpMng.GetBattleType() );
-					sprintf_e( chMode, "%s%s", chSlash, g_HttpMng.GetBattleMode() );
-					sprintf_e( chPostData, "%sPLAY%s%s%sHERO_CHANGE", chSlash, chType, chMode, chSlash );
-				}
-				else
-				{
-					SafeSprintf( chSlash, sizeof(chSlash), "%2F" );
-					SafeSprintf( chType, sizeof(chType), "%1%2", chSlash, g_HttpMng.GetBattleType() );
-					SafeSprintf( chMode, sizeof(chMode), "%1%2", chSlash, g_HttpMng.GetBattleMode() );
-					SafeSprintf( chPostData, sizeof(chPostData), "%1PLAY%2%3%4HERO_CHANGE", chSlash, chType, chMode, chSlash );
-				}
-
-				// PLAY_<TYPE>_<MODE>_HERO_CHANGE
-				g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), chPostData, 9 );
-			}		
-		}
-	}	
-#endif
 }
 
 ioBaseChar *ioPlayStage::_OnChangeChar( SP2Packet &rkPacket )
@@ -16625,27 +16034,6 @@ ioBaseChar *ioPlayStage::_OnChangeChar( SP2Packet &rkPacket )
 
 			LOG.PrintTimeAndLog( 0, "ExitProgram - 13" );
 
-#if defined( USE_GA )
-			if( g_App.GetGAStart() == true )
-			{
-				char chLabel[32] = {0,};
-				if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-					sprintf_e( chLabel, "%d", 13 );
-				else
-					SafeSprintf( chLabel, sizeof(chLabel), "%1", 13 );
-
-				// GAME_END_ERR_POS
-				g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-					, "Game"
-					, "Error"
-					, chLabel
-					, 1
-					, "%2FGAME%2FOVER%2FERR"
-					, 1 );
-
-				g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FGAME%2FOVER%2FERR", 6, chLabel );
-			}			
-#endif
 			g_App.SetExitProgram();
 			return NULL;
 		}
@@ -17395,30 +16783,11 @@ void ioPlayStage::OnEtcItemBuyResult( SP2Packet &rkPacket )
 		byte eEtcBuyResultType;
 		rkPacket >> iType >> iValue1 >> iValue2 >> iMoney >> iCash >> iChannelingCash >> iBonusPeso >> bShowAlarmPopup;
 		rkPacket >> dwCompensation >> eEtcBuyResultType;
-		
-#if defined( USE_GA )
-		bool bGACash	= false;
-		bool bGAMoney	= false;
-		int iPesoPrice	= g_MyInfo.GetMoney() - iMoney;
-		int iCashPrice	= g_MyInfo.GetCash() - iCash;
-		if( iCashPrice > 0 && iCashPrice < 1000000 )
-			bGACash		= true;
-		if( iPesoPrice > 0 )
-			bGAMoney	= true;
-		int iSubCode	= 0;
-#endif
 
 		ioUserEtcItem *pUserEtcItem =  g_MyInfo.GetUserEtcItem();
 		if( pUserEtcItem )
 		{
 			ioUserEtcItem::ETCITEMSLOT kSlot;
-
-#if defined( USE_GA )
-			ioUserEtcItem::ETCITEMSLOT kNowSlot;
-			pUserEtcItem->GetEtcItem( iType, kNowSlot );
-			iSubCode = iValue1 - kNowSlot.m_iValue1;
-#endif
-
 			kSlot.m_iType   = iType;
 			kSlot.m_iValue1 = iValue1;
 			kSlot.m_iValue2 = iValue2;
@@ -17511,38 +16880,6 @@ void ioPlayStage::OnEtcItemBuyResult( SP2Packet &rkPacket )
 		}
 		g_QuestMgr.QuestCompleteTerm( QC_BUY_ETC_ITEM, iType );
 
-#if defined( USE_GA )
-		if( bGACash )
-		{
-			if( iSubCode > 0 )
-			{
-				iCashPrice = g_App.GetGAEtcCash( iType, iSubCode );
-				if( iCashPrice > 0 )
-				{
-					// GOLD_USE_ETC
-					g_HttpMng.GA_ItemHitTracking( g_MyInfo.GetUserIndex() 
-						, "Etc"
-						, iCashPrice
-						, 1
-						, iType
-						, "Gold"
-						, "%2FGOLD%2FUSE%2FETC"
-						, true );
-				}
-			}						
-		}
-		if( bGAMoney )
-		{
-			// PESO_USE_ETC
-			g_HttpMng.GA_ItemHitTracking( g_MyInfo.GetUserIndex() 
-				, "Etc"
-				, iPesoPrice
-				, 1
-				, iType
-				, "Peso"
-				, "%2FPESO%2FUSE%2FETC" );
-		}	
-#endif
 	}
 	else if( iResult == ETCITEM_BUY_EXCEPTION )
 	{
@@ -17748,17 +17085,6 @@ void ioPlayStage::OnExtraItemBuyResult( SP2Packet &rkPacket )
 			int iBonusPeso;
 			rkPacket >> iBonusPeso;
 
-#if defined( USE_GA )
-			bool bGACash	= false;
-			bool bGAMoney	= false;
-			int iPesoPrice	= g_MyInfo.GetMoney() - iPeso;
-			int iCashPrice	= g_MyInfo.GetCash() - iCash;
-			if( iCashPrice > 0 && iCashPrice < 1000000 )
-				bGACash		= true;
-			if( iPesoPrice > 0 )
-				bGAMoney	= true;
-#endif
-
 			ioUserExtraItem *pUserExtraItem = g_MyInfo.GetUserExtraItem();
 			if( pUserExtraItem )
 			{
@@ -17804,40 +17130,6 @@ void ioPlayStage::OnExtraItemBuyResult( SP2Packet &rkPacket )
 			g_MyInfo.SetCash( iCash );
 			g_MyInfo.SetChannelingCash( iChannelingCash );
 
-#if defined( USE_GA )
-			if( bGACash )
-			{
-				RandomMachineInfo *pInfo = g_ExtraItemInfoMgr.GetRandomMachineInfo( iMachineCode );
-				if( pInfo )
-				{
-					iCashPrice = pInfo->GetNeedCash();
-
-					if( iCashPrice > 0 )
-					{
-						// GOLD_USE_GEAR
-						g_HttpMng.GA_ItemHitTracking( g_MyInfo.GetUserIndex() 
-							, "Gear"
-							, iCashPrice
-							, 1
-							, iItemCode
-							, "Gold"
-							, "%2FGOLD%2FUSE%2FGEAR"
-							, true );
-					}					
-				}				
-			}
-			if( bGAMoney )
-			{
-				// PESO_USE_GEAR
-				g_HttpMng.GA_ItemHitTracking( g_MyInfo.GetUserIndex() 
-					, "Gear"
-					, iPesoPrice
-					, 1
-					, iItemCode
-					, "Peso"
-					, "%2FPESO%2FUSE%2FGEAR" );
-			}			
-#endif
 		}
 		return;
 	case EXTRAITEM_PACKAGE_BUY_OK:
@@ -18191,10 +17483,6 @@ void ioPlayStage::OnExtraItemSellResult( SP2Packet &rkPacket )
 		bool bExtraItemCustom = false;
 		int nGradeType = 0;
 
-#if defined( USE_GA )
-		int iGAItemIndex = 0;
-#endif
-
 		ioUserExtraItem *pExtraItem = g_MyInfo.GetUserExtraItem();
 		if( pExtraItem )
 		{
@@ -18211,9 +17499,6 @@ void ioPlayStage::OnExtraItemSellResult( SP2Packet &rkPacket )
 				if( pItem )
 					nGradeType = pItem->GetGradeType();
 
-#if defined( USE_GA )
-				iGAItemIndex = kSlot.m_iItemCode;
-#endif
 			}
 		}
 
@@ -18266,32 +17551,6 @@ void ioPlayStage::OnExtraItemSellResult( SP2Packet &rkPacket )
 			pInvenWnd->ShowItemRecvSellInfoWnd( ItemRecvSellInfoWnd::ITEM_SELL, ItemRecvSellInfoWnd::ITEM_EXTRAITEM, szIconName, szSubIconName, vTitle, vDesc, -1, iItemReinforce, bExtraItemCustom, false, nGradeType );
 		}
 
-#if defined( USE_GA )
-		char chItemIndex[32]	= {0,};
-		char chSlash[16]		= {0,};
-		char chPostData[256]	= {0,};
-
-		if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-		{
-			sprintf_e( chItemIndex, "%d", iGAItemIndex );
-			sprintf_e( chSlash, "%%2F" );
-			sprintf_e( chPostData, "%sPESO_GET_BUY_GEAR_ITEM%s%s", chSlash, chSlash, chItemIndex );
-		}
-		else
-		{
-			SafeSprintf( chItemIndex, sizeof(chItemIndex), "%1", iGAItemIndex );
-			SafeSprintf( chSlash, sizeof(chSlash), "%2F" );
-			SafeSprintf( chPostData, sizeof(chPostData), "%1PESO_GET_BUY_GEAR_ITEM%2%3", chSlash, chSlash, chItemIndex );
-		}		
-
-		// PESO_GET_BUY_GEAR_ITEM
-		g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-			, "Peso"
-			, "Gear"
-			, ""
-			, iAddPeso
-			, chPostData );
-#endif
 	}
 	else if( iResult == EXTRAITEM_SELL_FAIL )
 	{
@@ -27635,23 +26894,6 @@ void ioPlayStage::OnGrowthLevelUp( SP2Packet &rkPacket )
 
 			g_QuestMgr.QuestCompleteTerm( QC_PESO_GROWTH_TRY );
 
-#if defined( USE_GA )
-			char chLabel[32] = {0,};
-
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chLabel, "%d", iClassType );
-			else
-				SafeSprintf( chLabel, sizeof(chLabel), "%1", iClassType );
-
-			// CHAR_GROWTH_LV_UP
-			g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-				, "Character"
-				, "LevelUp"
-				, chLabel
-				, 1
-				, "%2FCHAR%2FGROWTH%2FLV%2FUP" );
-#endif
-
 		}
 
 		return;
@@ -27778,21 +27020,6 @@ void ioPlayStage::OnLevelGrowth( SP2Packet &rkPacket )
 
 			g_QuestMgr.QuestCompleteTerm( QC_PESO_GROWTH_TRY );
 
-#if defined( USE_GA )
-			char chLabel[32] = {0,};
-
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chLabel, "%d", iClassType );
-			else
-				SafeSprintf( chLabel, sizeof(chLabel), "%1", iClassType );
-
-			g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-				, "Character"
-				, "GrowthLevel"
-				, chLabel
-				, 1
-				, "%2FCHAR%2FGROWTH%2FLV%2FUP" );
-#endif
 		}
 
 		return;
@@ -27944,22 +27171,6 @@ void ioPlayStage::OnTimeGrowthAdd( SP2Packet &rkPacket )
 				pSelectWnd->UpdateInfo();
 			}
 
-#if defined( USE_GA )
-			char chLabel[32] = {0,};
-
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chLabel, "%d", iClassType );
-			else
-				SafeSprintf( chLabel, sizeof(chLabel), "%1", iClassType );
-
-			// CHAR_GROWTH_TIME_START
-			g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-				, "Character"
-				, "Start"
-				, chLabel
-				, 1
-				, "%2FCHAR%2FGROWTH%2FTIME%2FSTART" );
-#endif
 		}
 
 		g_QuestMgr.QuestCompleteTerm( QC_TIME_GROWTH_TRY );
@@ -28005,22 +27216,6 @@ void ioPlayStage::OnTimeGrowthRemove( SP2Packet &rkPacket )
 				pSelectWnd->UpdateInfo();
 			}
 
-#if defined( USE_GA )
-			char chLabel[32] = {0,};
-
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chLabel, "%d", iClassType );
-			else
-				SafeSprintf( chLabel, sizeof(chLabel), "%1", iClassType );
-
-			// CHAR_GROWTH_TIME_CANCEL
-			g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-			 	, "Character"
-			 	, "Cancel"
-			 	, chLabel
-			 	, 1
-			 	, "%2FCHAR%2FGROWTH%2FTIME%2FCANCEL" );
-#endif
 		}
 	}
 }
@@ -28083,22 +27278,7 @@ void ioPlayStage::OnGrowthLevelDown( SP2Packet &rkPacket )
 				pInvenWnd->UpdateTab( false, false );
 			}
 
-#if defined( USE_GA )
-			char chLabel[32] = {0,};
 
-			if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-				sprintf_e( chLabel, "%d", iClassType );
-			else
-				SafeSprintf( chLabel, sizeof(chLabel), "%1", iClassType );
-
-			// CHAR_GROWTH_LV_DOWN
-			g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-				, "Character"
-				, "LevelDown"
-				, chLabel
-				, 1
-				, "%2FCHAR%2FGROWTH%2FLV%2FDOWN" );
-#endif
 		}
 
 		return;
@@ -28847,10 +28027,6 @@ void ioPlayStage::OnPresentBuy( SP2Packet &rkPacket )
 		int iChannelingCash = 0;
 
 		rkPacket >> iMoney >> iCash >> iPurchasedCash >> iChannelingCash;
-		
-#if defined( USE_GA )
-		int iCashPrice	= g_MyInfo.GetCash() - iCash;
-#endif
 
 		//사운드
 		if( iMoney != g_MyInfo.GetMoney() || iCash != g_MyInfo.GetCash() )
@@ -28873,23 +28049,6 @@ void ioPlayStage::OnPresentBuy( SP2Packet &rkPacket )
 
 		LOG.PrintTimeAndLog( 0, "Success present buy : %I64d|%d|%d|%d", iMoney, iCash, iPurchasedCash, iChannelingCash );
 
-#if defined( USE_GA )
-		if( iCashPrice > 0 && iCashPrice < 1000000 )
-		{
-			// GOLD_USE_GIFT
-			g_HttpMng.GA_ItemHitTracking( g_MyInfo.GetUserIndex() 
-				, "Gift"
-				, g_HttpMng.GetGiftCash()
-				, 1
-				, g_HttpMng.GetGiftIndex()
-				, "Gold"
-				, "%2FGOLD%2FUSE%2FGIFT"
-				, true );
-
-			g_HttpMng.SetGiftIndex( 0 );
-			g_HttpMng.SetGiftCash( 0 );
-		}		
-#endif
 	}
 	else
 	{
@@ -30033,17 +29192,6 @@ void ioPlayStage::OnTradeItemBuy( SP2Packet &rkPacket )
 			{
 				pResultWnd->SetBuyResultInfo( dwItemType, dwItemMagicCode, dwItemValue, dwItemMaleCustom, dwItemFemaleCustom, iItemPrice );
 			}
-
-#if defined( USE_GA )
-			// PESO_MARKET_BUY
-			g_HttpMng.GA_ItemHitTracking( g_MyInfo.GetUserIndex() 
-				, "Gear"
-				, iItemPrice
-				, 1
-				, dwItemMagicCode
-				, "Peso"
-				, "%2FPESO%2FMARKET%2FBUY" );
-#endif
 		}
 		break;
 	case TRADE_SELL_OK:
@@ -30088,17 +29236,6 @@ void ioPlayStage::OnTradeItemBuy( SP2Packet &rkPacket )
 				if( pQuick && pQuick->IsShow() )
 					pQuick->RefreshTradeItemList();
 			}
-
-#if defined( USE_GA )
-			// PESO_MARKET_SELL
-			g_HttpMng.GA_ItemHitTracking( g_MyInfo.GetUserIndex() 
-				, "Gear"
-				, iItemPrice
-				, 1
-				, dwItemMagicCode
-				, "Peso"
-				, "%2FPESO%2FMARKET%2FSELL" );
-#endif
 		}
 		break;
 	case TRADE_BUY_PESO:
@@ -32626,9 +31763,6 @@ void ioPlayStage::OnExtraItemDisassembleResult( SP2Packet &rkPacket )
 		bool bExtraItemCustom = false;
 		int nGradeType = 0;
 
-#if defined( USE_GA )
-		int iGAItemIndex = 0;
-#endif
 		ioUserExtraItem *pExtraItem = g_MyInfo.GetUserExtraItem();
 		if( pExtraItem )
 		{
@@ -32644,10 +31778,6 @@ void ioPlayStage::OnExtraItemDisassembleResult( SP2Packet &rkPacket )
 				const ioItem *pItem = g_ItemMaker.GetItemConst( kSlot.m_iItemCode, __FUNCTION__ );
 				if( pItem )
 					nGradeType = pItem->GetGradeType();
-
-#if defined( USE_GA )
-				iGAItemIndex = kSlot.m_iItemCode;
-#endif
 
 			}
 		}
@@ -32713,22 +31843,6 @@ void ioPlayStage::OnExtraItemDisassembleResult( SP2Packet &rkPacket )
 			pInvenWnd->ShowItemRecvSellInfoWnd( ItemRecvSellInfoWnd::ITEM_DISASSEMBLE, ItemRecvSellInfoWnd::ITEM_PRESENT, szIconName, szSubIconName, vTitle, vDesc, -1, iItemReinforce, bExtraItemCustom, false, nGradeType );
 		}
 
-#if defined( USE_GA )
-		char chLabel[32] = {0,};
-
-		if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-			sprintf_e( chLabel, "%d", iGAItemIndex );
-		else
-			SafeSprintf( chLabel, sizeof(chLabel), "%1", iGAItemIndex );
-
-		// ITEM_DISASSEMBLE
-		g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-			, "Item"
-			, "Disassemble"
-			, chLabel
-			, 1
-			, "%2FITEM%2FDISASSEMBLE" );
-#endif
 	}
 	else if( iResult == EXTRAITEM_DISASSEMBLE_FAIL )
 	{
@@ -32824,32 +31938,7 @@ void ioPlayStage::OnMedalItemSellResult( SP2Packet &rkPacket )
 			pInvenWnd->ShowItemRecvSellInfoWnd( ItemRecvSellInfoWnd::ITEM_SELL, ItemRecvSellInfoWnd::ITEM_MEDAL, szIconName, szSubIconName, vTitle, vDesc, -1, 0, false, false, 0 );
 		}
 
-#if defined( USE_GA )
-		char chItemIndex[32]	= {0,};
-		char chSlash[16]		= {0,};
-		char chPostData[256]	= {0,};
 
-		if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-		{
-			sprintf_e( chItemIndex, "%d", iMedalIndex );
-			sprintf_e( chSlash, "%%2F" );
-			sprintf_e( chPostData, "%sPESO_GET_BUY_MEDAL_ITEM%s%s", chSlash, chSlash, chItemIndex );
-		}
-		else
-		{
-			SafeSprintf( chItemIndex, sizeof(chItemIndex), "%1", iMedalIndex );
-			SafeSprintf( chSlash, sizeof(chSlash), "%2F" );
-			SafeSprintf( chPostData, sizeof(chPostData), "%1PESO_GET_BUY_MEDAL_ITEM%2%3", chSlash, chSlash, chItemIndex );
-		}		
-
-		// PESO_GET_BUY_MEDAL_ITEM
-		g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-			, "Peso"
-			, "Medal"
-			, ""
-			, iAddPeso
-			, chPostData );
-#endif
 	}
 	else if( iResult == MEDALITEM_SELL_FAIL )
 	{
@@ -32947,32 +32036,6 @@ void ioPlayStage::OnCustomMedalItemSellResult( SP2Packet &rkPacket )
 			pInvenWnd->ShowItemRecvSellInfoWnd( ItemRecvSellInfoWnd::ITEM_SELL, ItemRecvSellInfoWnd::ITEM_MEDAL, szIconName, szSubIconName, vTitle, vDesc, -1, 0, false, false, 0 );
 		}
 
-#if defined( USE_GA )
-		char chItemIndex[32]	= {0,};
-		char chSlash[16]		= {0,};
-		char chPostData[256]	= {0,};
-
-		if ( ioLocalManager::GetLocalType() == ioLocalManager::LCT_KOREA )
-		{
-			sprintf_e( chItemIndex, "%d", iMedalIndex );
-			sprintf_e( chSlash, "%%2F" );
-			sprintf_e( chPostData, "%sPESO_GET_BUY_MEDAL_ITEM%s%s", chSlash, chSlash, chItemIndex );
-		}
-		else
-		{
-			SafeSprintf( chItemIndex, sizeof(chItemIndex), "%1", iMedalIndex );
-			SafeSprintf( chSlash, sizeof(chSlash), "%2F" );
-			SafeSprintf( chPostData, sizeof(chPostData), "%1PESO_GET_BUY_MEDAL_ITEM%2%3", chSlash, chSlash, chItemIndex );
-		}		
-
-		// PESO_GET_BUY_MEDAL_ITEM
-		g_HttpMng.GA_EventTracking( g_MyInfo.GetUserIndex()
-			, "Peso"
-			, "Medal"
-			, ""
-			, iAddPeso
-			, chPostData );
-#endif
 	}
 	else if( iResult == MEDALITEM_SELL_FAIL )
 	{
@@ -33407,17 +32470,6 @@ void ioPlayStage::OnSubscriptionBuy( SP2Packet &rkPacket )
 
 		rkPacket >> iMoney >> iCash >> iPurchasedCash >> iChannelingCash;
 
-#if defined( USE_GA )
-		bool bGACash	= false;
-		bool bGAMoney	= false;
-		int iPesoPrice	= g_MyInfo.GetMoney() - iMoney;
-		int iCashPrice	= g_MyInfo.GetCash() - iCash;
-		if( iCashPrice > 0 && iCashPrice < 1000000 )
-			bGACash		= true;
-		if( iPesoPrice > 0 )
-			bGAMoney	= true;
-#endif
-
 		//사운드
 		if( iMoney != g_MyInfo.GetMoney() || iCash != g_MyInfo.GetCash() )
 			g_ExSoundMgr.PlaySound( ExSound::EST_SHOP_BUY_SUCCESS );
@@ -33443,38 +32495,6 @@ void ioPlayStage::OnSubscriptionBuy( SP2Packet &rkPacket )
 				pNewShopBuyWnd->ShowOnlyBoughtBtns( true );
 		}
 
-#if defined( USE_GA )
-		if( bGACash )
-		{
-			int iLimitDate = g_HttpMng.GetScripHeroLimitDate();
-
-			if( iLimitDate == 0 )
-				iCashPrice = g_ClassPrice.GetMortmainCharCash( g_HttpMng.GetScripHeroIndex() );
-			else
-				iCashPrice = g_ClassPrice.GetClassBuyCash( g_HttpMng.GetScripHeroIndex(), iLimitDate );
-
-			// GOLD_USE_HERO
-			g_HttpMng.GA_ItemHitTracking( g_MyInfo.GetUserIndex() 
-				, "Hero"
-				, iCashPrice
-				, 1
-				, g_HttpMng.GetScripHeroIndex()
-				, "Gold"
-				, "%2FGOLD%2FUSE%2FHERO"
-				, true );
-		}
-		if( bGAMoney )
-		{
-			// PESO_USE_HERO
-			g_HttpMng.GA_ItemHitTracking( g_MyInfo.GetUserIndex() 
-				, "Hero"
-				, iPesoPrice
-				, 1
-				, g_HttpMng.GetScripHeroIndex()
-				, "Peso"
-				, "%2FPESO%2FUSE%2FHERO" );
-		}
-#endif
 	}
 	else
 	{

@@ -421,10 +421,7 @@ void AttendanceWnd::iwm_show()
 	InitCurrAccrueReward();
 	CheckAttendanceButton();
 
-#if defined( USE_GA )
-	// WND_ATTENDANCE
-	g_HttpMng.GA_PageVIewTracking( g_MyInfo.GetUserIndex(), "%2FWND%2FATTENDANCE" );
-#endif
+
 }
 
 void AttendanceWnd::iwm_hide()
