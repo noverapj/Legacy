@@ -307,9 +307,6 @@
     <Filter Include="nProtect">
       <UniqueIdentifier>{bc29dc77-b934-48e2-afce-f72d6616434e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="XignCode">
-      <UniqueIdentifier>{3f652ab0-094c-46fd-8048-d839b2f65dea}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Item\CounterAttack">
       <UniqueIdentifier>{deea3e8a-2835-4ac3-b377-6ea0df577e7f}</UniqueIdentifier>
     </Filter>
