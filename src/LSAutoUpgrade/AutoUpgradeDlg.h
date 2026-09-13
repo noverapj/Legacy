@@ -96,9 +96,9 @@ private:
 		CT_EXPAND_VALUE       = 0,
 		CT_VCODE			  = 1,	
 		CT_OPTIONS			  = 2,
-		CT_FULLZIPVER		  = 4,
-		CT_COPY_FOLDER_SOURCE = 5,
-		CT_COPY_FOLDER_DEST   = 6,
+		CT_FULLZIPVER		  = 5,
+		CT_COPY_FOLDER_SOURCE = 6,
+		CT_COPY_FOLDER_DEST   = 7,
 		CT_MAX,
 	};
 
