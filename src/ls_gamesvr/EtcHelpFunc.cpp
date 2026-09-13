@@ -80,6 +80,17 @@ static bool s_bOnlyServerRelay      = false;
 static bool s_bWholeChatOn          = true;
 static bool s_bServerRelayToTCP     = true;
 
+struct RelayRegionRange
+{
+	DWORD dwNetwork;
+	DWORD dwMask;
+	char  szRegion[16];
+};
+typedef std::vector<RelayRegionRange> RelayRegionVec;
+static RelayRegionVec s_vRelayRegionRanges;
+static char s_szDefaultRegion[16] = "SG";
+static bool s_bRelayRegionMode = false;
+
 static int s_iHeroTop100SyncHour = 9;
 static int s_iHeroUserDataSyncHour = 9;
 
@@ -867,6 +878,82 @@ bool IsCharChangeToUDP()
 void SetOnlyServerRelay( bool bRelay )
 {
 	s_bOnlyServerRelay = bRelay;
+}
+
+static DWORD RegionStrToIP(const char* szIP)
+{
+	int a = 0, b = 0, c = 0, d = 0;
+	sscanf_s(szIP, "%d.%d.%d.%d", &a, &b, &c, &d);
+	return (DWORD)((a << 24) | (b << 16) | (c << 8) | d);
+}
+
+void InitRelayRegion()
+{
+	s_vRelayRegionRanges.clear();
+	strcpy_s(s_szDefaultRegion, "SG");
+
+	const char* szPath = "config/relay_region.ini";
+	char szDefault[16] = "";
+	GetPrivateProfileStringA("COMMON", "DEFAULT_REGION", "SG", szDefault, sizeof(szDefault), szPath);
+	char szMode[8] = "";
+	GetPrivateProfileStringA("COMMON", "REGION_MODE", "0", szMode, sizeof(szMode), szPath);
+	s_bRelayRegionMode = (atoi(szMode) != 0);
+
+	strcpy_s(s_szDefaultRegion, szDefault);
+
+	for (int i = 1; i < 100000; ++i)
+	{
+		char szKey[16], szValue[128];
+		sprintf_s(szKey, sizeof(szKey), "%d", i);
+		GetPrivateProfileStringA("REGIONS", szKey, "", szValue, sizeof(szValue), szPath);
+		if (szValue[0] == 0) break;
+
+		char szRegion[16], szIP[32];
+		int iPrefix = 0;
+		if (sscanf_s(szValue, "%15[^,],%31[^/]/%d", szRegion, (UINT)sizeof(szRegion), szIP, (UINT)sizeof(szIP), &iPrefix) != 3)
+		{
+			LOG.PrintTimeAndLog(0, "InitRelayRegion Parse Error [%s]", szValue);
+			continue;
+		}
+		if (iPrefix < 0 || iPrefix > 32) continue;
+
+		RelayRegionRange kRange;
+		_strupr_s(szRegion);
+		kRange.dwNetwork = RegionStrToIP(szIP);
+		kRange.dwMask = (iPrefix == 0) ? 0 : (0xFFFFFFFFUL << (32 - iPrefix));
+		strcpy_s(kRange.szRegion, szRegion);
+
+		s_vRelayRegionRanges.push_back(kRange);
+	}
+
+	LOG.PrintTimeAndLog(0, "InitRelayRegion : %d ranges, default=%s, mode=%d, test(171.96.1.1)=%s",
+		(int)s_vRelayRegionRanges.size(), s_szDefaultRegion,
+		(int)s_bRelayRegionMode, ResolveRegion("171.96.1.1"));
+}
+
+const char* ResolveRegion(const char* szIP)
+{
+	if (szIP == NULL || szIP[0] == 0)
+		return s_szDefaultRegion;
+
+	DWORD dwIP = RegionStrToIP(szIP);
+	RelayRegionVec::iterator iter;
+	for (iter = s_vRelayRegionRanges.begin(); iter != s_vRelayRegionRanges.end(); ++iter)
+	{
+		if ((dwIP & iter->dwMask) == (iter->dwNetwork & iter->dwMask))
+			return iter->szRegion;
+	}
+	return s_szDefaultRegion;
+}
+
+bool IsRelayRegionMode()
+{
+	return s_bRelayRegionMode;
+}
+
+const char* GetDefaultRelayRegion()
+{
+	return s_szDefaultRegion;
 }
 
 bool IsOnlyServerRelay()

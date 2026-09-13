@@ -80,6 +80,7 @@ public:
 	ServerNode* GetRelayServer();
 	ServerNode* GetRelayServer(const int relayServerID, BOOL ForceState = FALSE);
 	ServerNode* FindRelayServer(int relayServerIndex, BOOL ForceState = FALSE);
+	ServerNode* GetRelayServerByRegion(const char* szRegion);
 
 public:
 	void MakeInfoPacket(SP2Packet& pk);
@@ -143,9 +144,13 @@ protected:
 	//////////////////////////////////////////////////////////////////////////
 #ifndef ANTIHACK
 public:
-	virtual void InsertRelayGroupReserve( Room *pRoom, DWORD dwUserIndex, const ioHashString &rkIP, int iPort, const ioHashString& publicID );
-	void RelayServerInsertGroup( Room *pRoom, DWORD dwUserIndex, const ioHashString &rkIP, int iPort, const ioHashString& publicID );
-	void LocalInsertRelayGroupReserve( Room *pRoom, DWORD dwUserIndex, const ioHashString &rkIP, int iPort );
+	virtual void InsertRelayGroupReserve(Room* pRoom, DWORD dwUserIndex, const ioHashString& rkIP, int iPort, const ioHashString& publicID);
+	void RelayServerInsertGroup(Room* pRoom, DWORD dwUserIndex, const ioHashString& rkIP, int iPort, const ioHashString& publicID);
+	void RelayServerInsertGroupAll(Room* pRoom, DWORD dwUserIndex, const ioHashString& rkIP, int iPort, const ioHashString& publicID);
+	void RelayServerRemoveGroupAll(Room* pRoom, DWORD dwUserIndex);
+	void RelayServerDelUserAll(DWORD dwUserIndex);
+	void LocalInsertRelayGroupReserve(Room* pRoom, DWORD dwUserIndex, const ioHashString& rkIP, int iPort, bool bRegionMode = false);
+
 	BOOL SendRelayPacket( DWORD dwUserIndex, SP2Packet& rkPacket );
 	BOOL SendPacket( RelayHeader* pRelayHeader ,DWORD queueId = 0);
 	void RemoveRoom( RelayHeader* pRelayHeader );

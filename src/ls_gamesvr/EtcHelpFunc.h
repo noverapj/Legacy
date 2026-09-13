@@ -116,6 +116,11 @@ namespace Help
 	void SetOnlyServerRelay( bool bRelay );
 	bool IsOnlyServerRelay();
 
+	void InitRelayRegion();							// load config/relay_region.ini
+	const char* ResolveRegion(const char* szIP);	// user IP -> region code (fallback DEFAULT_REGION)
+	bool IsRelayRegionMode();						// REGION_MODE=1 ¡æ per-user nearest relay
+	const char* GetDefaultRelayRegion();			// DEFAULT_REGION
+
 	void SetWholeChatOn( bool bOn );
 	bool IsWholeChatOn();
 

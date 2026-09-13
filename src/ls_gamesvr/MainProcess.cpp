@@ -310,6 +310,8 @@ BOOL ioMainProcess::LoadINI()
 		m_dwIP = StrToDwordIP( m_szPublicIP.c_str() );
 	}
 
+	Help::InitRelayRegion();
+
 	char szTemp[MAX_PATH] = "";
 
 	const char* szINI = g_App.GetINI().c_str();

@@ -76,6 +76,7 @@ public://get/set fuction
 	void SetPrivateIPFirstByte(int val)			{ m_privateIPFirstByte = val; }
 	std::vector<int>& GetUdpPorts()				{ return m_udpPorts; }
 	void SetUdpPorts(std::vector<int>& val)		{ m_udpPorts = val; }
+	char* GetRegion()							{ return m_region; }
 
 private:
 	TCHAR m_IP[64];
@@ -121,6 +122,7 @@ private:
 	/* RelayServerInfo                                                                     */
 	/************************************************************************/
 	int m_relayServerRoomMaxCount;
+	char m_region[16];
 	/************************************************************************/
 	/* ioProcess / Packet checker                                                                     */
 	/************************************************************************/

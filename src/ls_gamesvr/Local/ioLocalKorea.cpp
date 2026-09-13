@@ -162,11 +162,7 @@ bool ioLocalKorea::IsChannelingID()
 
 bool ioLocalKorea::IsBillingTestID( const ioHashString &rsPublicID )
 {
-	// 아래 "금벌", "금벌인", "금벌진" 아이디 수정시 반드시 대윤씨에게 문의해주세요.
-	// 금벌 : 일반, 금벌인 : 엠게임, galura17 : 네이버 ( byosa190 / 로사테스트1@ ), 금벌진 : 버디버디, 금벌금 : 투니랜드 ( cash6 /cash6 )
-	if( rsPublicID == "금벌" || rsPublicID == "금벌인" || rsPublicID == "galura17" || rsPublicID == "금벌진" || rsPublicID == "금벌금" )
-		return true;
-
+	
 	return false;
 }
 
@@ -187,7 +183,10 @@ int ioLocalKorea::GetLimitGradeLevel()
 
 bool ioLocalKorea::IsBadPingKick( bool bLadder )
 {
-	return true;
+	if (bLadder)
+		return true;
+
+	return false;
 }
 
 int ioLocalKorea::GetLicenseDate()

@@ -87,25 +87,39 @@ void ioBroadCastRelayModule::Run()
 
 }
 
-void ioBroadCastRelayModule::InsertRelayGroupReserve( Room *pRoom, DWORD dwUserIndex, const ioHashString &rkIP, int iPort,const ioHashString& publicID )
+void ioBroadCastRelayModule::InsertRelayGroupReserve(Room* pRoom, DWORD dwUserIndex, const ioHashString& rkIP, int iPort, const ioHashString& publicID)
 {
-	if(IsRelayServerOn(pRoom->GetRoomIndex(), pRoom->RelayServerIndex()))
+	if (Help::IsRelayRegionMode())
+	{
+		RelayServerInsertGroupAll(pRoom, dwUserIndex, rkIP, iPort, publicID);
+		LocalInsertRelayGroupReserve(pRoom, dwUserIndex, rkIP, iPort, true);
+		return;
+	}
+
+	if (IsRelayServerOn(pRoom->GetRoomIndex(), pRoom->RelayServerIndex()))
 	{
 		RelayServerInsertGroup(pRoom, dwUserIndex, rkIP, iPort, publicID);
 	}
 	else
 	{
 		LocalInsertRelayGroupReserve(pRoom, dwUserIndex, rkIP, iPort);
-	} 
+	}
 }
 
-void ioBroadCastRelayModule::RemoveRelayGroupReserve( Room *pRoom, DWORD dwUserIndex )
+void ioBroadCastRelayModule::RemoveRelayGroupReserve(Room* pRoom, DWORD dwUserIndex)
 {
-	if(IsRelayServerOn(pRoom->GetRoomIndex(), pRoom->RelayServerIndex()))
+	if (Help::IsRelayRegionMode())
+	{
+		RelayServerRemoveGroupAll(pRoom, dwUserIndex);
+		LocalRemoveRelayGroupReserve(pRoom->GetRoomIndex(), dwUserIndex);
+		return;
+	}
+
+	if (IsRelayServerOn(pRoom->GetRoomIndex(), pRoom->RelayServerIndex()))
 	{
 		RelayServerRemoveGroup(pRoom, dwUserIndex);
 	}
-	else 
+	else
 	{
 		LocalRemoveRelayGroupReserve(pRoom->GetRoomIndex(), dwUserIndex);
 	}
@@ -224,7 +238,7 @@ int ioBroadCastRelayModule::GetNodeSize()
 	return sumCount;
 }
 
-void ioBroadCastRelayModule::LocalInsertRelayGroupReserve( Room *pRoom, DWORD dwUserIndex, const ioHashString &rkIP, int iPort )
+void ioBroadCastRelayModule::LocalInsertRelayGroupReserve( Room *pRoom, DWORD dwUserIndex, const ioHashString &rkIP, int iPort, bool bRegionMode/* = false*/)
 {
 	InsertData *pData = reinterpret_cast<InsertData*>(m_bufferPool.Get(sizeof(InsertData)));
 	if(pData == NULL)
@@ -246,15 +260,20 @@ void ioBroadCastRelayModule::LocalInsertRelayGroupReserve( Room *pRoom, DWORD dw
 
 	pRoom->SetRelayServerIndex(0);
 
-	User* pUser = g_UserNodeManager.GetUserNode(dwUserIndex);
-	if(pUser && pUser->IsRelayUse())
+	if (!bRegionMode)
 	{
-		SP2Packet kPacket(STPK_ON_CONTROL);
-		int iControlType = RC_NOTUSE_RELAYSVR;
-		kPacket << iControlType;
+		pRoom->SetRelayServerIndex(0);
 
-		pUser->SendMessage(kPacket);
-		pUser->SendUserLogOut();
+		User* pUser = g_UserNodeManager.GetUserNode(dwUserIndex);
+		if (pUser && pUser->IsRelayUse())
+		{
+			SP2Packet kPacket(STPK_ON_CONTROL);
+			int iControlType = RC_NOTUSE_RELAYSVR;
+			kPacket << iControlType;
+
+			pUser->SendMessage(kPacket);
+			pUser->SendUserLogOut();
+		}
 	}
 
 	IncementInputCount();
@@ -426,6 +445,37 @@ ServerNode* ioBroadCastRelayModule::FindRelayServer( int relayServerIndex, BOOL 
 	return pServerNode;
 }
 
+ServerNode* ioBroadCastRelayModule::GetRelayServerByRegion(const char* szRegion)
+{
+	if (szRegion == NULL || szRegion[0] == 0)
+		return NULL;
+
+	POSITION pos = m_relayServerNodes.GetHeadPosition();
+
+	ServerNode* pServerNode = NULL;
+
+	while (pos)
+	{
+		pServerNode = m_relayServerNodes.GetAt(pos);
+
+		if (pServerNode == NULL)
+			return pServerNode;
+
+		if (pServerNode->RelayInfo().m_roomCount < ROOM_MAX &&
+			IsRelayServerMode(pServerNode) == TRUE &&
+			_stricmp(pServerNode->SZRegion(), szRegion) == 0)
+		{
+			return pServerNode;
+		}
+
+		m_relayServerNodes.GetNext(pos);
+
+		pServerNode = NULL;
+	}
+
+	return pServerNode;
+}
+
 void ioBroadCastRelayModule::RelayServerInsertGroup(  Room *pRoom, DWORD dwUserIndex, const ioHashString &rkIP, int iPort, const ioHashString& publicID )
 {
 	if(pRoom == NULL)
@@ -516,6 +566,102 @@ void ioBroadCastRelayModule::RelayServerRemoveGroup( Room *pRoom, DWORD dwUserIn
 	pServerNode->SendMessage( kPacket );
 
 	m_bufferPool.Push(reinterpret_cast<char*>(outData),sizeof(RemoveData));
+}
+
+void ioBroadCastRelayModule::RelayServerInsertGroupAll(Room* pRoom, DWORD dwUserIndex, const ioHashString& rkIP, int iPort, const ioHashString& publicID)
+{
+	if (pRoom == NULL)
+		return;
+
+	SendRelayInsertData* outData = reinterpret_cast<SendRelayInsertData*>(m_bufferPool.Get(sizeof(SendRelayInsertData)));
+	if (outData == NULL)
+	{
+		LOG.PrintTimeAndLog(0, "RelayServerInsertGroupAll is Null");
+		return;
+	}
+
+	outData->m_dwRoomIndex = pRoom->GetRoomIndex();
+	outData->m_dwUserIndex = dwUserIndex;
+	outData->m_iClientPort = iPort;
+	strcpy_s(outData->m_szPublicIP, rkIP.c_str());
+	strcpy_s(outData->m_szPublicID, publicID.c_str());
+
+	POSITION pos = m_relayServerNodes.GetHeadPosition();
+	while (pos)
+	{
+		ServerNode* pServerNode = m_relayServerNodes.GetAt(pos);
+
+		if (pServerNode)
+		{
+			SP2Packet kPacket(RSTPK_ON_CONTROL);
+			int iControlType = RS_INSERT_GROUP;
+			kPacket << iControlType;
+			kPacket << (*outData);
+
+			pServerNode->SendMessage(kPacket);
+		}
+
+		m_relayServerNodes.GetNext(pos);
+	}
+
+	m_bufferPool.Push(reinterpret_cast<char*>(outData), sizeof(SendRelayInsertData));
+}
+
+void ioBroadCastRelayModule::RelayServerRemoveGroupAll(Room* pRoom, DWORD dwUserIndex)
+{
+	if (pRoom == NULL)
+		return;
+
+	RemoveData* outData = reinterpret_cast<RemoveData*>(m_bufferPool.Get(sizeof(RemoveData)));
+	if (outData == NULL)
+	{
+		LOG.PrintTimeAndLog(0, "RelayServerRemoveGroupAll MemoryPool is NULL");
+		return;
+	}
+
+	outData->m_dwRoomIndex = pRoom->GetRoomIndex();
+	outData->m_dwUserIndex = dwUserIndex;
+
+	POSITION pos = m_relayServerNodes.GetHeadPosition();
+	while (pos)
+	{
+		ServerNode* pServerNode = m_relayServerNodes.GetAt(pos);
+
+		if (pServerNode)
+		{
+			SP2Packet kPacket(RSTPK_ON_CONTROL);
+			int iControlType = RS_REMOVE_GROUP;
+			kPacket << iControlType;
+			kPacket << (*outData);
+
+			pServerNode->SendMessage(kPacket);
+		}
+
+		m_relayServerNodes.GetNext(pos);
+	}
+
+	m_bufferPool.Push(reinterpret_cast<char*>(outData), sizeof(RemoveData));
+}
+
+void ioBroadCastRelayModule::RelayServerDelUserAll(DWORD dwUserIndex)
+{
+	POSITION pos = m_relayServerNodes.GetHeadPosition();
+	while (pos)
+	{
+		ServerNode* pServerNode = m_relayServerNodes.GetAt(pos);
+
+		if (pServerNode)
+		{
+			SP2Packet kPacket(RSTPK_ON_CONTROL);
+			int iControlType = RS_DEL_USER;
+			kPacket << iControlType;
+			kPacket << dwUserIndex;
+
+			pServerNode->SendMessage(kPacket);
+		}
+
+		m_relayServerNodes.GetNext(pos);
+	}
 }
 
 void ioBroadCastRelayModule::MakeInfoPacket( SP2Packet& pk )

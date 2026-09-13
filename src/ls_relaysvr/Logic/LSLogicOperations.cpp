@@ -82,12 +82,15 @@
 		{
 			pk << udpPorts->at(i);
 		}
+		pk << g_Config()->GetRegion();
+
 		stData->node->OnCreate();
 		if(stData->node->AfterCreate())
 			stData->node->SendMessage(pk);
 		else
 			LOG.PrintTimeAndLog(0,"Error OnAccept");
-		LOG.PrintTimeAndLog(0,"Public IP : %s:%d",g_Config()->GetPublicIP(),g_Config()->GetPort());
+
+		LOG.PrintTimeAndLog(0, "Public IP : %s:%d Region:%s", g_Config()->GetPublicIP(), g_Config()->GetPort(), g_Config()->GetRegion());
 	 }
 	 return 0;
  }

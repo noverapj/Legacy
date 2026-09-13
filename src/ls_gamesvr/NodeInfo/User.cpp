@@ -7197,6 +7197,9 @@ void User::FillConnectUserData( SP2Packet &rkPacket )
 	PACKET_GUARD_VOID( rkPacket.Write(m_user_data.m_iExcavationExp) ); 
 	PACKET_GUARD_VOID( rkPacket.Write(m_user_data.m_iAccrueHeroExpert) ); 
 	PACKET_GUARD_VOID( rkPacket.Write(m_user_data.m_iHeroExpert) );
+#ifdef KRLATEST
+	PACKET_GUARD_VOID(rkPacket.Write(m_user_data.m_iLadderMMR));
+#endif
 
 	// 상대계급 정보
 	PACKET_GUARD_VOID( rkPacket.Write(m_user_relative_grade_data.m_init_code) );
@@ -8015,9 +8018,6 @@ void User::PacketParsing( CPacket &packet )
 	case CTPK_CLOSE_SESSION:
 		OnClose( kPacket );
 		break;
-	/*case CTPK_AUTH:
-		OnAuth(kPacket);
-		break;*/
 	case CTPK_CONNECT:            // 첫 접속
 		OnConnect( kPacket );//로그인 무조간 보내고 
 		break;
@@ -9113,87 +9113,6 @@ void User::OnClose(SP2Packet &packet)
 		g_UserNodeManager.RemoveNode( this );
 		OnSessionDestroy();	         //접속 종료 저장 및 노드 초기화( 서버 이동한 유저는 초기화만하고 저장하지 않는다. )	
 	}
-}
-
-void User::OnAuth(SP2Packet& packet)
-{
-	ioHashString szEncLoginKeyAndID;
-	PACKET_GUARD_VOID(packet.Read(szEncLoginKeyAndID));
-
-	LOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "[%s] User[%s] 0x55F cred[%s]",
-		__FUNCTION__, GetPublicID().c_str(), szEncLoginKeyAndID.c_str());
-
-	ioLocalParent* pLocal = g_LocalMgr.GetLocal(ioLocalManager::GetLocalType());
-	if (!pLocal)
-	{
-		LOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "[%s] pLocal == NULL", __FUNCTION__);
-		return;
-	}
-
-	ioHashString sPrivateID;
-	char szLoginKey[MAX_PATH] = "";
-
-	if (pLocal->IsDecryptID())
-	{
-		char szDecryptID[DATA_LEN] = "";
-		if (!pLocal->ParseLoginData(szEncLoginKeyAndID, szLoginKey, sizeof(szLoginKey), szDecryptID, sizeof(szDecryptID)))
-		{
-			LOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "[%s] ParseLoginData false", __FUNCTION__);
-			return;
-		}
-		sPrivateID = szDecryptID;
-	}
-	else
-	{
-		sPrivateID = szEncLoginKeyAndID;
-	}
-
-	if (pLocal->IsPrivateLowerID())
-		sPrivateID.MakeLower();
-
-	if (!pLocal->IsRightID(sPrivateID.c_str()))
-	{
-		LOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "[%s] Wrong ID :%s", __FUNCTION__, sPrivateID.c_str());
-		return;
-	}
-
-#if 0   
-
-	{
-		bool bLoginAuthed = g_UserNodeManager.IsLoginAuthorized(sPrivateID);
-		LOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "[ls_loginsvr] connect user[%s] loginsvr_authorized=%d",
-			sPrivateID.c_str(), bLoginAuthed ? 1 : 0);
-		if (!bLoginAuthed)
-		{
-			SP2Packet kReturn(STPK_CONNECT);
-			PACKET_GUARD_VOID(kReturn.Write(CONNECT_ID_NOT));
-			PACKET_GUARD_VOID(kReturn.Write(sPrivateID));
-			SendMessage(kReturn);
-			LOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "[ls_loginsvr] REJECT (skip loginsvr) user[%s]", sPrivateID.c_str());
-			return;
-		}
-	}
-#endif
-
-	SAFEDELETE(m_pEncLoginKey);
-	m_pEncLoginKey = new ioHashString;
-	*m_pEncLoginKey = szLoginKey;
-
-	if (g_UserNodeManager.IsConnectUser(sPrivateID))
-	{
-		LOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "[%s] CONNECT_ID_ALREADY :%s", __FUNCTION__, sPrivateID.c_str());
-		SAFEDELETE(m_pEncLoginKey);
-		return;
-	}
-
-	SetPrivateID(sPrivateID);
-	m_dwDBAgentID = Help::GetUserDBAgentID(GetPrivateID());
-
-	if (!pLocal->SendLoginData(this))
-	{
-		g_DBClient.OnSelectUserLoginInfo(GetUserDBAgentID(), GetAgentThreadID(), GetGUID(), sPrivateID);
-	}
-
 }
 
 void User::OnConnect(SP2Packet& packet)
@@ -32209,20 +32128,27 @@ void User::OnPirateRouletteResetRequest( SP2Packet& kPacket )
 
 void User::SendUserLogOut()
 {
-	if(IsRelayUse())
+	if (IsRelayUse())
 	{
-		//kyg 작업 
-		SP2Packet kPacket(RSTPK_ON_CONTROL);
+		if (Help::IsRelayRegionMode())
+		{
+			g_Relay.RelayServerDelUserAll(GetUserIndex());
+		}
+		else
+		{
+			SP2Packet kPacket(RSTPK_ON_CONTROL);
 
-		int ctype = RS_DEL_USER; 
-		DWORD userIndex = GetUserIndex();
+			int ctype = RS_DEL_USER;
+			DWORD userIndex = GetUserIndex();
 
-		PACKET_GUARD_VOID( kPacket.Write(ctype) );
-		PACKET_GUARD_VOID( kPacket.Write(userIndex) );
+			PACKET_GUARD_VOID(kPacket.Write(ctype));
+			PACKET_GUARD_VOID(kPacket.Write(userIndex));
 
-		ServerNode * node = g_Relay.GetRelayServer(m_iRelayServerID);//유저가 어느 릴레이에 붙어있는지 정함 
-		if(node)
-			node->SendMessage(kPacket);
+			ServerNode* node = g_Relay.GetRelayServer(m_iRelayServerID);
+			if (node)
+				node->SendMessage(kPacket);
+		}
+
 		SetRelayServerID(0);
 	}
 }
@@ -32281,17 +32207,38 @@ bool User::TimeOutClose( int checkTime )
 	return false;
 }
 
-void User::SetTransferAddress( ServerNode* &node, ioHashString &ipAddr, int &port )
+void User::SetTransferAddress(ServerNode*& node, ioHashString& ipAddr, int& port)
 {
-	
-	if(m_pMyRoom == NULL)
+
+	if (m_pMyRoom == NULL)
 	{
 		ipAddr = g_App.GetClientMoveIP();
 		port = g_App.GetCSPort();
 		SetRelayServerID(0);
 		return;
 	}
- 	if(m_pMyRoom->RelayServerIndex() == 0)
+
+	if (Help::IsRelayRegionMode())
+	{
+		ServerNode* pRegionNode = g_Relay.GetRelayServerByRegion(Help::ResolveRegion(GetPublicIP()));
+		if (pRegionNode == NULL)
+			pRegionNode = g_Relay.GetRelayServerByRegion(Help::GetDefaultRelayRegion());
+
+		if (pRegionNode)
+		{
+			node = pRegionNode;
+			SetRelayServerID(pRegionNode->RelayServerIndex());
+			ipAddr = pRegionNode->SZPublicIP();
+			port = pRegionNode->GetRelayServerPort(m_pMyRoom->GetRoomIndex());
+
+			LOG.PrintTimeAndLog(0, "RegionRelay : user=%d ip=%s region=%s -> relay=%s:%d idx=%d",
+				GetUserIndex(), GetPublicIP(), pRegionNode->SZRegion(),
+				pRegionNode->SZPublicIP(), port, pRegionNode->RelayServerIndex());
+			return;
+		}
+	}
+
+	if (m_pMyRoom->RelayServerIndex() == 0)
 	{
 		ipAddr = g_App.GetClientMoveIP();
 		port = g_App.GetCSPort();
@@ -32301,7 +32248,7 @@ void User::SetTransferAddress( ServerNode* &node, ioHashString &ipAddr, int &por
 	else
 	{ //kyg 여기도 바꿈 어떤 포트로 줘야할지 정해야함 
 		node = g_Relay.GetRelayServer(GetMyRoom()->RelayServerIndex());//릴레이 서버가 새로 할당될리 없음 
-		if(node)
+		if (node)
 		{
 			SetRelayServerID(node->RelayServerIndex());
 			ipAddr = node->SZPublicIP();
@@ -32309,8 +32256,8 @@ void User::SetTransferAddress( ServerNode* &node, ioHashString &ipAddr, int &por
 		}
 		else
 		{ // 이게 맞는 것인지 
-			Information("SetTransferAddress Error (%d)Relay Index is NULL",m_pMyRoom->RelayServerIndex());
-			LOG.PrintTimeAndLog(0,"SetTransferAddress Error (%d)Relay Index is NULL",m_pMyRoom->RelayServerIndex());
+			Information("SetTransferAddress Error (%d)Relay Index is NULL", m_pMyRoom->RelayServerIndex());
+			LOG.PrintTimeAndLog(0, "SetTransferAddress Error (%d)Relay Index is NULL", m_pMyRoom->RelayServerIndex());
 			ipAddr = g_App.GetClientMoveIP();
 			port = g_App.GetCSPort();
 			SetRelayServerID(0);

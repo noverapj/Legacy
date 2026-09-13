@@ -94,6 +94,10 @@ struct USERDATA          //2007.05.29 LJH
 	int            m_iExcavationExp;        //발굴 구간 경험치
 	int            m_iAccrueHeroExpert;     //영웅전 누적 경험치
 	int		       m_iHeroExpert;           //영웅전 경험치
+#ifdef KRLATEST
+	int		       m_iLadderMMR;           //MMR
+#endif
+
 	short		   m_sPractice;           //영웅전 경험치
 	CTime		   m_login_time;			//로그인 한 시간.
 	__int64		   m_iTimeGateOpenTime;		//타임 게이트 연 시간
@@ -140,6 +144,9 @@ struct USERDATA          //2007.05.29 LJH
 		m_iExcavationExp  = 0;
 		m_iAccrueHeroExpert = 0;
 		m_iHeroExpert     = 0;
+#ifdef KRLATEST
+		m_iLadderMMR = 1500;
+#endif
 		m_sPractice			= 0;
 
 		m_dwUSMemberIndex	= 0;

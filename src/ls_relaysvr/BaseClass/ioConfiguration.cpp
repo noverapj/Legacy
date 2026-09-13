@@ -22,6 +22,7 @@
 
 ioConfiguration::ioConfiguration(void) : m_allblock(FALSE)
 {
+	strcpy_s(m_region, "SG");
 }
 
 ioConfiguration::~ioConfiguration(void)
@@ -128,6 +129,7 @@ void ioConfiguration::ServerConnectInfoLoad( ioINILoader &kLoader )
 {
 	kLoader.SetTitle( "RELAYSERVERINFO" );
 
+	kLoader.LoadString("REGION", "SG", m_region, sizeof(m_region));
 	SetConnectTime( kLoader.LoadInt( "RECONNECTTIME", 3000 ) );
 	SetServerFullCount( kLoader.LoadInt( "RELAYSERVERINFO", "SERVERFULLCOUNT" , 1000 ) );
 	SetRoomMaxCount(kLoader.LoadInt("RELAYSERVERINFO","ROOMMAX",3000));

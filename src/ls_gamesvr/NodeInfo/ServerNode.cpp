@@ -947,6 +947,7 @@ void ServerNode::InitData()
 	m_iUserCount			= 0;
 	m_iRelayIndex			= 0;
 	m_iPartitionIndex		= 0;
+	strcpy_s(m_szRegion, "SG");
 
 	m_szServerIP.Clear();
 	m_szClientMoveIP.Clear();
@@ -6904,6 +6905,10 @@ void ServerNode::OnRelayServerConnect(SP2Packet& kPacket)
 		
 	}
 	
+	if (kPacket.GetBufferSize() > kPacket.GetCurPos())
+	{
+		kPacket >> m_szRegion;
+	}
 	 
 	g_Relay.AddRelayServerInfo(this);
 	m_iRelayIndex = g_Relay.GetRelayServerIndex();
@@ -6918,7 +6923,7 @@ void ServerNode::OnRelayServerConnect(SP2Packet& kPacket)
 
 	g_Relay.SetUseRelayServer(TRUE);
 
-	LOG.PrintTimeAndLog(0,"OnRelayServerConnect(%s:%d)",m_szPublicIP,m_iServerPort);
+	LOG.PrintTimeAndLog(0, "OnRelayServerConnect(%s:%d) Region:%s", m_szPublicIP, m_iServerPort, m_szRegion);
 }
 
 void ServerNode::OnRelayControl( SP2Packet & kPacket )
@@ -6980,16 +6985,41 @@ void ServerNode::RequestRelayServerConnect( SP2Packet & kPacket )
 
 void ServerNode::RequestRelayServerConnect(const char* publicID)
 { //kyg 여기서 일단 한번 바꿈 
-	if(m_iServerPort != 0 )
+	if (m_iServerPort != 0)
 	{
 		User* node = g_UserNodeManager.GetUserNodeByPublicID(publicID);
-		if(node)
+		if (node)
 		{
-			Room* pRoom  = node->GetMyRoom();
-			int nPort  = 0 ;
-			if(pRoom)
+			// region mode: home ditentukan SetTransferAddress (region-aware);
+			// announce dari relay manapun dijawab dengan addr home - RelayServerID tidak ditimpa
+			if (Help::IsRelayRegionMode())
 			{
-				Debug("RQ:%d :: \n",node->GetMyRoom()->GetRoomIndex());
+				ServerNode* pHomeNode = g_Relay.GetRelayServer(node->RelayServerID());
+
+				SP2Packet pk(STPK_ON_CONTROL);
+				int ctype = RC_USE_RELAYSVR;
+				pk << ctype;
+
+				Room* pRoom = node->GetMyRoom();
+				if (pHomeNode && pRoom)
+				{
+					pk << pHomeNode->SZPublicIP();
+					pk << pHomeNode->GetRelayServerPort(pRoom->GetRoomIndex());
+				}
+				else
+				{
+					pk << g_App.GetClientMoveIP();
+					pk << 0;
+				}
+				node->SendMessage(pk);
+				return;
+			}
+
+			Room* pRoom = node->GetMyRoom();
+			int nPort = 0;
+			if (pRoom)
+			{
+				Debug("RQ:%d :: \n", node->GetMyRoom()->GetRoomIndex());
 				nPort = GetRelayServerPort(pRoom->GetRoomIndex());
 			}
 			nPort = (nPort != 0) ? nPort : GetRelayServerPort(0);
@@ -6998,13 +7028,12 @@ void ServerNode::RequestRelayServerConnect(const char* publicID)
 			pk << ctype;
 			pk << m_szPublicIP;
 			pk << nPort;
-			Debug("RelayServer Port Send : %d\n",nPort);
+			Debug("RelayServer Port Send : %d\n", nPort);
 			node->SetRelayServerID(m_iRelayIndex);
 			node->SendMessage(pk);
 		}
 	}
 }
-
 void ServerNode::OnChangeAddress( SP2Packet & kPacket )
 {
 	char szPublicID[ID_NUM_PLUS_ONE];
@@ -7058,7 +7087,7 @@ void ServerNode::OnHackAnnounce( SP2Packet & kPacket )
 	}
 }
 
-void ServerNode::OnUserGhost( SP2Packet & kPacket )
+void ServerNode::OnUserGhost(SP2Packet& kPacket)
 {
 	DWORD userIndex;
 	int CheckTime;
@@ -7066,8 +7095,12 @@ void ServerNode::OnUserGhost( SP2Packet & kPacket )
 	kPacket >> CheckTime;
 
 	User* node = g_UserNodeManager.GetUserNode(userIndex);
-	if(node)
+	if (node)
+	{
+		if (node->RelayServerID() != RelayServerIndex())
+			return;
 		node->TimeOutClose(CheckTime);
+	}
 }
 
 int ServerNode::GetRelayServerPort( int num )

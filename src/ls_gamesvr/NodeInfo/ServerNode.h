@@ -54,6 +54,7 @@ protected:
 	ioHashString m_szServerIP;     // 사설IP
 	ioHashString m_szClientMoveIP; // 공인IP
 	TCHAR        m_szPublicIP[STR_IP_MAX]; //전송용 
+	TCHAR        m_szRegion[16];
 	int          m_iServerPort;
 	int          m_iClientPort;
 	int          m_iUserCount;
@@ -237,6 +238,7 @@ public:
 	void SetRelayServerIndex(int iRelayIndex)	{ m_iRelayIndex = iRelayIndex; }
 	SendRelayInfo_& RelayInfo()					{ return m_RelayInfo; }
 	TCHAR* SZPublicIP()							{ return m_szPublicIP; }
+	TCHAR* SZRegion()							{ return m_szRegion; }
 
 	int GetRelayServerPort(int num);
 
