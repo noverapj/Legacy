@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+<APPEARANCE>
+	<RACE race="human" id="1" >
+		<SEX id="1" sex="male" model="animodel/sp2_human_man.txt" raceinfo = "config/sp2_race_human_man.ini" >
+			<BEARD 		valid="1" />
+			<ACCESSORY 	valid="1" />
+			<FACE 		valid="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,19,20,21,22,24,25,26,27,28,29,31,32,33,35,36,37,38,39,40,41,42,43,44,45,46,54,55,56,57" />
+			<HAIR 		valid="1,2,3,4,5,6,7,11,13,14,15,16,17,18,19,20,21,23,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42" />
+			<SKINCOLOR 	valid="1,2,3,4,5,6,7,8" />
+			<HAIRCOLOR 	valid="1,2,3,4,5,6,9,13,14,15" />
+			<UNDERWEAR 	valid="1,2,3,4,5,7,8,13" />
+		</SEX>
+		<SEX id="2" sex="female" model="animodel/sp2_human_woman.txt" raceinfo = "config/sp2_race_human_woman.ini">
+			<BEARD 		valid="1" />
+			<ACCESSORY 	valid="1" />
+			<FACE 		valid="1,2,3,4,5,6,7,8,9,10,11,12,13,15,16,17,18,19,20,21,22,24,25,26,27,28,29,30,31,32,34,35,36,37,38,47,48,49,50,51" />
+			<HAIR 		valid="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,19,20,21,22,24,25,26,27,28,29,30,31,32,34,35,36,37,38,39,40,41,42,43" />
+			<SKINCOLOR 	valid="1,2,3,4,5,6,7,8" />
+			<HAIRCOLOR 	valid="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15" />
+			<UNDERWEAR 	valid="1,2,3,4,5,6,7,8,10,11,13" />
+		</SEX>
+	</RACE>
+</APPEARANCE>

@@ -1,0 +1,1282 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+<Window ClassName="ShopWndWeeklyTab" SubClassName="ioWnd" Id="0" IDName="" MemberName="">
+    <Size X="0" Y="0" Width="0" Height="0" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+    <Imagery />
+    <Window ClassName="ioFrameWndEX" SubClassName="" Id="1" IDName="" MemberName="">
+        <Size X="0" Y="0" Width="548" Height="488" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+        <Imagery />
+        <ExtraInfo>
+            <ToolInfo />
+        </ExtraInfo>
+        <Window ClassName="ioFrameWndEX" SubClassName="" Id="2" IDName="" MemberName="m_backfrm[0]">
+            <Size X="5" Y="3" Width="107" Height="240" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo>
+                <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffacac" />
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="3" IDName="ID_IMGBTN_ITEMICON_0" MemberName="m_iconbtn[0]">
+                <Size X="11" Y="10" Width="88" Height="81" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverAddImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <PushImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <ToolInfo>
+                        <Event Type="WEVT_LBUTTONUP" Function="OnLClickShopIcon00" />
+                    </ToolInfo>
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="4" IDName="ID_LAB_ITEMNAME_0" MemberName="m_namelabel[0]">
+                <Size X="1" Y="98" Width="105" Height="18" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="사이보그" Size="13" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="102" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="5" IDName="" MemberName="m_pricebackfrm[0]">
+                <Size X="9" Y="118" Width="92" Height="15" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffce9651" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioRichLabel" SubClassName="" Id="164" IDName="" MemberName="m_pricelabel[0]">
+                    <Size X="0" Y="0" Width="90" Height="13" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
+                        <TextBlock Text="19,000" Size="13" Style="Bold" Color="ffffffff" />
+                        <TextBlock Text=" 골드" Size="13" Style="Normal" Color="fff7cfac" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="8" IDName="" MemberName="">
+                <Size X="45" Y="140" Width="19" Height="14" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="+" Size="16" Color="ffed569d" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="9" IDName="" MemberName="">
+                <Size X="9" Y="157" Width="90" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fff9999b" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="10" IDName="" MemberName="">
+                <Size X="9" Y="184" Width="90" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fff9999b" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="11" IDName="" MemberName="">
+                <Size X="9" Y="211" Width="90" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fff9999b" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="12" IDName="ID_FRM_ITEMBONUS_0_0" MemberName="">
+                <Size X="9" Y="157" Width="89" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffff6094" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="13" IDName="ID_LAB_ITEMBONUS_0_0" MemberName="m_bonuslabel0[0]">
+                    <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="14" IDName="ID_FRM_ITEMBONUS_0_1" MemberName="">
+                <Size X="9" Y="184" Width="89" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffff6094" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="15" IDName="ID_LAB_ITEMBONUS_0_1" MemberName="m_bonuslabel1[0]">
+                    <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="18" IDName="ID_FRM_ITEMBONUS_0_2" MemberName="">
+                <Size X="9" Y="211" Width="89" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffff6094" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="19" IDName="ID_LAB_ITEMBONUS_0_2" MemberName="m_bonuslabel2[0]">
+                    <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+        </Window>
+        <Window ClassName="ioFrameWndEX" SubClassName="" Id="20" IDName="" MemberName="m_backfrm[1]">
+            <Size X="113" Y="3" Width="107" Height="240" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo>
+                <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffacac" />
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="21" IDName="ID_IMGBTN_ITEMICON_1" MemberName="m_iconbtn[1]">
+                <Size X="11" Y="10" Width="88" Height="81" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverAddImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <PushImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <ToolInfo>
+                        <Event Type="WEVT_LBUTTONUP" Function="OnLClickShopIcon10" />
+                    </ToolInfo>
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="22" IDName="ID_LAB_ITEMNAME_1" MemberName="m_namelabel[1]">
+                <Size X="1" Y="98" Width="105" Height="18" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="사이보그" Size="13" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="102" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="23" IDName="" MemberName="m_pricebackfrm[1]">
+                <Size X="9" Y="118" Width="92" Height="15" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffce9651" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioRichLabel" SubClassName="" Id="165" IDName="" MemberName="m_pricelabel[1]">
+                    <Size X="0" Y="0" Width="90" Height="13" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
+                        <TextBlock Text="19,000" Size="13" Style="Bold" Color="ffffffff" />
+                        <TextBlock Text=" 골드" Size="13" Style="Normal" Color="fff7cfac" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="26" IDName="" MemberName="">
+                <Size X="45" Y="140" Width="19" Height="14" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="+" Size="16" Color="ffed569d" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="27" IDName="" MemberName="">
+                <Size X="9" Y="157" Width="90" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fff9999b" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="28" IDName="" MemberName="">
+                <Size X="9" Y="184" Width="90" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fff9999b" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="29" IDName="" MemberName="">
+                <Size X="9" Y="211" Width="90" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fff9999b" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="30" IDName="ID_FRM_ITEMBONUS_1_0" MemberName="">
+                <Size X="9" Y="157" Width="89" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffff6094" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="31" IDName="ID_LAB_ITEMBONUS_1_0" MemberName="m_bonuslabel0[1]">
+                    <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="32" IDName="ID_FRM_ITEMBONUS_1_1" MemberName="">
+                <Size X="9" Y="184" Width="89" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffff6094" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="33" IDName="ID_LAB_ITEMBONUS_1_1" MemberName="m_bonuslabel1[1]">
+                    <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="34" IDName="ID_FRM_ITEMBONUS_1_2" MemberName="">
+                <Size X="9" Y="211" Width="89" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffff6094" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="35" IDName="ID_LAB_ITEMBONUS_1_2" MemberName="m_bonuslabel2[1]">
+                    <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+        </Window>
+        <Window ClassName="ioFrameWndEX" SubClassName="" Id="36" IDName="" MemberName="m_backfrm[2]">
+            <Size X="221" Y="3" Width="107" Height="240" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo>
+                <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffacac" />
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="37" IDName="ID_IMGBTN_ITEMICON_2" MemberName="m_iconbtn[2]">
+                <Size X="11" Y="10" Width="88" Height="81" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverAddImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <PushImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <ToolInfo>
+                        <Event Type="WEVT_LBUTTONUP" Function="OnLClickShopIcon20" />
+                    </ToolInfo>
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="38" IDName="ID_LAB_ITEMNAME_2" MemberName="m_namelabel[2]">
+                <Size X="1" Y="98" Width="105" Height="18" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="사이보그" Size="13" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="102" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="39" IDName="" MemberName="m_pricebackfrm[2]">
+                <Size X="9" Y="118" Width="92" Height="15" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffce9651" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioRichLabel" SubClassName="" Id="166" IDName="" MemberName="m_pricelabel[2]">
+                    <Size X="0" Y="0" Width="90" Height="13" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
+                        <TextBlock Text="19,000" Size="13" Style="Bold" Color="ffffffff" />
+                        <TextBlock Text=" 골드" Size="13" Style="Normal" Color="fff7cfac" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="42" IDName="" MemberName="">
+                <Size X="45" Y="140" Width="19" Height="14" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="+" Size="16" Color="ffed569d" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="43" IDName="" MemberName="">
+                <Size X="9" Y="157" Width="90" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fff9999b" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="44" IDName="" MemberName="">
+                <Size X="9" Y="184" Width="90" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fff9999b" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="45" IDName="" MemberName="">
+                <Size X="9" Y="211" Width="90" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fff9999b" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="46" IDName="ID_FRM_ITEMBONUS_2_0" MemberName="">
+                <Size X="9" Y="157" Width="89" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffff6094" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="47" IDName="ID_LAB_ITEMBONUS_2_0" MemberName="m_bonuslabel0[2]">
+                    <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="48" IDName="ID_FRM_ITEMBONUS_2_1" MemberName="">
+                <Size X="9" Y="184" Width="89" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffff6094" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="49" IDName="ID_LAB_ITEMBONUS_2_1" MemberName="m_bonuslabel1[2]">
+                    <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="50" IDName="ID_FRM_ITEMBONUS_2_2" MemberName="">
+                <Size X="9" Y="211" Width="89" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffff6094" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="51" IDName="ID_LAB_ITEMBONUS_2_2" MemberName="m_bonuslabel2[2]">
+                    <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+        </Window>
+        <Window ClassName="ioFrameWndEX" SubClassName="" Id="52" IDName="" MemberName="m_backfrm[3]">
+            <Size X="329" Y="3" Width="107" Height="240" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo>
+                <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffacac" />
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="53" IDName="ID_IMGBTN_ITEMICON_3" MemberName="m_iconbtn[3]">
+                <Size X="11" Y="10" Width="88" Height="81" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverAddImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <PushImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <ToolInfo>
+                        <Event Type="WEVT_LBUTTONUP" Function="OnLClickShopIcon30" />
+                    </ToolInfo>
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="54" IDName="ID_LAB_ITEMNAME_3" MemberName="m_namelabel[3]">
+                <Size X="1" Y="98" Width="105" Height="18" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="사이보그" Size="13" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="102" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="55" IDName="" MemberName="m_pricebackfrm[3]">
+                <Size X="9" Y="118" Width="92" Height="15" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffce9651" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioRichLabel" SubClassName="" Id="167" IDName="" MemberName="m_pricelabel[3]">
+                    <Size X="0" Y="0" Width="90" Height="13" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
+                        <TextBlock Text="19,000" Size="13" Style="Bold" Color="ffffffff" />
+                        <TextBlock Text=" 골드" Size="13" Style="Normal" Color="fff7cfac" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="58" IDName="" MemberName="">
+                <Size X="45" Y="140" Width="19" Height="14" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="+" Size="16" Color="ffed569d" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="59" IDName="" MemberName="">
+                <Size X="9" Y="157" Width="90" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fff9999b" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="60" IDName="" MemberName="">
+                <Size X="9" Y="184" Width="90" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fff9999b" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="61" IDName="" MemberName="">
+                <Size X="9" Y="211" Width="90" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fff9999b" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="62" IDName="ID_FRM_ITEMBONUS_3_0" MemberName="">
+                <Size X="9" Y="157" Width="89" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffff6094" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="63" IDName="ID_LAB_ITEMBONUS_3_0" MemberName="m_bonuslabel0[3]">
+                    <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="64" IDName="ID_FRM_ITEMBONUS_3_1" MemberName="">
+                <Size X="9" Y="184" Width="89" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffff6094" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="65" IDName="ID_LAB_ITEMBONUS_3_1" MemberName="m_bonuslabel1[3]">
+                    <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="66" IDName="ID_FRM_ITEMBONUS_3_2" MemberName="">
+                <Size X="9" Y="211" Width="89" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffff6094" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="67" IDName="ID_LAB_ITEMBONUS_3_2" MemberName="m_bonuslabel2[3]">
+                    <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+        </Window>
+        <Window ClassName="ioFrameWndEX" SubClassName="" Id="68" IDName="" MemberName="m_backfrm[4]">
+            <Size X="437" Y="3" Width="107" Height="240" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo>
+                <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffacac" />
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="69" IDName="ID_IMGBTN_ITEMICON_4" MemberName="m_iconbtn[4]">
+                <Size X="11" Y="10" Width="88" Height="81" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverAddImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <PushImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <ToolInfo>
+                        <Event Type="WEVT_LBUTTONUP" Function="OnLClickShopIcon40" />
+                    </ToolInfo>
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="70" IDName="ID_LAB_ITEMNAME_4" MemberName="m_namelabel[4]">
+                <Size X="1" Y="98" Width="105" Height="18" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="사이보그" Size="13" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="102" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="71" IDName="" MemberName="m_pricebackfrm[4]">
+                <Size X="9" Y="118" Width="92" Height="15" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffce9651" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioRichLabel" SubClassName="" Id="168" IDName="" MemberName="m_pricelabel[4]">
+                    <Size X="0" Y="0" Width="90" Height="13" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
+                        <TextBlock Text="19,000" Size="13" Style="Bold" Color="ffffffff" />
+                        <TextBlock Text=" 골드" Size="13" Style="Normal" Color="fff7cfac" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="74" IDName="" MemberName="">
+                <Size X="45" Y="140" Width="19" Height="14" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="+" Size="16" Color="ffed569d" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="75" IDName="" MemberName="">
+                <Size X="9" Y="157" Width="90" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fff9999b" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="76" IDName="" MemberName="">
+                <Size X="9" Y="184" Width="90" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fff9999b" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="77" IDName="" MemberName="">
+                <Size X="9" Y="211" Width="90" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fff9999b" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="78" IDName="ID_FRM_ITEMBONUS_4_0" MemberName="">
+                <Size X="9" Y="157" Width="89" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffff6094" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="79" IDName="ID_LAB_ITEMBONUS_4_0" MemberName="m_bonuslabel0[4]">
+                    <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="80" IDName="ID_FRM_ITEMBONUS_4_1" MemberName="">
+                <Size X="9" Y="184" Width="89" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffff6094" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="81" IDName="ID_LAB_ITEMBONUS_4_1" MemberName="m_bonuslabel1[4]">
+                    <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="82" IDName="ID_FRM_ITEMBONUS_4_2" MemberName="">
+                <Size X="9" Y="211" Width="89" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffff6094" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="83" IDName="ID_LAB_ITEMBONUS_4_2" MemberName="m_bonuslabel2[4]">
+                    <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+        </Window>
+        <Window ClassName="ioFrameWndEX" SubClassName="" Id="84" IDName="" MemberName="m_backfrm[5]">
+            <Size X="5" Y="243" Width="107" Height="240" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo>
+                <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffacac" />
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="85" IDName="ID_IMGBTN_ITEMICON_5" MemberName="m_iconbtn[5]">
+                <Size X="11" Y="10" Width="88" Height="81" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverAddImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <PushImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <ToolInfo>
+                        <Event Type="WEVT_LBUTTONUP" Function="OnLClickShopIcon01" />
+                    </ToolInfo>
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="86" IDName="ID_LAB_ITEMNAME_5" MemberName="m_namelabel[5]">
+                <Size X="1" Y="98" Width="105" Height="18" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="사이보그" Size="13" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="102" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="87" IDName="" MemberName="m_pricebackfrm[5]">
+                <Size X="9" Y="118" Width="92" Height="15" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffce9651" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioRichLabel" SubClassName="" Id="169" IDName="" MemberName="m_pricelabel[5]">
+                    <Size X="0" Y="0" Width="90" Height="13" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
+                        <TextBlock Text="19,000" Size="13" Style="Bold" Color="ffffffff" />
+                        <TextBlock Text=" 골드" Size="13" Style="Normal" Color="fff7cfac" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="90" IDName="" MemberName="">
+                <Size X="45" Y="140" Width="19" Height="14" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="+" Size="16" Color="ffed569d" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="91" IDName="" MemberName="">
+                <Size X="9" Y="157" Width="90" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fff9999b" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="92" IDName="" MemberName="">
+                <Size X="9" Y="184" Width="90" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fff9999b" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="93" IDName="" MemberName="">
+                <Size X="9" Y="211" Width="90" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fff9999b" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="94" IDName="ID_FRM_ITEMBONUS_5_0" MemberName="">
+                <Size X="9" Y="157" Width="89" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffff6094" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="95" IDName="ID_LAB_ITEMBONUS_5_0" MemberName="m_bonuslabel0[5]">
+                    <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="96" IDName="ID_FRM_ITEMBONUS_5_1" MemberName="">
+                <Size X="9" Y="184" Width="89" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffff6094" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="97" IDName="ID_LAB_ITEMBONUS_5_1" MemberName="m_bonuslabel1[5]">
+                    <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="98" IDName="ID_FRM_ITEMBONUS_5_2" MemberName="">
+                <Size X="9" Y="211" Width="89" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffff6094" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="99" IDName="ID_LAB_ITEMBONUS_5_2" MemberName="m_bonuslabel2[5]">
+                    <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+        </Window>
+        <Window ClassName="ioFrameWndEX" SubClassName="" Id="100" IDName="" MemberName="m_backfrm[6]">
+            <Size X="113" Y="243" Width="107" Height="240" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo>
+                <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffacac" />
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="101" IDName="ID_IMGBTN_ITEMICON_6" MemberName="m_iconbtn[6]">
+                <Size X="11" Y="10" Width="88" Height="81" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverAddImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <PushImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <ToolInfo>
+                        <Event Type="WEVT_LBUTTONUP" Function="OnLClickShopIcon11" />
+                    </ToolInfo>
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="102" IDName="ID_LAB_ITEMNAME_6" MemberName="m_namelabel[6]">
+                <Size X="1" Y="98" Width="105" Height="18" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="사이보그" Size="13" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="102" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="103" IDName="" MemberName="m_pricebackfrm[6]">
+                <Size X="9" Y="118" Width="92" Height="15" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffce9651" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioRichLabel" SubClassName="" Id="170" IDName="" MemberName="m_pricelabel[6]">
+                    <Size X="0" Y="0" Width="90" Height="13" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
+                        <TextBlock Text="19,000" Size="13" Style="Bold" Color="ffffffff" />
+                        <TextBlock Text=" 골드" Size="13" Style="Normal" Color="fff7cfac" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="106" IDName="" MemberName="">
+                <Size X="45" Y="140" Width="19" Height="14" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="+" Size="16" Color="ffed569d" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="107" IDName="" MemberName="">
+                <Size X="9" Y="157" Width="90" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fff9999b" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="108" IDName="" MemberName="">
+                <Size X="9" Y="184" Width="90" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fff9999b" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="109" IDName="" MemberName="">
+                <Size X="9" Y="211" Width="90" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fff9999b" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="110" IDName="ID_FRM_ITEMBONUS_6_0" MemberName="">
+                <Size X="9" Y="157" Width="89" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffff6094" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="111" IDName="ID_LAB_ITEMBONUS_6_0" MemberName="m_bonuslabel0[6]">
+                    <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="112" IDName="ID_FRM_ITEMBONUS_6_1" MemberName="">
+                <Size X="9" Y="184" Width="89" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffff6094" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="113" IDName="ID_LAB_ITEMBONUS_6_1" MemberName="m_bonuslabel1[6]">
+                    <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="114" IDName="ID_FRM_ITEMBONUS_6_2" MemberName="">
+                <Size X="9" Y="211" Width="89" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffff6094" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="115" IDName="ID_LAB_ITEMBONUS_6_2" MemberName="m_bonuslabel2[6]">
+                    <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+        </Window>
+        <Window ClassName="ioFrameWndEX" SubClassName="" Id="116" IDName="" MemberName="m_backfrm[7]">
+            <Size X="221" Y="243" Width="107" Height="240" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo>
+                <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffacac" />
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="117" IDName="ID_IMGBTN_ITEMICON_7" MemberName="m_iconbtn[7]">
+                <Size X="11" Y="10" Width="88" Height="81" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverAddImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <PushImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <ToolInfo>
+                        <Event Type="WEVT_LBUTTONUP" Function="OnLClickShopIcon21" />
+                    </ToolInfo>
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="118" IDName="ID_LAB_ITEMNAME_7" MemberName="m_namelabel[7]">
+                <Size X="1" Y="98" Width="105" Height="18" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="사이보그" Size="13" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="102" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="119" IDName="" MemberName="m_pricebackfrm[7]">
+                <Size X="9" Y="118" Width="92" Height="15" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffce9651" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioRichLabel" SubClassName="" Id="171" IDName="" MemberName="m_pricelabel[7]">
+                    <Size X="0" Y="0" Width="90" Height="13" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
+                        <TextBlock Text="19,000" Size="13" Style="Bold" Color="ffffffff" />
+                        <TextBlock Text=" 골드" Size="13" Style="Normal" Color="fff7cfac" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="122" IDName="" MemberName="">
+                <Size X="45" Y="140" Width="19" Height="14" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="+" Size="16" Color="ffed569d" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="123" IDName="" MemberName="">
+                <Size X="9" Y="157" Width="90" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fff9999b" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="124" IDName="" MemberName="">
+                <Size X="9" Y="184" Width="90" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fff9999b" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="125" IDName="" MemberName="">
+                <Size X="9" Y="211" Width="90" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fff9999b" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="126" IDName="ID_FRM_ITEMBONUS_7_0" MemberName="">
+                <Size X="9" Y="157" Width="89" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffff6094" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="127" IDName="ID_LAB_ITEMBONUS_7_0" MemberName="m_bonuslabel0[7]">
+                    <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="128" IDName="ID_FRM_ITEMBONUS_7_1" MemberName="">
+                <Size X="9" Y="184" Width="89" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffff6094" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="129" IDName="ID_LAB_ITEMBONUS_7_1" MemberName="m_bonuslabel1[7]">
+                    <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="130" IDName="ID_FRM_ITEMBONUS_7_2" MemberName="">
+                <Size X="9" Y="211" Width="89" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffff6094" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="131" IDName="ID_LAB_ITEMBONUS_7_2" MemberName="m_bonuslabel2[7]">
+                    <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+        </Window>
+        <Window ClassName="ioFrameWndEX" SubClassName="" Id="132" IDName="" MemberName="m_backfrm[8]">
+            <Size X="329" Y="243" Width="107" Height="240" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo>
+                <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffacac" />
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="133" IDName="ID_IMGBTN_ITEMICON_8" MemberName="m_iconbtn[8]">
+                <Size X="11" Y="10" Width="88" Height="81" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverAddImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <PushImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <ToolInfo>
+                        <Event Type="WEVT_LBUTTONUP" Function="OnLClickShopIcon31" />
+                    </ToolInfo>
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="134" IDName="ID_LAB_ITEMNAME_8" MemberName="m_namelabel[8]">
+                <Size X="1" Y="98" Width="105" Height="18" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="사이보그" Size="13" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="102" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="135" IDName="" MemberName="m_pricebackfrm[8]">
+                <Size X="9" Y="118" Width="92" Height="15" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffce9651" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioRichLabel" SubClassName="" Id="172" IDName="" MemberName="m_pricelabel[8]">
+                    <Size X="0" Y="0" Width="90" Height="13" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
+                        <TextBlock Text="19,000" Size="13" Style="Bold" Color="ffffffff" />
+                        <TextBlock Text=" 골드" Size="13" Style="Normal" Color="fff7cfac" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="138" IDName="" MemberName="">
+                <Size X="45" Y="140" Width="19" Height="14" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="+" Size="16" Color="ffed569d" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="139" IDName="" MemberName="">
+                <Size X="9" Y="157" Width="90" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fff9999b" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="140" IDName="" MemberName="">
+                <Size X="9" Y="184" Width="90" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fff9999b" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="141" IDName="" MemberName="">
+                <Size X="9" Y="211" Width="90" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fff9999b" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="142" IDName="ID_FRM_ITEMBONUS_8_0" MemberName="">
+                <Size X="9" Y="157" Width="89" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffff6094" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="143" IDName="ID_LAB_ITEMBONUS_8_0" MemberName="m_bonuslabel0[8]">
+                    <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="144" IDName="ID_FRM_ITEMBONUS_8_1" MemberName="">
+                <Size X="9" Y="184" Width="89" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffff6094" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="145" IDName="ID_LAB_ITEMBONUS_8_1" MemberName="m_bonuslabel1[8]">
+                    <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="146" IDName="ID_FRM_ITEMBONUS_8_2" MemberName="">
+                <Size X="9" Y="211" Width="89" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffff6094" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="147" IDName="ID_LAB_ITEMBONUS_8_2" MemberName="m_bonuslabel2[8]">
+                    <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+        </Window>
+        <Window ClassName="ioFrameWndEX" SubClassName="" Id="148" IDName="" MemberName="m_backfrm[9]">
+            <Size X="437" Y="243" Width="107" Height="240" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo>
+                <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffacac" />
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="149" IDName="ID_IMGBTN_ITEMICON_9" MemberName="m_iconbtn[9]">
+                <Size X="11" Y="10" Width="88" Height="81" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverAddImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <PushImage FileName="" ImageSetName="SoldierIconPack003" ImageName="043f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <ToolInfo>
+                        <Event Type="WEVT_LBUTTONUP" Function="OnLClickShopIcon41" />
+                    </ToolInfo>
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="150" IDName="ID_LAB_ITEMNAME_9" MemberName="m_namelabel[9]">
+                <Size X="1" Y="98" Width="105" Height="18" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="사이보그" Size="13" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="102" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="151" IDName="" MemberName="m_pricebackfrm[9]">
+                <Size X="9" Y="118" Width="92" Height="15" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffce9651" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioRichLabel" SubClassName="" Id="173" IDName="" MemberName="m_pricelabel[9]">
+                    <Size X="0" Y="0" Width="90" Height="13" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
+                        <TextBlock Text="19,000" Size="13" Style="Bold" Color="ffffffff" />
+                        <TextBlock Text=" 골드" Size="13" Style="Normal" Color="fff7cfac" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="154" IDName="" MemberName="">
+                <Size X="45" Y="140" Width="19" Height="14" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="+" Size="16" Color="ffed569d" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="155" IDName="" MemberName="">
+                <Size X="9" Y="157" Width="90" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fff9999b" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="156" IDName="" MemberName="">
+                <Size X="9" Y="184" Width="90" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fff9999b" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="157" IDName="" MemberName="">
+                <Size X="9" Y="211" Width="90" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fff9999b" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="158" IDName="ID_FRM_ITEMBONUS_9_0" MemberName="">
+                <Size X="9" Y="157" Width="89" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffff6094" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="159" IDName="ID_LAB_ITEMBONUS_9_0" MemberName="m_bonuslabel0[9]">
+                    <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="160" IDName="ID_FRM_ITEMBONUS_9_1" MemberName="">
+                <Size X="9" Y="184" Width="89" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffff6094" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="161" IDName="ID_LAB_ITEMBONUS_9_1" MemberName="m_bonuslabel1[9]">
+                    <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="162" IDName="ID_FRM_ITEMBONUS_9_2" MemberName="">
+                <Size X="9" Y="211" Width="89" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffff6094" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="163" IDName="ID_LAB_ITEMBONUS_9_2" MemberName="m_bonuslabel2[9]">
+                    <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+        </Window>
+    </Window>
+</Window>

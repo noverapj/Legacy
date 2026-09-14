@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="PracticeInfoWnd" Id="7101">
+	<Size X="0" Y="0" Width="0" Height="0" XAlign="Left" YAlign="Top"/>
+	<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+	<Imagery>
+		<Image Type="StarYellow" Imageset="BaseImage046" Image="training_starsmall_yellow" >
+			<Area X="13" Y="0"/>
+		</Image>
+		<Image Type="StarGray" Imageset="BaseImage046" Image="training_starsmall_gray" >
+			<Area X="13" Y="0"/>
+		</Image>
+		<Image Type="Line" Imageset="BaseImage046" Image="Training_Line" >
+			<Area X="0" Y="0" Width="228" Height="34"/>
+		</Image>
+		<Image Type="TimeSmall" Imageset="BaseImage046" Image="training_timesmall_gray" >
+			<Area X="13" Y="0"/>
+		</Image>
+		<Image Type="TimeSec" Imageset="BaseImage046" Image="training_time_sec" >
+			<Area X="13" Y="0"/>
+		</Image>
+		<Image Type="TimeClear" Imageset="BaseImage046" Image="training_time_clear" >
+			<Area X="13" Y="0"/>
+		</Image>
+		<Image Type="TimeEa" Imageset="BaseImage046" Image="training_time_ea" >
+			<Area X="13" Y="0"/>
+		</Image>
+		<Image Type="TimeClear2" Imageset="BaseImage046" Image="training_time_clear2" >
+			<Area X="13" Y="0"/>
+		</Image>
+	</Imagery>	
+	<ExtraInfo TextInfo1="%d위"
+			   TextInfo2="기록없음"
+			 />
+	</Window>

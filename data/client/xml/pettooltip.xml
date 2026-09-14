@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="PetToolTip" Id="6247">
+    <!--Height는 소스에서 결정-->
+	<Size X="0" Y="0" Width="268" Height="175" />
+	<Style>IWS_START_HIDE|IWS_PROCESS</Style>
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="tooltip3">
+			<Area X="0" Y="0" Width="268" Height="175"/>
+		</DefaultFrameImagery>
+		<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1"/>
+		<Image Type="BottomImg" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="268" Height="80" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+	</Imagery>	
+
+</Window>

@@ -1,0 +1,1457 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="CostumeCustomSelectWnd" Id="6257">
+	<Size X="0" Y="-20" Width="482" Height="540" XAlign="Center" YAlign="Center"/>
+	<DragRect Left="0" Top="0" Right="482" Bottom="36" />
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_CANMOVE|IWS_EXIT_ESC</Style>
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Title>
+		<Format X="13" Y="11" Size="18" Style="Outline_full_2x" HorzAlign="Left"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Text>코스튬 선택하기</Text>
+	</Title> 
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+			<Area X="0" Y="0" Width="482" Height="540"/>
+		</DefaultFrameImagery>
+
+		<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title">
+			<Area X="5" Y="6" Width="472" Height="36"/>
+		</DefaultFrameImagery>
+
+		<DefaultFrameImagery Type="MultiplyFrm" Templete="win1_multiply_bottom">
+			<Area X="0" Y="457" Width="482" Height="83"/>
+		</DefaultFrameImagery>
+
+		<Image Imageset="BaseImage001" Image="tap2_line" >
+			<Area X="106" Y="75" Width="1" Height="2" HorzAlign="Stretch"/>
+		</Image>
+		<Image Imageset="BaseImage001" Image="tap2_line" >
+			<Area X="196" Y="75" Width="1" Height="2" HorzAlign="Stretch"/>
+		</Image>
+		<Image Imageset="BaseImage001" Image="tap2_line" >
+			<Area X="286" Y="75" Width="1" Height="2" HorzAlign="Stretch"/>
+		</Image>
+		<Image Imageset="BaseImage001" Image="tap2_line" >
+			<Area X="376" Y="75" Width="1" Height="2" HorzAlign="Stretch"/>
+		</Image>
+	</Imagery>
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="448" Y="11" Width="23" Height="23"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+                        <Image Type="Disable" Imageset="BaseImage001" Image="icon0_x_grayframe" >
+				<Area X="0" Y="0" />
+			</Image>
+                        <Image Type="NormalList" Imageset="BaseImage001" Image="icon0_x" >
+				<Area X="5" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+<!--///////////////////////// 탭 /////////////////////////////////////////////-->
+	<Window ClassName="ioRadioButton" Id="101">
+		<Size X="17" Y="54" Width="89" Height="23" />
+		<Title>
+			<Format X="44" Y="5" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>전체</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="tap3_off">
+				<Area X="0" Y="0" Width="89" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="tap3_off">
+				<Area X="0" Y="0" Width="89" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap3_overadd">
+				<Area X="0" Y="0" Width="89" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="tap3_on1">
+				<Area X="0" Y="0" Width="89" Height="23"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioRadioButton" Id="102">
+		<Size X="107" Y="54" Width="89" Height="23" />
+		<Title>
+			<Format X="44" Y="5" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>무기</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="tap3_off">
+				<Area X="0" Y="0" Width="89" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="tap3_off">
+				<Area X="0" Y="0" Width="89" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap3_overadd">
+				<Area X="0" Y="0" Width="89" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="tap3_on1">
+				<Area X="0" Y="0" Width="89" Height="23"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioRadioButton" Id="103">
+		<Size X="107" Y="54" Width="89" Height="23" />
+		<Title>
+			<Format X="44" Y="5" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>갑옷</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="tap3_off">
+				<Area X="0" Y="0" Width="89" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="tap3_off">
+				<Area X="0" Y="0" Width="89" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap3_overadd">
+				<Area X="0" Y="0" Width="89" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="tap3_on1">
+				<Area X="0" Y="0" Width="89" Height="23"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioRadioButton" Id="104">
+		<Size X="197" Y="54" Width="89" Height="23" />
+		<Title>
+			<Format X="44" Y="5" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>투구</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="tap3_off">
+				<Area X="0" Y="0" Width="89" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="tap3_off">
+				<Area X="0" Y="0" Width="89" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap3_overadd">
+				<Area X="0" Y="0" Width="89" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="tap3_on1">
+				<Area X="0" Y="0" Width="89" Height="23"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioRadioButton" Id="105">
+		<Size X="287" Y="54" Width="89" Height="23" />
+		<Title>
+			<Format X="44" Y="5" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>망토</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="tap3_off">
+				<Area X="0" Y="0" Width="89" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="tap3_off">
+				<Area X="0" Y="0" Width="89" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap3_overadd">
+				<Area X="0" Y="0" Width="89" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="tap3_on1">
+				<Area X="0" Y="0" Width="89" Height="23"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+<!--////////////////////////// 버튼 : 아이템 /////////////////////////////////////////////-->
+	<Window ClassName="CostumeCustomInfoWnd" Id="201">
+		<Size X="17" Y="82" Width="104" Height="181" />
+		<Style>IWS_BACKMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="104" Height="179"/>
+			</DefaultFrameImagery>
+
+			<Image Type="empty_image" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+		</Imagery>
+
+	    	<Window ClassName="ItemCustomIconBtn" Id="1">
+			<Size X="20" Y="17" Width="64" Height="64" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Imagery>
+				<DefaultFrameImagery Type="StateOrangeFrm" Templete="state_orange">
+					<Area X="0" Y="0" Width="51" Height="16"/>
+				</DefaultFrameImagery>
+
+				<DefaultFrameImagery Type="StateGreenFrm" Templete="state_green">
+					<Area X="0" Y="0" Width="51" Height="16"/>
+				</DefaultFrameImagery>
+
+				<DefaultFrameImagery Type="StateBlueFrm" Templete="state_blue">
+					<Area X="0" Y="0" Width="51" Height="16"/>
+				</DefaultFrameImagery>
+
+				<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+				<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+				<Image Type="costume_image" Imageset="BaseImage031" Image="costume_mark"/>
+			</Imagery>
+		</Window>
+		
+		<Window ClassName="ioButton" Id="2">
+			<Size X="7" Y="150" Width="90" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="45" Y="2" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Disable" Text="FF323232" Back="FF0C426F"/>
+				<Text>남성</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_blue_down">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="3">
+			<Size X="7" Y="150" Width="44" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="22" Y="2" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Disable" Text="FF323232" Back="FF0C426F"/>
+				<Text>남성</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_blue_down">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="4">
+			<Size X="53" Y="150" Width="44" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="22" Y="2" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF9F291A"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF9F291A"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF9F291A"/>
+				<Color Type="Disable" Text="FF323232" Back="FF9F291A"/>
+				<Text>여성</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_red_nor">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_red_nor">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_red_down">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<!-- 장비 : 커스텀 -->
+		<Window ClassName="ioButton" Id="5">
+			<Size X="59" Y="6" Width="39" Height="33" />
+			<Style>IWS_BACKMOST</Style> 
+			<ExStyle>IWS_EX_PUSH_DOUBLE|IWS_EX_OVER_SCREEN</ExStyle>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage003" Image="icon0_skin_delicon" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage003" Image="icon0_skin_delicon" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage003" Image="icon0_skin_delicon" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Disable" Imageset="BaseImage003" Image="icon0_skin_delicon" >
+					<Area X="0" Y="0"/>
+				</Image>
+			</Imagery>
+		</Window>
+	</Window>
+
+	<Window ClassName="CostumeCustomInfoWnd" Id="202">
+		<Size X="123" Y="82" Width="104" Height="181" />
+		<Style>IWS_BACKMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="104" Height="179"/>
+			</DefaultFrameImagery>
+
+			<Image Type="empty_image" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+		</Imagery>
+
+	    	<Window ClassName="ItemCustomIconBtn" Id="1">
+			<Size X="20" Y="17" Width="64" Height="64" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Imagery>
+				<DefaultFrameImagery Type="StateOrangeFrm" Templete="state_orange">
+					<Area X="0" Y="0" Width="51" Height="16"/>
+				</DefaultFrameImagery>
+
+				<DefaultFrameImagery Type="StateGreenFrm" Templete="state_green">
+					<Area X="0" Y="0" Width="51" Height="16"/>
+				</DefaultFrameImagery>
+
+				<DefaultFrameImagery Type="StateBlueFrm" Templete="state_blue">
+					<Area X="0" Y="0" Width="51" Height="16"/>
+				</DefaultFrameImagery>
+
+				<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+				<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+				<Image Type="costume_image" Imageset="BaseImage031" Image="costume_mark"/>
+			</Imagery>
+		</Window>
+		
+		<Window ClassName="ioButton" Id="2">
+			<Size X="7" Y="150" Width="90" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="45" Y="2" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Disable" Text="FF323232" Back="FF0C426F"/>
+				<Text>남성</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_blue_down">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="3">
+			<Size X="7" Y="150" Width="44" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="22" Y="2" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Disable" Text="FF323232" Back="FF0C426F"/>
+				<Text>남성</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_blue_down">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="4">
+			<Size X="53" Y="150" Width="44" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="22" Y="2" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF9F291A"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF9F291A"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF9F291A"/>
+				<Color Type="Disable" Text="FF323232" Back="FF9F291A"/>
+				<Text>여성</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_red_nor">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_red_nor">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_red_down">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<!-- 장비 : 커스텀 -->
+		<Window ClassName="ioButton" Id="5">
+			<Size X="59" Y="6" Width="39" Height="33" />
+			<Style>IWS_BACKMOST</Style> 
+			<ExStyle>IWS_EX_PUSH_DOUBLE|IWS_EX_OVER_SCREEN</ExStyle>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage003" Image="icon0_skin_delicon" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage003" Image="icon0_skin_delicon" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage003" Image="icon0_skin_delicon" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Disable" Imageset="BaseImage003" Image="icon0_skin_delicon" >
+					<Area X="0" Y="0"/>
+				</Image>
+			</Imagery>
+		</Window>
+	</Window>
+
+	<Window ClassName="CostumeCustomInfoWnd" Id="203">
+		<Size X="229" Y="82" Width="104" Height="181" />
+		<Style>IWS_BACKMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="104" Height="179"/>
+			</DefaultFrameImagery>
+
+			<Image Type="empty_image" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+		</Imagery>
+
+	    	<Window ClassName="ItemCustomIconBtn" Id="1">
+			<Size X="20" Y="17" Width="64" Height="64" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Imagery>
+				<DefaultFrameImagery Type="StateOrangeFrm" Templete="state_orange">
+					<Area X="0" Y="0" Width="51" Height="16"/>
+				</DefaultFrameImagery>
+
+				<DefaultFrameImagery Type="StateGreenFrm" Templete="state_green">
+					<Area X="0" Y="0" Width="51" Height="16"/>
+				</DefaultFrameImagery>
+
+				<DefaultFrameImagery Type="StateBlueFrm" Templete="state_blue">
+					<Area X="0" Y="0" Width="51" Height="16"/>
+				</DefaultFrameImagery>
+
+				<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+				<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+				<Image Type="costume_image" Imageset="BaseImage031" Image="costume_mark"/>
+			</Imagery>
+		</Window>
+		
+		<Window ClassName="ioButton" Id="2">
+			<Size X="7" Y="150" Width="90" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="45" Y="2" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Disable" Text="FF323232" Back="FF0C426F"/>
+				<Text>남성</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_blue_down">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="3">
+			<Size X="7" Y="150" Width="44" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="22" Y="2" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Disable" Text="FF323232" Back="FF0C426F"/>
+				<Text>남성</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_blue_down">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="4">
+			<Size X="53" Y="150" Width="44" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="22" Y="2" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF9F291A"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF9F291A"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF9F291A"/>
+				<Color Type="Disable" Text="FF323232" Back="FF9F291A"/>
+				<Text>여성</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_red_nor">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_red_nor">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_red_down">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<!-- 장비 : 커스텀 -->
+		<Window ClassName="ioButton" Id="5">
+			<Size X="59" Y="6" Width="39" Height="33" />
+			<Style>IWS_BACKMOST</Style> 
+			<ExStyle>IWS_EX_PUSH_DOUBLE|IWS_EX_OVER_SCREEN</ExStyle>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage003" Image="icon0_skin_delicon" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage003" Image="icon0_skin_delicon" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage003" Image="icon0_skin_delicon" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Disable" Imageset="BaseImage003" Image="icon0_skin_delicon" >
+					<Area X="0" Y="0"/>
+				</Image>
+			</Imagery>
+		</Window>
+	</Window>
+
+	<Window ClassName="CostumeCustomInfoWnd" Id="204">
+		<Size X="335" Y="82" Width="104" Height="181" />
+		<Style>IWS_BACKMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="104" Height="179"/>
+			</DefaultFrameImagery>
+
+			<Image Type="empty_image" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+		</Imagery>
+
+	    	<Window ClassName="ItemCustomIconBtn" Id="1">
+			<Size X="20" Y="17" Width="64" Height="64" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Imagery>
+				<DefaultFrameImagery Type="StateOrangeFrm" Templete="state_orange">
+					<Area X="0" Y="0" Width="51" Height="16"/>
+				</DefaultFrameImagery>
+
+				<DefaultFrameImagery Type="StateGreenFrm" Templete="state_green">
+					<Area X="0" Y="0" Width="51" Height="16"/>
+				</DefaultFrameImagery>
+
+				<DefaultFrameImagery Type="StateBlueFrm" Templete="state_blue">
+					<Area X="0" Y="0" Width="51" Height="16"/>
+				</DefaultFrameImagery>
+
+				<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+				<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+				<Image Type="costume_image" Imageset="BaseImage031" Image="costume_mark"/>
+			</Imagery>
+		</Window>
+		
+		<Window ClassName="ioButton" Id="2">
+			<Size X="7" Y="150" Width="90" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="45" Y="2" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Disable" Text="FF323232" Back="FF0C426F"/>
+				<Text>남성</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_blue_down">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="3">
+			<Size X="7" Y="150" Width="44" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="22" Y="2" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Disable" Text="FF323232" Back="FF0C426F"/>
+				<Text>남성</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_blue_down">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="4">
+			<Size X="53" Y="150" Width="44" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="22" Y="2" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF9F291A"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF9F291A"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF9F291A"/>
+				<Color Type="Disable" Text="FF323232" Back="FF9F291A"/>
+				<Text>여성</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_red_nor">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_red_nor">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_red_down">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<!-- 장비 : 커스텀 -->
+		<Window ClassName="ioButton" Id="5">
+			<Size X="59" Y="6" Width="39" Height="33" />
+			<Style>IWS_BACKMOST</Style> 
+			<ExStyle>IWS_EX_PUSH_DOUBLE|IWS_EX_OVER_SCREEN</ExStyle>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage003" Image="icon0_skin_delicon" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage003" Image="icon0_skin_delicon" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage003" Image="icon0_skin_delicon" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Disable" Imageset="BaseImage003" Image="icon0_skin_delicon" >
+					<Area X="0" Y="0"/>
+				</Image>
+			</Imagery>
+		</Window>
+	</Window>
+
+	<Window ClassName="CostumeCustomInfoWnd" Id="205">
+		<Size X="17" Y="263" Width="104" Height="181" />
+		<Style>IWS_BACKMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="104" Height="179"/>
+			</DefaultFrameImagery>
+
+			<Image Type="empty_image" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+		</Imagery>
+
+	    	<Window ClassName="ItemCustomIconBtn" Id="1">
+			<Size X="20" Y="17" Width="64" Height="64" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Imagery>
+				<DefaultFrameImagery Type="StateOrangeFrm" Templete="state_orange">
+					<Area X="0" Y="0" Width="51" Height="16"/>
+				</DefaultFrameImagery>
+
+				<DefaultFrameImagery Type="StateGreenFrm" Templete="state_green">
+					<Area X="0" Y="0" Width="51" Height="16"/>
+				</DefaultFrameImagery>
+
+				<DefaultFrameImagery Type="StateBlueFrm" Templete="state_blue">
+					<Area X="0" Y="0" Width="51" Height="16"/>
+				</DefaultFrameImagery>
+
+				<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+				<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+				<Image Type="costume_image" Imageset="BaseImage031" Image="costume_mark"/>
+			</Imagery>
+		</Window>
+		
+		<Window ClassName="ioButton" Id="2">
+			<Size X="7" Y="150" Width="90" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="45" Y="2" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Disable" Text="FF323232" Back="FF0C426F"/>
+				<Text>남성</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_blue_down">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="3">
+			<Size X="7" Y="150" Width="44" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="22" Y="2" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Disable" Text="FF323232" Back="FF0C426F"/>
+				<Text>남성</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_blue_down">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="4">
+			<Size X="53" Y="150" Width="44" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="22" Y="2" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF9F291A"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF9F291A"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF9F291A"/>
+				<Color Type="Disable" Text="FF323232" Back="FF9F291A"/>
+				<Text>여성</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_red_nor">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_red_nor">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_red_down">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<!-- 장비 : 커스텀 -->
+		<Window ClassName="ioButton" Id="5">
+			<Size X="59" Y="6" Width="39" Height="33" />
+			<Style>IWS_BACKMOST</Style> 
+			<ExStyle>IWS_EX_PUSH_DOUBLE|IWS_EX_OVER_SCREEN</ExStyle>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage003" Image="icon0_skin_delicon" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage003" Image="icon0_skin_delicon" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage003" Image="icon0_skin_delicon" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Disable" Imageset="BaseImage003" Image="icon0_skin_delicon" >
+					<Area X="0" Y="0"/>
+				</Image>
+			</Imagery>
+		</Window>
+	</Window>
+
+	<Window ClassName="CostumeCustomInfoWnd" Id="206">
+		<Size X="123" Y="263" Width="104" Height="181" />
+		<Style>IWS_BACKMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="104" Height="179"/>
+			</DefaultFrameImagery>
+
+			<Image Type="empty_image" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+		</Imagery>
+
+	    	<Window ClassName="ItemCustomIconBtn" Id="1">
+			<Size X="20" Y="17" Width="64" Height="64" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Imagery>
+				<DefaultFrameImagery Type="StateOrangeFrm" Templete="state_orange">
+					<Area X="0" Y="0" Width="51" Height="16"/>
+				</DefaultFrameImagery>
+
+				<DefaultFrameImagery Type="StateGreenFrm" Templete="state_green">
+					<Area X="0" Y="0" Width="51" Height="16"/>
+				</DefaultFrameImagery>
+
+				<DefaultFrameImagery Type="StateBlueFrm" Templete="state_blue">
+					<Area X="0" Y="0" Width="51" Height="16"/>
+				</DefaultFrameImagery>
+
+				<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+				<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+				<Image Type="costume_image" Imageset="BaseImage031" Image="costume_mark"/>
+			</Imagery>
+		</Window>
+		
+		<Window ClassName="ioButton" Id="2">
+			<Size X="7" Y="150" Width="90" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="45" Y="2" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Disable" Text="FF323232" Back="FF0C426F"/>
+				<Text>남성</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_blue_down">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="3">
+			<Size X="7" Y="150" Width="44" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="22" Y="2" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Disable" Text="FF323232" Back="FF0C426F"/>
+				<Text>남성</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_blue_down">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="4">
+			<Size X="53" Y="150" Width="44" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="22" Y="2" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF9F291A"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF9F291A"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF9F291A"/>
+				<Color Type="Disable" Text="FF323232" Back="FF9F291A"/>
+				<Text>여성</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_red_nor">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_red_nor">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_red_down">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<!-- 장비 : 커스텀 -->
+		<Window ClassName="ioButton" Id="5">
+			<Size X="59" Y="6" Width="39" Height="33" />
+			<Style>IWS_BACKMOST</Style> 
+			<ExStyle>IWS_EX_PUSH_DOUBLE|IWS_EX_OVER_SCREEN</ExStyle>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage003" Image="icon0_skin_delicon" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage003" Image="icon0_skin_delicon" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage003" Image="icon0_skin_delicon" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Disable" Imageset="BaseImage003" Image="icon0_skin_delicon" >
+					<Area X="0" Y="0"/>
+				</Image>
+			</Imagery>
+		</Window>
+	</Window>
+
+	<Window ClassName="CostumeCustomInfoWnd" Id="207">
+		<Size X="229" Y="263" Width="104" Height="181" />
+		<Style>IWS_BACKMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="104" Height="179"/>
+			</DefaultFrameImagery>
+
+			<Image Type="empty_image" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+		</Imagery>
+
+	    	<Window ClassName="ItemCustomIconBtn" Id="1">
+			<Size X="20" Y="17" Width="64" Height="64" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Imagery>
+				<DefaultFrameImagery Type="StateOrangeFrm" Templete="state_orange">
+					<Area X="0" Y="0" Width="51" Height="16"/>
+				</DefaultFrameImagery>
+
+				<DefaultFrameImagery Type="StateGreenFrm" Templete="state_green">
+					<Area X="0" Y="0" Width="51" Height="16"/>
+				</DefaultFrameImagery>
+
+				<DefaultFrameImagery Type="StateBlueFrm" Templete="state_blue">
+					<Area X="0" Y="0" Width="51" Height="16"/>
+				</DefaultFrameImagery>
+
+				<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+				<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+				<Image Type="costume_image" Imageset="BaseImage031" Image="costume_mark"/>
+			</Imagery>
+		</Window>
+		
+		<Window ClassName="ioButton" Id="2">
+			<Size X="7" Y="150" Width="90" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="45" Y="2" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Disable" Text="FF323232" Back="FF0C426F"/>
+				<Text>남성</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_blue_down">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="3">
+			<Size X="7" Y="150" Width="44" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="22" Y="2" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Disable" Text="FF323232" Back="FF0C426F"/>
+				<Text>남성</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_blue_down">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="4">
+			<Size X="53" Y="150" Width="44" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="22" Y="2" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF9F291A"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF9F291A"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF9F291A"/>
+				<Color Type="Disable" Text="FF323232" Back="FF9F291A"/>
+				<Text>여성</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_red_nor">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_red_nor">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_red_down">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<!-- 장비 : 커스텀 -->
+		<Window ClassName="ioButton" Id="5">
+			<Size X="59" Y="6" Width="39" Height="33" />
+			<Style>IWS_BACKMOST</Style> 
+			<ExStyle>IWS_EX_PUSH_DOUBLE|IWS_EX_OVER_SCREEN</ExStyle>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage003" Image="icon0_skin_delicon" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage003" Image="icon0_skin_delicon" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage003" Image="icon0_skin_delicon" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Disable" Imageset="BaseImage003" Image="icon0_skin_delicon" >
+					<Area X="0" Y="0"/>
+				</Image>
+			</Imagery>
+		</Window>
+	</Window>
+
+	<Window ClassName="CostumeCustomInfoWnd" Id="208">
+		<Size X="335" Y="263" Width="104" Height="181" />
+		<Style>IWS_BACKMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="104" Height="179"/>
+			</DefaultFrameImagery>
+
+			<Image Type="empty_image" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+		</Imagery>
+
+	    	<Window ClassName="ItemCustomIconBtn" Id="1">
+			<Size X="20" Y="17" Width="64" Height="64" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Imagery>
+				<DefaultFrameImagery Type="StateOrangeFrm" Templete="state_orange">
+					<Area X="0" Y="0" Width="51" Height="16"/>
+				</DefaultFrameImagery>
+
+				<DefaultFrameImagery Type="StateGreenFrm" Templete="state_green">
+					<Area X="0" Y="0" Width="51" Height="16"/>
+				</DefaultFrameImagery>
+
+				<DefaultFrameImagery Type="StateBlueFrm" Templete="state_blue">
+					<Area X="0" Y="0" Width="51" Height="16"/>
+				</DefaultFrameImagery>
+
+				<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+				<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+				<Image Type="costume_image" Imageset="BaseImage031" Image="costume_mark"/>
+			</Imagery>
+		</Window>
+		
+		<Window ClassName="ioButton" Id="2">
+			<Size X="7" Y="150" Width="90" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="45" Y="2" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Disable" Text="FF323232" Back="FF0C426F"/>
+				<Text>남성</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_blue_down">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="3">
+			<Size X="7" Y="150" Width="44" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="22" Y="2" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF0C426F"/>
+				<Color Type="Disable" Text="FF323232" Back="FF0C426F"/>
+				<Text>남성</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_blue_down">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="4">
+			<Size X="53" Y="150" Width="44" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="22" Y="2" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF9F291A"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF9F291A"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF9F291A"/>
+				<Color Type="Disable" Text="FF323232" Back="FF9F291A"/>
+				<Text>여성</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_red_nor">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_red_nor">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_red_down">
+					<Area X="0" Y="0" Width="44" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<!-- 장비 : 커스텀 -->
+		<Window ClassName="ioButton" Id="5">
+			<Size X="59" Y="6" Width="39" Height="33" />
+			<Style>IWS_BACKMOST</Style> 
+			<ExStyle>IWS_EX_PUSH_DOUBLE|IWS_EX_OVER_SCREEN</ExStyle>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage003" Image="icon0_skin_delicon" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage003" Image="icon0_skin_delicon" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage003" Image="icon0_skin_delicon" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Disable" Imageset="BaseImage003" Image="icon0_skin_delicon" >
+					<Area X="0" Y="0"/>
+				</Image>
+			</Imagery>
+		</Window>
+	</Window>
+
+<!--////////////////////////// scroll /////////////////////////////////////////////-->
+	<Window ClassName="ioScroll" Id="1001">
+		<Size X="450" Y="82" Width="15" Height="360" />
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_VSCROLL</ExStyle>
+		<Imagery>
+			<DefaultFrameImagery Templete="scrollbar_back">
+				<Area X="5" Y="10" Width="5" Height="340"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo PageRange="2" StartTime="500" CurTime ="100"/>
+
+		<Window ClassName="ioButton" Id="1">
+			<Size X="0" Y="0" Width="15" Height="10" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0" Reverse="Vert"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0" Reverse="Vert"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0" Reverse="Vert"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>					
+		</Window>
+		<Window ClassName="ioButton" Id="2">
+			<Size X="0" Y="350" Width="15" Height="10" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>					
+		</Window>
+		<Window ClassName="ioSlide" Id="3">
+			<Size X="0" Y="10" Width="15" Height="30" />
+			<DragRect Left="0" Top="0" Right="15" Bottom="30" />
+			<ExStyle>IWS_EX_NOTIFY_MOVED</ExStyle>
+			<Style>IWS_CANMOVE</Style>
+			<Imagery>
+				<DefaultFrameImagery Templete="scrollbar_drag">
+					<Area X="0" Y="0" Width="15" Height="30"/>
+				</DefaultFrameImagery>
+				<Image Type="Icon_Slide" Imageset="BaseImage001" Image="scrollbar_drag_icon"/>
+			</Imagery>
+		</Window>
+	</Window>
+</Window>

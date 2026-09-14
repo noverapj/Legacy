@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<!-- 툴팁 매니져에서 윈도우 아이디를 할당 -->
+<Window ClassName="ioBasicToolTip" Id="0">
+	<Size X="0" Y="0" Width="164" Height="49"/>
+	<Style>IWS_START_HIDE|IWS_PROCESS|IWS_TOPMOST</Style> 
+	<Imagery>
+	<DefaultFrameImagery Type="Selected" Templete="tooltip2" >
+		<Area X="0" Y="0" Width="164" Height="49"/>
+	</DefaultFrameImagery>
+	</Imagery>
+	<!-- 텍스트 스타일
+		Normal,
+		Shadow,
+		Outline,
+		Outline_2x,
+		Outline_full,
+		Outline_full_2x,
+		Outline_full_3x,
+		Outline_full_4x,
+		Bold,
+		Bold_shadow,
+		Bold_outline,
+		Bold_outline_full,
+		Bold_outline_full_2x,
+		Bold_outline_full_3x,
+		Bold_outline_full_4x,
+	-->
+	
+	<!-- Sunday -->
+	<Window ClassName="ioRichLabel" Id="1">
+		<Size X="7" Y="6" Width="164" Height="49"/>
+		<ExtraInfo VertGap="3" HorzAlign="Left" VertAlign="Center" >
+			<TextBlock Text="진화란?#" Size="12" Color="FF3A3A3A"/>
+			<TextBlock Text="소울스톤을 사용하여 용병에게#" Size="12"  Color="FF6E6E6E"/>
+			<TextBlock Text="새로운 기술을 부여하거나#" Size="12"  Color="FF117222"/>
+			<TextBlock Text="기본성능" Size="12"  Color="FF117222"/>
+			<TextBlock Text="을 향상시켜주는#" Size="12"  Color="FF6E6E6E"/>
+			<TextBlock Text="시스템입니다. 진화한 용병은#" Size="12"  Color="FF6E6E6E"/>
+		  <TextBlock Text="같은 단계로 진화된 장비만#" Size="12"  Color="FF117222"/>
+			<TextBlock Text="장착이 가능" Size="12"  Color="FF117222"/>
+			<TextBlock Text="하며 장비 진화시#" Size="12"  Color="FF6E6E6E"/>
+			<TextBlock Text="외형이 변경되고 " Size="12"  Color="FF117222"/>
+			<TextBlock Text="스킨은 제거#" Size="12"  Color="FF6E6E6E"/>
+			<TextBlock Text="됩니다. 진화된 장비의#" Size="12"  Color="FF6E6E6E"/>
+			<TextBlock Text="강화 수치는 유지됩니다." Size="12"  Color="FF117222"/>
+		</ExtraInfo>
+	</Window>
+</Window> 

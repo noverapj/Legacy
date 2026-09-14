@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="CountUpWnd" Id="5040">
+	<Size X="0" Y="101" XAlign="Center" YAlign="Top" Width="284" Height="92"/>
+	<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST</Style>
+	<Imagery>
+		<Image Type="CountNum_Blue" Imageset="BaseImage046" Image="training_time_blue"/>
+		<Image Type="CountNum_Gray" Imageset="BaseImage046" Image="training_time_gray"/>
+		<Image Type="BlueColon" Imageset="BaseImage046" Image="training_time_blue_colon"/>
+		<Image Type="GrayColon" Imageset="BaseImage046" Image="training_time_gray_colon"/>
+		<Image Type="Line" Imageset="BaseImage016" Image="centerui_line" >
+			<Area X="32" Y="54" Width="221" Height="5"/>
+		</Image>
+	</Imagery>
+	<Text>
+		<Format Type="ProgressTitle" X="142" Y="2" Size="18" Style="Outline_full_2x" HorzAlign="Center"/>
+		<Color Text="FF7BEE35"/>
+	</Text>
+</Window>

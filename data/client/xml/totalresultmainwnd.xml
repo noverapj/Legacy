@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="TotalResultMainWnd" Id="5007">
+	<Size X="0" Y="-20" XAlign="Center" YAlign="Center" Width="774" Height="526" />
+	<DragRect Left="0" Top="0" Right="774" Bottom="39" />
+	<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST|IWS_CANMOVE</Style>
+	<Imagery>
+		<DefaultFrameImagery Templete="win1_frame80">
+			<Area X="0" Y="0" Width="232" Height="526" AutoResize="False"/>
+		</DefaultFrameImagery>
+
+		<Image Imageset="BaseImage005" Image="window_gloss" >
+			<Area X="2" Y="2"/>
+		</Image>
+		<Image Imageset="BaseImage005" Image="window_gloss" >
+			<Area X="113" Y="407" Reverse="HorzVert"/>
+		</Image>
+
+		<DefaultFrameImagery Templete="win1_frame80">
+			<Area X="234" Y="0" Width="540" Height="526" AutoResize="False"/>
+		</DefaultFrameImagery>
+
+		<Image Imageset="BaseImage005" Image="window_gloss" >
+			<Area X="236" Y="2"/>
+		</Image>
+		<Image Imageset="BaseImage005" Image="window_gloss" >
+			<Area X="655" Y="407" Reverse="HorzVert"/>
+		</Image>
+		<DefaultFrameImagery Templete="win1_title">
+			<Area X="239" Y="6" Width="530" Height="36" AutoResize="False"/>
+		</DefaultFrameImagery>		
+		<DefaultFrameImagery Type="TtitleBack" Templete="win1_title">
+			<Area X="239" Y="6" Width="530" Height="36" AutoResize="False"/>
+		</DefaultFrameImagery>
+	</Imagery>
+
+  <Window ClassName="TotalResultSpiritRewardWnd" Id="8">
+    <Size X="0" Y="0" Width="211" Height="57"/>
+    <Style>IWS_PROCESS|IWS_START_HIDE</Style>
+    <ExtraInfo DescText1="정기 추가획득"
+               DescText2="%s %d개"/>
+    <Imagery>
+      <DefaultFrameImagery Templete="win1_frame80">
+        <Area X="0" Y="0" Width="211" Height="57"/>
+      </DefaultFrameImagery>
+      <Effect Type="Effect" File="ui_eff_spirit_get.txt" RenderType="AfterRender">
+        <Area X="0" Y="0" Width="200" Height="200" />
+      </Effect>
+    </Imagery>
+  </Window>
+	<Window ClassName="UppderAlphaWnd" Id="101">
+		<Size X="0" Y="0" Width="232" Height="526"/>
+		<Style>IWS_PROCESS|IWS_START_HIDE|IWS_NO_MOUSE_RESPONSE|IWS_BACKMOST</Style>
+		<ExtraInfo AlphaTime="1200" SizeFromParent="False"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="win1_white">
+				<Area X="0" Y="0" Width="232" Height="526" AutoResize="false"/>
+			</DefaultFrameImagery>
+		</Imagery>
+	</Window>
+
+</Window>

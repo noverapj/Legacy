@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="AlchemicChangeAlarmWnd" Id="10032">
+	<Size X="0" Y="-20" XAlign="Center" YAlign="Center" Width="317" Height="326" />
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_EXIT_ESC</Style>
+	<Title>
+		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Text>조각전환알림</Text>
+	</Title>
+  <ExtraInfo TopText="조각시스템 개편으로 보유하고 있는\n조각 모두 페소로 전환되었습니다.\n전환된 페소는 선물함으로 지급되었습니다."
+             BottomText1="페소전환금액 : %s페소"
+             BottomText2="(보유조각 총갯수 : %s개)"/>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+			<Area X="0" Y="0" Width="317" Height="326"/> 
+		</DefaultFrameImagery>		
+		<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title">
+			<Area X="6" Y="6" Width="305" Height="36"/> 
+		</DefaultFrameImagery>
+    <DefaultFrameImagery Type="MultiplyFrm" Templete="win1_multiply_bottom">
+      <Area X="0" Y="261" Width="317" Height="65"/>
+    </DefaultFrameImagery>
+    <Image Imageset="BaseImage002" Image="iconeffect_3" >
+      <Area X="159" Y="162" RenderType="Multiply" />
+    </Image>
+    <Image Imageset="UIIconPack13" Image="quest_002" >
+      <Area X="159" Y="162"/>
+    </Image>
+	</Imagery>
+  
+	<Window ClassName="ioButton" Id="1">
+		<Size X="282" Y="11" Width="23" Height="23"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+      <Image Type="Disable" Imageset="BaseImage001" Image="icon0_x_grayframe" >
+				<Area X="0" Y="0" />
+			</Image>
+      <Image Type="NormalList" Imageset="BaseImage001" Image="icon0_x" >
+				<Area X="5" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+               ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+  <Window ClassName="ioButton" Id="2">
+    <Size X="17" Y="277" Width="187" Height="31"/>
+    <Title>
+      <Format X="94" Y="7" Size="14" Style="Outline_full_2x" HorzAlign="Center"/>
+      <Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+      <Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+      <Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+      <Color Type="Disable" Text="FF323232" Back="FF000000"/>
+      <Text>선물함으로이동(SPACE)</Text>
+    </Title>
+    <Imagery>
+      <DefaultFrameImagery Type="Normal" Templete="bt006_blue_nor">
+        <Area X="0" Y="0" Width="187" Height="31"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Over" Templete="bt006_blue_nor">
+        <Area X="0" Y="0" Width="187" Height="31"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+        <Area X="0" Y="0" Width="187" Height="31"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Push" Templete="bt006_blue_down">
+        <Area X="0" Y="0" Width="187" Height="31"/>
+      </DefaultFrameImagery>
+    </Imagery>
+    <ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  </Window>
+  <Window ClassName="ioButton" Id="3">
+    <Size X="206" Y="277" Width="94" Height="31"/>
+    <Title>
+      <Format X="47" Y="7" Size="14" Style="Normal" HorzAlign="Center"/>
+      <Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+      <Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+      <Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+      <Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+      <Text>닫기(ESC)</Text>
+    </Title>
+    <Imagery>
+      <DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
+        <Area X="0" Y="0" Width="94" Height="31"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Over" Templete="bt006_gray_nor">
+        <Area X="0" Y="0" Width="94" Height="31"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+        <Area X="0" Y="0" Width="94" Height="31"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Push" Templete="bt006_gray_down">
+        <Area X="0" Y="0" Width="94" Height="31"/>
+      </DefaultFrameImagery>
+    </Imagery>
+    <ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  </Window>
+</Window>

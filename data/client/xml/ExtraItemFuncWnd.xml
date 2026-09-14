@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="ExtraItemFuncWnd" Id="555">
+	<Size X="496" Y="0" Width="258" Height="506" />
+	<Style>IWS_PROCESS|IWS_CHILD_ONLY_RESPONSE|IWS_START_HIDE</Style>
+  <Imagery>
+    <Image Imageset="BaseImage001" Image="tap2_line" >
+      <Area X="128" Y="84" Width="2" Height="2" HorzAlign="Stretch"/>
+    </Image>
+    <Image Type="strip_gray_dark" Imageset="BaseImage001" Image="strip_gray_dark2" />
+    <Image Type="magic_circle" Imageset="BaseImage_Defense002" Image="com_magiccircle" />
+    <Image Type="ItemBack" Imageset="BaseImage026" Image="iconslot_upgrade_01" />
+    <Image Type="Gauge"      Imageset="BaseImage004" Image="gauge_mychr_gauge"/>
+    <Image Type="NewGauge"      Imageset="BaseImage026" Image="gauge_mychr_gauge2"/>
+    <Image Type="GaugeBack"  Imageset="BaseImage004" Image="gauge_mychr_bg"/>
+    <Image Type="MainBack" Imageset="BaseImage004" Image="gauge_mychr_bg2" />
+    <Image Type="ManualMark" Imageset="BaseImage001" Image="icon0_help_black" />
+    <Image Type="ExtraSubBack" Imageset="BaseImage001" Image="strip_gray_dark2" >
+      <Area Width="204" Height="50" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+    </Image>
+    <Image Type="back_effect" Imageset="BaseImage002" Image="iconeffect_4" />
+    <Image Type="final_back_effect" Imageset="BaseImage002" Image="iconeffect_3" />
+  </Imagery>
+  <ExtraInfo ErrMsg1="영구용병에게만 사용할 수 있습니다."
+             ErrMsg2="메달슬롯 오픈은 로비에서만 가능합니다."
+             ErrMsg3="전투체험 용병으로는 불가능합니다."
+             ErrMsg4="메달슬롯 오픈은 광장/본부에서만 가능합니다."
+             ErrMsg5="PC방 용병은 선택 할 수 없습니다."
+             ErrMsg6="강화에 필요한 재료가 부족합니다."
+             ErrMsg7="강화하려는 장비가 선택되지 않았습니다."
+             ErrMsg8="강화하려는 장비가 없습니다."
+             ErrMsg9="영구장비만 강화할 수 있습니다."
+             InfoText1="메달%d"
+             InfoText2="레벨제한%d"
+             InfoText3="성공 확률"
+             InfoText4="실패 경험치"
+             InfoText5="강화하려는 장비가 +%d 이상일 경우#장비 강화 실패시 +%d로 고정됩니다."
+             InfoText6="%s +%d(봉인)"
+             InfoText7="%s +%d(봉인가능)"
+             InfoText8="장비강화를 완료했습니다."
+             InfoText9="강화중입니다. 잠시만 기다려주세요."
+             InfoText10="+%d 강화에 성공했습니다"
+             InfoText11="+%d 초월강화에 성공했습니다"
+             InfoText12="강화에 실패했습니다."             
+             InfoText13="초월강화에 실패했습니다."
+             InfoText14="+%d 로 돌아갑니다."
+             BtnText="장비 강화 (%s 페소)"
+             SelectItemMsg="장비가 선택되지 않았습니다."
+             LackMaterialMsg="강화재료가 부족합니다."
+             extra_sub_manual = "311"
+             help_tip_idx = "352"
+             rolling_sound = "interface/compound_effect_01.wav"
+		         success_sound = "interface/compound_ok_01.wav"
+		         extra_success_sound = "interface/compound_ok_02.wav"
+		         fail_sound = "interface/compound_fail_01.wav"
+             rolling_duration = "2000"
+             Effect_Gap_Time = "50"
+             Icon_Scale_Time = "50"
+             Max_Rolling_Effect = "9"
+	           Rolling_Effect_1 = "BaseEffect002#effect_roll_01"
+	           Rolling_Effect_2 = "BaseEffect002#effect_roll_02"
+	           Rolling_Effect_3 = "BaseEffect002#effect_roll_03"
+	           Rolling_Effect_4 = "BaseEffect002#effect_roll_04"
+	           Rolling_Effect_5 = "BaseEffect002#effect_roll_05"
+	           Rolling_Effect_6 = "BaseEffect003#effect_roll_06"
+	           Rolling_Effect_7 = "BaseEffect003#effect_roll_07"
+	           Rolling_Effect_8 = "BaseEffect003#effect_roll_08"
+	           Rolling_Effect_9 = "BaseEffect003#effect_roll_09"
+	           Max_Extra_Rolling_Effect = "9"
+	           Extra_Rolling_Effect_1 = "BaseEffect004#effect_roll_add_01"
+	           Extra_Rolling_Effect_2 = "BaseEffect004#effect_roll_add_02"
+	           Extra_Rolling_Effect_3 = "BaseEffect004#effect_roll_add_03"
+	           Extra_Rolling_Effect_4 = "BaseEffect004#effect_roll_add_04"
+	           Extra_Rolling_Effect_5 = "BaseEffect004#effect_roll_add_05"
+	           Extra_Rolling_Effect_6 = "BaseEffect005#effect_roll_add_06"
+	           Extra_Rolling_Effect_7 = "BaseEffect005#effect_roll_add_07"
+	           Extra_Rolling_Effect_8 = "BaseEffect005#effect_roll_add_08"
+	           Extra_Rolling_Effect_9 = "BaseEffect005#effect_roll_add_09"
+	           Max_Success_Effect = "10"
+	           Success_Effect_1 = "BaseEffect002#effect_success_01"
+	           Success_Effect_2 = "BaseEffect002#effect_success_02"
+	           Success_Effect_3 = "BaseEffect002#effect_success_03"
+	           Success_Effect_4 = "BaseEffect002#effect_success_04"
+	           Success_Effect_5 = "BaseEffect002#effect_success_05"
+	           Success_Effect_6 = "BaseEffect002#effect_success_06"
+	           Success_Effect_7 = "BaseEffect003#effect_success_07"
+	           Success_Effect_8 = "BaseEffect003#effect_success_08"
+	           Success_Effect_9 = "BaseEffect003#effect_success_09"
+	           Success_Effect_10 = "BaseEffect003#effect_success_10"
+	           Max_Extra_Success_Effect = "10"
+	           Extra_Success_Effect_1 = "BaseEffect004#effect_success_add_01"
+	           Extra_Success_Effect_2 = "BaseEffect004#effect_success_add_02"
+	           Extra_Success_Effect_3 = "BaseEffect004#effect_success_add_03"
+	           Extra_Success_Effect_4 = "BaseEffect004#effect_success_add_04"
+	           Extra_Success_Effect_5 = "BaseEffect004#effect_success_add_05"
+	           Extra_Success_Effect_6 = "BaseEffect004#effect_success_add_06"
+	           Extra_Success_Effect_7 = "BaseEffect005#effect_success_add_07"
+	           Extra_Success_Effect_8 = "BaseEffect005#effect_success_add_08"
+	           Extra_Success_Effect_9 = "BaseEffect005#effect_success_add_09"
+	           Extra_Success_Effect_10 = "BaseEffect005#effect_success_add_10"
+	           Max_Fail_Effect = "10"
+	           Fail_Effect_1 = "BaseEffect001#effect_fail_01"
+	           Fail_Effect_2 = "BaseEffect001#effect_fail_02"
+	           Fail_Effect_3 = "BaseEffect001#effect_fail_03"
+	           Fail_Effect_4 = "BaseEffect001#effect_fail_04"
+	           Fail_Effect_5 = "BaseEffect001#effect_fail_05"
+	           Fail_Effect_6 = "BaseEffect001#effect_fail_06"
+	           Fail_Effect_7 = "BaseEffect001#effect_fail_07"
+	           Fail_Effect_8 = "BaseEffect001#effect_fail_08"
+	           Fail_Effect_9 = "BaseEffect001#effect_fail_09"
+	           Fail_Effect_10 = "BaseEffect001#effect_fail_10"
+             ExtraSubManual="★초월강화는<c:0xFFB91600>+26 부터 +30<c:0xFF3A3A3A>까지 능력치가 <c:0xFFB91600>5씩 <c:0xFF3A3A3A>증가한다. 실패경험치가 쌓이지 않고 <c:0xFFB91600>실패 시 +25<c:0xFF3A3A3A>로 돌아간다."/>
+  
+  <Window ClassName="ioRadioButton" Id="1">
+    <Size X="27" Y="59" Width="101" Height="27" />
+    <Title>
+      <Format X="50" Y="8" Size="12" Style="Normal" HorzAlign="Center"/>
+      <Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+      <Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+      <Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+      <Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+      <Text>장착</Text>
+    </Title>
+    <Imagery>
+      <DefaultFrameImagery Type="Normal" Templete="tap2_off">
+        <Area X="0" Y="0" Width="101" Height="27"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Over" Templete="tap2_off">
+        <Area X="0" Y="0" Width="101" Height="27"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="OverAdd" Templete="tap2_overadd">
+        <Area X="0" Y="0" Width="101" Height="27"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Push" Templete="tap2_on1">
+        <Area X="0" Y="0" Width="101" Height="27"/>
+      </DefaultFrameImagery>
+    </Imagery>
+    <ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  </Window>
+  <Window ClassName="ioRadioButton" Id="2">
+    <Size X="130" Y="59" Width="101" Height="27" />
+    <Title>
+      <Format X="50" Y="8" Size="12" Style="Normal" HorzAlign="Center"/>
+      <Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+      <Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+      <Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+      <Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+      <Text>강화</Text>
+    </Title>
+    <Imagery>
+      <DefaultFrameImagery Type="Normal" Templete="tap2_off">
+        <Area X="0" Y="0" Width="101" Height="27"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Over" Templete="tap2_off">
+        <Area X="0" Y="0" Width="101" Height="27"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="OverAdd" Templete="tap2_overadd">
+        <Area X="0" Y="0" Width="101" Height="27"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Push" Templete="tap2_on1">
+        <Area X="0" Y="0" Width="101" Height="27"/>
+      </DefaultFrameImagery>
+    </Imagery>
+    <ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  </Window>
+
+  <Window ClassName="ioButton" Id="3">
+    <Size X="51" Y="97" Width="152" Height="22" />
+    <Title>
+      <Format X="76" Y="2" Size="12" Style="Outline_full_3x" HorzAlign="Center"/>
+      <Color Type="Normal" Text="FFFFFFFF" Back="FF1646B2"/>
+      <Color Type="Over" Text="FFFFFFFF" Back="FF1646B2"/>
+      <Color Type="Push" Text="FFFFFFFF" Back="FF1646B2"/>
+      <Color Type="Disable" Text="FFA7A7A7" Back="FF1646B2"/>
+      <Text>내 용병 선택</Text>
+    </Title>
+    <Imagery>
+      <Image Type="Normal" Imageset="BaseImage034" Image="hero_select_nor_middle">
+        <Area X="0" Y="0" Width="152" Height="22" HorzAlign="Stretch"/>
+      </Image>
+      <Image Type="Over" Imageset="BaseImage034" Image="hero_select_nor_middle">
+        <Area X="0" Y="0" Width="152" Height="22" HorzAlign="Stretch"/>
+      </Image>
+      <DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+        <Area X="0" Y="0" Width="152" Height="22"/>
+      </DefaultFrameImagery>
+      <Image Type="Push" Imageset="BaseImage034" Image="hero_select_down_middle">
+        <Area X="0" Y="0" Width="152" Height="22" HorzAlign="Stretch"/>
+      </Image>
+    </Imagery>
+    <ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  </Window>
+  <Window ClassName="ioButton" Id="4">
+    <Size X="27" Y="97" Width="24" Height="22" />
+    <Imagery>
+      <Image Type="Normal" Imageset="BaseImage034" Image="hero_select_nor_left"/>
+      <Image Type="Over" Imageset="BaseImage034" Image="hero_select_nor_left"/>
+      <DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+        <Area X="0" Y="0" Width="24" Height="22"/>
+      </DefaultFrameImagery>
+      <Image Type="Push" Imageset="BaseImage034" Image="hero_select_down_left"/>
+    </Imagery>
+    <ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  </Window>
+  <Window ClassName="ioButton" Id="5">
+    <Size X="203" Y="97" Width="24" Height="22" />
+    <Imagery>
+      <Image Type="Normal" Imageset="BaseImage034" Image="hero_select_nor_right"/>
+      <Image Type="Over" Imageset="BaseImage034" Image="hero_select_nor_right"/>
+      <DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+        <Area X="0" Y="0" Width="24" Height="22"/>
+      </DefaultFrameImagery>
+      <Image Type="Push" Imageset="BaseImage034" Image="hero_select_down_right"/>
+    </Imagery>
+    <ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  </Window>
+
+  <Window ClassName="SlotIconBtn" Id="21">
+    <Style>IWS_PROCESS</Style>
+    <ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+    <Size X="28" Y="125" Width="57" Height="57" />
+    <Title>
+      <Format X="28" Y="60" Size="11" Style="Normal" HorzAlign="Center"/>
+      <Color Type="Normal" Text="FF6E6E6E" Back="FFFFFFFF"/>
+      <Color Type="Over" Text="FF6E6E6E" Back="FFFFFFFF"/>
+      <Color Type="Push" Text="FF6E6E6E" Back="FFFFFFFF"/>
+      <Color Type="Disable" Text="FFA7A7A7" Back="FFFFFFFF"/>
+      <Text>무기</Text>
+    </Title>
+    <Imagery>
+      <DefaultFrameImagery Type="StatePinkFrm" Templete="state_pink">
+        <Area X="0" Y="0" Width="51" Height="16"/>
+      </DefaultFrameImagery>
+
+      <Image Type="IconBack" Imageset="BaseImage005" Image="iconslot_1" />
+      <Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+      <Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+      <Image Type="custom_image" Imageset="BaseImage003" Image="icon0_skin_delicon"/>
+    </Imagery>
+  </Window>
+  <Window ClassName="SlotIconBtn" Id="22">
+    <Style>IWS_PROCESS</Style>
+    <ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+    <Size X="28" Y="249" Width="57" Height="57" />
+    <Title>
+      <Format X="28" Y="60" Size="11" Style="Normal" HorzAlign="Center"/>
+      <Color Type="Normal" Text="FF6E6E6E" Back="FFFFFFFF"/>
+      <Color Type="Over" Text="FF6E6E6E" Back="FFFFFFFF"/>
+      <Color Type="Push" Text="FF6E6E6E" Back="FFFFFFFF"/>
+      <Color Type="Disable" Text="FFA7A7A7" Back="FFFFFFFF"/>
+      <Text>갑옷</Text>
+    </Title>
+    <Imagery>
+      <DefaultFrameImagery Type="StatePinkFrm" Templete="state_pink">
+        <Area X="0" Y="0" Width="51" Height="16"/>
+      </DefaultFrameImagery>
+
+      <Image Type="IconBack" Imageset="BaseImage005" Image="iconslot_2" />
+      <Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+      <Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+      <Image Type="custom_image" Imageset="BaseImage003" Image="icon0_skin_delicon"/>
+    </Imagery>
+  </Window>
+  <Window ClassName="SlotIconBtn" Id="23">
+    <Style>IWS_PROCESS</Style>
+    <ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+    <Size X="172" Y="125" Width="57" Height="57" />
+    <Title>
+      <Format X="28" Y="60" Size="11" Style="Normal" HorzAlign="Center"/>
+      <Color Type="Normal" Text="FF6E6E6E" Back="FFFFFFFF"/>
+      <Color Type="Over" Text="FF6E6E6E" Back="FFFFFFFF"/>
+      <Color Type="Push" Text="FF6E6E6E" Back="FFFFFFFF"/>
+      <Color Type="Disable" Text="FFA7A7A7" Back="FFFFFFFF"/>
+      <Text>투구</Text>
+    </Title>
+    <Imagery>
+      <DefaultFrameImagery Type="StatePinkFrm" Templete="state_pink">
+        <Area X="0" Y="0" Width="51" Height="16"/>
+      </DefaultFrameImagery>
+
+      <Image Type="IconBack" Imageset="BaseImage005" Image="iconslot_3" />
+      <Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+      <Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+      <Image Type="custom_image" Imageset="BaseImage003" Image="icon0_skin_delicon"/>
+    </Imagery>
+  </Window>
+  <Window ClassName="SlotIconBtn" Id="24">
+    <Style>IWS_PROCESS</Style>
+    <ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+    <Size X="172" Y="249" Width="57" Height="57" />
+    <Title>
+      <Format X="28" Y="60" Size="11" Style="Normal" HorzAlign="Center"/>
+      <Color Type="Normal" Text="FF6E6E6E" Back="FFFFFFFF"/>
+      <Color Type="Over" Text="FF6E6E6E" Back="FFFFFFFF"/>
+      <Color Type="Push" Text="FF6E6E6E" Back="FFFFFFFF"/>
+      <Color Type="Disable" Text="FFA7A7A7" Back="FFFFFFFF"/>
+      <Text>망토</Text>
+    </Title>
+    <Imagery>
+      <DefaultFrameImagery Type="StatePinkFrm" Templete="state_pink">
+        <Area X="0" Y="0" Width="51" Height="16"/>
+      </DefaultFrameImagery>
+
+      <Image Type="IconBack" Imageset="BaseImage005" Image="iconslot_4" />
+      <Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+      <Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+      <Image Type="custom_image" Imageset="BaseImage003" Image="icon0_skin_delicon"/>
+    </Imagery>
+  </Window>
+
+  <Window ClassName="SlotIconBtn" Id="25">
+    <Style>IWS_PROCESS</Style>
+    <ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+    <Size X="28" Y="328" Width="57" Height="57" />
+    <Title>
+      <Format X="28" Y="60" Size="11" Style="Normal" HorzAlign="Center"/>
+      <Color Type="Normal" Text="FF6E6E6E" Back="FFFFFFFF"/>
+      <Color Type="Over" Text="FF6E6E6E" Back="FFFFFFFF"/>
+      <Color Type="Push" Text="FF6E6E6E" Back="FFFFFFFF"/>
+      <Color Type="Disable" Text="FFA7A7A7" Back="FFFFFFFF"/>
+      <!-- Text는 프로그램에서 설정 -->
+      <Text>--</Text>
+    </Title>
+    <Imagery>
+      <Image Type="IconBack"     Imageset="BaseImage005" Image="iconslot_5" />
+      <Image Type="IconDisable"  Imageset="BaseImage002" Image="quest_giftbox_x" />
+      <Image Type="IconLock"     Imageset="BaseImage009" Image="icon0_medalopen_bt_nor" />
+      <Image Type="IconLockOver" Imageset="BaseImage009" Image="icon0_medalopen_bt_over" />
+    </Imagery>
+  </Window>
+  <Window ClassName="SlotIconBtn" Id="26">
+    <Style>IWS_PROCESS</Style>
+    <ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+    <Size X="100" Y="328" Width="57" Height="57" />
+    <Title>
+      <Format X="28" Y="60" Size="11" Style="Normal" HorzAlign="Center"/>
+      <Color Type="Normal" Text="FF6E6E6E" Back="FFFFFFFF"/>
+      <Color Type="Over" Text="FF6E6E6E" Back="FFFFFFFF"/>
+      <Color Type="Push" Text="FF6E6E6E" Back="FFFFFFFF"/>
+      <Color Type="Disable" Text="FFA7A7A7" Back="FFFFFFFF"/>
+      <!-- Text는 프로그램에서 설정 -->
+      <Text>--</Text>
+    </Title>
+    <Imagery>
+      <Image Type="IconBack"    Imageset="BaseImage005" Image="iconslot_5" />
+      <Image Type="IconDisable" Imageset="BaseImage002" Image="quest_giftbox_x" />
+      <Image Type="IconLock"     Imageset="BaseImage009" Image="icon0_medalopen_bt_nor" />
+      <Image Type="IconLockOver" Imageset="BaseImage009" Image="icon0_medalopen_bt_over" />
+    </Imagery>
+  </Window>
+  <Window ClassName="SlotIconBtn" Id="27">
+    <Style>IWS_PROCESS</Style>
+    <ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+    <Size X="172" Y="328" Width="57" Height="57" />
+    <Title>
+      <Format X="28" Y="60" Size="11" Style="Normal" HorzAlign="Center"/>
+      <Color Type="Normal" Text="FF6E6E6E" Back="FFFFFFFF"/>
+      <Color Type="Over" Text="FF6E6E6E" Back="FFFFFFFF"/>
+      <Color Type="Push" Text="FF6E6E6E" Back="FFFFFFFF"/>
+      <Color Type="Disable" Text="FFA7A7A7" Back="FFFFFFFF"/>
+      <!-- Text는 프로그램에서 설정 -->
+      <Text>--</Text>
+    </Title>
+    <Imagery>
+      <Image Type="IconBack"    Imageset="BaseImage005" Image="iconslot_5" />
+      <Image Type="IconDisable" Imageset="BaseImage002" Image="quest_giftbox_x" />
+      <Image Type="IconLock"     Imageset="BaseImage009" Image="icon0_medalopen_bt_nor" />
+      <Image Type="IconLockOver" Imageset="BaseImage009" Image="icon0_medalopen_bt_over" />
+    </Imagery>
+  </Window>
+  <Window ClassName="SlotIconBtn" Id="28">
+    <Style>IWS_PROCESS</Style>
+    <ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+    <Size X="28" Y="406" Width="57" Height="57" />
+    <Title>
+      <Format X="28" Y="60" Size="11" Style="Normal" HorzAlign="Center"/>
+      <Color Type="Normal" Text="FF6E6E6E" Back="FFFFFFFF"/>
+      <Color Type="Over" Text="FF6E6E6E" Back="FFFFFFFF"/>
+      <Color Type="Push" Text="FF6E6E6E" Back="FFFFFFFF"/>
+      <Color Type="Disable" Text="FFA7A7A7" Back="FFFFFFFF"/>
+      <!-- Text는 프로그램에서 설정 -->
+      <Text>--</Text>
+    </Title>
+    <Imagery>
+      <Image Type="IconBack"    Imageset="BaseImage005" Image="iconslot_5" />
+      <Image Type="IconDisable" Imageset="BaseImage002" Image="quest_giftbox_x" />
+      <Image Type="IconLock"     Imageset="BaseImage009" Image="icon0_medalopen_bt_nor" />
+      <Image Type="IconLockOver" Imageset="BaseImage009" Image="icon0_medalopen_bt_over" />
+    </Imagery>
+  </Window>
+  <Window ClassName="SlotIconBtn" Id="29">
+    <Style>IWS_PROCESS</Style>
+    <ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+    <Size X="100" Y="406" Width="57" Height="57" />
+    <Title>
+      <Format X="28" Y="60" Size="11" Style="Normal" HorzAlign="Center"/>
+      <Color Type="Normal" Text="FF6E6E6E" Back="FFFFFFFF"/>
+      <Color Type="Over" Text="FF6E6E6E" Back="FFFFFFFF"/>
+      <Color Type="Push" Text="FF6E6E6E" Back="FFFFFFFF"/>
+      <Color Type="Disable" Text="FFA7A7A7" Back="FFFFFFFF"/>
+      <!-- Text는 프로그램에서 설정 -->
+      <Text>--</Text>
+    </Title>
+    <Imagery>
+      <Image Type="IconBack"    Imageset="BaseImage005" Image="iconslot_5" />
+      <Image Type="IconDisable" Imageset="BaseImage002" Image="quest_giftbox_x" />
+      <Image Type="IconLock"     Imageset="BaseImage009" Image="icon0_medalopen_bt_nor" />
+      <Image Type="IconLockOver" Imageset="BaseImage009" Image="icon0_medalopen_bt_over" />
+    </Imagery>
+  </Window>
+  <Window ClassName="SlotIconBtn" Id="30">
+    <Style>IWS_PROCESS</Style>
+    <ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+    <Size X="172" Y="406" Width="57" Height="57" />
+    <Title>
+      <Format X="28" Y="60" Size="11" Style="Normal" HorzAlign="Center"/>
+      <Color Type="Normal" Text="FF6E6E6E" Back="FFFFFFFF"/>
+      <Color Type="Over" Text="FF6E6E6E" Back="FFFFFFFF"/>
+      <Color Type="Push" Text="FF6E6E6E" Back="FFFFFFFF"/>
+      <Color Type="Disable" Text="FFA7A7A7" Back="FFFFFFFF"/>
+      <!-- Text는 프로그램에서 설정 -->
+      <Text>--</Text>
+    </Title>
+    <Imagery>
+      <Image Type="IconBack"    Imageset="BaseImage005" Image="iconslot_5" />
+      <Image Type="IconDisable" Imageset="BaseImage002" Image="quest_giftbox_x" />
+      <Image Type="IconLock"     Imageset="BaseImage009" Image="icon0_medalopen_bt_nor" />
+      <Image Type="IconLockOver" Imageset="BaseImage009" Image="icon0_medalopen_bt_over" />
+    </Imagery>
+  </Window>
+
+  <Window ClassName="SlotIconBtn" Id="251">
+    <Style>IWS_PROCESS|IWS_CHILD_ONLY_RESPONSE|IWS_TOPMOST</Style>
+    <Size X="28" Y="125" Width="26" Height="26" />
+    <Imagery>
+      <DefaultFrameImagery Type="StatePinkFrm" Templete="state_pink">
+        <Area X="0" Y="0" Width="51" Height="16"/>
+      </DefaultFrameImagery>
+
+      <Image Type="IconBack" Imageset="BaseImage005" Image="costumeicon_bg" />
+      <Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+      <Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+      <Image Type="custom_image" Imageset="BaseImage003" Image="icon0_skin_delicon"/>
+      <Image Type="costume_image" Imageset="BaseImage031" Image="costume_mark"/>
+    </Imagery>
+  </Window>
+  <Window ClassName="SlotIconBtn" Id="252">
+    <Style>IWS_PROCESS|IWS_CHILD_ONLY_RESPONSE|IWS_TOPMOST</Style>
+    <Size X="28" Y="249" Width="26" Height="26" />
+    <Imagery>
+      <DefaultFrameImagery Type="StatePinkFrm" Templete="state_pink">
+        <Area X="0" Y="0" Width="51" Height="16"/>
+      </DefaultFrameImagery>
+
+      <Image Type="IconBack" Imageset="BaseImage005" Image="costumeicon_bg" />
+      <Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+      <Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+      <Image Type="custom_image" Imageset="BaseImage003" Image="icon0_skin_delicon"/>
+      <Image Type="costume_image" Imageset="BaseImage031" Image="costume_mark"/>
+    </Imagery>
+  </Window>
+  <Window ClassName="SlotIconBtn" Id="253">
+    <Style>IWS_PROCESS|IWS_CHILD_ONLY_RESPONSE|IWS_TOPMOST</Style>
+    <Size X="172" Y="125" Width="26" Height="26" />
+    <Imagery>
+      <DefaultFrameImagery Type="StatePinkFrm" Templete="state_pink">
+        <Area X="0" Y="0" Width="51" Height="16"/>
+      </DefaultFrameImagery>
+
+      <Image Type="IconBack" Imageset="BaseImage005" Image="costumeicon_bg" />
+      <Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+      <Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+      <Image Type="custom_image" Imageset="BaseImage003" Image="icon0_skin_delicon"/>
+      <Image Type="costume_image" Imageset="BaseImage031" Image="costume_mark"/>
+    </Imagery>
+  </Window>
+  <Window ClassName="SlotIconBtn" Id="254">
+    <Style>IWS_PROCESS|IWS_CHILD_ONLY_RESPONSE|IWS_TOPMOST</Style>
+    <Size X="172" Y="249" Width="26" Height="26" />
+    <Imagery>
+      <DefaultFrameImagery Type="StatePinkFrm" Templete="state_pink">
+        <Area X="0" Y="0" Width="51" Height="16"/>
+      </DefaultFrameImagery>
+
+      <Image Type="IconBack" Imageset="BaseImage005" Image="costumeicon_bg" />
+      <Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+      <Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+      <Image Type="custom_image" Imageset="BaseImage003" Image="icon0_skin_delicon"/>
+      <Image Type="costume_image" Imageset="BaseImage031" Image="costume_mark"/>
+    </Imagery>
+  </Window>
+
+  <!-- 강화 버튼 -->
+  <Window ClassName="ioButton" Id="31">
+    <ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+    <Size X="27" Y="448" Width="204" Height="31"/>
+    <Title>
+      <Format X="102" Y="7" Size="13" Style="Outline_full_3x" HorzAlign="Center"/>
+      <Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+      <Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+      <Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+      <Color Type="Disable" Text="FFA7A7A7" Back="FF6E6E6E"/>
+      <Text>장비 강화</Text>
+    </Title>
+    <Imagery>
+      <DefaultFrameImagery Type="Normal" Templete="bt006_green_nor">
+        <Area X="0" Y="0" Width="204" Height="31"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Over" Templete="bt006_green_nor">
+        <Area X="0" Y="0" Width="204" Height="31"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+        <Area X="0" Y="0" Width="204" Height="31"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Push" Templete="bt006_green_down">
+        <Area X="0" Y="0" Width="204" Height="31"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Disable" Templete="bt_empty">
+        <Area X="0" Y="0" Width="204" Height="31"/>
+      </DefaultFrameImagery>
+    </Imagery>
+    <ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  </Window>
+  <Window ClassName="ioWnd" Id="32">
+    <ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+    <Size X="27" Y="448" Width="204" Height="31"/>
+    <Title>
+      <Format X="102" Y="7" Size="13" Style="Normal" HorzAlign="Center"/>
+      <Color Type="Normal" Text="FFA7A7A7" Back="FFA7A7A7"/>
+      <Text>강화중...</Text>
+    </Title>
+    <Imagery>
+      <DefaultFrameImagery Templete="bt_empty">
+        <Area X="0" Y="0" Width="204" Height="31"/>
+      </DefaultFrameImagery>
+    </Imagery>
+  </Window>
+  <!-- 타겟 아이콘 -->
+  <Window ClassName="InventoryIconBtn" Id="33">
+    <Size X="96" Y="133" Width="64" Height="64" />
+    <Imagery>
+      <Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+      <Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+    </Imagery>
+    <ExtraInfo OverSound  = "interface/public_mouseover_00.wav"
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+  </Window>
+  <!-- 재료 버튼 -->
+  <Window ClassName="SelectExtraItemBtn" Id="34">
+    <ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+    <Size X="27" Y="285" Width="204" Height="25" />
+    <Title>
+      <Format X="102" Y="3" Size="12" Style="Normal" HorzAlign="Center"/>
+      <Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+      <Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+      <Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+      <Color Type="Disable" Text="FF6E6E6E" Back="FF000000"/>
+      <!-- Title은 프로그램에서 설정 -->
+      <Text>----</Text>
+    </Title>
+    <Imagery>
+      <DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+        <Area X="0" Y="0" Width="204" Height="23"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+        <Area X="0" Y="0" Width="204" Height="23"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+        <Area X="0" Y="0" Width="204" Height="23"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+        <Area X="0" Y="0" Width="204" Height="23"/>
+      </DefaultFrameImagery>
+      <Image Imageset="BaseImage001" Image="icon0_list_down" >
+        <Area X="188" Y="8" />
+      </Image>
+    </Imagery>
+    <ExtraInfo OverSound  = "interface/public_mouseover_00.wav"
+			   ClickSound = "interface/public_mouseclick_00.wav"
+			   DescText = "재료를 선택하세요" />
+  </Window>
+  <!-- 재료선택 -->
+  <Window ClassName="NewShopPullDownWnd" Id="35">
+    <Size X="0" Y="0" Width="204" Height="21" />
+    <Style>IWS_START_HIDE|IWS_PROCESS|IWS_TOPMOST</Style>
+    <Imagery>
+      <DefaultFrameImagery Type="Selected" Templete="tooltip2">
+        <Area X="0" Y="0" Width="204" Height="21"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="NoneSelected" Templete="tooltip2">
+        <Area X="0" Y="0" Width="204" Height="21"/>
+      </DefaultFrameImagery>
+      <Image Type="DarkLine" Imageset="BaseImage001" Image="strip_gray_dark" >
+        <Area X="0" Y="0" Width="70" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+      </Image>
+      <Image Type="LightLine" Imageset="BaseImage001" Image="strip_gray_light" >
+        <Area X="0" Y="0" Width="70" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+      </Image>
+      <Image Type="OverLine" Imageset="BaseImage001" Image="strip_gray_on" >
+        <Area X="0" Y="0" Width="70" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+      </Image>
+    </Imagery>
+    <ExtraInfo StartHGap   = "8"
+               EndHGap     = "8"
+               ItemHSize   = "21"
+               ItemMaxPage = "5"
+               FontSize    = "0.65f" />
+
+    <!--////////////////////////// scroll /////////////////////////////////////////////-->
+    <Window ClassName="ioScroll" Id="1000">
+      <Size X="182" Y="7" Width="15" Height="105" />
+      <Style>IWS_PROCESS</Style>
+      <ExStyle>IWS_EX_VSCROLL</ExStyle>
+      <Imagery>
+        <DefaultFrameImagery Templete="scrollbar_back">
+          <Area X="5" Y="10" Width="5" Height="85"/>
+        </DefaultFrameImagery>
+      </Imagery>
+      <ExtraInfo PageRange="1" StartTime="500" CurTime ="100"/>
+
+      <Window ClassName="ioButton" Id="1">
+        <Size X="0" Y="0" Width="15" Height="10" />
+        <Imagery>
+          <Image Type="Normal" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+            <Area X="3" Y="0" Reverse="Vert"/>
+          </Image>
+          <Image Type="Over" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+            <Area X="3" Y="0" Reverse="Vert"/>
+          </Image>
+          <Image Type="Push" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+            <Area X="3" Y="0" Reverse="Vert"/>
+          </Image>
+        </Imagery>
+        <ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+				           ClickSound = "interface/public_mouseclick_00.wav"/>
+      </Window>
+      <Window ClassName="ioButton" Id="2">
+        <Size X="0" Y="200" Width="15" Height="10" />
+        <Imagery>
+          <Image Type="Normal" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+            <Area X="3" Y="0"/>
+          </Image>
+          <Image Type="Over" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+            <Area X="3" Y="0"/>
+          </Image>
+          <Image Type="Push" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+            <Area X="3" Y="0"/>
+          </Image>
+        </Imagery>
+        <ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+				           ClickSound = "interface/public_mouseclick_00.wav"/>
+      </Window>
+      <Window ClassName="ioSlide" Id="3">
+        <Size X="0" Y="10" Width="15" Height="30" />
+        <DragRect Left="0" Top="0" Right="15" Bottom="30" />
+        <ExStyle>IWS_EX_NOTIFY_MOVED</ExStyle>
+        <Style>IWS_CANMOVE</Style>
+        <Imagery>
+          <DefaultFrameImagery Templete="scrollbar_drag">
+            <Area X="0" Y="0" Width="15" Height="30"/>
+          </DefaultFrameImagery>
+          <Image Type="Icon_Slide" Imageset="BaseImage001" Image="scrollbar_drag_icon"/>
+        </Imagery>
+      </Window>
+    </Window>
+  </Window>
+  <!--재료 아이콘-->
+  <Window ClassName="SelectMaterialItemBtn" Id="36">
+    <Style>IWS_PROCESS|IWS_START_HIDE</Style>
+    <ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+    <Size X="96" Y="212" Width="64" Height="64" />
+    <Imagery>
+      <DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+        <Area X="0" Y="0" Width="64" Height="64"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="material_frm" Templete="com_slot2_b">
+        <Area X="0" Y="0" Width="64" Height="64"/>
+      </DefaultFrameImagery>
+      <Image Type="material_image" Imageset="BaseImage026" Image="iconslot_upgrade_02"/>
+      <Image Type="icon_back_image" Imageset="BaseImage002" Image="iconeffect_1"/>
+    </Imagery>
+  </Window>
+  <!--Help -->
+  <Window ClassName="ioButton" Id="37">
+    <Size X="207" Y="388" Width="15" Height="15" />
+    <ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  </Window>
+  <!--툴팁-->
+  <Window ClassName="ioBasicToolTip" Id="38">
+    <Size X="0" Y="0" Width="164" Height="49" />
+    <Style>IWS_START_HIDE|IWS_PROCESS|IWS_TOPMOST</Style>
+    <Imagery>
+      <DefaultFrameImagery Type="Selected" Templete="tooltip2">
+        <Area X="0" Y="0" Width="164" Height="49" />
+      </DefaultFrameImagery>
+    </Imagery>
+    <Window ClassName="ioRichLabel" Id="1">
+      <Size X="7" Y="6" Width="164" Height="49"/>
+      <ExtraInfo VertGap="3" HorzAlign="Left" VertAlign="Center" >
+        <TextBlock Text="실패 경험치란?#" Size="12" Color="FF3A3A3A"/>
+        <TextBlock Text="강화에 실패할 경우#" Size="12"  Color="FF6E6E6E"/>
+        <TextBlock Text="실패 경험치가 쌓이게 되며#" Size="12"  Color="FF6E6E6E"/>
+        <TextBlock Text="이에 따라 다음 강화#" Size="12"  Color="FF6E6E6E"/>
+        <TextBlock Text="성공률이 증가하게 됩니다." Size="12"  Color="FF6E6E6E"/>
+      </ExtraInfo>
+    </Window>
+  </Window>
+  <Window ClassName="ioButton" Id="39">
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Size X="27" Y="448" Width="102" Height="31"/>
+		<Title>
+			<Format X="51" Y="7" Size="13" Style="Outline_full_3x" DisableStyle="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FFA7A7A7"/>
+			<Text>추가사용</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_green_nor">
+				<Area X="0" Y="0" Width="102" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_green_nor">
+				<Area X="0" Y="0" Width="102" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="102" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_green_down">
+				<Area X="0" Y="0" Width="102" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="102" Height="31"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="ioButton" Id="40">
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Size X="131" Y="448" Width="102" Height="31"/>
+		<Title>
+			<Format X="51" Y="7" Size="13" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>아이템 보기</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="102" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="102" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="102" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_gray_down">
+				<Area X="0" Y="0" Width="102" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="102" Height="31"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+</Window>

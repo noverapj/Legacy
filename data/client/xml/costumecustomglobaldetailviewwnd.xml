@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="CostumeCustomGlobalDetailViewWnd" Id="6264">
+	<Size X="0" Y="-20" Width="754" Height="506" XAlign="Center" YAlign="Center"/>
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_MODAL|IWS_EXIT_ESC</Style>
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+			<Area X="0" Y="0" Width="754" Height="506"/>
+		</DefaultFrameImagery>
+
+		<DefaultFrameImagery Type="TitleBar" Templete="win1_title">
+			<Area X="5" Y="6" Width="744" Height="36"/>
+		</DefaultFrameImagery>
+
+		<Image Type="MouseLeft" Imageset="BaseImage008" Image="icon0_skin_mleft"/>
+		<Image Type="MouseRight" Imageset="BaseImage008" Image="icon0_skin_mright" />
+		<Image Type="MouseMiddle" Imageset="BaseImage008" Image="icon0_skin_mwheel"/>
+		<Image Type="Background" Imageset="BaseImage003" Image="icon0_skin_bggra"/>
+	</Imagery>
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="720" Y="11" Width="23" Height="23"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+                        <Image Type="Disable" Imageset="BaseImage001" Image="icon0_x_grayframe" >
+				<Area X="0" Y="0" />
+			</Image>
+                        <Image Type="NormalList" Imageset="BaseImage001" Image="icon0_x" >
+				<Area X="5" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+</Window>

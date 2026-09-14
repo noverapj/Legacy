@@ -1,0 +1,139 @@
+<?xml version="1.0"  encoding="euc-kr" ?>
+<ACTION_PRESETS>
+	<!--
+	; KEY_NONE = 0, KEY_RELEASE = 1, KEY_PRESS = 2, KEY_REPEAT = 3
+	; Attack(D), Defense(S), Jump(A)
+	-->
+	<ACTION name="A_IRONKNIGHT_01">
+		<DESCRIPTION>
+			;HP 50%이상일때 - 기본타(+앞딜100ms) & 대기(500ms)
+			;기본상태(1/1-100%) - 평타(앞딜레이 100 + 딜레이 500, 평타중 반격 가능)
+			ActionRangeMin = 0.0f		<!-- TRIGGER_CONDITIONS-DISTANCE-min -->
+			ActionRangeMax = 150.0f		<!-- TRIGGER_CONDITIONS-DISTANCE-max -->
+			LimitHPRateMin = 0.51f		<!-- TRIGGER_CONDITIONS-HP_RATE-min -->
+			LimitHPRateMax = 1.1f		<!-- TRIGGER_CONDITIONS-HP_RATE-max -->
+			ActiveRand     = 1000		<!-- TRIGGER_CONDITIONS-FRONT_DELAY-variance -->
+			ActiveDelayTime= 0			<!-- TRIGGER_CONDITIONS-FRONT_DELAY-base -->
+			MyState        = -1			<!-- TRIGGER_CONDITIONS-OWNER_STATE-STATELIST -->
+			TargetState    = -1			<!-- TRIGGER_CONDITIONS-TARGET_STATE-STATELIST -->
+		</DESCRIPTION>
+		<CONDITIONS>
+			<TARGET_DISTANCE	min = "0.0f"	max = "150.0f">
+			<ONWER_HP_RATE		min = "0.51f" 	max = "1.1f" />
+			<FRONTDELAY			base = "0" 		variance = "1000" />
+		</CONDITIONS>
+		<KEYSEQUENCE use="KEYSEQUENCE[NORMAL_D10]" />
+	</ACTION>
+
+	<ACTION name="A_IRONKNIGHT_02">
+		<DESCRIPTION>
+			;대기상태(1/1-100%) - 500ms (5초에 한번)
+			[Action2]
+			ActionRangeMin = 0.0f
+			ActionRangeMax = 100000000.0f
+			LimitHPRateMin = 0.0f
+			LimitHPRateMax = 1.1f
+			ActiveRand     = 1000
+			ActiveDelayTime= 1000
+			MyState        = -1
+			TargetState    = -1
+		</DESCRIPTION>
+		<CONDITIONS>
+			<DISTANCE	min = "0.0f"	max = "150.0f">
+			<HP_RATE	min = "0.0f" 	max = "1.1f" />
+			<FRONTDELAY	base = "1000"	variance = "1000" />
+		</CONDITIONS>
+		<KEY_SEQUENCE>
+			<KEY type="D"		action="KEY_NONE"		duration="500" 	/>
+		</KEY_SEQUENCE>
+	</ACTION>
+
+	<ACTION name="A_IRONKNIGHT_03">
+		<DESCRIPTION>
+			;HP 50%이하일때
+			;기본상태(1/2-50%) - 평타(딜레이 500, 평타중 반격 가능)
+			[Action3]
+			ActionRangeMin = 0.0f
+			ActionRangeMax = 150.0f
+			LimitHPRateMin = 0.0f
+			LimitHPRateMax = 0.51f
+			ActiveRand     = 700
+			ActiveDelayTime= 0
+			MyState        = -1
+			TargetState    = -1
+		</DESCRIPTION>
+		<CONDITIONS>
+			<DISTANCE	min = "0.0f"	max = "150.0f">
+			<HP_RATE	min = "0.0f" 	max = "0.51f" />
+			<FRONTDELAY	base = "0"		variance = "700" />
+		</CONDITIONS>
+		<KEY_SEQUENCE use="KEYSEQUENCE[]">
+			<KEY type="D"		action="KEY_NONE"		duration="100" 	/>
+			<KEY type="D"		action="KEY_PRESS"		duration="10" 	/>
+			<KEY type="D"		action="KEY_REPEAT"		duration="10" 	/>
+			<KEY type="D"		action="KEY_RELEASE"	duration="500" 	/>
+		</KEY_SEQUENCE>
+	</ACTION>
+	
+	<ACTION name="A_IRONKNIGHT_04">
+		<DESCRIPTION>
+			;기본상태(2/2-50%) - 무기스킬 (사용주기 15초)
+			[Action4]
+			ActionRangeMin = 0.0f
+			ActionRangeMax = 150.0f
+			LimitHPRateMin = 0.0f
+			LimitHPRateMax = 0.51f
+			ActiveRand     = 300
+			ActiveDelayTime= 15000
+			MyState        = -1
+			TargetState    = -1
+		</DESCRIPTION>
+		<CONDITIONS>
+			<DISTANCE	min = "0.0f"	max = "150.0f">
+			<HP_RATE	min = "0.0f" 	max = "0.51f" />
+			<FRONTDELAY	base = "15000"	variance = "300" />
+		</CONDITIONS>
+		<KEY_SEQUENCE>
+			<KEY type="D"		action="KEY_NONE"		duration="250" 	/>
+			<KEY type="S+D"		action="KEY_PRESS"		duration="10" 	/>
+			<KEY type="S+D"		action="KEY_REPEAT"		duration="10" 	/>
+			<KEY type="S+D"		action="KEY_RELEASE"	duration="10" 	/>
+		</KEY_SEQUENCE>
+	</ACTION>
+	
+	<ACTION name="A_IRONKNIGHT_05">
+		<DESCRIPTION>
+			;점프상태(1/1-100%) - 점프공격 (앞딜레이 10)
+			[Action5]
+			ActionRangeMin = 0.0f
+			ActionRangeMax = 200.0f
+			LimitHPRateMin = 0.0f
+			LimitHPRateMax = 1.1f
+			ActiveRand     = 1000
+			ActiveDelayTime= 0
+			MyState        = 4
+			TargetState    = -1
+
+			MaxKey      = 4
+			Key1_D      = 0
+			Key1_Delay  = 10
+			Key2_D      = 2
+			Key2_Delay  = 10
+			Key3_D      = 3
+			Key3_Delay  = 10
+			Key4_D      = 1
+			Key4_Delay  = 10
+		</DESCRIPTION>
+		<CONDITIONS>
+			<DISTANCE		min = "0.0f"	max = "150.0f">
+			<HP_RATE		min = "0.0f" 	max = "0.51f" />
+			<FRONTDELAY		base = "15000"	variance = "300" />
+		</CONDITIONS>
+		<KEY_SEQUENCE>
+			<KEY type="D"		action="KEY_NONE"		duration="250" 	/>
+			<KEY type="S+D"		action="KEY_PRESS"		duration="10" 	/>
+			<KEY type="S+D"		action="KEY_REPEAT"		duration="10" 	/>
+			<KEY type="S+D"		action="KEY_RELEASE"	duration="10" 	/>
+		</KEY_SEQUENCE>
+	</ACTION>
+</ACTION_PRESETS>

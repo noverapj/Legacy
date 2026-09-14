@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+<Window ClassName="TotalResultChatWnd" Id="100">
+	<Size X="246" Y="339" Width="516" Height="175"/>
+	<Style>IWS_START_HIDE|IWS_BACKMOST</Style>
+	<ExtraInfo LoadInfo ="NormalChatInfo"/>
+
+	<Window ClassName="ChatMsgWnd" Id="1">
+		<Size X="0" Y="0" Width="516" Height="138"/>
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST</Style>
+		<ExtraInfo StartXPos ="9" 
+			   StartYPos = "116" 
+			   LineYOffset = "18"
+			   LineHeight = "17"/>
+
+		<Imagery>
+			<Image Type="NormalOverBack" Imageset="BaseImage002" Image="chat_over_lobby" >
+				<Area X="0" Y="0" Width="476" Height="16" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+
+			<Image Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="10" Y="24" Width="476" Height="2" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="10" Y="42" Width="476" Height="2" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="10" Y="60" Width="476" Height="2" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="10" Y="78" Width="476" Height="2" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="10" Y="96" Width="476" Height="2" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="10" Y="114" Width="476" Height="2" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="10" Y="132" Width="476" Height="2" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+		</Imagery>
+
+		<Window ClassName="ioScroll" Id="1000">
+			<Size X="491" Y="7" Width="15" Height="126" />
+			<Style>IWS_PROCESS</Style>
+			<ExStyle>IWS_EX_VSCROLL</ExStyle>
+			<Imagery>
+				<DefaultFrameImagery Templete="scrollbar_back">
+					<Area X="5" Y="10" Width="5" Height="106"/>
+				</DefaultFrameImagery>
+			</Imagery>		
+			<ExtraInfo PageRange="7" StartTime="500" CurTime ="100"/>
+
+			<Window ClassName="ioButton" Id="1">
+				<Size X="0" Y="0" Width="15" Height="10" />
+				<Imagery>
+					<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0" Reverse="Vert"/>
+					</Image>
+					<Image Type="Over" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0" Reverse="Vert"/>
+					</Image>
+					<Image Type="Push" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0" Reverse="Vert"/>
+					</Image>
+				</Imagery>
+				<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+				           ClickSound = "interface/public_mouseclick_00.wav"/>					
+			</Window>
+			<Window ClassName="ioButton" Id="2">
+				<Size X="0" Y="116" Width="15" Height="10" />
+				<Imagery>
+					<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0"/>
+					</Image>
+					<Image Type="Over" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0"/>
+					</Image>
+					<Image Type="Push" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0"/>
+					</Image>
+				</Imagery>
+				<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+				           ClickSound = "interface/public_mouseclick_00.wav"/>					
+			</Window>
+			<Window ClassName="ioSlide" Id="3">
+				<Size X="0" Y="10" Width="15" Height="30" />
+				<DragRect Left="0" Top="0" Right="15" Bottom="30" />
+				<ExStyle>IWS_EX_NOTIFY_MOVED</ExStyle>
+				<Style>IWS_CANMOVE</Style>
+				<Imagery>
+					<DefaultFrameImagery Templete="scrollbar_drag">
+						<Area X="0" Y="0" Width="15" Height="30"/>
+					</DefaultFrameImagery>
+					<Image Type="Icon_Slide" Imageset="BaseImage001" Image="scrollbar_drag_icon"/>
+				</Imagery>
+			</Window>
+		</Window>
+
+	</Window>
+
+	<Window ClassName="GameChatInput" Id="2">
+		<Size X="10" Y="139" Width="496" Height="26"/>
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="chat_box">
+				<Area X="0" Y="0" Width="496" Height="26"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="FocusBox" Templete="slot_chatact">
+				<Area X="0" Y="0" Width="496" Height="26"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo ChatLimitCount="3" ChatLimitTime="3000" ShowEditFocus="false"/>
+
+		<Window ClassName="ioEdit" Id="1">
+			<Size X="53" Y="6" Width="443" Height="20" />
+			<ExtraInfo MaxLength="50" TextColor="FF3A3A3A" BkColor="FF3A3A3A" Align="Left" Style="Normal" Size="12" />
+		</Window>
+		
+		<Window ClassName="ioButton" Id="2">
+			<Size X="4" Y="4" Width="45" Height="18" />
+			<Title>
+				<Format X="17" Y="3" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF3A3A3A"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>전체</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="45" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="45" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="45" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+					<Area X="0" Y="0" Width="45" Height="18"/>
+				</DefaultFrameImagery>
+			
+				<Image Imageset="BaseImage001" Image="icon0_list_down" >
+					<Area X="30" Y="4"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	        	     	   ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+
+	</Window>
+
+</Window>

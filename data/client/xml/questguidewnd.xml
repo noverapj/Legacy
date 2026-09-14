@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="QuestGuideWnd" Id="1">
+	<Size X="0" Y="0" Width="14" Height="14" />
+	<Style>IWS_START_HIDE</Style>
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="0" Y="0" Width="14" Height="14" />
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>		
+	</Window>
+
+</Window>

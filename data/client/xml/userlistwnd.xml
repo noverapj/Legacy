@@ -1,0 +1,930 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="UserListWnd" Id="100">
+	<Size X="0" Y="118" Width="323" Height="322" />
+	<Style>IWS_PROCESS|IWS_START_HIDE</Style> 
+	<Imagery>
+		<DefaultFrameImagery Type="MultiplyFrm" Templete="win1_multiply_bottom">
+			<Area X="0" Y="257" Width="323" Height="65"/>
+		</DefaultFrameImagery>
+		<Image Imageset="BaseImage001" Image="tap2_line" >
+			<Area X="125" Y="21" Width="1" Height="2" HorzAlign="Stretch"/>
+		</Image>
+		<Image Imageset="BaseImage001" Image="tap2_line" >
+			<Area X="234" Y="21" Width="1" Height="2" HorzAlign="Stretch"/>
+		</Image>
+
+		<Image Imageset="BaseImage001" Image="strip_gray_dark" >
+			<Area X="17" Y="28" Width="289" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_light" >
+			<Area X="17" Y="49" Width="289" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_dark" >
+			<Area X="17" Y="70" Width="289" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_light" >
+			<Area X="17" Y="91" Width="289" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_dark" >
+			<Area X="17" Y="112" Width="289" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_light" >
+			<Area X="17" Y="133" Width="289" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_dark" >
+			<Area X="17" Y="154" Width="289" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_light" >
+			<Area X="17" Y="175" Width="289" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_dark" >
+			<Area X="17" Y="196" Width="289" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+	</Imagery>
+
+	<Window ClassName="ioRadioButton" Id="1">
+		<Style>IWS_BACKMOST</Style>
+		<Size X="17" Y="0" Width="108" Height="23" />		
+		<Title>
+			<Format X="54" Y="4" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>친구</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="tap3_off">
+				<Area X="0" Y="0" Width="108" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="tap3_off">
+				<Area X="0" Y="0" Width="108" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap3_overadd">
+				<Area X="0" Y="0" Width="108" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="tap3_on1">
+				<Area X="0" Y="0" Width="108" Height="23"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>	
+
+	<Window ClassName="ioRadioButton" Id="2">
+		<Style>IWS_BACKMOST</Style>
+		<Size X="126" Y="0" Width="108" Height="23" />
+		<Title>
+			<Format X="54" Y="4" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>길드</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="tap3_off">
+				<Area X="0" Y="0" Width="108" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="tap3_off">
+				<Area X="0" Y="0" Width="108" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap3_overadd">
+				<Area X="0" Y="0" Width="108" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="tap3_on1">
+				<Area X="0" Y="0" Width="108" Height="23"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioRadioButton" Id="3">
+		<Style>IWS_BACKMOST</Style>
+		<Size X="235" Y="0" Width="71" Height="23" />
+		<Title>
+			<Format X="35" Y="4" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>차단</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="tap3_off">
+				<Area X="0" Y="0" Width="71" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="tap3_off">
+				<Area X="0" Y="0" Width="71" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap3_overadd">
+				<Area X="0" Y="0" Width="71" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="tap3_on1">
+				<Area X="0" Y="0" Width="71" Height="23"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="10">
+		<Size X="17" Y="274" Width="289" Height="31"/>
+		<Title>
+			<Format X="144" Y="5" Size="13" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>친구신청</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_blue_nor">
+				<Area X="0" Y="0" Width="289" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_blue_nor">
+				<Area X="0" Y="0" Width="289" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="289" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_blue_down">
+				<Area X="0" Y="0" Width="289" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="289" Height="31"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="12">
+		<Size X="17" Y="274" Width="191" Height="31"/>
+		<Title>
+			<Format X="95" Y="5" Size="13" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>길드정보</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_blue_nor">
+				<Area X="0" Y="0" Width="191" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_blue_nor">
+				<Area X="0" Y="0" Width="191" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="191" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_blue_down">
+				<Area X="0" Y="0" Width="191" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="191" Height="31"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="13">
+		<Size X="210" Y="274" Width="96" Height="31"/>
+		<Title>
+			<Format X="48" Y="5" Size="13" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>길드홈피</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_green_nor">
+				<Area X="0" Y="0" Width="96" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_green_nor">
+				<Area X="0" Y="0" Width="96" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="96" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_green_down">
+				<Area X="0" Y="0" Width="96" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="96" Height="31"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="14">
+		<Size X="17" Y="274" Width="289" Height="31"/>
+		<Title>
+			<Format X="144" Y="5" Size="13" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>차단추가</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_blue_nor">
+				<Area X="0" Y="0" Width="289" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_blue_nor">
+				<Area X="0" Y="0" Width="289" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="289" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_blue_down">
+				<Area X="0" Y="0" Width="289" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="289" Height="31"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="15">
+		<Size X="95" Y="222" Width="43" Height="18" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_left" >
+				<Area X="17" Y="4"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="16">
+		<Size X="185" Y="222" Width="43" Height="18" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_left" >
+				<Area X="17" Y="4" Reverse="Horz"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="UserInfoListWnd" Id="100">
+		<Size X="17" Y="28" Width="289" Height="21" />
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Imagery>			
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="289" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="289" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			
+			<Image Type="BlackMark" Imageset="BaseImage001" Image="icon0_xman_orange" />
+			<Image Type="MyBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend1_black" />
+			<Image Type="MyBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend1_gray" />
+			<Image Type="OtherBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend2_black" />
+			<Image Type="OtherBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend2_gray" />
+			<Image Type="CoupleBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend3_black" />
+			<Image Type="CoupleBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend3_gray" />
+		</Imagery>
+
+		<Window ClassName="CloverButton" Id="1">
+			<Style>IWS_BACKMOST</Style>
+			<ExStyle>IWS_EX_OVER_SCREEN</ExStyle>
+			<Size X="222" Y="0" Width="33" Height="21" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage022" Image="icon0_clover_gold_get">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage022" Image="icon0_clover_gold_get">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage022" Image="icon0_clover_gold_get">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	        	     ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+
+		<Window ClassName="CloverButton" Id="2">
+			<Style>IWS_BACKMOST</Style>
+			<ExStyle>IWS_EX_OVER_SCREEN</ExStyle>
+			<Size X="255" Y="0" Width="33" Height="21" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage022" Image="icon0_clover_green_give">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage022" Image="icon0_clover_green_give">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage022" Image="icon0_clover_green_give">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="InActiveNormal"  Imageset="BaseImage022" Image="icon0_clover_green_give_g">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="InActiveOver"    Imageset="BaseImage022" Image="icon0_clover_green_give_g">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="InActivePush"    Imageset="BaseImage022" Image="icon0_clover_green_give_g">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	        	     ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="UserInfoListWnd" Id="101">
+		<Size X="17" Y="49" Width="289" Height="21" />
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Imagery>			
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="289" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="289" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			
+			<Image Type="BlackMark" Imageset="BaseImage001" Image="icon0_xman_orange" />
+			<Image Type="MyBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend1_black" />
+			<Image Type="MyBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend1_gray" />
+			<Image Type="OtherBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend2_black" />
+			<Image Type="OtherBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend2_gray" />
+			<Image Type="CoupleBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend3_black" />
+			<Image Type="CoupleBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend3_gray" />
+		</Imagery>
+
+		<Window ClassName="CloverButton" Id="1">
+			<Style>IWS_BACKMOST</Style>
+			<ExStyle>IWS_EX_OVER_SCREEN</ExStyle>
+			<Size X="222" Y="0" Width="33" Height="21" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage022" Image="icon0_clover_gold_get">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage022" Image="icon0_clover_gold_get">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage022" Image="icon0_clover_gold_get">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	        	     ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+
+		<Window ClassName="CloverButton" Id="2">
+			<Style>IWS_BACKMOST</Style>
+			<ExStyle>IWS_EX_OVER_SCREEN</ExStyle>
+			<Size X="255" Y="0" Width="33" Height="21" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage022" Image="icon0_clover_green_give">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage022" Image="icon0_clover_green_give">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage022" Image="icon0_clover_green_give">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="InActiveNormal"  Imageset="BaseImage022" Image="icon0_clover_green_give_g">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="InActiveOver"    Imageset="BaseImage022" Image="icon0_clover_green_give_g">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="InActivePush"    Imageset="BaseImage022" Image="icon0_clover_green_give_g">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	        	     ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="UserInfoListWnd" Id="102">
+		<Size X="17" Y="70" Width="289" Height="21" />
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Imagery>			
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="289" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="289" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			
+			<Image Type="BlackMark" Imageset="BaseImage001" Image="icon0_xman_orange" />
+			<Image Type="MyBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend1_black" />
+			<Image Type="MyBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend1_gray" />
+			<Image Type="OtherBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend2_black" />
+			<Image Type="OtherBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend2_gray" />
+			<Image Type="CoupleBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend3_black" />
+			<Image Type="CoupleBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend3_gray" />
+		</Imagery>
+
+		<Window ClassName="CloverButton" Id="1">
+			<Style>IWS_BACKMOST</Style>
+			<ExStyle>IWS_EX_OVER_SCREEN</ExStyle>
+			<Size X="222" Y="0" Width="33" Height="21" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage022" Image="icon0_clover_gold_get">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage022" Image="icon0_clover_gold_get">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage022" Image="icon0_clover_gold_get">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	        	     ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+
+		<Window ClassName="CloverButton" Id="2">
+			<Style>IWS_BACKMOST</Style>
+			<ExStyle>IWS_EX_OVER_SCREEN</ExStyle>
+			<Size X="255" Y="0" Width="33" Height="21" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage022" Image="icon0_clover_green_give">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage022" Image="icon0_clover_green_give">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage022" Image="icon0_clover_green_give">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="InActiveNormal"  Imageset="BaseImage022" Image="icon0_clover_green_give_g">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="InActiveOver"    Imageset="BaseImage022" Image="icon0_clover_green_give_g">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="InActivePush"    Imageset="BaseImage022" Image="icon0_clover_green_give_g">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	        	     ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="UserInfoListWnd" Id="103">
+		<Size X="17" Y="91" Width="289" Height="21" />
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Imagery>			
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="289" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="289" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			
+			<Image Type="BlackMark" Imageset="BaseImage001" Image="icon0_xman_orange" />
+			<Image Type="MyBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend1_black" />
+			<Image Type="MyBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend1_gray" />
+			<Image Type="OtherBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend2_black" />
+			<Image Type="OtherBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend2_gray" />
+			<Image Type="CoupleBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend3_black" />
+			<Image Type="CoupleBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend3_gray" />
+		</Imagery>
+
+		<Window ClassName="CloverButton" Id="1">
+			<Style>IWS_BACKMOST</Style>
+			<ExStyle>IWS_EX_OVER_SCREEN</ExStyle>
+			<Size X="222" Y="0" Width="33" Height="21" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage022" Image="icon0_clover_gold_get">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage022" Image="icon0_clover_gold_get">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage022" Image="icon0_clover_gold_get">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	        	     ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+
+		<Window ClassName="CloverButton" Id="2">
+			<Style>IWS_BACKMOST</Style>
+			<ExStyle>IWS_EX_OVER_SCREEN</ExStyle>
+			<Size X="255" Y="0" Width="33" Height="21" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage022" Image="icon0_clover_green_give">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage022" Image="icon0_clover_green_give">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage022" Image="icon0_clover_green_give">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="InActiveNormal"  Imageset="BaseImage022" Image="icon0_clover_green_give_g">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="InActiveOver"    Imageset="BaseImage022" Image="icon0_clover_green_give_g">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="InActivePush"    Imageset="BaseImage022" Image="icon0_clover_green_give_g">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	        	     ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="UserInfoListWnd" Id="104">
+		<Size X="17" Y="112" Width="289" Height="21" />
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Imagery>			
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="289" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="289" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			
+			<Image Type="BlackMark" Imageset="BaseImage001" Image="icon0_xman_orange" />
+			<Image Type="MyBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend1_black" />
+			<Image Type="MyBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend1_gray" />
+			<Image Type="OtherBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend2_black" />
+			<Image Type="OtherBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend2_gray" />
+			<Image Type="CoupleBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend3_black" />
+			<Image Type="CoupleBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend3_gray" />
+		</Imagery>
+
+		<Window ClassName="CloverButton" Id="1">
+			<Style>IWS_BACKMOST</Style>
+			<ExStyle>IWS_EX_OVER_SCREEN</ExStyle>
+			<Size X="222" Y="0" Width="33" Height="21" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage022" Image="icon0_clover_gold_get">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage022" Image="icon0_clover_gold_get">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage022" Image="icon0_clover_gold_get">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	        	     ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+
+		<Window ClassName="CloverButton" Id="2">
+			<Style>IWS_BACKMOST</Style>
+			<ExStyle>IWS_EX_OVER_SCREEN</ExStyle>
+			<Size X="255" Y="0" Width="33" Height="21" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage022" Image="icon0_clover_green_give">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage022" Image="icon0_clover_green_give">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage022" Image="icon0_clover_green_give">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="InActiveNormal"  Imageset="BaseImage022" Image="icon0_clover_green_give_g">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="InActiveOver"    Imageset="BaseImage022" Image="icon0_clover_green_give_g">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="InActivePush"    Imageset="BaseImage022" Image="icon0_clover_green_give_g">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	        	     ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="UserInfoListWnd" Id="105">
+		<Size X="17" Y="133" Width="289" Height="21" />
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Imagery>			
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="289" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="289" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			
+			<Image Type="BlackMark" Imageset="BaseImage001" Image="icon0_xman_orange" />
+			<Image Type="MyBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend1_black" />
+			<Image Type="MyBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend1_gray" />
+			<Image Type="OtherBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend2_black" />
+			<Image Type="OtherBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend2_gray" />
+			<Image Type="CoupleBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend3_black" />
+			<Image Type="CoupleBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend3_gray" />
+		</Imagery>
+
+		<Window ClassName="CloverButton" Id="1">
+			<Style>IWS_BACKMOST</Style>
+			<ExStyle>IWS_EX_OVER_SCREEN</ExStyle>
+			<Size X="222" Y="0" Width="33" Height="21" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage022" Image="icon0_clover_gold_get">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage022" Image="icon0_clover_gold_get">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage022" Image="icon0_clover_gold_get">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	        	     ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+
+		<Window ClassName="CloverButton" Id="2">
+			<Style>IWS_BACKMOST</Style>
+			<ExStyle>IWS_EX_OVER_SCREEN</ExStyle>
+			<Size X="255" Y="0" Width="33" Height="21" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage022" Image="icon0_clover_green_give">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage022" Image="icon0_clover_green_give">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage022" Image="icon0_clover_green_give">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="InActiveNormal"  Imageset="BaseImage022" Image="icon0_clover_green_give_g">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="InActiveOver"    Imageset="BaseImage022" Image="icon0_clover_green_give_g">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="InActivePush"    Imageset="BaseImage022" Image="icon0_clover_green_give_g">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	        	     ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="UserInfoListWnd" Id="106">
+		<Size X="17" Y="154" Width="289" Height="21" />
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Imagery>			
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="289" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="289" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			
+			<Image Type="BlackMark" Imageset="BaseImage001" Image="icon0_xman_orange" />
+			<Image Type="MyBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend1_black" />
+			<Image Type="MyBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend1_gray" />
+			<Image Type="OtherBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend2_black" />
+			<Image Type="OtherBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend2_gray" />
+			<Image Type="CoupleBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend3_black" />
+			<Image Type="CoupleBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend3_gray" />
+		</Imagery>
+
+		<Window ClassName="CloverButton" Id="1">
+			<Style>IWS_BACKMOST</Style>
+			<ExStyle>IWS_EX_OVER_SCREEN</ExStyle>
+			<Size X="222" Y="0" Width="33" Height="21" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage022" Image="icon0_clover_gold_get">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage022" Image="icon0_clover_gold_get">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage022" Image="icon0_clover_gold_get">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	        	     ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+
+		<Window ClassName="CloverButton" Id="2">
+			<Style>IWS_BACKMOST</Style>
+			<ExStyle>IWS_EX_OVER_SCREEN</ExStyle>
+			<Size X="255" Y="0" Width="33" Height="21" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage022" Image="icon0_clover_green_give">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage022" Image="icon0_clover_green_give">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage022" Image="icon0_clover_green_give">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="InActiveNormal"  Imageset="BaseImage022" Image="icon0_clover_green_give_g">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="InActiveOver"    Imageset="BaseImage022" Image="icon0_clover_green_give_g">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="InActivePush"    Imageset="BaseImage022" Image="icon0_clover_green_give_g">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	        	     ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="UserInfoListWnd" Id="107">
+		<Size X="17" Y="175" Width="289" Height="21" />
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Imagery>			
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="289" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="289" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			
+			<Image Type="BlackMark" Imageset="BaseImage001" Image="icon0_xman_orange" />
+			<Image Type="MyBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend1_black" />
+			<Image Type="MyBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend1_gray" />
+			<Image Type="OtherBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend2_black" />
+			<Image Type="OtherBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend2_gray" />
+			<Image Type="CoupleBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend3_black" />
+			<Image Type="CoupleBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend3_gray" />
+		</Imagery>
+
+		<Window ClassName="CloverButton" Id="1">
+			<Style>IWS_BACKMOST</Style>
+			<ExStyle>IWS_EX_OVER_SCREEN</ExStyle>
+			<Size X="222" Y="0" Width="33" Height="21" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage022" Image="icon0_clover_gold_get">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage022" Image="icon0_clover_gold_get">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage022" Image="icon0_clover_gold_get">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	        	     ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+
+		<Window ClassName="CloverButton" Id="2">
+			<Style>IWS_BACKMOST</Style>
+			<ExStyle>IWS_EX_OVER_SCREEN</ExStyle>
+			<Size X="255" Y="0" Width="33" Height="21" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage022" Image="icon0_clover_green_give">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage022" Image="icon0_clover_green_give">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage022" Image="icon0_clover_green_give">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="InActiveNormal"  Imageset="BaseImage022" Image="icon0_clover_green_give_g">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="InActiveOver"    Imageset="BaseImage022" Image="icon0_clover_green_give_g">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="InActivePush"    Imageset="BaseImage022" Image="icon0_clover_green_give_g">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	        	     ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="UserInfoListWnd" Id="108">
+		<Size X="17" Y="196" Width="289" Height="21" />
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Imagery>			
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="289" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="289" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			
+			<Image Type="BlackMark" Imageset="BaseImage001" Image="icon0_xman_orange" />
+			<Image Type="MyBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend1_black" />
+			<Image Type="MyBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend1_gray" />
+			<Image Type="OtherBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend2_black" />
+			<Image Type="OtherBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend2_gray" />
+			<Image Type="CoupleBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend3_black" />
+			<Image Type="CoupleBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend3_gray" />
+		</Imagery>
+
+		<Window ClassName="CloverButton" Id="1">
+			<Style>IWS_BACKMOST</Style>
+			<ExStyle>IWS_EX_OVER_SCREEN</ExStyle>
+			<Size X="222" Y="0" Width="33" Height="21" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage022" Image="icon0_clover_gold_get">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage022" Image="icon0_clover_gold_get">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage022" Image="icon0_clover_gold_get">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	        	     ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+
+		<Window ClassName="CloverButton" Id="2">
+			<Style>IWS_BACKMOST</Style>
+			<ExStyle>IWS_EX_OVER_SCREEN</ExStyle>
+			<Size X="255" Y="0" Width="33" Height="21" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage022" Image="icon0_clover_green_give">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage022" Image="icon0_clover_green_give">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage022" Image="icon0_clover_green_give">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="InActiveNormal"  Imageset="BaseImage022" Image="icon0_clover_green_give_g">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="InActiveOver"    Imageset="BaseImage022" Image="icon0_clover_green_give_g">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+				<Image Type="InActivePush"    Imageset="BaseImage022" Image="icon0_clover_green_give_g">
+					<Area X="0" Y="0" Width="33" Height="21"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	        	     ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="UserInfoListOptionWnd" Id="1000">
+		<Size X="0" Y="0" Width="100" Height="35" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_EXIT_ESC|IWS_TOPMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="tooltip2">
+				<Area X="0" Y="0" Width="100" Height="35" />
+			</DefaultFrameImagery>
+
+			<Image Type="DarkLine" Imageset="BaseImage001" Image="strip_gray_dark">
+				<Area X="0" Y="0" RenderType="Multiply" />
+			</Image>
+			<Image Type="LightLine" Imageset="BaseImage001" Image="strip_gray_light">
+				<Area X="0" Y="0" RenderType="Multiply" />
+			</Image>
+			<Image Type="OverLine" Imageset="BaseImage001" Image="strip_gray_on" />
+		</Imagery>
+		<ExtraInfo AddWidth="14" AddHeight="12" ListX="7" ListY="7" HeightGap="21"/>
+	</Window>
+</Window>
+

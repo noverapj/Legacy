@@ -1,0 +1,1255 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="BattleQuickStartOption" Id="3022">
+	<Size X="0" Y="-20" XAlign="Center" YAlign="Center" Width="670" Height="521" />
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_MODAL|IWS_AFTER_RENDER|IWS_EXIT_ESC</Style>
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Title>
+		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Text>빠른참가＆방정렬 설정</Text>
+	</Title>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+			<Area X="0" Y="0" Width="670" Height="521"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title">
+			<Area X="5" Y="6" Width="660" Height="36"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="MultiplyFrm" Templete="win1_multiply_bottom">
+			<Area X="0" Y="456" Width="670" Height="65"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="GreenState" Templete="state_green">
+			<Area X="24" Y="61" Width="40" Height="16"/>
+		</DefaultFrameImagery>
+
+		<Image Type="ModeIconBack" Imageset="BaseImage002" Image="iconeffect_1"/>
+		<Image Type="CheckOn" Imageset="BaseImage001" Image="check_radio_on"/>
+		<Image Type="CheckOff" Imageset="BaseImage001" Image="check_radio_off"/>
+		<Image Type="Dot" Imageset="BaseImage001" Image="strip_gray_dark" >
+			<Area X="0" Y="0" Width="2" Height="2" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+	</Imagery>
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="636" Y="11" Width="23" Height="23"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<Image Type="Disable" Imageset="BaseImage001" Image="icon0_x_grayframe" >
+				<Area X="0" Y="0" />
+			</Image>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="icon0_x" >
+				<Area X="5" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="2">
+		<Size X="411" Y="473" Width="152" Height="31" />
+		<Title>
+			<Format X="76" Y="5" Size="13" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FF323232" Back="FF215AA2"/>
+			<Text>빠른 참가(SPACE)</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_blue_nor">
+				<Area X="0" Y="0" Width="152" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_blue_nor">
+				<Area X="0" Y="0" Width="152" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="152" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_blue_down">
+				<Area X="0" Y="0" Width="152" Height="31"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="3">
+		<Size X="565" Y="473" Width="88" Height="31" />
+		<Title>
+			<Format X="44" Y="7" Size="13" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF215AA2"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF215AA2"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FF323232" Back="FF215AA2"/>
+			<Text>설정 완료</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="88" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="88" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="88" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_gray_down">
+				<Area X="0" Y="0" Width="88" Height="31"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioCheckButton" Id="4">
+		<Size X="97" Y="489" Width="16" Height="16" />
+		<Title>
+			<Format X="20" Y="1" Size="12" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>양팀 같은 인원</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Check" Imageset="BaseImage001" Image="check_box_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo UnCheckText="FF6E6E6E" UnCheckBack="FF000000"
+			   OverSound = "interface/public_mouseover_00.wav"
+	                   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="BattleQuickStartPlayerOption" Id="5">
+		<Size X="96" Y="473" Width="269" Height="17" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="scrollbar2_back">
+				<Area X="0" Y="5" Width="269" Height="5" AutoResize="False"/>
+			</DefaultFrameImagery>
+
+			<Image Type="OrangeStrip" Imageset="BaseImage001" Image="strip_orange"/>
+			<Image Type="TickLine" Imageset="BaseImage001" Image="scrollbar2_back_line"/>
+		</Imagery>
+
+		<Window ClassName="ioSlide" Id="1">
+			<Size X="0" Y="0" Width="59" Height="17" />
+			<DragRect Left="0" Top="0" Right="59" Bottom="17" />
+			<ExStyle>IWS_EX_NOTIFY_MOVED</ExStyle>
+			<Style>IWS_CANMOVE</Style>
+			<Title>
+				<Format X="27" Y="1" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF6E6E6E" Back="FF215AA2"/>
+				<Color Type="Over" Text="FF6E6E6E" Back="FF215AA2"/>
+				<Color Type="Push" Text="FF6E6E6E" Back="FF215AA2"/>
+				<Color Type="Disable" Text="FF323232" Back="FF215AA2"/>
+				<Text>최소 1명</Text>
+			</Title>
+			<Imagery>
+				<Image Imageset="BaseImage004" Image="scrollbar2_drag_arrow" >
+					<Area X="0" Y="0"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+		             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+
+		<Window ClassName="ioSlide" Id="2">
+			<Size X="210" Y="0" Width="59" Height="17" />
+			<DragRect Left="0" Top="0" Right="59" Bottom="17" />
+			<ExStyle>IWS_EX_NOTIFY_MOVED</ExStyle>
+			<Style>IWS_CANMOVE</Style>
+			<Title>
+				<Format X="31" Y="1" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF6E6E6E" Back="FF215AA2"/>
+				<Color Type="Over" Text="FF6E6E6E" Back="FF215AA2"/>
+				<Color Type="Push" Text="FF6E6E6E" Back="FF215AA2"/>
+				<Color Type="Disable" Text="FF323232" Back="FF215AA2"/>
+				<Text>최소 16명</Text>
+			</Title>
+			<Imagery>
+				<Image Imageset="BaseImage004" Image="scrollbar2_drag_arrow" >
+					<Area X="0" Y="0" Reverse="Horz"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+		             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+
+
+	<Window ClassName="ioButton" Id="6">
+		<Size X="511" Y="11" Width="123" Height="23" />
+		<Title>
+			<Format X="61" Y="4" Size="11" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Disable" Text="FF323232" Back="FF20394F"/>
+			<Text>모드별 공략보기</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="123" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="123" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="123" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="123" Height="23"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+
+	<Window ClassName="NormalModeBtn" Id="101">
+		<Size X="17" Y="54" Width="100" Height="91" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage020" Image="mode_000_anything" />
+			<Image Type="Over" Imageset="BaseImage020" Image="mode_000_anything" />
+			<Image Type="OverAdd" Imageset="BaseImage020" Image="mode_000_anything" />
+			<Image Type="Push" Imageset="BaseImage020" Image="mode_000_anything" />
+			<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_big" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+				   ModeStyle = "0" XCheck = "13" YCheck = "9"/>
+	</Window>
+
+	<Window ClassName="NormalModeBtn" Id="102">
+		<Size X="124" Y="54" Width="100" Height="91" />
+		<Style>IWS_PROCESS</Style>
+		<Title>
+			<Format X="50" Y="76" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Text>랜덤게임</Text>
+		</Title>
+
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage020" Image="mode_000_random" />
+			<Image Type="Over" Imageset="BaseImage020" Image="mode_000_random" />
+			<Image Type="OverAdd" Imageset="BaseImage020" Image="mode_000_random" />
+			<Image Type="Push" Imageset="BaseImage020" Image="mode_000_random" />
+			<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_big" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+				   ModeStyle = "1" XCheck = "13" YCheck = "9"/>
+	</Window>
+
+	<Window ClassName="NormalModeBtn" Id="103">
+		<Size X="231" Y="54" Width="100" Height="91" />
+		<Style>IWS_PROCESS</Style>
+		<Title>
+			<Format X="50" Y="76" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Text>포로탈출</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage020" Image="mode_prisoner" />
+			<Image Type="Over" Imageset="BaseImage020" Image="mode_prisoner" />
+			<Image Type="OverAdd" Imageset="BaseImage020" Image="mode_prisoner" />
+			<Image Type="Push" Imageset="BaseImage020" Image="mode_prisoner" />
+			<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_big" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+				   ModeStyle = "2" XCheck = "13" YCheck = "9"/>
+	</Window>
+
+	<Window ClassName="NormalModeBtn" Id="104">
+		<Size X="338" Y="54" Width="100" Height="91" />
+		<Style>IWS_PROCESS</Style>
+		<Title>
+			<Format X="50" Y="76" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Text>팀데스매치</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage020" Image="mode_teamdeath" />
+			<Image Type="Over" Imageset="BaseImage020" Image="mode_teamdeath" />
+			<Image Type="OverAdd" Imageset="BaseImage020" Image="mode_teamdeath" />
+			<Image Type="Push" Imageset="BaseImage020" Image="mode_teamdeath" />
+			<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_big" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+				   ModeStyle = "7" XCheck = "13" YCheck = "9"/>
+	</Window>
+
+	<Window ClassName="PVEModeBtn" Id="105">
+		<Size X="445" Y="54" Width="100" Height="91" />
+		<Style>IWS_EXACTIVE</Style>
+		<Title>
+			<Format X="50" Y="76" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Text>AI팀데스매치</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage021" Image="mode_ai01_teamdeath" />
+			<Image Type="Over" Imageset="BaseImage021" Image="mode_ai01_teamdeath" />
+			<Image Type="OverAdd" Imageset="BaseImage021" Image="mode_ai01_teamdeath" />
+			<Image Type="Push" Imageset="BaseImage021" Image="mode_ai01_teamdeath" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+				   ModeStyle = "44"/>
+		<Window ClassName="NormalModeBtn" Id="1">
+			<Size X="3" Y="3" Width="46" Height="69" />
+			<Style>IWS_PROCESS</Style>
+			<Title>
+				<Format X="23" Y="28" Size="12" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Over" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Push" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Disable" Text="FF10538D" Back="FF000000"/>
+				<Text>쉬움</Text>
+			</Title>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="Over" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="OverAdd" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="Push" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_small" />
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+					   ModeStyle = "0" SubModeStyle = "1" XCheck = "1" YCheck = "16"/>
+		</Window>
+		<Window ClassName="NormalModeBtn" Id="2">
+			<Size X="51" Y="3" Width="46" Height="69" />
+			<Style>IWS_PROCESS</Style>
+			<Title>
+				<Format X="23" Y="28" Size="12" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Over" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Push" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Disable" Text="FF10538D" Back="FF000000"/>
+				<Text>보통</Text>
+			</Title>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="Over" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="OverAdd" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="Push" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_small" />
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+					   ModeStyle = "0" SubModeStyle = "2" XCheck = "1" YCheck = "16"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="NormalModeBtn" Id="106">
+		<Size X="552" Y="54" Width="100" Height="91" />
+		<Style>IWS_PROCESS</Style>
+		<Title>
+			<Format X="50" Y="76" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Text>드워프모드</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage021" Image="mode_dwarf" />
+			<Image Type="Over" Imageset="BaseImage021" Image="mode_dwarf" />
+			<Image Type="OverAdd" Imageset="BaseImage021" Image="mode_dwarf" />
+			<Image Type="Push" Imageset="BaseImage021" Image="mode_dwarf" />
+			<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_big" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+				   ModeStyle = "23" XCheck = "13" YCheck = "9"/>
+	</Window>
+
+	<Window ClassName="NormalModeBtn" Id="107">
+		<Size X="17" Y="113" Width="100" Height="91" />
+		<Style>IWS_PROCESS</Style>
+		<Title>
+			<Format X="50" Y="76" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Text>데스매치</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage020" Image="mode_deathmatch" />
+			<Image Type="Over" Imageset="BaseImage020" Image="mode_deathmatch" />
+			<Image Type="OverAdd" Imageset="BaseImage020" Image="mode_deathmatch" />
+			<Image Type="Push" Imageset="BaseImage020" Image="mode_deathmatch" />
+			<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_big" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+				   ModeStyle = "6" XCheck = "13" YCheck = "9"/>
+	</Window>
+
+	<Window ClassName="NormalModeBtn" Id="108">
+		<Size X="124" Y="113" Width="100" Height="91" />
+		<Style>IWS_PROCESS</Style>
+		<Title>
+			<Format X="50" Y="76" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Text>챔피언모드</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage020" Image="mode_champion" />
+			<Image Type="Over" Imageset="BaseImage020" Image="mode_champion" />
+			<Image Type="OverAdd" Imageset="BaseImage020" Image="mode_champion" />
+			<Image Type="Push" Imageset="BaseImage020" Image="mode_champion" />
+			<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_big" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+				   ModeStyle = "25" XCheck = "13" YCheck = "9"/>
+	</Window>
+
+	<Window ClassName="NormalModeBtn" Id="109">
+		<Size X="231" Y="113" Width="100" Height="91" />
+		<Style>IWS_PROCESS</Style>
+		<Title>
+			<Format X="50" Y="76" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Text>파워스톤</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage020" Image="mode_stone" />
+			<Image Type="Over" Imageset="BaseImage020" Image="mode_stone" />
+			<Image Type="OverAdd" Imageset="BaseImage020" Image="mode_stone" />
+			<Image Type="Push" Imageset="BaseImage020" Image="mode_stone" />
+			<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_big" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+				   ModeStyle = "4" XCheck = "13" YCheck = "9"/>
+	</Window>
+
+	<Window ClassName="NormalModeBtn" Id="110">
+		<Size X="338" Y="113" Width="100" Height="91" />
+		<Style>IWS_PROCESS</Style>
+		<Title>
+			<Format X="50" Y="76" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Text>보스레이드</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage020" Image="mode_boss" />
+			<Image Type="Over" Imageset="BaseImage020" Image="mode_boss" />
+			<Image Type="OverAdd" Imageset="BaseImage020" Image="mode_boss" />
+			<Image Type="Push" Imageset="BaseImage020" Image="mode_boss" />
+			<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_big" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+				   ModeStyle = "14" XCheck = "13" YCheck = "9"/>
+	</Window>
+
+	<Window ClassName="NormalModeBtn" Id="111">
+		<Size X="445" Y="113" Width="100" Height="91" />
+		<Style>IWS_PROCESS</Style>
+		<Title>
+			<Format X="50" Y="76" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Text>강시서바이벌</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage020" Image="mode_gangsi" />
+			<Image Type="Over" Imageset="BaseImage020" Image="mode_gangsi" />
+			<Image Type="OverAdd" Imageset="BaseImage020" Image="mode_gangsi" />
+			<Image Type="Push" Imageset="BaseImage020" Image="mode_gangsi" />
+			<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_big" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+				   ModeStyle = "21" XCheck = "13" YCheck = "9"/>
+	</Window>
+
+	<Window ClassName="PVEModeBtn" Id="112">
+		<Size X="552" Y="113" Width="100" Height="91" />
+		<Style>IWS_EXACTIVE</Style>
+		<Title>
+			<Format X="50" Y="76" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Text>깊은 숲</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage020" Image="mode_pve01" />
+			<Image Type="Over" Imageset="BaseImage020" Image="mode_pve01_over" />
+			<Image Type="OverAdd" Imageset="BaseImage020" Image="mode_pve01_over" />
+			<Image Type="Push" Imageset="BaseImage020" Image="mode_pve01" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+				   ModeStyle = "26"/>
+
+		<!--이전에 난이도 4개였을 경우 (스노우타운, 불의신전, 비밀공장 공통)
+	   	<Window ClassName="NormalModeBtn" Id="1">
+			<Size X="3" Y="3" Width="56" Height="33" />
+			<Style>IWS_PROCESS</Style>
+			<Title>
+				<Format X="28" Y="9" Size="12" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Over" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Push" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Disable" Text="FF10538D" Back="FF000000"/>
+				<Text>쉬움</Text>
+			</Title>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage009" Image="quickstart_pve_gradebg" />
+				<Image Type="Over" Imageset="BaseImage009" Image="quickstart_pve_gradebg" />
+				<Image Type="OverAdd" Imageset="BaseImage009" Image="quickstart_pve_gradebg" />
+				<Image Type="Push" Imageset="BaseImage009" Image="quickstart_pve_gradebg" />
+				<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_small" />
+			</Imagery>		
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+					   ModeStyle = "0" SubModeStyle = "1" XCheck = "7" YCheck = "0"/>
+		</Window>
+		<Window ClassName="NormalModeBtn" Id="2">
+			<Size X="61" Y="3" Width="56" Height="33" />
+			<Style>IWS_PROCESS</Style>
+			<Title>
+				<Format X="28" Y="9" Size="12" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Over" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Push" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Disable" Text="FF10538D" Back="FF000000"/>
+				<Text>보통</Text>
+			</Title>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage009" Image="quickstart_pve_gradebg" />
+				<Image Type="Over" Imageset="BaseImage009" Image="quickstart_pve_gradebg" />
+				<Image Type="OverAdd" Imageset="BaseImage009" Image="quickstart_pve_gradebg" />
+				<Image Type="Push" Imageset="BaseImage009" Image="quickstart_pve_gradebg" />
+				<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_small" />
+			</Imagery>		
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+					   ModeStyle = "0" SubModeStyle = "2" XCheck = "7" YCheck = "0"/>
+		</Window>
+		<Window ClassName="NormalModeBtn" Id="3">
+			<Size X="3" Y="38" Width="56" Height="33" />
+			<Style>IWS_PROCESS</Style>
+			<Title>
+				<Format X="28" Y="9" Size="12" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Over" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Push" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Disable" Text="FF10538D" Back="FF000000"/>
+				<Text>어려움</Text>
+			</Title>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage009" Image="quickstart_pve_gradebg" />
+				<Image Type="Over" Imageset="BaseImage009" Image="quickstart_pve_gradebg" />
+				<Image Type="OverAdd" Imageset="BaseImage009" Image="quickstart_pve_gradebg" />
+				<Image Type="Push" Imageset="BaseImage009" Image="quickstart_pve_gradebg" />
+				<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_small" />
+			</Imagery>		
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+					   ModeStyle = "0" SubModeStyle = "3" XCheck = "7" YCheck = "0"/>
+		</Window>     
+		<Window ClassName="NormalModeBtn" Id="4">
+			<Size X="61" Y="38" Width="56" Height="33" />
+			<Style>IWS_PROCESS</Style>
+			<Title>
+				<Format X="28" Y="9" Size="12" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Over" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Push" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Disable" Text="FF10538D" Back="FF000000"/>
+				<Text>마스터</Text>
+			</Title>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage009" Image="quickstart_pve_gradebg" />
+				<Image Type="Over" Imageset="BaseImage009" Image="quickstart_pve_gradebg" />
+				<Image Type="OverAdd" Imageset="BaseImage009" Image="quickstart_pve_gradebg" />
+				<Image Type="Push" Imageset="BaseImage009" Image="quickstart_pve_gradebg" />
+				<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_small" />
+				</Image>
+			</Imagery>		
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+					   ModeStyle = "0" SubModeStyle = "4" XCheck = "7" YCheck = "0"/>
+		</Window>  
+		-->
+		<!--14.4.9 패치 후 2개 난이도-->
+		<Window ClassName="NormalModeBtn" Id="1">
+			<Size X="3" Y="3" Width="46" Height="69" />
+			<Style>IWS_PROCESS</Style>
+			<Title>
+				<Format X="23" Y="28" Size="12" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Over" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Push" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Disable" Text="FF10538D" Back="FF000000"/>
+				<Text>쉬움</Text>
+			</Title>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="Over" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="OverAdd" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="Push" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_small" />
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+					   ModeStyle = "0" SubModeStyle = "1" XCheck = "1" YCheck = "16"/>
+		</Window>
+		<Window ClassName="NormalModeBtn" Id="4">
+			<Size X="51" Y="3" Width="46" Height="69" />
+			<Style>IWS_PROCESS</Style>
+			<Title>
+				<Format X="23" Y="28" Size="12" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Over" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Push" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Disable" Text="FF10538D" Back="FF000000"/>
+				<Text>마스터</Text>
+			</Title>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="Over" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="OverAdd" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="Push" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_small" />
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+					   ModeStyle = "0" SubModeStyle = "4" XCheck = "1" YCheck = "16"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="PVEModeBtn" Id="113">
+		<Size X="17" Y="172" Width="100" Height="91" />
+		<Style>IWS_EXACTIVE</Style>
+		<Title>
+			<Format X="50" Y="76" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Text>스노우타운</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage020" Image="mode_pve02" />
+			<Image Type="Over" Imageset="BaseImage020" Image="mode_pve02_over" />
+			<Image Type="OverAdd" Imageset="BaseImage020" Image="mode_pve02_over" />
+			<Image Type="Push" Imageset="BaseImage020" Image="mode_pve02" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+				   ModeStyle = "30"/>
+		<Window ClassName="NormalModeBtn" Id="1">
+			<Size X="3" Y="3" Width="46" Height="69" />
+			<Style>IWS_PROCESS</Style>
+			<Title>
+				<Format X="23" Y="28" Size="12" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Over" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Push" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Disable" Text="FF10538D" Back="FF000000"/>
+				<Text>쉬움</Text>
+			</Title>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="Over" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="OverAdd" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="Push" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_small" />
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+					   ModeStyle = "0" SubModeStyle = "1" XCheck = "1" YCheck = "16"/>
+		</Window>
+		<Window ClassName="NormalModeBtn" Id="4">
+			<Size X="51" Y="3" Width="46" Height="69" />
+			<Style>IWS_PROCESS</Style>
+			<Title>
+				<Format X="23" Y="28" Size="12" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Over" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Push" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Disable" Text="FF10538D" Back="FF000000"/>
+				<Text>마스터</Text>
+			</Title>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="Over" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="OverAdd" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="Push" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_small" />
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+					   ModeStyle = "0" SubModeStyle = "4" XCheck = "1" YCheck = "16"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="PVEModeBtn" Id="114">
+		<Size X="124" Y="172" Width="100" Height="91" />
+		<Style>IWS_EXACTIVE</Style>
+		<Title>
+			<Format X="50" Y="76" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Text>불의 신전</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage021" Image="mode_pve03" />
+			<Image Type="Over" Imageset="BaseImage021" Image="mode_pve03_over" />
+			<Image Type="OverAdd" Imageset="BaseImage021" Image="mode_pve03_over" />
+			<Image Type="Push" Imageset="BaseImage021" Image="mode_pve03" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+				   ModeStyle = "34"/>
+		<Window ClassName="NormalModeBtn" Id="1">
+			<Size X="3" Y="3" Width="46" Height="69" />
+			<Style>IWS_PROCESS</Style>
+			<Title>
+				<Format X="23" Y="28" Size="12" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Over" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Push" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Disable" Text="FF10538D" Back="FF000000"/>
+				<Text>쉬움</Text>
+			</Title>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="Over" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="OverAdd" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="Push" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_small" />
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+					   ModeStyle = "0" SubModeStyle = "1" XCheck = "1" YCheck = "16"/>
+		</Window>
+		<Window ClassName="NormalModeBtn" Id="4">
+			<Size X="51" Y="3" Width="46" Height="69" />
+			<Style>IWS_PROCESS</Style>
+			<Title>
+				<Format X="23" Y="28" Size="12" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Over" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Push" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Disable" Text="FF10538D" Back="FF000000"/>
+				<Text>마스터</Text>
+			</Title>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="Over" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="OverAdd" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="Push" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_small" />
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+					   ModeStyle = "0" SubModeStyle = "4" XCheck = "1" YCheck = "16"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="PVEModeBtn" Id="115">
+		<Size X="231" Y="172" Width="100" Height="91" />
+		<Style>IWS_EXACTIVE</Style>
+		<Title>
+			<Format X="50" Y="76" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Text>비밀공장</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage021" Image="mode_pve04" />
+			<Image Type="Over" Imageset="BaseImage021" Image="mode_pve04_over" />
+			<Image Type="OverAdd" Imageset="BaseImage021" Image="mode_pve04_over" />
+			<Image Type="Push" Imageset="BaseImage021" Image="mode_pve04" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+				   ModeStyle = "40"/>
+		<Window ClassName="NormalModeBtn" Id="1">
+			<Size X="3" Y="3" Width="46" Height="69" />
+			<Style>IWS_PROCESS</Style>
+			<Title>
+				<Format X="23" Y="28" Size="12" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Over" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Push" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Disable" Text="FF10538D" Back="FF000000"/>
+				<Text>쉬움</Text>
+			</Title>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="Over" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="OverAdd" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="Push" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_small" />
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+					   ModeStyle = "0" SubModeStyle = "1" XCheck = "1" YCheck = "16"/>
+		</Window>
+		<Window ClassName="NormalModeBtn" Id="4">
+			<Size X="51" Y="3" Width="56" Height="68" />
+			<Style>IWS_PROCESS</Style>
+			<Title>
+				<Format X="23" Y="28" Size="12" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Over" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Push" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Disable" Text="FF10538D" Back="FF000000"/>
+				<Text>마스터</Text>
+			</Title>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="Over" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="OverAdd" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="Push" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_small" />
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+					   ModeStyle = "0" SubModeStyle = "4" XCheck = "1" YCheck = "16"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="NormalModeBtn" Id="116">
+		<Size X="338" Y="172" Width="100" Height="91" />
+		<Style>IWS_PROCESS</Style>
+		<Title>
+			<Format X="50" Y="76" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Text>레이드</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage021" Image="mode_pve05" />
+			<Image Type="Over" Imageset="BaseImage021" Image="mode_pve05" />
+			<Image Type="OverAdd" Imageset="BaseImage021" Image="mode_pve05" />
+			<Image Type="Push" Imageset="BaseImage021" Image="mode_pve05" />
+			<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_big" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+				   ModeStyle = "48" XCheck = "13" YCheck = "9"/>
+	</Window>
+	
+	<Window ClassName="NormalModeBtn" Id="117">
+		<Size X="445" Y="172" Width="100" Height="91" />
+		<Style>IWS_PROCESS</Style>
+		<Title>
+			<Format X="50" Y="76" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Text>팬티몬</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage021" Image="mode_pantymon" />
+			<Image Type="Over" Imageset="BaseImage021" Image="mode_pantymon" />
+			<Image Type="OverAdd" Imageset="BaseImage021" Image="mode_pantymon" />
+			<Image Type="Push" Imageset="BaseImage021" Image="mode_pantymon" />
+			<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_big" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+				   ModeStyle = "46" XCheck = "13" YCheck = "9"/>
+	</Window>
+
+	<Window ClassName="NormalModeBtn" Id="118">
+		<Size X="552" Y="172" Width="100" Height="91" />
+		<Style>IWS_PROCESS</Style>
+		<Title>
+			<Format X="50" Y="76" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Text>클래식</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage021" Image="mode_classic" />
+			<Image Type="Over" Imageset="BaseImage021" Image="mode_classic" />
+			<Image Type="OverAdd" Imageset="BaseImage021" Image="mode_classic" />
+			<Image Type="Push" Imageset="BaseImage021" Image="mode_classic" />
+			<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_big" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+				   ModeStyle = "47" XCheck = "13" YCheck = "9"/>
+	</Window>
+
+	<Window ClassName="PVEModeBtn" Id="119">
+		<Size X="17" Y="231" Width="100" Height="91" />
+		<Style>IWS_EXACTIVE</Style>
+		<Title>
+			<Format X="50" Y="76" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Text>해골영웅</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage020" Image="mode_pve00" />
+			<Image Type="Over" Imageset="BaseImage020" Image="mode_pve00_over" />
+			<Image Type="OverAdd" Imageset="BaseImage020" Image="mode_pve00_over" />
+			<Image Type="Push" Imageset="BaseImage020" Image="mode_pve00" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+				   ModeStyle = "15"/>
+
+		<Window ClassName="NormalModeBtn" Id="1">
+			<Size X="3" Y="3" Width="46" Height="33" />
+			<Style>IWS_PROCESS</Style>
+			<Title>
+				<Format X="23" Y="10" Size="12" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Over" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Push" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Disable" Text="FF10538D" Back="FF000000"/>
+				<Text>1층</Text>
+			</Title>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage009" Image="quickstart_pve_gradebg" />
+				<Image Type="Over" Imageset="BaseImage009" Image="quickstart_pve_gradebg" />
+				<Image Type="OverAdd" Imageset="BaseImage009" Image="quickstart_pve_gradebg" />
+				<Image Type="Push" Imageset="BaseImage009" Image="quickstart_pve_gradebg" />
+				<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_small" />
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+					   ModeStyle = "0" SubModeStyle = "1" XCheck = "0" YCheck = "0"/>
+		</Window>
+		<Window ClassName="NormalModeBtn" Id="2">
+			<Size X="51" Y="3" Width="46" Height="33" />
+			<Style>IWS_PROCESS</Style>
+			<Title>
+				<Format X="23" Y="10" Size="12" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Over" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Push" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Disable" Text="FF10538D" Back="FF000000"/>
+				<Text>21층</Text>
+			</Title>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage009" Image="quickstart_pve_gradebg" />
+				<Image Type="Over" Imageset="BaseImage009" Image="quickstart_pve_gradebg" />
+				<Image Type="OverAdd" Imageset="BaseImage009" Image="quickstart_pve_gradebg" />
+				<Image Type="Push" Imageset="BaseImage009" Image="quickstart_pve_gradebg" />
+				<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_small" />
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+					   ModeStyle = "0" SubModeStyle = "2" XCheck = "0" YCheck = "0"/>
+		</Window>
+		<Window ClassName="NormalModeBtn" Id="3">
+			<Size X="3" Y="38" Width="46" Height="33" />
+			<Style>IWS_PROCESS</Style>
+			<Title>
+				<Format X="23" Y="10" Size="12" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Over" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Push" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Disable" Text="FF10538D" Back="FF000000"/>
+				<Text>41층</Text>
+			</Title>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage009" Image="quickstart_pve_gradebg" />
+				<Image Type="Over" Imageset="BaseImage009" Image="quickstart_pve_gradebg" />
+				<Image Type="OverAdd" Imageset="BaseImage009" Image="quickstart_pve_gradebg" />
+				<Image Type="Push" Imageset="BaseImage009" Image="quickstart_pve_gradebg" />
+				<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_small" />
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+					   ModeStyle = "0" SubModeStyle = "3" XCheck = "0" YCheck = "0"/>
+		</Window>
+
+
+	</Window>
+	
+	<Window ClassName="NormalModeBtn" Id="120">
+		<Size X="124" Y="231" Width="100" Height="91" />
+		<Style>IWS_PROCESS</Style>
+		<Title>
+			<Format X="50" Y="76" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Text>더블크라운</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage020" Image="mode_king" />
+			<Image Type="Over" Imageset="BaseImage020" Image="mode_king" />
+			<Image Type="OverAdd" Imageset="BaseImage020" Image="mode_king" />
+			<Image Type="Push" Imageset="BaseImage020" Image="mode_king" />
+			<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_big" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+				   ModeStyle = "38" XCheck = "13" YCheck = "9"/>
+	</Window>
+
+	<Window ClassName="NormalModeBtn" Id="121">
+		<Size X="231" Y="231" Width="100" Height="91" />
+		<Style>IWS_PROCESS</Style>
+		<Title>
+			<Format X="50" Y="76" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Text>축구경기</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage020" Image="mode_soccer" />
+			<Image Type="Over" Imageset="BaseImage020" Image="mode_soccer" />
+			<Image Type="OverAdd" Imageset="BaseImage020" Image="mode_soccer" />
+			<Image Type="Push" Imageset="BaseImage020" Image="mode_soccer" />
+			<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_big" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+				   ModeStyle = "19" XCheck = "13" YCheck = "9"/>
+	</Window>
+
+	<Window ClassName="NormalModeBtn" Id="122">
+		<Size X="338" Y="231" Width="100" Height="91" />
+		<Style>IWS_PROCESS</Style>
+		<Title>
+			<Format X="50" Y="76" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Text>깃발모드</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage020" Image="mode_flag" />
+			<Image Type="Over" Imageset="BaseImage020" Image="mode_flag" />
+			<Image Type="OverAdd" Imageset="BaseImage020" Image="mode_flag" />
+			<Image Type="Push" Imageset="BaseImage020" Image="mode_flag" />
+			<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_big" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+				   ModeStyle = "50" XCheck = "13" YCheck = "9"/>
+	</Window>
+
+	<Window ClassName="NormalModeBtn" Id="123">
+		<Size X="445" Y="231" Width="100" Height="91" />
+		<Style>IWS_PROCESS</Style>
+		<Title>
+			<Format X="50" Y="76" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Text>아레나모드</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage020" Image="mode_arena" />
+			<Image Type="Over" Imageset="BaseImage020" Image="mode_arena" />
+			<Image Type="OverAdd" Imageset="BaseImage020" Image="mode_arena" />
+			<Image Type="Push" Imageset="BaseImage020" Image="mode_arena" />
+			<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_big" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+				   ModeStyle = "51" XCheck = "13" YCheck = "9"/>
+	</Window>
+
+	<!-- <Window ClassName="NormalModeBtn" Id="124"> -->
+		<!-- <Size X="552" Y="231" Width="100" Height="91" /> -->
+		<!-- <Style>IWS_PROCESS</Style> -->
+		<!-- <Title> -->
+			<!-- <Format X="50" Y="76" Size="12" Style="Normal" HorzAlign="Center"/> -->
+			<!-- <Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/> -->
+			<!-- <Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/> -->
+			<!-- <Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/> -->
+			<!-- <Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/> -->
+			<!-- <Text>배틀모드</Text> -->
+		<!-- </Title> -->
+		<!-- <Imagery> -->
+			<!-- <Image Type="Normal" Imageset="BaseImage020" Image="mode_arena" /> -->
+			<!-- <Image Type="Over" Imageset="BaseImage020" Image="mode_arena" /> -->
+			<!-- <Image Type="OverAdd" Imageset="BaseImage020" Image="mode_arena" /> -->
+			<!-- <Image Type="Push" Imageset="BaseImage020" Image="mode_arena" /> -->
+			<!-- <Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_big" /> -->
+		<!-- </Imagery> -->
+		<!-- <ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav" -->
+				   <!-- ModeStyle = "52" XCheck = "13" YCheck = "9"/> -->
+	<!-- </Window> -->
+	
+	<Window ClassName="PVPModeBtn" Id="124">
+		<Size X="552" Y="231" Width="100" Height="91" /> -->
+		<Style>IWS_EXACTIVE</Style>
+		<Title>
+			<Format X="50" Y="76" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Text>배틀모드</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage020" Image="mode_battlemod" />
+			<Image Type="Over" Imageset="BaseImage020" Image="mode_battlemod" />
+			<Image Type="OverAdd" Imageset="BaseImage020" Image="mode_battlemod" />
+			<Image Type="Push" Imageset="BaseImage020" Image="mode_battlemod" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+				   ModeStyle = "52"/>
+		<Window ClassName="NormalModeBtn" Id="1">
+			<Size X="3" Y="3" Width="46" Height="69" />
+			<Style>IWS_PROCESS</Style>
+			<Title>
+				<Format X="23" Y="28" Size="12" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Over" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Push" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Disable" Text="FF10538D" Back="FF000000"/>
+				<Text>3vs3</Text>
+			</Title>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="Over" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="OverAdd" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="Push" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_small" />
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+					   ModeStyle = "0" SubModeStyle = "1" XCheck = "1" YCheck = "16"/>
+		</Window>
+		<Window ClassName="NormalModeBtn" Id="2">
+			<Size X="51" Y="3" Width="46" Height="69" />
+			<Style>IWS_PROCESS</Style>
+			<Title>
+				<Format X="23" Y="28" Size="12" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Over" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Push" Text="FF10538D" Back="FF000000"/>
+				<Color Type="Disable" Text="FF10538D" Back="FF000000"/>
+				<Text>2vs2</Text>
+			</Title>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="Over" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="OverAdd" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="Push" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
+				<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_small" />
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+					   ModeStyle = "0" SubModeStyle = "2" XCheck = "1" YCheck = "16"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="NormalModeBtn" Id="125">
+		<Size X="445" Y="172" Width="100" Height="91" />
+		<Style>IWS_PROCESS</Style>
+		<Title>
+			<Format X="50" Y="76" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Text>파밍모드</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage021" Image="mode_farming" />
+			<Image Type="Over" Imageset="BaseImage021" Image="mode_farming" />
+			<Image Type="OverAdd" Imageset="BaseImage021" Image="mode_farming" />
+			<Image Type="Push" Imageset="BaseImage021" Image="mode_farming" />
+			<Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_big" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"
+				   ModeStyle = "54" XCheck = "13" YCheck = "9"/>
+	</Window>
+	
+	<!-- <Window ClassName="NormalModeBtn" Id="125"> -->
+		<!-- <Size X="445" Y="231" Width="100" Height="91" /> -->
+		<!-- <Style>IWS_PROCESS</Style> -->
+		<!-- <Title> -->
+			<!-- <Format X="50" Y="76" Size="12" Style="Normal" HorzAlign="Center"/> -->
+			<!-- <Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/> -->
+			<!-- <Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/> -->
+			<!-- <Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/> -->
+			<!-- <Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/> -->
+			<!-- <Text>유저모드</Text> -->
+		<!-- </Title> -->
+		<!-- <Imagery> -->
+			<!-- <Image Type="Normal" Imageset="BaseImage020" Image="mode_user" /> -->
+			<!-- <Image Type="Over" Imageset="BaseImage020" Image="mode_user" /> -->
+			<!-- <Image Type="OverAdd" Imageset="BaseImage020" Image="mode_user" /> -->
+			<!-- <Image Type="Push" Imageset="BaseImage020" Image="mode_user" /> -->
+			<!-- <Image Type="CheckOn" Imageset="BaseImage009" Image="quickstart_v_big" /> -->
+		<!-- </Imagery> -->
+		<!-- <ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav" -->
+				   <!-- ModeStyle = "18" XCheck = "13" YCheck = "9"/> -->
+	<!-- </Window> -->
+
+	<Window ClassName="NormalModeBtn" Id="126">
+		<Size X="445" Y="231" Width="100" Height="91" />
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage020" Image="mode_000_empty" />
+			<Image Type="Over" Imageset="BaseImage020" Image="mode_000_empty" />
+			<Image Type="OverAdd" Imageset="BaseImage020" Image="mode_000_empty" />
+			<Image Type="Push" Imageset="BaseImage020" Image="mode_000_empty" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="NormalModeBtn" Id="127">
+		<Size X="552" Y="231" Width="100" Height="91" />
+		<Style>IWS_NO_MOUSE_RESPONSE</Style>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage020" Image="mode_000_empty" />
+			<Image Type="Over" Imageset="BaseImage020" Image="mode_000_empty" />
+			<Image Type="OverAdd" Imageset="BaseImage020" Image="mode_000_empty" />
+			<Image Type="Push" Imageset="BaseImage020" Image="mode_000_empty" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="ModeHelpTooltip" Id="500">
+		<Size X="0" Y="0" Width="164" Height="70" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_TOPMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="tooltip3">
+				<Area X="0" Y="0" Width="164" Height="70" />
+			</DefaultFrameImagery>
+		</Imagery>
+	</Window>
+</Window>
+

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="TimeScoreWnd" Id="5049">
+	<Size X="15" Y="15" XAlign="Left" YAlign="Top" Width="168" Height="157"/>
+	<DragRect Left="0" Top="0" Right="168" Bottom="157" />
+	<Style>IWS_PROCESS|IWS_CANMOVE|IWS_BACKMOST</Style>
+	<Imagery>
+
+	<Image Type="TimeIcon" Imageset="BaseImage012" Image="Score_Time_Icon" />
+	<Image Type="TimeNumber" Imageset="BaseImage012" Image="Score_Time_Number" />
+	<Image Type="Back" Imageset="BaseImage013" Image="Score_Back" />
+	<Image Type="Mold" Imageset="BaseImage013" Image="Score_Add" />
+	<Image Type="WarningBack" Imageset="BaseImage013" Image="Score_Red" />
+
+	<Image Type="TeamNumberBlue" Imageset="BaseImage016" Image="score_bluenum" />
+	<Image Type="TeamNumberRed" Imageset="BaseImage016" Image="score_rednum" />
+	<Image Type="TitleTeamDeath" Imageset="BaseImage015" Image="score_text_teamdeath" />
+	<Image Type="TitleCatch" Imageset="BaseImage015" Image="score_text_prisoner" />
+	<Image Type="TitleStone" Imageset="BaseImage015" Image="score_text_stone" />
+	<Image Type="TitleKing" Imageset="BaseImage015" Image="score_text_crown" />
+	<Image Type="TitleSoccer" Imageset="BaseImage015" Image="score_text_soccer" />
+	<Image Type="TitleHero" Imageset="BaseImage015" Image="score_text_ladder" />
+	<Image Type="TitleDeath" Imageset="BaseImage015" Image="score_text_deathmatch" />
+	<Image Type="TitleBoss" Imageset="BaseImage015" Image="score_text_boss" />
+	<Image Type="TitleGangsi" Imageset="BaseImage015" Image="score_text_gangsi" />	
+	<Image Type="TitleShuffleBonus" Imageset="BaseImage025" Image="today_stage" />
+	<Image Type="TeamColon" Imageset="BaseImage016" Image="score_colon" />
+	<Image Type="SingleRank" Imageset="BaseImage015" Image="score_text_rank" />
+	<Image Type="SingleSurvivor" Imageset="BaseImage015" Image="score_text_survival" />
+	<Image Type="TitleRunningMan" Imageset="BaseImage015" Image="score_text_dwarf" />
+
+	<Image Type="PvETitleBG" Imageset="BaseImage014" Image="pve_line03" />
+	<Image Type="PvETitleFloor" Imageset="BaseImage014" Image="pve_text03" />
+	<Image Type="PvETitleFloorNum" Imageset="BaseImage014" Image="pve_num03" />
+	<Image Type="PvEMonsterCoin" Imageset="UIIconPack10" Image="goods_pvecoin_1" />
+	<Image Type="PvEMonsterCoinX" Imageset="BaseImage014" Image="pve_x" />
+	<Image Type="PvEMonsterCoinNum" Imageset="BaseImage013" Image="Score_Teamdeath_Number_Y" />
+	
+	<Image Type="TitleDoubleCrown" Imageset="BaseImage025" Image="doubleking" />
+	<Image Type="DoubleCrownSimilar" Imageset="BaseImage025" Image="double_start" />
+	<Image Type="DoubleBlueCloseWin" Imageset="BaseImage025" Image="winblue" />
+	<Image Type="DoubleRedCloseWin" Imageset="BaseImage025" Image="winred" />
+	
+	<Image Type="ShuffleBonusStarIcon" Imageset="BaseImage027" Image="today_star" />
+	<Image Type="ShuffleBonusCross"    Imageset="BaseImage027" Image="today_x" />
+	<Image Type="ShuffleBonusNumber"   Imageset="BaseImage027" Image="today_number" />
+	
+	<Image Type="TitleSuccession"   Imageset="BaseImage042" Image="1vs1mode" />
+	<Image Type="SuccessionText"   Imageset="BaseImage042" Image="1vs1_score_successive" />
+	<Image Type="SuccessionNumber"   Imageset="BaseImage042" Image="1vs1_score_yellownum2" />
+
+	<Image Type="TitleFlagCapture" Imageset="BaseImage015" Image="score_text_flag" />
+	<Image Type="TitleArena" Imageset="BaseImage046" Image="score_text_arena" />
+	
+	</Imagery>
+	<ExtraInfo TestNum = "0"/>
+</Window>

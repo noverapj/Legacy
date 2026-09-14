@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="InviteProgressWnd" Id="6125">
+	<Size X="0" Y="-20" XAlign="Center" YAlign="Center" Width="207" Height="235"/>
+	<DragRect Left="0" Top="0" Right="207" Bottom="235" />
+	<Style>IWS_START_HIDE|IWS_PROCESS|IWS_CANMOVE|IWS_EXIT_ESC</Style>
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Title>
+		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Text>초대하기</Text>
+	</Title>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+			<Area X="0" Y="0" Width="207" Height="235"/>
+		</DefaultFrameImagery>		
+		<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title">
+			<Area X="5" Y="6" Width="197" Height="36"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="MultiplyFrm" Templete="win1_multiply_bottom">
+			<Area X="0" Y="193" Width="207" Height="42"/>
+		</DefaultFrameImagery>
+		
+                <Image Imageset="BaseImage004" Image="gauge_invite_bg" >
+			<Area X="17" Y="210" />
+		</Image>
+		
+		<Image Type="PhoneIcon" Imageset="UIIconPack1" Image="hacking_invite_icon"/>
+		<Image Type="BackType1" Imageset="BaseImage002" Image="iconeffect_4"/>
+		<Image Type="BackType2" Imageset="BaseImage002" Image="iconeffect_3"/>
+		<Image Type="Gauge" Imageset="BaseImage004" Image="gauge_invite_gauge"/>
+	</Imagery>
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="173" Y="11" Width="23" Height="23"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+                        <Image Type="Disable" Imageset="BaseImage001" Image="icon0_x_grayframe" >
+				<Area X="0" Y="0" />
+			</Image>
+                        <Image Type="NormalList" Imageset="BaseImage001" Image="icon0_x" >
+				<Area X="5" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+</Window>

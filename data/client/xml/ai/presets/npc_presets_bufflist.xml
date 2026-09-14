@@ -1,0 +1,17 @@
+<?xml version="1.0"  encoding="euc-kr" ?>
+<BUFFLIST_PRESETS>
+	<BUFFLIST name="TARGET_IGNORE_BUFF_01">
+		<BUFF name="003_GODBless_State"				comment="" />
+		<BUFF name="008_Protect_10sec"				comment="" />
+		<BUFF name="012_Hiding_10sec"				comment="" />
+		<BUFF name="npc_user_revival_protection"	comment="" />
+		<BUFF name="017EB_GODBless_State" 			comment="" />
+		<BUFF name="034EB_kumiho_State"				comment="" />
+		<BUFF name="000_protect_State1"				comment="" />
+		<BUFF name="000_protect_State2"				comment="" />
+		<BUFF name="000_protect_State3"				comment="" />
+		<BUFF name="051EB_Safety_AD_State"			comment="" />
+		<BUFF name="003MB_AD_State_Powerup_No2"		comment="" />
+		<BUFF name="318EB_AD_State"					comment="" />
+	</BUFFLIST>
+</BUFFLIST_PRESETS>

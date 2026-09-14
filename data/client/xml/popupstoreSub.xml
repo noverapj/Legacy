@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="PopupStoreSubWnd" Id="10030">
+  <Size X="0" Y="0" Width="800" Height="600"></Size>
+  <Style>IWS_PROCESS|IWS_MODAL</Style>
+
+  <Window ClassName="ioWnd" Id="0">
+    <Style>IWS_PROCESS</Style>
+    <Size X="400" Y="300" Width="0" Height="0"></Size>
+
+    <Imagery>
+      <Image Type="TopImage1" Imageset="BaseImage034" Image="ini_store_envelope" >
+        <Area X="-6" Y="0" Width="250" Height="305" HorzAlign="Stretch" VertAlign="Stretch"/>
+      </Image>
+      <Effect Type="Ready" File="ui_eff_popup_ready.txt" RenderType="NormalRender">
+        <!--<Area X="-622" Y="-381" Width="800" Height="600" />-->
+        <Area X="-390" Y="-300" Width="800" Height="600" />
+        <EffectScale X="1" Y="1" Z="1" />
+      </Effect>      
+    </Imagery>
+
+    <!--아이템 버튼-->
+    <Window ClassName="ioButton" Id="1">
+      <Size X="40"  Y="8" Width="91" Height="97" YAlign="Center" XAlign="Center"/>
+      <Style>IWS_PROCESS|IWS_ISINRECT_CENTER</Style>
+      <!--<Imagery>
+        <DefaultFrameImagery Type="Normal" Templete="bt001_store_orange_nor">
+          <Area X="0" Y="0" Width="91" Height="97" />
+        </DefaultFrameImagery>
+        <DefaultFrameImagery Type="Over" Templete="bt001_store_orange_nor">
+          <Area X="0" Y="0" Width="91" Height="97" />
+        </DefaultFrameImagery>
+        <DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+          <Area X="0" Y="0" Width="91" Height="97" />
+        </DefaultFrameImagery>
+        <DefaultFrameImagery Type="Push" Templete="bt001_store_orange_down">
+          <Area X="0" Y="0" Width="91" Height="97" />
+        </DefaultFrameImagery>
+      </Imagery>-->
+      
+      <Imagery>       
+        <Image Type="Normal" Imageset="BaseImage033" Image="bt002_ini_store">
+          <Area X="0" Y="0" HorzAlign="Stretch" VertAlign="Stretch"/>
+        </Image>
+        <Image Type="Over" Imageset="BaseImage033" Image="bt002_ini_store">
+          <Area X="0" Y="0" HorzAlign="Stretch" VertAlign="Stretch"/>
+        </Image>
+        <Image Type="OverAdd" Imageset="BaseImage033" Image="bt002_ini_store">
+          <Area X="0" Y="0" RenderType="AddAlpha" HorzAlign="Stretch" VertAlign="Stretch"/>
+        </Image>
+        <Image Type="Push" Imageset="BaseImage033" Image="bt002_ini_store">
+          <Area X="0" Y="0" HorzAlign="Stretch" VertAlign="Stretch"/>
+        </Image>
+      </Imagery>
+
+      <ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+                 ClickSound = "interface/public_mouseclick_00.wav"/>
+    </Window>
+
+  </Window>
+</Window>
+

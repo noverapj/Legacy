@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="AbuseProblemWnd" Id="6021">
+	<Size X="0" Y="20" XAlign="Center" YAlign="Rate" Width="255" Height="125"/>
+	<Style>IWS_PROCESS|IWS_MODAL|IWS_START_HIDE</Style>
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Title>
+		<Format X="127" Y="10" Size="13" Style="Outline_full_2x" HorzAlign="Center"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Text>미활동 용병단 검사</Text>
+	</Title>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+			<Area X="0" Y="0" Width="255" Height="125"/>
+		</DefaultFrameImagery>		
+		<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title2">
+			<Area X="5" Y="6" Width="245" Height="29"/>
+		</DefaultFrameImagery>
+
+		<DefaultFrameImagery Templete="slot_empty_white">
+			<Area X="104" Y="62" Width="121" Height="21" AutoResize="False"/>
+		</DefaultFrameImagery>	
+	</Imagery>
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="12" Y="91" Width="231" Height="22" />
+		<Title>
+			<Format X="115" Y="2" Size="11" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+			<Text>확인 (ENTER)</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="231" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="231" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="231" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="231" Height="22"/>
+			</DefaultFrameImagery>	
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioEdit" Id="2">
+		<Size X="110" Y="65" Width="103" Height="21" />
+		<ExStyle>IWS_EX_EDIT_NUM</ExStyle>
+		<ExtraInfo MaxLength="4" TextColor="FFCE4E00" BkColor="FF000000" Align="Left" Style="Normal" Size="12" />
+	</Window>
+
+</Window>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="KOChatMsgWnd" Id="5009">
+	<Size X="14" Y="176" XAlign="Left" YAlign="Top" Width="180" Height="77"/>
+	<DragRect Left="0" Top="0" Right="180" Bottom="77" />
+	<Style>IWS_PROCESS|IWS_CANMOVE|IWS_BACKMOST</Style>
+ 	<Imagery>
+		<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+		<Image Type="NoneKillerIcon" Imageset="UIIconPack2" Image="event_player_toondeath_icon" />
+		<Image Type="NoneSkillIcon" Imageset="UIIconPack2" Image="event_player_crydown_icon" />
+	</Imagery>
+        <ExtraInfo StartXPos ="16" 
+		               StartYPos = "2" 
+		               LineYOffset = "19"
+		               LineHeight = "17"
+		               MaxChatViewCnt = "4" 
+		               AlphaStartTime = "5000"
+		               AlphaTime = "15000"
+                   MsgSound="interface/public_alert_00.wav" />
+
+	<Window ClassName="ioScroll" Id="1000">
+		<Size X="0" Y="-10" Width="13" Height="100" />
+		<Style>IWS_PROCESS|IWS_START_HIDE</Style>
+		<ExStyle>IWS_EX_VSCROLL</ExStyle>
+		<Imagery>
+			<DefaultFrameImagery Templete="scrollbar4_back">
+				<Area X="2" Y="10" Width="9" Height="80"/>
+			</DefaultFrameImagery>
+		</Imagery>		
+		<ExtraInfo PageRange="4" StartTime="500" CurTime ="100"/>
+			<Window ClassName="ioSlide" Id="3">
+			<Size X="0" Y="0" Width="13" Height="31" />
+			<DragRect Left="0" Top="0" Right="13" Bottom="31" />
+			<ExStyle>IWS_EX_NOTIFY_MOVED</ExStyle>
+			<Style>IWS_CANMOVE</Style>
+			<Imagery>
+				<DefaultFrameImagery Templete="scrollbar4_drag">
+					<Area X="0" Y="0" Width="13" Height="31"/>
+				</DefaultFrameImagery>
+				<Image Type="Icon_Slide" Imageset="BaseImage004" Image="scrollbar4_drag_icon" >
+					<Area X="0" Y="0" RenderType="Multiply" />
+				</Image>
+			</Imagery>
+		</Window>
+	</Window>
+		
+</Window>

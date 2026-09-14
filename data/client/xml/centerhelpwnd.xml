@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="CenterHelpWnd" Id="6099">
+	<Size X="0" Y="0" Width="0" Height="0" />
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style> 
+	<ExtraInfo ShowSound=""
+	           FadeTime= "750"/>
+	<Imagery>
+		<Image Type="HelpBack" Imageset="BaseImage014" Image="pve_line01"/>
+	</Imagery>
+</Window>
+

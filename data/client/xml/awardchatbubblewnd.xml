@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="AwardChatBubbleWnd" Id="100">
+	<Size X="0" Y="-2" Width="88" Height="8" />
+	<Style>IWS_START_HIDE|IWS_PROCESS|IWS_TOPMOST|IWS_NO_MOUSE_RESPONSE</Style>
+	<ExtraInfo DefaultX="18" 
+		   DefaultY="69" 
+		   DefaultW="88" 
+		   DefaultH="8" 
+		   AddHeight="14"
+		   StartXPos="7"
+		   StartYPos="5"
+		   WidthCut="75"
+		   MaxLine="4"
+		   ShowTime="5000"
+		   ShowEventTime="100"/>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="tooltip5">
+			<Area X="0" Y="0" Width="88" Height="8"/>
+		</DefaultFrameImagery>	
+
+		<Image Type="TooltipTail" Imageset="BaseImage004" Image="tooltip5_tail" >
+			<Area X="39" Y="0"/>
+		</Image>
+	</Imagery>
+</Window>

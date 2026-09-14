@@ -1,0 +1,12 @@
+<?xml version="1.0"  encoding="euc-kr" ?>
+<BEHAVIORDB>
+	<BEHAVIOR name="TARGET_CHAMPIONMODE">	
+		<REPEAT halt="onTrue" comment="유효한 타겟을 찾을 때 까지 찾는다">
+			<SEQUENCE comment="타겟 찾기">
+				<ACTION act="__global__.GetTarget(CLOSEST)" />
+				<ACTION act="__target__.IsTargetValid()"  comment="__target__.IsTargetValid()"/>
+				<ACTION act="__myself__.ShowChat('찾았다!! 타겟!!')" />
+			</SEQUENCE>
+		</REPEAT>
+	</BEHAVIOR>
+</BEHAVIORDB>

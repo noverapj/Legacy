@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="DiceGameWnd" Id="6319">
+	<Size X="0" Y="-20" Width="754" Height="506" XAlign="Center" YAlign="Center"/>
+	<DragRect Left="0" Top="0" Right="754" Bottom="36" />
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_CANMOVE|IWS_EXIT_ESC|IWS_DRAG_DROP</Style>
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Title>
+		<Format X="12" Y="10" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Text>뱀주사위</Text>
+	</Title>
+ 	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+			<Area X="0" Y="0" Width="754" Height="506"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title">
+			<Area X="5" Y="6" Width="744" Height="36"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="GameDisabled" Templete="win_frameinner_dimmed">
+			<Area X="0" Y="0" Width="754" Height="506"/>
+		</DefaultFrameImagery>
+
+		<Image Type="DiceCountNum" Imageset="BaseImage016" Image="score_bluenum" />
+		<Image Type="DiceCount" Imageset="BaseImage019" Image="bingo_text_mynum" />
+		<Image Type="BoardBack1" Imageset="BaseImage050" Image="baseimage050"/>
+		<Image Type="BoardBack2" Imageset="BaseImage051" Image="BaseImage051"/>
+		<Image Type="BoardBack3" Imageset="BaseImage052" Image="BaseImage052"/>
+		<Image Type="BoardBack4" Imageset="BaseImage050" Image="baseimage050"/>
+		<Image Type="BoardBack5" Imageset="BaseImage051" Image="BaseImage051"/>
+		<Image Type="BoardBack6" Imageset="BaseImage052" Image="BaseImage052"/>
+
+
+		<Effect Type="DiceEffect1" File="snakedice_01.txt" RenderType="NormalRender" CamName="UIdice">
+			<Area X="0" Y="0" Width="10" Height="300" />
+		</Effect>
+		<Effect Type="DiceEffect2" File="snakedice_02.txt" RenderType="NormalRender" CamName="UIdice">
+			<Area X="0" Y="0" Width="10" Height="300" />
+		</Effect>
+		<Effect Type="DiceEffect3" File="snakedice_03.txt" RenderType="NormalRender" CamName="UIdice">
+			<Area X="0" Y="0" Width="10" Height="300" />
+		</Effect>
+		<Effect Type="DiceEffect4" File="snakedice_04.txt" RenderType="NormalRender" CamName="UIdice">
+			<Area X="0" Y="0" Width="10" Height="300" />
+		</Effect>
+		<Effect Type="DiceEffect5" File="snakedice_05.txt" RenderType="NormalRender" CamName="UIdice">
+			<Area X="0" Y="0" Width="10" Height="300" />
+		</Effect>
+		<Effect Type="DiceEffect6" File="snakedice_06.txt" RenderType="NormalRender" CamName="UIdice">
+			<Area X="0" Y="0" Width="10" Height="300" />
+		</Effect>
+		<Effect Type="DiceEffectIdle" File="snakedice_delay.txt" RenderType="NormalRender" CamName="UIdice">
+			<Area X="0" Y="0" Width="10" Height="300" />
+		</Effect>
+	</Imagery>
+
+	<ExtraInfo
+		ChangeReward = "보상 바꾸기 x %d"
+		ChangeBoard = "게임판 바꾸기 x %d"
+		ErrorDice = "[주사위] 아이템이 없습니다."
+		ErrorReward = "[보상 변경권] 아이템이 없습니다."
+		ErrorBoard = "[게임판 변경권] 아이템이 없습니다."
+
+		PlayerPieceSpeed = "1000"
+		PlayerSnakeLadderSpeed = "500"
+
+		RandomRewardShowTime = "800"
+
+		DiceRollingTime = "3000"
+
+		LeftLineCount = "4"
+		LeftLineStart1 = "13"
+		LeftLineEnd1 = "25"
+		LeftLineCount1 = "2"
+		LeftLineStart2 = "39"
+		LeftLineEnd2 = "51"
+		LeftLineCount2 = "4"
+		LeftLineStart3 = "61"
+		LeftLineEnd3 = "69"
+		LeftLineCount3 = "6"
+		LeftLineStart4 = "79"
+		LeftLineEnd4 = "87"
+		LeftLineCount4 = "8"
+
+		RightLineCount = "4"
+		RightLineStart1 = "0"
+		RightLineEnd1 = "12"
+		RightLineCount1 = "1"
+		RightLineStart2 = "26"
+		RightLineEnd2 = "38"
+		RightLineCount2 = "3"
+		RightLineStart3 = "52"
+		RightLineEnd3 = "60"
+		RightLineCount3 = "5"
+		RightLineStart4 = "70"
+		RightLineEnd4 = "78"
+		RightLineCount4 = "7"
+
+		StartPosX = "38"
+		StartPosY = "467"
+		WidthTerm = "56"
+		HeightTerm = "56"
+
+		RollingSound = "event/event_snake_rolling.wav"
+		ResultSound = "interface/tutorial_clear_01.wav"
+		GetItemSound = "interface/tutorial_count_01.wav"
+	/>
+	
+	<Window ClassName="ioButton" Id="1">
+		<Size X="720" Y="11" Width="23" Height="23"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+            		<Image Type="Disable" Imageset="BaseImage001" Image="icon0_x_small_grayframe" >
+				<Area X="0" Y="0" />
+			</Image>
+            		<Image Type="NormalList" Imageset="BaseImage001" Image="icon0_x" >
+				<Area X="5" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>	
+
+	<Window ClassName="ioButton" Id="2">
+		<Size X="533" Y="142" Width="189" Height="47"/>
+		<Title>
+			<Format X="93" Y="10" Size="19" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF215AA2"/>
+			<Text>주사위 굴리기</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt005_blue_nor">
+				<Area X="0" Y="0" Width="189" Height="47"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt005_blue_nor">
+				<Area X="0" Y="0" Width="189" Height="47"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="189" Height="47"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt005_blue_down">
+				<Area X="0" Y="0" Width="189" Height="47"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="189" Height="47"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="3">
+		<Size X="533" Y="196" Width="189" Height="33" />
+		<Title>
+			<Format X="41" Y="6" Size="14" Style="Outline_full_2x" HorzAlign="Left"/>
+			<Color Type="Normal"  Text="FFFFFFFF" Back="FF006633"/>
+			<Color Type="Over"  Text="FFFFFFFF" Back="FF006633"/>
+			<Color Type="Push"  Text="FFFFFFFF" Back="FF006633"/>
+			<Color Type="Disable"  Text="FFA7A7A7" Back="FF000000"/>
+			<Text>게임판 바꾸기 X5</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_green_nor">
+				<Area X="0" Y="0" Width="189" Height="33"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_green_nor">
+				<Area X="0" Y="0" Width="189" Height="33"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt017_overadd">
+				<Area X="3" Y="1" Width="189" Height="33"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_green_down">
+				<Area X="0" Y="0" Width="189" Height="33"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="189" Height="33"/>
+			</DefaultFrameImagery>
+			<Image Type="BoardChange" Imageset="UIIconPack46" Image="goods_bingo03_numchange" Scale="0.28f" TextureFilterOption="1">
+				<Area X="25" Y="17" Width="36" Height="23"/>
+			</Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="4">
+		<Size X="533" Y="231" Width="189" Height="33" />
+		<Title>
+			<Format X="41" Y="6" Size="14" Style="Outline_full_2x" HorzAlign="Left"/>
+			<Color Type="Normal"  Text="FFFFFFFF" Back="FF006633"/>
+			<Color Type="Over"  Text="FFFFFFFF" Back="FF006633"/>
+			<Color Type="Push"  Text="FFFFFFFF" Back="FF006633"/>
+			<Color Type="Disable"  Text="FFA7A7A7" Back="FF000000"/>
+			<Text>보상 변경권</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_green_nor">
+				<Area X="0" Y="0" Width="189" Height="33"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_green_nor">
+				<Area X="0" Y="0" Width="189" Height="33"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt017_overadd">
+				<Area X="3" Y="1" Width="189" Height="33"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_green_down">
+				<Area X="0" Y="0" Width="189" Height="33"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="189" Height="33"/>
+			</DefaultFrameImagery>
+
+			<Image Type="RewardChange" Imageset="UIIconPack46" Image="goods_bingo04_itemchange" Scale="0.28f" TextureFilterOption="1">
+				<Area X="25" Y="17" Width="21" Height="24"/>
+			</Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="DiceRewardBtn" Id="101">
+		<Size X="73" Y="442" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="102">
+		<Size X="129" Y="442" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="103">
+		<Size X="185" Y="442" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="104">
+		<Size X="241" Y="442" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="105">
+		<Size X="297" Y="442" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="106">
+		<Size X="353" Y="442" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="107">
+		<Size X="409" Y="442" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="108">
+		<Size X="465" Y="442" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="109">
+		<Size X="521" Y="442" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="110">
+		<Size X="577" Y="442" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="111">
+		<Size X="633" Y="442" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="112">
+		<Size X="689" Y="442" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="113">
+		<Size X="689" Y="386" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="114">
+		<Size X="633" Y="386" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="115">
+		<Size X="577" Y="386" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="116">
+		<Size X="521" Y="386" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="117">
+		<Size X="465" Y="386" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="118">
+		<Size X="409" Y="386" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="119">
+		<Size X="353" Y="386" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="120">
+		<Size X="297" Y="386" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="121">
+		<Size X="241" Y="386" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="122">
+		<Size X="185" Y="386" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="123">
+		<Size X="129" Y="386" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="124">
+		<Size X="73" Y="386" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="125">
+		<Size X="17" Y="386" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="126">
+		<Size X="17" Y="330" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="127">
+		<Size X="73" Y="330" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="128">
+		<Size X="129" Y="330" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="129">
+		<Size X="185" Y="330" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="130">
+		<Size X="241" Y="330" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="131">
+		<Size X="297" Y="330" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="132">
+		<Size X="353" Y="330" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="133">
+		<Size X="409" Y="330" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="134">
+		<Size X="465" Y="330" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="135">
+		<Size X="521" Y="330" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="136">
+		<Size X="577" Y="330" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="137">
+		<Size X="633" Y="330" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="138">
+		<Size X="689" Y="330" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="139">
+		<Size X="689" Y="274" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="140">
+		<Size X="633" Y="274" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="141">
+		<Size X="577" Y="274" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="142">
+		<Size X="521" Y="274" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="143">
+		<Size X="465" Y="274" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="144">
+		<Size X="409" Y="274" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="145">
+		<Size X="353" Y="274" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="146">
+		<Size X="297" Y="274" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="147">
+		<Size X="241" Y="274" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="148">
+		<Size X="185" Y="274" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="149">
+		<Size X="129" Y="274" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="150">
+		<Size X="73" Y="274" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="151">
+		<Size X="17" Y="274" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="152">
+		<Size X="17" Y="218" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="153">
+		<Size X="73" Y="218" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="154">
+		<Size X="129" Y="218" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="155">
+		<Size X="185" Y="218" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="156">
+		<Size X="241" Y="218" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="157">
+		<Size X="297" Y="218" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="158">
+		<Size X="353" Y="218" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="159">
+		<Size X="409" Y="218" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="160">
+		<Size X="465" Y="218" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="161">
+		<Size X="465" Y="162" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="162">
+		<Size X="409" Y="162" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="163">
+		<Size X="353" Y="162" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="164">
+		<Size X="297" Y="162" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="165">
+		<Size X="241" Y="162" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="166">
+		<Size X="185" Y="162" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="167">
+		<Size X="129" Y="162" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="168">
+		<Size X="73" Y="162" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="169">
+		<Size X="17" Y="162" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="170">
+		<Size X="17" Y="106" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="171">
+		<Size X="73" Y="106" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="172">
+		<Size X="129" Y="106" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="173">
+		<Size X="185" Y="106" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="174">
+		<Size X="241" Y="106" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="175">
+		<Size X="297" Y="106" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="176">
+		<Size X="353" Y="106" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="177">
+		<Size X="409" Y="106" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="178">
+		<Size X="465" Y="106" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="179">
+		<Size X="465" Y="50" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="180">
+		<Size X="409" Y="50" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="181">
+		<Size X="353" Y="50" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="182">
+		<Size X="297" Y="50" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="183">
+		<Size X="241" Y="50" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="184">
+		<Size X="185" Y="50" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="185">
+		<Size X="129" Y="50" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="186">
+		<Size X="73" Y="50" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceRewardBtn" Id="187">
+		<Size X="17" Y="50" Width="50" Height="50" />
+		<Style>IWS_PROCESS</Style>
+	</Window>
+
+	<Window ClassName="DiceDevK" Id="200">
+		<Size X="0" Y="0" Width="1" Height="1" />
+		<Style>IWS_PROCESS|IWS_TOPMOST</Style>
+		<ExtraInfo
+			DevK_Effect_Gap_Time = "50"
+			Max_DevK_Effect = "12"
+			DevK_Effect_1 = "UIIconEvent9#devk_frame1"
+			DevK_Effect_2 = "UIIconEvent9#devk_frame2"
+			DevK_Effect_3 = "UIIconEvent9#devk_frame3"
+			DevK_Effect_4 = "UIIconEvent9#devk_frame4"
+			DevK_Effect_5 = "UIIconEvent9#devk_frame5"
+			DevK_Effect_6 = "UIIconEvent9#devk_frame6"
+			DevK_Effect_7 = "UIIconEvent9#devk_frame7"
+			DevK_Effect_8 = "UIIconEvent9#devk_frame8"
+			DevK_Effect_9 = "UIIconEvent9#devk_frame9"
+			DevK_Effect_10 = "UIIconEvent9#devk_frame10"
+			DevK_Effect_11 = "UIIconEvent9#devk_frame11"
+			DevK_Effect_12 = "UIIconEvent9#devk_frame12"
+		/>
+	</Window>
+
+	<Window ClassName="DiceItemEffect" Id="300">
+		<Size X="0" Y="0" Width="100" Height="100" />
+		<Style>IWS_PROCESS|IWS_START_HIDE|IWS_TOPMOST</Style>
+		<ExtraInfo
+			Effect_Time = "800"
+			
+			Effect_Scale_Min = "0.6f"
+			Effect_Sclae_Max = "1.5f"
+		/>
+	</Window>
+
+	<Window ClassName="DiceToolTip" Id="1001">
+		<Size X="0" Y="0" Width="234" Height="115" />
+		<Style>IWS_PROCESS|IWS_START_HIDE|IWS_TOPMOST</Style>
+		<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="tooltip3">
+				<Area X="0" Y="0" Width="234" Height="115"/>
+			</DefaultFrameImagery>
+			<Image Type ="IconBg" Imageset="BaseImage002" Image="iconeffect_1" />
+		</Imagery>
+	</Window>
+
+	<Window ClassName="DiceDisabledBack" Id="2001">
+		<Size X="0" Y="0" Width="754" Height="506" />
+		<Style>IWS_PROCESS|IWS_START_HIDE|IWS_TOPMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="GameDisabled" Templete="win_frameinner_dimmed">
+				<Area X="0" Y="0" Width="754" Height="506"/>
+			</DefaultFrameImagery>
+
+			<Image Type="GameEnd" Imageset="BaseImage046" Image="eventmission_end"/>
+			<Image Type="IconBack" Imageset="BaseImage050" Image="eff_radial_blight0"/>
+			<Image Type="SnakeIcon" Imageset="UIIconPack130" Image="icon_snakeladder"/>
+		</Imagery>
+		<Text>
+			<Format Type="GameEndInfo" X ="272" Y="150" Size="14" Style="Outline_full_2x" HorzAlign="Left" RenderPos="AfterRender"/>
+			<Color Text="FFFFFFFF" Back="FF000000"/>
+			<Text>보상은 보관함으로 즉시 지급 됩니다.</Text>
+		</Text>
+
+		<Window ClassName="ioButton" Id="1">
+			<Size X="297" Y="336" Width="157" Height="48" />
+			<Title>
+				<Format X="78" Y="15" Size="14" Style="Outline_full_2x" HorzAlign="Center"/>
+				<Color Type="Normal"  Text="FFFFFFFF" Back="FF854314"/>
+				<Color Type="Over"  Text="FFFFFFFF" Back="FF854314"/>
+				<Color Type="Push"  Text="FFFFFFFF" Back="FF854314"/>
+				<Color Type="Disable"  Text="FFA7A7A7" Back="FF854314"/>
+				<Text>다시 하기</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt005_redbrown_nor">
+					<Area X="0" Y="0" Width="157" Height="48"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt005_redbrown_nor">
+					<Area X="0" Y="0" Width="157" Height="48"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="3" Y="1" Width="157" Height="48"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt005_redbrown_down">
+					<Area X="0" Y="0" Width="157" Height="48"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Disable" Templete="bt006_gray_nor">
+					<Area X="0" Y="0" Width="157" Height="48"/>
+				</DefaultFrameImagery>
+			</Imagery>
+    			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+
+	</Window>
+</Window>

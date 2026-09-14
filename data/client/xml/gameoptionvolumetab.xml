@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="GameOptionVolumeTab" Id="102">
+	<Style>IWS_START_HIDE</Style>
+	<Size X="0" Y="81" Width="536" Height="431" />
+	
+	<Imagery>
+		<DefaultFrameImagery Type="MultiplyFrm" Templete="win1_multiply_bottom">
+			<Area X="0" Y="366" Width="536" Height="65"/>
+		</DefaultFrameImagery>
+
+		<Image Imageset="BaseImage001" Image="strip_gray_dark" >
+			<Area X="17" Y="15" Width="502" Height="24" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_light" >
+			<Area X="17" Y="39" Width="502" Height="24" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_dark" >
+			<Area X="17" Y="63" Width="502" Height="24" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_light" >
+			<Area X="17" Y="87" Width="502" Height="24" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_dark" >
+			<Area X="17" Y="111" Width="502" Height="24" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_light" >
+			<Area X="17" Y="135" Width="502" Height="24" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_dark" >
+			<Area X="17" Y="159" Width="502" Height="24" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_light" >
+			<Area X="17" Y="183" Width="502" Height="24" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_dark" >
+			<Area X="17" Y="207" Width="502" Height="24" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_light" >
+			<Area X="17" Y="231" Width="502" Height="24" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_dark" >
+			<Area X="17" Y="255" Width="502" Height="24" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_light" >
+			<Area X="17" Y="279" Width="502" Height="24" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_dark" >
+			<Area X="17" Y="303" Width="502" Height="24" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_light" >
+			<Area X="17" Y="327" Width="502" Height="24" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1"/>
+		<Image Type="IconVolume" Imageset="UIIconPack1" Image="lobby_leader_icon"/>
+		<Image Type="IconMic" Imageset="UIIconPack6" Image="goods_yell"/>
+	</Imagery>
+	
+	<Window ClassName="ioScroll" Id="1">
+		<Size X="93" Y="44" Width="226" Height="15" />
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_HSCROLL</ExStyle>
+		<Imagery>		
+			<DefaultFrameImagery Templete="scrollbar2_back">
+				<Area X="10" Y="5" Width="206" Height="5"/>
+			</DefaultFrameImagery>			
+		</Imagery>	
+		<ExtraInfo PageRange="1" StartTime="500" CurTime ="100"/>
+
+		<Window ClassName="ioButton" Id="1">
+			<Size X="0" Y="0" Width="10" Height="15" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar2_arrow_down" >
+					<Area X="0" Y="3"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage001" Image="scrollbar2_arrow_down" >
+					<Area X="0" Y="3"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage001" Image="scrollbar2_arrow_down" >
+					<Area X="0" Y="3"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>					
+		</Window>
+		<Window ClassName="ioButton" Id="2">
+			<Size X="216" Y="0" Width="10" Height="15" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar2_arrow_down" >
+					<Area X="0" Y="3" Reverse="Horz"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage001" Image="scrollbar2_arrow_down" >
+					<Area X="0" Y="3" Reverse="Horz"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage001" Image="scrollbar2_arrow_down" >
+					<Area X="0" Y="3" Reverse="Horz"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>					
+		</Window>
+		<Window ClassName="ioSlide" Id="3">
+			<Size X="10" Y="0" Width="30" Height="15" />
+			<DragRect Left="0" Top="0" Right="30" Bottom="15" />
+			<ExStyle>IWS_EX_NOTIFY_MOVED</ExStyle>
+			<Style>IWS_CANMOVE</Style>
+			<Imagery>
+				<DefaultFrameImagery Templete="scrollbar2_drag">
+					<Area X="0" Y="0" Width="30" Height="15"/>
+				</DefaultFrameImagery>
+				<Image Type="Icon_Slide" Imageset="BaseImage001" Image="scrollbar2_drag_icon"/>
+			</Imagery>
+		</Window>
+	</Window>
+	
+	
+	<Window ClassName="ioScroll" Id="2">
+		<Size X="93" Y="68" Width="226" Height="15" />
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_HSCROLL</ExStyle>
+		<Imagery>		
+			<DefaultFrameImagery Templete="scrollbar2_back">
+				<Area X="10" Y="5" Width="206" Height="5"/>
+			</DefaultFrameImagery>			
+		</Imagery>	
+		<ExtraInfo PageRange="1" StartTime="500" CurTime ="100"/>
+
+		<Window ClassName="ioButton" Id="1">
+			<Size X="0" Y="0" Width="10" Height="15" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar2_arrow_down" >
+					<Area X="0" Y="3"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage001" Image="scrollbar2_arrow_down" >
+					<Area X="0" Y="3"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage001" Image="scrollbar2_arrow_down" >
+					<Area X="0" Y="3"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>					
+		</Window>
+		<Window ClassName="ioButton" Id="2">
+			<Size X="216" Y="0" Width="10" Height="15" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar2_arrow_down" >
+					<Area X="0" Y="3" Reverse="Horz"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage001" Image="scrollbar2_arrow_down" >
+					<Area X="0" Y="3" Reverse="Horz"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage001" Image="scrollbar2_arrow_down" >
+					<Area X="0" Y="3" Reverse="Horz"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>					
+		</Window>
+		<Window ClassName="ioSlide" Id="3">
+			<Size X="10" Y="0" Width="30" Height="15" />
+			<DragRect Left="0" Top="0" Right="30" Bottom="15" />
+			<ExStyle>IWS_EX_NOTIFY_MOVED</ExStyle>
+			<Style>IWS_CANMOVE</Style>
+			<Imagery>
+				<DefaultFrameImagery Templete="scrollbar2_drag">
+					<Area X="0" Y="0" Width="30" Height="15"/>
+				</DefaultFrameImagery>
+				<Image Type="Icon_Slide" Imageset="BaseImage001" Image="scrollbar2_drag_icon"/>
+			</Imagery>
+		</Window>
+	</Window>
+	
+	<Window ClassName="ioScroll" Id="3">
+		<Size X="93" Y="92" Width="226" Height="15" />
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_HSCROLL</ExStyle>
+		<Imagery>		
+			<DefaultFrameImagery Templete="scrollbar2_back">
+				<Area X="10" Y="5" Width="206" Height="5"/>
+			</DefaultFrameImagery>			
+		</Imagery>	
+		<ExtraInfo PageRange="1" StartTime="500" CurTime ="100"/>
+
+		<Window ClassName="ioButton" Id="1">
+			<Size X="0" Y="0" Width="10" Height="15" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar2_arrow_down" >
+					<Area X="0" Y="3"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage001" Image="scrollbar2_arrow_down" >
+					<Area X="0" Y="3"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage001" Image="scrollbar2_arrow_down" >
+					<Area X="0" Y="3"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>					
+		</Window>
+		<Window ClassName="ioButton" Id="2">
+			<Size X="216" Y="0" Width="10" Height="15" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar2_arrow_down" >
+					<Area X="0" Y="3" Reverse="Horz"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage001" Image="scrollbar2_arrow_down" >
+					<Area X="0" Y="3" Reverse="Horz"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage001" Image="scrollbar2_arrow_down" >
+					<Area X="0" Y="3" Reverse="Horz"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>					
+		</Window>
+		<Window ClassName="ioSlide" Id="3">
+			<Size X="10" Y="0" Width="30" Height="15" />
+			<DragRect Left="0" Top="0" Right="30" Bottom="15" />
+			<ExStyle>IWS_EX_NOTIFY_MOVED</ExStyle>
+			<Style>IWS_CANMOVE</Style>
+			<Imagery>
+				<DefaultFrameImagery Templete="scrollbar2_drag">
+					<Area X="0" Y="0" Width="30" Height="15"/>
+				</DefaultFrameImagery>
+				<Image Type="Icon_Slide" Imageset="BaseImage001" Image="scrollbar2_drag_icon"/>
+			</Imagery>
+		</Window>
+	</Window>
+	
+	
+	<Window ClassName="ioScroll" Id="4">
+		<Size X="93" Y="260" Width="226" Height="15" />
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_HSCROLL</ExStyle>
+		<Imagery>		
+			<DefaultFrameImagery Templete="scrollbar2_back">
+				<Area X="10" Y="5" Width="206" Height="5"/>
+			</DefaultFrameImagery>			
+		</Imagery>	
+		<ExtraInfo PageRange="1" StartTime="500" CurTime ="100"/>
+
+		<Window ClassName="ioButton" Id="1">
+			<Size X="0" Y="0" Width="10" Height="15" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar2_arrow_down" >
+					<Area X="0" Y="3"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage001" Image="scrollbar2_arrow_down" >
+					<Area X="0" Y="3"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage001" Image="scrollbar2_arrow_down" >
+					<Area X="0" Y="3"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>					
+		</Window>
+		<Window ClassName="ioButton" Id="2">
+			<Size X="216" Y="0" Width="10" Height="15" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar2_arrow_down" >
+					<Area X="0" Y="3" Reverse="Horz"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage001" Image="scrollbar2_arrow_down" >
+					<Area X="0" Y="3" Reverse="Horz"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage001" Image="scrollbar2_arrow_down" >
+					<Area X="0" Y="3" Reverse="Horz"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>					
+		</Window>
+		<Window ClassName="ioSlide" Id="3">
+			<Size X="10" Y="0" Width="30" Height="15" />
+			<DragRect Left="0" Top="0" Right="30" Bottom="15" />
+			<ExStyle>IWS_EX_NOTIFY_MOVED</ExStyle>
+			<Style>IWS_CANMOVE</Style>
+			<Imagery>
+				<DefaultFrameImagery Templete="scrollbar2_drag">
+					<Area X="0" Y="0" Width="30" Height="15"/>
+				</DefaultFrameImagery>
+				<Image Type="Icon_Slide" Imageset="BaseImage001" Image="scrollbar2_drag_icon"/>
+			</Imagery>
+		</Window>
+	</Window>
+	
+	<Window ClassName="ioCheckButton" Id="5">
+		<Size X="21" Y="43" Width="16" Height="16" />
+		<Title>
+			<Format X="20" Y="0" Size="13" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>배경음</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Check" Imageset="BaseImage001" Image="check_box_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="ioCheckButton" Id="6">
+		<Size X="21" Y="67" Width="16" Height="16" />
+		<Title>
+			<Format X="20" Y="0" Size="13" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>효과음</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Check" Imageset="BaseImage001" Image="check_box_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="ioCheckButton" Id="7">
+		<Size X="21" Y="91" Width="16" Height="16" />
+		<Title>
+			<Format X="20" Y="0" Size="13" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>음성</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Check" Imageset="BaseImage001" Image="check_box_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioCheckButton" Id="12">
+		<Size X="21" Y="235" Width="16" Height="16" />
+		<Title>
+			<Format X="20" Y="0" Size="13" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>마이크 활성화</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Check" Imageset="BaseImage001" Image="check_box_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="ioCheckButton" Id="8">
+		<Size X="21" Y="259" Width="16" Height="16" />
+		<Title>
+			<Format X="20" Y="0" Size="13" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>마이크</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Check" Imageset="BaseImage001" Image="check_box_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="ioButton" Id="9">
+		<Size X="275" Y="383" Width="80" Height="31"/>
+		<Title>
+			<Format X="40" Y="5" Size="13" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>결정</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_blue_nor">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_blue_nor">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_blue_down">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="10">
+		<Size X="357" Y="383" Width="80" Height="31"/>
+		<Title>
+			<Format X="40" Y="7" Size="13" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF215AA2"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF215AA2"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>취소</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_gray_down">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="ioButton" Id="11">
+		<Size X="439" Y="383" Width="80" Height="31"/>
+		<Title>
+			<Format X="40" Y="7" Size="13" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF215AA2"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF215AA2"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>적용</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_gray_down">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="ioCheckButton" Id="15">
+		<Size X="21" Y="115" Width="16" Height="16" />
+		<Title>
+			<Format X="20" Y="0" Size="13" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>킬 사운드</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Check" Imageset="BaseImage001" Image="check_box_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="ioCheckButton" Id="16">
+		<Size X="21" Y="139" Width="16" Height="16" />
+		<Title>
+			<Format X="20" Y="0" Size="13" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>콤보 사운드</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Check" Imageset="BaseImage001" Image="check_box_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="ioCheckButton" Id="17">
+		<Size X="21" Y="163" Width="16" Height="16" />
+		<Title>
+			<Format X="20" Y="0" Size="13" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>아이돌 사운드</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Check" Imageset="BaseImage001" Image="check_box_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+</Window>

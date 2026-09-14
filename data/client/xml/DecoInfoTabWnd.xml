@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+<Window ClassName="DecoInfoTabWnd" SubClassName="ioWndEX" Id="0" IDName="" MemberName="">
+    <Size X="0" Y="0" Width="0" Height="0" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+    <Imagery />
+    <ExtraInfo>
+        <ToolInfo />
+    </ExtraInfo>
+    <Window ClassName="ioTabWndEX" SubClassName="" Id="36" IDName="" MemberName="">
+        <Size X="0" Y="0" Width="363" Height="431" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+        <Imagery />
+        <ExtraInfo DotGap="1" DotHeight="2">
+            <DotImage FileName="" ImageSetName="BaseImage001" ImageName="tap2_line" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+            <ToolInfo />
+        </ExtraInfo>
+        <Window ClassName="ioTabFrameButtonEX" SubClassName="" Id="37" IDName="" MemberName="m_infotabbutton">
+            <Size X="0" Y="0" Width="99" Height="22" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo ButtonType="0">
+                <LabelInfo Text="정보" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                <NormalFrame Template="tap4_off" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                <OverFrame Template="tap4_off" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                <OverAddFrame Template="tap4_overadd" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                <PushFrame Template="tap4_on" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioImageWndEX" SubClassName="" Id="38" IDName="" MemberName="m_backimg">
+                <Size X="0" Y="31" Width="362" Height="398" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <ImageInfo FileName="" ImageSetName="LoadingMap901" ImageName="Back001" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" NoMagicAlign="false" Color="ffffffff" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioFrameWndEX" SubClassName="" Id="39" IDName="" MemberName="">
+                    <Size X="-3" Y="-2" Width="367" Height="37" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo>
+                        <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                    <Window ClassName="ioLabelWndEX" SubClassName="" Id="40" IDName="" MemberName="m_lefttoplabel">
+                        <Size X="11" Y="4" Width="118" Height="27" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                            <LabelInfo Text="헤어 치장" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                    <Window ClassName="ioLabelWndEX" SubClassName="" Id="41" IDName="" MemberName="m_righttoplabel">
+                        <Size X="210" Y="4" Width="149" Height="27" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                            <LabelInfo Text="아래 선택된 용병에게 귀속됨" Size="12" Color="ffe8040a" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="2" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                </Window>
+            </Window>
+        </Window>
+    </Window>
+</Window>

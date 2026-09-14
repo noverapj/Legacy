@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="PetResellResultWnd" Id="503">
+	<Size X="496" Y="0" Width="258" Height="506" />
+	<Style>IWS_CHILD_ONLY_RESPONSE|IWS_START_HIDE</Style>		
+	<Imagery>
+		<Image Type="back_effect" Imageset="BaseImage002" Image="iconeffect_4" />
+	</Imagery>
+	
+</Window>

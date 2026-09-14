@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="SpiritComposeResultWnd" Id="6313">
+  <Style>IWS_START_HIDE|IWS_MODAL|IWS_PROCESS</Style>
+  <ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+  <Size X="0" Y="0" Width="258" Height="506" />
+  <ExtraInfo mortmain="영구용병"
+             composedesc="합성으로 획득한 용병은 보관함에서 확인가능합니다."
+             showtime="3000"/>
+  <Imagery>
+    <Image Type="Title" Imageset="BaseImage042" Image="slot_spirit_title" >
+      <Area X="128" Y="92"/>
+    </Image>
+    <Effect Type="Effect" File="ui_eff_spirit_char_bg.txt" RenderType="PreRender">
+      <Area X="0" Y="0" Width="200" Height="200" />
+    </Effect>
+  </Imagery>
+  <Window ClassName="NewShopHelpWnd" Id="100">
+    <Size X="53" Y="112" Width="144" Height="270" />
+    <Style>IWS_PROCESS|IWS_BACKMOST</Style>
+    <Imagery>
+      <Image Imageset="BaseImage002" Image="mychr_shadow" >
+        <Area X="-10" Y="227" RenderType="Multiply" />
+      </Image>
+    </Imagery>
+    <ExtraInfo RotateYaw ="1.3f"/>
+    <Window ClassName="NewShopHelpControlWnd" Id="1">
+      <Size X="7" Y="116" Width="144" Height="64" />
+      <Style>IWS_PROCESS</Style>
+      <Window ClassName="NewShopHelpControlBtn" Id="1">
+        <Size X="0" Y="0" Width="46" Height="44" />
+        <Imagery>
+          <Image Type="Btn" Imageset="BaseImage004" Image="icon0_3d_left"/>
+        </Imagery>
+        <ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+               ClickSound = "interface/public_mouseclick_00.wav"/>
+      </Window>
+      <Window ClassName="NewShopHelpControlBtn" Id="2">
+        <Size X="98" Y="0" Width="46" Height="44" />
+        <Imagery>
+          <Image Type="Btn" Imageset="BaseImage004" Image="icon0_3d_left">
+            <Area X="0" Y="0"  Reverse="Horz"/>
+          </Image>
+        </Imagery>
+        <ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+               ClickSound = "interface/public_mouseclick_00.wav"/>
+      </Window>
+      <Window ClassName="NewShopHelpControlBtn" Id="3">
+        <Size X="46" Y="24" Width="52" Height="39" />
+        <Imagery>
+          <Image Type="Btn" Imageset="BaseImage004" Image="icon0_3d_front"/>
+        </Imagery>
+        <ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+               ClickSound = "interface/public_mouseclick_00.wav"/>
+      </Window>
+    </Window>
+  </Window>
+</Window>

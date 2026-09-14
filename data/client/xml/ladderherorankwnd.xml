@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="LadderHeroRankListWnd" Id="11">
+	<Size X="17" Y="96" Width="424" Height="280" />
+	<Style>IWS_START_HIDE|IWS_BACKMOST|IWS_PROCESS</Style>
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="146" Y="262" Width="43" Height="18" />
+		<Style>IWS_BACKMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_left" >
+				<Area X="17" Y="4"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="2">
+		<Size X="235" Y="262" Width="43" Height="18" />
+		<Style>IWS_BACKMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_left" >
+				<Area X="17" Y="4" Reverse="Horz"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="LadderRankListBtn" Id="100">
+		<Size X="0" Y="0" Width="424" Height="31" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_gray_down">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="InActive" Templete="slot_empty_gray2">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNormal" Imageset="BaseImage004" Image="icon0_teamrank_nor_blue" />
+			<Image Type="RedNormal" Imageset="BaseImage004" Image="icon0_teamrank_nor_red" />
+			<Image Type="BluePush" Imageset="BaseImage004" Image="icon0_teamrank_down_blue" />
+			<Image Type="RedPush" Imageset="BaseImage004" Image="icon0_teamrank_down_red" />
+			<Image Type="Key" Imageset="BaseImage001" Image="icon0_locks_black" />
+			<Image Type="Arrow" Imageset="BaseImage001" Image="icon0_right_gray" >
+				<Area X="0" Y="0" Reverse="Horz"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="LadderRankListBtn" Id="101">
+		<Size X="0" Y="32" Width="424" Height="31" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_gray_down">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="InActive" Templete="slot_empty_gray2">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNormal" Imageset="BaseImage004" Image="icon0_teamrank_nor_blue" />
+			<Image Type="RedNormal" Imageset="BaseImage004" Image="icon0_teamrank_nor_red" />
+			<Image Type="BluePush" Imageset="BaseImage004" Image="icon0_teamrank_down_blue" />
+			<Image Type="RedPush" Imageset="BaseImage004" Image="icon0_teamrank_down_red" />
+			<Image Type="Key" Imageset="BaseImage001" Image="icon0_locks_black" />
+			<Image Type="Arrow" Imageset="BaseImage001" Image="icon0_right_gray" >
+				<Area X="0" Y="0" Reverse="Horz"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="LadderRankListBtn" Id="102">
+		<Size X="0" Y="64" Width="424" Height="31" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_gray_down">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="InActive" Templete="slot_empty_gray2">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNormal" Imageset="BaseImage004" Image="icon0_teamrank_nor_blue" />
+			<Image Type="RedNormal" Imageset="BaseImage004" Image="icon0_teamrank_nor_red" />
+			<Image Type="BluePush" Imageset="BaseImage004" Image="icon0_teamrank_down_blue" />
+			<Image Type="RedPush" Imageset="BaseImage004" Image="icon0_teamrank_down_red" />
+			<Image Type="Key" Imageset="BaseImage001" Image="icon0_locks_black" />
+			<Image Type="Arrow" Imageset="BaseImage001" Image="icon0_right_gray" >
+				<Area X="0" Y="0" Reverse="Horz"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="LadderRankListBtn" Id="103">
+		<Size X="0" Y="96" Width="424" Height="31" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_gray_down">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="InActive" Templete="slot_empty_gray2">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNormal" Imageset="BaseImage004" Image="icon0_teamrank_nor_blue" />
+			<Image Type="RedNormal" Imageset="BaseImage004" Image="icon0_teamrank_nor_red" />
+			<Image Type="BluePush" Imageset="BaseImage004" Image="icon0_teamrank_down_blue" />
+			<Image Type="RedPush" Imageset="BaseImage004" Image="icon0_teamrank_down_red" />
+			<Image Type="Key" Imageset="BaseImage001" Image="icon0_locks_black" />
+			<Image Type="Arrow" Imageset="BaseImage001" Image="icon0_right_gray" >
+				<Area X="0" Y="0" Reverse="Horz"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="LadderRankListBtn" Id="104">
+		<Size X="0" Y="128" Width="424" Height="31" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_gray_down">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="InActive" Templete="slot_empty_gray2">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNormal" Imageset="BaseImage004" Image="icon0_teamrank_nor_blue" />
+			<Image Type="RedNormal" Imageset="BaseImage004" Image="icon0_teamrank_nor_red" />
+			<Image Type="BluePush" Imageset="BaseImage004" Image="icon0_teamrank_down_blue" />
+			<Image Type="RedPush" Imageset="BaseImage004" Image="icon0_teamrank_down_red" />
+			<Image Type="Key" Imageset="BaseImage001" Image="icon0_locks_black" />
+			<Image Type="Arrow" Imageset="BaseImage001" Image="icon0_right_gray" >
+				<Area X="0" Y="0" Reverse="Horz"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="LadderRankListBtn" Id="105">
+		<Size X="0" Y="160" Width="424" Height="31" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_gray_down">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="InActive" Templete="slot_empty_gray2">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNormal" Imageset="BaseImage004" Image="icon0_teamrank_nor_blue" />
+			<Image Type="RedNormal" Imageset="BaseImage004" Image="icon0_teamrank_nor_red" />
+			<Image Type="BluePush" Imageset="BaseImage004" Image="icon0_teamrank_down_blue" />
+			<Image Type="RedPush" Imageset="BaseImage004" Image="icon0_teamrank_down_red" />
+			<Image Type="Key" Imageset="BaseImage001" Image="icon0_locks_black" />
+			<Image Type="Arrow" Imageset="BaseImage001" Image="icon0_right_gray" >
+				<Area X="0" Y="0" Reverse="Horz"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="LadderRankListBtn" Id="106">
+		<Size X="0" Y="192" Width="424" Height="31" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_gray_down">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="InActive" Templete="slot_empty_gray2">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNormal" Imageset="BaseImage004" Image="icon0_teamrank_nor_blue" />
+			<Image Type="RedNormal" Imageset="BaseImage004" Image="icon0_teamrank_nor_red" />
+			<Image Type="BluePush" Imageset="BaseImage004" Image="icon0_teamrank_down_blue" />
+			<Image Type="RedPush" Imageset="BaseImage004" Image="icon0_teamrank_down_red" />
+			<Image Type="Key" Imageset="BaseImage001" Image="icon0_locks_black" />
+			<Image Type="Arrow" Imageset="BaseImage001" Image="icon0_right_gray" >
+				<Area X="0" Y="0" Reverse="Horz"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="LadderRankListBtn" Id="107">
+		<Size X="0" Y="224" Width="424" Height="31" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_gray_down">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="InActive" Templete="slot_empty_gray2">
+				<Area X="0" Y="0" Width="424" Height="31"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNormal" Imageset="BaseImage004" Image="icon0_teamrank_nor_blue" />
+			<Image Type="RedNormal" Imageset="BaseImage004" Image="icon0_teamrank_nor_red" />
+			<Image Type="BluePush" Imageset="BaseImage004" Image="icon0_teamrank_down_blue" />
+			<Image Type="RedPush" Imageset="BaseImage004" Image="icon0_teamrank_down_red" />
+			<Image Type="Key" Imageset="BaseImage001" Image="icon0_locks_black" />
+			<Image Type="Arrow" Imageset="BaseImage001" Image="icon0_right_gray" >
+				<Area X="0" Y="0" Reverse="Horz"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+</Window>

@@ -1,0 +1,31 @@
+<boxgraph>
+<nodes>
+	<box name="rbox1" min="-3198.61,-2139.98,4109.24" max="-1403.6,-333.442,4171.6"/>
+	<box name="rbox02" min="-480.653,-1672.56,4109.24" max="281.403,-818.145,4171.6"/>
+	<box name="rbox06" min="292.448,1012.02,4109.24" max="1478.86,1864.52,4171.6"/>
+	<box name="rbox07" min="-1388.0,-1672.56,4109.24" max="-492.28,-816.542,4171.6"/>
+	<box name="rbox08" min="-479.452,-806.806,4109.24" max="280.575,1003.55,4171.6"/>
+	<box name="rbox09" min="-478.038,1015.83,4109.24" max="280.637,1868.36,4171.6"/>
+	<box name="rbox11" min="1491.3,528.834,4109.24" max="3342.24,2373.2,4171.6"/>
+</nodes>
+<links>
+	<link from="rbox1" to="rbox07" type="L"/>
+
+	<link from="rbox02" to="rbox07" type="L"/>
+	<link from="rbox02" to="rbox08" type="L"/>
+
+	<link from="rbox06" to="rbox09" type="L"/>
+	<link from="rbox06" to="rbox11" type="L"/>
+
+	<link from="rbox07" to="rbox1" type="L"/>
+	<link from="rbox07" to="rbox02" type="L"/>
+
+	<link from="rbox08" to="rbox02" type="L"/>
+	<link from="rbox08" to="rbox09" type="L"/>
+
+	<link from="rbox09" to="rbox06" type="L"/>
+	<link from="rbox09" to="rbox08" type="L"/>
+
+	<link from="rbox11" to="rbox06" type="L"/>
+</links>
+</boxgraph>

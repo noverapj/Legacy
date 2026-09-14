@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="BingoToolTip" Id="1001">
+	<Size X="0" Y="0" Width="234" Height="115" />
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_TOPMOST</Style>
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="tooltip3">
+			<Area X="0" Y="0" Width="234" Height="115"/>
+		</DefaultFrameImagery>
+		<Image Type ="IconBg" Imageset="BaseImage002" Image="iconeffect_1" />
+	</Imagery>
+</Window>
+

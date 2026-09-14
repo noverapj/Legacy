@@ -1,0 +1,69 @@
+<?xml version="1.0"  encoding="euc-kr" ?>
+<KEYSEQUENCEDB>
+	<KEYSEQUENCE name="NORMAL_D" >
+		<KEY type="ATTACK"	action="KEYNONE"	duration="10" 	/>
+		<KEY type="ATTACK"	action="KEYPRESS"	duration="10" 	/>
+		<KEY type="ATTACK"	action="KEYREPEAT"	duration="10" 	/>
+		<KEY type="ATTACK"	action="KEYRELEASE"	duration="100" 	/>
+	</KEYSEQUENCE>
+	
+	<KEYSEQUENCE name="D_KEY_SHORT" >
+		<KEY type="D"		action="KEYPRESS"	duration="10" 	/>
+		<KEY type="D"		action="KEYRELEASE"	duration="10" 	/>
+	</KEYSEQUENCE>
+	
+	<KEYSEQUENCE name="D_KEY_LONG" >
+		<KEY type="D"		action="KEYPRESS"	duration="10" 	/>
+		<KEY type="D"		action="KEYREPEAT"	duration="300"	/>
+		<KEY type="D"		action="KEYRELEASE"	duration="10" 	/>
+	</KEYSEQUENCE>
+	
+	<KEYSEQUENCE name="D_KEY_LONG2" >
+		<KEY type="D"		action="KEYPRESS"	duration="10" 	/>
+		<KEY type="D"		action="KEYREPEAT"	duration="500"	/>
+		<KEY type="D"		action="KEYRELEASE"	duration="10" 	/>
+	</KEYSEQUENCE>
+	
+	<KEYSEQUENCE name="S" >
+		<KEY type="S"		action="KEYNONE"	duration="10" 	/>
+		<KEY type="S"		action="KEYPRESS"	duration="1500"	/>
+		<KEY type="S"		action="KEYRELEASE"	duration="10" 	/>
+		<KEY type="S"		action="KEYNONE"	duration="10" 	/>
+	</KEYSEQUENCE>
+	
+	<KEYSEQUENCE name="A" >
+		<KEY type="A"		action="KEYNONE"	duration="10" 	/>
+		<KEY type="A"		action="KEYPRESS"	duration="1500"	/>
+		<KEY type="A"		action="KEYRELEASE"	duration="10" 	/>
+		<KEY type="A"		action="KEYNONE"	duration="10" 	/>
+	</KEYSEQUENCE>
+	
+	<KEYSEQUENCE name="SD" >
+		<KEY type="SD"		action="KEYNONE"	duration="10" 	/>
+		<KEY type="SD"		action="KEYPRESS"	duration="10"	/>
+		<KEY type="SD"		action="KEYRELEASE"	duration="10" 	/>
+		<KEY type="SD"		action="KEYNONE"	duration="10" 	/>
+	</KEYSEQUENCE>
+	
+	<KEYSEQUENCE name="ASD" >
+		<KEY type="ASD"		action="KEYNONE"	duration="10" 	/>
+		<KEY type="ASD"		action="KEYPRESS"	duration="10"	/>
+		<KEY type="ASD"		action="KEYRELEASE"	duration="10" 	/>
+		<KEY type="ASD"		action="KEYNONE"	duration="10" 	/>
+	</KEYSEQUENCE>
+	
+	<KEYSEQUENCE name="AD" >
+		<KEY type="AD"		action="KEYNONE"	duration="10" 	/>
+		<KEY type="AD"		action="KEYPRESS"	duration="10"	/>
+		<KEY type="AD"		action="KEYRELEASE"	duration="10" 	/>
+		<KEY type="AD"		action="KEYNONE"	duration="10" 	/>
+	</KEYSEQUENCE>
+	
+	<KEYSEQUENCE name="AS" >
+		<KEY type="AS"		action="KEYNONE"	duration="10" 	/>
+		<KEY type="AS"		action="KEYPRESS"	duration="10"	/>
+		<KEY type="AS"		action="KEYRELEASE"	duration="10" 	/>
+		<KEY type="AS"		action="KEYNONE"	duration="10" 	/>
+	</KEYSEQUENCE>
+
+</KEYSEQUENCEDB>

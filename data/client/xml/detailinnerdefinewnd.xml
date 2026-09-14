@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="TournamentDetailInnerPageNoticeWnd" Id="10">
+	<Size X="29" Y="58" Width="186" Height="382" />
+	<Style>IWS_BACKMOST</Style>
+	<Imagery>
+		<Image Type="DevideStrip" Imageset="BaseImage001" Image="strip_gray_dark">
+  	  <Area X="6" Y="236" Width="174" Height="2" HorzAlign="Stretch" RenderType="Multiply" />
+  	</Image>
+		<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_3">
+ 			<Area X="93" Y="167" RenderType="Multiply"/>
+ 		</Image>
+		<Image Type="HelpIcon" Imageset="UIIconPack19" Image="quest_246">
+ 			<Area X="93" Y="167" />
+  	</Image>
+		<Image Type="NoticeIcon" Imageset="UIIconPack6" Image="goods_yell">
+ 			<Area X="93" Y="167" />
+  	</Image>
+  </Imagery>
+  <ExtraInfo DevideOffsetX="0.0f" DevideOffsetY="18.0f" DevideHorzCnt="1" DevideVertCnt="7" />
+  <Window ClassName="ioButton" Id="1">
+		<Size X="27" Y="364" Width="43" Height="18"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="icon0_list_left">
+  			<Area X="17" Y="4"/>
+  		</Image>
+		</Imagery>
+	</Window>
+	<Window ClassName="ioButton" Id="2">
+		<Size X="116" Y="364" Width="43" Height="18" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="icon0_list_left">
+  			<Area X="17" Y="4" Reverse="Horz"/>
+  		</Image>
+		</Imagery>
+	</Window>
+	<Window ClassName="ioButton" Id="3">
+		<Size X="12" Y="351" Width="162" Height="31" />
+		<Title>
+			<Format X="81" Y="7" Size="13" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF20394F"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF20394F"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF20394F"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+			<Text>공지 작성</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="162" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="162" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="162" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_gray_down">
+				<Area X="0" Y="0" Width="162" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="162" Height="31"/>
+			</DefaultFrameImagery>
+		</Imagery>
+	</Window>	
+</Window>

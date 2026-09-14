@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+<Window ClassName="CharacterControlWnd" SubClassName="ioWnd" Id="990000" IDName="" MemberName="">
+    <Size X="0" Y="0" Width="310" Height="600" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+    <Style>IWS_PROCESS</Style>
+    <Imagery />
+    <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="1" IDName="ID_BTN_CHAR_CHANGE_RIGHT" MemberName="">
+        <Size X="229" Y="182" Width="53" Height="53" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+        <Imagery />
+        <ExtraInfo ButtonType="0">
+            <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+            <NormalImage FileName="" ImageSetName="BaseImage001" ImageName="icon0_right_orange" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+            <OverImage FileName="" ImageSetName="BaseImage001" ImageName="icon0_right_orange" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+            <OverAddImage FileName="" ImageSetName="BaseImage001" ImageName="icon0_right_orange" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+            <PushImage FileName="" ImageSetName="BaseImage001" ImageName="icon0_right_orange" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+            <ToolInfo>
+                <Event Type="WEVT_LBUTTONUP" Function="OnRightChangeCharacter" />
+            </ToolInfo>
+        </ExtraInfo>
+    </Window>
+    <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="2" IDName="ID_BTN_CHAR_CHANGE_LEFT" MemberName="">
+        <Size X="27" Y="182" Width="53" Height="53" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+        <Imagery />
+        <ExtraInfo ButtonType="0">
+            <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+            <NormalImage FileName="" ImageSetName="BaseImage001" ImageName="icon0_right_orange" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="1" Color="ffffffff" />
+            <OverImage FileName="" ImageSetName="BaseImage001" ImageName="icon0_right_orange" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="1" Color="ffffffff" />
+            <OverAddImage FileName="" ImageSetName="BaseImage001" ImageName="icon0_right_orange" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="1" Color="ffffffff" />
+            <PushImage FileName="" ImageSetName="BaseImage001" ImageName="icon0_right_orange" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="1" Color="ffffffff" />
+            <ToolInfo>
+                <Event Type="WEVT_LBUTTONUP" Function="OnLeftChangeCharacter" />
+            </ToolInfo>
+        </ExtraInfo>
+    </Window>
+    <Window ClassName="ioLabelWndEX" SubClassName="" Id="5" IDName="ID_LABEL_NAME" MemberName="">
+        <Size X="91" Y="341" Width="90" Height="14" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+        <Imagery />
+        <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+            <LabelInfo Text="lv10 데스페라도" Size="12" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+            <ToolInfo />
+        </ExtraInfo>
+    </Window>
+    <Window ClassName="ioTabWndEX" SubClassName="" Id="6" IDName="ID_TAB_MAINTAB" MemberName="">
+        <Size X="18" Y="365" Width="272" Height="195" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+        <Imagery />
+        <ExtraInfo DotGap="1" DotHeight="2">
+            <DotImage FileName="" ImageSetName="BaseImage001" ImageName="tap2_line" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+            <ToolInfo>
+                <Event Type="WEVT_TABCHECK" Function="OnTabMain" />
+            </ToolInfo>
+        </ExtraInfo>
+        <Window ClassName="ioTabFrameButtonEX" SubClassName="" Id="7" IDName="ID" MemberName="">
+            <Size X="0" Y="0" Width="90" Height="22" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo ButtonType="0">
+                <LabelInfo Text="육성" Size="14" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                <NormalFrame Template="tap4_off" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                <OverFrame Template="tap4_off" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                <OverAddFrame Template="tap4_overadd" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                <PushFrame Template="tap4_on" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="95" IDName="ID_FRM_ATTACK_BACK" MemberName="">
+                <Size X="136" Y="29" Width="133" Height="37" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioImageWndEX" SubClassName="" Id="96" IDName="ID_IMG_ATTACK_ICON" MemberName="">
+                    <Size X="3" Y="4" Width="31" Height="28" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo>
+                        <ImageInfo FileName="" ImageSetName="Ex1ItemIconPack101" ImageName="n021_weapon" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" NoMagicAlign="false" Color="ffffffff" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="97" IDName="ID_LAB_ATTACK_TXT" MemberName="">
+                    <Size X="39" Y="6" Width="62" Height="27" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="공격력" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioFrameButtonWndEX" SubClassName="" Id="98" IDName="ID_BTN_ATTACK_UP" MemberName="">
+                    <Size X="97" Y="7" Width="32" Height="24" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo ButtonType="0">
+                        <LabelInfo Text="+30" Size="14" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ffffffff" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                        <NormalFrame Template="bt002_green_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <OverFrame Template="bt002_green_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <OverAddFrame Template="bt002_green_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <PushFrame Template="bt002_green_down" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <DisableFrame Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <ToolInfo>
+                            <Event Type="WEVT_LBUTTONUP" Function="OnAttackUpgrade" />
+                            <Event Type="WEVT_MOUSEOVER" Function="OnAttackOver" />
+                            <Event Type="WEVT_MOUSELEAVE" Function="OnAttackLeave" />
+                        </ToolInfo>
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="103" IDName="" MemberName="">
+                <Size X="136" Y="111" Width="133" Height="37" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioImageWndEX" SubClassName="" Id="104" IDName="ID_IMG_SPEED_ICON" MemberName="">
+                    <Size X="3" Y="4" Width="31" Height="28" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo>
+                        <ImageInfo FileName="" ImageSetName="Ex2ItemIconPack401" ImageName="n005_cloak" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" NoMagicAlign="false" Color="ffffffff" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="105" IDName="ID_LAB_SPEED_TXT" MemberName="">
+                    <Size X="39" Y="6" Width="62" Height="27" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="이동속도" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioFrameButtonWndEX" SubClassName="" Id="106" IDName="ID_BTN_SPEED_UP" MemberName="">
+                    <Size X="97" Y="7" Width="32" Height="24" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo ButtonType="0">
+                        <LabelInfo Text="+30" Size="14" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ffffffff" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                        <NormalFrame Template="bt002_green_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <OverFrame Template="bt002_green_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <OverAddFrame Template="bt002_green_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <PushFrame Template="bt002_green_down" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <DisableFrame Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <ToolInfo>
+                            <Event Type="WEVT_LBUTTONUP" Function="OnSpeedUpgrade" />
+                            <Event Type="WEVT_MOUSEOVER" Function="OnSpeedOver" />
+                            <Event Type="WEVT_MOUSELEAVE" Function="OnSpeedLeave" />
+                        </ToolInfo>
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="111" IDName="ID_FRM_DROPDOWN_BACK" MemberName="">
+                <Size X="136" Y="152" Width="133" Height="37" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioImageWndEX" SubClassName="" Id="112" IDName="ID_IMG_DROPDOWN_ICON" MemberName="">
+                    <Size X="3" Y="4" Width="31" Height="28" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo>
+                        <ImageInfo FileName="" ImageSetName="Ex1SkillIconPack401" ImageName="s005_cloak2" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" NoMagicAlign="false" Color="ffffffff" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="113" IDName="ID_LAB_DROPDOWN_TXT" MemberName="">
+                    <Size X="39" Y="6" Width="62" Height="27" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="드랍완화" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioFrameButtonWndEX" SubClassName="" Id="114" IDName="ID_BTN_DROPDOWN_UP" MemberName="">
+                    <Size X="97" Y="7" Width="32" Height="24" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo ButtonType="0">
+                        <LabelInfo Text="+30" Size="14" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ffffffff" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                        <NormalFrame Template="bt002_green_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <OverFrame Template="bt002_green_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <OverAddFrame Template="bt002_green_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <PushFrame Template="bt002_green_down" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <DisableFrame Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <ToolInfo>
+                            <Event Type="WEVT_LBUTTONUP" Function="OnDropDownUpgrade" />
+                            <Event Type="WEVT_MOUSEOVER" Function="OnDropDownOver" />
+                            <Event Type="WEVT_MOUSELEAVE" Function="OnDropDownLeave" />
+                        </ToolInfo>
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="119" IDName="" MemberName="">
+                <Size X="136" Y="70" Width="133" Height="37" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioImageWndEX" SubClassName="" Id="120" IDName="ID_IMG_DEFENCE_ICON" MemberName="">
+                    <Size X="3" Y="4" Width="31" Height="28" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo>
+                        <ImageInfo FileName="" ImageSetName="Ex1ItemIconPack102" ImageName="n040_weapon" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" NoMagicAlign="false" Color="ffffffff" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="121" IDName="ID_LAB_DEFENCE_TXT" MemberName="">
+                    <Size X="39" Y="6" Width="62" Height="27" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="방어력" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioFrameButtonWndEX" SubClassName="" Id="122" IDName="ID_BTN_DEFENCE_UP" MemberName="">
+                    <Size X="97" Y="7" Width="32" Height="24" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo ButtonType="0">
+                        <LabelInfo Text="+30" Size="14" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ffffffff" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                        <NormalFrame Template="bt002_green_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <OverFrame Template="bt002_green_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <OverAddFrame Template="bt002_green_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <PushFrame Template="bt002_green_down" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <DisableFrame Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <ToolInfo>
+                            <Event Type="WEVT_LBUTTONUP" Function="OnDefenceUpgrade" />
+                            <Event Type="WEVT_MOUSEOVER" Function="OnDefenceOver" />
+                            <Event Type="WEVT_MOUSELEAVE" Function="OnDefenceLeave" />
+                        </ToolInfo>
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="123" IDName="" MemberName="">
+                <Size X="2" Y="29" Width="133" Height="37" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioImageWndEX" SubClassName="" Id="124" IDName="ID_IMG_WEAPON_ICON" MemberName="">
+                    <Size X="3" Y="4" Width="31" Height="28" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo>
+                        <ImageInfo FileName="" ImageSetName="Ex1ItemIconPack101" ImageName="n001_weapon" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" NoMagicAlign="false" Color="ffffffff" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="125" IDName="ID_LAB_WEAPON_TXT" MemberName="">
+                    <Size X="39" Y="6" Width="62" Height="27" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="무기스킬" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioFrameButtonWndEX" SubClassName="" Id="126" IDName="ID_BTN_WEAPON_UP" MemberName="">
+                    <Size X="97" Y="7" Width="32" Height="24" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo ButtonType="0">
+                        <LabelInfo Text="+30" Size="14" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ffffffff" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                        <NormalFrame Template="bt002_green_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffbfbfbf" />
+                        <OverFrame Template="bt002_green_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <OverAddFrame Template="bt002_green_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <PushFrame Template="bt002_green_down" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <DisableFrame Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <ToolInfo>
+                            <Event Type="WEVT_LBUTTONUP" Function="OnWaeponUpgrade" />
+                            <Event Type="WEVT_MOUSEOVER" Function="OnWaeponOver" />
+                            <Event Type="WEVT_MOUSELEAVE" Function="OnWaeponLeave" />
+                        </ToolInfo>
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="127" IDName="" MemberName="">
+                <Size X="2" Y="111" Width="133" Height="37" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioImageWndEX" SubClassName="" Id="128" IDName="ID_IMG_HELM_ICON" MemberName="">
+                    <Size X="3" Y="4" Width="31" Height="28" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo>
+                        <ImageInfo FileName="" ImageSetName="Ex1ItemIconPack102" ImageName="n046_weapon" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" NoMagicAlign="false" Color="ffffffff" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="129" IDName="ID_LAB_HELM_TXT" MemberName="">
+                    <Size X="39" Y="6" Width="62" Height="27" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="투구스킬" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioFrameButtonWndEX" SubClassName="" Id="130" IDName="ID_BTN_HELM_UP" MemberName="">
+                    <Size X="97" Y="7" Width="32" Height="24" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo ButtonType="0">
+                        <LabelInfo Text="+30" Size="14" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ffffffff" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                        <NormalFrame Template="bt002_green_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <OverFrame Template="bt002_green_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <OverAddFrame Template="bt002_green_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <PushFrame Template="bt002_green_down" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <DisableFrame Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <ToolInfo>
+                            <Event Type="WEVT_LBUTTONUP" Function="OnHelmUpgrade" />
+                            <Event Type="WEVT_MOUSEOVER" Function="OnHelmOver" />
+                            <Event Type="WEVT_MOUSELEAVE" Function="OnHelmLeave" />
+                        </ToolInfo>
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="131" IDName="" MemberName="">
+                <Size X="2" Y="70" Width="133" Height="37" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioImageWndEX" SubClassName="" Id="132" IDName="ID_IMG_AMOR_ICON" MemberName="">
+                    <Size X="3" Y="4" Width="31" Height="28" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo>
+                        <ImageInfo FileName="" ImageSetName="Ex1ItemIconPack201" ImageName="n001_armor" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" NoMagicAlign="false" Color="ffffffff" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="133" IDName="ID_LAB_AMOR_TXT" MemberName="">
+                    <Size X="39" Y="6" Width="62" Height="27" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="갑옷스킬" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioFrameButtonWndEX" SubClassName="" Id="134" IDName="ID_BTN_AMOR_UP" MemberName="">
+                    <Size X="97" Y="7" Width="32" Height="24" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo ButtonType="0">
+                        <LabelInfo Text="+30" Size="14" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ffffffff" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                        <NormalFrame Template="bt002_green_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <OverFrame Template="bt002_green_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <OverAddFrame Template="bt002_green_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <PushFrame Template="bt002_green_down" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <DisableFrame Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <ToolInfo>
+                            <Event Type="WEVT_LBUTTONUP" Function="OnAmorUpgrade" />
+                            <Event Type="WEVT_MOUSEOVER" Function="OnAmorOver" />
+                            <Event Type="WEVT_MOUSELEAVE" Function="OnAmorLeave" />
+                        </ToolInfo>
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="135" IDName="" MemberName="">
+                <Size X="2" Y="152" Width="133" Height="37" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioImageWndEX" SubClassName="" Id="136" IDName="ID_IMG_CAPE_ICON" MemberName="">
+                    <Size X="3" Y="4" Width="31" Height="28" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo>
+                        <ImageInfo FileName="" ImageSetName="Ex1ItemIconPack401" ImageName="n009_cloak" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" NoMagicAlign="false" Color="ffffffff" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="137" IDName="ID_LAB_CAPE_TXT" MemberName="">
+                    <Size X="39" Y="6" Width="62" Height="27" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="망토스킬" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioFrameButtonWndEX" SubClassName="" Id="138" IDName="ID_BTN_CAPE_UP" MemberName="">
+                    <Size X="97" Y="7" Width="32" Height="24" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo ButtonType="0">
+                        <LabelInfo Text="+30" Size="14" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ffffffff" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                        <NormalFrame Template="bt002_green_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <OverFrame Template="bt002_green_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <OverAddFrame Template="bt002_green_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <PushFrame Template="bt002_green_down" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <DisableFrame Template="bt007_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <ToolInfo>
+                            <Event Type="WEVT_LBUTTONUP" Function="OnCapeUpgrade" />
+                            <Event Type="WEVT_MOUSEOVER" Function="OnCapeOver" />
+                            <Event Type="WEVT_MOUSELEAVE" Function="OnCapeLeave" />
+                        </ToolInfo>
+                    </ExtraInfo>
+                </Window>
+            </Window>
+        </Window>
+        <Window ClassName="ioTabFrameButtonEX" SubClassName="" Id="8" IDName="" MemberName="">
+            <Size X="91" Y="0" Width="90" Height="22" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo ButtonType="0">
+                <LabelInfo Text="장비" Size="14" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                <NormalFrame Template="tap4_off" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                <OverFrame Template="tap4_off" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                <OverAddFrame Template="tap4_overadd" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                <PushFrame Template="tap4_on" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioImageWndEX" SubClassName="" Id="43" IDName="" MemberName="">
+                <Size X="-91" Y="25" Width="271" Height="138" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioImageWndEX" SubClassName="" Id="44" IDName="ID_IMG_EQIP_WEAPON" MemberName="">
+                    <Size X="6" Y="16" Width="61" Height="53" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo>
+                        <ImageInfo FileName="" ImageSetName="BaseImage005" ImageName="iconslot_1" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" NoMagicAlign="false" Color="ffffffff" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                    <Window ClassName="ioLabelWndEX" SubClassName="" Id="139" IDName="ID_LAB_EQIP_WEAPON_UPGRADE" MemberName="">
+                        <Size X="0" Y="32" Width="58" Height="32" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                            <LabelInfo Text="+100" Size="22" Color="ff0ce1e7" BKColor="ff000000" Alpha="255" Style="13" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                </Window>
+                <Window ClassName="ioImageWndEX" SubClassName="" Id="45" IDName="ID_IMG_EQIP_AMOR" MemberName="">
+                    <Size X="74" Y="16" Width="61" Height="53" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo>
+                        <ImageInfo FileName="" ImageSetName="BaseImage005" ImageName="iconslot_2" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" NoMagicAlign="false" Color="ffffffff" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                    <Window ClassName="ioLabelWndEX" SubClassName="" Id="21" IDName="ID_LAB_EQIP_AMOR_UPGRADE" MemberName="">
+                        <Size X="0" Y="32" Width="58" Height="32" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                            <LabelInfo Text="+100" Size="22" Color="ff0ce1e7" BKColor="ff000000" Alpha="255" Style="13" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                </Window>
+                <Window ClassName="ioImageWndEX" SubClassName="" Id="46" IDName="ID_IMG_EQIP_HELM" MemberName="">
+                    <Size X="142" Y="16" Width="61" Height="53" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo>
+                        <ImageInfo FileName="" ImageSetName="BaseImage005" ImageName="iconslot_3" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" NoMagicAlign="false" Color="ffffffff" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                    <Window ClassName="ioLabelWndEX" SubClassName="" Id="33" IDName="ID_LAB_EQIP_HELM_UPGRADE" MemberName="">
+                        <Size X="0" Y="32" Width="58" Height="32" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                            <LabelInfo Text="+100" Size="22" Color="ff0ce1e7" BKColor="ff000000" Alpha="255" Style="13" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                </Window>
+                <Window ClassName="ioImageWndEX" SubClassName="" Id="47" IDName="ID_IMG_EQIP_CAPE" MemberName="">
+                    <Size X="211" Y="16" Width="61" Height="53" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo>
+                        <ImageInfo FileName="" ImageSetName="BaseImage005" ImageName="iconslot_4" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" NoMagicAlign="false" Color="ffffffff" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                    <Window ClassName="ioLabelWndEX" SubClassName="" Id="11" IDName="ID_LAB_EQIP_CAPE_UPGRADE" MemberName="">
+                        <Size X="0" Y="32" Width="58" Height="32" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                            <LabelInfo Text="+100" Size="22" Color="ff0ce1e7" BKColor="ff000000" Alpha="255" Style="13" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                </Window>
+                <Window ClassName="ioImageWndEX" SubClassName="" Id="48" IDName="ID_IMG_MEDAL_0" MemberName="">
+                    <Size X="14" Y="93" Width="35" Height="31" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo>
+                        <ImageInfo FileName="" ImageSetName="BaseImage005" ImageName="iconslot_5" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" NoMagicAlign="false" Color="ffffffff" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioImageWndEX" SubClassName="" Id="49" IDName="ID_IMG_MEDAL_10" MemberName="">
+                    <Size X="55" Y="93" Width="35" Height="31" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo>
+                        <ImageInfo FileName="" ImageSetName="BaseImage005" ImageName="iconslot_5" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" NoMagicAlign="false" Color="ffffffff" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioImageWndEX" SubClassName="" Id="50" IDName="ID_IMG_MEDAL_20" MemberName="">
+                    <Size X="96" Y="93" Width="35" Height="31" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo>
+                        <ImageInfo FileName="" ImageSetName="BaseImage005" ImageName="iconslot_5" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" NoMagicAlign="false" Color="ffffffff" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioImageWndEX" SubClassName="" Id="51" IDName="ID_IMG_MEDAL_40" MemberName="">
+                    <Size X="178" Y="93" Width="35" Height="31" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo>
+                        <ImageInfo FileName="" ImageSetName="BaseImage005" ImageName="iconslot_5" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" NoMagicAlign="false" Color="ffffffff" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioImageWndEX" SubClassName="" Id="52" IDName="ID_IMG_MEDAL_30" MemberName="">
+                    <Size X="137" Y="93" Width="35" Height="31" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo>
+                        <ImageInfo FileName="" ImageSetName="BaseImage005" ImageName="iconslot_5" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" NoMagicAlign="false" Color="ffffffff" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioImageWndEX" SubClassName="" Id="53" IDName="ID_IMG_MEDAL_50" MemberName="">
+                    <Size X="219" Y="93" Width="35" Height="31" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo>
+                        <ImageInfo FileName="" ImageSetName="BaseImage005" ImageName="iconslot_5" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" NoMagicAlign="false" Color="ffffffff" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+        </Window>
+        <Window ClassName="ioTabFrameButtonEX" SubClassName="" Id="9" IDName="" MemberName="">
+            <Size X="182" Y="0" Width="90" Height="22" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo ButtonType="0">
+                <LabelInfo Text="치장" Size="14" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                <NormalFrame Template="tap4_off" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                <OverFrame Template="tap4_off" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                <OverAddFrame Template="tap4_overadd" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                <PushFrame Template="tap4_on" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioImageWndEX" SubClassName="" Id="54" IDName="" MemberName="">
+                <Size X="-181" Y="31" Width="271" Height="138" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioImageWndEX" SubClassName="" Id="55" IDName="ID_IMG_DECO_KINDRED" MemberName="">
+                    <Size X="13" Y="7" Width="61" Height="53" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo>
+                        <ImageInfo FileName="" ImageSetName="SkillIconPack301" ImageName="s008_cap" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" NoMagicAlign="false" Color="ffffffff" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioImageWndEX" SubClassName="" Id="56" IDName="ID_IMG_DECO_FACE" MemberName="">
+                    <Size X="104" Y="7" Width="61" Height="53" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo>
+                        <ImageInfo FileName="" ImageSetName="SkillIconPack301" ImageName="s008_cap" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" NoMagicAlign="false" Color="ffffffff" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioImageWndEX" SubClassName="" Id="57" IDName="ID_IMG_DECO_FACECOLOR" MemberName="">
+                    <Size X="195" Y="7" Width="61" Height="53" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo>
+                        <ImageInfo FileName="" ImageSetName="SkillIconPack301" ImageName="s008_cap" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" NoMagicAlign="false" Color="ffffffff" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioImageWndEX" SubClassName="" Id="64" IDName="ID_IMG_DECO_HAIR" MemberName="">
+                    <Size X="13" Y="74" Width="61" Height="53" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo>
+                        <ImageInfo FileName="" ImageSetName="SkillIconPack301" ImageName="s008_cap" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" NoMagicAlign="false" Color="ffffffff" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioImageWndEX" SubClassName="" Id="65" IDName="ID_IMG_DECO_HAIRCOLOR" MemberName="">
+                    <Size X="104" Y="74" Width="61" Height="53" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo>
+                        <ImageInfo FileName="" ImageSetName="SkillIconPack301" ImageName="s008_cap" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" NoMagicAlign="false" Color="ffffffff" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioImageWndEX" SubClassName="" Id="66" IDName="ID_IMG_DECO_PANTS" MemberName="">
+                    <Size X="195" Y="74" Width="61" Height="53" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo>
+                        <ImageInfo FileName="" ImageSetName="SkillIconPack301" ImageName="s008_cap" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" NoMagicAlign="false" Color="ffffffff" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+        </Window>
+    </Window>
+    <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="67" IDName="ID_BTN_TURN_LEFT" MemberName="">
+        <Size X="70" Y="259" Width="53" Height="53" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+        <Style>IWS_START_HIDE</Style>
+        <Imagery />
+        <ExtraInfo ButtonType="0">
+            <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+            <NormalImage FileName="" ImageSetName="BaseImage004" ImageName="icon0_3d_left" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+            <OverImage FileName="" ImageSetName="BaseImage004" ImageName="icon0_3d_left" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+            <OverAddImage FileName="" ImageSetName="BaseImage004" ImageName="icon0_3d_left" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+            <PushImage FileName="" ImageSetName="BaseImage004" ImageName="icon0_3d_left" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+            <ToolInfo>
+                <Event Type="WEVT_LBUTTONUP" Function="OnTurnLeft" />
+            </ToolInfo>
+        </ExtraInfo>
+    </Window>
+    <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="68" IDName="ID_BTN_TURN_RIGHT" MemberName="">
+        <Size X="181" Y="258" Width="53" Height="53" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+        <Style>IWS_START_HIDE</Style>
+        <Imagery />
+        <ExtraInfo ButtonType="0">
+            <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+            <NormalImage FileName="" ImageSetName="BaseImage004" ImageName="icon0_3d_left" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="1" Color="ffffffff" />
+            <OverImage FileName="" ImageSetName="BaseImage004" ImageName="icon0_3d_left" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="1" Color="ffffffff" />
+            <OverAddImage FileName="" ImageSetName="BaseImage004" ImageName="icon0_3d_left" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="1" Color="ffffffff" />
+            <PushImage FileName="" ImageSetName="BaseImage004" ImageName="icon0_3d_left" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="1" Color="ffffffff" />
+            <ToolInfo>
+                <Event Type="WEVT_LBUTTONUP" Function="OnTurnRight" />
+            </ToolInfo>
+        </ExtraInfo>
+    </Window>
+    <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="69" IDName="ID_BTN_CHANGE_CHAR" MemberName="">
+        <Size X="127" Y="273" Width="53" Height="53" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+        <Style>IWS_START_HIDE</Style>
+        <Imagery />
+        <ExtraInfo ButtonType="0">
+            <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+            <NormalImage FileName="" ImageSetName="BaseImage004" ImageName="icon0_3d_front" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+            <OverImage FileName="" ImageSetName="BaseImage004" ImageName="icon0_3d_front" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+            <OverAddImage FileName="" ImageSetName="BaseImage004" ImageName="icon0_3d_front" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+            <PushImage FileName="" ImageSetName="BaseImage004" ImageName="icon0_3d_front" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+            <ToolInfo>
+                <Event Type="WEVT_LBUTTONUP" Function="OnChangeCharacter" />
+            </ToolInfo>
+        </ExtraInfo>
+    </Window>
+    <Window ClassName="ioLabelWndEX" SubClassName="" Id="141" IDName="ID_LABEL_NAME2" MemberName="">
+        <Size X="180" Y="341" Width="32" Height="14" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+        <Imagery />
+        <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+            <LabelInfo Text="(영구)" Size="12" Color="ff1c26f9" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+            <ToolInfo />
+        </ExtraInfo>
+    </Window>
+</Window>

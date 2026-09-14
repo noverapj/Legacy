@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="ItemLostSagaMixerWnd" Id="528">
+	<Size X="496" Y="0" Width="258" Height="506" />
+	<Style>IWS_PROCESS|IWS_CHILD_ONLY_RESPONSE|IWS_START_HIDE</Style>
+	<Imagery>
+		<Image Imageset="BaseImage001" Image="strip_gray_dark" >
+			<Area X="27" Y="349" Width="204" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_light" >
+			<Area X="27" Y="370" Width="204" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_dark" >
+			<Area X="27" Y="391" Width="204" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_light" >
+			<Area X="27" Y="412" Width="204" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+	</Imagery>
+
+	<Window ClassName="ioButton" Id="1">
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Size X="27" Y="448" Width="204" Height="31"/>
+		<Title>
+			<Format X="102" Y="7" Size="13" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF117222"/>
+			<Text>조합 하기</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_green_nor">
+				<Area X="0" Y="0" Width="204" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_green_nor">
+				<Area X="0" Y="0" Width="204" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="204" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_green_down">
+				<Area X="0" Y="0" Width="204" Height="31"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="2">
+		<Size X="29" Y="57" Width="101" Height="96"/>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="3">
+		<Size X="129" Y="57" Width="101" Height="96"/>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="4">
+		<Size X="29" Y="152" Width="101" Height="96"/>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="5">
+		<Size X="129" Y="152" Width="101" Height="96"/>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="6">
+		<Size X="29" Y="247" Width="101" Height="96"/>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="7">
+		<Size X="129" Y="247" Width="101" Height="96"/>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+</Window>

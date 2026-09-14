@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="BriefingWnd" Id="5027">
+	<Size X="0" Y="0" XAlign="Left" YAlign="Top" Width="1" Height="1" />
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style> 
+	<ExtraInfo StartSound=""
+       		   RoundWinSound="interface/mode/round_win_00.wav"
+		         RoundLoseSound="interface/mode/round_lose_00.wav"
+      		   ResultWinSound="interface/mode/result_win_00.wav"
+		         ResultLoseSound="interface/mode/result_lose_00.wav"
+       		   ResultDrawSound="interface/mode/result_lose_00.wav"
+		         StartSoundFootBall=""
+       		   RoundWinSoundFootBall="interface/mode/soccer_round_win.wav"
+		         RoundLoseSoundFootBall="interface/mode/soccer_round_lose.wav"
+      		   ResultWinSoundFootBall="interface/mode/soccer_result_win.wav"
+	           ResultLoseSoundFootBall="interface/mode/soccer_result_lose.wav"
+       		   ResultDrawSoundFootBall="interface/mode/soccer_result_lose.wav"/>
+	<Imagery>
+		<Image Type="FinalRoundText" Imageset="BaseImage011" Image="Title_Roundfinal"/>
+		<Image Type="RoundText" Imageset="BaseImage011" Image="Title_Round"/>
+		<Image Type="Number" Imageset="BaseImage011" Image="Title_Roundnumber"/>
+		<Image Type="GameStart" Imageset="BaseImage011" Image="Title_Start"/>
+		<Image Type="GameEnd" Imageset="BaseImage011" Image="Title_End"/>
+		<Image Type="GameWin" Imageset="BaseImage011" Image="Title_Win"/>
+		<Image Type="GameDraw" Imageset="BaseImage011" Image="Title_Draw"/>
+		<Image Type="GameLose" Imageset="BaseImage011" Image="Title_Lose"/>
+		<Image Type="GameBlueWin" Imageset="BaseImage011" Image="Title_Winblue"/>
+		<Image Type="GameRedWin" Imageset="BaseImage011" Image="Title_Winred"/>
+		<Image Type="GameBlueLose" Imageset="BaseImage011" Image="Title_Loseblue"/>
+		<Image Type="GameRedLose" Imageset="BaseImage011" Image="Title_Losered"/>
+		<Image Type="IconWin" Imageset="UIIconPack5" Image="finish_win"/>
+		<Image Type="IconDraw" Imageset="UIIconPack5" Image="finash_draw"/>
+		<Image Type="IconLose" Imageset="UIIconPack5" Image="finish_lose"/>
+		<Image Type="HelpBar" Imageset="BaseImage013" Image="TextBack"/>
+		<Image Type="BattleModeRedTeamFrame" Imageset="BaseImage053" Image="battlemod_teamframe_l"/>
+		<Image Type="BattleModeBlueTeamFrame" Imageset="BaseImage054" Image="battlemod_teamframe_r"/>
+		<Image Type="BattleModeFrameCenter" Imageset="BaseImage054" Image="battlemod_vs_bg"/>
+		<Image Type="BattleModeVS" Imageset="BaseImage053" Image="battlemod_vs"/>
+
+		<Image Type="PvETitleWin" Imageset="BaseImage014" Image="pve_text17" />
+		<Image Type="PvETitleLose" Imageset="BaseImage014" Image="pve_text15" />
+		<Image Type="PvETitleFloor" Imageset="BaseImage014" Image="pve_text02" />
+		<Image Type="PvETitleFloorNum" Imageset="BaseImage014" Image="pve_num02" />
+		<Image Type="PvEModeTitleSub" Imageset="BaseImage014" Image="pve_text06"/>
+		<Image Type="PvEModeTitleLine" Imageset="BaseImage014" Image="pve_line01"/>
+		
+		<Image Type="TournamentResultBack" Imageset="BaseImage013" Image="TextBack"/>
+		
+		<Image Type="ShuffleResultEffect" Imageset="BaseImage027" Image="today_effect_yellow">
+			<Area X="0" Y="0" HorzAlign="Center"/>
+		</Image>
+		<Image Type="ShuffleEnd" Imageset="BaseImage028" Image="today_title_end">
+			<Area X="0" Y="0" HorzAlign="Center"/>
+		</Image>
+		<Image Type="ShuffleStarBox" Imageset="BaseImage027" Image="today_image_box">
+			<Area X="0" Y="0" HorzAlign="Center"/>
+		</Image>
+		<Image Type="ShuffleStarNum" Imageset="BaseImage027" Image="today_number_total">
+			<Area X="0" Y="0" HorzAlign="Center"/>
+		</Image>
+		<Image Type="HunterCoinResultEffect" Imageset="BaseImage027" Image="today_effect_yellow">
+			<Area X="0" Y="0" HorzAlign="Center"/>
+		</Image>
+		<Image Type="HunterCoinEnd" Imageset="BaseImage028" Image="raid_title_end">
+			<Area X="0" Y="0" HorzAlign="Center"/>
+		</Image>
+		<Image Type="HunterCoinBox" Imageset="BaseImage027" Image="raid_image_box">
+			<Area X="0" Y="0" HorzAlign="Center"/>
+		</Image>
+		<Image Type="HunterCoinNum" Imageset="BaseImage027" Image="today_number_total">
+			<Area X="0" Y="0" HorzAlign="Center"/>
+		</Image>
+	</Imagery>
+ 
+	<Window ClassName="ModeRankWnd" Id="1">
+		<Size X="0" Y="0" Width="287" Height="30" />
+		<Style>IWS_PROCESS|IWS_START_HIDE</Style> 
+		<ExtraInfo ShowTime="1000"
+               StartTime="1000"
+           	   GapTime="500"
+			         RollingSound="interface/ceremony/rank_rolling_00.wav"
+               RollingStopSound="interface/ceremony/rank_get_00.wav"/>
+		<Imagery>
+			<Image Type="StonePoint" Imageset="BaseImage012" Image="Rank_Stoneattack"/>
+			<Image Type="PrisonerPoint" Imageset="BaseImage012" Image="Rank_Prisonercatch"/>
+			<Image Type="KingPoint" Imageset="BaseImage012" Image="Rank_Crowndefence"/>
+			<Image Type="KillPoint" Imageset="BaseImage012" Image="Rank_Kill"/>
+			<Image Type="AttackPoint" Imageset="BaseImage012" Image="Rank_Attack"/>
+			<Image Type="DamagePoint" Imageset="BaseImage012" Image="Rank_Damage"/>
+
+			<Image Type="GoalPoint" Imageset="BaseImage012" Image="Rank_Kill"/>
+			<Image Type="BallTouchPoint" Imageset="BaseImage012" Image="Rank_Attack"/>
+			<Image Type="BallTimePoint" Imageset="BaseImage012" Image="Rank_Crowndefence"/>
+
+			<Image Type="GangsiInfectionPoint" Imageset="BaseImage012" Image="Rank_Gangsi"/>
+			<Image Type="GangsiSurvivorPoint" Imageset="BaseImage012" Image="Rank_Survival"/>
+
+			<Image Type="Rank_C" Imageset="BaseImage012" Image="Rank_C"/>
+			<Image Type="Rank_B" Imageset="BaseImage012" Image="Rank_B"/>
+			<Image Type="Rank_A" Imageset="BaseImage012" Image="Rank_A"/>
+			<Image Type="Rank_S" Imageset="BaseImage012" Image="Rank_S"/>
+			
+			<Image Type="Rank_Attack" Imageset="BaseImage_Defense001" Image="Rank_Allattack"/>
+			<Image Type="Rank_Defense" Imageset="BaseImage_Defense001" Image="Rank_Alldefense"/>
+			<Image Type="Rank_Time" Imageset="BaseImage_Defense001" Image="Rank_Time"/>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="PartyMemberList" Id="101">
+		<Size X="160" Y="265" Width="88" Height="243" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<DefaultFrameImagery Type="BlueNor" Templete="slot_camp_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="243"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="slot_camp_blue_over">
+				<Area X="0" Y="0" Width="88" Height="243"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNor" Templete="slot_camp_red_nor">
+				<Area X="0" Y="0" Width="88" Height="243"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="slot_camp_red_over">
+				<Area X="0" Y="0" Width="88" Height="243"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CaptainBack" Templete="state_green">
+				<Area X="6" Y="6" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNorGra" Imageset="BaseImage004" Image="slot_battle_blue_nor_gra" />
+			<Image Type="BlueOverGra" Imageset="BaseImage004" Image="slot_battle_blue_over_gra" />
+			<Image Type="RedNorGra" Imageset="BaseImage004" Image="slot_battle_red_nor_gra" />
+			<Image Type="RedOverGra" Imageset="BaseImage004" Image="slot_battle_red_over_gra" />
+			<Image Type="GuildMarkLine" Imageset="BaseImage001" Image="icon0_guildmark_s_bg1" />
+			<Image Type="GoldMonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_gold" />
+			<Image Type="MonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_normal" />
+			<Image Type="RaidCoin" Imageset="BaseImage025" Image="pve_raid_ticket" />
+			<Image Type="CoinNumber" Imageset="BaseImage001" Image="text_moncoin_num" />
+			<Image Type="CoinUnlimited" Imageset="BaseImage001" Image="text_moncoin_unlimited" />
+			<Image Type="BlueEmpty" Imageset="BaseImage004" Image="slot_blue_x" />
+			<Image Type="RedEmpty" Imageset="BaseImage004" Image="slot_red_x" />
+			<Image Type="LoadCharBack" Imageset="BaseImage002" Image="mychr_shadow2" />
+			<Image Type="CharLoading1" Imageset="BaseImage002" Image="mychr_loading1" />
+			<Image Type="CharLoading2" Imageset="BaseImage002" Image="mychr_loading2" />
+			<Image Type="CharLoading3" Imageset="BaseImage002" Image="mychr_loading3" />
+			<Image Type="CharLoading4" Imageset="BaseImage002" Image="mychr_loading4" />
+			<Image Type="CharLoading5" Imageset="BaseImage002" Image="mychr_loading1" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading6" Imageset="BaseImage002" Image="mychr_loading2" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading7" Imageset="BaseImage002" Image="mychr_loading3" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading8" Imageset="BaseImage002" Image="mychr_loading4" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="AIBG" Imageset="BaseImage028" Image="mychr_ai_shadow" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyMemberList" Id="102">
+		<Size X="253" Y="265" Width="88" Height="131" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<DefaultFrameImagery Type="BlueNor" Templete="slot_camp_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="243"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="slot_camp_blue_over">
+				<Area X="0" Y="0" Width="88" Height="243"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNor" Templete="slot_camp_red_nor">
+				<Area X="0" Y="0" Width="88" Height="243"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="slot_camp_red_over">
+				<Area X="0" Y="0" Width="88" Height="243"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CaptainBack" Templete="state_green">
+				<Area X="6" Y="6" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNorGra" Imageset="BaseImage004" Image="slot_battle_blue_nor_gra" />
+			<Image Type="BlueOverGra" Imageset="BaseImage004" Image="slot_battle_blue_over_gra" />
+			<Image Type="RedNorGra" Imageset="BaseImage004" Image="slot_battle_red_nor_gra" />
+			<Image Type="RedOverGra" Imageset="BaseImage004" Image="slot_battle_red_over_gra" />
+			<Image Type="GuildMarkLine" Imageset="BaseImage001" Image="icon0_guildmark_s_bg1" />
+			<Image Type="GoldMonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_gold" />
+			<Image Type="MonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_normal" />
+			<Image Type="RaidCoin" Imageset="BaseImage025" Image="pve_raid_ticket" />
+			<Image Type="CoinNumber" Imageset="BaseImage001" Image="text_moncoin_num" />
+			<Image Type="CoinUnlimited" Imageset="BaseImage001" Image="text_moncoin_unlimited" />
+			<Image Type="BlueEmpty" Imageset="BaseImage004" Image="slot_blue_x" />
+			<Image Type="RedEmpty" Imageset="BaseImage004" Image="slot_red_x" />
+			<Image Type="LoadCharBack" Imageset="BaseImage002" Image="mychr_shadow2" />
+			<Image Type="CharLoading1" Imageset="BaseImage002" Image="mychr_loading1" />
+			<Image Type="CharLoading2" Imageset="BaseImage002" Image="mychr_loading2" />
+			<Image Type="CharLoading3" Imageset="BaseImage002" Image="mychr_loading3" />
+			<Image Type="CharLoading4" Imageset="BaseImage002" Image="mychr_loading4" />
+			<Image Type="CharLoading5" Imageset="BaseImage002" Image="mychr_loading1" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading6" Imageset="BaseImage002" Image="mychr_loading2" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading7" Imageset="BaseImage002" Image="mychr_loading3" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading8" Imageset="BaseImage002" Image="mychr_loading4" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="AIBG" Imageset="BaseImage028" Image="mychr_ai_shadow" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyMemberList" Id="103">
+		<Size X="346" Y="265" Width="88" Height="131" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<DefaultFrameImagery Type="BlueNor" Templete="slot_camp_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="243"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="slot_camp_blue_over">
+				<Area X="0" Y="0" Width="88" Height="243"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNor" Templete="slot_camp_red_nor">
+				<Area X="0" Y="0" Width="88" Height="243"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="slot_camp_red_over">
+				<Area X="0" Y="0" Width="88" Height="243"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CaptainBack" Templete="state_green">
+				<Area X="6" Y="6" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNorGra" Imageset="BaseImage004" Image="slot_battle_blue_nor_gra" />
+			<Image Type="BlueOverGra" Imageset="BaseImage004" Image="slot_battle_blue_over_gra" />
+			<Image Type="RedNorGra" Imageset="BaseImage004" Image="slot_battle_red_nor_gra" />
+			<Image Type="RedOverGra" Imageset="BaseImage004" Image="slot_battle_red_over_gra" />
+			<Image Type="GuildMarkLine" Imageset="BaseImage001" Image="icon0_guildmark_s_bg1" />
+			<Image Type="GoldMonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_gold" />
+			<Image Type="MonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_normal" />
+			<Image Type="RaidCoin" Imageset="BaseImage025" Image="pve_raid_ticket" />
+			<Image Type="CoinNumber" Imageset="BaseImage001" Image="text_moncoin_num" />
+			<Image Type="CoinUnlimited" Imageset="BaseImage001" Image="text_moncoin_unlimited" />
+			<Image Type="BlueEmpty" Imageset="BaseImage004" Image="slot_blue_x" />
+			<Image Type="RedEmpty" Imageset="BaseImage004" Image="slot_red_x" />
+			<Image Type="LoadCharBack" Imageset="BaseImage002" Image="mychr_shadow2" />
+			<Image Type="CharLoading1" Imageset="BaseImage002" Image="mychr_loading1" />
+			<Image Type="CharLoading2" Imageset="BaseImage002" Image="mychr_loading2" />
+			<Image Type="CharLoading3" Imageset="BaseImage002" Image="mychr_loading3" />
+			<Image Type="CharLoading4" Imageset="BaseImage002" Image="mychr_loading4" />
+			<Image Type="CharLoading5" Imageset="BaseImage002" Image="mychr_loading1" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading6" Imageset="BaseImage002" Image="mychr_loading2" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading7" Imageset="BaseImage002" Image="mychr_loading3" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading8" Imageset="BaseImage002" Image="mychr_loading4" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="AIBG" Imageset="BaseImage028" Image="mychr_ai_shadow" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyMemberList" Id="104">
+		<Size X="585" Y="265" Width="88" Height="131" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<DefaultFrameImagery Type="BlueNor" Templete="slot_camp_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="243"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="slot_camp_blue_over">
+				<Area X="0" Y="0" Width="88" Height="243"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNor" Templete="slot_camp_red_nor">
+				<Area X="0" Y="0" Width="88" Height="243"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="slot_camp_red_over">
+				<Area X="0" Y="0" Width="88" Height="243"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CaptainBack" Templete="state_green">
+				<Area X="6" Y="6" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNorGra" Imageset="BaseImage004" Image="slot_battle_blue_nor_gra" />
+			<Image Type="BlueOverGra" Imageset="BaseImage004" Image="slot_battle_blue_over_gra" />
+			<Image Type="RedNorGra" Imageset="BaseImage004" Image="slot_battle_red_nor_gra" />
+			<Image Type="RedOverGra" Imageset="BaseImage004" Image="slot_battle_red_over_gra" />
+			<Image Type="GuildMarkLine" Imageset="BaseImage001" Image="icon0_guildmark_s_bg1" />
+			<Image Type="GoldMonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_gold" />
+			<Image Type="MonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_normal" />
+			<Image Type="RaidCoin" Imageset="BaseImage025" Image="pve_raid_ticket" />
+			<Image Type="CoinNumber" Imageset="BaseImage001" Image="text_moncoin_num" />
+			<Image Type="CoinUnlimited" Imageset="BaseImage001" Image="text_moncoin_unlimited" />
+			<Image Type="BlueEmpty" Imageset="BaseImage004" Image="slot_blue_x" />
+			<Image Type="RedEmpty" Imageset="BaseImage004" Image="slot_red_x" />
+			<Image Type="LoadCharBack" Imageset="BaseImage002" Image="mychr_shadow2" />
+			<Image Type="CharLoading1" Imageset="BaseImage002" Image="mychr_loading1" />
+			<Image Type="CharLoading2" Imageset="BaseImage002" Image="mychr_loading2" />
+			<Image Type="CharLoading3" Imageset="BaseImage002" Image="mychr_loading3" />
+			<Image Type="CharLoading4" Imageset="BaseImage002" Image="mychr_loading4" />
+			<Image Type="CharLoading5" Imageset="BaseImage002" Image="mychr_loading1" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading6" Imageset="BaseImage002" Image="mychr_loading2" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading7" Imageset="BaseImage002" Image="mychr_loading3" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading8" Imageset="BaseImage002" Image="mychr_loading4" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="AIBG" Imageset="BaseImage028" Image="mychr_ai_shadow" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyMemberList" Id="105">
+		<Size X="675" Y="266" Width="88" Height="131" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<DefaultFrameImagery Type="BlueNor" Templete="slot_camp_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="243"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="slot_camp_blue_over">
+				<Area X="0" Y="0" Width="88" Height="243"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNor" Templete="slot_camp_red_nor">
+				<Area X="0" Y="0" Width="88" Height="243"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="slot_camp_red_over">
+				<Area X="0" Y="0" Width="88" Height="243"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CaptainBack" Templete="state_green">
+				<Area X="6" Y="6" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNorGra" Imageset="BaseImage004" Image="slot_battle_blue_nor_gra" />
+			<Image Type="BlueOverGra" Imageset="BaseImage004" Image="slot_battle_blue_over_gra" />
+			<Image Type="RedNorGra" Imageset="BaseImage004" Image="slot_battle_red_nor_gra" />
+			<Image Type="RedOverGra" Imageset="BaseImage004" Image="slot_battle_red_over_gra" />
+			<Image Type="GuildMarkLine" Imageset="BaseImage001" Image="icon0_guildmark_s_bg1" />
+			<Image Type="GoldMonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_gold" />
+			<Image Type="MonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_normal" />
+			<Image Type="RaidCoin" Imageset="BaseImage025" Image="pve_raid_ticket" />
+			<Image Type="CoinNumber" Imageset="BaseImage001" Image="text_moncoin_num" />
+			<Image Type="CoinUnlimited" Imageset="BaseImage001" Image="text_moncoin_unlimited" />
+			<Image Type="BlueEmpty" Imageset="BaseImage004" Image="slot_blue_x" />
+			<Image Type="RedEmpty" Imageset="BaseImage004" Image="slot_red_x" />
+			<Image Type="LoadCharBack" Imageset="BaseImage002" Image="mychr_shadow2" />
+			<Image Type="CharLoading1" Imageset="BaseImage002" Image="mychr_loading1" />
+			<Image Type="CharLoading2" Imageset="BaseImage002" Image="mychr_loading2" />
+			<Image Type="CharLoading3" Imageset="BaseImage002" Image="mychr_loading3" />
+			<Image Type="CharLoading4" Imageset="BaseImage002" Image="mychr_loading4" />
+			<Image Type="CharLoading5" Imageset="BaseImage002" Image="mychr_loading1" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading6" Imageset="BaseImage002" Image="mychr_loading2" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading7" Imageset="BaseImage002" Image="mychr_loading3" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading8" Imageset="BaseImage002" Image="mychr_loading4" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="AIBG" Imageset="BaseImage028" Image="mychr_ai_shadow" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyMemberList" Id="106">
+		<Size X="770" Y="265" Width="88" Height="131" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<DefaultFrameImagery Type="BlueNor" Templete="slot_camp_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="243"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="slot_camp_blue_over">
+				<Area X="0" Y="0" Width="88" Height="243"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNor" Templete="slot_camp_red_nor">
+				<Area X="0" Y="0" Width="88" Height="243"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="slot_camp_red_over">
+				<Area X="0" Y="0" Width="88" Height="243"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CaptainBack" Templete="state_green">
+				<Area X="6" Y="6" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNorGra" Imageset="BaseImage004" Image="slot_battle_blue_nor_gra" />
+			<Image Type="BlueOverGra" Imageset="BaseImage004" Image="slot_battle_blue_over_gra" />
+			<Image Type="RedNorGra" Imageset="BaseImage004" Image="slot_battle_red_nor_gra" />
+			<Image Type="RedOverGra" Imageset="BaseImage004" Image="slot_battle_red_over_gra" />
+			<Image Type="GuildMarkLine" Imageset="BaseImage001" Image="icon0_guildmark_s_bg1" />
+			<Image Type="GoldMonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_gold" />
+			<Image Type="MonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_normal" />
+			<Image Type="RaidCoin" Imageset="BaseImage025" Image="pve_raid_ticket" />
+			<Image Type="CoinNumber" Imageset="BaseImage001" Image="text_moncoin_num" />
+			<Image Type="CoinUnlimited" Imageset="BaseImage001" Image="text_moncoin_unlimited" />
+			<Image Type="BlueEmpty" Imageset="BaseImage004" Image="slot_blue_x" />
+			<Image Type="RedEmpty" Imageset="BaseImage004" Image="slot_red_x" />
+			<Image Type="LoadCharBack" Imageset="BaseImage002" Image="mychr_shadow2" />
+			<Image Type="CharLoading1" Imageset="BaseImage002" Image="mychr_loading1" />
+			<Image Type="CharLoading2" Imageset="BaseImage002" Image="mychr_loading2" />
+			<Image Type="CharLoading3" Imageset="BaseImage002" Image="mychr_loading3" />
+			<Image Type="CharLoading4" Imageset="BaseImage002" Image="mychr_loading4" />
+			<Image Type="CharLoading5" Imageset="BaseImage002" Image="mychr_loading1" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading6" Imageset="BaseImage002" Image="mychr_loading2" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading7" Imageset="BaseImage002" Image="mychr_loading3" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading8" Imageset="BaseImage002" Image="mychr_loading4" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="AIBG" Imageset="BaseImage028" Image="mychr_ai_shadow" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+</Window>
+

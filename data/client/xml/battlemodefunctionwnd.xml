@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="BattleModeFunctionWnd" Id="5081">
+	<Size X="0" Y="0" XAlign="Right" YAlign="Bottom" Width="280" Height="450"/>
+	<Style>IWS_PROCESS|IWS_CANMOVE|IWS_BACKMOST</Style>
+	<!-- <Imagery> -->
+		<!-- <DefaultFrameImagery Type="BackFrm" Templete="arcade_infobg"> -->
+			<!-- <Area X="0" Y="0" Width="800" Height="29"/> -->
+		<!-- </DefaultFrameImagery> -->
+
+		<!-- <Image Type="BackFrmLine" Imageset="BaseImage_Arcade001" Image="arcade_eff_line" /> -->
+
+		<!-- <Image Type="NewChallengerText" Imageset="BaseImage_Arcade002" Image="arcade_comtxt_come" /> -->
+	<!-- </Imagery> -->
+	<!-- <ExtraInfo ChallengerSnd = "emotion/hi_01.wav"/> -->
+	
+	
+	<!-- 난입 버튼 -->
+	<Window ClassName="ioButton" Id="1">
+		<Size X="124" Y="250" Width="124" Height="31" />
+		<Title>
+			<Format X="38" Y="15" Size="14" Style="Outline_full_2x" HorzAlign="Left" VertAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FFAA374D"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FFAA374D"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FFAA374D"/>
+			<Color Type="Disable" Text="FF323232" Back="FFAA374D"/>
+			<Text>--</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_red_nor">
+				<Area X="0" Y="0" Width="124" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_red_nor">
+				<Area X="0" Y="0" Width="124" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="124" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_red_down">
+				<Area X="0" Y="0" Width="124" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt001_red_nor">
+				<Area X="0" Y="0" Width="124" Height="31"/>
+			</DefaultFrameImagery>
+
+			<Image Imageset="BaseImage053" Image="battlemod_icon_dive" >
+				<Area X="20" Y="15" />
+			</Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>		
+	</Window>
+
+	<!-- 캐릭터 교체 버튼 -->
+	<Window ClassName="ioButton" Id="2">
+		<Size X="124" Y="290" Width="124" Height="31" />
+		<Title>
+			<Format X="36" Y="15" Size="14" Style="Outline_full_2x" HorzAlign="Left" VertAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="117222"/>
+			<Color Type="Disable" Text="FF323232" Back="117222"/>
+			<Text>--</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_green_nor">
+				<Area X="0" Y="0" Width="124" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_green_nor">
+				<Area X="0" Y="0" Width="124" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="124" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_green_down">
+				<Area X="0" Y="0" Width="124" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt001_green_nor">
+				<Area X="0" Y="0" Width="124" Height="31"/>
+			</DefaultFrameImagery>
+
+			<Image Imageset="BaseImage053" Image="battlemod_icon_switch" >
+				<Area X="20" Y="15" />
+			</Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>		
+	</Window>
+	
+	<!-- 태그 요청 / 요청 취소 -->
+	<Window ClassName="ioButton" Id="3">
+		<Size X="124" Y="330" Width="124" Height="31" />
+		<Title>
+			<Format X="67" Y="15" Size="14" Style="Outline_full_2x" HorzAlign="Center" VertAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="117222"/>
+			<Color Type="Disable" Text="FF323232" Back="117222"/>
+			<Text>--</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_green_nor">
+				<Area X="0" Y="0" Width="124" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_green_nor">
+				<Area X="0" Y="0" Width="124" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="124" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_green_down">
+				<Area X="0" Y="0" Width="124" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt001_green_nor">
+				<Area X="0" Y="0" Width="124" Height="31"/>
+			</DefaultFrameImagery>
+
+			<Image Imageset="BaseImage053" Image="battlemod_icon_tag" >
+				<Area X="20" Y="15" />
+			</Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>		
+	</Window>
+	
+	<Window ClassName="ioButton" Id="4">
+		<Size X="124" Y="330" Width="124" Height="31" />
+		<Title>
+			<Format X="67" Y="15" Size="14" Style="Outline_full_2x" HorzAlign="Center" VertAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="117222"/>
+			<Color Type="Disable" Text="FF323232" Back="117222"/>
+			<Text>--</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_green_nor">
+				<Area X="0" Y="0" Width="124" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_green_nor">
+				<Area X="0" Y="0" Width="124" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="124" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_green_down">
+				<Area X="0" Y="0" Width="124" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt001_green_nor">
+				<Area X="0" Y="0" Width="124" Height="31"/>
+			</DefaultFrameImagery>
+
+			<Image Imageset="BaseImage053" Image="battlemod_icon_tag" >
+				<Area X="20" Y="15" />
+			</Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>		
+	</Window>
+</Window>

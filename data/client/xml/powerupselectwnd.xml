@@ -1,0 +1,981 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="PowerUpSelectWnd" Id="6253">
+	<Size X="0" Y="-20" Width="482" Height="513" XAlign="Center" YAlign="Center"/>
+	<DragRect Left="0" Top="0" Right="482" Bottom="36" />
+	<Style>IWS_MODAL|IWS_PROCESS|IWS_START_HIDE|IWS_CANMOVE|IWS_EXIT_ESC</Style>
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+			<Area X="0" Y="0" Width="482" Height="513"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title">
+			<Area X="5" Y="6" Width="472" Height="36"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="MultiplyFrm" Templete="win1_multiply_bottom">
+			<Area X="0" Y="457" Width="482" Height="56"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="EditFrm" Templete="slot_empty_white">
+		  <Area X="0" Y="0" Width="297" Height="22" AutoResize="False"/>
+		</DefaultFrameImagery>
+		<Image Type="TabDot" Imageset="BaseImage001" Image="tap2_line">
+			<Area X="18" Y="75" Width="1" Height="2" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+	</Imagery>
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="448" Y="11" Width="23" Height="23"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<Image Type="Disable" Imageset="BaseImage001" Image="icon0_x_grayframe" >
+				<Area X="0" Y="0" />
+			</Image>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="icon0_x" >
+				<Area X="5" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+ 
+  <Window ClassName="ioEdit" Id="2">
+    <Size X="25" Y="478" Width="297" Height="22" />
+    <ExtraInfo MaxLength="50" TextColor="FFce4e00" BkColor="FF3A3A3A" Align="Left" Style="Normal" Size="12" />
+  </Window>
+  
+  <Window ClassName="ioButton" Id="3">
+    <Size X="316" Y="474" Width="149" Height="22" />
+    <Title>
+      <Format X="74" Y="4" Size="12" Style="Normal" HorzAlign="Center"/>
+      <Color Type="Normal" Text="FF3a3a3a" Back="FF117222"/>
+      <Color Type="Over" Text="FF3a3a3a" Back="FF117222"/>
+      <Color Type="Push" Text="FF3a3a3a" Back="FF117222"/>
+      <Color Type="Disable" Text="FFa7a7a7" Back="FF117222"/>
+      <Text>검색하기 (ENTER)</Text>
+    </Title>
+    <Imagery>
+      <DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+        <Area X="0" Y="0" Width="149" Height="22"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+        <Area X="0" Y="0" Width="149" Height="22"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+        <Area X="0" Y="0" Width="149" Height="22"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+        <Area X="0" Y="0" Width="149" Height="22"/>
+      </DefaultFrameImagery>
+    </Imagery>
+    <ExtraInfo OverSound  = "interface/public_mouseover_00.wav"
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+  </Window>
+ 
+<!--///////////////////////// 탭 /////////////////////////////////////////////-->
+	<Window ClassName="PowerUpCategoryTab" Id="101">
+		<Size X="17" Y="54" Width="73" Height="23" />
+		<Title>
+			<Format X="36" Y="5" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>전체</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="tap3_off">
+				<Area X="0" Y="0" Width="73" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="tap3_off">
+				<Area X="0" Y="0" Width="73" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap3_overadd">
+				<Area X="0" Y="0" Width="73" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="tap3_on1">
+				<Area X="0" Y="0" Width="73" Height="23"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="tap2_line" >
+				<Area X="73" Y="21" Width="1" Height="2" HorzAlign="Stretch"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PowerUpCategoryTab" Id="102">
+		<Size X="91" Y="54" Width="73" Height="23" />
+		<Title>
+			<Format X="36" Y="5" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>이름없음1</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="tap3_off">
+				<Area X="0" Y="0" Width="73" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="tap3_off">
+				<Area X="0" Y="0" Width="73" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap3_overadd">
+				<Area X="0" Y="0" Width="73" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="tap3_on1">
+				<Area X="0" Y="0" Width="73" Height="23"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="tap2_line" >
+				<Area X="73" Y="21" Width="1" Height="2" HorzAlign="Stretch"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PowerUpCategoryTab" Id="103">
+		<Size X="165" Y="54" Width="73" Height="23" />
+		<Title>
+			<Format X="36" Y="5" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>이름없음2</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="tap3_off">
+				<Area X="0" Y="0" Width="73" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="tap3_off">
+				<Area X="0" Y="0" Width="73" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap3_overadd">
+				<Area X="0" Y="0" Width="73" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="tap3_on1">
+				<Area X="0" Y="0" Width="73" Height="23"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="tap2_line" >
+				<Area X="73" Y="21" Width="1" Height="2" HorzAlign="Stretch"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PowerUpCategoryTab" Id="104">
+		<Size X="239" Y="54" Width="73" Height="23" />
+		<Title>
+			<Format X="36" Y="5" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>이름없음3</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="tap3_off">
+				<Area X="0" Y="0" Width="73" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="tap3_off">
+				<Area X="0" Y="0" Width="73" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap3_overadd">
+				<Area X="0" Y="0" Width="73" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="tap3_on1">
+				<Area X="0" Y="0" Width="73" Height="23"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="tap2_line" >
+				<Area X="73" Y="21" Width="1" Height="2" HorzAlign="Stretch"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PowerUpCategoryTab" Id="105">
+		<Size X="313" Y="54" Width="73" Height="23" />
+		<Title>
+			<Format X="36" Y="5" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>이름없음4</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="tap3_off">
+				<Area X="0" Y="0" Width="73" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="tap3_off">
+				<Area X="0" Y="0" Width="73" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap3_overadd">
+				<Area X="0" Y="0" Width="73" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="tap3_on1">
+				<Area X="0" Y="0" Width="73" Height="23"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="tap2_line" >
+				<Area X="73" Y="21" Width="1" Height="2" HorzAlign="Stretch"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="PowerUpCategoryTab" Id="106">
+		<Size X="387" Y="54" Width="73" Height="23" />
+		<Title>
+			<Format X="36" Y="5" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>이름없음4</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="tap3_off">
+				<Area X="0" Y="0" Width="73" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="tap3_off">
+				<Area X="0" Y="0" Width="73" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap3_overadd">
+				<Area X="0" Y="0" Width="73" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="tap3_on1">
+				<Area X="0" Y="0" Width="73" Height="23"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="PowerUpCategoryTab" Id="107">
+		<Size X="17" Y="54" Width="87" Height="23" />
+		<Title>
+			<Format X="43" Y="5" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>전체</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="tap3_off">
+				<Area X="0" Y="0" Width="87" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="tap3_off">
+				<Area X="0" Y="0" Width="87" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap3_overadd">
+				<Area X="0" Y="0" Width="87" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="tap3_on1">
+				<Area X="0" Y="0" Width="87" Height="23"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="tap2_line" >
+				<Area X="87" Y="21" Width="1" Height="2" HorzAlign="Stretch"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PowerUpCategoryTab" Id="108">
+		<Size X="105" Y="54" Width="87" Height="23" />
+		<Title>
+			<Format X="43" Y="5" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>이름없음1</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="tap3_off">
+				<Area X="0" Y="0" Width="87" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="tap3_off">
+				<Area X="0" Y="0" Width="87" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap3_overadd">
+				<Area X="0" Y="0" Width="87" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="tap3_on1">
+				<Area X="0" Y="0" Width="87" Height="23"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="tap2_line" >
+				<Area X="87" Y="21" Width="1" Height="2" HorzAlign="Stretch"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PowerUpCategoryTab" Id="109">
+		<Size X="193" Y="54" Width="87" Height="23" />
+		<Title>
+			<Format X="43" Y="5" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>이름없음2</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="tap3_off">
+				<Area X="0" Y="0" Width="87" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="tap3_off">
+				<Area X="0" Y="0" Width="87" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap3_overadd">
+				<Area X="0" Y="0" Width="87" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="tap3_on1">
+				<Area X="0" Y="0" Width="87" Height="23"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="tap2_line" >
+				<Area X="87" Y="21" Width="1" Height="2" HorzAlign="Stretch"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PowerUpCategoryTab" Id="110">
+		<Size X="281" Y="54" Width="87" Height="23" />
+		<Title>
+			<Format X="43" Y="5" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>이름없음3</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="tap3_off">
+				<Area X="0" Y="0" Width="87" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="tap3_off">
+				<Area X="0" Y="0" Width="87" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap3_overadd">
+				<Area X="0" Y="0" Width="87" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="tap3_on1">
+				<Area X="0" Y="0" Width="87" Height="23"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="tap2_line" >
+				<Area X="87" Y="21" Width="1" Height="2" HorzAlign="Stretch"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PowerUpCategoryTab" Id="111">
+		<Size X="369" Y="54" Width="87" Height="23" />
+		<Title>
+			<Format X="43" Y="5" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>이름없음4</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="tap3_off">
+				<Area X="0" Y="0" Width="87" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="tap3_off">
+				<Area X="0" Y="0" Width="87" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap3_overadd">
+				<Area X="0" Y="0" Width="87" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="tap3_on1">
+				<Area X="0" Y="0" Width="87" Height="23"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+<!--////////////////////////// 버튼 : 아이템 /////////////////////////////////////////////-->
+	<Window ClassName="PowerUpSelectInfoWnd" Id="201">
+		<Size X="17" Y="82" Width="104" Height="181" />
+		<Style>IWS_BACKMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="104" Height="179"/>
+			</DefaultFrameImagery>
+
+			<Image Type="empty_image" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+		</Imagery>
+
+	    <Window ClassName="PowerUpSelectIconBtn" Id="1">
+			<Size X="20" Y="17" Width="64" Height="64" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Imagery>
+				<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+				<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+			</Imagery>
+		</Window>
+		
+		<Window ClassName="ioButton" Id="2">
+			<Size X="7" Y="150" Width="90" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="45" Y="2" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+				<Color Type="Disable" Text="FF323232" Back="FF0C426F"/>
+				<Text>선택</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_green_nor">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_green_nor">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_green_down">
+					<Area X="0" Y="0" Width="90" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	               ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+  </Window>
+  
+	<Window ClassName="PowerUpSelectInfoWnd" Id="202">
+		<Size X="123" Y="82" Width="104" Height="181" />
+		<Style>IWS_BACKMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="104" Height="179"/>
+			</DefaultFrameImagery>
+
+			<Image Type="empty_image" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+		</Imagery>
+
+	   <Window ClassName="PowerUpSelectIconBtn" Id="1">
+			<Size X="20" Y="17" Width="64" Height="64" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Imagery>
+				<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+				<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+			</Imagery>
+		</Window>
+
+    <Window ClassName="ioButton" Id="2">
+      <Size X="7" Y="150" Width="90" Height="22" />
+      <Style>IWS_BACKMOST</Style>
+      <Title>
+        <Format X="45" Y="2" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+        <Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+        <Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+        <Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+        <Color Type="Disable" Text="FF323232" Back="FF0C426F"/>
+        <Text>선택</Text>
+      </Title>
+      <Imagery>
+        <DefaultFrameImagery Type="Normal" Templete="bt007_green_nor">
+          <Area X="0" Y="0" Width="90" Height="22"/>
+        </DefaultFrameImagery>
+        <DefaultFrameImagery Type="Over" Templete="bt007_green_nor">
+          <Area X="0" Y="0" Width="90" Height="22"/>
+        </DefaultFrameImagery>
+        <DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+          <Area X="0" Y="0" Width="90" Height="22"/>
+        </DefaultFrameImagery>
+        <DefaultFrameImagery Type="Push" Templete="bt007_green_down">
+          <Area X="0" Y="0" Width="90" Height="22"/>
+        </DefaultFrameImagery>
+      </Imagery>
+	  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	               ClickSound = "interface/public_mouseclick_00.wav"/>
+    </Window>
+  </Window>
+  
+	<Window ClassName="PowerUpSelectInfoWnd" Id="203">
+		<Size X="229" Y="82" Width="104" Height="181" />
+		<Style>IWS_BACKMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="104" Height="179"/>
+			</DefaultFrameImagery>
+
+			<Image Type="empty_image" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+		</Imagery>
+
+	    	<Window ClassName="PowerUpSelectIconBtn" Id="1">
+			<Size X="20" Y="17" Width="64" Height="64" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Imagery>
+				<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+				<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+			</Imagery>
+		</Window>
+
+    <Window ClassName="ioButton" Id="2">
+      <Size X="7" Y="150" Width="90" Height="22" />
+      <Style>IWS_BACKMOST</Style>
+      <Title>
+        <Format X="45" Y="2" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+        <Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+        <Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+        <Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+        <Color Type="Disable" Text="FF323232" Back="FF0C426F"/>
+        <Text>선택</Text>
+      </Title>
+      <Imagery>
+        <DefaultFrameImagery Type="Normal" Templete="bt007_green_nor">
+          <Area X="0" Y="0" Width="90" Height="22"/>
+        </DefaultFrameImagery>
+        <DefaultFrameImagery Type="Over" Templete="bt007_green_nor">
+          <Area X="0" Y="0" Width="90" Height="22"/>
+        </DefaultFrameImagery>
+        <DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+          <Area X="0" Y="0" Width="90" Height="22"/>
+        </DefaultFrameImagery>
+        <DefaultFrameImagery Type="Push" Templete="bt007_green_down">
+          <Area X="0" Y="0" Width="90" Height="22"/>
+        </DefaultFrameImagery>
+      </Imagery>
+	  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	               ClickSound = "interface/public_mouseclick_00.wav"/>
+    </Window>
+  </Window>
+  
+	<Window ClassName="PowerUpSelectInfoWnd" Id="204">
+		<Size X="335" Y="82" Width="104" Height="181" />
+		<Style>IWS_BACKMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="104" Height="179"/>
+			</DefaultFrameImagery>	
+
+			<Image Type="empty_image" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+		</Imagery>
+
+	    	<Window ClassName="PowerUpSelectIconBtn" Id="1">
+			<Size X="20" Y="17" Width="64" Height="64" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Imagery>
+				<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+				<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+			</Imagery>
+		</Window>
+
+    <Window ClassName="ioButton" Id="2">
+      <Size X="7" Y="150" Width="90" Height="22" />
+      <Style>IWS_BACKMOST</Style>
+      <Title>
+        <Format X="45" Y="2" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+        <Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+        <Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+        <Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+        <Color Type="Disable" Text="FF323232" Back="FF0C426F"/>
+        <Text>선택</Text>
+      </Title>
+      <Imagery>
+        <DefaultFrameImagery Type="Normal" Templete="bt007_green_nor">
+          <Area X="0" Y="0" Width="90" Height="22"/>
+        </DefaultFrameImagery>
+        <DefaultFrameImagery Type="Over" Templete="bt007_green_nor">
+          <Area X="0" Y="0" Width="90" Height="22"/>
+        </DefaultFrameImagery>
+        <DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+          <Area X="0" Y="0" Width="90" Height="22"/>
+        </DefaultFrameImagery>
+        <DefaultFrameImagery Type="Push" Templete="bt007_green_down">
+          <Area X="0" Y="0" Width="90" Height="22"/>
+        </DefaultFrameImagery>
+      </Imagery>
+	  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	               ClickSound = "interface/public_mouseclick_00.wav"/>
+    </Window>
+  </Window>
+	
+	<Window ClassName="PowerUpSelectInfoWnd" Id="205">
+		<Size X="17" Y="263" Width="104" Height="181" />
+		<Style>IWS_BACKMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="104" Height="179"/>
+			</DefaultFrameImagery>	
+
+			<Image Type="empty_image" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+		</Imagery>
+
+	  <Window ClassName="PowerUpSelectIconBtn" Id="1">
+			<Size X="20" Y="17" Width="64" Height="64" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Imagery>
+				<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+				<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+			</Imagery>
+		</Window>
+
+	<Window ClassName="ioButton" Id="2">
+	  <Size X="7" Y="150" Width="90" Height="22" />
+	  <Style>IWS_BACKMOST</Style>
+	  <Title>
+		<Format X="45" Y="2" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+		<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+		<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+		<Color Type="Disable" Text="FF323232" Back="FF0C426F"/>
+		<Text>선택</Text>
+	  </Title>
+	  <Imagery>
+		<DefaultFrameImagery Type="Normal" Templete="bt007_green_nor">
+		  <Area X="0" Y="0" Width="90" Height="22"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="Over" Templete="bt007_green_nor">
+		  <Area X="0" Y="0" Width="90" Height="22"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+		  <Area X="0" Y="0" Width="90" Height="22"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="Push" Templete="bt007_green_down">
+		  <Area X="0" Y="0" Width="90" Height="22"/>
+		</DefaultFrameImagery>
+	  </Imagery>
+	  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+				   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	</Window>
+
+	<Window ClassName="PowerUpSelectInfoWnd" Id="206">
+		<Size X="123" Y="263" Width="104" Height="181" />
+		<Style>IWS_BACKMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="104" Height="179"/>
+			</DefaultFrameImagery>
+
+			<Image Type="empty_image" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+		</Imagery>
+
+	   <Window ClassName="PowerUpSelectIconBtn" Id="1">
+			<Size X="20" Y="17" Width="64" Height="64" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Imagery>
+				<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+				<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+			</Imagery>
+		</Window>
+
+    <Window ClassName="ioButton" Id="2">
+      <Size X="7" Y="150" Width="90" Height="22" />
+      <Style>IWS_BACKMOST</Style>
+      <Title>
+        <Format X="45" Y="2" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+        <Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+        <Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+        <Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+        <Color Type="Disable" Text="FF323232" Back="FF0C426F"/>
+        <Text>선택</Text>
+      </Title>
+      <Imagery>
+        <DefaultFrameImagery Type="Normal" Templete="bt007_green_nor">
+          <Area X="0" Y="0" Width="90" Height="22"/>
+        </DefaultFrameImagery>
+        <DefaultFrameImagery Type="Over" Templete="bt007_green_nor">
+          <Area X="0" Y="0" Width="90" Height="22"/>
+        </DefaultFrameImagery>
+        <DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+          <Area X="0" Y="0" Width="90" Height="22"/>
+        </DefaultFrameImagery>
+        <DefaultFrameImagery Type="Push" Templete="bt007_green_down">
+          <Area X="0" Y="0" Width="90" Height="22"/>
+        </DefaultFrameImagery>
+      </Imagery>
+	  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	               ClickSound = "interface/public_mouseclick_00.wav"/>
+    </Window>
+  </Window>
+  
+	<Window ClassName="PowerUpSelectInfoWnd" Id="207">
+		<Size X="229" Y="263" Width="104" Height="181" />
+		<Style>IWS_BACKMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="104" Height="179"/>
+			</DefaultFrameImagery>
+
+			<Image Type="empty_image" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+		</Imagery>
+
+	   <Window ClassName="PowerUpSelectIconBtn" Id="1">
+			<Size X="20" Y="17" Width="64" Height="64" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Imagery>
+				<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+				<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+			</Imagery>
+		</Window>
+
+    <Window ClassName="ioButton" Id="2">
+      <Size X="7" Y="150" Width="90" Height="22" />
+      <Style>IWS_BACKMOST</Style>
+      <Title>
+        <Format X="45" Y="2" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+        <Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+        <Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+        <Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+        <Color Type="Disable" Text="FF323232" Back="FF0C426F"/>
+        <Text>선택</Text>
+      </Title>
+      <Imagery>
+        <DefaultFrameImagery Type="Normal" Templete="bt007_green_nor">
+          <Area X="0" Y="0" Width="90" Height="22"/>
+        </DefaultFrameImagery>
+        <DefaultFrameImagery Type="Over" Templete="bt007_green_nor">
+          <Area X="0" Y="0" Width="90" Height="22"/>
+        </DefaultFrameImagery>
+        <DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+          <Area X="0" Y="0" Width="90" Height="22"/>
+        </DefaultFrameImagery>
+        <DefaultFrameImagery Type="Push" Templete="bt007_green_down">
+          <Area X="0" Y="0" Width="90" Height="22"/>
+        </DefaultFrameImagery>
+      </Imagery>
+	  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	               ClickSound = "interface/public_mouseclick_00.wav"/>
+    </Window>
+  </Window>
+  
+	<Window ClassName="PowerUpSelectInfoWnd" Id="208">
+		<Size X="335" Y="263" Width="104" Height="181" />
+		<Style>IWS_BACKMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="104" Height="179"/>
+			</DefaultFrameImagery>
+
+			<Image Type="empty_image" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+		</Imagery>
+
+	   <Window ClassName="PowerUpSelectIconBtn" Id="1">
+			<Size X="20" Y="17" Width="64" Height="64" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Imagery>
+				<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+				<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+			</Imagery>
+		</Window>
+
+    <Window ClassName="ioButton" Id="2">
+      <Size X="7" Y="150" Width="90" Height="22" />
+      <Style>IWS_BACKMOST</Style>
+      <Title>
+        <Format X="45" Y="2" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+        <Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+        <Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+        <Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+        <Color Type="Disable" Text="FF323232" Back="FF0C426F"/>
+        <Text>선택</Text>
+      </Title>
+      <Imagery>
+        <DefaultFrameImagery Type="Normal" Templete="bt007_green_nor">
+          <Area X="0" Y="0" Width="90" Height="22"/>
+        </DefaultFrameImagery>
+        <DefaultFrameImagery Type="Over" Templete="bt007_green_nor">
+          <Area X="0" Y="0" Width="90" Height="22"/>
+        </DefaultFrameImagery>
+        <DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+          <Area X="0" Y="0" Width="90" Height="22"/>
+        </DefaultFrameImagery>
+        <DefaultFrameImagery Type="Push" Templete="bt007_green_down">
+          <Area X="0" Y="0" Width="90" Height="22"/>
+        </DefaultFrameImagery>
+      </Imagery>
+	  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	               ClickSound = "interface/public_mouseclick_00.wav"/>
+    </Window>
+  </Window>
+<!--////////////////////////// scroll /////////////////////////////////////////////-->
+	<Window ClassName="ioScroll" Id="1001">
+		<Size X="450" Y="82" Width="15" Height="360" />
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_VSCROLL</ExStyle>
+		<Imagery>
+			<DefaultFrameImagery Templete="scrollbar_back">
+				<Area X="5" Y="10" Width="5" Height="340"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo PageRange="2" StartTime="500" CurTime ="100"/>
+
+		<Window ClassName="ioButton" Id="1">
+			<Size X="0" Y="0" Width="15" Height="10" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0" Reverse="Vert"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0" Reverse="Vert"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0" Reverse="Vert"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>					
+		</Window>
+		<Window ClassName="ioButton" Id="2">
+			<Size X="0" Y="350" Width="15" Height="10" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>					
+		</Window>
+		<Window ClassName="ioSlide" Id="3">
+			<Size X="0" Y="10" Width="15" Height="30" />
+			<DragRect Left="0" Top="0" Right="15" Bottom="30" />
+			<ExStyle>IWS_EX_NOTIFY_MOVED</ExStyle>
+			<Style>IWS_CANMOVE</Style>
+			<Imagery>
+				<DefaultFrameImagery Templete="scrollbar_drag">
+					<Area X="0" Y="0" Width="15" Height="30"/>
+				</DefaultFrameImagery>
+				<Image Type="Icon_Slide" Imageset="BaseImage001" Image="scrollbar_drag_icon"/>
+			</Imagery>
+		</Window>
+	</Window>
+</Window>

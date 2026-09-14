@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="TournamentDetailInnerCustomWnd" Id="13">
+	<Size X="29" Y="58" Width="558" Height="382" />
+	<Style>IWS_BACKMOST|IWS_PROCESS</Style>
+	<Imagery>
+		<Image Type="DevideStrip" Imageset="BaseImage001" Image="strip_gray_dark">
+  	  <Area X="6" Y="236" Width="546" Height="2" HorzAlign="Stretch" RenderType="Multiply" />
+	  </Image>
+    <Image Type="PresentBack" Imageset="BaseImage002" Image="iconeffect_1">
+      <Area X="204" Y="320"/>
+    </Image>
+    <Image Type="PresentNone" Imageset="BaseImage002" Image="quest_giftbox_x">
+      <Area X="204" Y="320"/>
+    </Image>
+    <Image Type="BackCircle" Imageset="BaseImage002" Image="iconeffect_4">
+      <Area X="279" Y="167" RenderType="Multiply"/>
+    </Image>
+    <Image Type="BackHub" Imageset="BaseImage002" Image="iconeffect_3">
+      <Area X="279" Y="167" RenderType="Multiply"/>
+    </Image>
+		<Image Type="CustomReward" Imageset="UIIconPack5" Image="finish_win">
+ 			<Area X="279" Y="167" />
+  	</Image>
+		<Image Type="NormalList" Imageset="BaseImage_League001" Image="league_confetti_big">
+ 			<Area X="85" Y="61" />
+  	</Image>
+		<Image Type="NormalList" Imageset="BaseImage_League001" Image="league_confetti_big">
+ 			<Area X="451" Y="76"/>
+  	</Image>
+		<Image Type="NormalList" Imageset="BaseImage_League001" Image="league_confetti_big">
+ 			<Area X="186" Y="119" Reverse="HorzVert"/>
+  	</Image>
+		<Image Type="NormalList" Imageset="BaseImage_League001" Image="league_confetti_big">
+ 			<Area X="121" Y="125" />
+  	</Image>
+		<Image Type="NormalList" Imageset="BaseImage_League001" Image="league_confetti_big">
+ 			<Area X="404" Y="177" Reverse="Horz"/>
+  	</Image>
+  	<Image Type="NormalList" Imageset="BaseImage_League001" Image="league_confetti_small">
+ 			<Area X="431" Y="36" Reverse="Horz"/>
+  	</Image>
+  	<Image Type="NormalList" Imageset="BaseImage_League001" Image="league_confetti_small">
+ 			<Area X="155" Y="113" Reverse="Horz"/>
+  	</Image>
+  	<Image Type="NormalList" Imageset="BaseImage_League001" Image="league_confetti_small">
+ 			<Area X="367" Y="137" />
+  	</Image>
+  	<Image Type="NormalList" Imageset="BaseImage_League001" Image="league_confetti_small">
+ 			<Area X="179" Y="146" />
+  	</Image>
+  	<Image Type="NormalList" Imageset="BaseImage_League001" Image="league_confetti_small">
+ 			<Area X="146" Y="186" />
+  	</Image>
+  	<Image Type="NormalList" Imageset="BaseImage_League001" Image="league_confetti_small">
+ 			<Area X="386" Y="190" Reverse="Horz"/>
+  	</Image>
+  </Imagery>
+  <ExtraInfo DevideOffsetX="0.0f" DevideOffsetY="18.0f" DevideHorzCnt="1" DevideVertCnt="4" 
+   PresentOffsetX="50.0f" PresentScaleRate="0.55f" PresentBackCnt="4" /> 
+</Window>

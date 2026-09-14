@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="HeroMatchWnd" Id="12">
+	<Size X="0" Y="32" Width="403" Height="423" />
+	<Style>IWS_START_HIDE|IWS_BACKMOST|IWS_PROCESS</Style>
+	<Imagery>
+		<DefaultFrameImagery Type="BlueBar" Templete="slot_hero_blue_nor">
+			<Area X="0" Y="0" Width="127" Height="183"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="RedBar" Templete="slot_hero_red_nor">
+			<Area X="0" Y="0" Width="127" Height="183"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="GrayBar" Templete="slot_hero_gray_nor">
+			<Area X="0" Y="0" Width="127" Height="183"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="BlueBarByPlaza" Templete="slot_camp_blue_nor">
+			<Area X="0" Y="0" Width="127" Height="246"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="RedBarByPlaza" Templete="slot_camp_red_nor">
+			<Area X="0" Y="0" Width="127" Height="246"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="GrayBarByPlaza" Templete="slot_camp_gray_nor">
+			<Area X="0" Y="0" Width="127" Height="246"/>
+		</DefaultFrameImagery>
+		
+		<Image Type="BlueGra" Imageset="BaseImage004" Image="slot_camp_blue_nor_gra" >
+			<Area X="3" Y="125" Width="121" Height="55" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+		<Image Type="BlueOverGra" Imageset="BaseImage004" Image="slot_camp_blue_over_gra" >
+			<Area X="3" Y="125" Width="121" Height="55" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+		<Image Type="RedGra" Imageset="BaseImage004" Image="slot_camp_red_nor_gra" >
+			<Area X="3" Y="125" Width="121" Height="55" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+		<Image Type="RedOverGra" Imageset="BaseImage004" Image="slot_camp_red_over_gra" >
+			<Area X="3" Y="125" Width="121" Height="55" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+		<Image Type="GrayGra" Imageset="BaseImage004" Image="slot_camp_gray_nor_gra" >
+			<Area X="3" Y="125" Width="121" Height="55" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+		<Image Type="GrayOverGra" Imageset="BaseImage004" Image="slot_camp_gray_over_gra" >
+			<Area X="3" Y="125" Width="121" Height="55" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+		
+		<Image Type="BlueGraByPlaza" Imageset="BaseImage004" Image="slot_camp_blue_nor_gra" >
+			<Area X="3" Y="188" Width="121" Height="55" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+		<Image Type="RedGraByPlaza" Imageset="BaseImage004" Image="slot_camp_red_nor_gra" >
+			<Area X="3" Y="188" Width="121" Height="55" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+		<Image Type="GrayGraByPlaza" Imageset="BaseImage004" Image="slot_camp_gray_nor_gra" >
+			<Area X="3" Y="188" Width="121" Height="55" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+		<Image Type="HeroRankTitle" Imageset="BaseImage015" Image="icontext_hero_heroranking"/>
+		<Image Type="SeasonHeroTitle" Imageset="BaseImage015" Image="icontext_hero_result"/>
+		<Image Type="SeasonRecordTitle" Imageset="BaseImage015" Image="icontext_hero_odds"/>
+
+		<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		<Image Type="RecordIcon" Imageset="UIIconPack22" Image="quest_348"/>
+		<Image Type="Number" Imageset="BaseImage012" Image="icontext_hero_num"/>
+		<Image Type="RankText" Imageset="BaseImage012" Image="icontext_hero_rank"/>
+		<Image Type="PercentText" Imageset="BaseImage012" Image="icontext_hero_per"/>
+		<Image Type="NoneText" Imageset="BaseImage012" Image="icontext_hero_00"/>
+		<Image Type="NoneIcon" Imageset="UIIconPack11" Image="mode_anything"/>
+		<Image Type="DarkBar" Imageset="BaseImage001" Image="strip_gray_dark" >
+			<Area X="0" Y="0" Width="121" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Type="LightBar" Imageset="BaseImage001" Image="strip_gray_light" >
+			<Area X="0" Y="0" Width="121" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Type="TextLine" Imageset="BaseImage001" Image="strip_gray_dark" >
+			<Area X="7" Y="346" Width="382" Height="2" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply"/>
+		</Image>
+	</Imagery>
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="10" Y="7" Width="319" Height="45" />
+		<Title>
+			<Format X="115" Y="10" Size="18" Style="Outline_full_2x" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+			<Text>대전 참여하기</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt005_blue_nor">
+				<Area X="0" Y="0" Width="319" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt005_blue_nor">
+				<Area X="0" Y="0" Width="319" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="319" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt005_blue_down">
+				<Area X="0" Y="0" Width="319" Height="45"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_up_blue" >
+				<Area X="95" Y="12"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="2">
+		<Size X="10" Y="7" Width="319" Height="45" />
+		<Title>
+			<Format X="115" Y="10" Size="18" Style="Outline_full_2x" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF9F291A"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF9F291A"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF9F291A"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+			<Text>대전 참여하기</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt005_red_nor">
+				<Area X="0" Y="0" Width="319" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt005_red_nor">
+				<Area X="0" Y="0" Width="319" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="319" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt005_red_down">
+				<Area X="0" Y="0" Width="319" Height="45"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_up_red" >
+				<Area X="95" Y="12"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="3">
+		<Size X="10" Y="7" Width="319" Height="45" />
+		<Title>
+			<Format X="115" Y="10" Size="18" Style="Outline_full_2x" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+			<Text>대전 참여하기</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt005_green_nor">
+				<Area X="0" Y="0" Width="319" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt005_green_nor">
+				<Area X="0" Y="0" Width="319" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="319" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt005_green_down">
+				<Area X="0" Y="0" Width="319" Height="45"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_up_green" >
+				<Area X="95" Y="12"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="4">
+		<Size X="331" Y="7" Width="62" Height="45" />
+		<Title>
+			<Format X="31" Y="10" Size="18" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+			<Text>랭킹</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt005_blue_nor">
+				<Area X="0" Y="0" Width="62" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt005_blue_nor">
+				<Area X="0" Y="0" Width="62" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="62" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt005_blue_down">
+				<Area X="0" Y="0" Width="62" Height="45"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="5">
+		<Size X="331" Y="7" Width="62" Height="45" />
+		<Title>
+			<Format X="31" Y="10" Size="18" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF9F291A"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF9F291A"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF9F291A"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+			<Text>랭킹</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt005_red_nor">
+				<Area X="0" Y="0" Width="62" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt005_red_nor">
+				<Area X="0" Y="0" Width="62" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="62" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt005_red_down">
+				<Area X="0" Y="0" Width="62" Height="45"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="6">
+		<Size X="331" Y="7" Width="62" Height="45" />
+		<Title>
+			<Format X="31" Y="10" Size="18" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+			<Text>랭킹</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt005_green_nor">
+				<Area X="0" Y="0" Width="62" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt005_green_nor">
+				<Area X="0" Y="0" Width="62" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="62" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt005_green_down">
+				<Area X="0" Y="0" Width="62" Height="45"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="HeroMatchRankBtn" Id="7">
+		<Size X="10" Y="58" Width="127" Height="183" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="BlueBar" Templete="slot_hero_blue_nor">
+				<Area X="0" Y="0" Width="127" Height="183"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOverBar" Templete="slot_hero_blue_over">
+				<Area X="0" Y="0" Width="127" Height="183"/>
+			</DefaultFrameImagery>
+
+			<DefaultFrameImagery Type="RedBar" Templete="slot_hero_red_nor">
+				<Area X="0" Y="0" Width="127" Height="183"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOverBar" Templete="slot_hero_red_over">
+				<Area X="0" Y="0" Width="127" Height="183"/>
+			</DefaultFrameImagery>
+
+			<DefaultFrameImagery Type="GrayBar" Templete="slot_hero_gray_nor">
+				<Area X="0" Y="0" Width="127" Height="183"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GrayOverBar" Templete="slot_hero_gray_over">
+				<Area X="0" Y="0" Width="127" Height="183"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueGra" Imageset="BaseImage004" Image="slot_camp_blue_nor_gra" >
+				<Area X="3" Y="125" Width="121" Height="55" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="BlueOverGra" Imageset="BaseImage004" Image="slot_camp_blue_over_gra" >
+				<Area X="3" Y="125" Width="121" Height="55" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="RedGra" Imageset="BaseImage004" Image="slot_camp_red_nor_gra" >
+				<Area X="3" Y="125" Width="121" Height="55" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="RedOverGra" Imageset="BaseImage004" Image="slot_camp_red_over_gra" >
+				<Area X="3" Y="125" Width="121" Height="55" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="GrayGra" Imageset="BaseImage004" Image="slot_camp_gray_nor_gra" >
+				<Area X="3" Y="125" Width="121" Height="55" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="GrayOverGra" Imageset="BaseImage004" Image="slot_camp_gray_over_gra" >
+				<Area X="3" Y="125" Width="121" Height="55" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+
+			<Image Type="HeroRankTitle" Imageset="BaseImage015" Image="icontext_hero_heroranking"/>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+			<Image Type="Number" Imageset="BaseImage012" Image="icontext_hero_num"/>
+			<Image Type="RankText" Imageset="BaseImage012" Image="icontext_hero_rank"/>
+			<Image Type="NoneText" Imageset="BaseImage012" Image="icontext_hero_00"/>
+			<Image Type="NoneIcon" Imageset="UIIconPack11" Image="mode_anything"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="LadderBattleHeroRankBtn" Id="8">
+		<Size X="10" Y="58" Width="127" Height="246" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="BlueBar" Templete="slot_camp_blue_nor">
+				<Area X="0" Y="0" Width="127" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedBar" Templete="slot_camp_red_nor">
+				<Area X="0" Y="0" Width="127" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GrayBar" Templete="slot_camp_gray_nor">
+				<Area X="0" Y="0" Width="127" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOverBar" Templete="slot_camp_blue_over">
+				<Area X="0" Y="0" Width="127" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOverBar" Templete="slot_camp_red_over">
+				<Area X="0" Y="0" Width="127" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GrayOverBar" Templete="slot_camp_gray_over">
+				<Area X="0" Y="0" Width="127" Height="246"/>
+			</DefaultFrameImagery>
+			
+			<Image Type="BlueGra" Imageset="BaseImage004" Image="slot_camp_blue_nor_gra" >
+				<Area X="3" Y="188" Width="121" Height="55" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="RedGra" Imageset="BaseImage004" Image="slot_camp_red_nor_gra" >
+				<Area X="3" Y="188" Width="121" Height="55" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="GrayBar" Imageset="BaseImage025" Image="slot_camp_gray_nor_gra" >
+				<Area X="3" Y="188" Width="121" Height="55" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="BlueOverGra" Imageset="BaseImage004" Image="slot_camp_blue_over_gra" >
+				<Area X="3" Y="188" Width="121" Height="55" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="RedOverGra" Imageset="BaseImage004" Image="slot_camp_red_over_gra" >
+				<Area X="3" Y="188" Width="121" Height="55" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="GrayOverBar" Imageset="BaseImage025" Image="slot_camp_gray_over_gra" >
+				<Area X="3" Y="188" Width="121" Height="55" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			
+			<Image Type="DarkBar" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="121" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="LightBar" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="121" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+
+			<Image Type="HeroRankTitle" Imageset="BaseImage015" Image="icontext_hero_heroranking"/>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+			<Image Type="Number" Imageset="BaseImage012" Image="icontext_hero_num"/>
+			<Image Type="RankText" Imageset="BaseImage012" Image="icontext_hero_rank"/>
+			<Image Type="NoneText" Imageset="BaseImage012" Image="icontext_hero_00"/>
+			<Image Type="NoneIcon" Imageset="UIIconPack11" Image="mode_anything"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="ioRichLabel" Id="100">
+		<Size X="12" Y="332" Width="420" Height="70"/>
+		<ExtraInfo VertGap="3" HorzAlign="Left" VertAlign="Top" >
+			<TextBlock Text="래더전이란?#" Size="12" Color="FF6E6E6E"/>
+			<TextBlock Text="상대진영과 1:1로 겨룰 수 있는 대전입니다.#" Size="12" Color="FF6E6E6E"/>
+			<TextBlock Text="대회포인트를 기본으로 지급하며,#" Size="12" Color="FF6E6E6E"/>
+			<TextBlock Text="시즌 성적에 따라 타이틀 및 보상보너스까지 제공합니다.#" Size="12" Color="FF6E6E6E"/>
+			<TextBlock Text="진영을 탈퇴해도 전적이 유지되니 많은 참여 바랍니다.#" Size="12" Color="FF6E6E6E"/>
+		</ExtraInfo>
+	</Window>
+</Window>

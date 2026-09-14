@@ -1,0 +1,24 @@
+	<BEHAVIOR name="SEARCH_AND_ATTACK">
+		<SEQUENCE name="SEQ:01:ROOT" >
+			<IMPORT use="TARGET_CHAMPIONMODE" comment="check and get target"/>
+			<REPEAT>
+				<SEQUENCE>
+					<ACTION act="not __target__.IsCurrentState(CS_DIE)" name1="ACT:04" />
+					<ACTION act="__myself__.Move(TOWARD_TARGET,RUN)" name="ACT:05:GO TO TARGET" />
+					<DECIDE act="__target__.IsDistance(BETWEEN{0.0f,200.0f})" name="DIC:05:DISTANCE_CHECK">
+						<SEQUENCE halt="none">
+							<ACTION act="__myself__.DoKeySeq(SHORT_D)" />
+							<REPEAT halt="onTrue" checkfor="450" > 
+								<ACTION="__myself__.IsCombo(1)" />
+							</REPEAT>
+							<ACTION act="__myself__.DoKeySeq(SHORT_D)" />
+							<REPEAT halt="onTrue" checkfor="450" > 
+								<ACTION="__myself__.IsCombo(2)" />
+							</REPEAT>
+							<ACTION act="__myself__.DoKeySeq(LONG_D)" />
+						</SEQUENCE>
+					</DECIDE>
+				</SEQUENCE>
+			</REPEAT>
+		</SEQUENCE>
+	</BEHAVIOR>

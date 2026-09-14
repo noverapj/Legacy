@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="TotalResultTournamentWnd" Id="6">
+	<Size X="234" Y="0" Width="540" Height="350" />
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_CHILD_ONLY_RESPONSE</Style>	
+	<Imagery>
+		<DefaultFrameImagery Type="ResultTextBack" Templete="league_finish_enterbg" >
+			<Area AutoResize="False"/>
+		</DefaultFrameImagery>
+    <Image Type="Back" Imageset="BaseImage_League007" Image="league_finish_bg" />
+    <Image Type="ProgressGaugeBack" Imageset="BaseImage_League007" Image="league_finish_entergauge_bg" />
+    <Image Type="ProgressGauge" Imageset="BaseImage_League007" Image="league_finish_entergauge_gauge" />
+    <Image Type="ProgressGaugeArrow" Imageset="BaseImage_League007" Image="league_finish_entergauge_gaugearrow" />
+    <Image Type="ChampIcon" Imageset="BaseImage_League003" Image="icon0_league_championicon" />
+    <Image Type="ChampIconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+    <Image Type="PesoIcon" Imageset="UIIconPack13" Image="quest_002" />
+    <Image Type="PesoIconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+    <Image Type="PesoText" Imageset="BaseImage_Arcade002" Image="arcade_uitxt_peso" />
+    <Image Type="PesoNum" Imageset="BaseImage_Arcade001" Image="arcade_peso_num" />    
+    <Image Type="BlueRoundNum" Imageset="BaseImage_League002" Image="icontext_league_finish_blue_num" />
+    <Image Type="BlueRoundText" Imageset="BaseImage_League002" Image="icontext_league_finish_blue_gang" />
+    <Image Type="BlueFinalRoundText" Imageset="BaseImage_League002" Image="icontext_league_finish_blue_end" />
+    <Image Type="BlueNextGoText" Imageset="BaseImage_League002" Image="icontext_league_finish_blue_enter" />
+    <Image Type="BlueNextFailText" Imageset="BaseImage_League002" Image="icontext_league_finish_blue_eli" />
+    <Image Type="BlueChampionText" Imageset="BaseImage_League002" Image="icontext_league_finish_blue_champ" />
+    <Image Type="BlueHalfChampionText" Imageset="BaseImage_League002" Image="icontext_league_finish_blue_champ2" />
+    <Image Type="RedRoundNum" Imageset="BaseImage_League002" Image="icontext_league_finish_red_num" />
+    <Image Type="RedRoundText" Imageset="BaseImage_League002" Image="icontext_league_finish_red_gang" />
+    <Image Type="RedFinalRoundText" Imageset="BaseImage_League002" Image="icontext_league_finish_red_end" />
+    <Image Type="RedNextGoText" Imageset="BaseImage_League002" Image="icontext_league_finish_red_enter" />
+    <Image Type="RedNextFailText" Imageset="BaseImage_League002" Image="icontext_league_finish_red_eli" />
+    <Image Type="RedChampionText" Imageset="BaseImage_League002" Image="icontext_league_finish_red_champ" />
+    <Image Type="RedHalfChampionText" Imageset="BaseImage_League002" Image="icontext_league_finish_red_champ2" />
+	</Imagery>
+	<ExtraInfo 
+	 WinBackSound="interface/league/league_finishbgm_win.wav"
+	 LoseBackSound="interface/league/league_finishbgm_lose.wav"
+ 	 TeamNameStartTime="760" TeamNameGapTime="340" TeamNameXPos="90"
+ 	 ResultTextStartTime="170" ResultTextGapTime="340"
+ 	 ResultTextBackStartTime="0" ResultTextBackGapTime="340"
+ 	 ResultTextBlinkStartTime="340" ResultTextBlinkGapTime="760"
+ 	 ResultTextEffectSound="interface/league/league_finish_textcome.wav"
+ 	 PesoRollingStartTime="0" PesoRollingGapTime="1650" PesoRollingTime="25"
+   PesoRollingSound="interface/league/league_finish_pesostop.wav"
+ 	 PesoBlinkStartTime="1780" PesoBlinkGapTime="130" PesoScale="0.5f"
+ 	 GagueStrechStartTime="1650" GagueStrechGapTime="1350"
+ 	 GaugeStrechEffectSound="interface/league/league_finish_gaugemove.wav"
+ 	 RoundTextStartTime ="3000" RoundTextGapTime ="170" />
+</Window>123

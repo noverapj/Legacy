@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="CampEnterWnd" Id="13">
+	<Size X="0" Y="32" Width="403" Height="455" />
+	<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST</Style>
+	<Imagery>
+		<DefaultFrameImagery Type="MainBannerFrm" Templete="league_main_banner_overoutline">
+			<Area X="0" Y="0" Width="383" Height="355"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="ScheduleBack" Templete="state_green">
+  		<Area X="0" Y="0" HorzAlign="Center" VertAlign="Center"/>
+  	</DefaultFrameImagery>
+
+		<Image Type="HorzLine" Imageset="BaseImage_League001" Image="league_main_line1"/>
+		<Image Type="TextBack" Imageset="BaseImage_League001" Image="league_main_line2" >
+			<Area X="0" Y="0" Width="377" Height="78" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+	</Imagery>
+	<Window ClassName="ioButton" Id="1">
+		<Size X="10" Y="368" Width="191" Height="45" />
+		<Title>
+			<Format X="95" Y="10" Size="18" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+			<Text>정부군가입</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt005_blue_nor">
+				<Area X="0" Y="0" Width="191" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt005_blue_nor">
+				<Area X="0" Y="0" Width="191" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="191" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt005_blue_down">
+				<Area X="0" Y="0" Width="191" Height="45"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	                   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="2">
+		<Size X="203" Y="368" Width="190" Height="45" />
+		<Title>
+			<Format X="95" Y="10" Size="18" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF9F291A"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF9F291A"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF9F291A"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+			<Text>반란군가입</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt005_red_nor">
+				<Area X="0" Y="0" Width="190" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt005_red_nor">
+				<Area X="0" Y="0" Width="190" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="190" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt005_red_down">
+				<Area X="0" Y="0" Width="190" Height="45"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	                   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioCheckButton" Id="5">
+		<Size X="21" Y="335" Width="16" Height="16" />
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Check" Imageset="BaseImage001" Image="check_box_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="ioButton" Id="6">
+		<Size X="40" Y="336" Width="100" Height="16" />
+		<Title>
+			<Format X="0" Y="0" Size="12" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FFFF8200" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFF8200" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFF8200" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+			<Text>[대회 운영 규칙]</Text>
+		</Title>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	                   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+</Window>

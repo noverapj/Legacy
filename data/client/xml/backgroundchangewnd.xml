@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="BackgroundChangeWnd" Id="6043">
+	<Size X="0" Y="-20" XAlign="Center" YAlign="Center" Width="280" Height="257" />
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_MODAL|IWS_AFTER_RENDER|IWS_EXIT_ESC</Style> 
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Title>
+		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Text>변경할 화면을 선택하세요</Text>
+	</Title>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+			<Area X="0" Y="0" Width="280" Height="257"/>
+		</DefaultFrameImagery>		
+		<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title">
+			<Area X="5" Y="6" Width="270" Height="36"/>
+		</DefaultFrameImagery>
+	</Imagery>
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="246" Y="11" Width="23" Height="23"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+                        <Image Type="Disable" Imageset="BaseImage001" Image="icon0_x_grayframe" >
+				<Area X="0" Y="0" />
+			</Image>
+                        <Image Type="NormalList" Imageset="BaseImage001" Image="icon0_x" >
+				<Area X="5" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="BackgroundChangeBtn" Id="2">
+		<Size X="17" Y="54" Width="120" Height="90" />
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Imagery>
+			<DefaultFrameImagery Type="LineFrame" Templete="slot_empty_gray4">
+				<Area X="0" Y="0" Width="124" Height="94"/>
+			</DefaultFrameImagery>
+
+			<Image Type="StripBlack" Imageset="BaseImage001" Image="strip_black100" >
+				<Area X="0" Y="0" Width="120" Height="16" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>	
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	               	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="BackgroundChangeBtn" Id="3">
+		<Size X="143" Y="54" Width="120" Height="90" />
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Imagery>
+			<DefaultFrameImagery Type="LineFrame" Templete="slot_empty_gray4">
+				<Area X="0" Y="0" Width="124" Height="94"/>
+			</DefaultFrameImagery>
+
+			<Image Type="StripBlack" Imageset="BaseImage001" Image="strip_black100" >
+				<Area X="0" Y="0" Width="120" Height="16" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>	
+			<Image Type="DefaultBack" Imageset="LoadingMap212" Image="Back001"/>
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	               	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="BackgroundChangeBtn" Id="4">
+		<Size X="17" Y="150" Width="120" Height="90" />
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Imagery>
+			<DefaultFrameImagery Type="LineFrame" Templete="slot_empty_gray4">
+				<Area X="0" Y="0" Width="124" Height="94"/>
+			</DefaultFrameImagery>
+
+			<Image Type="StripBlack" Imageset="BaseImage001" Image="strip_black100" >
+				<Area X="0" Y="0" Width="120" Height="16" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>	
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	               	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="BackgroundChangeBtn" Id="5">
+		<Size X="143" Y="150" Width="120" Height="90" />
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Imagery>
+			<DefaultFrameImagery Type="LineFrame" Templete="slot_empty_gray4">
+				<Area X="0" Y="0" Width="124" Height="94"/>
+			</DefaultFrameImagery>
+
+			<Image Type="StripBlack" Imageset="BaseImage001" Image="strip_black100" >
+				<Area X="0" Y="0" Width="120" Height="16" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>	
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	               	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="BackgroundChangeBtn" Id="6">
+		<Size X="17" Y="54" Width="120" Height="90" />
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Imagery>
+			<DefaultFrameImagery Type="LineFrame" Templete="slot_empty_gray4">
+				<Area X="0" Y="0" Width="124" Height="94"/>
+			</DefaultFrameImagery>
+
+			<Image Type="StripBlack" Imageset="BaseImage001" Image="strip_black100" >
+				<Area X="0" Y="0" Width="120" Height="16" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>	
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	               	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+</Window>

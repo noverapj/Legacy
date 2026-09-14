@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<Window ClassName="TowerDefWnd" Id="5076">
+	<Size X="0" Y="0" XAlign="Left" YAlign="Top" Width="800" Height="600"/>
+	<DragRect Left="0" Top="0" Right="800" Bottom="600" />
+	
+	<Style>IWS_START_HIDE|IWS_PROCESS|IWS_CHILD_ONLY_RESPONSE|IWS_BACKMOST</Style>
+
+	<Window ClassName="TowerDefUserGaugeWnd" Id="100">
+	
+	<Size X="30" Y="30" XAlign="Left" YAlign="Top" Width="100" Height="40"/>
+		<DragRect Left="0" Top="0" Right="65" Bottom="65" />
+		
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_CANMOVE|IWS_BACKMOST</Style>
+		<Imagery>
+		
+		<DefaultFrameImagery Type="UserGaugeFrame" Templete="gameui_hp_small_bg">
+			<Area X="0" Y="0" Width="105" Height="20"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="UserGaugeFrameOver" Templete="gameui_hp_small_overadd">
+			<Area X="0" Y="0" Width="105" Height="20"/>
+		</DefaultFrameImagery>
+		
+		<Image Type="UserFaceBG" Imageset="BaseImage_Defense002" Image="gameui_face_bg" />
+		<Image Type="UserFaceOverBG" Imageset="BaseImage_Defense002" Image="gameui_face_overadd" />
+		<Image Type="GaugeBlue" Imageset="BaseImage_Defense002" Image="gameui_hpgauge_blue" >
+			<Area X="0" Y="0" Width="101" Height="16"/>
+		</Image>
+		
+		<Image Type="Surrender" Imageset="BaseImage_Defense003" Image="pve_text_surrender" />
+		
+		</Imagery>
+	</Window>
+	
+	<Window ClassName="TowerDefUserGaugeWnd" Id="101">
+	
+	<Size X="30" Y="122" XAlign="Left" YAlign="Top" Width="100" Height="40"/>
+		<DragRect Left="0" Top="0" Right="65" Bottom="65" />
+		
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_CANMOVE|IWS_BACKMOST</Style>
+		<Imagery>
+		
+		<DefaultFrameImagery Type="UserGaugeFrame" Templete="gameui_hp_small_bg">
+			<Area X="0" Y="0" Width="105" Height="20"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="UserGaugeFrameOver" Templete="gameui_hp_small_overadd">
+			<Area X="0" Y="0" Width="105" Height="20"/>
+		</DefaultFrameImagery>
+		
+		<Image Type="UserFaceBG" Imageset="BaseImage_Defense002" Image="gameui_face_bg" />
+		<Image Type="UserFaceOverBG" Imageset="BaseImage_Defense002" Image="gameui_face_overadd" />
+		<Image Type="GaugeBlue" Imageset="BaseImage_Defense002" Image="gameui_hpgauge_blue" >
+			<Area X="0" Y="0" Width="101" Height="16"/>
+		</Image>
+		
+		<Image Type="Surrender" Imageset="BaseImage_Defense003" Image="pve_text_surrender" />
+		
+		</Imagery>
+	</Window>
+	
+	<Window ClassName="TowerDefUserGaugeWnd" Id="102">
+	
+	<Size X="30" Y="168" XAlign="Left" YAlign="Top" Width="100" Height="40"/>
+		<DragRect Left="0" Top="0" Right="65" Bottom="65" />
+		
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_CANMOVE|IWS_BACKMOST</Style>
+		<Imagery>
+		
+		<DefaultFrameImagery Type="UserGaugeFrame" Templete="gameui_hp_small_bg">
+			<Area X="0" Y="0" Width="105" Height="20"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="UserGaugeFrameOver" Templete="gameui_hp_small_overadd">
+			<Area X="0" Y="0" Width="105" Height="20"/>
+		</DefaultFrameImagery>
+		
+		<Image Type="UserFaceBG" Imageset="BaseImage_Defense002" Image="gameui_face_bg" />
+		<Image Type="UserFaceOverBG" Imageset="BaseImage_Defense002" Image="gameui_face_overadd" />
+		<Image Type="GaugeBlue" Imageset="BaseImage_Defense002" Image="gameui_hpgauge_blue" >
+			<Area X="0" Y="0" Width="101" Height="16"/>
+		</Image>
+		
+		<Image Type="Surrender" Imageset="BaseImage_Defense003" Image="pve_text_surrender" />
+		
+		</Imagery>
+	</Window>
+	
+	<Window ClassName="TowerDefUserGaugeWnd" Id="103">
+	
+	<Size X="30" Y="214" XAlign="Left" YAlign="Top" Width="100" Height="40"/>
+		<DragRect Left="0" Top="0" Right="65" Bottom="65" />
+		
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_CANMOVE|IWS_BACKMOST</Style>
+		<Imagery>
+		
+		<DefaultFrameImagery Type="UserGaugeFrame" Templete="gameui_hp_small_bg">
+			<Area X="0" Y="0" Width="105" Height="20"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="UserGaugeFrameOver" Templete="gameui_hp_small_overadd">
+			<Area X="0" Y="0" Width="105" Height="20"/>
+		</DefaultFrameImagery>
+		
+		<Image Type="UserFaceBG" Imageset="BaseImage_Defense002" Image="gameui_face_bg" />
+		<Image Type="UserFaceOverBG" Imageset="BaseImage_Defense002" Image="gameui_face_overadd" />
+		<Image Type="GaugeBlue" Imageset="BaseImage_Defense002" Image="gameui_hpgauge_blue" >
+			<Area X="0" Y="0" Width="101" Height="16"/>
+		</Image>
+		
+		<Image Type="Surrender" Imageset="BaseImage_Defense003" Image="pve_text_surrender" />
+		
+		</Imagery>
+	</Window>
+	
+	<Window ClassName="TowerDefUserGaugeWnd" Id="104">
+	
+	<Size X="178" Y="30" XAlign="Left" YAlign="Top" Width="400" Height="40"/>
+		<DragRect Left="0" Top="0" Right="65" Bottom="65" />
+		
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_CANMOVE|IWS_BACKMOST</Style>
+		<Imagery>
+		
+		<DefaultFrameImagery Type="UserGaugeFrame" Templete="gameui_hp_small_bg">
+			<Area X="0" Y="0" Width="240" Height="20"/>
+		</DefaultFrameImagery>	
+		<DefaultFrameImagery Type="UserGaugeFrameOver" Templete="gameui_hp_small_overadd">
+			<Area X="0" Y="0" Width="240" Height="20"/>
+		</DefaultFrameImagery>
+			
+		<Image Type="UserFaceBG" Imageset="BaseImage_Defense002" Image="gameui_face_bg" />
+		<Image Type="UserFaceOverBG" Imageset="BaseImage_Defense002" Image="gameui_face_overadd" />
+		<Image Type="GaugeBlue" Imageset="BaseImage_Defense002" Image="gameui_hpgauge_red" >
+			<Area X="0" Y="0" Width="236" Height="16"/>
+		</Image>
+		</Imagery>
+	</Window>
+	
+	<Window ClassName="TowerDefUserGaugeWnd" Id="105">
+	
+	<Size X="178" Y="30" XAlign="Left" YAlign="Top" Width="400" Height="40"/>
+		<DragRect Left="0" Top="0" Right="65" Bottom="65" />
+		
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_CANMOVE|IWS_BACKMOST</Style>
+		<Imagery>
+		
+		<DefaultFrameImagery Type="UserGaugeFrame" Templete="gameui_hp_large_bg">
+			<Area X="0" Y="0" Width="320" Height="39"/>
+		</DefaultFrameImagery>	
+		<DefaultFrameImagery Type="UserGaugeFrameOver" Templete="gameui_hp_large_overadd">
+			<Area X="0" Y="0" Width="320" Height="39"/>
+		</DefaultFrameImagery>
+			
+		<Image Type="UserFaceBG" Imageset="BaseImage_Defense002" Image="gameui_face_bg" />
+		<Image Type="UserFaceOverBG" Imageset="BaseImage_Defense002" Image="gameui_face_overadd" />
+		<Image Type="GaugeBlue" Imageset="BaseImage_Defense002" Image="gameui_hpgauge_red" >
+			<Area X="0" Y="0" Width="316" Height="35"/>
+		</Image>
+		</Imagery>
+	</Window>
+	
+	<Window ClassName="ConsumptionWnd" Id="106">
+	<Size X="30" Y="69" XAlign="Left" YAlign="Top" Width="141" Height="34"/>
+		<DragRect Left="0" Top="0" Right="141" Bottom="34" />
+		
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_CANMOVE|IWS_BACKMOST</Style>
+		
+		
+		<Window ClassName="ConsumptionSlotBtn" Id="0">
+		    <Style>IWS_BACKMOST</Style>
+			<Size X="19" Y="17" Width="34" Height="34"/>
+			<Imagery>
+				<Image Type="EmptySlot" Imageset="BaseImage_Defense002" Image="pve_potionui_x" />
+			</Imagery>
+		</Window>
+		
+		<Window ClassName="ConsumptionSlotBtn" Id="1">
+		    <Style>IWS_BACKMOST</Style>
+			<Size X="53" Y="17" Width="34" Height="34"/>
+			<Imagery>
+				<Image Type="EmptySlot" Imageset="BaseImage_Defense002" Image="pve_potionui_x" />
+			</Imagery>
+		</Window>
+		
+		<Window ClassName="ConsumptionSlotBtn" Id="2">
+		    <Style>IWS_BACKMOST</Style>
+			<Size X="87" Y="17" Width="34" Height="34"/>
+			<Imagery>
+				<Image Type="EmptySlot" Imageset="BaseImage_Defense002" Image="pve_potionui_x" />
+			</Imagery>
+		</Window>
+		
+		<Window ClassName="ConsumptionSlotBtn" Id="3">
+		    <Style>IWS_BACKMOST</Style>
+			<Size X="121" Y="17" Width="34" Height="34"/>
+			<Imagery>
+				<Image Type="EmptySlot" Imageset="BaseImage_Defense002" Image="pve_potionui_x" />
+			</Imagery>
+		</Window>
+		
+	</Window>
+	
+</Window>

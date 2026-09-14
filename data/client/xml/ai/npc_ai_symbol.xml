@@ -1,0 +1,298 @@
+<?xml version="1.1" encoding="euc-kr" ?>
+<SYMBOLTABLE>
+	<SYMBOLTYPE_LIST>
+		<SYMBOL_TYPE	location="ClientEnumTypes"	enumname="AIDefElemType"			value="1" 		loadtype="101" />
+		<SYMBOL_TYPE	location="ClientEnumTypes"	enumname="AIBrainElemType"			value="2" 		loadtype="101" />
+		<SYMBOL_TYPE	location="ClientEnumTypes"	enumname="AIDatabaseType"			value="3" 		loadtype="101" />
+		<SYMBOL_TYPE	location="ClientEnumTypes"	enumname="AIBvTNodeType"			value="4" 		loadtype="101" />
+		<SYMBOL_TYPE	location="ClientEnumTypes"	enumname="AIBvTHaltType"			value="5" 		loadtype="101" />
+		<SYMBOL_TYPE	location="ClientEnumTypes"	enumname="AIBvTRoleType"			value="6" 		loadtype="101" />
+		<SYMBOL_TYPE	location="ClientEnumTypes"	enumname="AIKeyInputType"			value="7" 		loadtype="101" />
+		<SYMBOL_TYPE	location="ClientEnumTypes"	enumname="AIKeyStateType"			value="8" 		loadtype="101" />
+		<SYMBOL_TYPE	location="ClientEnumTypes"	enumname="AIConfigType"				value="9" 		loadtype="101" />
+		<SYMBOL_TYPE	location="ClientEnumTypes"	enumname="AICompareType"			value="10" 		loadtype="101" />
+		<SYMBOL_TYPE	location="ClientEnumTypes"	enumname="AIExecVariableType"		value="11" 		loadtype="101" />
+		<SYMBOL_TYPE	location="ClientEnumTypes"	enumname="AIExecOperatorType"		value="12" 		loadtype="101" />
+		<SYMBOL_TYPE	location="ClientEnumTypes"	enumname="AIExecMethodType"			value="13" 		loadtype="101" />
+		<SYMBOL_TYPE	location="ClientEnumTypes"	enumname="CharState"				value="14" 		loadtype="101" />
+	</SYMBOLTYPE_LIST>
+	<SYMBOLLIST type="auto">
+	</SYMBOLLIST>
+	<SYMBOLLIST type="manual">
+		<!-- Client : ioAIDefinitions.h : enum AIDefElemType -->
+		<SYMBOL str="NPCAI_DEF"	client_enum="AIDefElemType"	client_val="1"	editor_enum="AIDefElemType" editor_val="1" 	loadtype="300" />
+		<SYMBOL str="INFO"		client_enum="AIDefElemType"	client_val="2"	editor_enum="AIDefElemType" editor_val="2"	loadtype="300" />
+		<SYMBOL str="MENT"		client_enum="AIDefElemType"	client_val="3"	editor_enum="AIDefElemType" editor_val="3"	loadtype="300" />
+		<SYMBOL str="BRAIN"		client_enum="AIDefElemType"	client_val="4"	editor_enum="AIDefElemType" editor_val="4"	loadtype="300" />
+		<SYMBOL str="BASIS"		client_enum="AIDefElemType"	client_val="5"	editor_enum="AIDefElemType" editor_val="5"	loadtype="300" />
+
+		<!-- Client : ioAIDefinitions.h : enum AIBrainElemType -->
+		<SYMBOL str="FSM"				client_enum="AIBrainElemType" 	client_val="1"	editor_enum="AIBrainElemType" editor_val="1" loadtype="300"	/>
+		<SYMBOL str="DESCRIPTION"		client_enum="AIBrainElemType" 	client_val="2"	editor_enum="AIBrainElemType" editor_val="2" loadtype="300"	/>
+		<SYMBOL str="BEHAVIOR"			client_enum="AIBrainElemType" 	client_val="3"	editor_enum="AIBrainElemType" editor_val="3" loadtype="300"	/>
+		<SYMBOL str="TRANS_LIST"		client_enum="AIBrainElemType" 	client_val="4"	editor_enum="AIBrainElemType" editor_val="4" loadtype="300"	/>
+		<SYMBOL str="TRANS"				client_enum="AIBrainElemType" 	client_val="5"	editor_enum="AIBrainElemType" editor_val="5" loadtype="300"	/>
+		<SYMBOL str="STATE"				client_enum="AIBrainElemType" 	client_val="6"	editor_enum="AIBrainElemType" editor_val="6" loadtype="300"	/>
+		<SYMBOL str="AIDIRECTOR"		client_enum="AIBrainElemType" 	client_val="7"	editor_enum="AIBrainElemType" editor_val="7" loadtype="300"	/>
+
+		<!-- Client : ioAIDefinitions.h : enum AIDatabaseType -->
+		<SYMBOL str="DESCRIPTION"		client_enum="AIDatabaseType"    client_val="1"	editor_enum=""	editor_val="" loadtype="100"/>
+		<SYMBOL str="TARGETINGDB"		client_enum="AIDatabaseType"    client_val="2"	editor_enum=""	editor_val="" loadtype="100" />
+		<SYMBOL str="ACTIONDB"		    client_enum="AIDatabaseType"    client_val="3"	editor_enum=""	editor_val="" loadtype="100" />
+		<SYMBOL str="MOVEMENTDB"		client_enum="AIDatabaseType"    client_val="4"	editor_enum=""	editor_val="" loadtype="100" />
+		<SYMBOL str="BEHAVIORDB"		client_enum="AIDatabaseType"    client_val="5"	editor_enum=""	editor_val="" loadtype="100" />
+		<SYMBOL str="BUFFLISTDB"		client_enum="AIDatabaseType"    client_val="6"	editor_enum=""	editor_val="" loadtype="100" />
+		<SYMBOL str="STATELISTDB"		client_enum="AIDatabaseType"    client_val="7"	editor_enum=""	editor_val="" loadtype="100" />
+		<SYMBOL str="KEYSEQLISTDB"	    client_enum="AIDatabaseType"    client_val="8"	editor_enum=""	editor_val="" loadtype="100" />
+                                                                        
+		<!-- Client : ioAIDefinitions.h : enum AIBvTNodeType -->      
+		<SYMBOL str="SEQUENCE"		    client_enum="AIBvTNodeType"	client_val="1"	editor_enum="AIBvTNodeType"	editor_val="1"	loadtype="300" />
+		<SYMBOL str="SELECT"			client_enum="AIBvTNodeType"	client_val="2"	editor_enum="AIBvTNodeType"	editor_val="2" 	loadtype="300" />
+		<SYMBOL str="ACTION"			client_enum="AIBvTNodeType"	client_val="3"	editor_enum="AIBvTNodeType"	editor_val="3"	loadtype="300" />
+		<SYMBOL str="REPEAT"			client_enum="AIBvTNodeType"	client_val="4"	editor_enum="AIBvTNodeType"	editor_val="4"	loadtype="300" />
+		<SYMBOL str="RANDOM"			client_enum="AIBvTNodeType"	client_val="5"	editor_enum="AIBvTNodeType"	editor_val="5"	loadtype="300" />
+		<SYMBOL str="DECIDE"			client_enum="AIBvTNodeType"	client_val="6"	editor_enum="AIBvTNodeType"	editor_val="6"	loadtype="300" />
+		<SYMBOL str="IMPORT"			client_enum="AIBvTNodeType"	client_val="7"	editor_enum="AIBvTNodeType"	editor_val="7"	loadtype="300" />
+		
+		<!-- Client : ioAIDefinitions.h : enum AIBvTHaltType -->
+		<SYMBOL str=""					client_enum="AIBvTHaltType"	client_val="0"	editor_enum="AIBvTHaltType"	editor_val="0" loadtype="300" />	
+		<SYMBOL str="none"				client_enum="AIBvTHaltType"	client_val="1"	editor_enum="AIBvTHaltType"	editor_val="1" loadtype="300" />	
+		<SYMBOL str="onTrue"			client_enum="AIBvTHaltType"	client_val="2"	editor_enum="AIBvTHaltType"	editor_val="2" loadtype="300" />		
+		<SYMBOL str="onFalse"			client_enum="AIBvTHaltType"	client_val="3"	editor_enum="AIBvTHaltType"	editor_val="3" loadtype="300" />		
+
+		<!-- Client : ioAIDefinitions.h : enum AIBvTRoleType -->
+		<SYMBOL str=""					client_enum="AIBvTRoleType"	client_val="1"	editor_enum="AIBvTRoleType"	editor_val="1"	loadtype="100"	/>
+		<SYMBOL str="default"			client_enum="AIBvTRoleType"	client_val="1"	editor_enum="AIBvTRoleType"	editor_val="1"	loadtype="100"	/>	
+		<SYMBOL str="DecQuery"			client_enum="AIBvTRoleType"	client_val="2"	editor_enum="AIBvTRoleType"	editor_val="2"	loadtype="100"	/>
+		<SYMBOL str="DecOnTrue"			client_enum="AIBvTRoleType"	client_val="3"	editor_enum="AIBvTRoleType"	editor_val="3"	loadtype="100"	/>
+		<SYMBOL str="DecOnFalse"		client_enum="AIBvTRoleType"	client_val="4"	editor_enum="AIBvTRoleType"	editor_val="4"	loadtype="100"	/>
+		
+		<!-- Client : ioAIDefinitions.h : enum AIKeyInputType -->
+		<SYMBOL str="MOVE"				client_enum="AIKeyInputType"	client_val="-1"		editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="MOVE_CENTER" 		client_enum="AIKeyInputType"	client_val="-1"		editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="MOVE_DOWN"			client_enum="AIKeyInputType"	client_val="0"		editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="MOVE_DN_LT"  		client_enum="AIKeyInputType"	client_val="1"		editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="MOVE_LEFT"			client_enum="AIKeyInputType"	client_val="2"		editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="MOVE_UP_LT"  		client_enum="AIKeyInputType"	client_val="3"		editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="MOVE_UP"			client_enum="AIKeyInputType"	client_val="4"		editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="MOVE_UP_RT"  		client_enum="AIKeyInputType"	client_val="5"		editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="MOVE_RIGHT"  		client_enum="AIKeyInputType"	client_val="6"		editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="MOVE_DN_RT"  		client_enum="AIKeyInputType"	client_val="7"		editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="JUMP"				client_enum="AIKeyInputType"	client_val="101"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="DEFENSE"			client_enum="AIKeyInputType"	client_val="102"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="ATTACK"			client_enum="AIKeyInputType"	client_val="103"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CLOAK"				client_enum="AIKeyInputType"	client_val="104"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="HELMET"			client_enum="AIKeyInputType"	client_val="105"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="WEAPON"			client_enum="AIKeyInputType"	client_val="106"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="ARMOR"				client_enum="AIKeyInputType"	client_val="107"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="A"					client_enum="AIKeyInputType"	client_val="101"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="S"					client_enum="AIKeyInputType"	client_val="102"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="D"					client_enum="AIKeyInputType"	client_val="103"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="AS"				client_enum="AIKeyInputType"	client_val="104"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="AD"				client_enum="AIKeyInputType"	client_val="105"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="ASD"				client_enum="AIKeyInputType"	client_val="106"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="SD"				client_enum="AIKeyInputType"	client_val="107"	editor_enum=""	editor_val=""	loadtype="100" />	
+
+		<!-- Client : ioAIDefinitions.h : enum AIKeyActionType -->
+		<SYMBOL str="KEYNONE"			client_enum="AIKeyStateType"	client_val="0"	editor_enum=""	editor_val=""	loadtype="100"/>	
+		<SYMBOL str="KEYPRESS"			client_enum="AIKeyStateType"	client_val="2"	editor_enum=""	editor_val=""	loadtype="100"/>
+		<SYMBOL str="KEYRELEASE"		client_enum="AIKeyStateType"	client_val="1"	editor_enum=""	editor_val=""	loadtype="100"/>	
+		<SYMBOL str="KEYREPEAT"			client_enum="AIKeyStateType"	client_val="3"	editor_enum=""	editor_val=""	loadtype="100"/>
+		
+		<!-- Client : ioAIDefinitions.h : enum AIConfigType -->
+		<SYMBOL str="DESCRIPTION"		client_enum="AIConfigType"	client_val="1"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="KEYSEQUENCEDB"		client_enum="AIConfigType"	client_val="2"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="BEHAVIORTREEDB"	client_enum="AIConfigType"	client_val="3"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="KEYSEQUENCE"		client_enum="AIConfigType"	client_val="4"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="KEY"				client_enum="AIConfigType"	client_val="5"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="BEHAVIOR"			client_enum="AIConfigType"	client_val="6"	editor_enum=""	editor_val=""	loadtype="100" />
+		
+		<!-- Client : ioAIDefinitions.h : enum AICompareType -->		
+		<SYMBOL str="BIGGER"			client_enum="AICompareType"	client_val="1"	editor_enum="AICompareType"	editor_val="1"	loadtype="300" />	
+		<SYMBOL str="SMALLER"			client_enum="AICompareType"	client_val="2"	editor_enum="AICompareType"	editor_val="2"	loadtype="300" />	
+		<SYMBOL str="EQUAL"				client_enum="AICompareType"	client_val="3"	editor_enum="AICompareType"	editor_val="3"	loadtype="300" />
+		<SYMBOL str="BETWEEN"			client_enum="AICompareType"	client_val="4"	editor_enum="AICompareType"	editor_val="4"	loadtype="300" />	
+		<SYMBOL str="NOTIN"				client_enum="AICompareType"	client_val="5"	editor_enum="AICompareType"	editor_val="5"	loadtype="300" />
+		<SYMBOL str="ONEOF"				client_enum="AICompareType"	client_val="6"	editor_enum="AICompareType"	editor_val="6"	loadtype="300" />
+		<SYMBOL str="EXCEPT"			client_enum="AICompareType"	client_val="7"	editor_enum="AICompareType"	editor_val="7"	loadtype="300" />
+		
+		<!-- Client : ioAIDefinitions.h : enum AIExecVariableTypes -->
+		<SYMBOL str="__myself__"	client_enum="AIExecVariableType"	client_val="1"	editor_enum="AIExecVariableType"	editor_val="1"	loadtype="100" />	
+		<SYMBOL str="__target__"	client_enum="AIExecVariableType"	client_val="2"	editor_enum="AIExecVariableType"	editor_val="2"	loadtype="100" />	
+		<SYMBOL str="__global__"	client_enum="AIExecVariableType"	client_val="3"	editor_enum="AIExecVariableType"	editor_val="3"	loadtype="100" />	
+		
+		<!-- Client : ioAIDefinitions.h : enum AIExecOperatorType -->
+		<SYMBOL str=""			client_enum="AIExecOperatorType"	client_val="0"	editor_enum="AIExecOperatorType"	editor_val="0"	loadtype="100" />
+		<SYMBOL str="not"		client_enum="AIExecOperatorType"	client_val="1"	editor_enum="AIExecOperatorType"	editor_val="1"	loadtype="100" />
+		
+		<!-- Client : ioAIDefinitions.h : enum AIExecMethodTypes -->
+		<SYMBOL str="DoKeySeq"			client_enum="AIExecMethodType"	client_val="1001"	editor_enum="AIExecMethodType"	editor_val="1001"	loadtype="300" />
+		<SYMBOL str="StopAllActions"	client_enum="AIExecMethodType"	client_val="1002"	editor_enum="AIExecMethodType"	editor_val="1002"	loadtype="300" />	
+		<SYMBOL str="ShowChat"			client_enum="AIExecMethodType"	client_val="1004"	editor_enum="AIExecMethodType"	editor_val="1004"	loadtype="300" />
+		<SYMBOL str="Move"				client_enum="AIExecMethodType"	client_val="1003"	editor_enum="AIExecMethodType"	editor_val="1003"	loadtype="300" />
+		<SYMBOL str="Turn"				client_enum="AIExecMethodType"	client_val="1005"	editor_enum="AIExecMethodType"	editor_val="1005"	loadtype="300" />
+		<SYMBOL str="Idle"				client_enum="AIExecMethodType"	client_val="1006"	editor_enum="AIExecMethodType"	editor_val="1006"	loadtype="300" />
+		<SYMBOL str="IsCombo"			client_enum="AIExecMethodType"	client_val="1007"	editor_enum="AIExecMethodType"	editor_val="1007"	loadtype="300" />	
+		<SYMBOL str="CanDoCombo"		client_enum="AIExecMethodType"	client_val="1008"	editor_enum="AIExecMethodType"	editor_val="1008"	loadtype="300" />	
+		<SYMBOL str="WaitForCombo"		client_enum="AIExecMethodType"	client_val="1009"	editor_enum="AIExecMethodType"	editor_val="1009"	loadtype="300" />
+		<SYMBOL str="DoMotion"			client_enum="AIExecMethodType"	client_val="1010"	editor_enum="AIExecMethodType"	editor_val="1010"	loadtype="300" />
+
+		<SYMBOL str="IsTargetValid"		client_enum="AIExecMethodType"	client_val="2001"	editor_enum="AIExecMethodType"	editor_val="2001"	loadtype="300" />
+		<SYMBOL str="IsDistance"		client_enum="AIExecMethodType"	client_val="2002"	editor_enum="AIExecMethodType"	editor_val="2002"	loadtype="300" />	
+		<SYMBOL str="FollowTarget"		client_enum="AIExecMethodType"	client_val="2003"	editor_enum="AIExecMethodType"	editor_val="2003"	loadtype="300" />	
+
+		<SYMBOL str="IsHP"				client_enum="AIExecMethodType"	client_val="3001"	editor_enum="AIExecMethodType"	editor_val="3001"	loadtype="300" />
+		<SYMBOL str="IsCurrentState"	client_enum="AIExecMethodType"	client_val="3002"	editor_enum="AIExecMethodType"	editor_val="3002"	loadtype="300" />	
+
+		<SYMBOL str="GetTarget"			client_enum="AIExecMethodType"	client_val="4001"	editor_enum="AIExecMethodType"	editor_val="4001"	loadtype="300" />
+		<SYMBOL str="GetTargetByHP"		client_enum="AIExecMethodType"	client_val="4002"	editor_enum="AIExecMethodType"	editor_val="4002"	loadtype="300" />
+		<SYMBOL str="IsTarget"			client_enum="AIExecMethodType"	client_val="4003"	editor_enum="AIExecMethodType"	editor_val="4003"	loadtype="300" />
+
+		<!-- Client : ioAIDefinitions.h : enum AIActionOperatorType -->
+		<SYMBOL str="CS_DELAY"  					client_enum="CharState"	client_val="0"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_RUN"  						client_enum="CharState"	client_val="1"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_DASH"  						client_enum="CharState"	client_val="2"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_EXTEND_DASH"  				client_enum="CharState"	client_val="3"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_JUMP"  						client_enum="CharState"	client_val="4"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_ATTACK"  					client_enum="CharState"	client_val="5"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_DASH_ATTACK"  				client_enum="CharState"	client_val="6"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_USING_SKILL"  				client_enum="CharState"	client_val="7"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_DEFENSE"  					client_enum="CharState"	client_val="8"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_EXTEND_DEFENSE"  			client_enum="CharState"	client_val="9"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_WOUNDED_DEFENSE"  			client_enum="CharState"	client_val="10"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_WOUNDED"  					client_enum="CharState"	client_val="11"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_BLOW_WOUNDED"  				client_enum="CharState"	client_val="12"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_PICK_ITEM"  				client_enum="CharState"	client_val="13"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_DIE"  						client_enum="CharState"	client_val="14"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_ETC_STATE"  				client_enum="CharState"	client_val="15"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_DROP_ZONE_DOWN"  			client_enum="CharState"	client_val="16"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_COUNTER_ATTACK"  			client_enum="CharState"	client_val="17"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_FALL"  						client_enum="CharState"	client_val="18"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_ENDMOTION"  				client_enum="CharState"	client_val="19"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_FLY"  						client_enum="CharState"	client_val="20"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_STRUCT_PUSH"  				client_enum="CharState"	client_val="21"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_ESCAPE_PRISONER"  			client_enum="CharState"	client_val="22"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_FROZEN"  					client_enum="CharState"	client_val="23"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_READY"  					client_enum="CharState"	client_val="24"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_DRINK"  					client_enum="CharState"	client_val="25"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_VIEW"  						client_enum="CharState"	client_val="26"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_DASH_FAIL"  				client_enum="CharState"	client_val="27"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_CHANGE_WAIT"  				client_enum="CharState"	client_val="28"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_ESCAPE_CATCH"  				client_enum="CharState"	client_val="29"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_CREEPING"  					client_enum="CharState"	client_val="30"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_PROTECTION"  				client_enum="CharState"	client_val="31"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_WARP_STATE"  				client_enum="CharState"	client_val="32"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_CLOSEORDER"  				client_enum="CharState"	client_val="33"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_STARTMOTION"  				client_enum="CharState"	client_val="34"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_CREATEMOTION"  				client_enum="CharState"	client_val="35"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_LOADING"					client_enum="CharState"	client_val="36"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_FLOAT_STATE"				client_enum="CharState"	client_val="37"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_STOP_MOTION"				client_enum="CharState"	client_val="38"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_TELEPORT"					client_enum="CharState"	client_val="39"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_MISS_FIRE"					client_enum="CharState"	client_val="40"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_SPECIAL_MOTION"				client_enum="CharState"	client_val="41"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_OBSERVER"					client_enum="CharState"	client_val="42"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_FISHING"					client_enum="CharState"	client_val="43"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_EXTRAITEM_CHANGE"			client_enum="CharState"	client_val="44"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_DUMMY_STATE"				client_enum="CharState"	client_val="45"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_COIN_REBIRTH"				client_enum="CharState"	client_val="46"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_EXCAVATING"					client_enum="CharState"	client_val="47"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_DODGE_DEFENSE"				client_enum="CharState"	client_val="48"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_BOUND_BLOW_WOUNDED"			client_enum="CharState"	client_val="49"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_CHANGE_GANGSI"				client_enum="CharState"	client_val="50"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_CURSE_ROLLING"				client_enum="CharState"	client_val="51"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_DOWN_ROLLING"				client_enum="CharState"	client_val="52"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_GRADEUP_MOTION"				client_enum="CharState"	client_val="53"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_MACHINE_TAKE_WAIT"			client_enum="CharState"	client_val="54"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_MACHINE_TAKE"				client_enum="CharState"	client_val="55"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_BUFF_AIR_ATTACK"			client_enum="CharState"	client_val="56"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_ETCITEM_MOTION"				client_enum="CharState"	client_val="57"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_NOT_MOVE_PROTECT"			client_enum="CharState"	client_val="58"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_ICE_STATE"					client_enum="CharState"	client_val="59"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_NEW_JUMP_ATTACK"			client_enum="CharState"	client_val="60"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_RETREAT_STATE"				client_enum="CharState"	client_val="61"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_DEFENSE_ATTACK"				client_enum="CharState"	client_val="62"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_CREATE_STRUCT"				client_enum="CharState"	client_val="63"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_GRAPPLING"					client_enum="CharState"	client_val="64"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_GRAPPLING_WOUNDED"			client_enum="CharState"	client_val="65"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_GRAPPLING_PUSHED"			client_enum="CharState"	client_val="66"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_GRAPPLING_WOUNDED_SKILL"	client_enum="CharState"	client_val="67"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_GRAPPLING_WOUNDED_SWING"	client_enum="CharState"	client_val="68"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_LAND_AFTER_STATE"			client_enum="CharState"	client_val="69"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_BLOW_EXTEND_WOUND"			client_enum="CharState"	client_val="70"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_BLOW_DASH_ATTACK"			client_enum="CharState"	client_val="71"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_SKIP_STUN"					client_enum="CharState"	client_val="72"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_JUMP_GRAPPLING"				client_enum="CharState"	client_val="73"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_JUMP_GRAPPLING_WOUNDED"		client_enum="CharState"	client_val="74"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_UROBORUS"					client_enum="CharState"	client_val="75"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_WEREWOLF"					client_enum="CharState"	client_val="76"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_CHARGE_FLY"					client_enum="CharState"	client_val="77"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_WITCH_FLY"					client_enum="CharState"	client_val="78"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_PANIC_MOVE"					client_enum="CharState"	client_val="79"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_MECHANICS_FLY"				client_enum="CharState"	client_val="80"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_ADHESIVE_BUFF"				client_enum="CharState"	client_val="81"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_MAGIC_STUN"					client_enum="CharState"	client_val="82"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_CMD_STATE"					client_enum="CharState"	client_val="83"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_PHANTOM_FLY"				client_enum="CharState"	client_val="84"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_POSSESSION_STATE"			client_enum="CharState"	client_val="85"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_LUCIFER_FLY"				client_enum="CharState"	client_val="86"	editor_enum=""	editor_val=""	loadtype="100" />	
+		<SYMBOL str="CS_GRAPPLING_WOUNDED_ITEM"		client_enum="CharState"	client_val="87"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_GRAPPLING_PUSHED_BUFF"		client_enum="CharState"	client_val="88"	editor_enum=""	editor_val=""	loadtype="100" />
+		<SYMBOL str="CS_NAKORURU_JUMP_ATTACK"		client_enum="CharState"	client_val="89"	editor_enum=""	editor_val=""	loadtype="100" />
+		
+		<!-- Client : ioAIDefinitions.h : enum ioAIExec_Myself_Move::MoveDirType -->
+		<SYMBOL str="STRICT_CENTER"		client_enum="MoveDirType"	client_val="-1"	editor_enum="MoveDirType"	editor_val="-1"	loadtype="301" />
+		<SYMBOL str="STRICT_DOWN"		client_enum="MoveDirType"	client_val="0"	editor_enum="MoveDirType"	editor_val="0"	loadtype="301" />	
+		<SYMBOL str="STRICT_DN_LT"		client_enum="MoveDirType"	client_val="1"	editor_enum="MoveDirType"	editor_val="1"	loadtype="301" />
+		<SYMBOL str="STRICT_LEFT"		client_enum="MoveDirType"	client_val="2"	editor_enum="MoveDirType"	editor_val="2"	loadtype="301" />	
+		<SYMBOL str="STRICT_UP_LT"		client_enum="MoveDirType"	client_val="3"	editor_enum="MoveDirType"	editor_val="3"	loadtype="301" />
+		<SYMBOL str="STRICT_UP"			client_enum="MoveDirType"	client_val="4"	editor_enum="MoveDirType"	editor_val="4"	loadtype="301" />
+		<SYMBOL str="STRICT_UP_RT"		client_enum="MoveDirType"	client_val="5"	editor_enum="MoveDirType"	editor_val="5"	loadtype="301" />
+		<SYMBOL str="STRICT_RIGHT"		client_enum="MoveDirType"	client_val="6"	editor_enum="MoveDirType"	editor_val="6"	loadtype="301" />
+		<SYMBOL str="STRICT_DN_RT"		client_enum="MoveDirType"	client_val="7"	editor_enum="MoveDirType"	editor_val="7"	loadtype="301" />
+		<SYMBOL str="TOWARD_TARGET"		client_enum="MoveDirType"	client_val="8"	editor_enum="MoveDirType"	editor_val="8"	loadtype="301" />
+		<SYMBOL str="TURNBACK_TARGET" 	client_enum="MoveDirType"	client_val="9"	editor_enum="MoveDirType"	editor_val="9"	loadtype="301" />
+		<SYMBOL str="TURNLEFT_TARGET"	client_enum="MoveDirType"	client_val="10"	editor_enum="MoveDirType"	editor_val="10"	loadtype="301" />	
+		<SYMBOL str="TURNRIGHT_TARGET"	client_enum="MoveDirType"	client_val="11"	editor_enum="MoveDirType"	editor_val="11"	loadtype="301" />
+		<SYMBOL str="RETURN_START_POS"	client_enum="MoveDirType"	client_val="12"	editor_enum="MoveDirType"	editor_val="12"	loadtype="301" />
+
+		<!-- Client : ioAIGlobalExecElem.h : enum ioAIExec_Global_GetTarget::TargetingType -->
+		<SYMBOL str="CLOSEST"   	client_enum="TargetingType"  client_val="1" editor_enum="TargetingType" editor_val="1" loadtype="301" />
+		<SYMBOL str="FIXED"     	client_enum="TargetingType"  client_val="2" editor_enum="TargetingType" editor_val="2" loadtype="301" />
+		<SYMBOL str="MOSTDAMAGE"	client_enum="TargetingType"  client_val="3" editor_enum="TargetingType" editor_val="3" loadtype="301" />
+		<SYMBOL str="MOSTAGGRO" 	client_enum="TargetingType"  client_val="4" editor_enum="TargetingType" editor_val="4" loadtype="301" />
+		<SYMBOL str="AGGRO_RAND_CLOSE" 	client_enum="TargetingType"  client_val="5" editor_enum="TargetingType" editor_val="5" loadtype="301" />
+		<SYMBOL str="RANDOM" 		client_enum="TargetingType"  client_val="6" editor_enum="TargetingType" editor_val="6" loadtype="301" />
+
+		<!-- Client : ioAITargetExecElem.h : enum ioAIExec_Target_IsCurrentState::CharStateCheckType -->
+		<SYMBOL str="NORMAL"	client_enum="CharStateCheckType"  client_val="1" editor_enum="CharStateCheckType" editor_val="1" loadtype="301" />
+		<SYMBOL str="IN_WOUND"	client_enum="CharStateCheckType"  client_val="2" editor_enum="CharStateCheckType" editor_val="2" loadtype="301" />
+		<SYMBOL str="IN_DOWN"	client_enum="CharStateCheckType"  client_val="3" editor_enum="CharStateCheckType" editor_val="3" loadtype="301" />
+		
+		<!-- Editor -->
+		<SYMBOL str="tag"					client_enum=""	client_val=""	editor_enum="PropertyElemType" editor_val="1"	loadtype="200" />
+		<SYMBOL str="name"					client_enum=""	client_val=""	editor_enum="PropertyElemType" editor_val="2"	loadtype="200" />
+		<SYMBOL str="halt"					client_enum=""	client_val=""	editor_enum="PropertyElemType" editor_val="3"	loadtype="200" />
+		<SYMBOL str="role"					client_enum=""	client_val=""	editor_enum="PropertyElemType" editor_val="4"	loadtype="200" />
+		<SYMBOL str="comment"				client_enum=""	client_val=""	editor_enum="PropertyElemType" editor_val="5"	loadtype="200" />
+		<SYMBOL str="use"					client_enum=""	client_val=""	editor_enum="PropertyElemType" editor_val="6"	loadtype="200" />
+		<SYMBOL str="weight"				client_enum=""	client_val=""	editor_enum="PropertyElemType" editor_val="7"	loadtype="200" />
+		<SYMBOL str="act"					client_enum=""	client_val=""	editor_enum="PropertyElemType" editor_val="8"	loadtype="200" />
+		<SYMBOL str="act.op"				client_enum=""	client_val=""	editor_enum="PropertyElemType" editor_val="9"	loadtype="200" />
+		<SYMBOL str="act.var"				client_enum=""	client_val=""	editor_enum="PropertyElemType" editor_val="10"	loadtype="200" />
+		<SYMBOL str="act.method"			client_enum=""	client_val=""	editor_enum="PropertyElemType" editor_val="11"	loadtype="200" />
+		<SYMBOL str="act.args"				client_enum=""	client_val=""	editor_enum="PropertyElemType" editor_val="12"	loadtype="200" />
+		<SYMBOL str="act.args.quote"		client_enum=""	client_val=""	editor_enum="PropertyElemType" editor_val="13"	loadtype="200" />
+		<SYMBOL str="act.args.targeting"	client_enum=""	client_val=""	editor_enum="PropertyElemType" editor_val="14"	loadtype="200" />
+		<SYMBOL str="act.args.keyseq"		client_enum=""	client_val=""	editor_enum="PropertyElemType" editor_val="15"	loadtype="200" />
+		<SYMBOL str="act.args.dir"			client_enum=""	client_val=""	editor_enum="PropertyElemType" editor_val="16"	loadtype="200" />
+		<SYMBOL str="act.args.int"			client_enum=""	client_val=""	editor_enum="PropertyElemType" editor_val="17"	loadtype="200" />
+		<SYMBOL str="act.args.imin"			client_enum=""	client_val=""	editor_enum="PropertyElemType" editor_val="18"	loadtype="200" />
+		<SYMBOL str="act.args.imax"			client_enum=""	client_val=""	editor_enum="PropertyElemType" editor_val="19"	loadtype="200" />
+		<SYMBOL str="act.args.float"		client_enum=""	client_val=""	editor_enum="PropertyElemType" editor_val="20"	loadtype="200" />
+		<SYMBOL str="act.args.fmin"			client_enum=""	client_val=""	editor_enum="PropertyElemType" editor_val="21"	loadtype="200" />
+		<SYMBOL str="act.args.fmax"			client_enum=""	client_val=""	editor_enum="PropertyElemType" editor_val="22"	loadtype="200" />
+		<SYMBOL str="act.args.compare"		client_enum=""	client_val=""	editor_enum="PropertyElemType" editor_val="23"	loadtype="200" />
+		<SYMBOL str="act.args.state"		client_enum=""	client_val=""	editor_enum="PropertyElemType" editor_val="24"	loadtype="200" />
+	</SYMBOLLIST>
+</SYMBOLTABLE>

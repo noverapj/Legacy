@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="MessengerWnd" Id="6016">
+	<Size X="-1" Y="-41" XAlign="Right" YAlign="Bottom" Width="323" Height="440" />
+	<DragRect Left="0" Top="0" Right="323" Bottom="470" />
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_CANMOVE|IWS_EXIT_ESC</Style> 
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Title>
+		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Text>메신저</Text>
+	</Title>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+			<Area X="0" Y="0" Width="323" Height="408"/>
+		</DefaultFrameImagery>		
+		<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title">
+			<Area X="5" Y="6" Width="313" Height="36"/>
+		</DefaultFrameImagery>
+
+		<Image Imageset="BaseImage001" Image="tap2_line" >
+			<Area X="86" Y="111" Width="1" Height="2" HorzAlign="Stretch"/>
+		</Image>
+		<Image Imageset="BaseImage001" Image="tap2_line" >
+			<Area X="156" Y="111" Width="1" Height="2" HorzAlign="Stretch"/>
+		</Image>
+		<Image Imageset="BaseImage001" Image="tap2_line" >
+			<Area X="206" Y="111" Width="1" Height="2" HorzAlign="Stretch"/>
+		</Image>
+		<Image Imageset="BaseImage001" Image="tap2_line" >
+			<Area X="256" Y="111" Width="1" Height="2" HorzAlign="Stretch"/>
+		</Image>
+
+		<Image Type="CloverInfoBox"  Imageset="BaseImage022" Image="icon0_clover_bg" >
+			<Area X="17" Y="54" />
+		</Image>
+		
+		<Image Type="CloverAniIconGold"  Imageset="BaseImage022" Image="icon0_clover_gold" />
+		<Image Type="CloverAniIconGreen" Imageset="BaseImage022" Image="icon0_clover_green" />
+		
+		<Image Type="CloverIconGold"  Imageset="BaseImage022" Image="icon0_clover_gold" />
+		
+		<Image Type="CloverIconGreen1" Imageset="BaseImage022" Image="icon0_clover_green" />
+		<Image Type="CloverIconGreen2" Imageset="BaseImage022" Image="icon0_clover_green" />
+		<Image Type="CloverIconGreen3" Imageset="BaseImage022" Image="icon0_clover_green" />
+		<Image Type="CloverIconGreen4" Imageset="BaseImage022" Image="icon0_clover_green" />
+		<Image Type="CloverIconGreen5" Imageset="BaseImage022" Image="icon0_clover_green" />
+		
+		<Image Type="CloverIconEmpty1" Imageset="BaseImage022" Image="icon0_clover_empty" />
+		<Image Type="CloverIconEmpty2" Imageset="BaseImage022" Image="icon0_clover_empty" />
+		<Image Type="CloverIconEmpty3" Imageset="BaseImage022" Image="icon0_clover_empty" />
+		<Image Type="CloverIconEmpty4" Imageset="BaseImage022" Image="icon0_clover_empty" />
+		<Image Type="CloverIconEmpty5" Imageset="BaseImage022" Image="icon0_clover_empty" />
+	</Imagery>
+	<ExtraInfo FriendHelpID="401"
+             BestFriendHelpID="402"
+						 CloverHelpID="800"
+					   SendCloverMovingAniTime="150"
+					   RecvCloverMovingAniTime="150"
+						 SendCloverEndAniTime ="200"
+						 RecvCloverEndAniTime ="200" />
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="289" Y="11" Width="23" Height="23"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+                        <Image Type="Disable" Imageset="BaseImage001" Image="icon0_x_grayframe" >
+				<Area X="0" Y="0" />
+			</Image>
+                        <Image Type="NormalList" Imageset="BaseImage001" Image="icon0_x" >
+				<Area X="5" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="2">
+		<Size X="103" Y="11" Width="60" Height="23"/>
+		<Title>
+			<Format X="33" Y="4" Size="11" Style="Outline_full_2x" DisableStyle="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF20394F"/>
+			<Text>친구?</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="60" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="60" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="60" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="60" Height="23"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="3">
+		<Size X="165" Y="11" Width="60" Height="23"/>
+		<Title>
+			<Format X="33" Y="4" Size="11" Style="Outline_full_2x" DisableStyle="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF20394F"/>
+			<Text>절친?</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="60" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="60" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="60" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="60" Height="23"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="4">
+		<Size X="227" Y="11" Width="60" Height="23"/>
+		<Title>
+			<Format X="33" Y="4" Size="11" Style="Outline_full_2x" DisableStyle="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF20394F"/>
+			<Text>클로버?</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="60" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="60" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="60" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="60" Height="23"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="MessengerListBtn" Id="5">
+		<Size X="17" Y="86" Width="69" Height="27" />
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Title>
+			<Format X="34" Y="5" Size="13" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>목록</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="tap2_off">
+				<Area X="0" Y="0" Width="69" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="tap2_off">
+				<Area X="0" Y="0" Width="69" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap2_overadd">
+				<Area X="0" Y="0" Width="69" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="tap2_on1">
+				<Area X="0" Y="0" Width="69" Height="27"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="MessengerListBtn" Id="6">
+		<Size X="87" Y="86" Width="69" Height="27" />
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="tap2_off">
+				<Area X="0" Y="0" Width="69" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="tap2_off">
+				<Area X="0" Y="0" Width="69" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap2_overadd">
+				<Area X="0" Y="0" Width="69" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="tap2_on1">
+				<Area X="0" Y="0" Width="69" Height="27"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="MessengerListBtn" Id="7">
+		<Size X="157" Y="86" Width="49" Height="27" />
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Title>
+			<Format X="24" Y="5" Size="13" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>채널</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="tap2_off">
+				<Area X="0" Y="0" Width="49" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="tap2_off">
+				<Area X="0" Y="0" Width="49" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap2_overadd">
+				<Area X="0" Y="0" Width="49" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="tap2_on1">
+				<Area X="0" Y="0" Width="49" Height="27"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="MessengerListBtn" Id="8">
+		<Size X="207" Y="86" Width="49" Height="27" />
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Title>
+			<Format X="24" Y="5" Size="13" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>채널</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="tap2_off">
+				<Area X="0" Y="0" Width="49" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="tap2_off">
+				<Area X="0" Y="0" Width="49" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap2_overadd">
+				<Area X="0" Y="0" Width="49" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="tap2_on1">
+				<Area X="0" Y="0" Width="49" Height="27"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="MessengerListBtn" Id="9">
+		<Size X="257" Y="86" Width="49" Height="27" />
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Title>
+			<Format X="24" Y="5" Size="13" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>길드</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="tap2_off">
+				<Area X="0" Y="0" Width="49" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="tap2_off">
+				<Area X="0" Y="0" Width="49" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap2_overadd">
+				<Area X="0" Y="0" Width="49" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="tap2_on1">
+				<Area X="0" Y="0" Width="49" Height="27"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+</Window>
+

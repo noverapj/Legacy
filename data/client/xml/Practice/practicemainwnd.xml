@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="PracticeMainWnd" Id="18">
+	<Size X="144" Y="54" Width="403" Height="455" />
+	<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST</Style>
+		
+	<Imagery>
+		<Image Imageset="BaseImage042" Image="1vs1_line_2px" >
+			<Area X="11" Y="27" Width="322" Height="2" HorzAlign="Stretch" />
+		</Image>
+		<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+		<Image Type="Icon" Imageset="UIIconPack5" Image="mode_openspace_training" />
+	</Imagery>
+	
+	  
+	<!--<Window ClassName="PracticeBtn" Id="101">-->
+	<Template ClassName="PracticeBtn" Id="101">
+		<Size X="0" Y="0" Width="382" Height="166" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="382" Height="166"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="SelectFrm" Templete="slot_select_pet">
+				<Area X="0" Y="0" Width="382" Height="166"/>
+			</DefaultFrameImagery>
+			<Image Type="Star1" Imageset="BaseImage046" Image="training_star_yellow" >
+			<Area X="274" Y="12"/>
+			</Image>
+			<Image Type="Star2" Imageset="BaseImage046" Image="training_star_yellow" >
+			<Area X="305" Y="12"/>
+			</Image>
+			<Image Type="Star3" Imageset="BaseImage046" Image="training_star_yellow" >
+			<Area X="336" Y="12"/>
+			</Image>
+			<Image Type="GrayStar1" Imageset="BaseImage046" Image="training_star_gray" >
+			<Area X="274" Y="12"/>
+			</Image>
+			<Image Type="GrayStar2" Imageset="BaseImage046" Image="training_star_gray" >
+			<Area X="305" Y="12"/>
+			</Image>
+			<Image Type="GrayStar3" Imageset="BaseImage046" Image="training_star_gray" >
+			<Area X="336" Y="12"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+					   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Template>
+		<Window ClassName="PracticeBtn" Id="999">
+		<Size X="11" Y="254" Width="382" Height="166" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+		<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="382" Height="166"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="SelectFrm" Templete="slot_select_pet">
+				<Area X="0" Y="0" Width="382" Height="166"/>
+			</DefaultFrameImagery>
+			<Image Type="IconBack1" Imageset="BaseImage046" Image="001" />			
+			<Image Type="IconBack" Imageset="BaseImage046" Image="Trainingset">
+				<Area X="11" Y="254" Width="382" Height="166" RenderType="Multiply"/>
+			</Image>
+			<Image Type="EmptyBox" Imageset="BaseImage002" Image="quest_giftbox_x">
+				<Area X="191" Y="83" Width="31" Height="31" RenderType="Multiply"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+					   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+<!--</Window>	<Image Type="IconBack1" Imageset="Baseimage_Training001" Image="001" />				-->
+	<!--
+	<Window ClassName="PracticeBtn" Id="102">
+		<Size X="11" Y="254" Width="382" Height="166" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+		<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="382" Height="166"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="SelectFrm" Templete="slot_select_pet">
+				<Area X="0" Y="0" Width="382" Height="166"/>
+			</DefaultFrameImagery>
+			<Image Type="IconBack1" Imageset="Baseimage_Training002" Image="004" />					
+			<Image Type="Star1" Imageset="BaseImage046" Image="training_star_yellow" >
+			<Area X="274" Y="12"/>
+			</Image>
+			<Image Type="Star2" Imageset="BaseImage046" Image="training_star_yellow" >
+			<Area X="305" Y="12"/>
+			</Image>
+			<Image Type="Star3" Imageset="BaseImage046" Image="training_star_yellow" >
+			<Area X="336" Y="12"/>
+			</Image>
+			<Image Type="GrayStar1" Imageset="BaseImage046" Image="training_star_gray" >
+			<Area X="274" Y="12"/>
+			</Image>
+			<Image Type="GrayStar2" Imageset="BaseImage046" Image="training_star_gray" >
+			<Area X="305" Y="12"/>
+			</Image>
+			<Image Type="GrayStar3" Imageset="BaseImage046" Image="training_star_gray" >
+			<Area X="336" Y="12"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+					   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+		<Window ClassName="PracticeBtn" Id="103">
+		<Size X="11" Y="78" Width="382" Height="166" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+		<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="382" Height="166"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="SelectFrm" Templete="slot_select_pet">
+				<Area X="0" Y="0" Width="382" Height="166"/>
+			</DefaultFrameImagery>
+			<Image Type="IconBack1" Imageset="Baseimage_Training001" Image="002" />				
+			<Image Type="Star1" Imageset="BaseImage046" Image="training_star_yellow" >
+			<Area X="274" Y="12"/>
+			</Image>
+			<Image Type="Star2" Imageset="BaseImage046" Image="training_star_yellow" >
+			<Area X="305" Y="12"/>
+			</Image>
+			<Image Type="Star3" Imageset="BaseImage046" Image="training_star_yellow" >
+			<Area X="336" Y="12"/>
+			</Image>
+			<Image Type="GrayStar1" Imageset="BaseImage046" Image="training_star_gray" >
+			<Area X="274" Y="12"/>
+			</Image>
+			<Image Type="GrayStar2" Imageset="BaseImage046" Image="training_star_gray" >
+			<Area X="305" Y="12"/>
+			</Image>
+			<Image Type="GrayStar3" Imageset="BaseImage046" Image="training_star_gray" >
+			<Area X="336" Y="12"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+					   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PracticeBtn" Id="104">
+		<Size X="11" Y="254" Width="382" Height="166" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+		<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="382" Height="166"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="SelectFrm" Templete="slot_select_pet">
+				<Area X="0" Y="0" Width="382" Height="166"/>
+			</DefaultFrameImagery>
+			<Image Type="IconBack1" Imageset="Baseimage_Training001" Image="003" />					
+			<Image Type="Star1" Imageset="BaseImage046" Image="training_star_yellow" >
+			<Area X="274" Y="12"/>
+			</Image>
+			<Image Type="Star2" Imageset="BaseImage046" Image="training_star_yellow" >
+			<Area X="305" Y="12"/>
+			</Image>
+			<Image Type="Star3" Imageset="BaseImage046" Image="training_star_yellow" >
+			<Area X="336" Y="12"/>
+			</Image>
+			<Image Type="GrayStar1" Imageset="BaseImage046" Image="training_star_gray" >
+			<Area X="274" Y="12"/>
+			</Image>
+			<Image Type="GrayStar2" Imageset="BaseImage046" Image="training_star_gray" >
+			<Area X="305" Y="12"/>
+			</Image>
+			<Image Type="GrayStar3" Imageset="BaseImage046" Image="training_star_gray" >
+			<Area X="336" Y="12"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+					   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+			<Window ClassName="PracticeBtn" Id="105">
+		<Size X="11" Y="78" Width="382" Height="166" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+		<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="382" Height="166"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="SelectFrm" Templete="slot_select_pet">
+				<Area X="0" Y="0" Width="382" Height="166"/>
+			</DefaultFrameImagery>
+			<Image Type="IconBack1" Imageset="Baseimage_Training002" Image="005" />				
+			<Image Type="Star1" Imageset="BaseImage046" Image="training_star_yellow" >
+			<Area X="274" Y="12"/>
+			</Image>
+			<Image Type="Star2" Imageset="BaseImage046" Image="training_star_yellow" >
+			<Area X="305" Y="12"/>
+			</Image>
+			<Image Type="Star3" Imageset="BaseImage046" Image="training_star_yellow" >
+			<Area X="336" Y="12"/>
+			</Image>
+			<Image Type="GrayStar1" Imageset="BaseImage046" Image="training_star_gray" >
+			<Area X="274" Y="12"/>
+			</Image>
+			<Image Type="GrayStar2" Imageset="BaseImage046" Image="training_star_gray" >
+			<Area X="305" Y="12"/>
+			</Image>
+			<Image Type="GrayStar3" Imageset="BaseImage046" Image="training_star_gray" >
+			<Area X="336" Y="12"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+					   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PracticeBtn" Id="106">
+		<Size X="11" Y="254" Width="382" Height="166" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+		<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="382" Height="166"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="SelectFrm" Templete="slot_select_pet">
+				<Area X="0" Y="0" Width="382" Height="166"/>
+			</DefaultFrameImagery>
+			<Image Type="IconBack1" Imageset="Baseimage_Training002" Image="006" />					
+			<Image Type="Star1" Imageset="BaseImage046" Image="training_star_yellow" >
+			<Area X="274" Y="12"/>
+			</Image>
+			<Image Type="Star2" Imageset="BaseImage046" Image="training_star_yellow" >
+			<Area X="305" Y="12"/>
+			</Image>
+			<Image Type="Star3" Imageset="BaseImage046" Image="training_star_yellow" >
+			<Area X="336" Y="12"/>
+			</Image>
+			<Image Type="GrayStar1" Imageset="BaseImage046" Image="training_star_gray" >
+			<Area X="274" Y="12"/>
+			</Image>
+			<Image Type="GrayStar2" Imageset="BaseImage046" Image="training_star_gray" >
+			<Area X="305" Y="12"/>
+			</Image>
+			<Image Type="GrayStar3" Imageset="BaseImage046" Image="training_star_gray" >
+			<Area X="336" Y="12"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+					   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+			<Window ClassName="PracticeBtn" Id="107">
+		<Size X="11" Y="78" Width="382" Height="166" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="382" Height="166"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="SelectFrm" Templete="slot_select_pet">
+				<Area X="0" Y="0" Width="382" Height="166"/>
+			</DefaultFrameImagery>
+			<Image Type="IconBack1" Imageset="Baseimage_Training001" Image="007" />				
+			<Image Type="Star1" Imageset="BaseImage046" Image="training_star_yellow" >
+			<Area X="274" Y="12"/>
+			</Image>
+			<Image Type="Star2" Imageset="BaseImage046" Image="training_star_yellow" >
+			<Area X="305" Y="12"/>
+			</Image>
+			<Image Type="Star3" Imageset="BaseImage046" Image="training_star_yellow" >
+			<Area X="336" Y="12"/>
+			</Image>
+			<Image Type="GrayStar1" Imageset="BaseImage046" Image="training_star_gray" >
+			<Area X="274" Y="12"/>
+			</Image>
+			<Image Type="GrayStar2" Imageset="BaseImage046" Image="training_star_gray" >
+			<Area X="305" Y="12"/>
+			</Image>
+			<Image Type="GrayStar3" Imageset="BaseImage046" Image="training_star_gray" >
+			<Area X="336" Y="12"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+					   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PracticeBtn" Id="108">
+		<Size X="11" Y="254" Width="382" Height="166" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+		<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="382" Height="166"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="SelectFrm" Templete="slot_select_pet">
+				<Area X="0" Y="0" Width="382" Height="166"/>
+			</DefaultFrameImagery>
+			<Image Type="IconBack1" Imageset="Baseimage_Training001" Image="008" />					
+			<Image Type="Star1" Imageset="BaseImage046" Image="training_star_yellow" >
+			<Area X="274" Y="12"/>
+			</Image>
+			<Image Type="Star2" Imageset="BaseImage046" Image="training_star_yellow" >
+			<Area X="305" Y="12"/>
+			</Image>
+			<Image Type="Star3" Imageset="BaseImage046" Image="training_star_yellow" >
+			<Area X="336" Y="12"/>
+			</Image>
+			<Image Type="GrayStar1" Imageset="BaseImage046" Image="training_star_gray" >
+			<Area X="274" Y="12"/>
+			</Image>
+			<Image Type="GrayStar2" Imageset="BaseImage046" Image="training_star_gray" >
+			<Area X="305" Y="12"/>
+			</Image>
+			<Image Type="GrayStar3" Imageset="BaseImage046" Image="training_star_gray" >
+			<Area X="336" Y="12"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+					   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="PracticeBtn" Id="109">
+		<Size X="11" Y="78" Width="382" Height="166" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="382" Height="166"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="SelectFrm" Templete="slot_select_pet">
+				<Area X="0" Y="0" Width="382" Height="166"/>
+			</DefaultFrameImagery>
+			<Image Type="IconBack1" Imageset="BaseImage046" Image="001" />					
+			<Image Type="IconBack" Imageset="BaseImage046" Image="Trainingset">
+				<Area X="11" Y="254" Width="382" Height="166" RenderType="Multiply"/>
+			</Image>
+			<Image Type="EmptyBox" Imageset="BaseImage002" Image="quest_giftbox_x">
+				<Area X="191" Y="83" Width="31" Height="31" RenderType="Multiply"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+					   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+
+	
+	-->
+	
+	<Window ClassName="ioButton" Id="201">
+		<Size X="124" Y="435" Width="65" Height="18" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="65" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="65" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="65" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="65" Height="18"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_left" >
+				<Area X="28" Y="4"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="ioButton" Id="202">
+		<Size X="216" Y="435" Width="65" Height="18" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="65" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="65" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="65" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="65" Height="18"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_left" >
+				<Area X="28" Y="4" Reverse="Horz"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+</Window>

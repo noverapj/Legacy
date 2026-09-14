@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="ioBingoRewardWnd" Id="10020">
+	<Size X="0" Y="-20" Width="478" Height="491" XAlign="Center" YAlign="Center"/>
+	<Style>IWS_MODAL|IWS_START_HIDE|IWS_CANMOVE|IWS_PROCESS|IWS_EXIT_ESC</Style> 
+	<ExStyle>IWS_EX_NOTIFY_MOVED|IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Title>
+		<Format X="13" Y="11" Size="18" Style="Outline_full_2x" HorzAlign="Left"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Text>보상 목록</Text>
+	</Title>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+			<Area X="0" Y="0" Width="478" Height="491"/>
+		</DefaultFrameImagery>
+			<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title">
+			<Area X="5" Y="6" Width="468" Height="36"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="MultiplyFrm" Templete="win1_multiply_bottom">
+			<Area X="0" Y="426" Width="478" Height="65"/>
+		</DefaultFrameImagery>
+	</Imagery>
+	<Window ClassName="ioBingoIconButton" Id="100">
+		<Style>IWS_NO_MOUSE_RESPONSE</Style>
+		<Size X="42" Y="63" Width="64" Height="64" />
+		<Imagery>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioBingoIconButton" Id="101">
+		<Style>IWS_NO_MOUSE_RESPONSE</Style>
+		<Size X="152" Y="63" Width="64" Height="64" />
+		<Imagery>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioBingoIconButton" Id="102">
+		<Style>IWS_NO_MOUSE_RESPONSE</Style>
+		<Size X="262" Y="63" Width="64" Height="64" />
+		<Imagery>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioBingoIconButton" Id="103">
+		<Style>IWS_NO_MOUSE_RESPONSE</Style>
+		<Size X="372" Y="63" Width="64" Height="64" />
+		<Imagery>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioBingoIconButton" Id="104">
+		<Style>IWS_NO_MOUSE_RESPONSE</Style>
+		<Size X="42" Y="169" Width="64" Height="64" />
+		<Imagery>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioBingoIconButton" Id="105">
+		<Style>IWS_NO_MOUSE_RESPONSE</Style>
+		<Size X="152" Y="169" Width="64" Height="64" />
+		<Imagery>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioBingoIconButton" Id="106">
+		<Style>IWS_NO_MOUSE_RESPONSE</Style>
+		<Size X="262" Y="169" Width="64" Height="64" />
+		<Imagery>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioBingoIconButton" Id="107">
+		<Style>IWS_NO_MOUSE_RESPONSE</Style>
+		<Size X="372" Y="169" Width="64" Height="64" />
+		<Imagery>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioBingoIconButton" Id="108">
+		<Style>IWS_NO_MOUSE_RESPONSE</Style>
+		<Size X="42" Y="275" Width="64" Height="64" />
+		<Imagery>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioBingoIconButton" Id="109">
+		<Style>IWS_NO_MOUSE_RESPONSE</Style>
+		<Size X="152" Y="275" Width="64" Height="64" />
+		<Imagery>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioBingoIconButton" Id="110">
+		<Style>IWS_NO_MOUSE_RESPONSE</Style>
+		<Size X="262" Y="275" Width="64" Height="64" />
+		<Imagery>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioBingoIconButton" Id="111">
+		<Style>IWS_NO_MOUSE_RESPONSE</Style>
+		<Size X="372" Y="275" Width="64" Height="64" />
+		<Imagery>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="172" Y="393" Width="43" Height="18" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_left" >
+				<Area X="17" Y="4"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	               ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="2">
+		<Size X="261" Y="393" Width="43" Height="18" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_left" >
+				<Area X="17" Y="4" Reverse="Horz"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	               ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+
+	<Window ClassName="ioButton" Id="3">
+		<Size X="444" Y="11" Width="23" Height="23"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+        <Image Type="Disable" Imageset="BaseImage001" Image="icon0_x_grayframe" >
+				<Area X="0" Y="0" />
+			</Image>
+        <Image Type="NormalList" Imageset="BaseImage001" Image="icon0_x" >
+				<Area X="5" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+</Window>

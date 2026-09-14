@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="SkillListWnd" Id="5001">
+	<Size X="0" Y="-62" XAlign="Center" YAlign="Bottom" Width="320" Height="76"/>
+	<DragRect Left="0" Top="0" Right="400" Bottom="76" />
+	<Style>IWS_PROCESS|IWS_CANMOVE|IWS_PROCESS|IWS_BACKMOST</Style>
+	<Imagery>
+		<Image Type="ToolTipCenter" Imageset="BaseImage001" Image="tooltip1_center" />
+
+		<Image Type="ToolTipLMiddle" Imageset="BaseImage001" Image="tooltip1_leftin" />
+		<Image Type="ToolTipLeft" Imageset="BaseImage001" Image="tooltip1_left" />
+
+		<Image Type="ToolTipRMiddle" Imageset="BaseImage001" Image="tooltip1_rightin" />
+		<Image Type="ToolTipRight" Imageset="BaseImage001" Image="tooltip1_right" />
+
+		<Image Type = "PointImage" Imageset="BaseImage006" Image="icon0_point"/>
+	</Imagery>
+        <ExtraInfo AniSound="interface/interface_setup_00.wav"
+		   ShowTime = "5000"
+		   RefreshTime = "1" />
+
+	<Window ClassName="SkillCharIcon" Id="11">
+		<Size X="19" Y="18" Width="54" Height="54" />
+		<Style>IWS_PROCESS|IWS_BACKMOST|IWS_NO_MOUSE_RESPONSE</Style>
+		<Imagery>
+			<Image Type="GaugeBackBg" Imageset="BaseImage013" Image="Skill_Exp_Back_Bg" />
+			<Image Type="GaugeBack" Imageset="BaseImage013" Image="Skill_Exp_Back" />
+			<Image Type="Gauge" Imageset="BaseImage013" Image="Skill_Exp_Gauge" />
+			<Image Type="GaugeAdd" Imageset="BaseImage013" Image="Skill_Exp_Add" />
+
+			<Image Type="LvText" Imageset="BaseImage012" Image="Text_S_Lv2" />
+			<Image Type="NumText" Imageset="BaseImage010" Image="Text_Number3" />
+		</Imagery>
+	</Window>
+
+	<Window ClassName="SkillCharBtn" Id="12">
+		<Size X="0" Y="0" Width="23" Height="23" />
+		<Style>IWS_BACKMOST|IWS_NO_MOUSE_RESPONSE|IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="BtnNormal" Imageset="BaseImage010" Image="Skill_UpgradeBt_Nor" />
+			<Image Type="BtnOver" Imageset="BaseImage010" Image="Skill_UpgradeBt_Over" />
+
+			<Image Type = "TimeGrowthText" Imageset="BaseImage006" Image="Shop_Grow" />
+			<Image Type = "TimeGrowthTextEffect" Imageset="BaseImage006" Image="Shop_Grow_Sreen" />
+		</Imagery>
+		<ExtraInfo EffectTime = "250" />
+	</Window>
+
+	<Window ClassName="SkillListBtn" Id="0">
+		<Size X="247" Y="18" Width="54" Height="54" />
+		<Style>IWS_BACKMOST|IWS_NO_MOUSE_RESPONSE</Style>
+		<Imagery>
+			<Image Type="BackImage" Imageset="UIIconPack1" Image="item_weapon" Color="99FFFFFF" />
+
+			<Image Type="BulletBack" Imageset="BaseImage013" Image="Skill_Bullet_Back" />
+			<Image Type="BulletOver" Imageset="BaseImage013" Image="Skill_Bullet_Over" />
+			<Image Type="GunOn"      Imageset="BaseImage013" Image="Skill_Bullet_Icon_Gun_Yellow" />
+			<Image Type="BeamOn"     Imageset="BaseImage013" Image="Skill_Bullet_Icon_Beam_Yellow" />
+			<Image Type="MoonOn"     Imageset="BaseImage013" Image="Skill_Bullet_Icon_Wolf_Yellow" />
+			<Image Type="MineOn"     Imageset="BaseImage013" Image="Skill_Bullet_Icon_Mine_Yellow" />
+			<Image Type="GunOff"     Imageset="BaseImage013" Image="Skill_Bullet_Icon_Gun_Red" />
+			<Image Type="BeamOff"    Imageset="BaseImage013" Image="Skill_Bullet_Icon_Beam_Red" />
+			<Image Type="MoonOff"    Imageset="BaseImage013" Image="Skill_Bullet_Icon_Wolf_Red" />
+			<Image Type="NumberOn"   Imageset="BaseImage013" Image="Skill_Bullet_Number_Yellow" />
+			<Image Type="NumberOff"  Imageset="BaseImage013" Image="Skill_Bullet_Number_Red" />
+			<Image Type="BeamNumberOn"  Imageset="BaseImage012" Image="Skill_Bullet_Number_On" />
+			<Image Type="HideOn"     Imageset="BaseImage013" Image="Skill_Bullet_Icon_Hide_Yellow" />
+			<Image Type="HideOff"    Imageset="BaseImage013" Image="Skill_Bullet_Icon_Hide_Red" />
+			<Image Type="SylphidOn"     Imageset="BaseImage013" Image="Skill_Bullet_Icon_Sylphid_Yellow" />
+			<Image Type="SylphidOff"    Imageset="BaseImage013" Image="Skill_Bullet_Icon_Sylphid_Red" />
+
+			<Image Type="AlterEgoOn"     Imageset="BaseImage013" Image="Skill_Bullet_Icon_AlterEgo_Yellow" />
+			<Image Type="AlterEgoOff"    Imageset="BaseImage013" Image="Skill_Bullet_Icon_AlterEgo_Red" />
+
+			<Image Type="WitchOn"     Imageset="BaseImage013" Image="Skill_Bullet_Icon_Witch_Yellow" />
+			<Image Type="WitchOff"    Imageset="BaseImage013" Image="Skill_Bullet_Icon_Witch_Red" />
+
+			<Image Type="MechanicsOn"     Imageset="BaseImage013" Image="Skill_Bullet_Icon_Mecha_Yellow" />
+			<Image Type="MechanicsOff"    Imageset="BaseImage013" Image="Skill_Bullet_Icon_Mecha_Red" />
+
+			<!-- Excalibur 임시 UI 시작 -->
+			<Image Type="ExcaliburRed"     Imageset="BaseImage016" Image="text_development_rednum" />
+			<Image Type="ExcaliburYellow"    Imageset="BaseImage008" Image="text_skilltest_num" />
+
+			<Image Type="ExcaliburRed_S"     Imageset="BaseImage016" Image="text_skill_num_redsmall" />
+			<Image Type="ExcaliburYellow_S"    Imageset="BaseImage016" Image="text_skill_num_yellowsmall" />
+
+			<Image Type="ExtraGaugeBack" Imageset="BaseImage016" Image="skill_bullet_gauge_bg" />
+			<Image Type="ExtraGaugeRed" Imageset="BaseImage016" Image="skill_bullet_gauge_red" />
+			<Image Type="ExtraGaugeYellow" Imageset="BaseImage016" Image="skill_bullet_gauge_yellow" />
+			<!-- Excalibur 임시 UI 끝 -->
+
+			<Image Type="ActiveCountOn"   Imageset="BaseImage008" Image="text_skilltest_num" />
+			<Image Type="ActiveCountOn_Yellow" Imageset="BaseImage016" Image="text_skill_num_yellowsmall" />
+			<Image Type="ActiveCountOn_Red"    Imageset="BaseImage016" Image="text_skill_num_redsmall" />			
+			<Image Type="ActiveCountOver" Imageset="BaseImage013" Image="Skill_Bullet_Over" />
+			<Image Type="ActiveCountBack" Imageset="BaseImage013" Image="Skill_Bullet_Back" />
+
+			<Image Type="GrowthNumText" Imageset="BaseImage010" Image="Text_Number6" />
+			<Image Type="GrowthPlusText" Imageset="BaseImage010" Image="Text_S_Plus3" />
+						
+			<DefaultFrameImagery Type="KeyBackNor" Templete="changeui_keybox">
+				<Area X="10" Y="52" Width="34" Height="17"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="KeyBackOn" Templete="changeui_keybox">
+				<Area X="10" Y="52" Width="34" Height="17"/>
+			</DefaultFrameImagery>
+            <DefaultFrameImagery Type="KeyBack" Templete="changeui_keybox">
+				<Area X="10" Y="52" Width="34" Height="17"/>
+			</DefaultFrameImagery>
+
+			
+
+			<Image Type="EffectImg1" Imageset="BaseImage005" Image="skillcool01" />
+			<Image Type="EffectImg2" Imageset="BaseImage005" Image="skillcool02" />
+		</Imagery>
+		<ExtraInfo EffectTime1 = "34"
+			   EffectTime2 = "466"
+			   EffectScale = "1.5f"
+			   EffectSound = "" />
+	</Window>
+
+	<Window ClassName="SkillListBtn" Id="1">
+		<Size X="171" Y="18" Width="54" Height="54" />
+		<Style>IWS_BACKMOST|IWS_NO_MOUSE_RESPONSE</Style>
+		<Imagery>
+			<Image Type="BackImage" Imageset="UIIconPack1" Image="item_suit" Color="99FFFFFF" />
+
+			<Image Type="GrowthNumText" Imageset="BaseImage010" Image="Text_Number6" />
+			<Image Type="GrowthPlusText" Imageset="BaseImage010" Image="Text_S_Plus3" />
+            
+            <DefaultFrameImagery Type="KeyBackNor" Templete="changeui_keybox">
+				<Area X="10" Y="52" Width="34" Height="17"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="KeyBackOn" Templete="changeui_keybox">
+				<Area X="10" Y="52" Width="34" Height="17"/>
+			</DefaultFrameImagery>
+            <DefaultFrameImagery Type="KeyBack" Templete="changeui_keybox">
+				<Area X="10" Y="52" Width="34" Height="17"/>
+			</DefaultFrameImagery>
+
+			<Image Type="ActiveCountOn"   Imageset="BaseImage008" Image="text_skilltest_num" />
+		  <Image Type="ActiveCountOn_Yellow" Imageset="BaseImage016" Image="text_skill_num_yellowsmall" />
+			<Image Type="ActiveCountOn_Red"    Imageset="BaseImage016" Image="text_skill_num_redsmall" />			
+			<Image Type="ActiveCountOver" Imageset="BaseImage013" Image="Skill_Bullet_Over" />
+			<Image Type="ActiveCountBack" Imageset="BaseImage013" Image="Skill_Bullet_Back" />
+
+			<Image Type="EffectImg1" Imageset="BaseImage005" Image="skillcool01" />
+			<Image Type="EffectImg2" Imageset="BaseImage005" Image="skillcool02" />
+		</Imagery>
+		<ExtraInfo EffectTime1 = "34"
+			   EffectTime2 = "466"
+			   EffectScale = "1.5f"
+			   EffectSound = "" />
+	</Window>
+
+	<Window ClassName="SkillListBtn" Id="2">
+		<Size X="95" Y="18" Width="54" Height="54" />
+		<Style>IWS_BACKMOST|IWS_NO_MOUSE_RESPONSE</Style>
+		<Imagery>
+			<Image Type="BackImage" Imageset="UIIconPack1" Image="item_head" Color="99FFFFFF" />
+
+			<Image Type="GrowthNumText" Imageset="BaseImage010" Image="Text_Number6" />
+			<Image Type="GrowthPlusText" Imageset="BaseImage010" Image="Text_S_Plus3" />
+			
+			<DefaultFrameImagery Type="KeyBackNor" Templete="changeui_keybox">
+				<Area X="10" Y="52" Width="34" Height="17"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="KeyBackOn" Templete="changeui_keybox">
+				<Area X="10" Y="52" Width="34" Height="17"/>
+			</DefaultFrameImagery>
+            <DefaultFrameImagery Type="KeyBack" Templete="changeui_keybox">
+				<Area X="10" Y="52" Width="34" Height="17"/>
+			</DefaultFrameImagery>
+
+			<Image Type="ActiveCountOn"   Imageset="BaseImage008" Image="text_skilltest_num" />
+		  <Image Type="ActiveCountOn_Yellow" Imageset="BaseImage016" Image="text_skill_num_yellowsmall" />
+			<Image Type="ActiveCountOn_Red"    Imageset="BaseImage016" Image="text_skill_num_redsmall" />
+			<Image Type="ActiveCountOver" Imageset="BaseImage013" Image="Skill_Bullet_Over" />
+			<Image Type="ActiveCountBack" Imageset="BaseImage013" Image="Skill_Bullet_Back" />
+
+			<Image Type="EffectImg1" Imageset="BaseImage005" Image="skillcool01" />
+			<Image Type="EffectImg2" Imageset="BaseImage005" Image="skillcool02" />
+		</Imagery>
+		<ExtraInfo EffectTime1 = "34"
+			   EffectTime2 = "466"
+			   EffectScale = "1.5f"
+			   EffectSound = "" />
+	</Window>
+
+	<Window ClassName="SkillListBtn" Id="3">
+		<Size X="19" Y="18" Width="54" Height="54" />
+		<Style>IWS_BACKMOST|IWS_NO_MOUSE_RESPONSE</Style>
+		<Imagery>
+			<Image Type="BackImage" Imageset="UIIconPack1" Image="item_cloak" Color="99FFFFFF" />
+
+			<Image Type="GrowthNumText" Imageset="BaseImage010" Image="Text_Number6" />
+			<Image Type="GrowthPlusText" Imageset="BaseImage010" Image="Text_S_Plus3" />
+			
+			<DefaultFrameImagery Type="KeyBackNor" Templete="changeui_keybox">
+				<Area X="10" Y="52" Width="34" Height="17"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="KeyBackOn" Templete="changeui_keybox">
+				<Area X="10" Y="52" Width="34" Height="17"/>
+			</DefaultFrameImagery>
+            <DefaultFrameImagery Type="KeyBack" Templete="changeui_keybox">
+				<Area X="10" Y="52" Width="34" Height="17"/>
+			</DefaultFrameImagery>
+
+			<Image Type="ActiveCountOn"        Imageset="BaseImage008" Image="text_skilltest_num" />
+			<Image Type="ActiveCountOn_Yellow" Imageset="BaseImage016" Image="text_skill_num_yellowsmall" />
+			<Image Type="ActiveCountOn_Red"    Imageset="BaseImage016" Image="text_skill_num_redsmall" />
+			<Image Type="ActiveCountOver" Imageset="BaseImage013" Image="Skill_Bullet_Over" />
+			<Image Type="ActiveCountBack" Imageset="BaseImage013" Image="Skill_Bullet_Back" />
+
+			<Image Type="EffectImg1" Imageset="BaseImage005" Image="skillcool01" />
+			<Image Type="EffectImg2" Imageset="BaseImage005" Image="skillcool02" />
+		</Imagery>
+		<ExtraInfo EffectTime1 = "34"
+			   EffectTime2 = "466"
+			   EffectScale = "1.5f"
+			   EffectSound = "" />
+	</Window>
+
+	<Window ClassName="GlobalTextTooltip" Id="21">
+		<Size X="0" Y="0" Width="120" Height="26" />
+		<Style>IWS_START_HIDE|IWS_PROCESS</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="tooltip3">
+				<Area X="0" Y="0" Width="120" Height="26" />
+			</DefaultFrameImagery>
+		</Imagery>
+	</Window>
+</Window>

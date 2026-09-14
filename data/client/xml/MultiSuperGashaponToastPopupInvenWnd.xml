@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="MultiSuperGashaponToastPopupWnd" Id="902">
+	<Size X="312" Y="-12" Width="211" Height="529"/>
+	<Style>IWS_START_HIDE|IWS_TOPMOST|IWS_PROCESS</Style> 
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="toast_left">
+			<Area X="0" Y="0" Width="211" Height="529"/>
+		</DefaultFrameImagery>
+
+		<Image Type="back_gray" Imageset="BaseImage054" Image="back_gray" >
+			<Area X="0" Y="0" Width="184" Height="59" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Normal" />
+		</Image>
+		<Image Type="back_yellow" Imageset="BaseImage054" Image="back_yellow" >
+			<Area X="0" Y="0" Width="184" Height="59" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Normal" />
+		</Image>
+		<Image Type="back_violet" Imageset="BaseImage054" Image="back_violet" >
+			<Area X="0" Y="0" Width="184" Height="59" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Normal" />
+		</Image>
+		<Image Type="GoodsNoneIcon"  Imageset="BaseImage002" Image="quest_giftbox_x" />
+		<Image Type="GoodsBackIcon"  Imageset="BaseImage002" Image="iconeffect_1" />
+		<Image Type="costume_image" Imageset="BaseImage031" Image="costume_mark"/>
+		<Image Type="popup_arrow" Imageset="BaseImage054" Image="toastarrow_right" />
+	</Imagery>
+
+	<!--<Title>
+		<Format X="105" Y="9" Size="12" Style="Normal" HorzAlign="Center"/>
+		<Color Type="Normal" Text="FF8A8A8A" Back="FF000000"/>
+		<Text>--</Text>
+	</Title>-->
+
+	<ExtraInfo Show_Time = "5000" />
+</Window>

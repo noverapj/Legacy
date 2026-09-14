@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+<Window ClassName="PaperMercenaryControlWnd" SubClassName="ioWndEX" Id="77780" IDName="" MemberName="">
+    <Size X="0" Y="0" Width="0" Height="0" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+    <Style>IWS_PROCESS</Style>
+    <Imagery />
+    <ExtraInfo>
+        <ToolInfo />
+    </ExtraInfo>
+    <Window ClassName="ioFrameWndEX" SubClassName="" Id="4" IDName="" MemberName="m_backfrm">
+        <Size X="-20" Y="-30" Width="200" Height="120" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+        <Imagery />
+        <ExtraInfo>
+            <ToolInfo />
+        </ExtraInfo>
+        <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="5" IDName="" MemberName="m_changeImgBtn">
+            <Size X="77" Y="51" Width="45" Height="31" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo ButtonType="0">
+                <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                <NormalImage FileName="" ImageSetName="BaseImage004" ImageName="icon0_3d_front" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                <OverImage FileName="" ImageSetName="BaseImage004" ImageName="icon0_3d_front" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                <OverAddImage FileName="" ImageSetName="BaseImage004" ImageName="icon0_3d_front" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                <PushImage FileName="" ImageSetName="BaseImage004" ImageName="icon0_3d_front" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                <ToolInfo>
+                    <Event Type="WEVT_LBUTTONUP" Function="OnClickChange" />
+                </ToolInfo>
+            </ExtraInfo>
+        </Window>
+        <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="6" IDName="" MemberName="m_turnLeftImgBtn">
+            <Size X="26" Y="33" Width="46" Height="44" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo ButtonType="0">
+                <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                <NormalImage FileName="" ImageSetName="BaseImage004" ImageName="icon0_3d_left" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                <OverImage FileName="" ImageSetName="BaseImage004" ImageName="icon0_3d_left" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                <OverAddImage FileName="" ImageSetName="BaseImage004" ImageName="icon0_3d_left" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                <PushImage FileName="" ImageSetName="BaseImage004" ImageName="icon0_3d_left" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                <ToolInfo>
+                    <Event Type="WEVT_LBUTTONDOWN" Function="OnTurnLeft" />
+                </ToolInfo>
+            </ExtraInfo>
+        </Window>
+        <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="7" IDName="" MemberName="m_turnRightImgBtn">
+            <Size X="128" Y="33" Width="46" Height="44" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo ButtonType="0">
+                <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                <NormalImage FileName="" ImageSetName="BaseImage004" ImageName="icon0_3d_left" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="1" Color="ffffffff" />
+                <OverImage FileName="" ImageSetName="BaseImage004" ImageName="icon0_3d_left" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="1" Color="ffffffff" />
+                <OverAddImage FileName="" ImageSetName="BaseImage004" ImageName="icon0_3d_left" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="1" Color="ffffffff" />
+                <PushImage FileName="" ImageSetName="BaseImage004" ImageName="icon0_3d_left" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="1" Color="ffffffff" />
+                <ToolInfo>
+                    <Event Type="WEVT_LBUTTONDOWN" Function="OnTurnRight" />
+                </ToolInfo>
+            </ExtraInfo>
+        </Window>
+    </Window>
+</Window>

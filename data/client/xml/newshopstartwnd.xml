@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="NewShopStartWnd" Id="5000">
+	<Size X="0" Y="39" XAlign="Center" YAlign="Center" Width="754" Height="466" />
+	<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST</Style>
+	<Imagery>
+		<DefaultFrameImagery Type="ProductFrm" Templete="shop_renewal_blue_slot">
+			<Area X="21" Y="269" Width="709" Height="159"/>
+		</DefaultFrameImagery>
+		<Image Type="NormalList" Imageset="BaseImage031" Image="shop_renewal_match_line" >
+			<Area X="280" Y="3" width="2" height="19" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+	</Imagery>
+	<!--상품 카테고리 버튼 -->
+	<Window ClassName="ioButton" Id="3">
+		<Size X="0" Y="0" Width="13" Height="14"/>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage031" Image="shop_renewal_arrow">
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage031" Image="shop_renewal_arrow">
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage031" Image="shop_renewal_arrow" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage031" Image="shop_renewal_arrow" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="ioButton" Id="4">
+		<Size X="0" Y="0" Width="13" Height="14"/>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage031" Image="shop_renewal_arrow">
+				<Area X="0" Y="0" Reverse="Horz"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage031" Image="shop_renewal_arrow">
+				<Area X="0" Y="0" Reverse="Horz"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage031" Image="shop_renewal_arrow" >
+				<Area X="0" Y="0" Reverse="Horz"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage031" Image="shop_renewal_arrow" >
+				<Area X="0" Y="0" Reverse="Horz"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<!-- 페이지 넘김 버튼 -->
+	<Window ClassName="ioButton" Id="5">
+		<Size X="28" Y="349" Width="19" Height="22"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt001_shop_renewal_nor">
+				<Area X="0" Y="0" Width="19" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt001_shop_renewal_nor">
+				<Area X="0" Y="0" Width="19" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="19" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt001_shop_renewal_down">
+				<Area X="0" Y="0" Width="19" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="icon0_list_left" >
+				<Area X="5" Y="6" />
+			</Image>
+			<Image Type="DisableList" Imageset="BaseImage001" Image="icon0_list_left_gray" >
+				<Area X="5" Y="6" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="ioButton" Id="6">
+		<Size X="704" Y="349" Width="19" Height="22"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt001_shop_renewal_nor">
+				<Area X="0" Y="0" Width="19" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt001_shop_renewal_nor">
+				<Area X="0" Y="0" Width="19" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="19" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt001_shop_renewal_down">
+				<Area X="0" Y="0" Width="19" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="icon0_list_left" >
+				<Area X="5" Y="6" Reverse="Horz"/>
+			</Image>
+			<Image Type="DisableList" Imageset="BaseImage001" Image="icon0_list_left_gray" >
+				<Area X="5" Y="6" Reverse="Horz"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<!--//////////////////// 텍스트 광고 //////////////////////////////////////////////-->	
+	<Window ClassName="ADTextPanelWnd" Id="1">
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_TOPMOST</Style>
+		<Size X="21" Y="0" XAlign="Left" YAlign="Top" Width="270" Height="50" />
+		<Imagery>
+			<Image Type="ADBackround" Imageset="BaseImage031" Image="shop_renewal_match_bg"/>
+			<Image Type="ADOutBorder" Imageset="BaseImage026" Image="shop_renewal_match_image"/>
+		</Imagery>
+	</Window>
+	<!--//////////////////// 이미지 광고  //////////////////////////////////////////////-->
+	<Window ClassName="ADImagePanelWnd" Id="2">
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_TOPMOST</Style>
+		<Size X="21" Y="36" XAlign="Left" YAlign="Top" Width="709" Height="228" />
+		<Imagery>
+			<DefaultFrameImagery Type="Border" Templete="league_main_banner_overoutline">
+				<Area X="0" Y="0" Width="709" Height="228"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<Window ClassName="ioButton" Id="1">
+			<Size X="18" Y="95" Width="30" Height="46"/>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage031" Image="shop_renewal_arrow_gray">
+					<Area X="0" Y="0" Reverse="Horz"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage031" Image="shop_renewal_arrow_blue">
+					<Area X="0" Y="0" Reverse="Horz"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage031" Image="shop_renewal_arrow_gray" >
+					<Area X="0" Y="0" Reverse="Horz"/>
+				</Image>
+				<Image Type="Disable" Imageset="BaseImage031" Image="shop_renewal_arrow_gray" >
+					<Area X="0" Y="0" Reverse="Horz"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+		<Window ClassName="ioButton" Id="2">
+			<Size X="662" Y="95" Width="30" Height="46"/>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage031" Image="shop_renewal_arrow_gray">
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage031" Image="shop_renewal_arrow_blue">
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage031" Image="shop_renewal_arrow_gray" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Disable" Imageset="BaseImage031" Image="shop_renewal_arrow_gray" >
+					<Area X="0" Y="0"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound ="interface/public_mouseclick_00.wav"/>
+		</Window>
+		<!-- 이미지 바로가기 버튼 -->
+		<Window ClassName="ioRadioButton" Id="10">
+			<Size X="0" Y="0" Width="18" Height="18"/>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage031" Image="shop_renewal_circle_gray" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage031" Image="shop_renewal_circle_gray" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage031" Image="shop_renewal_circle_blue" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Disable" Imageset="BaseImage031" Image="shop_renewal_circle_gray" >
+					<Area X="0" Y="0"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+		<Window ClassName="ioRadioButton" Id="11">
+			<Size X="0" Y="0" Width="18" Height="18"/>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage031" Image="shop_renewal_circle_gray" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage031" Image="shop_renewal_circle_gray" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage031" Image="shop_renewal_circle_blue" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Disable" Imageset="BaseImage031" Image="shop_renewal_circle_gray" >
+					<Area X="0" Y="0"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+		<Window ClassName="ioRadioButton" Id="12">
+			<Size X="0" Y="0" Width="18" Height="18"/>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage031" Image="shop_renewal_circle_gray" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage031" Image="shop_renewal_circle_gray" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage031" Image="shop_renewal_circle_blue" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Disable" Imageset="BaseImage031" Image="shop_renewal_circle_gray" >
+					<Area X="0" Y="0"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+		<Window ClassName="ioRadioButton" Id="13">
+			<Size X="0" Y="0" Width="18" Height="18"/>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage031" Image="shop_renewal_circle_gray" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage031" Image="shop_renewal_circle_gray" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage031" Image="shop_renewal_circle_blue" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Disable" Imageset="BaseImage031" Image="shop_renewal_circle_gray" >
+					<Area X="0" Y="0"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+		<Window ClassName="ioRadioButton" Id="14">
+			<Size X="0" Y="0" Width="18" Height="18"/>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage031" Image="shop_renewal_circle_gray" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage031" Image="shop_renewal_circle_gray" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage031" Image="shop_renewal_circle_blue" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Disable" Imageset="BaseImage031" Image="shop_renewal_circle_gray" >
+					<Area X="0" Y="0"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+		<Window ClassName="ioRadioButton" Id="15">
+			<Size X="0" Y="0" Width="18" Height="18"/>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage031" Image="shop_renewal_circle_gray" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage031" Image="shop_renewal_circle_gray" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage031" Image="shop_renewal_circle_blue" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Disable" Imageset="BaseImage031" Image="shop_renewal_circle_gray" >
+					<Area X="0" Y="0"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+		<Window ClassName="ioRadioButton" Id="16">
+			<Size X="0" Y="0" Width="18" Height="18"/>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage031" Image="shop_renewal_circle_gray" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage031" Image="shop_renewal_circle_gray" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage031" Image="shop_renewal_circle_blue" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Disable" Imageset="BaseImage031" Image="shop_renewal_circle_gray" >
+					<Area X="0" Y="0"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+		<Window ClassName="ioRadioButton" Id="17">
+			<Size X="0" Y="0" Width="18" Height="18"/>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage031" Image="shop_renewal_circle_gray" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage031" Image="shop_renewal_circle_gray" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage031" Image="shop_renewal_circle_blue" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Disable" Imageset="BaseImage031" Image="shop_renewal_circle_gray" >
+					<Area X="0" Y="0"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+		<Window ClassName="ioRadioButton" Id="18">
+			<Size X="0" Y="0" Width="18" Height="18"/>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage031" Image="shop_renewal_circle_gray" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage031" Image="shop_renewal_circle_gray" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage031" Image="shop_renewal_circle_blue" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Disable" Imageset="BaseImage031" Image="shop_renewal_circle_gray" >
+					<Area X="0" Y="0"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+		<Window ClassName="ioRadioButton" Id="19">
+			<Size X="0" Y="0" Width="18" Height="18"/>
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage031" Image="shop_renewal_circle_gray" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage031" Image="shop_renewal_circle_gray" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage031" Image="shop_renewal_circle_blue" >
+					<Area X="0" Y="0"/>
+				</Image>
+				<Image Type="Disable" Imageset="BaseImage031" Image="shop_renewal_circle_gray" >
+					<Area X="0" Y="0"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+	<!--//////////////////// 바로가기 버튼  //////////////////////////////////////////////-->
+	<Window ClassName="ioProductLinkButton" Id="10">
+		<Size X="51" Y="300" Width="91" Height="119"/>
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="shop_renewal_slot">
+				<Area X="0" Y="0" Width="91" Height="119"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="shop_renewal_slot">
+				<Area X="0" Y="0" Width="91" Height="119"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="91" Height="119"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="shop_renewal_slot">
+				<Area X="0" Y="0" Width="91" Height="119"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="91" Height="119" />
+			</DefaultFrameImagery>
+		</Imagery>
+		<Window ClassName="ioProductIconButton" Id="1">
+			<Size X="22" Y="10" Width="48" Height="48"/>
+			<Style>IWS_PROCESS</Style>
+			<Imagery>
+				<DefaultFrameImagery Type="StateBlueFrm" Templete="state_blue">
+					<Area X="0" Y="0" Width="40" Height="16"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="StatePinkFrm" Templete="state_pink">
+					<Area X="0" Y="0" Width="40" Height="16"/>
+				</DefaultFrameImagery>
+        <Image Type="DDayMark" Imageset="BaseImage015" Image="state_dday"/>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_1"/>
+				<Image Type="IconEmpty"  Imageset="BaseImage002" Image="quest_giftbox_x"/>
+				<Image Type="NewMark"   Imageset="BaseImage006" Image="state_green_new"/>
+				<Image Type="HotMark"   Imageset="BaseImage006" Image="state_red_hot"/>
+				<Image Type="EventMark"   Imageset="BaseImage006" Image="state_pink_event"/>
+				<Image Type="LimitMark"   Imageset="BaseImage012" Image="state_violet_limit"/>
+				<Image Type="LimitDayMark" Imageset="BaseImage015" Image="state_violet_limit_02"/>
+				<Image Type="SoldOutMark" Imageset="BaseImage012" Image="state_red_soldout"/>
+				<Image Type="GradeLimitClearMark" Imageset="BaseImage015" Image="state_black_unlock"/>
+				<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+				<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+				<Image Type="CostumeImage" Imageset="BaseImage031" Image="costume_mark"/>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="ioProductLinkButton" Id="11">
+		<Size X="144" Y="300" Width="91" Height="119" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="shop_renewal_slot">
+				<Area X="0" Y="0" Width="91" Height="119"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="shop_renewal_slot">
+				<Area X="0" Y="0" Width="91" Height="119"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="91" Height="119"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="shop_renewal_slot">
+				<Area X="0" Y="0" Width="91" Height="119"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="91" Height="119" />
+			</DefaultFrameImagery>				
+		</Imagery>
+		<Window ClassName="ioProductIconButton" Id="1">
+			<Size X="22" Y="10" Width="48" Height="48"/>
+			<Style>IWS_PROCESS</Style>
+			<Imagery>
+				<DefaultFrameImagery Type="StateBlueFrm" Templete="state_blue">
+					<Area X="0" Y="0" Width="40" Height="16"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="StatePinkFrm" Templete="state_pink">
+					<Area X="0" Y="0" Width="40" Height="16"/>
+				</DefaultFrameImagery>
+        <Image Type="DDayMark" Imageset="BaseImage015" Image="state_dday"/>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_1"/>
+				<Image Type="IconEmpty"  Imageset="BaseImage002" Image="quest_giftbox_x"/>
+				<Image Type="NewMark"   Imageset="BaseImage006" Image="state_green_new"/>
+				<Image Type="HotMark"   Imageset="BaseImage006" Image="state_red_hot"/>
+				<Image Type="EventMark"   Imageset="BaseImage006" Image="state_pink_event"/>
+				<Image Type="LimitMark"   Imageset="BaseImage012" Image="state_violet_limit"/>
+				<Image Type="LimitDayMark" Imageset="BaseImage015" Image="state_violet_limit_02"/>
+				<Image Type="SoldOutMark" Imageset="BaseImage012" Image="state_red_soldout"/>
+				<Image Type="GradeLimitClearMark" Imageset="BaseImage015" Image="state_black_unlock"/>
+				<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+				<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+				<Image Type="CostumeImage" Imageset="BaseImage031" Image="costume_mark"/>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="ioProductLinkButton" Id="12">
+		<Size X="237" Y="300" Width="91" Height="119" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="shop_renewal_slot">
+				<Area X="0" Y="0" Width="91" Height="119"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="shop_renewal_slot">
+				<Area X="0" Y="0" Width="91" Height="119"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="91" Height="119"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="shop_renewal_slot">
+				<Area X="0" Y="0" Width="91" Height="119"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="91" Height="119" />
+			</DefaultFrameImagery>				
+		</Imagery>
+		<Window ClassName="ioProductIconButton" Id="1">
+			<Size X="22" Y="10" Width="48" Height="48"/>
+			<Style>IWS_PROCESS</Style>
+			<Imagery>
+				<DefaultFrameImagery Type="StateBlueFrm" Templete="state_blue">
+					<Area X="0" Y="0" Width="40" Height="16"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="StatePinkFrm" Templete="state_pink">
+					<Area X="0" Y="0" Width="40" Height="16"/>
+				</DefaultFrameImagery>
+        <Image Type="DDayMark" Imageset="BaseImage015" Image="state_dday"/>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_1"/>
+				<Image Type="IconEmpty"  Imageset="BaseImage002" Image="quest_giftbox_x"/>
+				<Image Type="NewMark"   Imageset="BaseImage006" Image="state_green_new"/>
+				<Image Type="HotMark"   Imageset="BaseImage006" Image="state_red_hot"/>
+				<Image Type="EventMark"   Imageset="BaseImage006" Image="state_pink_event"/>
+				<Image Type="LimitMark"   Imageset="BaseImage012" Image="state_violet_limit"/>
+				<Image Type="LimitDayMark" Imageset="BaseImage015" Image="state_violet_limit_02"/>
+				<Image Type="SoldOutMark" Imageset="BaseImage012" Image="state_red_soldout"/>
+				<Image Type="GradeLimitClearMark" Imageset="BaseImage015" Image="state_black_unlock"/>
+				<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+				<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+				<Image Type="CostumeImage" Imageset="BaseImage031" Image="costume_mark"/>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="ioProductLinkButton" Id="13">
+		<Size X="330" Y="300" Width="91" Height="119" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="shop_renewal_slot">
+				<Area X="0" Y="0" Width="91" Height="119"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="shop_renewal_slot">
+				<Area X="0" Y="0" Width="91" Height="119"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="91" Height="119"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="shop_renewal_slot">
+				<Area X="0" Y="0" Width="91" Height="119"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="91" Height="119" />
+			</DefaultFrameImagery>				
+		</Imagery>
+		<Window ClassName="ioProductIconButton" Id="1">
+			<Size X="22" Y="10" Width="48" Height="48"/>
+			<Style>IWS_PROCESS</Style>
+			<Imagery>
+				<DefaultFrameImagery Type="StateBlueFrm" Templete="state_blue">
+					<Area X="0" Y="0" Width="40" Height="16"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="StatePinkFrm" Templete="state_pink">
+					<Area X="0" Y="0" Width="40" Height="16"/>
+				</DefaultFrameImagery>
+        <Image Type="DDayMark" Imageset="BaseImage015" Image="state_dday"/>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_1"/>
+				<Image Type="IconEmpty"  Imageset="BaseImage002" Image="quest_giftbox_x"/>
+				<Image Type="NewMark"   Imageset="BaseImage006" Image="state_green_new"/>
+				<Image Type="HotMark"   Imageset="BaseImage006" Image="state_red_hot"/>
+				<Image Type="EventMark"   Imageset="BaseImage006" Image="state_pink_event"/>
+				<Image Type="LimitMark"   Imageset="BaseImage012" Image="state_violet_limit"/>
+				<Image Type="LimitDayMark" Imageset="BaseImage015" Image="state_violet_limit_02"/>
+				<Image Type="SoldOutMark" Imageset="BaseImage012" Image="state_red_soldout"/>
+				<Image Type="GradeLimitClearMark" Imageset="BaseImage015" Image="state_black_unlock"/>
+				<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+				<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+				<Image Type="CostumeImage" Imageset="BaseImage031" Image="costume_mark"/>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="ioProductLinkButton" Id="14">
+		<Size X="423" Y="300" Width="91" Height="119" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="shop_renewal_slot">
+				<Area X="0" Y="0" Width="91" Height="119"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="shop_renewal_slot">
+				<Area X="0" Y="0" Width="91" Height="119"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="91" Height="119"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="shop_renewal_slot">
+				<Area X="0" Y="0" Width="91" Height="119"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="91" Height="119" />
+			</DefaultFrameImagery>				
+		</Imagery>
+		<Window ClassName="ioProductIconButton" Id="1">
+			<Size X="22" Y="10" Width="48" Height="48"/>
+			<Style>IWS_PROCESS</Style>
+			<Imagery>
+				<DefaultFrameImagery Type="StateBlueFrm" Templete="state_blue">
+					<Area X="0" Y="0" Width="40" Height="16"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="StatePinkFrm" Templete="state_pink">
+					<Area X="0" Y="0" Width="40" Height="16"/>
+				</DefaultFrameImagery>
+        <Image Type="DDayMark" Imageset="BaseImage015" Image="state_dday"/>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_1"/>
+				<Image Type="IconEmpty"  Imageset="BaseImage002" Image="quest_giftbox_x"/>
+				<Image Type="NewMark"   Imageset="BaseImage006" Image="state_green_new"/>
+				<Image Type="HotMark"   Imageset="BaseImage006" Image="state_red_hot"/>
+				<Image Type="EventMark"   Imageset="BaseImage006" Image="state_pink_event"/>
+				<Image Type="LimitMark"   Imageset="BaseImage012" Image="state_violet_limit"/>
+				<Image Type="LimitDayMark" Imageset="BaseImage015" Image="state_violet_limit_02"/>
+				<Image Type="SoldOutMark" Imageset="BaseImage012" Image="state_red_soldout"/>
+				<Image Type="GradeLimitClearMark" Imageset="BaseImage015" Image="state_black_unlock"/>
+				<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+				<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+				<Image Type="CostumeImage" Imageset="BaseImage031" Image="costume_mark"/>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="ioProductLinkButton" Id="15">
+		<Size X="516" Y="300" Width="91" Height="119" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="shop_renewal_slot">
+				<Area X="0" Y="0" Width="91" Height="119"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="shop_renewal_slot">
+				<Area X="0" Y="0" Width="91" Height="119"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="91" Height="119"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="shop_renewal_slot">
+				<Area X="0" Y="0" Width="91" Height="119"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="91" Height="119" />
+			</DefaultFrameImagery>				
+		</Imagery>
+		<Window ClassName="ioProductIconButton" Id="1">
+			<Size X="22" Y="10" Width="48" Height="48"/>
+			<Style>IWS_PROCESS</Style>
+			<Imagery>
+				<DefaultFrameImagery Type="StateBlueFrm" Templete="state_blue">
+					<Area X="0" Y="0" Width="40" Height="16"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="StatePinkFrm" Templete="state_pink">
+					<Area X="0" Y="0" Width="40" Height="16"/>
+				</DefaultFrameImagery>
+        <Image Type="DDayMark" Imageset="BaseImage015" Image="state_dday"/>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_1"/>
+				<Image Type="IconEmpty"  Imageset="BaseImage002" Image="quest_giftbox_x"/>
+				<Image Type="NewMark"   Imageset="BaseImage006" Image="state_green_new"/>
+				<Image Type="HotMark"   Imageset="BaseImage006" Image="state_red_hot"/>
+				<Image Type="EventMark"   Imageset="BaseImage006" Image="state_pink_event"/>
+				<Image Type="LimitMark"   Imageset="BaseImage012" Image="state_violet_limit"/>
+				<Image Type="LimitDayMark" Imageset="BaseImage015" Image="state_violet_limit_02"/>
+				<Image Type="SoldOutMark" Imageset="BaseImage012" Image="state_red_soldout"/>
+				<Image Type="GradeLimitClearMark" Imageset="BaseImage015" Image="state_black_unlock"/>
+				<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+				<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+				<Image Type="CostumeImage" Imageset="BaseImage031" Image="costume_mark"/>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="ioProductLinkButton" Id="16">
+		<Size X="609" Y="300" Width="91" Height="119" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="shop_renewal_slot">
+				<Area X="0" Y="0" Width="91" Height="119"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="shop_renewal_slot">
+				<Area X="0" Y="0" Width="91" Height="119"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="91" Height="119"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="shop_renewal_slot">
+				<Area X="0" Y="0" Width="91" Height="119"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="91" Height="119" />
+			</DefaultFrameImagery>				
+		</Imagery>
+		<Window ClassName="ioProductIconButton" Id="1">
+			<Size X="22" Y="10" Width="48" Height="48"/>
+			<Style>IWS_PROCESS</Style>
+			<Imagery>
+				<DefaultFrameImagery Type="StateBlueFrm" Templete="state_blue">
+					<Area X="0" Y="0" Width="40" Height="16"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="StatePinkFrm" Templete="state_pink">
+					<Area X="0" Y="0" Width="40" Height="16"/>
+				</DefaultFrameImagery>
+        <Image Type="DDayMark" Imageset="BaseImage015" Image="state_dday"/>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_1"/>
+				<Image Type="IconEmpty"  Imageset="BaseImage002" Image="quest_giftbox_x"/>
+				<Image Type="NewMark"   Imageset="BaseImage006" Image="state_green_new"/>
+				<Image Type="HotMark"   Imageset="BaseImage006" Image="state_red_hot"/>
+				<Image Type="EventMark"   Imageset="BaseImage006" Image="state_pink_event"/>
+				<Image Type="LimitMark"   Imageset="BaseImage012" Image="state_violet_limit"/>
+				<Image Type="LimitDayMark" Imageset="BaseImage015" Image="state_violet_limit_02"/>
+				<Image Type="SoldOutMark" Imageset="BaseImage012" Image="state_red_soldout"/>
+				<Image Type="GradeLimitClearMark" Imageset="BaseImage015" Image="state_black_unlock"/>
+				<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+				<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+				<Image Type="CostumeImage" Imageset="BaseImage031" Image="costume_mark"/>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+</Window>

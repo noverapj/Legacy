@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="CustomTournamentScheduleWnd" Id="11">
+	<Size X="442" Y="227" YAlign="Left" Width="285" Height="168" />
+	<Style>IWS_START_HIDE</Style>
+	<Window ClassName="ioScroll" Id="100">
+		<Size X="269" Y="-10" Width="15" Height="186" />
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_VSCROLL</ExStyle>
+		<Imagery>
+			<DefaultFrameImagery Templete="scrollbar_back">
+				<Area X="5" Y="10" Width="5" Height="166"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo PageRange="7" StartTime="500" CurTime ="100"/>	
+		<Window ClassName="ioSlide" Id="3">
+			<Size X="0" Y="10" Width="15" Height="30" />
+			<DragRect Left="0" Top="0" Right="15" Bottom="30" />
+			<ExStyle>IWS_EX_NOTIFY_MOVED</ExStyle>
+			<Style>IWS_CANMOVE</Style>
+			<Imagery>
+				<DefaultFrameImagery Templete="scrollbar_drag">
+					<Area X="0" Y="0" Width="15" Height="30"/>
+				</DefaultFrameImagery>
+				<Image Type="Icon_Slide" Imageset="BaseImage001" Image="scrollbar_drag_icon"/>
+			</Imagery>
+		</Window>
+	</Window>
+	<Window ClassName="CustomTournamentScheduleBtn" Id="1">
+		<Size X="242" Y="1" Width="62" Height="22" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<Image Type="ActiveIcon" Imageset="BaseImage_League001" Image="icon0_calendar_black"/>
+			<Image Type="InActiveIcon" Imageset="BaseImage_League001" Image="icon0_calendar_gray"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="CustomTournamentScheduleBtn" Id="2">
+		<Size X="242" Y="25" Width="22" Height="22" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<Image Type="ActiveIcon" Imageset="BaseImage_League001" Image="icon0_calendar_black"/>
+			<Image Type="InActiveIcon" Imageset="BaseImage_League001" Image="icon0_calendar_gray"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="CustomTournamentScheduleBtn" Id="3">
+		<Size X="242" Y="49" Width="22" Height="22" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<Image Type="ActiveIcon" Imageset="BaseImage_League001" Image="icon0_calendar_black"/>
+			<Image Type="InActiveIcon" Imageset="BaseImage_League001" Image="icon0_calendar_gray"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="CustomTournamentScheduleBtn" Id="4">
+		<Size X="242" Y="73" Width="22" Height="22" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<Image Type="ActiveIcon" Imageset="BaseImage_League001" Image="icon0_calendar_black"/>
+			<Image Type="InActiveIcon" Imageset="BaseImage_League001" Image="icon0_calendar_gray"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="CustomTournamentScheduleBtn" Id="5">
+		<Size X="242" Y="97" Width="22" Height="22" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<Image Type="ActiveIcon" Imageset="BaseImage_League001" Image="icon0_calendar_black"/>
+			<Image Type="InActiveIcon" Imageset="BaseImage_League001" Image="icon0_calendar_gray"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="CustomTournamentScheduleBtn" Id="6">
+		<Size X="242" Y="121" Width="22" Height="22" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<Image Type="ActiveIcon" Imageset="BaseImage_League001" Image="icon0_calendar_black"/>
+			<Image Type="InActiveIcon" Imageset="BaseImage_League001" Image="icon0_calendar_gray"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="CustomTournamentScheduleBtn" Id="7">
+		<Size X="242" Y="145" Width="22" Height="22" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="22" Height="22" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<Image Type="ActiveIcon" Imageset="BaseImage_League001" Image="icon0_calendar_black"/>
+			<Image Type="InActiveIcon" Imageset="BaseImage_League001" Image="icon0_calendar_gray"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+</Window>

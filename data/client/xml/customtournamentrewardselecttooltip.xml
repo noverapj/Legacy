@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="CustomTournamentRewardToolTip" Id="6221">
+    <!--Height는 소스에서 결정-->
+	<Size X="0" Y="0" Width="234" Height="115" />
+	<Style>IWS_START_HIDE|IWS_PROCESS</Style>
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="tooltip3">
+			<Area X="0" Y="0" Width="234" Height="115"/>
+		</DefaultFrameImagery>		
+
+	</Imagery>
+	
+	<Window ClassName="NewShopIconBtn" Id="1">
+		<Style>IWS_NO_MOUSE_RESPONSE|IWS_TOPMOST</Style>
+		<Size X="16" Y="17" Width="64" Height="64" />
+		<Imagery>
+			<DefaultFrameImagery Type="StateBlueFrm" Templete="state_blue">
+				<Area X="0" Y="0" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+			<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_2"/>
+			<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			<Image Type="NewMark"   Imageset="BaseImage006" Image="state_green_new"/>
+			<Image Type="HotMark"   Imageset="BaseImage006" Image="state_red_hot"/>
+			<Image Type="LimitMark" Imageset="BaseImage012" Image="state_violet_limit"/>
+			<Image Type="SoldOutMark" Imageset="BaseImage012" Image="state_red_soldout"/>
+			<Image Type="NumText"   Imageset="BaseImage004" Image="text_equipment_num"/>
+			<Image Type="PlusText"  Imageset="BaseImage004" Image="text_equipment_plus"/>
+			<Image Type="costume_image" Imageset="BaseImage031" Image="costume_mark"/>
+		</Imagery>
+		<ExtraInfo DisableSelfOver="true" />
+	</Window>
+
+</Window>

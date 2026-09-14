@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="GashaponPresentListWnd" Id="6108">
+	<Size X="0" Y="-20" Width="478" Height="521" XAlign="Center" YAlign="Center"/>
+	<Style>IWS_MODAL|IWS_START_HIDE|IWS_AFTER_RENDER|IWS_EXIT_ESC</Style>
+	<Title>
+		<Format X="13" Y="11" Size="18" Style="Outline_full_2x" HorzAlign="Left"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Text>해외(1)</Text>
+	</Title>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+			<Area X="0" Y="0" Width="478" Height="521"/>
+		</DefaultFrameImagery>
+			<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title">
+			<Area X="5" Y="6" Width="468" Height="36"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="MultiplyFrm" Templete="win1_multiply_bottom">
+			<Area X="0" Y="456" Width="478" Height="65"/>
+		</DefaultFrameImagery>
+		<Image Imageset="BaseImage001" Image="tap2_line" >
+			<Area X="105" Y="74" Width="350" Height="2" HorzAlign="Stretch"/>
+		</Image>
+	
+	</Imagery>
+	<ExtraInfo Max_Present   = "13"
+                   Icon_Name_1   = "SoldierIconPack002#023"
+                   Present_Name1_1= "해외(2)"
+		   Present_Name2_1= "해외(3)"
+		   Icon_Name_2   = "SoldierIconPack002#023"
+                   Present_Name1_2= "해외(4)"
+                   Present_Name2_2= "해외(5)"
+		   Icon_Name_3   = "SoldierIconPack001#016"
+                   Present_Name1_3= "해외(6)"
+                   Present_Name2_3= "해외(7)"
+		   Icon_Name_4   = "SoldierIconPack001#017"
+                   Present_Name1_4= "해외(8)"
+                   Present_Name2_4= "해외(9)"
+		   Icon_Name_5   = "SoldierIconPack001#009"
+                   Present_Name1_5= "해외(10)"
+                   Present_Name2_5= "해외(11)"
+   		   Icon_Name_6   = "UIIconPack6#goods_yell"
+                   Present_Name1_6= "해외(12)"
+                   Present_Name2_6= "해외(13)"
+		   Icon_Name_7   = "UIIconPack8#goods_exp100pro"
+                   Present_Name1_7= "해외(14)"
+                   Present_Name2_7= "해외(15)"
+		   Icon_Name_8   = "UIIconPack8#goods_peso40pro"
+                   Present_Name1_8= "해외(16)"
+                   Present_Name2_8= "해외(17)"
+		   Icon_Name_9   = "UIIconPack8#goods_growrecovery"
+                   Present_Name1_9= "해외(18)"
+                   Present_Name2_9= "해외(19)"
+		   Icon_Name_10   = "UIIconPack9#goods_fishing_rod2"
+                   Present_Name1_10= "해외(20)"
+                   Present_Name2_10= "해외(21)"
+		   Icon_Name_11   = "UIIconPack9#goods_fishing_bait2" 
+                   Present_Name1_11= "해외(22)"
+                   Present_Name2_11= "해외(23)"
+   		   Icon_Name_12    = "UIIconPack6#goods_yell"
+                   Present_Name1_12= "해외(24)"
+                   Present_Name2_12= "해외(25)"/>
+
+
+	<Window ClassName="ioRadioButton" Id="10">
+		<Size X="17" Y="49" Width="82" Height="27" />
+		<Title>
+			<Format X="44" Y="5" Size="14" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>STR(26)</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="tap2_off">
+				<Area X="0" Y="0" Width="88" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="tap2_off">
+				<Area X="0" Y="0" Width="88" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap2_overadd">
+				<Area X="0" Y="0" Width="88" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="tap2_on1">
+				<Area X="0" Y="0" Width="88" Height="27"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	               ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="GashaponPresentListBtn" Id="100">
+		<Style>IWS_NO_MOUSE_RESPONSE</Style>
+		<Size X="42" Y="93" Width="64" Height="64" />
+		<Imagery>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+				<Image Type="NewMark"   Imageset="BaseImage006" Image="state_green_new"/>
+				<Image Type="HotMark"   Imageset="BaseImage006" Image="state_red_hot"/>
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GashaponPresentListBtn" Id="101">
+		<Style>IWS_NO_MOUSE_RESPONSE</Style>
+		<Size X="152" Y="93" Width="64" Height="64" />
+		<Imagery>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+				<Image Type="NewMark"   Imageset="BaseImage006" Image="state_green_new"/>
+				<Image Type="HotMark"   Imageset="BaseImage006" Image="state_red_hot"/>
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GashaponPresentListBtn" Id="102">
+		<Style>IWS_NO_MOUSE_RESPONSE</Style>
+		<Size X="262" Y="93" Width="64" Height="64" />
+		<Imagery>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+				<Image Type="NewMark"   Imageset="BaseImage006" Image="state_green_new"/>
+				<Image Type="HotMark"   Imageset="BaseImage006" Image="state_red_hot"/>
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GashaponPresentListBtn" Id="103">
+		<Style>IWS_NO_MOUSE_RESPONSE</Style>
+		<Size X="372" Y="93" Width="64" Height="64" />
+		<Imagery>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+				<Image Type="NewMark"   Imageset="BaseImage006" Image="state_green_new"/>
+				<Image Type="HotMark"   Imageset="BaseImage006" Image="state_red_hot"/>
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GashaponPresentListBtn" Id="104">
+		<Style>IWS_NO_MOUSE_RESPONSE</Style>
+		<Size X="42" Y="199" Width="64" Height="64" />
+		<Imagery>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+				<Image Type="NewMark"   Imageset="BaseImage006" Image="state_green_new"/>
+				<Image Type="HotMark"   Imageset="BaseImage006" Image="state_red_hot"/>
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GashaponPresentListBtn" Id="105">
+		<Style>IWS_NO_MOUSE_RESPONSE</Style>
+		<Size X="152" Y="199" Width="64" Height="64" />
+		<Imagery>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+				<Image Type="NewMark"   Imageset="BaseImage006" Image="state_green_new"/>
+				<Image Type="HotMark"   Imageset="BaseImage006" Image="state_red_hot"/>
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GashaponPresentListBtn" Id="106">
+		<Style>IWS_NO_MOUSE_RESPONSE</Style>
+		<Size X="262" Y="199" Width="64" Height="64" />
+		<Imagery>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+				<Image Type="NewMark"   Imageset="BaseImage006" Image="state_green_new"/>
+				<Image Type="HotMark"   Imageset="BaseImage006" Image="state_red_hot"/>
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GashaponPresentListBtn" Id="107">
+		<Style>IWS_NO_MOUSE_RESPONSE</Style>
+		<Size X="372" Y="199" Width="64" Height="64" />
+		<Imagery>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+				<Image Type="NewMark"   Imageset="BaseImage006" Image="state_green_new"/>
+				<Image Type="HotMark"   Imageset="BaseImage006" Image="state_red_hot"/>
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GashaponPresentListBtn" Id="108">
+		<Style>IWS_NO_MOUSE_RESPONSE</Style>
+		<Size X="42" Y="305" Width="64" Height="64" />
+		<Imagery>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+				<Image Type="NewMark"   Imageset="BaseImage006" Image="state_green_new"/>
+				<Image Type="HotMark"   Imageset="BaseImage006" Image="state_red_hot"/>
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GashaponPresentListBtn" Id="109">
+		<Style>IWS_NO_MOUSE_RESPONSE</Style>
+		<Size X="152" Y="305" Width="64" Height="64" />
+		<Imagery>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+				<Image Type="NewMark"   Imageset="BaseImage006" Image="state_green_new"/>
+				<Image Type="HotMark"   Imageset="BaseImage006" Image="state_red_hot"/>
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GashaponPresentListBtn" Id="110">
+		<Style>IWS_NO_MOUSE_RESPONSE</Style>
+		<Size X="262" Y="305" Width="64" Height="64" />
+		<Imagery>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+				<Image Type="NewMark"   Imageset="BaseImage006" Image="state_green_new"/>
+				<Image Type="HotMark"   Imageset="BaseImage006" Image="state_red_hot"/>
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GashaponPresentListBtn" Id="111">
+		<Style>IWS_NO_MOUSE_RESPONSE</Style>
+		<Size X="372" Y="305" Width="64" Height="64" />
+		<Imagery>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+				<Image Type="NewMark"   Imageset="BaseImage006" Image="state_green_new"/>
+				<Image Type="HotMark"   Imageset="BaseImage006" Image="state_red_hot"/>
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="172" Y="423" Width="43" Height="18" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_left" >
+				<Area X="17" Y="4"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	               ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="2">
+		<Size X="261" Y="423" Width="43" Height="18" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_left" >
+				<Area X="17" Y="4" Reverse="Horz"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	               ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+
+	<Window ClassName="ioButton" Id="3">
+		<Size X="444" Y="11" Width="23" Height="23"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+                        <Image Type="Disable" Imageset="BaseImage001" Image="icon0_x_grayframe" >
+				<Area X="0" Y="0" />
+			</Image>
+                        <Image Type="NormalList" Imageset="BaseImage001" Image="icon0_x" >
+				<Area X="5" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+</Window>

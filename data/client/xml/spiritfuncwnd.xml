@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="SpiritFuncWnd" Id="553">
+	<Size X="496" Y="0" Width="258" Height="506" />
+	<Style>IWS_PROCESS|IWS_CHILD_ONLY_RESPONSE|IWS_START_HIDE</Style>
+  <Imagery>
+    <Image Imageset="BaseImage001" Image="tap2_line" >
+      <Area X="128" Y="84" Width="2" Height="2" HorzAlign="Stretch"/>
+    </Image>
+    <Image Type="ComposeBG" Imageset="BaseImage043" Image="spirit_compose_bg"/>
+    <Image Type="ConversionBG" Imageset="BaseImage043" Image="spirit_change_bg"/>
+    <Image Type="strip_gray_dark" Imageset="BaseImage001" Image="strip_gray_dark2"/>
+    <Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+    <Image Type="BGEffect1" Imageset="BaseImage043" Image="bg_effect_spirit1"/>
+    <Image Type="BGEffect2" Imageset="BaseImage043" Image="bg_effect_spirit2"/>
+    <Effect Type="Effect" File="ui_eff_spirit_mix_front.txt" RenderType="AfterRender">
+      <Area X="0" Y="0" Width="200" Height="200" />
+    </Effect>
+  </Imagery>
+  <ExtraInfo ComposeStateMsg1="용병정기를 선택해주세요."
+             ComposeStateMsg2="정기개수가 부족합니다."
+             ComposeStateMsg3="정기를 합성해주세요."
+             ComposeStateMsg4="정기를 합성중입니다."
+             ComposeText="합성하고자 하는 용병정기를 선택해주세요. 모자른 정기는 미지의 정기로 대체가능합니다."
+             ComposeAlarm1="선택하신 정기는 영구용병으로 소지하고 있으므로 합성이 불가합니다."
+             ComposeAlarm2="선택하신 정기는 최소 요구량 미달로\n합성이 불가합니다.\n(최소개수 : 일반 40\n/ 레어 80 / 유니크 160)"
+             SendComposeError1="용병정기를 선택해주세요."
+             SendComposeError2="정기개수가 부족합니다."
+             SpiritCountText1="현재개수 %s"
+             SpiritCountText2="(최대개수 %s)"
+             NoSpiritAlarm="해당 정기를 보유하고 있지 않습니다."
+             SpecialSpiritCode="1001"
+             ProcessGapTime="100"
+             ProcessFirstGapTime="200"
+             ConversionStateMsg1="용병정기를 선택해주세요."
+             ConversionStateMsg2="전환할 정기를 선택해주세요"
+             ConversionStateMsg3="정기를 전환해주세요."
+             ConversionStateMsg4="정기를 전환중입니다."
+             ConversionText="전환하고자 하는 용병의 정기를 선택하시면 전환될 용병의 정기선택버튼이 활성화됩니다.\n \n3개이상 보유시 사용 가능"
+             ConversionAlarm="선택하신 정기는 최소 요구량 미달로\n전환이 불가합니다.\n(최소 필요 정기 수는 3개입니다.)"
+             SendConversionError1="용병정기를 선택해주세요."
+             SendConversionError2="전환할 정기를 선택해주세요"
+             RollingTime = "1500"
+			 ComposeRollingSound = "interface/spirit/compose_rolling_01.wav"
+			 ComposeResultSound = "interface/spirit/compose_result_01.wav"
+			 ConversionRollingSound = "interface/spirit/compose_rolling_01.wav"
+			 ConversionResultSound = "interface/spirit/compose_result_01.wav"
+			 />
+  
+  <Window ClassName="ioRadioButton" Id="1">
+    <Size X="27" Y="59" Width="101" Height="27" />
+    <Title>
+      <Format X="50" Y="8" Size="12" Style="Normal" HorzAlign="Center"/>
+      <Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+      <Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+      <Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+      <Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+      <Text>합성</Text>
+    </Title>
+    <Imagery>
+      <DefaultFrameImagery Type="Normal" Templete="tap2_off">
+        <Area X="0" Y="0" Width="101" Height="27"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Over" Templete="tap2_off">
+        <Area X="0" Y="0" Width="101" Height="27"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="OverAdd" Templete="tap2_overadd">
+        <Area X="0" Y="0" Width="101" Height="27"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Push" Templete="tap2_on1">
+        <Area X="0" Y="0" Width="101" Height="27"/>
+      </DefaultFrameImagery>
+    </Imagery>
+    <ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  </Window>
+  <Window ClassName="ioRadioButton" Id="2">
+    <Size X="130" Y="59" Width="101" Height="27" />
+    <Title>
+      <Format X="50" Y="8" Size="12" Style="Normal" HorzAlign="Center"/>
+      <Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+      <Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+      <Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+      <Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+      <Text>전환</Text>
+    </Title>
+    <Imagery>
+      <DefaultFrameImagery Type="Normal" Templete="tap2_off">
+        <Area X="0" Y="0" Width="101" Height="27"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Over" Templete="tap2_off">
+        <Area X="0" Y="0" Width="101" Height="27"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="OverAdd" Templete="tap2_overadd">
+        <Area X="0" Y="0" Width="101" Height="27"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Push" Templete="tap2_on1">
+        <Area X="0" Y="0" Width="101" Height="27"/>
+      </DefaultFrameImagery>
+    </Imagery>
+    <ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  </Window>
+ 
+  <Window ClassName="InventoryIconBtn" Id="11">
+    <Size X="71" Y="118" Width="52" Height="52" />
+    <ExtraInfo OverSound  = "interface/public_mouseover_00.wav"
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+  </Window>
+  <Window ClassName="InventoryIconBtn" Id="12">
+    <Size X="155" Y="173" Width="44" Height="44" />
+    <ExtraInfo OverSound  = "interface/public_mouseover_00.wav"
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+  </Window>
+  <Window ClassName="InventoryIconBtn" Id="13">
+    <Size X="71" Y="234" Width="52" Height="52" />
+    <ExtraInfo OverSound  = "interface/public_mouseover_00.wav"
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+  </Window>
+  <Window ClassName="ioButton" Id="14">
+    <ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+    <Size X="27" Y="448" Width="204" Height="31"/>
+    <Title>
+      <Format X="102" Y="7" Size="13" Style="Outline_full_3x" HorzAlign="Center"/>
+      <Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+      <Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+      <Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+      <Color Type="Disable" Text="FFA7A7A7" Back="FF6E6E6E"/>
+      <Text>합성하기</Text>
+    </Title>
+    <Imagery>
+      <DefaultFrameImagery Type="Normal" Templete="bt006_green_nor">
+        <Area X="0" Y="0" Width="204" Height="31"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Over" Templete="bt006_green_nor">
+        <Area X="0" Y="0" Width="204" Height="31"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+        <Area X="0" Y="0" Width="204" Height="31"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Push" Templete="bt006_green_down">
+        <Area X="0" Y="0" Width="204" Height="31"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Disable" Templete="bt_empty">
+        <Area X="0" Y="0" Width="204" Height="31"/>
+      </DefaultFrameImagery>
+    </Imagery>
+    <ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  </Window>
+  <Window ClassName="ioWnd" Id="19">
+    <ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+    <Size X="27" Y="448" Width="204" Height="31"/>
+    <Title>
+      <Format X="102" Y="7" Size="13" Style="Normal" HorzAlign="Center"/>
+      <Color Type="Normal" Text="FFA7A7A7" Back="FFA7A7A7"/>
+      <Text>합성중...</Text>
+    </Title>
+    <Imagery>
+      <DefaultFrameImagery Templete="bt_empty">
+        <Area X="0" Y="0" Width="204" Height="31"/>
+      </DefaultFrameImagery>
+    </Imagery>
+  </Window>
+  <Window ClassName="ioButton" Id="15">
+    <Size X="49" Y="165" Width="21" Height="22" />
+    <Imagery>
+      <DefaultFrameImagery Type="Normal" Templete="bt007_blue_nor">
+        <Area X="0" Y="0" Width="21" Height="22"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Over" Templete="bt007_blue_nor">
+        <Area X="0" Y="0" Width="21" Height="22"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+        <Area X="0" Y="0" Width="21" Height="22"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Push" Templete="bt007_blue_down">
+        <Area X="0" Y="0" Width="21" Height="22"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Disable" Templete="bt007_gray_nor">
+        <Area X="0" Y="0" Width="21" Height="22"/>
+      </DefaultFrameImagery>
+      <Image Imageset="BaseImage034" Image="icon0_minus_blue" >
+        <Area X="3" Y="4"/>
+      </Image>
+    </Imagery>
+    <ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+  </Window>
+  <Window ClassName="ioButton" Id="16">
+    <Size X="124" Y="165" Width="21" Height="22" />
+    <Imagery>
+      <DefaultFrameImagery Type="Normal" Templete="bt007_blue_nor">
+        <Area X="0" Y="0" Width="21" Height="22"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Over" Templete="bt007_blue_nor">
+        <Area X="0" Y="0" Width="21" Height="22"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+        <Area X="0" Y="0" Width="21" Height="22"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Push" Templete="bt007_blue_down">
+        <Area X="0" Y="0" Width="21" Height="22"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Disable" Templete="bt007_gray_nor">
+        <Area X="0" Y="0" Width="21" Height="22"/>
+      </DefaultFrameImagery>
+      <Image Imageset="BaseImage034" Image="icon0_plus_blue" >
+        <Area X="3" Y="4"/>
+      </Image>
+    </Imagery>
+    <ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+  </Window>
+  <Window ClassName="ioButton" Id="17">
+    <Size X="129" Y="211" Width="21" Height="22" />
+    <Imagery>
+      <DefaultFrameImagery Type="Normal" Templete="bt007_blue_nor">
+        <Area X="0" Y="0" Width="21" Height="22"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Over" Templete="bt007_blue_nor">
+        <Area X="0" Y="0" Width="21" Height="22"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+        <Area X="0" Y="0" Width="21" Height="22"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Push" Templete="bt007_blue_down">
+        <Area X="0" Y="0" Width="21" Height="22"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Disable" Templete="bt007_gray_nor">
+        <Area X="0" Y="0" Width="21" Height="22"/>
+      </DefaultFrameImagery>
+      <Image Imageset="BaseImage034" Image="icon0_minus_blue" >
+        <Area X="3" Y="4"/>
+      </Image>
+    </Imagery>
+    <ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+  </Window>
+  <Window ClassName="ioButton" Id="18">
+    <Size X="204" Y="211" Width="21" Height="22" />
+    <Imagery>
+      <DefaultFrameImagery Type="Normal" Templete="bt007_blue_nor">
+        <Area X="0" Y="0" Width="21" Height="22"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Over" Templete="bt007_blue_nor">
+        <Area X="0" Y="0" Width="21" Height="22"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+        <Area X="0" Y="0" Width="21" Height="22"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Push" Templete="bt007_blue_down">
+        <Area X="0" Y="0" Width="21" Height="22"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Disable" Templete="bt007_gray_nor">
+        <Area X="0" Y="0" Width="21" Height="22"/>
+      </DefaultFrameImagery>
+      <Image Imageset="BaseImage034" Image="icon0_plus_blue" >
+        <Area X="3" Y="4"/>
+      </Image>
+    </Imagery>
+    <ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+  </Window>
+  <Window ClassName="InventoryIconBtn" Id="21">
+    <Size X="49" Y="117" Width="52" Height="52" />
+    <ExtraInfo OverSound  = "interface/public_mouseover_00.wav"
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+  </Window>
+  <Window ClassName="InventoryIconBtn" Id="22">
+    <Size X="157" Y="152" Width="52" Height="52" />
+    <Imagery>
+      <Image Type="EmptyOver" Imageset="BaseImage043" Image="spirit_mouse_on"/>
+    </Imagery>
+    <ExtraInfo OverSound  = "interface/public_mouseover_00.wav"
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+  </Window>
+  <Window ClassName="ioButton" Id="23">
+    <Size X="145" Y="222" Width="75" Height="22" />
+    <Title>
+      <Format X="37" Y="2" Size="12" Style="Outline_full_2x" HorzAlign="Center"/>
+      <Color Type="Normal" Text="FFFFFFFF" Back="FF20394F"/>
+      <Color Type="Over" Text="FFFFFFFF" Back="FF20394F"/>
+      <Color Type="Push" Text="FFFFFFFF" Back="FF20394F"/>
+      <Color Type="Disable" Text="FFA7A7A7" Back="FF6E6E6E"/>
+      <Text>정기선택</Text>
+    </Title>
+    <Imagery>
+      <DefaultFrameImagery Type="Normal" Templete="bt007_blue_nor">
+        <Area X="0" Y="0" Width="75" Height="22"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Over" Templete="bt007_blue_nor">
+        <Area X="0" Y="0" Width="75" Height="22"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+        <Area X="0" Y="0" Width="75" Height="22"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Push" Templete="bt007_blue_down">
+        <Area X="0" Y="0" Width="75" Height="22"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Disable" Templete="bt_empty">
+        <Area X="0" Y="0" Width="75" Height="22"/>
+      </DefaultFrameImagery>
+    </Imagery>
+    <ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+  </Window>
+  <Window ClassName="ioButton" Id="24">
+    <ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+    <Size X="27" Y="448" Width="204" Height="31"/>
+    <Title>
+      <Format X="102" Y="7" Size="13" Style="Outline_full_3x" HorzAlign="Center"/>
+      <Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+      <Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+      <Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+      <Color Type="Disable" Text="FFA7A7A7" Back="FF6E6E6E"/>
+      <Text>전환하기</Text>
+    </Title>
+    <Imagery>
+      <DefaultFrameImagery Type="Normal" Templete="bt006_green_nor">
+        <Area X="0" Y="0" Width="204" Height="31"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Over" Templete="bt006_green_nor">
+        <Area X="0" Y="0" Width="204" Height="31"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+        <Area X="0" Y="0" Width="204" Height="31"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Push" Templete="bt006_green_down">
+        <Area X="0" Y="0" Width="204" Height="31"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Disable" Templete="bt_empty">
+        <Area X="0" Y="0" Width="204" Height="31"/>
+      </DefaultFrameImagery>
+    </Imagery>
+    <ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  </Window>
+  <Window ClassName="ioWnd" Id="27">
+    <ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+    <Size X="27" Y="448" Width="204" Height="31"/>
+    <Title>
+      <Format X="102" Y="7" Size="13" Style="Normal" HorzAlign="Center"/>
+      <Color Type="Normal" Text="FFA7A7A7" Back="FFA7A7A7"/>
+      <Text>전환중...</Text>
+    </Title>
+    <Imagery>
+      <DefaultFrameImagery Templete="bt_empty">
+        <Area X="0" Y="0" Width="204" Height="31"/>
+      </DefaultFrameImagery>
+    </Imagery>
+  </Window>
+  <Window ClassName="ioButton" Id="25">
+    <Size X="27" Y="165" Width="21" Height="22" />
+    <Imagery>
+      <DefaultFrameImagery Type="Normal" Templete="bt007_blue_nor">
+        <Area X="0" Y="0" Width="21" Height="22"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Over" Templete="bt007_blue_nor">
+        <Area X="0" Y="0" Width="21" Height="22"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+        <Area X="0" Y="0" Width="21" Height="22"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Push" Templete="bt007_blue_down">
+        <Area X="0" Y="0" Width="21" Height="22"/>
+      </DefaultFrameImagery>
+      <Image Imageset="BaseImage034" Image="icon0_minus_blue" >
+        <Area X="3" Y="4"/>
+      </Image>
+    </Imagery>
+    <ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+  </Window>
+  <Window ClassName="ioButton" Id="26">
+    <Size X="102" Y="165" Width="21" Height="22" />
+    <Imagery>
+      <DefaultFrameImagery Type="Normal" Templete="bt007_blue_nor">
+        <Area X="0" Y="0" Width="21" Height="22"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Over" Templete="bt007_blue_nor">
+        <Area X="0" Y="0" Width="21" Height="22"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+        <Area X="0" Y="0" Width="21" Height="22"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Push" Templete="bt007_blue_down">
+        <Area X="0" Y="0" Width="21" Height="22"/>
+      </DefaultFrameImagery>
+      <Image Imageset="BaseImage034" Image="icon0_plus_blue" >
+        <Area X="3" Y="4"/>
+      </Image>
+    </Imagery>
+    <ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+  </Window>
+  
+</Window>

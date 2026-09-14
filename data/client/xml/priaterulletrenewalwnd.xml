@@ -1,0 +1,1202 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="PriateRulletRenewalWnd" Id="6302">
+	<Size X="0" Y="-20" XAlign="Center" YAlign="Center" Width="754" Height="506" />
+	<DragRect Left="0" Top="0" Right="754" Bottom="36" />
+	<Style>IWS_START_HIDE|IWS_EXIT_ESC|IWS_PROCESS</Style>
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Title>
+		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Text>공포의 오크통</Text>
+	</Title>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+			<Area X="0" Y="0" Width="754" Height="506"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title">
+			<Area X="5" Y="6" Width="744" Height="36"/>
+		</DefaultFrameImagery>
+		<Image Type="OakCap" Imageset="UIIconEvent7" Image="roulette_pirate_sub_board">
+			<Area X="121" Y="196"/>
+		</Image>
+		<Image Type="OakBody" Imageset="UIIconEvent7" Image="roulette_pirate_main_board">
+			<Area X="87" Y="214"/>
+		</Image>
+		<Image Type="DevelopK" Imageset="UIIconEvent7" Image="roulette_pirate_baseimage">
+			<Area X="119" Y="77"/>
+		</Image>
+		<Image Type="RewardMap" Imageset="UIIconEvent7" Image="roulette_pirate_map_normal">
+			<Area X="425" Y="140"/>
+		</Image>
+		<Image Type="FailMap" Imageset="UIIconEvent7" Image="roulette_pirate_map_fail">
+			<Area X="425" Y="140"/>
+		</Image>
+		<Image Type="SwordBar" Imageset="UIIconEvent7" Image="roulette_pirate_map_top">
+			<Area X="397" Y="71"/>
+		</Image>
+		
+		
+		<Image Type="DevelopKFlyStart" Imageset="UIIconEvent7" Image="roulette_pirate_annie_effects02"/>
+		<Image Type="DevelopKFlyEnd" Imageset="UIIconEvent7" Image="roulette_pirate_annie_effects01"/>
+		<Image Type="DevelopKWounded" Imageset="UIIconEvent7" Image="roulette_pirate_image11"/>
+		<Image Type="DevelopKProvoke" Imageset="UIIconEvent7" Image="roulette_pirate_image12"/>
+		<Image Type="FireWorkEffect01" Imageset="UIIconEvent7" Image="roulette_pirate_annie_effects03"/>
+		<Image Type="FireWorkEffect02" Imageset="UIIconEvent7" Image="roulette_pirate_annie_effects04"/>
+		<Image Type="FireWorkEffect03" Imageset="UIIconEvent7" Image="roulette_pirate_annie_effects05"/>
+		<Image Type="FireWorkEffect04" Imageset="UIIconEvent7" Image="roulette_pirate_annie_effects06"/>
+		<Image Type="DevelopKProvokeBack" Imageset="UIIconEvent7" Image="roulette_pirate_image12"/>
+		<Image Type="DevelopKWoundedBack" Imageset="UIIconEvent7" Image="roulette_pirate_image11"/>
+		<Image Type="MonKeyFace" Imageset="UIIconEvent7" Image="roulette_pirate_bg_ani2_1" >
+			<Area X="27" Y="108"/>
+		</Image>
+		<Image Type="ShipTreeLight" Imageset="UIIconEvent7" Image="roulette_pirate_bg_ani2_2_1" >
+			<Area X="74" Y="62"/>
+		</Image>
+		<Image Type="ShipTreeInvLight" Imageset="UIIconEvent7" Image="roulette_pirate_bg_ani2_2_2" >
+			<Area X="74" Y="62"/>
+		</Image>
+		<Image Type="BombLeftFire" Imageset="UIIconEvent7" Image="roulette_pirate_bg_ani2_3_1" >
+			<Area X="7" Y="331"/>
+		</Image>
+		<Image Type="BombLeftInvFire" Imageset="UIIconEvent7" Image="roulette_pirate_bg_ani2_3_2" >
+			<Area X="7" Y="331"/>
+		</Image>
+		<Image Type="BombRightFire" Imageset="UIIconEvent7" Image="roulette_pirate_bg_ani2_4_1" >
+			<Area X="356" Y="344"/>
+		</Image>
+		<Image Type="BombRightInvFire" Imageset="UIIconEvent7" Image="roulette_pirate_bg_ani2_4_2" >
+			<Area X="356" Y="344"/>
+		</Image>
+		<Image Type="NormalList" Imageset="UIIconEvent7" Image="roulette_pirate_obj_bg" >
+			<Area X="7" Y="42" width="739" height="456"/>
+		</Image>
+		<Effect Type="CriticalEffect" File="ui_knife_exp_01.txt" RenderType="AfterRender" CamName="UIOak">
+			<Area X="0" Y="0" Width="100" Height="100" />
+		</Effect>
+		<Effect Type="RewardEffect" File="ui_eff_roulette_pirate.txt" RenderType="AfterRender" CamName="UIOak">
+			<Area X="0" Y="0" Width="200" Height="200" />
+		</Effect>
+		<Image Type="WoodSword" Imageset="UIIconPack103" Image="sword_1">
+			<Area X="467" Y="102" TexFilter="bilinear"/>
+		</Image>
+		<Image Type="ClearStamp" Imageset="UIIconEvent7" Image="oak_stamp_gain" >
+			<Area X="648" Y="321"/>
+		</Image>
+	</Imagery>
+	<ExtraInfo ProvocationSound = "oak/Provocation.wav" 
+		       DevelopKSound = "oak/Start.wav"
+		       RewardSound = "interface/roulettepirate/ad_roulette_pirate.wav"
+			   FailSound = "interface/compound_fail_01.wav"
+			   RollingSound = "interface/compound_effect_01.wav"
+			   ClearStampSound = "interface/Mission_clear.wav"
+			   ClearStampLoopTime = "300"
+			   ClearStampScaleSpeed = "6"  
+			   HelpMaxPage = "2" />
+	<Window ClassName="PriateTextTooltip" Id="500">
+		<Size X="0" Y="0" Width="120" Height="26" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_TOPMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="tooltip3">
+				<Area X="0" Y="0" Width="120" Height="26" />
+			</DefaultFrameImagery>
+		</Imagery>
+	</Window>
+	
+	<Window ClassName="RenewalDevelopKBubble" Id="2000">
+		<Size X="281" Y="114" Width="120" Height="84" XAlign="Left" YAlign="Top"/>
+		<Style>IWS_START_HIDE|IWS_AFTER_RENDER|IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="tooltip6">
+				<Area X="0" Y="0" Width="120" Height="84" XAlign="Left" YAlign="Bottom"/>
+			</DefaultFrameImagery>
+			<Image Type="BubbleTail" Imageset="UIIconEvent7" Image="tooltip6_tail"/>
+		</Imagery>
+		<ExtraInfo ReverseTail="false" />
+	</Window>
+	
+	<Window ClassName="ioButton" Id="1">
+		<Size X="720" Y="11" Width="22" Height="22"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+            <Image Type="Disable" Imageset="BaseImage001" Image="icon0_x_grayframe" >
+				<Area X="0" Y="0" />
+			</Image>
+            <Image Type="NormalList" Imageset="BaseImage001" Image="icon0_x" >
+				<Area X="5" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<!-- 게임 룰 설명 시작-->
+	<Window ClassName="ioRichLabel" Id="2">
+		<Size X="422" Y="107" Width="300" Height="25"/>
+		<ExtraInfo VertGap="3" HorzAlign="Center" VertAlign="Top" >
+			<TextBlock Text="좀비처럼 돌아온 오크통!" Size="24" Color="FF7F3101"/>
+		</ExtraInfo>
+	</Window>
+	
+	<Window ClassName="ioRichLabel" Id="3">
+		<Size X="422" Y="136" Width="300" Height="25"/>
+		<ExtraInfo VertGap="3" HorzAlign="Center" VertAlign="Top" >
+			<TextBlock Text="신중하게 검을 꽂아 보상을 받아가세요!!" Size="14" Color="FF7F3F01"/>
+		</ExtraInfo>
+	</Window>
+	<!-- 1Page-->
+	<Window ClassName="ioRichLabel" Id="4">
+		<Size X="433" Y="170" Width="300" Height="10"/>
+		<ExtraInfo VertGap="3" HorzAlign="Left" VertAlign="Top" >
+			<TextBlock Text="<장난감 검>#" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="1. 장난감 검은 상점의 특별탭에서 구매할 수#" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="   있습니다.#" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="2. 하루에 검을 오크통에 50회 꽂을 수 있습니다.#" Size="12" Color="FF7F3F01"/>
+		</ExtraInfo>
+	</Window>
+
+	<Window ClassName="ioRichLabel" Id="5">
+		<Size X="433" Y="245" Width="300" Height="10"/>
+		<ExtraInfo VertGap="3" HorzAlign="Left" VertAlign="Top" >
+			<TextBlock Text="<보상 획득>#" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="1. 검을 꽂을 때마다 개발자K가 날아가지 않으면#" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="   단계별로 보상을 획득 가능한 상태가 됩니다#" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="2. 진행 중에 [보상 받기]를 누르면 획득 가능한#" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="   상태의 보상을 받을 수 있습니다" Size="12" Color="FF7F3F01"/>
+		</ExtraInfo>
+	</Window>
+	
+	<Window ClassName="ioRichLabel" Id="6">
+		<Size X="433" Y="338" Width="300" Height="10"/>
+		<ExtraInfo VertGap="3" HorzAlign="Left" VertAlign="Top" >
+			<TextBlock Text="<꽝>#" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="1. 진행 중에 운이 나빠 개발자 K가 날아갔다면 마지막#" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="   보상만 얻을 수 있으니 신중하세요!#" Size="12" Color="FF7F3F01"/>
+		</ExtraInfo>
+	</Window>
+	<!-- 2Page-->
+	<Window ClassName="ioRichLabel" Id="7">
+		<Size X="433" Y="170" Width="300" Height="10"/>
+		<ExtraInfo VertGap="3" HorzAlign="Left" VertAlign="Top" >
+			<TextBlock Text="<보상>#" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="1. 보상은 단계별로 무작위로 지급되며 단계가 올라갈#" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="   수록 높은 가치의 아이템이 나올 확률이 높아집니다" Size="12" Color="FF7F3F01"/>
+		</ExtraInfo>
+	</Window>
+	<!-- 사용안함
+	<Window ClassName="ioRichLabel" Id="8">
+		<Size X="433" Y="275" Width="300" Height="10"/>
+		<ExtraInfo VertGap="3" HorzAlign="Left" VertAlign="Top" >
+			<TextBlock Text="<2page꽝>#" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="1. 진행 중에 운이 나빠 개발자K가 날아갔다면 획득#" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="   할 수 있는 모든 보상은 날아가게 되니 신중하세요!#" Size="12" Color="FF7F3F01"/>
+		</ExtraInfo>
+	</Window>
+	
+	<Window ClassName="ioRichLabel" Id="9">
+		<Size X="433" Y="338" Width="300" Height="10"/>
+		<ExtraInfo VertGap="3" HorzAlign="Left" VertAlign="Top" >
+			<TextBlock Text="<2page보상>#" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="1. 보상은 단계별로 무작위로 지급되며 단계가 올라갈#" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="   수록 높은 가치의 아이템이 나올 확률이 높아집니다#" Size="12" Color="FF7F3F01"/>
+		</ExtraInfo>
+	</Window>
+  -->
+	<!-- 게임 룰 설명 종료-->
+	
+	<Window ClassName="ioButton" Id="10">
+		<Size X="436" Y="413" Width="260" Height="40" />
+		<Title>
+			<Format X="131" Y="7" Size="18" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal"  Text="FFF2FBE2" Back="FF4D2B17"/>
+			<Color Type="Over"  Text="FFF2FBE2" Back="FF4D2B17"/>
+			<Color Type="Push"  Text="FFF2FBE2" Back="FF4D2B17"/>
+			<Color Type="Disable"  Text="FFF2FBE2" Back="FF4D2B17"/>
+			<Text>시작하기</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt017_brown_nor">
+				<Area X="0" Y="0" Width="260" Height="40"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt017_brown_nor">
+				<Area X="0" Y="0" Width="260" Height="40"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt017_overadd">
+				<Area X="3" Y="1" Width="258" Height="34"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt017_brown_down">
+				<Area X="0" Y="0" Width="260" Height="40"/>
+			</DefaultFrameImagery>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<!-- 보상 버튼 시작-->
+	<Window ClassName="RenewalPrivateRulletRewardButton" Id="11">
+		<Size X="472" Y="179" Width="37" Height="37" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Secret" Imageset="UIIconPack54" Image="event_secret" />
+			<Image Type="Effect_Fail01" Imageset="BaseEffect001" Image="effect_fail_01"/>
+			<Image Type="Effect_Fail02" Imageset="BaseEffect001" Image="effect_fail_02"/>
+			<Image Type="Effect_Fail03" Imageset="BaseEffect001" Image="effect_fail_03"/>
+			<Image Type="Effect_Fail04" Imageset="BaseEffect001" Image="effect_fail_04"/>
+			<Image Type="Effect_Fail05" Imageset="BaseEffect001" Image="effect_fail_05"/>
+			<Image Type="Effect_Fail06" Imageset="BaseEffect001" Image="effect_fail_06"/>
+			<Image Type="Effect_Fail07" Imageset="BaseEffect001" Image="effect_fail_07"/>
+			<Image Type="Effect_Fail08" Imageset="BaseEffect001" Image="effect_fail_08"/>
+			<Image Type="Effect_Fail09" Imageset="BaseEffect001" Image="effect_fail_09"/>
+			<Image Type="Effect_Fail10" Imageset="BaseEffect001" Image="effect_fail_10"/>
+			
+			<Image Type="Effect_Rolling01" Imageset="BaseEffect004" Image="effect_roll_add_01"/>
+			<Image Type="Effect_Rolling02" Imageset="BaseEffect004" Image="effect_roll_add_02"/>
+			<Image Type="Effect_Rolling03" Imageset="BaseEffect004" Image="effect_roll_add_03"/>
+			<Image Type="Effect_Rolling04" Imageset="BaseEffect004" Image="effect_roll_add_04"/>
+			<Image Type="Effect_Rolling05" Imageset="BaseEffect004" Image="effect_roll_add_05"/>
+			<Image Type="Effect_Rolling06" Imageset="BaseEffect005" Image="effect_roll_add_06"/>
+			<Image Type="Effect_Rolling07" Imageset="BaseEffect005" Image="effect_roll_add_07"/>
+			<Image Type="Effect_Rolling08" Imageset="BaseEffect005" Image="effect_roll_add_08"/>
+			<Image Type="Effect_Rolling09" Imageset="BaseEffect005" Image="effect_roll_add_09"/>
+			
+			<Image Type="Effect_Reward01" Imageset="BaseEffect005" Image="effect_ok_yellow_01"/>
+			<Image Type="Effect_Reward02" Imageset="BaseEffect005" Image="effect_ok_yellow_02"/>
+			<Image Type="Effect_Reward03" Imageset="BaseEffect005" Image="effect_ok_yellow_03"/>
+			<Image Type="Effect_Reward04" Imageset="BaseEffect005" Image="effect_ok_yellow_04"/>
+			<Image Type="Effect_Reward05" Imageset="BaseEffect005" Image="effect_ok_yellow_05"/>
+			<Image Type="Effect_Reward06" Imageset="BaseEffect005" Image="effect_ok_yellow_06"/>
+			<Image Type="Effect_Reward07" Imageset="BaseEffect005" Image="effect_ok_yellow_07"/>
+			<Image Type="Effect_Reward08" Imageset="BaseEffect005" Image="effect_ok_yellow_08"/>
+			<Image Type="Effect_Reward09" Imageset="BaseEffect005" Image="effect_ok_yellow_09"/>
+			<Image Type="Effect_Reward10" Imageset="BaseEffect005" Image="effect_ok_yellow_10"/>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"
+				   EffectXPos="15"
+				   EffectYPos="17"/>
+	</Window>
+	<Window ClassName="RenewalPrivateRulletRewardButton" Id="12">
+		<Size X="525" Y="179" Width="37" Height="37" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Secret" Imageset="UIIconPack54" Image="event_secret" />
+			<Image Type="Effect_Fail01" Imageset="BaseEffect001" Image="effect_fail_01"/>
+			<Image Type="Effect_Fail02" Imageset="BaseEffect001" Image="effect_fail_02"/>
+			<Image Type="Effect_Fail03" Imageset="BaseEffect001" Image="effect_fail_03"/>
+			<Image Type="Effect_Fail04" Imageset="BaseEffect001" Image="effect_fail_04"/>
+			<Image Type="Effect_Fail05" Imageset="BaseEffect001" Image="effect_fail_05"/>
+			<Image Type="Effect_Fail06" Imageset="BaseEffect001" Image="effect_fail_06"/>
+			<Image Type="Effect_Fail07" Imageset="BaseEffect001" Image="effect_fail_07"/>
+			<Image Type="Effect_Fail08" Imageset="BaseEffect001" Image="effect_fail_08"/>
+			<Image Type="Effect_Fail09" Imageset="BaseEffect001" Image="effect_fail_09"/>
+			<Image Type="Effect_Fail10" Imageset="BaseEffect001" Image="effect_fail_10"/>
+			
+			<Image Type="Effect_Rolling01" Imageset="BaseEffect004" Image="effect_roll_add_01"/>
+			<Image Type="Effect_Rolling02" Imageset="BaseEffect004" Image="effect_roll_add_02"/>
+			<Image Type="Effect_Rolling03" Imageset="BaseEffect004" Image="effect_roll_add_03"/>
+			<Image Type="Effect_Rolling04" Imageset="BaseEffect004" Image="effect_roll_add_04"/>
+			<Image Type="Effect_Rolling05" Imageset="BaseEffect004" Image="effect_roll_add_05"/>
+			<Image Type="Effect_Rolling06" Imageset="BaseEffect005" Image="effect_roll_add_06"/>
+			<Image Type="Effect_Rolling07" Imageset="BaseEffect005" Image="effect_roll_add_07"/>
+			<Image Type="Effect_Rolling08" Imageset="BaseEffect005" Image="effect_roll_add_08"/>
+			<Image Type="Effect_Rolling09" Imageset="BaseEffect005" Image="effect_roll_add_09"/>
+			
+			<Image Type="Effect_Reward01" Imageset="BaseEffect005" Image="effect_ok_yellow_01"/>
+			<Image Type="Effect_Reward02" Imageset="BaseEffect005" Image="effect_ok_yellow_02"/>
+			<Image Type="Effect_Reward03" Imageset="BaseEffect005" Image="effect_ok_yellow_03"/>
+			<Image Type="Effect_Reward04" Imageset="BaseEffect005" Image="effect_ok_yellow_04"/>
+			<Image Type="Effect_Reward05" Imageset="BaseEffect005" Image="effect_ok_yellow_05"/>
+			<Image Type="Effect_Reward06" Imageset="BaseEffect005" Image="effect_ok_yellow_06"/>
+			<Image Type="Effect_Reward07" Imageset="BaseEffect005" Image="effect_ok_yellow_07"/>
+			<Image Type="Effect_Reward08" Imageset="BaseEffect005" Image="effect_ok_yellow_08"/>
+			<Image Type="Effect_Reward09" Imageset="BaseEffect005" Image="effect_ok_yellow_09"/>
+			<Image Type="Effect_Reward10" Imageset="BaseEffect005" Image="effect_ok_yellow_10"/>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"
+				   EffectXPos="15"
+				   EffectYPos="17"/>
+	</Window>	
+	<Window ClassName="RenewalPrivateRulletRewardButton" Id="13">
+		<Size X="576" Y="179" Width="37" Height="37" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Secret" Imageset="UIIconPack54" Image="event_secret" />
+			<Image Type="Effect_Fail01" Imageset="BaseEffect001" Image="effect_fail_01"/>
+			<Image Type="Effect_Fail02" Imageset="BaseEffect001" Image="effect_fail_02"/>
+			<Image Type="Effect_Fail03" Imageset="BaseEffect001" Image="effect_fail_03"/>
+			<Image Type="Effect_Fail04" Imageset="BaseEffect001" Image="effect_fail_04"/>
+			<Image Type="Effect_Fail05" Imageset="BaseEffect001" Image="effect_fail_05"/>
+			<Image Type="Effect_Fail06" Imageset="BaseEffect001" Image="effect_fail_06"/>
+			<Image Type="Effect_Fail07" Imageset="BaseEffect001" Image="effect_fail_07"/>
+			<Image Type="Effect_Fail08" Imageset="BaseEffect001" Image="effect_fail_08"/>
+			<Image Type="Effect_Fail09" Imageset="BaseEffect001" Image="effect_fail_09"/>
+			<Image Type="Effect_Fail10" Imageset="BaseEffect001" Image="effect_fail_10"/>
+			
+			<Image Type="Effect_Rolling01" Imageset="BaseEffect004" Image="effect_roll_add_01"/>
+			<Image Type="Effect_Rolling02" Imageset="BaseEffect004" Image="effect_roll_add_02"/>
+			<Image Type="Effect_Rolling03" Imageset="BaseEffect004" Image="effect_roll_add_03"/>
+			<Image Type="Effect_Rolling04" Imageset="BaseEffect004" Image="effect_roll_add_04"/>
+			<Image Type="Effect_Rolling05" Imageset="BaseEffect004" Image="effect_roll_add_05"/>
+			<Image Type="Effect_Rolling06" Imageset="BaseEffect005" Image="effect_roll_add_06"/>
+			<Image Type="Effect_Rolling07" Imageset="BaseEffect005" Image="effect_roll_add_07"/>
+			<Image Type="Effect_Rolling08" Imageset="BaseEffect005" Image="effect_roll_add_08"/>
+			<Image Type="Effect_Rolling09" Imageset="BaseEffect005" Image="effect_roll_add_09"/>
+			
+			<Image Type="Effect_Reward01" Imageset="BaseEffect005" Image="effect_ok_yellow_01"/>
+			<Image Type="Effect_Reward02" Imageset="BaseEffect005" Image="effect_ok_yellow_02"/>
+			<Image Type="Effect_Reward03" Imageset="BaseEffect005" Image="effect_ok_yellow_03"/>
+			<Image Type="Effect_Reward04" Imageset="BaseEffect005" Image="effect_ok_yellow_04"/>
+			<Image Type="Effect_Reward05" Imageset="BaseEffect005" Image="effect_ok_yellow_05"/>
+			<Image Type="Effect_Reward06" Imageset="BaseEffect005" Image="effect_ok_yellow_06"/>
+			<Image Type="Effect_Reward07" Imageset="BaseEffect005" Image="effect_ok_yellow_07"/>
+			<Image Type="Effect_Reward08" Imageset="BaseEffect005" Image="effect_ok_yellow_08"/>
+			<Image Type="Effect_Reward09" Imageset="BaseEffect005" Image="effect_ok_yellow_09"/>
+			<Image Type="Effect_Reward10" Imageset="BaseEffect005" Image="effect_ok_yellow_10"/>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"
+				   EffectXPos="15"
+				   EffectYPos="17"/>
+	</Window>
+	<Window ClassName="RenewalPrivateRulletRewardButton" Id="14">
+		<Size X="628" Y="179" Width="37" Height="37" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Secret" Imageset="UIIconPack54" Image="event_secret" />
+			<Image Type="Effect_Fail01" Imageset="BaseEffect001" Image="effect_fail_01"/>
+			<Image Type="Effect_Fail02" Imageset="BaseEffect001" Image="effect_fail_02"/>
+			<Image Type="Effect_Fail03" Imageset="BaseEffect001" Image="effect_fail_03"/>
+			<Image Type="Effect_Fail04" Imageset="BaseEffect001" Image="effect_fail_04"/>
+			<Image Type="Effect_Fail05" Imageset="BaseEffect001" Image="effect_fail_05"/>
+			<Image Type="Effect_Fail06" Imageset="BaseEffect001" Image="effect_fail_06"/>
+			<Image Type="Effect_Fail07" Imageset="BaseEffect001" Image="effect_fail_07"/>
+			<Image Type="Effect_Fail08" Imageset="BaseEffect001" Image="effect_fail_08"/>
+			<Image Type="Effect_Fail09" Imageset="BaseEffect001" Image="effect_fail_09"/>
+			<Image Type="Effect_Fail10" Imageset="BaseEffect001" Image="effect_fail_10"/>
+			
+			<Image Type="Effect_Rolling01" Imageset="BaseEffect004" Image="effect_roll_add_01"/>
+			<Image Type="Effect_Rolling02" Imageset="BaseEffect004" Image="effect_roll_add_02"/>
+			<Image Type="Effect_Rolling03" Imageset="BaseEffect004" Image="effect_roll_add_03"/>
+			<Image Type="Effect_Rolling04" Imageset="BaseEffect004" Image="effect_roll_add_04"/>
+			<Image Type="Effect_Rolling05" Imageset="BaseEffect004" Image="effect_roll_add_05"/>
+			<Image Type="Effect_Rolling06" Imageset="BaseEffect005" Image="effect_roll_add_06"/>
+			<Image Type="Effect_Rolling07" Imageset="BaseEffect005" Image="effect_roll_add_07"/>
+			<Image Type="Effect_Rolling08" Imageset="BaseEffect005" Image="effect_roll_add_08"/>
+			<Image Type="Effect_Rolling09" Imageset="BaseEffect005" Image="effect_roll_add_09"/>
+			
+			<Image Type="Effect_Reward01" Imageset="BaseEffect005" Image="effect_ok_yellow_01"/>
+			<Image Type="Effect_Reward02" Imageset="BaseEffect005" Image="effect_ok_yellow_02"/>
+			<Image Type="Effect_Reward03" Imageset="BaseEffect005" Image="effect_ok_yellow_03"/>
+			<Image Type="Effect_Reward04" Imageset="BaseEffect005" Image="effect_ok_yellow_04"/>
+			<Image Type="Effect_Reward05" Imageset="BaseEffect005" Image="effect_ok_yellow_05"/>
+			<Image Type="Effect_Reward06" Imageset="BaseEffect005" Image="effect_ok_yellow_06"/>
+			<Image Type="Effect_Reward07" Imageset="BaseEffect005" Image="effect_ok_yellow_07"/>
+			<Image Type="Effect_Reward08" Imageset="BaseEffect005" Image="effect_ok_yellow_08"/>
+			<Image Type="Effect_Reward09" Imageset="BaseEffect005" Image="effect_ok_yellow_09"/>
+			<Image Type="Effect_Reward10" Imageset="BaseEffect005" Image="effect_ok_yellow_10"/>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"
+				   EffectXPos="15"
+				   EffectYPos="17"/>
+	</Window>
+	
+	<Window ClassName="RenewalPrivateRulletRewardButton" Id="15">
+		<Size X="628" Y="242" Width="37" Height="37" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Secret" Imageset="UIIconPack54" Image="event_secret" />
+			<Image Type="Effect_Fail01" Imageset="BaseEffect001" Image="effect_fail_01"/>
+			<Image Type="Effect_Fail02" Imageset="BaseEffect001" Image="effect_fail_02"/>
+			<Image Type="Effect_Fail03" Imageset="BaseEffect001" Image="effect_fail_03"/>
+			<Image Type="Effect_Fail04" Imageset="BaseEffect001" Image="effect_fail_04"/>
+			<Image Type="Effect_Fail05" Imageset="BaseEffect001" Image="effect_fail_05"/>
+			<Image Type="Effect_Fail06" Imageset="BaseEffect001" Image="effect_fail_06"/>
+			<Image Type="Effect_Fail07" Imageset="BaseEffect001" Image="effect_fail_07"/>
+			<Image Type="Effect_Fail08" Imageset="BaseEffect001" Image="effect_fail_08"/>
+			<Image Type="Effect_Fail09" Imageset="BaseEffect001" Image="effect_fail_09"/>
+			<Image Type="Effect_Fail10" Imageset="BaseEffect001" Image="effect_fail_10"/>
+			
+			<Image Type="Effect_Rolling01" Imageset="BaseEffect004" Image="effect_roll_add_01"/>
+			<Image Type="Effect_Rolling02" Imageset="BaseEffect004" Image="effect_roll_add_02"/>
+			<Image Type="Effect_Rolling03" Imageset="BaseEffect004" Image="effect_roll_add_03"/>
+			<Image Type="Effect_Rolling04" Imageset="BaseEffect004" Image="effect_roll_add_04"/>
+			<Image Type="Effect_Rolling05" Imageset="BaseEffect004" Image="effect_roll_add_05"/>
+			<Image Type="Effect_Rolling06" Imageset="BaseEffect005" Image="effect_roll_add_06"/>
+			<Image Type="Effect_Rolling07" Imageset="BaseEffect005" Image="effect_roll_add_07"/>
+			<Image Type="Effect_Rolling08" Imageset="BaseEffect005" Image="effect_roll_add_08"/>
+			<Image Type="Effect_Rolling09" Imageset="BaseEffect005" Image="effect_roll_add_09"/>
+			
+			<Image Type="Effect_Reward01" Imageset="BaseEffect005" Image="effect_ok_yellow_01"/>
+			<Image Type="Effect_Reward02" Imageset="BaseEffect005" Image="effect_ok_yellow_02"/>
+			<Image Type="Effect_Reward03" Imageset="BaseEffect005" Image="effect_ok_yellow_03"/>
+			<Image Type="Effect_Reward04" Imageset="BaseEffect005" Image="effect_ok_yellow_04"/>
+			<Image Type="Effect_Reward05" Imageset="BaseEffect005" Image="effect_ok_yellow_05"/>
+			<Image Type="Effect_Reward06" Imageset="BaseEffect005" Image="effect_ok_yellow_06"/>
+			<Image Type="Effect_Reward07" Imageset="BaseEffect005" Image="effect_ok_yellow_07"/>
+			<Image Type="Effect_Reward08" Imageset="BaseEffect005" Image="effect_ok_yellow_08"/>
+			<Image Type="Effect_Reward09" Imageset="BaseEffect005" Image="effect_ok_yellow_09"/>
+			<Image Type="Effect_Reward10" Imageset="BaseEffect005" Image="effect_ok_yellow_10"/>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"
+				   EffectXPos="15"
+				   EffectYPos="17"/>
+	</Window>	
+	<Window ClassName="RenewalPrivateRulletRewardButton" Id="16">
+		<Size X="576" Y="242" Width="37" Height="37" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="Secret" Imageset="UIIconPack54" Image="event_secret" />
+			<Image Type="Effect_Fail01" Imageset="BaseEffect001" Image="effect_fail_01"/>
+			<Image Type="Effect_Fail02" Imageset="BaseEffect001" Image="effect_fail_02"/>
+			<Image Type="Effect_Fail03" Imageset="BaseEffect001" Image="effect_fail_03"/>
+			<Image Type="Effect_Fail04" Imageset="BaseEffect001" Image="effect_fail_04"/>
+			<Image Type="Effect_Fail05" Imageset="BaseEffect001" Image="effect_fail_05"/>
+			<Image Type="Effect_Fail06" Imageset="BaseEffect001" Image="effect_fail_06"/>
+			<Image Type="Effect_Fail07" Imageset="BaseEffect001" Image="effect_fail_07"/>
+			<Image Type="Effect_Fail08" Imageset="BaseEffect001" Image="effect_fail_08"/>
+			<Image Type="Effect_Fail09" Imageset="BaseEffect001" Image="effect_fail_09"/>
+			<Image Type="Effect_Fail10" Imageset="BaseEffect001" Image="effect_fail_10"/>
+			
+			<Image Type="Effect_Rolling01" Imageset="BaseEffect004" Image="effect_roll_add_01"/>
+			<Image Type="Effect_Rolling02" Imageset="BaseEffect004" Image="effect_roll_add_02"/>
+			<Image Type="Effect_Rolling03" Imageset="BaseEffect004" Image="effect_roll_add_03"/>
+			<Image Type="Effect_Rolling04" Imageset="BaseEffect004" Image="effect_roll_add_04"/>
+			<Image Type="Effect_Rolling05" Imageset="BaseEffect004" Image="effect_roll_add_05"/>
+			<Image Type="Effect_Rolling06" Imageset="BaseEffect005" Image="effect_roll_add_06"/>
+			<Image Type="Effect_Rolling07" Imageset="BaseEffect005" Image="effect_roll_add_07"/>
+			<Image Type="Effect_Rolling08" Imageset="BaseEffect005" Image="effect_roll_add_08"/>
+			<Image Type="Effect_Rolling09" Imageset="BaseEffect005" Image="effect_roll_add_09"/>
+			
+			<Image Type="Effect_Reward01" Imageset="BaseEffect005" Image="effect_ok_yellow_01"/>
+			<Image Type="Effect_Reward02" Imageset="BaseEffect005" Image="effect_ok_yellow_02"/>
+			<Image Type="Effect_Reward03" Imageset="BaseEffect005" Image="effect_ok_yellow_03"/>
+			<Image Type="Effect_Reward04" Imageset="BaseEffect005" Image="effect_ok_yellow_04"/>
+			<Image Type="Effect_Reward05" Imageset="BaseEffect005" Image="effect_ok_yellow_05"/>
+			<Image Type="Effect_Reward06" Imageset="BaseEffect005" Image="effect_ok_yellow_06"/>
+			<Image Type="Effect_Reward07" Imageset="BaseEffect005" Image="effect_ok_yellow_07"/>
+			<Image Type="Effect_Reward08" Imageset="BaseEffect005" Image="effect_ok_yellow_08"/>
+			<Image Type="Effect_Reward09" Imageset="BaseEffect005" Image="effect_ok_yellow_09"/>
+			<Image Type="Effect_Reward10" Imageset="BaseEffect005" Image="effect_ok_yellow_10"/>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"
+				   EffectXPos="15"
+				   EffectYPos="17"/>
+	</Window>
+	<Window ClassName="RenewalPrivateRulletRewardButton" Id="17">
+		<Size X="525" Y="242" Width="37" Height="37" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Secret" Imageset="UIIconPack54" Image="event_secret" />
+			<Image Type="Effect_Fail01" Imageset="BaseEffect001" Image="effect_fail_01"/>
+			<Image Type="Effect_Fail02" Imageset="BaseEffect001" Image="effect_fail_02"/>
+			<Image Type="Effect_Fail03" Imageset="BaseEffect001" Image="effect_fail_03"/>
+			<Image Type="Effect_Fail04" Imageset="BaseEffect001" Image="effect_fail_04"/>
+			<Image Type="Effect_Fail05" Imageset="BaseEffect001" Image="effect_fail_05"/>
+			<Image Type="Effect_Fail06" Imageset="BaseEffect001" Image="effect_fail_06"/>
+			<Image Type="Effect_Fail07" Imageset="BaseEffect001" Image="effect_fail_07"/>
+			<Image Type="Effect_Fail08" Imageset="BaseEffect001" Image="effect_fail_08"/>
+			<Image Type="Effect_Fail09" Imageset="BaseEffect001" Image="effect_fail_09"/>
+			<Image Type="Effect_Fail10" Imageset="BaseEffect001" Image="effect_fail_10"/>
+			
+			<Image Type="Effect_Rolling01" Imageset="BaseEffect004" Image="effect_roll_add_01"/>
+			<Image Type="Effect_Rolling02" Imageset="BaseEffect004" Image="effect_roll_add_02"/>
+			<Image Type="Effect_Rolling03" Imageset="BaseEffect004" Image="effect_roll_add_03"/>
+			<Image Type="Effect_Rolling04" Imageset="BaseEffect004" Image="effect_roll_add_04"/>
+			<Image Type="Effect_Rolling05" Imageset="BaseEffect004" Image="effect_roll_add_05"/>
+			<Image Type="Effect_Rolling06" Imageset="BaseEffect005" Image="effect_roll_add_06"/>
+			<Image Type="Effect_Rolling07" Imageset="BaseEffect005" Image="effect_roll_add_07"/>
+			<Image Type="Effect_Rolling08" Imageset="BaseEffect005" Image="effect_roll_add_08"/>
+			<Image Type="Effect_Rolling09" Imageset="BaseEffect005" Image="effect_roll_add_09"/>
+			
+			<Image Type="Effect_Reward01" Imageset="BaseEffect005" Image="effect_ok_yellow_01"/>
+			<Image Type="Effect_Reward02" Imageset="BaseEffect005" Image="effect_ok_yellow_02"/>
+			<Image Type="Effect_Reward03" Imageset="BaseEffect005" Image="effect_ok_yellow_03"/>
+			<Image Type="Effect_Reward04" Imageset="BaseEffect005" Image="effect_ok_yellow_04"/>
+			<Image Type="Effect_Reward05" Imageset="BaseEffect005" Image="effect_ok_yellow_05"/>
+			<Image Type="Effect_Reward06" Imageset="BaseEffect005" Image="effect_ok_yellow_06"/>
+			<Image Type="Effect_Reward07" Imageset="BaseEffect005" Image="effect_ok_yellow_07"/>
+			<Image Type="Effect_Reward08" Imageset="BaseEffect005" Image="effect_ok_yellow_08"/>
+			<Image Type="Effect_Reward09" Imageset="BaseEffect005" Image="effect_ok_yellow_09"/>
+			<Image Type="Effect_Reward10" Imageset="BaseEffect005" Image="effect_ok_yellow_10"/>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"
+				   EffectXPos="15"
+				   EffectYPos="17"/>
+	</Window>
+	<Window ClassName="RenewalPrivateRulletRewardButton" Id="18">
+		<Size X="472" Y="242" Width="37" Height="37" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="Secret" Imageset="UIIconPack54" Image="event_secret" />
+			<Image Type="Effect_Fail01" Imageset="BaseEffect001" Image="effect_fail_01"/>
+			<Image Type="Effect_Fail02" Imageset="BaseEffect001" Image="effect_fail_02"/>
+			<Image Type="Effect_Fail03" Imageset="BaseEffect001" Image="effect_fail_03"/>
+			<Image Type="Effect_Fail04" Imageset="BaseEffect001" Image="effect_fail_04"/>
+			<Image Type="Effect_Fail05" Imageset="BaseEffect001" Image="effect_fail_05"/>
+			<Image Type="Effect_Fail06" Imageset="BaseEffect001" Image="effect_fail_06"/>
+			<Image Type="Effect_Fail07" Imageset="BaseEffect001" Image="effect_fail_07"/>
+			<Image Type="Effect_Fail08" Imageset="BaseEffect001" Image="effect_fail_08"/>
+			<Image Type="Effect_Fail09" Imageset="BaseEffect001" Image="effect_fail_09"/>
+			<Image Type="Effect_Fail10" Imageset="BaseEffect001" Image="effect_fail_10"/>
+			
+			<Image Type="Effect_Rolling01" Imageset="BaseEffect004" Image="effect_roll_add_01"/>
+			<Image Type="Effect_Rolling02" Imageset="BaseEffect004" Image="effect_roll_add_02"/>
+			<Image Type="Effect_Rolling03" Imageset="BaseEffect004" Image="effect_roll_add_03"/>
+			<Image Type="Effect_Rolling04" Imageset="BaseEffect004" Image="effect_roll_add_04"/>
+			<Image Type="Effect_Rolling05" Imageset="BaseEffect004" Image="effect_roll_add_05"/>
+			<Image Type="Effect_Rolling06" Imageset="BaseEffect005" Image="effect_roll_add_06"/>
+			<Image Type="Effect_Rolling07" Imageset="BaseEffect005" Image="effect_roll_add_07"/>
+			<Image Type="Effect_Rolling08" Imageset="BaseEffect005" Image="effect_roll_add_08"/>
+			<Image Type="Effect_Rolling09" Imageset="BaseEffect005" Image="effect_roll_add_09"/>
+			
+			<Image Type="Effect_Reward01" Imageset="BaseEffect005" Image="effect_ok_yellow_01"/>
+			<Image Type="Effect_Reward02" Imageset="BaseEffect005" Image="effect_ok_yellow_02"/>
+			<Image Type="Effect_Reward03" Imageset="BaseEffect005" Image="effect_ok_yellow_03"/>
+			<Image Type="Effect_Reward04" Imageset="BaseEffect005" Image="effect_ok_yellow_04"/>
+			<Image Type="Effect_Reward05" Imageset="BaseEffect005" Image="effect_ok_yellow_05"/>
+			<Image Type="Effect_Reward06" Imageset="BaseEffect005" Image="effect_ok_yellow_06"/>
+			<Image Type="Effect_Reward07" Imageset="BaseEffect005" Image="effect_ok_yellow_07"/>
+			<Image Type="Effect_Reward08" Imageset="BaseEffect005" Image="effect_ok_yellow_08"/>
+			<Image Type="Effect_Reward09" Imageset="BaseEffect005" Image="effect_ok_yellow_09"/>
+			<Image Type="Effect_Reward10" Imageset="BaseEffect005" Image="effect_ok_yellow_10"/>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"
+				   EffectXPos="15"
+				   EffectYPos="17"/>
+	</Window>
+	
+	<Window ClassName="RenewalPrivateRulletRewardButton" Id="19">
+		<Size X="472" Y="305" Width="37" Height="37" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="Secret" Imageset="UIIconPack54" Image="event_secret" />
+			<Image Type="Effect_Fail01" Imageset="BaseEffect001" Image="effect_fail_01"/>
+			<Image Type="Effect_Fail02" Imageset="BaseEffect001" Image="effect_fail_02"/>
+			<Image Type="Effect_Fail03" Imageset="BaseEffect001" Image="effect_fail_03"/>
+			<Image Type="Effect_Fail04" Imageset="BaseEffect001" Image="effect_fail_04"/>
+			<Image Type="Effect_Fail05" Imageset="BaseEffect001" Image="effect_fail_05"/>
+			<Image Type="Effect_Fail06" Imageset="BaseEffect001" Image="effect_fail_06"/>
+			<Image Type="Effect_Fail07" Imageset="BaseEffect001" Image="effect_fail_07"/>
+			<Image Type="Effect_Fail08" Imageset="BaseEffect001" Image="effect_fail_08"/>
+			<Image Type="Effect_Fail09" Imageset="BaseEffect001" Image="effect_fail_09"/>
+			<Image Type="Effect_Fail10" Imageset="BaseEffect001" Image="effect_fail_10"/>
+			
+			<Image Type="Effect_Rolling01" Imageset="BaseEffect004" Image="effect_roll_add_01"/>
+			<Image Type="Effect_Rolling02" Imageset="BaseEffect004" Image="effect_roll_add_02"/>
+			<Image Type="Effect_Rolling03" Imageset="BaseEffect004" Image="effect_roll_add_03"/>
+			<Image Type="Effect_Rolling04" Imageset="BaseEffect004" Image="effect_roll_add_04"/>
+			<Image Type="Effect_Rolling05" Imageset="BaseEffect004" Image="effect_roll_add_05"/>
+			<Image Type="Effect_Rolling06" Imageset="BaseEffect005" Image="effect_roll_add_06"/>
+			<Image Type="Effect_Rolling07" Imageset="BaseEffect005" Image="effect_roll_add_07"/>
+			<Image Type="Effect_Rolling08" Imageset="BaseEffect005" Image="effect_roll_add_08"/>
+			<Image Type="Effect_Rolling09" Imageset="BaseEffect005" Image="effect_roll_add_09"/>
+			
+			<Image Type="Effect_Reward01" Imageset="BaseEffect005" Image="effect_ok_yellow_01"/>
+			<Image Type="Effect_Reward02" Imageset="BaseEffect005" Image="effect_ok_yellow_02"/>
+			<Image Type="Effect_Reward03" Imageset="BaseEffect005" Image="effect_ok_yellow_03"/>
+			<Image Type="Effect_Reward04" Imageset="BaseEffect005" Image="effect_ok_yellow_04"/>
+			<Image Type="Effect_Reward05" Imageset="BaseEffect005" Image="effect_ok_yellow_05"/>
+			<Image Type="Effect_Reward06" Imageset="BaseEffect005" Image="effect_ok_yellow_06"/>
+			<Image Type="Effect_Reward07" Imageset="BaseEffect005" Image="effect_ok_yellow_07"/>
+			<Image Type="Effect_Reward08" Imageset="BaseEffect005" Image="effect_ok_yellow_08"/>
+			<Image Type="Effect_Reward09" Imageset="BaseEffect005" Image="effect_ok_yellow_09"/>
+			<Image Type="Effect_Reward10" Imageset="BaseEffect005" Image="effect_ok_yellow_10"/>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"
+				   EffectXPos="15"
+				   EffectYPos="17"/>
+	</Window>	
+	<Window ClassName="RenewalPrivateRulletRewardButton" Id="20">
+		<Size X="525" Y="305" Width="37" Height="37" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="Secret" Imageset="UIIconPack54" Image="event_secret" />
+			<Image Type="Effect_Fail01" Imageset="BaseEffect001" Image="effect_fail_01"/>
+			<Image Type="Effect_Fail02" Imageset="BaseEffect001" Image="effect_fail_02"/>
+			<Image Type="Effect_Fail03" Imageset="BaseEffect001" Image="effect_fail_03"/>
+			<Image Type="Effect_Fail04" Imageset="BaseEffect001" Image="effect_fail_04"/>
+			<Image Type="Effect_Fail05" Imageset="BaseEffect001" Image="effect_fail_05"/>
+			<Image Type="Effect_Fail06" Imageset="BaseEffect001" Image="effect_fail_06"/>
+			<Image Type="Effect_Fail07" Imageset="BaseEffect001" Image="effect_fail_07"/>
+			<Image Type="Effect_Fail08" Imageset="BaseEffect001" Image="effect_fail_08"/>
+			<Image Type="Effect_Fail09" Imageset="BaseEffect001" Image="effect_fail_09"/>
+			<Image Type="Effect_Fail10" Imageset="BaseEffect001" Image="effect_fail_10"/>
+			
+			<Image Type="Effect_Rolling01" Imageset="BaseEffect004" Image="effect_roll_add_01"/>
+			<Image Type="Effect_Rolling02" Imageset="BaseEffect004" Image="effect_roll_add_02"/>
+			<Image Type="Effect_Rolling03" Imageset="BaseEffect004" Image="effect_roll_add_03"/>
+			<Image Type="Effect_Rolling04" Imageset="BaseEffect004" Image="effect_roll_add_04"/>
+			<Image Type="Effect_Rolling05" Imageset="BaseEffect004" Image="effect_roll_add_05"/>
+			<Image Type="Effect_Rolling06" Imageset="BaseEffect005" Image="effect_roll_add_06"/>
+			<Image Type="Effect_Rolling07" Imageset="BaseEffect005" Image="effect_roll_add_07"/>
+			<Image Type="Effect_Rolling08" Imageset="BaseEffect005" Image="effect_roll_add_08"/>
+			<Image Type="Effect_Rolling09" Imageset="BaseEffect005" Image="effect_roll_add_09"/>
+			
+			<Image Type="Effect_Reward01" Imageset="BaseEffect005" Image="effect_ok_yellow_01"/>
+			<Image Type="Effect_Reward02" Imageset="BaseEffect005" Image="effect_ok_yellow_02"/>
+			<Image Type="Effect_Reward03" Imageset="BaseEffect005" Image="effect_ok_yellow_03"/>
+			<Image Type="Effect_Reward04" Imageset="BaseEffect005" Image="effect_ok_yellow_04"/>
+			<Image Type="Effect_Reward05" Imageset="BaseEffect005" Image="effect_ok_yellow_05"/>
+			<Image Type="Effect_Reward06" Imageset="BaseEffect005" Image="effect_ok_yellow_06"/>
+			<Image Type="Effect_Reward07" Imageset="BaseEffect005" Image="effect_ok_yellow_07"/>
+			<Image Type="Effect_Reward08" Imageset="BaseEffect005" Image="effect_ok_yellow_08"/>
+			<Image Type="Effect_Reward09" Imageset="BaseEffect005" Image="effect_ok_yellow_09"/>
+			<Image Type="Effect_Reward10" Imageset="BaseEffect005" Image="effect_ok_yellow_10"/>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"
+				   EffectXPos="15"
+				   EffectYPos="17"/>
+	</Window>
+	<Window ClassName="RenewalPrivateRulletRewardButton" Id="21">
+		<Size X="576" Y="305" Width="37" Height="37" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="Secret" Imageset="UIIconPack54" Image="event_secret" />
+			<Image Type="Effect_Fail01" Imageset="BaseEffect001" Image="effect_fail_01"/>
+			<Image Type="Effect_Fail02" Imageset="BaseEffect001" Image="effect_fail_02"/>
+			<Image Type="Effect_Fail03" Imageset="BaseEffect001" Image="effect_fail_03"/>
+			<Image Type="Effect_Fail04" Imageset="BaseEffect001" Image="effect_fail_04"/>
+			<Image Type="Effect_Fail05" Imageset="BaseEffect001" Image="effect_fail_05"/>
+			<Image Type="Effect_Fail06" Imageset="BaseEffect001" Image="effect_fail_06"/>
+			<Image Type="Effect_Fail07" Imageset="BaseEffect001" Image="effect_fail_07"/>
+			<Image Type="Effect_Fail08" Imageset="BaseEffect001" Image="effect_fail_08"/>
+			<Image Type="Effect_Fail09" Imageset="BaseEffect001" Image="effect_fail_09"/>
+			<Image Type="Effect_Fail10" Imageset="BaseEffect001" Image="effect_fail_10"/>
+			
+			<Image Type="Effect_Rolling01" Imageset="BaseEffect004" Image="effect_roll_add_01"/>
+			<Image Type="Effect_Rolling02" Imageset="BaseEffect004" Image="effect_roll_add_02"/>
+			<Image Type="Effect_Rolling03" Imageset="BaseEffect004" Image="effect_roll_add_03"/>
+			<Image Type="Effect_Rolling04" Imageset="BaseEffect004" Image="effect_roll_add_04"/>
+			<Image Type="Effect_Rolling05" Imageset="BaseEffect004" Image="effect_roll_add_05"/>
+			<Image Type="Effect_Rolling06" Imageset="BaseEffect005" Image="effect_roll_add_06"/>
+			<Image Type="Effect_Rolling07" Imageset="BaseEffect005" Image="effect_roll_add_07"/>
+			<Image Type="Effect_Rolling08" Imageset="BaseEffect005" Image="effect_roll_add_08"/>
+			<Image Type="Effect_Rolling09" Imageset="BaseEffect005" Image="effect_roll_add_09"/>
+			
+			<Image Type="Effect_Reward01" Imageset="BaseEffect005" Image="effect_ok_yellow_01"/>
+			<Image Type="Effect_Reward02" Imageset="BaseEffect005" Image="effect_ok_yellow_02"/>
+			<Image Type="Effect_Reward03" Imageset="BaseEffect005" Image="effect_ok_yellow_03"/>
+			<Image Type="Effect_Reward04" Imageset="BaseEffect005" Image="effect_ok_yellow_04"/>
+			<Image Type="Effect_Reward05" Imageset="BaseEffect005" Image="effect_ok_yellow_05"/>
+			<Image Type="Effect_Reward06" Imageset="BaseEffect005" Image="effect_ok_yellow_06"/>
+			<Image Type="Effect_Reward07" Imageset="BaseEffect005" Image="effect_ok_yellow_07"/>
+			<Image Type="Effect_Reward08" Imageset="BaseEffect005" Image="effect_ok_yellow_08"/>
+			<Image Type="Effect_Reward09" Imageset="BaseEffect005" Image="effect_ok_yellow_09"/>
+			<Image Type="Effect_Reward10" Imageset="BaseEffect005" Image="effect_ok_yellow_10"/>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"
+				   EffectXPos="15"
+				   EffectYPos="17"/>
+	</Window>
+	
+	<!-- 보상 버튼 종료-->
+	
+	<!-- 도움말 시작 -->
+	<Window ClassName="ioButton" Id="41">
+		<Size X="612" Y="413" Width="88" Height="40" />
+		<Title>
+			<Format X="45" Y="6" Size="18" Style="Outline_full_2x" HorzAlign="Center"/>			
+			<Color Type="Normal"  Text="FFFEBE2" Back="FF4D2B17"/>
+			<Color Type="Over"  Text="FFFEBE2" Back="FF4D2B17"/>
+			<Color Type="Push"  Text="FFFEBE2" Back="FF4D2B17"/>
+			<Color Type="Disable"  Text="FFFEBE2" Back="FF4D2B17"/>
+			<Text>도움말</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt017_brown_nor">
+				<Area X="0" Y="0" Width="88" Height="40"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt017_brown_nor">
+				<Area X="0" Y="0" Width="88" Height="40"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt017_overadd">
+				<Area X="3" Y="1" Width="82" Height="34"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt017_brown_down">
+				<Area X="0" Y="0" Width="88" Height="40"/>
+			</DefaultFrameImagery>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<!-- 도움말 종료 -->
+	
+	<!-- 되돌아가기 시작 -->
+	<Window ClassName="ioButton" Id="42">
+		<Size X="644" Y="413" Width="54" Height="40" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt017_brown_nor">
+				<Area X="0" Y="0" Width="54" Height="40"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt017_brown_nor">
+				<Area X="0" Y="0" Width="54" Height="40"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt017_overadd">
+				<Area X="0" Y="0" Width="54" Height="40"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt017_brown_down">
+				<Area X="0" Y="0" Width="54" Height="40"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="UIIconEvent7" Image="roulette_pirate_close" >
+				<Area X="15" Y="5" width="29" height="24"/>
+			</Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<!-- 되돌아가기 종료-->
+	
+
+	<!-- 도움말 페이지 버튼 -->
+	<Window ClassName="ioButton" Id="43">
+		<Size X="585" Y="413" Width="54" Height="40" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt017_brown_nor">
+				<Area X="0" Y="0" Width="54" Height="40"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt017_brown_nor">
+				<Area X="0" Y="0" Width="54" Height="40"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt017_overadd">
+				<Area X="0" Y="0" Width="54" Height="40"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt017_brown_down">
+				<Area X="0" Y="0" Width="54" Height="40"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="UIIconEvent7" Image="roulette_pirate_arrow" >
+				<Area X="15" Y="5" width="29" height="24" Reverse="Horz" />
+			</Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+
+	<Window ClassName="ioButton" Id="44">
+		<Size X="585" Y="413" Width="54" Height="40" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt017_brown_nor">
+				<Area X="0" Y="0" Width="54" Height="40"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt017_brown_nor">
+				<Area X="0" Y="0" Width="54" Height="40"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt017_overadd">
+				<Area X="0" Y="0" Width="54" Height="40"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt017_brown_down">
+				<Area X="0" Y="0" Width="54" Height="40"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="UIIconEvent7" Image="roulette_pirate_arrow" >
+				<Area X="15" Y="5" width="29" height="24" />
+			</Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<!-- 페이지 버튼 종료-->
+
+	
+	<Window ClassName="RenewalPriateNewStartButton" Id="60">
+		<Size X="436" Y="413" Width="264" Height="40" />
+		<Style>IWS_START_HIDE|IWS_PROCESS</Style>
+		<Title>
+			<Format X="133" Y="6" Size="18" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal"  Text="FFFEFBE2" Back="FF4D2B17"/>
+			<Color Type="Over"  Text="FFFEFBE2" Back="FF4D2B17"/>
+			<Color Type="Push"  Text="FFFEFBE2" Back="FF4D2B17"/>
+			<Color Type="Disable"  Text="FFF2FBE2" Back="FF4D2B17"/>
+			<Text>새로 시작하기</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt017_red_nor">
+				<Area X="0" Y="0" Width="264" Height="40"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt017_red_nor">
+				<Area X="0" Y="0" Width="264" Height="40"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt017_overadd">
+				<Area X="3" Y="1" Width="258" Height="34"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt017_red_down">
+				<Area X="0" Y="0" Width="264" Height="40"/>
+			</DefaultFrameImagery>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<!--보상받기-->
+	<Window ClassName="ioButton" Id="61">
+		<Size X="436" Y="412" Width="174" Height="40" />
+		<Title>
+			<Format X="86" Y="7" Size="18" Style="Outline_full_2x" HorzAlign="Center"/>			
+			<Color Type="Normal"  Text="FFFEBE2" Back="FF4D2B17"/>
+			<Color Type="Over"  Text="FFFEBE2" Back="FF4D2B17"/>
+			<Color Type="Push"  Text="FFFEBE2" Back="FF4D2B17"/>
+			<Color Type="Disable"  Text="FFFEBE2" Back="FF4D2B17"/>
+			<Text>보상받기</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt017_brown_nor">
+				<Area X="0" Y="0" Width="174" Height="40"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt017_brown_nor">
+				<Area X="0" Y="0" Width="174" Height="40"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt017_overadd">
+				<Area X="3" Y="1" Width="168" Height="34"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt017_brown_down">
+				<Area X="0" Y="0" Width="174" Height="40"/>
+			</DefaultFrameImagery>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="ioButton" Id="62">
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Size X="436" Y="413" Width="174" Height="40" />
+		<Title>
+			<Format X="88" Y="8" Size="18" Style="Normal" HorzAlign="Center"/>			
+			<Color Type="Normal"  Text="FFA8875A" Back="FFA8875A"/>
+			<Color Type="Over"  Text="FFA8875A" Back="FFA8875A"/>
+			<Color Type="Push"  Text="FFA8875A" Back="FFA8875A"/>
+			<Color Type="Disable"  Text="FFA8875A" Back="FFA8875A"/>
+			<Text>확인중...</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt_empty">
+				<Area X="0" Y="0" Width="174" Height="40"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt_empty">
+				<Area X="0" Y="0" Width="174" Height="40"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt_empty">
+				<Area X="0" Y="0" Width="174" Height="40"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="174" Height="40"/>
+			</DefaultFrameImagery>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<!-- 왼쪽줄 -->
+	<Window ClassName="RenewalOakHoleButton" Id="101">
+		<Size X="112" Y="237" Width="35" Height="50" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="OverSword" Imageset="UIIconEvent7" Image="bt01_roulette_pirate_over_01">
+				<Area X="-26" Y="-3"/>
+			</Image>
+			<Image Type="WoodClickSword" Imageset="UIIconEvent7" Image="wood_1step_01">
+				<Area X="-71" Y="-20"/>
+			</Image>
+			<Image Type="WoodClickMoveSword" Imageset="UIIconEvent7" Image="wood_2step_01">
+				<Area X="-71" Y="-20"/>
+			</Image>
+			<Image Type="WoodStickedSword" Imageset="UIIconEvent7" Image="wood_3step_01">
+				<Area X="-26" Y="-3"/>
+			</Image>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           StickedWoodSound = "oak/Attack_1.wav"
+				   DamageSound = "oak/Beaten.wav"
+				   EndDamageSound = "oak/Flying_DeveloperK_2.wav"
+				   EffectXPos="17"
+				   EffectYPos="27"/>
+	</Window>
+	<Window ClassName="RenewalOakHoleButton" Id="102">
+		<Size X="160" Y="251" Width="35" Height="50" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="OverSword" Imageset="UIIconEvent7" Image="bt01_roulette_pirate_over_02">
+				<Area X="-18" Y="-7"/>
+			</Image>
+			<Image Type="WoodClickSword" Imageset="UIIconEvent7" Image="wood_1step_02">
+				<Area X="-45" Y="-20"/>
+			</Image>
+			<Image Type="WoodClickMoveSword" Imageset="UIIconEvent7" Image="wood_2step_02">
+				<Area X="-45" Y="-20"/>
+			</Image>
+			<Image Type="WoodStickedSword" Imageset="UIIconEvent7" Image="wood_3step_02">
+				<Area X="-18" Y="-7"/>
+			</Image>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           StickedWoodSound = "oak/Attack_1.wav"
+				   DamageSound = "oak/Beaten.wav"
+				   EndDamageSound = "oak/Flying_DeveloperK_2.wav"
+				   EffectXPos="13"
+				   EffectYPos="24"/>
+	</Window>
+	<Window ClassName="RenewalOakHoleButton" Id="103">
+		<Size X="122" Y="302" Width="35" Height="50" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="OverSword" Imageset="UIIconEvent7" Image="bt01_roulette_pirate_over_03">
+				<Area X="-20" Y="-1"/>
+			</Image>
+			
+			<Image Type="WoodClickSword" Imageset="UIIconEvent7" Image="wood_1step_03">
+				<Area X="-48" Y="-6"/>
+			</Image>			
+			<Image Type="WoodClickMoveSword" Imageset="UIIconEvent7" Image="wood_2step_03">
+				<Area X="-48" Y="-6"/>
+			</Image>
+			<Image Type="WoodStickedSword" Imageset="UIIconEvent7" Image="wood_3step_03">
+				<Area X="-20" Y="-1"/>
+			</Image>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           StickedWoodSound = "oak/Attack_1.wav"
+				   DamageSound = "oak/Beaten.wav"
+				   EndDamageSound = "oak/Flying_DeveloperK_2.wav"
+				   EffectXPos="13"
+				   EffectYPos="21"/>
+	</Window>
+	<Window ClassName="RenewalOakHoleButton" Id="104">
+		<Size X="153" Y="368" Width="35" Height="50" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="OverSword" Imageset="UIIconEvent7" Image="bt01_roulette_pirate_over_04">
+				<Area X="-21" Y="1"/>
+			</Image>
+			<Image Type="WoodClickSword" Imageset="UIIconEvent7" Image="wood_1step_04">
+				<Area X="-53" Y="13"/>
+			</Image>
+			<Image Type="WoodClickMoveSword" Imageset="UIIconEvent7" Image="wood_2step_04">
+				<Area X="-53" Y="13"/>
+			</Image>
+			<Image Type="WoodStickedSword" Imageset="UIIconEvent7" Image="wood_3step_04">
+				<Area X="-21" Y="1"/>
+			</Image>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           StickedWoodSound = "oak/Attack_1.wav"
+				   DamageSound = "oak/Beaten.wav"
+				   EndDamageSound = "oak/Flying_DeveloperK_2.wav"
+				   EffectXPos="15"
+				   EffectYPos="16"/>
+	</Window>
+	<Window ClassName="RenewalOakHoleButton" Id="105">
+		<Size X="131" Y="421" Width="35" Height="50" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="OverSword" Imageset="UIIconEvent7" Image="bt01_roulette_pirate_over_05">
+				<Area X="-15" Y="-2"/>
+			</Image>
+			<Image Type="WoodClickSword" Imageset="UIIconEvent7" Image="wood_1step_05">
+				<Area X="-46" Y="18"/>
+			</Image>
+			<Image Type="WoodClickMoveSword" Imageset="UIIconEvent7" Image="wood_2step_05">
+				<Area X="-46" Y="18"/>
+			</Image>
+			<Image Type="WoodStickedSword" Imageset="UIIconEvent7" Image="wood_3step_05">
+				<Area X="-15" Y="-2"/>
+			</Image>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           StickedWoodSound = "oak/Attack_1.wav"
+				   DamageSound = "oak/Beaten.wav"
+				   EndDamageSound = "oak/Flying_DeveloperK_2.wav"
+				   EffectXPos="15"
+				   EffectYPos="24"/>
+	</Window>
+	
+	<!-- 중앙-->
+	<Window ClassName="RenewalOakHoleButton" Id="106">
+		<Size X="190" Y="312" Width="35" Height="50" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="OverSword" Imageset="UIIconEvent7" Image="bt01_roulette_pirate_over_06">
+				<Area X="5" Y="0"/>
+			</Image>
+			<Image Type="WoodClickSword" Imageset="UIIconEvent7" Image="wood_1step_06">
+				<Area X="14" Y="-2"/>
+			</Image>
+			<Image Type="WoodClickMoveSword" Imageset="UIIconEvent7" Image="wood_2step_06">
+				<Area X="14" Y="-2"/>
+			</Image>
+			<Image Type="WoodStickedSword" Imageset="UIIconEvent7" Image="wood_3step_06">
+				<Area X="5" Y="0"/>
+			</Image>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           StickedWoodSound = "oak/Attack_1.wav"
+				   DamageSound = "oak/Beaten.wav"
+				   EndDamageSound = "oak/Flying_DeveloperK_2.wav"
+				   EffectXPos="15"
+				   EffectYPos="26"/>
+	</Window>
+	<Window ClassName="RenewalOakHoleButton" Id="107">
+		<Size X="190" Y="428" Width="35" Height="50" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="OverSword" Imageset="UIIconEvent7" Image="bt01_roulette_pirate_over_07">
+				<Area X="5" Y="5"/>
+			</Image>
+			<Image Type="WoodClickSword" Imageset="UIIconEvent7" Image="wood_1step_07">
+				<Area X="14" Y="-15"/>
+			</Image>
+			<Image Type="WoodClickMoveSword" Imageset="UIIconEvent7" Image="wood_2step_07">
+				<Area X="14" Y="-15"/>
+			</Image>
+			<Image Type="WoodStickedSword" Imageset="UIIconEvent7" Image="wood_3step_07">
+				<Area X="5" Y="5"/>
+			</Image>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           StickedWoodSound = "oak/Attack_1.wav"
+				   DamageSound = "oak/Beaten.wav"
+				   EndDamageSound = "oak/Flying_DeveloperK_2.wav"
+				   EffectXPos="15"
+				   EffectYPos="26"/>
+	</Window>
+	
+	<!-- 오른쪽줄 -->
+	<Window ClassName="RenewalOakHoleButton" Id="108">
+		<Size X="268" Y="237" Width="35" Height="50" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>			
+			<Image Type="OverSword" Imageset="UIIconEvent7" Image="bt01_roulette_pirate_over_01">
+				<Area X="-3" Y="1" Reverse="Horz"/>
+			</Image>
+			<Image Type="WoodClickSword" Imageset="UIIconEvent7" Image="wood_1step_01">
+				<Area X="12" Y="-16" Reverse="Horz" />
+			</Image>
+			<Image Type="WoodClickMoveSword" Imageset="UIIconEvent7" Image="wood_2step_01">
+				<Area X="12" Y="-16" Reverse="Horz" />
+			</Image>
+			<Image Type="WoodStickedSword" Imageset="UIIconEvent7" Image="wood_3step_01">
+				<Area X="-3" Y="1" Reverse="Horz" />
+			</Image>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           StickedWoodSound = "oak/Attack_1.wav"
+				   DamageSound = "oak/Beaten.wav"
+				   EndDamageSound = "oak/Flying_DeveloperK_2.wav"
+				   EffectXPos="15"
+				   EffectYPos="24"/>
+	</Window>
+	<Window ClassName="RenewalOakHoleButton" Id="109">
+		<Size X="220" Y="251" Width="35" Height="50" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="OverSword" Imageset="UIIconEvent7" Image="bt01_roulette_pirate_over_02">
+				<Area X="1" Y="-13" Reverse="Horz"/>
+			</Image>
+			<Image Type="WoodClickSword" Imageset="UIIconEvent7" Image="wood_1step_02">
+				<Area X="12" Y="-20" Reverse="Horz" />
+			</Image>
+			<Image Type="WoodClickMoveSword" Imageset="UIIconEvent7" Image="wood_2step_02">
+				<Area X="12" Y="-20" Reverse="Horz" />
+			</Image>
+			<Image Type="WoodStickedSword" Imageset="UIIconEvent7" Image="wood_3step_02">
+				<Area X="1" Y="-13" Reverse="Horz" />
+			</Image>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           StickedWoodSound = "oak/Attack_1.wav"
+				   DamageSound = "oak/Beaten.wav"
+				   EndDamageSound = "oak/Flying_DeveloperK_2.wav"
+				   EffectXPos="15"
+				   EffectYPos="23"/>
+	</Window>
+	<Window ClassName="RenewalOakHoleButton" Id="110">
+		<Size X="258" Y="302" Width="35" Height="50" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="OverSword" Imageset="UIIconEvent7" Image="bt01_roulette_pirate_over_03">
+				<Area X="2" Y="0" Reverse="Horz"/>
+			</Image>
+			<Image Type="WoodClickSword" Imageset="UIIconEvent7" Image="wood_1step_03">
+				<Area X="11" Y="6" Reverse="Horz" />
+			</Image>
+			<Image Type="WoodClickMoveSword" Imageset="UIIconEvent7" Image="wood_2step_03">
+				<Area X="11" Y="6" Reverse="Horz" />
+			</Image>
+			<Image Type="WoodStickedSword" Imageset="UIIconEvent7" Image="wood_3step_03">
+				<Area X="2" Y="0" Reverse="Horz" />
+			</Image>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           StickedWoodSound = "oak/Attack_1.wav"
+				   DamageSound = "oak/Beaten.wav"
+				   EndDamageSound = "oak/Flying_DeveloperK_2.wav"
+				   EffectXPos="15"
+				   EffectYPos="25"/>
+	</Window>
+	<Window ClassName="RenewalOakHoleButton" Id="111">
+		<Size X="227" Y="368" Width="35" Height="50" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="OverSword" Imageset="UIIconEvent7" Image="bt01_roulette_pirate_over_04">
+				<Area X="4" Y="1" Reverse="Horz"/>
+			</Image>
+			<Image Type="WoodClickSword" Imageset="UIIconEvent7" Image="wood_1step_04">
+				<Area X="14" Y="13" Reverse="Horz" />
+			</Image>
+			<Image Type="WoodClickMoveSword" Imageset="UIIconEvent7" Image="wood_2step_04">
+				<Area X="14" Y="13" Reverse="Horz" />
+			</Image>
+			<Image Type="WoodStickedSword" Imageset="UIIconEvent7" Image="wood_3step_04">
+				<Area X="4" Y="1" Reverse="Horz" />
+			</Image>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           StickedWoodSound = "oak/Attack_1.wav"
+				   DamageSound = "oak/Beaten.wav"
+				   EndDamageSound = "oak/Flying_DeveloperK_2.wav"
+				   EffectXPos="15"
+				   EffectYPos="24"/>
+	</Window>
+	<Window ClassName="RenewalOakHoleButton" Id="112">
+		<Size X="249" Y="421" Width="35" Height="50" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="OverSword" Imageset="UIIconEvent7" Image="bt01_roulette_pirate_over_05">
+				<Area X="3" Y="0" Reverse="Horz"/>
+			</Image>
+			<Image Type="WoodClickSword" Imageset="UIIconEvent7" Image="wood_1step_05">
+				<Area X="13" Y="19" Reverse="Horz" />
+			</Image>
+			<Image Type="WoodClickMoveSword" Imageset="UIIconEvent7" Image="wood_2step_05">
+				<Area X="13" Y="19" Reverse="Horz" />
+			</Image>
+			<Image Type="WoodStickedSword" Imageset="UIIconEvent7" Image="wood_3step_05">
+				<Area X="3" Y="0" Reverse="Horz" />
+			</Image>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           StickedWoodSound = "oak/Attack_1.wav"
+				   DamageSound = "oak/Beaten.wav"
+				   EndDamageSound = "oak/Flying_DeveloperK_2.wav"
+				   EffectXPos="15"
+				   EffectYPos="21"/>
+	</Window>
+</Window>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="CostumeCustomThumbnailTooltip" Id="6267">
+	<Size X="0" Y="0" Width="120" Height="26" />
+	<Style>IWS_START_HIDE|IWS_PROCESS|IWS_TOPMOST</Style> 
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="tooltip3">
+			<Area X="0" Y="0" Width="120" Height="26" />
+		</DefaultFrameImagery>
+	</Imagery>
+
+	<Window ClassName="CostumeCustomThumbnailWnd" Id="1">
+		<Size X="8" Y="43" Width="182" Height="193"/>
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="RectSrc" Imageset="BaseImage004" Image="icon0_3dskin_bg"/>
+			<DefaultFrameImagery Type="RedStateFrm" Templete="state_red">
+				<Area X="8" Y="8" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueStateFrm" Templete="state_blue">
+				<Area X="8" Y="8" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="CostumeCustomThumbnailWnd" Id="2">
+		<Size X="196" Y="43" Width="182" Height="193"/>
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="RectSrc" Imageset="BaseImage004" Image="icon0_3dskin_bg"/>
+			<DefaultFrameImagery Type="BlueStateFrm" Templete="state_blue">
+				<Area X="8" Y="8" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedStateFrm" Templete="state_red">
+				<Area X="8" Y="8" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+		</Imagery>
+	</Window>
+</Window>

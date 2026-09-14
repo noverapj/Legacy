@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="MonsterSurvivalHelWnd" Id="6110">
+	<Size X="0" Y="0" Width="0" Height="0" />
+	<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+	<Imagery>
+		<Image Type="ContinueText" Imageset="BaseImage014" Image="pve_text08"/>
+		<Image Type="ContinueCount" Imageset="BaseImage014" Image="pve_num01"/>
+		<Image Type="ClearText" Imageset="BaseImage014" Image="pve_text09"/>
+		<Image Type="GameOverText" Imageset="BaseImage014" Image="pve_text14"/>
+		<Image Type="KOText" Imageset="BaseImage014" Image="pve_text11"/>
+		<Image Type="RevivalDelay" Imageset="BaseImage014" Image="pve_text12"/>
+		<Image Type="AttackKeyText" Imageset="BaseImage014" Image="pve_text13"/>
+		<Image Type="DeathTimeText" Imageset="BaseImage014" Image="pve_text10"/>
+	</Imagery>
+</Window>
+

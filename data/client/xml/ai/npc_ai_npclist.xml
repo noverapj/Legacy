@@ -1,0 +1,1663 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+<NPCLIST>
+	<NPC id= "100101" NpcType	= "0" RandomAppreance = "1" comment= "아이언 나이트" >  
+		<LABEL
+			NpcViewName 	= "아이언 나이트"
+			NpcGradeTitle	= "01"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/001/ai_npc_001_knight_no01.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4001" 	comment= "무기" />
+			<EQUIP itemcode= "104001"	comment= "갑옷" />
+			<EQUIP itemcode= "204001"	comment= "투구" />
+			<EQUIP itemcode= "304001"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "100102" NpcType	= "0" RandomAppreance = "1" comment= "아이언 나이트" > 
+		<LABEL
+			NpcViewName 	= "아이언 나이트"
+			NpcGradeTitle	= "02"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			
+			NpcAI		= "xml/ai/npcai/001/ai_npc_001_knight_no02.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4001" 	comment= "무기" />
+			<EQUIP itemcode= "104001"	comment= "갑옷" />
+			<EQUIP itemcode= "204001"	comment= "투구" />
+			<EQUIP itemcode= "304001"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "100103" NpcType	= "0" RandomAppreance = "1" comment= "아이언 나이트" >  
+		<LABEL
+			NpcViewName 	= "아이언 나이트"
+			NpcGradeTitle	= "03"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/001/ai_npc_001_knight_no03.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4001" 	comment= "무기" />
+			<EQUIP itemcode= "104001"	comment= "갑옷" />
+			<EQUIP itemcode= "204001"	comment= "투구" />
+			<EQUIP itemcode= "304001"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "100104" NpcType	= "0" RandomAppreance = "1" comment= "아이언 나이트" > 
+		<LABEL
+			NpcViewName 	= "아이언 나이트"
+			NpcGradeTitle	= "04"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/001/ai_npc_001_knight_no04.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4001" 	comment= "무기" />
+			<EQUIP itemcode= "104001"	comment= "갑옷" />
+			<EQUIP itemcode= "204001"	comment= "투구" />
+			<EQUIP itemcode= "304001"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "100105" NpcType	= "0" RandomAppreance = "1" comment= "아이언 나이트" >  
+		<LABEL
+			NpcViewName 	= "아이언 나이트"
+			NpcGradeTitle	= "05"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/001/ai_npc_001_knight_no05.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4001" 	comment= "무기" />
+			<EQUIP itemcode= "104001"	comment= "갑옷" />
+			<EQUIP itemcode= "204001"	comment= "투구" />
+			<EQUIP itemcode= "304001"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "100401" NpcType	= "0" RandomAppreance = "1" comment= "파이어 메이지" > 
+		<LABEL
+			NpcViewName 	= "파이어 메이지"
+			NpcGradeTitle	= "01"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/004/ai_npc_004_firemage_no01.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4004" 	comment= "무기" />
+			<EQUIP itemcode= "104004"	comment= "갑옷" />
+			<EQUIP itemcode= "204004"	comment= "투구" />
+			<EQUIP itemcode= "304004"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "100402" NpcType	= "0" RandomAppreance = "1" comment= "파이어 메이지" > 
+		<LABEL
+			NpcViewName 	= "파이어 메이지"
+			NpcGradeTitle	= "02"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/004/ai_npc_004_firemage_no02.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4004" 	comment= "무기" />
+			<EQUIP itemcode= "104004"	comment= "갑옷" />
+			<EQUIP itemcode= "204004"	comment= "투구" />
+			<EQUIP itemcode= "304004"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "100403" NpcType	= "0" RandomAppreance = "1" comment= "파이어 메이지" > 
+		<LABEL
+			NpcViewName 	= "파이어 메이지"
+			NpcGradeTitle	= "03"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/004/ai_npc_004_firemage_no03.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4004" 	comment= "무기" />
+			<EQUIP itemcode= "104004"	comment= "갑옷" />
+			<EQUIP itemcode= "204004"	comment= "투구" />
+			<EQUIP itemcode= "304004"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+		<NPC id= "100404" NpcType	= "0" RandomAppreance = "1" comment= "파이어 메이지" > 
+		<LABEL
+			NpcViewName 	= "파이어 메이지"
+			NpcGradeTitle	= "04"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/004/ai_npc_004_firemage_no04.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4004" 	comment= "무기" />
+			<EQUIP itemcode= "104004"	comment= "갑옷" />
+			<EQUIP itemcode= "204004"	comment= "투구" />
+			<EQUIP itemcode= "304004"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "100405" NpcType	= "0" RandomAppreance = "1" comment= "파이어 메이지" > 
+		<LABEL
+			NpcViewName 	= "파이어 메이지"
+			NpcGradeTitle	= "05"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/004/ai_npc_004_firemage_no05.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4004" 	comment= "무기" />
+			<EQUIP itemcode= "104004"	comment= "갑옷" />
+			<EQUIP itemcode= "204004"	comment= "투구" />
+			<EQUIP itemcode= "304004"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "100601" NpcType	= "0" RandomAppreance = "1" comment= "세비지 버서커" >  
+		<LABEL
+			NpcViewName 	= "세비지 버서커"
+			NpcGradeTitle	= "01"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/006/ai_npc_006_savage_no01.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4006" 	comment= "무기" />
+			<EQUIP itemcode= "104006"	comment= "갑옷" />
+			<EQUIP itemcode= "204006"	comment= "투구" />
+			<EQUIP itemcode= "304006"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "100602" NpcType	= "0" RandomAppreance = "1" comment= "세비지 버서커" > 
+		<LABEL
+			NpcViewName 	= "세비지 버서커"
+			NpcGradeTitle	= "02"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/006/ai_npc_006_savage_no02.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4006" 	comment= "무기" />
+			<EQUIP itemcode= "104006"	comment= "갑옷" />
+			<EQUIP itemcode= "204006"	comment= "투구" />
+			<EQUIP itemcode= "304006"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "100603" NpcType	= "0" RandomAppreance = "1" comment= "세비지 버서커" >  
+		<LABEL
+			NpcViewName 	= "세비지 버서커"
+			NpcGradeTitle	= "03"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/006/ai_npc_006_savage_no03.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4006" 	comment= "무기" />
+			<EQUIP itemcode= "104006"	comment= "갑옷" />
+			<EQUIP itemcode= "204006"	comment= "투구" />
+			<EQUIP itemcode= "304006"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "100604" NpcType	= "0" RandomAppreance = "1" comment= "세비지 버서커" > 
+		<LABEL
+			NpcViewName 	= "세비지 버서커"
+			NpcGradeTitle	= "04"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/006/ai_npc_006_savage_no04.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4006" 	comment= "무기" />
+			<EQUIP itemcode= "104006"	comment= "갑옷" />
+			<EQUIP itemcode= "204006"	comment= "투구" />
+			<EQUIP itemcode= "304006"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "100605" NpcType	= "0" RandomAppreance = "1" comment= "세비지 버서커" >  
+		<LABEL
+			NpcViewName 	= "세비지 버서커"
+			NpcGradeTitle	= "05"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/006/ai_npc_006_savage_no05.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4006" 	comment= "무기" />
+			<EQUIP itemcode= "104006"	comment= "갑옷" />
+			<EQUIP itemcode= "204006"	comment= "투구" />
+			<EQUIP itemcode= "304006"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "100901" NpcType	= "0" RandomAppreance = "1" comment= "아이스 메이지" > 
+		<LABEL
+			NpcViewName 	= "아이스 메이지"
+			NpcGradeTitle	= "01"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/009/ai_npc_009_icemage_no01.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4009" 	comment= "무기" />
+			<EQUIP itemcode= "104009"	comment= "갑옷" />
+			<EQUIP itemcode= "204009"	comment= "투구" />
+			<EQUIP itemcode= "304009"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "100902" NpcType	= "0" RandomAppreance = "1" comment= "아이스 메이지" > 
+		<LABEL
+			NpcViewName 	= "아이스 메이지"
+			NpcGradeTitle	= "02"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/009/ai_npc_009_icemage_no02.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4009" 	comment= "무기" />
+			<EQUIP itemcode= "104009"	comment= "갑옷" />
+			<EQUIP itemcode= "204009"	comment= "투구" />
+			<EQUIP itemcode= "304009"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "100903" NpcType	= "0" RandomAppreance = "1" comment= "아이스 메이지" > 
+		<LABEL
+			NpcViewName 	= "아이스 메이지"
+			NpcGradeTitle	= "03"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/009/ai_npc_009_icemage_no03.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4009" 	comment= "무기" />
+			<EQUIP itemcode= "104009"	comment= "갑옷" />
+			<EQUIP itemcode= "204009"	comment= "투구" />
+			<EQUIP itemcode= "304009"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+		<NPC id= "100904" NpcType	= "0" RandomAppreance = "1" comment= "아이스 메이지" > 
+		<LABEL
+			NpcViewName 	= "아이스 메이지"
+			NpcGradeTitle	= "04"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/009/ai_npc_009_icemage_no04.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4009" 	comment= "무기" />
+			<EQUIP itemcode= "104009"	comment= "갑옷" />
+			<EQUIP itemcode= "204009"	comment= "투구" />
+			<EQUIP itemcode= "304009"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "100905" NpcType	= "0" RandomAppreance = "1" comment= "아이스 메이지" > 
+		<LABEL
+			NpcViewName 	= "아이스 메이지"
+			NpcGradeTitle	= "05"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/009/ai_npc_009_icemage_no05.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4009" 	comment= "무기" />
+			<EQUIP itemcode= "104009"	comment= "갑옷" />
+			<EQUIP itemcode= "204009"	comment= "투구" />
+			<EQUIP itemcode= "304009"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101201" NpcType	= "0" RandomAppreance = "1" comment= "쉐도우 어쌔신" > 
+		<LABEL
+			NpcViewName 	= "쉐도우 어쌔신"
+			NpcGradeTitle	= "01"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/012/ai_npc_012_shadow_no01.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4012" 	comment= "무기" />
+			<EQUIP itemcode= "104012"	comment= "갑옷" />
+			<EQUIP itemcode= "204012"	comment= "투구" />
+			<EQUIP itemcode= "304012"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101202" NpcType	= "0" RandomAppreance = "1" comment= "쉐도우 어쌔신" >
+		<LABEL
+			NpcViewName 	= "쉐도우 어쌔신"
+			NpcGradeTitle	= "02"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/012/ai_npc_012_shadow_no02.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4012" 	comment= "무기" />
+			<EQUIP itemcode= "104012"	comment= "갑옷" />
+			<EQUIP itemcode= "204012"	comment= "투구" />
+			<EQUIP itemcode= "304012"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101203" NpcType	= "0" RandomAppreance = "1" comment= "쉐도우 어쌔신" >
+		<LABEL
+			NpcViewName 	= "쉐도우 어쌔신"
+			NpcGradeTitle	= "03"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/012/ai_npc_012_shadow_no03.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4012" 	comment= "무기" />
+			<EQUIP itemcode= "104012"	comment= "갑옷" />
+			<EQUIP itemcode= "204012"	comment= "투구" />
+			<EQUIP itemcode= "304012"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101204" NpcType	= "0" RandomAppreance = "1" comment= "쉐도우 어쌔신" > 
+		<LABEL
+			NpcViewName 	= "쉐도우 어쌔신"
+			NpcGradeTitle	= "04"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/012/ai_npc_012_shadow_no04.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4012" 	comment= "무기" />
+			<EQUIP itemcode= "104012"	comment= "갑옷" />
+			<EQUIP itemcode= "204012"	comment= "투구" />
+			<EQUIP itemcode= "304012"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101205" NpcType	= "0" RandomAppreance = "1" comment= "쉐도우 어쌔신" > 
+		<LABEL
+			NpcViewName 	= "쉐도우 어쌔신"
+			NpcGradeTitle	= "05"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/012/ai_npc_012_shadow_no05.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4012" 	comment= "무기" />
+			<EQUIP itemcode= "104012"	comment= "갑옷" />
+			<EQUIP itemcode= "204012"	comment= "투구" />
+			<EQUIP itemcode= "304012"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101301" NpcType	= "0" RandomAppreance = "1" comment= "빅토리 디펜더" > 
+		<LABEL
+			NpcViewName 	= "빅토리 디펜더"
+			NpcGradeTitle	= "01"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/013/ai_npc_013_victory_no01.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4013" 	comment= "무기" />
+			<EQUIP itemcode= "104013"	comment= "갑옷" />
+			<EQUIP itemcode= "204013"	comment= "투구" />
+			<EQUIP itemcode= "304013"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101302" NpcType	= "0" RandomAppreance = "1" comment= "빅토리 디펜더" > 
+		<LABEL
+			NpcViewName 	= "빅토리 디펜더"
+			NpcGradeTitle	= "02"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/013/ai_npc_013_victory_no02.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4013" 	comment= "무기" />
+			<EQUIP itemcode= "104013"	comment= "갑옷" />
+			<EQUIP itemcode= "204013"	comment= "투구" />
+			<EQUIP itemcode= "304013"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101303" NpcType	= "0" RandomAppreance = "1" comment= "빅토리 디펜더" > 
+		<LABEL
+			NpcViewName 	= "빅토리 디펜더"
+			NpcGradeTitle	= "03"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/013/ai_npc_013_victory_no03.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4013" 	comment= "무기" />
+			<EQUIP itemcode= "104013"	comment= "갑옷" />
+			<EQUIP itemcode= "204013"	comment= "투구" />
+			<EQUIP itemcode= "304013"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101304" NpcType	= "0" RandomAppreance = "1" comment= "빅토리 디펜더" >
+		<LABEL
+			NpcViewName 	= "빅토리 디펜더"
+			NpcGradeTitle	= "04"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/013/ai_npc_013_victory_no04.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4013" 	comment= "무기" />
+			<EQUIP itemcode= "104013"	comment= "갑옷" />
+			<EQUIP itemcode= "204013"	comment= "투구" />
+			<EQUIP itemcode= "304013"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101305" NpcType	= "0" RandomAppreance = "1" comment= "빅토리 디펜더" >
+		<LABEL
+			NpcViewName 	= "빅토리 디펜더"
+			NpcGradeTitle	= "05"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/013/ai_npc_013_victory_no05.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4013" 	comment= "무기" />
+			<EQUIP itemcode= "104013"	comment= "갑옷" />
+			<EQUIP itemcode= "204013"	comment= "투구" />
+			<EQUIP itemcode= "304013"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101401" NpcType	= "0" RandomAppreance = "1" comment= "청룡 관우" > 
+		<LABEL
+			NpcViewName 	= "청룡 관우"
+			NpcGradeTitle	= "01"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/014/ai_npc_014_guanwoo_no01.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4014" 	comment= "무기" />
+			<EQUIP itemcode= "104014"	comment= "갑옷" />
+			<EQUIP itemcode= "204014"	comment= "투구" />
+			<EQUIP itemcode= "304014"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101402" NpcType	= "0" RandomAppreance = "1" comment= "청룡 관우" > 
+		<LABEL
+			NpcViewName 	= "청룡 관우"
+			NpcGradeTitle	= "02"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/014/ai_npc_014_guanwoo_no02.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4014" 	comment= "무기" />
+			<EQUIP itemcode= "104014"	comment= "갑옷" />
+			<EQUIP itemcode= "204014"	comment= "투구" />
+			<EQUIP itemcode= "304014"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101403" NpcType	= "0" RandomAppreance = "1" comment= "청룡 관우" > 
+		<LABEL
+			NpcViewName 	= "청룡 관우"
+			NpcGradeTitle	= "03"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/014/ai_npc_014_guanwoo_no03.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4014" 	comment= "무기" />
+			<EQUIP itemcode= "104014"	comment= "갑옷" />
+			<EQUIP itemcode= "204014"	comment= "투구" />
+			<EQUIP itemcode= "304014"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101404" NpcType	= "0" RandomAppreance = "1" comment= "청룡 관우" > 
+		<LABEL
+			NpcViewName 	= "청룡 관우"
+			NpcGradeTitle	= "04"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/014/ai_npc_014_guanwoo_no04.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4014" 	comment= "무기" />
+			<EQUIP itemcode= "104014"	comment= "갑옷" />
+			<EQUIP itemcode= "204014"	comment= "투구" />
+			<EQUIP itemcode= "304014"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101405" NpcType	= "0" RandomAppreance = "1" comment= "청룡 관우" > 
+		<LABEL
+			NpcViewName 	= "청룡 관우"
+			NpcGradeTitle	= "05"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/014/ai_npc_014_guanwoo_no05.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4014" 	comment= "무기" />
+			<EQUIP itemcode= "104014"	comment= "갑옷" />
+			<EQUIP itemcode= "204014"	comment= "투구" />
+			<EQUIP itemcode= "304014"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101501" NpcType	= "0" RandomAppreance = "1" comment= "와일드 복서" > 
+		<LABEL
+			NpcViewName 	= "와일드 복서"
+			NpcGradeTitle	= "01"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/015/ai_npc_015_boxer_no01.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4015" 	comment= "무기" />
+			<EQUIP itemcode= "104015"	comment= "갑옷" />
+			<EQUIP itemcode= "204015"	comment= "투구" />
+			<EQUIP itemcode= "304015"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101502" NpcType	= "0" RandomAppreance = "1" comment= "와일드 복서" > 
+		<LABEL
+			NpcViewName 	= "와일드 복서"
+			NpcGradeTitle	= "02"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/015/ai_npc_015_boxer_no02.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4015" 	comment= "무기" />
+			<EQUIP itemcode= "104015"	comment= "갑옷" />
+			<EQUIP itemcode= "204015"	comment= "투구" />
+			<EQUIP itemcode= "304015"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101503" NpcType	= "0" RandomAppreance = "1" comment= "와일드 복서" > 
+		<LABEL
+			NpcViewName 	= "와일드 복서"
+			NpcGradeTitle	= "03"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/015/ai_npc_015_boxer_no03.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4015" 	comment= "무기" />
+			<EQUIP itemcode= "104015"	comment= "갑옷" />
+			<EQUIP itemcode= "204015"	comment= "투구" />
+			<EQUIP itemcode= "304015"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101504" NpcType	= "0" RandomAppreance = "1" comment= "와일드 복서" >
+		<LABEL
+			NpcViewName 	= "와일드 복서"
+			NpcGradeTitle	= "04"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/015/ai_npc_015_boxer_no04.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4015" 	comment= "무기" />
+			<EQUIP itemcode= "104015"	comment= "갑옷" />
+			<EQUIP itemcode= "204015"	comment= "투구" />
+			<EQUIP itemcode= "304015"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101505" NpcType	= "0" RandomAppreance = "1" comment= "와일드 복서" >
+		<LABEL
+			NpcViewName 	= "와일드 복서"
+			NpcGradeTitle	= "05"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/015/ai_npc_015_boxer_no05.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4015" 	comment= "무기" />
+			<EQUIP itemcode= "104015"	comment= "갑옷" />
+			<EQUIP itemcode= "204015"	comment= "투구" />
+			<EQUIP itemcode= "304015"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101601" NpcType	= "0" RandomAppreance = "1" comment= "바이킹 스벤" > 
+		<LABEL
+			NpcViewName 	= "바이킹 스벤"
+			NpcGradeTitle	= "01"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/016/ai_npc_016_viking_no01.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4016" 	comment= "무기" />
+			<EQUIP itemcode= "104016"	comment= "갑옷" />
+			<EQUIP itemcode= "204016"	comment= "투구" />
+			<EQUIP itemcode= "304016"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101602" NpcType	= "0" RandomAppreance = "1" comment= "바이킹 스벤" > 
+		<LABEL
+			NpcViewName 	= "바이킹 스벤"
+			NpcGradeTitle	= "02"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/016/ai_npc_016_viking_no02.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4016" 	comment= "무기" />
+			<EQUIP itemcode= "104016"	comment= "갑옷" />
+			<EQUIP itemcode= "204016"	comment= "투구" />
+			<EQUIP itemcode= "304016"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101603" NpcType	= "0" RandomAppreance = "1" comment= "바이킹 스벤" > 
+		<LABEL
+			NpcViewName 	= "바이킹 스벤"
+			NpcGradeTitle	= "03"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/016/ai_npc_016_viking_no03.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4016" 	comment= "무기" />
+			<EQUIP itemcode= "104016"	comment= "갑옷" />
+			<EQUIP itemcode= "204016"	comment= "투구" />
+			<EQUIP itemcode= "304016"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101604" NpcType	= "0" RandomAppreance = "1" comment= "바이킹 스벤" > 
+		<LABEL
+			NpcViewName 	= "바이킹 스벤"
+			NpcGradeTitle	= "04"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/016/ai_npc_016_viking_no04.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4016" 	comment= "무기" />
+			<EQUIP itemcode= "104016"	comment= "갑옷" />
+			<EQUIP itemcode= "204016"	comment= "투구" />
+			<EQUIP itemcode= "304016"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101605" NpcType	= "0" RandomAppreance = "1" comment= "바이킹 스벤" > 
+		<LABEL
+			NpcViewName 	= "바이킹 스벤"
+			NpcGradeTitle	= "05"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/016/ai_npc_016_viking_no05.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4016" 	comment= "무기" />
+			<EQUIP itemcode= "104016"	comment= "갑옷" />
+			<EQUIP itemcode= "204016"	comment= "투구" />
+			<EQUIP itemcode= "304016"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101701" NpcType	= "0" RandomAppreance = "1" comment= "카게 닌자" > 
+		<LABEL
+			NpcViewName 	= "카게 닌자"
+			NpcGradeTitle	= "01"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/017/ai_npc_017_ninja_no01.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4017" 	comment= "무기" />
+			<EQUIP itemcode= "104017"	comment= "갑옷" />
+			<EQUIP itemcode= "204017"	comment= "투구" />
+			<EQUIP itemcode= "304017"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101702" NpcType	= "0" RandomAppreance = "1" comment= "카게 닌자" > 
+		<LABEL
+			NpcViewName 	= "카게 닌자"
+			NpcGradeTitle	= "02"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/017/ai_npc_017_ninja_no02.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4017" 	comment= "무기" />
+			<EQUIP itemcode= "104017"	comment= "갑옷" />
+			<EQUIP itemcode= "204017"	comment= "투구" />
+			<EQUIP itemcode= "304017"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101703" NpcType	= "0" RandomAppreance = "1" comment= "카게 닌자" > 
+		<LABEL
+			NpcViewName 	= "카게 닌자"
+			NpcGradeTitle	= "03"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/017/ai_npc_017_ninja_no03.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4017" 	comment= "무기" />
+			<EQUIP itemcode= "104017"	comment= "갑옷" />
+			<EQUIP itemcode= "204017"	comment= "투구" />
+			<EQUIP itemcode= "304017"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101704" NpcType	= "0" RandomAppreance = "1" comment= "카게 닌자" >
+		<LABEL
+			NpcViewName 	= "카게 닌자"
+			NpcGradeTitle	= "04"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/017/ai_npc_017_ninja_no04.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4017" 	comment= "무기" />
+			<EQUIP itemcode= "104017"	comment= "갑옷" />
+			<EQUIP itemcode= "204017"	comment= "투구" />
+			<EQUIP itemcode= "304017"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101705" NpcType	= "0" RandomAppreance = "1" comment= "카게 닌자" >
+		<LABEL
+			NpcViewName 	= "카게 닌자"
+			NpcGradeTitle	= "05"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/017/ai_npc_017_ninja_no05.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4017" 	comment= "무기" />
+			<EQUIP itemcode= "104017"	comment= "갑옷" />
+			<EQUIP itemcode= "204017"	comment= "투구" />
+			<EQUIP itemcode= "304017"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101901" NpcType	= "0" RandomAppreance = "1" comment= "태권 무도가" > 
+		<LABEL
+			NpcViewName 	= "태권 무도가"
+			NpcGradeTitle	= "01"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/019/ai_npc_019_taekwon_no01.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4019" 	comment= "무기" />
+			<EQUIP itemcode= "104019"	comment= "갑옷" />
+			<EQUIP itemcode= "204019"	comment= "투구" />
+			<EQUIP itemcode= "304019"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101902" NpcType	= "0" RandomAppreance = "1" comment= "태권 무도가" > 
+		<LABEL
+			NpcViewName 	= "태권 무도가"
+			NpcGradeTitle	= "02"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/019/ai_npc_019_taekwon_no02.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4019" 	comment= "무기" />
+			<EQUIP itemcode= "104019"	comment= "갑옷" />
+			<EQUIP itemcode= "204019"	comment= "투구" />
+			<EQUIP itemcode= "304019"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101903" NpcType	= "0" RandomAppreance = "1" comment= "태권 무도가" > 
+		<LABEL
+			NpcViewName 	= "태권 무도가"
+			NpcGradeTitle	= "03"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/019/ai_npc_019_taekwon_no03.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4019" 	comment= "무기" />
+			<EQUIP itemcode= "104019"	comment= "갑옷" />
+			<EQUIP itemcode= "204019"	comment= "투구" />
+			<EQUIP itemcode= "304019"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101904" NpcType	= "0" RandomAppreance = "1" comment= "태권 무도가" > 
+		<LABEL
+			NpcViewName 	= "태권 무도가"
+			NpcGradeTitle	= "04"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/019/ai_npc_019_taekwon_no04.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4019" 	comment= "무기" />
+			<EQUIP itemcode= "104019"	comment= "갑옷" />
+			<EQUIP itemcode= "204019"	comment= "투구" />
+			<EQUIP itemcode= "304019"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101905" NpcType	= "0" RandomAppreance = "1" comment= "태권 무도가" > 
+		<LABEL
+			NpcViewName 	= "태권 무도가"
+			NpcGradeTitle	= "05"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/019/ai_npc_019_taekwon_no05.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4019" 	comment= "무기" />
+			<EQUIP itemcode= "104019"	comment= "갑옷" />
+			<EQUIP itemcode= "204019"	comment= "투구" />
+			<EQUIP itemcode= "304019"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "102001" NpcType	= "0" RandomAppreance = "1" comment= "암흑 주술사" > 
+		<LABEL
+			NpcViewName 	= "암흑 주술사"
+			NpcGradeTitle	= "01"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/020/ai_npc_020_shaman_no01.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4020" 	comment= "무기" />
+			<EQUIP itemcode= "104020"	comment= "갑옷" />
+			<EQUIP itemcode= "204020"	comment= "투구" />
+			<EQUIP itemcode= "304020"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "102002" NpcType	= "0" RandomAppreance = "1" comment= "암흑 주술사" > 
+		<LABEL
+			NpcViewName 	= "암흑 주술사"
+			NpcGradeTitle	= "02"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/020/ai_npc_020_shaman_no02.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4020" 	comment= "무기" />
+			<EQUIP itemcode= "104020"	comment= "갑옷" />
+			<EQUIP itemcode= "204020"	comment= "투구" />
+			<EQUIP itemcode= "304020"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "102003" NpcType	= "0" RandomAppreance = "1" comment= "암흑 주술사" > 
+		<LABEL
+			NpcViewName 	= "암흑 주술사"
+			NpcGradeTitle	= "03"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/020/ai_npc_020_shaman_no03.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4020" 	comment= "무기" />
+			<EQUIP itemcode= "104020"	comment= "갑옷" />
+			<EQUIP itemcode= "204020"	comment= "투구" />
+			<EQUIP itemcode= "304020"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "102004" NpcType	= "0" RandomAppreance = "1" comment= "암흑 주술사" >
+		<LABEL
+			NpcViewName 	= "암흑 주술사"
+			NpcGradeTitle	= "04"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/020/ai_npc_020_shaman_no04.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4020" 	comment= "무기" />
+			<EQUIP itemcode= "104020"	comment= "갑옷" />
+			<EQUIP itemcode= "204020"	comment= "투구" />
+			<EQUIP itemcode= "304020"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "102005" NpcType	= "0" RandomAppreance = "1" comment= "암흑 주술사" >
+		<LABEL
+			NpcViewName 	= "암흑 주술사"
+			NpcGradeTitle	= "05"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/020/ai_npc_020_shaman_no05.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4020" 	comment= "무기" />
+			<EQUIP itemcode= "104020"	comment= "갑옷" />
+			<EQUIP itemcode= "204020"	comment= "투구" />
+			<EQUIP itemcode= "304020"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "102101" NpcType	= "0" RandomAppreance = "1" comment= "스마일 조커" > 
+		<LABEL
+			NpcViewName 	= "스마일 조커"
+			NpcGradeTitle	= "01"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/021/ai_npc_021_joker_no01.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4021" 	comment= "무기" />
+			<EQUIP itemcode= "104021"	comment= "갑옷" />
+			<EQUIP itemcode= "204021"	comment= "투구" />
+			<EQUIP itemcode= "304021"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "102102" NpcType	= "0" RandomAppreance = "1" comment= "스마일 조커" > 
+		<LABEL
+			NpcViewName 	= "스마일 조커"
+			NpcGradeTitle	= "02"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/021/ai_npc_021_joker_no02.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4021" 	comment= "무기" />
+			<EQUIP itemcode= "104021"	comment= "갑옷" />
+			<EQUIP itemcode= "204021"	comment= "투구" />
+			<EQUIP itemcode= "304021"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "102103" NpcType	= "0" RandomAppreance = "1" comment= "스마일 조커" > 
+		<LABEL
+			NpcViewName 	= "스마일 조커"
+			NpcGradeTitle	= "03"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/021/ai_npc_021_joker_no03.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4021" 	comment= "무기" />
+			<EQUIP itemcode= "104021"	comment= "갑옷" />
+			<EQUIP itemcode= "204021"	comment= "투구" />
+			<EQUIP itemcode= "304021"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "102104" NpcType	= "0" RandomAppreance = "1" comment= "스마일 조커" > 
+		<LABEL
+			NpcViewName 	= "스마일 조커"
+			NpcGradeTitle	= "04"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/021/ai_npc_021_joker_no04.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4021" 	comment= "무기" />
+			<EQUIP itemcode= "104021"	comment= "갑옷" />
+			<EQUIP itemcode= "204021"	comment= "투구" />
+			<EQUIP itemcode= "304021"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "102105" NpcType	= "0" RandomAppreance = "1" comment= "스마일 조커" > 
+		<LABEL
+			NpcViewName 	= "스마일 조커"
+			NpcGradeTitle	= "05"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/021/ai_npc_021_joker_no05.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4021" 	comment= "무기" />
+			<EQUIP itemcode= "104021"	comment= "갑옷" />
+			<EQUIP itemcode= "204021"	comment= "투구" />
+			<EQUIP itemcode= "304021"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+
+
+	<NPC id= "100106" NpcType	= "0" RandomAppreance = "1" comment= "아이언 나이트" >  
+		<LABEL
+			NpcViewName 	= "아이언 나이트"
+			NpcGradeTitle	= "06"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/001/ai_npc_001_knight_no06.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4001" 	comment= "무기" />
+			<EQUIP itemcode= "104001"	comment= "갑옷" />
+			<EQUIP itemcode= "204001"	comment= "투구" />
+			<EQUIP itemcode= "304001"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	
+	<NPC id= "100406" NpcType	= "0" RandomAppreance = "1" comment= "파이어 메이지" > 
+		<LABEL
+			NpcViewName 	= "파이어 메이지"
+			NpcGradeTitle	= "06"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/004/ai_npc_004_firemage_no06.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4004" 	comment= "무기" />
+			<EQUIP itemcode= "104004"	comment= "갑옷" />
+			<EQUIP itemcode= "204004"	comment= "투구" />
+			<EQUIP itemcode= "304004"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	
+	<NPC id= "101206" NpcType	= "0" RandomAppreance = "1" comment= "쉐도우 어쌔신" > 
+		<LABEL
+			NpcViewName 	= "쉐도우 어쌔신"
+			NpcGradeTitle	= "06"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/012/ai_npc_012_shadow_no06.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4012" 	comment= "무기" />
+			<EQUIP itemcode= "104012"	comment= "갑옷" />
+			<EQUIP itemcode= "204012"	comment= "투구" />
+			<EQUIP itemcode= "304012"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	
+	<NPC id= "101306" NpcType	= "0" RandomAppreance = "1" comment= "빅토리 디펜더" >
+		<LABEL
+			NpcViewName 	= "빅토리 디펜더"
+			NpcGradeTitle	= "06"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/013/ai_npc_013_victory_no06.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4013" 	comment= "무기" />
+			<EQUIP itemcode= "104013"	comment= "갑옷" />
+			<EQUIP itemcode= "204013"	comment= "투구" />
+			<EQUIP itemcode= "304013"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	
+	<NPC id= "101406" NpcType	= "0" RandomAppreance = "1" comment= "청룡 관우" > 
+		<LABEL
+			NpcViewName 	= "청룡 관우"
+			NpcGradeTitle	= "06"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/014/ai_npc_014_guanwoo_no06.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4014" 	comment= "무기" />
+			<EQUIP itemcode= "104014"	comment= "갑옷" />
+			<EQUIP itemcode= "204014"	comment= "투구" />
+			<EQUIP itemcode= "304014"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	
+	<NPC id= "101606" NpcType	= "0" RandomAppreance = "1" comment= "바이킹 스벤" > 
+		<LABEL
+			NpcViewName 	= "바이킹 스벤"
+			NpcGradeTitle	= "06"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/016/ai_npc_016_viking_no06.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4016" 	comment= "무기" />
+			<EQUIP itemcode= "104016"	comment= "갑옷" />
+			<EQUIP itemcode= "204016"	comment= "투구" />
+			<EQUIP itemcode= "304016"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101906" NpcType	= "0" RandomAppreance = "1" comment= "태권 무도가" > 
+		<LABEL
+			NpcViewName 	= "태권 무도가"
+			NpcGradeTitle	= "06"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/019/ai_npc_019_taekwon_no06.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4019" 	comment= "무기" />
+			<EQUIP itemcode= "104019"	comment= "갑옷" />
+			<EQUIP itemcode= "204019"	comment= "투구" />
+			<EQUIP itemcode= "304019"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	
+   <NPC id= "102006" NpcType	= "0" RandomAppreance = "1" comment= "암흑 주술사" >
+		<LABEL
+			NpcViewName 	= "암흑 주술사"
+			NpcGradeTitle	= "06"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/020/ai_npc_020_shaman_no06.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4020" 	comment= "무기" />
+			<EQUIP itemcode= "104020"	comment= "갑옷" />
+			<EQUIP itemcode= "204020"	comment= "투구" />
+			<EQUIP itemcode= "304020"	comment= "망토" />
+		</EQUIPLIST>
+		</NPC>	
+		
+   <NPC id= "102706" NpcType	= "0" RandomAppreance = "1" comment= "타이거" >
+		<LABEL
+			NpcViewName 	= "타이거"
+			NpcGradeTitle	= "06"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/027/ai_npc_027_tiger_no06.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4027" 	comment= "무기" />
+			<EQUIP itemcode= "104027"	comment= "갑옷" />
+			<EQUIP itemcode= "204027"	comment= "투구" />
+			<EQUIP itemcode= "304027"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+		
+   <NPC id= "102806" NpcType	= "0" RandomAppreance = "1" comment= "살라딘" >
+		<LABEL
+			NpcViewName 	= "살라딘"
+			NpcGradeTitle	= "06"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/028/ai_npc_028_saladin_no06.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4028" 	comment= "무기" />
+			<EQUIP itemcode= "104028"	comment= "갑옷" />
+			<EQUIP itemcode= "204028"	comment= "투구" />
+			<EQUIP itemcode= "304028"	comment= "망토" />
+		</EQUIPLIST>
+		</NPC>
+		
+   <NPC id= "103706" NpcType	= "0" RandomAppreance = "1" comment= "진키사라기" >
+		<LABEL
+			NpcViewName 	= "진키사라기"
+			NpcGradeTitle	= "06"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/037/ai_npc_037_jin_no06.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4037" 	comment= "무기" />
+			<EQUIP itemcode= "104037"	comment= "갑옷" />
+			<EQUIP itemcode= "204037"	comment= "투구" />
+			<EQUIP itemcode= "304037"	comment= "망토" />
+		</EQUIPLIST>
+	  </NPC>
+		
+   <NPC id= "103806" NpcType	= "0" RandomAppreance = "1" comment= "네크로멘서" >
+		<LABEL
+			NpcViewName 	= "네크로멘서"
+			NpcGradeTitle	= "06"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/038/ai_npc_038_necromancer_no06.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4038" 	comment= "무기" />
+			<EQUIP itemcode= "104038"	comment= "갑옷" />
+			<EQUIP itemcode= "204038"	comment= "투구" />
+			<EQUIP itemcode= "304038"	comment= "망토" />
+		</EQUIPLIST>	
+	 </NPC>		
+		
+   <NPC id= "104006" NpcType	= "0" RandomAppreance = "1" comment= "스파르타쿠스" >
+		<LABEL
+			NpcViewName 	= "스파르타쿠스"
+			NpcGradeTitle	= "06"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/040/ai_npc_040_spartacus_no06.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4040" 	comment= "무기" />
+			<EQUIP itemcode= "104040"	comment= "갑옷" />
+			<EQUIP itemcode= "204040"	comment= "투구" />
+			<EQUIP itemcode= "304040"	comment= "망토" />
+		</EQUIPLIST>	
+		</NPC>					
+		
+   <NPC id= "104906" NpcType	= "0" RandomAppreance = "1" comment= "카포에라" >
+		<LABEL
+			NpcViewName 	= "카포에라"
+			NpcGradeTitle	= "06"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/049/ai_npc_049_capoeira_no06.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4049" 	comment= "무기" />
+			<EQUIP itemcode= "104049"	comment= "갑옷" />
+			<EQUIP itemcode= "204049"	comment= "투구" />
+			<EQUIP itemcode= "304049"	comment= "망토" />
+		</EQUIPLIST>	
+	  </NPC>						
+		
+   <NPC id= "105006" NpcType	= "0" RandomAppreance = "1" comment= "라그나" >
+		<LABEL
+			NpcViewName 	= "라그나"
+			NpcGradeTitle	= "06"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/050/ai_npc_050_ragna_no06.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4050" 	comment= "무기" />
+			<EQUIP itemcode= "104050"	comment= "갑옷" />
+			<EQUIP itemcode= "204050"	comment= "투구" />
+			<EQUIP itemcode= "304050"	comment= "망토" />
+		</EQUIPLIST>	
+	</NPC>
+		
+   <NPC id= "105806" NpcType	= "0" RandomAppreance = "1" comment= "메이" >
+		<LABEL
+			NpcViewName 	= "메이"
+			NpcGradeTitle	= "06"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/058/ai_npc_058_may_no06.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4058" 	comment= "무기" />
+			<EQUIP itemcode= "104058"	comment= "갑옷" />
+			<EQUIP itemcode= "204058"	comment= "투구" />
+			<EQUIP itemcode= "304058"	comment= "망토" />
+		</EQUIPLIST>			
+	</NPC>		
+		
+   <NPC id= "105906" NpcType	= "0" RandomAppreance = "1" comment= "무에타이" >
+		<LABEL
+			NpcViewName 	= "무에타이"
+			NpcGradeTitle	= "06"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/059/ai_npc_059_muaythai_no06.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4059" 	comment= "무기" />
+			<EQUIP itemcode= "104059"	comment= "갑옷" />
+			<EQUIP itemcode= "204059"	comment= "투구" />
+			<EQUIP itemcode= "304059"	comment= "망토" />
+		</EQUIPLIST>			
+	</NPC>
+					
+   <NPC id= "107306" NpcType	= "0" RandomAppreance = "1" comment= "그래피티" >
+		<LABEL
+			NpcViewName 	= "그래피티"
+			NpcGradeTitle	= "06"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/073/ai_npc_073_graffiti_no06.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4073" 	comment= "무기" />
+			<EQUIP itemcode= "104073"	comment= "갑옷" />
+			<EQUIP itemcode= "204073"	comment= "투구" />
+			<EQUIP itemcode= "304073"	comment= "망토" />
+		</EQUIPLIST>	
+		</NPC>	
+		
+	<NPC id= "100107" NpcType	= "0" RandomAppreance = "1" comment= "아이언 나이트" >  
+		<LABEL
+			NpcViewName 	= "아이언 나이트"
+			NpcGradeTitle	= "07"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/001/ai_npc_001_knight_no07.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4001" 	comment= "무기" />
+			<EQUIP itemcode= "111086"	comment= "갑옷" />
+			<EQUIP itemcode= "211017"	comment= "투구" />
+			<EQUIP itemcode= "311001"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	
+	<NPC id= "100407" NpcType	= "0" RandomAppreance = "1" comment= "파이어 메이지" > 
+		<LABEL
+			NpcViewName 	= "파이어 메이지"
+			NpcGradeTitle	= "07"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/004/ai_npc_004_firemage_no07.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4004" 	comment= "무기" />
+			<EQUIP itemcode= "111052"	comment= "갑옷" />
+			<EQUIP itemcode= "211070"	comment= "투구" />
+			<EQUIP itemcode= "311056"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	
+	<NPC id= "101207" NpcType	= "0" RandomAppreance = "1" comment= "쉐도우 어쌔신" > 
+		<LABEL
+			NpcViewName 	= "쉐도우 어쌔신"
+			NpcGradeTitle	= "07"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/012/ai_npc_012_shadow_no07.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4012" 	comment= "무기" />
+			<EQUIP itemcode= "111037"	comment= "갑옷" />
+			<EQUIP itemcode= "211030"	comment= "투구" />
+			<EQUIP itemcode= "311037"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	
+	<NPC id= "101307" NpcType	= "0" RandomAppreance = "1" comment= "빅토리 디펜더" >
+		<LABEL
+			NpcViewName 	= "빅토리 디펜더"
+			NpcGradeTitle	= "07"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/013/ai_npc_013_victory_no07.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4013" 	comment= "무기" />
+			<EQUIP itemcode= "111049"	comment= "갑옷" />
+			<EQUIP itemcode= "211040"	comment= "투구" />
+			<EQUIP itemcode= "311045"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	
+	<NPC id= "101407" NpcType	= "0" RandomAppreance = "1" comment= "청룡 관우" > 
+		<LABEL
+			NpcViewName 	= "청룡 관우"
+			NpcGradeTitle	= "07"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/014/ai_npc_014_guanwoo_no07.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4014" 	comment= "무기" />
+			<EQUIP itemcode= "111033"	comment= "갑옷" />
+			<EQUIP itemcode= "211092"	comment= "투구" />
+			<EQUIP itemcode= "311020"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	
+	<NPC id= "101607" NpcType	= "0" RandomAppreance = "1" comment= "바이킹 스벤" > 
+		<LABEL
+			NpcViewName 	= "바이킹 스벤"
+			NpcGradeTitle	= "07"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/016/ai_npc_016_viking_no07.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4016" 	comment= "무기" />
+			<EQUIP itemcode= "111104"	comment= "갑옷" />
+			<EQUIP itemcode= "211050"	comment= "투구" />
+			<EQUIP itemcode= "311111"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	<NPC id= "101907" NpcType	= "0" RandomAppreance = "1" comment= "태권 무도가" > 
+		<LABEL
+			NpcViewName 	= "태권 무도가"
+			NpcGradeTitle	= "07"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/019/ai_npc_019_taekwon_no07.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4019" 	comment= "무기" />
+			<EQUIP itemcode= "104019"	comment= "갑옷" />
+			<EQUIP itemcode= "204019"	comment= "투구" />
+			<EQUIP itemcode= "304019"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+	
+   <NPC id= "102007" NpcType	= "0" RandomAppreance = "1" comment= "암흑 주술사" >
+		<LABEL
+			NpcViewName 	= "암흑 주술사"
+			NpcGradeTitle	= "07"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/020/ai_npc_020_shaman_no07.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4020" 	comment= "무기" />
+			<EQUIP itemcode= "111058"	comment= "갑옷" />
+			<EQUIP itemcode= "211075"	comment= "투구" />
+			<EQUIP itemcode= "311124"	comment= "망토" />
+		</EQUIPLIST>
+		</NPC>	
+		
+   <NPC id= "102707" NpcType	= "0" RandomAppreance = "1" comment= "타이거" >
+		<LABEL
+			NpcViewName 	= "타이거"
+			NpcGradeTitle	= "07"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/027/ai_npc_027_tiger_no07.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4027" 	comment= "무기" />
+			<EQUIP itemcode= "104027"	comment= "갑옷" />
+			<EQUIP itemcode= "204027"	comment= "투구" />
+			<EQUIP itemcode= "304027"	comment= "망토" />
+		</EQUIPLIST>
+	</NPC>
+		
+   <NPC id= "102807" NpcType	= "0" RandomAppreance = "1" comment= "살라딘" >
+		<LABEL
+			NpcViewName 	= "살라딘"
+			NpcGradeTitle	= "07"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/028/ai_npc_028_saladin_no07.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4028" 	comment= "무기" />
+			<EQUIP itemcode= "104028"	comment= "갑옷" />
+			<EQUIP itemcode= "204028"	comment= "투구" />
+			<EQUIP itemcode= "304028"	comment= "망토" />
+		</EQUIPLIST>
+		</NPC>
+		
+   <NPC id= "103707" NpcType	= "0" RandomAppreance = "1" comment= "진키사라기" >
+		<LABEL
+			NpcViewName 	= "진키사라기"
+			NpcGradeTitle	= "07"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/037/ai_npc_037_jin_no07.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4037" 	comment= "무기" />
+			<EQUIP itemcode= "111041"	comment= "갑옷" />
+			<EQUIP itemcode= "211110"	comment= "투구" />
+			<EQUIP itemcode= "311044"	comment= "망토" />
+		</EQUIPLIST>
+	  </NPC>
+		
+   <NPC id= "103807" NpcType	= "0" RandomAppreance = "1" comment= "네크로멘서" >
+		<LABEL
+			NpcViewName 	= "네크로멘서"
+			NpcGradeTitle	= "07"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/038/ai_npc_038_necromancer_no07.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4038" 	comment= "무기" />
+			<EQUIP itemcode= "111048"	comment= "갑옷" />
+			<EQUIP itemcode= "211073"	comment= "투구" />
+			<EQUIP itemcode= "311083"	comment= "망토" />
+		</EQUIPLIST>	
+	 </NPC>		
+		
+   <NPC id= "104007" NpcType	= "0" RandomAppreance = "1" comment= "스파르타쿠스" >
+		<LABEL
+			NpcViewName 	= "스파르타쿠스"
+			NpcGradeTitle	= "07"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/040/ai_npc_040_spartacus_no07.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4040" 	comment= "무기" />
+			<EQUIP itemcode= "111054"	comment= "갑옷" />
+			<EQUIP itemcode= "211063"	comment= "투구" />
+			<EQUIP itemcode= "311122"	comment= "망토" />
+		</EQUIPLIST>	
+		</NPC>					
+		
+   <NPC id= "104907" NpcType	= "0" RandomAppreance = "1" comment= "카포에라" >
+		<LABEL
+			NpcViewName 	= "카포에라"
+			NpcGradeTitle	= "07"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/049/ai_npc_049_capoeira_no07.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4049" 	comment= "무기" />
+			<EQUIP itemcode= "111056"	comment= "갑옷" />
+			<EQUIP itemcode= "211056"	comment= "투구" />
+			<EQUIP itemcode= "311098"	comment= "망토" />
+		</EQUIPLIST>	
+	  </NPC>						
+		
+   <NPC id= "105007" NpcType	= "0" RandomAppreance = "1" comment= "라그나" >
+		<LABEL
+			NpcViewName 	= "라그나"
+			NpcGradeTitle	= "07"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/050/ai_npc_050_ragna_no07.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4050" 	comment= "무기" />
+			<EQUIP itemcode= "104050"	comment= "갑옷" />
+			<EQUIP itemcode= "204050"	comment= "투구" />
+			<EQUIP itemcode= "304050"	comment= "망토" />
+		</EQUIPLIST>	
+	</NPC>
+		
+   <NPC id= "105807" NpcType	= "0" RandomAppreance = "1" comment= "메이" >
+		<LABEL
+			NpcViewName 	= "메이"
+			NpcGradeTitle	= "07"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/058/ai_npc_058_may_no07.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4058" 	comment= "무기" />
+			<EQUIP itemcode= "111076"	comment= "갑옷" />
+			<EQUIP itemcode= "211048"	comment= "투구" />
+			<EQUIP itemcode= "311049"	comment= "망토" />
+		</EQUIPLIST>			
+	</NPC>		
+		
+   <NPC id= "105907" NpcType	= "0" RandomAppreance = "1" comment= "무에타이" >
+		<LABEL
+			NpcViewName 	= "무에타이"
+			NpcGradeTitle	= "07"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/059/ai_npc_059_muaythai_no07.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4059" 	comment= "무기" />
+			<EQUIP itemcode= "111040"	comment= "갑옷" />
+			<EQUIP itemcode= "211120"	comment= "투구" />
+			<EQUIP itemcode= "311131"	comment= "망토" />
+		</EQUIPLIST>			
+	</NPC>
+					
+   <NPC id= "107307" NpcType	= "0" RandomAppreance = "1" comment= "그래피티" >
+		<LABEL
+			NpcViewName 	= "그래피티"
+			NpcGradeTitle	= "07"
+		/>
+		<REFERENCE
+			NpcInfo 	= "config/FieldNPC/sp2_npc_ai_normal.ini"
+			NpcAI		= "xml/ai/npcai/073/ai_npc_073_graffiti_no07.xml"
+		/>
+		<EQUIPLIST>
+			<EQUIP itemcode= "4073" 	comment= "무기" />
+			<EQUIP itemcode= "104073"	comment= "갑옷" />
+			<EQUIP itemcode= "204073"	comment= "투구" />
+			<EQUIP itemcode= "304073"	comment= "망토" />
+		</EQUIPLIST>	
+		</NPC>	
+		
+		
+</NPCLIST>
+
+
+
+
+
+

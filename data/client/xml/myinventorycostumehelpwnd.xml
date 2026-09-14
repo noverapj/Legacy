@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="NewShopHelpWnd" Id="103">
+	<Size X="54" Y="125" Width="207" Height="300" />
+	<Style>IWS_PROCESS|IWS_BACKMOST|IWS_START_HIDE</Style>
+	<Imagery>
+		<Image Imageset="BaseImage002" Image="mychr_shadow" >
+			<Area X="-10" Y="227" RenderType="Multiply" />
+		</Image>
+
+		<Image Type="3D_Back" Imageset="BaseImage008" Image="icon0_3dbg" />
+	</Imagery>
+	<ExtraInfo RotateYaw ="1.3f"/>
+
+	<Window ClassName="NewShopHelpControlWnd" Id="1">
+		<Size X="-20" Y="103" Width="173" Height="44" />
+		<Style>IWS_PROCESS</Style>	
+		<Window ClassName="NewShopHelpControlBtn" Id="1">
+			<Size X="0" Y="0" Width="46" Height="44" />
+			<Imagery>
+				<Image Type="Btn" Imageset="BaseImage004" Image="icon0_3d_left"/>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		               ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+		<Window ClassName="NewShopHelpControlBtn" Id="2">
+			<Size X="144" Y="0" Width="46" Height="44" />
+			<Imagery>
+				<Image Type="Btn" Imageset="BaseImage004" Image="icon0_3d_left">
+					<Area X="0" Y="0"  Reverse="Horz"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+                	   ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+</Window>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="GlobalTextTooltip" Id="6173">
+	<Size X="0" Y="0" Width="120" Height="26" />
+	<Style>IWS_START_HIDE|IWS_PROCESS|IWS_TOPMOST</Style> 
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="tooltip3">
+			<Area X="0" Y="0" Width="120" Height="26" />
+		</DefaultFrameImagery>
+	</Imagery>
+</Window>

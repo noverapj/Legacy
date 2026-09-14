@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="AniTextWnd" Id="5031">
+	<Size X="0" Y="0" Width="0" Height="0"/>
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style>
+	<Imagery>
+	</Imagery>
+	
+	<Window ClassName="ioWnd" Id="1">
+	<Size X="0" Y="0" Width="0" Height="0"/>
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style>
+	
+	<Window ClassName="AniLetterSubWnd" Id="1">
+		<Size X="0" Y="0" Width="0" Height="0"/>
+		<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style>
+		<Imagery>
+			<Image Type="Letter" Imageset="BaseImage019" Image="centerui_plaza_boss_in_1" />
+		</Imagery>
+		<ExtraInfo 
+			StartTime = "10"
+			StartDuration = "300"
+			StartScale = "4.0f"
+			StartXPos = "-509"
+			ZoomOutXPos = "-170"
+			StartYPosRatio = "0.24f"
+			DelayDuration = "0"
+			VibDuration = "4700"
+			TextClrDuration = "0"
+			ZoomInDuration = "130"
+			
+			BGM = "Resource/wave/bgm/bgm_plazamonster_01.ogg"
+			EffectSnd = "interface/plazamonster/plazamonster_start_normal.wav" />
+	</Window>
+	<Window ClassName="AniLetterSubWnd" Id="2">
+		<Size X="0" Y="0" Width="0" Height="0"/>
+		<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style>
+		<Imagery>
+			<Image Type="Letter" Imageset="BaseImage019" Image="centerui_plaza_boss_in_2" />
+		</Imagery>
+		<ExtraInfo 
+			StartTime = "310"
+			StartDuration = "300"
+			StartScale = "4.0f"
+			StartXPos = "-254"
+			ZoomOutXPos = "-85"
+			StartYPosRatio = "0.24f"
+			DelayDuration = "0"
+			VibDuration = "4400"
+			TextClrDuration = "0"
+			ZoomInDuration = "130"
+			
+			EffectSnd = "mercenary/029/sword_swing_02.wav" />
+	</Window>
+	
+	<Window ClassName="AniLetterSubWnd" Id="3">
+		<Size X="0" Y="0" Width="0" Height="0"/>
+		<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style>
+		<Imagery>
+			<Image Type="Letter" Imageset="BaseImage019" Image="centerui_plaza_boss_in_3" />
+		</Imagery>
+		<ExtraInfo 
+			StartTime = "610"
+			StartDuration = "300"
+			StartScale = "4.0f"
+			StartXPos = "0"
+			ZoomOutXPos = "0"
+			StartYPosRatio = "0.24f"
+			DelayDuration = "0"
+			VibDuration = "4100"
+			TextClrDuration = "0"
+			ZoomInDuration = "130"
+			
+			EffectSnd = "mercenary/029/sword_swing_02.wav" />
+	</Window>
+	
+	<Window ClassName="AniLetterSubWnd" Id="4">
+		<Size X="0" Y="0" Width="0" Height="0"/>
+		<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style>
+		<Imagery>
+			<Image Type="Letter" Imageset="BaseImage019" Image="centerui_plaza_boss_in_4" />
+		</Imagery>
+		<ExtraInfo 
+			StartTime = "910"
+			StartDuration = "300"
+			StartScale = "4.0f"
+			StartXPos = "254"
+			ZoomOutXPos = "85"
+			StartYPosRatio = "0.24f"
+			DelayDuration = "0"
+			VibDuration = "3800"
+			TextClrDuration = "0"
+			ZoomInDuration = "130"
+			
+			EffectSnd = "mercenary/029/sword_swing_02.wav" />
+	</Window>
+	
+	<Window ClassName="AniLetterSubWnd" Id="5">
+		<Size X="0" Y="0" Width="0" Height="0"/>
+		<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style>
+		<Imagery>
+			<Image Type="Letter" Imageset="BaseImage019" Image="centerui_plaza_boss_in_5" />
+		</Imagery>
+		<ExtraInfo 
+			StartTime = "1210"
+			StartDuration = "300"
+			StartScale = "4.0f"
+			StartXPos = "509"
+			ZoomOutXPos = "170"
+			StartYPosRatio = "0.24f"
+			DelayDuration = "0"
+			VibDuration = "3500"
+			TextClrDuration = "0"
+			ZoomInDuration = "130"
+			
+			EffectSnd = "mercenary/029/sword_swing_02.wav" />
+	</Window>
+	</Window>
+	
+	
+	<Window ClassName="ioWnd" Id="2">
+	<Size X="0" Y="0" Width="0" Height="0"/>
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style>
+	
+	<Window ClassName="AniLetterSubWnd" Id="1">
+		<Size X="0" Y="0" Width="0" Height="0"/>
+		<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style>
+		<Imagery>
+			<Image Type="Letter" Imageset="BaseImage019" Image="centerui_plaza_boss_out_1" />
+		</Imagery>
+		<ExtraInfo 
+			StartTime = "10"
+			StartDuration = "300"
+			StartScale = "4.0f"
+			StartXPos = "-509"
+			ZoomOutXPos = "-170"
+			StartYPosRatio = "0.24f"
+			DelayDuration = "120"
+			VibDuration = "0"
+			TextClrDuration = "4000"
+			ZoomInDuration = "130"
+			
+			EffectSnd = "interface/plazamonster/plazamonster_end_clear.wav" />
+			
+	</Window>
+	<Window ClassName="AniLetterSubWnd" Id="2">
+		<Size X="0" Y="0" Width="0" Height="0"/>
+		<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style>
+		<Imagery>
+			<Image Type="Letter" Imageset="BaseImage019" Image="centerui_plaza_boss_out_2" />
+		</Imagery>
+		<ExtraInfo 
+			StartTime = "40"
+			StartDuration = "300"
+			StartScale = "4.0f"
+			StartXPos = "-254"
+			ZoomOutXPos = "-85"
+			StartYPosRatio = "0.24f"
+			DelayDuration = "90"
+			VibDuration = "0"
+			TextClrDuration = "4000"
+			ZoomInDuration = "130"  
+		/>
+	</Window>
+	
+	<Window ClassName="AniLetterSubWnd" Id="3">
+		<Size X="0" Y="0" Width="0" Height="0"/>
+		<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style>
+		<Imagery>
+			<Image Type="Letter" Imageset="BaseImage019" Image="centerui_plaza_boss_out_3" />
+		</Imagery>
+		<ExtraInfo 
+			StartTime = "70"
+			StartDuration = "300"
+			StartScale = "4.0f"
+			StartXPos = "0"
+			ZoomOutXPos = "0"
+			StartYPosRatio = "0.24f"
+			DelayDuration = "60"
+			VibDuration = "0"
+			TextClrDuration = "4000"
+			ZoomInDuration = "130"
+			/>
+	</Window>
+	
+	<Window ClassName="AniLetterSubWnd" Id="4">
+		<Size X="0" Y="0" Width="0" Height="0"/>
+		<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style>
+		<Imagery>
+			<Image Type="Letter" Imageset="BaseImage019" Image="centerui_plaza_boss_out_4" />
+		</Imagery>
+		<ExtraInfo 
+			StartTime = "100"
+			StartDuration = "300"
+			StartScale = "4.0f"
+			StartXPos = "254"
+			ZoomOutXPos = "85"
+			StartYPosRatio = "0.24f"
+			DelayDuration = "30"
+			VibDuration = "0"
+			TextClrDuration = "4000"
+			ZoomInDuration = "130"
+			/>
+	</Window>
+	
+	<Window ClassName="AniLetterSubWnd" Id="5">
+		<Size X="0" Y="0" Width="0" Height="0"/>
+		<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style>
+		<Imagery>
+			<Image Type="Letter" Imageset="BaseImage019" Image="centerui_plaza_boss_out_5" />
+		</Imagery>
+		<ExtraInfo 
+			StartTime = "130"
+			StartDuration = "300"
+			StartScale = "4.0f"
+			StartXPos = "509"
+			ZoomOutXPos = "170"
+			StartYPosRatio = "0.24f"
+			DelayDuration = "0"
+			VibDuration = "0"
+			TextClrDuration = "4000"
+			ZoomInDuration = "130"
+			/>
+	</Window>
+	</Window>
+	
+	<Window ClassName="ioWnd" Id="3">
+	<Size X="0" Y="0" Width="0" Height="0"/>
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style>
+	
+	<Window ClassName="AniLetterSubWnd" Id="1">
+		<Size X="0" Y="0" Width="0" Height="0"/>
+		<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style>
+		<Imagery>
+			<Image Type="Letter" Imageset="BaseImage019" Image="centerui_plaza_boss_run_1" />
+		</Imagery>
+		<ExtraInfo 
+			StartTime = "10"
+			StartDuration = "300"
+			StartScale = "4.0f"
+			StartXPos = "-509"
+			ZoomOutXPos = "-170"
+			StartYPosRatio = "0.24f"
+			DelayDuration = "120"
+			VibDuration = "0"
+			TextClrDuration = "4000"
+			ZoomInDuration = "130"
+			
+			EffectSnd = "interface/plazamonster/plazamonster_end_runaway.wav" />
+			
+	</Window>
+	<Window ClassName="AniLetterSubWnd" Id="2">
+		<Size X="0" Y="0" Width="0" Height="0"/>
+		<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style>
+		<Imagery>
+			<Image Type="Letter" Imageset="BaseImage019" Image="centerui_plaza_boss_run_2" />
+		</Imagery>
+		<ExtraInfo 
+			StartTime = "40"
+			StartDuration = "300"
+			StartScale = "4.0f"
+			StartXPos = "-254"
+			ZoomOutXPos = "-85"
+			StartYPosRatio = "0.24f"
+			DelayDuration = "90"
+			VibDuration = "0"
+			TextClrDuration = "4000"
+			ZoomInDuration = "130"  
+		/>
+	</Window>
+	
+	<Window ClassName="AniLetterSubWnd" Id="3">
+		<Size X="0" Y="0" Width="0" Height="0"/>
+		<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style>
+		<Imagery>
+			<Image Type="Letter" Imageset="BaseImage019" Image="centerui_plaza_boss_run_3" />
+		</Imagery>
+		<ExtraInfo 
+			StartTime = "70"
+			StartDuration = "300"
+			StartScale = "4.0f"
+			StartXPos = "0"
+			ZoomOutXPos = "0"
+			StartYPosRatio = "0.24f"
+			DelayDuration = "60"
+			VibDuration = "0"
+			TextClrDuration = "4000"
+			ZoomInDuration = "130"
+			/>
+	</Window>
+	
+	<Window ClassName="AniLetterSubWnd" Id="4">
+		<Size X="0" Y="0" Width="0" Height="0"/>
+		<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style>
+		<Imagery>
+			<Image Type="Letter" Imageset="BaseImage019" Image="centerui_plaza_boss_run_4" />
+		</Imagery>
+		<ExtraInfo 
+			StartTime = "100"
+			StartDuration = "300"
+			StartScale = "4.0f"
+			StartXPos = "254"
+			ZoomOutXPos = "85"
+			StartYPosRatio = "0.24f"
+			DelayDuration = "30"
+			VibDuration = "0"
+			TextClrDuration = "4000"
+			ZoomInDuration = "130"
+			/>
+	</Window>
+	
+	<Window ClassName="AniLetterSubWnd" Id="5">
+		<Size X="0" Y="0" Width="0" Height="0"/>
+		<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style>
+		<Imagery>
+			<Image Type="Letter" Imageset="BaseImage019" Image="centerui_plaza_boss_run_5" />
+		</Imagery>
+		<ExtraInfo 
+			StartTime = "130"
+			StartDuration = "300"
+			StartScale = "4.0f"
+			StartXPos = "509"
+			ZoomOutXPos = "170"
+			StartYPosRatio = "0.24f"
+			DelayDuration = "0"
+			VibDuration = "0"
+			TextClrDuration = "4000"
+			ZoomInDuration = "130"
+			/>
+	</Window>
+	</Window>
+	
+	<Window ClassName="ioWnd" Id="4">
+	<Size X="0" Y="0" Width="0" Height="0"/>
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style>
+	
+	<Window ClassName="AniLetterSubWnd" Id="1">
+		<Size X="0" Y="0" Width="0" Height="0"/>
+		<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style>
+		<Imagery>
+			<Image Type="Letter" Imageset="BaseImage025" Image="centerui_plaza_boss_rage_1" />
+		</Imagery>
+		<ExtraInfo 
+			StartTime = "10"
+			StartDuration = "300"
+			StartScale = "4.0f"
+			StartXPos = "-509"
+			ZoomOutXPos = "-170"
+			StartYPosRatio = "0.24f"
+			DelayDuration = "0"
+			VibDuration = "4700"
+			TextClrDuration = "0"
+			ZoomInDuration = "130"
+			
+			BGM = "Resource/wave/bgm/bgm_plazamonster_02.ogg"
+			EffectSnd = "interface/plazamonster/plazamonster_start_rage.wav" />
+	</Window>
+	<Window ClassName="AniLetterSubWnd" Id="2">
+		<Size X="0" Y="0" Width="0" Height="0"/>
+		<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style>
+		<Imagery>
+			<Image Type="Letter" Imageset="BaseImage025" Image="centerui_plaza_boss_rage_2" />
+		</Imagery>
+		<ExtraInfo 
+			StartTime = "310"
+			StartDuration = "300"
+			StartScale = "4.0f"
+			StartXPos = "-254"
+			ZoomOutXPos = "-85"
+			StartYPosRatio = "0.24f"
+			DelayDuration = "0"
+			VibDuration = "4400"
+			TextClrDuration = "0"
+			ZoomInDuration = "130"
+			
+			EffectSnd = "mercenary/029/sword_swing_02.wav" />
+	</Window>
+	
+	<Window ClassName="AniLetterSubWnd" Id="3">
+		<Size X="0" Y="0" Width="0" Height="0"/>
+		<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style>
+		<Imagery>
+			<Image Type="Letter" Imageset="BaseImage025" Image="centerui_plaza_boss_rage_3" />
+		</Imagery>
+		<ExtraInfo 
+			StartTime = "610"
+			StartDuration = "300"
+			StartScale = "4.0f"
+			StartXPos = "0"
+			ZoomOutXPos = "0"
+			StartYPosRatio = "0.24f"
+			DelayDuration = "0"
+			VibDuration = "4100"
+			TextClrDuration = "0"
+			ZoomInDuration = "130"
+			
+			EffectSnd = "mercenary/029/sword_swing_02.wav" />
+	</Window>
+	
+	<Window ClassName="AniLetterSubWnd" Id="4">
+		<Size X="0" Y="0" Width="0" Height="0"/>
+		<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style>
+		<Imagery>
+			<Image Type="Letter" Imageset="BaseImage025" Image="centerui_plaza_boss_rage_4" />
+		</Imagery>
+		<ExtraInfo 
+			StartTime = "910"
+			StartDuration = "300"
+			StartScale = "4.0f"
+			StartXPos = "254"
+			ZoomOutXPos = "85"
+			StartYPosRatio = "0.24f"
+			DelayDuration = "0"
+			VibDuration = "3800"
+			TextClrDuration = "0"
+			ZoomInDuration = "130"
+			
+			EffectSnd = "mercenary/029/sword_swing_02.wav" />
+	</Window>
+	
+	<Window ClassName="AniLetterSubWnd" Id="5">
+		<Size X="0" Y="0" Width="0" Height="0"/>
+		<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style>
+		<Imagery>
+			<Image Type="Letter" Imageset="BaseImage025" Image="centerui_plaza_boss_rage_5" />
+		</Imagery>
+		<ExtraInfo 
+			StartTime = "1210"
+			StartDuration = "300"
+			StartScale = "4.0f"
+			StartXPos = "509"
+			ZoomOutXPos = "170"
+			StartYPosRatio = "0.24f"
+			DelayDuration = "0"
+			VibDuration = "3500"
+			TextClrDuration = "0"
+			ZoomInDuration = "130"
+			
+			EffectSnd = "mercenary/029/sword_swing_02.wav" />
+	</Window>
+	</Window>
+	
+</Window>
+
+

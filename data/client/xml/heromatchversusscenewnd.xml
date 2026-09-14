@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="HeroMatchVersusSceneWnd" Id="5008">
+	<Size X="0" Y="0" Width="800" Height="600" />
+	<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST</Style> 
+	<Imagery>
+		<DefaultFrameImagery Type="BlueBar" Templete="slot_camp_blue_nor">
+			<Area X="0" Y="0" Width="147" Height="246"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="RedBar" Templete="slot_camp_red_nor">
+			<Area X="0" Y="0" Width="147" Height="246"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="BackFrame" Templete="hero_vsoutline">
+			<Area X="0" Y="0" Width="147" Height="246"/>
+		</DefaultFrameImagery>
+
+		<Image Type="BlueGra" Imageset="BaseImage004" Image="slot_camp_blue_nor_gra" >
+			<Area X="3" Y="188" Width="141" Height="55" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+		<Image Type="RedGra" Imageset="BaseImage004" Image="slot_camp_red_nor_gra" >
+			<Area X="3" Y="188" Width="141" Height="55" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+
+		<Image Type="DarkBar" Imageset="BaseImage001" Image="strip_gray_dark" >
+			<Area X="0" Y="0" Width="141" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Type="LightBar" Imageset="BaseImage001" Image="strip_gray_light" >
+			<Area X="0" Y="0" Width="141" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+
+		<Image Type="BlackStrip" Imageset="BaseImage001" Image="strip_black200"/>
+		<Image Type="WhiteStrip" Imageset="BaseImage001" Image="WhitePoint"/>
+		<Image Type="HeroRankTitle" Imageset="BaseImage015" Image="icontext_hero_heroranking"/>
+		<Image Type="Number" Imageset="BaseImage012" Image="icontext_hero_num"/>
+		<Image Type="RankText" Imageset="BaseImage012" Image="icontext_hero_rank"/>
+		<Image Type="NoneText" Imageset="BaseImage012" Image="icontext_hero_00"/>
+		<Image Type="LadderHeroMark" Imageset="BaseImage012" Image="icontext_hero_vsmark"/>
+		<Image Type="CharShadow" Imageset="BaseImage009" Image="mychr_shadow5"/>
+		<Image Type="EffectSprite0" Imageset="BaseEffect002" Image="effect_success_01"/>
+		<Image Type="EffectSprite1" Imageset="BaseEffect002" Image="effect_success_02"/>
+		<Image Type="EffectSprite2" Imageset="BaseEffect002" Image="effect_success_03"/>
+		<Image Type="EffectSprite3" Imageset="BaseEffect002" Image="effect_success_04"/>
+		<Image Type="EffectSprite4" Imageset="BaseEffect002" Image="effect_success_05"/>
+		<Image Type="EffectSprite5" Imageset="BaseEffect002" Image="effect_success_06"/>
+		<Image Type="EffectSprite6" Imageset="BaseEffect003" Image="effect_success_07"/>
+		<Image Type="EffectSprite7" Imageset="BaseEffect003" Image="effect_success_08"/>
+		<Image Type="EffectSprite8" Imageset="BaseEffect003" Image="effect_success_09"/>
+		<Image Type="EffectSprite9" Imageset="BaseEffect003" Image="effect_success_10"/>
+	</Imagery>
+
+</Window>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="TournamentCheerPopUpWnd" Id="6235">
+	<Size X="0" Y="-20" XAlign="Center" YAlign="Center" Width="302" Height="298" />
+	<Style>IWS_START_HIDE|IWS_MODAL|IWS_EXIT_ESC</Style> 
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Title>
+		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Text>우승응원 결정</Text>
+	</Title>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+			<Area X="0" Y="0" Width="302" Height="298"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title">
+			<Area X="5" Y="6" Width="292" Height="36"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="MultiplyFrm" Templete="win1_multiply_bottom">
+			<Area X="0" Y="233" Width="302" Height="65"/>
+		</DefaultFrameImagery>
+  	<Image Type="NormalList" Imageset="BaseImage002" Image="iconeffect_3">
+			<Area X="151" Y="98" RenderType="Multiply"/>
+		</Image>
+  	<Image Type="NormalList" Imageset="UIIconPack19" Image="quest_257" >
+			<Area X="151" Y="98" />
+		</Image>
+	</Imagery>
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="268" Y="11" Width="23" Height="23"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+                        <Image Type="Disable" Imageset="BaseImage001" Image="icon0_x_grayframe" >
+				<Area X="0" Y="0" />
+			</Image>
+                        <Image Type="NormalList" Imageset="BaseImage001" Image="icon0_x" >
+				<Area X="5" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="ioButton" Id="3">
+		<Size X="17" Y="250" Width="133" Height="31" />
+		<Title>
+			<Format X="66" Y="5" Size="13" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FF323232" Back="FF215AA2"/>
+			<Text>결정(SPACE)</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_blue_nor">
+				<Area X="0" Y="0" Width="133" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_blue_nor">
+				<Area X="0" Y="0" Width="133" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="133" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_blue_down">
+				<Area X="0" Y="0" Width="133" Height="31"/>
+			</DefaultFrameImagery>	
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="ioButton" Id="2">
+		<Size X="152" Y="250" Width="133" Height="31" />
+		<Title>
+			<Format X="66" Y="7" Size="13" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF215AA2"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF215AA2"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FF323232" Back="FF215AA2"/>
+			<Text>취소(ESC)</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="133" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="133" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="133" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_gray_down">
+				<Area X="0" Y="0" Width="133" Height="31"/>
+			</DefaultFrameImagery>	
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+</Window>

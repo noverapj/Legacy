@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="TutorialKeyboardWnd" Id="5026">
+	<Size X="0" Y="0" XAlign="Center" YAlign="Center" Width="0" Height="0" />
+	<Style>IWS_PROCESS|IWS_START_HIDE</Style> 
+	<Imagery>
+		<Image Type="ButtonNormal" Imageset="BaseImage_Arcade001" Image="arcade_keyui_bt_nor"/>
+		<Image Type="ButtonOver" Imageset="BaseImage_Arcade001" Image="arcade_keyui_bt_over"/>
+		<Image Type="ArrowLeft" Imageset="BaseImage_Arcade001" Image="arcade_keyui_arrow_left"/>
+		<Image Type="ArrowUp" Imageset="BaseImage_Arcade001" Image="arcade_keyui_arrow_up"/>
+	</Imagery>
+</Window>

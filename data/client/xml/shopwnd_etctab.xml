@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+<Window ClassName="ShopWndETCTab" SubClassName="ioWndEX" Id="0" IDName="" MemberName="">
+    <Size X="0" Y="0" Width="0" Height="0" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+    <Imagery />
+    <ExtraInfo>
+        <ToolInfo />
+    </ExtraInfo>
+    <Window ClassName="ioFrameWndEX" SubClassName="" Id="1" IDName="" MemberName="">
+        <Size X="0" Y="0" Width="548" Height="488" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+        <Imagery />
+        <ExtraInfo>
+            <ToolInfo />
+        </ExtraInfo>
+        <Window ClassName="ioFrameWndEX" SubClassName="" Id="2" IDName="ID_FRM_BACK_0" MemberName="m_backfrm[0]">
+            <Size X="6" Y="5" Width="105" Height="157" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo>
+                <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fffc8b97" />
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="3" IDName="ID_IMGBTN_ICON_0" MemberName="m_iconbtn[0]">
+                <Size X="12" Y="10" Width="80" Height="84" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverAddImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <PushImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <ToolInfo>
+                        <Event Type="WEVT_LBUTTONUP" Function="OnLClickShopIcon00" />
+                    </ToolInfo>
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="4" IDName="ID_LAB_NAME_0" MemberName="m_namelabel[0]">
+                <Size X="3" Y="108" Width="101" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="사이보그" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="5" IDName="ID_FRM_PRICE_BACK_0" MemberName="m_pricebackfrm[0]">
+                <Size X="6" Y="126" Width="93" Height="24" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt002_brown_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioRichLabel" SubClassName="" Id="96" IDName="" MemberName="m_pricelabel[0]">
+                    <Size X="1" Y="4" Width="90" Height="13" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
+                        <TextBlock Text="9,000" Size="14" Style="Bold" Color="ffffffff" />
+                        <TextBlock Text=" 골드" Size="13" Style="Normal" Color="ffefcb96" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+        </Window>
+        <Window ClassName="ioFrameWndEX" SubClassName="" Id="8" IDName="ID_FRM_BACK_4" MemberName="m_backfrm[4]">
+            <Size X="434" Y="5" Width="105" Height="157" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo>
+                <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fffc8b97" />
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="9" IDName="ID_IMGBTN_ICON_4" MemberName="m_iconbtn[4]">
+                <Size X="12" Y="10" Width="80" Height="84" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverAddImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <PushImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <ToolInfo>
+                        <Event Type="WEVT_LBUTTONUP" Function="OnLClickShopIcon40" />
+                    </ToolInfo>
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="10" IDName="ID_LAB_NAME_4" MemberName="m_namelabel[4]">
+                <Size X="3" Y="108" Width="101" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="사이보그" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="11" IDName="ID_FRM_PRICE_BACK_4" MemberName="m_pricebackfrm[4]">
+                <Size X="6" Y="126" Width="93" Height="24" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt002_brown_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioRichLabel" SubClassName="" Id="100" IDName="" MemberName="m_pricelabel[4]">
+                    <Size X="1" Y="4" Width="90" Height="13" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
+                        <TextBlock Text="9,000" Size="14" Style="Bold" Color="ffffffff" />
+                        <TextBlock Text=" 골드" Size="13" Style="Normal" Color="ffefcb96" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+        </Window>
+        <Window ClassName="ioFrameWndEX" SubClassName="" Id="14" IDName="ID_FRM_BACK_3" MemberName="m_backfrm[3]">
+            <Size X="327" Y="5" Width="105" Height="157" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo>
+                <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fffc8b97" />
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="15" IDName="ID_IMGBTN_ICON_3" MemberName="m_iconbtn[3]">
+                <Size X="12" Y="10" Width="80" Height="84" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverAddImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <PushImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <ToolInfo>
+                        <Event Type="WEVT_LBUTTONUP" Function="OnLClickShopIcon30" />
+                    </ToolInfo>
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="16" IDName="ID_LAB_NAME_3" MemberName="m_namelabel[3]">
+                <Size X="3" Y="108" Width="101" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="사이보그" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="17" IDName="ID_FRM_PRICE_BACK_3" MemberName="m_pricebackfrm[3]">
+                <Size X="6" Y="126" Width="93" Height="24" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt002_brown_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioRichLabel" SubClassName="" Id="99" IDName="" MemberName="m_pricelabel[3]">
+                    <Size X="1" Y="4" Width="90" Height="13" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
+                        <TextBlock Text="9,000" Size="14" Style="Bold" Color="ffffffff" />
+                        <TextBlock Text=" 골드" Size="13" Style="Normal" Color="ffefcb96" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+        </Window>
+        <Window ClassName="ioFrameWndEX" SubClassName="" Id="20" IDName="ID_FRM_BACK_2" MemberName="m_backfrm[2]">
+            <Size X="220" Y="5" Width="105" Height="157" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo>
+                <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fffc8b97" />
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="21" IDName="ID_IMGBTN_ICON_2" MemberName="m_iconbtn[2]">
+                <Size X="12" Y="10" Width="80" Height="84" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverAddImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <PushImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <ToolInfo>
+                        <Event Type="WEVT_LBUTTONUP" Function="OnLClickShopIcon20" />
+                    </ToolInfo>
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="22" IDName="ID_LAB_NAME_2" MemberName="m_namelabel[2]">
+                <Size X="3" Y="108" Width="101" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="사이보그" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="23" IDName="ID_FRM_PRICE_BACK_2" MemberName="m_pricebackfrm[2]">
+                <Size X="6" Y="126" Width="93" Height="24" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt002_brown_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioRichLabel" SubClassName="" Id="98" IDName="" MemberName="m_pricelabel[2]">
+                    <Size X="1" Y="4" Width="90" Height="13" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
+                        <TextBlock Text="9,000" Size="14" Style="Bold" Color="ffffffff" />
+                        <TextBlock Text=" 골드" Size="13" Style="Normal" Color="ffefcb96" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+        </Window>
+        <Window ClassName="ioFrameWndEX" SubClassName="" Id="26" IDName="ID_FRM_BACK_1" MemberName="m_backfrm[1]">
+            <Size X="113" Y="5" Width="105" Height="157" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo>
+                <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fffc8b97" />
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="27" IDName="ID_IMGBTN_ICON_1" MemberName="m_iconbtn[1]">
+                <Size X="12" Y="10" Width="80" Height="84" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverAddImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <PushImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <ToolInfo>
+                        <Event Type="WEVT_LBUTTONUP" Function="OnLClickShopIcon10" />
+                    </ToolInfo>
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="28" IDName="ID_LAB_NAME_1" MemberName="m_namelabel[1]">
+                <Size X="3" Y="108" Width="101" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="사이보그" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="29" IDName="ID_FRM_PRICE_BACK_1" MemberName="m_pricebackfrm[1]">
+                <Size X="6" Y="126" Width="93" Height="24" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt002_brown_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioRichLabel" SubClassName="" Id="97" IDName="" MemberName="m_pricelabel[1]">
+                    <Size X="1" Y="4" Width="90" Height="13" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
+                        <TextBlock Text="9,000" Size="14" Style="Bold" Color="ffffffff" />
+                        <TextBlock Text=" 골드" Size="13" Style="Normal" Color="ffefcb96" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+        </Window>
+        <Window ClassName="ioFrameWndEX" SubClassName="" Id="32" IDName="ID_FRM_BACK_10" MemberName="m_backfrm[10]">
+            <Size X="6" Y="325" Width="105" Height="157" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo>
+                <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fffc8b97" />
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="33" IDName="ID_IMGBTN_ICON_10" MemberName="m_iconbtn[10]">
+                <Size X="12" Y="10" Width="80" Height="84" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverAddImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <PushImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <ToolInfo>
+                        <Event Type="WEVT_LBUTTONUP" Function="OnLClickShopIcon02" />
+                    </ToolInfo>
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="34" IDName="ID_LAB_NAME_10" MemberName="m_namelabel[10]">
+                <Size X="3" Y="108" Width="101" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="사이보그" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="35" IDName="ID_FRM_PRICE_BACK_10" MemberName="m_pricebackfrm[10]">
+                <Size X="6" Y="126" Width="93" Height="24" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt002_brown_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioRichLabel" SubClassName="" Id="106" IDName="" MemberName="m_pricelabel[10]">
+                    <Size X="1" Y="4" Width="90" Height="13" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
+                        <TextBlock Text="9,000" Size="14" Style="Bold" Color="ffffffff" />
+                        <TextBlock Text=" 골드" Size="13" Style="Normal" Color="ffefcb96" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+        </Window>
+        <Window ClassName="ioFrameWndEX" SubClassName="" Id="38" IDName="ID_FRM_BACK_5" MemberName="m_backfrm[5]">
+            <Size X="6" Y="165" Width="105" Height="157" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo>
+                <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fffc8b97" />
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="39" IDName="ID_IMGBTN_ICON_5" MemberName="m_iconbtn[5]">
+                <Size X="12" Y="10" Width="80" Height="84" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverAddImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <PushImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <ToolInfo>
+                        <Event Type="WEVT_LBUTTONUP" Function="OnLClickShopIcon01" />
+                    </ToolInfo>
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="40" IDName="ID_LAB_NAME_5" MemberName="m_namelabel[5]">
+                <Size X="3" Y="108" Width="101" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="사이보그" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="41" IDName="ID_FRM_PRICE_BACK_5" MemberName="m_pricebackfrm[5]">
+                <Size X="6" Y="126" Width="93" Height="24" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt002_brown_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioRichLabel" SubClassName="" Id="101" IDName="" MemberName="m_pricelabel[5]">
+                    <Size X="1" Y="4" Width="90" Height="13" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
+                        <TextBlock Text="9,000" Size="14" Style="Bold" Color="ffffffff" />
+                        <TextBlock Text=" 골드" Size="13" Style="Normal" Color="ffefcb96" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+        </Window>
+        <Window ClassName="ioFrameWndEX" SubClassName="" Id="44" IDName="ID_FRM_BACK_6" MemberName="m_backfrm[6]">
+            <Size X="113" Y="165" Width="105" Height="157" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo>
+                <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fffc8b97" />
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="45" IDName="ID_IMGBTN_ICON_6" MemberName="m_iconbtn[6]">
+                <Size X="12" Y="10" Width="80" Height="84" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverAddImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <PushImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <ToolInfo>
+                        <Event Type="WEVT_LBUTTONUP" Function="OnLClickShopIcon11" />
+                    </ToolInfo>
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="46" IDName="ID_LAB_NAME_6" MemberName="m_namelabel[6]">
+                <Size X="3" Y="108" Width="101" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="사이보그" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="47" IDName="ID_FRM_PRICE_BACK_6" MemberName="m_pricebackfrm[6]">
+                <Size X="6" Y="126" Width="93" Height="24" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt002_brown_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioRichLabel" SubClassName="" Id="102" IDName="" MemberName="m_pricelabel[6]">
+                    <Size X="1" Y="4" Width="90" Height="13" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
+                        <TextBlock Text="9,000" Size="14" Style="Bold" Color="ffffffff" />
+                        <TextBlock Text=" 골드" Size="13" Style="Normal" Color="ffefcb96" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+        </Window>
+        <Window ClassName="ioFrameWndEX" SubClassName="" Id="56" IDName="ID_FRM_BACK_7" MemberName="m_backfrm[7]">
+            <Size X="220" Y="165" Width="105" Height="157" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo>
+                <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fffc8b97" />
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="57" IDName="ID_IMGBTN_ICON_7" MemberName="m_iconbtn[7]">
+                <Size X="12" Y="10" Width="80" Height="84" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverAddImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <PushImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <ToolInfo>
+                        <Event Type="WEVT_LBUTTONUP" Function="OnLClickShopIcon21" />
+                    </ToolInfo>
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="58" IDName="ID_LAB_NAME_7" MemberName="m_namelabel[7]">
+                <Size X="3" Y="108" Width="101" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="사이보그" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="59" IDName="ID_FRM_PRICE_BACK_7" MemberName="m_pricebackfrm[7]">
+                <Size X="6" Y="126" Width="93" Height="24" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt002_brown_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioRichLabel" SubClassName="" Id="103" IDName="" MemberName="m_pricelabel[7]">
+                    <Size X="1" Y="4" Width="90" Height="13" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
+                        <TextBlock Text="9,000" Size="14" Style="Bold" Color="ffffffff" />
+                        <TextBlock Text=" 골드" Size="13" Style="Normal" Color="ffefcb96" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+        </Window>
+        <Window ClassName="ioFrameWndEX" SubClassName="" Id="62" IDName="ID_FRM_BACK_8" MemberName="m_backfrm[8]">
+            <Size X="327" Y="165" Width="105" Height="157" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo>
+                <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fffc8b97" />
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="63" IDName="ID_IMGBTN_ICON_8" MemberName="m_iconbtn[8]">
+                <Size X="12" Y="10" Width="80" Height="84" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverAddImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <PushImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <ToolInfo>
+                        <Event Type="WEVT_LBUTTONUP" Function="OnLClickShopIcon31" />
+                    </ToolInfo>
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="64" IDName="ID_LAB_NAME_8" MemberName="m_namelabel[8]">
+                <Size X="3" Y="108" Width="101" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="사이보그" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="65" IDName="ID_FRM_PRICE_BACK_8" MemberName="m_pricebackfrm[8]">
+                <Size X="6" Y="126" Width="93" Height="24" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt002_brown_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioRichLabel" SubClassName="" Id="104" IDName="" MemberName="m_pricelabel[8]">
+                    <Size X="1" Y="4" Width="90" Height="13" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
+                        <TextBlock Text="9,000" Size="14" Style="Bold" Color="ffffffff" />
+                        <TextBlock Text=" 골드" Size="13" Style="Normal" Color="ffefcb96" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+        </Window>
+        <Window ClassName="ioFrameWndEX" SubClassName="" Id="68" IDName="ID_FRM_BACK_9" MemberName="m_backfrm[9]">
+            <Size X="434" Y="165" Width="105" Height="157" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo>
+                <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fffc8b97" />
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="69" IDName="ID_IMGBTN_ICON_9" MemberName="m_iconbtn[9]">
+                <Size X="12" Y="10" Width="80" Height="84" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverAddImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <PushImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <ToolInfo>
+                        <Event Type="WEVT_LBUTTONUP" Function="OnLClickShopIcon41" />
+                    </ToolInfo>
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="70" IDName="ID_LAB_NAME_9" MemberName="m_namelabel[9]">
+                <Size X="3" Y="108" Width="101" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="사이보그" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="71" IDName="ID_FRM_PRICE_BACK_9" MemberName="m_pricebackfrm[9]">
+                <Size X="6" Y="126" Width="93" Height="24" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt002_brown_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioRichLabel" SubClassName="" Id="105" IDName="" MemberName="m_pricelabel[9]">
+                    <Size X="1" Y="4" Width="90" Height="13" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
+                        <TextBlock Text="9,000" Size="14" Style="Bold" Color="ffffffff" />
+                        <TextBlock Text=" 골드" Size="13" Style="Normal" Color="ffefcb96" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+        </Window>
+        <Window ClassName="ioFrameWndEX" SubClassName="" Id="74" IDName="ID_FRM_BACK_11" MemberName="m_backfrm[11]">
+            <Size X="113" Y="325" Width="105" Height="157" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo>
+                <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fffc8b97" />
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="75" IDName="ID_IMGBTN_ICON_11" MemberName="m_iconbtn[11]">
+                <Size X="12" Y="10" Width="80" Height="84" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverAddImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <PushImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <ToolInfo>
+                        <Event Type="WEVT_LBUTTONUP" Function="OnLClickShopIcon12" />
+                    </ToolInfo>
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="76" IDName="ID_LAB_NAME_11" MemberName="m_namelabel[11]">
+                <Size X="3" Y="108" Width="101" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="사이보그" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="77" IDName="ID_FRM_PRICE_BACK_11" MemberName="m_pricebackfrm[11]">
+                <Size X="6" Y="126" Width="93" Height="24" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt002_brown_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioRichLabel" SubClassName="" Id="107" IDName="" MemberName="m_pricelabel[11]">
+                    <Size X="1" Y="4" Width="90" Height="13" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
+                        <TextBlock Text="9,000" Size="14" Style="Bold" Color="ffffffff" />
+                        <TextBlock Text=" 골드" Size="13" Style="Normal" Color="ffefcb96" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+        </Window>
+        <Window ClassName="ioFrameWndEX" SubClassName="" Id="80" IDName="ID_FRM_BACK_12" MemberName="m_backfrm[12]">
+            <Size X="220" Y="325" Width="105" Height="157" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo>
+                <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fffc8b97" />
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="81" IDName="ID_IMGBTN_ICON_12" MemberName="m_iconbtn[12]">
+                <Size X="12" Y="10" Width="80" Height="84" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverAddImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <PushImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <ToolInfo>
+                        <Event Type="WEVT_LBUTTONUP" Function="OnLClickShopIcon22" />
+                    </ToolInfo>
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="82" IDName="ID_LAB_NAME_12" MemberName="m_namelabel[12]">
+                <Size X="5" Y="108" Width="101" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="사이보그" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="83" IDName="ID_FRM_PRICE_BACK_12" MemberName="m_pricebackfrm[12]">
+                <Size X="6" Y="126" Width="93" Height="24" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt002_brown_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioRichLabel" SubClassName="" Id="108" IDName="" MemberName="m_pricelabel[12]">
+                    <Size X="1" Y="4" Width="90" Height="13" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
+                        <TextBlock Text="9,000" Size="14" Style="Bold" Color="ffffffff" />
+                        <TextBlock Text=" 골드" Size="13" Style="Normal" Color="ffefcb96" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+        </Window>
+        <Window ClassName="ioFrameWndEX" SubClassName="" Id="86" IDName="ID_FRM_BACK_13" MemberName="m_backfrm[13]">
+            <Size X="327" Y="325" Width="105" Height="157" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo>
+                <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fffc8b97" />
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="87" IDName="ID_IMGBTN_ICON_13" MemberName="m_iconbtn[13]">
+                <Size X="12" Y="10" Width="80" Height="84" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverAddImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <PushImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <ToolInfo>
+                        <Event Type="WEVT_LBUTTONUP" Function="OnLClickShopIcon32" />
+                    </ToolInfo>
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="88" IDName="ID_LAB_NAME_13" MemberName="m_namelabel[13]">
+                <Size X="3" Y="108" Width="101" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="사이보그" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="89" IDName="ID_FRM_PRICE_BACK_13" MemberName="m_pricebackfrm[13]">
+                <Size X="6" Y="126" Width="93" Height="24" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt002_brown_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioRichLabel" SubClassName="" Id="109" IDName="" MemberName="m_pricelabel[13]">
+                    <Size X="1" Y="4" Width="90" Height="13" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
+                        <TextBlock Text="9,000" Size="14" Style="Bold" Color="ffffffff" />
+                        <TextBlock Text=" 골드" Size="13" Style="Normal" Color="ffefcb96" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+        </Window>
+        <Window ClassName="ioFrameWndEX" SubClassName="" Id="92" IDName="ID_FRM_BACK_14" MemberName="m_backfrm[14]">
+            <Size X="434" Y="325" Width="105" Height="157" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo>
+                <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="fffc8b97" />
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="93" IDName="ID_IMGBTN_ICON_14" MemberName="m_iconbtn[14]">
+                <Size X="12" Y="10" Width="80" Height="84" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverAddImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <PushImage FileName="" ImageSetName="SoldierIconPack005" ImageName="082f" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <ToolInfo>
+                        <Event Type="WEVT_LBUTTONUP" Function="OnLClickShopIcon42" />
+                    </ToolInfo>
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="94" IDName="ID_LAB_NAME_14" MemberName="m_namelabel[14]">
+                <Size X="3" Y="108" Width="101" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="사이보그" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="95" IDName="ID_FRM_PRICE_BACK_14" MemberName="m_pricebackfrm[14]">
+                <Size X="6" Y="126" Width="93" Height="24" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="bt002_brown_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioRichLabel" SubClassName="" Id="110" IDName="" MemberName="m_pricelabel[14]">
+                    <Size X="1" Y="4" Width="90" Height="13" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
+                        <TextBlock Text="9,000" Size="14" Style="Bold" Color="ffffffff" />
+                        <TextBlock Text=" 골드" Size="13" Style="Normal" Color="ffefcb96" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+        </Window>
+    </Window>
+</Window>

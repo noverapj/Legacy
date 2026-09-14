@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="TournamentBattleInviteWnd" Id="6198">
+	<Size X="0" Y="20" XAlign="Center" YAlign="Rate" Width="355" Height="118"/>
+	<DragRect Left="0" Top="0" Right="355" Bottom="118" />
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_CANMOVE|IWS_AFTER_RENDER</Style> 
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Title>
+		<Format X="177" Y="10" Size="13" Style="Outline_full_2x" HorzAlign="Center"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Text>대회 초대</Text>
+	</Title>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+			<Area X="0" Y="0" Width="355" Height="118"/>
+		</DefaultFrameImagery>		
+		<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title2">
+			<Area X="5" Y="6" Width="345" Height="36"/>
+		</DefaultFrameImagery>
+	</Imagery>
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="12" Y="84" Width="331" Height="22" />
+		<Title>
+			<Format X="165" Y="2" Size="12" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FF323232" Back="FF215AA2"/>
+			<Text>경기장 입장</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="331" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="331" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="331" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="331" Height="22"/>
+			</DefaultFrameImagery>	
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+</Window>

@@ -1,0 +1,29 @@
+<?xml version="1.3"  encoding="euc-kr" ?>
+<CONFIGURATIONS>
+	LOADING 순서가 중요함. 앞에서 먼저 define 되어 있어야 뒤에서 사용 가능.
+	Behavior가 가장 나중에 오게 됨. (모두 다 씀)
+
+	<!-- NPC List : NPC들의 List -->
+	<NPCDB			index="1"	name="NPC DB 1" 	file="xml/ai/npc_ai_npclist.xml"	version="1.0" />
+	
+	<!-- Text List : NPC들이 사용하는 추가적인 텍스트를 정의한다 -->
+	<NPCTEXTDB		index="1"	name="NPC Text 1" 	file="xml/ai/npc_ai_npctext.xml"	version="1.0" />
+	
+	<!-- Appearance List : NPC들의 외형에 사용 될 수 있는 모델들을 정의한다 -->
+	<APPEARANCEDB	index="1"	name="NPC App 1" 	file="xml/ai/npc_ai_appearance.xml"	version="1.0" />
+	
+	<!-- Regular Expressions : using in Symbol table -->
+	<REGEXDB		index="1"	name="Reg Exp 1" 	file="xml/ai/npc_ai_regex.xml"		version="1.0" />
+	
+	<!-- SYMBOL DB : using in NPC Behavior tree generation -->
+	<SYMBOLDB		index="1"	name="SymbolDB 1" 	file="xml/ai/npc_ai_symbol.xml"		version="1.1" />
+	
+	<!-- 중간에 끊기지 않는 행동들은 key sequence 형태로 정의한다. -->
+	<KEYSEQUENCEDB	index="1" 	name="Action Key" 	file="xml/ai/presets/npc_presets_keysequence.xml"	version="1.0" />
+	<KEYSEQUENCEDB  index="2" 	name="Movement"		file="xml/ai/presets/npc_presets_movement.xml" 		version="1.0" />
+	
+	<!-- 중간에 판단이 필요한 행동들은 behavior tree 형태로 정의한다. -->
+	<BEHAVIORTREEDB index="1" 	name="Targeting"	file="xml/ai/presets/npc_presets_targeting.xml"		version="1.0" />
+	<BEHAVIORTREEDB index="2" 	name="Behavior 1"	file="xml/ai/presets/npc_presets_behavior.xml"		version="1.0" />
+
+</CONFIGURATIONS>

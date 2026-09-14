@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="StartingSignalWnd" Id="7110">
+	<Size X="0" Y="0" Width="0" Height="0" XAlign="Center" YAlign="Center"/>
+	<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+	<ExtraInfo FadeInTime="200" FadeOutTime="150" CountGap="500" StartTextTime="500"
+				Sound3Sec="interface/mode/count_3.wav"
+				Sound2Sec="interface/mode/count_2.wav"
+				Sound1Sec="interface/mode/count_1.wav"
+				Sound0Sec="interface/mode/count_0_start.wav"/>
+	<Imagery>
+		<Image Type="Count" Imageset="BaseImage040" Image="con0_raidcount_count">
+			<Area X="0" Y="-148"/>
+		</Image>
+		<Image Type="Text_1" Imageset="BaseImage040" Image="icon0_raidcount1"/>
+		<Image Type="Text_2" Imageset="BaseImage040" Image="icon0_raidcount2"/>
+		<Image Type="Text_3" Imageset="BaseImage040" Image="icon0_raidcount3"/>
+		<Image Type="StartText" Imageset="BaseImage040" Image="icon0_raidcount_go"/>
+	</Imagery>
+</Window>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="ioObserverInfoWnd" Id="5065">
+	<Size X="0" Y="0" XAlign="Center" YAlign="Center" Width="0" Height="0" />
+	<Style>IWS_PROCESS|IWS_START_HIDE</Style>
+	<ExtraInfo Desc1="옵저버 모드 입니다. (SPACE로 관전모드 전환 가능)"
+             Desc2="A키 : 상승 / S키 하강 / 방향키 이동"
+			 Desc3="관전 모드 입니다. (SPACE로 옵저버모드 전환 가능)"
+			 Desc4="A키 : 영화모드 / S키 시점 변경"
+             ShowTime="2000"
+             BlinkTime="50"
+             BlinkCount="2"/>
+	<Imagery>
+		<Image Type="Back" Imageset="BaseImage002" Image="iconeffect_8" />
+	</Imagery>
+</Window>

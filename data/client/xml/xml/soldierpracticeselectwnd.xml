@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="SoldierPracticeSelectWnd" Id="6068">
+	<Size X="0" Y="-20" XAlign="Center" YAlign="Center" Width="386" Height="410"/>
+	<DragRect Left="0" Top="0" Right="386" Bottom="410" />
+	<Style>IWS_START_HIDE|IWS_PROCESS|IWS_CANMOVE|IWS_EXIT_ESC</Style>
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Title>
+		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Text>훈련 용병 선택</Text>
+	</Title>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+			<Area X="0" Y="0" Width="386" Height="410"/>
+		</DefaultFrameImagery>		
+		<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title">
+			<Area X="5" Y="6" Width="376" Height="36"/>
+		</DefaultFrameImagery>
+	</Imagery>
+ 	<ExtraInfo MaxClass    = "30" 
+	                ClassType1 = "78" 
+		        ClassType2 = "79"
+                 	ClassType3 = "86"
+                 	ClassType4 = "88"
+                 	ClassType5 = "91"
+                 	ClassType6 = "96"
+                 	ClassType7 = "99"
+                 	ClassType8 = "102"
+		 	ClassType9 = "105"
+		 	ClassType10 = "106"
+		 	ClassType11 = "107"
+		 	ClassType12 = "109"
+		 	ClassType13 = "111"
+			ClassType14 = "113"
+			ClassType15 = "114"
+ 			ClassType16 = "115"
+			ClassType17 = "117"
+			ClassType18 = "118"
+			ClassType19 = "121"
+			ClassType20 = "124"
+			ClassType21 = "126"
+			ClassType22 = "129"
+			ClassType23 = "130"
+			ClassType24 = "134"
+			ClassType25 = "135"
+			ClassType26 = "137"
+			ClassType27 = "140"
+			ClassType28 = "146"
+			ClassType29 = "147"
+			ClassType30 = "150"/>
+
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="352" Y="11" Width="23" Height="23"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+                        <Image Type="Disable" Imageset="BaseImage001" Image="icon0_x_grayframe" >
+				<Area X="0" Y="0" />
+			</Image>
+                        <Image Type="NormalList" Imageset="BaseImage001" Image="icon0_x" >
+				<Area X="5" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="2">
+		<Size X="134" Y="380" Width="44" Height="18" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="44" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="44" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="44" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="44" Height="18"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_left" >
+				<Area X="18" Y="4"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="3">
+		<Size X="207" Y="380" Width="44" Height="18" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="44" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="44" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="44" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="44" Height="18"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_left" >
+				<Area X="18" Y="4" Reverse="Horz"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SoldierPracticeSelectBtn" Id="100">
+		<Size X="0" Y="0" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="CustomNormal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CustomOver" Templete="tooltip3">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+
+			<Image Type="None" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SoldierPracticeSelectBtn" Id="101">
+		<Size X="0" Y="0" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="CustomNormal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CustomOver" Templete="tooltip3">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+
+			<Image Type="None" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SoldierPracticeSelectBtn" Id="102">
+		<Size X="0" Y="0" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="CustomNormal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CustomOver" Templete="tooltip3">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+
+			<Image Type="None" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SoldierPracticeSelectBtn" Id="103">
+		<Size X="0" Y="0" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="CustomNormal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CustomOver" Templete="tooltip3">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+
+			<Image Type="None" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SoldierPracticeSelectBtn" Id="104">
+		<Size X="0" Y="0" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="CustomNormal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CustomOver" Templete="tooltip3">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+
+			<Image Type="None" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SoldierPracticeSelectBtn" Id="105">
+		<Size X="0" Y="0" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="CustomNormal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CustomOver" Templete="tooltip3">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+
+			<Image Type="None" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SoldierPracticeSelectBtn" Id="106">
+		<Size X="0" Y="0" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="CustomNormal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CustomOver" Templete="tooltip3">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+
+			<Image Type="None" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SoldierPracticeSelectBtn" Id="107">
+		<Size X="0" Y="0" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="CustomNormal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CustomOver" Templete="tooltip3">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+
+			<Image Type="None" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SoldierPracticeSelectBtn" Id="108">
+		<Size X="0" Y="0" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="CustomNormal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CustomOver" Templete="tooltip3">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+
+			<Image Type="None" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SoldierPracticeSelectBtn" Id="109">
+		<Size X="0" Y="0" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="CustomNormal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CustomOver" Templete="tooltip3">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+
+			<Image Type="None" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SoldierPracticeSelectBtn" Id="110">
+		<Size X="0" Y="0" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="CustomNormal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CustomOver" Templete="tooltip3">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+
+			<Image Type="None" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SoldierPracticeSelectBtn" Id="111">
+		<Size X="0" Y="0" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="CustomNormal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CustomOver" Templete="tooltip3">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+
+			<Image Type="None" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SoldierPracticeSelectBtn" Id="112">
+		<Size X="0" Y="0" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="CustomNormal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CustomOver" Templete="tooltip3">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+
+			<Image Type="None" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SoldierPracticeSelectBtn" Id="113">
+		<Size X="0" Y="0" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="CustomNormal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CustomOver" Templete="tooltip3">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+
+			<Image Type="None" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SoldierPracticeSelectBtn" Id="114">
+		<Size X="0" Y="0" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="CustomNormal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CustomOver" Templete="tooltip3">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+
+			<Image Type="None" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SoldierPracticeSelectBtn" Id="115">
+		<Size X="0" Y="0" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="CustomNormal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CustomOver" Templete="tooltip3">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+
+			<Image Type="None" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SoldierPracticeSelectBtn" Id="116">
+		<Size X="0" Y="0" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="CustomNormal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CustomOver" Templete="tooltip3">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+
+			<Image Type="None" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SoldierPracticeSelectBtn" Id="117">
+		<Size X="0" Y="0" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="CustomNormal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CustomOver" Templete="tooltip3">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+
+			<Image Type="None" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SoldierPracticeSelectBtn" Id="118">
+		<Size X="0" Y="0" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="CustomNormal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CustomOver" Templete="tooltip3">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+
+			<Image Type="None" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SoldierPracticeSelectBtn" Id="119">
+		<Size X="0" Y="0" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="CustomNormal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CustomOver" Templete="tooltip3">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+
+			<Image Type="None" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SoldierPracticeSelectBtn" Id="120">
+		<Size X="0" Y="0" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="CustomNormal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CustomOver" Templete="tooltip3">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+
+			<Image Type="None" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SoldierPracticeSelectBtn" Id="121">
+		<Size X="0" Y="0" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="CustomNormal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CustomOver" Templete="tooltip3">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+
+			<Image Type="None" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SoldierPracticeSelectBtn" Id="122">
+		<Size X="0" Y="0" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="CustomNormal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CustomOver" Templete="tooltip3">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+
+			<Image Type="None" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SoldierPracticeSelectBtn" Id="123">
+		<Size X="0" Y="0" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="CustomNormal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CustomOver" Templete="tooltip3">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+
+			<Image Type="None" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SoldierPracticeSelectBtn" Id="124">
+		<Size X="0" Y="0" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="CustomNormal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CustomOver" Templete="tooltip3">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+
+			<Image Type="None" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SoldierPracticeSelectBtn" Id="125">
+		<Size X="0" Y="0" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="CustomNormal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CustomOver" Templete="tooltip3">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+
+			<Image Type="None" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SoldierPracticeSelectBtn" Id="126">
+		<Size X="0" Y="0" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="CustomNormal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CustomOver" Templete="tooltip3">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+
+			<Image Type="None" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SoldierPracticeSelectBtn" Id="127">
+		<Size X="0" Y="0" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="CustomNormal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CustomOver" Templete="tooltip3">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+
+			<Image Type="None" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SoldierPracticeSelectBtn" Id="128">
+		<Size X="0" Y="0" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="CustomNormal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CustomOver" Templete="tooltip3">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+
+			<Image Type="None" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SoldierPracticeSelectBtn" Id="129">
+		<Size X="0" Y="0" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="CustomNormal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CustomOver" Templete="tooltip3">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+
+			<Image Type="None" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+</Window>

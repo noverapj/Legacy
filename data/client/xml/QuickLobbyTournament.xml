@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+<Window ClassName="QuickLobbyTournament" SubClassName="ioImageWndEX" Id="1" IDName="" MemberName="">
+    <Size X="21" Y="86" Width="209" Height="133" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+    <Style>IWS_START_HIDE|IWS_EXIT_ESC|IWS_PROCESS</Style>
+    <ExStyle>IWS_EX_SHOW_HIDE_ACTION=EXWP_SCALE_TOP</ExStyle>
+    <Imagery />
+    <ExtraInfo>
+        <ImageInfo FileName="BaseImage030#window_popup" ImageSetName="BaseImage030" ImageName="window_popup" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" NoMagicAlign="false" Color="ffffffff" />
+        <ToolInfo />
+    </ExtraInfo>
+    <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="2" IDName="ID_CAMP_BTN" MemberName="">
+        <Size X="13" Y="23" Width="90" Height="96" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+        <Imagery />
+        <ExtraInfo ButtonType="0">
+            <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+            <NormalImage FileName="BaseImage030#bt007_nor" ImageSetName="BaseImage030" ImageName="bt007_nor" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+            <OverImage FileName="BaseImage030#bt007_over" ImageSetName="BaseImage030" ImageName="bt007_over" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+            <OverAddImage FileName="BaseImage030#bt007_over" ImageSetName="BaseImage030" ImageName="bt007_over" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+            <PushImage FileName="BaseImage030#bt007_down" ImageSetName="BaseImage030" ImageName="bt007_down" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+            <ToolInfo>
+                <Event Type="WEVT_LBUTTONUP" Function="OnCampMainLButtonUp" />
+            </ToolInfo>
+        </ExtraInfo>
+    </Window>
+    <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="3" IDName="ID_TOURNAMENT_BTN" MemberName="">
+        <Size X="104" Y="23" Width="90" Height="96" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+        <Imagery />
+        <ExtraInfo ButtonType="0">
+            <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+            <NormalImage FileName="BaseImage030#bt008_nor" ImageSetName="BaseImage030" ImageName="bt008_nor" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+            <OverImage FileName="BaseImage030#bt008_over" ImageSetName="BaseImage030" ImageName="bt008_over" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+            <OverAddImage FileName="BaseImage030#bt008_over" ImageSetName="BaseImage030" ImageName="bt008_over" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+            <PushImage FileName="BaseImage030#bt008_down" ImageSetName="BaseImage030" ImageName="bt008_down" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+            <ToolInfo>
+                <Event Type="WEVT_LBUTTONUP" Function="OnTournamentLButtonUp" />
+            </ToolInfo>
+        </ExtraInfo>
+    </Window>
+    <Window ClassName="ioFrameWndEX" SubClassName="" Id="4" IDName="CAMP_PROGRESS" MemberName="">
+        <Size X="38" Y="71" Width="40" Height="16" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+        <Style>IWS_START_HIDE|IWS_NO_MOUSE_RESPONSE</Style>
+        <Imagery />
+        <ExtraInfo>
+            <FrameInfo Template="state_green" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+            <ToolInfo />
+        </ExtraInfo>
+        <Window ClassName="ioLabelWndEX" SubClassName="" Id="10" IDName="" MemberName="">
+            <Size X="0" Y="0" Width="40" Height="16" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                <LabelInfo Text="진행중" Size="11" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                <ToolInfo />
+            </ExtraInfo>
+        </Window>
+    </Window>
+    <Window ClassName="ioFrameWndEX" SubClassName="" Id="5" IDName="CAMP_UNPROGRESS" MemberName="">
+        <Size X="38" Y="71" Width="40" Height="16" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+        <Style>IWS_START_HIDE|IWS_NO_MOUSE_RESPONSE</Style>
+        <Imagery />
+        <ExtraInfo>
+            <FrameInfo Template="state_red" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+            <ToolInfo />
+        </ExtraInfo>
+        <Window ClassName="ioLabelWndEX" SubClassName="" Id="11" IDName="" MemberName="">
+            <Size X="0" Y="0" Width="40" Height="16" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                <LabelInfo Text="휴식중" Size="11" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                <ToolInfo />
+            </ExtraInfo>
+        </Window>
+    </Window>
+    <Window ClassName="ioFrameWndEX" SubClassName="" Id="6" IDName="TOUR_REST" MemberName="">
+        <Size X="129" Y="71" Width="40" Height="16" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+        <Style>IWS_START_HIDE|IWS_NO_MOUSE_RESPONSE</Style>
+        <Imagery />
+        <ExtraInfo>
+            <FrameInfo Template="state_green" RenderType="2" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+            <ToolInfo />
+        </ExtraInfo>
+        <Window ClassName="ioLabelWndEX" SubClassName="" Id="12" IDName="" MemberName="">
+            <Size X="0" Y="0" Width="40" Height="16" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                <LabelInfo Text="휴식중" Size="11" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                <ToolInfo />
+            </ExtraInfo>
+        </Window>
+    </Window>
+    <Window ClassName="ioFrameWndEX" SubClassName="" Id="7" IDName="TOUR_APP" MemberName="">
+        <Size X="129" Y="71" Width="40" Height="16" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+        <Style>IWS_START_HIDE|IWS_NO_MOUSE_RESPONSE</Style>
+        <Imagery />
+        <ExtraInfo>
+            <FrameInfo Template="state_orange" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+            <ToolInfo />
+        </ExtraInfo>
+        <Window ClassName="ioLabelWndEX" SubClassName="" Id="13" IDName="" MemberName="">
+            <Size X="0" Y="0" Width="40" Height="16" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                <LabelInfo Text="모집중" Size="11" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                <ToolInfo />
+            </ExtraInfo>
+        </Window>
+    </Window>
+    <Window ClassName="ioFrameWndEX" SubClassName="" Id="8" IDName="TOUR_CHEER" MemberName="">
+        <Size X="129" Y="71" Width="40" Height="16" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+        <Style>IWS_START_HIDE|IWS_NO_MOUSE_RESPONSE</Style>
+        <Imagery />
+        <ExtraInfo>
+            <FrameInfo Template="state_pink" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+            <ToolInfo />
+        </ExtraInfo>
+        <Window ClassName="ioLabelWndEX" SubClassName="" Id="14" IDName="" MemberName="">
+            <Size X="0" Y="0" Width="40" Height="16" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                <LabelInfo Text="응원중" Size="11" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                <ToolInfo />
+            </ExtraInfo>
+        </Window>
+    </Window>
+    <Window ClassName="ioFrameWndEX" SubClassName="" Id="9" IDName="TOUR_BATTLE" MemberName="">
+        <Size X="129" Y="71" Width="40" Height="16" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+        <Style>IWS_START_HIDE|IWS_NO_MOUSE_RESPONSE</Style>
+        <Imagery />
+        <ExtraInfo>
+            <FrameInfo Template="state_green" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+            <ToolInfo />
+        </ExtraInfo>
+        <Window ClassName="ioLabelWndEX" SubClassName="" Id="15" IDName="" MemberName="">
+            <Size X="0" Y="0" Width="40" Height="16" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                <LabelInfo Text="대회중" Size="11" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                <ToolInfo />
+            </ExtraInfo>
+        </Window>
+    </Window>
+</Window>

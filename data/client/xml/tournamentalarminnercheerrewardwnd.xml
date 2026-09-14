@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="TournamentAlarmCheerRewardWnd" Id="12">
+	<Size X="401" Y="58" Width="186" Height="382" />
+	<Style>IWS_BACKMOST</Style>
+	<Imagery>
+		<Image Type="DevideStrip" Imageset="BaseImage001" Image="strip_gray_dark">
+  	  <Area X="6" Y="236" Width="174" Height="2" HorzAlign="Stretch" RenderType="Multiply" />
+	  </Image>
+    <Image Type="PresentBack" Imageset="BaseImage002" Image="iconeffect_1">
+      <Area X="30" Y="320"/>
+    </Image>
+    <Image Type="PresentNone" Imageset="BaseImage002" Image="quest_giftbox_x">
+      <Area X="30" Y="320"/>
+    </Image>
+    <Image Type="PresentPeso" Imageset="UIIconPack8" Image="camp_gold">
+      <Area X="30" Y="320"/>
+    </Image>
+    <Image Type="BackCircle" Imageset="BaseImage002" Image="iconeffect_4">
+      <Area X="93" Y="167" RenderType="Multiply"/>
+    </Image>
+    <Image Type="BackHub" Imageset="BaseImage002" Image="iconeffect_3">
+      <Area X="93" Y="167" RenderType="Multiply"/>
+    </Image>
+		<Image Type="CheerReward" Imageset="UIIconPack19" Image="quest_257">
+ 			<Area X="93" Y="167" />
+  	</Image>  	
+  </Imagery>
+  <ExtraInfo DevideOffsetX="0.0f" DevideOffsetY="18.0f" DevideHorzCnt="1" DevideVertCnt="4" 
+   PresentOffsetX="42.0f" PresentScaleRate="0.55f" PresentBackCnt="4" /> 
+</Window>

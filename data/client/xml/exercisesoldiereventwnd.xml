@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="ExerciseSoldierEventWnd" Id="6112">
+    <!-- Width은 소스에서 결정 -->
+	<Size X="0" Y="0" Width="600" Height="71" />
+	<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame80">
+			<Area X="0" Y="0" Width="600" Height="71"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="LeftFrm" Templete="win1_multiply_left">
+			<Area X="0" Y="0" Width="88" Height="71"/>
+		</DefaultFrameImagery>
+	</Imagery>
+	<ExtraInfo MaxClass  = "0" 
+		       ClassType1= "2" 
+		       ClassType2= "19"
+		       ClassType3= "13"
+		       ClassType4= "18" />
+	
+	<!--////////////////////////// scroll /////////////////////////////////////////////-->
+	<Window ClassName="ioScroll" Id="1001">
+		<Size X="-32" Y="7" Width="15" Height="57" />
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_VSCROLL</ExStyle>
+		<Imagery>
+			<DefaultFrameImagery Templete="scrollbar_back">
+				<Area X="5" Y="10" Width="5" Height="37"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo PageRange="1" StartTime="500" CurTime ="100"/>
+
+		<Window ClassName="ioButton" Id="1">
+			<Size X="0" Y="0" Width="15" Height="10" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0" Reverse="Vert"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0" Reverse="Vert"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0" Reverse="Vert"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>					
+		</Window>
+		<Window ClassName="ioButton" Id="2">
+			<Size X="0" Y="47" Width="15" Height="10" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>					
+		</Window>
+		<Window ClassName="ioSlide" Id="3">
+			<Size X="0" Y="10" Width="15" Height="30" />
+			<DragRect Left="0" Top="0" Right="15" Bottom="30" />
+			<ExStyle>IWS_EX_NOTIFY_MOVED</ExStyle>
+			<Style>IWS_CANMOVE</Style>
+			<Imagery>
+				<DefaultFrameImagery Templete="scrollbar_drag">
+					<Area X="0" Y="0" Width="15" Height="30"/>
+				</DefaultFrameImagery>
+				<Image Type="Icon_Slide" Imageset="BaseImage001" Image="scrollbar_drag_icon"/>
+			</Imagery>
+		</Window>
+	</Window>
+		
+	<!--////////////////////////// btn /////////////////////////////////////////////-->
+	<Window ClassName="SoldierExerciseBtn" Id="101">
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<ExStyle>IWS_EX_OVER_SCREEN|IWS_EX_PUSH_SCREEN</ExStyle>
+		<Size X="99" Y="6" Width="60" Height="60"/>
+		<Title>
+			<Format X="39" Y="39" Size="18" Style="Outline_full_2x" HorzAlign="Center" VertAlign="Center"/>
+			<Color Type="Normal" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Over" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Push" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+		</Title>
+		<Imagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+		</Imagery>
+		<ExtraInfo UseArrow          = "false"
+		           DownHeight        = "10"
+		           OverSound         = "interface/public_mouseover_00.wav"
+		           ClickSound        = "interface/public_mouseclick_00.wav"
+		           NewEffectWaitTime = "250" />
+	</Window>
+	
+	<Window ClassName="SoldierExerciseBtn" Id="102">
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<ExStyle>IWS_EX_OVER_SCREEN|IWS_EX_PUSH_SCREEN</ExStyle>
+		<Size X="159" Y="6" Width="60" Height="60"/>
+		<Title>
+			<Format X="39" Y="39" Size="18" Style="Outline_full_2x" HorzAlign="Center" VertAlign="Center"/>
+			<Color Type="Normal" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Over" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Push" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+		</Title>
+		<Imagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+		</Imagery>
+		<ExtraInfo UseArrow          = "false"
+		           DownHeight        = "10"
+		           OverSound         = "interface/public_mouseover_00.wav"
+		           ClickSound        = "interface/public_mouseclick_00.wav"
+		           NewEffectWaitTime = "250" />
+	</Window>
+	
+	<Window ClassName="SoldierExerciseBtn" Id="103">
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<ExStyle>IWS_EX_OVER_SCREEN|IWS_EX_PUSH_SCREEN</ExStyle>
+		<Size X="219" Y="6" Width="60" Height="60"/>
+		<Title>
+			<Format X="39" Y="39" Size="18" Style="Outline_full_2x" HorzAlign="Center" VertAlign="Center"/>
+			<Color Type="Normal" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Over" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Push" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+		</Title>
+		<Imagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+		</Imagery>
+		<ExtraInfo UseArrow          = "false"
+		           DownHeight        = "10"
+		           OverSound         = "interface/public_mouseover_00.wav"
+		           ClickSound        = "interface/public_mouseclick_00.wav"
+		           NewEffectWaitTime = "250" />
+	</Window>
+	
+	<Window ClassName="SoldierExerciseBtn" Id="104">
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<ExStyle>IWS_EX_OVER_SCREEN|IWS_EX_PUSH_SCREEN</ExStyle>
+		<Size X="279" Y="6" Width="60" Height="60"/>
+		<Title>
+			<Format X="39" Y="39" Size="18" Style="Outline_full_2x" HorzAlign="Center" VertAlign="Center"/>
+			<Color Type="Normal" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Over" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Push" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+		</Title>
+		<Imagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+		</Imagery>
+		<ExtraInfo UseArrow          = "false"
+		           DownHeight        = "10"
+		           OverSound         = "interface/public_mouseover_00.wav"
+		           ClickSound        = "interface/public_mouseclick_00.wav"
+		           NewEffectWaitTime = "250" />
+	</Window>
+	
+	<Window ClassName="SoldierExerciseBtn" Id="105">
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<ExStyle>IWS_EX_OVER_SCREEN|IWS_EX_PUSH_SCREEN</ExStyle>
+		<Size X="339" Y="6" Width="60" Height="60"/>
+		<Title>
+			<Format X="39" Y="39" Size="18" Style="Outline_full_2x" HorzAlign="Center" VertAlign="Center"/>
+			<Color Type="Normal" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Over" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Push" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+		</Title>
+		<Imagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+		</Imagery>
+		<ExtraInfo UseArrow          = "false"
+		           DownHeight        = "10"
+		           OverSound         = "interface/public_mouseover_00.wav"
+		           ClickSound        = "interface/public_mouseclick_00.wav"
+		           NewEffectWaitTime = "250" />
+	</Window>
+	
+	<Window ClassName="SoldierExerciseBtn" Id="106">
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<ExStyle>IWS_EX_OVER_SCREEN|IWS_EX_PUSH_SCREEN</ExStyle>
+		<Size X="399" Y="6" Width="60" Height="60"/>
+		<Title>
+			<Format X="39" Y="39" Size="18" Style="Outline_full_2x" HorzAlign="Center" VertAlign="Center"/>
+			<Color Type="Normal" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Over" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Push" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+		</Title>
+		<Imagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+		</Imagery>
+		<ExtraInfo UseArrow          = "false"
+		           DownHeight        = "10"
+		           OverSound         = "interface/public_mouseover_00.wav"
+		           ClickSound        = "interface/public_mouseclick_00.wav"
+		           NewEffectWaitTime = "250" />
+	</Window>
+	
+	<Window ClassName="SoldierExerciseBtn" Id="107">
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<ExStyle>IWS_EX_OVER_SCREEN|IWS_EX_PUSH_SCREEN</ExStyle>
+		<Size X="459" Y="6" Width="60" Height="60"/>
+		<Title>
+			<Format X="39" Y="39" Size="18" Style="Outline_full_2x" HorzAlign="Center" VertAlign="Center"/>
+			<Color Type="Normal" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Over" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Push" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+		</Title>
+		<Imagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+		</Imagery>
+		<ExtraInfo UseArrow          = "false"
+		           DownHeight        = "10"
+		           OverSound         = "interface/public_mouseover_00.wav"
+		           ClickSound        = "interface/public_mouseclick_00.wav"
+		           NewEffectWaitTime = "250" />
+	</Window>
+	
+	<Window ClassName="SoldierExerciseBtn" Id="108">
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<ExStyle>IWS_EX_OVER_SCREEN|IWS_EX_PUSH_SCREEN</ExStyle>
+		<Size X="519" Y="6" Width="60" Height="60"/>
+		<Title>
+			<Format X="39" Y="39" Size="18" Style="Outline_full_2x" HorzAlign="Center" VertAlign="Center"/>
+			<Color Type="Normal" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Over" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Push" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+		</Title>
+		<Imagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+		</Imagery>
+		<ExtraInfo UseArrow          = "false"
+		           DownHeight        = "10"
+		           OverSound         = "interface/public_mouseover_00.wav"
+		           ClickSound        = "interface/public_mouseclick_00.wav"
+		           NewEffectWaitTime = "250" />
+	</Window>
+	
+	<Window ClassName="SoldierExerciseBtn" Id="109">
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<ExStyle>IWS_EX_OVER_SCREEN|IWS_EX_PUSH_SCREEN</ExStyle>
+		<Size X="579" Y="6" Width="60" Height="60"/>
+		<Title>
+			<Format X="39" Y="39" Size="18" Style="Outline_full_2x" HorzAlign="Center" VertAlign="Center"/>
+			<Color Type="Normal" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Over" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Push" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+		</Title>
+		<Imagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+		</Imagery>
+		<ExtraInfo UseArrow          = "false"
+		           DownHeight        = "10"
+		           OverSound         = "interface/public_mouseover_00.wav"
+		           ClickSound        = "interface/public_mouseclick_00.wav"
+		           NewEffectWaitTime = "250" />
+	</Window>
+	
+	<Window ClassName="SoldierExerciseBtn" Id="110">
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<ExStyle>IWS_EX_OVER_SCREEN|IWS_EX_PUSH_SCREEN</ExStyle>
+		<Size X="639" Y="6" Width="60" Height="60"/>
+		<Title>
+			<Format X="39" Y="39" Size="18" Style="Outline_full_2x" HorzAlign="Center" VertAlign="Center"/>
+			<Color Type="Normal" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Over" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Push" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+		</Title>
+		<Imagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+		</Imagery>
+		<ExtraInfo UseArrow          = "false"
+		           DownHeight        = "10"
+		           OverSound         = "interface/public_mouseover_00.wav"
+		           ClickSound        = "interface/public_mouseclick_00.wav"
+		           NewEffectWaitTime = "250" />
+	</Window>
+	
+	<Window ClassName="SoldierExerciseBtn" Id="111">
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<ExStyle>IWS_EX_OVER_SCREEN|IWS_EX_PUSH_SCREEN</ExStyle>
+		<Size X="699" Y="6" Width="60" Height="60"/>
+		<Title>
+			<Format X="39" Y="39" Size="18" Style="Outline_full_2x" HorzAlign="Center" VertAlign="Center"/>
+			<Color Type="Normal" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Over" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Push" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+		</Title>
+		<Imagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+		</Imagery>
+		<ExtraInfo UseArrow          = "false"
+		           DownHeight        = "10"
+		           OverSound         = "interface/public_mouseover_00.wav"
+		           ClickSound        = "interface/public_mouseclick_00.wav"
+		           NewEffectWaitTime = "250" />
+	</Window>
+	
+	<Window ClassName="SoldierExerciseBtn" Id="112">
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<ExStyle>IWS_EX_OVER_SCREEN|IWS_EX_PUSH_SCREEN</ExStyle>
+		<Size X="759" Y="6" Width="60" Height="60"/>
+		<Title>
+			<Format X="39" Y="39" Size="18" Style="Outline_full_2x" HorzAlign="Center" VertAlign="Center"/>
+			<Color Type="Normal" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Over" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Push" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+		</Title>
+		<Imagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+		</Imagery>
+		<ExtraInfo UseArrow          = "false"
+		           DownHeight        = "10"
+		           OverSound         = "interface/public_mouseover_00.wav"
+		           ClickSound        = "interface/public_mouseclick_00.wav"
+		           NewEffectWaitTime = "250" />
+	</Window>
+	
+	<Window ClassName="SoldierExerciseBtn" Id="113">
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<ExStyle>IWS_EX_OVER_SCREEN|IWS_EX_PUSH_SCREEN</ExStyle>
+		<Size X="819" Y="6" Width="60" Height="60"/>
+		<Title>
+			<Format X="39" Y="39" Size="18" Style="Outline_full_2x" HorzAlign="Center" VertAlign="Center"/>
+			<Color Type="Normal" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Over" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Push" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+		</Title>
+		<Imagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+		</Imagery>
+		<ExtraInfo UseArrow          = "false"
+		           DownHeight        = "10"
+		           OverSound         = "interface/public_mouseover_00.wav"
+		           ClickSound        = "interface/public_mouseclick_00.wav"
+		           NewEffectWaitTime = "250" />
+	</Window>
+	
+	<Window ClassName="SoldierExerciseBtn" Id="114">
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<ExStyle>IWS_EX_OVER_SCREEN|IWS_EX_PUSH_SCREEN</ExStyle>
+		<Size X="879" Y="6" Width="60" Height="60"/>
+		<Title>
+			<Format X="39" Y="39" Size="18" Style="Outline_full_2x" HorzAlign="Center" VertAlign="Center"/>
+			<Color Type="Normal" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Over" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Push" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+		</Title>
+		<Imagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+		</Imagery>
+		<ExtraInfo UseArrow          = "false"
+		           DownHeight        = "10"
+		           OverSound         = "interface/public_mouseover_00.wav"
+		           ClickSound        = "interface/public_mouseclick_00.wav"
+		           NewEffectWaitTime = "250" />
+	</Window>
+	
+	<Window ClassName="SoldierExerciseBtn" Id="115">
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<ExStyle>IWS_EX_OVER_SCREEN|IWS_EX_PUSH_SCREEN</ExStyle>
+		<Size X="939" Y="6" Width="60" Height="60"/>
+		<Title>
+			<Format X="39" Y="39" Size="18" Style="Outline_full_2x" HorzAlign="Center" VertAlign="Center"/>
+			<Color Type="Normal" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Over" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Push" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+		</Title>
+		<Imagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+		</Imagery>
+		<ExtraInfo UseArrow          = "false"
+		           DownHeight        = "10"
+		           OverSound         = "interface/public_mouseover_00.wav"
+		           ClickSound        = "interface/public_mouseclick_00.wav"
+		           NewEffectWaitTime = "250" />
+	</Window>
+	
+	<Window ClassName="SoldierExerciseBtn" Id="116">
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<ExStyle>IWS_EX_OVER_SCREEN|IWS_EX_PUSH_SCREEN</ExStyle>
+		<Size X="999" Y="6" Width="60" Height="60"/>
+		<Title>
+			<Format X="39" Y="39" Size="18" Style="Outline_full_2x" HorzAlign="Center" VertAlign="Center"/>
+			<Color Type="Normal" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Over" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Push" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+		</Title>
+		<Imagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+		</Imagery>
+		<ExtraInfo UseArrow          = "false"
+		           DownHeight        = "10"
+		           OverSound         = "interface/public_mouseover_00.wav"
+		           ClickSound        = "interface/public_mouseclick_00.wav"
+		           NewEffectWaitTime = "250" />
+	</Window>
+	
+	
+	<Window ClassName="SoldierExerciseBtn" Id="117">
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<ExStyle>IWS_EX_OVER_SCREEN|IWS_EX_PUSH_SCREEN</ExStyle>
+		<Size X="1059" Y="6" Width="60" Height="60"/>
+		<Title>
+			<Format X="39" Y="39" Size="18" Style="Outline_full_2x" HorzAlign="Center" VertAlign="Center"/>
+			<Color Type="Normal" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Over" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Push" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+		</Title>
+		<Imagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+		</Imagery>
+		<ExtraInfo UseArrow          = "false"
+		           DownHeight        = "10"
+		           OverSound         = "interface/public_mouseover_00.wav"
+		           ClickSound        = "interface/public_mouseclick_00.wav"
+		           NewEffectWaitTime = "250" />
+	</Window>
+	
+	<Window ClassName="SoldierExerciseBtn" Id="118">
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<ExStyle>IWS_EX_OVER_SCREEN|IWS_EX_PUSH_SCREEN</ExStyle>
+		<Size X="1119" Y="6" Width="60" Height="60"/>
+		<Title>
+			<Format X="39" Y="39" Size="18" Style="Outline_full_2x" HorzAlign="Center" VertAlign="Center"/>
+			<Color Type="Normal" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Over" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Push" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+		</Title>
+		<Imagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+		</Imagery>
+		<ExtraInfo UseArrow          = "false"
+		           DownHeight        = "10"
+		           OverSound         = "interface/public_mouseover_00.wav"
+		           ClickSound        = "interface/public_mouseclick_00.wav"
+		           NewEffectWaitTime = "250" />
+	</Window>
+	
+	<Window ClassName="SoldierExerciseBtn" Id="119">
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<ExStyle>IWS_EX_OVER_SCREEN|IWS_EX_PUSH_SCREEN</ExStyle>
+		<Size X="1179" Y="6" Width="60" Height="60"/>
+		<Title>
+			<Format X="39" Y="39" Size="18" Style="Outline_full_2x" HorzAlign="Center" VertAlign="Center"/>
+			<Color Type="Normal" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Over" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Push" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+		</Title>
+		<Imagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+		</Imagery>
+		<ExtraInfo UseArrow          = "false"
+		           DownHeight        = "10"
+		           OverSound         = "interface/public_mouseover_00.wav"
+		           ClickSound        = "interface/public_mouseclick_00.wav"
+		           NewEffectWaitTime = "250" />
+	</Window>
+	
+	<Window ClassName="SoldierExerciseBtn" Id="120">
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<ExStyle>IWS_EX_OVER_SCREEN|IWS_EX_PUSH_SCREEN</ExStyle>
+		<Size X="1239" Y="6" Width="60" Height="60"/>
+		<Title>
+			<Format X="39" Y="39" Size="18" Style="Outline_full_2x" HorzAlign="Center" VertAlign="Center"/>
+			<Color Type="Normal" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Over" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Push" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+		</Title>
+		<Imagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+		</Imagery>
+		<ExtraInfo UseArrow          = "false"
+		           DownHeight        = "10"
+		           OverSound         = "interface/public_mouseover_00.wav"
+		           ClickSound        = "interface/public_mouseclick_00.wav"
+		           NewEffectWaitTime = "250" />
+	</Window>
+	
+	<Window ClassName="SoldierExerciseBtn" Id="121">
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<ExStyle>IWS_EX_OVER_SCREEN|IWS_EX_PUSH_SCREEN</ExStyle>
+		<Size X="1299" Y="6" Width="60" Height="60"/>
+		<Title>
+			<Format X="39" Y="39" Size="18" Style="Outline_full_2x" HorzAlign="Center" VertAlign="Center"/>
+			<Color Type="Normal" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Over" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Push" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+		</Title>
+		<Imagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+		</Imagery>
+		<ExtraInfo UseArrow          = "false"
+		           DownHeight        = "10"
+		           OverSound         = "interface/public_mouseover_00.wav"
+		           ClickSound        = "interface/public_mouseclick_00.wav"
+		           NewEffectWaitTime = "250" />
+	</Window>
+	
+	<Window ClassName="SoldierExerciseBtn" Id="122">
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<ExStyle>IWS_EX_OVER_SCREEN|IWS_EX_PUSH_SCREEN</ExStyle>
+		<Size X="1359" Y="6" Width="60" Height="60"/>
+		<Title>
+			<Format X="39" Y="39" Size="18" Style="Outline_full_2x" HorzAlign="Center" VertAlign="Center"/>
+			<Color Type="Normal" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Over" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Push" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+		</Title>
+		<Imagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+		</Imagery>
+		<ExtraInfo UseArrow          = "false"
+		           DownHeight        = "10"
+		           OverSound         = "interface/public_mouseover_00.wav"
+		           ClickSound        = "interface/public_mouseclick_00.wav"
+		           NewEffectWaitTime = "250" />
+	</Window>
+	
+	<Window ClassName="SoldierExerciseBtn" Id="123">
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<ExStyle>IWS_EX_OVER_SCREEN|IWS_EX_PUSH_SCREEN</ExStyle>
+		<Size X="1419" Y="6" Width="60" Height="60"/>
+		<Title>
+			<Format X="39" Y="39" Size="18" Style="Outline_full_2x" HorzAlign="Center" VertAlign="Center"/>
+			<Color Type="Normal" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Over" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Push" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+		</Title>
+		<Imagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+		</Imagery>
+		<ExtraInfo UseArrow          = "false"
+		           DownHeight        = "10"
+		           OverSound         = "interface/public_mouseover_00.wav"
+		           ClickSound        = "interface/public_mouseclick_00.wav"
+		           NewEffectWaitTime = "250" />
+	</Window>
+	
+	<Window ClassName="SoldierExerciseBtn" Id="124">
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<ExStyle>IWS_EX_OVER_SCREEN|IWS_EX_PUSH_SCREEN</ExStyle>
+		<Size X="1479" Y="6" Width="60" Height="60"/>
+		<Title>
+			<Format X="39" Y="39" Size="18" Style="Outline_full_2x" HorzAlign="Center" VertAlign="Center"/>
+			<Color Type="Normal" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Over" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Push" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+		</Title>
+		<Imagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+		</Imagery>
+		<ExtraInfo UseArrow          = "false"
+		           DownHeight        = "10"
+		           OverSound         = "interface/public_mouseover_00.wav"
+		           ClickSound        = "interface/public_mouseclick_00.wav"
+		           NewEffectWaitTime = "250" />
+	</Window>
+	
+	<Window ClassName="SoldierExerciseBtn" Id="125">
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<ExStyle>IWS_EX_OVER_SCREEN|IWS_EX_PUSH_SCREEN</ExStyle>
+		<Size X="1539" Y="6" Width="60" Height="60"/>
+		<Title>
+			<Format X="39" Y="39" Size="18" Style="Outline_full_2x" HorzAlign="Center" VertAlign="Center"/>
+			<Color Type="Normal" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Over" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Push" Text="FFFFB400" Back="FF000000"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+		</Title>
+		<Imagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+		</Imagery>
+		<ExtraInfo UseArrow          = "false"
+		           DownHeight        = "10"
+		           OverSound         = "interface/public_mouseover_00.wav"
+		           ClickSound        = "interface/public_mouseclick_00.wav"
+		           NewEffectWaitTime = "250" />
+	</Window>
+	
+</Window>
+

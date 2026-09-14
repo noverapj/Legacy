@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="LobbyTradeInfoWnd" Id="6">
+	<Size X="566" Y="0" Width="206" Height="526" />
+	<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST|IWS_CHILD_ONLY_RESPONSE</Style>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame80">
+			<Area X="0" Y="0" Width="206" Height="526"/>
+		</DefaultFrameImagery>
+		<Image Imageset="BaseImage005" Image="window_gloss" >
+			<Area X="2" Y="2"/>
+		</Image>
+		<Image Imageset="BaseImage005" Image="window_gloss" >
+			<Area X="87" Y="407" Reverse="HorzVert"/>
+		</Image>
+		<DefaultFrameImagery Templete="win1_title">
+			<Area X="5" Y="6" Width="196" Height="36" AutoResize="False"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="MultiplyFrm" Templete="win1_multiply">
+			<Area X="0" Y="0" Width="206" Height="526"/>
+		</DefaultFrameImagery>
+	</Imagery>
+
+	<Window ClassName="NamedTitleBtn" Id="1">
+		<Size X="152" Y="11" Width="43" Height="23" />
+		<Style>IWS_PROCESS</Style>
+		<Title>
+			<Format X="21" Y="4" Size="11" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>내정보</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="43" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="43" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="43" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="43" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="EffectFrm" Templete="title_effect">
+				<Area X="0" Y="0" Width="43" Height="23"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"
+					   Change_Time = "10"
+					   Add_Alpha = "10"/>		
+	</Window>
+	
+	<Window ClassName="NoviceGradeBuffBtn" Id="2">
+	<Size X="2" Y="-4" Width="60" Height="60" />
+	<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST|IWS_NO_MOUSE_RESPONSE</Style>
+	<Imagery>
+		<Image Type="Icon" Imageset="UIIconPack80" Image="buff_beginner"/>
+		<Image Type="IconEffect" Imageset="BaseImage031" Image="buff_beginner_effect"/>
+		<Image Type="IconAddEffect" Imageset="BaseImage031" Image="buff_beginner_effect"/>
+	</Imagery>
+	
+	<ExtraInfo OverSound  = "interface/public_mouseover_00.wav"
+				ClickSound = "interface/public_mouseclick_00.wav"
+				Change_Time = "50"
+				Add_Alpha = "10"
+				/>	
+	</Window>
+
+	<Window ClassName="ioButton" Id="3">
+		<Size X="2" Y="-4" Width="60" Height="60" />			
+	</Window>
+	
+	<Window ClassName="ioBasicToolTip" Id="4">
+		<Size X="0" Y="0" Width="164" Height="49" /> 
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_TOPMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="tooltip2">
+				<Area X="0" Y="0" Width="164" Height="49" /> 
+			</DefaultFrameImagery>
+		</Imagery>		
+		<Window ClassName="ioRichLabel" Id="1">
+			<Size X="7" Y="6" Width="164" Height="49"/>
+			<ExtraInfo VertGap="3" HorzAlign="Left" VertAlign="Center" >				
+				<TextBlock Text="초보자 버프 상태#" Size="12"  Color="FF117222"/>
+				<TextBlock Text="공격/방어/이동속도/#" Size="12"  Color="FFB91600"/>
+				<TextBlock Text="드랍피해감소 상승!#" Size="12"  Color="FFB91600"/>
+				<TextBlock Text="하사 5호봉까지 적용됩니다.#" Size="12"  Color="FF6E6E6E"/>			
+				</ExtraInfo>
+		</Window>
+	</Window>
+</Window>

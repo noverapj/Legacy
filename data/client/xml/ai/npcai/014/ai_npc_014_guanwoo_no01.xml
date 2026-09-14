@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<!-- 
+; Char State #######################################################################################################################################
+; CS_DELAY(0), CS_RUN(1), CS_DASH(2), CS_EXTEND_DASH(3), CS_JUMP(4), CS_ATTACK(5), CS_DASH_ATTACK(6), CS_USING_SKILL(7),
+; CS_DEFENSE(8), CS_EXTEND_DEFENSE(9), CS_WOUNDED_DEFENSE(10), CS_WOUNDED(11), CS_BLOW_WOUNDED(12), CS_PICK_ITEM(13),
+; CS_DIE(14), CS_ETC_STATE(15), CS_DROP_ZONE_DOWN(16), CS_DEFENSE_ATTACK(17), CS_FALL(18), CS_ENDMOTION(19), CS_FLY(20),
+; CS_STRUCT_PUSH(21), CS_ESCAPE_PRISONER(22), CS_FROZEN(23), CS_READY(24), CS_DRINK(25), CS_VIEW(26), CS_DASH_FAIL(27), CS_CHANGE_WAIT(28),
+; CS_ESCAPE_CATCH(29), CS_CREEPING(30), CS_PROTECTION(31), CS_WARP_STATE(32), CS_CLOSEORDER(33), CS_STARTMOTION(34), CS_CREATEMOTION(35),
+; CS_LOADING(36), CS_FLOAT_STATE(37), CS_STOP_MOTION(38), CS_TELEPORT(39), CS_MISS_FIRE(40), CS_SPECIAL_MOTION(41), CS_OBSERVER(42), CS_FISHING(43)
+; ################################################################################################################################################## 
+-->
+
+<NPCAI_DEF>
+	<INFO AIType = "2" boss = "0" />
+	<MENT duration 	= "3000" scale = "0.83f" color = "0xFFFFFFFF" >
+		잘 따라다니나 봅시다
+	</MENT>
+		
+	<BRAIN>
+		<FSM initial_state="BASE">
+			<STATE name="BASE">
+				<DESCRIPTION>
+				  기본 변수
+						__global__	: 전체
+							.GetTarget(OWNER)	: 고정 target을 지정한다.
+							
+						__myself__	: 나 (NPC)
+							.DoKeySeq(LONG_D_500)	: 지정된 keysequence를 수행한다.
+							
+						__target__ 	: 현재 대상. (champion mode AI 이므로 상대 user 1 명만 대상이다.)
+							.IsHP(EQUAL,25%)		: HP 가 주어진 %와 같은지 확인하여 true/false로 나타낸다.
+							.IsTargetValid()		: 유효한 target인지 확인한다.
+							.IsCurrentState(CS_DIE)	: 현재 상태가 어떤지를 true/false 로 나타낸다.
+							.IsDistance(BETWEEN{0.0f,100.0f})	: 대상과의 거리가 어느 범위 안에 있는지 true/false 로 나타낸다.
+				</DESCRIPTION>
+				<BEHAVIOR>
+					<SEQUENCE>
+						<REPEAT halt="onTrue" comment="유효한 타겟을 찾을 때 까지 찾는다">
+							<SEQUENCE comment="타겟 찾기">
+								<ACTION act="__global__.GetTarget(CLOSEST)" />
+								<ACTION act="__target__.IsTargetValid()"  comment="__target__.IsTargetValid()"/>
+								<ACTION act="__myself__.ShowChat('차가 식기전에 돌아오겠소.')" />
+							</SEQUENCE>
+						</REPEAT>
+						<REPEAT halt="none">
+						<ACTION act="__myself__.Move(TOWARD_TARGET,RUN)" comment="M_1" role="DecOnFalse" />
+							<DECIDE comment="move or attack">
+								<ACTION act="__target__.IsDistance(BETWEEN{0.0f,400.0f})" role="DecQuery" comment="M_2" />
+								<SEQUENCE role="DecOnTrue" >
+									<ACTION act="__myself__.Turn(TOWARD_TARGET)" comment="T_1"/>
+									
+									<!-- Initiation -->
+									<ACTION act="__myself__.DoKeySeq(D_KEY_SHORT)" name="NORMAL_01" comment="D_S_1" />
+									<ACTION act="__myself__.WaitForCombo(200)"  name="W1" comment="WFC1"/>
+									<ACTION act="__myself__.DoKeySeq(D_KEY_SHORT)" name="NORMAL_02" comment="D_S_1" />
+									<ACTION act="__myself__.WaitForCombo(200)"  name="W1" comment="WFC1"/>
+									<ACTION	act="__myself__.Idle(500)"  name="Idle_500"/>
+									<ACTION act="__myself__.Turn(TOWARD_TARGET)" comment="T_1"/>
+									<ACTION	act="__myself__.Idle(500)"  name="Idle_500"/>
+									<ACTION act="__myself__.Turn(TOWARD_TARGET)" comment="T_1"/>
+							
+								</SEQUENCE>
+								<ACTION act="__myself__.Move(TOWARD_TARGET,RUN)" comment="M_1" role="DecOnFalse" />
+							</DECIDE>
+							<ACTION act="__myself__.Move(TOWARD_TARGET,RUN)" comment="M_1" role="DecOnFalse" />
+							<DECIDE comment="move or Defense">
+								<ACTION act="__target__.IsDistance(BETWEEN{0.0f,400.0f})" role="DecQuery" comment="M_2" />
+								<SEQUENCE role="DecOnTrue" >
+									<ACTION act="__myself__.Turn(TOWARD_TARGET)" comment="T_1"/>
+									
+									<!-- 방어 -->
+	                                <ACTION act="__myself__.DoKeySeq(S)" name="DEFENSE_01" comment="S_1" />
+									<ACTION	act="__myself__.Idle(10)"  name="Idle_10"/>
+							
+								</SEQUENCE>
+								<ACTION act="__myself__.Move(TOWARD_TARGET,RUN)" comment="M_1" role="DecOnFalse" />
+							</DECIDE>
+							<ACTION act="__myself__.Move(TOWARD_TARGET,RUN)" comment="M_1" role="DecOnFalse" />
+							<DECIDE comment="move or attack">
+								<ACTION act="__target__.IsDistance(BETWEEN{0.0f,400.0f})" role="DecQuery" comment="M_2" />
+								<SEQUENCE role="DecOnTrue" >
+									<ACTION act="__myself__.Turn(TOWARD_TARGET)" comment="T_1"/>
+									
+									<!-- Initiation -->
+									<ACTION act="__myself__.ShowChat('연속찌르기!!')"  name="SC1" comment="SC1" />
+									<ACTION act="__myself__.DoKeySeq(D_KEY_SHORT)" name="NORMAL_01" comment="D_S_1" />
+									<ACTION act="__myself__.WaitForCombo(200)"  name="W1" comment="WFC1"/>
+									<ACTION act="__myself__.DoKeySeq(D_KEY_SHORT)" name="NORMAL_02" comment="D_S_1" />
+									<ACTION act="__myself__.WaitForCombo(200)"  name="W1" comment="WFC1"/>
+									<ACTION	act="__myself__.Idle(500)"  name="Idle_500"/>
+									<ACTION act="__myself__.Turn(TOWARD_TARGET)" comment="T_1"/>
+									<ACTION	act="__myself__.Idle(500)"  name="Idle_500"/>
+									<ACTION act="__myself__.Turn(TOWARD_TARGET)" comment="T_1"/>
+							
+								</SEQUENCE>
+								<ACTION act="__myself__.Move(TOWARD_TARGET,RUN)" comment="M_1" role="DecOnFalse" />
+							</DECIDE>
+							<ACTION act="__myself__.Move(TOWARD_TARGET,RUN)" comment="M_1" role="DecOnFalse" />
+							<DECIDE comment="move or attack">
+								<ACTION act="__target__.IsDistance(BETWEEN{0.0f,400.0f})" role="DecQuery" comment="M_2" />
+								<SEQUENCE role="DecOnTrue" >
+									<ACTION act="__myself__.Turn(TOWARD_TARGET)" comment="T_1"/>
+									
+									<!-- Initiation -->
+									<ACTION act="__myself__.ShowChat('반달베기!!')"  name="SC4" comment="SC4" />
+	                                <ACTION act="__myself__.DoKeySeq(D_KEY_LONG)" name="CHARGE_04" comment="D_L_2" />
+									<ACTION act="__myself__.WaitForCombo(300)"  name="W1"  comment="WFC1"/>
+									<ACTION	act="__myself__.Idle(500)"  name="Idle_500"/>
+									<ACTION act="__myself__.Turn(TOWARD_TARGET)" comment="T_1"/>
+									<ACTION	act="__myself__.Idle(500)"  name="Idle_500"/>
+									<ACTION act="__myself__.Turn(TOWARD_TARGET)" comment="T_1"/>
+							
+								</SEQUENCE>
+								<ACTION act="__myself__.Move(TOWARD_TARGET,RUN)" comment="M_1" role="DecOnFalse" />
+							</DECIDE>
+						</REPEAT>
+					</SEQUENCE>
+				</BEHAVIOR>
+				<TRANS_LIST>
+					<TRANS />
+					<TRANS />
+				</TRANS_LIST>
+			</STATE>
+		</FSM>
+	</BRAIN>
+</NPCAI_DEF>
+

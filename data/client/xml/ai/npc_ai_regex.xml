@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+<REGEXTABLE>
+	<REGEX name="opname" 		loadtype="300" buildtype="0" regstr="(not|)[ ]?" />
+	<REGEX name="varname" 		loadtype="300" buildtype="0" regstr="([A-Za-z0-9_]+)" />
+	<REGEX name="methodname" 	loadtype="300" buildtype="0" regstr="\.([A-Za-z0-9_]+)" />
+	<REGEX name="args" 			loadtype="300" buildtype="0" regstr="\(([^\)]*)\)" />
+	<REGEX name="counter"		loadtype="300" buildtype="0" regstr="[\s]*([A-Za-z0-9_]+)[\s]*,[\s]*(INCREASE|DECREASE|SETTO)[\s]*,[\s]*([0-9]+)" />
+	<REGEX name="isHP"			loadtype="300" buildtype="0" regstr="[\s]*([A-Z]+)[\s]*\{[\s]*([0-9]+)(%|\.[0-9]+[f]?|)[\s]*\}" />
+	<REGEX name="curState"		loadtype="300" buildtype="0" regstr="[\s]*(CS_[A-Z]+)" />
+	<REGEX name="curINState"	loadtype="300" buildtype="0" regstr="[\s]*(IN_WOUND)[\s]*,[\s]*([0-9]+)" />
+	<REGEX name="curStateEx"	loadtype="300" buildtype="0" regstr="[\s]*(ONEOF|EXCEPT)[\s]*\{[\s]*([A-Za-z_,\t ]+)[\s]*\}" />
+	<REGEX name="move" 			loadtype="300" buildtype="0" regstr="([\s]*[A-Za-z0-9_]+[\s]*)[\s]*,[\s]*([\s]*[A-Za-z0-9_]+[\s]*)" />
+	<REGEX name="turn" 			loadtype="300" buildtype="0" regstr="([A-Za-z0-9_]+)" />
+	<REGEX name="int" 			loadtype="300" buildtype="0" regstr="([0-9]+)" />
+	<REGEX name="float" 		loadtype="300" buildtype="0" regstr="([0-9]+)(.[0-9]+[f]?)?" />
+	<REGEX name="skillkey" 		loadtype="300" buildtype="0" regstr="[\s]*(AS|SD|AD|ASD)[\s]*" />
+	<REGEX name="intRange" 		loadtype="300" buildtype="0" regstr="([0-9]+)[\s]*,[\s]*([0-9]+)" />
+	<REGEX name="floatRange" 	loadtype="300" buildtype="0" regstr="[\s]*([0-9]+)(.[0-9]+[f]?)?[\s]*,[\s]*([0-9]+)(.[0-9]+[f]?)?[\s]*" />
+	<REGEX name="floatRangeEx" 	loadtype="300" buildtype="0" regstr="[\s]*(BETWEEN|NOTIN)[\s]*\{[\s]*([0-9]+)(.[0-9]+[f]?)?[\s]*,[\s]*([0-9]+)(.[0-9]+[f]?)?[\s]*\}" />
+
+	<REGEX name="targeting"		loadtype="300" buildtype="1" buildelem="-9999" 	buildtarget="TargetingType" />
+	<REGEX name="InState"		loadtype="300" buildtype="1" buildelem="-9999" 	buildtarget="CharStateCheckType" />
+	<REGEX name="rangeCompare" 	loadtype="300" buildtype="1" buildelem="4,5" 	buildtarget="AICompareType" />
+	<REGEX name="sizeCompare" 	loadtype="300" buildtype="1" buildelem="1,2,3"	buildtarget="AICompareType" />
+	<REGEX name="existCompare" 	loadtype="300" buildtype="1" buildelem="6,7"	buildtarget="AICompareType" />
+</REGEXTABLE>

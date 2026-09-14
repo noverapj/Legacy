@@ -1,0 +1,55 @@
+<boxgraph>
+<nodes>
+	<box name="rbox01" min="-1672.69,-3883.51,8679.33" max="-278.868,-2479.77,9026.12"/>
+	<box name="rbox02" min="-251.18,-3523.6,8679.33" max="2067.05,-2839.68,9026.12"/>
+	<box name="rbox04" min="2087.79,-3883.51,8679.33" max="3481.61,-2479.77,9026.12"/>
+	<box name="rbox05" min="2488.91,-2456.33,8679.33" max="3140.5,-1175.35,9026.12"/>
+	<box name="rbox06" min="2087.79,-1150.41,8679.33" max="3481.61,253.323,9026.12"/>
+	<box name="rbox07" min="557.308,-741.527,8679.33" max="2029.22,-89.929,9026.12"/>
+	<box name="rbox09" min="-3009.22,-753.142,8679.33" max="-1525.63,-101.544,9026.12"/>
+	<box name="rbox10" min="-4440.89,-1121.01,8679.33" max="-3047.07,282.727,9026.12"/>
+	<box name="rbox11" min="-4177.86,296.043,8679.33" max="-3508.42,2143.78,9026.12"/>
+	<box name="rbox13" min="-2575.3,2837.18,8679.33" max="776.99,3506.63,9026.12"/>
+	<box name="rbox08" min="-1493.24,-1412.81,8695.74" max="507.413,602.075,9010.57"/>
+	<box name="rbox14" min="802.135,2136.51,8695.74" max="2957.64,4307.35,9034.94"/>
+	<box name="rbox12" min="-4357.05,2162.84,8679.33" max="-2601.59,3969.57,9026.12"/>
+</nodes>
+<links>
+	<link from="rbox01" to="rbox02" type="L"/>
+
+	<link from="rbox02" to="rbox01" type="L"/>
+	<link from="rbox02" to="rbox04" type="L"/>
+
+	<link from="rbox04" to="rbox02" type="L"/>
+	<link from="rbox04" to="rbox05" type="L"/>
+
+	<link from="rbox05" to="rbox04" type="L"/>
+	<link from="rbox05" to="rbox06" type="L"/>
+
+	<link from="rbox06" to="rbox05" type="L"/>
+	<link from="rbox06" to="rbox07" type="L"/>
+
+	<link from="rbox07" to="rbox06" type="L"/>
+	<link from="rbox07" to="rbox08" type="L"/>
+
+	<link from="rbox09" to="rbox10" type="L"/>
+	<link from="rbox09" to="rbox08" type="L"/>
+
+	<link from="rbox10" to="rbox09" type="L"/>
+	<link from="rbox10" to="rbox11" type="L"/>
+
+	<link from="rbox11" to="rbox10" type="L"/>
+	<link from="rbox11" to="rbox12" type="L"/>
+
+	<link from="rbox13" to="rbox14" type="L"/>
+	<link from="rbox13" to="rbox12" type="L"/>
+
+	<link from="rbox08" to="rbox07" type="L"/>
+	<link from="rbox08" to="rbox09" type="L"/>
+
+	<link from="rbox14" to="rbox13" type="L"/>
+
+	<link from="rbox12" to="rbox11" type="L"/>
+	<link from="rbox12" to="rbox13" type="L"/>
+</links>
+</boxgraph>

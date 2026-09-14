@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="CustomTournamentViewWnd" Id="10">
+	<Size X="0" Y="36" YAlign="Center" Width="425" Height="506" />
+	<Imagery>
+		<DefaultFrameImagery Type="MainBannerFrm" Templete="league_main_banner_overoutline">
+			<Area X="0" Y="0" Width="383" Height="388"/>
+		</DefaultFrameImagery>
+		<Image Type="HorzLine" Imageset="BaseImage_League001" Image="league_main_line1"/>
+		<Image Type="VertLine" Imageset="BaseImage_League001" Image="league_main_line3"/>
+		<Image Type="TextBack" Imageset="BaseImage_League001" Image="league_main_line2" >
+			<Area X="0" Y="0" Width="377" Height="86" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+		<Image Type="TodayMark" Imageset="BaseImage_League002" Image="state_green_today"/>
+		<DefaultFrameImagery Type="ScheduleOpenGray" Templete="schedule_small_open_gray"/>
+		<DefaultFrameImagery Type="ScheduleOpenOrange" Templete="schedule_small_open_orange"/>
+		<DefaultFrameImagery Type="ScheduleCloseGray" Templete="schedule_small_close_gray"/>
+		<DefaultFrameImagery Type="ScheduleCloseOrange" Templete="schedule_small_close_orange"/>
+		<Image Type="ExtraExplainBack" Imageset="BaseImage_League001" Image="league_make_underbar"/>
+	</Imagery>
+	<Window ClassName="CustomTournamentListBtn" Id="1">
+		<Size X="41" Y="23" Width="26" Height="26" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="SelectBack" Imageset="BaseImage001" Image="strip_orange" >
+				<Area X="-2" Y="-2" Width="30" Height="30" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="EmptyBack" Imageset="BaseImage_League003" Image="icon0_league_smallbanner_empty"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="CustomTournamentListBtn" Id="2">
+		<Size X="71" Y="23" Width="26" Height="26" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="SelectBack" Imageset="BaseImage001" Image="strip_orange" >
+				<Area X="-2" Y="-2" Width="30" Height="30" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="EmptyBack" Imageset="BaseImage_League003" Image="icon0_league_smallbanner_empty"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="CustomTournamentListBtn" Id="3">
+		<Size X="101" Y="23" Width="26" Height="26" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="SelectBack" Imageset="BaseImage001" Image="strip_orange" >
+				<Area X="-2" Y="-2" Width="30" Height="30" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="EmptyBack" Imageset="BaseImage_League003" Image="icon0_league_smallbanner_empty"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="CustomTournamentListBtn" Id="4">
+		<Size X="131" Y="23" Width="26" Height="26" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="SelectBack" Imageset="BaseImage001" Image="strip_orange" >
+				<Area X="-2" Y="-2" Width="30" Height="30" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="EmptyBack" Imageset="BaseImage_League003" Image="icon0_league_smallbanner_empty"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="CustomTournamentListBtn" Id="5">
+		<Size X="161" Y="23" Width="26" Height="26" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="SelectBack" Imageset="BaseImage001" Image="strip_orange" >
+				<Area X="-2" Y="-2" Width="30" Height="30" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="EmptyBack" Imageset="BaseImage_League003" Image="icon0_league_smallbanner_empty"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="CustomTournamentListBtn" Id="6">
+		<Size X="191" Y="23" Width="26" Height="26" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="SelectBack" Imageset="BaseImage001" Image="strip_orange" >
+				<Area X="-2" Y="-2" Width="30" Height="30" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="EmptyBack" Imageset="BaseImage_League003" Image="icon0_league_smallbanner_empty"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="CustomTournamentListBtn" Id="7">
+		<Size X="221" Y="23" Width="26" Height="26" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="SelectBack" Imageset="BaseImage001" Image="strip_orange" >
+				<Area X="-2" Y="-2" Width="30" Height="30" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="EmptyBack" Imageset="BaseImage_League003" Image="icon0_league_smallbanner_empty"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="CustomTournamentListBtn" Id="8">
+		<Size X="251" Y="23" Width="26" Height="26" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="SelectBack" Imageset="BaseImage001" Image="strip_orange" >
+				<Area X="-2" Y="-2" Width="30" Height="30" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="EmptyBack" Imageset="BaseImage_League003" Image="icon0_league_smallbanner_empty"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="CustomTournamentListBtn" Id="9">
+		<Size X="281" Y="23" Width="26" Height="26" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="SelectBack" Imageset="BaseImage001" Image="strip_orange" >
+				<Area X="-2" Y="-2" Width="30" Height="30" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="EmptyBack" Imageset="BaseImage_League003" Image="icon0_league_smallbanner_empty"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="CustomTournamentListBtn" Id="10">
+		<Size X="311" Y="23" Width="26" Height="26" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="SelectBack" Imageset="BaseImage001" Image="strip_orange" >
+				<Area X="-2" Y="-2" Width="30" Height="30" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="EmptyBack" Imageset="BaseImage_League003" Image="icon0_league_smallbanner_empty"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="CustomTournamentListBtn" Id="11">
+		<Size X="341" Y="23" Width="26" Height="26" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="SelectBack" Imageset="BaseImage001" Image="strip_orange" >
+				<Area X="-2" Y="-2" Width="30" Height="30" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="EmptyBack" Imageset="BaseImage_League003" Image="icon0_league_smallbanner_empty"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>	
+	<Window ClassName="CustomTournamentListBtn" Id="12">
+		<Size X="371" Y="23" Width="26" Height="26" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="SelectBack" Imageset="BaseImage001" Image="strip_orange" >
+				<Area X="-2" Y="-2" Width="30" Height="30" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="EmptyBack" Imageset="BaseImage_League003" Image="icon0_league_smallbanner_empty"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<ExtraInfo TournamentHelpID ="752" />
+</Window>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="BattleInfoWnd" Id="4">
+	<Size X="566" Y="0" Width="206" Height="526" />
+	<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST</Style>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame100">
+			<Area X="0" Y="0" Width="206" Height="526"/>
+		</DefaultFrameImagery>
+
+		<DefaultFrameImagery Type="MultiplyFrm" Templete="win1_multiply">
+			<Area X="0" Y="0" Width="206" Height="526"/>
+		</DefaultFrameImagery>
+		
+		<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title">
+			<Area X="5" Y="6" Width="196" Height="36"/>
+		</DefaultFrameImagery>
+
+	</Imagery>
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="152" Y="11" Width="43" Height="23" />
+		<Title>
+			<Format X="21" Y="4" Size="11" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>내정보</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="43" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="43" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt002_overadd">
+				<Area X="0" Y="0" Width="43" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="43" Height="23"/>
+			</DefaultFrameImagery>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>		
+	</Window>
+
+</Window>

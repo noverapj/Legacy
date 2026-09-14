@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="TotalResultRaidCardWnd" Id="7">        
+	<Size X="234" Y="0" Width="540" Height="350" />
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_CHILD_ONLY_RESPONSE</Style>
+	<Title>
+		<Format X="265" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Center"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Text>잠시 기다려 주세요</Text>
+	</Title>
+	<ExtraInfo StartTime="1250" StartAlphaTime="250" ClickTime="5000" AutoOpenTime="50" ClearTime="2800" 
+		   BackSound="interface/mode/awarding_bgm_01.wav"
+    		   AutoOpenSound="interface/ceremony/exp_effect_01.wav"/>
+	<Imagery>
+		<DefaultFrameImagery Type="NameBubble" Templete="tooltip5">
+			<Area X="0" Y="0" Width="99" Height="22"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="NameBubbleBlue" Templete="tooltip5_blue">
+			<Area X="0" Y="0" Width="99" Height="22"/>
+		</DefaultFrameImagery>
+
+		<Image Type="CardText1" Imageset="BaseImage_Defense001" Image="icontext_final_pve_cardment1" />
+		<Image Type="CardText2" Imageset="BaseImage_Defense001" Image="icontext_final_pve_cardment2" />
+		<Image Type="CardTextNum" Imageset="BaseImage_Defense001" Image="icontext_final_pve_cardnum" />
+		<Image Type="NoneCardText1" Imageset="BaseImage_Defense001" Image="icontext_final_pve_cardment3" />
+		<Image Type="NoneCardText2" Imageset="BaseImage_Defense001" Image="icontext_final_pve_cardment4" />
+		<Image Type="NameBubbleTail" Imageset="BaseImage004" Image="tooltip5_tail" />
+		<Image Type="NameBubbleTailBlue" Imageset="BaseImage008" Image="tooltip5_blue_tail" />
+	</Imagery>
+
+	<Window ClassName="TotalResultRaidCardBtn" Id="1">
+		<Size X="22" Y="56" Width="121" Height="272"/>
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="CardCover" Imageset="BaseImage_Defense005" Image="icon0_treasurecard_raid_back" />	
+			<Image Type="PresentCover" Imageset="BaseImage_Defense005" Image="icon0_treasurecard_raid_front" />
+			<Image Type="PresentCoverOverAdd" Imageset="BaseImage_Defense005" Image="icon0_treasurecard_raid_overadd" />	
+			<Image Type="PresentCoverMe" Imageset="BaseImage_Defense005" Image="icon0_treasurecard_front_raid_me" />		
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/event_coin_get_02.wav"/>
+	</Window>
+
+	<Window ClassName="TotalResultRaidCardBtn" Id="2">
+		<Size X="145" Y="56" Width="121" Height="272"/>
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="CardCover" Imageset="BaseImage_Defense005" Image="icon0_treasurecard_raid_back" />				
+			<Image Type="PresentCover" Imageset="BaseImage_Defense005" Image="icon0_treasurecard_raid_front" />
+			<Image Type="PresentCoverOverAdd" Imageset="BaseImage_Defense005" Image="icon0_treasurecard_raid_overadd" />	
+			<Image Type="PresentCoverMe" Imageset="BaseImage_Defense005" Image="icon0_treasurecard_front_raid_me" />		
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/event_coin_get_02.wav"/>
+	</Window>
+
+	<Window ClassName="TotalResultRaidCardBtn" Id="3">
+		<Size X="268" Y="56" Width="121" Height="272"/>
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="CardCover" Imageset="BaseImage_Defense005" Image="icon0_treasurecard_raid_back" />				
+			<Image Type="PresentCover" Imageset="BaseImage_Defense005" Image="icon0_treasurecard_raid_front" />
+			<Image Type="PresentCoverOverAdd" Imageset="BaseImage_Defense005" Image="icon0_treasurecard_raid_overadd" />	
+			<Image Type="PresentCoverMe" Imageset="BaseImage_Defense005" Image="icon0_treasurecard_front_raid_me" />		
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/event_coin_get_02.wav"/>
+	</Window>
+
+	<Window ClassName="TotalResultRaidCardBtn" Id="4">
+		<Size X="391" Y="56" Width="121" Height="272"/>
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="CardCover" Imageset="BaseImage_Defense005" Image="icon0_treasurecard_raid_back" />				
+			<Image Type="PresentCover" Imageset="BaseImage_Defense005" Image="icon0_treasurecard_raid_front" />
+			<Image Type="PresentCoverOverAdd" Imageset="BaseImage_Defense005" Image="icon0_treasurecard_raid_overadd" />	
+			<Image Type="PresentCoverMe" Imageset="BaseImage_Defense005" Image="icon0_treasurecard_front_raid_me" />		
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/event_coin_get_02.wav"/>
+	</Window>
+
+</Window>

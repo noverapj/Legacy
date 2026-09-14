@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="WaitEffectWnd" Id="6311" Layer = "103" >
+	<Size X="0" Y="-20" XAlign="Center" YAlign="Center" Width="0" Height="0" />
+	<DragRect Left="0" Top="0" Right="0" Bottom="0" />
+	<Style>IWS_START_HIDE|IWS_PROCESS</Style>
+	<Imagery>
+		<Image Type="count_circle" Imageset="BaseImage005" Image="icon0_warcountcircle" />
+		<Image Type="count_wait" Imageset="BaseImage006" Image="icon0_warcount_wait" />
+		<Image Type="text_back" Imageset="BaseImage002" Image="iconeffect_8" />
+	</Imagery>
+</Window>

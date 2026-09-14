@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="ShuffleToolTip" Id="502">
+	<Size X="0" Y="0" Width="256" Height="170"/>
+	<Style>IWS_START_HIDE|IWS_PROCESS|IWS_TOPMOST</Style> 
+	<Imagery>
+	<DefaultFrameImagery Type="Selected" Templete="tooltip3" >
+		<Area X="0" Y="0" Width="302" Height="278"/>
+	</DefaultFrameImagery>
+	</Imagery>
+	<!-- 텍스트 스타일
+		Normal,
+		Shadow,
+		Outline,
+		Outline_2x,
+		Outline_full,
+		Outline_full_2x,
+		Outline_full_3x,
+		Outline_full_4x,
+		Bold,
+		Bold_shadow,
+		Bold_outline,
+		Bold_outline_full,
+		Bold_outline_full_2x,
+		Bold_outline_full_3x,
+		Bold_outline_full_4x,
+	-->
+	
+	<!-- Sunday -->
+	<Window ClassName="ioRichLabel" Id="1">
+		<Size X="7" Y="6" Width="256" Height="170"/>
+		<ExtraInfo VertGap="5" HorzAlign="Left" VertAlign="Center" >
+		  <TextBlock Text="오늘의 모드는?#" Size="12" Color="FF5B3714"/>
+			<TextBlock Text="(" Size="12"  Color="FFB91600"/>
+			<TextBlock Text="팀 데스매치" Size="12"  Color="FFB91600"/>									
+			<TextBlock Text=")#" Size="12"  Color="FFB91600"/>				
+			<TextBlock Text="계급이 비슷한 유저와 1개의 모드를 플레이한뒤#" Size="12"  Color="FF6E6E6E"/>
+			<TextBlock Text="스타 코인을 모아보세요!#" Size="12"  Color="FF6E6E6E"/>
+		</ExtraInfo>
+	</Window>
+	
+	<!-- Monday -->
+	<Window ClassName="ioRichLabel" Id="2">
+		<Style>IWS_START_HIDE|IWS_BACKMOST</Style> 
+		<Size X="7" Y="6" Width="256" Height="170"/>
+		<ExtraInfo VertGap="5" HorzAlign="Left" VertAlign="Center" >
+		  <TextBlock Text="오늘의 모드는?#" Size="12" Color="FF5B3714"/>
+			<TextBlock Text="(" Size="12"  Color="FFB91600"/>
+			<TextBlock Text="팀 데스매치" Size="12"  Color="FFB91600"/>									
+			<TextBlock Text=")#" Size="12"  Color="FFB91600"/>				
+			<TextBlock Text="계급이 비슷한 유저와 1개의 모드를 플레이한뒤#" Size="12"  Color="FF6E6E6E"/>
+			<TextBlock Text="스타 코인을 모아보세요!#" Size="12"  Color="FF6E6E6E"/>
+		</ExtraInfo>
+	</Window>
+	
+	<!-- Tuesday -->
+	<Window ClassName="ioRichLabel" Id="3">
+		<Style>IWS_START_HIDE|IWS_BACKMOST</Style> 
+		<Size X="7" Y="6" Width="256" Height="170"/>
+		<ExtraInfo VertGap="5" HorzAlign="Left" VertAlign="Center" >
+		  <TextBlock Text="오늘의 모드는?#" Size="12" Color="FF5B3714"/>
+			<TextBlock Text="(" Size="12"  Color="FFB91600"/>
+			<TextBlock Text="팀 데스매치" Size="12"  Color="FFB91600"/>									
+			<TextBlock Text=")#" Size="12"  Color="FFB91600"/>				
+			<TextBlock Text="계급이 비슷한 유저와 1개의 모드를 플레이한뒤#" Size="12"  Color="FF6E6E6E"/>
+			<TextBlock Text="스타 코인을 모아보세요!#" Size="12"  Color="FF6E6E6E"/>
+		</ExtraInfo>
+	</Window>
+	
+	<!-- Wednesday -->
+	<Window ClassName="ioRichLabel" Id="4">
+		<Style>IWS_START_HIDE|IWS_BACKMOST</Style> 
+		<Size X="7" Y="6" Width="256" Height="170"/>
+		<ExtraInfo VertGap="5" HorzAlign="Left" VertAlign="Center" >
+		  <TextBlock Text="오늘의 모드는?#" Size="12" Color="FF5B3714"/>
+			<TextBlock Text="(" Size="12"  Color="FFB91600"/>
+			<TextBlock Text="팀 데스매치" Size="12"  Color="FFB91600"/>									
+			<TextBlock Text=")#" Size="12"  Color="FFB91600"/>				
+			<TextBlock Text="계급이 비슷한 유저와 1개의 모드를 플레이한뒤#" Size="12"  Color="FF6E6E6E"/>
+			<TextBlock Text="스타 코인을 모아보세요!#" Size="12"  Color="FF6E6E6E"/>
+		</ExtraInfo>
+	</Window>
+	
+	<!-- Thursday -->
+	<Window ClassName="ioRichLabel" Id="5">
+		<Style>IWS_START_HIDE|IWS_BACKMOST</Style> 
+		<Size X="7" Y="6" Width="256" Height="170"/>
+		<ExtraInfo VertGap="5" HorzAlign="Left" VertAlign="Center" >
+			<TextBlock Text="오늘의 모드는?#" Size="12" Color="FF5B3714"/>
+			<TextBlock Text="(" Size="12"  Color="FFB91600"/>
+			<TextBlock Text="팀 데스매치" Size="12"  Color="FFB91600"/>									
+			<TextBlock Text=")#" Size="12"  Color="FFB91600"/>				
+			<TextBlock Text="계급이 비슷한 유저와 1개의 모드를 플레이한뒤#" Size="12"  Color="FF6E6E6E"/>
+			<TextBlock Text="스타 코인을 모아보세요!#" Size="12"  Color="FF6E6E6E"/>
+		</ExtraInfo>
+	</Window>
+	
+	<!-- Friday -->
+	<Window ClassName="ioRichLabel" Id="6">
+		<Style>IWS_START_HIDE|IWS_BACKMOST</Style> 
+			<Size X="7" Y="6" Width="256" Height="170"/>
+		<ExtraInfo VertGap="5" HorzAlign="Left" VertAlign="Center" >
+			<TextBlock Text="오늘의 모드는?#" Size="12" Color="FF5B3714"/>
+			<TextBlock Text="(" Size="12"  Color="FFB91600"/>
+			<TextBlock Text="팀 데스매치" Size="12"  Color="FFB91600"/>									
+			<TextBlock Text=")#" Size="12"  Color="FFB91600"/>				
+			<TextBlock Text="계급이 비슷한 유저와 1개의 모드를 플레이한뒤#" Size="12"  Color="FF6E6E6E"/>
+			<TextBlock Text="스타 코인을 모아보세요!#" Size="12"  Color="FF6E6E6E"/>
+		</ExtraInfo>
+	</Window>
+	
+	<!-- Saturday -->
+	<Window ClassName="ioRichLabel" Id="7">
+		<Style>IWS_START_HIDE|IWS_BACKMOST</Style> 
+	<Size X="7" Y="6" Width="256" Height="170"/>
+		<ExtraInfo VertGap="5" HorzAlign="Left" VertAlign="Center" >
+			<TextBlock Text="오늘의 모드는?#" Size="12" Color="FF5B3714"/>
+			<TextBlock Text="(" Size="12"  Color="FFB91600"/>
+			<TextBlock Text="팀 데스매치" Size="12"  Color="FFB91600"/>									
+			<TextBlock Text=")#" Size="12"  Color="FFB91600"/>				
+			<TextBlock Text="계급이 비슷한 유저와 1개의 모드를 플레이한뒤#" Size="12"  Color="FF6E6E6E"/>
+			<TextBlock Text="스타 코인을 모아보세요!#" Size="12"  Color="FF6E6E6E"/>
+		</ExtraInfo>
+	</Window>
+	
+	<!-- default : 날짜를 가져오지 못했을때 출력 -->
+	<Window ClassName="ioRichLabel" Id="8">
+		<Style>IWS_START_HIDE|IWS_BACKMOST</Style>
+		<Size X="7" Y="6" Width="256" Height="170"/>
+		<ExtraInfo VertGap="5" HorzAlign="Left" VertAlign="Center" >
+			<TextBlock Text="오늘의 모드란?#" Size="12" Color="FF6E6E6E" Style="Outline"/>
+			<TextBlock Text="자신과 계급이 비슷한 유저와 매일 1개의#" Size="12"  Color="FF6E6E6E"/>
+			<TextBlock Text="게임 모드를 플레이 하여 스타코인 획득이#" Size="12"  Color="FF6E6E6E"/>
+			<TextBlock Text="가능합니다. 스타 코인은 과연 어디에 사용될까요?#" Size="12" Color="FF6E6E6E"/>
+		</ExtraInfo>
+	</Window>
+</Window>

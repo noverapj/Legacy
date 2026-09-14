@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="TotalResultScoreWnd" Id="2">        
+	<Size X="0" Y="0" Width="232" Height="526" />
+	<Style>IWS_START_HIDE|IWS_CHILD_ONLY_RESPONSE</Style>
+	<Title>
+		<Format X="110" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Center"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Text>최종스코어</Text>
+	</Title>	
+	<Imagery>
+		<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title">
+			<Area X="5" Y="6" Width="222" Height="36" AutoResize="False"/>
+		</DefaultFrameImagery>	
+	</Imagery>
+
+	<Window ClassName="ResultScoreUserWnd" Id="1">
+		<Size X="10" Y="50" Width="210" Height="465" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="MyTeamFrm" Templete="slot_finish_myteam">
+				<Area X="0" Y="0" Width="210" Height="465"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GuildMarkFrm" Templete="bt_empty">
+				<Area X="0" Y="0" Width="39" Height="39"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CampBonusFrm" Templete="slot_chrchange_gray">
+				<Area X="0" Y="0" Width="104" Height="179"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ShuffleFrm" Templete="slot_chrchange_gray">
+				<Area X="0" Y="0" Width="113" Height="182"/>
+			</DefaultFrameImagery>
+			
+			<Image Type="BlueWin" Imageset="BaseImage006" Image="icontext_finish_bluewin" />
+			<Image Type="BlueLose" Imageset="BaseImage006" Image="icontext_finish_bluelose" />
+			<Image Type="BlueDraw" Imageset="BaseImage006" Image="icontext_finish_drow" />
+			<Image Type="RedWin" Imageset="BaseImage006" Image="icontext_finish_redwin" />
+			<Image Type="RedLose" Imageset="BaseImage006" Image="icontext_finish_redlose" />
+			<Image Type="RedDraw" Imageset="BaseImage006" Image="icontext_finish_drow" />
+			<Image Type="GameOver" Imageset="BaseImage006" Image="icontext_finish_gameover" />
+			<Image Type="Clear" Imageset="BaseImage006" Image="icontext_finish_clear" />
+			<Image Type="CampMarkBack" Imageset="BaseImage002" Image="iconeffect_2" />
+			<Image Type="ModeIconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+
+			<Image Type="PCRoomBlue" Imageset="BaseImage006" Image="icontext_pc_blue" />
+			<Image Type="PCRoomRed" Imageset="BaseImage006" Image="icontext_pc_red" />
+			<Image Type="GuildBlue" Imageset="BaseImage006" Image="icontext_guild3_blue" />
+			<Image Type="GuildRed" Imageset="BaseImage006" Image="icontext_guild3_red" />
+			<Image Type="FriendBlue" Imageset="BaseImage006" Image="icontext_friend_blue" />
+			<Image Type="FriendRed" Imageset="BaseImage006" Image="icontext_friend_red" />
+			<Image Type="VictoriesBlue1" Imageset="BaseImage006" Image="icontext_win1_blue" />
+			<Image Type="VictoriesRed1" Imageset="BaseImage006" Image="icontext_win1_red" />
+			<Image Type="VictoriesBlue2" Imageset="BaseImage006" Image="icontext_win2_blue" />
+			<Image Type="VictoriesRed2" Imageset="BaseImage006" Image="icontext_win2_red" />
+			<Image Type="VictoriesNumBlue" Imageset="BaseImage006" Image="icontext_winnum_b" />
+			<Image Type="VictoriesNumRed" Imageset="BaseImage006" Image="icontext_winnum_r" />
+
+			<Image Type="BlueNumber" Imageset="BaseImage006" Image="icontext_middle_num_b" />
+			<Image Type="RedNumber" Imageset="BaseImage006" Image="icontext_middle_num_r" />
+			<Image Type="BluePer" Imageset="BaseImage006" Image="icontext_middle_per_b" />
+			<Image Type="RedPer" Imageset="BaseImage006" Image="icontext_middle_per_r" />
+			<Image Type="BluePointText" Imageset="BaseImage006" Image="icontext_middle_point_b" />
+			<Image Type="RedPointText" Imageset="BaseImage006" Image="icontext_middle_point_r" />
+			<Image Type="RedRankText" Imageset="BaseImage006" Image="icontext_middle_rank_r" />
+			<Image Type="GradeUpText" Imageset="BaseImage015" Image="icontext_finish_levelup2" />
+			<Image Type="BlueDark" Imageset="BaseImage001" Image="strip_blue_dark" >
+				<Area X="0" Y="0" Width="196" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="BlueLight" Imageset="BaseImage001" Image="strip_blue_light" >
+				<Area X="0" Y="0" Width="196" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="BlueOver" Imageset="BaseImage001" Image="strip_blue_on" >
+				<Area X="0" Y="0" Width="196" Height="21" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="RedDark" Imageset="BaseImage001" Image="strip_red_dark" >
+				<Area X="0" Y="0" Width="196" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="RedLight" Imageset="BaseImage001" Image="strip_red_light" >
+				<Area X="0" Y="0" Width="196" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="RedOver" Imageset="BaseImage001" Image="strip_red_on" >
+				<Area X="0" Y="0" Width="196" Height="21" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="ShuffleResultIcon" Imageset="UIIconPack51" Image="Bonus_stage_icon2" />
+			<Image Type="ShuffleResultIconBack" Imageset="BaseImage002" Image="iconeffect_2" />
+			<Image Type="ShuffleLine" Imageset="BaseImage027" Image="today_line" />
+		</Imagery>
+		<ExtraInfo MaxPlayer="16" TickTime="150" RollingTickTime="75" CountSound="interface/ceremony/result_get_01.wav"/>
+	</Window>
+
+	<Window ClassName="ResultScoreUserWnd" Id="2">
+		<Size X="10" Y="50" Width="210" Height="236" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="MyTeamFrm" Templete="slot_finish_myteam">
+				<Area X="0" Y="0" Width="210" Height="236"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GuildMarkFrm" Templete="bt_empty">
+				<Area X="0" Y="0" Width="39" Height="39"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CampBonusFrm" Templete="slot_chrchange_gray">
+				<Area X="0" Y="0" Width="104" Height="179"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueWin" Imageset="BaseImage006" Image="icontext_finish_bluewin" />
+			<Image Type="BlueLose" Imageset="BaseImage006" Image="icontext_finish_bluelose" />
+			<Image Type="BlueDraw" Imageset="BaseImage006" Image="icontext_finish_drow" />
+			<Image Type="RedWin" Imageset="BaseImage006" Image="icontext_finish_redwin" />
+			<Image Type="RedLose" Imageset="BaseImage006" Image="icontext_finish_redlose" />
+			<Image Type="RedDraw" Imageset="BaseImage006" Image="icontext_finish_drow" />
+			<Image Type="GameOver" Imageset="BaseImage006" Image="icontext_finish_gameover" />
+			<Image Type="Clear" Imageset="BaseImage006" Image="icontext_finish_clear" />
+			<Image Type="CampMarkBack" Imageset="BaseImage002" Image="iconeffect_2" />
+			<Image Type="ModeIconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="HumanIcon" Imageset="UIIconPack2" Image="event_player_fighting_icon" />
+			<Image Type="HumanText" Imageset="BaseImage015" Image="icontext_finish_human" />
+			<Image Type="GangsiText" Imageset="BaseImage015" Image="icontext_finish_gangsi" />
+
+			<Image Type="PCRoomBlue" Imageset="BaseImage006" Image="icontext_pc_blue" />
+			<Image Type="PCRoomRed" Imageset="BaseImage006" Image="icontext_pc_red" />
+			<Image Type="GuildBlue" Imageset="BaseImage006" Image="icontext_guild3_blue" />
+			<Image Type="GuildRed" Imageset="BaseImage006" Image="icontext_guild3_red" />
+			<Image Type="FriendBlue" Imageset="BaseImage006" Image="icontext_friend_blue" />
+			<Image Type="FriendRed" Imageset="BaseImage006" Image="icontext_friend_red" />
+			<Image Type="VictoriesBlue1" Imageset="BaseImage006" Image="icontext_win1_blue" />
+			<Image Type="VictoriesRed1" Imageset="BaseImage006" Image="icontext_win1_red" />
+			<Image Type="VictoriesBlue2" Imageset="BaseImage006" Image="icontext_win2_blue" />
+			<Image Type="VictoriesRed2" Imageset="BaseImage006" Image="icontext_win2_red" />
+			<Image Type="VictoriesNumBlue" Imageset="BaseImage006" Image="icontext_winnum_b" />
+			<Image Type="VictoriesNumRed" Imageset="BaseImage006" Image="icontext_winnum_r" />
+
+			<Image Type="BlueNumber" Imageset="BaseImage006" Image="icontext_middle_num_b" />
+			<Image Type="RedNumber" Imageset="BaseImage006" Image="icontext_middle_num_r" />
+			<Image Type="BluePer" Imageset="BaseImage006" Image="icontext_middle_per_b" />
+			<Image Type="RedPer" Imageset="BaseImage006" Image="icontext_middle_per_r" />
+			<Image Type="BluePointText" Imageset="BaseImage006" Image="icontext_middle_point_b" />
+			<Image Type="RedPointText" Imageset="BaseImage006" Image="icontext_middle_point_r" />
+			<Image Type="RedRankText" Imageset="BaseImage006" Image="icontext_middle_rank_r" />
+
+			<Image Type="GradeUpText" Imageset="BaseImage015" Image="icontext_finish_levelup2" />
+
+			<Image Type="BlueDark" Imageset="BaseImage001" Image="strip_blue_dark" >
+				<Area X="0" Y="0" Width="196" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="BlueLight" Imageset="BaseImage001" Image="strip_blue_light" >
+				<Area X="0" Y="0" Width="196" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="BlueOver" Imageset="BaseImage001" Image="strip_blue_on" >
+				<Area X="0" Y="0" Width="196" Height="21" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+
+			<Image Type="RedDark" Imageset="BaseImage001" Image="strip_red_dark" >
+				<Area X="0" Y="0" Width="196" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="RedLight" Imageset="BaseImage001" Image="strip_red_light" >
+				<Area X="0" Y="0" Width="196" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="RedOver" Imageset="BaseImage001" Image="strip_red_on" >
+				<Area X="0" Y="0" Width="196" Height="21" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo MaxPlayer="8" TickTime="150" RollingTickTime="75" CountSound="interface/ceremony/result_get_01.wav"/>
+	</Window>
+
+	<Window ClassName="ResultScoreUserWnd" Id="3">
+		<Size X="10" Y="281" Width="210" Height="236" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="MyTeamFrm" Templete="slot_finish_myteam">
+				<Area X="0" Y="0" Width="210" Height="236"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GuildMarkFrm" Templete="bt_empty">
+				<Area X="0" Y="0" Width="39" Height="39"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CampBonusFrm" Templete="slot_chrchange_gray">
+				<Area X="0" Y="0" Width="104" Height="179"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueWin" Imageset="BaseImage006" Image="icontext_finish_bluewin" />
+			<Image Type="BlueLose" Imageset="BaseImage006" Image="icontext_finish_bluelose" />
+			<Image Type="BlueDraw" Imageset="BaseImage006" Image="icontext_finish_drow" />
+			<Image Type="RedWin" Imageset="BaseImage006" Image="icontext_finish_redwin" />
+			<Image Type="RedLose" Imageset="BaseImage006" Image="icontext_finish_redlose" />
+			<Image Type="RedDraw" Imageset="BaseImage006" Image="icontext_finish_drow" />
+			<Image Type="GameOver" Imageset="BaseImage006" Image="icontext_finish_gameover" />
+			<Image Type="Clear" Imageset="BaseImage006" Image="icontext_finish_clear" />
+			<Image Type="CampMarkBack" Imageset="BaseImage002" Image="iconeffect_2" />
+			<Image Type="ModeIconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="HumanIcon" Imageset="UIIconPack2" Image="event_player_fighting_icon" />
+			<Image Type="HumanText" Imageset="BaseImage015" Image="icontext_finish_human" />
+			<Image Type="GangsiText" Imageset="BaseImage015" Image="icontext_finish_gangsi" />
+
+			<Image Type="PCRoomBlue" Imageset="BaseImage006" Image="icontext_pc_blue" />
+			<Image Type="PCRoomRed" Imageset="BaseImage006" Image="icontext_pc_red" />
+			<Image Type="GuildBlue" Imageset="BaseImage006" Image="icontext_guild3_blue" />
+			<Image Type="GuildRed" Imageset="BaseImage006" Image="icontext_guild3_red" />
+			<Image Type="FriendBlue" Imageset="BaseImage006" Image="icontext_friend_blue" />
+			<Image Type="FriendRed" Imageset="BaseImage006" Image="icontext_friend_red" />
+			<Image Type="VictoriesBlue1" Imageset="BaseImage006" Image="icontext_win1_blue" />
+			<Image Type="VictoriesRed1" Imageset="BaseImage006" Image="icontext_win1_red" />
+			<Image Type="VictoriesBlue2" Imageset="BaseImage006" Image="icontext_win2_blue" />
+			<Image Type="VictoriesRed2" Imageset="BaseImage006" Image="icontext_win2_red" />
+			<Image Type="VictoriesNumBlue" Imageset="BaseImage006" Image="icontext_winnum_b" />
+			<Image Type="VictoriesNumRed" Imageset="BaseImage006" Image="icontext_winnum_r" />
+
+			<Image Type="BlueNumber" Imageset="BaseImage006" Image="icontext_middle_num_b" />
+			<Image Type="RedNumber" Imageset="BaseImage006" Image="icontext_middle_num_r" />
+			<Image Type="BluePer" Imageset="BaseImage006" Image="icontext_middle_per_b" />
+			<Image Type="RedPer" Imageset="BaseImage006" Image="icontext_middle_per_r" />
+			<Image Type="BluePointText" Imageset="BaseImage006" Image="icontext_middle_point_b" />
+			<Image Type="RedPointText" Imageset="BaseImage006" Image="icontext_middle_point_r" />
+			<Image Type="RedRankText" Imageset="BaseImage006" Image="icontext_middle_rank_r" />
+
+			<Image Type="GradeUpText" Imageset="BaseImage015" Image="icontext_finish_levelup2" />
+
+			<Image Type="BlueDark" Imageset="BaseImage001" Image="strip_blue_dark" >
+				<Area X="0" Y="0" Width="196" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="BlueLight" Imageset="BaseImage001" Image="strip_blue_light" >
+				<Area X="0" Y="0" Width="196" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="BlueOver" Imageset="BaseImage001" Image="strip_blue_on" >
+				<Area X="0" Y="0" Width="196" Height="21" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+
+			<Image Type="RedDark" Imageset="BaseImage001" Image="strip_red_dark" >
+				<Area X="0" Y="0" Width="196" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="RedLight" Imageset="BaseImage001" Image="strip_red_light" >
+				<Area X="0" Y="0" Width="196" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="RedOver" Imageset="BaseImage001" Image="strip_red_on" >
+				<Area X="0" Y="0" Width="196" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+		</Imagery>
+		<ExtraInfo MaxPlayer="8" TickTime="150" RollingTickTime="75" CountSound="interface/ceremony/result_get_01.wav"/>
+	</Window>
+
+	<Window ClassName="ResultRaidScoreUserWnd" Id="4">
+		<Size X="10" Y="50" Width="210" Height="465" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST</Style> 
+		<ExtraInfo MVPDelay="500" EndDelay="1000"  RollingSound="interface/ceremony/result_get_01.wav"/>
+
+		<Window ClassName="ResultRaidScoreUserBtn" Id="1">
+			<Size X="1" Y="0" Width="104" Height="226" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+			<Imagery>
+				<DefaultFrameImagery Type="SlotNormal" Templete="slot_pve2final_blue_nor">
+					<Area X="0" Y="0" Width="104" Height="226"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="SlotOver" Templete="slot_pve2final_blue_over">
+					<Area X="0" Y="0" Width="104" Height="226"/>
+				</DefaultFrameImagery>
+				
+				<Image Type="SlotGra" Imageset="BaseImage004" Image="slot_camp_blue_nor_gra" />
+				<Image Type="SlotGraOver" Imageset="BaseImage004" Image="slot_camp_blue_over_gra" />	
+				<Image Type="EmptySlot" Imageset="BaseImage004" Image="slot_blue_x" />
+				<Image Type="SlotMVP" Imageset="BaseImage015" Image="icontext_mvp1" />
+				<Image Type="SlotLineDark" Imageset="BaseImage001" Image="strip_gray_dark" />
+				<Image Type="SlotLineLight" Imageset="BaseImage001" Image="strip_gray_light" />
+
+				<Image Type="SlotRankS" Imageset="UIIconPack36" Image="pve_rank_s" />
+				<Image Type="SlotRankA" Imageset="UIIconPack36" Image="pve_rank_a" />
+				<Image Type="SlotRankB" Imageset="UIIconPack36" Image="pve_rank_b" />
+				<Image Type="SlotRankC" Imageset="UIIconPack36" Image="pve_rank_c" />
+			</Imagery>
+			<ExtraInfo RollingTime="1500" 
+				   RollingStopTime="200"
+                                   MVPTime="200" 
+                                   RollingStopSnd="interface/ceremony/result_get_01.wav"
+				   MVPSnd="interface/ceremony/result_get_01.wav"/>
+		</Window>
+
+		<Window ClassName="ResultRaidScoreUserBtn" Id="2">
+			<Size X="107" Y="0" Width="104" Height="226" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+			<Imagery>
+				<DefaultFrameImagery Type="SlotNormal" Templete="slot_pve2final_blue_nor">
+					<Area X="0" Y="0" Width="104" Height="226"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="SlotOver" Templete="slot_pve2final_blue_over">
+					<Area X="0" Y="0" Width="104" Height="226"/>
+				</DefaultFrameImagery>
+				
+				<Image Type="SlotGra" Imageset="BaseImage004" Image="slot_camp_blue_nor_gra" />
+				<Image Type="SlotGraOver" Imageset="BaseImage004" Image="slot_camp_blue_over_gra" />	
+				<Image Type="EmptySlot" Imageset="BaseImage004" Image="slot_blue_x" />
+				<Image Type="SlotMVP" Imageset="BaseImage015" Image="icontext_mvp1" />
+				<Image Type="SlotLineDark" Imageset="BaseImage001" Image="strip_gray_dark" />
+				<Image Type="SlotLineLight" Imageset="BaseImage001" Image="strip_gray_light" />
+
+				<Image Type="SlotRankS" Imageset="UIIconPack36" Image="pve_rank_s" />
+				<Image Type="SlotRankA" Imageset="UIIconPack36" Image="pve_rank_a" />
+				<Image Type="SlotRankB" Imageset="UIIconPack36" Image="pve_rank_b" />
+				<Image Type="SlotRankC" Imageset="UIIconPack36" Image="pve_rank_c" />
+			</Imagery>
+			<ExtraInfo RollingTime="1700" 
+				   RollingStopTime="200"
+                                   MVPTime="200" 
+                                   RollingStopSnd="interface/ceremony/result_get_01.wav"
+				   MVPSnd="interface/ceremony/result_get_01.wav"/>
+		</Window>
+
+		<Window ClassName="ResultRaidScoreUserBtn" Id="3">
+			<Size X="1" Y="228" Width="104" Height="226" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+			<Imagery>
+				<DefaultFrameImagery Type="SlotNormal" Templete="slot_pve2final_blue_nor">
+					<Area X="0" Y="0" Width="104" Height="226"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="SlotOver" Templete="slot_pve2final_blue_over">
+					<Area X="0" Y="0" Width="104" Height="226"/>
+				</DefaultFrameImagery>
+				
+				<Image Type="SlotGra" Imageset="BaseImage004" Image="slot_camp_blue_nor_gra" />
+				<Image Type="SlotGraOver" Imageset="BaseImage004" Image="slot_camp_blue_over_gra" />	
+				<Image Type="EmptySlot" Imageset="BaseImage004" Image="slot_blue_x" />
+				<Image Type="SlotMVP" Imageset="BaseImage015" Image="icontext_mvp1" />
+				<Image Type="SlotLineDark" Imageset="BaseImage001" Image="strip_gray_dark" />
+				<Image Type="SlotLineLight" Imageset="BaseImage001" Image="strip_gray_light" />
+
+				<Image Type="SlotRankS" Imageset="UIIconPack36" Image="pve_rank_s" />
+				<Image Type="SlotRankA" Imageset="UIIconPack36" Image="pve_rank_a" />
+				<Image Type="SlotRankB" Imageset="UIIconPack36" Image="pve_rank_b" />
+				<Image Type="SlotRankC" Imageset="UIIconPack36" Image="pve_rank_c" />
+			</Imagery>
+			<ExtraInfo RollingTime="1900" 
+				   RollingStopTime="200"
+                                   MVPTime="200" 
+                                   RollingStopSnd="interface/ceremony/result_get_01.wav"
+				   MVPSnd="interface/ceremony/result_get_01.wav"/>
+		</Window>
+
+		<Window ClassName="ResultRaidScoreUserBtn" Id="4">
+			<Size X="107" Y="228" Width="104" Height="226" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+			<Imagery>
+				<DefaultFrameImagery Type="SlotNormal" Templete="slot_pve2final_blue_nor">
+					<Area X="0" Y="0" Width="104" Height="226"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="SlotOver" Templete="slot_pve2final_blue_over">
+					<Area X="0" Y="0" Width="104" Height="226"/>
+				</DefaultFrameImagery>
+				
+				<Image Type="SlotGra" Imageset="BaseImage004" Image="slot_camp_blue_nor_gra" />
+				<Image Type="SlotGraOver" Imageset="BaseImage004" Image="slot_camp_blue_over_gra" />	
+				<Image Type="EmptySlot" Imageset="BaseImage004" Image="slot_blue_x" />
+				<Image Type="SlotMVP" Imageset="BaseImage015" Image="icontext_mvp1" />
+				<Image Type="SlotLineDark" Imageset="BaseImage001" Image="strip_gray_dark" />
+				<Image Type="SlotLineLight" Imageset="BaseImage001" Image="strip_gray_light" />
+
+				<Image Type="SlotRankS" Imageset="UIIconPack36" Image="pve_rank_s" />
+				<Image Type="SlotRankA" Imageset="UIIconPack36" Image="pve_rank_a" />
+				<Image Type="SlotRankB" Imageset="UIIconPack36" Image="pve_rank_b" />
+				<Image Type="SlotRankC" Imageset="UIIconPack36" Image="pve_rank_c" />
+			</Imagery>
+			<ExtraInfo RollingTime="2100" 
+				   RollingStopTime="200"
+                                   MVPTime="200" 
+                                   RollingStopSnd="interface/ceremony/result_get_01.wav"
+				   MVPSnd="interface/ceremony/result_get_01.wav"/>
+		</Window>
+
+	</Window>
+</Window>

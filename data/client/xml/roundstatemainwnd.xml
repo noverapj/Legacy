@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="RoundStateMainWnd" Id="5003">        
+	<Size X="0" Y="0" Width="670" Height="326" />
+	<Style>IWS_START_HIDE</Style>
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+			<Area X="0" Y="0" Width="670" Height="326"/>
+		</DefaultFrameImagery>		
+		<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title">
+			<Area X="5" Y="6" Width="660" Height="36"/>
+		</DefaultFrameImagery>
+	</Imagery>
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="616" Y="11" Width="43" Height="23" />
+		<Title>
+			<Format X="21" Y="4" Size="11" Style="Outline_full_2x" DisableStyle="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF20394F"/>
+			<Text>방정보</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="43" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="43" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="43" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="43" Height="23"/>
+			</DefaultFrameImagery>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>		
+	</Window>
+
+	<Window ClassName="RoundStateUserWnd" Id="2">
+		<Size X="17" Y="54" Width="638" Height="204" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="MyTeamFrm" Templete="slot_finish_myteam">
+				<Area X="0" Y="0" Width="638" Height="204"/>
+			</DefaultFrameImagery>
+
+			<Image Type="RedVert" Imageset="BaseImage001" Image="strip_red_dark" >
+				<Area X="158" Y="29" Width="2" Height="168" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+
+			<Image Type="BlueDark" Imageset="BaseImage001" Image="strip_blue_dark" >
+				<Area X="0" Y="0" Width="144" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="BlueLight" Imageset="BaseImage001" Image="strip_blue_light" >
+				<Area X="0" Y="0" Width="144" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="BlueOver" Imageset="BaseImage001" Image="strip_blue_on" >
+				<Area X="0" Y="0" Width="144" Height="21" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+
+			<Image Type="RedDark" Imageset="BaseImage001" Image="strip_red_dark" >
+				<Area X="0" Y="0" Width="144" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="RedLight" Imageset="BaseImage001" Image="strip_red_light" >
+				<Area X="0" Y="0" Width="144" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="RedOver" Imageset="BaseImage001" Image="strip_red_on" >
+				<Area X="0" Y="0" Width="144" Height="21" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+
+			<Image Type="OrangeMan" Imageset="BaseImage001" Image="icon0_man_orange"/>
+			<Image Type="GrayMan" Imageset="BaseImage001" Image="icon0_man_gray"/>
+		</Imagery>
+		<ExtraInfo MaxLine="32" LinePlayer="8" LinePlayerGap="160" 
+			   LineStartX="7" LineStartY="29" LineWidth="144" LineHeight="21"
+			   NameLimit="75"/>
+	</Window>
+
+	<Window ClassName="RoundStateUserWnd" Id="3">
+		<Size X="17" Y="54" Width="636" Height="255" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="MyTeamFrm" Templete="slot_finish_myteam">
+				<Area X="0" Y="0" Width="636" Height="255"/>
+			</DefaultFrameImagery>
+			
+			<Image Type="BlueVert" Imageset="BaseImage001" Image="strip_blue_dark" >
+				<Area X="317" Y="80" Width="2" Height="168" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="RedVert" Imageset="BaseImage001" Image="strip_red_dark" >
+				<Area X="317" Y="80" Width="2" Height="168" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+
+			<Image Type="BlueDark" Imageset="BaseImage001" Image="strip_blue_dark" >
+				<Area X="0" Y="0" Width="303" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="BlueLight" Imageset="BaseImage001" Image="strip_blue_light" >
+				<Area X="0" Y="0" Width="303" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="BlueOver" Imageset="BaseImage001" Image="strip_blue_on" >
+				<Area X="0" Y="0" Width="303" Height="21" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+
+			<Image Type="RedDark" Imageset="BaseImage001" Image="strip_red_dark" >
+				<Area X="0" Y="0" Width="303" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="RedLight" Imageset="BaseImage001" Image="strip_red_light" >
+				<Area X="0" Y="0" Width="303" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="RedOver" Imageset="BaseImage001" Image="strip_red_on" >
+				<Area X="0" Y="0" Width="303" Height="21" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+
+			<Image Type="OrangeMan" Imageset="BaseImage001" Image="icon0_man_orange"/>
+			<Image Type="GrayMan" Imageset="BaseImage001" Image="icon0_man_gray"/>
+
+			<Image Type="PCRoomBlue" Imageset="BaseImage006" Image="icontext_pc_blue" />
+			<Image Type="PCRoomRed" Imageset="BaseImage006" Image="icontext_pc_red" />
+			<Image Type="GuildBlue" Imageset="BaseImage006" Image="icontext_guild3_blue" />
+			<Image Type="GuildRed" Imageset="BaseImage006" Image="icontext_guild3_red" />
+			<Image Type="FriendBlue" Imageset="BaseImage006" Image="icontext_friend_blue" />
+			<Image Type="FriendRed" Imageset="BaseImage006" Image="icontext_friend_red" />
+			<Image Type="VictoriesBlue1" Imageset="BaseImage006" Image="icontext_win1_blue" />
+			<Image Type="VictoriesRed1" Imageset="BaseImage006" Image="icontext_win1_red" />
+			<Image Type="VictoriesBlue2" Imageset="BaseImage006" Image="icontext_win2_blue" />
+			<Image Type="VictoriesRed2" Imageset="BaseImage006" Image="icontext_win2_red" />
+			<Image Type="VictoriesNumBlue" Imageset="BaseImage006" Image="icontext_winnum_b" />
+			<Image Type="VictoriesNumRed" Imageset="BaseImage006" Image="icontext_winnum_r" />
+			<Image Type="ModeIconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+
+			<Image Type="MonsterModeTitle" Imageset="BaseImage006" Image="icontext_middle_skeletonhero" />
+			<Image Type="SurvivalModeTitle" Imageset="BaseImage006" Image="icontext_middle_deathmatch" />
+			<Image Type="BossModeTitle" Imageset="BaseImage006" Image="icontext_middle_bossraid" />
+			<Image Type="GangsiModeTitle1" Imageset="BaseImage015" Image="icontext_middle_gangsi" />
+			<Image Type="GangsiModeTitle2" Imageset="BaseImage015" Image="icontext_middle_survival_r" />
+			<Image Type="FightModeTitle" Imageset="BaseImage_Arcade002" Image="icontext_middle_arcade" />
+			<Image Type="ShuffleBonusModeTitle" Imageset="BaseImage028" Image="today_tap_title" />
+			<Image Type="RaidModeTitle" Imageset="BaseImage025" Image="icontext_middle_raid" />
+			
+			<Image Type="TowerDefTitle" Imageset="BaseImage_Defense001" Image="pve_text_tap_title01" />
+			<Image Type="SnowTownTitle" Imageset="BaseImage_Defense003" Image="pve_text_tap_title02" />
+			<Image Type="FireTempleTitle" Imageset="BaseImage_Defense003" Image="pve_text_tap_title03" />
+			<Image Type="FactoryTitle" Imageset="BaseImage_Defense003" Image="pve_text_tap_title04" />
+			<Image Type="TowerDefEasy" Imageset="BaseImage_Defense001" Image="pve_text_tap_class01" />
+			<Image Type="TowerDefNoraml" Imageset="BaseImage_Defense001" Image="pve_text_tap_class02" />
+			<Image Type="TowerDefHard" Imageset="BaseImage_Defense001" Image="pve_text_tap_class03" />
+			<Image Type="TowerDefMaster" Imageset="BaseImage_Defense001" Image="pve_text_tap_class04" />
+			<Image Type="BlueNumber" Imageset="BaseImage006" Image="icontext_middle_num_b" />
+			<Image Type="RedNumber" Imageset="BaseImage006" Image="icontext_middle_num_r" />
+			<Image Type="BlueFloor" Imageset="BaseImage006" Image="icontext_middle_floor_b" />
+			<Image Type="RedRank" Imageset="BaseImage006" Image="icontext_middle_rank_r" />
+			<Image Type="BlueRank" Imageset="BaseImage025" Image="icontext_middle_rank_raid_b" />
+
+			<Image Type="GoldMonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_gold" />
+			<Image Type="MonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_normal" />
+			<Image Type="RaidCoin" Imageset="BaseImage025" Image="pve_raid_ticket" />
+			<Image Type="CoinNumber" Imageset="BaseImage001" Image="text_moncoin_num" />
+			<Image Type="CoinUnlimited" Imageset="BaseImage001" Image="text_moncoin_unlimited" />
+			<Image Type="BlueTeam" Imageset="BaseImage025" Image="double_blue" />
+			<Image Type="RedTeam" Imageset="BaseImage025" Image="double_red" />
+		</Imagery>
+		<ExtraInfo MaxLine="16" LinePlayer="8" LinePlayerGap="319" 
+			   LineStartX="7" LineStartY="80" LineWidth="303" LineHeight="21"
+			   NameLimit="92"/>
+	</Window>
+
+	<Window ClassName="RoundStateUserWnd" Id="4">
+		<Size X="17" Y="54" Width="317" Height="255" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="MyTeamFrm" Templete="slot_finish_myteam">
+				<Area X="0" Y="0" Width="317" Height="255"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GuildMarkFrm" Templete="bt_empty">
+				<Area X="266" Y="11" Width="39" Height="39"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueDark" Imageset="BaseImage001" Image="strip_blue_dark" >
+				<Area X="0" Y="0" Width="303" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="BlueLight" Imageset="BaseImage001" Image="strip_blue_light" >
+				<Area X="0" Y="0" Width="303" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="BlueOver" Imageset="BaseImage001" Image="strip_blue_on" >
+				<Area X="0" Y="0" Width="303" Height="21" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+
+			<Image Type="RedDark" Imageset="BaseImage001" Image="strip_red_dark" >
+				<Area X="0" Y="0" Width="303" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="RedLight" Imageset="BaseImage001" Image="strip_red_light" >
+				<Area X="0" Y="0" Width="303" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="RedOver" Imageset="BaseImage001" Image="strip_red_on" >
+				<Area X="0" Y="0" Width="303" Height="21" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+
+			<Image Type="OrangeMan" Imageset="BaseImage001" Image="icon0_man_orange"/>
+			<Image Type="GrayMan" Imageset="BaseImage001" Image="icon0_man_gray"/>
+
+			<Image Type="PCRoomBlue" Imageset="BaseImage006" Image="icontext_pc_blue" />
+			<Image Type="PCRoomRed" Imageset="BaseImage006" Image="icontext_pc_red" />
+			<Image Type="GuildBlue" Imageset="BaseImage006" Image="icontext_guild3_blue" />
+			<Image Type="GuildRed" Imageset="BaseImage006" Image="icontext_guild3_red" />
+			<Image Type="FriendBlue" Imageset="BaseImage006" Image="icontext_friend_blue" />
+			<Image Type="FriendRed" Imageset="BaseImage006" Image="icontext_friend_red" />
+			<Image Type="VictoriesBlue1" Imageset="BaseImage006" Image="icontext_win1_blue" />
+			<Image Type="VictoriesRed1" Imageset="BaseImage006" Image="icontext_win1_red" />
+			<Image Type="VictoriesBlue2" Imageset="BaseImage006" Image="icontext_win2_blue" />
+			<Image Type="VictoriesRed2" Imageset="BaseImage006" Image="icontext_win2_red" />
+			<Image Type="VictoriesNumBlue" Imageset="BaseImage006" Image="icontext_winnum_b" />
+			<Image Type="VictoriesNumRed" Imageset="BaseImage006" Image="icontext_winnum_r" />
+			<Image Type="ModeIconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+
+			<Image Type="BlueNumber" Imageset="BaseImage006" Image="icontext_middle_num_b" />
+			<Image Type="RedNumber" Imageset="BaseImage006" Image="icontext_middle_num_r" />
+			<Image Type="BluePer" Imageset="BaseImage006" Image="icontext_middle_per_b" />
+			<Image Type="RedPer" Imageset="BaseImage006" Image="icontext_middle_per_r" />
+			<Image Type="BluePoint" Imageset="BaseImage006" Image="icontext_middle_point_b" />
+			<Image Type="RedPoint" Imageset="BaseImage006" Image="icontext_middle_point_r" />
+			<Image Type="BlueTeam" Imageset="BaseImage025" Image="double_blue" />
+			<Image Type="RedTeam" Imageset="BaseImage025" Image="double_red" />	
+			
+			<DefaultFrameImagery Type="SuccessionFrm" Templete="slot_finish_myteam">
+				<Area X="0" Y="0" Width="636" Height="255"/>
+			</DefaultFrameImagery>			
+			<Image Type="SuccessionTitle" Imageset="BaseImage042" Image="1vs1_tap_title" />	
+		</Imagery>
+		<ExtraInfo MaxLine="8" LinePlayer="8" LinePlayerGap="319" 
+			   LineStartX="7" LineStartY="80" LineWidth="303" LineHeight="21"
+			   NameLimit="92"/>
+	</Window>
+
+	<Window ClassName="RoundStateUserWnd" Id="5">
+		<Size X="336" Y="54" Width="317" Height="255" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="MyTeamFrm" Templete="slot_finish_myteam">
+				<Area X="0" Y="0" Width="317" Height="255"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GuildMarkFrm" Templete="bt_empty">
+				<Area X="266" Y="11" Width="39" Height="39"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueDark" Imageset="BaseImage001" Image="strip_blue_dark" >
+				<Area X="0" Y="0" Width="303" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="BlueLight" Imageset="BaseImage001" Image="strip_blue_light" >
+				<Area X="0" Y="0" Width="303" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="BlueOver" Imageset="BaseImage001" Image="strip_blue_on" >
+				<Area X="0" Y="0" Width="303" Height="21" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+
+			<Image Type="RedDark" Imageset="BaseImage001" Image="strip_red_dark" >
+				<Area X="0" Y="0" Width="303" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="RedLight" Imageset="BaseImage001" Image="strip_red_light" >
+				<Area X="0" Y="0" Width="303" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="RedOver" Imageset="BaseImage001" Image="strip_red_on" >
+				<Area X="0" Y="0" Width="303" Height="21" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+
+			<Image Type="OrangeMan" Imageset="BaseImage001" Image="icon0_man_orange"/>
+			<Image Type="GrayMan" Imageset="BaseImage001" Image="icon0_man_gray"/>
+
+			<Image Type="PCRoomBlue" Imageset="BaseImage006" Image="icontext_pc_blue" />
+			<Image Type="PCRoomRed" Imageset="BaseImage006" Image="icontext_pc_red" />
+			<Image Type="GuildBlue" Imageset="BaseImage006" Image="icontext_guild3_blue" />
+			<Image Type="GuildRed" Imageset="BaseImage006" Image="icontext_guild3_red" />
+			<Image Type="FriendBlue" Imageset="BaseImage006" Image="icontext_friend_blue" />
+			<Image Type="FriendRed" Imageset="BaseImage006" Image="icontext_friend_red" />
+			<Image Type="VictoriesBlue1" Imageset="BaseImage006" Image="icontext_win1_blue" />
+			<Image Type="VictoriesRed1" Imageset="BaseImage006" Image="icontext_win1_red" />
+			<Image Type="VictoriesBlue2" Imageset="BaseImage006" Image="icontext_win2_blue" />
+			<Image Type="VictoriesRed2" Imageset="BaseImage006" Image="icontext_win2_red" />
+			<Image Type="VictoriesNumBlue" Imageset="BaseImage006" Image="icontext_winnum_b" />
+			<Image Type="VictoriesNumRed" Imageset="BaseImage006" Image="icontext_winnum_r" />
+			<Image Type="ModeIconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+
+			<Image Type="BlueNumber" Imageset="BaseImage006" Image="icontext_middle_num_b" />
+			<Image Type="RedNumber" Imageset="BaseImage006" Image="icontext_middle_num_r" />
+			<Image Type="BluePer" Imageset="BaseImage006" Image="icontext_middle_per_b" />
+			<Image Type="RedPer" Imageset="BaseImage006" Image="icontext_middle_per_r" />
+			<Image Type="BluePoint" Imageset="BaseImage006" Image="icontext_middle_point_b" />
+			<Image Type="RedPoint" Imageset="BaseImage006" Image="icontext_middle_point_r" />
+			<Image Type="BlueTeam" Imageset="BaseImage025" Image="double_blue" />
+			<Image Type="RedTeam" Imageset="BaseImage025" Image="double_red" />			
+		</Imagery>
+		<ExtraInfo MaxLine="8" LinePlayer="8" LinePlayerGap="319" 
+			   LineStartX="7" LineStartY="80" LineWidth="303" LineHeight="21"
+			   NameLimit="92"/>
+	</Window>
+</Window>

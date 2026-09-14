@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="SpiritConversionResultWnd" Id="6314">
+  <Style>IWS_START_HIDE|IWS_MODAL|IWS_PROCESS</Style>
+  <ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+  <Size X="0" Y="0" Width="258" Height="506" />
+  <ExtraInfo showtime="2000"
+             effecttime="200"
+             effectstarttime="1000"/>
+  <Imagery>
+    <Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+    <Effect Type="Effect" File="ui_eff_spirit_mix_back.txt" RenderType="PreRender">
+      <Area X="0" Y="0" Width="200" Height="200" />
+    </Effect>
+  </Imagery>
+  <Window ClassName="InventoryIconBtn" Id="1">
+    <Size X="101" Y="140" Width="52" Height="52" />
+    <ExtraInfo OverSound  = "interface/public_mouseover_00.wav"
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+  </Window>
+</Window>

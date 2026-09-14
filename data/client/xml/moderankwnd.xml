@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="ModeRankWnd" Id="5005">
+	<Size X="0" Y="-108" XAlign="Center" YAlign="Bottom" Width="287" Height="30" />
+	<DragRect Left="0" Top="0" Right="287" Bottom="30" />
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_CANMOVE</Style> 
+	<ExtraInfo ShowTime="1000"
+		   StartTime="1000"
+		   HideTime="6000"
+		   GapTime="300"
+		   RollingSound="interface/ceremony/rank_rolling_00.wav"
+		   RollingStopSound="interface/ceremony/rank_get_00.wav"/>
+	<Imagery>
+		<Image Type="StonePoint" Imageset="BaseImage012" Image="Rank_Stoneattack"/>
+		<Image Type="PrisonerPoint" Imageset="BaseImage012" Image="Rank_Prisonercatch"/>
+		<Image Type="KingPoint" Imageset="BaseImage012" Image="Rank_Crowndefence"/>
+		<Image Type="KillPoint" Imageset="BaseImage012" Image="Rank_Kill"/>
+		<Image Type="AttackPoint" Imageset="BaseImage012" Image="Rank_Attack"/>
+		<Image Type="DamagePoint" Imageset="BaseImage012" Image="Rank_Damage"/>
+
+		<Image Type="GoalPoint" Imageset="BaseImage012" Image="Rank_Kill"/>
+		<Image Type="BallTouchPoint" Imageset="BaseImage012" Image="Rank_Attack"/>
+		<Image Type="BallTimePoint" Imageset="BaseImage012" Image="Rank_Crowndefence"/>
+
+		<Image Type="GangsiInfectionPoint" Imageset="BaseImage012" Image="Rank_Gangsi"/>
+		<Image Type="GangsiSurvivorPoint" Imageset="BaseImage012" Image="Rank_Survival"/>
+
+		<Image Type="Rank_C" Imageset="BaseImage012" Image="Rank_C"/>
+		<Image Type="Rank_B" Imageset="BaseImage012" Image="Rank_B"/>
+		<Image Type="Rank_A" Imageset="BaseImage012" Image="Rank_A"/>
+		<Image Type="Rank_S" Imageset="BaseImage012" Image="Rank_S"/>
+		
+		<Image Type="Rank_Attack" Imageset="BaseImage_Defense001" Image="Rank_Allattack"/>
+		<Image Type="Rank_Defense" Imageset="BaseImage_Defense001" Image="Rank_Alldefense"/>
+		<Image Type="Rank_Time" Imageset="BaseImage_Defense001" Image="Rank_Time"/>
+	</Imagery>
+</Window>
+

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+<Window ClassName="QuickLobbyExitWnd" SubClassName="ioWnd" Id="6249" IDName="" MemberName="">
+    <Size X="0" Y="0" Width="220" Height="135" CheckParentOutSide="true" XAlign="Center" YAlign="Center" />
+    <Style>IWS_START_HIDE|IWS_MODAL|IWS_EXIT_ESC</Style>
+    <ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+    <Title>
+        <Format X="13" Y="11" Size="17" VertGap="24" Style="Outline_full_2x" DisableStyle="Normal" HorzAlign="Left" VertAlign="Top" />
+        <Color Type="Normal" Text="ffffffff" Back="FF12304E" />
+        <Color Type="Over" Text="ff000000" Back="ff000000" />
+        <Color Type="Push" Text="ff000000" Back="ff000000" />
+        <Color Type="Disable" Text="ff000000" Back="ff000000" />
+        <Color Type="NoneSelected" Text="ff000000" Back="ff000000" />
+        <Text>게임메뉴</Text>
+    </Title>
+    <DragRect Left="0" Top="0" Right="500" Bottom="36" />
+    <Imagery>
+        <DefaultFrameImagery Type="Selected" Templete="win1_frame90" Color="ffffffff">
+            <Area X="0" Y="0" Width="220" Height="135" AutoResize="True" />
+        </DefaultFrameImagery>
+        <DefaultFrameImagery Type="SelectedTitle" Templete="win1_title" Color="ffffffff">
+            <Area X="5" Y="6" Width="210" Height="36" AutoResize="True" />
+        </DefaultFrameImagery>
+    </Imagery>
+    <Window ClassName="ioFrameButtonWndEX" SubClassName="" Id="1" IDName="EXIT_BTN" MemberName="">
+        <Size X="186" Y="11" Width="23" Height="23" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+        <Imagery />
+        <ExtraInfo ButtonType="0">
+            <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+            <NormalFrame Template="bt002_blue_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+            <OverFrame Template="bt002_blue_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+            <OverAddFrame Template="bt_overadd" RenderType="3" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+            <PushFrame Template="bt002_blue_down" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+            <ToolInfo>
+                <Event Type="WEVT_LBUTTONUP" Function="OnExitButtonDown" />
+            </ToolInfo>
+        </ExtraInfo>
+        <Window ClassName="ioImageWndEX" SubClassName="" Id="2" IDName="" MemberName="">
+            <Size X="5" Y="5" Width="13" Height="13" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+            <Style>IWS_INACTIVE</Style>
+            <Imagery />
+            <ExtraInfo>
+                <ImageInfo FileName="BaseImage001#icon0_x" ImageSetName="BaseImage001" ImageName="icon0_x" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" NoMagicAlign="false" Color="ffffffff" />
+                <ToolInfo />
+            </ExtraInfo>
+        </Window>
+    </Window>
+    <Window ClassName="ioFrameButtonWndEX" SubClassName="" Id="3" IDName="OPTION_BTN" MemberName="">
+        <Size X="17" Y="54" Width="186" Height="31" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+        <Imagery />
+        <ExtraInfo ButtonType="0">
+            <LabelInfo Text="옵션 (F8)" Size="13" Alpha="255" Style="5" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ffffffff" NormalBKColor="ff12304e" OverColor="ffffffff" OverBKColor="ff12304e" PushColor="ffffffff" PushBKColor="ff12304b" DisableColor="ff000000" DisableBKColor="ff000000" />
+            <NormalFrame Template="bt006_blue_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+            <OverFrame Template="bt006_blue_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+            <OverAddFrame Template="bt_overadd" RenderType="3" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+            <PushFrame Template="bt006_blue_down" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+            <ToolInfo>
+                <Event Type="WEVT_LBUTTONUP" Function="OnOptionBtnUp" />
+            </ToolInfo>
+        </ExtraInfo>
+    </Window>
+    <Window ClassName="ioFrameButtonWndEX" SubClassName="" Id="4" IDName="PLAZA_BACK_BTN" MemberName="">
+        <Size X="17" Y="87" Width="186" Height="31" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+        <Imagery />
+        <ExtraInfo ButtonType="0">
+            <LabelInfo Text="나가기" Size="13" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ffb91600" NormalBKColor="ff000000" OverColor="ffb91600" OverBKColor="ff000000" PushColor="ffb91600" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+            <NormalFrame Template="bt006_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+            <OverFrame Template="bt006_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+            <OverAddFrame Template="bt_overadd" RenderType="3" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+            <PushFrame Template="bt006_gray_down" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+            <ToolInfo>
+                <Event Type="WEVT_LBUTTONUP" Function="OnPlazaBackBtnUp" />
+            </ToolInfo>
+        </ExtraInfo>
+    </Window>
+    <Window ClassName="ioFrameButtonWndEX" SubClassName="" Id="5" IDName="ALTF4_BTN" MemberName="">
+        <Size X="17" Y="87" Width="186" Height="31" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+        <Imagery />
+        <ExtraInfo ButtonType="0">
+            <LabelInfo Text="게임 종료" Size="13" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ffb91600" NormalBKColor="ff000000" OverColor="ffb91600" OverBKColor="ff000000" PushColor="ffb91600" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+            <NormalFrame Template="bt006_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+            <OverFrame Template="bt006_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+            <OverAddFrame Template="bt_overadd" RenderType="3" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+            <PushFrame Template="bt006_gray_down" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+            <ToolInfo>
+                <Event Type="WEVT_LBUTTONUP" Function="OnGameExitBtnUp" />
+            </ToolInfo>
+        </ExtraInfo>
+    </Window>
+</Window>

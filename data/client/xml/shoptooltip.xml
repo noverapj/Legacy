@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="ShopToolTip" Id="100">
+	<Size X="74" Y="0" Width="314" Height="200" />
+	<Style>IWS_START_HIDE|IWS_NO_MOUSE_RESPONSE</Style>
+	<Imagery>
+		<DefaultFrameImagery Templete="YellowLineBlackFrame">
+			<Area X="0" Y="0" Width="314" Height="200"/>
+		</DefaultFrameImagery>
+		<Image Imageset="TypoLook" Image="YellowWidthLine" >
+			<Area X="10" Y="44" Width="298" Height="2" HorzAlign="Stretch"/>
+		</Image>
+	</Imagery>
+</Window>

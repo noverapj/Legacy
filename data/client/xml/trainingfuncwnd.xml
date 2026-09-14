@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="TrainingFuncWnd" Id="6280">
+	<Size X="0" Y="0" Width="437" Height="526" XAlign="Center" YAlign="Center"/>
+	<DragRect Left="0" Top="0" Right="500" Bottom="36" />
+    <Style>IWS_START_HIDE|IWS_CANMOVE</Style>
+    <ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+    <Title>
+        <Format X="13" Y="11" Size="17" VertGap="24" Style="Outline_full_2x" DisableStyle="Normal" HorzAlign="Left" VertAlign="Top" />
+        <Color Type="Normal" Text="ffffffff" Back="ff0c426f" />
+        <Color Type="Over" Text="ff000000" Back="ff000000" />
+        <Color Type="Push" Text="ff000000" Back="ff000000" />
+        <Color Type="Disable" Text="ff000000" Back="ff000000" />
+        <Color Type="NoneSelected" Text="ff000000" Back="ff000000" />
+        <Text>전투</Text>
+    </Title>
+	<Imagery>
+        <DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+            <Area X="0" Y="0" Width="437" Height="526" AutoResize="True" />
+        </DefaultFrameImagery>
+        <DefaultFrameImagery Type="SelectedTitle" Templete="win1_title">
+            <Area X="5" Y="6" Width="427" Height="36" AutoResize="True" />
+        </DefaultFrameImagery>
+    </Imagery>
+	
+	<Window ClassName="ioButton" Id="1">
+		<Size X="404" Y="11" Width="22" Height="22"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="22" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="22" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="22" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="22" Height="22"/>
+			</DefaultFrameImagery>
+			<Image Type="Disable" Imageset="BaseImage001" Image="icon0_x_grayframe" >
+				<Area X="0" Y="0" />
+			</Image>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="icon0_x" >
+				<Area X="5" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="LobbyOwnerTradeListWnd" Id="2">
+		<Size X="566" Y="0" Width="206" Height="526" />
+		<Style>IWS_PROCESS|IWS_BACKMOST|IWS_START_HIDE</Style>
+		<Title>
+			<Format X="103" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+			<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
+			<Text>내가 등록한 장비</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="win1_frame80">
+				<Area X="0" Y="0" Width="206" Height="526"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Templete="win1_title">
+				<Area X="5" Y="6" Width="196" Height="36" AutoResize="False"/>
+			</DefaultFrameImagery>
+		</Imagery>
+
+		<Window ClassName="ioButton" Id="1">
+			<Size X="17" Y="477" Width="63" Height="18" />
+			<Style>IWS_BACKMOST</Style> 
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="63" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="63" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="63" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+					<Area X="0" Y="0" Width="63" Height="18"/>
+				</DefaultFrameImagery>
+				<Image Imageset="BaseImage001" Image="icon0_list_left" >
+					<Area X="27" Y="4"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+						   ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+
+		<Window ClassName="ioButton" Id="2">
+			<Size X="126" Y="477" Width="63" Height="18" />
+			<Style>IWS_BACKMOST</Style> 
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="63" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="63" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="63" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+					<Area X="0" Y="0" Width="63" Height="18"/>
+				</DefaultFrameImagery>
+				<Image Imageset="BaseImage001" Image="icon0_list_left" >
+					<Area X="27" Y="4" Reverse="Horz"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+						   ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+
+		<Window ClassName="LobbyTradeItemBtn" Id="10">
+			<Size X="17" Y="72" Width="172" Height="57" />
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="slot_quest_alarm_nor">
+					<Area X="0" Y="0" Width="172" Height="57"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="slot_quest_alarm_nor">
+					<Area X="0" Y="0" Width="172" Height="57"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="172" Height="57"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="slot_quest_alarm_down">
+					<Area X="0" Y="0" Width="172" Height="57"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray2">
+					<Area X="0" Y="0" Width="172" Height="55" AutoResize="False"/>
+				</DefaultFrameImagery>
+
+				<Image Type="empty_image" Imageset="BaseImage002" Image="quest_giftbox_x" />
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+						   ClickSound = "interface/public_mouseclick_00.wav"/>
+
+				<Window ClassName="InventoryIconBtn" Id="1">
+				<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+				<Size X="25" Y="27" Width="0" Height="0" />
+				<Imagery>
+					<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+					<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+					<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+				</Imagery>
+			</Window>
+
+			<!-- 장비 : 커스텀 -->
+			<Window ClassName="LobbyTradeItemCustomBtn" Id="2">
+				<Size X="29" Y="5" Width="0" Height="0" />
+				<Style>IWS_BACKMOST</Style> 
+				<Imagery>
+					<Image Type="custom_image" Imageset="BaseImage003" Image="icon0_skin_delicon"/>
+				</Imagery>
+			</Window>
+		</Window>
+
+		<Window ClassName="LobbyTradeItemBtn" Id="11">
+			<Size X="17" Y="129" Width="172" Height="57" />
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="slot_quest_alarm_nor">
+					<Area X="0" Y="0" Width="172" Height="57"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="slot_quest_alarm_nor">
+					<Area X="0" Y="0" Width="172" Height="57"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="172" Height="57"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="slot_quest_alarm_down">
+					<Area X="0" Y="0" Width="172" Height="57"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray2">
+					<Area X="0" Y="0" Width="172" Height="55" AutoResize="False"/>
+				</DefaultFrameImagery>
+
+				<Image Type="empty_image" Imageset="BaseImage002" Image="quest_giftbox_x" />
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+						   ClickSound = "interface/public_mouseclick_00.wav"/>
+
+				<Window ClassName="InventoryIconBtn" Id="1">
+				<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+				<Size X="25" Y="27" Width="0" Height="0" />
+				<Imagery>
+					<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+					<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+					<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+				</Imagery>
+			</Window>
+
+			<!-- 장비 : 커스텀 -->
+			<Window ClassName="LobbyTradeItemCustomBtn" Id="2">
+				<Size X="29" Y="5" Width="0" Height="0" />
+				<Style>IWS_BACKMOST</Style> 
+				<Imagery>
+					<Image Type="custom_image" Imageset="BaseImage003" Image="icon0_skin_delicon"/>
+				</Imagery>
+			</Window>
+		</Window>
+
+		<Window ClassName="LobbyTradeItemBtn" Id="12">
+			<Size X="17" Y="186" Width="172" Height="57" />
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="slot_quest_alarm_nor">
+					<Area X="0" Y="0" Width="172" Height="57"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="slot_quest_alarm_nor">
+					<Area X="0" Y="0" Width="172" Height="57"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="172" Height="57"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="slot_quest_alarm_down">
+					<Area X="0" Y="0" Width="172" Height="57"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray2">
+					<Area X="0" Y="0" Width="172" Height="55" AutoResize="False"/>
+				</DefaultFrameImagery>
+
+				<Image Type="empty_image" Imageset="BaseImage002" Image="quest_giftbox_x" />
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+						   ClickSound = "interface/public_mouseclick_00.wav"/>
+
+				<Window ClassName="InventoryIconBtn" Id="1">
+				<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+				<Size X="25" Y="27" Width="0" Height="0" />
+				<Imagery>
+					<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+					<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+					<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+				</Imagery>
+			</Window>
+
+			<!-- 장비 : 커스텀 -->
+			<Window ClassName="LobbyTradeItemCustomBtn" Id="2">
+				<Size X="29" Y="5" Width="0" Height="0" />
+				<Style>IWS_BACKMOST</Style> 
+				<Imagery>
+					<Image Type="custom_image" Imageset="BaseImage003" Image="icon0_skin_delicon"/>
+				</Imagery>
+			</Window>
+		</Window>
+
+		<Window ClassName="LobbyTradeItemBtn" Id="13">
+			<Size X="17" Y="243" Width="172" Height="57" />
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="slot_quest_alarm_nor">
+					<Area X="0" Y="0" Width="172" Height="57"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="slot_quest_alarm_nor">
+					<Area X="0" Y="0" Width="172" Height="57"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="172" Height="57"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="slot_quest_alarm_down">
+					<Area X="0" Y="0" Width="172" Height="57"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray2">
+					<Area X="0" Y="0" Width="172" Height="55" AutoResize="False"/>
+				</DefaultFrameImagery>
+
+				<Image Type="empty_image" Imageset="BaseImage002" Image="quest_giftbox_x" />
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+						   ClickSound = "interface/public_mouseclick_00.wav"/>
+
+				<Window ClassName="InventoryIconBtn" Id="1">
+				<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+				<Size X="25" Y="27" Width="0" Height="0" />
+				<Imagery>
+					<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+					<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+					<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+				</Imagery>
+			</Window>
+
+			<!-- 장비 : 커스텀 -->
+			<Window ClassName="LobbyTradeItemCustomBtn" Id="2">
+				<Size X="29" Y="5" Width="0" Height="0" />
+				<Style>IWS_BACKMOST</Style> 
+				<Imagery>
+					<Image Type="custom_image" Imageset="BaseImage003" Image="icon0_skin_delicon"/>
+				</Imagery>
+			</Window>
+		</Window>
+
+		<Window ClassName="LobbyTradeItemBtn" Id="14">
+			<Size X="17" Y="300" Width="172" Height="57" />
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="slot_quest_alarm_nor">
+					<Area X="0" Y="0" Width="172" Height="57"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="slot_quest_alarm_nor">
+					<Area X="0" Y="0" Width="172" Height="57"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="172" Height="57"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="slot_quest_alarm_down">
+					<Area X="0" Y="0" Width="172" Height="57"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray2">
+					<Area X="0" Y="0" Width="172" Height="55" AutoResize="False"/>
+				</DefaultFrameImagery>
+
+				<Image Type="empty_image" Imageset="BaseImage002" Image="quest_giftbox_x" />
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+						   ClickSound = "interface/public_mouseclick_00.wav"/>
+
+				<Window ClassName="InventoryIconBtn" Id="1">
+				<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+				<Size X="25" Y="27" Width="0" Height="0" />
+				<Imagery>
+					<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+					<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+					<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+				</Imagery>
+			</Window>
+
+			<!-- 장비 : 커스텀 -->
+			<Window ClassName="LobbyTradeItemCustomBtn" Id="2">
+				<Size X="29" Y="5" Width="0" Height="0" />
+				<Style>IWS_BACKMOST</Style> 
+				<Imagery>
+					<Image Type="custom_image" Imageset="BaseImage003" Image="icon0_skin_delicon"/>
+				</Imagery>
+			</Window>
+		</Window>
+		
+		<Window ClassName="LobbyTradeItemBtn" Id="15">
+			<Size X="17" Y="357" Width="172" Height="57" />
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="slot_quest_alarm_nor">
+					<Area X="0" Y="0" Width="172" Height="57"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="slot_quest_alarm_nor">
+					<Area X="0" Y="0" Width="172" Height="57"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="172" Height="57"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="slot_quest_alarm_down">
+					<Area X="0" Y="0" Width="172" Height="57"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray2">
+					<Area X="0" Y="0" Width="172" Height="55" AutoResize="False"/>
+				</DefaultFrameImagery>
+
+				<Image Type="empty_image" Imageset="BaseImage002" Image="quest_giftbox_x" />
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+						   ClickSound = "interface/public_mouseclick_00.wav"/>
+
+				<Window ClassName="InventoryIconBtn" Id="1">
+				<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+				<Size X="25" Y="27" Width="0" Height="0" />
+				<Imagery>
+					<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+					<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+					<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+				</Imagery>
+			</Window>
+
+			<!-- 장비 : 커스텀 -->
+			<Window ClassName="LobbyTradeItemCustomBtn" Id="2">
+				<Size X="29" Y="5" Width="0" Height="0" />
+				<Style>IWS_BACKMOST</Style> 
+				<Imagery>
+					<Image Type="custom_image" Imageset="BaseImage003" Image="icon0_skin_delicon"/>
+				</Imagery>
+			</Window>
+		</Window>
+		
+		<Window ClassName="LobbyTradeItemBtn" Id="16">
+			<Size X="17" Y="414" Width="172" Height="57" />
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="slot_quest_alarm_nor">
+					<Area X="0" Y="0" Width="172" Height="57"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="slot_quest_alarm_nor">
+					<Area X="0" Y="0" Width="172" Height="57"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="172" Height="57"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="slot_quest_alarm_down">
+					<Area X="0" Y="0" Width="172" Height="57"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray2">
+					<Area X="0" Y="0" Width="172" Height="55" AutoResize="False"/>
+				</DefaultFrameImagery>
+
+				<Image Type="empty_image" Imageset="BaseImage002" Image="quest_giftbox_x" />
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+						   ClickSound = "interface/public_mouseclick_00.wav"/>
+
+				<Window ClassName="InventoryIconBtn" Id="1">
+				<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+				<Size X="25" Y="27" Width="0" Height="0" />
+				<Imagery>
+					<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+					<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+					<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+				</Imagery>
+			</Window>
+
+			<!-- 장비 : 커스텀 -->
+			<Window ClassName="LobbyTradeItemCustomBtn" Id="2">
+				<Size X="29" Y="5" Width="0" Height="0" />
+				<Style>IWS_BACKMOST</Style> 
+				<Imagery>
+					<Image Type="custom_image" Imageset="BaseImage003" Image="icon0_skin_delicon"/>
+				</Imagery>
+			</Window>
+		</Window>
+	</Window>
+
+    <Window ClassName="ModeHelpTooltip" Id="500">
+        <Size X="0" Y="0" Width="164" Height="70" XAlign="Left" YAlign="Top" />
+        <Style>IWS_START_HIDE|IWS_PROCESS|IWS_TOPMOST</Style>
+        <Imagery>
+            <DefaultFrameImagery Type="Selected" Templete="tooltip3">
+                <Area X="0" Y="0" Width="164" Height="70" AutoResize="True" />
+            </DefaultFrameImagery>
+        </Imagery>
+    </Window>
+
+    <Window ClassName="QuickModeToolTip" Id="501">
+        <Size X="0" Y="0" Width="156" Height="70" XAlign="Left" YAlign="Top" />
+        <Style>IWS_START_HIDE|IWS_PROCESS|IWS_TOPMOST</Style>
+        <Imagery>
+            <DefaultFrameImagery Type="Selected" Templete="tooltip3">
+                <Area X="0" Y="0" Width="156" Height="70" AutoResize="True" />
+            </DefaultFrameImagery>
+        </Imagery>
+    </Window>
+</Window>

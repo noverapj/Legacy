@@ -1,0 +1,1434 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="CustomTournamentAllocateWnd" Id="6218">
+	<Size X="0" Y="-20" XAlign="Center" YAlign="Center" Width="458" Height="543" />
+	<Style>IWS_START_HIDE|IWS_EXIT_ESC|IWS_DRAG_DROP</Style> 
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Title>
+		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Text>대진 배정</Text>
+	</Title>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+			<Area X="0" Y="0" Width="458" Height="543"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title">
+			<Area X="5" Y="6" Width="448" Height="36"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="MultiplyFrm" Templete="win1_multiply_bottom">
+			<Area X="0" Y="478" Width="458" Height="65"/>
+		</DefaultFrameImagery>
+    <Image Type="NormalList" Imageset="BaseImage_League001" Image="league_bluearrow" >
+		  <Area X="198" Y="165" />
+		</Image>
+    <Image Type="NormalList" Imageset="BaseImage_League001" Image="league_redarrow" >
+		  <Area X="198" Y="260" Reverse="Horz"/>
+		</Image>
+  </Imagery>
+	<Window ClassName="ioButton" Id="1">
+		<Size X="424" Y="11" Width="23" Height="23"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+      <Image Type="Disable" Imageset="BaseImage001" Image="icon0_x_grayframe" >
+				<Area X="0" Y="0" />
+			</Image>
+      <Image Type="NormalList" Imageset="BaseImage001" Image="icon0_x" >
+				<Area X="5" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="ioCheckButton" Id="2">
+		<Size X="17" Y="495" Width="16" Height="16" />
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Check" Imageset="BaseImage001" Image="check_box_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="ioButton" Id="3">
+		<Size X="239" Y="495" Width="100" Height="31" />
+		<Title>
+			<Format X="50" Y="5" Size="13" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FF323232" Back="FF215AA2"/>
+			<Text>배정 완료</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="100" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_blue_down">
+				<Area X="0" Y="0" Width="100" Height="31"/>
+			</DefaultFrameImagery>	
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="ioButton" Id="4">
+		<Size X="341" Y="495" Width="100" Height="31" />
+		<Title>
+			<Format X="50" Y="7" Size="13" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A39" Back="FF215AA2"/>
+			<Color Type="Over" Text="FF3A3A39" Back="FF215AA2"/>
+			<Color Type="Push" Text="FF3A3A39" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FF323232" Back="FF215AA2"/>
+			<Text>취소</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="100" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_gray_down">
+				<Area X="0" Y="0" Width="100" Height="31"/>
+			</DefaultFrameImagery>
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+  <Window ClassName="UnAllocateWnd" Id="10">
+    <Style>IWS_PROCESS</Style>
+    <Size X="17" Y="54" Width="174" Height="384" />
+		<Window ClassName="ioScroll" Id="1000">
+			<Size X="159" Y="0" Width="15" Height="382" />
+			<Style>IWS_PROCESS</Style>
+			<ExStyle>IWS_EX_VSCROLL</ExStyle>
+			<Imagery>
+				<DefaultFrameImagery Templete="scrollbar_back">
+					<Area X="5" Y="10" Width="5" Height="364"/>
+				</DefaultFrameImagery>
+			</Imagery>		
+			<ExtraInfo PageRange="1" StartTime="500" CurTime ="100"/>
+			<Window ClassName="ioButton" Id="1">  	
+				<Size X="0" Y="0" Width="15" Height="10" />
+				<Imagery>
+					<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0" Reverse="Vert"/>
+					</Image>
+					<Image Type="Over" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0" Reverse="Vert"/>
+					</Image>
+					<Image Type="Push" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0" Reverse="Vert"/>
+					</Image>
+				</Imagery>
+				<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+				           ClickSound = "interface/public_mouseclick_00.wav"/>
+			</Window>
+			<Window ClassName="ioButton" Id="2">
+				<Size X="0" Y="374" Width="15" Height="10" />
+				<Imagery>
+					<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0"/>
+					</Image>
+					<Image Type="Over" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0"/>
+					</Image>
+					<Image Type="Push" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0"/>
+					</Image>
+				</Imagery>
+				<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+				           ClickSound = "interface/public_mouseclick_00.wav"/>
+			</Window>
+			<Window ClassName="ioSlide" Id="3">
+				<Size X="0" Y="10" Width="15" Height="30" />
+				<DragRect Left="0" Top="0" Right="15" Bottom="30" />
+				<ExStyle>IWS_EX_NOTIFY_MOVED</ExStyle>
+				<Style>IWS_CANMOVE</Style>
+				<Imagery>
+					<DefaultFrameImagery Templete="scrollbar_drag">
+						<Area X="0" Y="0" Width="15" Height="30"/>
+					</DefaultFrameImagery>
+					<Image Type="Icon_Slide" Imageset="BaseImage001" Image="scrollbar_drag_icon"/>
+				</Imagery>
+			</Window>
+		</Window>
+  	<Window ClassName="UnAllocateButton" Id="100">
+    	<Style>IWS_BACKMOST</Style>
+  	  <Size X="0" Y="0" Width="152" Height="22" />
+  	  <Title>
+  	  	<Format X="76" Y="4" Size="12" HorzAlign="Center"/>
+  	  	<Color Type="Normal" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+  	  	<Text>미지정 대회팀</Text>
+  	  </Title>
+  	  <Imagery>
+  	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	 		<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+		   	<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+		   	<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+  	  </Imagery>		
+  	  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+  	            	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  	 </Window>
+  	 <Window ClassName="UnAllocateButton" Id="101">
+  	  <Style>IWS_BACKMOST</Style>
+  	  <Size X="0" Y="24" Width="152" Height="22" />
+  	  <Title>
+  	  	<Format X="76" Y="4" Size="12" HorzAlign="Center"/>
+  	  	<Color Type="Normal" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+  	  	<Text>미지정 대회팀</Text>
+  	  </Title>
+  	  <Imagery>
+  	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	 		<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+		   	<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+		   	<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+  	  </Imagery>		
+  	  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+  	            	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  	 </Window>
+  	 <Window ClassName="UnAllocateButton" Id="102">
+  	  <Style>IWS_BACKMOST</Style>
+  	  <Size X="0" Y="48" Width="152" Height="22" />
+  	  <Title>
+  	  	<Format X="76" Y="4" Size="12" HorzAlign="Center"/>
+  	  	<Color Type="Normal" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+  	  	<Text>미지정 대회팀</Text>
+  	  </Title>
+  	  <Imagery>
+  	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	 		<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+		   	<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+		   	<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+  	  </Imagery>		
+  	  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+  	            	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  	 </Window>
+  	 <Window ClassName="UnAllocateButton" Id="103">
+  	 <Style>IWS_BACKMOST</Style>
+  	  <Size X="0" Y="72" Width="152" Height="22" />
+  	  <Title>
+  	  	<Format X="76" Y="4" Size="12" HorzAlign="Center"/>
+  	  	<Color Type="Normal" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+  	  	<Text>미지정 대회팀</Text>
+  	  </Title>
+  	  <Imagery>
+  	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	 		<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+		   	<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+		   	<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+  	  </Imagery>		
+  	  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+  	            	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  	 </Window>
+  	 <Window ClassName="UnAllocateButton" Id="104">
+  	  <Style>IWS_BACKMOST</Style>
+  	  <Size X="0" Y="96" Width="152" Height="22" />
+  	  <Title>
+  	  	<Format X="76" Y="4" Size="12" HorzAlign="Center"/>
+  	  	<Color Type="Normal" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+  	  	<Text>미지정 대회팀</Text>
+  	  </Title>
+  	  <Imagery>
+  	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	 		<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+		   	<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+		   	<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+  	  </Imagery>		
+  	  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+  	            	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  	 </Window>
+  	 <Window ClassName="UnAllocateButton" Id="105">
+  	  <Style>IWS_BACKMOST</Style>
+  	  <Size X="0" Y="120" Width="152" Height="22" />
+  	  <Title>
+  	  	<Format X="76" Y="4" Size="12" HorzAlign="Center"/>
+  	  	<Color Type="Normal" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+  	  	<Text>미지정 대회팀</Text>
+  	  </Title>
+  	  <Imagery>
+  	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	 		<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+		   	<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+		   	<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+  	  </Imagery>		
+  	  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+  	            	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  	 </Window>
+  	 <Window ClassName="UnAllocateButton" Id="106">
+  	  <Style>IWS_BACKMOST</Style>
+  	  <Size X="0" Y="144" Width="152" Height="22" />
+  	  <Title>
+  	  	<Format X="76" Y="4" Size="12" HorzAlign="Center"/>
+  	  	<Color Type="Normal" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+  	  	<Text>미지정 대회팀</Text>
+  	  </Title>
+  	  <Imagery>
+  	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	 		<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+		   	<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+		   	<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+  	  </Imagery>		
+  	  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+  	            	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  	 </Window>
+  	 <Window ClassName="UnAllocateButton" Id="107">
+  	  <Style>IWS_BACKMOST</Style>
+  	  <Size X="0" Y="168" Width="152" Height="22" />
+  	  <Title>
+  	  	<Format X="76" Y="4" Size="12" HorzAlign="Center"/>
+  	  	<Color Type="Normal" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+  	  	<Text>미지정 대회팀</Text>
+  	  </Title>
+  	  <Imagery>
+  	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	 		<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+		   	<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+		   	<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+  	  </Imagery>		
+  	  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+  	            	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  	 </Window>
+  	 <Window ClassName="UnAllocateButton" Id="108">
+  	  <Style>IWS_BACKMOST</Style>
+  	  <Size X="0" Y="192" Width="152" Height="22" />
+  	  <Title>
+  	  	<Format X="76" Y="4" Size="12" HorzAlign="Center"/>
+  	  	<Color Type="Normal" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+  	  	<Text>미지정 대회팀</Text>
+  	  </Title>
+  	  <Imagery>
+  	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	 		<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+		   	<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+		   	<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+  	  </Imagery>		
+  	  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+  	            	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  	 </Window>
+  	 <Window ClassName="UnAllocateButton" Id="109">
+  	  <Style>IWS_BACKMOST</Style>
+  	  <Size X="0" Y="216" Width="152" Height="22" />
+  	  <Title>
+  	  	<Format X="76" Y="4" Size="12" HorzAlign="Center"/>
+  	  	<Color Type="Normal" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+  	  	<Text>미지정 대회팀</Text>
+  	  </Title>
+  	  <Imagery>
+  	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+  	  		<Area X="0" Y="0" Width="152" Height="22"/>
+  	  	</DefaultFrameImagery>
+  	 		<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+		   	<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+		   	<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+  	  </Imagery>		
+  	  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+  	            	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  	 </Window>
+  	 <Window ClassName="UnAllocateButton" Id="110">
+  	  <Style>IWS_BACKMOST</Style>
+  	  <Size X="0" Y="240" Width="152" Height="22" />
+  	  <Title>
+  	  	<Format X="76" Y="4" Size="12" HorzAlign="Center"/>
+  	  	<Color Type="Normal" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
+  	   	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+  		 	<Text>미지정 대회팀</Text>
+  		 </Title>
+  		 <Imagery>
+  		 	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+  		 		<Area X="0" Y="0" Width="152" Height="22"/>
+  		 	</DefaultFrameImagery>
+  		 	<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+  		 		<Area X="0" Y="0" Width="152" Height="22"/>
+  		 	</DefaultFrameImagery>
+  		 	<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+  		 		<Area X="0" Y="0" Width="152" Height="22"/>
+  		 	</DefaultFrameImagery>
+  		 	<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+  		 		<Area X="0" Y="0" Width="152" Height="22"/>
+  		 	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+		   	<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+		   	<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+  		 </Imagery>		
+  		 <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+  	            	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  	  </Window>
+  	  <Window ClassName="UnAllocateButton" Id="111">
+  	    <Style>IWS_BACKMOST</Style>
+  		  <Size X="0" Y="264" Width="152" Height="22" />
+  		  <Title>
+  		  	<Format X="76" Y="4" Size="12" HorzAlign="Center"/>
+  		  	<Color Type="Normal" Text="FF117222" Back="FF000000"/>
+  		  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
+  		  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
+  		  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+  		  	<Text>미지정 대회팀</Text>
+  		  </Title>
+  		  <Imagery>
+  		  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+  		  		<Area X="0" Y="0" Width="152" Height="22"/>
+  		  	</DefaultFrameImagery>
+  		  	<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+  		  		<Area X="0" Y="0" Width="152" Height="22"/>
+  		  	</DefaultFrameImagery>
+  		  	<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+  		  		<Area X="0" Y="0" Width="152" Height="22"/>
+  		  	</DefaultFrameImagery>
+  		  	<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+  		  		<Area X="0" Y="0" Width="152" Height="22"/>
+  		  	</DefaultFrameImagery>
+  	  		<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				    <Area X="0" Y="0" Width="152" Height="22"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				    <Area X="0" Y="0" Width="152" Height="22"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+				    <Area X="0" Y="0" Width="152" Height="22"/>
+    			</DefaultFrameImagery>
+  		  </Imagery>		
+  		  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+  	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  	  </Window>
+  	  <Window ClassName="UnAllocateButton" Id="112">
+  	   <Style>IWS_BACKMOST</Style>
+  		 <Size X="0" Y="288" Width="152" Height="22" />
+  		 <Title>
+  		 	<Format X="76" Y="4" Size="12" HorzAlign="Center"/>
+  		 	<Color Type="Normal" Text="FF117222" Back="FF000000"/>
+  		 	<Color Type="Over" Text="FF117222" Back="FF000000"/>
+  		 	<Color Type="Push" Text="FF117222" Back="FF000000"/>
+  		 	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+  		 	<Text>미지정 대회팀</Text>
+  		 </Title>
+  		 <Imagery>
+  		 	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+  		 		<Area X="0" Y="0" Width="152" Height="22"/>
+  		 	</DefaultFrameImagery>
+  		 	<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+  		 		<Area X="0" Y="0" Width="152" Height="22"/>
+  		 	</DefaultFrameImagery>
+  		 	<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+  		 		<Area X="0" Y="0" Width="152" Height="22"/>
+  		 	</DefaultFrameImagery>
+  		 	<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+  		 		<Area X="0" Y="0" Width="152" Height="22"/>
+  		 	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+		   	<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+		   	<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+			    <Area X="0" Y="0" Width="152" Height="22"/>
+    		</DefaultFrameImagery>
+  		 </Imagery>		
+  		 <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+  	            	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  	  </Window>
+  	  <Window ClassName="UnAllocateButton" Id="113">
+  	   <Style>IWS_BACKMOST</Style>
+  		  <Size X="0" Y="312" Width="152" Height="22" />
+  		  <Title>
+  		  	<Format X="76" Y="4" Size="12" HorzAlign="Center"/>
+  		  	<Color Type="Normal" Text="FF117222" Back="FF000000"/>
+  		  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
+  		  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
+  		  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+  		  	<Text>미지정 대회팀</Text>
+  		  </Title>
+  		  <Imagery>
+  		  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+  		  		<Area X="0" Y="0" Width="152" Height="22"/>
+  		  	</DefaultFrameImagery>
+  		  	<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+  		  		<Area X="0" Y="0" Width="152" Height="22"/>
+  		  	</DefaultFrameImagery>
+  		  	<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+  		  		<Area X="0" Y="0" Width="152" Height="22"/>
+  		  	</DefaultFrameImagery>
+  		  	<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+  		  		<Area X="0" Y="0" Width="152" Height="22"/>
+  		  	</DefaultFrameImagery>
+  	  		<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				    <Area X="0" Y="0" Width="152" Height="22"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				    <Area X="0" Y="0" Width="152" Height="22"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+				    <Area X="0" Y="0" Width="152" Height="22"/>
+    			</DefaultFrameImagery>
+  		  </Imagery>		
+  		  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+  	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  	  </Window>
+  	  <Window ClassName="UnAllocateButton" Id="114">
+  	    <Style>IWS_BACKMOST</Style>
+  		  <Size X="0" Y="336" Width="152" Height="22" />
+  		  <Title>
+  		  	<Format X="76" Y="4" Size="12" HorzAlign="Center"/>
+  		  	<Color Type="Normal" Text="FF117222" Back="FF000000"/>
+  		  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
+  		  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
+  		  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+  		  	<Text>미지정 대회팀</Text>
+  		  </Title>
+  		  <Imagery>
+  		  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+  		  		<Area X="0" Y="0" Width="152" Height="22"/>
+  		  	</DefaultFrameImagery>
+  		  	<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+  		  		<Area X="0" Y="0" Width="152" Height="22"/>
+  		  	</DefaultFrameImagery>
+  		  	<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+  		  		<Area X="0" Y="0" Width="152" Height="22"/>
+  		  	</DefaultFrameImagery>
+  		  	<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+  		  		<Area X="0" Y="0" Width="152" Height="22"/>
+  		  	</DefaultFrameImagery>
+  	  		<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				    <Area X="0" Y="0" Width="152" Height="22"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				    <Area X="0" Y="0" Width="152" Height="22"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+				    <Area X="0" Y="0" Width="152" Height="22"/>
+    			</DefaultFrameImagery>
+  		  </Imagery>		
+  		  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+  	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  	  </Window>
+  	  <Window ClassName="UnAllocateButton" Id="115">
+  	    <Style>IWS_BACKMOST</Style>
+  		  <Size X="0" Y="360" Width="152" Height="22" />
+  		  <Title>
+  		  	<Format X="76" Y="4" Size="12" HorzAlign="Center"/>
+  		  	<Color Type="Normal" Text="FF117222" Back="FF000000"/>
+  		  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
+  		  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
+  		  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+  		  	<Text>미지정 대회팀</Text>
+  		  </Title>
+  		  <Imagery>
+  		  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+  		  		<Area X="0" Y="0" Width="152" Height="22"/>
+  		  	</DefaultFrameImagery>
+  		  	<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+  		  		<Area X="0" Y="0" Width="152" Height="22"/>
+  		  	</DefaultFrameImagery>
+  		  	<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+  		  		<Area X="0" Y="0" Width="152" Height="22"/>
+  		  	</DefaultFrameImagery>
+  		  	<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+  		  		<Area X="0" Y="0" Width="152" Height="22"/>
+  		  	</DefaultFrameImagery>
+  	  		<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				    <Area X="0" Y="0" Width="152" Height="22"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				    <Area X="0" Y="0" Width="152" Height="22"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+				    <Area X="0" Y="0" Width="152" Height="22"/>
+    			</DefaultFrameImagery>
+  		  </Imagery>		
+  		  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+  	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  	</Window>
+ 	</Window>
+ 	<Window ClassName="AllocatedWnd" Id="11">
+    <Style>IWS_PROCESS</Style>
+    <Size X="267" Y="54" Width="174" Height="384" />
+	<Imagery>
+    <Image Type="TourLine" Imageset="BaseImage_League001" Image="icon0_leagueline_25per" />
+  </Imagery>
+		<Window ClassName="ioScroll" Id="1000">
+			<Size X="159" Y="0" Width="15" Height="382" />
+			<Style>IWS_PROCESS</Style>
+			<ExStyle>IWS_EX_VSCROLL</ExStyle>
+			<Imagery>
+				<DefaultFrameImagery Templete="scrollbar_back">
+					<Area X="5" Y="10" Width="5" Height="364"/>
+				</DefaultFrameImagery>
+			</Imagery>		
+			<ExtraInfo PageRange="1" StartTime="500" CurTime ="100"/>
+			<Window ClassName="ioButton" Id="1">
+				<Size X="0" Y="0" Width="15" Height="10" />
+				<Imagery>
+					<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0" Reverse="Vert"/>
+					</Image>
+					<Image Type="Over" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0" Reverse="Vert"/>
+					</Image>
+					<Image Type="Push" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0" Reverse="Vert"/>
+					</Image>
+				</Imagery>
+				<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+				           ClickSound = "interface/public_mouseclick_00.wav"/>
+			</Window>
+			<Window ClassName="ioButton" Id="2">
+				<Size X="0" Y="374" Width="15" Height="10" />
+				<Imagery>
+					<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0"/>
+					</Image>
+					<Image Type="Over" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0"/>
+					</Image>
+					<Image Type="Push" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0"/>
+					</Image>
+				</Imagery>
+				<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+				           ClickSound = "interface/public_mouseclick_00.wav"/>
+			</Window>
+			<Window ClassName="ioSlide" Id="3">
+				<Size X="0" Y="10" Width="15" Height="30" />
+				<DragRect Left="0" Top="0" Right="15" Bottom="30" />
+				<ExStyle>IWS_EX_NOTIFY_MOVED</ExStyle>
+				<Style>IWS_CANMOVE</Style>
+				<Imagery>
+					<DefaultFrameImagery Templete="scrollbar_drag">
+						<Area X="0" Y="0" Width="15" Height="30"/>
+					</DefaultFrameImagery>
+					<Image Type="Icon_Slide" Imageset="BaseImage001" Image="scrollbar_drag_icon"/>
+				</Imagery>
+			</Window>
+		</Window>
+  	<Window ClassName="AllocatedButton" Id="100">
+  	  <Style>IWS_BACKMOST</Style>
+  	  <Size X="0" Y="0" Width="146" Height="24" />
+  	  <Title>
+  	  	<Format X="76" Y="4" Size="12" HorzAlign="Center"/>
+  	  	<Color Type="Normal" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+  	  	<Text>지정 대회팀</Text>
+  	  </Title>
+  	  <Imagery>
+  	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  		<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+  	  </Imagery>		
+  	  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+  	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  	</Window>
+ 	  <Window ClassName="AllocatedButton" Id="101">
+  	  <Style>IWS_BACKMOST</Style>
+  	  <Size X="0" Y="24" Width="152" Height="24" />
+  	  <Title>
+  	  	<Format X="76" Y="4" Size="12" HorzAlign="Center"/>
+  	  	<Color Type="Normal" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+  	  	<Text>지정 대회팀</Text>
+  	  </Title>
+  	  <Imagery>
+  	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  		<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+  	  </Imagery>		
+  	  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+  	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  	</Window>
+ 	  <Window ClassName="AllocatedButton" Id="102">
+  	  <Style>IWS_BACKMOST</Style>
+  	  <Size X="0" Y="48" Width="146" Height="24" />
+  	  <Title>
+  	  	<Format X="76" Y="4" Size="12" HorzAlign="Center"/>
+  	  	<Color Type="Normal" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+  	  	<Text>지정 대회팀</Text>
+  	  </Title>
+  	  <Imagery>
+  	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  		<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+  	  </Imagery>		
+  	  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+  	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  	</Window>
+ 	  <Window ClassName="AllocatedButton" Id="103">
+  	  <Style>IWS_BACKMOST</Style>
+  	  <Size X="0" Y="72" Width="146" Height="24" />
+  	  <Title>
+  	  	<Format X="76" Y="4" Size="12" HorzAlign="Center"/>
+  	  	<Color Type="Normal" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+  	  	<Text>지정 대회팀</Text>
+  	  </Title>
+  	  <Imagery>
+  	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  		<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+  	  </Imagery>		
+  	  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+  	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  	</Window>
+ 	  <Window ClassName="AllocatedButton" Id="104">
+   	  <Style>IWS_BACKMOST</Style>
+  	  <Size X="0" Y="96" Width="146" Height="24" />
+  	  <Title>
+  	  	<Format X="76" Y="4" Size="12" HorzAlign="Center"/>
+  	  	<Color Type="Normal" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+  	  	<Text>지정 대회팀</Text>
+  	  </Title>
+  	  <Imagery>
+  	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  		<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+  	  </Imagery>		
+  	  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+  	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  	</Window>
+ 	  <Window ClassName="AllocatedButton" Id="105">
+   	  <Style>IWS_BACKMOST</Style>
+  	  <Size X="0" Y="120" Width="146" Height="24" />
+  	  <Title>
+  	  	<Format X="76" Y="4" Size="12" HorzAlign="Center"/>
+  	  	<Color Type="Normal" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+  	  	<Text>지정 대회팀</Text>
+  	  </Title>
+  	  <Imagery>
+  	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  		<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+  	  </Imagery>		
+  	  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+  	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  	</Window>
+ 	  <Window ClassName="AllocatedButton" Id="106">
+   	  <Style>IWS_BACKMOST</Style>
+  	  <Size X="0" Y="144" Width="146" Height="24" />
+  	  <Title>
+  	  	<Format X="76" Y="4" Size="12" HorzAlign="Center"/>
+  	  	<Color Type="Normal" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+  	  	<Text>지정 대회팀</Text>
+  	  </Title>
+  	  <Imagery>
+  	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  		<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+  	  </Imagery>		
+  	  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+  	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  	</Window>
+ 	  <Window ClassName="AllocatedButton" Id="107">
+   	  <Style>IWS_BACKMOST</Style>
+  	  <Size X="0" Y="168" Width="146" Height="24" />
+  	  <Title>
+  	  	<Format X="76" Y="4" Size="12" HorzAlign="Center"/>
+  	  	<Color Type="Normal" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+  	  	<Text>지정 대회팀</Text>
+  	  </Title>
+  	  <Imagery>
+  	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  		<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+  	  </Imagery>		
+  	  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+  	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  	</Window>
+ 	  <Window ClassName="AllocatedButton" Id="108">
+   	  <Style>IWS_BACKMOST</Style>
+  	  <Size X="0" Y="192" Width="146" Height="24" />
+  	  <Title>
+  	  	<Format X="76" Y="4" Size="12" HorzAlign="Center"/>
+  	  	<Color Type="Normal" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+  	  	<Text>지정 대회팀</Text>
+  	  </Title>
+  	  <Imagery>
+  	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  		<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+  	  </Imagery>		
+  	  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+  	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  	</Window>
+ 	  <Window ClassName="AllocatedButton" Id="109">
+   	  <Style>IWS_BACKMOST</Style>
+  	  <Size X="0" Y="216" Width="146" Height="24" />
+  	  <Title>
+  	  	<Format X="76" Y="4" Size="12" HorzAlign="Center"/>
+  	  	<Color Type="Normal" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+  	  	<Text>지정 대회팀</Text>
+  	  </Title>
+  	  <Imagery>
+  	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  		<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+  	  </Imagery>		
+  	  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+  	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  	</Window>
+ 	  <Window ClassName="AllocatedButton" Id="110">
+   	  <Style>IWS_BACKMOST</Style>
+  	  <Size X="0" Y="240" Width="146" Height="24" />
+  	  <Title>
+  	  	<Format X="76" Y="4" Size="12" HorzAlign="Center"/>
+  	  	<Color Type="Normal" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+  	  	<Text>지정 대회팀</Text>
+  	  </Title>
+  	  <Imagery>
+  	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  		<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+  	  </Imagery>		
+  	  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+  	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  	</Window>
+ 	  <Window ClassName="AllocatedButton" Id="111">
+   	  <Style>IWS_BACKMOST</Style>
+  	  <Size X="0" Y="264" Width="146" Height="24" />
+  	  <Title>
+  	  	<Format X="76" Y="4" Size="12" HorzAlign="Center"/>
+  	  	<Color Type="Normal" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+  	  	<Text>지정 대회팀</Text>
+  	  </Title>
+  	  <Imagery>
+  	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  		<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+  	  </Imagery>		
+  	  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+  	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  	</Window>
+ 	  <Window ClassName="AllocatedButton" Id="112">
+   	  <Style>IWS_BACKMOST</Style>
+  	  <Size X="0" Y="288" Width="146" Height="24" />
+  	  <Title>
+  	  	<Format X="76" Y="4" Size="12" HorzAlign="Center"/>
+  	  	<Color Type="Normal" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+  	  	<Text>지정 대회팀</Text>
+  	  </Title>
+  	  <Imagery>
+  	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  		<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+  	  </Imagery>		
+  	  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+  	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  	</Window>
+ 	  <Window ClassName="AllocatedButton" Id="113">
+   	  <Style>IWS_BACKMOST</Style>
+  	  <Size X="0" Y="312" Width="146" Height="24" />
+  	  <Title>
+  	  	<Format X="76" Y="4" Size="12" HorzAlign="Center"/>
+  	  	<Color Type="Normal" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+  	  	<Text>지정 대회팀</Text>
+  	  </Title>
+  	  <Imagery>
+  	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  		<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+  	  </Imagery>		
+  	  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+  	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  	</Window>
+ 	  <Window ClassName="AllocatedButton" Id="114">
+   	  <Style>IWS_BACKMOST</Style>
+  	  <Size X="0" Y="336" Width="146" Height="24" />
+  	  <Title>
+  	  	<Format X="76" Y="4" Size="12" HorzAlign="Center"/>
+  	  	<Color Type="Normal" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+  	  	<Text>지정 대회팀</Text>
+  	  </Title>
+  	  <Imagery>
+  	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  		<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+  	  </Imagery>		
+  	  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+  	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  	</Window>
+ 	  <Window ClassName="AllocatedButton" Id="115">
+   	  <Style>IWS_BACKMOST</Style>
+  	  <Size X="0" Y="360" Width="146" Height="24" />
+  	  <Title>
+  	  	<Format X="76" Y="4" Size="12" HorzAlign="Center"/>
+  	  	<Color Type="Normal" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
+  	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+  	  	<Text>지정 대회팀</Text>
+  	  </Title>
+  	  <Imagery>
+  	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  	<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+  	  		<Area X="0" Y="0" Width="146" Height="24"/>
+  	  	</DefaultFrameImagery>
+  	  		<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+		    	<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+				    <Area X="0" Y="0" Width="146" Height="24"/>
+    			</DefaultFrameImagery>
+  	  </Imagery>		
+  	  <ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+  	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+  	</Window>
+  </Window>
+</Window>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="RouletteWnd" Id="6227">
+	<Size X="15" Y="15" XAlign="Left" YAlign="Top" Width="180" Height="140"/>
+	<DragRect Left="0" Top="0" Right="180" Bottom="140" />
+	<Style>IWS_PROCESS|IWS_CANMOVE|IWS_BACKMOST|IWS_START_HIDE</Style>
+	<ExtraInfo Roulette_Count="5"
+						 Roulette1="roulette_ui_1.dds"
+						 Roulette2="roulette_ui_2.dds"
+						 Roulette3="roulette_ui_3.dds"
+						 Roulette4="roulette_ui_4.dds"
+						 Roulette5="roulette_ui_5.dds"/>
+	<Imagery>
+		<Image Type="roulette_help_bg" Imageset="BaseImage022" Image="roulette_helpbtbg">
+			<Area X="113" Y="40" Width="49" Height="41"/>
+		</Image>
+		<Image Type="roulette_text_bg" Imageset="BaseImage022" Image="roulette_textbg">
+			<Area X="0" Y="43" Width="119" Height="33"/>
+		</Image>
+		<Image Type="text_title" Imageset="BaseImage019" Image="roulette_text_title"/>
+		<Image Type="text_enable_join" Imageset="BaseImage019" Image="roulette_text_join_able"/>
+		<Image Type="text_join" Imageset="BaseImage019" Image="roulette_text_join_ing"/>
+		<Image Type="text_end" Imageset="BaseImage019" Image="roulette_text_end"/>
+		<Image Type="text_end_sec" Imageset="BaseImage019" Image="roulette_text_sec"/>
+		<Image Type="text_end_num" Imageset="BaseImage019" Image="roulette_text_end_num"/>
+
+		<Image Type="text_present" Imageset="BaseImage019" Image="roulette_text_present_check"/>
+		<Image Type="text_reward_bg_1" Imageset="BaseImage022" Image="roulette_bg_rank1"/>
+		<Image Type="text_reward_bg_2" Imageset="BaseImage022" Image="roulette_bg_rank2"/>
+		<Image Type="text_reward_bg_3" Imageset="BaseImage022" Image="roulette_bg_rank3"/>
+		<Image Type="text_reward_1" Imageset="BaseImage019" Image="roulette_text_rank1"/>
+		<Image Type="text_reward_2" Imageset="BaseImage019" Image="roulette_text_rank2"/>
+		<Image Type="text_reward_3" Imageset="BaseImage019" Image="roulette_text_rank3"/>
+		
+		<Image Type="upper_coupon" Imageset="BaseImage019" Image="roulette_text_coupon"/>
+		<Image Type="upper_coupon_num" Imageset="BaseImage019" Image="roulette_text_coupon_num"/>
+
+		<Image Type="under_coupon" Imageset="BaseImage019" Image="roulette_text_join"/>
+		<Image Type="under_count" Imageset="BaseImage019" Image="roulette_text_people"/>
+
+		<Image Type="arrow" Imageset="BaseImage022" Image="roulette_arrow"/>
+	</Imagery>
+
+	<Window ClassName="ioButton" Id="1">
+		<Style>IWS_START_HIDE</Style>
+		<Size X="123" Y="45" Width="35" Height="33"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_pink_nor">
+				<Area X="0" Y="0" Width="35" Height="33"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_pink_nor">
+				<Area X="0" Y="0" Width="35" Height="33"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="35" Height="33"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_pink_down">
+				<Area X="0" Y="0" Width="35" Height="33"/>	
+			</DefaultFrameImagery>
+			<Image Type="help" Imageset="BaseImage022" Image="roulette_help">
+				<Area X="9" Y="5" Width="17" Height="21"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+</Window>

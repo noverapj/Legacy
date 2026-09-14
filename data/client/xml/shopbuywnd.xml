@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+<Window ClassName="ShopBuyWnd" SubClassName="ioWndEX" Id="77779" IDName="" MemberName="">
+    <Size X="0" Y="0" Width="0" Height="0" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+    <Imagery />
+    <Window ClassName="ioFrameWndEX" SubClassName="" Id="1" IDName="" MemberName="">
+        <Size X="0" Y="0" Width="389" Height="341" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+        <Imagery />
+        <ExtraInfo>
+            <FrameInfo Template="win1_frame90" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+            <ToolInfo />
+        </ExtraInfo>
+        <Window ClassName="ioFrameWndEX" SubClassName="" Id="2" IDName="" MemberName="">
+            <Size X="8" Y="6" Width="373" Height="32" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo>
+                <FrameInfo Template="bt001_blue_down" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="3" IDName="" MemberName="">
+                <Size X="10" Y="5" Width="60" Height="23" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="구입" Size="16" Color="fffcfcfc" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="5" IDName="" MemberName="">
+                <Size X="348" Y="6" Width="16" Height="16" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalImage FileName="" ImageSetName="BaseImage001" ImageName="icon0_x" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverImage FileName="" ImageSetName="BaseImage001" ImageName="icon0_x" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <OverAddImage FileName="" ImageSetName="BaseImage001" ImageName="icon0_x" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <PushImage FileName="" ImageSetName="BaseImage001" ImageName="icon0_x" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                    <ToolInfo>
+                        <Event Type="WEVT_LBUTTONUP" Function="OnClickClose" />
+                    </ToolInfo>
+                </ExtraInfo>
+            </Window>
+        </Window>
+        <Window ClassName="ioImageWndEX" SubClassName="" Id="7" IDName="" MemberName="m_iconimg">
+            <Size X="13" Y="45" Width="60" Height="60" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo>
+                <ImageInfo FileName="" ImageSetName="UIIconPack51" ImageName="Bonus_stage_icon2" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" NoMagicAlign="false" Color="ffffffff" />
+                <ToolInfo />
+            </ExtraInfo>
+        </Window>
+        <Window ClassName="ioRichLabel" SubClassName="" Id="8" IDName="" MemberName="m_namerich">
+            <Size X="82" Y="81" Width="274" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo HorzAlign="Left" VertAlign="Bottom" MSVertAlign="Center" VertGap="2">
+                <TextBlock Text="Lv3 사이보그#" Size="17" Style="Normal" Color="ff000000" />
+                <TextBlock Text="남은시간 13일 03:54:14#" Size="11" Style="Normal" Color="ffff80c0" />
+                <TextBlock Text="보유중" Size="11" Style="Normal" Color="ff0080c0" />
+                <ToolInfo />
+            </ExtraInfo>
+        </Window>
+        <Window ClassName="ioRichLabel" SubClassName="" Id="9" IDName="" MemberName="m_descrich">
+            <Size X="18" Y="115" Width="358" Height="20" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo HorzAlign="Left" VertAlign="Bottom" MSVertAlign="Top" VertGap="0">
+                <TextBlock Text="미래의 기술과 발사체로 다수의 적을 제압하는데 특화되어 있습니당." Size="12" Style="Normal" Color="ff000000" />
+                <ToolInfo />
+            </ExtraInfo>
+        </Window>
+        <Window ClassName="ioWndEX" SubClassName="" Id="31" IDName="" MemberName="m_midwndex">
+            <Size X="2" Y="141" Width="386" Height="198" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo>
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="32" IDName="" MemberName="">
+                <Size X="14" Y="4" Width="359" Height="22" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="card_light" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffa4a4a4" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioRichLabel" SubClassName="" Id="33" IDName="" MemberName="">
+                    <Size X="22" Y="2" Width="223" Height="16" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo HorzAlign="Left" VertAlign="Bottom" MSVertAlign="Top" VertGap="0">
+                        <TextBlock Text="2시간 고용" Size="12" Style="Normal" Color="ff000000" />
+                        <TextBlock Text="  (소령3호봉 제한)" Size="12" Style="Normal" Color="ffffffff" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="34" IDName="" MemberName="">
+                    <Size X="260" Y="4" Width="93" Height="15" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="3,759 페소" Size="12" Color="ff0000ff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="2" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="35" IDName="" MemberName="">
+                <Size X="14" Y="32" Width="359" Height="22" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioRichLabel" SubClassName="" Id="36" IDName="" MemberName="">
+                    <Size X="22" Y="2" Width="223" Height="16" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo HorzAlign="Left" VertAlign="Bottom" MSVertAlign="Top" VertGap="0">
+                        <TextBlock Text="2시간 고용" Size="12" Style="Normal" Color="ff000000" />
+                        <TextBlock Text="  (소령3호봉 제한)" Size="12" Style="Normal" Color="ffffffff" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="37" IDName="" MemberName="">
+                    <Size X="260" Y="4" Width="93" Height="15" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="3,759 페소" Size="12" Color="ff0000ff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="2" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="38" IDName="" MemberName="">
+                <Size X="14" Y="60" Width="359" Height="22" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="card_light" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffa4a4a4" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioRichLabel" SubClassName="" Id="39" IDName="" MemberName="">
+                    <Size X="22" Y="2" Width="224" Height="16" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo HorzAlign="Left" VertAlign="Bottom" MSVertAlign="Top" VertGap="0">
+                        <TextBlock Text="2시간 고용" Size="12" Style="Normal" Color="ff000000" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="40" IDName="" MemberName="">
+                    <Size X="260" Y="4" Width="93" Height="15" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="3,800 골드" Size="12" Color="ffc18c3e" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="2" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="41" IDName="" MemberName="">
+                <Size X="14" Y="88" Width="359" Height="22" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioRichLabel" SubClassName="" Id="42" IDName="" MemberName="">
+                    <Size X="22" Y="2" Width="222" Height="16" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo HorzAlign="Left" VertAlign="Bottom" MSVertAlign="Top" VertGap="0">
+                        <TextBlock Text="2시간 고용" Size="12" Style="Normal" Color="ff000000" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioLabelWndEX" SubClassName="" Id="43" IDName="" MemberName="">
+                    <Size X="260" Y="4" Width="93" Height="15" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                        <LabelInfo Text="10,000골드" Size="12" Color="ffb88547" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="2" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="44" IDName="" MemberName="m_adddesclabel">
+                <Size X="15" Y="117" Width="359" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="영구 고용시 블라블라 지급" Size="12" Color="ffff00ff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="45" IDName="" MemberName="m_btmwndex">
+                <Size X="-2" Y="143" Width="389" Height="57" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="win1_multiply_bottom" RenderType="8" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioFrameButtonWndEX" SubClassName="" Id="46" IDName="" MemberName="">
+                    <Size X="19" Y="12" Width="177" Height="31" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo ButtonType="0">
+                        <LabelInfo Text="구입(SPACE)" Size="13" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ffffffff" NormalBKColor="ffffffff" OverColor="ffffffff" OverBKColor="ffffffff" PushColor="ffffffff" PushBKColor="ffffffff" DisableColor="ffffffff" DisableBKColor="ffffffff" />
+                        <NormalFrame Template="bt006_blue_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <OverFrame Template="bt006_blue_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <OverAddFrame Template="bt_overadd" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <PushFrame Template="bt006_blue_down" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <ToolInfo>
+                            <Event Type="WEVT_LBUTTONUP" Function="OnClickBuy" />
+                        </ToolInfo>
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioFrameButtonWndEX" SubClassName="" Id="47" IDName="" MemberName="">
+                    <Size X="197" Y="12" Width="177" Height="31" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo ButtonType="0">
+                        <LabelInfo Text="선물" Size="13" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ffffffff" NormalBKColor="ffffffff" OverColor="ffffffff" OverBKColor="ffffffff" PushColor="ffffffff" PushBKColor="ffffffff" DisableColor="ffffffff" DisableBKColor="ffffffff" />
+                        <NormalFrame Template="bt006_blue_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <OverFrame Template="bt006_blue_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <OverAddFrame Template="bt_overadd" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <PushFrame Template="bt006_blue_down" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                        <ToolInfo>
+                            <Event Type="WEVT_LBUTTONUP" Function="OnClickPresent" />
+                        </ToolInfo>
+                    </ExtraInfo>
+                </Window>
+            </Window>
+            <Window ClassName="ioRadioWndEX" SubClassName="" Id="48" IDName="" MemberName="">
+                <Size X="0" Y="0" Width="114" Height="110" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioRadioImageButtonEX" SubClassName="" Id="49" IDName="" MemberName="">
+                    <Size X="18" Y="6" Width="16" Height="16" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo ButtonType="2">
+                        <LabelInfo Text="" Size="24" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="24" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                        <NormalImage FileName="" ImageSetName="BaseImage001" ImageName="check_radio_off" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                        <OverImage FileName="" ImageSetName="BaseImage001" ImageName="check_radio_off" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                        <PushImage FileName="" ImageSetName="BaseImage001" ImageName="check_radio_on" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                        <DisableImage FileName="" ImageSetName="BaseImage001" ImageName="check_radio_no" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioRadioImageButtonEX" SubClassName="" Id="51" IDName="" MemberName="">
+                    <Size X="18" Y="34" Width="16" Height="16" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo ButtonType="2">
+                        <LabelInfo Text="" Size="24" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="24" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                        <NormalImage FileName="" ImageSetName="BaseImage001" ImageName="check_radio_off" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                        <OverImage FileName="" ImageSetName="BaseImage001" ImageName="check_radio_off" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                        <PushImage FileName="" ImageSetName="BaseImage001" ImageName="check_radio_on" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                        <DisableImage FileName="" ImageSetName="BaseImage001" ImageName="check_radio_no" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioRadioImageButtonEX" SubClassName="" Id="52" IDName="" MemberName="">
+                    <Size X="18" Y="62" Width="16" Height="16" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo ButtonType="2">
+                        <LabelInfo Text="" Size="24" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="24" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                        <NormalImage FileName="" ImageSetName="BaseImage001" ImageName="check_radio_off" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                        <OverImage FileName="" ImageSetName="BaseImage001" ImageName="check_radio_off" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                        <PushImage FileName="" ImageSetName="BaseImage001" ImageName="check_radio_on" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                        <DisableImage FileName="" ImageSetName="BaseImage001" ImageName="check_radio_no" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+                <Window ClassName="ioRadioImageButtonEX" SubClassName="" Id="53" IDName="" MemberName="">
+                    <Size X="18" Y="90" Width="16" Height="16" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo ButtonType="2">
+                        <LabelInfo Text="" Size="24" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="24" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                        <NormalImage FileName="" ImageSetName="BaseImage001" ImageName="check_radio_off" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                        <OverImage FileName="" ImageSetName="BaseImage001" ImageName="check_radio_off" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                        <PushImage FileName="" ImageSetName="BaseImage001" ImageName="check_radio_on" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                        <DisableImage FileName="" ImageSetName="BaseImage001" ImageName="check_radio_no" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+        </Window>
+    </Window>
+</Window>

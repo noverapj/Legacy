@@ -1,0 +1,2097 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="PartyShamBattleWnd" Id="5036">
+	<Size X="0" Y="-20" XAlign="Center" YAlign="Center" Width="772" Height="526" />
+	<DragRect Left="0" Top="0" Right="772" Bottom="39" />
+	<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST|IWS_CANMOVE</Style>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame80">
+			<Area X="0" Y="0" Width="772" Height="526"/>
+		</DefaultFrameImagery>
+		<Image Imageset="BaseImage005" Image="window_gloss" >
+			<Area X="2" Y="2"/>
+		</Image>
+		<Image Imageset="BaseImage005" Image="window_gloss" >
+			<Area X="653" Y="407" Reverse="HorzVert"/>
+		</Image>
+		<DefaultFrameImagery Templete="win1_title">
+			<Area X="5" Y="6" Width="762" Height="36" AutoResize="False"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="MultiplyFrm" Templete="win1_multiply_bottom">
+			<Area X="0" Y="368" Width="772" Height="158"/>
+		</DefaultFrameImagery>		
+		<DefaultFrameImagery Type="ModeNMapGray" Templete="slot_empty_gray3">
+			<Area X="0" Y="0" Width="163" Height="31"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="TournamentStartGray" Templete="slot_empty_gray3">
+			<Area X="0" Y="0" Width="329" Height="45"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="TournamentEntryArmFrm" Templete="tooltip5_pink">
+			<Area X="0" Y="0" Width="155" Height="54"/>
+		</DefaultFrameImagery>		
+		<Image Type="ManualMark" Imageset="BaseImage001" Image="icon0_help_black" />
+		<Image Type="count_5" Imageset="BaseImage006" Image="icon0_warcount5" />
+		<Image Type="count_4" Imageset="BaseImage006" Image="icon0_warcount4" />
+		<Image Type="count_3" Imageset="BaseImage006" Image="icon0_warcount3" />
+		<Image Type="count_2" Imageset="BaseImage006" Image="icon0_warcount2" />
+		<Image Type="count_1" Imageset="BaseImage006" Image="icon0_warcount1" />
+		<Image Type="count_0" Imageset="BaseImage006" Image="icon0_warcount0" />
+
+		<Image Type="count_circle" Imageset="BaseImage005" Image="icon0_warcountcircle" />
+	</Imagery>
+	<ExtraInfo BackOGG="bgm/bgm_battle_01.ogg" 
+		   AutoStartCheckTime="20000"/>
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="613" Y="11" Width="72" Height="23" />
+		<Title>
+			<Format X="36" Y="4" Size="11" Style="Outline_full_2x" DisableStyle="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF20394F"/>
+			<Text>방정보 변경</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="72" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="72" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="72" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="72" Height="23"/>
+			</DefaultFrameImagery>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>		
+	</Window>
+
+	<Window ClassName="PartyModeNMapBtn" Id="2">
+		<Size X="416" Y="385" Width="163" Height="31" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="163" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="163" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="163" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_gray_down">
+				<Area X="0" Y="0" Width="163" Height="31"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="148" Y="10"/>
+			</Image>
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyModeNMapBtn" Id="3">
+		<Size X="581" Y="385" Width="163" Height="31" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="163" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="163" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="163" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_gray_down">
+				<Area X="0" Y="0" Width="163" Height="31"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="148" Y="10"/>
+			</Image>
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="PartyModeNMapBtn" Id="16">
+		<Size X="678" Y="385" Width="67" Height="31" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="67" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="67" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="67" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_gray_down">
+				<Area X="0" Y="0" Width="67" Height="31"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="52" Y="10"/>
+			</Image>
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	
+	
+	<Window ClassName="PartyModeNMapBtn" Id="17">
+		<Size X="35" Y="240" Width="72" Height="25" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="72" Height="25"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="72" Height="25"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="72" Height="25"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_gray_down">
+				<Area X="0" Y="0" Width="72" Height="25"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="52" Y="10"/>
+			</Image>
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="PartyModeNMapBtn" Id="18">
+		<Size X="125" Y="240" Width="72" Height="25" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="72" Height="25"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="72" Height="25"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="72" Height="25"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_gray_down">
+				<Area X="0" Y="0" Width="72" Height="25"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="52" Y="10"/>
+			</Image>
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="PartyModeNMapBtn" Id="19">
+		<Size X="215" Y="240" Width="72" Height="25" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="72" Height="25"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="72" Height="25"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="72" Height="25"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_gray_down">
+				<Area X="0" Y="0" Width="72" Height="25"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="52" Y="10"/>
+			</Image>
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="PartyModeNMapBtn" Id="20">
+		<Size X="395" Y="240" Width="72" Height="25" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="72" Height="25"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="72" Height="25"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="72" Height="25"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_gray_down">
+				<Area X="0" Y="0" Width="72" Height="25"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="52" Y="10"/>
+			</Image>
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="PartyModeNMapBtn" Id="21">
+		<Size X="485" Y="240" Width="72" Height="25" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="72" Height="25"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="72" Height="25"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="72" Height="25"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_gray_down">
+				<Area X="0" Y="0" Width="72" Height="25"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="52" Y="10"/>
+			</Image>
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="PartyModeNMapBtn" Id="22">
+		<Size X="575" Y="240" Width="72" Height="25" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="72" Height="25"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="72" Height="25"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="72" Height="25"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_gray_down">
+				<Area X="0" Y="0" Width="72" Height="25"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="52" Y="10"/>
+			</Image>
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+
+	<Window ClassName="ioCheckButton" Id="4">
+		<Size X="419" Y="422" Width="16" Height="16" />
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Title>
+			<Format X="20" Y="1" Size="12" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FF6E6E6E" Back="FF000000"/>
+			<Text>유저모드</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Check" Imageset="BaseImage001" Image="check_box_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="ExDisableNor" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="ExDisablePush" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioCheckButton" Id="5">
+		<Size X="531" Y="422" Width="16" Height="16" />
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Title>
+			<Format X="20" Y="1" Size="12" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FF6E6E6E" Back="FF000000"/>
+			<Text>팀섞어시작</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Check" Imageset="BaseImage001" Image="check_box_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="ExDisableNor" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="ExDisablePush" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioCheckButton" Id="6">
+		<Size X="643" Y="422" Width="16" Height="16" />
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Title>
+			<Format X="20" Y="1" Size="12" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FF6E6E6E" Back="FF000000"/>
+			<Text>중간참여불가</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Check" Imageset="BaseImage001" Image="check_box_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="ExDisableNor" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="ExDisablePush" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioCheckButton" Id="15">
+		<Size X="643" Y="422" Width="16" Height="16" />
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Title>
+			<Format X="20" Y="1" Size="12" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FF6E6E6E" Back="FF000000"/>
+			<Text>도전자 받기</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Check" Imageset="BaseImage001" Image="check_box_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="ExDisableNor" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="ExDisablePush" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioCheckButton" Id="7">
+		<Size X="419" Y="442" Width="16" Height="16" />
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Title>
+			<Format X="20" Y="1" Size="12" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FF6E6E6E" Back="FF000000"/>
+			<Text>자동시작</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Check" Imageset="BaseImage001" Image="check_box_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="ExDisableNor" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="ExDisablePush" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioCheckButton" Id="8">
+		<Size X="531" Y="442" Width="16" Height="16" />
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Title>
+			<Format X="20" Y="1" Size="12" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FF6E6E6E" Back="FF000000"/>
+			<Text>네트워크 불량시 강제퇴장</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Check" Imageset="BaseImage001" Image="check_box_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="ExDisableNor" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="ExDisablePush" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="9">
+		<Size X="416" Y="464" Width="70" Height="45" />
+		<Title>
+			<Format X="35" Y="12" Size="18" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>팀변경</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt005_gray_nor">
+				<Area X="0" Y="0" Width="70" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt005_gray_nor">
+				<Area X="0" Y="0" Width="70" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="70" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt005_gray_down">
+				<Area X="0" Y="0" Width="70" Height="45"/>
+			</DefaultFrameImagery>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>		
+	</Window>
+
+	<Window ClassName="ioButton" Id="10">
+		<Size X="488" Y="464" Width="52" Height="45" />
+		<Title>
+			<Format X="26" Y="12" Size="18" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>관전</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt005_gray_nor">
+				<Area X="0" Y="0" Width="52" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt005_gray_nor">
+				<Area X="0" Y="0" Width="52" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="52" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt005_gray_down">
+				<Area X="0" Y="0" Width="52" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt005_gray_nor">
+				<Area X="0" Y="0" Width="52" Height="45"/>
+			</DefaultFrameImagery>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>		
+	</Window>
+
+	<Window ClassName="ioButton" Id="11">
+		<Size X="542" Y="464" Width="52" Height="45" />
+		<Title>
+			<Format X="26" Y="12" Size="18" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>초대</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt005_gray_nor">
+				<Area X="0" Y="0" Width="52" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt005_gray_nor">
+				<Area X="0" Y="0" Width="52" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="52" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt005_gray_down">
+				<Area X="0" Y="0" Width="52" Height="45"/>
+			</DefaultFrameImagery>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>		
+	</Window>
+
+	<Window ClassName="ioButton" Id="12">
+		<Size X="596" Y="464" Width="149" Height="45" />
+		<Title>
+			<Format X="48" Y="10" Size="18" Style="Outline_full_2x" HorzAlign="Left" />
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF0B7222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF0B7222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF0B7222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>게임시작</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt005_green_nor">
+				<Area X="0" Y="0" Width="149" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt005_green_nor">
+				<Area X="0" Y="0" Width="149" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="149" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt005_green_down">
+				<Area X="0" Y="0" Width="149" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt005_gray_nor">
+				<Area X="0" Y="0" Width="149" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt005_gray_down">
+				<Area X="0" Y="0" Width="149" Height="45"/>
+			</DefaultFrameImagery>
+
+			<Image Type="NormalList" Imageset="BaseImage001" Image="icon0_right_green" >
+				<Area X="28" Y="12"/>
+			</Image>
+			<Image Type="DisableList" Imageset="BaseImage001" Image="icon0_right_gray" >
+				<Area X="28" Y="12"/>
+			</Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>	
+	</Window>
+
+	<Window ClassName="ioButton" Id="13">
+		<Size X="596" Y="464" Width="149" Height="45" />
+		<Title>
+			<Format X="48" Y="10" Size="18" Style="Outline_full_2x" HorzAlign="Left" />
+			<Color Type="Normal" Text="FFFFFFFF" Back="FFb91600"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FFb91600"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FFb91600"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>시작취소</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt005_red_nor">
+				<Area X="0" Y="0" Width="149" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt005_red_nor">
+				<Area X="0" Y="0" Width="149" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="149" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt005_red_down">
+				<Area X="0" Y="0" Width="149" Height="45"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_right_red" >
+				<Area X="28" Y="12" Reverse="Horz"/>
+			</Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>	
+	</Window>
+
+	<Window ClassName="ioButton" Id="14">
+		<Size X="689" Y="11" Width="72" Height="23" />
+		<Title>
+			<Format X="25" Y="4" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF20394F"/>
+			<Text>나가기</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="72" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="72" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="72" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="72" Height="23"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_leftarrow" >
+				<Area X="11" Y="4" />
+			</Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>		
+	</Window>
+
+	<Window ClassName="PartyMemberList" Id="100">
+		<Size X="27" Y="80" Width="88" Height="131" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<DefaultFrameImagery Type="BlueNor" Templete="slot_battle_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="slot_battle_blue_over">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNor" Templete="slot_battle_red_nor">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="slot_battle_red_over">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CaptainBack" Templete="state_green">
+				<Area X="6" Y="6" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNorGra" Imageset="BaseImage004" Image="slot_battle_blue_nor_gra" />
+			<Image Type="BlueOverGra" Imageset="BaseImage004" Image="slot_battle_blue_over_gra" />
+			<Image Type="RedNorGra" Imageset="BaseImage004" Image="slot_battle_red_nor_gra" />
+			<Image Type="RedOverGra" Imageset="BaseImage004" Image="slot_battle_red_over_gra" />
+			<Image Type="GuildMarkLine" Imageset="BaseImage001" Image="icon0_guildmark_s_bg1" />
+			<Image Type="GoldMonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_gold" />
+			<Image Type="MonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_normal" />
+			<Image Type="RaidCoin" Imageset="BaseImage025" Image="pve_raid_ticket" />
+			<Image Type="CoinNumber" Imageset="BaseImage001" Image="text_moncoin_num" />
+			<Image Type="CoinUnlimited" Imageset="BaseImage001" Image="text_moncoin_unlimited" />
+			<Image Type="BlueEmpty" Imageset="BaseImage004" Image="slot_blue_x" />
+			<Image Type="RedEmpty" Imageset="BaseImage004" Image="slot_red_x" />
+			<Image Type="LoadCharBack" Imageset="BaseImage002" Image="mychr_shadow2" />
+			<Image Type="CharLoading1" Imageset="BaseImage002" Image="mychr_loading1" />
+			<Image Type="CharLoading2" Imageset="BaseImage002" Image="mychr_loading2" />
+			<Image Type="CharLoading3" Imageset="BaseImage002" Image="mychr_loading3" />
+			<Image Type="CharLoading4" Imageset="BaseImage002" Image="mychr_loading4" />
+			<Image Type="CharLoading5" Imageset="BaseImage002" Image="mychr_loading1" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading6" Imageset="BaseImage002" Image="mychr_loading2" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading7" Imageset="BaseImage002" Image="mychr_loading3" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading8" Imageset="BaseImage002" Image="mychr_loading4" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="AIBG" Imageset="BaseImage028" Image="mychr_ai_shadow" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyMemberList" Id="101">
+		<Size X="117" Y="80" Width="88" Height="131" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<DefaultFrameImagery Type="BlueNor" Templete="slot_battle_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="slot_battle_blue_over">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNor" Templete="slot_battle_red_nor">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="slot_battle_red_over">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CaptainBack" Templete="state_green">
+				<Area X="6" Y="6" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNorGra" Imageset="BaseImage004" Image="slot_battle_blue_nor_gra" />
+			<Image Type="BlueOverGra" Imageset="BaseImage004" Image="slot_battle_blue_over_gra" />
+			<Image Type="RedNorGra" Imageset="BaseImage004" Image="slot_battle_red_nor_gra" />
+			<Image Type="RedOverGra" Imageset="BaseImage004" Image="slot_battle_red_over_gra" />
+			<Image Type="GuildMarkLine" Imageset="BaseImage001" Image="icon0_guildmark_s_bg1" />
+			<Image Type="GoldMonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_gold" />
+			<Image Type="MonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_normal" />
+			<Image Type="RaidCoin" Imageset="BaseImage025" Image="pve_raid_ticket" />
+			<Image Type="CoinNumber" Imageset="BaseImage001" Image="text_moncoin_num" />
+			<Image Type="CoinUnlimited" Imageset="BaseImage001" Image="text_moncoin_unlimited" />
+			<Image Type="BlueEmpty" Imageset="BaseImage004" Image="slot_blue_x" />
+			<Image Type="RedEmpty" Imageset="BaseImage004" Image="slot_red_x" />
+			<Image Type="LoadCharBack" Imageset="BaseImage002" Image="mychr_shadow2" />
+			<Image Type="CharLoading1" Imageset="BaseImage002" Image="mychr_loading1" />
+			<Image Type="CharLoading2" Imageset="BaseImage002" Image="mychr_loading2" />
+			<Image Type="CharLoading3" Imageset="BaseImage002" Image="mychr_loading3" />
+			<Image Type="CharLoading4" Imageset="BaseImage002" Image="mychr_loading4" />
+			<Image Type="CharLoading5" Imageset="BaseImage002" Image="mychr_loading1" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading6" Imageset="BaseImage002" Image="mychr_loading2" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading7" Imageset="BaseImage002" Image="mychr_loading3" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading8" Imageset="BaseImage002" Image="mychr_loading4" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="AIBG" Imageset="BaseImage028" Image="mychr_ai_shadow" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyMemberList" Id="102">
+		<Size X="207" Y="80" Width="88" Height="131" />		
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<DefaultFrameImagery Type="BlueNor" Templete="slot_battle_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="slot_battle_blue_over">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNor" Templete="slot_battle_red_nor">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="slot_battle_red_over">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CaptainBack" Templete="state_green">
+				<Area X="6" Y="6" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNorGra" Imageset="BaseImage004" Image="slot_battle_blue_nor_gra" />
+			<Image Type="BlueOverGra" Imageset="BaseImage004" Image="slot_battle_blue_over_gra" />
+			<Image Type="RedNorGra" Imageset="BaseImage004" Image="slot_battle_red_nor_gra" />
+			<Image Type="RedOverGra" Imageset="BaseImage004" Image="slot_battle_red_over_gra" />
+			<Image Type="GuildMarkLine" Imageset="BaseImage001" Image="icon0_guildmark_s_bg1" />
+			<Image Type="GoldMonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_gold" />
+			<Image Type="MonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_normal" />
+			<Image Type="RaidCoin" Imageset="BaseImage025" Image="pve_raid_ticket" />
+			<Image Type="CoinNumber" Imageset="BaseImage001" Image="text_moncoin_num" />
+			<Image Type="CoinUnlimited" Imageset="BaseImage001" Image="text_moncoin_unlimited" />
+			<Image Type="BlueEmpty" Imageset="BaseImage004" Image="slot_blue_x" />
+			<Image Type="RedEmpty" Imageset="BaseImage004" Image="slot_red_x" />
+			<Image Type="LoadCharBack" Imageset="BaseImage002" Image="mychr_shadow2" />
+			<Image Type="CharLoading1" Imageset="BaseImage002" Image="mychr_loading1" />
+			<Image Type="CharLoading2" Imageset="BaseImage002" Image="mychr_loading2" />
+			<Image Type="CharLoading3" Imageset="BaseImage002" Image="mychr_loading3" />
+			<Image Type="CharLoading4" Imageset="BaseImage002" Image="mychr_loading4" />
+			<Image Type="CharLoading5" Imageset="BaseImage002" Image="mychr_loading1" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading6" Imageset="BaseImage002" Image="mychr_loading2" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading7" Imageset="BaseImage002" Image="mychr_loading3" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading8" Imageset="BaseImage002" Image="mychr_loading4" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="AIBG" Imageset="BaseImage028" Image="mychr_ai_shadow" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyMemberList" Id="103">
+		<Size X="297" Y="80" Width="88" Height="131" />			
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<DefaultFrameImagery Type="BlueNor" Templete="slot_battle_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="slot_battle_blue_over">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNor" Templete="slot_battle_red_nor">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="slot_battle_red_over">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CaptainBack" Templete="state_green">
+				<Area X="6" Y="6" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNorGra" Imageset="BaseImage004" Image="slot_battle_blue_nor_gra" />
+			<Image Type="BlueOverGra" Imageset="BaseImage004" Image="slot_battle_blue_over_gra" />
+			<Image Type="RedNorGra" Imageset="BaseImage004" Image="slot_battle_red_nor_gra" />
+			<Image Type="RedOverGra" Imageset="BaseImage004" Image="slot_battle_red_over_gra" />
+			<Image Type="GuildMarkLine" Imageset="BaseImage001" Image="icon0_guildmark_s_bg1" />
+			<Image Type="GoldMonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_gold" />
+			<Image Type="MonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_normal" />
+			<Image Type="RaidCoin" Imageset="BaseImage025" Image="pve_raid_ticket" />
+			<Image Type="CoinNumber" Imageset="BaseImage001" Image="text_moncoin_num" />
+			<Image Type="CoinUnlimited" Imageset="BaseImage001" Image="text_moncoin_unlimited" />
+			<Image Type="BlueEmpty" Imageset="BaseImage004" Image="slot_blue_x" />
+			<Image Type="RedEmpty" Imageset="BaseImage004" Image="slot_red_x" />
+			<Image Type="LoadCharBack" Imageset="BaseImage002" Image="mychr_shadow2" />
+			<Image Type="CharLoading1" Imageset="BaseImage002" Image="mychr_loading1" />
+			<Image Type="CharLoading2" Imageset="BaseImage002" Image="mychr_loading2" />
+			<Image Type="CharLoading3" Imageset="BaseImage002" Image="mychr_loading3" />
+			<Image Type="CharLoading4" Imageset="BaseImage002" Image="mychr_loading4" />
+			<Image Type="CharLoading5" Imageset="BaseImage002" Image="mychr_loading1" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading6" Imageset="BaseImage002" Image="mychr_loading2" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading7" Imageset="BaseImage002" Image="mychr_loading3" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading8" Imageset="BaseImage002" Image="mychr_loading4" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="AIBG" Imageset="BaseImage028" Image="mychr_ai_shadow" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyMemberList" Id="104">
+		<Size X="27" Y="213" Width="88" Height="131" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<DefaultFrameImagery Type="BlueNor" Templete="slot_battle_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="slot_battle_blue_over">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNor" Templete="slot_battle_red_nor">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="slot_battle_red_over">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CaptainBack" Templete="state_green">
+				<Area X="6" Y="6" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNorGra" Imageset="BaseImage004" Image="slot_battle_blue_nor_gra" />
+			<Image Type="BlueOverGra" Imageset="BaseImage004" Image="slot_battle_blue_over_gra" />
+			<Image Type="RedNorGra" Imageset="BaseImage004" Image="slot_battle_red_nor_gra" />
+			<Image Type="RedOverGra" Imageset="BaseImage004" Image="slot_battle_red_over_gra" />
+			<Image Type="GuildMarkLine" Imageset="BaseImage001" Image="icon0_guildmark_s_bg1" />
+			<Image Type="GoldMonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_gold" />
+			<Image Type="MonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_normal" />
+			<Image Type="RaidCoin" Imageset="BaseImage025" Image="pve_raid_ticket" />
+			<Image Type="CoinNumber" Imageset="BaseImage001" Image="text_moncoin_num" />
+			<Image Type="CoinUnlimited" Imageset="BaseImage001" Image="text_moncoin_unlimited" />
+			<Image Type="BlueEmpty" Imageset="BaseImage004" Image="slot_blue_x" />
+			<Image Type="RedEmpty" Imageset="BaseImage004" Image="slot_red_x" />
+			<Image Type="LoadCharBack" Imageset="BaseImage002" Image="mychr_shadow2" />
+			<Image Type="CharLoading1" Imageset="BaseImage002" Image="mychr_loading1" />
+			<Image Type="CharLoading2" Imageset="BaseImage002" Image="mychr_loading2" />
+			<Image Type="CharLoading3" Imageset="BaseImage002" Image="mychr_loading3" />
+			<Image Type="CharLoading4" Imageset="BaseImage002" Image="mychr_loading4" />
+			<Image Type="CharLoading5" Imageset="BaseImage002" Image="mychr_loading1" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading6" Imageset="BaseImage002" Image="mychr_loading2" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading7" Imageset="BaseImage002" Image="mychr_loading3" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading8" Imageset="BaseImage002" Image="mychr_loading4" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="AIBG" Imageset="BaseImage028" Image="mychr_ai_shadow" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyMemberList" Id="105">
+		<Size X="117" Y="213" Width="88" Height="131" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<DefaultFrameImagery Type="BlueNor" Templete="slot_battle_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="slot_battle_blue_over">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNor" Templete="slot_battle_red_nor">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="slot_battle_red_over">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CaptainBack" Templete="state_green">
+				<Area X="6" Y="6" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNorGra" Imageset="BaseImage004" Image="slot_battle_blue_nor_gra" />
+			<Image Type="BlueOverGra" Imageset="BaseImage004" Image="slot_battle_blue_over_gra" />
+			<Image Type="RedNorGra" Imageset="BaseImage004" Image="slot_battle_red_nor_gra" />
+			<Image Type="RedOverGra" Imageset="BaseImage004" Image="slot_battle_red_over_gra" />
+			<Image Type="GuildMarkLine" Imageset="BaseImage001" Image="icon0_guildmark_s_bg1" />
+			<Image Type="GoldMonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_gold" />
+			<Image Type="MonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_normal" />
+			<Image Type="RaidCoin" Imageset="BaseImage025" Image="pve_raid_ticket" />
+			<Image Type="CoinNumber" Imageset="BaseImage001" Image="text_moncoin_num" />
+			<Image Type="CoinUnlimited" Imageset="BaseImage001" Image="text_moncoin_unlimited" />
+			<Image Type="BlueEmpty" Imageset="BaseImage004" Image="slot_blue_x" />
+			<Image Type="RedEmpty" Imageset="BaseImage004" Image="slot_red_x" />
+			<Image Type="LoadCharBack" Imageset="BaseImage002" Image="mychr_shadow2" />
+			<Image Type="CharLoading1" Imageset="BaseImage002" Image="mychr_loading1" />
+			<Image Type="CharLoading2" Imageset="BaseImage002" Image="mychr_loading2" />
+			<Image Type="CharLoading3" Imageset="BaseImage002" Image="mychr_loading3" />
+			<Image Type="CharLoading4" Imageset="BaseImage002" Image="mychr_loading4" />
+			<Image Type="CharLoading5" Imageset="BaseImage002" Image="mychr_loading1" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading6" Imageset="BaseImage002" Image="mychr_loading2" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading7" Imageset="BaseImage002" Image="mychr_loading3" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading8" Imageset="BaseImage002" Image="mychr_loading4" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="AIBG" Imageset="BaseImage028" Image="mychr_ai_shadow" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyMemberList" Id="106">
+		<Size X="207" Y="213" Width="88" Height="131" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<DefaultFrameImagery Type="BlueNor" Templete="slot_battle_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="slot_battle_blue_over">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNor" Templete="slot_battle_red_nor">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="slot_battle_red_over">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CaptainBack" Templete="state_green">
+				<Area X="6" Y="6" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNorGra" Imageset="BaseImage004" Image="slot_battle_blue_nor_gra" />
+			<Image Type="BlueOverGra" Imageset="BaseImage004" Image="slot_battle_blue_over_gra" />
+			<Image Type="RedNorGra" Imageset="BaseImage004" Image="slot_battle_red_nor_gra" />
+			<Image Type="RedOverGra" Imageset="BaseImage004" Image="slot_battle_red_over_gra" />
+			<Image Type="GuildMarkLine" Imageset="BaseImage001" Image="icon0_guildmark_s_bg1" />
+			<Image Type="GoldMonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_gold" />
+			<Image Type="MonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_normal" />
+			<Image Type="RaidCoin" Imageset="BaseImage025" Image="pve_raid_ticket" />
+			<Image Type="CoinNumber" Imageset="BaseImage001" Image="text_moncoin_num" />
+			<Image Type="CoinUnlimited" Imageset="BaseImage001" Image="text_moncoin_unlimited" />
+			<Image Type="BlueEmpty" Imageset="BaseImage004" Image="slot_blue_x" />
+			<Image Type="RedEmpty" Imageset="BaseImage004" Image="slot_red_x" />
+			<Image Type="LoadCharBack" Imageset="BaseImage002" Image="mychr_shadow2" />
+			<Image Type="CharLoading1" Imageset="BaseImage002" Image="mychr_loading1" />
+			<Image Type="CharLoading2" Imageset="BaseImage002" Image="mychr_loading2" />
+			<Image Type="CharLoading3" Imageset="BaseImage002" Image="mychr_loading3" />
+			<Image Type="CharLoading4" Imageset="BaseImage002" Image="mychr_loading4" />
+			<Image Type="CharLoading5" Imageset="BaseImage002" Image="mychr_loading1" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading6" Imageset="BaseImage002" Image="mychr_loading2" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading7" Imageset="BaseImage002" Image="mychr_loading3" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading8" Imageset="BaseImage002" Image="mychr_loading4" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="AIBG" Imageset="BaseImage028" Image="mychr_ai_shadow" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyMemberList" Id="107">
+		<Size X="297" Y="213" Width="88" Height="131" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<DefaultFrameImagery Type="BlueNor" Templete="slot_battle_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="slot_battle_blue_over">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNor" Templete="slot_battle_red_nor">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="slot_battle_red_over">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CaptainBack" Templete="state_green">
+				<Area X="6" Y="6" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNorGra" Imageset="BaseImage004" Image="slot_battle_blue_nor_gra" />
+			<Image Type="BlueOverGra" Imageset="BaseImage004" Image="slot_battle_blue_over_gra" />
+			<Image Type="RedNorGra" Imageset="BaseImage004" Image="slot_battle_red_nor_gra" />
+			<Image Type="RedOverGra" Imageset="BaseImage004" Image="slot_battle_red_over_gra" />
+			<Image Type="GuildMarkLine" Imageset="BaseImage001" Image="icon0_guildmark_s_bg1" />
+			<Image Type="GoldMonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_gold" />
+			<Image Type="MonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_normal" />
+			<Image Type="RaidCoin" Imageset="BaseImage025" Image="pve_raid_ticket" />
+			<Image Type="CoinNumber" Imageset="BaseImage001" Image="text_moncoin_num" />
+			<Image Type="CoinUnlimited" Imageset="BaseImage001" Image="text_moncoin_unlimited" />
+			<Image Type="BlueEmpty" Imageset="BaseImage004" Image="slot_blue_x" />
+			<Image Type="RedEmpty" Imageset="BaseImage004" Image="slot_red_x" />
+			<Image Type="LoadCharBack" Imageset="BaseImage002" Image="mychr_shadow2" />
+			<Image Type="CharLoading1" Imageset="BaseImage002" Image="mychr_loading1" />
+			<Image Type="CharLoading2" Imageset="BaseImage002" Image="mychr_loading2" />
+			<Image Type="CharLoading3" Imageset="BaseImage002" Image="mychr_loading3" />
+			<Image Type="CharLoading4" Imageset="BaseImage002" Image="mychr_loading4" />
+			<Image Type="CharLoading5" Imageset="BaseImage002" Image="mychr_loading1" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading6" Imageset="BaseImage002" Image="mychr_loading2" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading7" Imageset="BaseImage002" Image="mychr_loading3" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading8" Imageset="BaseImage002" Image="mychr_loading4" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="AIBG" Imageset="BaseImage028" Image="mychr_ai_shadow" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="PartyMemberList" Id="108">
+		<Size X="27" Y="98" Width="88" Height="246" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<DefaultFrameImagery Type="BlueNor" Templete="slot_camp_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="slot_camp_blue_over">
+				<Area X="0" Y="0" Width="88" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNor" Templete="slot_camp_red_nor">
+				<Area X="0" Y="0" Width="88" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="slot_camp_red_over">
+				<Area X="0" Y="0" Width="88" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CaptainBack" Templete="state_green">
+				<Area X="6" Y="6" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNorGra" Imageset="BaseImage004" Image="slot_camp_blue_nor_gra" />
+			<Image Type="BlueOverGra" Imageset="BaseImage004" Image="slot_camp_blue_over_gra" />
+			<Image Type="RedNorGra" Imageset="BaseImage004" Image="slot_camp_red_nor_gra" />
+			<Image Type="RedOverGra" Imageset="BaseImage004" Image="slot_camp_red_over_gra" />
+			<Image Type="GuildMarkLine" Imageset="BaseImage001" Image="icon0_guildmark_s_bg1" />
+			<Image Type="BlueEmpty" Imageset="BaseImage004" Image="slot_blue_x" />
+			<Image Type="RedEmpty" Imageset="BaseImage004" Image="slot_red_x" />
+			<Image Type="LoadCharBack" Imageset="BaseImage002" Image="mychr_shadow3" />
+			<Image Type="CharLoading1" Imageset="BaseImage002" Image="mychr_loading1" />
+			<Image Type="CharLoading2" Imageset="BaseImage002" Image="mychr_loading2" />
+			<Image Type="CharLoading3" Imageset="BaseImage002" Image="mychr_loading3" />
+			<Image Type="CharLoading4" Imageset="BaseImage002" Image="mychr_loading4" />
+			<Image Type="CharLoading5" Imageset="BaseImage002" Image="mychr_loading1" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading6" Imageset="BaseImage002" Image="mychr_loading2" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading7" Imageset="BaseImage002" Image="mychr_loading3" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading8" Imageset="BaseImage002" Image="mychr_loading4" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyMemberList" Id="109">
+		<Size X="117" Y="98" Width="88" Height="246" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<DefaultFrameImagery Type="BlueNor" Templete="slot_camp_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="slot_camp_blue_over">
+				<Area X="0" Y="0" Width="88" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNor" Templete="slot_camp_red_nor">
+				<Area X="0" Y="0" Width="88" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="slot_camp_red_over">
+				<Area X="0" Y="0" Width="88" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CaptainBack" Templete="state_green">
+				<Area X="6" Y="6" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNorGra" Imageset="BaseImage004" Image="slot_camp_blue_nor_gra" />
+			<Image Type="BlueOverGra" Imageset="BaseImage004" Image="slot_camp_blue_over_gra" />
+			<Image Type="RedNorGra" Imageset="BaseImage004" Image="slot_camp_red_nor_gra" />
+			<Image Type="RedOverGra" Imageset="BaseImage004" Image="slot_camp_red_over_gra" />
+			<Image Type="GuildMarkLine" Imageset="BaseImage001" Image="icon0_guildmark_s_bg1" />
+			<Image Type="BlueEmpty" Imageset="BaseImage004" Image="slot_blue_x" />
+			<Image Type="RedEmpty" Imageset="BaseImage004" Image="slot_red_x" />
+			<Image Type="LoadCharBack" Imageset="BaseImage002" Image="mychr_shadow3" />
+			<Image Type="CharLoading1" Imageset="BaseImage002" Image="mychr_loading1" />
+			<Image Type="CharLoading2" Imageset="BaseImage002" Image="mychr_loading2" />
+			<Image Type="CharLoading3" Imageset="BaseImage002" Image="mychr_loading3" />
+			<Image Type="CharLoading4" Imageset="BaseImage002" Image="mychr_loading4" />
+			<Image Type="CharLoading5" Imageset="BaseImage002" Image="mychr_loading1" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading6" Imageset="BaseImage002" Image="mychr_loading2" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading7" Imageset="BaseImage002" Image="mychr_loading3" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading8" Imageset="BaseImage002" Image="mychr_loading4" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyMemberList" Id="110">
+		<Size X="207" Y="98" Width="88" Height="246" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+				<Imagery>
+			<DefaultFrameImagery Type="BlueNor" Templete="slot_camp_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="slot_camp_blue_over">
+				<Area X="0" Y="0" Width="88" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNor" Templete="slot_camp_red_nor">
+				<Area X="0" Y="0" Width="88" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="slot_camp_red_over">
+				<Area X="0" Y="0" Width="88" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CaptainBack" Templete="state_green">
+				<Area X="6" Y="6" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNorGra" Imageset="BaseImage004" Image="slot_camp_blue_nor_gra" />
+			<Image Type="BlueOverGra" Imageset="BaseImage004" Image="slot_camp_blue_over_gra" />
+			<Image Type="RedNorGra" Imageset="BaseImage004" Image="slot_camp_red_nor_gra" />
+			<Image Type="RedOverGra" Imageset="BaseImage004" Image="slot_camp_red_over_gra" />
+			<Image Type="GuildMarkLine" Imageset="BaseImage001" Image="icon0_guildmark_s_bg1" />
+			<Image Type="BlueEmpty" Imageset="BaseImage004" Image="slot_blue_x" />
+			<Image Type="RedEmpty" Imageset="BaseImage004" Image="slot_red_x" />
+			<Image Type="LoadCharBack" Imageset="BaseImage002" Image="mychr_shadow3" />
+			<Image Type="CharLoading1" Imageset="BaseImage002" Image="mychr_loading1" />
+			<Image Type="CharLoading2" Imageset="BaseImage002" Image="mychr_loading2" />
+			<Image Type="CharLoading3" Imageset="BaseImage002" Image="mychr_loading3" />
+			<Image Type="CharLoading4" Imageset="BaseImage002" Image="mychr_loading4" />
+			<Image Type="CharLoading5" Imageset="BaseImage002" Image="mychr_loading1" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading6" Imageset="BaseImage002" Image="mychr_loading2" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading7" Imageset="BaseImage002" Image="mychr_loading3" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading8" Imageset="BaseImage002" Image="mychr_loading4" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyMemberList" Id="111">
+		<Size X="297" Y="98" Width="88" Height="246" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+				<Imagery>
+			<DefaultFrameImagery Type="BlueNor" Templete="slot_camp_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="slot_camp_blue_over">
+				<Area X="0" Y="0" Width="88" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNor" Templete="slot_camp_red_nor">
+				<Area X="0" Y="0" Width="88" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="slot_camp_red_over">
+				<Area X="0" Y="0" Width="88" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CaptainBack" Templete="state_green">
+				<Area X="6" Y="6" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNorGra" Imageset="BaseImage004" Image="slot_camp_blue_nor_gra" />
+			<Image Type="BlueOverGra" Imageset="BaseImage004" Image="slot_camp_blue_over_gra" />
+			<Image Type="RedNorGra" Imageset="BaseImage004" Image="slot_camp_red_nor_gra" />
+			<Image Type="RedOverGra" Imageset="BaseImage004" Image="slot_camp_red_over_gra" />
+			<Image Type="GuildMarkLine" Imageset="BaseImage001" Image="icon0_guildmark_s_bg1" />
+			<Image Type="BlueEmpty" Imageset="BaseImage004" Image="slot_blue_x" />
+			<Image Type="RedEmpty" Imageset="BaseImage004" Image="slot_red_x" />
+			<Image Type="LoadCharBack" Imageset="BaseImage002" Image="mychr_shadow3" />
+			<Image Type="CharLoading1" Imageset="BaseImage002" Image="mychr_loading1" />
+			<Image Type="CharLoading2" Imageset="BaseImage002" Image="mychr_loading2" />
+			<Image Type="CharLoading3" Imageset="BaseImage002" Image="mychr_loading3" />
+			<Image Type="CharLoading4" Imageset="BaseImage002" Image="mychr_loading4" />
+			<Image Type="CharLoading5" Imageset="BaseImage002" Image="mychr_loading1" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading6" Imageset="BaseImage002" Image="mychr_loading2" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading7" Imageset="BaseImage002" Image="mychr_loading3" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading8" Imageset="BaseImage002" Image="mychr_loading4" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyMemberList" Id="200">
+		<Size X="387" Y="80" Width="88" Height="131" />		
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<DefaultFrameImagery Type="BlueNor" Templete="slot_battle_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="slot_battle_blue_over">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNor" Templete="slot_battle_red_nor">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="slot_battle_red_over">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CaptainBack" Templete="state_green">
+				<Area X="6" Y="6" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNorGra" Imageset="BaseImage004" Image="slot_battle_blue_nor_gra" />
+			<Image Type="BlueOverGra" Imageset="BaseImage004" Image="slot_battle_blue_over_gra" />
+			<Image Type="RedNorGra" Imageset="BaseImage004" Image="slot_battle_red_nor_gra" />
+			<Image Type="RedOverGra" Imageset="BaseImage004" Image="slot_battle_red_over_gra" />
+			<Image Type="GuildMarkLine" Imageset="BaseImage001" Image="icon0_guildmark_s_bg1" />
+			<Image Type="GoldMonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_gold" />
+			<Image Type="MonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_normal" />
+			<Image Type="RaidCoin" Imageset="BaseImage025" Image="pve_raid_ticket" />
+			<Image Type="CoinNumber" Imageset="BaseImage001" Image="text_moncoin_num" />
+			<Image Type="CoinUnlimited" Imageset="BaseImage001" Image="text_moncoin_unlimited" />
+			<Image Type="BlueEmpty" Imageset="BaseImage004" Image="slot_blue_x" />
+			<Image Type="RedEmpty" Imageset="BaseImage004" Image="slot_red_x" />
+			<Image Type="LoadCharBack" Imageset="BaseImage002" Image="mychr_shadow2" />
+			<Image Type="CharLoading1" Imageset="BaseImage002" Image="mychr_loading1" />
+			<Image Type="CharLoading2" Imageset="BaseImage002" Image="mychr_loading2" />
+			<Image Type="CharLoading3" Imageset="BaseImage002" Image="mychr_loading3" />
+			<Image Type="CharLoading4" Imageset="BaseImage002" Image="mychr_loading4" />
+			<Image Type="CharLoading5" Imageset="BaseImage002" Image="mychr_loading1" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading6" Imageset="BaseImage002" Image="mychr_loading2" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading7" Imageset="BaseImage002" Image="mychr_loading3" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading8" Imageset="BaseImage002" Image="mychr_loading4" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="AIBG" Imageset="BaseImage028" Image="mychr_ai_shadow" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyMemberList" Id="201">
+		<Size X="477" Y="80" Width="88" Height="131" />		
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<DefaultFrameImagery Type="BlueNor" Templete="slot_battle_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="slot_battle_blue_over">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNor" Templete="slot_battle_red_nor">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="slot_battle_red_over">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CaptainBack" Templete="state_green">
+				<Area X="6" Y="6" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNorGra" Imageset="BaseImage004" Image="slot_battle_blue_nor_gra" />
+			<Image Type="BlueOverGra" Imageset="BaseImage004" Image="slot_battle_blue_over_gra" />
+			<Image Type="RedNorGra" Imageset="BaseImage004" Image="slot_battle_red_nor_gra" />
+			<Image Type="RedOverGra" Imageset="BaseImage004" Image="slot_battle_red_over_gra" />
+			<Image Type="GuildMarkLine" Imageset="BaseImage001" Image="icon0_guildmark_s_bg1" />
+			<Image Type="GoldMonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_gold" />
+			<Image Type="MonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_normal" />
+			<Image Type="RaidCoin" Imageset="BaseImage025" Image="pve_raid_ticket" />
+			<Image Type="CoinNumber" Imageset="BaseImage001" Image="text_moncoin_num" />
+			<Image Type="CoinUnlimited" Imageset="BaseImage001" Image="text_moncoin_unlimited" />
+			<Image Type="BlueEmpty" Imageset="BaseImage004" Image="slot_blue_x" />
+			<Image Type="RedEmpty" Imageset="BaseImage004" Image="slot_red_x" />
+			<Image Type="LoadCharBack" Imageset="BaseImage002" Image="mychr_shadow2" />
+			<Image Type="CharLoading1" Imageset="BaseImage002" Image="mychr_loading1" />
+			<Image Type="CharLoading2" Imageset="BaseImage002" Image="mychr_loading2" />
+			<Image Type="CharLoading3" Imageset="BaseImage002" Image="mychr_loading3" />
+			<Image Type="CharLoading4" Imageset="BaseImage002" Image="mychr_loading4" />
+			<Image Type="CharLoading5" Imageset="BaseImage002" Image="mychr_loading1" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading6" Imageset="BaseImage002" Image="mychr_loading2" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading7" Imageset="BaseImage002" Image="mychr_loading3" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading8" Imageset="BaseImage002" Image="mychr_loading4" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="AIBG" Imageset="BaseImage028" Image="mychr_ai_shadow" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyMemberList" Id="202">
+		<Size X="567" Y="80" Width="88" Height="131" />		
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<DefaultFrameImagery Type="BlueNor" Templete="slot_battle_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="slot_battle_blue_over">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNor" Templete="slot_battle_red_nor">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="slot_battle_red_over">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CaptainBack" Templete="state_green">
+				<Area X="6" Y="6" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNorGra" Imageset="BaseImage004" Image="slot_battle_blue_nor_gra" />
+			<Image Type="BlueOverGra" Imageset="BaseImage004" Image="slot_battle_blue_over_gra" />
+			<Image Type="RedNorGra" Imageset="BaseImage004" Image="slot_battle_red_nor_gra" />
+			<Image Type="RedOverGra" Imageset="BaseImage004" Image="slot_battle_red_over_gra" />
+			<Image Type="GuildMarkLine" Imageset="BaseImage001" Image="icon0_guildmark_s_bg1" />
+			<Image Type="GoldMonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_gold" />
+			<Image Type="MonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_normal" />
+			<Image Type="RaidCoin" Imageset="BaseImage025" Image="pve_raid_ticket" />
+			<Image Type="CoinNumber" Imageset="BaseImage001" Image="text_moncoin_num" />
+			<Image Type="CoinUnlimited" Imageset="BaseImage001" Image="text_moncoin_unlimited" />
+			<Image Type="BlueEmpty" Imageset="BaseImage004" Image="slot_blue_x" />
+			<Image Type="RedEmpty" Imageset="BaseImage004" Image="slot_red_x" />
+			<Image Type="LoadCharBack" Imageset="BaseImage002" Image="mychr_shadow2" />
+			<Image Type="CharLoading1" Imageset="BaseImage002" Image="mychr_loading1" />
+			<Image Type="CharLoading2" Imageset="BaseImage002" Image="mychr_loading2" />
+			<Image Type="CharLoading3" Imageset="BaseImage002" Image="mychr_loading3" />
+			<Image Type="CharLoading4" Imageset="BaseImage002" Image="mychr_loading4" />
+			<Image Type="CharLoading5" Imageset="BaseImage002" Image="mychr_loading1" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading6" Imageset="BaseImage002" Image="mychr_loading2" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading7" Imageset="BaseImage002" Image="mychr_loading3" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading8" Imageset="BaseImage002" Image="mychr_loading4" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="AIBG" Imageset="BaseImage028" Image="mychr_ai_shadow" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyMemberList" Id="203">
+		<Size X="657" Y="80" Width="88" Height="131" />		
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<DefaultFrameImagery Type="BlueNor" Templete="slot_battle_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="slot_battle_blue_over">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNor" Templete="slot_battle_red_nor">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="slot_battle_red_over">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CaptainBack" Templete="state_green">
+				<Area X="6" Y="6" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNorGra" Imageset="BaseImage004" Image="slot_battle_blue_nor_gra" />
+			<Image Type="BlueOverGra" Imageset="BaseImage004" Image="slot_battle_blue_over_gra" />
+			<Image Type="RedNorGra" Imageset="BaseImage004" Image="slot_battle_red_nor_gra" />
+			<Image Type="RedOverGra" Imageset="BaseImage004" Image="slot_battle_red_over_gra" />
+			<Image Type="GuildMarkLine" Imageset="BaseImage001" Image="icon0_guildmark_s_bg1" />
+			<Image Type="GoldMonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_gold" />
+			<Image Type="MonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_normal" />
+			<Image Type="RaidCoin" Imageset="BaseImage025" Image="pve_raid_ticket" />
+			<Image Type="CoinNumber" Imageset="BaseImage001" Image="text_moncoin_num" />
+			<Image Type="CoinUnlimited" Imageset="BaseImage001" Image="text_moncoin_unlimited" />
+			<Image Type="BlueEmpty" Imageset="BaseImage004" Image="slot_blue_x" />
+			<Image Type="RedEmpty" Imageset="BaseImage004" Image="slot_red_x" />
+			<Image Type="LoadCharBack" Imageset="BaseImage002" Image="mychr_shadow2" />
+			<Image Type="CharLoading1" Imageset="BaseImage002" Image="mychr_loading1" />
+			<Image Type="CharLoading2" Imageset="BaseImage002" Image="mychr_loading2" />
+			<Image Type="CharLoading3" Imageset="BaseImage002" Image="mychr_loading3" />
+			<Image Type="CharLoading4" Imageset="BaseImage002" Image="mychr_loading4" />
+			<Image Type="CharLoading5" Imageset="BaseImage002" Image="mychr_loading1" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading6" Imageset="BaseImage002" Image="mychr_loading2" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading7" Imageset="BaseImage002" Image="mychr_loading3" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading8" Imageset="BaseImage002" Image="mychr_loading4" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="AIBG" Imageset="BaseImage028" Image="mychr_ai_shadow" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyMemberList" Id="204">
+		<Size X="387" Y="213" Width="88" Height="131" />			
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<DefaultFrameImagery Type="BlueNor" Templete="slot_battle_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="slot_battle_blue_over">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNor" Templete="slot_battle_red_nor">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="slot_battle_red_over">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CaptainBack" Templete="state_green">
+				<Area X="6" Y="6" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNorGra" Imageset="BaseImage004" Image="slot_battle_blue_nor_gra" />
+			<Image Type="BlueOverGra" Imageset="BaseImage004" Image="slot_battle_blue_over_gra" />
+			<Image Type="RedNorGra" Imageset="BaseImage004" Image="slot_battle_red_nor_gra" />
+			<Image Type="RedOverGra" Imageset="BaseImage004" Image="slot_battle_red_over_gra" />
+			<Image Type="GuildMarkLine" Imageset="BaseImage001" Image="icon0_guildmark_s_bg1" />
+			<Image Type="GoldMonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_gold" />
+			<Image Type="MonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_normal" />
+			<Image Type="RaidCoin" Imageset="BaseImage025" Image="pve_raid_ticket" />
+			<Image Type="CoinNumber" Imageset="BaseImage001" Image="text_moncoin_num" />
+			<Image Type="CoinUnlimited" Imageset="BaseImage001" Image="text_moncoin_unlimited" />
+			<Image Type="BlueEmpty" Imageset="BaseImage004" Image="slot_blue_x" />
+			<Image Type="RedEmpty" Imageset="BaseImage004" Image="slot_red_x" />
+			<Image Type="LoadCharBack" Imageset="BaseImage002" Image="mychr_shadow2" />
+			<Image Type="CharLoading1" Imageset="BaseImage002" Image="mychr_loading1" />
+			<Image Type="CharLoading2" Imageset="BaseImage002" Image="mychr_loading2" />
+			<Image Type="CharLoading3" Imageset="BaseImage002" Image="mychr_loading3" />
+			<Image Type="CharLoading4" Imageset="BaseImage002" Image="mychr_loading4" />
+			<Image Type="CharLoading5" Imageset="BaseImage002" Image="mychr_loading1" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading6" Imageset="BaseImage002" Image="mychr_loading2" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading7" Imageset="BaseImage002" Image="mychr_loading3" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading8" Imageset="BaseImage002" Image="mychr_loading4" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="AIBG" Imageset="BaseImage028" Image="mychr_ai_shadow" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyMemberList" Id="205">
+		<Size X="477" Y="213" Width="88" Height="131" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<DefaultFrameImagery Type="BlueNor" Templete="slot_battle_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="slot_battle_blue_over">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNor" Templete="slot_battle_red_nor">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="slot_battle_red_over">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CaptainBack" Templete="state_green">
+				<Area X="6" Y="6" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNorGra" Imageset="BaseImage004" Image="slot_battle_blue_nor_gra" />
+			<Image Type="BlueOverGra" Imageset="BaseImage004" Image="slot_battle_blue_over_gra" />
+			<Image Type="RedNorGra" Imageset="BaseImage004" Image="slot_battle_red_nor_gra" />
+			<Image Type="RedOverGra" Imageset="BaseImage004" Image="slot_battle_red_over_gra" />
+			<Image Type="GuildMarkLine" Imageset="BaseImage001" Image="icon0_guildmark_s_bg1" />
+			<Image Type="GoldMonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_gold" />
+			<Image Type="MonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_normal" />
+			<Image Type="RaidCoin" Imageset="BaseImage025" Image="pve_raid_ticket" />
+			<Image Type="CoinNumber" Imageset="BaseImage001" Image="text_moncoin_num" />
+			<Image Type="CoinUnlimited" Imageset="BaseImage001" Image="text_moncoin_unlimited" />
+			<Image Type="BlueEmpty" Imageset="BaseImage004" Image="slot_blue_x" />
+			<Image Type="RedEmpty" Imageset="BaseImage004" Image="slot_red_x" />
+			<Image Type="LoadCharBack" Imageset="BaseImage002" Image="mychr_shadow2" />
+			<Image Type="CharLoading1" Imageset="BaseImage002" Image="mychr_loading1" />
+			<Image Type="CharLoading2" Imageset="BaseImage002" Image="mychr_loading2" />
+			<Image Type="CharLoading3" Imageset="BaseImage002" Image="mychr_loading3" />
+			<Image Type="CharLoading4" Imageset="BaseImage002" Image="mychr_loading4" />
+			<Image Type="CharLoading5" Imageset="BaseImage002" Image="mychr_loading1" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading6" Imageset="BaseImage002" Image="mychr_loading2" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading7" Imageset="BaseImage002" Image="mychr_loading3" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading8" Imageset="BaseImage002" Image="mychr_loading4" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="AIBG" Imageset="BaseImage028" Image="mychr_ai_shadow" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyMemberList" Id="206">
+		<Size X="567" Y="213" Width="88" Height="131" />		
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<DefaultFrameImagery Type="BlueNor" Templete="slot_battle_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="slot_battle_blue_over">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNor" Templete="slot_battle_red_nor">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="slot_battle_red_over">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CaptainBack" Templete="state_green">
+				<Area X="6" Y="6" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNorGra" Imageset="BaseImage004" Image="slot_battle_blue_nor_gra" />
+			<Image Type="BlueOverGra" Imageset="BaseImage004" Image="slot_battle_blue_over_gra" />
+			<Image Type="RedNorGra" Imageset="BaseImage004" Image="slot_battle_red_nor_gra" />
+			<Image Type="RedOverGra" Imageset="BaseImage004" Image="slot_battle_red_over_gra" />
+			<Image Type="GuildMarkLine" Imageset="BaseImage001" Image="icon0_guildmark_s_bg1" />
+			<Image Type="GoldMonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_gold" />
+			<Image Type="MonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_normal" />
+			<Image Type="RaidCoin" Imageset="BaseImage025" Image="pve_raid_ticket" />
+			<Image Type="CoinNumber" Imageset="BaseImage001" Image="text_moncoin_num" />
+			<Image Type="CoinUnlimited" Imageset="BaseImage001" Image="text_moncoin_unlimited" />
+			<Image Type="BlueEmpty" Imageset="BaseImage004" Image="slot_blue_x" />
+			<Image Type="RedEmpty" Imageset="BaseImage004" Image="slot_red_x" />
+			<Image Type="LoadCharBack" Imageset="BaseImage002" Image="mychr_shadow2" />
+			<Image Type="CharLoading1" Imageset="BaseImage002" Image="mychr_loading1" />
+			<Image Type="CharLoading2" Imageset="BaseImage002" Image="mychr_loading2" />
+			<Image Type="CharLoading3" Imageset="BaseImage002" Image="mychr_loading3" />
+			<Image Type="CharLoading4" Imageset="BaseImage002" Image="mychr_loading4" />
+			<Image Type="CharLoading5" Imageset="BaseImage002" Image="mychr_loading1" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading6" Imageset="BaseImage002" Image="mychr_loading2" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading7" Imageset="BaseImage002" Image="mychr_loading3" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading8" Imageset="BaseImage002" Image="mychr_loading4" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="AIBG" Imageset="BaseImage028" Image="mychr_ai_shadow" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyMemberList" Id="207">
+		<Size X="657" Y="213" Width="88" Height="131" />			
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<DefaultFrameImagery Type="BlueNor" Templete="slot_battle_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="slot_battle_blue_over">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNor" Templete="slot_battle_red_nor">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="slot_battle_red_over">
+				<Area X="0" Y="0" Width="88" Height="131"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CaptainBack" Templete="state_green">
+				<Area X="6" Y="6" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNorGra" Imageset="BaseImage004" Image="slot_battle_blue_nor_gra" />
+			<Image Type="BlueOverGra" Imageset="BaseImage004" Image="slot_battle_blue_over_gra" />
+			<Image Type="RedNorGra" Imageset="BaseImage004" Image="slot_battle_red_nor_gra" />
+			<Image Type="RedOverGra" Imageset="BaseImage004" Image="slot_battle_red_over_gra" />
+			<Image Type="GuildMarkLine" Imageset="BaseImage001" Image="icon0_guildmark_s_bg1" />
+			<Image Type="GoldMonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_gold" />
+			<Image Type="MonsterCoin" Imageset="BaseImage001" Image="icon0_moncoin_normal" />
+			<Image Type="RaidCoin" Imageset="BaseImage025" Image="pve_raid_ticket" />
+			<Image Type="CoinNumber" Imageset="BaseImage001" Image="text_moncoin_num" />
+			<Image Type="CoinUnlimited" Imageset="BaseImage001" Image="text_moncoin_unlimited" />
+			<Image Type="BlueEmpty" Imageset="BaseImage004" Image="slot_blue_x" />
+			<Image Type="RedEmpty" Imageset="BaseImage004" Image="slot_red_x" />
+			<Image Type="LoadCharBack" Imageset="BaseImage002" Image="mychr_shadow2" />
+			<Image Type="CharLoading1" Imageset="BaseImage002" Image="mychr_loading1" />
+			<Image Type="CharLoading2" Imageset="BaseImage002" Image="mychr_loading2" />
+			<Image Type="CharLoading3" Imageset="BaseImage002" Image="mychr_loading3" />
+			<Image Type="CharLoading4" Imageset="BaseImage002" Image="mychr_loading4" />
+			<Image Type="CharLoading5" Imageset="BaseImage002" Image="mychr_loading1" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading6" Imageset="BaseImage002" Image="mychr_loading2" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading7" Imageset="BaseImage002" Image="mychr_loading3" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading8" Imageset="BaseImage002" Image="mychr_loading4" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="AIBG" Imageset="BaseImage028" Image="mychr_ai_shadow" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="PartyMemberList" Id="208">
+		<Size X="387" Y="98" Width="88" Height="246" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+				<Imagery>
+			<DefaultFrameImagery Type="BlueNor" Templete="slot_camp_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="slot_camp_blue_over">
+				<Area X="0" Y="0" Width="88" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNor" Templete="slot_camp_red_nor">
+				<Area X="0" Y="0" Width="88" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="slot_camp_red_over">
+				<Area X="0" Y="0" Width="88" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CaptainBack" Templete="state_green">
+				<Area X="6" Y="6" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNorGra" Imageset="BaseImage004" Image="slot_camp_blue_nor_gra" />
+			<Image Type="BlueOverGra" Imageset="BaseImage004" Image="slot_camp_blue_over_gra" />
+			<Image Type="RedNorGra" Imageset="BaseImage004" Image="slot_camp_red_nor_gra" />
+			<Image Type="RedOverGra" Imageset="BaseImage004" Image="slot_camp_red_over_gra" />
+			<Image Type="GuildMarkLine" Imageset="BaseImage001" Image="icon0_guildmark_s_bg1" />
+			<Image Type="BlueEmpty" Imageset="BaseImage004" Image="slot_blue_x" />
+			<Image Type="RedEmpty" Imageset="BaseImage004" Image="slot_red_x" />
+			<Image Type="LoadCharBack" Imageset="BaseImage002" Image="mychr_shadow3" />
+			<Image Type="CharLoading1" Imageset="BaseImage002" Image="mychr_loading1" />
+			<Image Type="CharLoading2" Imageset="BaseImage002" Image="mychr_loading2" />
+			<Image Type="CharLoading3" Imageset="BaseImage002" Image="mychr_loading3" />
+			<Image Type="CharLoading4" Imageset="BaseImage002" Image="mychr_loading4" />
+			<Image Type="CharLoading5" Imageset="BaseImage002" Image="mychr_loading1" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading6" Imageset="BaseImage002" Image="mychr_loading2" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading7" Imageset="BaseImage002" Image="mychr_loading3" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading8" Imageset="BaseImage002" Image="mychr_loading4" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyMemberList" Id="209">
+		<Size X="477" Y="98" Width="88" Height="246" />		
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+				<Imagery>
+			<DefaultFrameImagery Type="BlueNor" Templete="slot_camp_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="slot_camp_blue_over">
+				<Area X="0" Y="0" Width="88" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNor" Templete="slot_camp_red_nor">
+				<Area X="0" Y="0" Width="88" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="slot_camp_red_over">
+				<Area X="0" Y="0" Width="88" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CaptainBack" Templete="state_green">
+				<Area X="6" Y="6" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNorGra" Imageset="BaseImage004" Image="slot_camp_blue_nor_gra" />
+			<Image Type="BlueOverGra" Imageset="BaseImage004" Image="slot_camp_blue_over_gra" />
+			<Image Type="RedNorGra" Imageset="BaseImage004" Image="slot_camp_red_nor_gra" />
+			<Image Type="RedOverGra" Imageset="BaseImage004" Image="slot_camp_red_over_gra" />
+			<Image Type="GuildMarkLine" Imageset="BaseImage001" Image="icon0_guildmark_s_bg1" />
+			<Image Type="BlueEmpty" Imageset="BaseImage004" Image="slot_blue_x" />
+			<Image Type="RedEmpty" Imageset="BaseImage004" Image="slot_red_x" />
+			<Image Type="LoadCharBack" Imageset="BaseImage002" Image="mychr_shadow3" />
+			<Image Type="CharLoading1" Imageset="BaseImage002" Image="mychr_loading1" />
+			<Image Type="CharLoading2" Imageset="BaseImage002" Image="mychr_loading2" />
+			<Image Type="CharLoading3" Imageset="BaseImage002" Image="mychr_loading3" />
+			<Image Type="CharLoading4" Imageset="BaseImage002" Image="mychr_loading4" />
+			<Image Type="CharLoading5" Imageset="BaseImage002" Image="mychr_loading1" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading6" Imageset="BaseImage002" Image="mychr_loading2" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading7" Imageset="BaseImage002" Image="mychr_loading3" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading8" Imageset="BaseImage002" Image="mychr_loading4" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyMemberList" Id="210">
+		<Size X="567" Y="98" Width="88" Height="246" />		
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+				<Imagery>
+			<DefaultFrameImagery Type="BlueNor" Templete="slot_camp_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="slot_camp_blue_over">
+				<Area X="0" Y="0" Width="88" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNor" Templete="slot_camp_red_nor">
+				<Area X="0" Y="0" Width="88" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="slot_camp_red_over">
+				<Area X="0" Y="0" Width="88" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CaptainBack" Templete="state_green">
+				<Area X="6" Y="6" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNorGra" Imageset="BaseImage004" Image="slot_camp_blue_nor_gra" />
+			<Image Type="BlueOverGra" Imageset="BaseImage004" Image="slot_camp_blue_over_gra" />
+			<Image Type="RedNorGra" Imageset="BaseImage004" Image="slot_camp_red_nor_gra" />
+			<Image Type="RedOverGra" Imageset="BaseImage004" Image="slot_camp_red_over_gra" />
+			<Image Type="GuildMarkLine" Imageset="BaseImage001" Image="icon0_guildmark_s_bg1" />
+			<Image Type="BlueEmpty" Imageset="BaseImage004" Image="slot_blue_x" />
+			<Image Type="RedEmpty" Imageset="BaseImage004" Image="slot_red_x" />
+			<Image Type="LoadCharBack" Imageset="BaseImage002" Image="mychr_shadow3" />
+			<Image Type="CharLoading1" Imageset="BaseImage002" Image="mychr_loading1" />
+			<Image Type="CharLoading2" Imageset="BaseImage002" Image="mychr_loading2" />
+			<Image Type="CharLoading3" Imageset="BaseImage002" Image="mychr_loading3" />
+			<Image Type="CharLoading4" Imageset="BaseImage002" Image="mychr_loading4" />
+			<Image Type="CharLoading5" Imageset="BaseImage002" Image="mychr_loading1" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading6" Imageset="BaseImage002" Image="mychr_loading2" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading7" Imageset="BaseImage002" Image="mychr_loading3" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading8" Imageset="BaseImage002" Image="mychr_loading4" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyMemberList" Id="211">
+		<Size X="657" Y="98" Width="88" Height="246" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+				<Imagery>
+			<DefaultFrameImagery Type="BlueNor" Templete="slot_camp_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="slot_camp_blue_over">
+				<Area X="0" Y="0" Width="88" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNor" Templete="slot_camp_red_nor">
+				<Area X="0" Y="0" Width="88" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="slot_camp_red_over">
+				<Area X="0" Y="0" Width="88" Height="246"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="CaptainBack" Templete="state_green">
+				<Area X="6" Y="6" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+
+			<Image Type="BlueNorGra" Imageset="BaseImage004" Image="slot_camp_blue_nor_gra" />
+			<Image Type="BlueOverGra" Imageset="BaseImage004" Image="slot_camp_blue_over_gra" />
+			<Image Type="RedNorGra" Imageset="BaseImage004" Image="slot_camp_red_nor_gra" />
+			<Image Type="RedOverGra" Imageset="BaseImage004" Image="slot_camp_red_over_gra" />
+			<Image Type="GuildMarkLine" Imageset="BaseImage001" Image="icon0_guildmark_s_bg1" />
+			<Image Type="BlueEmpty" Imageset="BaseImage004" Image="slot_blue_x" />
+			<Image Type="RedEmpty" Imageset="BaseImage004" Image="slot_red_x" />
+			<Image Type="LoadCharBack" Imageset="BaseImage002" Image="mychr_shadow3" />
+			<Image Type="CharLoading1" Imageset="BaseImage002" Image="mychr_loading1" />
+			<Image Type="CharLoading2" Imageset="BaseImage002" Image="mychr_loading2" />
+			<Image Type="CharLoading3" Imageset="BaseImage002" Image="mychr_loading3" />
+			<Image Type="CharLoading4" Imageset="BaseImage002" Image="mychr_loading4" />
+			<Image Type="CharLoading5" Imageset="BaseImage002" Image="mychr_loading1" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading6" Imageset="BaseImage002" Image="mychr_loading2" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading7" Imageset="BaseImage002" Image="mychr_loading3" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+			<Image Type="CharLoading8" Imageset="BaseImage002" Image="mychr_loading4" >
+				<Area X="0" Y="0" Reverse="HorzVert"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ModeMapSelectList" Id="1000">
+		<Size X="0" Y="0" Width="163" Height="35" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_EXIT_ESC</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="tooltip2">
+				<Area X="0" Y="0" Width="163" Height="35" />
+			</DefaultFrameImagery>
+
+			<Image Type="DarkLine" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="7" Y="7" RenderType="Multiply"/>
+			</Image>
+			<Image Type="LightLine" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="7" Y="7" RenderType="Multiply"/>
+			</Image>
+			<Image Type="OverLine" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="7" Y="7"/>
+			</Image>
+			<Image Type="ManualMark" Imageset="BaseImage001" Image="icon0_help_black" />
+		</Imagery>
+		<ExtraInfo MaxPageList="16" 
+                           AddWidth="14" 
+                           AddHeight="12" 
+                           ListX="7" 
+                           ListY="7" 
+                           HeightGap="21"
+                           CutWidth="20" 
+			   ManualMarkX="128"
+                           ManualMarkWidth="21"/>
+		
+		<Window ClassName="ModeHelpTooltip" Id="500">
+			<Size X="0" Y="0" Width="164" Height="70" />
+			<Style>IWS_START_HIDE|IWS_PROCESS|IWS_TOPMOST</Style> 
+			<Imagery>
+				<DefaultFrameImagery Type="Selected" Templete="tooltip3">
+					<Area X="0" Y="0" Width="164" Height="70" />
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioScroll" Id="1000">
+			<Size X="141" Y="7" Width="15" Height="315" />
+			<Style>IWS_PROCESS</Style>
+			<ExStyle>IWS_EX_VSCROLL</ExStyle>
+			<Imagery>
+				<DefaultFrameImagery Templete="scrollbar_back">
+					<Area X="5" Y="10" Width="5" Height="295"/>
+				</DefaultFrameImagery>
+			</Imagery>		
+			<ExtraInfo PageRange="16" StartTime="500" CurTime ="100"/>
+
+			<Window ClassName="ioButton" Id="1">
+				<Size X="0" Y="0" Width="15" Height="10" />
+				<Imagery>
+					<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0" Reverse="Vert"/>
+					</Image>
+					<Image Type="Over" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0" Reverse="Vert"/>
+					</Image>
+					<Image Type="Push" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0" Reverse="Vert"/>
+					</Image>
+				</Imagery>
+				<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+				           ClickSound = "interface/public_mouseclick_00.wav"/>					
+			</Window>
+			<Window ClassName="ioButton" Id="2">
+				<Size X="0" Y="305" Width="15" Height="10" />
+				<Imagery>
+					<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0"/>
+					</Image>
+					<Image Type="Over" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0"/>
+					</Image>
+					<Image Type="Push" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0"/>
+					</Image>
+				</Imagery>
+				<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+				           ClickSound = "interface/public_mouseclick_00.wav"/>					
+			</Window>
+			<Window ClassName="ioSlide" Id="3">
+				<Size X="0" Y="10" Width="15" Height="30" />
+				<DragRect Left="0" Top="0" Right="15" Bottom="30" />
+				<ExStyle>IWS_EX_NOTIFY_MOVED</ExStyle>
+				<Style>IWS_CANMOVE</Style>
+				<Imagery>
+					<DefaultFrameImagery Templete="scrollbar_drag">
+						<Area X="0" Y="0" Width="15" Height="30"/>
+					</DefaultFrameImagery>
+					<Image Type="Icon_Slide" Imageset="BaseImage001" Image="scrollbar_drag_icon"/>
+				</Imagery>
+			</Window>
+		</Window>
+	</Window>
+
+	<Window ClassName="BattleUserOptionWnd" Id="1002">
+		<Size X="0" Y="0" Width="100" Height="35" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_EXIT_ESC</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="tooltip2">
+				<Area X="0" Y="0" Width="100" Height="35" />
+			</DefaultFrameImagery>
+
+			<Image Type="DarkLine" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" RenderType="Multiply" />
+			</Image>
+			<Image Type="LightLine" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" RenderType="Multiply" />
+			</Image>
+			<Image Type="OverLine" Imageset="BaseImage001" Image="strip_gray_on" />
+		</Imagery>
+		<ExtraInfo AddWidth="14" AddHeight="12" ListX="7" ListY="7" HeightGap="21"/>
+	</Window>
+
+	<Window ClassName="ModeHelpTooltip" Id="1003">
+		<Size X="0" Y="0" Width="164" Height="70" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_TOPMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="tooltip3">
+				<Area X="0" Y="0" Width="164" Height="70" />
+			</DefaultFrameImagery>
+		</Imagery>
+	</Window>
+</Window>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="QuestToolTip" Id="6002">
+	<Size X="0" Y="0" Width="303" Height="38" />
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_TOPMOST</Style> 	
+	<Imagery>
+		<DefaultFrameImagery Type="StateRedFrm" Templete="state_red">
+			<Area X="0" Y="0" Width="40" Height="16"/>
+		</DefaultFrameImagery>
+
+		<Image Type="TooltipLeft" Imageset="BaseImage001" Image="tooltip1_left" />
+		<Image Type="TooltipLeftIn" Imageset="BaseImage001" Image="tooltip1_leftin" />
+		<Image Type="TooltipCenter" Imageset="BaseImage001" Image="tooltip1_center" />
+		<Image Type="TooltipRightIn" Imageset="BaseImage001" Image="tooltip1_rightin" />
+		<Image Type="TooltipRight" Imageset="BaseImage001" Image="tooltip1_right" />
+	</Imagery>
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="0" Y="0" Width="303" Height="38" />
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	                   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+</Window>
+

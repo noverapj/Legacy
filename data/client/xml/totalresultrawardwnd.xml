@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="TotalResultRawardWnd" Id="4">        
+	<Size X="0" Y="0" Width="232" Height="526" />
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_CHILD_ONLY_RESPONSE</Style>
+	<Title>
+		<Format X="110" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Center"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Text>보상</Text>
+	</Title>
+	<ExtraInfo BonusTickTime="400" ScaleTime="150" GradeIconPage="35" GradeIconMainName="Grade" GradeIconSubName="grade_"
+ 		         PesoRollingSound="interface/ceremony/result_rolling_01.wav"
+             ExpRollingSound=""
+             PesoStopSound="interface/ceremony/result_get_02.wav"
+             ExpStopSound="interface/ceremony/result_get_02.wav"
+             BonusCountSound="interface/ceremony/result_get_01.wav"/>
+	<Imagery>
+		<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title">
+			<Area X="5" Y="6" Width="222" Height="36" AutoResize="False"/>
+		</DefaultFrameImagery>
+		<Image Imageset="BaseImage002" Image="finish_bonusbox" >
+			<Area X="22" Y="243" />
+		</Image>
+		<Image Imageset="BaseImage002" Image="finish_bonusbox" >
+			<Area X="146" Y="243" Reverse="Horz"/>
+		</Image>
+		<DefaultFrameImagery Type="StateBlueFrm" Templete="state_blue"/>
+		<DefaultFrameImagery Type="StateOrangeFrm" Templete="state_orange"/>
+		<DefaultFrameImagery Type="BonusFrm" Templete="slot_finish_bonus"/>
+		<DefaultFrameImagery Type="BonusNoneFrm" Templete="bt_empty"/>
+		<DefaultFrameImagery Type="ShufflePointFrm" Templete="slot_finish_bonus">
+			<Area X="0" Y="0" Width="187" Height="81" AutoResize="False"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="SuccessionPesoFrm" Templete="win1_frame80">
+			<Area X="0" Y="0" Width="187" Height="57" AutoResize="False"/>
+		</DefaultFrameImagery>
+		
+		<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2" />
+		<Image Type="PesoIcon" Imageset="UIIconPack13" Image="quest_002" />
+		<Image Type="BonusOffX" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+
+		<Image Type="BonusIconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+		<Image Type="MannerIcon" Imageset="UIIconPack2" Image="event_player_pumpkin_icon" />
+		<Image Type="SoldierIcon" Imageset="UIIconPack5" Image="bonus_soldier" />
+		<Image Type="GuildIcon" Imageset="UIIconPack5" Image="bonus_guild" />
+		<Image Type="FriendIcon" Imageset="UIIconPack2" Image="event_player_hard_icon" />
+		<Image Type="PcroomIcon" Imageset="UIIconPack5" Image="bonus_pcroom" />
+		<Image Type="ModeIcon" Imageset="UIIconPack1" Image="bonus_mission" />
+		<Image Type="AwardIcon" Imageset="UIIconPack8" Image="bonus_award" />
+		<Image Type="CampIcon" Imageset="UIIconPack8" Image="bonus_camp" />
+		<Image Type="EtcItemIcon" Imageset="UIIconPack5" Image="bonus_peso50" />
+		<Image Type="BonusIcon" Imageset="UIIconPack5" Image="bonus_present" />
+		<Image Type="PesoBonusIcon" Imageset="UIIconPack5" Image="bonus_present" />
+		<Image Type="EtcItemExpIcon"     Imageset="UIIconPack8" Image="goods_exp100pro" />
+		<Image Type="EtcItemPesoIcon"    Imageset="UIIconPack8" Image="goods_peso40pro" />
+		<Image Type="EtcItemExpPesoIcon" Imageset="UIIconPack8" Image="goods_exppeso" />
+		<Image Type="VictoriesIcon" Imageset="UIIconPack10" Image="bonus_win" />
+		<Image Type="ContributeIcon" Imageset="UIIconPack13" Image="quest_003" />
+		<Image Type="ModeConsecutively" Imageset="UIIconPack18" Image="quest_189" />
+		<Image Type="RewardPesoNum" Imageset="BaseImage006" Image="icontext_middle_num_b" />
+		<Image Type="RewardExpNum" Imageset="BaseImage008" Image="text_finalgoods_num" />
+		<Image Type="ShuffleStarBg" Imageset="BaseImage002" Image="iconeffect_1" />
+		<Image Type="ShuffleStar" Imageset="UIIconPack51" Image="Bonus_stage_icon2" />
+		<Image Type="DarkLine" Imageset="BaseImage001" Image="strip_gray_dark" >
+			<Area X="0" Y="0" Width="117" Height="17" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+		<Image Type="LightLine" Imageset="BaseImage001" Image="strip_gray_light">
+			<Area X="0" Y="0" Width="117" Height="17" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+		<Image Type="SuccessionIconBg" Imageset="BaseImage002" Image="iconeffect_1" />
+		<Image Type="SuccessionIcon" Imageset="UIIconPack117" Image="mode_1vs1" />
+	</Imagery>
+
+</Window>

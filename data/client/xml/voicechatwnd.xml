@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="VoiceChatWnd" Id="5021">
+	<Size X="14" Y="-299" YAlign="Bottom" Width="180" Height="39" />
+	<DragRect Left="0" Top="0" Right="180" Bottom="39" />
+	<Style>IWS_START_HIDE|IWS_BACKMOST|IWS_CANMOVE|IWS_PROCESS</Style>
+    	<Window ClassName="VoiceChatItem" Id="1">
+	    <!-- Width 프로그램내에서 설정 -->
+		<Size X="15" Y="2" Width="10" Height="17" />
+		<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style>
+			<Imagery>
+				<Image Type="Head"        Imageset="BaseImage004" Image="chat_category" />
+				<Image Type="HeadOutLine" Imageset="BaseImage004" Image="chat_category_outline" />
+				<Image Type="OverImg"        Imageset="BaseImage002" Image="chat_over_game_dodge" />
+				<Image Type="OverOutLineImg" Imageset="BaseImage002" Image="chat_over_game_out" />
+				<Image Type="SoundWav1" Imageset="BaseImage001" Image="icon0_voice_1" />
+				<Image Type="SoundWav2" Imageset="BaseImage001" Image="icon0_voice_2" />
+				<Image Type="SoundWav3" Imageset="BaseImage001" Image="icon0_voice_3" />
+				<Image Type="Wait"      Imageset="BaseImage001" Image="icon0_voice_0" />
+				<Image Type="Disable"   Imageset="BaseImage001" Image="icon0_voice_x" />
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+				       ClickSound = "interface/public_mouseclick_00.wav"/>
+       			<ExtraInfo CheckDuration="100"/>
+	</Window>
+
+   	<Window ClassName="VoiceChatItem" Id="2">
+	    <!-- Width 프로그램내에서 설정 -->
+		<Size X="15" Y="21" Width="10" Height="17" />
+		<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style>
+			<Imagery>
+				<Image Type="Head"        Imageset="BaseImage004" Image="chat_category" />
+				<Image Type="HeadOutLine" Imageset="BaseImage004" Image="chat_category_outline" />
+				<Image Type="OverImg"        Imageset="BaseImage002" Image="chat_over_game_dodge" />
+				<Image Type="OverOutLineImg" Imageset="BaseImage002" Image="chat_over_game_out" />
+				<Image Type="SoundWav1" Imageset="BaseImage001" Image="icon0_voice_1" />
+				<Image Type="SoundWav2" Imageset="BaseImage001" Image="icon0_voice_2" />
+				<Image Type="SoundWav3" Imageset="BaseImage001" Image="icon0_voice_3" />
+				<Image Type="Wait"      Imageset="BaseImage001" Image="icon0_voice_0" />
+				<Image Type="Disable"   Imageset="BaseImage001" Image="icon0_voice_x" />
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+				       ClickSound = "interface/public_mouseclick_00.wav"/>
+        		<ExtraInfo CheckDuration="100"/>
+	</Window>
+	
+	<Window ClassName="ioScroll" Id="1000">
+		<Size X="0" Y="-10" Width="13" Height="62" />
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_VSCROLL</ExStyle>
+		<Imagery>
+			<DefaultFrameImagery Templete="scrollbar4_back">
+				<Area X="2" Y="10" Width="9" Height="42"/>
+			</DefaultFrameImagery>
+		</Imagery>		
+		<ExtraInfo PageRange="2" StartTime="500" CurTime ="100"/>
+			<Window ClassName="ioSlide" Id="3">
+			<Size X="0" Y="0" Width="13" Height="31" />
+			<DragRect Left="0" Top="0" Right="13" Bottom="31" />
+			<ExStyle>IWS_EX_NOTIFY_MOVED</ExStyle>
+			<Style>IWS_CANMOVE</Style>
+			<Imagery>
+				<DefaultFrameImagery Templete="scrollbar4_drag">
+					<Area X="0" Y="0" Width="13" Height="31"/>
+				</DefaultFrameImagery>
+				<Image Type="Icon_Slide" Imageset="BaseImage004" Image="scrollbar4_drag_icon" >
+					<Area X="0" Y="0" RenderType="Multiply" />
+				</Image>
+			</Imagery>
+		</Window>
+	</Window>
+		
+</Window>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="BattleModeTimeGaugeWnd" Id="5080">
+	<Size X="0" Y="0" XAlign="Center" YAlign="Top" Width="760" Height="200"/>
+	<DragRect Left="0" Top="0" Right="760" Bottom="200" />
+	<Style>IWS_PROCESS|IWS_CANMOVE|IWS_BACKMOST</Style>
+	<Imagery>
+	
+	<!-- <Image Type="TimeIcon" Imageset="BaseImage012" Image="Score_Time_Icon" /> -->
+	<!-- <Image Type="TimeNumber" Imageset="BaseImage012" Image="Score_Time_Number" /> -->
+	<!-- <Image Type="Back" Imageset="BaseImage013" Image="Score_Back" /> -->
+	<!-- <Image Type="Mold" Imageset="BaseImage013" Image="Score_Add" /> -->
+	<!-- <Image Type="WarningBack" Imageset="BaseImage013" Image="Score_Red" /> -->
+
+	<Image Type="TimeText" Imageset="BaseImage_Arcade002" Image="arcade_uitxt_time" />
+	<Image Type="TimeTextRed" Imageset="BaseImage_Arcade002" Image="arcade_uitxt_time_red" />
+	<Image Type="TimeNumText" Imageset="BaseImage_Arcade001" Image="arcade_time_num" />
+	<Image Type="TimeNumTextRed" Imageset="BaseImage_Arcade001" Image="arcade_timered_num" />
+	<Image Type="TimeBack" Imageset="BaseImage_Arcade001" Image="arcade_timebg" />
+	<Image Type="TimeBackRed" Imageset="BaseImage_Arcade001" Image="arcade_timeredbg" />
+
+	<Image Type="PowerBackEffectL" Imageset="BaseImage_Arcade002" Image="arcade_power_gaugeoutline_right" >
+		<Area X="0" Y="0" Reverse="Horz"/>
+	</Image>
+	<Image Type="PowerBackGaugeL" Imageset="BaseImage_Arcade002" Image="arcade_power_bg_left" />
+	<Image Type="PowerGaugeL" Imageset="BaseImage_Arcade002" Image="arcade_power_gauge_left" />
+	<Image Type="PowerGaugeEffectL" Imageset="BaseImage_Arcade002" Image="arcade_power_gaugelight_left" />
+	<Image Type="PowerGaugeMaxL" Imageset="BaseImage_Arcade002" Image="arcade_power_gaugemax_left" />
+
+	<Image Type="PowerBackEffectR" Imageset="BaseImage_Arcade002" Image="arcade_power_gaugeoutline_right" />
+	<Image Type="PowerBackGaugeR" Imageset="BaseImage_Arcade002" Image="arcade_power_bg_right" />
+	<Image Type="PowerGaugeR" Imageset="BaseImage_Arcade002" Image="arcade_power_gauge_right" />
+	<Image Type="PowerGaugeEffectR" Imageset="BaseImage_Arcade002" Image="arcade_power_gaugelight_right" />
+	<Image Type="PowerGaugeMaxR" Imageset="BaseImage_Arcade002" Image="arcade_power_gaugemax_right" />
+
+	<Image Type="TeamBlue" Imageset="BaseImage053" Image="battlemod_teamA" />
+	<Image Type="LeftBackLine" Imageset="BaseImage_Arcade001" Image="arcade_hpoutline_bg_right" >
+		<Area X="0" Y="0" Reverse="Horz"/>
+	</Image>	
+	<Image Type="LeftBackLineLight" Imageset="BaseImage_Arcade001" Image="arcade_hpoutline_bg_right_light" >
+		<Area X="0" Y="0" Reverse="Horz"/>
+	</Image>	
+	<Image Type="LeftHPGaugeBack" Imageset="BaseImage_Arcade001" Image="arcade_hp_bg_left" />
+	<Image Type="LeftGauge100" Imageset="BaseImage_Arcade001" Image="arcade_hp_gauge_left" />
+	<Image Type="LeftGaugeGlow" Imageset="BaseImage_Arcade001" Image="arcade_hp_light_left" />
+	<Image Type="LeftGaugeRed" Imageset="BaseImage_Arcade001" Image="arcade_hp_redgauge_left" />
+	<Image Type="LeftBlueNameBar" Imageset="BaseImage_Arcade001" Image="arcade_namebg_me_left" />
+	<Image Type="LeftRedNameBar" Imageset="BaseImage_Arcade001" Image="arcade_namebg_you_left" />
+
+	<Image Type="TeamRed" Imageset="BaseImage053" Image="battlemod_teamB" />
+	<Image Type="RightBackLine" Imageset="BaseImage_Arcade001" Image="arcade_hpoutline_bg_right" />
+	<Image Type="RightBackLineLight" Imageset="BaseImage_Arcade001" Image="arcade_hpoutline_bg_right_light" />
+	<Image Type="RightHPGaugeBack" Imageset="BaseImage_Arcade001" Image="arcade_hp_bg_right" />
+	<Image Type="RightGauge100" Imageset="BaseImage_Arcade001" Image="arcade_hp_gauge_right" />
+	<Image Type="RightGaugeGlow" Imageset="BaseImage_Arcade001" Image="arcade_hp_light_right" />
+	<Image Type="RightGaugeRed" Imageset="BaseImage_Arcade001" Image="arcade_hp_redgauge_right" />
+	<Image Type="RightBlueNameBar" Imageset="BaseImage_Arcade001" Image="arcade_namebg_me_right" />
+	<Image Type="RightRedNameBar" Imageset="BaseImage_Arcade001" Image="arcade_namebg_you_right" />
+
+	<Image Type="CheerBack" Imageset="BaseImage_Arcade002" Image="arcade_cheer_bg" />
+	<Image Type="ChampCheerPoint" Imageset="BaseImage_Arcade001" Image="arcade_cheer_me_green" />
+	<Image Type="ChampCheerNumber" Imageset="BaseImage_Arcade001" Image="arcade_cheer_num_green" />
+	<Image Type="ChampCheerText" Imageset="BaseImage_Arcade002" Image="arcade_cheer_text_green" />
+	<Image Type="ChallCheerPoint" Imageset="BaseImage_Arcade001" Image="arcade_cheer_me_red" />
+	<Image Type="ChallCheerNumber" Imageset="BaseImage_Arcade001" Image="arcade_cheer_num_red" />
+	<Image Type="ChallCheerText" Imageset="BaseImage_Arcade002" Image="arcade_cheer_text_red" />
+	<Image Type="CheerTimeBack" Imageset="BaseImage_Arcade001" Image="arcade_cheer_count_bg" />
+
+	<!-- <Image Type="FightNpcClearBack" Imageset="BaseImage_Arcade001" Image="arcade_ai_round_bg" /> -->
+	<Image Type="FightNpcClearWin" Imageset="BaseImage_Arcade002" Image="arcade_ai_round_win" />
+
+	<Image Type="AcceptBack" Imageset="BaseImage_Arcade002" Image="arcade_uitxt_matchinggauge" />
+	<Image Type="AcceptPoint" Imageset="BaseImage_Arcade001" Image="arcade_matchinglight" />
+
+	<!-- <Image Type="FightNPCRoundText" Imageset="BaseImage_Arcade002" Image="arcade_comtxt_round" /> -->
+	
+	<!-- 스코어 -->
+	<Image Type="ScoreColon" Imageset="BaseImage053" Image="battlemod_scorevs" />
+	<Image Type="ScoreBg" Imageset="BaseImage_Arcade002" Image="arcade_cheer_bg" >
+		<Area X="328" Y="46"/>
+	</Image>	
+	<Image Type="BlueScoreNum" Imageset="BaseImage_Arcade001" Image="arcade_cheer_num_green" />
+	<Image Type="RedScoreNum" Imageset="BaseImage_Arcade001" Image="arcade_cheer_num_red" />
+	
+	</Imagery>
+	
+	<ExtraInfo WarningSecond="10" WarningTickSnd="interface/mode/time_limit_00.wav"
+		   CheerLimitTime="40000"
+		   MaxPower="30" 
+		   MaxTimePower="6" TPValue1="70" TPPoint1="5"
+		                    TPValue2="60" TPPoint2="10"
+		                    TPValue3="50" TPPoint3="15"
+		                    TPValue4="40" TPPoint4="20"
+		                    TPValue5="30" TPPoint5="25"
+		                    TPValue6="20" TPPoint6="30"
+	     MaxHPPower="6" HPValue1="20" HPPoint1="5" 
+	                    HPValue2="30" HPPoint2="10" 
+	                    HPValue3="40" HPPoint3="15" 
+	                    HPValue4="50" HPPoint4="20" 
+	                    HPValue5="60" HPPoint5="25" 
+	                    HPValue6="70" HPPoint6="30"
+	     MaxComGrade="5" Image1="BaseImage_Arcade002#arcade_ai_grade1"
+                             Image2="BaseImage_Arcade002#arcade_ai_grade1"
+			     Image3="BaseImage_Arcade002#arcade_ai_grade2"
+			     Image4="BaseImage_Arcade002#arcade_ai_grade2"
+			     Image5="BaseImage_Arcade002#arcade_ai_grade3"
+		  AcceptPointTime="800"/>
+
+</Window>

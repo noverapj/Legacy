@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="GuildInfoUserListWnd" Id="11">
+	<Size X="0" Y="96" Width="458" Height="363"/>
+	<Style>IWS_START_HIDE|IWS_PROCESS</Style>	
+
+	<Window ClassName="GuildInfoUserBtn" Id="0">
+		<Size X="17" Y="0" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="MasterMark" Imageset="BaseImage006" Image="icontext_guild1_black" />
+			<Image Type="SecondMasterMark" Imageset="BaseImage006" Image="icontext_guild2_black" />
+			<Image Type="PeopleOrange" Imageset="BaseImage001" Image="icon0_man_orange" />
+			<Image Type="PeopleGray" Imageset="BaseImage001" Image="icon0_man_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildInfoUserBtn" Id="1">
+		<Size X="17" Y="21" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="MasterMark" Imageset="BaseImage006" Image="icontext_guild1_black" />
+			<Image Type="SecondMasterMark" Imageset="BaseImage006" Image="icontext_guild2_black" />
+			<Image Type="PeopleOrange" Imageset="BaseImage001" Image="icon0_man_orange" />
+			<Image Type="PeopleGray" Imageset="BaseImage001" Image="icon0_man_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildInfoUserBtn" Id="2">
+		<Size X="17" Y="42" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="MasterMark" Imageset="BaseImage006" Image="icontext_guild1_black" />
+			<Image Type="SecondMasterMark" Imageset="BaseImage006" Image="icontext_guild2_black" />
+			<Image Type="PeopleOrange" Imageset="BaseImage001" Image="icon0_man_orange" />
+			<Image Type="PeopleGray" Imageset="BaseImage001" Image="icon0_man_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildInfoUserBtn" Id="3">
+		<Size X="17" Y="63" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="MasterMark" Imageset="BaseImage006" Image="icontext_guild1_black" />
+			<Image Type="SecondMasterMark" Imageset="BaseImage006" Image="icontext_guild2_black" />
+			<Image Type="PeopleOrange" Imageset="BaseImage001" Image="icon0_man_orange" />
+			<Image Type="PeopleGray" Imageset="BaseImage001" Image="icon0_man_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildInfoUserBtn" Id="4">
+		<Size X="17" Y="84" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="MasterMark" Imageset="BaseImage006" Image="icontext_guild1_black" />
+			<Image Type="SecondMasterMark" Imageset="BaseImage006" Image="icontext_guild2_black" />
+			<Image Type="PeopleOrange" Imageset="BaseImage001" Image="icon0_man_orange" />
+			<Image Type="PeopleGray" Imageset="BaseImage001" Image="icon0_man_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildInfoUserBtn" Id="5">
+		<Size X="17" Y="105" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="MasterMark" Imageset="BaseImage006" Image="icontext_guild1_black" />
+			<Image Type="SecondMasterMark" Imageset="BaseImage006" Image="icontext_guild2_black" />
+			<Image Type="PeopleOrange" Imageset="BaseImage001" Image="icon0_man_orange" />
+			<Image Type="PeopleGray" Imageset="BaseImage001" Image="icon0_man_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildInfoUserBtn" Id="6">
+		<Size X="17" Y="126" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="MasterMark" Imageset="BaseImage006" Image="icontext_guild1_black" />
+			<Image Type="SecondMasterMark" Imageset="BaseImage006" Image="icontext_guild2_black" />
+			<Image Type="PeopleOrange" Imageset="BaseImage001" Image="icon0_man_orange" />
+			<Image Type="PeopleGray" Imageset="BaseImage001" Image="icon0_man_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildInfoUserBtn" Id="7">
+		<Size X="17" Y="147" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="MasterMark" Imageset="BaseImage006" Image="icontext_guild1_black" />
+			<Image Type="SecondMasterMark" Imageset="BaseImage006" Image="icontext_guild2_black" />
+			<Image Type="PeopleOrange" Imageset="BaseImage001" Image="icon0_man_orange" />
+			<Image Type="PeopleGray" Imageset="BaseImage001" Image="icon0_man_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildInfoUserBtn" Id="8">
+		<Size X="17" Y="168" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="MasterMark" Imageset="BaseImage006" Image="icontext_guild1_black" />
+			<Image Type="SecondMasterMark" Imageset="BaseImage006" Image="icontext_guild2_black" />
+			<Image Type="PeopleOrange" Imageset="BaseImage001" Image="icon0_man_orange" />
+			<Image Type="PeopleGray" Imageset="BaseImage001" Image="icon0_man_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildInfoUserBtn" Id="9">
+		<Size X="17" Y="189" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="MasterMark" Imageset="BaseImage006" Image="icontext_guild1_black" />
+			<Image Type="SecondMasterMark" Imageset="BaseImage006" Image="icontext_guild2_black" />
+			<Image Type="PeopleOrange" Imageset="BaseImage001" Image="icon0_man_orange" />
+			<Image Type="PeopleGray" Imageset="BaseImage001" Image="icon0_man_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildInfoUserBtn" Id="10">
+		<Size X="17" Y="210" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="MasterMark" Imageset="BaseImage006" Image="icontext_guild1_black" />
+			<Image Type="SecondMasterMark" Imageset="BaseImage006" Image="icontext_guild2_black" />
+			<Image Type="PeopleOrange" Imageset="BaseImage001" Image="icon0_man_orange" />
+			<Image Type="PeopleGray" Imageset="BaseImage001" Image="icon0_man_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildInfoUserBtn" Id="11">
+		<Size X="17" Y="231" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="MasterMark" Imageset="BaseImage006" Image="icontext_guild1_black" />
+			<Image Type="SecondMasterMark" Imageset="BaseImage006" Image="icontext_guild2_black" />
+			<Image Type="PeopleOrange" Imageset="BaseImage001" Image="icon0_man_orange" />
+			<Image Type="PeopleGray" Imageset="BaseImage001" Image="icon0_man_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildInfoUserBtn" Id="12">
+		<Size X="17" Y="252" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="MasterMark" Imageset="BaseImage006" Image="icontext_guild1_black" />
+			<Image Type="SecondMasterMark" Imageset="BaseImage006" Image="icontext_guild2_black" />
+			<Image Type="PeopleOrange" Imageset="BaseImage001" Image="icon0_man_orange" />
+			<Image Type="PeopleGray" Imageset="BaseImage001" Image="icon0_man_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildInfoUserBtn" Id="13">
+		<Size X="17" Y="273" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="MasterMark" Imageset="BaseImage006" Image="icontext_guild1_black" />
+			<Image Type="SecondMasterMark" Imageset="BaseImage006" Image="icontext_guild2_black" />
+			<Image Type="PeopleOrange" Imageset="BaseImage001" Image="icon0_man_orange" />
+			<Image Type="PeopleGray" Imageset="BaseImage001" Image="icon0_man_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildInfoUserBtn" Id="14">
+		<Size X="17" Y="294" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="MasterMark" Imageset="BaseImage006" Image="icontext_guild1_black" />
+			<Image Type="SecondMasterMark" Imageset="BaseImage006" Image="icontext_guild2_black" />
+			<Image Type="PeopleOrange" Imageset="BaseImage001" Image="icon0_man_orange" />
+			<Image Type="PeopleGray" Imageset="BaseImage001" Image="icon0_man_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildInfoUserBtn" Id="15">
+		<Size X="17" Y="315" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="MasterMark" Imageset="BaseImage006" Image="icontext_guild1_black" />
+			<Image Type="SecondMasterMark" Imageset="BaseImage006" Image="icontext_guild2_black" />
+			<Image Type="PeopleOrange" Imageset="BaseImage001" Image="icon0_man_orange" />
+			<Image Type="PeopleGray" Imageset="BaseImage001" Image="icon0_man_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildInfoUserBtn" Id="16">
+		<Size X="230" Y="0" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="MasterMark" Imageset="BaseImage006" Image="icontext_guild1_black" />
+			<Image Type="SecondMasterMark" Imageset="BaseImage006" Image="icontext_guild2_black" />
+			<Image Type="PeopleOrange" Imageset="BaseImage001" Image="icon0_man_orange" />
+			<Image Type="PeopleGray" Imageset="BaseImage001" Image="icon0_man_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildInfoUserBtn" Id="17">
+		<Size X="230" Y="21" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="MasterMark" Imageset="BaseImage006" Image="icontext_guild1_black" />
+			<Image Type="SecondMasterMark" Imageset="BaseImage006" Image="icontext_guild2_black" />
+			<Image Type="PeopleOrange" Imageset="BaseImage001" Image="icon0_man_orange" />
+			<Image Type="PeopleGray" Imageset="BaseImage001" Image="icon0_man_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildInfoUserBtn" Id="18">
+		<Size X="230" Y="42" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="MasterMark" Imageset="BaseImage006" Image="icontext_guild1_black" />
+			<Image Type="SecondMasterMark" Imageset="BaseImage006" Image="icontext_guild2_black" />
+			<Image Type="PeopleOrange" Imageset="BaseImage001" Image="icon0_man_orange" />
+			<Image Type="PeopleGray" Imageset="BaseImage001" Image="icon0_man_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildInfoUserBtn" Id="19">
+		<Size X="230" Y="63" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="MasterMark" Imageset="BaseImage006" Image="icontext_guild1_black" />
+			<Image Type="SecondMasterMark" Imageset="BaseImage006" Image="icontext_guild2_black" />
+			<Image Type="PeopleOrange" Imageset="BaseImage001" Image="icon0_man_orange" />
+			<Image Type="PeopleGray" Imageset="BaseImage001" Image="icon0_man_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildInfoUserBtn" Id="20">
+		<Size X="230" Y="84" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="MasterMark" Imageset="BaseImage006" Image="icontext_guild1_black" />
+			<Image Type="SecondMasterMark" Imageset="BaseImage006" Image="icontext_guild2_black" />
+			<Image Type="PeopleOrange" Imageset="BaseImage001" Image="icon0_man_orange" />
+			<Image Type="PeopleGray" Imageset="BaseImage001" Image="icon0_man_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildInfoUserBtn" Id="21">
+		<Size X="230" Y="105" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="MasterMark" Imageset="BaseImage006" Image="icontext_guild1_black" />
+			<Image Type="SecondMasterMark" Imageset="BaseImage006" Image="icontext_guild2_black" />
+			<Image Type="PeopleOrange" Imageset="BaseImage001" Image="icon0_man_orange" />
+			<Image Type="PeopleGray" Imageset="BaseImage001" Image="icon0_man_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildInfoUserBtn" Id="22">
+		<Size X="230" Y="126" Width="211" Height="21" />
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="MasterMark" Imageset="BaseImage006" Image="icontext_guild1_black" />
+			<Image Type="SecondMasterMark" Imageset="BaseImage006" Image="icontext_guild2_black" />
+			<Image Type="PeopleOrange" Imageset="BaseImage001" Image="icon0_man_orange" />
+			<Image Type="PeopleGray" Imageset="BaseImage001" Image="icon0_man_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildInfoUserBtn" Id="23">
+		<Size X="230" Y="147" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="MasterMark" Imageset="BaseImage006" Image="icontext_guild1_black" />
+			<Image Type="SecondMasterMark" Imageset="BaseImage006" Image="icontext_guild2_black" />
+			<Image Type="PeopleOrange" Imageset="BaseImage001" Image="icon0_man_orange" />
+			<Image Type="PeopleGray" Imageset="BaseImage001" Image="icon0_man_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildInfoUserBtn" Id="24">
+		<Size X="230" Y="168" Width="211" Height="21" />
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="MasterMark" Imageset="BaseImage006" Image="icontext_guild1_black" />
+			<Image Type="SecondMasterMark" Imageset="BaseImage006" Image="icontext_guild2_black" />
+			<Image Type="PeopleOrange" Imageset="BaseImage001" Image="icon0_man_orange" />
+			<Image Type="PeopleGray" Imageset="BaseImage001" Image="icon0_man_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildInfoUserBtn" Id="25">
+		<Size X="230" Y="189" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="MasterMark" Imageset="BaseImage006" Image="icontext_guild1_black" />
+			<Image Type="SecondMasterMark" Imageset="BaseImage006" Image="icontext_guild2_black" />
+			<Image Type="PeopleOrange" Imageset="BaseImage001" Image="icon0_man_orange" />
+			<Image Type="PeopleGray" Imageset="BaseImage001" Image="icon0_man_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildInfoUserBtn" Id="26">
+		<Size X="230" Y="210" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="MasterMark" Imageset="BaseImage006" Image="icontext_guild1_black" />
+			<Image Type="SecondMasterMark" Imageset="BaseImage006" Image="icontext_guild2_black" />
+			<Image Type="PeopleOrange" Imageset="BaseImage001" Image="icon0_man_orange" />
+			<Image Type="PeopleGray" Imageset="BaseImage001" Image="icon0_man_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildInfoUserBtn" Id="27">
+		<Size X="230" Y="231" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="MasterMark" Imageset="BaseImage006" Image="icontext_guild1_black" />
+			<Image Type="SecondMasterMark" Imageset="BaseImage006" Image="icontext_guild2_black" />
+			<Image Type="PeopleOrange" Imageset="BaseImage001" Image="icon0_man_orange" />
+			<Image Type="PeopleGray" Imageset="BaseImage001" Image="icon0_man_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildInfoUserBtn" Id="28">
+		<Size X="230" Y="252" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="MasterMark" Imageset="BaseImage006" Image="icontext_guild1_black" />
+			<Image Type="SecondMasterMark" Imageset="BaseImage006" Image="icontext_guild2_black" />
+			<Image Type="PeopleOrange" Imageset="BaseImage001" Image="icon0_man_orange" />
+			<Image Type="PeopleGray" Imageset="BaseImage001" Image="icon0_man_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildInfoUserBtn" Id="29">
+		<Size X="230" Y="273" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="MasterMark" Imageset="BaseImage006" Image="icontext_guild1_black" />
+			<Image Type="SecondMasterMark" Imageset="BaseImage006" Image="icontext_guild2_black" />
+			<Image Type="PeopleOrange" Imageset="BaseImage001" Image="icon0_man_orange" />
+			<Image Type="PeopleGray" Imageset="BaseImage001" Image="icon0_man_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildInfoUserBtn" Id="30">
+		<Size X="230" Y="294" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="MasterMark" Imageset="BaseImage006" Image="icontext_guild1_black" />
+			<Image Type="SecondMasterMark" Imageset="BaseImage006" Image="icontext_guild2_black" />
+			<Image Type="PeopleOrange" Imageset="BaseImage001" Image="icon0_man_orange" />
+			<Image Type="PeopleGray" Imageset="BaseImage001" Image="icon0_man_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildInfoUserBtn" Id="31">
+		<Size X="230" Y="315" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="MasterMark" Imageset="BaseImage006" Image="icontext_guild1_black" />
+			<Image Type="SecondMasterMark" Imageset="BaseImage006" Image="icontext_guild2_black" />
+			<Image Type="PeopleOrange" Imageset="BaseImage001" Image="icon0_man_orange" />
+			<Image Type="PeopleGray" Imageset="BaseImage001" Image="icon0_man_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+
+	<Window ClassName="GuildInfoUserOptionWnd" Id="1000">
+		<Size X="0" Y="0" Width="100" Height="35" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_EXIT_ESC</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="tooltip2">
+				<Area X="0" Y="0" Width="100" Height="35" />
+			</DefaultFrameImagery>
+
+			<Image Type="DarkLine" Imageset="BaseImage001" Image="strip_gray_dark">
+				<Area X="0" Y="0" RenderType="Multiply" />
+			</Image>
+			<Image Type="LightLine" Imageset="BaseImage001" Image="strip_gray_light">
+				<Area X="0" Y="0" RenderType="Multiply" />
+			</Image>
+			<Image Type="OverLine" Imageset="BaseImage001" Image="strip_gray_on" />
+		</Imagery>
+		<ExtraInfo AddWidth="14" AddHeight="12" ListX="7" ListY="7" HeightGap="21"/>
+	</Window>
+</Window>

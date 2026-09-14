@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="ExpandMedalSlotWnd" Id="535">
+	<Size X="496" Y="0" Width="258" Height="506" />
+	<Style>IWS_PROCESS|IWS_CHILD_ONLY_RESPONSE|IWS_START_HIDE</Style>
+	<ExtraInfo rolling_sound = "interface/compound_effect_01.wav"
+			   Effect_Gap_Time = "50"
+			   Max_Rolling_Effect = "9"
+			   Rolling_Effect_1 = "BaseEffect002#effect_roll_01"
+			   Rolling_Effect_2 = "BaseEffect002#effect_roll_02"
+			   Rolling_Effect_3 = "BaseEffect002#effect_roll_03"
+			   Rolling_Effect_4 = "BaseEffect002#effect_roll_04"
+			   Rolling_Effect_5 = "BaseEffect002#effect_roll_05"
+			   Rolling_Effect_6 = "BaseEffect003#effect_roll_06"
+			   Rolling_Effect_7 = "BaseEffect003#effect_roll_07"
+			   Rolling_Effect_8 = "BaseEffect003#effect_roll_08"
+			   Rolling_Effect_9 = "BaseEffect003#effect_roll_09"/>
+
+	<!-- 클레스 버튼 -->
+	<Window ClassName="SelectSoldierListBtn" Id="1">
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Size X="27" Y="420" Width="204" Height="23" />
+		<Title>
+			<Format X="102" Y="3" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FF6E6E6E" Back="FF000000"/>
+			<!-- Title은 프로그램에서 설정 -->
+			<Text>----</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="204" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="204" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="204" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="204" Height="23"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="188" Y="8" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			   ClickSound = "interface/public_mouseclick_00.wav"
+			   DescText = "용병을 선택하세요" />
+	</Window>
+
+	<!-- 사용 -->
+	<Window ClassName="ioButton" Id="2">
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Size X="27" Y="448" Width="204" Height="31"/>
+		<Title>
+			<Format X="102" Y="7" Size="13" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF117222"/>
+		    <!-- Title은 프로그램에서 설정 -->
+			<Text>----</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_green_nor">
+				<Area X="0" Y="0" Width="204" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_green_nor">
+				<Area X="0" Y="0" Width="204" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="204" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_green_down">
+				<Area X="0" Y="0" Width="204" Height="31"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+				   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<!-- 클레스 리스트 -->
+	<Window ClassName="NewShopPullDownWnd" Id="101">
+		<Size X="0" Y="0" Width="204" Height="21" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_TOPMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="tooltip2">
+				<Area X="0" Y="0" Width="204" Height="21"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="NoneSelected" Templete="tooltip2">
+				<Area X="0" Y="0" Width="204" Height="21"/>
+			</DefaultFrameImagery>
+			<Image Type="DarkLine" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="70" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="LightLine" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="70" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="OverLine" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="70" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+		</Imagery>
+		<ExtraInfo StartHGap   = "8" 
+                   EndHGap     = "8"
+                   ItemHSize   = "21"
+                   ItemMaxPage = "5"
+                   FontSize    = "0.65f" />
+
+		<!--////////////////////////// scroll /////////////////////////////////////////////-->
+		<Window ClassName="ioScroll" Id="1000">
+			<Size X="182" Y="7" Width="15" Height="105" />
+			<Style>IWS_PROCESS</Style>
+			<ExStyle>IWS_EX_VSCROLL</ExStyle>
+			<Imagery>
+				<DefaultFrameImagery Templete="scrollbar_back">
+					<Area X="5" Y="10" Width="5" Height="85"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo PageRange="1" StartTime="500" CurTime ="100"/>
+
+			<Window ClassName="ioButton" Id="1">
+				<Size X="0" Y="0" Width="15" Height="10" />
+				<Imagery>
+					<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0" Reverse="Vert"/>
+					</Image>
+					<Image Type="Over" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0" Reverse="Vert"/>
+					</Image>
+					<Image Type="Push" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0" Reverse="Vert"/>
+					</Image>
+				</Imagery>
+				<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+				           ClickSound = "interface/public_mouseclick_00.wav"/>					
+			</Window>
+			<Window ClassName="ioButton" Id="2">
+				<Size X="0" Y="200" Width="15" Height="10" />
+				<Imagery>
+					<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0"/>
+					</Image>
+					<Image Type="Over" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0"/>
+					</Image>
+					<Image Type="Push" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0"/>
+					</Image>
+				</Imagery>
+				<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+				           ClickSound = "interface/public_mouseclick_00.wav"/>					
+			</Window>
+			<Window ClassName="ioSlide" Id="3">
+				<Size X="0" Y="10" Width="15" Height="30" />
+				<DragRect Left="0" Top="0" Right="15" Bottom="30" />
+				<ExStyle>IWS_EX_NOTIFY_MOVED</ExStyle>
+				<Style>IWS_CANMOVE</Style>
+				<Imagery>
+					<DefaultFrameImagery Templete="scrollbar_drag">
+						<Area X="0" Y="0" Width="15" Height="30"/>
+					</DefaultFrameImagery>
+					<Image Type="Icon_Slide" Imageset="BaseImage001" Image="scrollbar_drag_icon"/>
+				</Imagery>
+			</Window>
+		</Window>
+	</Window>
+
+    <!--////////////////////////// 메달 ////////////////////////////////////-->
+	<Window ClassName="MedalSlotBtn" Id="11">
+		<Style>IWS_START_HIDE|IWS_PROCESS</Style>
+		<Size X="28" Y="257" Width="57" Height="57" />
+		<Title>
+			<Format X="28" Y="60" Size="11" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FFFFFFFF"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FFFFFFFF"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FFFFFFFF"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FFFFFFFF"/>
+			<!-- Text는 프로그램에서 설정 -->
+			<Text>ABCD</Text>
+		</Title>
+		<Imagery>
+			<Image Type="IconBack" Imageset="BaseImage005" Image="iconslot_5" />
+			<Image Type="IconDisable" Imageset="BaseImage002" Image="quest_giftbox_x" />
+		</Imagery>
+	</Window>
+
+	<Window ClassName="MedalSlotBtn" Id="12">
+		<Style>IWS_START_HIDE|IWS_PROCESS</Style>
+		<Size X="100" Y="257" Width="57" Height="57" />
+		<Title>
+			<Format X="28" Y="60" Size="11" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FFFFFFFF"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FFFFFFFF"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FFFFFFFF"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FFFFFFFF"/>
+			<!-- Text는 프로그램에서 설정 -->
+			<Text>--</Text>
+		</Title>
+		<Imagery>
+			<Image Type="IconBack" Imageset="BaseImage005" Image="iconslot_5" />
+			<Image Type="IconDisable" Imageset="BaseImage002" Image="quest_giftbox_x" />
+		</Imagery>
+	</Window>
+
+	<Window ClassName="MedalSlotBtn" Id="13">
+		<Style>IWS_START_HIDE|IWS_PROCESS</Style>
+		<Size X="172" Y="257" Width="57" Height="57" />
+		<Title>
+			<Format X="28" Y="60" Size="11" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FFFFFFFF"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FFFFFFFF"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FFFFFFFF"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FFFFFFFF"/>
+			<!-- Text는 프로그램에서 설정 -->
+			<Text>--</Text>
+		</Title>
+		<Imagery>
+			<Image Type="IconBack" Imageset="BaseImage005" Image="iconslot_5" />
+			<Image Type="IconDisable" Imageset="BaseImage002" Image="quest_giftbox_x" />
+		</Imagery>
+	</Window>
+
+	<Window ClassName="MedalSlotBtn" Id="14">
+		<Style>IWS_START_HIDE|IWS_PROCESS</Style>
+		<Size X="28" Y="336" Width="57" Height="57" />
+		<Title>
+			<Format X="28" Y="60" Size="11" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FFFFFFFF"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FFFFFFFF"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FFFFFFFF"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FFFFFFFF"/>
+			<!-- Text는 프로그램에서 설정 -->
+			<Text>--</Text>
+		</Title>
+		<Imagery>
+			<Image Type="IconBack" Imageset="BaseImage005" Image="iconslot_5" />
+			<Image Type="IconDisable" Imageset="BaseImage002" Image="quest_giftbox_x" />
+		</Imagery>
+	</Window>
+
+	<Window ClassName="MedalSlotBtn" Id="15">
+		<Style>IWS_START_HIDE|IWS_PROCESS</Style>
+		<Size X="100" Y="336" Width="57" Height="57" />
+		<Title>
+			<Format X="28" Y="60" Size="11" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FFFFFFFF"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FFFFFFFF"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FFFFFFFF"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FFFFFFFF"/>
+			<!-- Text는 프로그램에서 설정 -->
+			<Text>--</Text>
+		</Title>
+		<Imagery>
+			<Image Type="IconBack" Imageset="BaseImage005" Image="iconslot_5" />
+			<Image Type="IconDisable" Imageset="BaseImage002" Image="quest_giftbox_x" />
+		</Imagery>
+	</Window>
+
+	<Window ClassName="MedalSlotBtn" Id="16">
+		<Style>IWS_START_HIDE|IWS_PROCESS</Style>
+		<Size X="172" Y="336" Width="57" Height="57" />
+		<Title>
+			<Format X="28" Y="60" Size="11" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FFFFFFFF"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FFFFFFFF"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FFFFFFFF"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FFFFFFFF"/>
+			<!-- Text는 프로그램에서 설정 -->
+			<Text>--</Text>
+		</Title>
+		<Imagery>
+			<Image Type="IconBack" Imageset="BaseImage005" Image="iconslot_5" />
+			<Image Type="IconDisable" Imageset="BaseImage002" Image="quest_giftbox_x" />
+		</Imagery>
+	</Window>
+	
+	<!--번쩍 윈도우 -->
+	<Window ClassName="UppderAlphaWnd" Id="1000">
+		<Size X="0" Y="0" Width="258" Height="506" />
+		<Style>IWS_PROCESS|IWS_START_HIDE|IWS_NO_MOUSE_RESPONSE</Style>
+		<ExtraInfo AlphaTime="100"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="slot_empty_white">
+				<Area X="0" Y="0" Width="258" Height="506"/>
+			</DefaultFrameImagery>
+		</Imagery>
+	</Window>
+</Window>

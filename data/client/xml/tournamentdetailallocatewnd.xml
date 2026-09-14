@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="TournamentDetailFrameAllocateWnd" Id="12">
+	<Size X="136" Y="39" Width="616" Height="465" />
+	<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST</Style>
+	<Imagery>
+	  <Image Type="ScheduleProgressBarInactiveLeft" Imageset="BaseImage_League001"
+	  Image="schedule_big_open_gray_left" >
+	   <Area X="29" Y="20" />
+	  </Image>
+	  <Image Type="ScheduleProgressBarInactiveCenter" Imageset="BaseImage_League001" 
+	  Image="schedule_big_open_gray_center">
+	   <Area X="41" Y="20" Width="531" Height="31" HorzAlign="Stretch" VertAlign="Stretch"/>
+	  </Image>
+	  <Image Type="ScheduleProgressBarInactiveRight" Imageset="BaseImage_League001" 
+	  Image="schedule_big_open_gray_right">
+	   <Area X="566" Y="20" />
+	  </Image>
+	  <Image Type="ScheduleProgressBarInactiveClose" Imageset="BaseImage_League001" 
+	  Image="schedule_big_close_gray_right">
+	   <Area X="572" Y="20" />
+	  </Image>
+	  <Image Type="ScheduleProgressBarActiveLeft" Imageset="BaseImage_League001" 
+	  Image="schedule_big_open_orange_left" >
+	   <Area X="29" Y="20" />
+	  </Image>
+	  
+	  <Image Type="ActiveAcceptCenterClose" Imageset="BaseImage_League001" 
+	  Image="schedule_big_close_orange_center">
+	   <Area X="41" Y="20" Width="531" Height="31" HorzAlign="Stretch" VertAlign="Stretch"/>
+	  </Image>
+	  <Image Type="ActiveAcceptRightClose" Imageset="BaseImage_League001" 
+	  Image="schedule_big_close_orange_right">
+  	  <Area X="572" Y="20" />
+	  </Image>
+	  
+	  <Image Type="ActiveCheerCenterClose" Imageset="BaseImage_League001" 
+	  Image="schedule_big_close_pink_center">
+	   <Area X="41" Y="20" Width="531" Height="31" HorzAlign="Stretch" VertAlign="Stretch"/>
+	  </Image>
+	  <Image Type="ActiveCheerRightClose" Imageset="BaseImage_League001" 
+	  Image="schedule_big_close_pink_right">
+  	  <Area X="572" Y="20" />
+	  </Image>
+	  
+	  <Image Type="ScheduleProgressBarActiveCenter" Imageset="BaseImage_League001" 
+	  Image="schedule_big_open_orange_center">
+	   <Area X="41" Y="20" Width="525" Height="31" HorzAlign="Stretch" VertAlign="Stretch"/>
+	  </Image>
+	  <Image Type="ScheduleProgressBarActiveRight" Imageset="BaseImage_League001" 
+	  Image="schedule_big_open_orange_right">
+  	  <Area X="566" Y="20" />
+	  </Image>
+	  
+	  <Image Type="ActiveTournamentCenterClose" Imageset="BaseImage_League001" 
+	  Image="schedule_big_close_green_center">
+	   <Area X="41" Y="20" Width="531" Height="31" HorzAlign="Stretch" VertAlign="Stretch"/>
+	  </Image>
+	  <Image Type="ActiveTournamentRightClose" Imageset="BaseImage_League001" 
+	  Image="schedule_big_close_green_right">
+  	  <Area X="572" Y="20" />
+	  </Image>
+	  
+	  <Image Type="ActiveAwardCenterClose" Imageset="BaseImage_League001" 
+	  Image="schedule_big_close_pink_center">
+	   <Area X="41" Y="20" Width="531" Height="31" HorzAlign="Stretch" VertAlign="Stretch"/>
+	  </Image>
+	  <Image Type="ActiveAwardRightClose" Imageset="BaseImage_League001" 
+	  Image="schedule_big_close_pink_right">
+  	  <Area X="572" Y="20" />
+	  </Image>
+	  <Image Type="WndDevideStrip" Imageset="BaseImage001" Image="strip_gray_dark">
+  	  <Area X="214" Y="58" Width="2" Height="3" RenderType="Multiply" />
+	  </Image>
+		<DefaultFrameImagery Type="Normal" Templete="tooltip3">
+				<Area X="29" Y="409" Width="558" Height="31" AutoResize="False"/>
+		</DefaultFrameImagery>
+	</Imagery>
+  <ExtraInfo DevideOffsetX="186.0f" DevideOffsetY="5.0f" DevideHorzCnt="2" DevideVertCnt="77" />
+  <Window ClassName="ioButton" Id="1">
+		<Size X="10" Y="20" Width="19" Height="31" />
+		<Imagery>
+			<Image Type="NormalList" Imageset="BaseImage_League001" Image="icon0_leaguelist_left">
+  			<Area X="3" Y="5"/>
+  		</Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="ioButton" Id="2">
+		<Size X="587" Y="20" Width="19" Height="31" />
+		<Imagery>
+			<Image Type="NormalList" Imageset="BaseImage_League001" Image="icon0_leaguelist_left">
+  			<Area X="3" Y="5" Reverse="Horz"/>
+  		</Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+  <ExtraInfo DevideOffsetX="186.0" DevideOffsetY="5.0f" DevideHorzCnt="2" DevideVertCnt="77" />
+</Window>

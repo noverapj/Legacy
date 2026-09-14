@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="UserInfoToolTip" Id="6024">
+	<!--위치, Height는 소스에서 결정-->
+	<Size X="0" Y="0" Width="174" Height="300" />
+	<Style>IWS_PROCESS|IWS_START_HIDE</Style>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame80">
+			<Area X="0" Y="0" Width="174" Height="229"/>
+		</DefaultFrameImagery>		
+		
+		<DefaultFrameImagery Type="NoneTitle" Templete="win1_title3">
+			<Area X="5" Y="6" Width="164" Height="43"/>
+		</DefaultFrameImagery>	
+		
+		<DefaultFrameImagery Type="PowerUpNAwakeTitle" Templete="win1_title4">
+			<Area X="5" Y="6" Width="164" Height="53"/>
+		</DefaultFrameImagery>	
+			
+		<!-- 육성현황 테두리 -->
+		<Image Type="InfoBox1" Imageset="BaseImage002" Image="overinfo_infobox" >
+			<Area X="7" Y="57"/>
+		</Image>
+		<Image Type="InfoBox2" Imageset="BaseImage002" Image="overinfo_infobox" >
+			<Area X="112" Y="57" Reverse="Horz"/>
+		</Image>
+		<!-- 장착코스튬 테두리 -->
+		<Image Type="InfoBox3" Imageset="BaseImage002" Image="overinfo_infobox_costume" >
+			<Area X="7" Y="159"/>
+		</Image>
+		<Image Type="InfoBox4" Imageset="BaseImage002" Image="overinfo_infobox_costume" >
+			<Area X="117" Y="159" Reverse="Horz"/>
+		</Image>
+		<!-- 장착악세사리 테두리 -->
+		<Image Type="InfoBox5" Imageset="BaseImage002" Image="overinfo_infobox_accessory" >
+			<Area X="7" Y="230"/>
+		</Image>
+		<Image Type="InfoBox6" Imageset="BaseImage002" Image="overinfo_infobox_accessory" >
+			<Area X="122" Y="230" Reverse="Horz"/>
+		</Image>
+		<!-- 장착메달 테두리 -->
+		<Image Type="InfoBox7" Imageset="BaseImage002" Image="overinfo_infobox" >
+			<Area X="7" Y="300"/>
+		</Image>
+		<Image Type="InfoBox8" Imageset="BaseImage002" Image="overinfo_infobox" >
+			<Area X="112" Y="300" Reverse="Horz"/>
+		</Image>
+		<Image Type="InfoLoading1" Imageset="BaseImage002" Image="mygrade_loading1" />
+		<Image Type="InfoLoading2" Imageset="BaseImage002" Image="mygrade_loading2" />
+		<Image Type="InfoLoading3" Imageset="BaseImage002" Image="mygrade_loading3" />
+		<Image Type="InfoLoading4" Imageset="BaseImage002" Image="mygrade_loading4" />
+		<Image Type="InfoLoading5" Imageset="BaseImage002" Image="mygrade_loading1" >
+			<Area X="0" Y="0" Reverse="HorzVert"/>
+		</Image>
+		<Image Type="InfoLoading6" Imageset="BaseImage002" Image="mygrade_loading2" >
+			<Area X="0" Y="0" Reverse="HorzVert"/>
+		</Image>
+		<Image Type="InfoLoading7" Imageset="BaseImage002" Image="mygrade_loading3" >
+			<Area X="0" Y="0" Reverse="HorzVert"/>
+		</Image>
+		<Image Type="InfoLoading8" Imageset="BaseImage002" Image="mygrade_loading4" >
+			<Area X="0" Y="0" Reverse="HorzVert"/>
+		</Image>
+	</Imagery>
+	<ExtraInfo MaxGrowthCharIcon = "4" 
+			   GrowthCharIcon1 = "UIIconPack8#up_attack"
+			   GrowthCharIcon2 = "UIIconPack8#up_defense"
+			   GrowthCharIcon3 = "UIIconPack8#up_speed"
+			   GrowthCharIcon4 = "UIIconPack8#up_drop"
+			   MaxRefreshDelayTime = "3000"
+			   MaxLiveTime         = "600000"
+			   MaxUserInfo         = "100" />		
+	
+	<!-- 육성현황 BTN-->
+	<Window ClassName="SlotIconBtn" Id="1">
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Size X="7" Y="69" Width="40" Height="39" />
+		<Imagery>
+			<Image Type="IconBack"   Imageset="BaseImage005" Image="iconslot_1" />
+			<Image Type="IconEffect" Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="NumText"    Imageset="BaseImage004" Image="text_development_num"/>
+			<Image Type="PlusText"   Imageset="BaseImage004" Image="text_development_plus"/>
+		</Imagery>
+	</Window>
+	<Window ClassName="SlotIconBtn" Id="2">
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Size X="47" Y="69" Width="40" Height="39" />
+		<Imagery>
+			<Image Type="IconBack"   Imageset="BaseImage005" Image="iconslot_2" />
+			<Image Type="IconEffect" Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="NumText"    Imageset="BaseImage004" Image="text_development_num"/>
+			<Image Type="PlusText"   Imageset="BaseImage004" Image="text_development_plus"/>
+		</Imagery>
+	</Window>
+	<Window ClassName="SlotIconBtn" Id="3">
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Size X="87" Y="69" Width="40" Height="39" />
+		<Imagery>
+			<Image Type="IconBack"   Imageset="BaseImage005" Image="iconslot_3" />
+			<Image Type="IconEffect" Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="NumText"    Imageset="BaseImage004" Image="text_development_num"/>
+			<Image Type="PlusText"   Imageset="BaseImage004" Image="text_development_plus"/>
+		</Imagery>
+	</Window>
+	<Window ClassName="SlotIconBtn" Id="4">
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Size X="127" Y="69" Width="40" Height="39" />
+		<Imagery>
+			<Image Type="IconBack"   Imageset="BaseImage005" Image="iconslot_4" />
+			<Image Type="IconEffect" Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="NumText"    Imageset="BaseImage004" Image="text_development_num"/>
+			<Image Type="PlusText"   Imageset="BaseImage004" Image="text_development_plus"/>
+		</Imagery>
+	</Window>
+	<Window ClassName="SlotIconBtn" Id="5">
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Size X="7" Y="108" Width="40" Height="39" />
+		<Imagery>
+			<Image Type="IconBack"   Imageset="BaseImage005" Image="iconslot_1" />
+			<Image Type="IconEffect" Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="NumText"    Imageset="BaseImage004" Image="text_development_num"/>
+			<Image Type="PlusText"   Imageset="BaseImage004" Image="text_development_plus"/>
+		</Imagery>
+	</Window>
+	<Window ClassName="SlotIconBtn" Id="6">
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Size X="47" Y="108" Width="40" Height="39" />
+		<Imagery>
+			<Image Type="IconBack"   Imageset="BaseImage005" Image="iconslot_2" />
+			<Image Type="IconEffect" Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="NumText"    Imageset="BaseImage004" Image="text_development_num"/>
+			<Image Type="PlusText"   Imageset="BaseImage004" Image="text_development_plus"/>
+		</Imagery>
+	</Window>
+	<Window ClassName="SlotIconBtn" Id="7">
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Size X="87" Y="108" Width="40" Height="39" />
+		<Imagery>
+			<Image Type="IconBack"   Imageset="BaseImage005" Image="iconslot_3" />
+			<Image Type="IconEffect" Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="NumText"    Imageset="BaseImage004" Image="text_development_num"/>
+			<Image Type="PlusText"   Imageset="BaseImage004" Image="text_development_plus"/>
+		</Imagery>
+	</Window>
+	<Window ClassName="SlotIconBtn" Id="8">
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Size X="127" Y="108" Width="40" Height="39" />
+		<Imagery>
+			<Image Type="IconBack"   Imageset="BaseImage005" Image="iconslot_4" />
+			<Image Type="IconEffect" Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="NumText"    Imageset="BaseImage004" Image="text_development_num"/>
+			<Image Type="PlusText"   Imageset="BaseImage004" Image="text_development_plus"/>
+		</Imagery>
+	</Window>
+	<!-- 장착메달 BTN-->
+	<Window ClassName="SlotIconBtn" Id="101">
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Size X="6" Y="313" Width="54" Height="51" />
+		<Imagery>
+			<Image Type="IconBack"    Imageset="BaseImage005" Image="iconslot_5" />
+			<Image Type="IconEffect"  Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="IconDisable" Imageset="BaseImage002" Image="quest_giftbox_x" />
+		</Imagery>
+	</Window>
+	<Window ClassName="SlotIconBtn" Id="102">
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Size X="60" Y="313" Width="54" Height="51" />
+		<Imagery>
+			<Image Type="IconBack"    Imageset="BaseImage005" Image="iconslot_5" />
+			<Image Type="IconEffect"  Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="IconDisable" Imageset="BaseImage002" Image="quest_giftbox_x" />
+		</Imagery>
+	</Window>
+	<Window ClassName="SlotIconBtn" Id="103">
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Size X="114" Y="313" Width="54" Height="51" />
+		<Imagery>
+			<Image Type="IconBack"    Imageset="BaseImage005" Image="iconslot_5" />
+			<Image Type="IconEffect"  Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="IconDisable" Imageset="BaseImage002" Image="quest_giftbox_x" />
+		</Imagery>
+	</Window>
+	<Window ClassName="SlotIconBtn" Id="104">
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Size X="6" Y="364" Width="54" Height="51" />
+		<Imagery>
+			<Image Type="IconBack"    Imageset="BaseImage005" Image="iconslot_5" />
+			<Image Type="IconEffect"  Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="IconDisable" Imageset="BaseImage002" Image="quest_giftbox_x" />
+		</Imagery>
+	</Window>
+	<Window ClassName="SlotIconBtn" Id="105">
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Size X="60" Y="364" Width="54" Height="51" />
+		<Imagery>
+			<Image Type="IconBack"    Imageset="BaseImage005" Image="iconslot_5" />
+			<Image Type="IconEffect"  Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="IconDisable" Imageset="BaseImage002" Image="quest_giftbox_x" />
+		</Imagery>
+	</Window>
+	<Window ClassName="SlotIconBtn" Id="106">
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Size X="114" Y="364" Width="54" Height="51" />
+		<Imagery>
+			<Image Type="IconBack"    Imageset="BaseImage005" Image="iconslot_5" />
+			<Image Type="IconEffect"  Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="IconDisable" Imageset="BaseImage002" Image="quest_giftbox_x" />
+		</Imagery>
+	</Window>
+	<!-- 장착코스튬 BTN-->
+	<Window ClassName="SlotIconBtn" Id="201">
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Size X="6" Y="171" Width="54" Height="51" />
+		<Imagery>
+			<Image Type="IconBack"    Imageset="BaseImage005" Image="iconslot_1" />
+			<Image Type="IconEffect"  Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="IconDisable" Imageset="BaseImage002" Image="quest_giftbox_x" />
+			<Image Type="costume_image" Imageset="BaseImage031" Image="costume_mark"/>
+		</Imagery>
+	</Window>
+	<Window ClassName="SlotIconBtn" Id="202">
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Size X="6" Y="171" Width="54" Height="51" />
+		<Imagery>
+			<Image Type="IconBack"    Imageset="BaseImage005" Image="iconslot_2" />
+			<Image Type="IconEffect"  Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="IconDisable" Imageset="BaseImage002" Image="quest_giftbox_x" />
+			<Image Type="costume_image" Imageset="BaseImage031" Image="costume_mark"/>
+		</Imagery>
+	</Window>
+	<Window ClassName="SlotIconBtn" Id="203">
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Size X="60" Y="171" Width="54" Height="51" />
+		<Imagery>
+			<Image Type="IconBack"    Imageset="BaseImage005" Image="iconslot_3" />
+			<Image Type="IconEffect"  Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="IconDisable" Imageset="BaseImage002" Image="quest_giftbox_x" />
+			<Image Type="costume_image" Imageset="BaseImage031" Image="costume_mark"/>
+		</Imagery>
+	</Window>
+	<Window ClassName="SlotIconBtn" Id="204">
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Size X="114" Y="171" Width="54" Height="51" />
+		<Imagery>
+			<Image Type="IconBack"    Imageset="BaseImage005" Image="iconslot_4" />
+			<Image Type="IconEffect"  Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="IconDisable" Imageset="BaseImage002" Image="quest_giftbox_x" />
+			<Image Type="costume_image" Imageset="BaseImage031" Image="costume_mark"/>
+		</Imagery>
+	</Window>
+	
+	<!-- 장착액세서리 BTN-->
+	<Window ClassName="SlotIconBtn" Id="301">
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Size X="6" Y="242" Width="54" Height="51" />
+		<Imagery>
+			<Image Type="IconBack"    Imageset="BaseImage026" Image="iconslot_7" />
+			<Image Type="IconEffect"  Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="IconDisable" Imageset="BaseImage002" Image="quest_giftbox_x" />
+		</Imagery>
+	</Window>
+	<Window ClassName="SlotIconBtn" Id="302">
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Size X="60" Y="242" Width="54" Height="51" />
+		<Imagery>
+			<Image Type="IconBack"    Imageset="BaseImage026" Image="iconslot_6" />
+			<Image Type="IconEffect"  Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="IconDisable" Imageset="BaseImage002" Image="quest_giftbox_x" />
+		</Imagery>
+	</Window>
+	<Window ClassName="SlotIconBtn" Id="303">
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Size X="114" Y="242" Width="54" Height="51" />
+		<Imagery>
+			<Image Type="IconBack"    Imageset="BaseImage026" Image="iconslot_8" />
+			<Image Type="IconEffect"  Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="IconDisable" Imageset="BaseImage002" Image="quest_giftbox_x" />
+		</Imagery>
+	</Window>
+</Window>

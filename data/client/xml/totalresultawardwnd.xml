@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="TotalResultAwardWnd" Id="1">        
+	<Size X="234" Y="0" Width="540" Height="350" />
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_CHILD_ONLY_RESPONSE</Style>
+	<ExtraInfo BackSound="interface/mode/awarding_bgm_01.wav"/>
+	<Title>
+		<Format X="265" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Center"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Text>시상식</Text>
+	</Title>
+
+	<Window ClassName="AwardSlotWnd" Id="1">
+		<Size X="22" Y="37" Width="124" Height="290" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Imagery>
+			<Image Type="BackEffect" Imageset="BaseImage005" Image="iconeffect_7" />
+			<Image Type="CharBottom" Imageset="BaseImage002" Image="mychr_shadow" />
+			<Image Type="TitleBack" Imageset="BaseImage002" Image="iconeffect_8" />
+			<Image Type="EmptyAward" Imageset="BaseImage006" Image="award_nothing" />
+			<Image Type="EtcItemNum" Imageset="BaseImage004" Image="text_equipment_num" />
+			<Image Type="EtcItemPlus" Imageset="BaseImage004" Image="text_equipment_plus" />
+		</Imagery>
+		<ExtraInfo RandTime="500" RandTickTime="100" OriginalTime="150" CountSound="interface/ceremony/prise_rolling_01.wav"/>
+
+		<Window ClassName="AwardSlotNameBtn" Id="1">
+			<Size X="2" Y="269" Width="120" Height="21" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+			<Imagery>
+				<DefaultFrameImagery Type="ThickBlueFrm" Templete="slot_finish_blue1">
+					<Area X="0" Y="0" Width="120" Height="21"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="LightBlueFrm" Templete="slot_finish_blue2">
+					<Area X="0" Y="0" Width="120" Height="21"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="ThickRedFrm" Templete="slot_finish_red1">
+					<Area X="0" Y="0" Width="120" Height="21"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="LightRedFrm" Templete="slot_finish_red2">
+					<Area X="0" Y="0" Width="120" Height="21"/>
+				</DefaultFrameImagery>
+			</Imagery>
+    			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		      		   ClickSound = "interface/public_mouseclick_00.wav"/>		
+		</Window>
+
+		<Window ClassName="ioButton" Id="2">
+			<Size X="0" Y="0" Width="124" Height="269" />
+		</Window>
+	</Window>
+
+	<Window ClassName="AwardSlotWnd" Id="2">
+		<Size X="146" Y="37" Width="124" Height="290" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Imagery>
+			<Image Type="BackEffect" Imageset="BaseImage005" Image="iconeffect_7" />
+			<Image Type="CharBottom" Imageset="BaseImage002" Image="mychr_shadow" />
+			<Image Type="TitleBack" Imageset="BaseImage002" Image="iconeffect_8" />
+			<Image Type="EmptyAward" Imageset="BaseImage006" Image="award_nothing" />
+			<Image Type="EtcItemNum" Imageset="BaseImage004" Image="text_equipment_num" />
+			<Image Type="EtcItemPlus" Imageset="BaseImage004" Image="text_equipment_plus" />
+		</Imagery>
+		<ExtraInfo RandTime="1750" RandTickTime="100" OriginalTime="150" CountSound="interface/ceremony/prise_rolling_02.wav"/>
+
+		<Window ClassName="AwardSlotNameBtn" Id="1">
+			<Size X="2" Y="269" Width="120" Height="21" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+			<Imagery>
+				<DefaultFrameImagery Type="ThickBlueFrm" Templete="slot_finish_blue1">
+					<Area X="0" Y="0" Width="120" Height="21"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="LightBlueFrm" Templete="slot_finish_blue2">
+					<Area X="0" Y="0" Width="120" Height="21"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="ThickRedFrm" Templete="slot_finish_red1">
+					<Area X="0" Y="0" Width="120" Height="21"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="LightRedFrm" Templete="slot_finish_red2">
+					<Area X="0" Y="0" Width="120" Height="21"/>
+				</DefaultFrameImagery>
+			</Imagery>
+    			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		      		   ClickSound = "interface/public_mouseclick_00.wav"/>		
+		</Window>
+
+		<Window ClassName="ioButton" Id="2">
+			<Size X="0" Y="0" Width="124" Height="269" />
+		</Window>
+	</Window>
+
+	<Window ClassName="AwardSlotWnd" Id="3">
+		<Size X="270" Y="37" Width="124" Height="290" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Imagery>
+			<Image Type="BackEffect" Imageset="BaseImage005" Image="iconeffect_7" />
+			<Image Type="CharBottom" Imageset="BaseImage002" Image="mychr_shadow" />
+			<Image Type="TitleBack" Imageset="BaseImage002" Image="iconeffect_8" />
+			<Image Type="EmptyAward" Imageset="BaseImage006" Image="award_nothing" />
+			<Image Type="EtcItemNum" Imageset="BaseImage004" Image="text_equipment_num" />
+			<Image Type="EtcItemPlus" Imageset="BaseImage004" Image="text_equipment_plus" />
+		</Imagery>
+		<ExtraInfo RandTime="3000" RandTickTime="100" OriginalTime="150" CountSound="interface/ceremony/prise_rolling_02.wav"/>
+
+		<Window ClassName="AwardSlotNameBtn" Id="1">
+			<Size X="2" Y="269" Width="120" Height="21" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+			<Imagery>
+				<DefaultFrameImagery Type="ThickBlueFrm" Templete="slot_finish_blue1">
+					<Area X="0" Y="0" Width="120" Height="21"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="LightBlueFrm" Templete="slot_finish_blue2">
+					<Area X="0" Y="0" Width="120" Height="21"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="ThickRedFrm" Templete="slot_finish_red1">
+					<Area X="0" Y="0" Width="120" Height="21"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="LightRedFrm" Templete="slot_finish_red2">
+					<Area X="0" Y="0" Width="120" Height="21"/>
+				</DefaultFrameImagery>
+			</Imagery>
+    			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		      		   ClickSound = "interface/public_mouseclick_00.wav"/>		
+		</Window>
+
+		<Window ClassName="ioButton" Id="2">
+			<Size X="0" Y="0" Width="124" Height="269" />
+		</Window>
+	</Window>
+
+	<Window ClassName="AwardSlotWnd" Id="4">
+		<Size X="394" Y="37" Width="124" Height="290" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Imagery>
+			<Image Type="BackEffect" Imageset="BaseImage005" Image="iconeffect_7" />
+			<Image Type="CharBottom" Imageset="BaseImage002" Image="mychr_shadow" />
+			<Image Type="TitleBack" Imageset="BaseImage002" Image="iconeffect_8" />
+			<Image Type="EmptyAward" Imageset="BaseImage006" Image="award_nothing" />
+			<Image Type="EtcItemNum" Imageset="BaseImage004" Image="text_equipment_num" />
+			<Image Type="EtcItemPlus" Imageset="BaseImage004" Image="text_equipment_plus" />
+		</Imagery>
+		<ExtraInfo RandTime="4250" RandTickTime="100" OriginalTime="150" CountSound="interface/ceremony/prise_rolling_02.wav"/>
+
+		<Window ClassName="AwardSlotNameBtn" Id="1">
+			<Size X="2" Y="269" Width="120" Height="21" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+			<Imagery>
+				<DefaultFrameImagery Type="ThickBlueFrm" Templete="slot_finish_blue1">
+					<Area X="0" Y="0" Width="120" Height="21"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="LightBlueFrm" Templete="slot_finish_blue2">
+					<Area X="0" Y="0" Width="120" Height="21"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="ThickRedFrm" Templete="slot_finish_red1">
+					<Area X="0" Y="0" Width="120" Height="21"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="LightRedFrm" Templete="slot_finish_red2">
+					<Area X="0" Y="0" Width="120" Height="21"/>
+				</DefaultFrameImagery>
+			</Imagery>
+    			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		      		   ClickSound = "interface/public_mouseclick_00.wav"/>		
+		</Window>
+
+		<Window ClassName="ioButton" Id="2">
+			<Size X="0" Y="0" Width="124" Height="269" />
+		</Window>
+	</Window>
+
+</Window>

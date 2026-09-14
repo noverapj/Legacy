@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="PracticeToolTip" Id="7103">
+    <!--Height는 소스에서 결정-->
+	<Size X="0" Y="0" Width="234" Height="115" />
+	<Style>IWS_START_HIDE|IWS_PROCESS|IWS_MODAL_TOOLTIP</Style>
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="tooltip3">
+			<Area X="0" Y="0" Width="234" Height="115"/>
+		</DefaultFrameImagery>		
+		<Image Type="GrowthLineLeft"    Imageset="BaseImage002" Image="box_left"/>
+		<Image Type="GrowthLineCenter"  Imageset="BaseImage002" Image="box_top"/>
+		<Image Type="GrowthLineRight"   Imageset="BaseImage002" Image="box_left"/>
+		<Image Type="GrowthBackGray"    Imageset="BaseImage001" Image="strip_gray_dark"/>
+		<Image Type="GrowthBackLight"   Imageset="BaseImage001" Image="strip_gray_light"/>
+	</Imagery>
+	
+	<Window ClassName="InventoryIconBtn" Id="1">
+		<Style>IWS_NO_MOUSE_RESPONSE</Style>
+		<Size X="16" Y="17" Width="64" Height="64" />
+		<Imagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+			<Image Type="NumText"  Imageset="BaseImage004" Image="text_equipment_num"/>
+			<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+			<Image Type="costume_image" Imageset="BaseImage031" Image="costume_mark"/>
+		</Imagery>
+	</Window>
+
+</Window>

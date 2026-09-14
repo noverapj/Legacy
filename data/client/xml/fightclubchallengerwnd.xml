@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="FightClubChallengerWnd" Id="5077">
+	<Size X="0" Y="0" Width="0" Height="0"/>
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style>
+	<Imagery>
+		<DefaultFrameImagery Type="BackFrm" Templete="arcade_infobg">
+			<Area X="0" Y="0" Width="800" Height="29"/>
+		</DefaultFrameImagery>
+
+		<Image Type="BackFrmLine" Imageset="BaseImage_Arcade001" Image="arcade_eff_line" />
+
+		<Image Type="NewChallengerText" Imageset="BaseImage_Arcade002" Image="arcade_comtxt_come" />
+	</Imagery>
+	<ExtraInfo ChallengerSnd = "emotion/hi_01.wav"/>
+</Window>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="TOOLTIP_BASE" Id="2000">
+	<Size X="0" Y="0" XAlign="Left" YAlign="Top" Width="0" Height="0" />
+	<DragRect Left="0" Top="0" Right="0" Bottom="0" />
+	<Style>IWS_TOPMOST|IWS_PROCESS</Style> 
+
+	<Imagery>
+		<DefaultFrameImagery Type="Back" Templete="tooltip3">
+			<Area X="0" Y="0" Width="100" Height="100"/>
+		</DefaultFrameImagery>
+	</Imagery>
+	<Text>
+		<Format Type="Title" X="0" Y="0" Size="15" Style="Normal" HorzAlign="Left" VertAlign="Top"/>
+		<Color Text="FFFFFFFF" Back="FF000000"/>
+		<Text></Text>
+	</Text>
+	<Text>
+		<Format Type="SubTitle" X="0" Y="0" Size="15" Style="Normal" HorzAlign="Left" VertAlign="Top"/>
+		<Color Text="FFFFFFFF" Back="FF000000"/>
+		<Text></Text>
+	</Text>
+	<Text>
+		<Format Type="Comment" X="0" Y="0" Size="12" Style="Normal" HorzAlign="Left" VertAlign="Top"/>
+		<Color Text="FFFFFFFF" Back="FF000000"/>
+		<Text></Text>
+	</Text>
+	<ExtraInfo FrameGap = "15" ItemGap = "5" TitleWidth = "-1" SubTitleWidth = "-1" CommentWidth = "200"/>
+</Window>

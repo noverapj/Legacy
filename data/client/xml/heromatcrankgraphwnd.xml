@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="HeroMatchRankGraphWnd" Id="100">
+	<Size X="387" Y="29" Width="331" Height="217" />
+	<Style>IWS_START_HIDE|IWS_PROCESS</Style> 
+	<Imagery>
+		<Image Type="GraphRect" Imageset="BaseImage001" Image="strip_herograph_gray"/>
+		<Image Type="BlueCircle" Imageset="BaseImage004" Image="icon0_hero_b_graph"/>
+		<Image Type="RedCircle" Imageset="BaseImage004" Image="icon0_hero_r_graph"/>
+		<Image Type="BlueTodayCircle" Imageset="BaseImage004" Image="icon0_hero_b_graph_now"/>
+		<Image Type="RedTodayCircle" Imageset="BaseImage004" Image="icon0_hero_r_graph_now"/>
+
+		<Image Type="GraphLine0" Imageset="BaseImage016" Image="hero_graph_00"/>
+		<Image Type="GraphLine1" Imageset="BaseImage016" Image="hero_graph_01"/>
+		<Image Type="GraphLine2" Imageset="BaseImage016" Image="hero_graph_02"/>
+		<Image Type="GraphLine3" Imageset="BaseImage016" Image="hero_graph_03"/>
+		<Image Type="GraphLine4" Imageset="BaseImage016" Image="hero_graph_04"/>
+		<Image Type="GraphLine5" Imageset="BaseImage016" Image="hero_graph_05"/>
+		<Image Type="GraphLine6" Imageset="BaseImage016" Image="hero_graph_06"/>
+		<Image Type="GraphLine7" Imageset="BaseImage016" Image="hero_graph_07"/>
+		<Image Type="GraphLine8" Imageset="BaseImage016" Image="hero_graph_08"/>
+		<Image Type="GraphLine9" Imageset="BaseImage016" Image="hero_graph_09"/>
+		<Image Type="GraphLine10" Imageset="BaseImage016" Image="hero_graph_10"/>
+		<Image Type="GraphLine11" Imageset="BaseImage016" Image="hero_graph_11"/>
+		<Image Type="GraphLine12" Imageset="BaseImage016" Image="hero_graph_12"/>
+		<Image Type="GraphLine13" Imageset="BaseImage016" Image="hero_graph_13"/>
+	</Imagery>
+
+</Window>

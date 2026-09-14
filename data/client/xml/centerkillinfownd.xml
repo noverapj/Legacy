@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="CenterKillInfoWnd" Id="6276">
+	<Size X="0" Y="103" XAlign="Center" YAlign="Rate" Width="452" Height="85"/>
+	<DragRect Left="0" Top="0" Right="452" Bottom="85" />
+	<Style>IWS_PROCESS|IWS_CANMOVE|IWS_BACKMOST|IWS_START_HIDE</Style>
+	<ExtraInfo  
+				OneKillLineLoopTime = "1600"
+				OneKillLineFadeOutTime = "400"
+				OtherKillLineLoopTime = "2000"
+				OtherKillLineFadeOutTime = "400"
+				
+				OneKillFadeInTime = "100"
+				OneKillLoopTime = "1500"
+				OneKillFadeOutTime = "400"
+				OneKillStartAlpha = "191"
+				OneKillStartScale = "1.5"
+				
+				TwinkleRedAlpha = "255"
+				TwinkleBlueAlpha = "200"
+				
+				OtherImgFadeInTime = "150"
+				OtherImgLoopAddTime = "800"
+				OtherImgTwinkleTime = "100"
+				OtherImgLoopTime = "1050"
+				OtherImgFadeOutTime = "400"
+				OtherImgStartAlpha = "200"
+				OtherImgStartScale = "3"
+				
+				KillImgWaitTime = "300"
+				KillImgFadeInTime = "150"
+				KillImgLoopAddTime = "800"
+				KillImgTwinkleTime = "100"
+				KillImgLoopTime = "1050"
+				KillImgFadeOutTime = "400"
+				KillImgStartAlpha = "200"
+				KillImgStartScale = "3"
+				
+				Kill_Combo_2_Img_Red = "BaseImage036#center_ui_red_text_double"
+				Kill_Combo_3_Img_Red = "BaseImage036#center_ui_red_text_triple"
+				Kill_Combo_4_Img_Red = "BaseImage036#center_ui_red_text_multi"
+				Kill_Combo_5_Img_Red = "BaseImage036#center_ui_red_text_fantastic"
+				Kill_Combo_6_Img_Red = "BaseImage036#center_ui_red_text_incredible"
+				Kill_Combo_7_Img_Red = "BaseImage037#center_ui_red_text_rampage"
+				Kill_Combo_8_Img_Red = "BaseImage037#center_ui_red_text_godlike"
+				
+				Kill_Combo_2_Img_RedKill = "BaseImage036#center_ui_red_text_double_kill"
+				Kill_Combo_3_Img_RedKill = "BaseImage036#center_ui_red_text_triple_kill"
+				Kill_Combo_4_Img_RedKill = "BaseImage036#center_ui_red_text_multi_kill"
+				Kill_Combo_5_Img_RedKill = "BaseImage036#center_ui_red_text_fantastic_kill"
+				Kill_Combo_6_Img_RedKill = "BaseImage037#center_ui_red_text_incredible_kill"
+				Kill_Combo_7_Img_RedKill = "BaseImage037#center_ui_red_text_rampage_kill"
+				Kill_Combo_8_Img_RedKill = "BaseImage037#center_ui_red_text_godlike_kill"
+				
+				Kill_Combo_2_Img_Blue = "BaseImage037#center_ui_blue_text_double"
+				Kill_Combo_3_Img_Blue = "BaseImage037#center_ui_blue_text_triple"
+				Kill_Combo_4_Img_Blue = "BaseImage038#center_ui_blue_text_multi"
+				Kill_Combo_5_Img_Blue = "BaseImage038#center_ui_blue_text_fantastic"
+				Kill_Combo_6_Img_Blue = "BaseImage038#center_ui_blue_text_incredible"
+				Kill_Combo_7_Img_Blue = "BaseImage038#center_ui_blue_text_rampage"
+				Kill_Combo_8_Img_Blue = "BaseImage038#center_ui_blue_text_godlike"
+				
+				Kill_Combo_2_Img_BlueKill = "BaseImage037#center_ui_blue_text_double_kill"
+				Kill_Combo_3_Img_BlueKill = "BaseImage037#center_ui_blue_text_triple_kill"
+				Kill_Combo_4_Img_BlueKill = "BaseImage038#center_ui_blue_text_multi_kill"
+				Kill_Combo_5_Img_BlueKill = "BaseImage038#center_ui_blue_text_fantastic_kill"
+				Kill_Combo_6_Img_BlueKill = "BaseImage038#center_ui_blue_text_incredible_kill"
+				Kill_Combo_7_Img_BlueKill = "BaseImage038#center_ui_blue_text_rampage_kill"
+				Kill_Combo_8_Img_BlueKill = "BaseImage035#center_ui_blue_text_godlike_kill"		
+				
+				
+				SoundWaitTime = "10"
+				Owner_Kill_Sound    = "impact/kill/01_kill_me.wav"
+				Owner_Die_Sound     = "impact/kill/01_kill_enemy.wav"
+				TeamChar_Kill_Sound = "impact/kill/01_kill_me.wav"
+				TeamChar_Die_Sound  = "impact/kill/01_kill_enemy_team.wav"
+				
+				Kill_Combo_Max_Cnt = "8"
+				Kill_Combo_2_Sound = "impact/kill/02_kill.wav"
+				Kill_Combo_3_Sound = "impact/kill/03_kill.wav"
+				Kill_Combo_4_Sound = "impact/kill/04_kill.wav"
+				Kill_Combo_5_Sound = "impact/kill/05_kill.wav"
+				Kill_Combo_6_Sound = "impact/kill/06_kill.wav"
+				Kill_Combo_7_Sound = "impact/kill/07_kill.wav"
+				Kill_Combo_8_Sound = "impact/kill/08_kill.wav"
+				/>
+
+				
+	<Imagery>
+		<Image Type="NoneItemKillerIcon" Imageset="UIIconPack87" Image="000p"/>
+		<Image Type="IconBG" Imageset="BaseImage034" Image="center_ui_bg"/>
+		<Image Type="KillRedLine" Imageset="BaseImage034" Image="center_ui_red_line"/>
+		<Image Type="KillBlueLine" Imageset="BaseImage034" Image="center_ui_blue_line"/>
+		
+		<Image Type="OwnerDieImage_Red" Imageset="BaseImage035" Image="center_ui_red_text_01"/>
+		<Image Type="OwnerDieImage_Blue" Imageset="BaseImage035" Image="center_ui_blue_text_01"/>
+		
+		<Image Type="OwnerKillImage_Red" Imageset="BaseImage035" Image="center_ui_red_text_02"/>
+		<Image Type="OwnerKillImage_Blue" Imageset="BaseImage035" Image="center_ui_blue_text_02"/>		
+		
+		<Image Type="TeamCharKillImage_Red" Imageset="BaseImage035" Image="center_ui_red_text_03"/>
+		<Image Type="TeamCharKillImage_Blue" Imageset="BaseImage035" Image="center_ui_blue_text_03"/>
+		
+		<Image Type="TeamCharDieImage_Red" Imageset="BaseImage035" Image="center_ui_red_text_04"/>
+		<Image Type="TeamCharDieImage_Blue" Imageset="BaseImage035" Image="center_ui_blue_text_04"/>
+	</Imagery>
+</Window>

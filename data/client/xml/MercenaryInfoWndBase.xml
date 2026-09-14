@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+<Window ClassName="MercenaryInfoWnd" Id="0">
+    <Size X="0" Y="0" Width="0" Height="0" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+    <Imagery />
+    <Window ClassName="ioFrameWndEX" Id="0">
+        <Size X="255" Y="67" Width="397" Height="577" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+        <Imagery />
+        <ExtraInfo>
+            <FrameInfo Template="win1_frame90" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+            <ToolInfo />
+        </ExtraInfo>
+        <Window ClassName="ioFrameWndEX" Id="1">
+            <Size X="13" Y="10" Width="373" Height="44" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo>
+                <FrameInfo Template="bt013_blue_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioLabelWndEX" Id="2">
+                <Size X="11" Y="9" Width="75" Height="27" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="사이보그" Size="18" Color="ffebebeb" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameButtonWndEX" Id="9">
+                <Size X="334" Y="6" Width="29" Height="29" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="X" Size="20" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ffeeeeee" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalFrame Template="bt006_blue_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <OverFrame Template="bt006_blue_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <OverAddFrame Template="bt_overadd" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <PushFrame Template="bt006_blue_down" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <ToolInfo>
+                        <Event Type="WEVT_LBUTTONUP" Function="OnClickClose" />
+                    </ToolInfo>
+                </ExtraInfo>
+            </Window>
+        </Window>
+        <Window ClassName="ioFrameWndEX" Id="10">
+            <Size X="0" Y="508" Width="397" Height="69" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo>
+                <FrameInfo Template="win1_multiply_bottom" RenderType="8" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+                <ToolInfo />
+            </ExtraInfo>
+        </Window>
+        <Window ClassName="ioFrameButtonWndEX" Id="8">
+            <Size X="235" Y="527" Width="146" Height="31" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo ButtonType="0">
+                <LabelInfo Text="닫기 (ESC)" Size="15" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                <NormalFrame Template="bt006_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                <OverFrame Template="bt006_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                <OverAddFrame Template="bt_overadd" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                <PushFrame Template="bt006_gray_down" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                <ToolInfo>
+                    <Event Type="WEVT_LBUTTONUP" Function="OnClickClose" />
+                </ToolInfo>
+            </ExtraInfo>
+        </Window>
+        <Window ClassName="ioFrameButtonWndEX" Id="6">
+            <Size X="18" Y="527" Width="214" Height="31" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo ButtonType="0">
+                <LabelInfo Text="구입 (SPACE)" Size="15" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ffffffff" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                <NormalFrame Template="bt006_blue_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                <OverFrame Template="bt006_blue_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                <OverAddFrame Template="bt_overadd" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                <PushFrame Template="bt006_blue_down" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                <ToolInfo>
+                    <Event Type="WEVT_LBUTTONUP" Function="OnClickBuy" />
+                </ToolInfo>
+            </ExtraInfo>
+        </Window>
+        <Window ClassName="ioTabWndEX" Id="11">
+            <Size X="18" Y="64" Width="363" Height="383" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo DotGap="1" DotHeight="2">
+                <DotImage FileName="" ImageSetName="BaseImage001" ImageName="tap2_line" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioTabFrameButtonEX" Id="12">
+                <Size X="0" Y="0" Width="99" Height="22" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="정보" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalFrame Template="tap4_off" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <OverFrame Template="tap4_off" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <OverAddFrame Template="tap4_overadd" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <PushFrame Template="tap4_on" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioImageWndEX" Id="5">
+                    <Size X="0" Y="31" Width="362" Height="398" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo>
+                        <ImageInfo FileName="" ImageSetName="LoadingMap901" ImageName="Back001" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                    <Window ClassName="ioFrameWndEX" Id="13">
+                        <Size X="-3" Y="-2" Width="367" Height="37" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo>
+                            <FrameInfo Template="win1_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                        <Window ClassName="ioLabelWndEX" Id="7">
+                            <Size X="11" Y="4" Width="118" Height="27" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                            <Imagery />
+                            <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                                <LabelInfo Text="난이도 ★★★" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                                <ToolInfo />
+                            </ExtraInfo>
+                        </Window>
+                        <Window ClassName="ioLabelWndEX" Id="14">
+                            <Size X="210" Y="4" Width="149" Height="27" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                            <Imagery />
+                            <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                                <LabelInfo Text="근접 / 추천용병" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="2" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                                <ToolInfo />
+                            </ExtraInfo>
+                        </Window>
+                    </Window>
+                </Window>
+            </Window>
+            <Window ClassName="ioTabFrameButtonEX" Id="3">
+                <Size X="100" Y="0" Width="100" Height="22" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="스킬영상" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalFrame Template="tap4_off" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <OverFrame Template="tap4_off" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <OverAddFrame Template="tap4_overadd" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <PushFrame Template="tap4_on" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioFrameWndEX" Id="4">
+                    <Size X="-101" Y="107" Width="363" Height="321" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo>
+                        <FrameInfo Template="win1_frame80" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ff000000" />
+                        <ToolInfo />
+                    </ExtraInfo>
+                    <Window ClassName="ioImageWndEX" Id="15">
+                        <Size X="18" Y="107" Width="49" Height="47" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo>
+                            <ImageInfo FileName="" ImageSetName="Ex1ItemIconPack102" ImageName="n049_weapon" OffsetX="35" OffsetY="30" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                    <Window ClassName="ioImageWndEX" Id="16">
+                        <Size X="18" Y="260" Width="49" Height="47" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo>
+                            <ImageInfo FileName="" ImageSetName="UIIconPack25" ImageName="goods_motion07" OffsetX="32" OffsetY="30" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                    <Window ClassName="ioImageWndEX" Id="17">
+                        <Size X="18" Y="209" Width="49" Height="47" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo>
+                            <ImageInfo FileName="" ImageSetName="UIIconPack53" ImageName="goods_projectkequip_pack" OffsetX="39" OffsetY="30" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                    <Window ClassName="ioImageWndEX" Id="18">
+                        <Size X="18" Y="158" Width="49" Height="47" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo>
+                            <ImageInfo FileName="" ImageSetName="UIIconPack45" ImageName="goods_rarepack001" OffsetX="40" OffsetY="38" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                    <Window ClassName="ioImageWndEX" Id="19">
+                        <Size X="65" Y="151" Width="280" Height="2" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo>
+                            <ImageInfo FileName="" ImageSetName="BaseImage001" ImageName="tap2_line" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                    <Window ClassName="ioImageWndEX" Id="20">
+                        <Size X="65" Y="201" Width="280" Height="2" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo>
+                            <ImageInfo FileName="" ImageSetName="BaseImage001" ImageName="tap2_line" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                    <Window ClassName="ioImageWndEX" Id="21">
+                        <Size X="65" Y="251" Width="280" Height="2" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo>
+                            <ImageInfo FileName="" ImageSetName="BaseImage001" ImageName="tap2_line" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                    <Window ClassName="ioImageWndEX" Id="22">
+                        <Size X="65" Y="301" Width="280" Height="2" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo>
+                            <ImageInfo FileName="" ImageSetName="BaseImage001" ImageName="tap2_line" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                    <Window ClassName="ioLabelWndEX" Id="23">
+                        <Size X="70" Y="114" Width="54" Height="18" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                            <LabelInfo Text="무기" Size="12" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                    <Window ClassName="ioLabelWndEX" Id="24">
+                        <Size X="70" Y="165" Width="54" Height="18" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                            <LabelInfo Text="ASD 스킬" Size="12" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                    <Window ClassName="ioLabelWndEX" Id="25">
+                        <Size X="70" Y="215" Width="54" Height="18" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                            <LabelInfo Text="AD 스킬" Size="12" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                    <Window ClassName="ioLabelWndEX" Id="26">
+                        <Size X="70" Y="265" Width="54" Height="18" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                            <LabelInfo Text="AS 스킬" Size="12" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                    <Window ClassName="ioLabelWndEX" Id="27">
+                        <Size X="69" Y="130" Width="262" Height="18" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                            <LabelInfo Text="이 스킬은 SD 스킬임" Size="12" Color="ffffffff" BKColor="ff000000" Alpha="150" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                    <Window ClassName="ioLabelWndEX" Id="28">
+                        <Size X="69" Y="180" Width="262" Height="18" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                            <LabelInfo Text="이 스킬은 ASD 스킬임" Size="12" Color="ffffffff" BKColor="ff000000" Alpha="150" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                    <Window ClassName="ioLabelWndEX" Id="29">
+                        <Size X="69" Y="230" Width="262" Height="18" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                            <LabelInfo Text="이 스킬은 AD 스킬임" Size="12" Color="ffffffff" BKColor="ff000000" Alpha="150" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                    <Window ClassName="ioLabelWndEX" Id="30">
+                        <Size X="69" Y="280" Width="262" Height="18" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                            <LabelInfo Text="이 스킬은 AS 스킬임" Size="12" Color="ffffffff" BKColor="ff000000" Alpha="150" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                    <Window ClassName="ioLabelWndEX" Id="31">
+                        <Size X="267" Y="115" Width="79" Height="18" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                            <LabelInfo Text="무기SD" Size="12" Color="ffd7910d" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="2" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                    <Window ClassName="ioLabelWndEX" Id="32">
+                        <Size X="267" Y="165" Width="79" Height="18" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                            <LabelInfo Text="갑옷ASD" Size="12" Color="ffd7910d" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="2" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                    <Window ClassName="ioLabelWndEX" Id="33">
+                        <Size X="267" Y="215" Width="79" Height="18" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                            <LabelInfo Text="투구AD" Size="12" Color="ffd7910d" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="2" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                    <Window ClassName="ioLabelWndEX" Id="34">
+                        <Size X="266" Y="265" Width="79" Height="18" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                            <LabelInfo Text="망토AS" Size="12" Color="ffd7910d" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="2" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                </Window>
+                <Window ClassName="ioFlashPlayer" Id="35">
+                    <Size X="-101" Y="27" Width="363" Height="175" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo BackgroundTransparency="false" Color="ffffffff" BackColor="00101010" FlashWidth="363" FlashHeight="175" SWF="hero_109.swf">
+                        <ToolInfo />
+                    </ExtraInfo>
+                </Window>
+            </Window>
+        </Window>
+    </Window>
+</Window>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="ExcavationSearchingWnd" Id="5067">
+	<Size X="0" Y="-64" Width="306" Height="130" XAlign="Center" YAlign="Bottom"/>
+	<DragRect Left="0" Top="0" Right="306" Bottom="130" />
+	<Style>IWS_START_HIDE|IWS_CANMOVE|IWS_PROCESS</Style>
+	<Imagery>
+		<Image Imageset="BaseImage012" Image="ruins_box_on" >
+			<Area X="0" Y="0"/>
+		</Image>
+		
+		<Image Type="BatteryGauge" Imageset="BaseImage009" Image="ruins_battery" />
+		<Image Type="Wave1"        Imageset="BaseImage009" Image="ruins_wave_1" />
+		<Image Type="Wave2"        Imageset="BaseImage009" Image="ruins_wave_2" />
+        <Image Type="Wave3"        Imageset="BaseImage009" Image="ruins_wave_3" />
+		<Image Type="Wave4"        Imageset="BaseImage009" Image="ruins_wave_4" />
+		<Image Type="Wave5"        Imageset="BaseImage009" Image="ruins_wave_5" />
+		<Image Type="Wave6"        Imageset="BaseImage009" Image="ruins_wave_6" />			
+		<Image Type="DistNumBlue"   Imageset="BaseImage009" Image="ruins_num_blue" />
+		<Image Type="DistNumYellow" Imageset="BaseImage009" Image="ruins_num_yellow" />
+		<Image Type="DistNumRed"    Imageset="BaseImage009" Image="ruins_num_red" />
+		<Image Type="RateNum"       Imageset="BaseImage009" Image="ruins_num_small" />
+		<Image Type="DistNone"       Imageset="BaseImage009" Image="ruins_num_none" />
+	</Imagery>
+	<ExtraInfo Full_Battery_Time   = "3600"
+		   Middle_Battery_Time = "1800"
+       Low_Battery_Time    = "300"
+		   Pos_Check_Time      = "100"
+		   Radar_Check_Time    = "10"
+		   Wave_Add_Size       = "2"
+		   Success_Per_Check_Time = "100"
+	
+       Max_Info          = "6"
+       Dist_Level_1      = "3000"
+       Dist_Level_2      = "2000"
+ 		   Dist_Level_3      = "1000"
+ 		   Dist_Level_4      = "500"
+ 		   Dist_Level_5      = "250"
+ 		   Dist_Level_6      = "0"
+	   
+  	   Wave1_Sound  = "interface/artifact/artifact_effect_02.wav"
+		   Wave2_Sound  = "interface/artifact/artifact_effect_02.wav" 
+		   Wave3_Sound  = "interface/artifact/artifact_effect_02_2.wav" 
+		   Wave4_Sound  = "interface/artifact/artifact_effect_02_2.wav" 
+		   Wave5_Sound  = "interface/artifact/artifact_effect_02_3.wav" 
+		   Wave6_Sound  = "interface/artifact/artifact_effect_02_3.wav"  />
+
+	<Window ClassName="ioButton" Id="1">
+		<ExStyle>IWS_EX_OVER_SCREEN|IWS_EX_PUSH_SCREEN</ExStyle>
+		<Size X="284" Y="2" Width="20" Height="20" />
+		<Imagery>
+			<Image Imageset="BaseImage008" Image="fish_x" >
+				<Area X="5" Y="5"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+			   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ExcavatingBtn" Id="2">
+		<Size X="218" Y="34" Width="54" Height="54" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST</Style>
+		<Imagery>
+			<Image Type="Icon"          Imageset="UIIconPack11" Image="ruindig" />
+			<Image Type="KeyBackNor"    Imageset="BaseImage010" Image="Skill_Command" />
+			<Image Type="KeyBackOn"     Imageset="BaseImage010" Image="Skill_Command_On" />
+			<Image Type="KeyBack"       Imageset="BaseImage010" Image="Skill_Command_Back" />
+			<Image Type="KeyDashNor"    Imageset="BaseImage010" Image="Skillkey_Nor_Dash" />
+			<Image Type="KeyDashOn"     Imageset="BaseImage010" Image="Skillkey_Act_Dash" />
+		</Imagery>
+	</Window>
+	
+	<Window ClassName="ExcavationExpWnd" Id="3">
+		<Style>IWS_BACKMOST</Style>
+		<Size X="96" Y="114" Width="161" Height="8" />
+		<Imagery>
+			<Image Type="Exp_Gauge" Imageset="BaseImage009" Image="ruins_gauge" />
+		</Imagery>
+		<ExtraInfo OverSound  = "interface/public_mouseover_00.wav"/>
+	</Window>
+	
+	<Window ClassName="GlobalTextTooltip" Id="4">
+		<Size X="0" Y="0" Width="120" Height="26" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="tooltip3">
+				<Area X="0" Y="0" Width="120" Height="26" />
+			</DefaultFrameImagery>
+		</Imagery>
+	</Window>
+
+</Window>

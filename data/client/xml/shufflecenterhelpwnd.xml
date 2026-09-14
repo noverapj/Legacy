@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="ShuffleCenterHelpWnd" Id="10024">
+	<Size X="0" Y="0" Width="0" Height="0" />
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style> 
+	<ExtraInfo ShowSound=""
+	           FadeTime= "750"/>
+	<Imagery>
+		<Image Type="AddMonsterText" Imageset="BaseImage028" Image="today_star_protection">
+			<Area X="0" Y="49" HorzAlign="Center"/>
+		</Image>
+		<Image Type="AddStarText" Imageset="BaseImage028" Image="today_star_starcoin">
+			<Area X="0" Y="197"/>
+		</Image>
+		<Image Type="AddStarIcon" Imageset="UIIconPack51" Image="Bonus_stage_icon2" Scale="0.65f">
+			<Area X="0" Y="208"/>
+		</Image>
+		<Image Type="AddBuffBoxText" Imageset="BaseImage028" Image="today_star_question">
+			<Area X="0" Y="197"/>
+		</Image>
+		<Image Type="AddBuffBoxIcon" Imageset="UIIconPack57" Image="star_box" Scale="0.65f">
+			<Area X="0" Y="208"/>
+		</Image>
+		<Image Type="GetBuffBoxText" Imageset="BaseImage028" Image="today_star_itemget">
+			<Area X="0" Y="197"/>
+		</Image>
+	</Imagery>
+</Window>
+

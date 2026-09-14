@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="QuestProgressInfoWnd" Id="1">
+	<Size X="0" Y="0" Width="435" Height="486" />
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_CHILD_ONLY_RESPONSE</Style>
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Title>
+		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF4B3923"/>
+		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF4B3923"/>
+		<Text>퀘스트제목</Text>
+	</Title> 
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win3_frame90">
+			<Area X="0" Y="0" Width="435" Height="486"/>
+		</DefaultFrameImagery>
+
+		<DefaultFrameImagery Type="BottomFrm" Templete="win3_multiply_bottom">
+			<Area X="0" Y="271" Width="435" Height="65"/>
+		</DefaultFrameImagery>
+		
+		<DefaultFrameImagery Type="SelectedTitle" Templete="win3_title">
+			<Area X="5" Y="6" Width="425" Height="36"/>
+		</DefaultFrameImagery>
+
+		<DefaultFrameImagery Type="StatePurposeFrm" Templete="state_red">
+			<Area X="0" Y="0" Width="52" Height="16"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="RewardOnFrm" Templete="slot_quest_gift">
+			<Area X="0" Y="0" Width="77" Height="136"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="RewardOffFrm" Templete="slot_quest_nogift">
+			<Area X="0" Y="0" Width="77" Height="136"/>
+		</DefaultFrameImagery>
+		<Image Type="StateEventMark" Imageset="BaseImage012" Image="icon0_quest_pink_event">
+			<Area X="6" Y="47"/>
+		</Image>
+
+		<Image Type="RewardOffX" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+                <Image Imageset="BaseImage001" Image="strip_questline" >
+			<Area X="22" Y="71" Width="362" Height="2" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+                <Image Imageset="BaseImage001" Image="strip_questline" >
+			<Area X="22" Y="92" Width="362" Height="2" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+                <Image Imageset="BaseImage001" Image="strip_questline" >
+			<Area X="22" Y="113" Width="362" Height="2" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+                <Image Imageset="BaseImage001" Image="strip_questline" >
+			<Area X="22" Y="134" Width="362" Height="2" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+                <Image Imageset="BaseImage001" Image="strip_questline" >
+			<Area X="22" Y="155" Width="362" Height="2" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+                <Image Imageset="BaseImage001" Image="strip_questline" >
+			<Area X="22" Y="176" Width="362" Height="2" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+                <Image Imageset="BaseImage001" Image="strip_questline" >
+			<Area X="22" Y="197" Width="362" Height="2" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+                <Image Imageset="BaseImage001" Image="strip_questline" >
+			<Area X="22" Y="218" Width="362" Height="2" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+                <Image Imageset="BaseImage001" Image="strip_questline" >
+			<Area X="22" Y="239" Width="362" Height="2" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+
+		<Image Type="QuestIconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		<Image Type="RewardIconBack" Imageset="BaseImage002" Image="iconeffect_1"/>
+		<Image Type="costume_image" Imageset="BaseImage031" Image="costume_mark"/>
+	</Imagery>
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="401" Y="11" Width="23" Height="23"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_brown_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_brown_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_brown_down">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+                        <Image Type="Disable" Imageset="BaseImage001" Image="icon0_x_brown_grayframe" >
+				<Area X="0" Y="0" />
+			</Image>
+                        <Image Type="NormalList" Imageset="BaseImage001" Image="icon0_x_brown" >
+				<Area X="5" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="2">
+		<Size X="278" Y="11" Width="123" Height="23"/>
+		<Title>
+			<Format X="10" Y="3" Size="11" Style="Outline_full_3x"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF4B3923"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF4B3923"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF4B3923"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF4B3923"/>
+			<Text>퀘스트 알림이 추가</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_brown_nor">
+				<Area X="0" Y="0" Width="123" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_brown_nor">
+				<Area X="0" Y="0" Width="123" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="123" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_brown_down">
+				<Area X="0" Y="0" Width="123" Height="23"/>
+			</DefaultFrameImagery>
+                        <Image Type="NormalList" Imageset="BaseImage001" Image="icon0_plus_brown" >
+				<Area X="105" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="3">
+		<Size X="278" Y="11" Width="123" Height="23"/>
+		<Title>
+			<Format X="10" Y="3" Size="11" Style="Outline_full_3x"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF4B3923"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF4B3923"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF4B3923"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF4B3923"/>
+			<Text>퀘스트 알림이 빼기</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_brown_nor">
+				<Area X="0" Y="0" Width="123" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_brown_nor">
+				<Area X="0" Y="0" Width="123" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="123" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_brown_down">
+				<Area X="0" Y="0" Width="123" Height="23"/>
+			</DefaultFrameImagery>
+                        <Image Type="NormalList" Imageset="BaseImage001" Image="icon0_minus_brown" >
+				<Area X="105" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioScroll" Id="1000">
+		<Size X="398" Y="54" Width="15" Height="197" />
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_VSCROLL</ExStyle>
+		<Imagery>
+			<DefaultFrameImagery Templete="scrollbar3_back">
+				<Area X="5" Y="10" Width="5" Height="177"/>
+			</DefaultFrameImagery>
+		</Imagery>		
+		<ExtraInfo PageRange="9" StartTime="500" CurTime ="100"/>
+		<Window ClassName="ioButton" Id="1">
+			<Size X="0" Y="0" Width="15" Height="10" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage004" Image="scrollbar3_arrow_down" >
+					<Area X="3" Y="0" Reverse="Vert"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage004" Image="scrollbar3_arrow_down" >
+					<Area X="3" Y="0" Reverse="Vert"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage004" Image="scrollbar3_arrow_down" >
+					<Area X="3" Y="0" Reverse="Vert"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>					
+		</Window>
+		<Window ClassName="ioButton" Id="2">
+			<Size X="0" Y="187" Width="15" Height="10" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage004" Image="scrollbar3_arrow_down" >
+					<Area X="3" Y="0"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage004" Image="scrollbar3_arrow_down" >
+					<Area X="3" Y="0"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage004" Image="scrollbar3_arrow_down" >
+					<Area X="3" Y="0"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>					
+		</Window>
+		<Window ClassName="ioSlide" Id="3">
+			<Size X="0" Y="10" Width="15" Height="30" />
+			<DragRect Left="0" Top="0" Right="15" Bottom="30" />
+			<ExStyle>IWS_EX_NOTIFY_MOVED</ExStyle>
+			<Style>IWS_CANMOVE</Style>
+			<Imagery>
+				<DefaultFrameImagery Templete="scrollbar3_drag">
+					<Area X="0" Y="0" Width="15" Height="30"/>
+				</DefaultFrameImagery>
+				<Image Type="Icon_Slide" Imageset="BaseImage004" Image="scrollbar3_drag_icon"/>
+			</Imagery>
+		</Window>
+	</Window>
+
+</Window>

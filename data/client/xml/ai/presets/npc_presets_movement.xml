@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+<KEYSEQUENCEDB>
+
+	<KEYSEQUENCE name="RUN" >
+		<KEY type="MOVE"	action="KEYPRESS"	duration="10" 	/>
+	</KEYSEQUENCE>
+	
+	<KEYSEQUENCE name="DASH" >
+		<KEY type="MOVE"	action="KEYPRESS"	duration="10" 	/>
+		<KEY type="MOVE"	action="KEYREPEAT"	duration="50" 	/>
+		<KEY type="MOVE"	action="KEYRELEASE"	duration="10" 	/>
+		<KEY type="MOVE"	action="KEYPRESS"	duration="10" 	/>
+		<KEY type="MOVE"	action="KEYREPEAT"	duration="50" 	/>
+	</KEYSEQUENCE>
+
+	<KEYSEQUENCE name="DASH_ATT" >
+		<KEY type="MOVE"	action="KEYREPEAT"	duration="10" 	/>
+		<KEY type="MOVE"	action="KEYRELEASE"	duration="10" 	/>
+		<KEY type="MOVE"	action="KEYNONE"	duration="10" 	/>
+		<KEY type="MOVE"	action="KEYREPEAT"	duration="500" />
+	</KEYSEQUENCE>
+
+	<KEYSEQUENCE name="KEEP_CUR_MOVE" >
+		<KEY type="MOVE"	action="KEYREPEAT"	duration="10" 	/>
+	</KEYSEQUENCE>
+	
+	<KEYSEQUENCE name="STOP_CUR_MOVE" >
+		<KEY type="MOVE"	action="KEYRELEASE"	duration="5" 	/>
+		<KEY type="MOVE"	action="KEYNONE"	duration="50" 	/>
+	</KEYSEQUENCE>
+	
+</KEYSEQUENCEDB>
+	

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="QuickLobbyTradeInfoWnd" Id="8">
+	<Size X="566" Y="0" Width="206" Height="526" />
+	<Style>IWS_START_HIDE|IWS_BACKMOST|IWS_CHILD_ONLY_RESPONSE</Style>
+	<Title>
+		<Format X="103" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Center"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Text>내가 등록한 장비</Text>
+	</Title>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame80">
+			<Area X="0" Y="0" Width="206" Height="526"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Templete="win1_title">
+			<Area X="5" Y="6" Width="196" Height="36" AutoResize="False"/>
+		</DefaultFrameImagery>
+	</Imagery>
+</Window>

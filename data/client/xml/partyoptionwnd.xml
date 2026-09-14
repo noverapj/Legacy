@@ -1,0 +1,1013 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="PartyOptionWnd" Id="5064">
+	<Size X="0" Y="20" XAlign="Center" YAlign="Center" Width="536" Height="172" />
+	<DragRect Left="0" Top="0" Right="536" Bottom="172" />
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_CANMOVE</Style> 
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Title>
+		<Format X="12" Y="10" Size="13" Style="Outline_full_2x" HorzAlign="Left"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Text>유저모드</Text>
+	</Title>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+			<Area X="0" Y="0" Width="536" Height="152"/>
+		</DefaultFrameImagery>		
+		<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title2">
+			<Area X="5" Y="6" Width="526" Height="29"/>
+		</DefaultFrameImagery>
+	</Imagery>
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="345" Y="9" Width="126" Height="20" />
+		<Title>
+			<Format X="61" Y="2" Size="11" Style="Outline_full_3x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF20394F"/>
+			<Text>수동 선택</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt011_blue_nor">
+				<Area X="0" Y="0" Width="126" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt011_blue_nor">
+				<Area X="0" Y="0" Width="126" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="126" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt011_blue_down">
+				<Area X="0" Y="0" Width="126" Height="20"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_down2" >
+				<Area X="108" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="501">
+		<Size X="473" Y="9" Width="54" Height="20" />
+		<Title>
+			<Format X="27" Y="2" Size="11" Style="Outline_full_3x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF20394F"/>
+			<Text>초기화</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt011_blue_nor">
+				<Area X="0" Y="0" Width="54" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt011_blue_nor">
+				<Area X="0" Y="0" Width="54" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="54" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt011_blue_down">
+				<Area X="0" Y="0" Width="54" Height="20"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="31">
+		<Size X="12" Y="44" Width="0" Height="0" />
+		<Title>
+			<Format X="0" Y="0" Size="12" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>용병육성</Text>
+		</Title>
+	</Window>
+
+	<Window ClassName="PartyOptionBtn" Id="32">
+		<Size X="64" Y="42" Width="84" Height="18" />
+		<Title>
+			<Format X="6" Y="3" Size="11" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>있음</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="69" Y="4" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+           	   ClickSound = "interface/public_mouseclick_00.wav"
+      			   DefaultColor="FF808080" ChangeColor="FF3A3A3A"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="11">
+		<Size X="12" Y="64" Width="0" Height="0" />
+		<Title>
+			<Format X="0" Y="0" Size="12" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>용병교체</Text>
+		</Title>
+	</Window>
+
+	<Window ClassName="PartyOptionBtn" Id="12">
+		<Size X="64" Y="62" Width="84" Height="18" />
+		<Title>
+			<Format X="6" Y="3" Size="11" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>가능</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="69" Y="4" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"
+			   DefaultColor="FF808080" ChangeColor="FF3A3A3A"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="23">
+		<Size X="12" Y="84" Width="0" Height="0" />
+		<Title>
+			<Format X="0" Y="0" Size="12" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>KO 조건</Text>
+		</Title>
+	</Window>
+
+	<Window ClassName="PartyOptionBtn" Id="24">
+		<Size X="64" Y="82" Width="84" Height="18" />
+		<Title>
+			<Format X="6" Y="3" Size="11" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>맨몸 + 체력없음</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="69" Y="4" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	                   ClickSound = "interface/public_mouseclick_00.wav"
+			   DefaultColor="FF808080" ChangeColor="FF3A3A3A"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="15">
+		<Size X="12" Y="104" Width="0" Height="0" />
+		<Title>
+			<Format X="0" Y="0" Size="12" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>드랍피해</Text>
+		</Title>
+	</Window>
+
+	<Window ClassName="PartyOptionBtn" Id="16">
+		<Size X="64" Y="102" Width="84" Height="18" />
+		<Title>
+			<Format X="6" Y="3" Size="11" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>기본</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="69" Y="4" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	                   ClickSound = "interface/public_mouseclick_00.wav"
+			   DefaultColor="FF808080" ChangeColor="FF3A3A3A"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="17">
+		<Size X="12" Y="124" Width="0" Height="0" />
+		<Title>
+			<Format X="0" Y="0" Size="12" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>팀원공격</Text>
+		</Title>
+	</Window>
+
+	<Window ClassName="PartyOptionBtn" Id="18">
+		<Size X="64" Y="122" Width="84" Height="18" />
+		<Title>
+			<Format X="6" Y="3" Size="11" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>불가</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="69" Y="4" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	                   ClickSound = "interface/public_mouseclick_00.wav"
+			   DefaultColor="FF808080" ChangeColor="FF3A3A3A"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="33">
+		<Size X="157" Y="44" Width="0" Height="0" />
+		<Title>
+			<Format X="0" Y="0" Size="12" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>장비사용</Text>
+		</Title>
+	</Window>
+
+	<Window ClassName="PartyOptionBtn" Id="34">
+		<Size X="209" Y="42" Width="84" Height="18" />
+		<Title>
+			<Format X="6" Y="3" Size="11" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>있음</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="69" Y="4" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	                   ClickSound = "interface/public_mouseclick_00.wav"
+			   DefaultColor="FF808080" ChangeColor="FF3A3A3A"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="13">
+		<Size X="157" Y="64" Width="0" Height="0" />
+		<Title>
+			<Format X="0" Y="0" Size="12" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>스킬사용</Text>
+		</Title>
+	</Window>
+
+	<Window ClassName="PartyOptionBtn" Id="14">
+		<Size X="209" Y="62" Width="84" Height="18" />
+		<Title>
+			<Format X="6" Y="3" Size="11" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>기본</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="69" Y="4" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	                   ClickSound = "interface/public_mouseclick_00.wav"
+			   DefaultColor="FF808080" ChangeColor="FF3A3A3A"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="25">
+		<Size X="157" Y="84" Width="0" Height="0" />
+		<Title>
+			<Format X="0" Y="0" Size="12" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>KO 효과</Text>
+		</Title>
+	</Window>
+
+	<Window ClassName="PartyOptionBtn" Id="26">
+		<Size X="209" Y="82" Width="84" Height="18" />
+		<Title>
+			<Format X="6" Y="3" Size="11" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>스킬회복</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="69" Y="4" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"
+			   DefaultColor="FF808080" ChangeColor="FF3A3A3A"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="21">
+		<Size X="157" Y="104" Width="0" Height="0" />
+		<Title>
+			<Format X="0" Y="0" Size="12" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>기립시간</Text>
+		</Title>
+	</Window>
+
+	<Window ClassName="PartyOptionBtn" Id="22">
+		<Size X="209" Y="102" Width="84" Height="18" />
+		<Title>
+			<Format X="6" Y="3" Size="11" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>기본</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="69" Y="4" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"
+			   DefaultColor="FF808080" ChangeColor="FF3A3A3A"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="19">
+		<Size X="157" Y="124" Width="0" Height="0" />
+		<Title>
+			<Format X="0" Y="0" Size="12" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>중력효과</Text>
+		</Title>
+	</Window>
+
+	<Window ClassName="PartyOptionBtn" Id="20">
+		<Size X="209" Y="122" Width="84" Height="18" />
+		<Title>
+			<Format X="6" Y="3" Size="11" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>기본</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="69" Y="4" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"
+			   DefaultColor="FF808080" ChangeColor="FF3A3A3A"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="27">
+		<Size X="12" Y="144" Width="0" Height="0" />
+		<Title>
+			<Format X="0" Y="0" Size="12" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>포로탈출</Text>
+		</Title>
+	</Window>
+
+	<Window ClassName="PartyOptionBtn" Id="28">
+		<Size X="64" Y="142" Width="84" Height="18" />
+		<Title>
+			<Format X="6" Y="3" Size="11" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>5 라운드</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="69" Y="4" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"
+			   DefaultColor="FF808080" ChangeColor="FF3A3A3A"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="29">
+		<Size X="157" Y="144" Width="0" Height="0" />
+		<Title>
+			<Format X="0" Y="0" Size="12" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>포로탈출</Text>
+		</Title>
+	</Window>
+
+	<Window ClassName="PartyOptionBtn" Id="30">
+		<Size X="209" Y="142" Width="84" Height="18" />
+		<Title>
+			<Format X="6" Y="3" Size="11" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>180초</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="69" Y="4" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"
+			   DefaultColor="FF808080" ChangeColor="FF3A3A3A"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="110">
+		<Size X="302" Y="44" Width="0" Height="0" />
+		<Title>
+			<Format X="0" Y="0" Size="12" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>용병상태</Text>
+		</Title>
+	</Window>
+
+	<Window ClassName="PartyOptionBtn" Id="111">
+		<Size X="354" Y="42" Width="84" Height="18" />
+		<Title>
+			<Format X="6" Y="3" Size="11" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>기본</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="69" Y="4" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	            	   ClickSound = "interface/public_mouseclick_00.wav"
+			   DefaultColor="FF808080" ChangeColor="FF1646B2"/>
+	</Window>
+
+	<Window ClassName="PartyOptionBtn" Id="112">
+		<Size X="440" Y="42" Width="84" Height="18" />
+		<Title>
+			<Format X="6" Y="3" Size="11" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>기본</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="69" Y="4" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"
+			   DefaultColor="FF808080" ChangeColor="FFB91600"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="101">
+		<Size X="302" Y="64" Width="0" Height="0" />
+		<Title>
+			<Format X="0" Y="0" Size="12" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>용병체력</Text>
+		</Title>
+	</Window>
+
+	<Window ClassName="PartyOptionBtn" Id="102">
+		<Size X="354" Y="62" Width="84" Height="18" />
+		<Title>
+			<Format X="6" Y="3" Size="11" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>기본</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="69" Y="4" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"
+			   DefaultColor="FF808080" ChangeColor="FF1646B2"/>
+	</Window>
+
+	<Window ClassName="PartyOptionBtn" Id="103">
+		<Size X="440" Y="62" Width="84" Height="18" />
+		<Title>
+			<Format X="6" Y="3" Size="11" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>기본</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="69" Y="4" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"
+			   DefaultColor="FF808080" ChangeColor="FFB91600"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="107">
+		<Size X="302" Y="84" Width="0" Height="0" />
+		<Title>
+			<Format X="0" Y="0" Size="12" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>이동속도</Text>
+		</Title>
+	</Window>
+
+	<Window ClassName="PartyOptionBtn" Id="108">
+		<Size X="354" Y="82" Width="84" Height="18" />
+		<Title>
+			<Format X="6" Y="3" Size="11" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>기본</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="69" Y="4" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"
+			   DefaultColor="FF808080" ChangeColor="FF1646B2"/>
+	</Window>
+
+	<Window ClassName="PartyOptionBtn" Id="109">
+		<Size X="440" Y="82" Width="84" Height="18" />
+		<Title>
+			<Format X="6" Y="3" Size="11" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>기본</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="69" Y="4" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"
+			   DefaultColor="FF808080" ChangeColor="FFB91600"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="104">
+		<Size X="302" Y="104" Width="0" Height="0" />
+		<Title>
+			<Format X="0" Y="0" Size="12" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>타격효과</Text>
+		</Title>
+	</Window>
+
+	<Window ClassName="PartyOptionBtn" Id="105">
+		<Size X="354" Y="102" Width="84" Height="18" />
+		<Title>
+			<Format X="6" Y="3" Size="11" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>정상</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="69" Y="4" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"
+			   DefaultColor="FF808080" ChangeColor="FF1646B2"/>
+	</Window>
+
+	<Window ClassName="PartyOptionBtn" Id="106">
+		<Size X="440" Y="102" Width="84" Height="18" />
+		<Title>
+			<Format X="6" Y="3" Size="11" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>정상</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="84" Height="20"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="69" Y="4" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	                   ClickSound = "interface/public_mouseclick_00.wav"
+			   DefaultColor="FF808080" ChangeColor="FFB91600"/>
+	</Window>
+
+	<Window ClassName="RoomOptionTypeList" Id="1000">
+		<Size X="0" Y="0" Width="113" Height="35" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_EXIT_ESC</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="tooltip2">
+				<Area X="0" Y="0" Width="113" Height="35" />
+			</DefaultFrameImagery>
+
+			<Image Type="DarkLine" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="7" Y="7" Width="99" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="LightLine" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="7" Y="7" Width="99" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="OverLine" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="7" Y="7" Width="99" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="RoomOptionTypeList" Id="1001">
+		<Size X="0" Y="0" Width="126" Height="35" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_EXIT_ESC</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="tooltip2">
+				<Area X="0" Y="0" Width="126" Height="35" />
+			</DefaultFrameImagery>
+
+			<Image Type="DarkLine" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="7" Y="7" Width="112" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="LightLine" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="7" Y="7" Width="112" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="OverLine" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="7" Y="7" Width="112" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+		</Imagery>
+	</Window>
+
+</Window>

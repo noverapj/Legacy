@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="FightClubRoundEndWnd" Id="5075">
+	<Size X="0" Y="0" Width="0" Height="0"/>
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style>
+	<Imagery>
+		<DefaultFrameImagery Type="BackFrm" Templete="arcade_infobg">
+			<Area X="0" Y="0" Width="800" Height="29"/>
+		</DefaultFrameImagery>		
+		<Image Type="BackFrmLine" Imageset="BaseImage_Arcade001" Image="arcade_eff_line" />
+		<Image Type="RoundEndKO" Imageset="BaseImage_Arcade002" Image="arcade_finishtxt_finish_ko" />
+		<Image Type="RoundEndKOEffect" Imageset="BaseImage_Arcade002" Image="arcade_finishtxt_finish_ko_eff" />
+		<Image Type="RoundEndTimeOut" Imageset="BaseImage_Arcade002" Image="arcade_finishtxt_finish_timeout" />
+		<Image Type="RoundEndPerfect" Imageset="BaseImage_Arcade002" Image="arcade_finishtxt_finish_perfect" />
+		<Image Type="RoundEndPerfectEffect" Imageset="BaseImage_Arcade002" Image="arcade_finishtxt_finish_perfect_eff" />
+
+		<Image Type="RewardBack" Imageset="BaseImage013" Image="TextBack" />
+		<Image Type="PesoIcon" Imageset="UIIconPack13" Image="quest_002" />
+		<Image Type="PesoText" Imageset="BaseImage_Arcade002" Image="arcade_uitxt_peso" />
+		<Image Type="PesoNumber" Imageset="BaseImage_Arcade001" Image="arcade_peso_num" />
+		<Image Type="ExpText" Imageset="BaseImage_Arcade002" Image="arcade_uitxt_exp" />
+		<Image Type="ExpNumber" Imageset="BaseImage_Arcade001" Image="arcade_exp_num" />
+		<Image Type="WinText" Imageset="BaseImage_Arcade002" Image="arcade_finishtxt_finish_win" />
+		<Image Type="LoseText" Imageset="BaseImage_Arcade002" Image="arcade_finishtxt_finish_lose" />
+		<Image Type="VictoryWinText" Imageset="BaseImage_Arcade002" Image="arcade_finishtxt_finish_chainwin" />
+		<Image Type="VictoryWinNum" Imageset="BaseImage_Arcade001" Image="arcade_chainwin_me_num" />
+
+		<Image Type="ChampionText" Imageset="BaseImage_Arcade002" Image="arcade_finishtxt_champion" />
+		<Image Type="ChampVictoryText" Imageset="BaseImage_Arcade002" Image="arcade_finishtxt_chainwin" />
+		<Image Type="ChampWinText" Imageset="BaseImage_Arcade002" Image="arcade_finishtxt_win" />
+		<Image Type="ChampWinNum" Imageset="BaseImage_Arcade001" Image="arcade_chainwin_you_num" />
+		<Image Type="ChallengerWinText" Imageset="BaseImage_Arcade002" Image="arcade_finishtxt_challengerwin" />
+
+		<Image Type="NPCFightWinText" Imageset="BaseImage_Arcade002" Image="arcade_comtxt_win" />
+		<Image Type="NPCFightFinalWinText" Imageset="BaseImage_Arcade002" Image="arcade_comtxt_last" />
+		
+    <Image Type="BlueRoundNum" Imageset="BaseImage_League002" Image="icontext_league_finish_blue_num" />
+    <Image Type="BlueRoundText" Imageset="BaseImage_League002" Image="icontext_league_finish_blue_gang" />
+    <Image Type="BlueFinalRoundText" Imageset="BaseImage_League002" Image="icontext_league_finish_blue_end" />
+    <Image Type="BlueNextGoText" Imageset="BaseImage_League002" Image="icontext_league_finish_blue_enter" />
+    <Image Type="BlueNextFailText" Imageset="BaseImage_League002" Image="icontext_league_finish_blue_eli" />
+    <Image Type="BlueChampionText" Imageset="BaseImage_League002" Image="icontext_league_finish_blue_champ" />
+    <Image Type="BlueHalfChampionText" Imageset="BaseImage_League002" Image="icontext_league_finish_blue_champ2" />
+	</Imagery>
+	<ExtraInfo KoSnd = "" 
+		         WinSnd = "interface/mode/champion_win.wav"
+		         LoseSnd = "interface/mode/champion_lose.wav"
+		         PerfectSnd = "interface/mode/champion_perfect.wav"
+		         TimeOutSnd = "interface/mode/champion_timeout.wav"
+		         RollingSnd = "interface/mode/champion_rolling_01.wav"/>
+</Window>

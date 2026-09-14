@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="LobbyDungeonInfoWnd" Id="7">
+	<Size X="566" Y="0" Width="206" Height="526" />
+	<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST|IWS_CHILD_ONLY_RESPONSE</Style>
+	<Title>
+		<Format X="103" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Center"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Text>던전 정보</Text>
+	</Title>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame80">
+			<Area X="0" Y="0" Width="206" Height="526"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Templete="win1_title">
+			<Area X="5" Y="6" Width="196" Height="36" AutoResize="False"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="MultiplyFrm" Templete="win1_multiply">
+			<Area X="0" Y="0" Width="206" Height="526"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Templete="icon0_pve2_title">
+			<Area X="14" Y="46" Width="178" Height="47"/>
+		</DefaultFrameImagery>
+	</Imagery>
+
+	<!--번쩍 윈도우 -->
+	<Window ClassName="UppderAlphaWnd" Id="1000">
+		<Size X="0" Y="0" Width="206" Height="526" />
+		<Style>IWS_PROCESS|IWS_START_HIDE|IWS_NO_MOUSE_RESPONSE</Style>
+		<ExtraInfo AlphaTime="100"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="slot_empty_white">
+				<Area X="0" Y="0" Width="206" Height="526"/>
+			</DefaultFrameImagery>
+		</Imagery>
+	</Window>
+
+</Window>

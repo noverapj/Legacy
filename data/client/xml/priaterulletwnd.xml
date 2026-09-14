@@ -1,0 +1,1506 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="PriateRulletWnd" Id="6296">
+	<Size X="0" Y="-20" XAlign="Center" YAlign="Center" Width="754" Height="506" />
+	<DragRect Left="0" Top="0" Right="754" Bottom="36" />
+	<Style>IWS_START_HIDE|IWS_CANMOVE|IWS_EXIT_ESC|IWS_PROCESS</Style>
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Title>
+		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Text>공포의 오크통</Text>
+	</Title>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+			<Area X="0" Y="0" Width="754" Height="506"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title">
+			<Area X="5" Y="6" Width="744" Height="36"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="SwordBorder" Templete="roulette_pirate_window">
+			<Area X="436" Y="245" Width="264" Height="164"/>
+		</DefaultFrameImagery>
+		<Image Type="OakCap" Imageset="UIIconEvent7" Image="roulette_pirate_sub_board">
+			<Area X="121" Y="196"/>
+		</Image>
+		<Image Type="OakBody" Imageset="UIIconEvent7" Image="roulette_pirate_main_board">
+			<Area X="87" Y="214"/>
+		</Image>
+		<Image Type="DevelopK" Imageset="UIIconEvent7" Image="roulette_pirate_baseimage">
+			<Area X="119" Y="77"/>
+		</Image>
+		<Image Type="DevelopKBack" Imageset="UIIconEvent7" Image="roulette_pirate_image13">
+			<Area X="143" Y="77"/>
+		</Image>
+		<Image Type="DevelopKBackAnimation" Imageset="UIIconEvent7" Image="roulette_pirate_spin_board">
+			<Area X="87" Y="75"/>
+		</Image>
+		<Image Type="RewardMap" Imageset="UIIconEvent7" Image="roulette_pirate_map">
+			<Area X="433" Y="84"/>
+		</Image>
+		<Image Type="SwordBorderTitle" Imageset="UIIconEvent7" Image="roulette_pirate_topimage01">
+			<Area X="440" Y="246"/>
+		</Image>
+		<Image Type="DevelopKFlyStart" Imageset="UIIconEvent7" Image="roulette_pirate_annie_effects02"/>
+		<Image Type="DevelopKFlyEnd" Imageset="UIIconEvent7" Image="roulette_pirate_annie_effects01"/>
+		<Image Type="DevelopKWounded" Imageset="UIIconEvent7" Image="roulette_pirate_image11"/>
+		<Image Type="DevelopKProvoke" Imageset="UIIconEvent7" Image="roulette_pirate_image12"/>
+		<Image Type="FireWorkEffect01" Imageset="UIIconEvent7" Image="roulette_pirate_annie_effects03"/>
+		<Image Type="FireWorkEffect02" Imageset="UIIconEvent7" Image="roulette_pirate_annie_effects04"/>
+		<Image Type="FireWorkEffect03" Imageset="UIIconEvent7" Image="roulette_pirate_annie_effects05"/>
+		<Image Type="FireWorkEffect04" Imageset="UIIconEvent7" Image="roulette_pirate_annie_effects06"/>
+		<Image Type="DevelopKBackToolTip" Imageset="UIIconEvent7" Image="roulette_pirate_tooltip"/>
+		<Image Type="DevelopKProvokeBack" Imageset="UIIconEvent7" Image="roulette_pirate_image12"/>
+		<Image Type="DevelopKWoundedBack" Imageset="UIIconEvent7" Image="roulette_pirate_image11"/>
+		<Image Type="MonKeyFace" Imageset="UIIconEvent7" Image="roulette_pirate_bg_ani_1" >
+			<Area X="30" Y="121"/>
+		</Image>
+		<Image Type="ShipTreeLight" Imageset="UIIconEvent7" Image="roulette_pirate_bg_ani_2_1" >
+			<Area X="226" Y="61"/>
+		</Image>
+		<Image Type="ShipTreeInvLight" Imageset="UIIconEvent7" Image="roulette_pirate_bg_ani_2_2" >
+			<Area X="226" Y="61"/>
+		</Image>
+		<Image Type="BombLeftFire" Imageset="UIIconEvent7" Image="roulette_pirate_bg_ani_3_1" >
+			<Area X="7" Y="330"/>
+		</Image>
+		<Image Type="BombLeftInvFire" Imageset="UIIconEvent7" Image="roulette_pirate_bg_ani_3_2" >
+			<Area X="7" Y="330"/>
+		</Image>
+		<Image Type="BombRightFire" Imageset="UIIconEvent7" Image="roulette_pirate_bg_ani_4_1" >
+			<Area X="357" Y="325"/>
+		</Image>
+		<Image Type="BombRightInvFire" Imageset="UIIconEvent7" Image="roulette_pirate_bg_ani_4_2" >
+			<Area X="357" Y="325"/>
+		</Image>
+		<Image Type="NormalList" Imageset="UIIconEvent7" Image="roulette_pirate_obj_bg" >
+			<Area X="7" Y="42" width="739" height="456"/>
+		</Image>
+		<Effect Type="SemiCriticalEffect" File="ui_knife_exp_01.txt" RenderType="AfterRender" CamName="UIOak">
+			<Area X="0" Y="0" Width="100" Height="100" />
+		</Effect>
+		<Effect Type="CriticalEffect" File="ui_knife_exp_02.txt" RenderType="AfterRender" CamName="UIOak">
+			<Area X="0" Y="0" Width="100" Height="100" />
+		</Effect>
+	</Imagery>
+	<ExtraInfo ProvocationSound = "oak/Provocation.wav" 
+		       DevelopKSound = "oak/Start.wav"
+		       RewardSound = "interface/Mission_clear.wav"/>
+	<Window ClassName="GlobalTextTooltip" Id="500">
+		<Size X="0" Y="0" Width="120" Height="26" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_TOPMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="tooltip3">
+				<Area X="0" Y="0" Width="120" Height="26" />
+			</DefaultFrameImagery>
+		</Imagery>
+	</Window>
+	<Window ClassName="PrivateRulletBonusRewardTooltip" Id="1000">
+		<Size X="0" Y="0" Width="198" Height="257" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_TOPMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="tooltip3">
+				<Area X="0" Y="0" Width="198" Height="257" />
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Slot1" Templete="slot_empty_gray1">
+				<Area X="10" Y="91" Width="58" Height="77"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Slot2" Templete="slot_empty_gray1">
+				<Area X="70" Y="91" Width="58" Height="77"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Slot3" Templete="slot_empty_gray1">
+				<Area X="130" Y="91" Width="58" Height="77"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Slot4" Templete="slot_empty_gray1">
+				<Area X="10" Y="170" Width="58" Height="77"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Slot5" Templete="slot_empty_gray1">
+				<Area X="70" Y="170" Width="58" Height="77"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Slot6" Templete="slot_empty_gray1">
+				<Area X="130" Y="170" Width="58" Height="77"/>
+			</DefaultFrameImagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1"/>
+			<Image Type="NoneIcon" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+		</Imagery>
+		<Window ClassName="ioRichLabel" Id="1">
+			<Size X="63" Y="23" Width="94" Height="21"/>
+			<ExtraInfo VertGap="3" HorzAlign="Left" VertAlign="Top" >
+				<TextBlock Text="보너스 보상" Size="18" Color="FF3A3A3A"/>
+			</ExtraInfo>
+		</Window>
+		<Window ClassName="ioRichLabel" Id="2">
+			<Size X="10" Y="54" Width="188" Height="203"/>
+			<ExtraInfo VertGap="3" HorzAlign="Left" VertAlign="Top" >
+				<TextBlock Text="개발자K를 날리는 데 " Size="12" Color="FF6E6E6E"/>
+				<TextBlock Text="사용된 검의 #" Size="12" Color="FFB91600"/>
+				<TextBlock Text="개수" Size="12" Color="FFB91600"/>
+				<TextBlock Text="에 알맞은 보상이 지급됩니다." Size="12" Color="FF6E6E6E"/>
+			</ExtraInfo>
+		</Window>
+	</Window>
+	<Window ClassName="DevelopKBubble" Id="2000">
+		<Size X="281" Y="114" Width="120" Height="84" XAlign="Left" YAlign="Top"/>
+		<Style>IWS_START_HIDE|IWS_AFTER_RENDER|IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="tooltip6">
+				<Area X="0" Y="0" Width="120" Height="84" XAlign="Left" YAlign="Bottom"/>
+			</DefaultFrameImagery>
+			<Image Type="BubbleTail" Imageset="UIIconEvent7" Image="tooltip6_tail"/>
+		</Imagery>
+		<ExtraInfo ReverseTail="false" />
+	</Window>
+	<Window ClassName="DevelopKBubble" Id="2001">
+		<Size X="33" Y="141" Width="120" Height="84" XAlign="Left" YAlign="Top"/>
+		<Style>IWS_START_HIDE|IWS_AFTER_RENDER|IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="tooltip6">
+				<Area X="0" Y="0" Width="120" Height="84"/>
+			</DefaultFrameImagery>
+			<Image Type="BubbleTail" Imageset="UIIconEvent7" Image="tooltip6_tail"/>
+		</Imagery>
+		<ExtraInfo ReverseTail="true" />
+	</Window>
+	<Window ClassName="ioButton" Id="1">
+		<Size X="720" Y="11" Width="22" Height="22"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+            <Image Type="Disable" Imageset="BaseImage001" Image="icon0_x_grayframe" >
+				<Area X="0" Y="0" />
+			</Image>
+            <Image Type="NormalList" Imageset="BaseImage001" Image="icon0_x" >
+				<Area X="5" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<!-- 게임 룰 설명 시작-->
+	<Window ClassName="ioRichLabel" Id="2">
+		<Size X="502" Y="93" Width="140" Height="25"/>
+		<ExtraInfo VertGap="3" HorzAlign="Left" VertAlign="Top" >
+			<TextBlock Text="오크통 게임룰" Size="22" Color="FF7F3F01"/>
+		</ExtraInfo>
+	</Window>
+	<Window ClassName="ioRichLabel" Id="3">
+		<Size X="436" Y="131" Width="300" Height="280"/>
+		<ExtraInfo VertGap="3" HorzAlign="Left" VertAlign="Top" >
+			<TextBlock Text="- [오크통]은 앞뒤로 존재하는 40개 구멍에,#" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="  보유하고 있는 검을 꽂아 [개발자K]에게 데미지를#" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="  입히면 보상을 획득 할 수 있는 미니 게임입니다.#" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="  보상은 [개발자K]의 표정이 크게 바뀔 때 마다#" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="  지급됩니다.#" Size="13" Color="FF7F3F01"/>
+			<TextBlock Text="- 간혹 [크리티컬]이 발생하는데, 이는 [개발자 K]에게#" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="  좀 더 강력한 데미지를 주게 됩니다.#" Size="12" Color="FF7F3F01"/>			
+			<TextBlock Text="- [개발자 K]의 체력을 모두 소모시켜 날려버리면,#" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="  모든 보상이 지급됩니다.#" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="  [개발자 K]를 날렸을 때, 사용된 검의 개수에 따라#" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="  [보너스 보상]이 추가 지급 됩니다.#" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="- 운이 좋으면 [개발자 K]를 적은 기회로 날릴 수#" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="  있습니다.#" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="- [개발자 K]를 날리거나 도중에 게임을 초기화 할 수#" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="  있으며, 보유하고 있던 검은 그대로 유지됩니다.#" Size="12" Color="FF7F3F01"/>
+		</ExtraInfo>
+	</Window>	
+	<!-- 게임 룰 설명 종료-->
+	
+	<Window ClassName="ioButton" Id="4">
+		<Size X="436" Y="413" Width="260" Height="40" />
+		<Title>
+			<Format X="131" Y="6" Size="18" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal"  Text="FFF2FBE2" Back="FF4D2B17"/>
+			<Color Type="Over"  Text="FFF2FBE2" Back="FF4D2B17"/>
+			<Color Type="Push"  Text="FFF2FBE2" Back="FF4D2B17"/>
+			<Color Type="Disable"  Text="FFF2FBE2" Back="FF4D2B17"/>
+			<Text>시작하기</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt017_brown_nor">
+				<Area X="0" Y="0" Width="260" Height="40"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt017_brown_nor">
+				<Area X="0" Y="0" Width="260" Height="40"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt017_overadd">
+				<Area X="3" Y="1" Width="258" Height="34"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt017_brown_down">
+				<Area X="0" Y="0" Width="260" Height="40"/>
+			</DefaultFrameImagery>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<!-- 보상 버튼 시작-->
+	<Window ClassName="PrivateRulletRewardButton" Id="11">
+		<Size X="510" Y="99" Width="37" Height="37" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="StampMark" Imageset="BaseImage029" Image="roulette_pirate_stamp" />
+			<Image Type="Secret" Imageset="UIIconPack54" Image="event_secret" />
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="PrivateRulletRewardButton" Id="12">
+		<Size X="566" Y="99" Width="37" Height="37" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="StampMark" Imageset="BaseImage029" Image="roulette_pirate_stamp" />
+			<Image Type="Secret" Imageset="UIIconPack54" Image="event_secret" />
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>	
+	<Window ClassName="PrivateRulletRewardButton" Id="13">
+		<Size X="617" Y="99" Width="37" Height="37" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="StampMark" Imageset="BaseImage029" Image="roulette_pirate_stamp" />
+			<Image Type="Secret" Imageset="UIIconPack54" Image="event_secret" />
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="PrivateRulletRewardButton" Id="14">
+		<Size X="611" Y="145" Width="37" Height="37" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="StampMark" Imageset="BaseImage029" Image="roulette_pirate_stamp" />
+			<Image Type="Secret" Imageset="UIIconPack54" Image="event_secret" />
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>	
+	<Window ClassName="PrivateRulletRewardButton" Id="15">
+		<Size X="561" Y="145" Width="37" Height="37" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="StampMark" Imageset="BaseImage029" Image="roulette_pirate_stamp" />
+			<Image Type="Secret" Imageset="UIIconPack54" Image="event_secret" />
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>	
+	<Window ClassName="PrivateRulletRewardButton" Id="16">
+		<Size X="508" Y="145" Width="37" Height="37" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="StampMark" Imageset="BaseImage029" Image="roulette_pirate_stamp" />
+			<Image Type="Secret" Imageset="UIIconPack54" Image="event_secret" />
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="PrivateRulletRewardButton" Id="17">
+		<Size X="456" Y="145" Width="37" Height="37" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="StampMark" Imageset="BaseImage029" Image="roulette_pirate_stamp" />
+			<Image Type="Secret" Imageset="UIIconPack54" Image="event_secret" />
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="PrivateRulletRewardButton" Id="18">
+		<Size X="459" Y="193" Width="37" Height="37" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="StampMark" Imageset="BaseImage029" Image="roulette_pirate_stamp" />
+			<Image Type="Secret" Imageset="UIIconPack54" Image="event_secret" />
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>	
+	<Window ClassName="PrivateRulletRewardButton" Id="19">
+		<Size X="511" Y="193" Width="37" Height="37" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="StampMark" Imageset="BaseImage029" Image="roulette_pirate_stamp" />
+			<Image Type="Secret" Imageset="UIIconPack54" Image="event_secret" />
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>	
+	<Window ClassName="PrivateRulletRewardButton" Id="20">
+		<Size X="572" Y="193" Width="37" Height="37" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="StampMark" Imageset="BaseImage029" Image="roulette_pirate_stamp" />
+			<Image Type="Secret" Imageset="UIIconPack54" Image="event_secret" />
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<!-- 보상 버튼 종료-->
+	
+	<!-- 보너스 버튼 시작-->
+		<Window ClassName="PrivateRulletRewardButton" Id="21">
+		<Size X="645" Y="193" Width="37" Height="37" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="StampMark" Imageset="BaseImage029" Image="roulette_pirate_stamp" />
+			<Image Type="Secret" Imageset="UIIconPack54" Image="event_secret" />
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<!-- 보너스 버튼 종료 -->
+	
+	<!-- 칼 선택 버튼 시작 -->	
+	<Window ClassName="SwordFrameButton" Id="22">
+		<Size X="611" Y="269" Width="78" Height="128" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="Normal" Imageset="UIIconEvent7" Image="slot_roulette_pirate_wood">
+				<Area X="0" Y="0" />
+			</Image>
+			<Image Type="Push" Imageset="UIIconEvent7" Image="slot_roulette_pirate_wood">
+				<Area X="0" Y="0" />
+			</Image>
+			<Image Type="Over" Imageset="UIIconEvent7" Image="slot_roulette_pirate_wood">
+				<Area X="0" Y="0" />
+			</Image>
+			<Image Type="Disable" Imageset="UIIconEvent7" Image="slot_empty_roulette_pirate_wood">
+				<Area X="0" Y="0" />
+			</Image>
+			<Image Type="Checked" Imageset="UIIconEvent7" Image="roulette_pirate_icon0_v">
+				<Area X="55" Y="77" />
+			</Image>
+			<DefaultFrameImagery Type="SelectFrame" Templete="slot_select_pet">
+				<Area X="-2" Y="-2" Width="82" Height="132"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="SwordFrameButton" Id="23">
+		<Size X="529" Y="269" Width="78" Height="128" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="Normal" Imageset="UIIconEvent7" Image="slot_roulette_pirate_silver">
+				<Area X="0" Y="0" />
+			</Image>
+			<Image Type="Push" Imageset="UIIconEvent7" Image="slot_roulette_pirate_silver">
+				<Area X="0" Y="0" />
+			</Image>
+			<Image Type="Over" Imageset="UIIconEvent7" Image="slot_roulette_pirate_silver">
+				<Area X="0" Y="0" />
+			</Image>
+			<Image Type="Disable" Imageset="UIIconEvent7" Image="slo_emptyt_roulette_pirate_silver">
+				<Area X="0" Y="0" />
+			</Image>
+			<Image Type="Checked" Imageset="UIIconEvent7" Image="roulette_pirate_icon0_v">
+				<Area X="55" Y="77" />
+			</Image>
+			<DefaultFrameImagery Type="SelectFrame" Templete="slot_select_pet">
+				<Area X="-2" Y="-2" Width="82" Height="132"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="SwordFrameButton" Id="24">
+		<Size X="447" Y="269" Width="78" Height="128" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="Normal" Imageset="UIIconEvent7" Image="slot_roulette_pirate_gold">
+				<Area X="0" Y="0" />
+			</Image>
+			<Image Type="Push" Imageset="UIIconEvent7" Image="slot_roulette_pirate_gold">
+				<Area X="0" Y="0" />
+			</Image>
+			<Image Type="Over" Imageset="UIIconEvent7" Image="slot_roulette_pirate_gold">
+				<Area X="0" Y="0" />
+			</Image>
+			<Image Type="Disable" Imageset="UIIconEvent7" Image="slot_empty_roulette_pirate_gold">
+				<Area X="0" Y="0" />
+			</Image>
+			<Image Type="Checked" Imageset="UIIconEvent7" Image="roulette_pirate_icon0_v">
+				<Area X="55" Y="77" />
+			</Image>
+			<DefaultFrameImagery Type="SelectFrame" Templete="slot_select_pet">
+				<Area X="-2" Y="-2" Width="82" Height="132"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<!-- 칼 선택 버튼 종료 -->
+	
+	<!-- 리셋 버튼 시작-->
+	<Window ClassName="ioButton" Id="25">
+		<Size X="436" Y="413" Width="131" Height="40" />
+		<Title>
+			<Format X="66" Y="6" Size="18" Style="Outline_full_2x" HorzAlign="Center"/>			
+			<Color Type="Normal"  Text="FFFEBE2" Back="FF4D2B17"/>
+			<Color Type="Over"  Text="FFFEBE2" Back="FF4D2B17"/>
+			<Color Type="Push"  Text="FFFEBE2" Back="FF4D2B17"/>
+			<Color Type="Disable"  Text="FFFEBE2" Back="FF4D2B17"/>
+			<Text>초기화</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt017_red_nor">
+				<Area X="0" Y="0" Width="131" Height="40"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt017_red_nor">
+				<Area X="0" Y="0" Width="131" Height="40"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt017_overadd">
+				<Area X="3" Y="1" Width="125" Height="34"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt017_red_down">
+				<Area X="0" Y="0" Width="131" Height="40"/>
+			</DefaultFrameImagery>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<!-- 리셋 버튼 종료 -->
+	
+	<!-- 도움말 시작 -->
+	<Window ClassName="ioButton" Id="26">
+		<Size X="569" Y="413" Width="131" Height="40" />
+		<Title>
+			<Format X="66" Y="6" Size="18" Style="Outline_full_2x" HorzAlign="Center"/>			
+			<Color Type="Normal"  Text="FFFEBE2" Back="FF4D2B17"/>
+			<Color Type="Over"  Text="FFFEBE2" Back="FF4D2B17"/>
+			<Color Type="Push"  Text="FFFEBE2" Back="FF4D2B17"/>
+			<Color Type="Disable"  Text="FFFEBE2" Back="FF4D2B17"/>
+			<Text>도움말</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt017_brown_nor">
+				<Area X="0" Y="0" Width="131" Height="40"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt017_brown_nor">
+				<Area X="0" Y="0" Width="131" Height="40"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt017_overadd">
+				<Area X="3" Y="1" Width="125" Height="34"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt017_brown_down">
+				<Area X="0" Y="0" Width="131" Height="40"/>
+			</DefaultFrameImagery>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<!-- 도움말 종료 -->
+	
+	<!-- 되돌아가기 시작 -->
+	<Window ClassName="ioButton" Id="27">
+		<Size X="644" Y="413" Width="54" Height="40" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt017_brown_nor">
+				<Area X="0" Y="0" Width="54" Height="40"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt017_brown_nor">
+				<Area X="0" Y="0" Width="54" Height="40"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt017_overadd">
+				<Area X="0" Y="0" Width="54" Height="40"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt017_brown_down">
+				<Area X="0" Y="0" Width="54" Height="40"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="UIIconEvent7" Image="roulette_pirate_arrow" >
+				<Area X="15" Y="5" width="29" height="24"/>
+			</Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<!-- 되돌아가기 종료-->
+	
+	<!-- 회전 버튼 -->
+	<Window ClassName="NewShopHelpControlBtn" Id="28">
+		<Size X="36" Y="308" Width="46" Height="44"/>
+		<Imagery>
+			<Image Type="Btn" Imageset="BaseImage004" Image="icon0_3d_left"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="NewShopHelpControlBtn" Id="29">
+		<Size X="335" Y="308" Width="46" Height="44"/>
+		<Imagery>
+			<Image Type="Btn" Imageset="BaseImage004" Image="icon0_3d_left">
+				<Area X="0" Y="0"  Reverse="Horz"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+				   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="PriateNewStartButton" Id="30">
+		<Size X="436" Y="413" Width="264" Height="39" />
+		<Style>IWS_PROCESS</Style>
+		<Title>
+			<Format X="132" Y="6" Size="18" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal"  Text="FFF2FBE2" Back="FF4D2B17"/>
+			<Color Type="Over"  Text="FFF2FBE2" Back="FF4D2B17"/>
+			<Color Type="Push"  Text="FFF2FBE2" Back="FF4D2B17"/>
+			<Color Type="Disable"  Text="FFF2FBE2" Back="FF4D2B17"/>
+			<Text>새로 시작하기</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt017_red_nor">
+				<Area X="0" Y="0" Width="264" Height="39"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt017_red_nor">
+				<Area X="0" Y="0" Width="264" Height="39"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt017_overadd">
+				<Area X="3" Y="1" Width="264" Height="39"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt017_red_down">
+				<Area X="0" Y="0" Width="264" Height="39"/>
+			</DefaultFrameImagery>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<!-- 첫번째 줄 -->
+	<Window ClassName="OakHoleButton" Id="101">
+		<Size X="103" Y="232" Width="31" Height="49" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="OverSword" Imageset="UIIconEvent8" Image="bt01_roulette_pirate_over_01">
+				<Area X="-27" Y="-1"/>
+			</Image>
+			<Image Type="GoldClickSword" Imageset="UIIconEvent8" Image="gold_2step_01">
+				<Area X="-71" Y="-23"/>
+			</Image>
+			<Image Type="GoldClickMoveSword" Imageset="UIIconEvent8" Image="gold_2step_01">
+				<Area X="-71" Y="-23"/>
+			</Image>
+			<Image Type="GoldStickedSword" Imageset="UIIconEvent8" Image="gold_3step_01">
+				<Area X="-27" Y="-1"/>
+			</Image>
+			<Image Type="SilverClickSword" Imageset="UIIconEvent8" Image="silver_2step_01">
+				<Area X="-71" Y="-23"/>
+			</Image>
+			<Image Type="SilverClickMoveSword" Imageset="UIIconEvent8" Image="silver_2step_01">
+				<Area X="-71" Y="-23"/>
+			</Image>
+			<Image Type="SilverStickedSword" Imageset="UIIconEvent8" Image="silver_3step_01">
+				<Area X="-27" Y="-1"/>
+			</Image>
+			<Image Type="WoodClickSword" Imageset="UIIconEvent8" Image="wood_1step_01">
+				<Area X="-71" Y="-23"/>
+			</Image>
+			<Image Type="WoodClickMoveSword" Imageset="UIIconEvent8" Image="wood_2step_01">
+				<Area X="-71" Y="-23"/>
+			</Image>
+			<Image Type="WoodStickedSword" Imageset="UIIconEvent8" Image="wood_3step_01">
+				<Area X="-27" Y="-1"/>
+			</Image>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           StickedWoodSound = "oak/Attack_1.wav"
+				   StickedMetalSound = "oak/Attack_2.wav"
+				   StickedCriticalWoodSound = "oak/Attack_1_C.wav"
+				   StickedCriticalMetalSound = "oak/Attack_2_C.wav"
+				   DamageSound = "oak/Beaten.wav"
+				   CriticalDamageSound = "oak/Beaten_2.wav"
+				   EndDamageSound = "oak/Flying_DeveloperK_2.wav"
+				   EffectXPos="17"
+				   EffectYPos="27"/>
+	</Window>
+	<Window ClassName="OakHoleButton" Id="102">
+		<Size X="93" Y="292" Width="31" Height="49" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="OverSword" Imageset="UIIconEvent8" Image="bt01_roulette_pirate_over_02">
+				<Area X="-32" Y="-2"/>
+			</Image>
+			<Image Type="GoldClickSword" Imageset="UIIconEvent8" Image="gold_2step_02">
+				<Area X="-81" Y="-7"/>
+			</Image>
+			<Image Type="GoldClickMoveSword" Imageset="UIIconEvent8" Image="gold_2step_02">
+				<Area X="-81" Y="-7"/>
+			</Image>
+			<Image Type="GoldStickedSword" Imageset="UIIconEvent8" Image="gold_3step_02">
+				<Area X="-32" Y="-2"/>
+			</Image>
+			<Image Type="SilverClickSword" Imageset="UIIconEvent8" Image="silver_2step_02">
+				<Area X="-81" Y="-7"/>
+			</Image>
+			<Image Type="SilverClickMoveSword" Imageset="UIIconEvent8" Image="silver_2step_02">
+				<Area X="-81" Y="-7"/>
+			</Image>
+			<Image Type="SilverStickedSword" Imageset="UIIconEvent8" Image="silver_3step_02">
+				<Area X="-32" Y="-2"/>
+			</Image>
+			<Image Type="WoodClickSword" Imageset="UIIconEvent8" Image="wood_1step_02">
+				<Area X="-81" Y="-7"/>
+			</Image>
+			<Image Type="WoodClickMoveSword" Imageset="UIIconEvent8" Image="wood_2step_02">
+				<Area X="-81" Y="-7"/>
+			</Image>
+			<Image Type="WoodStickedSword" Imageset="UIIconEvent8" Image="wood_3step_02">
+				<Area X="-32" Y="-2"/>
+			</Image>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           StickedWoodSound = "oak/Attack_1.wav"
+				   StickedMetalSound = "oak/Attack_2.wav"
+				   StickedCriticalWoodSound = "oak/Attack_1_C.wav"
+				   StickedCriticalMetalSound = "oak/Attack_2_C.wav"
+				   DamageSound = "oak/Beaten.wav"
+				   CriticalDamageSound = "oak/Beaten_2.wav"
+				   EndDamageSound = "oak/Flying_DeveloperK_2.wav"
+				   EffectXPos="13"
+				   EffectYPos="24"/>
+	</Window>
+	<Window ClassName="OakHoleButton" Id="103">
+		<Size X="93" Y="353" Width="31" Height="49" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="OverSword" Imageset="UIIconEvent8" Image="bt01_roulette_pirate_over_03">
+				<Area X="-32" Y="-1"/>
+			</Image>
+			<Image Type="GoldClickSword" Imageset="UIIconEvent8" Image="gold_2step_03">
+				<Area X="-85" Y="9"/>
+			</Image>
+			<Image Type="GoldClickMoveSword" Imageset="UIIconEvent8" Image="gold_2step_03">
+				<Area X="-85" Y="9"/>
+			</Image>
+			<Image Type="GoldStickedSword" Imageset="UIIconEvent8" Image="gold_3step_03">
+				<Area X="-32" Y="-1"/>
+			</Image>
+			<Image Type="SilverClickSword" Imageset="UIIconEvent8" Image="silver_2step_03">
+				<Area X="-85" Y="9"/>
+			</Image>
+			<Image Type="SilverClickMoveSword" Imageset="UIIconEvent8" Image="silver_2step_03">
+				<Area X="-85" Y="9"/>
+			</Image>
+			<Image Type="SilverStickedSword" Imageset="UIIconEvent8" Image="silver_3step_03">
+				<Area X="-32" Y="-1"/>
+			</Image>
+			<Image Type="WoodClickSword" Imageset="UIIconEvent8" Image="wood_1step_03">
+				<Area X="-85" Y="9"/>
+			</Image>
+			<Image Type="WoodClickMoveSword" Imageset="UIIconEvent8" Image="wood_2step_03">
+				<Area X="-85" Y="9"/>
+			</Image>
+			<Image Type="WoodStickedSword" Imageset="UIIconEvent8" Image="wood_3step_03">
+				<Area X="-32" Y="-1"/>
+			</Image>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           StickedWoodSound = "oak/Attack_1.wav"
+				   StickedMetalSound = "oak/Attack_2.wav"
+				   StickedCriticalWoodSound = "oak/Attack_1_C.wav"
+				   StickedCriticalMetalSound = "oak/Attack_2_C.wav"
+				   DamageSound = "oak/Beaten.wav"
+				   CriticalDamageSound = "oak/Beaten_2.wav"
+				   EndDamageSound = "oak/Flying_DeveloperK_2.wav"
+				   EffectXPos="13"
+				   EffectYPos="21"/>
+	</Window>
+	<Window ClassName="OakHoleButton" Id="104">
+		<Size X="106" Y="418" Width="31" Height="49" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="OverSword" Imageset="UIIconEvent8" Image="bt01_roulette_pirate_over_04">
+				<Area X="-25" Y="-6"/>
+			</Image>
+			<Image Type="GoldClickSword" Imageset="UIIconEvent8" Image="gold_2step_04">
+				<Area X="-76" Y="9"/>
+			</Image>
+			<Image Type="GoldClickMoveSword" Imageset="UIIconEvent8" Image="gold_2step_04">
+				<Area X="-76" Y="9"/>
+			</Image>
+			<Image Type="GoldStickedSword" Imageset="UIIconEvent8" Image="gold_3step_04">
+				<Area X="-25" Y="-6"/>
+			</Image>
+			<Image Type="SilverClickSword" Imageset="UIIconEvent8" Image="silver_2step_04">
+				<Area X="-76" Y="9"/>
+			</Image>
+			<Image Type="SilverClickMoveSword" Imageset="UIIconEvent8" Image="silver_2step_04">
+				<Area X="-76" Y="9"/>
+			</Image>
+			<Image Type="SilverStickedSword" Imageset="UIIconEvent8" Image="silver_3step_04">
+				<Area X="-25" Y="-6"/>
+			</Image>
+			<Image Type="WoodClickSword" Imageset="UIIconEvent8" Image="wood_1step_04">
+				<Area X="-76" Y="9"/>
+			</Image>
+			<Image Type="WoodClickMoveSword" Imageset="UIIconEvent8" Image="wood_2step_04">
+				<Area X="-76" Y="9"/>
+			</Image>
+			<Image Type="WoodStickedSword" Imageset="UIIconEvent8" Image="wood_3step_04">
+				<Area X="-25" Y="-6"/>
+			</Image>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           StickedWoodSound = "oak/Attack_1.wav"
+				   StickedMetalSound = "oak/Attack_2.wav"
+				   StickedCriticalWoodSound = "oak/Attack_1_C.wav"
+				   StickedCriticalMetalSound = "oak/Attack_2_C.wav"
+				   DamageSound = "oak/Beaten.wav"
+				   CriticalDamageSound = "oak/Beaten_2.wav"
+				   EndDamageSound = "oak/Flying_DeveloperK_2.wav"
+				   EffectXPos="15"
+				   EffectYPos="16"/>
+	</Window>
+	<Window ClassName="OakHoleButton" Id="105">
+		<Size X="142" Y="247" Width="31" Height="49" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="OverSword" Imageset="UIIconEvent8" Image="bt01_roulette_pirate_over_05">
+				<Area X="-20" Y="-8"/>
+			</Image>
+			<Image Type="GoldClickSword" Imageset="UIIconEvent8" Image="gold_2step_05">
+				<Area X="-40" Y="-20"/>
+			</Image>
+			<Image Type="GoldClickMoveSword" Imageset="UIIconEvent8" Image="gold_2step_05">
+				<Area X="-40" Y="-20"/>
+			</Image>
+			<Image Type="GoldStickedSword" Imageset="UIIconEvent8" Image="gold_3step_05">
+				<Area X="-20" Y="-8"/>
+			</Image>
+			<Image Type="SilverClickSword" Imageset="UIIconEvent8" Image="silver_2step_05">
+				<Area X="-40" Y="-20"/>
+			</Image>
+			<Image Type="SilverClickMoveSword" Imageset="UIIconEvent8" Image="silver_2step_05">
+				<Area X="-40" Y="-20"/>
+			</Image>
+			<Image Type="SilverStickedSword" Imageset="UIIconEvent8" Image="silver_3step_05">
+				<Area X="-20" Y="-8"/>
+			</Image>
+			<Image Type="WoodClickSword" Imageset="UIIconEvent8" Image="wood_1step_05">
+				<Area X="-40" Y="-20"/>
+			</Image>
+			<Image Type="WoodClickMoveSword" Imageset="UIIconEvent8" Image="wood_2step_05">
+				<Area X="-40" Y="-20"/>
+			</Image>
+			<Image Type="WoodStickedSword" Imageset="UIIconEvent8" Image="wood_3step_05">
+				<Area X="-20" Y="-8"/>
+			</Image>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           StickedWoodSound = "oak/Attack_1.wav"
+				   StickedMetalSound = "oak/Attack_2.wav"
+				   StickedCriticalWoodSound = "oak/Attack_1_C.wav"
+				   StickedCriticalMetalSound = "oak/Attack_2_C.wav"
+				   DamageSound = "oak/Beaten.wav"
+				   CriticalDamageSound = "oak/Beaten_2.wav"
+				   EndDamageSound = "oak/Flying_DeveloperK_2.wav"
+				   EffectXPos="15"
+				   EffectYPos="24"/>
+	</Window>
+	<!-- 두번째 줄 -->
+	<Window ClassName="OakHoleButton" Id="106">
+		<Size X="134" Y="306" Width="31" Height="49" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="OverSword" Imageset="UIIconEvent8" Image="bt01_roulette_pirate_over_06">
+				<Area X="-22" Y="-2"/>
+			</Image>
+			<Image Type="GoldClickSword" Imageset="UIIconEvent8" Image="gold_2step_06">
+				<Area X="-49" Y="1"/>
+			</Image>
+			<Image Type="GoldClickMoveSword" Imageset="UIIconEvent8" Image="gold_2step_06">
+				<Area X="-49" Y="1"/>
+			</Image>
+			<Image Type="GoldStickedSword" Imageset="UIIconEvent8" Image="gold_3step_06">
+				<Area X="-22" Y="-2"/>
+			</Image>
+			<Image Type="SilverClickSword" Imageset="UIIconEvent8" Image="silver_2step_06">
+				<Area X="-49" Y="1"/>
+			</Image>
+			<Image Type="SilverClickMoveSword" Imageset="UIIconEvent8" Image="silver_2step_06">
+				<Area X="-49" Y="1"/>
+			</Image>
+			<Image Type="SilverStickedSword" Imageset="UIIconEvent8" Image="silver_3step_06">
+				<Area X="-22" Y="-2"/>
+			</Image>
+			<Image Type="WoodClickSword" Imageset="UIIconEvent8" Image="wood_1step_06">
+				<Area X="-49" Y="1"/>
+			</Image>
+			<Image Type="WoodClickMoveSword" Imageset="UIIconEvent8" Image="wood_2step_06">
+				<Area X="-49" Y="1"/>
+			</Image>
+			<Image Type="WoodStickedSword" Imageset="UIIconEvent8" Image="wood_3step_06">
+				<Area X="-22" Y="-2"/>
+			</Image>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           StickedWoodSound = "oak/Attack_1.wav"
+				   StickedMetalSound = "oak/Attack_2.wav"
+				   StickedCriticalWoodSound = "oak/Attack_1_C.wav"
+				   StickedCriticalMetalSound = "oak/Attack_2_C.wav"
+				   DamageSound = "oak/Beaten.wav"
+				   CriticalDamageSound = "oak/Beaten_2.wav"
+				   EndDamageSound = "oak/Flying_DeveloperK_2.wav"
+				   EffectXPos="15"
+				   EffectYPos="26"/>
+	</Window>
+	<Window ClassName="OakHoleButton" Id="107">
+		<Size X="135" Y="364" Width="31" Height="49" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="OverSword" Imageset="UIIconEvent8" Image="bt01_roulette_pirate_over_07">
+				<Area X="-23" Y="3"/>
+			</Image>
+			<Image Type="GoldClickSword" Imageset="UIIconEvent8" Image="gold_2step_07">
+				<Area X="-50" Y="15"/>
+			</Image>
+			<Image Type="GoldClickMoveSword" Imageset="UIIconEvent8" Image="gold_2step_07">
+				<Area X="-50" Y="15"/>
+			</Image>
+			<Image Type="GoldStickedSword" Imageset="UIIconEvent8" Image="gold_3step_07">
+				<Area X="-23" Y="3"/>
+			</Image>
+			<Image Type="SilverClickSword" Imageset="UIIconEvent8" Image="silver_2step_07">
+				<Area X="-50" Y="15"/>
+			</Image>
+			<Image Type="SilverClickMoveSword" Imageset="UIIconEvent8" Image="silver_2step_07">
+				<Area X="-50" Y="15"/>
+			</Image>
+			<Image Type="SilverStickedSword" Imageset="UIIconEvent8" Image="silver_3step_07">
+				<Area X="-23" Y="3"/>
+			</Image>
+			<Image Type="WoodClickSword" Imageset="UIIconEvent8" Image="wood_1step_07">
+				<Area X="-50" Y="15"/>
+			</Image>
+			<Image Type="WoodClickMoveSword" Imageset="UIIconEvent8" Image="wood_2step_07">
+				<Area X="-50" Y="15"/>
+			</Image>
+			<Image Type="WoodStickedSword" Imageset="UIIconEvent8" Image="wood_3step_07">
+				<Area X="-23" Y="3"/>
+			</Image>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           StickedWoodSound = "oak/Attack_1.wav"
+				   StickedMetalSound = "oak/Attack_2.wav"
+				   StickedCriticalWoodSound = "oak/Attack_1_C.wav"
+				   StickedCriticalMetalSound = "oak/Attack_2_C.wav"
+				   DamageSound = "oak/Beaten.wav"
+				   CriticalDamageSound = "oak/Beaten_2.wav"
+				   EndDamageSound = "oak/Flying_DeveloperK_2.wav"
+				   EffectXPos="15"
+				   EffectYPos="26"/>
+	</Window>
+	<Window ClassName="OakHoleButton" Id="108">
+		<Size X="145" Y="423" Width="31" Height="49" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="OverSword" Imageset="UIIconEvent8" Image="bt01_roulette_pirate_over_08">
+				<Area X="-19" Y="3"/>
+			</Image>
+			<Image Type="GoldClickSword" Imageset="UIIconEvent8" Image="gold_2step_08">
+				<Area X="-48" Y="16"/>
+			</Image>
+			<Image Type="GoldClickMoveSword" Imageset="UIIconEvent8" Image="gold_2step_08">
+				<Area X="-48" Y="16"/>
+			</Image>
+			<Image Type="GoldStickedSword" Imageset="UIIconEvent8" Image="gold_3step_08">
+				<Area X="-19" Y="3"/>
+			</Image>
+			<Image Type="SilverClickSword" Imageset="UIIconEvent8" Image="silver_2step_08">
+				<Area X="-48" Y="16"/>
+			</Image>
+			<Image Type="SilverClickMoveSword" Imageset="UIIconEvent8" Image="silver_2step_08">
+				<Area X="-48" Y="16"/>
+			</Image>
+			<Image Type="SilverStickedSword" Imageset="UIIconEvent8" Image="silver_3step_08">
+				<Area X="-19" Y="3"/>
+			</Image>
+			<Image Type="WoodClickSword" Imageset="UIIconEvent8" Image="wood_1step_08">
+				<Area X="-48" Y="16"/>
+			</Image>
+			<Image Type="WoodClickMoveSword" Imageset="UIIconEvent8" Image="wood_2step_08">
+				<Area X="-48" Y="16"/>
+			</Image>
+			<Image Type="WoodStickedSword" Imageset="UIIconEvent8" Image="wood_3step_08">
+				<Area X="-19" Y="3"/>
+			</Image>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           StickedWoodSound = "oak/Attack_1.wav"
+				   StickedMetalSound = "oak/Attack_2.wav"
+				   StickedCriticalWoodSound = "oak/Attack_1_C.wav"
+				   StickedCriticalMetalSound = "oak/Attack_2_C.wav"
+				   DamageSound = "oak/Beaten.wav"
+				   CriticalDamageSound = "oak/Beaten_2.wav"
+				   EndDamageSound = "oak/Flying_DeveloperK_2.wav"
+				   EffectXPos="15"
+				   EffectYPos="24"/>
+	</Window>
+	<Window ClassName="OakHoleButton" Id="109">
+		<Size X="192" Y="254" Width="31" Height="49" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="OverSword" Imageset="UIIconEvent8" Image="bt01_roulette_pirate_over_09">
+				<Area X="3" Y="-8"/>
+			</Image>
+			<Image Type="GoldClickSword" Imageset="UIIconEvent8" Image="gold_2step_09">
+				<Area X="12" Y="-11"/>
+			</Image>
+			<Image Type="GoldClickMoveSword" Imageset="UIIconEvent8" Image="gold_2step_09">
+				<Area X="12" Y="-11"/>
+			</Image>
+			<Image Type="GoldStickedSword" Imageset="UIIconEvent8" Image="gold_3step_09">
+				<Area X="3" Y="-8"/>
+			</Image>
+			<Image Type="SilverClickSword" Imageset="UIIconEvent8" Image="silver_2step_09">
+				<Area X="12" Y="-11"/>
+			</Image>
+			<Image Type="SilverClickMoveSword" Imageset="UIIconEvent8" Image="silver_2step_09">
+				<Area X="12" Y="-11"/>
+			</Image>
+			<Image Type="SilverStickedSword" Imageset="UIIconEvent8" Image="silver_3step_09">
+				<Area X="3" Y="-8"/>
+			</Image>
+			<Image Type="WoodClickSword" Imageset="UIIconEvent8" Image="wood_1step_09">
+				<Area X="12" Y="-11"/>
+			</Image>
+			<Image Type="WoodClickMoveSword" Imageset="UIIconEvent8" Image="wood_2step_09">
+				<Area X="12" Y="-11"/>
+			</Image>
+			<Image Type="WoodStickedSword" Imageset="UIIconEvent8" Image="wood_3step_09">
+				<Area X="3" Y="-8"/>
+			</Image>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           StickedWoodSound = "oak/Attack_1.wav"
+				   StickedMetalSound = "oak/Attack_2.wav"
+				   StickedCriticalWoodSound = "oak/Attack_1_C.wav"
+				   StickedCriticalMetalSound = "oak/Attack_2_C.wav"
+				   DamageSound = "oak/Beaten.wav"
+				   CriticalDamageSound = "oak/Beaten_2.wav"
+				   EndDamageSound = "oak/Flying_DeveloperK_2.wav"
+				   EffectXPos="15"
+				   EffectYPos="23"/>
+	</Window>
+	<Window ClassName="OakHoleButton" Id="110">
+		<Size X="192" Y="313" Width="31" Height="49" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="OverSword" Imageset="UIIconEvent8" Image="bt01_roulette_pirate_over_10">
+				<Area X="3" Y="-4"/>
+			</Image>
+			<Image Type="GoldClickSword" Imageset="UIIconEvent8" Image="gold_2step_10">
+				<Area X="12" Y="-7"/>
+			</Image>
+			<Image Type="GoldClickMoveSword" Imageset="UIIconEvent8" Image="gold_2step_10">
+				<Area X="12" Y="-7"/>
+			</Image>
+			<Image Type="GoldStickedSword" Imageset="UIIconEvent8" Image="gold_3step_10">
+				<Area X="3" Y="-4"/>
+			</Image>
+			<Image Type="SilverClickSword" Imageset="UIIconEvent8" Image="silver_2step_10">
+				<Area X="12" Y="-7"/>
+			</Image>
+			<Image Type="SilverClickMoveSword" Imageset="UIIconEvent8" Image="silver_2step_10">
+				<Area X="12" Y="-7"/>
+			</Image>
+			<Image Type="SilverStickedSword" Imageset="UIIconEvent8" Image="silver_3step_10">
+				<Area X="3" Y="-4"/>
+			</Image>
+			<Image Type="WoodClickSword" Imageset="UIIconEvent8" Image="wood_1step_10">
+				<Area X="12" Y="-7"/>
+			</Image>
+			<Image Type="WoodClickMoveSword" Imageset="UIIconEvent8" Image="wood_2step_10">
+				<Area X="12" Y="-7"/>
+			</Image>
+			<Image Type="WoodStickedSword" Imageset="UIIconEvent8" Image="wood_3step_10">
+				<Area X="3" Y="-4"/>
+			</Image>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           StickedWoodSound = "oak/Attack_1.wav"
+				   StickedMetalSound = "oak/Attack_2.wav"
+				   StickedCriticalWoodSound = "oak/Attack_1_C.wav"
+				   StickedCriticalMetalSound = "oak/Attack_2_C.wav"
+				   DamageSound = "oak/Beaten.wav"
+				   CriticalDamageSound = "oak/Beaten_2.wav"
+				   EndDamageSound = "oak/Flying_DeveloperK_2.wav"
+				   EffectXPos="15"
+				   EffectYPos="25"/>
+	</Window>
+	<!-- 세번째 줄 -->
+	<Window ClassName="OakHoleButton" Id="111">
+		<Size X="192" Y="372" Width="31" Height="49" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="OverSword" Imageset="UIIconEvent8" Image="bt01_roulette_pirate_over_11">
+				<Area X="3" Y="1"/>
+			</Image>
+			<Image Type="GoldClickSword" Imageset="UIIconEvent8" Image="gold_2step_11">
+				<Area X="12" Y="2"/>
+			</Image>
+			<Image Type="GoldClickMoveSword" Imageset="UIIconEvent8" Image="gold_2step_11">
+				<Area X="12" Y="2"/>
+			</Image>
+			<Image Type="GoldStickedSword" Imageset="UIIconEvent8" Image="gold_3step_11">
+				<Area X="3" Y="1"/>
+			</Image>
+			<Image Type="SilverClickSword" Imageset="UIIconEvent8" Image="silver_2step_11">
+				<Area X="12" Y="2"/>
+			</Image>
+			<Image Type="SilverClickMoveSword" Imageset="UIIconEvent8" Image="silver_2step_11">
+				<Area X="12" Y="2"/>
+			</Image>
+			<Image Type="SilverStickedSword" Imageset="UIIconEvent8" Image="silver_3step_11">
+				<Area X="3" Y="1"/>
+			</Image>
+			<Image Type="WoodClickSword" Imageset="UIIconEvent8" Image="wood_1step_11">
+				<Area X="12" Y="2"/>
+			</Image>
+			<Image Type="WoodClickMoveSword" Imageset="UIIconEvent8" Image="wood_2step_11">
+				<Area X="12" Y="2"/>
+			</Image>
+			<Image Type="WoodStickedSword" Imageset="UIIconEvent8" Image="wood_3step_11">
+				<Area X="3" Y="1"/>
+			</Image>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           StickedWoodSound = "oak/Attack_1.wav"
+				   StickedMetalSound = "oak/Attack_2.wav"
+				   StickedCriticalWoodSound = "oak/Attack_1_C.wav"
+				   StickedCriticalMetalSound = "oak/Attack_2_C.wav"
+				   DamageSound = "oak/Beaten.wav"
+				   CriticalDamageSound = "oak/Beaten_2.wav"
+				   EndDamageSound = "oak/Flying_DeveloperK_2.wav"
+				   EffectXPos="15"
+				   EffectYPos="24"/>
+	</Window>
+	<Window ClassName="OakHoleButton" Id="112">
+		<Size X="192" Y="431" Width="31" Height="49" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="OverSword" Imageset="UIIconEvent8" Image="bt01_roulette_pirate_over_12">
+				<Area X="3" Y="3"/>
+			</Image>
+			<Image Type="GoldClickSword" Imageset="UIIconEvent8" Image="gold_2step_12">
+				<Area X="12" Y="6"/>
+			</Image>
+			<Image Type="GoldClickMoveSword" Imageset="UIIconEvent8" Image="gold_2step_12">
+				<Area X="12" Y="6"/>
+			</Image>
+			<Image Type="GoldStickedSword" Imageset="UIIconEvent8" Image="gold_3step_12">
+				<Area X="3" Y="3"/>
+			</Image>
+			<Image Type="SilverClickSword" Imageset="UIIconEvent8" Image="silver_2step_12">
+				<Area X="12" Y="6"/>
+			</Image>
+			<Image Type="SilverClickMoveSword" Imageset="UIIconEvent8" Image="silver_2step_12">
+				<Area X="12" Y="6"/>
+			</Image>
+			<Image Type="SilverStickedSword" Imageset="UIIconEvent8" Image="silver_3step_12">
+				<Area X="3" Y="3"/>
+			</Image>
+			<Image Type="WoodClickSword" Imageset="UIIconEvent8" Image="wood_1step_12">
+				<Area X="12" Y="6"/>
+			</Image>
+			<Image Type="WoodClickMoveSword" Imageset="UIIconEvent8" Image="wood_2step_12">
+				<Area X="12" Y="6"/>
+			</Image>
+			<Image Type="WoodStickedSword" Imageset="UIIconEvent8" Image="wood_3step_12">
+				<Area X="3" Y="3"/>
+			</Image>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           StickedWoodSound = "oak/Attack_1.wav"
+				   StickedMetalSound = "oak/Attack_2.wav"
+				   StickedCriticalWoodSound = "oak/Attack_1_C.wav"
+				   StickedCriticalMetalSound = "oak/Attack_2_C.wav"
+				   DamageSound = "oak/Beaten.wav"
+				   CriticalDamageSound = "oak/Beaten_2.wav"
+				   EndDamageSound = "oak/Flying_DeveloperK_2.wav"
+				   EffectXPos="15"
+				   EffectYPos="21"/>
+	</Window>
+	<Window ClassName="OakHoleButton" Id="113">
+		<Size X="242" Y="247" Width="31" Height="49" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="OverSword" Imageset="UIIconEvent8" Image="bt01_roulette_pirate_over_05">
+				<Area X="-2" Y="-8" Reverse="Horz"/>
+			</Image>
+			<Image Type="GoldClickSword" Imageset="UIIconEvent8" Image="gold_2step_05">
+				<Area X="8" Y="-20" Reverse="Horz"/>
+			</Image>
+			<Image Type="GoldClickMoveSword" Imageset="UIIconEvent8" Image="gold_2step_05">
+				<Area X="8" Y="-20" Reverse="Horz"/>
+			</Image>
+			<Image Type="GoldStickedSword" Imageset="UIIconEvent8" Image="gold_3step_05">
+				<Area X="-2" Y="-8" Reverse="Horz"/>
+			</Image>
+			<Image Type="SilverClickSword" Imageset="UIIconEvent8" Image="silver_2step_05">
+				<Area X="8" Y="-20" Reverse="Horz"/>
+			</Image>
+			<Image Type="SilverClickMoveSword" Imageset="UIIconEvent8" Image="silver_2step_05">
+				<Area X="8" Y="-20" Reverse="Horz"/>
+			</Image>
+			<Image Type="SilverStickedSword" Imageset="UIIconEvent8" Image="silver_3step_05">
+				<Area X="-2" Y="-8" Reverse="Horz"/>
+			</Image>
+			<Image Type="WoodClickSword" Imageset="UIIconEvent8" Image="wood_1step_05">
+				<Area X="8" Y="-20" Reverse="Horz"/>
+			</Image>
+			<Image Type="WoodClickMoveSword" Imageset="UIIconEvent8" Image="wood_2step_05">
+				<Area X="8" Y="-20" Reverse="Horz"/>
+			</Image>
+			<Image Type="WoodStickedSword" Imageset="UIIconEvent8" Image="wood_3step_05">
+				<Area X="-2" Y="-8" Reverse="Horz"/>
+			</Image>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           StickedWoodSound = "oak/Attack_1.wav"
+				   StickedMetalSound = "oak/Attack_2.wav"
+				   StickedCriticalWoodSound = "oak/Attack_1_C.wav"
+				   StickedCriticalMetalSound = "oak/Attack_2_C.wav"
+				   DamageSound = "oak/Beaten.wav"
+				   CriticalDamageSound = "oak/Beaten_2.wav"
+				   EndDamageSound = "oak/Flying_DeveloperK_2.wav"
+				   EffectXPos="15"
+				   EffectYPos="24"/>
+	</Window>
+	<Window ClassName="OakHoleButton" Id="114">
+		<Size X="250" Y="306" Width="31" Height="49" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="OverSword" Imageset="UIIconEvent8" Image="bt01_roulette_pirate_over_06">
+				<Area X="1" Y="-2" Reverse="Horz"/>
+			</Image>
+			<Image Type="GoldClickSword" Imageset="UIIconEvent8" Image="gold_2step_06">
+				<Area X="8" Y="1" Reverse="Horz"/>
+			</Image>
+			<Image Type="GoldClickMoveSword" Imageset="UIIconEvent8" Image="gold_2step_06">
+				<Area X="8" Y="1" Reverse="Horz"/>
+			</Image>
+			<Image Type="GoldStickedSword" Imageset="UIIconEvent8" Image="gold_3step_06">
+				<Area X="1" Y="-2" Reverse="Horz"/>
+			</Image>
+			<Image Type="SilverClickSword" Imageset="UIIconEvent8" Image="silver_2step_06">
+				<Area X="8" Y="1" Reverse="Horz"/>
+			</Image>
+			<Image Type="SilverClickMoveSword" Imageset="UIIconEvent8" Image="silver_2step_06">
+				<Area X="8" Y="1" Reverse="Horz"/>
+			</Image>
+			<Image Type="SilverStickedSword" Imageset="UIIconEvent8" Image="silver_3step_06">
+				<Area X="1" Y="-2" Reverse="Horz"/>
+			</Image>
+			<Image Type="WoodClickSword" Imageset="UIIconEvent8" Image="wood_1step_06">
+				<Area X="8" Y="1" Reverse="Horz"/>
+			</Image>
+			<Image Type="WoodClickMoveSword" Imageset="UIIconEvent8" Image="wood_2step_06">
+				<Area X="8" Y="1" Reverse="Horz"/>
+			</Image>
+			<Image Type="WoodStickedSword" Imageset="UIIconEvent8" Image="wood_3step_06">
+				<Area X="1" Y="-2" Reverse="Horz"/>
+			</Image>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           StickedWoodSound = "oak/Attack_1.wav"
+				   StickedMetalSound = "oak/Attack_2.wav"
+				   StickedCriticalWoodSound = "oak/Attack_1_C.wav"
+				   StickedCriticalMetalSound = "oak/Attack_2_C.wav"
+				   DamageSound = "oak/Beaten.wav"
+				   CriticalDamageSound = "oak/Beaten_2.wav"
+				   EndDamageSound = "oak/Flying_DeveloperK_2.wav"
+				   EffectXPos="15"
+				   EffectYPos="26"/>
+	</Window>
+	<Window ClassName="OakHoleButton" Id="115">
+		<Size X="249" Y="364" Width="31" Height="49" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="OverSword" Imageset="UIIconEvent8" Image="bt01_roulette_pirate_over_07">
+				<Area X="2" Y="3" Reverse="Horz"/>
+			</Image>
+			<Image Type="GoldClickSword" Imageset="UIIconEvent8" Image="gold_2step_07">
+				<Area X="8" Y="15" Reverse="Horz"/>
+			</Image>
+			<Image Type="GoldClickMoveSword" Imageset="UIIconEvent8" Image="gold_2step_07">
+				<Area X="8" Y="15" Reverse="Horz"/>
+			</Image>
+			<Image Type="GoldStickedSword" Imageset="UIIconEvent8" Image="gold_3step_07">
+				<Area X="2" Y="3" Reverse="Horz"/>
+			</Image>
+			<Image Type="SilverClickSword" Imageset="UIIconEvent8" Image="silver_2step_07">
+				<Area X="8" Y="15" Reverse="Horz"/>
+			</Image>
+			<Image Type="SilverClickMoveSword" Imageset="UIIconEvent8" Image="silver_2step_07">
+				<Area X="8" Y="15" Reverse="Horz"/>
+			</Image>
+			<Image Type="SilverStickedSword" Imageset="UIIconEvent8" Image="silver_3step_07">
+				<Area X="2" Y="3" Reverse="Horz"/>
+			</Image>
+			<Image Type="WoodClickSword" Imageset="UIIconEvent8" Image="wood_1step_07">
+				<Area X="8" Y="15" Reverse="Horz"/>
+			</Image>
+			<Image Type="WoodClickMoveSword" Imageset="UIIconEvent8" Image="wood_2step_07">
+				<Area X="8" Y="15" Reverse="Horz"/>
+			</Image>
+			<Image Type="WoodStickedSword" Imageset="UIIconEvent8" Image="wood_3step_07">
+				<Area X="2" Y="3" Reverse="Horz"/>
+			</Image>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           StickedWoodSound = "oak/Attack_1.wav"
+				   StickedMetalSound = "oak/Attack_2.wav"
+				   StickedCriticalWoodSound = "oak/Attack_1_C.wav"
+				   StickedCriticalMetalSound = "oak/Attack_2_C.wav"
+				   DamageSound = "oak/Beaten.wav"
+				   CriticalDamageSound = "oak/Beaten_2.wav"
+				   EndDamageSound = "oak/Flying_DeveloperK_2.wav"
+				   EffectXPos="15"
+				   EffectYPos="26"/>
+	</Window>	
+	<!-- 네번째 줄 -->
+	<Window ClassName="OakHoleButton" Id="116">
+		<Size X="239" Y="423" Width="31" Height="49" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="OverSword" Imageset="UIIconEvent8" Image="bt01_roulette_pirate_over_08">
+				<Area X="-2" Y="-3" Reverse="Horz"/>
+			</Image>
+			<Image Type="GoldClickSword" Imageset="UIIconEvent8" Image="gold_2step_08">
+				<Area X="11" Y="16" Reverse="Horz"/>
+			</Image>
+			<Image Type="GoldClickMoveSword" Imageset="UIIconEvent8" Image="gold_2step_08">
+				<Area X="11" Y="16" Reverse="Horz"/>
+			</Image>
+			<Image Type="GoldStickedSword" Imageset="UIIconEvent8" Image="gold_3step_08">
+				<Area X="-2" Y="-3" Reverse="Horz"/>
+			</Image>
+			<Image Type="SilverClickSword" Imageset="UIIconEvent8" Image="silver_2step_08">
+				<Area X="11" Y="16" Reverse="Horz"/>
+			</Image>
+			<Image Type="SilverClickMoveSword" Imageset="UIIconEvent8" Image="silver_2step_08">
+				<Area X="11" Y="16" Reverse="Horz"/>
+			</Image>
+			<Image Type="SilverStickedSword" Imageset="UIIconEvent8" Image="silver_3step_08">
+				<Area X="-2" Y="-3" Reverse="Horz"/>
+			</Image>
+			<Image Type="WoodClickSword" Imageset="UIIconEvent8" Image="wood_1step_08">
+				<Area X="11" Y="16" Reverse="Horz"/>
+			</Image>
+			<Image Type="WoodClickMoveSword" Imageset="UIIconEvent8" Image="wood_2step_08">
+				<Area X="11" Y="16" Reverse="Horz"/>
+			</Image>
+			<Image Type="WoodStickedSword" Imageset="UIIconEvent8" Image="wood_3step_08">
+				<Area X="-2" Y="-3" Reverse="Horz"/>
+			</Image>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           StickedWoodSound = "oak/Attack_1.wav"
+				   StickedMetalSound = "oak/Attack_2.wav"
+				   StickedCriticalWoodSound = "oak/Attack_1_C.wav"
+				   StickedCriticalMetalSound = "oak/Attack_2_C.wav"
+				   DamageSound = "oak/Beaten.wav"
+				   CriticalDamageSound = "oak/Beaten_2.wav"
+				   EndDamageSound = "oak/Flying_DeveloperK_2.wav"
+				   EffectXPos="15"
+				   EffectYPos="24"/>
+	</Window>
+	<Window ClassName="OakHoleButton" Id="117">
+		<Size X="282" Y="232" Width="31" Height="49"/>
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="OverSword" Imageset="UIIconEvent8" Image="bt01_roulette_pirate_over_01">
+				<Area X="-7" Y="-1" Reverse="Horz"/>
+			</Image>
+			<Image Type="GoldClickSword" Imageset="UIIconEvent8" Image="gold_2step_01">
+				<Area X="8" Y="-23" Reverse="Horz"/>
+			</Image>
+			<Image Type="GoldClickMoveSword" Imageset="UIIconEvent8" Image="gold_2step_01">
+				<Area X="8" Y="-23" Reverse="Horz"/>
+			</Image>
+			<Image Type="GoldStickedSword" Imageset="UIIconEvent8" Image="gold_3step_01">
+				<Area X="-7" Y="-1" Reverse="Horz"/>
+			</Image>
+			<Image Type="SilverClickSword" Imageset="UIIconEvent8" Image="silver_2step_01">
+				<Area X="8" Y="-23" Reverse="Horz"/>
+			</Image>
+			<Image Type="SilverClickMoveSword" Imageset="UIIconEvent8" Image="silver_2step_01">
+				<Area X="8" Y="-23" Reverse="Horz"/>
+			</Image>
+			<Image Type="SilverStickedSword" Imageset="UIIconEvent8" Image="silver_3step_01">
+				<Area X="-7" Y="-1" Reverse="Horz"/>
+			</Image>
+			<Image Type="WoodClickSword" Imageset="UIIconEvent8" Image="wood_1step_01">
+				<Area X="8" Y="-23" Reverse="Horz"/>
+			</Image>
+			<Image Type="WoodClickMoveSword" Imageset="UIIconEvent8" Image="wood_2step_01">
+				<Area X="8" Y="-23" Reverse="Horz"/>
+			</Image>
+			<Image Type="WoodStickedSword" Imageset="UIIconEvent8" Image="wood_3step_01">
+				<Area X="-7" Y="-1" Reverse="Horz"/>
+			</Image>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           StickedWoodSound = "oak/Attack_1.wav"
+				   StickedMetalSound = "oak/Attack_2.wav"
+				   StickedCriticalWoodSound = "oak/Attack_1_C.wav"
+				   StickedCriticalMetalSound = "oak/Attack_2_C.wav"
+				   DamageSound = "oak/Beaten.wav"
+				   CriticalDamageSound = "oak/Beaten_2.wav"
+				   EndDamageSound = "oak/Flying_DeveloperK_2.wav"
+				   EffectXPos="12"
+				   EffectYPos="27"/>
+	</Window>
+	<Window ClassName="OakHoleButton" Id="118">
+		<Size X="292" Y="292" Width="31" Height="49"/>
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="OverSword" Imageset="UIIconEvent8" Image="bt01_roulette_pirate_over_02">
+				<Area X="1" Y="-2" Reverse="Horz"/>
+			</Image>
+			<Image Type="GoldClickSword" Imageset="UIIconEvent8" Image="gold_2step_02">
+				<Area X="13" Y="-7" Reverse="Horz"/>
+			</Image>
+			<Image Type="GoldClickMoveSword" Imageset="UIIconEvent8" Image="gold_2step_02">
+				<Area X="13" Y="-7" Reverse="Horz"/>
+			</Image>
+			<Image Type="GoldStickedSword" Imageset="UIIconEvent8" Image="gold_3step_02">
+				<Area X="1" Y="-2" Reverse="Horz"/>
+			</Image>
+			<Image Type="SilverClickSword" Imageset="UIIconEvent8" Image="silver_2step_02">
+				<Area X="13" Y="-7" Reverse="Horz"/>
+			</Image>
+			<Image Type="SilverClickMoveSword" Imageset="UIIconEvent8" Image="silver_2step_02">
+				<Area X="13" Y="-7" Reverse="Horz"/>
+			</Image>
+			<Image Type="SilverStickedSword" Imageset="UIIconEvent8" Image="silver_3step_02">
+				<Area X="1" Y="-2" Reverse="Horz"/>
+			</Image>
+			<Image Type="WoodClickSword" Imageset="UIIconEvent8" Image="wood_1step_02">
+				<Area X="13" Y="-7" Reverse="Horz"/>
+			</Image>
+			<Image Type="WoodClickMoveSword" Imageset="UIIconEvent8" Image="wood_2step_02">
+				<Area X="13" Y="-7" Reverse="Horz"/>
+			</Image>
+			<Image Type="WoodStickedSword" Imageset="UIIconEvent8" Image="wood_3step_02">
+				<Area X="1" Y="-2" Reverse="Horz"/>
+			</Image>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           StickedWoodSound = "oak/Attack_1.wav"
+				   StickedMetalSound = "oak/Attack_2.wav"
+				   StickedCriticalWoodSound = "oak/Attack_1_C.wav"
+				   StickedCriticalMetalSound = "oak/Attack_2_C.wav"
+				   DamageSound = "oak/Beaten.wav"
+				   CriticalDamageSound = "oak/Beaten_2.wav"
+				   EndDamageSound = "oak/Flying_DeveloperK_2.wav"
+				   EffectXPos="16"
+				   EffectYPos="24"/>
+	</Window>
+	<Window ClassName="OakHoleButton" Id="119">
+		<Size X="292" Y="353" Width="31" Height="49"/>
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="OverSword" Imageset="UIIconEvent8" Image="bt01_roulette_pirate_over_03">
+				<Area X="1" Y="0" Reverse="Horz"/>
+			</Image>
+			<Image Type="GoldClickSword" Imageset="UIIconEvent8" Image="gold_2step_03">
+				<Area X="14" Y="9" Reverse="Horz"/>
+			</Image>
+			<Image Type="GoldClickMoveSword" Imageset="UIIconEvent8" Image="gold_2step_03">
+				<Area X="14" Y="9" Reverse="Horz"/>
+			</Image>
+			<Image Type="GoldStickedSword" Imageset="UIIconEvent8" Image="gold_3step_03">
+				<Area X="1" Y="0" Reverse="Horz"/>
+			</Image>
+			<Image Type="SilverClickSword" Imageset="UIIconEvent8" Image="silver_2step_03">
+				<Area X="14" Y="9" Reverse="Horz"/>
+			</Image>
+			<Image Type="SilverClickMoveSword" Imageset="UIIconEvent8" Image="silver_2step_03">
+				<Area X="14" Y="9" Reverse="Horz"/>
+			</Image>
+			<Image Type="SilverStickedSword" Imageset="UIIconEvent8" Image="silver_3step_03">
+				<Area X="1" Y="0" Reverse="Horz"/>
+			</Image>
+			<Image Type="WoodClickSword" Imageset="UIIconEvent8" Image="wood_1step_03">
+				<Area X="14" Y="9" Reverse="Horz"/>
+			</Image>
+			<Image Type="WoodClickMoveSword" Imageset="UIIconEvent8" Image="wood_2step_03">
+				<Area X="14" Y="9" Reverse="Horz"/>
+			</Image>
+			<Image Type="WoodStickedSword" Imageset="UIIconEvent8" Image="wood_3step_03">
+				<Area X="1" Y="0" Reverse="Horz"/>
+			</Image>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           StickedWoodSound = "oak/Attack_1.wav"
+				   StickedMetalSound = "oak/Attack_2.wav"
+				   StickedCriticalWoodSound = "oak/Attack_1_C.wav"
+				   StickedCriticalMetalSound = "oak/Attack_2_C.wav"
+				   DamageSound = "oak/Beaten.wav"
+				   CriticalDamageSound = "oak/Beaten_2.wav"
+				   EndDamageSound = "oak/Flying_DeveloperK_2.wav"
+				   EffectXPos="16"
+				   EffectYPos="21"/>
+	</Window>
+	<Window ClassName="OakHoleButton" Id="120">
+		<Size X="279" Y="418" Width="31" Height="49"/>
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="OverSword" Imageset="UIIconEvent8" Image="bt01_roulette_pirate_over_04">
+				<Area X="-7" Y="-6" Reverse="Horz"/>
+			</Image>
+			<Image Type="GoldClickSword" Imageset="UIIconEvent8" Image="gold_2step_04">
+				<Area X="11" Y="9" Reverse="Horz"/>
+			</Image>
+			<Image Type="GoldClickMoveSword" Imageset="UIIconEvent8" Image="gold_2step_04">
+				<Area X="11" Y="9" Reverse="Horz"/>
+			</Image>
+			<Image Type="GoldStickedSword" Imageset="UIIconEvent8" Image="gold_3step_04">
+				<Area X="-7" Y="-6" Reverse="Horz"/>
+			</Image>
+			<Image Type="SilverClickSword" Imageset="UIIconEvent8" Image="silver_2step_04">
+				<Area X="11" Y="9" Reverse="Horz"/>
+			</Image>
+			<Image Type="SilverClickMoveSword" Imageset="UIIconEvent8" Image="silver_2step_04">
+				<Area X="11" Y="9" Reverse="Horz"/>
+			</Image>
+			<Image Type="SilverStickedSword" Imageset="UIIconEvent8" Image="silver_3step_04">
+				<Area X="-7" Y="-6" Reverse="Horz"/>
+			</Image>
+			<Image Type="WoodClickSword" Imageset="UIIconEvent8" Image="wood_1step_04">
+				<Area X="11" Y="9" Reverse="Horz"/>
+			</Image>
+			<Image Type="WoodClickMoveSword" Imageset="UIIconEvent8" Image="wood_2ste_04">
+				<Area X="11" Y="9" Reverse="Horz"/>
+			</Image>
+			<Image Type="WoodStickedSword" Imageset="UIIconEvent8" Image="wood_3step_04">
+				<Area X="-7" Y="-6" Reverse="Horz"/>
+			</Image>
+		</Imagery>
+    	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           StickedWoodSound = "oak/Attack_1.wav"
+				   StickedMetalSound = "oak/Attack_2.wav"
+				   StickedCriticalWoodSound = "oak/Attack_1_C.wav"
+				   StickedCriticalMetalSound = "oak/Attack_2_C.wav"
+				   DamageSound = "oak/Beaten.wav"
+				   CriticalDamageSound = "oak/Beaten_2.wav"
+				   EndDamageSound = "oak/Flying_DeveloperK_2.wav"
+				   EffectXPos="13"
+				   EffectYPos="15"/>
+	</Window>
+
+</Window>

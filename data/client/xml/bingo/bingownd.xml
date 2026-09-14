@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="BingoWnd" Id="10019">
+	<Size X="0" Y="-20" XAlign="Center" YAlign="Center" Width="580" Height="457"/>
+	<Style>IWS_START_HIDE|IWS_PROCESS|IWS_MODAL|IWS_EXIT_ESC</Style>
+	<Title>
+		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF0c426f"/>
+		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0c426f"/>
+		<Text>빙고</Text>
+	</Title>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+			<Area X="0" Y="0" Width="580" Height="457"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title">
+			<Area X="5" Y="6" Width="570" Height="36"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="MultiplyFrm" Templete="win1_multiply_right">
+			<Area X="359" Y="0" Width="221" Height="457"/>
+		</DefaultFrameImagery>
+		<Image Type="Good" Imageset="BaseImage019" Image="bingo_textobj_itembg_allbingo" >
+			<Area X="76" Y="54" />
+		</Image>
+		<Image Type="StopEffect1"  Imageset="BaseEffect001" Image="effect_ok_01"/>
+		<Image Type="StopEffect2"  Imageset="BaseEffect001" Image="effect_ok_02"/>
+		<Image Type="StopEffect3"  Imageset="BaseEffect001" Image="effect_ok_03"/>
+		<Image Type="StopEffect4"  Imageset="BaseEffect001" Image="effect_ok_04"/>
+		<Image Type="StopEffect5"  Imageset="BaseEffect001" Image="effect_ok_05"/>
+		<Image Type="StopEffect6"  Imageset="BaseEffect001" Image="effect_ok_06"/>
+		<Image Type="StopEffect7"  Imageset="BaseEffect001" Image="effect_ok_07"/>
+		<Image Type="StopEffect8"  Imageset="BaseEffect001" Image="effect_ok_08"/>
+		<Image Type="StopEffect9"  Imageset="BaseEffect001" Image="effect_ok_09"/>
+		<Image Type="StopEffect10" Imageset="BaseEffect001" Image="effect_ok_10"/>
+	</Imagery>
+	<ExtraInfo RollingGapTime="50"
+						 RollingSound="interface/ceremony/rank_rolling_00.wav"
+						 StopSound="interface/skill_ok_01.wav"/>
+
+	<Window ClassName="ioButton" Id="100">
+		<Size X="546" Y="11" Width="23" Height="23"/>
+		<Style>IWS_TOPMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<Image Type="Disable" Imageset="BaseImage001" Image="icon0_x_grayframe" >
+				<Area X="0" Y="0" />
+			</Image>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="icon0_x" >
+				<Area X="5" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<!--왼쪽상단-->
+	<Window ClassName="RewardButton" Id="11">
+		<Style>IWS_PROCESS</Style>
+		<Size X="17" Y="55" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg" Imageset="BaseImage022" Image="bingo_obj_itembg_bottomleft">
+				<Area X="0" Y="0" Reverse="Vert"/>
+			</Image>
+			<Image Type="IconBg" Imageset="BaseImage002" Image="iconeffect_1"/>
+			<Image Type="GetItem" Imageset="BaseImage012" Image="icontext_gain_red"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<!--왼쪽-->
+	<Window ClassName="RewardButton" Id="12">
+		<Style>IWS_PROCESS</Style>
+		<Size X="17" Y="113" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg" Imageset="BaseImage022" Image="bingo_obj_itembg_left"/>
+			<Image Type="IconBg" Imageset="BaseImage002" Image="iconeffect_1"/>
+			<Image Type="GetItem" Imageset="BaseImage012" Image="icontext_gain_red"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="RewardButton" Id="13">
+		<Style>IWS_PROCESS</Style>
+		<Size X="17" Y="167" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg" Imageset="BaseImage022" Image="bingo_obj_itembg_left"/>
+			<Image Type="IconBg" Imageset="BaseImage002" Image="iconeffect_1"/>
+			<Image Type="GetItem" Imageset="BaseImage012" Image="icontext_gain_red"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="RewardButton" Id="14">
+		<Style>IWS_PROCESS</Style>
+		<Size X="17" Y="221" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg" Imageset="BaseImage022" Image="bingo_obj_itembg_left"/>
+			<Image Type="IconBg" Imageset="BaseImage002" Image="iconeffect_1"/>
+			<Image Type="GetItem" Imageset="BaseImage012" Image="icontext_gain_red"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="RewardButton" Id="15">
+		<Style>IWS_PROCESS</Style>
+		<Size X="17" Y="275" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg" Imageset="BaseImage022" Image="bingo_obj_itembg_left"/>
+			<Image Type="IconBg" Imageset="BaseImage002" Image="iconeffect_1"/>
+			<Image Type="GetItem" Imageset="BaseImage012" Image="icontext_gain_red"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="RewardButton" Id="16">
+		<Style>IWS_PROCESS</Style>
+		<Size X="17" Y="329" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg" Imageset="BaseImage022" Image="bingo_obj_itembg_left"/>
+			<Image Type="IconBg" Imageset="BaseImage002" Image="iconeffect_1"/>
+			<Image Type="GetItem" Imageset="BaseImage012" Image="icontext_gain_red"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<!--왼쪽하단-->
+	<Window ClassName="RewardButton" Id="17">
+		<Style>IWS_PROCESS</Style>
+		<Size X="17" Y="388" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg" Imageset="BaseImage022" Image="bingo_obj_itembg_bottomleft"/>
+			<Image Type="IconBg" Imageset="BaseImage002" Image="iconeffect_1"/>
+			<Image Type="GetItem" Imageset="BaseImage012" Image="icontext_gain_red"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<!--하단-->
+	<Window ClassName="RewardButton" Id="18">
+		<Style>IWS_PROCESS</Style>
+		<Size X="76" Y="388" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg" Imageset="BaseImage022" Image="bingo_obj_itembg_bottom"/>
+			<Image Type="IconBg" Imageset="BaseImage002" Image="iconeffect_1"/>
+			<Image Type="GetItem" Imageset="BaseImage012" Image="icontext_gain_red"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="RewardButton" Id="19">
+		<Style>IWS_PROCESS</Style>
+		<Size X="130" Y="388" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg" Imageset="BaseImage022" Image="bingo_obj_itembg_bottom"/>
+			<Image Type="IconBg" Imageset="BaseImage002" Image="iconeffect_1"/>
+			<Image Type="GetItem" Imageset="BaseImage012" Image="icontext_gain_red"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="RewardButton" Id="20">
+		<Style>IWS_PROCESS</Style>
+		<Size X="184" Y="388" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg" Imageset="BaseImage022" Image="bingo_obj_itembg_bottom"/>
+			<Image Type="IconBg" Imageset="BaseImage002" Image="iconeffect_1"/>
+			<Image Type="GetItem" Imageset="BaseImage012" Image="icontext_gain_red"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="RewardButton" Id="21">
+		<Style>IWS_PROCESS</Style>
+		<Size X="238" Y="388" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg" Imageset="BaseImage022" Image="bingo_obj_itembg_bottom"/>
+			<Image Type="IconBg" Imageset="BaseImage002" Image="iconeffect_1"/>
+			<Image Type="GetItem" Imageset="BaseImage012" Image="icontext_gain_red"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="RewardButton" Id="22">
+		<Style>IWS_PROCESS</Style>
+		<Size X="292" Y="388" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg" Imageset="BaseImage022" Image="bingo_obj_itembg_bottom"/>
+			<Image Type="IconBg" Imageset="BaseImage002" Image="iconeffect_1"/>
+			<Image Type="GetItem" Imageset="BaseImage012" Image="icontext_gain_red"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="RewardButton" Id="23">
+		<Style>IWS_PROCESS</Style>
+		<Size X="236" Y="54" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="IconBg" Imageset="BaseImage002" Image="iconeffect_1"/>
+			<Image Type="GetItem" Imageset="BaseImage012" Image="icontext_gain_red"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<!--숫자판-->
+	<Window ClassName="NumberButton" Id="101">
+		<Style>IWS_PROCESS</Style>
+		<Size X="76" Y="113" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg"      Imageset="BaseImage022" Image="bingo_obj_numbg_blue_basic"/>
+			<Image Type="ButtonBgLight" Imageset="BaseImage022" Image="bingo_obj_numbg_blue_light"/>
+			<Image Type="ButtonBgRed"        Imageset="BaseImage022" Image="bingo_obj_numbg_red_single"/>
+			<Image Type="ButtonBgRedLeft"    Imageset="BaseImage022" Image="bingo_obj_numbg_red_left"/>
+			<Image Type="ButtonBgRedTop"     Imageset="BaseImage022" Image="bingo_obj_numbg_red_top"/>
+			<Image Type="ButtonBgRedLeftTop" Imageset="BaseImage022" Image="bingo_obj_numbg_red_lefttop"/>
+			<Image Type="ButtonBingoEffect"  Imageset="BaseImage022" Image="bingo_eff_num"/>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="NumberButton" Id="102">
+		<Style>IWS_PROCESS</Style>
+		<Size X="130" Y="113" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg"      Imageset="BaseImage022" Image="bingo_obj_numbg_blue_basic"/>
+			<Image Type="ButtonBgLight" Imageset="BaseImage022" Image="bingo_obj_numbg_blue_light"/>
+			<Image Type="ButtonBgRed"        Imageset="BaseImage022" Image="bingo_obj_numbg_red_single"/>
+			<Image Type="ButtonBgRedLeft"    Imageset="BaseImage022" Image="bingo_obj_numbg_red_left"/>
+			<Image Type="ButtonBgRedTop"     Imageset="BaseImage022" Image="bingo_obj_numbg_red_top"/>
+			<Image Type="ButtonBgRedLeftTop" Imageset="BaseImage022" Image="bingo_obj_numbg_red_lefttop"/>
+			<Image Type="ButtonBingoEffect"  Imageset="BaseImage022" Image="bingo_eff_num"/>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="NumberButton" Id="103">
+		<Style>IWS_PROCESS</Style>
+		<Size X="184" Y="113" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg"      Imageset="BaseImage022" Image="bingo_obj_numbg_blue_basic"/>
+			<Image Type="ButtonBgLight" Imageset="BaseImage022" Image="bingo_obj_numbg_blue_light"/>
+			<Image Type="ButtonBgRed"        Imageset="BaseImage022" Image="bingo_obj_numbg_red_single"/>
+			<Image Type="ButtonBgRedLeft"    Imageset="BaseImage022" Image="bingo_obj_numbg_red_left"/>
+			<Image Type="ButtonBgRedTop"     Imageset="BaseImage022" Image="bingo_obj_numbg_red_top"/>
+			<Image Type="ButtonBgRedLeftTop" Imageset="BaseImage022" Image="bingo_obj_numbg_red_lefttop"/>
+			<Image Type="ButtonBingoEffect"  Imageset="BaseImage022" Image="bingo_eff_num"/>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="NumberButton" Id="104">
+		<Style>IWS_PROCESS</Style>
+		<Size X="238" Y="113" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg"      Imageset="BaseImage022" Image="bingo_obj_numbg_blue_basic"/>
+			<Image Type="ButtonBgLight" Imageset="BaseImage022" Image="bingo_obj_numbg_blue_light"/>
+			<Image Type="ButtonBgRed"        Imageset="BaseImage022" Image="bingo_obj_numbg_red_single"/>
+			<Image Type="ButtonBgRedLeft"    Imageset="BaseImage022" Image="bingo_obj_numbg_red_left"/>
+			<Image Type="ButtonBgRedTop"     Imageset="BaseImage022" Image="bingo_obj_numbg_red_top"/>
+			<Image Type="ButtonBgRedLeftTop" Imageset="BaseImage022" Image="bingo_obj_numbg_red_lefttop"/>
+			<Image Type="ButtonBingoEffect"  Imageset="BaseImage022" Image="bingo_eff_num"/>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="NumberButton" Id="105">
+		<Style>IWS_PROCESS</Style>
+		<Size X="292" Y="113" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg"      Imageset="BaseImage022" Image="bingo_obj_numbg_blue_basic"/>
+			<Image Type="ButtonBgLight" Imageset="BaseImage022" Image="bingo_obj_numbg_blue_light"/>
+			<Image Type="ButtonBgRed"        Imageset="BaseImage022" Image="bingo_obj_numbg_red_single"/>
+			<Image Type="ButtonBgRedLeft"    Imageset="BaseImage022" Image="bingo_obj_numbg_red_left"/>
+			<Image Type="ButtonBgRedTop"     Imageset="BaseImage022" Image="bingo_obj_numbg_red_top"/>
+			<Image Type="ButtonBgRedLeftTop" Imageset="BaseImage022" Image="bingo_obj_numbg_red_lefttop"/>
+			<Image Type="ButtonBingoEffect"  Imageset="BaseImage022" Image="bingo_eff_num"/>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="NumberButton" Id="106">
+		<Style>IWS_PROCESS</Style>
+		<Size X="76" Y="167" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg"      Imageset="BaseImage022" Image="bingo_obj_numbg_blue_basic"/>
+			<Image Type="ButtonBgLight" Imageset="BaseImage022" Image="bingo_obj_numbg_blue_light"/>
+			<Image Type="ButtonBgRed"        Imageset="BaseImage022" Image="bingo_obj_numbg_red_single"/>
+			<Image Type="ButtonBgRedLeft"    Imageset="BaseImage022" Image="bingo_obj_numbg_red_left"/>
+			<Image Type="ButtonBgRedTop"     Imageset="BaseImage022" Image="bingo_obj_numbg_red_top"/>
+			<Image Type="ButtonBgRedLeftTop" Imageset="BaseImage022" Image="bingo_obj_numbg_red_lefttop"/>
+			<Image Type="ButtonBingoEffect"  Imageset="BaseImage022" Image="bingo_eff_num"/>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="NumberButton" Id="107">
+		<Style>IWS_PROCESS</Style>
+		<Size X="130" Y="167" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg"      Imageset="BaseImage022" Image="bingo_obj_numbg_blue_basic"/>
+			<Image Type="ButtonBgLight" Imageset="BaseImage022" Image="bingo_obj_numbg_blue_light"/>
+			<Image Type="ButtonBgRed"        Imageset="BaseImage022" Image="bingo_obj_numbg_red_single"/>
+			<Image Type="ButtonBgRedLeft"    Imageset="BaseImage022" Image="bingo_obj_numbg_red_left"/>
+			<Image Type="ButtonBgRedTop"     Imageset="BaseImage022" Image="bingo_obj_numbg_red_top"/>
+			<Image Type="ButtonBgRedLeftTop" Imageset="BaseImage022" Image="bingo_obj_numbg_red_lefttop"/>
+			<Image Type="ButtonBingoEffect"  Imageset="BaseImage022" Image="bingo_eff_num"/>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="NumberButton" Id="108">
+		<Style>IWS_PROCESS</Style>
+		<Size X="184" Y="167" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg"      Imageset="BaseImage022" Image="bingo_obj_numbg_blue_basic"/>
+			<Image Type="ButtonBgLight" Imageset="BaseImage022" Image="bingo_obj_numbg_blue_light"/>
+			<Image Type="ButtonBgRed"        Imageset="BaseImage022" Image="bingo_obj_numbg_red_single"/>
+			<Image Type="ButtonBgRedLeft"    Imageset="BaseImage022" Image="bingo_obj_numbg_red_left"/>
+			<Image Type="ButtonBgRedTop"     Imageset="BaseImage022" Image="bingo_obj_numbg_red_top"/>
+			<Image Type="ButtonBgRedLeftTop" Imageset="BaseImage022" Image="bingo_obj_numbg_red_lefttop"/>
+			<Image Type="ButtonBingoEffect"  Imageset="BaseImage022" Image="bingo_eff_num"/>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="NumberButton" Id="109">
+		<Style>IWS_PROCESS</Style>
+		<Size X="238" Y="167" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg"      Imageset="BaseImage022" Image="bingo_obj_numbg_blue_basic"/>
+			<Image Type="ButtonBgLight" Imageset="BaseImage022" Image="bingo_obj_numbg_blue_light"/>
+			<Image Type="ButtonBgRed"        Imageset="BaseImage022" Image="bingo_obj_numbg_red_single"/>
+			<Image Type="ButtonBgRedLeft"    Imageset="BaseImage022" Image="bingo_obj_numbg_red_left"/>
+			<Image Type="ButtonBgRedTop"     Imageset="BaseImage022" Image="bingo_obj_numbg_red_top"/>
+			<Image Type="ButtonBgRedLeftTop" Imageset="BaseImage022" Image="bingo_obj_numbg_red_lefttop"/>
+			<Image Type="ButtonBingoEffect"  Imageset="BaseImage022" Image="bingo_eff_num"/>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="NumberButton" Id="110">
+		<Style>IWS_PROCESS</Style>
+		<Size X="292" Y="167" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg"      Imageset="BaseImage022" Image="bingo_obj_numbg_blue_basic"/>
+			<Image Type="ButtonBgLight" Imageset="BaseImage022" Image="bingo_obj_numbg_blue_light"/>
+			<Image Type="ButtonBgRed"        Imageset="BaseImage022" Image="bingo_obj_numbg_red_single"/>
+			<Image Type="ButtonBgRedLeft"    Imageset="BaseImage022" Image="bingo_obj_numbg_red_left"/>
+			<Image Type="ButtonBgRedTop"     Imageset="BaseImage022" Image="bingo_obj_numbg_red_top"/>
+			<Image Type="ButtonBgRedLeftTop" Imageset="BaseImage022" Image="bingo_obj_numbg_red_lefttop"/>
+			<Image Type="ButtonBingoEffect"  Imageset="BaseImage022" Image="bingo_eff_num"/>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="NumberButton" Id="111">
+		<Style>IWS_PROCESS</Style>
+		<Size X="76" Y="221" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg"      Imageset="BaseImage022" Image="bingo_obj_numbg_blue_basic"/>
+			<Image Type="ButtonBgLight" Imageset="BaseImage022" Image="bingo_obj_numbg_blue_light"/>
+			<Image Type="ButtonBgRed"        Imageset="BaseImage022" Image="bingo_obj_numbg_red_single"/>
+			<Image Type="ButtonBgRedLeft"    Imageset="BaseImage022" Image="bingo_obj_numbg_red_left"/>
+			<Image Type="ButtonBgRedTop"     Imageset="BaseImage022" Image="bingo_obj_numbg_red_top"/>
+			<Image Type="ButtonBgRedLeftTop" Imageset="BaseImage022" Image="bingo_obj_numbg_red_lefttop"/>
+			<Image Type="ButtonBingoEffect"  Imageset="BaseImage022" Image="bingo_eff_num"/>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="NumberButton" Id="112">
+		<Style>IWS_PROCESS</Style>
+		<Size X="130" Y="221" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg"      Imageset="BaseImage022" Image="bingo_obj_numbg_blue_basic"/>
+			<Image Type="ButtonBgLight" Imageset="BaseImage022" Image="bingo_obj_numbg_blue_light"/>
+			<Image Type="ButtonBgRed"        Imageset="BaseImage022" Image="bingo_obj_numbg_red_single"/>
+			<Image Type="ButtonBgRedLeft"    Imageset="BaseImage022" Image="bingo_obj_numbg_red_left"/>
+			<Image Type="ButtonBgRedTop"     Imageset="BaseImage022" Image="bingo_obj_numbg_red_top"/>
+			<Image Type="ButtonBgRedLeftTop" Imageset="BaseImage022" Image="bingo_obj_numbg_red_lefttop"/>
+			<Image Type="ButtonBingoEffect"  Imageset="BaseImage022" Image="bingo_eff_num"/>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="NumberButton" Id="113">
+		<Style>IWS_PROCESS</Style>
+		<Size X="184" Y="221" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg"      Imageset="BaseImage022" Image="bingo_obj_numbg_blue_basic"/>
+			<Image Type="ButtonBgLight" Imageset="BaseImage022" Image="bingo_obj_numbg_blue_light"/>
+			<Image Type="ButtonBgRed"        Imageset="BaseImage022" Image="bingo_obj_numbg_red_single"/>
+			<Image Type="ButtonBgRedLeft"    Imageset="BaseImage022" Image="bingo_obj_numbg_red_left"/>
+			<Image Type="ButtonBgRedTop"     Imageset="BaseImage022" Image="bingo_obj_numbg_red_top"/>
+			<Image Type="ButtonBgRedLeftTop" Imageset="BaseImage022" Image="bingo_obj_numbg_red_lefttop"/>
+			<Image Type="ButtonBingoEffect"  Imageset="BaseImage022" Image="bingo_eff_num"/>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="NumberButton" Id="114">
+		<Style>IWS_PROCESS</Style>
+		<Size X="238" Y="221" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg"      Imageset="BaseImage022" Image="bingo_obj_numbg_blue_basic"/>
+			<Image Type="ButtonBgLight" Imageset="BaseImage022" Image="bingo_obj_numbg_blue_light"/>
+			<Image Type="ButtonBgRed"        Imageset="BaseImage022" Image="bingo_obj_numbg_red_single"/>
+			<Image Type="ButtonBgRedLeft"    Imageset="BaseImage022" Image="bingo_obj_numbg_red_left"/>
+			<Image Type="ButtonBgRedTop"     Imageset="BaseImage022" Image="bingo_obj_numbg_red_top"/>
+			<Image Type="ButtonBgRedLeftTop" Imageset="BaseImage022" Image="bingo_obj_numbg_red_lefttop"/>
+			<Image Type="ButtonBingoEffect"  Imageset="BaseImage022" Image="bingo_eff_num"/>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="NumberButton" Id="115">
+		<Style>IWS_PROCESS</Style>
+		<Size X="292" Y="221" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg"      Imageset="BaseImage022" Image="bingo_obj_numbg_blue_basic"/>
+			<Image Type="ButtonBgLight" Imageset="BaseImage022" Image="bingo_obj_numbg_blue_light"/>
+			<Image Type="ButtonBgRed"        Imageset="BaseImage022" Image="bingo_obj_numbg_red_single"/>
+			<Image Type="ButtonBgRedLeft"    Imageset="BaseImage022" Image="bingo_obj_numbg_red_left"/>
+			<Image Type="ButtonBgRedTop"     Imageset="BaseImage022" Image="bingo_obj_numbg_red_top"/>
+			<Image Type="ButtonBgRedLeftTop" Imageset="BaseImage022" Image="bingo_obj_numbg_red_lefttop"/>
+			<Image Type="ButtonBingoEffect"  Imageset="BaseImage022" Image="bingo_eff_num"/>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="NumberButton" Id="116">
+		<Style>IWS_PROCESS</Style>
+		<Size X="76" Y="275" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg"      Imageset="BaseImage022" Image="bingo_obj_numbg_blue_basic"/>
+			<Image Type="ButtonBgLight" Imageset="BaseImage022" Image="bingo_obj_numbg_blue_light"/>
+			<Image Type="ButtonBgRed"        Imageset="BaseImage022" Image="bingo_obj_numbg_red_single"/>
+			<Image Type="ButtonBgRedLeft"    Imageset="BaseImage022" Image="bingo_obj_numbg_red_left"/>
+			<Image Type="ButtonBgRedTop"     Imageset="BaseImage022" Image="bingo_obj_numbg_red_top"/>
+			<Image Type="ButtonBgRedLeftTop" Imageset="BaseImage022" Image="bingo_obj_numbg_red_lefttop"/>
+			<Image Type="ButtonBingoEffect"  Imageset="BaseImage022" Image="bingo_eff_num"/>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="NumberButton" Id="117">
+		<Style>IWS_PROCESS</Style>
+		<Size X="130" Y="275" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg"      Imageset="BaseImage022" Image="bingo_obj_numbg_blue_basic"/>
+			<Image Type="ButtonBgLight" Imageset="BaseImage022" Image="bingo_obj_numbg_blue_light"/>
+			<Image Type="ButtonBgRed"        Imageset="BaseImage022" Image="bingo_obj_numbg_red_single"/>
+			<Image Type="ButtonBgRedLeft"    Imageset="BaseImage022" Image="bingo_obj_numbg_red_left"/>
+			<Image Type="ButtonBgRedTop"     Imageset="BaseImage022" Image="bingo_obj_numbg_red_top"/>
+			<Image Type="ButtonBgRedLeftTop" Imageset="BaseImage022" Image="bingo_obj_numbg_red_lefttop"/>
+			<Image Type="ButtonBingoEffect"  Imageset="BaseImage022" Image="bingo_eff_num"/>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="NumberButton" Id="118">
+		<Style>IWS_PROCESS</Style>
+		<Size X="184" Y="275" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg"      Imageset="BaseImage022" Image="bingo_obj_numbg_blue_basic"/>
+			<Image Type="ButtonBgLight" Imageset="BaseImage022" Image="bingo_obj_numbg_blue_light"/>
+			<Image Type="ButtonBgRed"        Imageset="BaseImage022" Image="bingo_obj_numbg_red_single"/>
+			<Image Type="ButtonBgRedLeft"    Imageset="BaseImage022" Image="bingo_obj_numbg_red_left"/>
+			<Image Type="ButtonBgRedTop"     Imageset="BaseImage022" Image="bingo_obj_numbg_red_top"/>
+			<Image Type="ButtonBgRedLeftTop" Imageset="BaseImage022" Image="bingo_obj_numbg_red_lefttop"/>
+			<Image Type="ButtonBingoEffect"  Imageset="BaseImage022" Image="bingo_eff_num"/>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="NumberButton" Id="119">
+		<Style>IWS_PROCESS</Style>
+		<Size X="238" Y="275" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg"      Imageset="BaseImage022" Image="bingo_obj_numbg_blue_basic"/>
+			<Image Type="ButtonBgLight" Imageset="BaseImage022" Image="bingo_obj_numbg_blue_light"/>
+			<Image Type="ButtonBgRed"        Imageset="BaseImage022" Image="bingo_obj_numbg_red_single"/>
+			<Image Type="ButtonBgRedLeft"    Imageset="BaseImage022" Image="bingo_obj_numbg_red_left"/>
+			<Image Type="ButtonBgRedTop"     Imageset="BaseImage022" Image="bingo_obj_numbg_red_top"/>
+			<Image Type="ButtonBgRedLeftTop" Imageset="BaseImage022" Image="bingo_obj_numbg_red_lefttop"/>
+			<Image Type="ButtonBingoEffect"  Imageset="BaseImage022" Image="bingo_eff_num"/>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="NumberButton" Id="120">
+		<Style>IWS_PROCESS</Style>
+		<Size X="292" Y="275" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg"      Imageset="BaseImage022" Image="bingo_obj_numbg_blue_basic"/>
+			<Image Type="ButtonBgLight" Imageset="BaseImage022" Image="bingo_obj_numbg_blue_light"/>
+			<Image Type="ButtonBgRed"        Imageset="BaseImage022" Image="bingo_obj_numbg_red_single"/>
+			<Image Type="ButtonBgRedLeft"    Imageset="BaseImage022" Image="bingo_obj_numbg_red_left"/>
+			<Image Type="ButtonBgRedTop"     Imageset="BaseImage022" Image="bingo_obj_numbg_red_top"/>
+			<Image Type="ButtonBgRedLeftTop" Imageset="BaseImage022" Image="bingo_obj_numbg_red_lefttop"/>
+			<Image Type="ButtonBingoEffect"  Imageset="BaseImage022" Image="bingo_eff_num"/>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="NumberButton" Id="121">
+		<Style>IWS_PROCESS</Style>
+		<Size X="76" Y="329" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg"      Imageset="BaseImage022" Image="bingo_obj_numbg_blue_basic"/>
+			<Image Type="ButtonBgLight" Imageset="BaseImage022" Image="bingo_obj_numbg_blue_light"/>
+			<Image Type="ButtonBgRed"        Imageset="BaseImage022" Image="bingo_obj_numbg_red_single"/>
+			<Image Type="ButtonBgRedLeft"    Imageset="BaseImage022" Image="bingo_obj_numbg_red_left"/>
+			<Image Type="ButtonBgRedTop"     Imageset="BaseImage022" Image="bingo_obj_numbg_red_top"/>
+			<Image Type="ButtonBgRedLeftTop" Imageset="BaseImage022" Image="bingo_obj_numbg_red_lefttop"/>
+			<Image Type="ButtonBingoEffect"  Imageset="BaseImage022" Image="bingo_eff_num"/>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="NumberButton" Id="122">
+		<Style>IWS_PROCESS</Style>
+		<Size X="130" Y="329" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg"      Imageset="BaseImage022" Image="bingo_obj_numbg_blue_basic"/>
+			<Image Type="ButtonBgLight" Imageset="BaseImage022" Image="bingo_obj_numbg_blue_light"/>
+			<Image Type="ButtonBgRed"        Imageset="BaseImage022" Image="bingo_obj_numbg_red_single"/>
+			<Image Type="ButtonBgRedLeft"    Imageset="BaseImage022" Image="bingo_obj_numbg_red_left"/>
+			<Image Type="ButtonBgRedTop"     Imageset="BaseImage022" Image="bingo_obj_numbg_red_top"/>
+			<Image Type="ButtonBgRedLeftTop" Imageset="BaseImage022" Image="bingo_obj_numbg_red_lefttop"/>
+			<Image Type="ButtonBingoEffect"  Imageset="BaseImage022" Image="bingo_eff_num"/>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="NumberButton" Id="123">
+		<Style>IWS_PROCESS</Style>
+		<Size X="184" Y="329" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg"      Imageset="BaseImage022" Image="bingo_obj_numbg_blue_basic"/>
+			<Image Type="ButtonBgLight" Imageset="BaseImage022" Image="bingo_obj_numbg_blue_light"/>
+			<Image Type="ButtonBgRed"        Imageset="BaseImage022" Image="bingo_obj_numbg_red_single"/>
+			<Image Type="ButtonBgRedLeft"    Imageset="BaseImage022" Image="bingo_obj_numbg_red_left"/>
+			<Image Type="ButtonBgRedTop"     Imageset="BaseImage022" Image="bingo_obj_numbg_red_top"/>
+			<Image Type="ButtonBgRedLeftTop" Imageset="BaseImage022" Image="bingo_obj_numbg_red_lefttop"/>
+			<Image Type="ButtonBingoEffect"  Imageset="BaseImage022" Image="bingo_eff_num"/>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="NumberButton" Id="124">
+		<Style>IWS_PROCESS</Style>
+		<Size X="238" Y="329" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg"      Imageset="BaseImage022" Image="bingo_obj_numbg_blue_basic"/>
+			<Image Type="ButtonBgLight" Imageset="BaseImage022" Image="bingo_obj_numbg_blue_light"/>
+			<Image Type="ButtonBgRed"        Imageset="BaseImage022" Image="bingo_obj_numbg_red_single"/>
+			<Image Type="ButtonBgRedLeft"    Imageset="BaseImage022" Image="bingo_obj_numbg_red_left"/>
+			<Image Type="ButtonBgRedTop"     Imageset="BaseImage022" Image="bingo_obj_numbg_red_top"/>
+			<Image Type="ButtonBgRedLeftTop" Imageset="BaseImage022" Image="bingo_obj_numbg_red_lefttop"/>
+			<Image Type="ButtonBingoEffect"  Imageset="BaseImage022" Image="bingo_eff_num"/>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="NumberButton" Id="125">
+		<Style>IWS_PROCESS</Style>
+		<Size X="292" Y="329" Width="52" Height="52"/>
+		<Imagery>
+			<Image Type="ButtonBg"      Imageset="BaseImage022" Image="bingo_obj_numbg_blue_basic"/>
+			<Image Type="ButtonBgLight" Imageset="BaseImage022" Image="bingo_obj_numbg_blue_light"/>
+			<Image Type="ButtonBgRed"        Imageset="BaseImage022" Image="bingo_obj_numbg_red_single"/>
+			<Image Type="ButtonBgRedLeft"    Imageset="BaseImage022" Image="bingo_obj_numbg_red_left"/>
+			<Image Type="ButtonBgRedTop"     Imageset="BaseImage022" Image="bingo_obj_numbg_red_top"/>
+			<Image Type="ButtonBgRedLeftTop" Imageset="BaseImage022" Image="bingo_obj_numbg_red_lefttop"/>
+			<Image Type="ButtonBingoEffect"  Imageset="BaseImage022" Image="bingo_eff_num"/>
+		</Imagery>
+	</Window>
+</Window>

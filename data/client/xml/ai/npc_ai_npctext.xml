@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+<TEXTLIST>
+	<TEXTGROUP 	groupname="wounded_male">
+		<TEXTITEM	name="wound_common_01"	loadtype="300" text="아야!" />
+		<TEXTITEM	name="wound_common_02"	loadtype="300" text="큭...." />
+		<TEXTITEM	name="wound_common_03"	loadtype="300" text="아악!" />
+		<TEXTITEM	name="wound_common_03"	loadtype="300" text="윽.." />
+	</TEXTGROUP>
+	
+	<TEXTGROUP 	groupname="wounded_female">
+		<TEXTITEM	name="wound_common_01"	loadtype="300" text="아야!" />
+		<TEXTITEM	name="wound_common_02"	loadtype="300" text="아파!!" />
+		<TEXTITEM	name="wound_common_03"	loadtype="300" text="우엥..." />
+		<TEXTITEM	name="wound_common_03"	loadtype="300" text="치이..." />
+	</TEXTGROUP>
+	
+	<TEXTGROUP 	groupname="down_male">
+		<TEXTITEM	name="down_common_01"	loadtype="300" text="쳇......" />
+		<TEXTITEM	name="down_common_01"	loadtype="300" text="크으......" />
+		<TEXTITEM	name="down_common_02"	loadtype="300" text="하아... 하아..." />
+		<TEXTITEM	name="down_common_03"	loadtype="300" text="..후우.." />
+	</TEXTGROUP>
+
+	<TEXTGROUP 	groupname="down_female">
+		<TEXTITEM	name="down_common_01"	loadtype="300" text="크으......" />
+		<TEXTITEM	name="down_common_01"	loadtype="300" text="칫......" />
+		<TEXTITEM	name="down_common_02"	loadtype="300" text="하아... 하..." />
+		<TEXTITEM	name="down_common_03"	loadtype="300" text="..키힝....." />
+	</TEXTGROUP>
+</TEXTLIST>

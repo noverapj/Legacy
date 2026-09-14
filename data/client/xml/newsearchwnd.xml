@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="NewSearchWnd" Id="5004">
+	<Style>IWS_START_HIDE|IWS_PROCESS|IWS_TOPMOST</Style>
+	<Size X="285" Y="88" XAlign="Left" YAlign="Top" Width="423" Height="30" />
+	<Imagery>
+		<DefaultFrameImagery Type="BlueFrm" Templete="shop_search_slot02">
+			<Area X="91" Y="0" Width="332" Height="29" AutoResize="False"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="InputFrm" Templete="shop_renewal_chat_box">
+			<Area X="163" Y="5" Width="170" Height="19" AutoResize="False"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="MyInputFrm" Templete="search_chat_box">
+			<Area X="11" Y="5" Width="218" Height="22" AutoResize="False"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="MultiplyFrm" Templete="win1_multiply_bottom">
+			<Area X="0" Y="2" Width="597" Height="42"/>
+		</DefaultFrameImagery>
+	</Imagery>
+	<Window ClassName="ioButton" Id="1">
+		<Size X="0" Y="0" Width="91" Height="29" Style="Outline_full_2x" />
+		<Style>IWS_BACKMOST</Style>
+		<Title>
+			<Format X="45" Y="7" Size="12" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF194871"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF194871"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF194871"/>
+			<Color Type="Disable" Text="FFFFFFFF" Back="FF000000"/>
+			<Text>전체</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt001_shop_search_nor">
+				<Area X="0" Y="0" Width="91" Height="29" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt001_shop_search_nor">
+				<Area X="0" Y="0" Width="91" Height="29" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="91" Height="29" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt001_shop_search_down">
+				<Area X="0" Y="0" Width="91" Height="29" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage031" Image="shop_underbar_icon" >
+			<Area X="71" Y="10"/>
+			</Image>
+		</Imagery>
+	</Window>
+	<Window ClassName="ioPullDownList" Id="2">
+		<Size X="0" Y="31" Width="91" Height="35" />
+		<Style>IWS_PROCESS|IWS_EXIT_ESC|IWS_TOPMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="tooltip2">
+				<Area X="0" Y="0" Width="91" Height="72" />
+			</DefaultFrameImagery>
+			<Image Type="DarkLine" Imageset="BaseImage001" Image="strip_gray_dark">
+				<Area X="0" Y="0" RenderType="Multiply"/>
+			</Image>
+			<Image Type="LightLine" Imageset="BaseImage001" Image="strip_gray_light">
+				<Area X="0" Y="0" RenderType="Multiply"/>
+			</Image>
+			<Image Type="OverLine" Imageset="BaseImage001" Image="strip_gray_on" />
+		</Imagery>
+		<ExtraInfo>
+			<PullDown MaxPageList="8" BlankWidth="7" BlankHeight="7" ListHeight="21" Style="0"/>
+		</ExtraInfo>
+	</Window>
+	<Window ClassName="ioEdit" Id="3">
+		<Size X="171" Y="7" Width="156" Height="18" />
+		<Style>IWS_START_HIDE</Style> 
+		<ExtraInfo MaxLength="100" TextColor="FFCE4E00" BkColor="FF3A3A3A" Align="Left" Style="Normal" Size="12" />
+	</Window>
+	<Window ClassName="ioButton" Id="4">
+		<Size X="323" Y="12" Width="7" Height="7"/>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage031" Image="shop_x_icon01" Color="FFA7A7A7">
+				<Area X="0" Y="0" RenderType="AddColor"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage031" Image="shop_x_icon01" Color="FF3A3A3A">
+				<Area X="0" Y="0" RenderType="AddColor"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage031" Image="shop_x_icon01" Color="FF3A3A3A">
+				<Area X="0" Y="0" RenderType="AddColor"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage031" Image="shop_x_icon01" Color="FF6E6E6E">
+				<Area X="0" Y="0" RenderType="AddColor"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="ioButton" Id="5">
+		<Size X="333" Y="5" Width="83" Height="19" Style="Outline_full_2x" />
+		<Style>IWS_BACKMOST</Style>
+		<Title>
+			<Format X="40" Y="2" Size="12" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF194871"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF194871"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF194871"/>
+			<Color Type="Disable" Text="FFFFFFFF" Back="FF000000"/>
+			<Text>검색(Enter)</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage034" Image="new_item_search_nor">
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage034" Image="new_item_search_nor">
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage034" Image="new_item_search_down">
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+	</Window>
+	<Window ClassName="ioRadioButton" Id="6">
+		<Size X="95" Y="7" Width="45" Height="16"/>
+		<Title>
+			<Format X="18" Y="1" Size="12" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF000000"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF000000"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF000000"/>
+			<Color Type="Disable" Text="FFFFFFFF" Back="FF000000"/>
+			<Text>검색</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage031" Image="shop_renewal_check_radio_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage031" Image="shop_renewal_check_radio_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage031" Image="shop_renewal_check_radio_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage031" Image="shop_renewal_check_radio_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="ioButton" Id="7">
+		<Size X="232" Y="5" Width="83" Height="22"/>
+		<Style>IWS_BACKMOST</Style>
+		<Title>
+			<Format X="41" Y="3" Size="11" Style="Outline_full_3x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215aa2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215aa2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215aa2"/>
+			<Color Type="Disable" Text="FFFFFFFF" Back="FF000000"/>
+			<Text>검색(Enter)</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt1905_search_nor">
+				<Area X="0" Y="0" Width="83" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt1905_search_nor">
+				<Area X="0" Y="0" Width="83" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="83" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt1905_search_down">
+				<Area X="0" Y="0" Width="83" Height="22"/>
+			</DefaultFrameImagery>
+		</Imagery>
+	</Window>
+	<Window ClassName="ioButton" Id="8">
+		<Size X="318" Y="5" Width="83" Height="22" />
+		<Style>IWS_BACKMOST</Style>
+		<Title>
+			<Format X="41" Y="3" Size="11" Style="Outline_full_3x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215aa2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215aa2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215aa2"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FFFFFFFF"/>
+			<Text>다음(TAB)</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt1905_search_nor">
+				<Area X="0" Y="0" Width="83" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt1905_search_nor">
+				<Area X="0" Y="0" Width="83" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="83" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt1905_search_down">
+				<Area X="0" Y="0" Width="83" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="83" Height="22"/>
+			</DefaultFrameImagery>
+		</Imagery>
+	</Window>
+</Window>

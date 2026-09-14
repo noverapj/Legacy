@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="GuildAttendInfoListWnd" Id="12">
+	<Size X="0" Y="96" Width="458" Height="363"/>
+	<Style>IWS_START_HIDE|IWS_PROCESS</Style>	
+
+	<Window ClassName="GuildAttendUserBtn" Id="0">
+		<Size X="17" Y="0" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="strip" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="GrayAttendance" Imageset="BaseImage031" Image="attendance_image03"/>
+			<Image Type="RedAttendance" Imageset="BaseImage031" Image="attendance_image02"/>
+			<Image Type="GreenAttendance" Imageset="BaseImage031" Image="attendance_image01"/>
+		</Imagery>
+		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildAttendUserBtn" Id="1">
+		<Size X="17" Y="21" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="strip" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>			
+			<Image Type="GrayAttendance" Imageset="BaseImage031" Image="attendance_image03"/>
+			<Image Type="RedAttendance" Imageset="BaseImage031" Image="attendance_image02"/>
+			<Image Type="GreenAttendance" Imageset="BaseImage031" Image="attendance_image01"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildAttendUserBtn" Id="2">
+		<Size X="17" Y="42" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="strip" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="GrayAttendance" Imageset="BaseImage031" Image="attendance_image03"/>
+			<Image Type="RedAttendance" Imageset="BaseImage031" Image="attendance_image02"/>
+			<Image Type="GreenAttendance" Imageset="BaseImage031" Image="attendance_image01"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildAttendUserBtn" Id="3">
+		<Size X="17" Y="63" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="strip" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="GrayAttendance" Imageset="BaseImage031" Image="attendance_image03"/>
+			<Image Type="RedAttendance" Imageset="BaseImage031" Image="attendance_image02"/>
+			<Image Type="GreenAttendance" Imageset="BaseImage031" Image="attendance_image01"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildAttendUserBtn" Id="4">
+		<Size X="17" Y="84" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="strip" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="GrayAttendance" Imageset="BaseImage031" Image="attendance_image03"/>
+			<Image Type="RedAttendance" Imageset="BaseImage031" Image="attendance_image02"/>
+			<Image Type="GreenAttendance" Imageset="BaseImage031" Image="attendance_image01"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildAttendUserBtn" Id="5">
+		<Size X="17" Y="105" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="strip" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="GrayAttendance" Imageset="BaseImage031" Image="attendance_image03"/>
+			<Image Type="RedAttendance" Imageset="BaseImage031" Image="attendance_image02"/>
+			<Image Type="GreenAttendance" Imageset="BaseImage031" Image="attendance_image01"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildAttendUserBtn" Id="6">
+		<Size X="17" Y="126" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="strip" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="GrayAttendance" Imageset="BaseImage031" Image="attendance_image03"/>
+			<Image Type="RedAttendance" Imageset="BaseImage031" Image="attendance_image02"/>
+			<Image Type="GreenAttendance" Imageset="BaseImage031" Image="attendance_image01"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildAttendUserBtn" Id="7">
+		<Size X="17" Y="147" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="strip" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="GrayAttendance" Imageset="BaseImage031" Image="attendance_image03"/>
+			<Image Type="RedAttendance" Imageset="BaseImage031" Image="attendance_image02"/>
+			<Image Type="GreenAttendance" Imageset="BaseImage031" Image="attendance_image01"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildAttendUserBtn" Id="8">
+		<Size X="17" Y="168" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="strip" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="GrayAttendance" Imageset="BaseImage031" Image="attendance_image03"/>
+			<Image Type="RedAttendance" Imageset="BaseImage031" Image="attendance_image02"/>
+			<Image Type="GreenAttendance" Imageset="BaseImage031" Image="attendance_image01"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildAttendUserBtn" Id="9">
+		<Size X="17" Y="189" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="strip" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="GrayAttendance" Imageset="BaseImage031" Image="attendance_image03"/>
+			<Image Type="RedAttendance" Imageset="BaseImage031" Image="attendance_image02"/>
+			<Image Type="GreenAttendance" Imageset="BaseImage031" Image="attendance_image01"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildAttendUserBtn" Id="10">
+		<Size X="17" Y="210" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="strip" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="GrayAttendance" Imageset="BaseImage031" Image="attendance_image03"/>
+			<Image Type="RedAttendance" Imageset="BaseImage031" Image="attendance_image02"/>
+			<Image Type="GreenAttendance" Imageset="BaseImage031" Image="attendance_image01"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildAttendUserBtn" Id="11">
+		<Size X="17" Y="231" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="strip" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="GrayAttendance" Imageset="BaseImage031" Image="attendance_image03"/>
+			<Image Type="RedAttendance" Imageset="BaseImage031" Image="attendance_image02"/>
+			<Image Type="GreenAttendance" Imageset="BaseImage031" Image="attendance_image01"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildAttendUserBtn" Id="12">
+		<Size X="17" Y="252" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="strip" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="GrayAttendance" Imageset="BaseImage031" Image="attendance_image03"/>
+			<Image Type="RedAttendance" Imageset="BaseImage031" Image="attendance_image02"/>
+			<Image Type="GreenAttendance" Imageset="BaseImage031" Image="attendance_image01"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildAttendUserBtn" Id="13">
+		<Size X="17" Y="273" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="strip" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="GrayAttendance" Imageset="BaseImage031" Image="attendance_image03"/>
+			<Image Type="RedAttendance" Imageset="BaseImage031" Image="attendance_image02"/>
+			<Image Type="GreenAttendance" Imageset="BaseImage031" Image="attendance_image01"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildAttendUserBtn" Id="14">
+		<Size X="17" Y="294" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="strip" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="GrayAttendance" Imageset="BaseImage031" Image="attendance_image03"/>
+			<Image Type="RedAttendance" Imageset="BaseImage031" Image="attendance_image02"/>
+			<Image Type="GreenAttendance" Imageset="BaseImage031" Image="attendance_image01"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildAttendUserBtn" Id="15">
+		<Size X="17" Y="315" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="strip" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="GrayAttendance" Imageset="BaseImage031" Image="attendance_image03"/>
+			<Image Type="RedAttendance" Imageset="BaseImage031" Image="attendance_image02"/>
+			<Image Type="GreenAttendance" Imageset="BaseImage031" Image="attendance_image01"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildAttendUserBtn" Id="16">
+		<Size X="230" Y="0" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="strip" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="GrayAttendance" Imageset="BaseImage031" Image="attendance_image03"/>
+			<Image Type="RedAttendance" Imageset="BaseImage031" Image="attendance_image02"/>
+			<Image Type="GreenAttendance" Imageset="BaseImage031" Image="attendance_image01"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildAttendUserBtn" Id="17">
+		<Size X="230" Y="21" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="strip" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="GrayAttendance" Imageset="BaseImage031" Image="attendance_image03"/>
+			<Image Type="RedAttendance" Imageset="BaseImage031" Image="attendance_image02"/>
+			<Image Type="GreenAttendance" Imageset="BaseImage031" Image="attendance_image01"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildAttendUserBtn" Id="18">
+		<Size X="230" Y="42" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="strip" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="GrayAttendance" Imageset="BaseImage031" Image="attendance_image03"/>
+			<Image Type="RedAttendance" Imageset="BaseImage031" Image="attendance_image02"/>
+			<Image Type="GreenAttendance" Imageset="BaseImage031" Image="attendance_image01"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildAttendUserBtn" Id="19">
+		<Size X="230" Y="63" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="strip" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="GrayAttendance" Imageset="BaseImage031" Image="attendance_image03"/>
+			<Image Type="RedAttendance" Imageset="BaseImage031" Image="attendance_image02"/>
+			<Image Type="GreenAttendance" Imageset="BaseImage031" Image="attendance_image01"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildAttendUserBtn" Id="20">
+		<Size X="230" Y="84" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="strip" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="GrayAttendance" Imageset="BaseImage031" Image="attendance_image03"/>
+			<Image Type="RedAttendance" Imageset="BaseImage031" Image="attendance_image02"/>
+			<Image Type="GreenAttendance" Imageset="BaseImage031" Image="attendance_image01"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildAttendUserBtn" Id="21">
+		<Size X="230" Y="105" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="strip" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="GrayAttendance" Imageset="BaseImage031" Image="attendance_image03"/>
+			<Image Type="RedAttendance" Imageset="BaseImage031" Image="attendance_image02"/>
+			<Image Type="GreenAttendance" Imageset="BaseImage031" Image="attendance_image01"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildAttendUserBtn" Id="22">
+		<Size X="230" Y="126" Width="211" Height="21" />
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="strip" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="GrayAttendance" Imageset="BaseImage031" Image="attendance_image03"/>
+			<Image Type="RedAttendance" Imageset="BaseImage031" Image="attendance_image02"/>
+			<Image Type="GreenAttendance" Imageset="BaseImage031" Image="attendance_image01"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildAttendUserBtn" Id="23">
+		<Size X="230" Y="147" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="strip" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="GrayAttendance" Imageset="BaseImage031" Image="attendance_image03"/>
+			<Image Type="RedAttendance" Imageset="BaseImage031" Image="attendance_image02"/>
+			<Image Type="GreenAttendance" Imageset="BaseImage031" Image="attendance_image01"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildAttendUserBtn" Id="24">
+		<Size X="230" Y="168" Width="211" Height="21" />
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="strip" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="GrayAttendance" Imageset="BaseImage031" Image="attendance_image03"/>
+			<Image Type="RedAttendance" Imageset="BaseImage031" Image="attendance_image02"/>
+			<Image Type="GreenAttendance" Imageset="BaseImage031" Image="attendance_image01"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildAttendUserBtn" Id="25">
+		<Size X="230" Y="189" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="strip" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="GrayAttendance" Imageset="BaseImage031" Image="attendance_image03"/>
+			<Image Type="RedAttendance" Imageset="BaseImage031" Image="attendance_image02"/>
+			<Image Type="GreenAttendance" Imageset="BaseImage031" Image="attendance_image01"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildAttendUserBtn" Id="26">
+		<Size X="230" Y="210" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="strip" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="GrayAttendance" Imageset="BaseImage031" Image="attendance_image03"/>
+			<Image Type="RedAttendance" Imageset="BaseImage031" Image="attendance_image02"/>
+			<Image Type="GreenAttendance" Imageset="BaseImage031" Image="attendance_image01"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildAttendUserBtn" Id="27">
+		<Size X="230" Y="231" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="strip" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="GrayAttendance" Imageset="BaseImage031" Image="attendance_image03"/>
+			<Image Type="RedAttendance" Imageset="BaseImage031" Image="attendance_image02"/>
+			<Image Type="GreenAttendance" Imageset="BaseImage031" Image="attendance_image01"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildAttendUserBtn" Id="28">
+		<Size X="230" Y="252" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="strip" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="GrayAttendance" Imageset="BaseImage031" Image="attendance_image03"/>
+			<Image Type="RedAttendance" Imageset="BaseImage031" Image="attendance_image02"/>
+			<Image Type="GreenAttendance" Imageset="BaseImage031" Image="attendance_image01"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildAttendUserBtn" Id="29">
+		<Size X="230" Y="273" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="strip" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="GrayAttendance" Imageset="BaseImage031" Image="attendance_image03"/>
+			<Image Type="RedAttendance" Imageset="BaseImage031" Image="attendance_image02"/>
+			<Image Type="GreenAttendance" Imageset="BaseImage031" Image="attendance_image01"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildAttendUserBtn" Id="30">
+		<Size X="230" Y="294" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="strip" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="GrayAttendance" Imageset="BaseImage031" Image="attendance_image03"/>
+			<Image Type="RedAttendance" Imageset="BaseImage031" Image="attendance_image02"/>
+			<Image Type="GreenAttendance" Imageset="BaseImage031" Image="attendance_image01"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildAttendUserBtn" Id="31">
+		<Size X="230" Y="315" Width="211" Height="21" />	
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>	
+		<Imagery>
+			<Image Type="strip" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="211" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="GrayAttendance" Imageset="BaseImage031" Image="attendance_image03"/>
+			<Image Type="RedAttendance" Imageset="BaseImage031" Image="attendance_image02"/>
+			<Image Type="GreenAttendance" Imageset="BaseImage031" Image="attendance_image01"/>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+
+	<Window ClassName="GuildInfoUserOptionWnd" Id="1000">
+		<Size X="0" Y="0" Width="100" Height="35" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_EXIT_ESC</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="tooltip2">
+				<Area X="0" Y="0" Width="100" Height="35" />
+			</DefaultFrameImagery>
+			<Image Type="OverLine" Imageset="BaseImage001" Image="strip_gray_on" />
+		</Imagery>
+		<ExtraInfo AddWidth="14" AddHeight="12" ListX="7" ListY="7" HeightGap="21"/>
+	</Window>
+</Window>

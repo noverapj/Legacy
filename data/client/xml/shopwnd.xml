@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+<Window ClassName="ShopWnd" SubClassName="ioWnd" Id="77777" IDName="" MemberName="">
+    <Size X="0" Y="0" Width="0" Height="0" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+    <Imagery />
+    <Window ClassName="ioFrameWndEX" SubClassName="" Id="1" IDName="ID_FRM_BACKGROUND" MemberName="">
+        <Size X="0" Y="0" Width="956" Height="639" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+        <Imagery />
+        <ExtraInfo>
+            <FrameInfo Template="win1_frame90" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+            <ToolInfo>
+                <Event Type="WEVT_WHEEL" Function="OnMouseWheel" />
+            </ToolInfo>
+        </ExtraInfo>
+        <Window ClassName="ioFrameWndEX" SubClassName="" Id="2" IDName="" MemberName="">
+            <Size X="16" Y="10" Width="929" Height="47" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo>
+                <FrameInfo Template="bt013_blue_down" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+                <ToolInfo />
+            </ExtraInfo>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="3" IDName="" MemberName="">
+                <Size X="18" Y="10" Width="60" Height="27" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="상점" Size="20" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameButtonWndEX" SubClassName="" Id="4" IDName="" MemberName="">
+                <Size X="683" Y="5" Width="100" Height="31" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="골드충전" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ffffffff" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalFrame Template="bt006_gold_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <OverFrame Template="bt006_gold_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <OverAddFrame Template="bt006_gold_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <PushFrame Template="bt006_gold_down" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameButtonWndEX" SubClassName="" Id="6" IDName="" MemberName="">
+                <Size X="786" Y="5" Width="100" Height="31" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="내아이템" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ffffffff" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalFrame Template="bt006_blue_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <OverFrame Template="bt006_blue_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <OverAddFrame Template="bt_overadd" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <PushFrame Template="bt006_blue_down" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameButtonWndEX" SubClassName="" Id="7" IDName="" MemberName="">
+                <Size X="889" Y="5" Width="32" Height="31" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="X" Size="25" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ffffffff" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalFrame Template="bt006_blue_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <OverFrame Template="bt006_blue_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <OverAddFrame Template="bt_overadd" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <PushFrame Template="bt006_blue_down" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="9" IDName="" MemberName="">
+                <Size X="483" Y="7" Width="60" Height="27" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="내페소 : /" Size="16" Color="ff92c2eb" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioLabelWndEX" SubClassName="" Id="10" IDName="" MemberName="">
+                <Size X="561" Y="7" Width="60" Height="27" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
+                    <LabelInfo Text="내골드 :" Size="16" Color="ffdabb5c" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+        </Window>
+        <Window ClassName="ioTabWndEX" SubClassName="" Id="11" IDName="ID_TAB_ITEM" MemberName="m_itemtabwnd">
+            <Size X="362" Y="67" Width="565" Height="560" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo DotGap="1" DotHeight="2">
+                <DotImage FileName="" ImageSetName="BaseImage001" ImageName="tap2_line" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                <ToolInfo>
+                    <Event Type="WEVT_TABCHECK" Function="OnTabItem" />
+                </ToolInfo>
+            </ExtraInfo>
+            <Window ClassName="ioTabFrameButtonEX" SubClassName="" Id="12" IDName="ID_TABBTN_WEEKLYITEM" MemberName="">
+                <Size X="0" Y="0" Width="100" Height="22" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="금주의 상품" Size="14" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalFrame Template="tap4_off" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <OverFrame Template="tap4_off" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <OverAddFrame Template="tap4_overadd" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <PushFrame Template="tap4_on" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioTabWndEX" SubClassName="" Id="49" IDName="" MemberName="m_tabweeklyfilter">
+                    <Size X="1" Y="34" Width="540" Height="504" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo DotGap="1" DotHeight="2">
+                        <ToolInfo>
+                            <Event Type="WEVT_TABCHECK" Function="OnTabWeeklyFilter" />
+                        </ToolInfo>
+                    </ExtraInfo>
+                    <Window ClassName="ioTabFrameButtonEX" SubClassName="" Id="50" IDName="" MemberName="">
+                        <Size X="0" Y="0" Width="70" Height="22" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo ButtonType="0">
+                            <LabelInfo Text="금주의 상품 |" Size="12" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                    <Window ClassName="ioTabFrameButtonEX" SubClassName="" Id="51" IDName="" MemberName="">
+                        <Size X="71" Y="0" Width="40" Height="22" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo ButtonType="0">
+                            <LabelInfo Text="신규 |" Size="12" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                    <Window ClassName="ioTabFrameButtonEX" SubClassName="" Id="54" IDName="" MemberName="">
+                        <Size X="112" Y="0" Width="40" Height="22" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo ButtonType="0">
+                            <LabelInfo Text="인기 |" Size="12" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                    <Window ClassName="ioTabFrameButtonEX" SubClassName="" Id="55" IDName="" MemberName="">
+                        <Size X="153" Y="0" Width="50" Height="22" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo ButtonType="0">
+                            <LabelInfo Text="계급해제" Size="12" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                </Window>
+            </Window>
+            <Window ClassName="ioTabFrameButtonEX" SubClassName="" Id="18" IDName="ID_TABBTN_MERCENARY" MemberName="">
+                <Size X="101" Y="0" Width="90" Height="22" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="용병" Size="14" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalFrame Template="tap4_off" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <OverFrame Template="tap4_off" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <OverAddFrame Template="tap4_overadd" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <PushFrame Template="tap4_on" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioTabWndEX" SubClassName="" Id="56" IDName="" MemberName="m_tabmecenaryfilter">
+                    <Size X="-100" Y="34" Width="540" Height="504" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo DotGap="1" DotHeight="2">
+                        <ToolInfo>
+                            <Event Type="WEVT_TABCHECK" Function="OnTabMecenaryFilter" />
+                        </ToolInfo>
+                    </ExtraInfo>
+                    <Window ClassName="ioTabFrameButtonEX" SubClassName="" Id="57" IDName="" MemberName="">
+                        <Size X="0" Y="0" Width="40" Height="22" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo ButtonType="0">
+                            <LabelInfo Text="용병 |" Size="12" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                    <Window ClassName="ioTabFrameButtonEX" SubClassName="" Id="58" IDName="" MemberName="">
+                        <Size X="41" Y="0" Width="40" Height="22" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo ButtonType="0">
+                            <LabelInfo Text="패키지" Size="12" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                </Window>
+            </Window>
+            <Window ClassName="ioTabFrameButtonEX" SubClassName="" Id="19" IDName="ID_TABBTN_EQUIP" MemberName="">
+                <Size X="192" Y="0" Width="90" Height="22" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="장비" Size="14" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalFrame Template="tap4_off" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <OverFrame Template="tap4_off" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <OverAddFrame Template="tap4_overadd" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <PushFrame Template="tap4_on" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioTabWndEX" SubClassName="" Id="59" IDName="" MemberName="m_tabequipfilter">
+                    <Size X="-192" Y="35" Width="540" Height="504" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo DotGap="1" DotHeight="2">
+                        <ToolInfo>
+                            <Event Type="WEVT_TABCHECK" Function="OnTabEquipFilter" />
+                        </ToolInfo>
+                    </ExtraInfo>
+                    <Window ClassName="ioTabFrameButtonEX" SubClassName="" Id="60" IDName="" MemberName="">
+                        <Size X="0" Y="0" Width="40" Height="22" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo ButtonType="0">
+                            <LabelInfo Text="장비 |" Size="12" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                    <Window ClassName="ioTabFrameButtonEX" SubClassName="" Id="61" IDName="" MemberName="">
+                        <Size X="41" Y="0" Width="40" Height="22" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo ButtonType="0">
+                            <LabelInfo Text="보급 |" Size="12" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                    <Window ClassName="ioTabFrameButtonEX" SubClassName="" Id="62" IDName="" MemberName="">
+                        <Size X="82" Y="0" Width="40" Height="22" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo ButtonType="0">
+                            <LabelInfo Text="기능" Size="12" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                </Window>
+            </Window>
+            <Window ClassName="ioTabFrameButtonEX" SubClassName="" Id="20" IDName="ID_TABBTN_ACCESSORY" MemberName="">
+                <Size X="283" Y="0" Width="90" Height="22" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="치장" Size="14" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalFrame Template="tap4_off" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <OverFrame Template="tap4_off" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <OverAddFrame Template="tap4_overadd" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <PushFrame Template="tap4_on" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioTabWndEX" SubClassName="" Id="63" IDName="" MemberName="m_tabaccessoryfilter">
+                    <Size X="-283" Y="35" Width="540" Height="504" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo DotGap="1" DotHeight="2">
+                        <ToolInfo>
+                            <Event Type="WEVT_TABCHECK" Function="OnTabAccessoryFilter" />
+                        </ToolInfo>
+                    </ExtraInfo>
+                    <Window ClassName="ioTabFrameButtonEX" SubClassName="" Id="64" IDName="" MemberName="">
+                        <Size X="0" Y="0" Width="40" Height="22" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo ButtonType="0">
+                            <LabelInfo Text="치장 |" Size="12" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                    <Window ClassName="ioTabFrameButtonEX" SubClassName="" Id="65" IDName="" MemberName="">
+                        <Size X="41" Y="0" Width="40" Height="22" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo ButtonType="0">
+                            <LabelInfo Text="모션 |" Size="12" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                    <Window ClassName="ioTabFrameButtonEX" SubClassName="" Id="66" IDName="" MemberName="">
+                        <Size X="82" Y="0" Width="40" Height="22" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo ButtonType="0">
+                            <LabelInfo Text="패키지" Size="12" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                </Window>
+            </Window>
+            <Window ClassName="ioTabFrameButtonEX" SubClassName="" Id="21" IDName="ID_TABBTN_UNIQUE" MemberName="">
+                <Size X="374" Y="0" Width="90" Height="24" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="특별" Size="14" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalFrame Template="tap4_off" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <OverFrame Template="tap4_off" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <OverAddFrame Template="tap4_overadd" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <PushFrame Template="tap4_on" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioTabWndEX" SubClassName="" Id="67" IDName="" MemberName="m_tabuniquefilter">
+                    <Size X="-374" Y="35" Width="540" Height="504" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo DotGap="1" DotHeight="2">
+                        <ToolInfo>
+                            <Event Type="WEVT_TABCHECK" Function="OnTabUniqueFilter" />
+                        </ToolInfo>
+                    </ExtraInfo>
+                    <Window ClassName="ioTabFrameButtonEX" SubClassName="" Id="68" IDName="" MemberName="">
+                        <Size X="0" Y="0" Width="40" Height="22" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo ButtonType="0">
+                            <LabelInfo Text="특별 |" Size="12" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                    <Window ClassName="ioTabFrameButtonEX" SubClassName="" Id="69" IDName="" MemberName="">
+                        <Size X="41" Y="0" Width="40" Height="22" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo ButtonType="0">
+                            <LabelInfo Text="블럭 |" Size="12" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                    <Window ClassName="ioTabFrameButtonEX" SubClassName="" Id="70" IDName="" MemberName="">
+                        <Size X="82" Y="0" Width="40" Height="22" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo ButtonType="0">
+                            <LabelInfo Text="던전" Size="12" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                </Window>
+            </Window>
+            <Window ClassName="ioTabFrameButtonEX" SubClassName="" Id="22" IDName="ID_TABBTN_EVENTSHOP" MemberName="">
+                <Size X="465" Y="0" Width="100" Height="22" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="이벤트샵" Size="14" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalFrame Template="tap4_off" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <OverFrame Template="tap4_off" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <OverAddFrame Template="tap4_overadd" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <PushFrame Template="tap4_on" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <ToolInfo />
+                </ExtraInfo>
+                <Window ClassName="ioTabWndEX" SubClassName="" Id="71" IDName="" MemberName="m_tabeventshopfilter">
+                    <Size X="-465" Y="35" Width="540" Height="504" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                    <Imagery />
+                    <ExtraInfo DotGap="1" DotHeight="2">
+                        <ToolInfo>
+                            <Event Type="WEVT_TABCHECK" Function="OnTabEventShopFilter" />
+                        </ToolInfo>
+                    </ExtraInfo>
+                    <Window ClassName="ioTabFrameButtonEX" SubClassName="" Id="72" IDName="" MemberName="">
+                        <Size X="0" Y="0" Width="60" Height="22" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo ButtonType="0">
+                            <LabelInfo Text="클로버샵 |" Size="12" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                    <Window ClassName="ioTabFrameButtonEX" SubClassName="" Id="73" IDName="" MemberName="">
+                        <Size X="61" Y="0" Width="50" Height="22" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                        <Imagery />
+                        <ExtraInfo ButtonType="0">
+                            <LabelInfo Text="이벤트샵" Size="12" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                            <ToolInfo />
+                        </ExtraInfo>
+                    </Window>
+                </Window>
+            </Window>
+        </Window>
+        <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="30" IDName="" MemberName="">
+            <Size X="883" Y="103" Width="20" Height="20" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo ButtonType="0">
+                <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                <NormalImage FileName="" ImageSetName="BaseImage004" ImageName="mouse_info" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                <OverImage FileName="" ImageSetName="BaseImage004" ImageName="mouse_info" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                <OverAddImage FileName="" ImageSetName="BaseImage004" ImageName="mouse_info" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                <PushImage FileName="" ImageSetName="BaseImage004" ImageName="mouse_info" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                <ToolInfo />
+            </ExtraInfo>
+        </Window>
+        <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="31" IDName="" MemberName="">
+            <Size X="905" Y="103" Width="20" Height="20" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Imagery />
+            <ExtraInfo ButtonType="0">
+                <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                <NormalImage FileName="" ImageSetName="BaseImage001" ImageName="icon0_help_blue" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                <OverImage FileName="" ImageSetName="BaseImage001" ImageName="icon0_help_blue" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                <OverAddImage FileName="" ImageSetName="BaseImage001" ImageName="icon0_help_blue" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                <PushImage FileName="" ImageSetName="BaseImage001" ImageName="icon0_help_blue" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                <BackImage FileName="" ImageSetName="BaseImage001" ImageName="icon0_help_black" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+                <ToolInfo />
+            </ExtraInfo>
+        </Window>
+        <Window ClassName="ioScrollBarEX" SubClassName="" Id="45" IDName="ID_SCR_VERTSB" MemberName="m_vscrollbar">
+            <Size X="913" Y="150" Width="5" Height="432" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+            <Style>IWS_PROCESS</Style>
+            <Imagery />
+            <ExtraInfo ScrollType="0" ScrollRange="100">
+                <FrameInfo Template="scrollbar6_back" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+                <ToolInfo>
+                    <Event Type="WEVT_SB_CLICK_DECREASE" Function="OnClickSBDecBtn" />
+                    <Event Type="WEVT_SB_CLICK_INCREASE" Function="OnClickSBIncBtn" />
+                    <Event Type="WEVT_SB_SCROLL" Function="OnScrollSB" />
+                </ToolInfo>
+            </ExtraInfo>
+            <Window ClassName="ioFrameButtonWndEX" SubClassName="" Id="46" IDName="" MemberName="">
+                <Size X="-7" Y="-20" Width="20" Height="20" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="▲" Size="24" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalFrame Template="slot_empty_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <OverFrame Template="slot_empty_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <OverAddFrame Template="slot_empty_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <PushFrame Template="slot_empty_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameButtonWndEX" SubClassName="" Id="47" IDName="" MemberName="">
+                <Size X="-7" Y="432" Width="20" Height="20" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo ButtonType="0">
+                    <LabelInfo Text="▼" Size="24" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                    <NormalFrame Template="slot_empty_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <OverFrame Template="slot_empty_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <OverAddFrame Template="slot_empty_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <PushFrame Template="slot_empty_white" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+            <Window ClassName="ioFrameWndEX" SubClassName="" Id="48" IDName="" MemberName="">
+                <Size X="-5" Y="0" Width="15" Height="35" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+                <Imagery />
+                <ExtraInfo>
+                    <FrameInfo Template="scrollbar6_drag" RenderType="0" GrayRenderType="0" TextureFilterOption="0" NoMagicAlign="false" Color="ffffffff" />
+                    <ToolInfo />
+                </ExtraInfo>
+            </Window>
+        </Window>
+    </Window>
+</Window>

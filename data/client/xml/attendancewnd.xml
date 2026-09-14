@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="AttendanceWnd" Id="6239">
+	<Size X="0" Y="-20" XAlign="Center" YAlign="Center" Width="731" Height="526"/>
+	<Style>IWS_START_HIDE|IWS_EXIT_ESC|IWS_PROCESS|IWS_MODAL</Style>
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+			<Area X="0" Y="0" Width="731" Height="526"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="OutLine" Templete="calendar_outline" />
+		<DefaultFrameImagery Type="TodayOutLine" Templete="slot_select_pet" />
+		<Image Type="AccrueTtitleBG" Imageset="BaseImage029" Image="today_orange_tap"/>
+		<Image Type="CalendarItemIconBG" Imageset="BaseImage002" Image="iconeffect_1"/>
+		<Image Type="ItemIconBG" Imageset="BaseImage002" Image="iconeffect_2"/>
+		<Image Type="HiddenIcon" Imageset="UIIconPack54" Image="event_secret"/>
+		<Image Type="GetIcon" Imageset="BaseImage029" Image="stamp_gain"/>
+		<Image Type="AttendanceIcon" Imageset="BaseImage029" Image="stamp_attend"/>
+		<Image Type="NoneIcon" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+		<!--Pattern1 -->
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="2" Y="2" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="123" Y="2" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="244" Y="2" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="365" Y="2" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="486" Y="2" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="607" Y="2" />
+		</Image>
+		<!--Pattern2 -->
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="2" Y="89" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="123" Y="89" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="244" Y="89" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="365" Y="89" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="486" Y="89" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="607" Y="89" />
+		</Image>
+		<!--Pattern3 -->
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="2" Y="176" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="123" Y="176" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="244" Y="176" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="365" Y="176" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="486" Y="176" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="607" Y="176" />
+		</Image>
+		<!--Pattern3 -->
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="2" Y="263" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="123" Y="263" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="244" Y="263" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="365" Y="263" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="486" Y="263" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="607" Y="263" />
+		</Image>
+		<!--Pattern4 -->
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="2" Y="350" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="123" Y="350" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="244" Y="350" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="365" Y="350" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="486" Y="350" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="607" Y="350" />
+		</Image>
+		<!--Pattern5 -->
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="2" Y="437" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="123" Y="437" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="244" Y="437" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="365" Y="437" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="486" Y="437" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage022" Image="calendar_pattern01" >
+			<Area X="607" Y="437" />
+		</Image>
+		
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_corner" >
+			<Area X="0" Y="0"/>
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_corner" >
+			<Area X="731" Y="0" Reverse="Horz" HorzAlign="Right"/>
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_corner" >
+			<Area X="0" Y="520" Reverse="Vert" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_corner" >
+			<Area X="731" Y="520" Reverse="HorzVert" HorzAlign="Right"/>
+		</Image>
+		<!--Ttitle -->
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_title_k">
+			<Area X="19" Y="-28" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_month_bg">
+			<Area X="492" Y="10" />
+		</Image>
+		<!--Calandar -->
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_white">
+			<Area X="20" Y="110" Width="455" Height="2" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_yellow02">
+			<Area X="20" Y="79" Width="455" Height="31" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		
+		<!-- 1 Week -->
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_white">
+			<Area X="20" Y="112" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_gray">
+			<Area X="85" Y="112" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_white">
+			<Area X="150" Y="112" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_gray">
+			<Area X="215" Y="112" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_white">
+			<Area X="280" Y="112" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_gray">
+			<Area X="345" Y="112" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_white">
+			<Area X="410" Y="112" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>		
+		<!-- 2 Week -->
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_gray">
+			<Area X="20" Y="173" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_white">
+			<Area X="85" Y="173" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_gray">
+			<Area X="150" Y="173" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_white">
+			<Area X="215" Y="173" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_gray">
+			<Area X="280" Y="173" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_white">
+			<Area X="345" Y="173" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_gray">
+			<Area X="410" Y="173" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>		
+		<!-- 3 Week -->
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_white">
+			<Area X="20" Y="234" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_gray">
+			<Area X="85" Y="234" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_white">
+			<Area X="150" Y="234" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_gray">
+			<Area X="215" Y="234" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_white">
+			<Area X="280" Y="234" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_gray">
+			<Area X="345" Y="234" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_white">
+			<Area X="410" Y="234" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<!-- 4 Week -->
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_gray">
+			<Area X="20" Y="295" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_white">
+			<Area X="85" Y="295" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_gray">
+			<Area X="150" Y="295" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_white">
+			<Area X="215" Y="295" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_gray">
+			<Area X="280" Y="295" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_white">
+			<Area X="345" Y="295" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_gray">
+			<Area X="410" Y="295" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<!-- 5 Week -->
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_white">
+			<Area X="20" Y="356" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_gray">
+			<Area X="85" Y="356" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_white">
+			<Area X="150" Y="356" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_gray">
+			<Area X="215" Y="356" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_white">
+			<Area X="280" Y="356" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_gray">
+			<Area X="345" Y="356" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_white">
+			<Area X="410" Y="356" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<!-- 6 Week -->
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_gray">
+			<Area X="20" Y="417" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_white">
+			<Area X="85" Y="417" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_gray">
+			<Area X="150" Y="417" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_white">
+			<Area X="215" Y="417" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_gray">
+			<Area X="280" Y="417" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_white">
+			<Area X="345" Y="417" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_gray">
+			<Area X="410" Y="417" Width="65" Height="61" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>
+		<!-- Accrue -->
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_white">
+			<Area X="495" Y="228" Width="215" Height="31" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>		
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_yellow01">
+			<Area X="495" Y="164" Width="43" Height="64" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_gray">
+			<Area X="538" Y="164" Width="43" Height="64" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_yellow01">
+			<Area X="581" Y="164" Width="43" Height="64" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_gray">
+			<Area X="624" Y="164" Width="43" Height="64" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_yellow01">
+			<Area X="667" Y="164" Width="43" Height="64" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_day_bg1">
+			<Area X="495" Y="113" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_day_bg2">
+			<Area X="538" Y="113" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_day_bg1">
+			<Area X="581" Y="113" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_day_bg2">
+			<Area X="624" Y="113" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_day_bg1">
+			<Area X="667" Y="113" />
+		</Image>
+		<!-- Today -->
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_yellow03">
+			<Area X="495" Y="275" Width="107" Height="25" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_yellow03">
+			<Area X="603" Y="275" Width="107" Height="25" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_yellow01">
+			<Area X="495" Y="300" Width="107" Height="87" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_yellow01">
+			<Area X="603" Y="300" Width="107" Height="87" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_yellow02">
+			<Area X="495" Y="387" Width="107" Height="32" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_base_yellow02">
+			<Area X="603" Y="387" Width="107" Height="32" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage029" Image="calendar_line">
+			<Area X="603" Y="275" Width="1" Height="144" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+		
+		<Image Type="Effect1"  Imageset="BaseEffect002" Image="effect_success_01"/>
+		<Image Type="Effect2"  Imageset="BaseEffect002" Image="effect_success_02"/>
+		<Image Type="Effect3"  Imageset="BaseEffect002" Image="effect_success_03"/>
+		<Image Type="Effect4"  Imageset="BaseEffect002" Image="effect_success_04"/>
+		<Image Type="Effect5"  Imageset="BaseEffect002" Image="effect_success_05"/>
+		<Image Type="Effect6"  Imageset="BaseEffect002" Image="effect_success_06"/>
+		<Image Type="Effect7"  Imageset="BaseEffect003" Image="effect_success_07"/>
+		<Image Type="Effect8"  Imageset="BaseEffect003" Image="effect_success_08"/>
+		<Image Type="Effect9"  Imageset="BaseEffect003" Image="effect_success_09"/>
+		<Image Type="Effect10" Imageset="BaseEffect003" Image="effect_success_10"/>
+	</Imagery>
+	<ExtraInfo GetSound ="interface/league/league_finish_pesostop.wav" StampSound ="interface/ceremony/prise_get_01.wav" />
+							
+	<Window ClassName="ioAttendanceCheckButton" Id="1">
+		<Size X="492" Y="437" Width="223" Height="45"/>
+		<Style>IWS_PROCESS</Style>
+		<Title>
+			<Format X="111" Y="10" Size="18" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FFAD4800"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FFAD4800"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FFAD4800"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>출석체크 하기(SPACE)</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt005_redbrown_nor">
+				<Area X="0" Y="0" Width="223" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt005_redbrown_nor">
+				<Area X="0" Y="0" Width="223" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="223" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt005_redbrown_down">
+				<Area X="0" Y="0" Width="223" Height="45"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="ioButton" Id="2">
+		<Size X="700" Y="7" Width="23" Height="23"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_gold_nor">
+				<Area X="0" Y="0" Width="22" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_gold_nor">
+				<Area X="0" Y="0" Width="22" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="22" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_gold_down">
+				<Area X="0" Y="0" Width="22" Height="22"/>
+			</DefaultFrameImagery>
+			<Image Type="Disable" Imageset="BaseImage001" Image="icon0_x_grayframe" >
+				<Area X="0" Y="0" />
+			</Image>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="icon0_x" >
+				<Area X="5" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="CalendarToolTip" Id="3">
+		<!--Height는 소스에서 결정-->
+		<Size X="0" Y="0" Width="14" Height="26" />
+		<Style>IWS_START_HIDE|IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="tooltip3">
+				<Area X="0" Y="0" Width="14" Height="26"/>
+			</DefaultFrameImagery>
+		</Imagery>
+	</Window>
+	<Window ClassName="ioAttendanceCheckedButton" Id="4">
+		<Size X="492" Y="437" Width="223" Height="45"/>
+		<Style>IWS_START_HIDE|IWS_PROCESS</Style>
+		<Title>
+			<Format X="111" Y="10" Size="18" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FFAD4800"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FFAD4800"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FFAD4800"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>종료하기 (SPACE)</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt005_redbrown_nor">
+				<Area X="0" Y="0" Width="223" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt005_redbrown_nor">
+				<Area X="0" Y="0" Width="223" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="223" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt005_redbrown_down">
+				<Area X="0" Y="0" Width="223" Height="45"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+</Window>

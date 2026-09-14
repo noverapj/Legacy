@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="HeadquartersInviteListWnd" Id="6120">
+	<Size X="0" Y="-20" XAlign="Center" YAlign="Center" Width="302" Height="398"/>
+	<DragRect Left="0" Top="0" Right="302" Bottom="398" />
+	<Style>IWS_START_HIDE|IWS_PROCESS|IWS_CANMOVE|IWS_EXIT_ESC</Style>
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Title>
+		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Text>초대하기</Text>
+	</Title>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+			<Area X="0" Y="0" Width="302" Height="398"/>
+		</DefaultFrameImagery>		
+		<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title">
+			<Area X="5" Y="6" Width="292" Height="36"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="MultiplyFrm" Templete="win1_multiply_bottom">
+			<Area X="0" Y="302" Width="302" Height="94"/>
+		</DefaultFrameImagery>
+			
+		<Image Imageset="BaseImage001" Image="strip_gray_dark">
+			<Area X="17" Y="54" Width="268" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_light">
+			<Area X="17" Y="75" Width="268" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_dark">
+			<Area X="17" Y="96" Width="268" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_light">
+			<Area X="17" Y="117" Width="268" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_dark">
+			<Area X="17" Y="138" Width="268" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_light">
+			<Area X="17" Y="159" Width="268" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_dark">
+			<Area X="17" Y="180" Width="268" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_light">
+			<Area X="17" Y="201" Width="268" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_dark">
+			<Area X="17" Y="222" Width="268" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_light">
+			<Area X="17" Y="243" Width="268" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+
+		<DefaultFrameImagery Templete="slot_empty_white">
+			<Area X="17" Y="359" Width="176" Height="22" AutoResize="False"/>
+		</DefaultFrameImagery>	
+	</Imagery>
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="268" Y="11" Width="23" Height="23"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+                        <Image Type="Disable" Imageset="BaseImage001" Image="icon0_x_grayframe" >
+				<Area X="0" Y="0" />
+			</Image>
+                        <Image Type="NormalList" Imageset="BaseImage001" Image="icon0_x" >
+				<Area X="5" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="2">
+		<Size X="85" Y="271" Width="43" Height="18" />
+		<Style>IWS_BACKMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_left" >
+				<Area X="17" Y="4"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="3">
+		<Size X="174" Y="271" Width="43" Height="18" />
+		<Style>IWS_BACKMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_left" >
+				<Area X="17" Y="4" Reverse="Horz"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="4">
+		<Size X="17" Y="321" Width="268" Height="31" />
+		<Title>
+			<Format X="134" Y="5" Size="13" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FF323232" Back="FF215AA2"/>
+			<Text>현재페이지 모두 초대</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_blue_nor">
+				<Area X="0" Y="0" Width="268" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_blue_nor">
+				<Area X="0" Y="0" Width="268" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="268" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_blue_down">
+				<Area X="0" Y="0" Width="268" Height="31"/>
+			</DefaultFrameImagery>	
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="5">
+		<Size X="195" Y="359" Width="90" Height="22" />
+		<Title>
+			<Format X="45" Y="4" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF215AA2"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF215AA2"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FF323232" Back="FF215AA2"/>
+			<Text>초대하기</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="90" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="90" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="90" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="90" Height="22"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioEdit" Id="6">
+		<Size X="23" Y="361" Width="158" Height="21" />
+		<ExtraInfo MaxLength="20" TextColor="FFCE4E00" BkColor="FF000000" Align="Left" Style="Normal" Size="12" />
+	</Window>
+
+	<Window ClassName="HeadquartersInviteList" Id="100">
+		<Size X="17" Y="54" Width="268" Height="21" />	
+		<Style>IWS_PROCESS</Style>		
+		<Imagery>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on">
+				<Area X="0" Y="0" Width="268" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on">
+				<Area X="0" Y="0" Width="268" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="GuildMark" Imageset="BaseImage006" Image="icontext_guild3_black"/>
+			<Image Type="FriendMark" Imageset="BaseImage006" Image="icontext_friend_black"/>
+		</Imagery>
+		
+		<Window ClassName="ioButton" Id="1">
+			<Size X="210" Y="1" Width="57" Height="18" />
+			<Title>
+				<Format X="28" Y="3" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF215AA2"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF215AA2"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF215AA2"/>
+				<Color Type="Disable" Text="FF323232" Back="FF215AA2"/>
+				<Text>초대</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	       		           ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="HeadquartersInviteList" Id="101">
+		<Size X="17" Y="75" Width="268" Height="21" />	
+		<Style>IWS_PROCESS</Style>		
+		<Imagery>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on">
+				<Area X="0" Y="0" Width="268" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on">
+				<Area X="0" Y="0" Width="268" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="GuildMark" Imageset="BaseImage006" Image="icontext_guild3_black"/>
+			<Image Type="FriendMark" Imageset="BaseImage006" Image="icontext_friend_black"/>
+		</Imagery>
+		
+		<Window ClassName="ioButton" Id="1">
+			<Size X="210" Y="1" Width="57" Height="18" />
+			<Title>
+				<Format X="28" Y="3" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF215AA2"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF215AA2"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF215AA2"/>
+				<Color Type="Disable" Text="FF323232" Back="FF215AA2"/>
+				<Text>초대</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	       		           ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="HeadquartersInviteList" Id="102">
+		<Size X="17" Y="96" Width="268" Height="21" />	
+		<Style>IWS_PROCESS</Style>		
+		<Imagery>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on">
+				<Area X="0" Y="0" Width="268" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on">
+				<Area X="0" Y="0" Width="268" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="GuildMark" Imageset="BaseImage006" Image="icontext_guild3_black"/>
+			<Image Type="FriendMark" Imageset="BaseImage006" Image="icontext_friend_black"/>
+		</Imagery>
+		
+		<Window ClassName="ioButton" Id="1">
+			<Size X="210" Y="1" Width="57" Height="18" />
+			<Title>
+				<Format X="28" Y="3" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF215AA2"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF215AA2"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF215AA2"/>
+				<Color Type="Disable" Text="FF323232" Back="FF215AA2"/>
+				<Text>초대</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	       		           ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="HeadquartersInviteList" Id="103">
+		<Size X="17" Y="117" Width="268" Height="21" />	
+		<Style>IWS_PROCESS</Style>		
+		<Imagery>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on">
+				<Area X="0" Y="0" Width="268" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on">
+				<Area X="0" Y="0" Width="268" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="GuildMark" Imageset="BaseImage006" Image="icontext_guild3_black"/>
+			<Image Type="FriendMark" Imageset="BaseImage006" Image="icontext_friend_black"/>
+		</Imagery>
+		
+		<Window ClassName="ioButton" Id="1">
+			<Size X="210" Y="1" Width="57" Height="18" />
+			<Title>
+				<Format X="28" Y="3" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF215AA2"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF215AA2"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF215AA2"/>
+				<Color Type="Disable" Text="FF323232" Back="FF215AA2"/>
+				<Text>초대</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	       		           ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="HeadquartersInviteList" Id="104">
+		<Size X="17" Y="138" Width="268" Height="21" />	
+		<Style>IWS_PROCESS</Style>		
+		<Imagery>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on">
+				<Area X="0" Y="0" Width="268" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on">
+				<Area X="0" Y="0" Width="268" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="GuildMark" Imageset="BaseImage006" Image="icontext_guild3_black"/>
+			<Image Type="FriendMark" Imageset="BaseImage006" Image="icontext_friend_black"/>
+		</Imagery>
+		
+		<Window ClassName="ioButton" Id="1">
+			<Size X="210" Y="1" Width="57" Height="18" />
+			<Title>
+				<Format X="28" Y="3" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF215AA2"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF215AA2"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF215AA2"/>
+				<Color Type="Disable" Text="FF323232" Back="FF215AA2"/>
+				<Text>초대</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	       		           ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="HeadquartersInviteList" Id="105">
+		<Size X="17" Y="159" Width="268" Height="21" />	
+		<Style>IWS_PROCESS</Style>		
+		<Imagery>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on">
+				<Area X="0" Y="0" Width="268" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on">
+				<Area X="0" Y="0" Width="268" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="GuildMark" Imageset="BaseImage006" Image="icontext_guild3_black"/>
+			<Image Type="FriendMark" Imageset="BaseImage006" Image="icontext_friend_black"/>
+		</Imagery>
+		
+		<Window ClassName="ioButton" Id="1">
+			<Size X="210" Y="1" Width="57" Height="18" />
+			<Title>
+				<Format X="28" Y="3" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF215AA2"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF215AA2"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF215AA2"/>
+				<Color Type="Disable" Text="FF323232" Back="FF215AA2"/>
+				<Text>초대</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	       		           ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="HeadquartersInviteList" Id="106">
+		<Size X="17" Y="180" Width="268" Height="21" />	
+		<Style>IWS_PROCESS</Style>		
+		<Imagery>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on">
+				<Area X="0" Y="0" Width="268" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on">
+				<Area X="0" Y="0" Width="268" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="GuildMark" Imageset="BaseImage006" Image="icontext_guild3_black"/>
+			<Image Type="FriendMark" Imageset="BaseImage006" Image="icontext_friend_black"/>
+		</Imagery>
+		
+		<Window ClassName="ioButton" Id="1">
+			<Size X="210" Y="1" Width="57" Height="18" />
+			<Title>
+				<Format X="28" Y="3" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF215AA2"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF215AA2"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF215AA2"/>
+				<Color Type="Disable" Text="FF323232" Back="FF215AA2"/>
+				<Text>초대</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	       		           ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="HeadquartersInviteList" Id="107">
+		<Size X="17" Y="201" Width="268" Height="21" />	
+		<Style>IWS_PROCESS</Style>		
+		<Imagery>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on">
+				<Area X="0" Y="0" Width="268" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on">
+				<Area X="0" Y="0" Width="268" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="GuildMark" Imageset="BaseImage006" Image="icontext_guild3_black"/>
+			<Image Type="FriendMark" Imageset="BaseImage006" Image="icontext_friend_black"/>
+		</Imagery>
+		
+		<Window ClassName="ioButton" Id="1">
+			<Size X="210" Y="1" Width="57" Height="18" />
+			<Title>
+				<Format X="28" Y="3" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF215AA2"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF215AA2"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF215AA2"/>
+				<Color Type="Disable" Text="FF323232" Back="FF215AA2"/>
+				<Text>초대</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	       		           ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="HeadquartersInviteList" Id="108">
+		<Size X="17" Y="222" Width="268" Height="21" />	
+		<Style>IWS_PROCESS</Style>		
+		<Imagery>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on">
+				<Area X="0" Y="0" Width="268" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on">
+				<Area X="0" Y="0" Width="268" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="GuildMark" Imageset="BaseImage006" Image="icontext_guild3_black"/>
+			<Image Type="FriendMark" Imageset="BaseImage006" Image="icontext_friend_black"/>
+		</Imagery>
+		
+		<Window ClassName="ioButton" Id="1">
+			<Size X="210" Y="1" Width="57" Height="18" />
+			<Title>
+				<Format X="28" Y="3" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF215AA2"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF215AA2"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF215AA2"/>
+				<Color Type="Disable" Text="FF323232" Back="FF215AA2"/>
+				<Text>초대</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	       		           ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="HeadquartersInviteList" Id="109">
+		<Size X="17" Y="243" Width="268" Height="21" />	
+		<Style>IWS_PROCESS</Style>		
+		<Imagery>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on">
+				<Area X="0" Y="0" Width="268" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on">
+				<Area X="0" Y="0" Width="268" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+
+			<Image Type="GuildMark" Imageset="BaseImage006" Image="icontext_guild3_black"/>
+			<Image Type="FriendMark" Imageset="BaseImage006" Image="icontext_friend_black"/>
+		</Imagery>
+		
+		<Window ClassName="ioButton" Id="1">
+			<Size X="210" Y="1" Width="57" Height="18" />
+			<Title>
+				<Format X="28" Y="3" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF215AA2"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF215AA2"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF215AA2"/>
+				<Color Type="Disable" Text="FF323232" Back="FF215AA2"/>
+				<Text>초대</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+					<Area X="0" Y="0" Width="57" Height="18"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	       		           ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+
+</Window>

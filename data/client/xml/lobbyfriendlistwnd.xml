@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="LobbyFriendListWnd" Id="10">
+	<Size X="0" Y="29" Width="172" Height="140" />
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style> 
+	<ExtraInfo FriendManual="401"/>
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="20" Y="112" Width="43" Height="18" />
+		<Style>IWS_BACKMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_left" >
+				<Area X="17" Y="4"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="2">
+		<Size X="109" Y="112" Width="43" Height="18" />
+		<Style>IWS_BACKMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_left" >
+				<Area X="17" Y="4" Reverse="Horz"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="3">
+		<Size X="20" Y="112" Width="132" Height="18" />
+		<Style>IWS_BACKMOST</Style> 
+		<Title>
+			<Format X="66" Y="3" Size="11" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF3A3A3A"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
+			<Color Type="Disable" Text="FF3A3A3A" Back="FF3A3A3A"/>
+			<Text>친구 신청하는 법</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="132" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="132" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="132" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="132" Height="18"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="LobbyUserListBtn" Id="10">
+		<Size X="0" Y="0" Width="172" Height="21" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="172" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="172" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="MyBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend1_black" />
+			<Image Type="MyBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend1_gray" />
+			<Image Type="OtherBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend2_black" />
+			<Image Type="OtherBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend2_gray" />
+			<Image Type="CoupleBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend3_black" />
+			<Image Type="CoupleBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend3_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	                   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="LobbyUserListBtn" Id="11">
+		<Size X="0" Y="21" Width="172" Height="21" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_dark2" >
+				<Area X="0" Y="0" Width="172" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="172" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="172" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="MyBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend1_black" />
+			<Image Type="MyBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend1_gray" />
+			<Image Type="OtherBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend2_black" />
+			<Image Type="OtherBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend2_gray" />
+			<Image Type="CoupleBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend3_black" />
+			<Image Type="CoupleBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend3_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	                   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="LobbyUserListBtn" Id="12">
+		<Size X="0" Y="42" Width="172" Height="21" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="172" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="172" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="MyBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend1_black" />
+			<Image Type="MyBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend1_gray" />
+			<Image Type="OtherBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend2_black" />
+			<Image Type="OtherBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend2_gray" />
+			<Image Type="CoupleBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend3_black" />
+			<Image Type="CoupleBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend3_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	                   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="LobbyUserListBtn" Id="13">
+		<Size X="0" Y="63" Width="172" Height="21" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_dark2" >
+				<Area X="0" Y="0" Width="172" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="172" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="172" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="MyBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend1_black" />
+			<Image Type="MyBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend1_gray" />
+			<Image Type="OtherBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend2_black" />
+			<Image Type="OtherBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend2_gray" />
+			<Image Type="CoupleBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend3_black" />
+			<Image Type="CoupleBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend3_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	                   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="LobbyUserListBtn" Id="14">
+		<Size X="0" Y="84" Width="172" Height="21" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="172" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="172" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="MyBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend1_black" />
+			<Image Type="MyBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend1_gray" />
+			<Image Type="OtherBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend2_black" />
+			<Image Type="OtherBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend2_gray" />
+			<Image Type="CoupleBestFriendBlack" Imageset="BaseImage015" Image="icontext_bestfriend3_black" />
+			<Image Type="CoupleBestFriendGray" Imageset="BaseImage015" Image="icontext_bestfriend3_gray" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	                   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="LobbyUserListOptionWnd" Id="1000">
+		<Size X="0" Y="0" Width="100" Height="35" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_EXIT_ESC</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="tooltip2">
+				<Area X="0" Y="0" Width="100" Height="35" />
+			</DefaultFrameImagery>
+
+			<Image Type="DarkLine" Imageset="BaseImage001" Image="strip_gray_dark">
+				<Area X="0" Y="0" RenderType="Multiply" />
+			</Image>
+			<Image Type="LightLine" Imageset="BaseImage001" Image="strip_gray_light">
+				<Area X="0" Y="0" RenderType="Multiply" />
+			</Image>
+			<Image Type="OverLine" Imageset="BaseImage001" Image="strip_gray_on" />
+		</Imagery>
+		<ExtraInfo AddWidth="14" AddHeight="12" ListX="7" ListY="7" HeightGap="21"/>
+	</Window>
+</Window>

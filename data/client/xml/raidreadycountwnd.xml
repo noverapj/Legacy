@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="RaidReadyCountWnd" Id="6299">
+	<Size X="0" Y="0" Width="0" Height="0" />
+	<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST</Style> 
+	<Imagery>
+		<Image Type="CountText" Imageset="BaseImage040" Image="con0_raidcount_count"/>
+		<Image Type="CountNum1" Imageset="BaseImage040" Image="icon0_raidcount1"/>
+		<Image Type="CountNum2" Imageset="BaseImage040" Image="icon0_raidcount2"/>
+		<Image Type="CountNum3" Imageset="BaseImage040" Image="icon0_raidcount3"/>
+		<Image Type="CountNum4" Imageset="BaseImage040" Image="icon0_raidcount4"/>
+		<Image Type="CountNum5" Imageset="BaseImage040" Image="icon0_raidcount5"/>
+		<Image Type="CountNum6" Imageset="BaseImage040" Image="icon0_raidcount6"/>
+		<Image Type="CountNum7" Imageset="BaseImage040" Image="icon0_raidcount7"/>
+		<Image Type="CountNum8" Imageset="BaseImage040" Image="icon0_raidcount8"/>
+		<Image Type="CountNum9" Imageset="BaseImage040" Image="icon0_raidcount9"/>
+		<Image Type="CountNum10" Imageset="BaseImage040" Image="icon0_raidcount10"/>
+		<Image Type="BgEffect" Imageset="BaseImage002" Image="iconeffect_8"/>
+		<Image Type="GoText" Imageset="BaseImage040" Image="icon0_raidcount_go"/>
+	</Imagery>
+	<ExtraInfo Raid_Count = "interface/raid/raid_count.wav"
+	      	   Raid_Go = "interface/raid/raid_go.wav"/>
+</Window>
+

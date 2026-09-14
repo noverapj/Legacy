@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="PlazaNPCGaugeWnd" Id="5079">
+	<Size X="0" Y="93" XAlign="Center" YAlign="Top" Width="432" Height="54"/>
+	<DragRect Left="0" Top="0" Right="432" Bottom="54" />
+	<Style>IWS_START_HIDE|IWS_PROCESS|IWS_CANMOVE|IWS_BACKMOST</Style>
+	<Imagery>
+		<Image Type="IconBackOrange" Imageset="BaseEffect001" Image="effect_stonebg_red" />
+		<Image Type="IconBackRed" Imageset="BaseEffect001" Image="effect_stonebg_red" />
+		<Image Type="GaugeBack" Imageset="BaseImage026" Image="centerui_plaza_gauge_bg" />
+		<Image Type="GaugeWhite" Imageset="BaseImage026" Image="centerui_plaza_gauge_white" />
+		<Image Type="GaugeOrange" Imageset="BaseImage026" Image="centerui_plaza_gauge_orange1" />
+		<Image Type="GaugeRed" Imageset="BaseImage026" Image="centerui_plaza_gauge_orange2" />
+		<Image Type="WhiteLine" Imageset="BaseImage016" Image="centerui_line" />
+		<Image Type="AttackEffect1" Imageset="BaseImage002" Image="effect_stoneattack_01" />
+		<Image Type="AttackEffect2" Imageset="BaseImage002" Image="effect_stoneattack_02" />		
+		<Image Type="RaidGauge" Imageset="BaseImage032" Image="centerui_raid_gauge_orange2" />
+		<Image Type="RaidGaugeWhite" Imageset="BaseImage032" Image="centerui_raid_gauge_white" />
+		<Image Type="RaidGaugeBack" Imageset="BaseImage032" Image="centerui_raid_gauge_bg" />
+	</Imagery>
+</Window>
+

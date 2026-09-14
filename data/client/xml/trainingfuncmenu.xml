@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="TrainingFuncMenuWnd" Id="6279">
+	<Size X="15" Y="15" Width="388" Height="43" XAlign="Left" YAlign="Top"/>
+	<DragRect Left="0" Top="0" Right="270" Bottom="43" />
+	<Style>IWS_PROCESS|IWS_CANMOVE|IWS_BACKMOST</Style>
+	<Imagery>
+		<Image Imageset="BaseImage030" Image="window_add_01">
+			<Area X="0" Y="0" Width="270" Height="43" />
+		</Image>
+	</Imagery>
+		
+	<Window ClassName="ioButton" Id="1">
+		<Size X="6" Y="6" Width="71" Height="33" />
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage030" Image="bt002_nor">
+				<Area X="0" Y="0" Width="71" Height="33"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage030" Image="bt002_over">
+				<Area X="0" Y="0" Width="71" Height="33"/>
+			</Image>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="71" Height="33"/>
+			</DefaultFrameImagery>
+			<Image Type="Push" Imageset="BaseImage030" Image="bt002_down">
+				<Area X="0" Y="0" Width="71" Height="33"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>					   
+	</Window>
+	
+	<Window ClassName="ioButton" Id="2">
+		<Size X="82" Y="6" Width="54" Height="33" />
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage030" Image="bt004_nor">
+				<Area X="0" Y="0" Width="54" Height="33"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage030" Image="bt004_over">
+				<Area X="0" Y="0" Width="54" Height="33"/>
+			</Image>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="54" Height="33"/>
+			</DefaultFrameImagery>
+			<Image Type="Push" Imageset="BaseImage030" Image="bt004_down">
+				<Area X="0" Y="0" Width="54" Height="33"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="ioButton" Id="3">
+		<Size X="136" Y="6" Width="54" Height="33" />
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage030" Image="bt005_nor">
+				<Area X="0" Y="0" Width="54" Height="33"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage030" Image="bt005_over">
+				<Area X="0" Y="0" Width="54" Height="33"/>
+			</Image>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="54" Height="33"/>
+			</DefaultFrameImagery>
+			<Image Type="Push" Imageset="BaseImage030" Image="bt005_down">
+				<Area X="0" Y="0" Width="54" Height="33"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+		
+	<Window ClassName="ioButton" Id="4">
+		<Size X="195" Y="6" Width="63" Height="33" />
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage030" Image="bt006_nor">
+				<Area X="0" Y="0" Width="63" Height="33"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage030" Image="bt006_over">
+				<Area X="0" Y="0" Width="63" Height="33"/>
+			</Image>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="63" Height="33"/>
+			</DefaultFrameImagery>
+			<Image Type="Push" Imageset="BaseImage030" Image="bt006_down">
+				<Area X="0" Y="0" Width="63" Height="33"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage030" Image="bt006_gray1">
+				<Area X="0" Y="0" Width="63" Height="33"/>
+			</Image>
+			<Image Type="ExDisableNor" Imageset="BaseImage030" Image="bt006_gray_nor">
+				<Area X="0" Y="0" Width="63" Height="33"/>
+			</Image>
+			<Image Type="ExDisablePush" Imageset="BaseImage030" Image="bt006_gray_down">
+				<Area X="0" Y="0" Width="63" Height="33"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	               ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="ioButton" Id="5">
+		<Size X="258" Y="6" Width="63" Height="33" />
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage030" Image="bt007_nor">
+				<Area X="0" Y="0" Width="63" Height="33"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage030" Image="bt007_over">
+				<Area X="0" Y="0" Width="63" Height="33"/>
+			</Image>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="63" Height="33"/>
+			</DefaultFrameImagery>
+			<Image Type="Push" Imageset="BaseImage030" Image="bt007_down">
+				<Area X="0" Y="0" Width="63" Height="33"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage030" Image="bt007_gray1">
+				<Area X="0" Y="0" Width="63" Height="33"/>
+			</Image>
+			<Image Type="ExDisableNor" Imageset="BaseImage030" Image="bt007_gray_nor">
+				<Area X="0" Y="0" Width="63" Height="33"/>
+			</Image>
+			<Image Type="ExDisablePush" Imageset="BaseImage030" Image="bt007_gray_down">
+				<Area X="0" Y="0" Width="63" Height="33"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	               ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="ioButton" Id="6">
+		<Size X="321" Y="6" Width="63" Height="33" />
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage030" Image="bt008_nor">
+				<Area X="0" Y="0" Width="63" Height="33"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage030" Image="bt008_over">
+				<Area X="0" Y="0" Width="63" Height="33"/>
+			</Image>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="63" Height="33"/>
+			</DefaultFrameImagery>
+			<Image Type="Push" Imageset="BaseImage030" Image="bt008_down">
+				<Area X="0" Y="0" Width="63" Height="33"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage030" Image="bt008_gray1">
+				<Area X="0" Y="0" Width="63" Height="33"/>
+			</Image>
+			<Image Type="ExDisableNor" Imageset="BaseImage030" Image="bt008_gray_nor">
+				<Area X="0" Y="0" Width="63" Height="33"/>
+			</Image>
+			<Image Type="ExDisablePush" Imageset="BaseImage030" Image="bt008_gray_down">
+				<Area X="0" Y="0" Width="63" Height="33"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	               ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+</Window>

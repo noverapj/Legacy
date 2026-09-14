@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="LobbyWnd" Id="1">
+	<Size X="0" Y="0" Width="564" Height="526" />
+	<Style>IWS_PROCESS|IWS_BACKMOST|IWS_START_HIDE|IWS_CHILD_ONLY_RESPONSE</Style>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame80">
+			<Area X="0" Y="0" Width="564" Height="526"/>
+		</DefaultFrameImagery>
+		<Image Imageset="BaseImage005" Image="window_gloss" >
+			<Area X="2" Y="2"/>
+		</Image>
+		<Image Imageset="BaseImage005" Image="window_gloss" >
+			<Area X="445" Y="407" Reverse="HorzVert"/>
+		</Image>	
+		<DefaultFrameImagery Type="CustomTitle" Templete="win1_title">
+			<Area X="5" Y="6" Width="554" Height="36"/>
+		</DefaultFrameImagery>
+		<Image Type="TabBack1" Imageset="BaseImage004" Image="tap1_back1"/>
+		<Image Type="TabBack2" Imageset="BaseImage004" Image="tap1_back2"/>
+		<Image Type="TabBack3" Imageset="BaseImage004" Image="tap1_back3"/>
+		<Image Type="TabBack4" Imageset="BaseImage004" Image="tap1_back4"/>
+		<Image Type="MinorGrade" Imageset="BaseImage001" Image="icon0_gradedetail" />
+		<Image Type="Gauge"      Imageset="BaseImage004" Image="gauge_gradelobby_gauge"/>
+		<Image Type="GaugeBack"  Imageset="BaseImage004" Image="gauge_gradelobby_bg"/>
+	</Imagery>
+
+	<Window ClassName="LobbyBtn" Id="1">
+		<Size X="17" Y="49" Width="118" Height="70" />
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage026" Image="tap1_off_small" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage026" Image="tap1_off_small" >
+				<Area X="0" Y="0" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="OverAdd" Imageset="BaseImage001" Image="tap1_overadd" >
+				<Area X="0" Y="0" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="tap1_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="Icon" Imageset="UIIconPack7" Image="lobby_battle_icon" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="LobbyBtn" Id="17">
+		<Size X="17" Y="120" Width="112" Height="54" />
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage026" Image="tap1_off_small" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage026" Image="tap1_off_small" >
+				<Area X="0" Y="0" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="OverAdd" Imageset="BaseImage001" Image="tap1_overadd" >
+				<Area X="0" Y="0" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="tap1_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="Icon" Imageset="UIIconPack5" Image="mode_openspace_training" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="LobbyBtn" Id="2">
+		<Size X="17" Y="175" Width="112" Height="54" />
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage026" Image="tap1_off_small" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage026" Image="tap1_off_small" >
+				<Area X="0" Y="0" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="OverAdd" Imageset="BaseImage001" Image="tap1_overadd" >
+				<Area X="0" Y="0" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="tap1_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="Icon" Imageset="UIIconPack44" Image="mode_rally1" />
+
+			<DefaultFrameImagery Type="GreenFrm" Templete="state_green">
+				<Area X="7" Y="7" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+			
+			<DefaultFrameImagery Type="RedFrm" Templete="state_red">
+				<Area X="7" Y="7" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+<!--  래더전 탭 변경
+	<Window ClassName="LobbyBtn" Id="3">
+		<Size X="11" Y="191" Width="118" Height="70" />
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="tap1_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="tap1_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="OverAdd" Imageset="BaseImage001" Image="tap1_overadd" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="tap1_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="Icon" Imageset="UIIconPack23" Image="mode_rally2" />
+
+			<DefaultFrameImagery Type="GreenFrm" Templete="state_green">
+				<Area X="7" Y="7" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+			
+			<DefaultFrameImagery Type="RedFrm" Templete="state_red">
+				<Area X="7" Y="7" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+-->
+
+	<Window ClassName="LobbyBtn" Id="7">
+		<Size X="17" Y="230" Width="112" Height="54" />
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage026" Image="tap1_off_small" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage026" Image="tap1_off_small" >
+				<Area X="0" Y="0" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="OverAdd" Imageset="BaseImage001" Image="tap1_overadd" >
+				<Area X="0" Y="0" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="tap1_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="Icon" Imageset="UIIconPack44" Image="mode_rally2" />
+
+			<DefaultFrameImagery Type="GreenFrm" Templete="state_green">
+				<Area X="7" Y="7" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+			
+			<DefaultFrameImagery Type="PinkFrm" Templete="state_pink">
+				<Area X="7" Y="7" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+
+			<DefaultFrameImagery Type="OrangeFrm" Templete="state_orange">
+				<Area X="7" Y="7" Width="40" Height="16"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="LobbyBtn" Id="4">
+		<Size X="17" Y="285" Width="112" Height="54" />
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage026" Image="tap1_off_small" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage026" Image="tap1_off_small" >
+				<Area X="0" Y="0" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="OverAdd" Imageset="BaseImage001" Image="tap1_overadd" >
+				<Area X="0" Y="0" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="tap1_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="Icon" Imageset="UIIconPack5" Image="mode_openspace_talking" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="LobbyBtn" Id="5">
+		<Size X="17" Y="340" Width="112" Height="54" />
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage026" Image="tap1_off_small" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage026" Image="tap1_off_small" >
+				<Area X="0" Y="0" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="OverAdd" Imageset="BaseImage001" Image="tap1_overadd" >
+				<Area X="0" Y="0" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="tap1_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage004" Image="tap1_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="Icon" Imageset="UIIconPack11" Image="lobby_shop_icon" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="IconBtn" Id="6">
+		<Size X="17" Y="439" Width="97" Height="22" />
+		<Title>
+			<Format X="52" Y="3" Size="11" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+			<Text>훈련소</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="97" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="97" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="97" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="97" Height="22"/>
+			</DefaultFrameImagery>
+			<Image Type="Icon" Imageset="BaseImage039" Image="housing_icon_01" >
+				<Area X="5" Y="3" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	               ClickSound = "interface/public_mouseclick_00.wav"
+				   IconScale = "1.0f"
+				   IconBackScale = "1.0f"/>
+	</Window>
+	<Window ClassName="IconBtn" Id="9">
+		<Size X="17" Y="462" Width="97" Height="22" />
+		<Title>
+			<Format X="52" Y="3" Size="11" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF215AA2"/>
+			<Text>개인본부</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="97" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="97" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="97" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="97" Height="22"/>
+			</DefaultFrameImagery>
+		<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="97" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="97" Height="22"/>
+			</DefaultFrameImagery>
+			<Image Type="Icon" Imageset="BaseImage039" Image="housing_icon_02" >
+				<Area X="5" Y="3" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	               ClickSound = "interface/public_mouseclick_00.wav"
+				   IconScale = "1.0f"
+				   IconBackScale = "1.0f"/>
+	</Window>
+	<Window ClassName="IconBtn" Id="8">
+		<Size X="17" Y="485" Width="97" Height="22" />
+		<Title>
+			<Format X="52" Y="3" Size="11" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF215AA2"/>
+			<Text>길드본부</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="97" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="97" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="97" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="97" Height="22"/>
+			</DefaultFrameImagery>
+		<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="97" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="97" Height="22"/>
+			</DefaultFrameImagery>
+			<Image Type="Icon" Imageset="BaseImage039" Image="housing_icon_03" >
+				<Area X="5" Y="3" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	               ClickSound = "interface/public_mouseclick_00.wav"
+				   IconScale = "1.0f"
+				   IconBackScale = "1.0f"/>
+	</Window>
+	
+	<Window ClassName="ioButton" Id="19">
+		<Size X="534" Y="8" Width="15" Height="15"/>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage031" Image="bonus_gold_icon" >
+				<Area X="0" Y="0" Width="15" Height="15"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage031" Image="bonus_gold_icon_over" >
+				<Area X="0" Y="0" Width="15" Height="15"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage031" Image="bonus_gold_icon" >
+				<Area X="0" Y="0" Width="15" Height="15"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage031" Image="bonus_gold_icon" >
+				<Area X="0" Y="0" Width="15" Height="15"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+</Window>

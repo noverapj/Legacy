@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+<Window ClassName="QuickLobbyMenu" SubClassName="ioWnd" Id="6244" IDName="" MemberName="">
+    <Size X="15" Y="15" Width="343" Height="96" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+    <Style>IWS_CANMOVE|IWS_PROCESS</Style>
+    <DragRect Left="15" Top="15" Right="343" Bottom="96" />
+    <Imagery>
+        <Image Type="Image" Color="ffffffff" File="BaseImage030#window_main" Imageset="BaseImage030" Image="window_main">
+            <Area X="0" Y="0" Width="357" Height="110" HorzAlign="Left" VertAlign="Top" Reverse="" RenderType="" />
+        </Image>
+    </Imagery>
+    <Window ClassName="ioShuffleButtonEx" SubClassName="ioImageButtonWndEX" Id="2" IDName="SHUFFLE_BTN" MemberName="">
+        <Size X="6" Y="7" Width="331" Height="48" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+        <Imagery />
+        <ExtraInfo ButtonType="0">
+            <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+            <NormalImage FileName="BaseImage030#bt001_nor" ImageSetName="BaseImage030" ImageName="bt001_nor" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="1" ReserveFormat="0" Color="ffffffff" />
+            <OverImage FileName="BaseImage030#bt001_over" ImageSetName="BaseImage030" ImageName="bt001_over" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="1" ReserveFormat="0" Color="ffffffff" />
+            <OverAddImage FileName="BaseImage030#bt001_over" ImageSetName="BaseImage030" ImageName="bt001_over" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="1" ReserveFormat="0" Color="ffffffff" />
+            <PushImage FileName="BaseImage030#bt001_down" ImageSetName="BaseImage030" ImageName="bt001_down" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="1" ReserveFormat="0" Color="ffffffff" />
+            <ToolInfo>
+                <Event Type="WEVT_LBUTTONUP" Function="OnShuffleLButtonUP" />
+            </ToolInfo>
+        </ExtraInfo>
+    </Window>
+    <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="3" IDName="BATTLE_BTN" MemberName="">
+        <Size X="6" Y="58" Width="71" Height="33" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+        <Imagery />
+        <ExtraInfo ButtonType="0">
+            <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+            <NormalImage FileName="BaseImage030#bt002_nor" ImageSetName="BaseImage030" ImageName="bt002_nor" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="1" ReserveFormat="0" Color="ffffffff" />
+            <OverImage FileName="BaseImage030#bt002_over" ImageSetName="BaseImage030" ImageName="bt002_over" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="1" ReserveFormat="0" Color="ffffffff" />
+            <OverAddImage FileName="BaseImage030#bt002_over" ImageSetName="BaseImage030" ImageName="bt002_over" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="1" ReserveFormat="0" Color="ffffffff" />
+            <PushImage FileName="BaseImage030#bt002_down" ImageSetName="BaseImage030" ImageName="bt002_down" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="1" ReserveFormat="0" Color="ffffffff" />
+            <ToolInfo>
+                <Event Type="WEVT_LBUTTONUP" Function="OnBattleLButtonUP" />
+            </ToolInfo>
+        </ExtraInfo>
+    </Window>
+    <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="4" IDName="TOURNAMENT_BTN" MemberName="">
+        <Size X="76" Y="58" Width="71" Height="33" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+        <Imagery />
+        <ExtraInfo ButtonType="0">
+            <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+            <NormalImage FileName="BaseImage030#bt003_nor" ImageSetName="BaseImage030" ImageName="bt003_nor" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="1" ReserveFormat="0" Color="ffffffff" />
+            <OverImage FileName="BaseImage030#bt003_over" ImageSetName="BaseImage030" ImageName="bt003_over" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="1" ReserveFormat="0" Color="ffffffff" />
+            <OverAddImage FileName="BaseImage030#bt003_over" ImageSetName="BaseImage030" ImageName="bt003_over" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="1" ReserveFormat="0" Color="ffffffff" />
+            <PushImage FileName="BaseImage030#bt003_down" ImageSetName="BaseImage030" ImageName="bt003_down" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="1" ReserveFormat="0" Color="ffffffff" />
+            <ToolInfo>
+                <Event Type="WEVT_LBUTTONUP" Function="OnTournamentLButtonUP" />
+            </ToolInfo>
+        </ExtraInfo>
+    </Window>
+    <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="5" IDName="PLAZA_BTN" MemberName="">
+        <Size X="153" Y="58" Width="54" Height="33" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+        <Imagery />
+        <ExtraInfo ButtonType="0">
+            <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+            <NormalImage FileName="BaseImage030#bt004_nor" ImageSetName="BaseImage030" ImageName="bt004_nor" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="1" ReserveFormat="0" Color="ffffffff" />
+            <OverImage FileName="BaseImage030#bt004_over" ImageSetName="BaseImage030" ImageName="bt004_over" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="1" ReserveFormat="0" Color="ffffffff" />
+            <OverAddImage FileName="BaseImage030#bt004_over" ImageSetName="BaseImage030" ImageName="bt004_over" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="1" ReserveFormat="0" Color="ffffffff" />
+            <PushImage FileName="BaseImage030#bt004_down" ImageSetName="BaseImage030" ImageName="bt004_down" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="1" ReserveFormat="0" Color="ffffffff" />
+            <ToolInfo>
+                <Event Type="WEVT_LBUTTONUP" Function="OnPlazaLButtonUP" />
+            </ToolInfo>
+        </ExtraInfo>
+    </Window>
+    <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="6" IDName="TRADE_BTN" MemberName="">
+        <Size X="206" Y="58" Width="54" Height="33" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+        <Imagery />
+        <ExtraInfo ButtonType="0">
+            <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+            <NormalImage FileName="BaseImage030#bt005_nor" ImageSetName="BaseImage030" ImageName="bt005_nor" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="1" ReserveFormat="0" Color="ffffffff" />
+            <OverImage FileName="BaseImage030#bt005_over" ImageSetName="BaseImage030" ImageName="bt005_over" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="1" ReserveFormat="0" Color="ffffffff" />
+            <OverAddImage FileName="BaseImage030#bt005_over" ImageSetName="BaseImage030" ImageName="bt005_over" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="1" ReserveFormat="0" Color="ffffffff" />
+            <PushImage FileName="BaseImage030#bt005_down" ImageSetName="BaseImage030" ImageName="bt005_down" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="1" ReserveFormat="0" Color="ffffffff" />
+            <ToolInfo>
+                <Event Type="WEVT_LBUTTONUP" Function="OnTradeLButtonUP" />
+            </ToolInfo>
+        </ExtraInfo>
+    </Window>
+    <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="7" IDName="HEAD_QUATER_BTN" MemberName="">
+        <Size X="266" Y="58" Width="71" Height="33" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+        <Imagery />
+        <ExtraInfo ButtonType="0">
+            <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+            <NormalImage FileName="BaseImage030#bt006_nor" ImageSetName="BaseImage030" ImageName="bt006_nor" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="1" ReserveFormat="0" Color="ffffffff" />
+            <OverImage FileName="BaseImage030#bt006_over" ImageSetName="BaseImage030" ImageName="bt006_over" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="1" ReserveFormat="0" Color="ffffffff" />
+            <OverAddImage FileName="BaseImage030#bt006_over" ImageSetName="BaseImage030" ImageName="bt006_over" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="1" ReserveFormat="0" Color="ffffffff" />
+            <PushImage FileName="BaseImage030#bt006_down" ImageSetName="BaseImage030" ImageName="bt006_down" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="1" ReserveFormat="0" Color="ffffffff" />
+            <ToolInfo>
+                <Event Type="WEVT_LBUTTONUP" Function="OnHeadQuartersLButtonUP" />
+            </ToolInfo>
+        </ExtraInfo>
+    </Window>
+    <Window ClassName="ioImageButtonWndEX" SubClassName="" Id="8" IDName="PLAZA_GO_BTN" MemberName="">
+        <Size X="266" Y="58" Width="71" Height="33" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
+        <Imagery />
+        <ExtraInfo ButtonType="0">
+            <LabelInfo Text="" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+            <NormalImage FileName="BaseImage030#bt006_2_nor" ImageSetName="BaseImage030" ImageName="bt006_2_nor" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+            <OverImage FileName="BaseImage030#bt006_2_over" ImageSetName="BaseImage030" ImageName="bt006_2_over" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+            <OverAddImage FileName="BaseImage030#bt006_2_over" ImageSetName="BaseImage030" ImageName="bt006_2_over" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+            <PushImage FileName="BaseImage030#bt006_2_down" ImageSetName="BaseImage030" ImageName="bt006_2_down" OffsetX="0" OffsetY="0" RenderType="0" GrayRenderType="0" TextureFilterOption="0" ReserveFormat="0" Color="ffffffff" />
+            <ToolInfo>
+                <Event Type="WEVT_LBUTTONUP" Function="OnPlazaGOLButtonUP" />
+            </ToolInfo>
+        </ExtraInfo>
+    </Window>
+</Window>

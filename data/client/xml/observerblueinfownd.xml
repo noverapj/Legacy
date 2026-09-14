@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="ioObserverBlueWnd" Id="5060">
+	<Size X="23" Y="172" XAlign="Left" YAlign="Top" Width="160" Height="25" />
+	<DragRect Left="0" Top="0" Right="160" Bottom="25" />
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_CANMOVE|IWS_AFTER_RENDER</Style>
+
+	<ExtraInfo ChangeTime="250"/>
+
+	<Imagery>
+		<Image Type="GuildBack" Imageset="BaseImage001" Image="strip_gray_on" />
+
+		<Image Type="BlueBack" Imageset="BaseImage010" Image="Watch_Blue_Back" />
+		<Image Type="RedBack" Imageset="BaseImage010" Image="Watch_Red_Back" />
+
+		<Image Type="BlueGauge" Imageset="BaseImage010" Image="Watch_Blue_Gauge" />
+		<Image Type="RedGauge" Imageset="BaseImage010" Image="Watch_Red_Gauge" />
+
+		<Image Type="BlueDead" Imageset="BaseImage010" Image="Watch_Blue_Dead" />
+
+		<Image Type="AddGauge" Imageset="BaseImage010" Image="Watch_Gauge_Add" />
+
+		<Image Type="BlueNumKey" Imageset="BaseImage010" Image="Text_Number4" />
+		<Image Type="RedNumKey" Imageset="BaseImage010" Image="Text_Number5" />
+
+		<Image Type="Target" Imageset="BaseImage010" Image="Guild_Myguild" />
+	</Imagery>
+
+</Window>

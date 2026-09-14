@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="MannerValuationChatWnd" Id="6083">
+	<Size X="0" Y="-20" XAlign="Center" YAlign="Center" Width="326" Height="183" />
+	<DragRect Left="0" Top="0" Right="626" Bottom="526" />
+	<Style>IWS_START_HIDE|IWS_MODAL|IWS_EXIT_ESC</Style> 
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Title>
+		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Text>채팅 / 쪽지</Text>
+	</Title>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+			<Area X="0" Y="0" Width="326" Height="183"/>
+		</DefaultFrameImagery>
+
+		<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title">
+			<Area X="5" Y="6" Width="316" Height="36"/>
+		</DefaultFrameImagery>
+
+		<DefaultFrameImagery Templete="tooltip3">
+			<Area X="17" Y="54" Width="145" Height="112" AutoResize ="False"/>
+		</DefaultFrameImagery>
+
+		<DefaultFrameImagery Templete="tooltip3">
+			<Area X="164" Y="54" Width="145" Height="112" AutoResize ="False"/>
+		</DefaultFrameImagery>
+	</Imagery>
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="291" Y="11" Width="23" Height="23"/>
+		<Style>IWS_BACKMOST</Style>			
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+                        <Image Type="Disable" Imageset="BaseImage001" Image="icon0_x_grayframe" >
+				<Area X="0" Y="0" />
+			</Image>
+                        <Image Type="NormalList" Imageset="BaseImage001" Image="icon0_x" >
+				<Area X="5" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="2">
+		<Size X="23" Y="60" Width="133" Height="63"/>
+		<Style>IWS_BACKMOST</Style>			
+		<Title>
+			<Format X="66" Y="19" Size="17" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF20394F"/>
+			<Text>1:1 채팅</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt013_green_nor">
+				<Area X="0" Y="0" Width="133" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt013_green_nor">
+				<Area X="0" Y="0" Width="133" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="133" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt013_green_down">
+				<Area X="0" Y="0" Width="133" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt013_gray_nor">
+				<Area X="0" Y="0" Width="133" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt013_gray_down">
+				<Area X="0" Y="0" Width="133" Height="63"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="3">
+		<Size X="170" Y="60" Width="133" Height="63"/>
+		<Style>IWS_BACKMOST</Style>			
+		<Title>
+			<Format X="66" Y="19" Size="17" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF20394F"/>
+			<Text>쪽지 보내기</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt013_green_nor">
+				<Area X="0" Y="0" Width="133" Height="63" />
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt013_green_nor">
+				<Area X="0" Y="0" Width="133" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="133" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt013_green_down">
+				<Area X="0" Y="0" Width="133" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt013_gray_nor">
+				<Area X="0" Y="0" Width="133" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt013_gray_down">
+				<Area X="0" Y="0" Width="133" Height="63"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+</Window>
+

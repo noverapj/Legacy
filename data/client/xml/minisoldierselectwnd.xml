@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="MiniSoldierSelectWnd" Id="5024">
+	<Size X="0" Y="-136" XAlign="Center" YAlign="Bottom" Width="268" Height="56" />
+	<DragRect Left="0" Top="0" Right="286" Bottom="56" />
+	<Style>IWS_PROCESS|IWS_CANMOVE|IWS_BACKMOST</Style>
+
+	<Imagery>
+		<Image Type="SoldierSelectBack" Imageset="BaseImage043" Image="hero_slot_bg" >
+			<Area X="7" Y="-10" Width="254" Height="56" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+	</Imagery>
+
+	<!--빠른 교체 게이지-->
+	<Window ClassName="CharChangeGaugeHelp" Id="101">
+		<Size X="256" Y="39" Width="15" Height="15" />
+		<Style>IWS_BACKMOST</Style>
+		<Imagery>
+			<Image Type="CharChangeHelp" Imageset="BaseImage001" Image="icon0_help_black" >
+				<Area X="0" Y="0" Width="15" Height="15"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	            	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioBasicToolTip" Id="102">
+		<Size X="0" Y="0" Width="230" Height="100" /> 
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_TOPMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="tooltip2">
+				<Area X="0" Y="0" Width="230" Height="100" /> 
+			</DefaultFrameImagery>
+		</Imagery>		
+		<Window ClassName="ioRichLabel" Id="1">
+			<Size X="7" Y="6" Width="230" Height="100"/>
+			<ExtraInfo VertGap="3" HorzAlign="Center" VertAlign="Center" >
+				<TextBlock Text="<빠른 용병 교체>#" Size="12" Color="FF6E6E6E"/>
+				<TextBlock Text="빠른 교체 게이지가 활성화된#" Size="12"  Color="FF6E6E6E"/>
+				<TextBlock Text="상태에서는 특정 공격, 피격 중에도#" Size="12"  Color="FF6E6E6E"/>
+				<TextBlock Text="원하는 용병으로 교체할 수 있습니다.#" Size="12"  Color="FF6E6E6E"/>
+				<TextBlock Text="- 옵션 → 게임 설정에서 슬롯on/off - #" Size="12"  Color="FF6E6E6E"/>
+			</ExtraInfo>
+		</Window>
+	</Window>
+
+	<Window ClassName="CharChangeGauge" Id="100">
+		<Style>IWS_BACKMOST|IWS_NO_MOUSE_RESPONSE</Style>
+		<Size X="9" Y="35" Width="249" Height="25"/>
+		<Imagery>
+			<Image Type="GaugeBack" Imageset="BaseImage043" Image="hero_quickgauge_back">
+				<Area X="124" Y="12" Width="249" Height="25" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="Gauge" Imageset="BaseImage043" Image="hero_quickgauge">
+				<Area X="124" Y="12" Width="237" Height="13" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="MiniSoldierBtn" Id="0">
+		<Style>IWS_BACKMOST|IWS_NO_MOUSE_RESPONSE</Style>
+		<Size X="16" Y="1" Width="36" Height="36"/>
+		<Imagery>
+			<Image Type="SlotIconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="EmptySlot" Imageset="BaseImage002" Image="changeui_x" />
+			<DefaultFrameImagery Type="KeyBack" Templete="changeui_keybox">
+				<Area X="7" Y="28" Width="22" Height="17"/>
+			</DefaultFrameImagery>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="MiniSoldierBtn" Id="1">
+		<Style>IWS_BACKMOST|IWS_NO_MOUSE_RESPONSE</Style>
+		<Size X="56" Y="1" Width="36" Height="36"/>
+		<Imagery>
+			<Image Type="SlotIconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="EmptySlot" Imageset="BaseImage002" Image="changeui_x" />
+			<DefaultFrameImagery Type="KeyBack" Templete="changeui_keybox">
+				<Area X="7" Y="28" Width="22" Height="17"/>
+			</DefaultFrameImagery>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="MiniSoldierBtn" Id="2">
+		<Style>IWS_BACKMOST|IWS_NO_MOUSE_RESPONSE</Style>
+		<Size X="96" Y="1" Width="36" Height="36"/>
+		<Imagery>
+			<Image Type="SlotIconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="EmptySlot" Imageset="BaseImage002" Image="changeui_x" />
+			<DefaultFrameImagery Type="KeyBack" Templete="changeui_keybox">
+				<Area X="7" Y="28" Width="22" Height="17"/>
+			</DefaultFrameImagery>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="MiniSoldierBtn" Id="3">
+		<Style>IWS_BACKMOST|IWS_NO_MOUSE_RESPONSE</Style>
+		<Size X="136" Y="1" Width="36" Height="36"/>
+		<Imagery>
+			<Image Type="SlotIconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="EmptySlot" Imageset="BaseImage002" Image="changeui_x" />
+			<DefaultFrameImagery Type="KeyBack" Templete="changeui_keybox">
+				<Area X="7" Y="28" Width="22" Height="17"/>
+			</DefaultFrameImagery>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="MiniSoldierBtn" Id="4">
+		<Style>IWS_BACKMOST|IWS_NO_MOUSE_RESPONSE</Style>
+		<Size X="176" Y="1" Width="36" Height="36"/>
+		<Imagery>
+			<Image Type="SlotIconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="EmptySlot" Imageset="BaseImage002" Image="changeui_x" />
+			<DefaultFrameImagery Type="KeyBack" Templete="changeui_keybox">
+				<Area X="7" Y="28" Width="22" Height="17"/>
+			</DefaultFrameImagery>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="MiniSoldierBtn" Id="5">
+		<Style>IWS_BACKMOST|IWS_NO_MOUSE_RESPONSE</Style>
+		<Size X="216" Y="1" Width="36" Height="36"/>
+		<Imagery>
+			<Image Type="SlotIconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="EmptySlot" Imageset="BaseImage002" Image="changeui_x" />
+			<DefaultFrameImagery Type="KeyBack" Templete="changeui_keybox">
+				<Area X="7" Y="28" Width="22" Height="17"/>
+			</DefaultFrameImagery>
+		</Imagery>
+	</Window>
+
+	<!--페이지버튼-->
+	<Window ClassName="ioButton" Id="7">
+		<Style>IWS_BACKMOST|IWS_NO_MOUSE_RESPONSE|IWS_START_HIDE</Style>
+		<Size X="255" Y="0" Width="13" Height="13"/>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage004" Image="changeui_pagedown">
+				<Area Reverse="Vert" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage004" Image="changeui_pagedown">
+				<Area Reverse="Vert" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage004" Image="changeui_pagedown">
+				<Area Reverse="Vert" />
+			</Image>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="ioButton" Id="8">
+		<Style>IWS_BACKMOST|IWS_NO_MOUSE_RESPONSE|IWS_START_HIDE</Style>
+		<Size X="255" Y="26" Width="13" Height="13"/>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage004" Image="changeui_pagedown" />				
+			<Image Type="Over" Imageset="BaseImage004" Image="changeui_pagedown" />
+			<Image Type="Push" Imageset="BaseImage004" Image="changeui_pagedown" />
+		</Imagery>
+	</Window>
+</Window>

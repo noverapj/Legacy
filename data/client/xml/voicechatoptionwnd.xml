@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="VoiceChatOptionWnd" Id="6139">
+    <!-- x,y는 프로그램내에서 결정 -->
+	<Size X="0" Y="0" Width="100" Height="56" />
+	<Style>IWS_START_HIDE|IWS_PROCESS</Style>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="tooltip2">
+			<Area X="0" Y="0" Width="100" Height="56"/>
+		</DefaultFrameImagery>			
+	</Imagery>
+	
+	<Window ClassName="VoiceChatOptionBtn" Id="1">
+	<!-- Text, width는 프로그램에서 설정 -->
+		<Size X="7" Y="7" Width="86" Height="21"/>
+		<Title>
+			<Format X="5" Y="3" Size="12" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FFFFFFFF"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FFFFFFFF"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FFFFFFFF"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+			<Text>----</Text>
+		</Title>
+		<Imagery>
+			<Image Type="StrechNormal" Imageset="BaseImage001" Image="strip_gray_dark">
+				<Area X="0" Y="0" Width="86" Height="21" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="StrechOverAndPush" Imageset="BaseImage001" Image="strip_gray_on">
+				<Area X="0" Y="0" Width="86" Height="21" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	               ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="VoiceChatOptionBtn" Id="2">
+		<Size X="7" Y="28" Width="86" Height="21"/>
+		<Title>
+			<Format X="5" Y="3" Size="12" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FFFFFFFF"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FFFFFFFF"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FFFFFFFF"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+			<Text>----</Text>
+		</Title>
+		<Imagery>
+			<Image Type="StrechNormal" Imageset="BaseImage001" Image="strip_gray_light">
+				<Area X="0" Y="0" Width="86" Height="21" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+			<Image Type="StrechOverAndPush" Imageset="BaseImage001" Image="strip_gray_on">
+				<Area X="0" Y="0" Width="86" Height="21" HorzAlign="Stretch" VertAlign="Stretch"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	               ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+</Window>

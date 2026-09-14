@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="TournamentDetailInnerAllocateWnd" Id="10">
+	<Size X="29" Y="58" Width="558" Height="382" />
+	<Style>IWS_START_HIDE|IWS_BACKMOST|IWS_PROCESS</Style>
+	<Imagery>
+    <Image Type="BackCircle" Imageset="BaseImage002" Image="iconeffect_4">
+      <Area X="279" Y="210" RenderType="Multiply"/>
+    </Image>
+    <Image Type="BackHub" Imageset="BaseImage002" Image="iconeffect_3">
+      <Area X="279" Y="210" RenderType="Multiply"/>
+    </Image>
+    <Image Type="Icon" Imageset="UIIconPack44" Image="mode_rally2">
+ 			<Area X="279" Y="210" />
+  	</Image>
+		<Image Type="NormalList" Imageset="BaseImage_League001" Image="league_confetti_big">
+ 			<Area X="85" Y="104" />
+  	</Image>
+		<Image Type="NormalList" Imageset="BaseImage_League001" Image="league_confetti_big">
+ 			<Area X="471" Y="119"/>
+  	</Image>
+		<Image Type="NormalList" Imageset="BaseImage_League001" Image="league_confetti_big">
+ 			<Area X="186" Y="162" Reverse="HorzVert"/>
+  	</Image>
+		<Image Type="NormalList" Imageset="BaseImage_League001" Image="league_confetti_big">
+ 			<Area X="121" Y="168" />
+  	</Image>
+		<Image Type="NormalList" Imageset="BaseImage_League001" Image="league_confetti_big">
+ 			<Area X="404" Y="220" Reverse="Horz"/>
+  	</Image>
+  	<Image Type="NormalList" Imageset="BaseImage_League001" Image="league_confetti_small">
+ 			<Area X="431" Y="79" Reverse="Horz"/>
+  	</Image>
+  	<Image Type="NormalList" Imageset="BaseImage_League001" Image="league_confetti_small">
+ 			<Area X="155" Y="156" Reverse="Horz"/>
+  	</Image>
+  	<Image Type="NormalList" Imageset="BaseImage_League001" Image="league_confetti_small">
+ 			<Area X="367" Y="180" />
+  	</Image>
+  	<Image Type="NormalList" Imageset="BaseImage_League001" Image="league_confetti_small">
+ 			<Area X="179" Y="189" />
+  	</Image>
+  	<Image Type="NormalList" Imageset="BaseImage_League001" Image="league_confetti_small">
+ 			<Area X="146" Y="229" />
+  	</Image>
+  	<Image Type="NormalList" Imageset="BaseImage_League001" Image="league_confetti_small">
+ 			<Area X="386" Y="233" Reverse="Horz"/>
+  	</Image>
+  </Imagery>
+  <ExtraInfo DevideOffsetX="0.0f" DevideOffsetY="18.0f" DevideHorzCnt="1" DevideVertCnt="4" 
+   PresentOffsetX="50.0f" PresentScaleRate="0.55f" PresentBackCnt="4" /> 
+</Window>

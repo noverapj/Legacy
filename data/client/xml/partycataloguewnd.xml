@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="PartyCatalogueWnd" Id="10">
+	<Size X="144" Y="54" Width="403" Height="455" />
+	<Style>IWS_START_HIDE|IWS_BACKMOST|IWS_PROCESS</Style>
+	<Imagery>
+		<Image Type="RankJoinBG" Imageset="BaseImage033" Image="rank_talkbox_bg" />
+		<Image Type="RankJoinEffect" Imageset="BaseImage034" Image="rank_talkbox_effect" />
+	</Imagery>
+	<ExtraInfo TopModeType = "2"
+			   Succession_ToolTip = "<c:0xFF5B3714>1vs1모드\n<c:0xFF6E6E6E>자신과 계급이 비슷한 유저와 1대1로\n<c:0xFF6E6E6E>대결하여 최고 연승을 달성하는\n<c:0xFF6E6E6E>게임모드입니다."
+			   Succession_Error_Grade = "1vs1모드는 상사 이상부터#플레이가 가능합니다."
+			   Succession_Error_Time = "아직 오픈시간이 아닙니다.#플레이 가능 시간 : 10:00 ~ 24:00"
+	/>
+	<Window ClassName="ioButton" Id="1">
+		<Size X="155" Y="5" Width="113" Height="45" />
+		<Title>
+			<Format X="26" Y="11" Size="19" Style="Outline_full_2x" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+			<Text>방만들기</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt005_green_nor">
+				<Area X="0" Y="0" Width="113" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt005_green_nor">
+				<Area X="0" Y="0" Width="113" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="113" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt005_green_down">
+				<Area X="0" Y="0" Width="113" Height="45"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage025" Image="bonus_home_icon" >
+				<Area X="8" Y="12"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+					   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyQuickJoinBtn" Id="2">
+		<Size X="120" Y="5" Width="33" Height="45" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt005_orange_leftcut_nor">
+				<Area X="0" Y="0" Width="33" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt005_orange_leftcut_nor">
+				<Area X="0" Y="0" Width="33" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt005_rightcut_overadd">
+				<Area X="0" Y="0" Width="33" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt005_orange_leftcut_down">
+				<Area X="0" Y="0" Width="33" Height="45"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="bt005_line" >
+				<Area X="0" Y="3"/>
+			</Image>
+			<Image Type="Setting" Imageset="BaseImage001" Image="icon0_setting">
+				<Area X="3" Y="10"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+					   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="3">
+		<Size X="10" Y="5" Width="110" Height="45" />
+		<Title>
+			<Format X="27" Y="11" Size="19" Style="Outline_full_2x" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FFAD4800"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FFAD4800"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FFAD4800"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+			<Text>빠른참가</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt005_redbrown_rightcut_nor">
+				<Area X="0" Y="0" Width="110" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt005_redbrown_rightcut_nor">
+				<Area X="0" Y="0" Width="110" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt005_rightcut_overadd">
+				<Area X="0" Y="0" Width="110" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt005_redbrown_rightcut_down">
+				<Area X="0" Y="0" Width="110" Height="45"/>
+			</DefaultFrameImagery>
+			<!-- 
+			<Image Type="NormalList" Imageset="BaseImage004" Image="icon0_right_redbrown" >
+				<Area X="18" Y="12"/>
+			</Image>
+			-->
+			<Image Type="NormalList" Imageset="BaseImage025" Image="bonus_quick_icon" >
+				<Area X="6" Y="12"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+					   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="4">
+		<Size X="123" Y="255" Width="65" Height="18" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="65" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="65" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="65" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="65" Height="18"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_left" >
+				<Area X="28" Y="4"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+					   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="5">
+		<Size X="215" Y="255" Width="65" Height="18" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="65" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="65" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="65" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="65" Height="18"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_left" >
+				<Area X="28" Y="4" Reverse="Horz"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+					   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="6">
+		<Size X="308" Y="255" Width="85" Height="18" />
+		<Title>
+			<Format X="29" Y="3" Size="11" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FF3A3A3A" Back="FF000000"/>
+			<Text>새로 고침</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="85" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="85" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="85" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="85" Height="18"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_refresh" >
+				<Area X="13" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+			   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="7">
+		<Size X="285" Y="5" Width="108" Height="45" />
+		<Title>
+			<Format X="31" Y="11" Size="19" Style="Outline_full_2x" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF0C426F"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF0C426F"/>
+			<Color Type="Disable" Text="FF323232" Back="FF0C426F"/>
+			<Text>오늘의모드</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt013_blue_nor">
+				<Area X="0" Y="0" Width="108" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt013_blue_nor">
+				<Area X="0" Y="0" Width="108" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="108" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt013_blue_down">
+				<Area X="0" Y="0" Width="108" Height="45"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage025" Image="bonus_star_icon" >
+				<Area X="7" Y="13"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+						   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="11">
+		<Size X="285" Y="5" Width="108" Height="45" />
+		<Title>
+			<Format X="42" Y="11" Size="19" Style="Outline_full_2x" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF0C426F"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF0C426F"/>
+			<Color Type="Disable" Text="FF323232" Back="FF0C426F"/>
+			<Text>랭킹전</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt013_blue_nor">
+				<Area X="0" Y="0" Width="108" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt013_blue_nor">
+				<Area X="0" Y="0" Width="108" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="108" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt013_blue_down">
+				<Area X="0" Y="0" Width="108" Height="45"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage034" Image="rank_icon" >
+				<Area X="11" Y="13"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+					   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="12">
+		<Size X="270" Y="5" Width="123" Height="45" />
+		<Title>
+			<Format X="30" Y="11" Size="19" Style="Outline_full_2x" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF0C426F"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF0C426F"/>
+			<Color Type="Disable" Text="FF323232" Back="FF0C426F"/>
+			<Text>1vs1모드</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt013_blue_nor">
+				<Area X="0" Y="0" Width="123" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt013_blue_nor">
+				<Area X="0" Y="0" Width="123" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="123" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt013_blue_down">
+				<Area X="0" Y="0" Width="123" Height="45"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage025" Image="bonus_1vs1_icon" >
+				<Area X="7" Y="12"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+					   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="13">
+		<Size X="270" Y="5" Width="123" Height="45" />
+		<Title>
+			<Format X="30" Y="13" Size="19" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FFA7A7A7" Back="FF0C426F"/>
+			<Color Type="Over" Text="FFA7A7A7" Back="FF0C426F"/>
+			<Color Type="Push" Text="FFA7A7A7" Back="FF0C426F"/>
+			<Color Type="Disable" Text="FF323232" Back="FF0C426F"/>
+			<Text>1vs1모드</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt005_gray_nor">
+				<Area X="0" Y="0" Width="123" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt005_gray_nor">
+				<Area X="0" Y="0" Width="123" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="123" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt005_gray_down">
+				<Area X="0" Y="0" Width="123" Height="45"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage025" Image="bonus_1vs1_icon_off" >
+				<Area X="7" Y="12"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+					   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyCatalogueBtn" Id="100">
+		<Size X="10" Y="56" Width="191" Height="63" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt003_gray_nor">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt003_gray_nor">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt003_gray_down">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="RoomNumBack" Imageset="BaseImage001" Image="icon0_roomcircle_re" />
+			<Image Type="BossModeIcon" Imageset="UIIconPack1" Image="mode_bossraid" />
+			<Image Type="LockKey" Imageset="BaseImage001" Image="icon0_locks_black" />
+			<Image Type="LockKeyGray" Imageset="BaseImage001" Image="icon0_locks_gray" />
+			<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+					   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyCatalogueBtn" Id="101">
+		<Size X="202" Y="56" Width="191" Height="63" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt003_gray_nor">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt003_gray_nor">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt003_gray_down">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="RoomNumBack" Imageset="BaseImage001" Image="icon0_roomcircle_re" />
+			<Image Type="BossModeIcon" Imageset="UIIconPack1" Image="mode_bossraid" />
+			<Image Type="LockKey" Imageset="BaseImage001" Image="icon0_locks_black" />
+			<Image Type="LockKeyGray" Imageset="BaseImage001" Image="icon0_locks_gray" />
+			<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+					   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyCatalogueBtn" Id="102">
+		<Size X="10" Y="121" Width="191" Height="63" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt003_gray_nor">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt003_gray_nor">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt003_gray_down">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="RoomNumBack" Imageset="BaseImage001" Image="icon0_roomcircle_re" />
+			<Image Type="BossModeIcon" Imageset="UIIconPack1" Image="mode_bossraid" />
+			<Image Type="LockKey" Imageset="BaseImage001" Image="icon0_locks_black" />
+			<Image Type="LockKeyGray" Imageset="BaseImage001" Image="icon0_locks_gray" />
+			<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+					   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyCatalogueBtn" Id="103">
+		<Size X="202" Y="121" Width="191" Height="63" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt003_gray_nor">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt003_gray_nor">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt003_gray_down">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="RoomNumBack" Imageset="BaseImage001" Image="icon0_roomcircle_re" />
+			<Image Type="BossModeIcon" Imageset="UIIconPack1" Image="mode_bossraid" />
+			<Image Type="LockKey" Imageset="BaseImage001" Image="icon0_locks_black" />
+			<Image Type="LockKeyGray" Imageset="BaseImage001" Image="icon0_locks_gray" />
+			<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+					   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyCatalogueBtn" Id="104">
+		<Size X="10" Y="186" Width="191" Height="63" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt003_gray_nor">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt003_gray_nor">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt003_gray_down">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="RoomNumBack" Imageset="BaseImage001" Image="icon0_roomcircle_re" />
+			<Image Type="BossModeIcon" Imageset="UIIconPack1" Image="mode_bossraid" />
+			<Image Type="LockKey" Imageset="BaseImage001" Image="icon0_locks_black" />
+			<Image Type="LockKeyGray" Imageset="BaseImage001" Image="icon0_locks_gray" />
+			<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+					   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyCatalogueBtn" Id="105">
+		<Size X="202" Y="186" Width="191" Height="63" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt003_gray_nor">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt003_gray_nor">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt003_gray_down">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="RoomNumBack" Imageset="BaseImage001" Image="icon0_roomcircle_re" />
+			<Image Type="BossModeIcon" Imageset="UIIconPack1" Image="mode_bossraid" />
+			<Image Type="LockKey" Imageset="BaseImage001" Image="icon0_locks_black" />
+			<Image Type="LockKeyGray" Imageset="BaseImage001" Image="icon0_locks_gray" />
+			<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+					   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="PartyCatalogueBtn" Id="106">
+		<Size X="10" Y="251" Width="191" Height="63" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt003_gray_nor">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt003_gray_nor">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt003_gray_down">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="RoomNumBack" Imageset="BaseImage001" Image="icon0_roomcircle_re" />
+			<Image Type="BossModeIcon" Imageset="UIIconPack1" Image="mode_bossraid" />
+			<Image Type="LockKey" Imageset="BaseImage001" Image="icon0_locks_black" />
+			<Image Type="LockKeyGray" Imageset="BaseImage001" Image="icon0_locks_gray" />
+			<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+					   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyCatalogueBtn" Id="107">
+		<Size X="202" Y="251" Width="191" Height="63" />
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt003_gray_nor">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt003_gray_nor">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt003_gray_down">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="191" Height="63"/>
+			</DefaultFrameImagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+			<Image Type="RoomNumBack" Imageset="BaseImage001" Image="icon0_roomcircle_re" />
+			<Image Type="BossModeIcon" Imageset="UIIconPack1" Image="mode_bossraid" />
+			<Image Type="LockKey" Imageset="BaseImage001" Image="icon0_locks_black" />
+			<Image Type="LockKeyGray" Imageset="BaseImage001" Image="icon0_locks_gray" />
+			<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+					   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<!-- 광장 접속버전 전용 -->
+	<Window ClassName="ioButton" Id="8">
+		<Size X="243" Y="5" Width="150" Height="45" />
+		<Title>
+			<Format X="50" Y="10" Size="19" Style="Outline_full_2x" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF0B7222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF0B7222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF0B7222"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+			<Text>방만들기</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt005_green_nor">
+				<Area X="0" Y="0" Width="150" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt005_green_nor">
+				<Area X="0" Y="0" Width="150" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="150" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt005_green_down">
+				<Area X="0" Y="0" Width="150" Height="45"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_up_green" >
+				<Area X="30" Y="12"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+					   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PartyQuickJoinBtn" Id="9">
+		<Size X="198" Y="5" Width="43" Height="45" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt005_orange_leftcut_nor">
+				<Area X="0" Y="0" Width="43" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt005_orange_leftcut_nor">
+				<Area X="0" Y="0" Width="43" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt005_rightcut_overadd">
+				<Area X="0" Y="0" Width="43" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt005_orange_leftcut_down">
+				<Area X="0" Y="0" Width="43" Height="45"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="bt005_line" >
+				<Area X="0" Y="3"/>
+			</Image>
+			<Image Type="Setting" Imageset="BaseImage001" Image="icon0_setting">
+				<Area X="7" Y="9"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+					   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="10">
+		<Size X="10" Y="5" Width="188" Height="45" />
+		<Title>
+			<Format X="106" Y="10" Size="19" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FFAD4800"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FFAD4800"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FFAD4800"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+			<Text>빠른참가</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt005_redbrown_rightcut_nor">
+				<Area X="0" Y="0" Width="188" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt005_redbrown_rightcut_nor">
+				<Area X="0" Y="0" Width="188" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt005_rightcut_overadd">
+				<Area X="0" Y="0" Width="188" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt005_redbrown_rightcut_down">
+				<Area X="0" Y="0" Width="188" Height="45"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage004" Image="icon0_right_redbrown" >
+				<Area X="42" Y="12"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+					   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+</Window>

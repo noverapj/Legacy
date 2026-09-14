@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="ReinforceSelectWnd" Id="6252">
+<Size X="0" Y="-20" XAlign="Center" YAlign="Center" Width="326" Height="315" />
+	<Style>IWS_MODAL|IWS_START_HIDE|IWS_PROCESS|IWS_AFTER_RENDER|IWS_EXIT_ESC</Style>
+	<Title>
+		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Text>소울스톤</Text>
+	</Title>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+			<Area X="0" Y="0" Width="326" Height="315"/>
+		</DefaultFrameImagery>
+		
+		<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title">
+			<Area X="5" Y="6" Width="316" Height="36"/>
+		</DefaultFrameImagery>
+		
+		<DefaultFrameImagery Type="MultiplyFrm" Templete="win1_multiply_bottom">
+			<Area X="0" Y="270" Width="326" Height="45"/>
+		</DefaultFrameImagery>
+	</Imagery>
+
+	<Window ClassName="ReinforceSelectSubWnd" Id="1">
+		<Size X="17" Y="58" Width="145" Height="192" />
+		<Style>IWS_START_HIDE</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_empty_white">
+				<Area X="0" Y="0" Width="145" Height="192"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_empty_white">
+				<Area X="0" Y="0" Width="145" Height="192"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_empty_white">
+				<Area X="0" Y="0" Width="145" Height="192"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="145" Height="192"/>
+			</DefaultFrameImagery>
+
+			
+		</Imagery>
+
+	    	<Window ClassName="ioButton" Id="1">
+			<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+			<Size X="6" Y="6" Width="133" Height="73" />
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt014_green_nor">
+					<Area X="0" Y="0" Width="133" Height="73"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt014_green_nor">
+					<Area X="0" Y="0" Width="133" Height="73"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="133" Height="73"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt014_green_down">
+					<Area X="0" Y="0" Width="133" Height="73"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	    	
+	</Window>
+	
+	<Window ClassName="ReinforceSelectSubWnd" Id="2">
+		<Size X="164" Y="58" Width="145" Height="192" />
+		<Style>IWS_START_HIDE</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_empty_white">
+				<Area X="0" Y="0" Width="145" Height="192"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_empty_white">
+				<Area X="0" Y="0" Width="145" Height="192"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_empty_white">
+				<Area X="0" Y="0" Width="145" Height="192"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="145" Height="192"/>
+			</DefaultFrameImagery>
+
+			
+		</Imagery>
+
+	    	<Window ClassName="ioButton" Id="1">
+			<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+			<Size X="6" Y="6" Width="133" Height="73" />
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt014_green_nor">
+					<Area X="0" Y="0" Width="133" Height="73"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt014_green_nor">
+					<Area X="0" Y="0" Width="133" Height="73"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="133" Height="73"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt014_green_down">
+					<Area X="0" Y="0" Width="133" Height="73"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	    	
+	</Window>
+	
+    <Window ClassName="ioButton" Id="11">
+		<Size X="294" Y="11" Width="23" Height="23"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+                        <Image Type="Disable" Imageset="BaseImage001" Image="icon0_x_grayframe" >
+				<Area X="0" Y="0" />
+			</Image>
+                        <Image Type="NormalList" Imageset="BaseImage001" Image="icon0_x" >
+				<Area X="5" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+</Window>
+
+
+

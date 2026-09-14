@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="FishingInventoryWnd" Id="6092">
+	<Size X="57" Y="-46" Width="512" Height="191" XAlign="Center" YAlign="Bottom"/>
+	<DragRect Left="0" Top="0" Right="512" Bottom="191" />
+	<Style>IWS_START_HIDE|IWS_CANMOVE|IWS_PROCESS</Style>
+	<Imagery>
+		<Image Imageset="BaseImage048" Image="fish_box2" >
+			<Area X="0" Y="9"/>
+		</Image>
+	</Imagery>
+	
+	<!--///////////////////////// 탭 /////////////////////////////////////////////-->
+	<Window ClassName="FishingIventoryCategoryTab" Id="601">
+		<Size X="20" Y="1" Width="59" Height="25" />
+		<Title>
+			<Format X="30" Y="4" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>낚싯대</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="fish_tap2">
+				<Area X="0" Y="-1" Width="59" Height="25"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="fish_tap2">
+				<Area X="0" Y="-1" Width="59" Height="25"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap3_overadd">
+				<Area X="0" Y="-1" Width="59" Height="25"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="fish_tap1">
+				<Area X="0" Y="-1" Width="59" Height="25"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="FishingIventoryCategoryTab" Id="602">
+		<Size X="78" Y="1" Width="59" Height="25" />
+		<Title>
+			<Format X="30" Y="4" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>미끼</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="fish_tap2">
+				<Area X="0" Y="-1" Width="59" Height="25"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="fish_tap2">
+				<Area X="0" Y="-1" Width="59" Height="25"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap3_overadd">
+				<Area X="0" Y="-1" Width="59" Height="25"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="fish_tap1">
+				<Area X="0" Y="-1" Width="59" Height="25"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="FishingIventoryCategoryTab" Id="603">
+		<Size X="136" Y="1" Width="59" Height="25" />
+		<Title>
+			<Format X="30" Y="4" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>낚시터</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="fish_tap2">
+				<Area X="0" Y="-1" Width="59" Height="25"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="fish_tap2">
+				<Area X="0" Y="-1" Width="59" Height="25"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap3_overadd">
+				<Area X="0" Y="-1" Width="59" Height="25"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="fish_tap1">
+				<Area X="0" Y="-1" Width="59" Height="25"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<!--//////////////////////////////////////////////////////////////////////-->
+	
+	<Window ClassName="FishingItemInfoWnd" Id="1">
+		<Style>IWS_BACKMOST</Style>
+		<Size X="224" Y="35" Width="42" Height="42" />
+		<Imagery>
+			<Image Type="SlotBack" Imageset="BaseImage008" Image="fish_slot" />
+			<Image Type="SelectSlot" Imageset="BaseImage008" Image="icon0_skin_mright" />
+			<Image Type="UseFishingGear" Imageset="BaseImage008" Image="icon0_displaysoldier_check" />
+		</Imagery>
+		<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			   ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+
+	<Window ClassName="FishingItemInfoWnd" Id="2">
+		<Style>IWS_BACKMOST</Style>
+		<Size X="277" Y="35" Width="42" Height="42" />
+		<Imagery>
+			<Image Type="SlotBack" Imageset="BaseImage008" Image="fish_slot" />
+			<Image Type="SelectSlot" Imageset="BaseImage008" Image="icon0_skin_mright" />
+			<Image Type="UseFishingGear" Imageset="BaseImage008" Image="icon0_displaysoldier_check" />
+		</Imagery>
+		<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			   ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+
+	<Window ClassName="FishingItemInfoWnd" Id="3">
+		<Style>IWS_BACKMOST</Style>
+		<Size X="330" Y="35" Width="42" Height="42" />
+		<Imagery>
+			<Image Type="SlotBack" Imageset="BaseImage008" Image="fish_slot" />
+			<Image Type="SelectSlot" Imageset="BaseImage008" Image="icon0_skin_mright" />
+			<Image Type="UseFishingGear" Imageset="BaseImage008" Image="icon0_displaysoldier_check" />
+		</Imagery>
+		<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			   ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+
+	<Window ClassName="FishingItemInfoWnd" Id="4">
+		<Style>IWS_BACKMOST</Style>
+		<Size X="383" Y="35" Width="42" Height="42" />
+		<Imagery>
+			<Image Type="SlotBack" Imageset="BaseImage008" Image="fish_slot" />
+			<Image Type="SelectSlot" Imageset="BaseImage008" Image="icon0_skin_mright" />
+			<Image Type="UseFishingGear" Imageset="BaseImage008" Image="icon0_displaysoldier_check" />
+		</Imagery>
+		<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			   ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+
+	<Window ClassName="FishingItemInfoWnd" Id="5">
+		<Style>IWS_BACKMOST</Style>
+		<Size X="436" Y="35" Width="42" Height="42" />
+		<Imagery>
+			<Image Type="SlotBack" Imageset="BaseImage008" Image="fish_slot" />
+			<Image Type="SelectSlot" Imageset="BaseImage008" Image="icon0_skin_mright" />
+			<Image Type="UseFishingGear" Imageset="BaseImage008" Image="icon0_displaysoldier_check" />
+		</Imagery>
+		<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			   ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+
+	<Window ClassName="FishingItemInfoWnd" Id="6">
+		<Style>IWS_BACKMOST</Style>
+		<Size X="224" Y="80" Width="42" Height="42" />
+		<Imagery>
+			<Image Type="SlotBack" Imageset="BaseImage008" Image="fish_slot" />
+			<Image Type="SelectSlot" Imageset="BaseImage008" Image="icon0_skin_mright" />
+			<Image Type="UseFishingGear" Imageset="BaseImage008" Image="icon0_displaysoldier_check" />
+		</Imagery>
+		<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			   ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+
+	<Window ClassName="FishingItemInfoWnd" Id="7">
+		<Style>IWS_BACKMOST</Style>
+		<Size X="277" Y="80" Width="42" Height="42" />
+		<Imagery>
+			<Image Type="SlotBack" Imageset="BaseImage008" Image="fish_slot" />
+			<Image Type="SelectSlot" Imageset="BaseImage008" Image="icon0_skin_mright" />
+			<Image Type="UseFishingGear" Imageset="BaseImage008" Image="icon0_displaysoldier_check" />
+		</Imagery>
+		<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			   ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+
+	<Window ClassName="FishingItemInfoWnd" Id="8">
+		<Style>IWS_BACKMOST</Style>
+		<Size X="330" Y="80" Width="42" Height="42" />
+		<Imagery>
+			<Image Type="SlotBack" Imageset="BaseImage008" Image="fish_slot" />
+			<Image Type="SelectSlot" Imageset="BaseImage008" Image="icon0_skin_mright" />
+			<Image Type="UseFishingGear" Imageset="BaseImage008" Image="icon0_displaysoldier_check" />
+		</Imagery>
+		<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			   ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+
+	<Window ClassName="FishingItemInfoWnd" Id="9">
+		<Style>IWS_BACKMOST</Style>
+		<Size X="383" Y="80" Width="42" Height="42" />
+		<Imagery>
+			<Image Type="SlotBack" Imageset="BaseImage008" Image="fish_slot" />
+			<Image Type="SelectSlot" Imageset="BaseImage008" Image="icon0_skin_mright" />
+			<Image Type="UseFishingGear" Imageset="BaseImage008" Image="icon0_displaysoldier_check" />
+		</Imagery>
+		<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			   ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+
+	<Window ClassName="FishingItemInfoWnd" Id="10">
+		<Style>IWS_BACKMOST</Style>
+		<Size X="436" Y="80" Width="42" Height="42" />
+		<Imagery>
+			<Image Type="SlotBack" Imageset="BaseImage008" Image="fish_slot" />
+			<Image Type="SelectSlot" Imageset="BaseImage008" Image="icon0_skin_mright" />
+			<Image Type="UseFishingGear" Imageset="BaseImage008" Image="icon0_displaysoldier_check" />
+		</Imagery>
+		<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			   ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+
+	<!--//////////////////////////////////////////////////////////////////////-->
+	<Window ClassName="FishingItemInfoWnd" Id="11">
+		<Style>IWS_BACKMOST</Style>
+		<Size X="32" Y="35" Width="42" Height="42" />
+		<Imagery>
+			<Image Type="SlotBack" Imageset="BaseImage008" Image="fish_slot" />
+			<Image Type="SelectSlot" Imageset="BaseImage048" Image="fish_select" />
+			<Image Type="UseFishingGear" Imageset="BaseImage048" Image="fish_use" />
+		</Imagery>
+		<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			   ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+
+	<Window ClassName="FishingItemInfoWnd" Id="12">
+		<Style>IWS_BACKMOST</Style>
+		<Size X="85" Y="35" Width="42" Height="42" />
+		<Imagery>
+			<Image Type="SlotBack" Imageset="BaseImage008" Image="fish_slot" />
+			<Image Type="SelectSlot" Imageset="BaseImage048" Image="fish_select" />
+			<Image Type="UseFishingGear" Imageset="BaseImage048" Image="fish_use" />
+		</Imagery>
+		<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			   ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+
+	<Window ClassName="FishingItemInfoWnd" Id="13">
+		<Style>IWS_BACKMOST</Style>
+		<Size X="138" Y="35" Width="42" Height="42" />
+		<Imagery>
+			<Image Type="SlotBack" Imageset="BaseImage008" Image="fish_slot" />
+			<Image Type="SelectSlot" Imageset="BaseImage048" Image="fish_select" />
+			<Image Type="UseFishingGear" Imageset="BaseImage048" Image="fish_use" />
+		</Imagery>
+		<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			   ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+
+	<Window ClassName="FishingItemInfoWnd" Id="14">
+		<Style>IWS_BACKMOST</Style>
+		<Size X="32" Y="80" Width="42" Height="42" />
+		<Imagery>
+			<Image Type="SlotBack" Imageset="BaseImage008" Image="fish_slot" />
+			<Image Type="SelectSlot" Imageset="BaseImage048" Image="fish_select" />
+			<Image Type="UseFishingGear" Imageset="BaseImage048" Image="fish_use" />
+		</Imagery>
+		<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			   ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+
+	<Window ClassName="FishingItemInfoWnd" Id="15">
+		<Style>IWS_BACKMOST</Style>
+		<Size X="85" Y="80" Width="42" Height="42" />
+		<Imagery>
+			<Image Type="SlotBack" Imageset="BaseImage008" Image="fish_slot" />
+			<Image Type="SelectSlot" Imageset="BaseImage048" Image="fish_select" />
+			<Image Type="UseFishingGear" Imageset="BaseImage048" Image="fish_use" />
+		</Imagery>
+		<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			   ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+
+	<Window ClassName="FishingItemInfoWnd" Id="16">
+		<Style>IWS_BACKMOST</Style>
+		<Size X="138" Y="80" Width="42" Height="42" />
+		<Imagery>
+			<Image Type="SlotBack" Imageset="BaseImage008" Image="fish_slot" />
+			<Image Type="SelectSlot" Imageset="BaseImage048" Image="fish_select" />
+			<Image Type="UseFishingGear" Imageset="BaseImage048" Image="fish_use" />
+		</Imagery>
+		<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			   ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+	<!--//////////////////////////////////////////////////////////////////////-->
+
+	<Window ClassName="ioButton" Id="101">
+		<Size X="355" Y="156" Width="143" Height="22" />
+		<Style>IWS_BACKMOST</Style>
+		<Title>
+			<Format X="68" Y="2" Size="12" Style="Outline_full_3x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF215AA2"/>
+			<Text>낚은 아이템 판매</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="143" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="143" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="143" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="143" Height="22"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+			   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="FishingScreenBtn" Id="102">
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<Size X="210" Y="156" Width="143" Height="22" />
+		<Title>
+			<Format X="72" Y="4" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>낚시하기</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="143" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="143" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="143" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="143" Height="22"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+			   ClickSound = "interface/public_mouseclick_00.wav"
+			   ScreenTime = "300"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="103">
+		<Style>IWS_BACKMOST</Style>
+		<ExStyle>IWS_EX_OVER_SCREEN|IWS_EX_PUSH_SCREEN</ExStyle>
+		<Size X="492" Y="20" Width="26" Height="26" />
+		<Imagery>
+			<Image Imageset="BaseImage008" Image="fish_x" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+			   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="FishingGearEquipBtn" Id="104">
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<Size X="20" Y="156" Width="174" Height="22" />
+		<Title>
+			<Format X="87" Y="4" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>장비/장비해제</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="174" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="174" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="174" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="174" Height="22"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+			   ClickSound = "interface/public_mouseclick_00.wav"
+			   ScreenTime = "300"/>
+	</Window>
+	
+	<Window ClassName="FishingGearEquipBtn" Id="105">
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<Size X="20" Y="155" Width="174" Height="24" />
+		<Title>
+			<Format X="87" Y="3" Size="12" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FFAB750B"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FFAB750B"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FFAB750B"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>구입하기</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gold_nor">
+				<Area X="0" Y="0" Width="174" Height="24"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gold_nor">
+				<Area X="0" Y="0" Width="174" Height="24"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="174" Height="24"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gold_down">
+				<Area X="0" Y="0" Width="174" Height="24"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="174" Height="24"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+			   ClickSound = "interface/public_mouseclick_00.wav"
+			   ScreenTime = "300"/>
+	</Window>
+
+
+	<Window ClassName="FishingItemPageBtn" Id="201">
+		<Style>IWS_BACKMOST</Style>
+		<Size X="485" Y="44" Width="26" Height="26" />
+		<Imagery>
+			<Image Type="ActiveImage" Imageset="BaseImage008" Image="fish_listup" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="InActiveImage" Imageset="BaseImage008" Image="fish_listup_gray" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			   ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+
+	<Window ClassName="FishingItemPageBtn" Id="202">
+		<Style>IWS_BACKMOST</Style>
+		<Size X="485" Y="86" Width="26" Height="26" />
+		<Imagery>
+			<Image Type="ActiveImage" Imageset="BaseImage008" Image="fish_listup" >
+				<Area X="0" Y="0" Reverse="Vert"/>
+			</Image>
+			<Image Type="InActiveImage" Imageset="BaseImage008" Image="fish_listup_gray" >
+				<Area X="0" Y="0" Reverse="Vert"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			   ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+	
+	<Window ClassName="FishingItemPageBtn" Id="203">
+		<Style>IWS_BACKMOST</Style>
+		<Size X="1" Y="44" Width="26" Height="26" />
+		<Imagery>
+			<Image Type="ActiveImage" Imageset="BaseImage008" Image="fish_listup" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="InActiveImage" Imageset="BaseImage008" Image="fish_listup_gray" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			   ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+
+	<Window ClassName="FishingItemPageBtn" Id="204">
+		<Style>IWS_BACKMOST</Style>
+		<Size X="1" Y="86" Width="26" Height="26" />
+		<Imagery>
+			<Image Type="ActiveImage" Imageset="BaseImage008" Image="fish_listup" >
+				<Area X="0" Y="0" Reverse="Vert"/>
+			</Image>
+			<Image Type="InActiveImage" Imageset="BaseImage008" Image="fish_listup_gray" >
+				<Area X="0" Y="0" Reverse="Vert"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+			   ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+
+
+	<Window ClassName="FishingExpWnd" Id="301">
+		<Style>IWS_BACKMOST</Style>
+		<Size X="284" Y="140" Width="206" Height="8" />
+		<Imagery>
+			<Image Type="Exp_Gauge" Imageset="BaseImage048" Image="fish_gauge2" />
+		</Imagery>
+		<ExtraInfo OverSound  = "interface/public_mouseover_00.wav"/>
+	</Window>
+
+
+	<!-- <Window ClassName="ioButton" Id="401"> -->
+		<!-- <Style>IWS_BACKMOST</Style> -->
+		<!-- <Size X="9" Y="142" Width="120" Height="22" /> -->
+		<!-- <Title> -->
+			<!-- <Format X="7" Y="4" Size="12" Style="Normal" HorzAlign="Left"/> -->
+			<!-- <Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/> -->
+			<!-- <Color Type="Over" Text="FF3A3A3A" Back="FF000000"/> -->
+			<!-- <Color Type="Push" Text="FF3A3A3A" Back="FF000000"/> -->
+			<!-- <Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/> -->
+			<!-- <Text>미끼없음</Text> -->
+		<!-- </Title> -->
+		<!-- <Imagery> -->
+			<!-- <DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor"> -->
+				<!-- <Area X="0" Y="0" Width="120" Height="22"/> -->
+			<!-- </DefaultFrameImagery> -->
+			<!-- <DefaultFrameImagery Type="Over" Templete="bt007_gray_nor"> -->
+				<!-- <Area X="0" Y="0" Width="120" Height="22"/> -->
+			<!-- </DefaultFrameImagery> -->
+			<!-- <DefaultFrameImagery Type="OverAdd" Templete="bt_overadd"> -->
+				<!-- <Area X="0" Y="0" Width="120" Height="22"/> -->
+			<!-- </DefaultFrameImagery> -->
+			<!-- <DefaultFrameImagery Type="Push" Templete="bt007_gray_down"> -->
+				<!-- <Area X="0" Y="0" Width="120" Height="22"/> -->
+			<!-- </DefaultFrameImagery> -->
+			<!-- <Image Imageset="BaseImage001" Image="icon0_list_down" > -->
+				<!-- <Area X="105" Y="6" /> -->
+			<!-- </Image> -->
+		<!-- </Imagery> -->
+		<!-- <ExtraInfo OverSound  = "interface/public_mouseover_00.wav" -->
+			   <!-- ClickSound = "interface/public_mouseclick_00.wav"/> -->
+	<!-- </Window> -->
+
+	<!-- <Window ClassName="FishingBaitListWnd" Id="402"> -->
+		<!-- <Size X="0" Y="0" Width="120" Height="35" /> -->
+		<!-- <Style>IWS_START_HIDE|IWS_PROCESS|IWS_EXIT_ESC</Style>  -->
+		<!-- <Imagery> -->
+			<!-- <DefaultFrameImagery Type="Selected" Templete="tooltip2"> -->
+				<!-- <Area X="0" Y="0" Width="120" Height="35" /> -->
+			<!-- </DefaultFrameImagery> -->
+
+			<!-- <Image Type="DarkLine" Imageset="BaseImage001" Image="strip_gray_dark" > -->
+				<!-- <Area X="7" Y="7" Width="106" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" /> -->
+			<!-- </Image> -->
+			<!-- <Image Type="LightLine" Imageset="BaseImage001" Image="strip_gray_light" > -->
+				<!-- <Area X="7" Y="7" Width="106" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" /> -->
+			<!-- </Image> -->
+			<!-- <Image Type="OverLine" Imageset="BaseImage001" Image="strip_gray_on" > -->
+				<!-- <Area X="7" Y="7" Width="106" Height="21" HorzAlign="Stretch" VertAlign="Stretch"/> -->
+			<!-- </Image> -->
+		<!-- </Imagery> -->
+		<!-- <ExtraInfo AddWidth="14" AddHeight="12" ListX="7" ListY="7" HeightGap="21"/> -->
+	<!-- </Window> -->
+
+	<Window ClassName="GlobalTextTooltip" Id="501">
+		<Size X="0" Y="0" Width="120" Height="26" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="tooltip3">
+				<Area X="0" Y="0" Width="120" Height="26" />
+			</DefaultFrameImagery>
+		</Imagery>
+	</Window>
+</Window>

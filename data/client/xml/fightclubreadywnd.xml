@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="FightClubReadyWnd" Id="5074">
+	<Size X="0" Y="0" Width="0" Height="0"/>
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style>
+	<Imagery>
+		<DefaultFrameImagery Type="BackFrm" Templete="arcade_infobg">
+			<Area X="0" Y="0" Width="800" Height="29"/>
+		</DefaultFrameImagery>		
+		<Image Type="BackFrmLine" Imageset="BaseImage_Arcade001" Image="arcade_eff_line" />
+		<Image Type="ReadyText" Imageset="BaseImage_Arcade002" Image="arcade_opentxt_ready" />
+		<Image Type="ReadyTextEffect" Imageset="BaseImage_Arcade002" Image="arcade_opentxt_ready_eff" />
+
+		<Image Type="BlackBack" Imageset="BaseImage001" Image="strip_black100" />
+		<Image Type="GoBackEffect" Imageset="BaseImage_Arcade001" Image="arcade_eff_lighting" />
+		<Image Type="GoText" Imageset="BaseImage_Arcade002" Image="arcade_opentxt_go" />
+		<Image Type="GoTextEffect" Imageset="BaseImage_Arcade002" Image="arcade_opentxt_go_eff" />
+
+		<Image Type="RoundText" Imageset="BaseImage_Arcade002" Image="arcade_opentxt_round" />
+		<Image Type="RoundNum" Imageset="BaseImage_Arcade001" Image="arcade_chainwin_you_num" />
+		<Image Type="FinalText" Imageset="BaseImage_Arcade002" Image="arcade_opentxt_final" />
+		<Image Type="FightText" Imageset="BaseImage_Arcade002" Image="arcade_opentxt_fight" />
+	</Imagery>
+	<ExtraInfo ReadySnd = "interface/mode/champion_ready.wav"
+		   GoSnd = "interface/mode/champion_go.wav"
+		   RoundSndCnt = "4"
+           RoundSnd1 = "interface/mode/champion_round_01.wav"
+		   RoundSnd2 = "interface/mode/champion_round_02.wav"
+		   RoundSnd3 = "interface/mode/champion_round_03.wav"
+		   RoundSnd4 = "interface/mode/champion_round_04.wav"
+		   FinalRoundSnd = "interface/mode/champion_finalRound.wav"
+		   FightSnd = "interface/mode/champion_fight.wav" />
+</Window>

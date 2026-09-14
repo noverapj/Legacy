@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="FontTextureTestWnd" Id="6001">
+	<Size X="0" Y="0" Width="800" Height="600" />
+	<DragRect Left="0" Top="0" Right="800" Bottom="600" />
+	<Style>IWS_START_HIDE|IWS_EXIT_ESC|IWS_CANMOVE</Style>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+			<Area X="0" Y="0" Width="800" Height="600"/>
+		</DefaultFrameImagery>
+	</Imagery>
+
+</Window>

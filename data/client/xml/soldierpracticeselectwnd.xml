@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="SoldierPracticeSelectWnd" Id="6068">
+	<Size X="0" Y="-20" XAlign="Center" YAlign="Center" Width="703" Height="494"/>
+	<DragRect Left="0" Top="0" Right="703" Bottom="494" />
+	<Style>IWS_START_HIDE|IWS_PROCESS|IWS_CANMOVE|IWS_EXIT_ESC</Style>
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Title>
+		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Text>훈련 용병 선택</Text>
+	</Title>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+			<Area X="0" Y="0" Width="703" Height="494"/>
+		</DefaultFrameImagery>		
+		<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title">
+			<Area X="6" Y="6" Width="691" Height="33"/>
+		</DefaultFrameImagery>
+    <Image Type="TabLine" Imageset="BaseImage001" Image="tap2_line" >
+      <Area X="0" Y="0" Width="1" Height="2" HorzAlign="Stretch"/>
+    </Image>
+	</Imagery>
+ 	<ExtraInfo MaxClass   = "37" 
+             ClassType1 = "78" 
+             ClassType2 = "79"
+             ClassType3 = "86"
+             ClassType4 = "88"
+             ClassType5 = "91"
+             ClassType6 = "96"
+             ClassType7 = "99"
+             ClassType8 = "102"
+             ClassType9 = "105"
+             ClassType10 = "106"
+             ClassType11 = "107"
+             ClassType12 = "109"
+             ClassType13 = "111"
+             ClassType14 = "113"
+             ClassType15 = "114"
+             ClassType16 = "115"
+             ClassType17 = "117"
+             ClassType18 = "118"
+             ClassType19 = "121"
+             ClassType20 = "124"
+             ClassType21 = "126"
+             ClassType22 = "129"
+             ClassType23 = "130"
+             ClassType24 = "134"
+             ClassType25 = "135"
+             ClassType26 = "137"
+             ClassType27 = "140"
+             ClassType28 = "146"
+             ClassType29 = "147"
+             ClassType30 = "150"
+             ClassType31 = "151"
+             ClassType32 = "155"
+             ClassType33 = "156"
+             ClassType34 = "162"
+             ClassType35 = "164"
+             ClassType36 = "165"
+             ClassType37 = "167"
+             TabCount="6"
+             TabText1="전체"
+             TabIndex1="-1"
+             TabText2="유니크"
+             TabIndex2="4"
+             TabText3="프리미엄"
+             TabIndex3="2"
+             TabText4="아이돌"
+             TabIndex4="6"
+             TabText5="레어"
+             TabIndex5="3"
+             TabText6="일반"
+             TabIndex6="0"/>
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="664" Y="11" Width="23" Height="23"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+      <Image Type="Disable" Imageset="BaseImage001" Image="icon0_x_grayframe" >
+				<Area X="0" Y="0" />
+			</Image>
+      <Image Type="NormalList" Imageset="BaseImage001" Image="icon0_x" >
+				<Area X="5" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+               ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="2">
+		<Size X="287" Y="459" Width="43" Height="18" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_left" >
+				<Area X="18" Y="4"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+               ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="3">
+		<Size X="374" Y="459" Width="43" Height="18" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_left" >
+				<Area X="18" Y="4" Reverse="Horz"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+               ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+  <Template ClassName="ioRadioButton">
+    <Size X="17" Y="49" Width="111" Height="27" />
+    <Title>
+      <Format X="55" Y="8" Size="12" Style="Normal" HorzAlign="Center"/>
+      <Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+      <Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+      <Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+      <Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+      <Text>용병</Text>
+    </Title>
+    <Imagery>
+      <DefaultFrameImagery Type="Normal" Templete="tap2_off">
+        <Area X="0" Y="0" Width="111" Height="27"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Over" Templete="tap2_off">
+        <Area X="0" Y="0" Width="111" Height="27"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="OverAdd" Templete="tap2_overadd">
+        <Area X="0" Y="0" Width="111" Height="27"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Push" Templete="tap2_on1">
+        <Area X="0" Y="0" Width="111" Height="27"/>
+      </DefaultFrameImagery>
+    </Imagery>
+    <ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+               ClickSound = "interface/public_mouseclick_00.wav"/>
+  </Template>
+
+  <Template ClassName="SoldierPracticeSelectBtn">
+		<Size X="0" Y="0" Width="109" Height="119" />
+		<Imagery>
+			<DefaultFrameImagery Type="BaseBG" Templete="shop_renewal_slot">
+				<Area X="0" Y="0" Width="109" Height="119"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="NoneBG" Templete="shop_renewal_slot_non">
+				<Area X="0" Y="0" Width="109" Height="119"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlankBG" Templete="shop_renewal_slot_blank">
+				<Area X="0" Y="0" Width="109" Height="119" />
+			</DefaultFrameImagery>
+      <DefaultFrameImagery Type="CustomOverAdd" Templete="slot_overadd">
+        <Area X="0" Y="0" Width="109" Height="119"/>
+      </DefaultFrameImagery>
+			<Image Type="None" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+      <DefaultFrameImagery Type="StateBlueFrm" Templete="state_blue">
+        <Area X="0" Y="0" Width="40" Height="18"/>
+      </DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+               ClickSound = "interface/public_mouseclick_00.wav"
+               HaveText="보유중"/>
+	</Template>
+</Window>

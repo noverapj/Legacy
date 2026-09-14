@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<!-- 툴팁 매니져에서 윈도우 아이디를 할당 -->
+<Window ClassName="ioBasicToolTip" Id="0">
+	<Size X="0" Y="0" Width="164" Height="49"/>
+	<Style>IWS_START_HIDE|IWS_PROCESS|IWS_TOPMOST</Style> 
+	<Imagery>
+	<DefaultFrameImagery Type="Selected" Templete="tooltip2" >
+		<Area X="0" Y="0" Width="164" Height="49"/>
+	</DefaultFrameImagery>
+	</Imagery>
+	<!-- 텍스트 스타일
+		Normal,
+		Shadow,
+		Outline,
+		Outline_2x,
+		Outline_full,
+		Outline_full_2x,
+		Outline_full_3x,
+		Outline_full_4x,
+		Bold,
+		Bold_shadow,
+		Bold_outline,
+		Bold_outline_full,
+		Bold_outline_full_2x,
+		Bold_outline_full_3x,
+		Bold_outline_full_4x,
+	-->
+	
+	<!-- Sunday -->
+	<Window ClassName="ioRichLabel" Id="1">
+		<Size X="7" Y="6" Width="164" Height="49"/>
+		<ExtraInfo VertGap="3" HorzAlign="Left" VertAlign="Center" >
+			<TextBlock Text="초월각성#" Size="12" Color="FF3A3A3A"/>
+			<TextBlock Text="해당 용병의 " Size="12"  Color="FF6E6E6E"/>
+			<TextBlock Text="모든 육성을 +25#" Size="12"  Color="FF117222"/>
+			<TextBlock Text="하는 기능입니다.#" Size="12"  Color="FF6E6E6E"/>
+			<TextBlock Text="차원 조각은 " Size="12"  Color="FF6E6E6E"/>
+			<TextBlock Text="영구용병 또는 #" Size="12"  Color="FF117222"/>
+			<TextBlock Text="영구장비 분해 시" Size="12"  Color="FF117222"/>
+			<TextBlock Text="획득합니다." Size="12"  Color="FF6E6E6E"/>
+		</ExtraInfo>
+	</Window>
+</Window>

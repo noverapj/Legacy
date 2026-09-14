@@ -1,0 +1,962 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="HelpWnd" Id="6006">
+	<Size X="0" Y="0" Width="800" Height="42" />
+	<Style>IWS_START_HIDE|IWS_PROCESS|IWS_TOPMOST</Style> 
+	<Imagery>
+		<Image Type="BarLeftMultiply" Imageset="BaseImage001" Image="underbar_back_left" />
+		<Image Type="BarCenterMultiply" Imageset="BaseImage001" Image="underbar_back_center" />
+		<Image Type="BarRightMultiply" Imageset="BaseImage001" Image="underbar_back_right" />
+		<Image Type="BarLeft" Imageset="BaseImage001" Image="underbar_win_left" />
+		<Image Type="BarCenter" Imageset="BaseImage001" Image="underbar_win_center" />
+		<Image Type="BarRight" Imageset="BaseImage001" Image="underbar_win_right" />
+		<Image Type="HideBar" Imageset="BaseImage001" Image="underbar_win_hidden" />
+		<Image Type="HideIcon" Imageset="BaseImage001" Image="underbar_icon" />
+	</Imagery>
+
+	<!-- 광장 접속 전용 윈도우 -->
+	<Window ClassName="ioButton" Id="40">
+		<Size X="6" Y="6" Width="46" Height="31" />
+		<Style>IWS_BACKMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt001_blue_nor">
+				<Area X="0" Y="0" Width="46" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt001_blue_nor">
+				<Area X="0" Y="0" Width="46" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="46" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt001_blue_down">
+				<Area X="0" Y="0" Width="46" Height="31"/>
+			</DefaultFrameImagery>
+            <Image Type="NormalList" Imageset="BaseImage015" Image="underbar_icontext_17" >
+				<Area X="0" Y="0" />
+			</Image>
+            <Image Type="DisableList" Imageset="BaseImage015" Image="underbar_icontext_gray_17" >
+				<Area X="0" Y="0" />
+			</Image>
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	                   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="ioButton" Id="1">
+		<Size X="7" Y="7" Width="34" Height="30" />
+		<Style>IWS_BACKMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt011_red_nor">
+				<Area X="0" Y="0" Width="34" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt011_red_nor">
+				<Area X="0" Y="0" Width="34" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="34" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt011_red_down">
+				<Area X="0" Y="0" Width="34" Height="30"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage039" Image="icon5_01" >
+				<Area X="6" Y="3" />
+			</Image>
+			<Image Type="NormalList" Imageset="BaseImage039" Image="underbar1_line" >
+				<Area X="36" Y="4" />
+			</Image>
+			<Image Type="DisableList" Imageset="BaseImage006" Image="icon5_gray_01" >
+				<Area X="6" Y="3" />
+			</Image>
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	                   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="2">
+		<Size X="7" Y="7" Width="34" Height="30" />
+		<Style>IWS_BACKMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt011_red_nor">
+				<Area X="0" Y="0" Width="34" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt011_red_nor">
+				<Area X="0" Y="0" Width="34" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="34" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt011_red_down">
+				<Area X="0" Y="0" Width="34" Height="30"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage039" Image="icon5_01" >
+				<Area X="6" Y="3" />
+			</Image>
+			<Image Type="NormalList" Imageset="BaseImage039" Image="underbar1_line" >
+				<Area X="36" Y="4" />
+			</Image>
+			<Image Type="DisableList" Imageset="BaseImage006" Image="icon5_gray_01" >
+				<Area X="6" Y="3" />
+			</Image>			
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	                   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="MenuBtn" Id="3">
+		<Size X="53" Y="6" Width="23" Height="30" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_green_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			
+			<DefaultFrameImagery Type="StartNormal" Templete="bt009_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="StartOver" Templete="bt009_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="StartOverAdd" Templete="bt01_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="StartPush" Templete="bt009_green_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			
+			<DefaultFrameImagery Type="MiddleNormal" Templete="bt010_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="MiddleOver" Templete="bt010_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="MiddleOverAdd" Templete="bt02_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="MiddlePush" Templete="bt010_green_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			
+			<DefaultFrameImagery Type="EndNormal" Templete="bt011_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="EndOver" Templete="bt011_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="EndOverAdd" Templete="bt03_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="EndPush" Templete="bt011_green_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			
+			<Image Type="NormalList" Imageset="BaseImage039" Image="icon5_02" >
+				<Area X="3" Y="5" />
+			</Image>
+			<Image Type="DisableList" Imageset="BaseImage039" Image="icon5_gray_02" >
+				<Area X="3" Y="5" />
+			</Image>
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="MenuBtn" Id="4">
+		<Size X="53" Y="6" Width="23" Height="30" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_green_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			
+			<DefaultFrameImagery Type="StartNormal" Templete="bt009_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="StartOver" Templete="bt009_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="StartOverAdd" Templete="bt01_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="StartPush" Templete="bt009_green_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			
+			<DefaultFrameImagery Type="MiddleNormal" Templete="bt010_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="MiddleOver" Templete="bt010_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="MiddleOverAdd" Templete="bt02_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="MiddlePush" Templete="bt010_green_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			
+			<DefaultFrameImagery Type="EndNormal" Templete="bt011_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="EndOver" Templete="bt011_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="EndOverAdd" Templete="bt03_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="EndPush" Templete="bt011_green_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			
+			<Image Type="NormalList" Imageset="BaseImage039" Image="icon5_05" >
+				<Area X="3" Y="5" />
+			</Image>
+			<Image Type="DisableList" Imageset="BaseImage039" Image="icon5_gray_05" >
+				<Area X="3" Y="5" />
+			</Image>
+		</Imagery>	
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="MenuBtn" Id="5">
+		<Size X="53" Y="6" Width="23" Height="30" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_green_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			
+			<DefaultFrameImagery Type="StartNormal" Templete="bt009_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="StartOver" Templete="bt009_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="StartOverAdd" Templete="bt01_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="StartPush" Templete="bt009_green_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			
+			<DefaultFrameImagery Type="MiddleNormal" Templete="bt010_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="MiddleOver" Templete="bt010_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="MiddleOverAdd" Templete="bt02_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="MiddlePush" Templete="bt010_green_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			
+			<DefaultFrameImagery Type="EndNormal" Templete="bt011_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="EndOver" Templete="bt011_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="EndOverAdd" Templete="bt03_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="EndPush" Templete="bt011_green_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			
+			<Image Type="NormalList" Imageset="BaseImage039" Image="icon5_05" >
+				<Area X="3" Y="5" />
+			</Image>
+			<Image Type="DisableList" Imageset="BaseImage039" Image="icon5_gray_05" >
+				<Area X="3" Y="5" />
+			</Image>
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="MenuBtn" Id="6">
+		<Size X="53" Y="6" Width="23" Height="30" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_green_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			
+			<DefaultFrameImagery Type="StartNormal" Templete="bt009_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="StartOver" Templete="bt009_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="StartOverAdd" Templete="bt01_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="StartPush" Templete="bt009_green_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			
+			<DefaultFrameImagery Type="MiddleNormal" Templete="bt010_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="MiddleOver" Templete="bt010_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="MiddleOverAdd" Templete="bt02_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="MiddlePush" Templete="bt010_green_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			
+			<DefaultFrameImagery Type="EndNormal" Templete="bt011_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="EndOver" Templete="bt011_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="EndOverAdd" Templete="bt03_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="EndPush" Templete="bt011_green_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<Image Type="BtnIconStart" Imageset="BaseImage039" Image="icon5_06" >
+				<Area X="2" Y="4" />
+			</Image>
+			<Image Type="BtnIconEnd" Imageset="BaseImage039" Image="icon5_06" >
+				<Area X="2" Y="4" />
+			</Image>
+			<Image Type="DisableList" Imageset="BaseImage039" Image="icon5_gray_03" >
+				<Area X="2" Y="4" />
+			</Image>
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="MenuBtn" Id="7">
+		<Size X="53" Y="6" Width="23" Height="30" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_green_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			
+			<DefaultFrameImagery Type="StartNormal" Templete="bt009_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="StartOver" Templete="bt009_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="StartOverAdd" Templete="bt01_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="StartPush" Templete="bt009_green_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			
+			<DefaultFrameImagery Type="MiddleNormal" Templete="bt010_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="MiddleOver" Templete="bt010_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="MiddleOverAdd" Templete="bt02_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="MiddlePush" Templete="bt010_green_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			
+			<DefaultFrameImagery Type="EndNormal" Templete="bt011_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="EndOver" Templete="bt011_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="EndOverAdd" Templete="bt03_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="EndPush" Templete="bt011_green_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<Image Type="BtnIconStart" Imageset="BaseImage039" Image="icon5_03" >
+				<Area X="3" Y="5" />
+			</Image>
+			<Image Type="BtnIconEnd" Imageset="BaseImage039" Image="icon5_03" >
+				<Area X="3" Y="5" />
+			</Image>
+			<Image Type="DisableList" Imageset="BaseImage039" Image="icon5_gray_03" >
+				<Area X="3" Y="5" />
+			</Image>
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="MenuBtn" Id="8">
+		<Size X="53" Y="6" Width="23" Height="30" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_green_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			
+			<DefaultFrameImagery Type="StartNormal" Templete="bt009_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="StartOver" Templete="bt009_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="StartOverAdd" Templete="bt01_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="StartPush" Templete="bt009_green_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			
+			<DefaultFrameImagery Type="MiddleNormal" Templete="bt010_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="MiddleOver" Templete="bt010_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="MiddleOverAdd" Templete="bt02_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="MiddlePush" Templete="bt010_green_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			
+			<DefaultFrameImagery Type="EndNormal" Templete="bt011_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="EndOver" Templete="bt011_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="EndOverAdd" Templete="bt03_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="EndPush" Templete="bt011_green_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<Image Type="BtnIconStart" Imageset="BaseImage039" Image="icon5_04" >
+				<Area X="3" Y="5" />
+			</Image>
+			<Image Type="BtnIconEnd" Imageset="BaseImage039" Image="icon5_04" >
+				<Area X="3" Y="5" />
+			</Image>
+			<Image Type="DisableList" Imageset="BaseImage039" Image="icon5_gray_04" >
+				<Area X="3" Y="5" />
+			</Image>
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PlazaStateBtn" Id="9">
+		<Size X="53" Y="6" Width="23" Height="30" />
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_green_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			
+			<DefaultFrameImagery Type="StartNormal" Templete="bt009_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="StartOver" Templete="bt009_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="StartOverAdd" Templete="bt01_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="StartPush" Templete="bt009_green_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			
+			<DefaultFrameImagery Type="MiddleNormal" Templete="bt010_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="MiddleOver" Templete="bt010_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="MiddleOverAdd" Templete="bt02_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="MiddlePush" Templete="bt010_green_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			
+			<DefaultFrameImagery Type="EndNormal" Templete="bt011_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="EndOver" Templete="bt011_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="EndOverAdd" Templete="bt03_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="EndPush" Templete="bt011_green_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalCommunity" Imageset="BaseImage039" Image="icon5_08" >
+				<Area X="3" Y="5" />
+			</Image>
+			<Image Type="DisableCommunity" Imageset="BaseImage039" Image="icon5_gray_08" >
+				<Area X="3" Y="5" />
+			</Image>
+			<Image Type="NormalPractice" Imageset="BaseImage039" Image="icon5_07" >
+				<Area X="3" Y="5" />
+			</Image>
+			<Image Type="DisablePractice" Imageset="BaseImage039" Image="icon5_gray_07" >
+				<Area X="3" Y="5" />
+			</Image>
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="MenuBtn" Id="10">
+		<Size X="53" Y="6" Width="34" Height="30" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_green_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			
+			<DefaultFrameImagery Type="StartNormal" Templete="bt009_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="StartOver" Templete="bt009_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="StartOverAdd" Templete="bt01_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="StartPush" Templete="bt009_green_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			
+			<DefaultFrameImagery Type="MiddleNormal" Templete="bt010_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="MiddleOver" Templete="bt010_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="MiddleOverAdd" Templete="bt02_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="MiddlePush" Templete="bt010_green_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			
+			<DefaultFrameImagery Type="EndNormal" Templete="bt011_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="EndOver" Templete="bt011_green_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="EndOverAdd" Templete="bt03_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="EndPush" Templete="bt011_green_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<Image Type="BtnIconStart" Imageset="BaseImage039" Image="icon5_09" >
+				<Area X="3" Y="5" />
+			</Image>
+			<Image Type="BtnIconEnd" Imageset="BaseImage039" Image="icon5_09" >
+				<Area X="3" Y="5" />
+			</Image>
+			<Image Type="DisableList" Imageset="BaseImage039" Image="icon5_gray_09" >
+				<Area X="3" Y="5" />
+			</Image>
+			
+			<Image Type="OakToolTip" Imageset="BaseImage039" Image="tooltip7_event" />
+			<Image Type="ExclamationMark01" Imageset="BaseImage039" Image="icon6_green_01" />
+			<Image Type="ExclamationMark02" Imageset="BaseImage039" Image="icon6_green_02" />
+			<Image Type="ExclamationMark03" Imageset="BaseImage039" Image="icon6_green_03" />
+			<Image Type="ExclamationMark04" Imageset="BaseImage039" Image="icon6_green_04" />
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	               ClickSound = "interface/public_mouseclick_00.wav"
+				   ExclamationTime01 = "300"
+				   ExclamationTime02 = "200"
+				   ExclamationTime03 = "100"
+				   ExclamationTime04 = "100" />
+	</Window>
+	
+	<Window ClassName="MenuBtn" Id="11">
+		<Size X="44" Y="11" Width="88" Height="30" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt009_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt009_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt01_overadd">
+				<Area X="0" Y="0" Width="88" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt009_blue_down">
+				<Area X="0" Y="0" Width="88" Height="30"/>
+			</DefaultFrameImagery>
+            <Image Imageset="BaseImage039" Image="icon4_01" >
+				<Area X="3" Y="4" />
+			</Image>
+			<Image Imageset="BaseImage039" Image="underbar1_line" >
+				<Area X="-5" Y="4" />
+			</Image>
+			<Image Type="TooltipLeft" Imageset="BaseImage001" Image="tooltip1_left" />
+			<Image Type="TooltipLeftIn" Imageset="BaseImage001" Image="tooltip1_leftin" />
+			<Image Type="TooltipCenter" Imageset="BaseImage001" Image="tooltip1_center" />
+			<Image Type="TooltipRightIn" Imageset="BaseImage001" Image="tooltip1_rightin" />
+			<Image Type="TooltipRight" Imageset="BaseImage001" Image="tooltip1_right" />
+<!-- 비밀상점 --> 
+      <Image Type="RedTooltip" Imageset="BaseImage031" Image="shop_renewal_tooltip1" />
+			<Image Type="RedTooltipText" Imageset="BaseImage028" Image="shop_renewal_text" />
+			<Image Type="RedEffect01" Imageset="BaseImage031" Image="shop_renewal_effect02" />
+			<Image Type="RedEffect02" Imageset="BaseImage031" Image="shop_renewal_effect03" />
+
+<!--블랙 프라이데이
+      <Image Type="RedTooltip" Imageset="BaseImage028" Image="shop_renewal_tooltip_black" />
+			<Image Type="RedTooltipText" Imageset="BaseImage028" Image="shop_renewal_text" />
+			<Image Type="RedEffect01" Imageset="BaseImage028" Image="shop_renewal_effect02_black" />
+			<Image Type="RedEffect02" Imageset="BaseImage028" Image="shop_renewal_effect03_black" />
+-->    
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="MenuBtn" Id="12">
+		<Size X="59" Y="11" Width="88" Height="30" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt010_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt010_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt02_overadd">
+				<Area X="0" Y="0" Width="88" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt010_blue_down">
+				<Area X="0" Y="0" Width="88" Height="30"/>
+			</DefaultFrameImagery>
+            <Image Imageset="BaseImage039" Image="icon4_02" >
+				<Area X="3" Y="4" />
+			</Image>
+			<Image Type="TooltipLeft" Imageset="BaseImage001" Image="tooltip1_left" />
+			<Image Type="TooltipLeftIn" Imageset="BaseImage001" Image="tooltip1_leftin" />
+			<Image Type="TooltipCenter" Imageset="BaseImage001" Image="tooltip1_center" />
+			<Image Type="TooltipRightIn" Imageset="BaseImage001" Image="tooltip1_rightin" />
+			<Image Type="TooltipRight" Imageset="BaseImage001" Image="tooltip1_right" />
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="MenuBtn" Id="13">
+		<Size X="59" Y="11" Width="88" Height="30" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt010_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt010_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt02_overadd">
+				<Area X="0" Y="0" Width="88" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt010_blue_down">
+				<Area X="0" Y="0" Width="88" Height="30"/>
+			</DefaultFrameImagery>
+            <Image Imageset="BaseImage039" Image="icon4_03" >
+				<Area X="3" Y="4" />
+			</Image>
+			<Image Type="TooltipLeft" Imageset="BaseImage001" Image="tooltip1_left" />
+			<Image Type="TooltipLeftIn" Imageset="BaseImage001" Image="tooltip1_leftin" />
+			<Image Type="TooltipCenter" Imageset="BaseImage001" Image="tooltip1_center" />
+			<Image Type="TooltipRightIn" Imageset="BaseImage001" Image="tooltip1_rightin" />
+			<Image Type="TooltipRight" Imageset="BaseImage001" Image="tooltip1_right" />
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="MenuBtn" Id="14">
+		<Size X="59" Y="11" Width="88" Height="30" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt010_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt010_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt02_overadd">
+				<Area X="0" Y="0" Width="88" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt010_blue_down">
+				<Area X="0" Y="0" Width="88" Height="30"/>
+			</DefaultFrameImagery>
+            <Image Imageset="BaseImage039" Image="icon4_04" >
+				<Area X="3" Y="4" />
+			</Image>
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"
+					   OverTicTime = "200"
+					   OverFrmPrintCount = "3"/>
+	</Window>
+	
+	<Window ClassName="MenuBtn" Id="15">
+		<Size X="59" Y="11" Width="88" Height="30" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt012_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt012_blue_nor">
+				<Area X="0" Y="0" Width="88" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt03_overadd">
+				<Area X="0" Y="0" Width="88" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt012_blue_down">
+				<Area X="0" Y="0" Width="88" Height="30"/>
+			</DefaultFrameImagery>
+            <Image Imageset="BaseImage039" Image="icon4_05" >
+				<Area X="3" Y="4" />
+			</Image>
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="MenuBtn" Id="19">
+		<Size X="-180" Y="6" Width="23" Height="30" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt009_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt009_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt01_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt009_blue_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			
+			<Image Type="NormalList" Imageset="BaseImage031" Image="underbar_icontext_16" >
+				<Area X="3" Y="6" />
+			</Image>
+			<Image Type="DisableList" Imageset="BaseImage031" Image="underbar_icontext_16_gray" >
+				<Area X="3" Y="6" />
+			</Image>
+			<Image Type="TooltipLeft" Imageset="BaseImage001" Image="tooltip1_left" />
+			<Image Type="TooltipLeftIn" Imageset="BaseImage001" Image="tooltip1_leftin" />
+			<Image Type="TooltipCenter" Imageset="BaseImage001" Image="tooltip1_center" />
+			<Image Type="TooltipRightIn" Imageset="BaseImage001" Image="tooltip1_rightin" />
+			<Image Type="TooltipRight" Imageset="BaseImage001" Image="tooltip1_right" />
+			</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="MenuBtn" Id="20">
+		<Size X="-180" Y="6" Width="23" Height="30" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt010_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt010_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt02_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt010_blue_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+            <Image Type="NormalList" Imageset="BaseImage031" Image="underbar_icontext_17" >
+				<Area X="1" Y="6" />
+			</Image>
+			<Image Type="DisableList" Imageset="BaseImage031" Image="underbar_icontext_17_gray" >
+				<Area X="1" Y="6" />
+			</Image>
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="MenuBtn" Id="21">
+		<Size X="-180" Y="6" Width="23" Height="30" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt010_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt010_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt02_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt010_blue_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+            <Image Type="NormalList" Imageset="BaseImage031" Image="underbar_icontext_18" >
+				<Area X="1" Y="6" />
+			</Image>
+			<Image Type="DisableList" Imageset="BaseImage031" Image="underbar_icontext_18_gray" >
+				<Area X="1" Y="6" />
+			</Image>
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="MenuBtn" Id="22">
+		<Size X="-180" Y="6" Width="23" Height="31" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt012_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt012_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt03_overadd">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt012_blue_down">
+				<Area X="0" Y="0" Width="23" Height="30"/>
+			</DefaultFrameImagery>
+           <Image Type="NormalList" Imageset="BaseImage031" Image="underbar_icontext_19" >
+				<Area X="1" Y="6" />
+			</Image>
+			<Image Type="DisableList" Imageset="BaseImage031" Image="underbar_icontext_19_gray" >
+				<Area X="1" Y="6" />
+			</Image>
+		</Imagery>		
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="MessengerBtn" Id="30">
+		<Size X="0" Y="6" Width="34" Height="28" />
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt001_blue_nor">
+				<Area X="0" Y="0" Width="34" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt001_blue_nor">
+				<Area X="0" Y="0" Width="34" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="34" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt001_blue_down">
+				<Area X="0" Y="0" Width="34" Height="31"/>
+			</DefaultFrameImagery>
+				<Image Type="NormalList" Imageset="BaseImage039" Image="icon5_10" >
+			<Area X="4" Y="5" />
+			</Image>
+				<Image Type="DisableList" Imageset="BaseImage039" Image="icon5_gray_10" >
+			<Area X="4" Y="5" />
+			</Image>
+			<Image Imageset="BaseImage039" Image="underbar1_line" >
+				<Area X="-5" Y="3" />
+			</Image>
+			<Image Type="TooltipLeft" Imageset="BaseImage001" Image="tooltip1_left" />
+			<Image Type="TooltipLeftIn" Imageset="BaseImage001" Image="tooltip1_leftin" />
+			<Image Type="TooltipCenter" Imageset="BaseImage001" Image="tooltip1_center" />
+			<Image Type="TooltipRightIn" Imageset="BaseImage001" Image="tooltip1_rightin" />
+			<Image Type="TooltipRight" Imageset="BaseImage001" Image="tooltip1_right" />
+		</Imagery>		
+		<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
+	                   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+</Window>
+

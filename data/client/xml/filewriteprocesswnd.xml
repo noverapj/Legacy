@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="FileWriteUploadWnd" Id="6171">
+	<Size X="0" Y="-20" XAlign="Center" YAlign="Center" Width="250" Height="184" />
+	<Style>IWS_START_HIDE|IWS_MODAL|IWS_TOPMOST</Style>
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+			<Area X="0" Y="0" Width="250" Height="184"/> 
+		</DefaultFrameImagery>		
+		<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title">
+			<Area X="5" Y="6" Width="240" Height="36"/> 
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="MultiplyFrm" Templete="win1_multiply_bottom">
+			<Area X="0" Y="129" Width="250" Height="55"/>
+		</DefaultFrameImagery>
+
+		<Image Imageset="BaseImage008" Image="gauge_skin_bg" >
+			<Area X="48" Y="80" />
+		</Image>
+		<Image Imageset="BaseImage008" Image="gauge_skin_bg" >
+			<Area X="48" Y="99" />
+		</Image>
+		<Image Type="Gauge" Imageset="BaseImage008" Image="gauge_skin_gauge"/>
+	</Imagery>
+</Window>

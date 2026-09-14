@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="ioObserverRedWnd" Id="5061">
+	<Size X="685" Y="172" XAlign="Left" YAlign="Top" Width="160" Height="25" />
+	<DragRect Left="0" Top="0" Right="160" Bottom="25" />
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_CANMOVE|IWS_AFTER_RENDER</Style>
+
+	<ExtraInfo ChangeTime="250"/>
+
+	<Imagery>
+		<Image Type="GuildBack" Imageset="BaseImage001" Image="strip_gray_on" />
+
+		<Image Type="BlueBack" Imageset="BaseImage010" Image="Watch_Blue_Back" />
+		<Image Type="RedBack" Imageset="BaseImage010" Image="Watch_Red_Back" />
+
+		<Image Type="BlueGauge" Imageset="BaseImage010" Image="Watch_Blue_Gauge" />
+		<Image Type="RedGauge" Imageset="BaseImage010" Image="Watch_Red_Gauge" />
+
+		<Image Type="RedDead" Imageset="BaseImage010" Image="Watch_Red_Dead" />
+
+		<Image Type="AddGauge" Imageset="BaseImage010" Image="Watch_Gauge_Add" />
+
+		<Image Type="RedKeyTextQ" Imageset="BaseImage010" Image="Text_S_Watch_Q" />
+		<Image Type="RedKeyTextW" Imageset="BaseImage010" Image="Text_S_Watch_W" />
+		<Image Type="RedKeyTextE" Imageset="BaseImage010" Image="Text_S_Watch_E" />
+		<Image Type="RedKeyTextR" Imageset="BaseImage010" Image="Text_S_Watch_R" />
+		<Image Type="RedKeyTextT" Imageset="BaseImage010" Image="Text_S_Watch_T" />
+		<Image Type="RedKeyTextY" Imageset="BaseImage010" Image="Text_S_Watch_Y" />
+		<Image Type="RedKeyTextU" Imageset="BaseImage010" Image="Text_S_Watch_U" />
+		<Image Type="RedKeyTextI" Imageset="BaseImage010" Image="Text_S_Watch_I" />
+
+		<Image Type="BlueKeyTextQ" Imageset="BaseImage010" Image="Text_S_Watch_Q_b" />
+		<Image Type="BlueKeyTextW" Imageset="BaseImage010" Image="Text_S_Watch_W_b" />
+		<Image Type="BlueKeyTextE" Imageset="BaseImage010" Image="Text_S_Watch_E_b" />
+		<Image Type="BlueKeyTextR" Imageset="BaseImage010" Image="Text_S_Watch_R_b" />
+		<Image Type="BlueKeyTextT" Imageset="BaseImage010" Image="Text_S_Watch_T_b" />
+		<Image Type="BlueKeyTextY" Imageset="BaseImage010" Image="Text_S_Watch_Y_b" />
+		<Image Type="BlueKeyTextU" Imageset="BaseImage010" Image="Text_S_Watch_U_b" />
+		<Image Type="BlueKeyTextI" Imageset="BaseImage010" Image="Text_S_Watch_I_b" />
+
+		<Image Type="Target" Imageset="BaseImage010" Image="Guild_Myguild" />
+	</Imagery>
+
+</Window>

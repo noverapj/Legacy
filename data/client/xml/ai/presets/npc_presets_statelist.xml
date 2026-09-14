@@ -1,0 +1,7 @@
+<?xml version="1.0"  encoding="euc-kr" ?>
+<STATELIST_PRESETS>
+	<STATELIST name="TARGET_IGNORE_STATE_01">
+		<STATE	state="CS_DROP_ZONE_DOWN"		comment="" />
+		<STATE	state="CS_FLY"					comment="" />
+	</STATELIST>
+</STATELIST_PRESETS>

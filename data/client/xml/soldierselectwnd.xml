@@ -1,0 +1,2724 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="SoldierSelectWnd" Id="5023">
+	<Size X="0" Y="-20" XAlign="Center" YAlign="Center" Width="599" Height="238" />
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_DRAG_DROP</Style>
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame80">
+			<Area X="0" Y="0" Width="599" Height="238"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title2">
+			<Area X="5" Y="6" Width="589" Height="26"/>
+		</DefaultFrameImagery>
+	</Imagery>
+	<ExtraInfo FightClubShowSnd = "interface/abuze_qa_alert_00.wav" 
+   		       FightClubTickSnd = "interface/mode/champion_char_02.wav"/>	
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="570" Y="9" Width="20" Height="20"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt011_blue_nor">
+				<Area X="0" Y="0" Width="20" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt011_blue_nor">
+				<Area X="0" Y="0" Width="20" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="20" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt011_blue_down">
+				<Area X="0" Y="0" Width="20" Height="20"/>
+			</DefaultFrameImagery>
+                        <Image Type="Disable" Imageset="BaseImage001" Image="icon0_x_small_grayframe" >
+				<Area X="0" Y="0" />
+			</Image>
+                        <Image Type="NormalList" Imageset="BaseImage001" Image="icon0_x_small" >
+				<Area X="4" Y="4" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+<!-- ////////////////////////////// scroll //////////////////////////////////////////////////////////////////////////////////////////////-->
+	<Window ClassName="ioScroll" Id="2">
+		<Size X="572" Y="42" Width="15" Height="183" />
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_VSCROLL</ExStyle>
+		<Imagery>
+			<DefaultFrameImagery Templete="scrollbar_back">
+				<Area X="5" Y="10" Width="5" Height="163"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo PageRange="1" StartTime="500" CurTime ="100"/>
+
+		<Window ClassName="ioButton" Id="1">
+			<Size X="0" Y="0" Width="15" Height="10" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0" Reverse="Vert"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0" Reverse="Vert"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0" Reverse="Vert"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>					
+		</Window>
+		<Window ClassName="ioButton" Id="2">
+			<Size X="0" Y="173" Width="15" Height="10" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>					
+		</Window>
+		<Window ClassName="ioSlide" Id="3">
+			<Size X="0" Y="10" Width="15" Height="30" />
+			<DragRect Left="0" Top="0" Right="15" Bottom="30" />
+			<ExStyle>IWS_EX_NOTIFY_MOVED</ExStyle>
+			<Style>IWS_CANMOVE</Style>
+			<Imagery>
+				<DefaultFrameImagery Templete="scrollbar_drag">
+					<Area X="0" Y="0" Width="15" Height="30"/>
+				</DefaultFrameImagery>
+				<Image Type="Icon_Slide" Imageset="BaseImage001" Image="scrollbar_drag_icon"/>
+			</Imagery>
+		</Window>
+	</Window>
+
+<!-- ////////////////////////////// first line //////////////////////////////////////////////////////////////////////////////////////////////-->
+	<Window ClassName="SoldierBtn" Id="3">
+		<Size X="12" Y="42" Width="90" Height="184" />
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_chrchange_gray">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_chrchange_gray">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="SelectPosFrm" Templete="search_keyboard_moving">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+		</Imagery>
+
+		<Window ClassName="SoldierChar" Id="1">
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+			<Size X="0" Y="0" Width="0" Height="0" />
+		</Window>
+
+		<Window ClassName="SoldierChargeBtn" Id="5">
+			<Size X="5" Y="156" Width="81" Height="22" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Imagery>
+				<DefaultFrameImagery Type="BlueNorFrm" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="BlueDownFrm" Templete="bt007_blue_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="PinkNorFrm" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="PinkDownFrm" Templete="bt007_pink_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	       		    	   ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+
+		<Window ClassName="SoldierInfo" Id="2">
+			<Size X="0" Y="0" Width="0" Height="0" />
+			<Style>IWS_BACKMOST</Style> 
+			<Imagery>
+				<Image Type="BlueKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_blue" />
+				<Image Type="PinkKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_pink" />
+				<Image Type="GrayKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_gray" />
+				<Image Type="ShadowBack" Imageset="BaseImage005" Image="mychr_shadow4"/>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="3">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>재고용</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="4">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>용병고용</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="6">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>전투체험</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="7">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>전투체험중</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="SoldierRentalBtn" Id="8">
+			<Size X="5" Y="156" Width="81" Height="22" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Title>
+				<Format X="40" Y="2" Size="11" Style="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Disable" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Text>전투체험</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_pink_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	       		    	   ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+	
+	<Window ClassName="SoldierBtn" Id="4">
+		<Size X="104" Y="42" Width="90" Height="184" />
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_chrchange_gray">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_chrchange_gray">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="SelectPosFrm" Templete="search_keyboard_moving">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+		</Imagery>
+
+		<Window ClassName="SoldierChar" Id="1">
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+			<Size X="0" Y="0" Width="0" Height="0" />
+		</Window>
+
+		<Window ClassName="SoldierChargeBtn" Id="5">
+			<Size X="5" Y="156" Width="81" Height="22" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Imagery>
+				<DefaultFrameImagery Type="BlueNorFrm" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="BlueDownFrm" Templete="bt007_blue_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="PinkNorFrm" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="PinkDownFrm" Templete="bt007_pink_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		       		    ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+
+		<Window ClassName="SoldierInfo" Id="2">
+			<Size X="0" Y="0" Width="0" Height="0" />
+			<Style>IWS_BACKMOST</Style> 
+			<Imagery>
+				<Image Type="BlueKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_blue" />
+				<Image Type="PinkKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_pink" />
+				<Image Type="GrayKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_gray" />
+				<Image Type="ShadowBack" Imageset="BaseImage005" Image="mychr_shadow4"/>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="3">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>재고용</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="4">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>용병고용</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="6">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>전투체험</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="7">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>전투체험중</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="SoldierRentalBtn" Id="8">
+			<Size X="5" Y="156" Width="81" Height="22" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Title>
+				<Format X="40" Y="2" Size="11" Style="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Disable" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Text>전투체험</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_pink_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	       		    	   ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="SoldierBtn" Id="5">
+		<Size X="196" Y="42" Width="90" Height="184" />
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_chrchange_gray">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_chrchange_gray">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="SelectPosFrm" Templete="search_keyboard_moving">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+		</Imagery>
+
+		<Window ClassName="SoldierChar" Id="1">
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+			<Size X="0" Y="0" Width="0" Height="0" />
+		</Window>
+
+		<Window ClassName="SoldierChargeBtn" Id="5">
+			<Size X="5" Y="156" Width="81" Height="22" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Imagery>
+				<DefaultFrameImagery Type="BlueNorFrm" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="BlueDownFrm" Templete="bt007_blue_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="PinkNorFrm" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="PinkDownFrm" Templete="bt007_pink_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		       		    ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+
+		<Window ClassName="SoldierInfo" Id="2">
+			<Size X="0" Y="0" Width="0" Height="0" />
+			<Style>IWS_BACKMOST</Style> 
+			<Imagery>
+				<Image Type="BlueKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_blue" />
+				<Image Type="PinkKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_pink" />
+				<Image Type="GrayKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_gray" />
+				<Image Type="ShadowBack" Imageset="BaseImage005" Image="mychr_shadow4"/>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="3">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>재고용</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+		<Window ClassName="ioButton" Id="4">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>용병고용</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="6">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>전투체험</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="7">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>전투체험중</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="SoldierRentalBtn" Id="8">
+			<Size X="5" Y="156" Width="81" Height="22" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Title>
+				<Format X="40" Y="2" Size="11" Style="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Disable" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Text>전투체험</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_pink_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	       		    	   ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="SoldierBtn" Id="6">
+		<Size X="288" Y="42" Width="90" Height="184" />
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_chrchange_gray">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_chrchange_gray">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="SelectPosFrm" Templete="search_keyboard_moving">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+		</Imagery>
+
+		<Window ClassName="SoldierChar" Id="1">
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+			<Size X="0" Y="0" Width="0" Height="0" />
+		</Window>
+
+		<Window ClassName="SoldierChargeBtn" Id="5">
+			<Size X="5" Y="156" Width="81" Height="22" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Imagery>
+				<DefaultFrameImagery Type="BlueNorFrm" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="BlueDownFrm" Templete="bt007_blue_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="PinkNorFrm" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="PinkDownFrm" Templete="bt007_pink_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		       		    ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+
+		<Window ClassName="SoldierInfo" Id="2">
+			<Size X="0" Y="0" Width="0" Height="0" />
+			<Style>IWS_BACKMOST</Style> 
+			<Imagery>
+				<Image Type="BlueKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_blue" />
+				<Image Type="PinkKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_pink" />
+				<Image Type="GrayKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_gray" />
+				<Image Type="ShadowBack" Imageset="BaseImage005" Image="mychr_shadow4"/>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="3">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>재고용</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="4">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>용병고용</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="6">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>전투체험</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="7">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>전투체험중</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="SoldierRentalBtn" Id="8">
+			<Size X="5" Y="156" Width="81" Height="22" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Title>
+				<Format X="40" Y="2" Size="11" Style="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Disable" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Text>전투체험</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_pink_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	       		    	   ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="SoldierBtn" Id="7">
+		<Size X="380" Y="42" Width="90" Height="184" />
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_chrchange_gray">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_chrchange_gray">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="SelectPosFrm" Templete="search_keyboard_moving">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+		</Imagery>
+
+		<Window ClassName="SoldierChar" Id="1">
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+			<Size X="0" Y="0" Width="0" Height="0" />
+		</Window>
+
+		<Window ClassName="SoldierChargeBtn" Id="5">
+			<Size X="5" Y="156" Width="81" Height="22" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Imagery>
+				<DefaultFrameImagery Type="BlueNorFrm" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="BlueDownFrm" Templete="bt007_blue_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="PinkNorFrm" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="PinkDownFrm" Templete="bt007_pink_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		       		    ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+
+		<Window ClassName="SoldierInfo" Id="2">
+			<Size X="0" Y="0" Width="0" Height="0" />
+			<Style>IWS_BACKMOST</Style> 
+			<Imagery>
+				<Image Type="BlueKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_blue" />
+				<Image Type="PinkKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_pink" />
+				<Image Type="GrayKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_gray" />
+				<Image Type="ShadowBack" Imageset="BaseImage005" Image="mychr_shadow4"/>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="3">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>재고용</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="4">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>용병고용</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="6">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>전투체험</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="7">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>전투체험중</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="SoldierRentalBtn" Id="8">
+			<Size X="5" Y="156" Width="81" Height="22" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Title>
+				<Format X="40" Y="2" Size="11" Style="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Disable" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Text>전투체험</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_pink_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	       		    	   ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="SoldierBtn" Id="8">
+		<Size X="472" Y="42" Width="90" Height="184" />
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_chrchange_gray">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_chrchange_gray">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="SelectPosFrm" Templete="search_keyboard_moving">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+		</Imagery>
+
+		<Window ClassName="SoldierChar" Id="1">
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+			<Size X="0" Y="0" Width="0" Height="0" />
+		</Window>
+
+		<Window ClassName="SoldierChargeBtn" Id="5">
+			<Size X="5" Y="156" Width="81" Height="22" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Imagery>
+				<DefaultFrameImagery Type="BlueNorFrm" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="BlueDownFrm" Templete="bt007_blue_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="PinkNorFrm" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="PinkDownFrm" Templete="bt007_pink_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		       		    ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+
+		<Window ClassName="SoldierInfo" Id="2">
+			<Size X="0" Y="0" Width="0" Height="0" />
+			<Style>IWS_BACKMOST</Style> 
+			<Imagery>
+				<Image Type="BlueKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_blue" />
+				<Image Type="PinkKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_pink" />
+				<Image Type="GrayKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_gray" />
+				<Image Type="ShadowBack" Imageset="BaseImage005" Image="mychr_shadow4"/>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="3">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>재고용</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="4">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>용병고용</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="6">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>전투체험</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="7">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>전투체험중</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="SoldierRentalBtn" Id="8">
+			<Size X="5" Y="156" Width="81" Height="22" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Title>
+				<Format X="40" Y="2" Size="11" Style="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Disable" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Text>전투체험</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_pink_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	       		    	   ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>	
+
+<!-- //////////////////////////////////////////////second line/////////////////////////////////////////////////////////////////-->
+
+	<Window ClassName="SoldierBtn" Id="9">
+		<Size X="12" Y="227" Width="90" Height="184" />
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_chrchange_gray">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_chrchange_gray">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="SelectPosFrm" Templete="search_keyboard_moving">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+		</Imagery>
+
+		<Window ClassName="SoldierChar" Id="1">
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+			<Size X="0" Y="0" Width="0" Height="0" />
+		</Window>
+
+		<Window ClassName="SoldierChargeBtn" Id="5">
+			<Size X="5" Y="156" Width="81" Height="22" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Imagery>
+				<DefaultFrameImagery Type="BlueNorFrm" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="BlueDownFrm" Templete="bt007_blue_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="PinkNorFrm" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="PinkDownFrm" Templete="bt007_pink_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		       		    ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+
+		<Window ClassName="SoldierInfo" Id="2">
+			<Size X="0" Y="0" Width="0" Height="0" />
+			<Style>IWS_BACKMOST</Style> 
+			<Imagery>
+				<Image Type="BlueKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_blue" />
+				<Image Type="PinkKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_pink" />
+				<Image Type="GrayKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_gray" />
+				<Image Type="ShadowBack" Imageset="BaseImage005" Image="mychr_shadow4"/>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="3">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>재고용</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="4">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>용병고용</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="6">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>전투체험</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="7">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>전투체험중</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="SoldierRentalBtn" Id="8">
+			<Size X="5" Y="156" Width="81" Height="22" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Title>
+				<Format X="40" Y="2" Size="11" Style="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Disable" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Text>전투체험</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_pink_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	       		    	   ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+	
+	<Window ClassName="SoldierBtn" Id="10">
+		<Size X="104" Y="227" Width="90" Height="184" />
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_chrchange_gray">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_chrchange_gray">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="SelectPosFrm" Templete="search_keyboard_moving">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+		</Imagery>
+
+		<Window ClassName="SoldierChar" Id="1">
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+			<Size X="0" Y="0" Width="0" Height="0" />
+		</Window>
+
+		<Window ClassName="SoldierChargeBtn" Id="5">
+			<Size X="5" Y="156" Width="81" Height="22" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Imagery>
+				<DefaultFrameImagery Type="BlueNorFrm" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="BlueDownFrm" Templete="bt007_blue_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="PinkNorFrm" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="PinkDownFrm" Templete="bt007_pink_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		       		    ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+
+		<Window ClassName="SoldierInfo" Id="2">
+			<Size X="0" Y="0" Width="0" Height="0" />
+			<Style>IWS_BACKMOST</Style> 
+			<Imagery>
+				<Image Type="BlueKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_blue" />
+				<Image Type="PinkKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_pink" />
+				<Image Type="GrayKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_gray" />
+				<Image Type="ShadowBack" Imageset="BaseImage005" Image="mychr_shadow4"/>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="3">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>재고용</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="4">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>용병고용</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="6">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>전투체험</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="7">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>전투체험중</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="SoldierRentalBtn" Id="8">
+			<Size X="5" Y="156" Width="81" Height="22" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Title>
+				<Format X="40" Y="2" Size="11" Style="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Disable" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Text>전투체험</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_pink_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	       		    	   ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="SoldierBtn" Id="11">
+		<Size X="196" Y="227" Width="90" Height="184" />
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_chrchange_gray">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_chrchange_gray">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="SelectPosFrm" Templete="search_keyboard_moving">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+		</Imagery>
+
+		<Window ClassName="SoldierChar" Id="1">
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+			<Size X="0" Y="0" Width="0" Height="0" />
+		</Window>
+
+		<Window ClassName="SoldierChargeBtn" Id="5">
+			<Size X="5" Y="156" Width="81" Height="22" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Imagery>
+				<DefaultFrameImagery Type="BlueNorFrm" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="BlueDownFrm" Templete="bt007_blue_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="PinkNorFrm" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="PinkDownFrm" Templete="bt007_pink_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		       		    ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+
+		<Window ClassName="SoldierInfo" Id="2">
+			<Size X="0" Y="0" Width="0" Height="0" />
+			<Style>IWS_BACKMOST</Style> 
+			<Imagery>
+				<Image Type="BlueKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_blue" />
+				<Image Type="PinkKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_pink" />
+				<Image Type="GrayKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_gray" />
+				<Image Type="ShadowBack" Imageset="BaseImage005" Image="mychr_shadow4"/>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="3">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>재고용</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+		<Window ClassName="ioButton" Id="4">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>용병고용</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="6">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>전투체험</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="7">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>전투체험중</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="SoldierRentalBtn" Id="8">
+			<Size X="5" Y="156" Width="81" Height="22" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Title>
+				<Format X="40" Y="2" Size="11" Style="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Disable" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Text>전투체험</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_pink_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	       		    	   ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="SoldierBtn" Id="12">
+		<Size X="288" Y="227" Width="90" Height="184" />
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_chrchange_gray">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_chrchange_gray">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="SelectPosFrm" Templete="search_keyboard_moving">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+		</Imagery>
+
+		<Window ClassName="SoldierChar" Id="1">
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+			<Size X="0" Y="0" Width="0" Height="0" />
+		</Window>
+
+		<Window ClassName="SoldierChargeBtn" Id="5">
+			<Size X="5" Y="156" Width="81" Height="22" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Imagery>
+				<DefaultFrameImagery Type="BlueNorFrm" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="BlueDownFrm" Templete="bt007_blue_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="PinkNorFrm" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="PinkDownFrm" Templete="bt007_pink_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		       		    ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+
+		<Window ClassName="SoldierInfo" Id="2">
+			<Size X="0" Y="0" Width="0" Height="0" />
+			<Style>IWS_BACKMOST</Style> 
+			<Imagery>
+				<Image Type="BlueKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_blue" />
+				<Image Type="PinkKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_pink" />
+				<Image Type="GrayKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_gray" />
+				<Image Type="ShadowBack" Imageset="BaseImage005" Image="mychr_shadow4"/>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="3">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>재고용</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="4">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>용병고용</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="6">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>전투체험</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="7">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>전투체험중</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="SoldierRentalBtn" Id="8">
+			<Size X="5" Y="156" Width="81" Height="22" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Title>
+				<Format X="40" Y="2" Size="11" Style="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Disable" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Text>전투체험</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_pink_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	       		    	   ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="SoldierBtn" Id="13">
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<Size X="380" Y="227" Width="90" Height="184" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_chrchange_gray">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_chrchange_gray">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="SelectPosFrm" Templete="search_keyboard_moving">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+		</Imagery>
+
+		<Window ClassName="SoldierChar" Id="1">
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+			<Size X="0" Y="0" Width="0" Height="0" />
+		</Window>
+
+		<Window ClassName="SoldierChargeBtn" Id="5">
+			<Size X="5" Y="156" Width="81" Height="22" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Imagery>
+				<DefaultFrameImagery Type="BlueNorFrm" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="BlueDownFrm" Templete="bt007_blue_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="PinkNorFrm" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="PinkDownFrm" Templete="bt007_pink_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		       		    ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+
+		<Window ClassName="SoldierInfo" Id="2">
+			<Size X="0" Y="0" Width="0" Height="0" />
+			<Style>IWS_BACKMOST</Style> 
+			<Imagery>
+				<Image Type="BlueKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_blue" />
+				<Image Type="PinkKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_pink" />
+				<Image Type="GrayKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_gray" />
+				<Image Type="ShadowBack" Imageset="BaseImage005" Image="mychr_shadow4"/>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="3">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>재고용</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="4">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>용병고용</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>		
+
+		<Window ClassName="ioButton" Id="6">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>전투체험</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="7">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>전투체험중</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="SoldierRentalBtn" Id="8">
+			<Size X="5" Y="156" Width="81" Height="22" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Title>
+				<Format X="40" Y="2" Size="11" Style="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Disable" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Text>전투체험</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_pink_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	       		    	   ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="SoldierBtn" Id="14">
+		<Size X="472" Y="227" Width="90" Height="184" />
+		<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_chrchange_gray">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_chrchange_gray">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="SelectPosFrm" Templete="search_keyboard_moving">
+				<Area X="0" Y="0" Width="90" Height="184"/>
+			</DefaultFrameImagery>
+		</Imagery>
+
+		<Window ClassName="SoldierChar" Id="1">
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style> 
+			<Size X="0" Y="0" Width="0" Height="0" />
+		</Window>
+
+		<Window ClassName="SoldierChargeBtn" Id="5">
+			<Size X="5" Y="156" Width="81" Height="22" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Imagery>
+				<DefaultFrameImagery Type="BlueNorFrm" Templete="bt007_blue_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="BlueDownFrm" Templete="bt007_blue_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="PinkNorFrm" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="PinkDownFrm" Templete="bt007_pink_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		       		    ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+
+		<Window ClassName="SoldierInfo" Id="2">
+			<Size X="0" Y="0" Width="0" Height="0" />
+			<Style>IWS_BACKMOST</Style> 
+			<Imagery>
+				<Image Type="BlueKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_blue" />
+				<Image Type="PinkKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_pink" />
+				<Image Type="GrayKeyBack" Imageset="BaseImage001" Image="icon0_chrnum_gray" />
+				<Image Type="ShadowBack" Imageset="BaseImage005" Image="mychr_shadow4"/>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="3">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>재고용</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="4">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>용병고용</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="6">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>전투체험</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="ioButton" Id="7">
+			<Size X="7" Y="78" Width="75" Height="22" />
+			<Style>IWS_BACKMOST</Style> 
+			<Title>
+				<Format X="37" Y="5" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>전투체험중</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="75" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+		</Window>
+
+		<Window ClassName="SoldierRentalBtn" Id="8">
+			<Size X="5" Y="156" Width="81" Height="22" />
+			<Style>IWS_PROCESS|IWS_BACKMOST</Style>
+			<Title>
+				<Format X="40" Y="2" Size="11" Style="Outline_full_3x" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Over" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Push" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Color Type="Disable" Text="FFFFFFFF" Back="FF9A273B"/>
+				<Text>전투체험</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_pink_nor">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_pink_down">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="81" Height="22"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	       		    	   ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>	
+	
+<!-- /////////////////////////// etc /////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+	<Window ClassName="ioButton" Id="15">
+		<Size X="491" Y="9" Width="78" Height="20"/>
+		<Title>
+			<Format X="7" Y="2" Size="11" Style="Outline_full_3x" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF20394F"/>
+			<Text>두줄로보기</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt011_blue_nor">
+				<Area X="0" Y="0" Width="78" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt011_blue_nor">
+				<Area X="0" Y="0" Width="78" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="78" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt011_blue_down">
+				<Area X="0" Y="0" Width="78" Height="20"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_whitetriangle" >
+				<Area X="61" Y="6" Reverse="Vert"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+
+	<Window ClassName="ioButton" Id="16">
+		<Size X="491" Y="9" Width="78" Height="20"/>
+		<Title>
+			<Format X="7" Y="2" Size="11" Style="Outline_full_3x" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF20394F"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF20394F"/>
+			<Text>한줄로보기</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt011_blue_nor">
+				<Area X="0" Y="0" Width="78" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt011_blue_nor">
+				<Area X="0" Y="0" Width="78" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="78" Height="20"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt011_blue_down">
+				<Area X="0" Y="0" Width="78" Height="20"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_whitetriangle" >
+				<Area X="61" Y="6"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+			
+	<Window ClassName="ioButton" Id="21">
+		<Size X="204" Y="235" Width="190" Height="22" />
+		<Style>IWS_BACKMOST</Style> 
+		<Title>
+			<Format X="95" Y="3" Size="11" Style="Outline_full_3x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF117222"/>
+			<Text>용병합쳐서보기</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="190" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="190" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="190" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="190" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="190" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="190" Height="22"/>
+			</DefaultFrameImagery>
+		</Imagery>
+	</Window>
+	
+	<Window ClassName="ioButton" Id="22">
+		<Size X="12" Y="235" Width="190" Height="22" />
+		<Style>IWS_BACKMOST</Style> 
+		<Title>
+			<Format X="95" Y="3" Size="11" Style="Outline_full_3x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF117222"/>
+			<Text>용병펼쳐서보기</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="190" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="190" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="190" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="190" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="190" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="190" Height="22"/>
+			</DefaultFrameImagery>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="ioButton" Id="23">
+		<Size X="396" Y="235" Width="191" Height="22" />
+		<Style>IWS_BACKMOST</Style> 
+		<Title>
+			<Format X="95" Y="3" Size="11" Style="Outline_full_3x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF117222"/>
+			<Text>용병/NPC 진열</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="191" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="191" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="191" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="191" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="191" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="191" Height="22"/>
+			</DefaultFrameImagery>
+		</Imagery>
+	</Window>
+	
+<!-- ////////////////////////////// scroll tall //////////////////////////////////////////////////////////////////////////////////////////////-->
+	<Window ClassName="ioScroll" Id="19">
+		<Size X="572" Y="42" Width="15" Height="368" />
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_VSCROLL</ExStyle>
+		<Imagery>
+			<DefaultFrameImagery Templete="scrollbar_back">
+				<Area X="5" Y="10" Width="5" Height="348"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo PageRange="1" StartTime="500" CurTime ="100"/>
+
+		<Window ClassName="ioButton" Id="1">
+			<Size X="0" Y="0" Width="15" Height="10" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0" Reverse="Vert"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0" Reverse="Vert"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0" Reverse="Vert"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>					
+		</Window>
+		<Window ClassName="ioButton" Id="2">
+			<Size X="0" Y="358" Width="15" Height="10" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>					
+		</Window>
+		<Window ClassName="ioSlide" Id="3">
+			<Size X="0" Y="10" Width="15" Height="30" />
+			<DragRect Left="0" Top="0" Right="15" Bottom="30" />
+			<ExStyle>IWS_EX_NOTIFY_MOVED</ExStyle>
+			<Style>IWS_CANMOVE</Style>
+			<Imagery>
+				<DefaultFrameImagery Templete="scrollbar_drag">
+					<Area X="0" Y="0" Width="15" Height="30"/>
+				</DefaultFrameImagery>
+				<Image Type="Icon_Slide" Imageset="BaseImage001" Image="scrollbar_drag_icon"/>
+			</Imagery>
+		</Window>
+	</Window>
+	
+</Window>

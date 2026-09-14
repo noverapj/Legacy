@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="QuestProgressInfoMainWnd" Id="6010">
+	<Size X="0" Y="-20" XAlign="Center" YAlign="Center" Width="435" Height="486" />
+	<DragRect Left="0" Top="0" Right="435" Bottom="36" />
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_CANMOVE|IWS_EXIT_ESC</Style>
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+
+</Window>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="TotalResultExpWnd" Id="3">        
+	<Size X="234" Y="0" Width="540" Height="350" />
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_CHILD_ONLY_RESPONSE</Style>
+	<Title>
+		<Format X="265" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Center"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Text>경험치</Text>
+	</Title>
+	<Imagery>
+		<Image Type="BackEffect" Imageset="BaseImage005" Image="iconeffect_9"/>
+	</Imagery>
+	<ExtraInfo CharShowTime="200" GaugeTime="1000" BackSound="interface/mode/result_final_01.wav"/>
+
+	<Window ClassName="TotalResultExpCharSlotWnd" Id="1">
+		<Size X="223" Y="54" Width="92" Height="233" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Imagery>
+			<Image Type="CharBottom" Imageset="BaseImage002" Image="mychr_shadow">
+				<Area X="45" Y="222"/>
+			</Image>
+			<Image Type="GaugeBar" Imageset="BaseImage008" Image="gauge_finishsmall_bg"/>
+			<Image Type="GaugeOrange" Imageset="BaseImage008" Image="gauge_finishsmall_gauge_orange"/>
+			<Image Type="GaugeYellow" Imageset="BaseImage008" Image="gauge_finishsmall_gauge_yellow"/>
+			<Image Type="LevelUP" Imageset="BaseImage006" Image="icontext_finish_levelup"/>
+			<Image Type="ExpBonus" Imageset="BaseImage015" Image="icon0_solder_exp100_buster"/>
+		</Imagery>
+		<ExtraInfo TitleX="0" TitleY="0" CharOffSetX="-350" CharOffSetY="-80" CharX="0" CharY="0" CharZ="675"
+			         CharGaugeSound="" 
+			         CharEffectSound="interface/ceremony/exp_effect_01.wav"/>
+	</Window>
+
+	<Window ClassName="TotalResultExpCharSlotWnd" Id="2">
+		<Size X="128" Y="54" Width="92" Height="233" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Imagery>
+			<Image Type="CharBottom" Imageset="BaseImage002" Image="mychr_shadow">
+				<Area X="45" Y="217"/>
+			</Image>
+			<Image Type="GaugeBar" Imageset="BaseImage008" Image="gauge_finishsmall_bg"/>
+			<Image Type="GaugeOrange" Imageset="BaseImage008" Image="gauge_finishsmall_gauge_orange"/>
+			<Image Type="GaugeYellow" Imageset="BaseImage008" Image="gauge_finishsmall_gauge_yellow"/>
+			<Image Type="LevelUP" Imageset="BaseImage006" Image="icontext_finish_levelup"/>
+			<Image Type="ExpBonus" Imageset="BaseImage015" Image="icon0_solder_exp100_buster"/>
+		</Imagery>
+		<ExtraInfo TitleX="0" TitleY="5" CharOffSetX="-350" CharOffSetY="-85" CharX="0" CharY="0" CharZ="725"
+			         CharGaugeSound="" 
+			         CharEffectSound=""/>
+	</Window>
+
+	<Window ClassName="TotalResultExpCharSlotWnd" Id="3">
+		<Size X="318" Y="54" Width="92" Height="233" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Imagery>
+			<Image Type="CharBottom" Imageset="BaseImage002" Image="mychr_shadow">
+				<Area X="45" Y="217"/>
+			</Image>
+			<Image Type="GaugeBar" Imageset="BaseImage008" Image="gauge_finishsmall_bg"/>
+			<Image Type="GaugeOrange" Imageset="BaseImage008" Image="gauge_finishsmall_gauge_orange"/>
+			<Image Type="GaugeYellow" Imageset="BaseImage008" Image="gauge_finishsmall_gauge_yellow"/>
+			<Image Type="LevelUP" Imageset="BaseImage006" Image="icontext_finish_levelup"/>
+			<Image Type="ExpBonus" Imageset="BaseImage015" Image="icon0_solder_exp100_buster"/>
+		</Imagery>
+		<ExtraInfo TitleX="0" TitleY="5" CharOffSetX="-350" CharOffSetY="-85" CharX="0" CharY="0" CharZ="725"
+			         CharGaugeSound="" 
+			         CharEffectSound=""/>
+	</Window>
+
+	<Window ClassName="TotalResultExpCharSlotWnd" Id="4">
+		<Size X="33" Y="54" Width="92" Height="233" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Imagery>
+			<Image Type="CharBottom" Imageset="BaseImage002" Image="mychr_shadow">
+				<Area X="45" Y="212"/>
+			</Image>
+			<Image Type="GaugeBar" Imageset="BaseImage008" Image="gauge_finishsmall_bg"/>
+			<Image Type="GaugeOrange" Imageset="BaseImage008" Image="gauge_finishsmall_gauge_orange"/>
+			<Image Type="GaugeYellow" Imageset="BaseImage008" Image="gauge_finishsmall_gauge_yellow"/>
+			<Image Type="LevelUP" Imageset="BaseImage006" Image="icontext_finish_levelup"/>
+			<Image Type="ExpBonus" Imageset="BaseImage015" Image="icon0_solder_exp100_buster"/>
+		</Imagery>
+		<ExtraInfo TitleX="0" TitleY="10" CharOffSetX="-350" CharOffSetY="-90" CharX="0" CharY="0" CharZ="775"
+			         CharGaugeSound="" 
+			         CharEffectSound=""/>
+	</Window>
+
+	<Window ClassName="TotalResultExpCharSlotWnd" Id="5">
+		<Size X="413" Y="54" Width="92" Height="233" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Imagery>
+			<Image Type="CharBottom" Imageset="BaseImage002" Image="mychr_shadow">
+				<Area X="45" Y="212"/>
+			</Image>
+			<Image Type="GaugeBar" Imageset="BaseImage008" Image="gauge_finishsmall_bg"/>
+			<Image Type="GaugeOrange" Imageset="BaseImage008" Image="gauge_finishsmall_gauge_orange"/>
+			<Image Type="GaugeYellow" Imageset="BaseImage008" Image="gauge_finishsmall_gauge_yellow"/>
+			<Image Type="LevelUP" Imageset="BaseImage006" Image="icontext_finish_levelup"/>
+			<Image Type="ExpBonus" Imageset="BaseImage015" Image="icon0_solder_exp100_buster"/>
+		</Imagery>
+		<ExtraInfo TitleX="0" TitleY="10" CharOffSetX="-350" CharOffSetY="-90" CharX="0" CharY="0" CharZ="775"
+			         CharGaugeSound="" 
+			         CharEffectSound=""/>
+	</Window>
+
+	<Window ClassName="TotalResultExpGradeWnd" Id="6">
+		<Size X="24" Y="295" Width="494" Height="47" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST</Style> 
+		<Imagery>
+			<Image Type="BackEffect" Imageset="BaseImage008" Image="gauge_finishbig_bigbg"/>
+			<Image Type="GaugeBar" Imageset="BaseImage008" Image="gauge_finishbig_bg"/>
+			<Image Type="GaugeOrange" Imageset="BaseImage008" Image="gauge_finishbig_gauge_orange"/>
+			<Image Type="GaugeYellow" Imageset="BaseImage008" Image="gauge_finishbig_gauge_yellow"/>
+			<Image Type="GradeLevelUP" Imageset="BaseImage015" Image="icon0_final_levelup"/>
+		</Imagery>
+		<ExtraInfo GradeIconPage="35" GradeIconMainName="Grade" GradeIconSubName="grade_"
+			         GradeGaugeSound="interface/ceremony/exp_gauge_01.wav"/>
+	</Window>
+</Window>

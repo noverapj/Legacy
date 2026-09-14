@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="QuestCompleteInfoWnd" Id="6135">
+	<Size X="0" Y="-20" XAlign="Center" YAlign="Center" Width="340" Height="226" />
+	<DragRect Left="0" Top="0" Right="340" Bottom="42" />
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_CANMOVE|IWS_EXIT_ESC</Style>
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+
+	<Imagery>
+		<DefaultFrameImagery Type="BrownBack" Templete="win3_frame90">
+			<Area X="0" Y="0" Width="340" Height="226"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="PinkBack" Templete="win2_frame90">
+			<Area X="0" Y="0" Width="340" Height="226"/>
+		</DefaultFrameImagery>
+
+		<DefaultFrameImagery Type="BrownTitle" Templete="win3_title">
+			<Area X="5" Y="6" Width="330" Height="36"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="PinkTitle" Templete="win2_title">
+			<Area X="5" Y="6" Width="330" Height="36"/>
+		</DefaultFrameImagery>
+
+		<DefaultFrameImagery Type="BrownBottomFrm" Templete="win3_multiply_bottom">
+			<Area X="0" Y="0" Width="340" Height="226"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="PinkBottomFrm" Templete="win2_multiply_bottom">
+			<Area X="0" Y="0" Width="340" Height="226"/>
+		</DefaultFrameImagery>
+
+		<DefaultFrameImagery Type="BrownRewardOnFrm" Templete="slot_quest_giftget">
+			<Area X="0" Y="0" Width="306" Height="43"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="PinkRewardOnFrm" Templete="slot_quest_giftget_pink">
+			<Area X="0" Y="0" Width="306" Height="43"/>
+		</DefaultFrameImagery>
+    <Image Type="QuestIconBack1" Imageset="BaseImage002" Image="iconeffect_3"/>
+		<Image Type="QuestIconBack2" Imageset="BaseImage002" Image="iconeffect_1"/>
+		<Image Type="costume_image" Imageset="BaseImage031" Image="costume_mark"/>
+	</Imagery>
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="306" Y="11" Width="23" Height="23"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_brown_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_brown_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_brown_down">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+                        <Image Type="Disable" Imageset="BaseImage001" Image="icon0_x_brown_grayframe" >
+				<Area X="0" Y="0" />
+			</Image>
+                        <Image Type="NormalList" Imageset="BaseImage001" Image="icon0_x_brown" >
+				<Area X="5" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="2">
+		<Size X="306" Y="11" Width="23" Height="23"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_pink_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_pink_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_pink_down">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+                        <Image Type="NormalList" Imageset="BaseImage001" Image="icon0_x_pink" >
+				<Area X="5" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+</Window>

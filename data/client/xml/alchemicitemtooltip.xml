@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="AlchemicItemToolTip" Id="6192">
+    <!--Height는 소스에서 결정-->
+	<Size X="0" Y="0" Width="14" Height="26" />
+	<Style>IWS_START_HIDE|IWS_PROCESS</Style>
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="tooltip3">
+			<Area X="0" Y="0" Width="14" Height="26"/>
+		</DefaultFrameImagery>
+	</Imagery>
+</Window>

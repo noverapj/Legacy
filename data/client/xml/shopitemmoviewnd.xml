@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="ShopItemMovieWnd" Id="6251">
+	<Size X="0" Y="0" Width="342" Height="228" XAlign="Center" YAlign="Center"/>
+	<Style>IWS_MODAL|IWS_START_HIDE|IWS_EXIT_ESC</Style>
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="video_window">
+			<Area X="0" Y="0" Width="342" Height="228"/>
+		</DefaultFrameImagery>		
+		<Image Type="Desc_First" Imageset="BaseImage031" Image="video_skill_bg" >
+				<Area X="10" Y="10" Width="322" Height="201" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>		
+		<Image Type="Desc_All" Imageset="BaseImage031" Image="video_skill_bg" >
+				<Area X="10" Y="10" Width="322" Height="335" HorzAlign="Stretch" VertAlign="Stretch" />
+		</Image>				
+	</Imagery>
+
+	<Window ClassName="ioButton" Id="1">	
+		<Size X="324" Y="3" Width="15" Height="15"/>
+		<Imagery>
+            <Image Imageset="BaseImage031" Image="video_icon_x" />
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+			
+	<Window ClassName="ShopItemDescWnd" Id="11">
+		<Size X="0" Y="0" Width="322" Height="42"/>
+		<Imagery>
+			<Image Type="Selected" Imageset="BaseImage031" Image="video_skill_bg" >
+				<Area X="0" Y="0" Width="322" Height="42" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Line" Imageset="BaseImage031" Image="video_skill_line" >
+				<Area X="8" Y="-11" Width="306" Height="2" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+		</Imagery>
+		<ExtraInfo Passive_Input = "BaseImage031#passive_image_text01"
+					Weapon_Input = "BaseImage031#weapon_image_text01" 
+					Armor_Input = "BaseImage031#armor_image_text01" 
+					Head_Input = "BaseImage031#cap_image_text01"
+					Cloak_Input = "BaseImage031#cloak_image_text01"
+					
+					Weapon_Part = "BaseImage031#weapon_image_text02" 
+					Armor_Part = "BaseImage031#armor_image_text02" 
+					Head_Part = "BaseImage031#cap_image_text02"
+					Cloak_Part = "BaseImage031#cloak_image_text02"/>
+	</Window>
+	
+	<Window ClassName="ShopItemDescWnd" Id="12">
+		<Size X="0" Y="0" Width="322" Height="42"/>
+		<Imagery>
+			<Image Type="Selected" Imageset="BaseImage031" Image="video_skill_bg" >
+				<Area X="0" Y="0" Width="322" Height="42" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Line" Imageset="BaseImage031" Image="video_skill_line" >
+				<Area X="49" Y="0" Width="262" Height="1" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+		</Imagery>
+		<ExtraInfo Passive_Input = "BaseImage031#passive_image_text01"
+					Weapon_Input = "BaseImage031#weapon_image_text01" 
+					Armor_Input = "BaseImage031#armor_image_text01" 
+					Head_Input = "BaseImage031#cap_image_text01"
+					Cloak_Input = "BaseImage031#cloak_image_text01"
+					
+					Weapon_Part = "BaseImage031#weapon_image_text02" 
+					Armor_Part = "BaseImage031#armor_image_text02" 
+					Head_Part = "BaseImage031#cap_image_text02"
+					Cloak_Part = "BaseImage031#cloak_image_text02"/>
+	</Window>
+	
+	<Window ClassName="ShopItemDescWnd" Id="13">
+		<Size X="0" Y="0" Width="322" Height="42"/>
+		<Imagery>
+			<Image Type="Selected" Imageset="BaseImage031" Image="video_skill_bg" >
+				<Area X="0" Y="0" Width="322" Height="42" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Line" Imageset="BaseImage031" Image="video_skill_line" >
+				<Area X="49" Y="0" Width="262" Height="1" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+		</Imagery>
+		<ExtraInfo Passive_Input = "BaseImage031#passive_image_text01"
+					Weapon_Input = "BaseImage031#weapon_image_text01" 
+					Armor_Input = "BaseImage031#armor_image_text01" 
+					Head_Input = "BaseImage031#cap_image_text01"
+					Cloak_Input = "BaseImage031#cloak_image_text01"
+					
+					Weapon_Part = "BaseImage031#weapon_image_text02" 
+					Armor_Part = "BaseImage031#armor_image_text02" 
+					Head_Part = "BaseImage031#cap_image_text02"
+					Cloak_Part = "BaseImage031#cloak_image_text02"/>
+	</Window>
+	
+	<Window ClassName="ShopItemDescWnd" Id="14">
+		<Size X="0" Y="0" Width="322" Height="42"/>
+		<Imagery>
+			<Image Type="Selected" Imageset="BaseImage031" Image="video_skill_bg" >
+				<Area X="0" Y="0" Width="322" Height="42" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Line" Imageset="BaseImage031" Image="video_skill_line" >
+				<Area X="49" Y="0" Width="262" Height="1" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+		</Imagery>
+		<ExtraInfo Passive_Input = "BaseImage031#passive_image_text01"
+					Weapon_Input = "BaseImage031#weapon_image_text01" 
+					Armor_Input = "BaseImage031#armor_image_text01" 
+					Head_Input = "BaseImage031#cap_image_text01"
+					Cloak_Input = "BaseImage031#cloak_image_text01"
+					
+					Weapon_Part = "BaseImage031#weapon_image_text02" 
+					Armor_Part = "BaseImage031#armor_image_text02" 
+					Head_Part = "BaseImage031#cap_image_text02"
+					Cloak_Part = "BaseImage031#cloak_image_text02"/>
+	</Window>
+	
+	<Window ClassName="ioFlashPlayer" Id="101">
+		<Size X="10" Y="10" Width="321" Height="146"/>
+		<Style>IWS_BACKMOST</Style>
+	</Window>
+	
+</Window>

@@ -1,0 +1,2244 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="TournamentDetailScheduleFrameWnd" Id="13">
+	<Size X="136" Y="39" Width="616" Height="465" />
+	<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST</Style>
+	<Imagery>
+	  <Image Type="ScheduleProgressBarInactiveLeft" Imageset="BaseImage_League001"
+	  Image="schedule_big_open_gray_left" >
+	   <Area X="29" Y="20" />
+	  </Image>
+	  <Image Type="ScheduleProgressBarInactiveCenter" Imageset="BaseImage_League001" 
+	  Image="schedule_big_open_gray_center">
+	   <Area X="41" Y="20" Width="531" Height="31" HorzAlign="Stretch" VertAlign="Stretch"/>
+	  </Image>
+	  <Image Type="ScheduleProgressBarInactiveRight" Imageset="BaseImage_League001" 
+	  Image="schedule_big_open_gray_right">
+	   <Area X="566" Y="20" />
+	  </Image>
+	  <Image Type="ScheduleProgressBarInactiveClose" Imageset="BaseImage_League001" 
+	  Image="schedule_big_close_gray_right">
+	   <Area X="572" Y="20" />
+	  </Image>
+	  <Image Type="ActiveTournamentCenterClose" Imageset="BaseImage_League001" 
+	  Image="schedule_big_close_green_center">
+	   <Area X="41" Y="20" Width="531" Height="31" HorzAlign="Stretch" VertAlign="Stretch"/>
+	  </Image>
+	  <Image Type="ActiveTournamentRightClose" Imageset="BaseImage_League001" 
+	   Image="schedule_big_close_green_right">
+  	  <Area X="572" Y="20" />
+	  </Image>	  
+	  <Image Type="ActiveAwardCenterClose" Imageset="BaseImage_League001" 
+	  Image="schedule_big_close_pink_center">
+	   <Area X="41" Y="20" Width="531" Height="31" HorzAlign="Stretch" VertAlign="Stretch"/>
+	  </Image>
+	  <Image Type="ActiveAwardRightClose" Imageset="BaseImage_League001" 
+	   Image="schedule_big_close_pink_right">
+  	  <Area X="572" Y="20" />
+	  </Image>	  
+    <Image Type="FirstPartActiveLeft" Imageset="BaseImage_League001"
+	   Image="schedule_big_open_green_left" >
+	   <Area X="29" Y="20" />
+	  </Image>
+	  <Image Type="FirstPartActiveCenter" Imageset="BaseImage_League001" 
+	   Image="schedule_big_open_green_center">
+	   <Area X="41" Y="20" Width="85" Height="31" HorzAlign="Stretch" VertAlign="Stretch"/>
+	  </Image>
+	  <Image Type="FirstPartActiveRight" Imageset="BaseImage_League001" 
+	  Image="schedule_big_open_green_right">
+	   <Area X="126" Y="20" />
+	  </Image>	  
+	  <Image Type="RestPartActiveCenter" Imageset="BaseImage_League001" 
+	   Image="schedule_big_open_green_center">
+	   <Area X="127" Y="20" Width="109" Height="31" HorzAlign="Stretch" VertAlign="Stretch"/>
+	  </Image>
+	  <Image Type="RestPartActiveRight" Imageset="BaseImage_League001" 
+	  Image="schedule_big_open_green_right">
+	   <Area X="236" Y="20" />
+	  </Image>
+    <Image Type="FirstPartInctiveLeft" Imageset="BaseImage_League001"
+	   Image="schedule_big_open_gray_left" >
+	   <Area X="29" Y="20" />
+	  </Image>
+	  <Image Type="FirstPartInctiveCenter" Imageset="BaseImage_League001" 
+	   Image="schedule_big_open_gray_center">
+	   <Area X="41" Y="20" Width="85" Height="31" HorzAlign="Stretch" VertAlign="Stretch"/>
+	  </Image>
+	  <Image Type="FirstPartInctiveRight" Imageset="BaseImage_League001" 
+	  Image="schedule_big_open_gray_right">
+	   <Area X="126" Y="20" />
+	  </Image>	  
+	  <Image Type="RestPartInctiveCenter" Imageset="BaseImage_League001" 
+	   Image="schedule_big_open_gray_center">
+	   <Area X="127" Y="20" Width="109" Height="31" HorzAlign="Stretch" VertAlign="Stretch"/>
+	  </Image>
+	  <Image Type="RestPartInctiveRight" Imageset="BaseImage_League001" 
+	  Image="schedule_big_open_gray_right">
+	   <Area X="236" Y="20" />
+	  </Image>
+		<Image Type="MatchLine" Imageset="BaseImage_League001" Image="icon0_leagueline_25per" />
+		<Image Type="MatchLineActive" Imageset="BaseImage_League001" Image="icon0_leagueline_100per" />	
+		<Image Type="Champion" Imageset="BaseImage_League003" Image="icon0_league_championicon">
+	    <Area X="519" Y="194" />
+	  </Image>
+		<Image Type="ChampionBack" Imageset="BaseImage002" Image="iconeffect_3">
+	    <Area X="519" Y="194" RenderType="Multiply" />
+	  </Image>
+	</Imagery>
+  <Window ClassName="ioButton" Id="1">
+		<Size X="10" Y="20" Width="19" Height="31" />
+		<Imagery>
+			<Image Type="NormalList" Imageset="BaseImage_League001" Image="icon0_leaguelist_left">
+  			<Area X="3" Y="5"/>
+  		</Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+<Window ClassName="ioButton" Id="2">
+		<Size X="587" Y="20" Width="19" Height="31" />
+		<Imagery>
+			<Image Type="NormalList" Imageset="BaseImage_League001" Image="icon0_leaguelist_left">
+  			<Area X="3" Y="5" Reverse="Horz"/>
+  		</Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="ioScroll" Id="3">
+		<Size X="572" Y="57" Width="15" Height="384" />
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_VSCROLL</ExStyle>
+		<Imagery>
+			<DefaultFrameImagery Templete="scrollbar_back">
+				<Area X="5" Y="10" Width="5" Height="364"/>
+			</DefaultFrameImagery>
+		</Imagery>		
+		<ExtraInfo PageRange="1" StartTime="500" CurTime ="100"/>
+
+		<Window ClassName="ioButton" Id="1">
+			<Size X="0" Y="0" Width="15" Height="10" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0" Reverse="Vert"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0" Reverse="Vert"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0" Reverse="Vert"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>					
+		</Window>
+		<Window ClassName="ioButton" Id="2">
+			<Size X="0" Y="374" Width="15" Height="10" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+			           ClickSound = "interface/public_mouseclick_00.wav"/>					
+		</Window>
+		<Window ClassName="ioSlide" Id="3">
+			<Size X="0" Y="10" Width="15" Height="30" />
+			<DragRect Left="0" Top="0" Right="15" Bottom="30" />
+			<ExStyle>IWS_EX_NOTIFY_MOVED</ExStyle>
+			<Style>IWS_CANMOVE</Style>
+			<Imagery>
+				<DefaultFrameImagery Templete="scrollbar_drag">
+					<Area X="0" Y="0" Width="15" Height="30"/>
+				</DefaultFrameImagery>
+				<Image Type="Icon_Slide" Imageset="BaseImage001" Image="scrollbar_drag_icon"/>
+			</Imagery>
+		</Window>
+	</Window>
+	
+	<Window ClassName="MatchBtn" Id="100000">
+		<Size X="29" Y="58" Width="100" Height="22" />
+		<Title>
+			<Format X="50" Y="4" Size="12" HorzAlign="Center" VertAlign="Top" />
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>1조 대회팀</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueNormal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNormal" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenNor" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenOver" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BluePush" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedPush" Templete="bt007_red_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenPush" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+	    <Image Type="MyCheerTeam" Imageset="BaseImage_League002" Image="icon0_league_cheer">
+	      <Area X="-12" Y="11" />
+	    </Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+    		ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+	
+	<Window ClassName="MatchBtn" Id="100001">
+		<Size X="29" Y="82" Width="100" Height="22" />
+		<Title>
+			<Format X="50" Y="4" Size="12" HorzAlign="Center" VertAlign="Top" />
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>1조 대회팀</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueNormal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNormal" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenNor" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenOver" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BluePush" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedPush" Templete="bt007_red_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenPush" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+	    <Image Type="MyCheerTeam" Imageset="BaseImage_League002" Image="icon0_league_cheer">
+	      <Area X="-12" Y="11" />
+	    </Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+    		ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+	
+	<Window ClassName="MatchBtn" Id="100002">
+		<Size X="29" Y="106" Width="100" Height="22" />
+		<Title>
+			<Format X="50" Y="4" Size="12" HorzAlign="Center" VertAlign="Top" />
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>1조 대회팀</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueNormal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNormal" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenNor" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenOver" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BluePush" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedPush" Templete="bt007_red_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenPush" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+	    <Image Type="MyCheerTeam" Imageset="BaseImage_League002" Image="icon0_league_cheer">
+	      <Area X="-12" Y="11" />
+	    </Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+    		ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+	
+	<Window ClassName="MatchBtn" Id="100003">
+		<Size X="29" Y="130" Width="100" Height="22" />
+		<Title>
+			<Format X="50" Y="4" Size="12" HorzAlign="Center" VertAlign="Top" />
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>1조 대회팀</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueNormal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNormal" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenNor" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenOver" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BluePush" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedPush" Templete="bt007_red_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenPush" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+	    <Image Type="MyCheerTeam" Imageset="BaseImage_League002" Image="icon0_league_cheer">
+	      <Area X="-12" Y="11" />
+	    </Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+    		ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+	
+	<Window ClassName="MatchBtn" Id="100004">
+		<Size X="29" Y="154" Width="100" Height="22" />
+		<Title>
+			<Format X="50" Y="4" Size="12" HorzAlign="Center" VertAlign="Top" />
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>1조 대회팀</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueNormal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNormal" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenNor" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenOver" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BluePush" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedPush" Templete="bt007_red_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenPush" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+	    <Image Type="MyCheerTeam" Imageset="BaseImage_League002" Image="icon0_league_cheer">
+	      <Area X="-12" Y="11" />
+	    </Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+    		ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+	
+	<Window ClassName="MatchBtn" Id="100005">
+		<Size X="29" Y="178" Width="100" Height="22" />
+		<Title>
+			<Format X="50" Y="4" Size="12" HorzAlign="Center" VertAlign="Top" />
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>1조 대회팀</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueNormal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNormal" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenNor" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenOver" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BluePush" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedPush" Templete="bt007_red_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenPush" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+	    <Image Type="MyCheerTeam" Imageset="BaseImage_League002" Image="icon0_league_cheer">
+	      <Area X="-12" Y="11" />
+	    </Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+    		ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+	
+	<Window ClassName="MatchBtn" Id="100006">
+		<Size X="29" Y="202" Width="100" Height="22" />
+		<Title>
+			<Format X="50" Y="4" Size="12" HorzAlign="Center" VertAlign="Top" />
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>1조 대회팀</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueNormal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNormal" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenNor" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenOver" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BluePush" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedPush" Templete="bt007_red_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenPush" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+	    <Image Type="MyCheerTeam" Imageset="BaseImage_League002" Image="icon0_league_cheer">
+	      <Area X="-12" Y="11" />
+	    </Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		               ClickSound = "interface/public_mouseclick_00.wav" 
+		               TextColor ="FFA7A7A7" BackColor="FF000000" />
+	</Window>
+	
+	<Window ClassName="MatchBtn" Id="100007">
+		<Size X="29" Y="226" Width="100" Height="22" />
+		<Title>
+			<Format X="50" Y="4" Size="12" HorzAlign="Center" VertAlign="Top" />
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>1조 대회팀</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueNormal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNormal" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenNor" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenOver" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BluePush" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedPush" Templete="bt007_red_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenPush" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+	    <Image Type="MyCheerTeam" Imageset="BaseImage_League002" Image="icon0_league_cheer">
+	      <Area X="-12" Y="11" />
+	    </Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+    		ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+	
+	<Window ClassName="MatchBtn" Id="100008">
+		<Size X="29" Y="250" Width="100" Height="22" />
+		<Title>
+			<Format X="50" Y="4" Size="12" HorzAlign="Center" VertAlign="Top" />
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>1조 대회팀</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueNormal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNormal" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenNor" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenOver" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BluePush" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedPush" Templete="bt007_red_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenPush" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+	    <Image Type="MyCheerTeam" Imageset="BaseImage_League002" Image="icon0_league_cheer">
+	      <Area X="-12" Y="11" />
+	    </Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+    		ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+	
+	<Window ClassName="MatchBtn" Id="100009">
+		<Size X="29" Y="274" Width="100" Height="22" />
+		<Title>
+			<Format X="50" Y="4" Size="12" HorzAlign="Center" VertAlign="Top" />
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>1조 대회팀</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueNormal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNormal" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenNor" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenOver" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BluePush" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedPush" Templete="bt007_red_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenPush" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+	    <Image Type="MyCheerTeam" Imageset="BaseImage_League002" Image="icon0_league_cheer">
+	      <Area X="-12" Y="11" />
+	    </Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+    		ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+	
+	<Window ClassName="MatchBtn" Id="100010">
+		<Size X="29" Y="298" Width="100" Height="22" />
+		<Title>
+			<Format X="50" Y="4" Size="12" HorzAlign="Center" VertAlign="Top" />
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>1조 대회팀</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueNormal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNormal" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenNor" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenOver" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BluePush" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedPush" Templete="bt007_red_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenPush" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+	    <Image Type="MyCheerTeam" Imageset="BaseImage_League002" Image="icon0_league_cheer">
+	      <Area X="-12" Y="11" />
+	    </Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+    		 ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+
+	<Window ClassName="MatchBtn" Id="100011">
+		<Size X="29" Y="322" Width="100" Height="22" />
+		<Title>
+			<Format X="50" Y="4" Size="12" HorzAlign="Center" VertAlign="Top" />
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>1조 대회팀</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueNormal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNormal" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenNor" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenOver" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BluePush" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedPush" Templete="bt007_red_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenPush" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+	    <Image Type="MyCheerTeam" Imageset="BaseImage_League002" Image="icon0_league_cheer">
+	      <Area X="-12" Y="11" />
+	    </Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+    		ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+
+	<Window ClassName="MatchBtn" Id="100012">
+		<Size X="29" Y="346" Width="100" Height="22" />
+		<Title>
+			<Format X="50" Y="4" Size="12" HorzAlign="Center" VertAlign="Top" />
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>1조 대회팀</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueNormal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNormal" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenNor" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenOver" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BluePush" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedPush" Templete="bt007_red_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenPush" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+	    <Image Type="MyCheerTeam" Imageset="BaseImage_League002" Image="icon0_league_cheer">
+	      <Area X="-12" Y="11" />
+	    </Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+    		ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+
+	<Window ClassName="MatchBtn" Id="100013">
+		<Size X="29" Y="370" Width="100" Height="22" />
+		<Title>
+			<Format X="50" Y="4" Size="12" HorzAlign="Center" VertAlign="Top" />
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>1조 대회팀</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueNormal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNormal" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenNor" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenOver" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BluePush" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedPush" Templete="bt007_red_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenPush" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+	    <Image Type="MyCheerTeam" Imageset="BaseImage_League002" Image="icon0_league_cheer">
+	      <Area X="-12" Y="11" />
+	    </Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+    		ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+	
+	<Window ClassName="MatchBtn" Id="100014">
+		<Size X="29" Y="394" Width="100" Height="22" />
+		<Title>
+			<Format X="50" Y="4" Size="12" HorzAlign="Center" VertAlign="Top" />
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>1조 대회팀</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueNormal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNormal" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenNor" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenOver" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BluePush" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedPush" Templete="bt007_red_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenPush" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+	    <Image Type="MyCheerTeam" Imageset="BaseImage_League002" Image="icon0_league_cheer">
+	      <Area X="-12" Y="11" />
+	    </Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+    		ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+	
+	<Window ClassName="MatchBtn" Id="100015">
+		<Size X="29" Y="418" Width="100" Height="22" />
+		<Title>
+			<Format X="50" Y="4" Size="12" HorzAlign="Center" VertAlign="Top" />
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>1조 대회팀</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueNormal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNormal" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenNor" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenOver" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BluePush" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedPush" Templete="bt007_red_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenPush" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+	    <Image Type="MyCheerTeam" Imageset="BaseImage_League002" Image="icon0_league_cheer">
+	      <Area X="-12" Y="11" />
+	    </Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+    		ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+	
+	<Window ClassName="MatchBtn" Id="10000">
+		<Size X="139" Y="70" Width="100" Height="22" />
+		<Title>
+			<Format X="50" Y="4" Size="12" HorzAlign="Center" VertAlign="Top" />
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>1조 대회팀</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueNormal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNormal" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenNor" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenOver" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BluePush" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedPush" Templete="bt007_red_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenPush" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+	    <Image Type="MyCheerTeam" Imageset="BaseImage_League002" Image="icon0_league_cheer">
+	      <Area X="-12" Y="11" />
+	    </Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+    		ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+	
+	<Window ClassName="MatchBtn" Id="10001">
+		<Size X="139" Y="118" Width="100" Height="22" />
+		<Title>
+			<Format X="50" Y="4" Size="12" HorzAlign="Center" VertAlign="Top" />
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>1조 대회팀</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueNormal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNormal" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenNor" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenOver" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BluePush" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedPush" Templete="bt007_red_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenPush" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+	    <Image Type="MyCheerTeam" Imageset="BaseImage_League002" Image="icon0_league_cheer">
+	      <Area X="-12" Y="11" />
+	    </Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+    		ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+	
+	<Window ClassName="MatchBtn" Id="10002">
+		<Size X="139" Y="166" Width="100" Height="22" />
+		<Title>
+			<Format X="50" Y="4" Size="12" HorzAlign="Center" VertAlign="Top" />
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>1조 대회팀</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueNormal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNormal" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenNor" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenOver" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BluePush" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedPush" Templete="bt007_red_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenPush" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+	    <Image Type="MyCheerTeam" Imageset="BaseImage_League002" Image="icon0_league_cheer">
+	      <Area X="-12" Y="11" />
+	    </Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+    		ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+	
+	<Window ClassName="MatchBtn" Id="10003">
+		<Size X="139" Y="214" Width="100" Height="22" />
+		<Title>
+			<Format X="50" Y="4" Size="12" HorzAlign="Center" VertAlign="Top" />
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>1조 대회팀</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueNormal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNormal" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenNor" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenOver" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BluePush" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedPush" Templete="bt007_red_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenPush" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+	    <Image Type="MyCheerTeam" Imageset="BaseImage_League002" Image="icon0_league_cheer">
+	      <Area X="-12" Y="11" />
+	    </Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+    		ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>	
+	
+	<Window ClassName="MatchBtn" Id="10004">
+		<Size X="139" Y="262" Width="100" Height="22" />
+		<Title>
+			<Format X="50" Y="4" Size="12" HorzAlign="Center" VertAlign="Top" />
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>1조 대회팀</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueNormal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNormal" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenNor" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenOver" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BluePush" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedPush" Templete="bt007_red_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenPush" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+	    <Image Type="MyCheerTeam" Imageset="BaseImage_League002" Image="icon0_league_cheer">
+	      <Area X="-12" Y="11" />
+	    </Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+    		           ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>	
+	
+	<Window ClassName="MatchBtn" Id="10005">
+		<Size X="139" Y="310" Width="100" Height="22" />
+		<Title>
+			<Format X="50" Y="4" Size="12" HorzAlign="Center" VertAlign="Top" />
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>1조 대회팀</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueNormal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNormal" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenNor" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenOver" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BluePush" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedPush" Templete="bt007_red_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenPush" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+	    <Image Type="MyCheerTeam" Imageset="BaseImage_League002" Image="icon0_league_cheer">
+	      <Area X="-12" Y="11" />
+	    </Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+    		           ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>	
+	
+	<Window ClassName="MatchBtn" Id="10006">
+		<Size X="139" Y="358" Width="100" Height="22" />
+		<Title>
+			<Format X="50" Y="4" Size="12" HorzAlign="Center" VertAlign="Top" />
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>1조 대회팀</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueNormal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNormal" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenNor" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenOver" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BluePush" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedPush" Templete="bt007_red_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenPush" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+	    <Image Type="MyCheerTeam" Imageset="BaseImage_League002" Image="icon0_league_cheer">
+	      <Area X="-12" Y="11" />
+	    </Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+    		           ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>	
+	
+	<Window ClassName="MatchBtn" Id="10007">
+		<Size X="139" Y="406" Width="100" Height="22" />
+		<Title>
+			<Format X="50" Y="4" Size="12" HorzAlign="Center" VertAlign="Top" />
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>1조 대회팀</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueNormal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNormal" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenNor" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenOver" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BluePush" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedPush" Templete="bt007_red_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenPush" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+	    <Image Type="MyCheerTeam" Imageset="BaseImage_League002" Image="icon0_league_cheer">
+	      <Area X="-12" Y="11" />
+	    </Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+    		           ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>	
+
+	<Window ClassName="MatchBtn" Id="1000">
+		<Size X="249" Y="94" Width="100" Height="22" />
+		<Title>
+			<Format X="50" Y="4" Size="12" HorzAlign="Center" VertAlign="Top" />
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>1조 대회팀</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueNormal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNormal" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenNor" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenOver" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BluePush" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedPush" Templete="bt007_red_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenPush" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+	    <Image Type="MyCheerTeam" Imageset="BaseImage_League002" Image="icon0_league_cheer">
+	      <Area X="-12" Y="11" />
+	    </Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+    		           ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>	
+		
+	<Window ClassName="MatchBtn" Id="1001">
+		<Size X="249" Y="190" Width="100" Height="22" />
+		<Title>
+			<Format X="50" Y="4" Size="12" HorzAlign="Center" VertAlign="Top" />
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>1조 대회팀</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueNormal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNormal" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenNor" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenOver" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BluePush" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedPush" Templete="bt007_red_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenPush" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+	    <Image Type="MyCheerTeam" Imageset="BaseImage_League002" Image="icon0_league_cheer">
+	      <Area X="-12" Y="11" />
+	    </Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+    		           ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>	
+		
+	<Window ClassName="MatchBtn" Id="1002">
+		<Size X="249" Y="286" Width="100" Height="22" />
+		<Title>
+			<Format X="50" Y="4" Size="12" HorzAlign="Center" VertAlign="Top" />
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>1조 대회팀</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueNormal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNormal" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenNor" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenOver" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BluePush" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedPush" Templete="bt007_red_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenPush" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+	    <Image Type="MyCheerTeam" Imageset="BaseImage_League002" Image="icon0_league_cheer">
+	      <Area X="-12" Y="11" />
+	    </Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+    		           ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>	
+		
+	<Window ClassName="MatchBtn" Id="1003">
+		<Size X="249" Y="382" Width="100" Height="22" />
+		<Title>
+			<Format X="50" Y="4" Size="12" HorzAlign="Center" VertAlign="Top" />
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>1조 대회팀</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueNormal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNormal" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenNor" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenOver" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BluePush" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedPush" Templete="bt007_red_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenPush" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+	    <Image Type="MyCheerTeam" Imageset="BaseImage_League002" Image="icon0_league_cheer">
+	      <Area X="-12" Y="11" />
+	    </Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+    		           ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+	
+	<Window ClassName="MatchBtn" Id="100">
+		<Size X="359" Y="142" Width="100" Height="22" />
+		<Title>
+			<Format X="50" Y="4" Size="12" HorzAlign="Center" VertAlign="Top" />
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>1조 대회팀</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueNormal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNormal" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenNor" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenOver" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BluePush" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedPush" Templete="bt007_red_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenPush" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+	    <Image Type="MyCheerTeam" Imageset="BaseImage_League002" Image="icon0_league_cheer">
+	      <Area X="-12" Y="11" />
+	    </Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+    		           ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+	
+	<Window ClassName="MatchBtn" Id="101">
+		<Size X="359" Y="334" Width="100" Height="22" />
+		<Title>
+			<Format X="50" Y="4" Size="12" HorzAlign="Center" VertAlign="Top" />
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>1조 대회팀</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueNormal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNormal" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenNor" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenOver" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BluePush" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedPush" Templete="bt007_red_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenPush" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+	    <Image Type="MyCheerTeam" Imageset="BaseImage_League002" Image="icon0_league_cheer">
+	      <Area X="-12" Y="11" />
+	    </Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+    		           ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+		
+	<Window ClassName="MatchBtn" Id="10">
+		<Size X="469" Y="238" Width="100" Height="22" />
+		<Title>
+			<Format X="50" Y="4" Size="12" HorzAlign="Center" VertAlign="Top" />
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>1조 대회팀</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueNormal" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedNormal" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenNor" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BlueOver" Templete="bt007_blue_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedOver" Templete="bt007_red_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenOver" Templete="bt007_green_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="BluePush" Templete="bt007_blue_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="RedPush" Templete="bt007_red_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="GreenPush" Templete="bt007_green_down">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisableNor" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ExDisablePush" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="100" Height="22"/>
+			</DefaultFrameImagery>
+	    <Image Type="MyCheerTeam" Imageset="BaseImage_League002" Image="icon0_league_cheer">
+	      <Area X="-12" Y="11" />
+	    </Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+    		           ClickSound = "interface/public_mouseclick_00.wav" />
+	</Window>
+		
+	<ExtraInfo MatchPrevLineCnt="16" MatchPrevLineOffsetX="0.0f" MatchPrevLineOffsetY="24.0" />
+</Window>

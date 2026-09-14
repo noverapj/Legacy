@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Fixed>
+	<Window ClassName="BingoRightWnd" Id="1000">
+		<Size X="359" Y="30" Width="221" Height="427"/>
+		<Imagery>
+			<Image Type="BingoBox" Imageset="BaseImage026" Image="bingo_obj_itembox" >
+				<Area X="22" Y="23" />
+			</Image>
+			<Image Type="TextUnderLine" Imageset="BaseImage001" Image="strip_gray_dark"/>
+			<Image Type="TextBingo" Imageset="BaseImage022" Image="bingo_text_start"/>
+			<Image Type="TextAllBingo" Imageset="BaseImage019" Image="bingo_text_all"/>
+			<Image Type="TextNumber" Imageset="BaseImage_Defense001" Image="icontext_final_pve_cardnum" Scale="0.82f"/>
+			<Image Type="TextCount" Imageset="BaseImage022" Image="bingo_text_number"/>
+			<Image Type="TextGet" Imageset="BaseImage019" Image="bingo_text_get"/>
+			<Image Type="RedBall" Imageset="BaseImage022" Image="bingo_obj_ball"/>
+			<Image Type="LightBall" Imageset="BaseImage022" Image="bingo_eff_ball"/>
+			<Image Type="TextSelect" Imageset="BaseImage022" Image="bingo_text_select"/>
+			<Image Type="TextClear"  Imageset="BaseImage022" Image="bingo_text_clear"/>
+			<Image Type="BallBg" Imageset="BaseImage002" Image="iconeffect_1"/>
+			<Image Type="BallEffect1"  Imageset="BaseEffect002" Image="effect_success_01"/>
+			<Image Type="BallEffect2"  Imageset="BaseEffect002" Image="effect_success_02"/>
+			<Image Type="BallEffect3"  Imageset="BaseEffect002" Image="effect_success_03"/>
+			<Image Type="BallEffect4"  Imageset="BaseEffect002" Image="effect_success_04"/>
+			<Image Type="BallEffect5"  Imageset="BaseEffect002" Image="effect_success_05"/>
+			<Image Type="BallEffect6"  Imageset="BaseEffect002" Image="effect_success_06"/>
+			<Image Type="BallEffect7"  Imageset="BaseEffect003" Image="effect_success_07"/>
+			<Image Type="BallEffect8"  Imageset="BaseEffect003" Image="effect_success_08"/>
+			<Image Type="BallEffect9"  Imageset="BaseEffect003" Image="effect_success_09"/>
+			<Image Type="BallEffect10" Imageset="BaseEffect003" Image="effect_success_10"/>
+		</Imagery>
+	</Window>
+</Fixed>

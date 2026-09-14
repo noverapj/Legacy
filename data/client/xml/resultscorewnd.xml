@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="ResultScoreWnd" Id="5008">
+	<Size X="70" Y="144" Width="660" Height="312"/>
+	<Style>IWS_START_HIDE</Style>
+	<Imagery>
+		<DefaultFrameImagery Templete="YellowLineBlackFrame">
+			<Area X="0" Y="0" Width="660" Height="312"/>
+		</DefaultFrameImagery>
+		<Image Imageset="TypoLook" Image="YellowWidthLine" >
+			<Area X="16" Y="44" Width="628" Height="2" HorzAlign="Stretch"/>
+		</Image>
+		<Image Imageset="TypoLook" Image="HorzColon" >
+			<Area X="24" Y="90" Width="612" Height="7" HorzAlign="Tile"/>
+		</Image>
+	</Imagery>
+</Window>

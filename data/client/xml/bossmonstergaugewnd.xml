@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="BossMonsterGaugeWnd" Id="5063">
+	<Size X="0" Y="93" XAlign="Center" YAlign="Top" Width="432" Height="54"/>
+	<DragRect Left="0" Top="0" Right="432" Bottom="54" />
+	<Style>IWS_START_HIDE|IWS_PROCESS|IWS_CANMOVE|IWS_BACKMOST</Style>
+	<Imagery>
+	<Image Type="IconBackOrange" Imageset="BaseImage014" Image="pve_magiccircle01" />
+	<Image Type="IconBackRed" Imageset="BaseImage014" Image="pve_magiccircle02" />
+	<Image Type="GaugeBack" Imageset="BaseImage014" Image="pve_gauge_bg" />
+	<Image Type="GaugeOrange" Imageset="BaseImage014" Image="pve_gauge_hp01" />
+	<Image Type="GaugeRed" Imageset="BaseImage014" Image="pve_gauge_hp02" />
+	</Imagery>
+</Window>

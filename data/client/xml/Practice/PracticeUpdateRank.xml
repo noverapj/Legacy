@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="PracticeUpdateRank" Id="6317">
+  <Size X="0" Y="-15" XAlign="Center" YAlign="Center" Width="334" Height="320" />
+	<Style>IWS_PROCESS|IWS_EXIT_ESC|IWS_START_HIDE</Style>
+	<Imagery>
+
+		<Image Type="Title" Imageset="BaseImage046" Image="training_newrecord">
+			<Area X="160" Y="-30" Width="222" Height="93"/>
+		</Image>	
+		<Image Type="Num_Blue" Imageset="BaseImage046" Image="training_time_blue"/>
+		<Image Type="score_text" Imageset="BaseImage015" Image="score_text_rank"/>			
+    <Effect Type="ResultEffect" File="ui_eff_trainning_rank.txt" RenderType="PreRender" CamName="UIOak">
+      <Area X="0" Y="0" Width="200" Height="200" />
+    </Effect>
+	</Imagery>
+  <ExtraInfo EffectPosX="167"
+             EffectPosY="330"
+			 ExitBtn="닫기"
+			 TextInfo1="축하드립니다! 새로운 기록을 달성하였습니다."
+			 TextInfo2="갱신시간"
+			 TextUpdateInfo1="기존 %d위에서"
+			 TextUpdateInfo2="(▲%d위) "
+			 TextUpdateInfo3="상승"
+			 />
+
+  <Window ClassName="ioButton" Id="1">
+    <Size X="56" Y="268" Width="222" Height="31"/>
+    <Title>
+      <Format X="111" Y="15" Size="12" Style="Outline_full_2x" HorzAlign="Center" VertAlign="Center"/>
+      <Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+      <Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+      <Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+      <Color Type="Disable" Text="FFA7A7A7" Back="FFA7A7A7"/>
+      <Text>닫기</Text>
+    </Title>
+    <Imagery>
+      <DefaultFrameImagery Type="Normal" Templete="bt006_blue_nor">
+        <Area X="0" Y="0" Width="222" Height="31"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Over" Templete="bt006_blue_nor">
+        <Area X="0" Y="0" Width="222" Height="31"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+        <Area X="0" Y="0" Width="222" Height="31"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Push" Templete="bt006_blue_down">
+        <Area X="0" Y="0" Width="222" Height="31"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Disable" Templete="bt_empty">
+        <Area X="0" Y="0" Width="222" Height="31"/>
+      </DefaultFrameImagery>
+    </Imagery>
+    <ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+               ClickSound = "interface/public_mouseclick_00.wav"/>
+  </Window>
+</Window>

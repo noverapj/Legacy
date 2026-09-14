@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="CenterInfoWnd" Id="5048">
+	<Size X="0" Y="103" XAlign="Center" YAlign="Rate" Width="232" Height="70"/>
+	<DragRect Left="0" Top="0" Right="232" Bottom="70" />
+	<Style>IWS_PROCESS|IWS_CANMOVE|IWS_BACKMOST|IWS_START_HIDE</Style>
+	<ExtraInfo BossRaidSound ="interface/mode/point_limit_00.wav"
+ 		         GangsiLiveSound ="equip/gangsi_effect_02.wav"
+			 FlagReturnAlramTime = "1000"/>
+	<Imagery>
+		<Image Type="BlueNum" Imageset="BaseImage016" Image="centerui_teamdeath_bluenum"/>
+		<Image Type="RedNum" Imageset="BaseImage016" Image="centerui_teamdeath_rednum"/>
+		<Image Type="WhiteNum" Imageset="BaseImage016" Image="centerui_teamdeath_whitenum"/>
+		<Image Type="NumColon" Imageset="BaseImage016" Image="centerui_teamdeath_colon"/>
+		<Image Type="CenterLine" Imageset="BaseImage016" Image="centerui_line"/>
+		<Image Type="DeathTimeText" Imageset="BaseImage015" Image="centerui_deathtime"/>
+		<Image Type="SuddenDeathTimeText" Imageset="BaseImage_League002" Image="centerui_suddendeath" />
+		<Image Type="TextRank" Imageset="BaseImage015" Image="centerui_text_rank"/>
+		<Image Type="TextSurvivor" Imageset="BaseImage015" Image="centerui_text_survival"/>
+		<Image Type="TextSec" Imageset="BaseImage015" Image="centerui_text_time"/>
+
+		<Image Type="BlueIconBack" Imageset="BaseEffect001" Image="effect_stonebg_blue"/>
+		<Image Type="BlueGaugeBack" Imageset="BaseImage016" Image="centerui_gauge_crown_blue_bg"/>
+		<Image Type="BlueGauge" Imageset="BaseImage016" Image="centerui_gauge_crown_blue_gauge"/>
+		<Image Type="RedIconBack" Imageset="BaseEffect001" Image="effect_stonebg_red"/>
+		<Image Type="RedGaugeBack" Imageset="BaseImage016" Image="centerui_gauge_crown_red_bg"/>
+		<Image Type="RedGauge" Imageset="BaseImage016" Image="centerui_gauge_crown_red_gauge"/>
+		<Image Type="WhiteGauge" Imageset="BaseImage016" Image="centerui_gauge_crown_white_gauge"/>
+
+		<Image Type="BlueCrown" Imageset="UIIconPack1" Image="blue_king_score"/>
+		<Image Type="BlueCrownText" Imageset="BaseImage015" Image="centerui_text_crown_blue"/>
+		<Image Type="RedCrown" Imageset="UIIconPack1" Image="red_king_score"/>
+		<Image Type="RedCrownText" Imageset="BaseImage015" Image="centerui_text_crown_red"/>
+
+		<Image Type="BossIcon1" Imageset="UIIconPack8" Image="boss_01"/>
+		<Image Type="BossIcon2" Imageset="UIIconPack8" Image="boss_02"/>
+		<Image Type="BossIcon3" Imageset="UIIconPack8" Image="boss_03"/>
+		<Image Type="BossIcon4" Imageset="UIIconPack8" Image="boss_04"/>
+		<Image Type="BossIcon5" Imageset="UIIconPack8" Image="boss_05"/>
+		<Image Type="BossIcon6" Imageset="UIIconPack8" Image="boss_06"/>
+		<Image Type="BossIcon7" Imageset="UIIconPack8" Image="boss_07"/>
+		<Image Type="BossIcon8" Imageset="UIIconPack8" Image="boss_08"/>
+		<Image Type="BossIcon9" Imageset="UIIconPack8" Image="boss_09"/>
+		<Image Type="BossIcon10" Imageset="UIIconPack8" Image="boss_10"/>
+		<Image Type="BossText" Imageset="BaseImage015" Image="centerui_text_boss"/>
+
+		<Image Type="BlueStoneIcon" Imageset="UIIconPack1" Image="blue_symbol_score"/>
+		<Image Type="RedStoneIcon" Imageset="UIIconPack1" Image="red_symbol_score"/>
+		<Image Type="KoText" Imageset="BaseImage015" Image="centerui_text_stone"/>
+		<Image Type="StoneGaugeBack" Imageset="BaseImage016" Image="centerui_gauge_stone_bg"/>
+		<Image Type="StoneBlueGauge1" Imageset="BaseImage016" Image="centerui_gauge_stone_blue_gauge1"/>
+		<Image Type="StoneBlueGauge2" Imageset="BaseImage016" Image="centerui_gauge_stone_blue_gauge2"/>
+		<Image Type="StoneRedGauge1" Imageset="BaseImage016" Image="centerui_gauge_stone_red_gauge1"/>
+		<Image Type="StoneRedGauge2" Imageset="BaseImage016" Image="centerui_gauge_stone_red_gauge2"/>
+		<Image Type="StoneAttack1" Imageset="BaseImage002" Image="effect_stoneattack_01"/>
+		<Image Type="StoneAttack2" Imageset="BaseImage002" Image="effect_stoneattack_02"/>
+		<Image Type="StoneBlueWhiteGauge" Imageset="BaseImage016" Image="centerui_gauge_stone_white_gauge"/>
+		<Image Type="StoneRedWhiteGauge" Imageset="BaseImage016" Image="centerui_gauge_stone_white_gauge2"/>
+	
+		<Image Type="BlueEffectSpr1" Imageset="BaseEffect001" Image="effect_ok_01"/>
+		<Image Type="BlueEffectSpr2" Imageset="BaseEffect001" Image="effect_ok_02"/>
+		<Image Type="BlueEffectSpr3" Imageset="BaseEffect001" Image="effect_ok_03"/>
+		<Image Type="BlueEffectSpr4" Imageset="BaseEffect001" Image="effect_ok_04"/>
+		<Image Type="BlueEffectSpr5" Imageset="BaseEffect001" Image="effect_ok_05"/>
+		<Image Type="BlueEffectSpr6" Imageset="BaseEffect001" Image="effect_ok_06"/>
+		<Image Type="BlueEffectSpr7" Imageset="BaseEffect001" Image="effect_ok_07"/>
+		<Image Type="BlueEffectSpr8" Imageset="BaseEffect001" Image="effect_ok_08"/>
+		<Image Type="BlueEffectSpr9" Imageset="BaseEffect001" Image="effect_ok_09"/>
+		<Image Type="BlueEffectSpr10" Imageset="BaseEffect001" Image="effect_ok_10"/>
+
+		<Image Type="RedEffectSpr1" Imageset="BaseEffect003" Image="effect_ok_red_01"/>
+		<Image Type="RedEffectSpr2" Imageset="BaseEffect003" Image="effect_ok_red_02"/>
+		<Image Type="RedEffectSpr3" Imageset="BaseEffect003" Image="effect_ok_red_03"/>
+		<Image Type="RedEffectSpr4" Imageset="BaseEffect003" Image="effect_ok_red_04"/>
+		<Image Type="RedEffectSpr5" Imageset="BaseEffect003" Image="effect_ok_red_05"/>
+		<Image Type="RedEffectSpr6" Imageset="BaseEffect003" Image="effect_ok_red_06"/>
+		<Image Type="RedEffectSpr7" Imageset="BaseEffect003" Image="effect_ok_red_07"/>
+		<Image Type="RedEffectSpr8" Imageset="BaseEffect003" Image="effect_ok_red_08"/>
+		<Image Type="RedEffectSpr9" Imageset="BaseEffect003" Image="effect_ok_red_09"/>
+		<Image Type="RedEffectSpr10" Imageset="BaseEffect003" Image="effect_ok_red_10"/>
+		
+		<Image Type="DoubleBlueCrown" Imageset="UIIconPack1" Image="blue_king_score"/>
+		<Image Type="DoubleRedCrown" Imageset="UIIconPack1" Image="red_king_score"/>
+		<Image Type="DoubleCrownSimilar" Imageset="BaseImage025" Image="gauge_win" />
+		<Image Type="DoubleBlueCloseWin" Imageset="BaseImage025" Image="gauge_winblue"/>
+		<Image Type="DoubleRedCloseWin" Imageset="BaseImage025" Image="gauge_winred"/>
+		<Image Type="DoubleBlueWhiteGauge" Imageset="BaseImage026" Image="centerui_gauge_double_blue_gauge"/>
+		<Image Type="DoubleRedWhiteGauge" Imageset="BaseImage026" Image="centerui_gauge_double_red_gauge"/>
+
+		<Image Type="FlagCaptureNewFlag" Imageset="BaseImage042" Image="laboratory_flag_new"/>
+		<Image Type="FlagCaptureBlueReturn" Imageset="BaseImage042" Image="laboratory_flag_bluewin"/>
+		<Image Type="FlagCaptureRedReturn" Imageset="BaseImage042" Image="laboratory_flag_redwin"/>
+	</Imagery>
+</Window>

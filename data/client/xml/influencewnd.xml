@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="InfluenceWnd" Id="11">
+	<Size X="0" Y="32" Width="403" Height="455" />
+	<Style>IWS_START_HIDE|IWS_PROCESS|IWS_BACKMOST</Style>
+<Imagery>
+		<DefaultFrameImagery Type="MainBannerFrm" Templete="league_main_banner_overoutline">
+			<Area X="0" Y="0" Width="383" Height="355" />
+		</DefaultFrameImagery>
+		<Image Type="HorzLine" Imageset="BaseImage_League001" Image="league_main_line1"/>
+		<Image Type="TextBack" Imageset="BaseImage_League001" Image="league_main_line2" >
+			<Area X="0" Y="0" Width="377" Height="78" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+    <Image Type="GagueBack" Imageset="BaseImage_League001" Image="campgauge_bg" >
+			<Area X="0" Y="0" Width="367" Height="21"/>
+		</Image>
+    <Image Type="GagueBlue" Imageset="BaseImage_League001" Image="campgauge_blue" >
+			<Area X="0" Y="0" Width="367" Height="21"/>
+		</Image>
+    <Image Type="GagueBlueAlpha" Imageset="BaseImage_League001" Image="campgauge_blue_light" >
+			<Area X="0" Y="0" Width="367" Height="21"/>
+		</Image>
+    <Image Type="GagueRed" Imageset="BaseImage_League001" Image="campgauge_red" >
+			<Area X="0" Y="0" Width="367" Height="21"/>
+		</Image>
+    <Image Type="GagueRedAlpha" Imageset="BaseImage_League001" Image="campgauge_red_light" >
+			<Area X="0" Y="0" Width="367" Height="21"/>
+		</Image>
+	</Imagery>
+	<Window ClassName="InfluenceBtn" Id="100">
+		<Size X="10" Y="368" Width="191" Height="45" />
+		<Title>
+			<Format X="95" Y="5" Size="18" Style="Normal" HorzAlign="Center" VertAlign="Top" />
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FF3A3A3A" Back="FF000000"/>
+			<Text>길드 랭킹</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt005_gray_nor">
+				<Area X="0" Y="0" Width="191" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt005_gray_nor">
+				<Area X="0" Y="0" Width="191" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="191" Height="45"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt005_gray_down">
+				<Area X="0" Y="0" Width="191" Height="45"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="InfluenceBtn" Id="102">
+		<Size X="202" Y="368" Width="191" Height="45" />
+		<Title>
+			<Format X="95" Y="5" Size="18" Style="Normal" HorzAlign="Center" VertAlign="Top" />
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+			<Text>래더 랭킹</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt005_gray_nor">
+				<Area X="0" Y="0" Width="191" Height="45" />
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt005_gray_nor">
+				<Area X="0" Y="0" Width="191" Height="45" />
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="191" Height="45" />
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt005_gray_down">
+				<Area X="0" Y="0" Width="191" Height="45" />
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+</Window>

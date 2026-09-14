@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="SuccessionBattleWnd" Id="6307" >
+	<Size X="0" Y="-20" XAlign="Center" YAlign="Center" Width="391" Height="357" />
+	<DragRect Left="0" Top="0" Right="391" Bottom="357" />
+	<Style>IWS_START_HIDE|IWS_EXIT_ESC|IWS_PROCESS</Style>
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Title>
+		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Text>1vs1모드</Text>
+		
+	</Title> 
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+			<Area X="0" Y="0" Width="391" Height="357"/>
+		</DefaultFrameImagery>		
+		<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title">
+			<Area X="6" Y="6" Width="379" Height="36"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="MultiplyFrm" Templete="win1_multiply_bottom">
+			<Area X="0" Y="294" Width="391" Height="65"/>
+		</DefaultFrameImagery>
+		<Image Type="SuccessionIcon" Imageset="UIIconPack117" Image="mode_1vs1" />
+		
+		<Image Type="SuccessionIconBack" Imageset="BaseImage002" Image="iconeffect_1" />
+		
+		<DefaultFrameImagery Templete="1vs1_frame">
+			<Area X="29" Y="176" Width="334" Height="69" AutoResize="False" />
+		</DefaultFrameImagery>	
+		
+		<Image Imageset="BaseImage042" Image="1vs1_line_2px" >
+			<Area X="17" Y="143"/>
+		</Image>
+		<DefaultFrameImagery Templete="laboratory_frame">
+			<Area X="17" Y="155" Width="357" Height="101" AutoResize="False" />
+		</DefaultFrameImagery>	
+		
+		<!-- 상단 텍스트 프레임-->
+		<DefaultFrameImagery Templete="1vs1_title">
+			<Area X="88" Y="166" Width="215" Height="22" AutoResize="False" />
+		</DefaultFrameImagery>
+		
+		<!-- 괄호-->
+		<Image Imageset="BaseImage042" Image="1vs1_penthesis_left" >
+			<Area X="195" Y="209"/>
+		</Image>
+		<Image Imageset="BaseImage042" Image="1vs1_penthesis_right" >
+			<Area X="343" Y="209"/>
+		</Image>
+		
+		<Image Type="MaxWinNum" Imageset="BaseImage016" Image="score_bluenum" />
+		<Image Type="CurWinNum" Imageset="BaseImage042" Image="1vs1_score_yellownum" />
+	</Imagery>
+	<ExtraInfo
+		MatchingSearchTime = "120000"
+		MatchingSearchMent = "상대방 찾는 중..%d"
+		MatchingCancelTime = "3000"
+		MatchingEventMent = "이벤트 기간 : 매월 첫주 점검 부터 ~ 마지막 주 점검까지" />
+	<Window ClassName="ioButton" Id="1">
+		<Size X="356" Y="11" Width="23" Height="23"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+            <Image Type="Disable" Imageset="BaseImage001" Image="icon0_x_grayframe" >
+				<Area X="0" Y="0" />
+			</Image>
+            <Image Type="NormalList" Imageset="BaseImage001" Image="icon0_x" >
+				<Area X="5" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	               ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	
+	<Window ClassName="ioButton" Id="2">
+		<Size X="17" Y="308" Width="357" Height="33" />
+		<Title>
+			<Format X="178" Y="7" Size="14" Style="Outline_full_2x" DisableStyle="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF215AA2"/>
+			<Text>상대찾기 (SPACE)</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_blue_nor">
+				<Area X="0" Y="0" Width="357" Height="33"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_blue_nor">
+				<Area X="0" Y="0" Width="357" Height="33"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="357" Height="33"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_blue_down">
+				<Area X="0" Y="0" Width="357" Height="33"/>
+			</DefaultFrameImagery>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>		
+	</Window>
+	
+	<Window ClassName="ioButton" Id="3">
+		<Size X="17" Y="308" Width="357" Height="33" />
+		<Title>
+			<Format X="178" Y="7" Size="14" Style="Outline_full_2x" DisableStyle="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF9F291A"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF9F291A"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF9F291A"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF9F291A"/>
+			<Text>매칭취소</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_red_nor">
+				<Area X="0" Y="0" Width="357" Height="33"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_red_nor">
+				<Area X="0" Y="0" Width="357" Height="33"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="357" Height="33"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_red_down">
+				<Area X="0" Y="0" Width="357" Height="33"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="357" Height="33"/>
+			</DefaultFrameImagery>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>		
+	</Window>
+</Window>

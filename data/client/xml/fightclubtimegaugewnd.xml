@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="FightClubTimeGaugeWnd" Id="5073">
+	<Size X="0" Y="30" XAlign="Center" YAlign="Top" Width="760" Height="200"/>
+	<DragRect Left="0" Top="0" Right="760" Bottom="200" />
+	<Style>IWS_PROCESS|IWS_CANMOVE|IWS_BACKMOST</Style>
+	<Imagery>
+
+	<Image Type="TimeText" Imageset="BaseImage_Arcade002" Image="arcade_uitxt_time" />
+	<Image Type="TimeTextRed" Imageset="BaseImage_Arcade002" Image="arcade_uitxt_time_red" />
+	<Image Type="TimeNumText" Imageset="BaseImage_Arcade001" Image="arcade_time_num" />
+	<Image Type="TimeNumTextRed" Imageset="BaseImage_Arcade001" Image="arcade_timered_num" />
+	<Image Type="TimeBack" Imageset="BaseImage_Arcade001" Image="arcade_timebg" />
+	<Image Type="TimeBackRed" Imageset="BaseImage_Arcade001" Image="arcade_timeredbg" />
+
+	<Image Type="PowerBackEffectL" Imageset="BaseImage_Arcade002" Image="arcade_power_gaugeoutline_right" >
+		<Area X="0" Y="0" Reverse="Horz"/>
+	</Image>
+	<Image Type="PowerBackGaugeL" Imageset="BaseImage_Arcade002" Image="arcade_power_bg_left" />
+	<Image Type="PowerGaugeL" Imageset="BaseImage_Arcade002" Image="arcade_power_gauge_left" />
+	<Image Type="PowerGaugeEffectL" Imageset="BaseImage_Arcade002" Image="arcade_power_gaugelight_left" />
+	<Image Type="PowerGaugeMaxL" Imageset="BaseImage_Arcade002" Image="arcade_power_gaugemax_left" />
+
+	<Image Type="PowerBackEffectR" Imageset="BaseImage_Arcade002" Image="arcade_power_gaugeoutline_right" />
+	<Image Type="PowerBackGaugeR" Imageset="BaseImage_Arcade002" Image="arcade_power_bg_right" />
+	<Image Type="PowerGaugeR" Imageset="BaseImage_Arcade002" Image="arcade_power_gauge_right" />
+	<Image Type="PowerGaugeEffectR" Imageset="BaseImage_Arcade002" Image="arcade_power_gaugelight_right" />
+	<Image Type="PowerGaugeMaxR" Imageset="BaseImage_Arcade002" Image="arcade_power_gaugemax_right" />
+
+	<Image Type="ChampionText" Imageset="BaseImage_Arcade002" Image="arcade_uitxt_champion" />
+	<Image Type="LeftBackLine" Imageset="BaseImage_Arcade001" Image="arcade_hpoutline_bg_right" >
+		<Area X="0" Y="0" Reverse="Horz"/>
+	</Image>	
+	<Image Type="LeftBackLineLight" Imageset="BaseImage_Arcade001" Image="arcade_hpoutline_bg_right_light" >
+		<Area X="0" Y="0" Reverse="Horz"/>
+	</Image>	
+	<Image Type="LeftGaugeBack" Imageset="BaseImage_Arcade001" Image="arcade_hp_bg_left" />
+	<Image Type="LeftGauge100" Imageset="BaseImage_Arcade001" Image="arcade_hp_gauge_left" />
+	<Image Type="LeftGaugeGlow" Imageset="BaseImage_Arcade001" Image="arcade_hp_light_left" />
+	<Image Type="LeftGaugeRed" Imageset="BaseImage_Arcade001" Image="arcade_hp_redgauge_left" />
+	<Image Type="LeftBlueNameBar" Imageset="BaseImage_Arcade001" Image="arcade_namebg_me_left" />
+	<Image Type="LeftRedNameBar" Imageset="BaseImage_Arcade001" Image="arcade_namebg_you_left" />
+
+	<Image Type="ChallengerText" Imageset="BaseImage_Arcade002" Image="arcade_uitxt_challenger" />
+	<Image Type="RightBackLine" Imageset="BaseImage_Arcade001" Image="arcade_hpoutline_bg_right" />
+	<Image Type="RightBackLineLight" Imageset="BaseImage_Arcade001" Image="arcade_hpoutline_bg_right_light" />
+	<Image Type="RightGaugeBack" Imageset="BaseImage_Arcade001" Image="arcade_hp_bg_right" />
+	<Image Type="RightGauge100" Imageset="BaseImage_Arcade001" Image="arcade_hp_gauge_right" />
+	<Image Type="RightGaugeGlow" Imageset="BaseImage_Arcade001" Image="arcade_hp_light_right" />
+	<Image Type="RightGaugeRed" Imageset="BaseImage_Arcade001" Image="arcade_hp_redgauge_right" />
+	<Image Type="RightBlueNameBar" Imageset="BaseImage_Arcade001" Image="arcade_namebg_me_right" />
+	<Image Type="RightRedNameBar" Imageset="BaseImage_Arcade001" Image="arcade_namebg_you_right" />
+
+	<Image Type="ChampionWinBar" Imageset="BaseImage_Arcade002" Image="arcade_chainwinui_bg" />
+	<Image Type="ChampionWinEff" Imageset="BaseImage_Arcade001" Image="arcade_chainwinui_eff" />
+	<Image Type="ChampionWinNum" Imageset="BaseImage_Arcade001" Image="arcade_chainwinui_num" />
+
+	<Image Type="SeqMeBar" Imageset="BaseImage_Arcade001" Image="arcade_namebg_me_mini" />
+	<Image Type="NextMeBattle" Imageset="BaseImage_Arcade002" Image="arcade_uitxt_next" />
+
+	<Image Type="CheerBack" Imageset="BaseImage_Arcade002" Image="arcade_cheer_bg" />
+	<Image Type="ChampCheerPoint" Imageset="BaseImage_Arcade001" Image="arcade_cheer_me_green" />
+	<Image Type="ChampCheerNumber" Imageset="BaseImage_Arcade001" Image="arcade_cheer_num_green" />
+	<Image Type="ChampCheerText" Imageset="BaseImage_Arcade002" Image="arcade_cheer_text_green" />
+	<Image Type="ChallCheerPoint" Imageset="BaseImage_Arcade001" Image="arcade_cheer_me_red" />
+	<Image Type="ChallCheerNumber" Imageset="BaseImage_Arcade001" Image="arcade_cheer_num_red" />
+	<Image Type="ChallCheerText" Imageset="BaseImage_Arcade002" Image="arcade_cheer_text_red" />
+	<Image Type="CheerTimeBack" Imageset="BaseImage_Arcade001" Image="arcade_cheer_count_bg" />
+
+	<Image Type="FightNpcClearBack" Imageset="BaseImage_Arcade001" Image="arcade_ai_round_bg" />
+	<Image Type="FightNpcClearWin" Imageset="BaseImage_Arcade002" Image="arcade_ai_round_win" />
+
+	<Image Type="AcceptBack" Imageset="BaseImage_Arcade002" Image="arcade_uitxt_matchinggauge" />
+	<Image Type="AcceptPoint" Imageset="BaseImage_Arcade001" Image="arcade_matchinglight" />
+
+	<Image Type="FightNPCRoundText" Imageset="BaseImage_Arcade002" Image="arcade_comtxt_round" />
+	<Image Type="FightNPCRoundNum" Imageset="BaseImage_Arcade001" Image="arcade_round_num" />
+	</Imagery>
+	
+	<ExtraInfo WarningSecond="10" WarningTickSnd="interface/mode/time_limit_00.wav"
+		   CheerLimitTime="40000"
+		   MaxPower="30" 
+		   MaxTimePower="6" TPValue1="70" TPPoint1="5"
+		                    TPValue2="60" TPPoint2="10"
+		                    TPValue3="50" TPPoint3="15"
+		                    TPValue4="40" TPPoint4="20"
+		                    TPValue5="30" TPPoint5="25"
+		                    TPValue6="20" TPPoint6="30"
+	     MaxHPPower="6" HPValue1="20" HPPoint1="5" 
+	                    HPValue2="30" HPPoint2="10" 
+	                    HPValue3="40" HPPoint3="15" 
+	                    HPValue4="50" HPPoint4="20" 
+	                    HPValue5="60" HPPoint5="25" 
+	                    HPValue6="70" HPPoint6="30"
+	     MaxComGrade="5" Image1="BaseImage_Arcade002#arcade_ai_grade1"
+                             Image2="BaseImage_Arcade002#arcade_ai_grade1"
+			     Image3="BaseImage_Arcade002#arcade_ai_grade2"
+			     Image4="BaseImage_Arcade002#arcade_ai_grade2"
+			     Image5="BaseImage_Arcade002#arcade_ai_grade3"
+		  AcceptPointTime="800"/>
+
+
+	<Window ClassName="ioRadioButton" Id="1">
+		<Size X="268" Y="99" Width="98" Height="87"/>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage_Arcade002" Image="arcade_cheer_bt_champ_nor">
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage_Arcade002" Image="arcade_cheer_bt_champ_over">
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage_Arcade002" Image="arcade_cheer_bt_champ_down">
+				<Area X="-3" Y="-3"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioRadioButton" Id="2">
+		<Size X="394" Y="99" Width="98" Height="87"/>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage_Arcade002" Image="arcade_cheer_bt_challenger_nor">
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage_Arcade002" Image="arcade_cheer_bt_challenger_over">
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage_Arcade002" Image="arcade_cheer_bt_challenger_down">
+				<Area X="-3" Y="-3"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+
+	<Window ClassName="ioButton" Id="3">
+		<Size X="630" Y="105" Width="125" Height="31" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_blue_nor">
+				<Area X="0" Y="0" Width="125" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_blue_nor">
+				<Area X="0" Y="0" Width="125" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="125" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_blue_down">
+				<Area X="0" Y="0" Width="125" Height="31"/>
+			</DefaultFrameImagery>
+
+			<Image Imageset="BaseImage_Arcade002" Image="arcade_uitxt_challenge_off" >
+				<Area X="19" Y="5" />
+			</Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>		
+	</Window>
+
+	<Window ClassName="ioButton" Id="4">
+		<Size X="630" Y="84" Width="125" Height="31" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_red_nor">
+				<Area X="0" Y="0" Width="125" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_red_nor">
+				<Area X="0" Y="0" Width="125" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="125" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_red_down">
+				<Area X="0" Y="0" Width="125" Height="31"/>
+			</DefaultFrameImagery>
+
+			<Image Imageset="BaseImage_Arcade002" Image="arcade_uitxt_challenge_on" >
+				<Area X="26" Y="5" />
+			</Image>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>		
+	</Window>
+
+</Window>

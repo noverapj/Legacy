@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="ShuffleRankWnd" Id="10025">
+	<Size X="11" Y="183" Width="40" Height="18" />
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_BACKMOST</Style> 
+	<ExtraInfo FadeTime= "750" Height="18"/>
+</Window>
+

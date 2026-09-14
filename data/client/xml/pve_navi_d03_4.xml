@@ -1,0 +1,63 @@
+<boxgraph>
+<nodes>
+	<box name="rbox1" min="-3199.11,-2139.98,4109.24" max="-1404.1,-333.442,4171.6"/>
+	<box name="rbox02" min="-797.58,-1677.82,4109.24" max="604.018,-814.608,4171.6"/>
+	<box name="rbox07" min="-1388.0,-1672.56,4109.24" max="-810.899,-816.542,4171.6"/>
+	<box name="rbox11" min="8111.73,-2136.22,4109.24" max="9962.67,-291.853,4171.6"/>
+	<box name="rbox12" min="1541.33,863.564,4109.24" max="2297.68,1719.83,4171.6"/>
+	<box name="rbox13" min="1535.85,-1676.06,4109.24" max="2308.72,-817.076,4171.6"/>
+	<box name="rbox15" min="1537.38,-804.272,4109.24" max="2297.4,847.1,4171.6"/>
+	<box name="rbox16" min="616.754,-1672.56,4109.24" max="1523.82,-816.542,4171.6"/>
+	<box name="rbox17" min="4038.88,863.429,4109.24" max="4803.59,1719.7,4171.6"/>
+	<box name="rbox18" min="4036.81,-806.649,4109.24" max="4796.84,849.991,4171.6"/>
+	<box name="rbox19" min="4036.08,-1674.52,4109.24" max="4795.05,-817.86,4171.6"/>
+	<box name="rbox20" min="2306.76,864.072,4109.24" max="4025.86,1720.09,4171.6"/>
+	<box name="rbox21" min="5917.08,-1676.57,4109.24" max="7291.82,-818.058,4171.6"/>
+	<box name="rbox22" min="4804.7,-1672.56,4109.24" max="5909.1,-816.542,4171.6"/>
+	<box name="rbox23" min="7306.56,-1672.56,4109.24" max="8091.3,-816.542,4171.6"/>
+</nodes>
+<links>
+	<link from="rbox1" to="rbox07" type="L"/>
+
+	<link from="rbox02" to="rbox07" type="L"/>
+	<link from="rbox02" to="rbox16" type="L"/>
+
+	<link from="rbox07" to="rbox1" type="L"/>
+	<link from="rbox07" to="rbox02" type="L"/>
+
+	<link from="rbox11" to="rbox23" type="L"/>
+
+	<link from="rbox12" to="rbox15" type="L"/>
+	<link from="rbox12" to="rbox20" type="L"/>
+
+	<link from="rbox13" to="rbox15" type="L"/>
+	<link from="rbox13" to="rbox16" type="L"/>
+
+	<link from="rbox15" to="rbox12" type="L"/>
+	<link from="rbox15" to="rbox13" type="L"/>
+
+	<link from="rbox16" to="rbox02" type="L"/>
+	<link from="rbox16" to="rbox13" type="L"/>
+
+	<link from="rbox17" to="rbox18" type="L"/>
+	<link from="rbox17" to="rbox20" type="L"/>
+
+	<link from="rbox18" to="rbox17" type="L"/>
+	<link from="rbox18" to="rbox19" type="L"/>
+
+	<link from="rbox19" to="rbox18" type="L"/>
+	<link from="rbox19" to="rbox22" type="L"/>
+
+	<link from="rbox20" to="rbox12" type="L"/>
+	<link from="rbox20" to="rbox17" type="L"/>
+
+	<link from="rbox21" to="rbox22" type="L"/>
+	<link from="rbox21" to="rbox23" type="L"/>
+
+	<link from="rbox22" to="rbox19" type="L"/>
+	<link from="rbox22" to="rbox21" type="L"/>
+
+	<link from="rbox23" to="rbox11" type="L"/>
+	<link from="rbox23" to="rbox21" type="L"/>
+</links>
+</boxgraph>

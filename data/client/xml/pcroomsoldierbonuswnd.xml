@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="PCRoomSoldierBonusWnd" Id="6127">
+	<Size X="0" Y="-20" XAlign="Center" YAlign="Center" Width="382" Height="155"/>
+	<Style>IWS_START_HIDE|IWS_MODAL|IWS_PROCESS|IWS_EXIT_ESC</Style>
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Title>
+		<Format X="191" Y="10" Size="13" Style="Outline_full_2x" HorzAlign="Center"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF9A273B"/>
+		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF9A273B"/>
+		<Text>PC방 보너스용병 선택 (SPACE로 선택 가능)</Text>
+	</Title>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+			<Area X="0" Y="0" Width="382" Height="155"/>
+		</DefaultFrameImagery>		
+		<DefaultFrameImagery Type="SelectedTitle" Templete="win2_title2">
+			<Area X="5" Y="6" Width="372" Height="29"/>
+		</DefaultFrameImagery>
+	</Imagery>
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="134" Y="129" Width="44" Height="18" />
+		<Style>IWS_BACKMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="44" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="44" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="44" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="44" Height="18"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_left" >
+				<Area X="18" Y="4"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="2">
+		<Size X="207" Y="129" Width="44" Height="18" />
+		<Style>IWS_BACKMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="44" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="44" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="44" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="44" Height="18"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_left" >
+				<Area X="18" Y="4" Reverse="Horz"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PCRoomSoldierBonusBtn" Id="10">
+		<Size X="11" Y="65" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_pcchr_gray">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound="interface/public_mouseover_00.wav" 
+			   ClickSound="interface/public_mouseclick_00.wav" />
+	</Window>
+
+	<Window ClassName="PCRoomSoldierBonusBtn" Id="11">
+		<Size X="72" Y="65" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_pcchr_gray">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound="interface/public_mouseover_00.wav" 
+			   ClickSound="interface/public_mouseclick_00.wav" />
+	</Window>
+
+	<Window ClassName="PCRoomSoldierBonusBtn" Id="12">
+		<Size X="133" Y="65" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_pcchr_gray">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound="interface/public_mouseover_00.wav" 
+			   ClickSound="interface/public_mouseclick_00.wav" />
+	</Window>
+
+	<Window ClassName="PCRoomSoldierBonusBtn" Id="13">
+		<Size X="194" Y="65" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_pcchr_gray">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound="interface/public_mouseover_00.wav" 
+			   ClickSound="interface/public_mouseclick_00.wav" />
+	</Window>
+
+	<Window ClassName="PCRoomSoldierBonusBtn" Id="14">
+		<Size X="255" Y="65" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_pcchr_gray">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound="interface/public_mouseover_00.wav" 
+			   ClickSound="interface/public_mouseclick_00.wav" />
+	</Window>
+
+	<Window ClassName="PCRoomSoldierBonusBtn" Id="15">
+		<Size X="316" Y="65" Width="59" Height="59" />
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_pcchr_gray">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="59" Height="59"/>
+			</DefaultFrameImagery>
+			<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_2"/>
+		</Imagery>
+		<ExtraInfo OverSound="interface/public_mouseover_00.wav" 
+			   ClickSound="interface/public_mouseclick_00.wav" />
+	</Window>
+
+</Window>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="BattleModeBlueSideUserInfoWnd" Id="5082">
+	<Size X="0" Y="0" XAlign="Left" YAlign="Top" Width="200" Height="150"/>
+	<Style>IWS_PROCESS|IWS_CANMOVE|IWS_BACKMOST</Style>
+	<Imagery>
+		<Image Type="IconBack"     Imageset="BaseImage002" Image="iconeffect_2"/>
+		
+		<Image Type="BlueUserSlot_BG" Imageset="BaseImage054" Image="battlemod_userinfo_teamBlue" />
+		<Image Type="BlueUser_HP_BG" Imageset="BaseImage054" Image="battlemod_hp_bg" />
+		<Image Type="BlueUser_HP" Imageset="BaseImage054" Image="battlemod_hp_fg" />
+		<Image Type="BlueSide_SoldierSlot_BG" Imageset="BaseImage053" Image="battlemod_player_blue" />
+		
+		<Image Type="BlueSide_Tag_BG" Imageset="BaseImage053" Image="battlemod_tag_msgbox" />
+		<Image Type="BlueSide_Entry_BG" Imageset="BaseImage053" Image="battlemod_dive_msgbox" />
+		
+		<Image Type="BlueUser_EntryGauge_BG" Imageset="BaseImage054" Image="battlemod_timegauge_bg_blue" />
+		<Image Type="BlueUser_EntryGauge" Imageset="BaseImage054" Image="battlemod_timegauge_fg_blue" />
+		
+		<Image Type="BlueUser_EntryAlarm_Icon" Imageset="BaseImage053" Image="battlemod_icon_dive" />
+		<Image Type="BlueUser_EntryAlarm_Text" Imageset="BaseImage053" Image="battlemod_dive" />
+		<Image Type="BlueUser_TagAlarm_Icon" Imageset="BaseImage053" Image="battlemod_icon_tag" />
+		<Image Type="BlueUser_TagAlarm_Text" Imageset="BaseImage053" Image="battlemod_tag" />
+		
+		<Image Type="BlueUser_HP_Text" Imageset="BaseImage053" Image="battlemod_icon_txthp" />
+	</Imagery>
+</Window>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="HeroRankingListWnd" Id="11">
+	<Size X="0" Y="0" Width="458" Height="428" />
+	<Style>IWS_PROCESS|IWS_START_HIDE|IWS_CHILD_ONLY_RESPONSE</Style> 
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="163" Y="330" Width="43" Height="18" />
+		<Style>IWS_BACKMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_left" >
+				<Area X="17" Y="4"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="2">
+		<Size X="252" Y="330" Width="43" Height="18" />
+		<Style>IWS_BACKMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_left" >
+				<Area X="17" Y="4" Reverse="Horz"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="HeroRankingListBtn" Id="100">
+		<Size X="17" Y="113" Width="424" Height="21" />
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="424" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="424" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="424" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="HeroRankingListBtn" Id="101">
+		<Size X="17" Y="134" Width="424" Height="21" />
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="424" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="424" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="424" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="HeroRankingListBtn" Id="102">
+		<Size X="17" Y="155" Width="424" Height="21" />
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="424" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="424" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="424" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="HeroRankingListBtn" Id="103">
+		<Size X="17" Y="176" Width="424" Height="21" />
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="424" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="424" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="424" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="HeroRankingListBtn" Id="104">
+		<Size X="17" Y="197" Width="424" Height="21" />
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="424" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="424" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="424" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="HeroRankingListBtn" Id="105">
+		<Size X="17" Y="218" Width="424" Height="21" />
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="424" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="424" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="424" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="HeroRankingListBtn" Id="106">
+		<Size X="17" Y="239" Width="424" Height="21" />
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="424" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="424" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="424" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="HeroRankingListBtn" Id="107">
+		<Size X="17" Y="260" Width="424" Height="21" />
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="424" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="424" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="424" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="HeroRankingListBtn" Id="108">
+		<Size X="17" Y="281" Width="424" Height="21" />
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="424" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="424" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="424" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="HeroRankingListBtn" Id="109">
+		<Size X="17" Y="302" Width="424" Height="21" />
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="424" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="424" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="424" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+</Window>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="AccessorySkillListWnd" Id="6300">
+	<Size X="190" Y="-40" XAlign="Center" YAlign="Bottom" Width="35" Height="105"/>
+	<DragRect Left="0" Top="0" Right="35" Bottom="105" />
+	<Style>IWS_PROCESS|IWS_CANMOVE|IWS_PROCESS|IWS_BACKMOST</Style>
+	<Imagery>
+		<Image Type="ToolTipCenter" Imageset="BaseImage001" Image="tooltip1_center" />
+
+		<Image Type="ToolTipLMiddle" Imageset="BaseImage001" Image="tooltip1_leftin" />
+		<Image Type="ToolTipLeft" Imageset="BaseImage001" Image="tooltip1_left" />
+
+		<Image Type="ToolTipRMiddle" Imageset="BaseImage001" Image="tooltip1_rightin" />
+		<Image Type="ToolTipRight" Imageset="BaseImage001" Image="tooltip1_right" />
+
+		<Image Type = "PointImage" Imageset="BaseImage006" Image="icon0_point"/>
+	</Imagery>
+        <ExtraInfo AniSound="interface/interface_setup_00.wav"
+		   ShowTime = "5000"
+		   RefreshTime = "1" />
+
+	<Window ClassName="AccessorySkillListBtn" Id="6">
+		<Size X="-10" Y="-7" Width="12" Height="12" />
+		<Style>IWS_BACKMOST|IWS_NO_MOUSE_RESPONSE</Style>
+		<Imagery>
+			<Image Type="BackImage" Imageset="BaseImage026" Image="iconslot_accessory" />
+			
+			<!-- 
+			<Image Type="ActiveCountOn"   Imageset="BaseImage008" Image="text_skilltest_num" />
+			<Image Type="ActiveCountOn_Yellow" Imageset="BaseImage016" Image="text_skill_num_yellowsmall" />
+			<Image Type="ActiveCountOn_Red"    Imageset="BaseImage016" Image="text_skill_num_redsmall" />			
+			<Image Type="ActiveCountOver" Imageset="BaseImage013" Image="Skill_Bullet_Over" />
+			<Image Type="ActiveCountBack" Imageset="BaseImage013" Image="Skill_Bullet_Back" />
+
+			<Image Type="GrowthNumText" Imageset="BaseImage010" Image="Text_Number6" />
+			<Image Type="GrowthPlusText" Imageset="BaseImage010" Image="Text_S_Plus3" />
+						
+			<DefaultFrameImagery Type="KeyBackNor" Templete="changeui_keybox">
+				<Area X="10" Y="52" Width="34" Height="17"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="KeyBackOn" Templete="changeui_keybox">
+				<Area X="10" Y="52" Width="34" Height="17"/>
+			</DefaultFrameImagery>
+            <DefaultFrameImagery Type="KeyBack" Templete="changeui_keybox">
+				<Area X="10" Y="52" Width="34" Height="17"/>
+			</DefaultFrameImagery>
+
+			-->
+
+			<Image Type="EffectImg1" Imageset="BaseImage005" Image="skillcool01" />
+			<Image Type="EffectImg2" Imageset="BaseImage005" Image="skillcool02" />
+		</Imagery>
+		<ExtraInfo EffectTime1 = "34"
+			   EffectTime2 = "466"
+			   EffectScale = "1.5f"
+			   EffectSound = "" />
+	</Window>
+
+	<Window ClassName="AccessorySkillListBtn" Id="7">
+		<Size X="-10" Y="26" Width="12" Height="12" />
+		<Style>IWS_BACKMOST|IWS_NO_MOUSE_RESPONSE</Style>
+		<Imagery>
+			<Image Type="BackImage" Imageset="BaseImage026" Image="iconslot_accessory" />
+
+			<!-- 
+			<Image Type="GrowthNumText" Imageset="BaseImage010" Image="Text_Number6" />
+			<Image Type="GrowthPlusText" Imageset="BaseImage010" Image="Text_S_Plus3" />
+            
+            <DefaultFrameImagery Type="KeyBackNor" Templete="changeui_keybox">
+				<Area X="10" Y="52" Width="34" Height="17"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="KeyBackOn" Templete="changeui_keybox">
+				<Area X="10" Y="52" Width="34" Height="17"/>
+			</DefaultFrameImagery>
+            <DefaultFrameImagery Type="KeyBack" Templete="changeui_keybox">
+				<Area X="10" Y="52" Width="34" Height="17"/>
+			</DefaultFrameImagery>
+
+			<Image Type="ActiveCountOn"   Imageset="BaseImage008" Image="text_skilltest_num" />
+		  <Image Type="ActiveCountOn_Yellow" Imageset="BaseImage016" Image="text_skill_num_yellowsmall" />
+			<Image Type="ActiveCountOn_Red"    Imageset="BaseImage016" Image="text_skill_num_redsmall" />			
+			<Image Type="ActiveCountOver" Imageset="BaseImage013" Image="Skill_Bullet_Over" />
+			<Image Type="ActiveCountBack" Imageset="BaseImage013" Image="Skill_Bullet_Back" />
+			-->
+			
+			<Image Type="EffectImg1" Imageset="BaseImage005" Image="skillcool01" />
+			<Image Type="EffectImg2" Imageset="BaseImage005" Image="skillcool02" />
+		</Imagery>
+		<ExtraInfo EffectTime1 = "34"
+			   EffectTime2 = "466"
+			   EffectScale = "1.5f"
+			   EffectSound = "" />
+	</Window>
+
+	<Window ClassName="AccessorySkillListBtn" Id="8">
+		<Size X="-10" Y="59" Width="12" Height="12" />
+		<Style>IWS_BACKMOST|IWS_NO_MOUSE_RESPONSE</Style>
+		<Imagery>
+			<Image Type="BackImage" Imageset="BaseImage026" Image="iconslot_accessory" />
+			<!-- 
+			<Image Type="GrowthNumText" Imageset="BaseImage010" Image="Text_Number6" />
+			<Image Type="GrowthPlusText" Imageset="BaseImage010" Image="Text_S_Plus3" />
+			
+			<DefaultFrameImagery Type="KeyBackNor" Templete="changeui_keybox">
+				<Area X="10" Y="52" Width="34" Height="17"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="KeyBackOn" Templete="changeui_keybox">
+				<Area X="10" Y="52" Width="34" Height="17"/>
+			</DefaultFrameImagery>
+            <DefaultFrameImagery Type="KeyBack" Templete="changeui_keybox">
+				<Area X="10" Y="52" Width="34" Height="17"/>
+			</DefaultFrameImagery>
+
+			<Image Type="ActiveCountOn"   Imageset="BaseImage008" Image="text_skilltest_num" />
+		  <Image Type="ActiveCountOn_Yellow" Imageset="BaseImage016" Image="text_skill_num_yellowsmall" />
+			<Image Type="ActiveCountOn_Red"    Imageset="BaseImage016" Image="text_skill_num_redsmall" />
+			<Image Type="ActiveCountOver" Imageset="BaseImage013" Image="Skill_Bullet_Over" />
+			<Image Type="ActiveCountBack" Imageset="BaseImage013" Image="Skill_Bullet_Back" />
+			-->
+			
+			<Image Type="EffectImg1" Imageset="BaseImage005" Image="skillcool01" />
+			<Image Type="EffectImg2" Imageset="BaseImage005" Image="skillcool02" />
+		</Imagery>
+		<ExtraInfo EffectTime1 = "34"
+			   EffectTime2 = "466"
+			   EffectScale = "1.5f"
+			   EffectSound = "" />
+	</Window>
+
+	<Window ClassName="GlobalTextTooltip" Id="21">
+		<Size X="0" Y="0" Width="120" Height="26" />
+		<Style>IWS_START_HIDE|IWS_PROCESS</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="tooltip3">
+				<Area X="0" Y="0" Width="120" Height="26" />
+			</DefaultFrameImagery>
+		</Imagery>
+	</Window>
+</Window>

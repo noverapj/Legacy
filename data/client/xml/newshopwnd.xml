@@ -1,0 +1,1483 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="NewShopWnd" Id="6136">
+	<Size X="0" Y="-20" XAlign="Center" YAlign="Center" Width="754" Height="506" />
+	<DragRect Left="0" Top="0" Right="754" Bottom="36" />
+	<Style>IWS_START_HIDE|IWS_CANMOVE|IWS_EXIT_ESC|IWS_PROCESS</Style>
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Title>
+		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Text>상점</Text>
+	</Title>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+			<Area X="0" Y="0" Width="754" Height="506"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="MultiplyFrm" Templete="win1_multiply_left">
+			<Area X="0" Y="0" Width="258" Height="506"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title">
+			<Area X="5" Y="6" Width="744" Height="36"/>
+		</DefaultFrameImagery>
+
+		<Image Imageset="BaseImage001" Image="tap2_line" >
+			<Area X="366" Y="84" Width="1" Height="2" HorzAlign="Stretch"/>
+		</Image>
+		<Image Imageset="BaseImage001" Image="tap2_line" >
+			<Area X="418" Y="84" Width="1" Height="2" HorzAlign="Stretch"/>
+		</Image>
+		<Image Imageset="BaseImage001" Image="tap2_line" >
+			<Area X="470" Y="84" Width="1" Height="2" HorzAlign="Stretch"/>
+		</Image>
+		<Image Imageset="BaseImage001" Image="tap2_line" >
+			<Area X="522" Y="84" Width="1" Height="2" HorzAlign="Stretch"/>
+		</Image>
+		<Image Imageset="BaseImage001" Image="tap2_line" >
+			<Area X="574" Y="84" Width="1" Height="2" HorzAlign="Stretch"/>
+		</Image>
+		<Image Imageset="BaseImage001" Image="tap2_line" >
+			<Area X="626" Y="84" Width="1" Height="2" HorzAlign="Stretch"/>
+		</Image>
+		<Image Imageset="BaseImage001" Image="tap2_line" >
+			<Area X="678" Y="84" Width="1" Height="2" HorzAlign="Stretch"/>
+		</Image>
+		<Image Type="TabEventMark"   Imageset="BaseImage012" Image="state_tap_event"/>
+		<Image Type="NormalList" Imageset="BaseImage031" Image="shop_renewal_line" >
+			<Area X="50" Y="14" width="6" height="17" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+	</Imagery>
+	<ExtraInfo	Max_101    = "6"
+				Name_101_1 = "전체"				
+				Type_101_1 = "0"				
+				Name_101_2 = "용병"
+				Type_101_2 = "1"
+				Name_101_3 = "장비"
+				Type_101_3 = "2"
+				Name_101_4 = "코스튬"
+				Type_101_4 = "5"
+				Name_101_5 = "치장"
+				Type_101_5 = "3"
+				Name_101_6 = "특별"
+				Type_101_6 = "4"
+				
+				Max_102    = "7"
+				Name_102_1 = "전체"
+				Type_102_1 = "0"
+				Name_102_2 = "프리미엄"
+				Type_102_2 = "5"
+				Name_102_3 = "근거리"
+				Type_102_3 = "1"
+				Name_102_4 = "원거리"
+				Type_102_4 = "2"
+				Name_102_5 = "마법"
+				Type_102_5 = "3"
+				Name_102_6 = "특수"
+				Type_102_6 = "4"
+				Name_102_7 = "★패키지"
+				Type_102_7 = "10000"
+
+				Max_103    = "7"
+				Name_103_1 = "전체"
+				Type_103_1 = "0"
+				Name_103_2 = "보급"
+				Type_103_2 = "1"
+				Name_103_3 = "무기"
+				Type_103_3 = "2"
+				Name_103_4 = "갑옷"
+				Type_103_4 = "3"
+				Name_103_5 = "투구"
+				Type_103_5 = "4"
+				Name_103_6 = "망토"
+				Type_103_6 = "5"
+				Name_103_7 = "★기능"
+				Type_103_7 = "10000"
+
+				Max_104    = "9"
+				Name_104_1 = "전체"
+				Type_104_1 = "0"
+				Name_104_2 = "성별"
+				Type_104_2 = "5"
+				Name_104_3 = "머리"
+				Type_104_3 = "2"
+				Name_104_4 = "머리색"
+				Type_104_4 = "4"
+				Name_104_5 = "얼굴"
+				Type_104_5 = "1"
+				Name_104_6 = "피부색"
+				Type_104_6 = "3"
+				Name_104_7 = "기본옷"
+				Type_104_7 = "7"
+				Name_104_8 = "모션"
+				Type_104_8 = "20000"
+				Name_104_9 = "★패키지"
+				Type_104_9 = "10000"
+
+				Max_105    = "7"
+				Name_105_1 = "전체"
+				Type_105_1 = "0"
+				Name_105_2 = "기능"
+				Type_105_2 = "1"
+				Name_105_3 = "프리미엄"
+				Type_105_3 = "2"
+				Name_105_4 = "놀이"
+				Type_105_4 = "3"
+				Name_105_5 = "길드본부"
+				Type_105_5 = "4"
+				Name_105_6 = "개인본부"
+				Type_105_6 = "5"
+				Name_105_7 = "낚시"
+				Type_105_7 = "6"
+				
+				Max_106    = "3"
+				Name_106_1 = "클로버샵"
+				Type_106_1 = "1001913"
+				Name_106_2 = "이벤트샵"
+				Type_106_2 = "1000049"
+				Name_106_3 = "M-코인샵"
+				Type_106_3 = "1005633"
+				
+				Max_107    = "6"
+				Name_107_1 = "전체"
+				Type_107_1 = "0"
+				Name_107_2 = "보급"
+				Type_107_2 = "1"
+				Name_107_3 = "갑옷"
+				Type_107_3 = "2"
+				Name_107_4 = "투구"
+				Type_107_4 = "3"
+				Name_107_5 = "망토"
+				Type_107_5 = "4"
+				Name_107_6 = "★기능"
+				Type_107_6 = "10000"
+				
+				Max_108    = "1"
+				Name_108_1 = "전체"
+				Type_108_1 = "777"							
+				
+				TabScreenGapTime = "200"
+				TabScreenDuration = "200"
+
+				DefaultShowTab = "101"
+				BonusCashTooltipCheckDuration = "60000"
+              Rand_URL_Fail_Msg1="확률확인은 로비에서만 가능합니다."
+              Rand_URL_Fail_Msg2="확률확인은 광장/훈련소/본부에서만 가능합니다."/>
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="598" Y="11" Width="99" Height="22" />
+		<Title>
+			<Format X="49" Y="2" Size="11" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF786023"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF786023"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF786023"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF786023"/>
+			<Text>골드충전</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_gold_nor">
+				<Area X="0" Y="0" Width="99" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_gold_nor">
+				<Area X="0" Y="0" Width="99" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="99" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_gold_down">
+				<Area X="0" Y="0" Width="99" Height="22"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+					 ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="2">
+		<Size X="698" Y="11" Width="22" Height="22"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="22" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="22" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="22" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="22" Height="22"/>
+			</DefaultFrameImagery>
+			<Image Type="NormalList" Imageset="BaseImage031" Image="my_item_icon" >
+				<Area X="2" Y="3" />
+			</Image>
+			<Image Type="DisableList" Imageset="BaseImage031" Image="my_item_icon_gray" >
+				<Area X="2" Y="3" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+					 ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="3">
+		<Size X="721" Y="11" Width="22" Height="22"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="22" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="22" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="22" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="22" Height="22"/>
+			</DefaultFrameImagery>
+			<Image Type="Disable" Imageset="BaseImage001" Image="icon0_x_grayframe" >
+				<Area X="0" Y="0" />
+			</Image>
+			<Image Type="NormalList" Imageset="BaseImage001" Image="icon0_x" >
+				<Area X="5" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="ioButton" Id="4">
+		<Size X="59" Y="11" Width="23" Height="23"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="22" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="22" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="22" Height="22"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="22" Height="22"/>
+			</DefaultFrameImagery>
+			
+			<Image Type="NormalList" Imageset="BaseImage031" Image="shop_renewal_icon" >
+				<Area X="2" Y="3" />
+			</Image>
+			<Image Type="DisableList" Imageset="BaseImage031" Image="shop_renewal_icon_gray" >
+				<Area X="2" Y="3" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="GlobalTextTooltip" Id="5">
+		<Size X="0" Y="0" Width="120" Height="26" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_TOPMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="tooltip3">
+				<Area X="0" Y="0" Width="120" Height="26" />
+			</DefaultFrameImagery>
+		</Imagery>
+	</Window>
+
+  <Window ClassName="ioButton" Id="6">
+    <Size X="84" Y="11" Width="74" Height="23"/>
+    <Imagery>
+      <DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+        <Area X="0" Y="0" Width="74" Height="23"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+        <Area X="0" Y="0" Width="74" Height="23"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+        <Area X="0" Y="0" Width="74" Height="23"/>
+      </DefaultFrameImagery>
+      <DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+        <Area X="0" Y="0" Width="74" Height="23"/>
+      </DefaultFrameImagery>
+    </Imagery>
+    <Title>
+      <Format X="37" Y="4" Size="11" Style="Outline_full_2x" HorzAlign="Center"/>
+      <Color Type="Normal" Text="FFFFFFFF" Back="FF20394F"/>
+      <Color Type="Over" Text="FFFFFFFF" Back="FF20394F"/>
+      <Color Type="Push" Text="FFFFFFFF" Back="FF20394F"/>
+      <Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+      <Text>확률안내</Text>
+    </Title>
+    <ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+  </Window>
+	<!--//////////////////// 상위 탭 //////////////////////////////////////////////-->
+	<Window ClassName="ioRadioButton" Id="101">
+		<Size X="285" Y="59" Width="81" Height="27" />
+		<Title>
+			<Format X="40" Y="6" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF8D5704" Back="FF000000"/>
+			<Color Type="Over" Text="FF8D5704" Back="FF000000"/>
+			<Color Type="Push" Text="FF8D5704" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>금주의 상품</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="tap2_off">
+				<Area X="0" Y="0" Width="81" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="tap2_off">
+				<Area X="0" Y="0" Width="81" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap2_overadd">
+				<Area X="0" Y="0" Width="81" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="tap2_on1">
+				<Area X="0" Y="0" Width="81" Height="27"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="ioRadioButton" Id="108">
+		<Size X="367" Y="59" Width="51" Height="27" />
+		<Title>
+			<Format X="25" Y="6" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF8D5704" Back="FF000000"/>
+			<Color Type="Over" Text="FF8D5704" Back="FF000000"/>
+			<Color Type="Push" Text="FF8D5704" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>비밀상점</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="tap2_off">
+				<Area X="0" Y="0" Width="51" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="tap2_off">
+				<Area X="0" Y="0" Width="51" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap2_overadd">
+				<Area X="0" Y="0" Width="51" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="tap2_on1">
+				<Area X="0" Y="0" Width="51" Height="27"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="ioRadioButton" Id="102">
+		<Size X="419" Y="59" Width="51" Height="27" />
+		<Title>
+			<Format X="27" Y="6" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>용병</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="tap2_off">
+				<Area X="0" Y="0" Width="51" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="tap2_off">
+				<Area X="0" Y="0" Width="51" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap2_overadd">
+				<Area X="0" Y="0" Width="51" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="tap2_on1">
+				<Area X="0" Y="0" Width="51" Height="27"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioRadioButton" Id="103">
+		<Size X="471" Y="59" Width="51" Height="27" />
+		<Title>
+			<Format X="27" Y="6" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>장비</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="tap2_off">
+				<Area X="0" Y="0" Width="51" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="tap2_off">
+				<Area X="0" Y="0" Width="51" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap2_overadd">
+				<Area X="0" Y="0" Width="51" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="tap2_on1">
+				<Area X="0" Y="0" Width="51" Height="27"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="ioRadioButton" Id="107">
+		<Size X="523" Y="59" Width="51" Height="27" />
+		<Title>
+			<Format X="27" Y="6" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>코스튬</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="tap2_off">
+				<Area X="0" Y="0" Width="51" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="tap2_off">
+				<Area X="0" Y="0" Width="51" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap2_overadd">
+				<Area X="0" Y="0" Width="51" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="tap2_on1">
+				<Area X="0" Y="0" Width="51" Height="27"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="ioRadioButton" Id="104">
+		<Size X="575" Y="59" Width="51" Height="27" />
+		<Title>
+			<Format X="26" Y="6" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>치장</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="tap2_off">
+				<Area X="0" Y="0" Width="51" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="tap2_off">
+				<Area X="0" Y="0" Width="51" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap2_overadd">
+				<Area X="0" Y="0" Width="51" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="tap2_on1">
+				<Area X="0" Y="0" Width="51" Height="27"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioRadioButton" Id="105">
+		<Size X="627" Y="59" Width="51" Height="27" />
+		<Title>
+			<Format X="27" Y="6" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>특별</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="tap2_off">
+				<Area X="0" Y="0" Width="51" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="tap2_off">
+				<Area X="0" Y="0" Width="51" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap2_overadd">
+				<Area X="0" Y="0" Width="51" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="tap2_on1">
+				<Area X="0" Y="0" Width="51" Height="27"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioRadioButton" Id="106">
+		<Size X="679" Y="59" Width="51" Height="27" />
+		<Title>
+			<Format X="26" Y="6" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>이벤트</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="tap2_off">
+				<Area X="0" Y="0" Width="51" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="tap2_off">
+				<Area X="0" Y="0" Width="51" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="tap2_overadd">
+				<Area X="0" Y="0" Width="51" Height="27"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="tap2_on1">
+				<Area X="0" Y="0" Width="51" Height="27"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	
+	<!--///////////////////////// 하위 탭 (타이틀은 프로그램에서 결정)/////////////////////////////////////////////-->
+	<Window ClassName="SmallTabButton" Id="201">
+		<Size X="283" Y="96" Width="55" Height="23" />
+		<Title>
+			<Format X="27" Y="4" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF8A8A8A" Back="FF000000"/>
+			<Color Type="Over" Text="FF5F5F5F" Back="FF000000"/>
+			<Color Type="Push" Text="FF5F5F5F" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>--</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt001_shop_renewal">
+				<Area X="0" Y="0"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt001_shop_renewal">
+				<Area X="0" Y="0"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt001_shop_renewal">
+				<Area X="0" Y="0"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SmallTabButton" Id="202">
+		<Size X="343" Y="97" Width="55" Height="23" />
+		<Title>
+			<Format X="27" Y="4" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF8A8A8A" Back="FF000000"/>
+			<Color Type="Over" Text="FF5F5F5F" Back="FF000000"/>
+			<Color Type="Push" Text="FF5F5F5F" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>--</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt001_shop_renewal">
+				<Area X="0" Y="0"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt001_shop_renewal">
+				<Area X="0" Y="0"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt001_shop_renewal">
+				<Area X="0" Y="0"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SmallTabButton" Id="203">
+		<Size X="399" Y="97" Width="55" Height="23" />
+		<Title>
+			<Format X="27" Y="4" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF8A8A8A" Back="FF000000"/>
+			<Color Type="Over" Text="FF5F5F5F" Back="FF000000"/>
+			<Color Type="Push" Text="FF5F5F5F" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>--</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt001_shop_renewal">
+				<Area X="0" Y="0"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt001_shop_renewal">
+				<Area X="0" Y="0"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt001_shop_renewal">
+				<Area X="0" Y="0"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+
+	<Window ClassName="SmallTabButton" Id="204">
+		<Size X="455" Y="97" Width="55" Height="23" />
+		<Title>
+			<Format X="27" Y="4" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF8A8A8A" Back="FF000000"/>
+			<Color Type="Over" Text="FF5F5F5F" Back="FF000000"/>
+			<Color Type="Push" Text="FF5F5F5F" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>--</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt001_shop_renewal">
+				<Area X="0" Y="0"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt001_shop_renewal">
+				<Area X="0" Y="0"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt001_shop_renewal">
+				<Area X="0" Y="0"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SmallTabButton" Id="205">
+		<Size X="511" Y="97" Width="55" Height="23" />
+		<Title>
+			<Format X="27" Y="4" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF8A8A8A" Back="FF000000"/>
+			<Color Type="Over" Text="FF5F5F5F" Back="FF000000"/>
+			<Color Type="Push" Text="FF5F5F5F" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>--</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt001_shop_renewal">
+				<Area X="0" Y="0"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt001_shop_renewal">
+				<Area X="0" Y="0"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt001_shop_renewal">
+				<Area X="0" Y="0"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SmallTabButton" Id="206">
+		<Size X="567" Y="97" Width="55" Height="23" />
+		<Title>
+			<Format X="27" Y="4" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF8A8A8A" Back="FF000000"/>
+			<Color Type="Over" Text="FF5F5F5F" Back="FF000000"/>
+			<Color Type="Push" Text="FF5F5F5F" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>--</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt001_shop_renewal">
+				<Area X="0" Y="0"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt001_shop_renewal">
+				<Area X="0" Y="0"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt001_shop_renewal">
+				<Area X="0" Y="0"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SmallTabButton" Id="207">
+		<Size X="623" Y="97" Width="55" Height="23" />
+		<Title>
+			<Format X="27" Y="4" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF8A8A8A" Back="FF000000"/>
+			<Color Type="Over" Text="FF5F5F5F" Back="FF000000"/>
+			<Color Type="Push" Text="FF5F5F5F" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>--</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt001_shop_renewal">
+				<Area X="0" Y="0"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt001_shop_renewal">
+				<Area X="0" Y="0"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt001_shop_renewal">
+				<Area X="0" Y="0"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SmallTabButton" Id="208">
+		<Size X="679" Y="97" Width="55" Height="23" />
+		<Title>
+			<Format X="27" Y="4" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF8A8A8A" Back="FF000000"/>
+			<Color Type="Over" Text="FF5F5F5F" Back="FF000000"/>
+			<Color Type="Push" Text="FF5F5F5F" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>--</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt001_shop_renewal">
+				<Area X="0" Y="0"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt001_shop_renewal">
+				<Area X="0" Y="0"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt001_shop_renewal">
+				<Area X="0" Y="0"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SmallTabButton" Id="209">
+		<Size X="735" Y="97" Width="55" Height="23" />
+		<Title>
+			<Format X="27" Y="4" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF8A8A8A" Back="FF000000"/>
+			<Color Type="Over" Text="FF5F5F5F" Back="FF000000"/>
+			<Color Type="Push" Text="FF5F5F5F" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>--</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt001_shop_renewal">
+				<Area X="0" Y="0"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt001_shop_renewal">
+				<Area X="0" Y="0"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt001_shop_renewal">
+				<Area X="0" Y="0"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="SmallTabButton" Id="210">
+		<Size X="791" Y="97" Width="55" Height="23" />
+		<Title>
+			<Format X="27" Y="4" Size="12" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF8A8A8A" Back="FF000000"/>
+			<Color Type="Over" Text="FF5F5F5F" Back="FF000000"/>
+			<Color Type="Push" Text="FF5F5F5F" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>--</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt001_shop_renewal">
+				<Area X="0" Y="0"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt001_shop_renewal">
+				<Area X="0" Y="0"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt001_shop_renewal">
+				<Area X="0" Y="0"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<!--////////////////////////// 상품검색 /////////////////////////////////////////////-->
+	<Window ClassName="ioButton" Id="5001">
+		<Size X="712" Y="93" Width="15" Height="15"/>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage031" Image="icon0_search_black" Color="FFCE4E00">
+				<Area X="0" Y="0" RenderType="AddColor"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage031" Image="icon0_search_black" Color="FFB91600">
+				<Area X="0" Y="0" RenderType="AddColor"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage031" Image="icon0_search_black" Color="FFB91600">
+				<Area X="0" Y="0" RenderType="AddColor"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage031" Image="icon0_search_black" Color="FF6E6E6E">
+				<Area X="0" Y="0" RenderType="AddColor"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="ioButton" Id="5002">
+		<Size X="712" Y="93" Width="15" Height="15"/>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage031" Image="icon0_close_black" Color="FFCE4E00">
+				<Area X="0" Y="0" RenderType="AddColor"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage031" Image="icon0_close_black" Color="FFB91600">
+				<Area X="0" Y="0" RenderType="AddColor"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage031" Image="icon0_close_black" Color="FFB91600">
+				<Area X="0" Y="0" RenderType="AddColor"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage031" Image="icon0_close_black" Color="FF6E6E6E">
+				<Area X="0" Y="0" RenderType="AddColor"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<!--////////////////////////// 상품버튼 /////////////////////////////////////////////-->
+	<Window ClassName="NewShopItemInfoWnd" Id="301">
+		<Size X="285" Y="119" Width="104" Height="181" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="104" Height="179" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="104" Height="179" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="SelectFrm" Templete="slot_select_pet">
+				<Area X="0" Y="0" Width="104" Height="179" AutoResize="False" />
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="EventFrm" Templete="shop_renewal_slot_pink">
+				<Area X="0" Y="0" Width="104" Height="181" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<!-- 하단  -->
+			<DefaultFrameImagery Type="MultiplyFrm" Templete="win1_multiply_bottom">
+				<Area X="0" Y="150" Width="104" Height="29"/>
+			</DefaultFrameImagery>
+			<Image Type="Left"  Imageset="BaseImage001" Image="icon0_list_left">
+				<Area X="12" Y="159" />
+			</Image>
+		</Imagery>
+
+		<Window ClassName="NewShopIconBtn" Id="1">
+			<Style>IWS_PROCESS</Style>
+			<Size X="20" Y="17" Width="64" Height="64" />
+			<Imagery>
+				<DefaultFrameImagery Type="StateBlueFrm" Templete="state_blue">
+					<Area X="0" Y="0" Width="40" Height="16"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="StatePinkFrm" Templete="state_pink">
+					<Area X="0" Y="0" Width="51" Height="16"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="StatePinkLimitFrm" Templete="state_pink">
+					<Area X="0" Y="0" Width="40" Height="16"/>
+				</DefaultFrameImagery>
+        <Image Type="DDayMark" Imageset="BaseImage015" Image="state_dday"/>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+				<Image Type="NewMark"   Imageset="BaseImage006" Image="state_green_new"/>
+				<Image Type="HotMark"   Imageset="BaseImage006" Image="state_red_hot"/>
+				<Image Type="EventMark"   Imageset="BaseImage006" Image="state_pink_event"/>
+				<Image Type="LimitMark"   Imageset="BaseImage012" Image="state_violet_limit"/>
+				<Image Type="LimitDayMark" Imageset="BaseImage015" Image="state_violet_limit_02"/>
+				<Image Type="SoldOutMark" Imageset="BaseImage012" Image="state_red_soldout"/>
+				<Image Type="GradeLimitClearMark" Imageset="BaseImage015" Image="state_black_unlock"/>
+				<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+				<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+				<Image Type="CostumeMark" Imageset="BaseImage031" Image="costume_mark"/>
+				<Image Type="GuildMark" Imageset="BaseImage039" Image="housing_guild_mark"/>
+				<Image Type="HomeMark" Imageset="BaseImage039" Image="housing_private_mark"/>
+				<Image Type="BlackFridayMark" Imageset="BaseImage028" Image="state_black_day" />
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav"
+			           ClickSound = "interface/public_mouseclick_00.wav"
+				   ScreenGapTime = "200"
+				   ScreenDuration = "200" />
+		</Window>
+	</Window>
+	<Window ClassName="NewShopItemInfoWnd" Id="302">
+		<Size X="391" Y="119" Width="104" Height="181" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="104" Height="179" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="104" Height="179"  AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="SelectFrm" Templete="slot_select_pet">
+				<Area X="0" Y="0" Width="104" Height="179" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="EventFrm" Templete="shop_renewal_slot_pink">
+				<Area X="0" Y="0" Width="104" Height="181" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<!-- 하단  -->
+			<DefaultFrameImagery Type="MultiplyFrm" Templete="win1_multiply_bottom">
+				<Area X="0" Y="150" Width="104" Height="29"/>
+			</DefaultFrameImagery>
+			<Image Type="Left"  Imageset="BaseImage001" Image="icon0_list_left">
+				<Area X="12" Y="159" />
+			</Image>
+		</Imagery>
+
+		<Window ClassName="NewShopIconBtn" Id="1">
+			<Style>IWS_PROCESS</Style>
+			<Size X="20" Y="17" Width="64" Height="64" />
+			<Imagery>
+				<DefaultFrameImagery Type="StateBlueFrm" Templete="state_blue">
+					<Area X="0" Y="0" Width="40" Height="16"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="StatePinkFrm" Templete="state_pink">
+					<Area X="0" Y="0" Width="51" Height="16"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="StatePinkLimitFrm" Templete="state_pink">
+					<Area X="0" Y="0" Width="40" Height="16"/>
+				</DefaultFrameImagery>
+        <Image Type="DDayMark" Imageset="BaseImage015" Image="state_dday"/>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+				<Image Type="NewMark"   Imageset="BaseImage006" Image="state_green_new"/>
+				<Image Type="HotMark"   Imageset="BaseImage006" Image="state_red_hot"/>
+				<Image Type="EventMark"   Imageset="BaseImage006" Image="state_pink_event"/>
+				<Image Type="LimitMark"   Imageset="BaseImage012" Image="state_violet_limit"/>
+				<Image Type="LimitDayMark" Imageset="BaseImage015" Image="state_violet_limit_02"/>
+				<Image Type="SoldOutMark" Imageset="BaseImage012" Image="state_red_soldout"/>
+				<Image Type="GradeLimitClearMark" Imageset="BaseImage015" Image="state_black_unlock"/>
+				<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+				<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+				<Image Type="CostumeMark" Imageset="BaseImage031" Image="costume_mark"/>
+				<Image Type="GuildMark" Imageset="BaseImage039" Image="housing_guild_mark"/>
+				<Image Type="HomeMark" Imageset="BaseImage039" Image="housing_private_mark"/>
+				<Image Type="BlackFridayMark" Imageset="BaseImage028" Image="state_black_day" />
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav"
+			           ClickSound = "interface/public_mouseclick_00.wav"
+				   ScreenGapTime = "200"
+				   ScreenDuration = "200" />
+		</Window>
+	</Window>
+
+	<Window ClassName="NewShopItemInfoWnd" Id="303">
+		<Size X="497" Y="119" Width="104" Height="181" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="104" Height="179" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="104" Height="179" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="SelectFrm" Templete="slot_select_pet">
+				<Area X="0" Y="0" Width="104" Height="179" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="EventFrm" Templete="shop_renewal_slot_pink">
+				<Area X="0" Y="0" Width="104" Height="181" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<!-- 하단  -->
+			<DefaultFrameImagery Type="MultiplyFrm" Templete="win1_multiply_bottom">
+				<Area X="0" Y="150" Width="104" Height="29"/>
+			</DefaultFrameImagery>
+			<Image Type="Left"  Imageset="BaseImage001" Image="icon0_list_left">
+				<Area X="12" Y="159" />
+			</Image>
+		</Imagery>
+
+		<Window ClassName="NewShopIconBtn" Id="1">
+			<Style>IWS_PROCESS</Style>
+			<Size X="20" Y="17" Width="64" Height="64" />
+			<Imagery>
+				<DefaultFrameImagery Type="StateBlueFrm" Templete="state_blue">
+					<Area X="0" Y="0" Width="40" Height="16"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="StatePinkFrm" Templete="state_pink">
+					<Area X="0" Y="0" Width="51" Height="16"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="StatePinkLimitFrm" Templete="state_pink">
+					<Area X="0" Y="0" Width="40" Height="16"/>
+				</DefaultFrameImagery>
+        <Image Type="DDayMark" Imageset="BaseImage015" Image="state_dday"/>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+				<Image Type="NewMark"   Imageset="BaseImage006" Image="state_green_new"/>
+				<Image Type="HotMark"   Imageset="BaseImage006" Image="state_red_hot"/>
+				<Image Type="EventMark"   Imageset="BaseImage006" Image="state_pink_event"/>
+				<Image Type="LimitMark"   Imageset="BaseImage012" Image="state_violet_limit"/>
+				<Image Type="LimitDayMark" Imageset="BaseImage015" Image="state_violet_limit_02"/>
+				<Image Type="SoldOutMark" Imageset="BaseImage012" Image="state_red_soldout"/>
+				<Image Type="GradeLimitClearMark" Imageset="BaseImage015" Image="state_black_unlock"/>
+				<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+				<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+				<Image Type="CostumeMark" Imageset="BaseImage031" Image="costume_mark"/>
+				<Image Type="GuildMark" Imageset="BaseImage039" Image="housing_guild_mark"/>
+				<Image Type="HomeMark" Imageset="BaseImage039" Image="housing_private_mark"/>
+				<Image Type="BlackFridayMark" Imageset="BaseImage028" Image="state_black_day" />
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav"
+			           ClickSound = "interface/public_mouseclick_00.wav"
+				   ScreenGapTime = "200"
+				   ScreenDuration = "200" />
+		</Window>
+	</Window>
+
+	<Window ClassName="NewShopItemInfoWnd" Id="304">
+		<Size X="603" Y="119" Width="104" Height="181" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="104" Height="179" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="104" Height="179" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="SelectFrm" Templete="slot_select_pet">
+				<Area X="0" Y="0" Width="104" Height="179" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="EventFrm" Templete="shop_renewal_slot_pink">
+				<Area X="0" Y="0" Width="104" Height="181" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<!-- 하단  -->
+			<DefaultFrameImagery Type="MultiplyFrm" Templete="win1_multiply_bottom">
+				<Area X="0" Y="150" Width="104" Height="29"/>
+			</DefaultFrameImagery>
+			<Image Type="Left"  Imageset="BaseImage001" Image="icon0_list_left">
+				<Area X="12" Y="159" />
+			</Image>
+		</Imagery>
+
+		<Window ClassName="NewShopIconBtn" Id="1">
+			<Style>IWS_PROCESS</Style>
+			<Size X="20" Y="17" Width="64" Height="64" />
+			<Imagery>
+				<DefaultFrameImagery Type="StateBlueFrm" Templete="state_blue">
+					<Area X="0" Y="0" Width="40" Height="16"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="StatePinkFrm" Templete="state_pink">
+					<Area X="0" Y="0" Width="51" Height="16"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="StatePinkLimitFrm" Templete="state_pink">
+					<Area X="0" Y="0" Width="40" Height="16"/>
+				</DefaultFrameImagery>
+        <Image Type="DDayMark" Imageset="BaseImage015" Image="state_dday"/>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+				<Image Type="NewMark"   Imageset="BaseImage006" Image="state_green_new"/>
+				<Image Type="HotMark"   Imageset="BaseImage006" Image="state_red_hot"/>
+				<Image Type="EventMark"   Imageset="BaseImage006" Image="state_pink_event"/>
+				<Image Type="LimitMark"   Imageset="BaseImage012" Image="state_violet_limit"/>
+				<Image Type="LimitDayMark" Imageset="BaseImage015" Image="state_violet_limit_02"/>
+				<Image Type="SoldOutMark" Imageset="BaseImage012" Image="state_red_soldout"/>
+				<Image Type="GradeLimitClearMark" Imageset="BaseImage015" Image="state_black_unlock"/>
+				<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+				<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+				<Image Type="CostumeMark" Imageset="BaseImage031" Image="costume_mark"/>
+				<Image Type="GuildMark" Imageset="BaseImage039" Image="housing_guild_mark"/>
+				<Image Type="HomeMark" Imageset="BaseImage039" Image="housing_private_mark"/>
+				<Image Type="BlackFridayMark" Imageset="BaseImage028" Image="state_black_day" />
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav"
+			           ClickSound = "interface/public_mouseclick_00.wav"
+				   ScreenGapTime = "200"
+				   ScreenDuration = "200" />
+		</Window>
+	</Window>
+
+	<Window ClassName="NewShopItemInfoWnd" Id="305">
+		<Size X="285" Y="300" Width="104" Height="181" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="104" Height="179" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="104" Height="179" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="SelectFrm" Templete="slot_select_pet">
+				<Area X="0" Y="0" Width="104" Height="179" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="EventFrm" Templete="shop_renewal_slot_pink">
+				<Area X="0" Y="0" Width="104" Height="181" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<!-- 하단  -->
+			<DefaultFrameImagery Type="MultiplyFrm" Templete="win1_multiply_bottom">
+				<Area X="0" Y="150" Width="104" Height="29"/>
+			</DefaultFrameImagery>
+			<Image Type="Left"  Imageset="BaseImage001" Image="icon0_list_left">
+				<Area X="12" Y="159" />
+			</Image>
+		</Imagery>
+
+		<Window ClassName="NewShopIconBtn" Id="1">
+			<Style>IWS_PROCESS</Style>
+			<Size X="20" Y="17" Width="64" Height="64" />
+			<Imagery>
+				<DefaultFrameImagery Type="StateBlueFrm" Templete="state_blue">
+					<Area X="0" Y="0" Width="40" Height="16"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="StatePinkFrm" Templete="state_pink">
+					<Area X="0" Y="0" Width="51" Height="16"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="StatePinkLimitFrm" Templete="state_pink">
+					<Area X="0" Y="0" Width="40" Height="16"/>
+				</DefaultFrameImagery>
+        <Image Type="DDayMark" Imageset="BaseImage015" Image="state_dday"/>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+				<Image Type="NewMark"   Imageset="BaseImage006" Image="state_green_new"/>
+				<Image Type="HotMark"   Imageset="BaseImage006" Image="state_red_hot"/>
+				<Image Type="EventMark"   Imageset="BaseImage006" Image="state_pink_event"/>
+				<Image Type="LimitMark"   Imageset="BaseImage012" Image="state_violet_limit"/>
+				<Image Type="LimitDayMark" Imageset="BaseImage015" Image="state_violet_limit_02"/>
+				<Image Type="SoldOutMark" Imageset="BaseImage012" Image="state_red_soldout"/>
+				<Image Type="GradeLimitClearMark" Imageset="BaseImage015" Image="state_black_unlock"/>
+				<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+				<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+				<Image Type="CostumeMark" Imageset="BaseImage031" Image="costume_mark"/>
+				<Image Type="GuildMark" Imageset="BaseImage039" Image="housing_guild_mark"/>
+				<Image Type="HomeMark" Imageset="BaseImage039" Image="housing_private_mark"/>
+				<Image Type="BlackFridayMark" Imageset="BaseImage028" Image="state_black_day" />
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav"
+			           ClickSound = "interface/public_mouseclick_00.wav"
+				   ScreenGapTime = "200"
+				   ScreenDuration = "200" />
+		</Window>
+	</Window>
+
+	<Window ClassName="NewShopItemInfoWnd" Id="306">
+		<Size X="391" Y="300" Width="104" Height="181" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="104" Height="179" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="104" Height="179" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="SelectFrm" Templete="slot_select_pet">
+				<Area X="0" Y="0" Width="104" Height="179"AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="EventFrm" Templete="shop_renewal_slot_pink">
+				<Area X="0" Y="0" Width="104" Height="181" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<!-- 하단  -->
+			<DefaultFrameImagery Type="MultiplyFrm" Templete="win1_multiply_bottom">
+				<Area X="0" Y="150" Width="104" Height="29"/>
+			</DefaultFrameImagery>
+			<Image Type="Left"  Imageset="BaseImage001" Image="icon0_list_left">
+				<Area X="12" Y="159" />
+			</Image>
+		</Imagery>
+
+		<Window ClassName="NewShopIconBtn" Id="1">
+			<Style>IWS_PROCESS</Style>
+			<Size X="20" Y="17" Width="64" Height="64" />
+			<Imagery>
+				<DefaultFrameImagery Type="StateBlueFrm" Templete="state_blue">
+					<Area X="0" Y="0" Width="40" Height="16"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="StatePinkFrm" Templete="state_pink">
+					<Area X="0" Y="0" Width="51" Height="16"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="StatePinkLimitFrm" Templete="state_pink">
+					<Area X="0" Y="0" Width="40" Height="16"/>
+				</DefaultFrameImagery>
+        <Image Type="DDayMark" Imageset="BaseImage015" Image="state_dday"/>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+				<Image Type="NewMark"   Imageset="BaseImage006" Image="state_green_new"/>
+				<Image Type="HotMark"   Imageset="BaseImage006" Image="state_red_hot"/>
+				<Image Type="EventMark"   Imageset="BaseImage006" Image="state_pink_event"/>
+				<Image Type="LimitMark"   Imageset="BaseImage012" Image="state_violet_limit"/>
+				<Image Type="LimitDayMark" Imageset="BaseImage015" Image="state_violet_limit_02"/>
+				<Image Type="SoldOutMark" Imageset="BaseImage012" Image="state_red_soldout"/>
+				<Image Type="GradeLimitClearMark" Imageset="BaseImage015" Image="state_black_unlock"/>
+				<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+				<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+				<Image Type="CostumeMark" Imageset="BaseImage031" Image="costume_mark"/>
+				<Image Type="GuildMark" Imageset="BaseImage039" Image="housing_guild_mark"/>
+				<Image Type="HomeMark" Imageset="BaseImage039" Image="housing_private_mark"/>
+				<Image Type="BlackFridayMark" Imageset="BaseImage028" Image="state_black_day" />
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav"
+			           ClickSound = "interface/public_mouseclick_00.wav"
+				   ScreenGapTime = "200"
+				   ScreenDuration = "200" />
+		</Window>
+	</Window>
+
+	<Window ClassName="NewShopItemInfoWnd" Id="307">
+		<Size X="497" Y="300" Width="104" Height="181" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="104" Height="179" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="104" Height="179" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="SelectFrm" Templete="slot_select_pet">
+				<Area X="0" Y="0" Width="104" Height="179" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="EventFrm" Templete="shop_renewal_slot_pink">
+				<Area X="0" Y="0" Width="104" Height="181" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<!-- 하단  -->
+			<DefaultFrameImagery Type="MultiplyFrm" Templete="win1_multiply_bottom">
+				<Area X="0" Y="150" Width="104" Height="29"/>
+			</DefaultFrameImagery>
+			<Image Type="Left"  Imageset="BaseImage001" Image="icon0_list_left">
+				<Area X="12" Y="159" />
+			</Image>
+		</Imagery>
+
+		<Window ClassName="NewShopIconBtn" Id="1">
+			<Style>IWS_PROCESS</Style>
+			<Size X="20" Y="17" Width="64" Height="64" />
+			<Imagery>
+				<DefaultFrameImagery Type="StateBlueFrm" Templete="state_blue">
+					<Area X="0" Y="0" Width="40" Height="16"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="StatePinkFrm" Templete="state_pink">
+					<Area X="0" Y="0" Width="51" Height="16"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="StatePinkLimitFrm" Templete="state_pink">
+					<Area X="0" Y="0" Width="40" Height="16"/>
+				</DefaultFrameImagery>
+        <Image Type="DDayMark" Imageset="BaseImage015" Image="state_dday"/>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+				<Image Type="NewMark"   Imageset="BaseImage006" Image="state_green_new"/>
+				<Image Type="HotMark"   Imageset="BaseImage006" Image="state_red_hot"/>
+				<Image Type="EventMark"   Imageset="BaseImage006" Image="state_pink_event"/>
+				<Image Type="LimitMark"   Imageset="BaseImage012" Image="state_violet_limit"/>
+				<Image Type="LimitDayMark" Imageset="BaseImage015" Image="state_violet_limit_02"/>
+				<Image Type="SoldOutMark" Imageset="BaseImage012" Image="state_red_soldout"/>
+				<Image Type="GradeLimitClearMark" Imageset="BaseImage015" Image="state_black_unlock"/>
+				<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+				<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+				<Image Type="CostumeMark" Imageset="BaseImage031" Image="costume_mark"/>
+				<Image Type="GuildMark" Imageset="BaseImage039" Image="housing_guild_mark"/>
+				<Image Type="HomeMark" Imageset="BaseImage039" Image="housing_private_mark"/>
+				<Image Type="BlackFridayMark" Imageset="BaseImage028" Image="state_black_day" />
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav"
+			           ClickSound = "interface/public_mouseclick_00.wav"
+				   ScreenGapTime = "200"
+				   ScreenDuration = "200" />
+		</Window>
+	</Window>
+
+	<Window ClassName="NewShopItemInfoWnd" Id="308">
+		<Size X="603" Y="300" Width="104" Height="181" />
+		<Style>IWS_BACKMOST|IWS_PROCESS</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="slot_overadd">
+				<Area X="0" Y="0" Width="104" Height="179" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="slot_quest_gray">
+				<Area X="0" Y="0" Width="104" Height="181" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="slot_empty_gray1">
+				<Area X="0" Y="0" Width="104" Height="179" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="SelectFrm" Templete="slot_select_pet">
+				<Area X="0" Y="0" Width="104" Height="179" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="EventFrm" Templete="shop_renewal_slot_pink">
+				<Area X="0" Y="0" Width="104" Height="181" AutoResize="False"/>
+			</DefaultFrameImagery>
+			<!-- 하단  -->
+			<DefaultFrameImagery Type="MultiplyFrm" Templete="win1_multiply_bottom">
+				<Area X="0" Y="150" Width="104" Height="29"/>
+			</DefaultFrameImagery>
+			<Image Type="Left"  Imageset="BaseImage001" Image="icon0_list_left">
+				<Area X="12" Y="159" />
+			</Image>
+		</Imagery>
+
+		<Window ClassName="NewShopIconBtn" Id="1">
+			<Style>IWS_PROCESS</Style>
+			<Size X="20" Y="17" Width="64" Height="64" />
+			<Imagery>
+				<DefaultFrameImagery Type="StateBlueFrm" Templete="state_blue">
+					<Area X="0" Y="0" Width="40" Height="16"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="StatePinkFrm" Templete="state_pink">
+					<Area X="0" Y="0" Width="51" Height="16"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="StatePinkLimitFrm" Templete="state_pink">
+					<Area X="0" Y="0" Width="40" Height="16"/>
+				</DefaultFrameImagery>
+        <Image Type="DDayMark" Imageset="BaseImage015" Image="state_dday"/>
+				<Image Type="IconBack"  Imageset="BaseImage002" Image="iconeffect_2"/>
+				<Image Type="IconEmpty" Imageset="BaseImage002" Image="quest_giftbox_x"/>
+				<Image Type="NewMark"   Imageset="BaseImage006" Image="state_green_new"/>
+				<Image Type="HotMark"   Imageset="BaseImage006" Image="state_red_hot"/>
+				<Image Type="EventMark"   Imageset="BaseImage006" Image="state_pink_event"/>
+				<Image Type="LimitMark"   Imageset="BaseImage012" Image="state_violet_limit"/>
+				<Image Type="LimitDayMark" Imageset="BaseImage015" Image="state_violet_limit_02"/>
+				<Image Type="SoldOutMark" Imageset="BaseImage012" Image="state_red_soldout"/>
+				<Image Type="GradeLimitClearMark" Imageset="BaseImage015" Image="state_black_unlock"/>
+				<Image Type="NumText" Imageset="BaseImage004" Image="text_equipment_num"/>
+				<Image Type="PlusText" Imageset="BaseImage004" Image="text_equipment_plus"/>
+				<Image Type="CostumeMark" Imageset="BaseImage031" Image="costume_mark"/>
+				<Image Type="GuildMark" Imageset="BaseImage039" Image="housing_guild_mark"/>
+				<Image Type="HomeMark" Imageset="BaseImage039" Image="housing_private_mark"/>
+				<Image Type="BlackFridayMark" Imageset="BaseImage028" Image="state_black_day" />
+			</Imagery>
+			<ExtraInfo OverSound  = "interface/public_mouseover_00.wav"
+			           ClickSound = "interface/public_mouseclick_00.wav"
+				   ScreenGapTime = "200"
+				   ScreenDuration = "200" />
+		</Window>
+
+	</Window>
+	
+	<!--보너스 캐시 -->
+	<Window ClassName="ioButton" Id="501">
+		<Size X="580" Y="8" Width="15" Height="15"/>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage031" Image="bonus_gold_icon" >
+				<Area X="0" Y="0" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage031" Image="bonus_gold_icon_over" >
+				<Area X="0" Y="0" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage031" Image="bonus_gold_icon" >
+				<Area X="0" Y="0" />
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage031" Image="bonus_gold_icon" >
+				<Area X="0" Y="0" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="ioBasicToolTip" Id="502">
+		<Size X="0" Y="0" Width="145" Height="23" />
+		<Style>IWS_START_HIDE|IWS_TOPMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="tooltip5">
+				<Area X="0" Y="0" Width="145" Height="23" /> 
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage004" Image="tooltip5_tail" >
+				<Area X="67" Y="21"/>
+			</Image>
+		</Imagery>
+		<Window ClassName="ioRichLabel" Id="1">
+			<Size X="7" Y="4" Width="145" Height="23"/>
+			<ExtraInfo VertGap="3" HorzAlign="Left" VertAlign="Center" >
+				<TextBlock Text="보너스캐시 " Size="12" Color="FF3A3A3A"/>
+				<TextBlock Text="기간만료 " Size="12"  Color="FFB91600"/>
+				<TextBlock Text="임박 " Size="12"  Color="FF3A3A3A"/>
+			</ExtraInfo>
+		</Window>
+	</Window>
+	<!--////////////////////////// scroll /////////////////////////////////////////////-->
+	<Window ClassName="ioScroll" Id="1001">
+		<Size X="718" Y="119" Width="15" Height="360" />
+		<Style>IWS_PROCESS</Style>
+		<ExStyle>IWS_EX_VSCROLL</ExStyle>
+		<Imagery>
+			<DefaultFrameImagery Templete="scrollbar_back">
+				<Area X="5" Y="10" Width="5" Height="340"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo PageRange="2" StartTime="500" CurTime ="100"/>
+
+		<Window ClassName="ioButton" Id="1">
+			<Size X="0" Y="0" Width="15" Height="10" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0" Reverse="Vert"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0" Reverse="Vert"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0" Reverse="Vert"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+			           ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+		<Window ClassName="ioButton" Id="2">
+			<Size X="0" Y="350" Width="15" Height="10" />
+			<Imagery>
+				<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0"/>
+				</Image>
+				<Image Type="Over" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0"/>
+				</Image>
+				<Image Type="Push" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+					<Area X="3" Y="0"/>
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav"
+			           ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+		<Window ClassName="ioSlide" Id="3">
+			<Size X="0" Y="10" Width="15" Height="30" />
+			<DragRect Left="0" Top="0" Right="15" Bottom="30" />
+			<ExStyle>IWS_EX_NOTIFY_MOVED</ExStyle>
+			<Style>IWS_CANMOVE</Style>
+			<Imagery>
+				<DefaultFrameImagery Templete="scrollbar_drag">
+					<Area X="0" Y="0" Width="15" Height="30"/>
+				</DefaultFrameImagery>
+				<Image Type="Icon_Slide" Imageset="BaseImage001" Image="scrollbar_drag_icon"/>
+			</Imagery>
+		</Window>
+	</Window>
+</Window>

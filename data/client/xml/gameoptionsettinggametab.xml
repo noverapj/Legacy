@@ -1,0 +1,1112 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="GameOptionSettingGameTab" Id="103">
+	<Style>IWS_START_HIDE|IWS_PROCESS</Style>
+	<Size X="0" Y="81" Width="536" Height="431" />
+	<Imagery>
+		<DefaultFrameImagery Type="MultiplyFrm" Templete="win1_multiply_bottom">
+			<Area X="0" Y="366" Width="536" Height="65"/>
+		</DefaultFrameImagery>
+
+		<Image Imageset="BaseImage001" Image="strip_gray_dark" >
+			<Area X="17" Y="15" Width="502" Height="24" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_light" >
+			<Area X="17" Y="39" Width="502" Height="24" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_dark" >
+			<Area X="17" Y="63" Width="502" Height="24" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_light" >
+			<Area X="17" Y="87" Width="502" Height="24" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_dark" >
+			<Area X="17" Y="111" Width="502" Height="24" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_light" >
+			<Area X="17" Y="135" Width="502" Height="24" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_dark" >
+			<Area X="17" Y="159" Width="502" Height="24" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_light" >
+			<Area X="17" Y="183" Width="502" Height="24" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_dark" >
+			<Area X="17" Y="207" Width="502" Height="24" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_light" >
+			<Area X="17" Y="231" Width="502" Height="24" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_dark" >
+			<Area X="17" Y="255" Width="502" Height="24" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_light" >
+			<Area X="17" Y="279" Width="502" Height="24" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_dark" >
+			<Area X="17" Y="303" Width="502" Height="24" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Imageset="BaseImage001" Image="strip_gray_light" >
+			<Area X="17" Y="327" Width="502" Height="24" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+		</Image>
+		<Image Type="IconBack" Imageset="BaseImage002" Image="iconeffect_1"/>
+		<Image Type="IconGame" Imageset="UIIconPack5" Image="mode_openspace_training"/>
+		<Image Type="IconMacro" Imageset="UIIconPack1" Image="event_player_talkmode_icon"/>
+	</Imagery>
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="275" Y="383" Width="80" Height="31"/>
+		<Title>
+			<Format X="40" Y="5" Size="14" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>결정</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_blue_nor">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_blue_nor">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_blue_down">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="2">
+		<Size X="357" Y="383" Width="80" Height="31"/>
+		<Title>
+			<Format X="40" Y="7" Size="14" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF215AA2"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF215AA2"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>취소</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_gray_down">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="ioButton" Id="3">
+		<Size X="439" Y="383" Width="80" Height="31"/>
+		<Title>
+			<Format X="40" Y="7" Size="14" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF215AA2"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF215AA2"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>적용</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_gray_down">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>	
+	
+	<Window ClassName="ioButton" Id="4">
+		<Size X="17" Y="383" Width="80" Height="31" />
+		<Title>
+			<Format X="40" Y="7" Size="14" Style="Normal" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FF3A3A3A" Back="FF215AA2"/>
+			<Color Type="Over" Text="FF3A3A3A" Back="FF215AA2"/>
+			<Color Type="Push" Text="FF3A3A3A" Back="FF215AA2"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>초기화</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_gray_nor">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_gray_down">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+				<Area X="0" Y="0" Width="80" Height="31"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+	<Window ClassName="ioCheckButton" Id="103">
+		<Size X="21" Y="43" Width="16" Height="16" />
+		<Title>
+			<Format X="20" Y="0" Size="14" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>일반전투 초대거절 (친구/길드 제외)</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Check" Imageset="BaseImage001" Image="check_box_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	                   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>	
+
+	<Window ClassName="ioCheckButton" Id="105">
+		<Size X="21" Y="67" Width="16" Height="16" />
+		<Title>
+			<Format X="20" Y="0" Size="14" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>진영전투 초대거절 (친구/길드 제외)</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Check" Imageset="BaseImage001" Image="check_box_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>	
+	
+	<Window ClassName="ioCheckButton" Id="104">
+		<Size X="21" Y="91" Width="16" Height="16" />
+		<Title>
+			<Format X="20" Y="0" Size="14" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>채팅내용 안보기 (친구/길드 제외)</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Check" Imageset="BaseImage001" Image="check_box_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	                   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioCheckButton" Id="113">
+		<Size X="21" Y="115" Width="16" Height="16" />
+		<Title>
+			<Format X="20" Y="0" Size="14" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>게임 말풍선 안보기 (이모티콘 제외)</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Check" Imageset="BaseImage001" Image="check_box_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioCheckButton" Id="114">
+		<Size X="21" Y="139" Width="16" Height="16" />
+		<Title>
+			<Format X="20" Y="0" Size="14" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>길드메신저알림 안보기</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Check" Imageset="BaseImage001" Image="check_box_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="ioCheckButton" Id="115">
+		<Size X="270" Y="67" Width="16" Height="16" />
+		<Title>
+			<Format X="20" Y="0" Size="14" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>게임 스킬＆버프 이모티콘 표시</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Check" Imageset="BaseImage001" Image="check_box_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+    <Window ClassName="ioCheckButton" Id="116">
+		<Size X="270" Y="115" Width="16" Height="16" />
+		<Title>
+			<Format X="20" Y="0" Size="14" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>게임 용병단축키슬롯 안보기</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Check" Imageset="BaseImage001" Image="check_box_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioCheckButton" Id="117">
+		<Size X="270" Y="139" Width="16" Height="16" />
+		<Title>
+			<Format X="20" Y="0" Size="14" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>게임 빠른 용병 교체 슬롯 숨기기</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Check" Imageset="BaseImage001" Image="check_box_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="ioButton" Id="201">
+		<Size X="270" Y="43" Width="0" Height="0" />
+		<Title>
+			<Format X="20" Y="0" Size="14" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>욕설 필터링</Text>
+		</Title>
+		<Imagery>
+			<Image Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Imageset="BaseImage001" Image="check_box_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+	</Window>
+
+	<Window ClassName="ioRadioButton" Id="202">
+		<Size X="365" Y="43" Width="16" Height="16" />
+		<Title>
+			<Format X="20" Y="0" Size="14" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FF6E6E6E" Back="FF000000"/>
+			<Text>대체어</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="check_radio_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="check_radio_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="check_radio_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage001" Image="check_radio_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioRadioButton" Id="203">
+		<Size X="444" Y="43" Width="16" Height="16" />
+		<Title>
+			<Format X="20" Y="0" Size="14" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FF6E6E6E" Back="FF000000"/>
+			<Text>별표(*)</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="check_radio_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="check_radio_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="check_radio_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage001" Image="check_radio_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="ioCheckButton" Id="221">
+		<Size X="270" Y="91" Width="16" Height="16" />
+		<Title>
+			<Format X="20" Y="0" Size="14" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>전투 중 상대코스튬 보기</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Check" Imageset="BaseImage001" Image="check_box_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Disable" Imageset="BaseImage001" Image="check_box_no" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<!-- 매크로////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+	<Window ClassName="SettingMacroItemWnd" Id="301">
+		<Size X="21" Y="208" Width="245" Height="22" />
+		<ExStyle>IWS_START_HIDE</ExStyle>
+
+		<Window ClassName="SettingMacroItemBtn" Id="1">
+			<Size X="0" Y="0" Width="96" Height="22" />
+			<Title>
+				<Format X="61" Y="4" Size="13" Style="Normal" HorzAlign="Center" />
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Disable" Text="FFA7A7A7" Back="FF000000" />
+				<Text>전체</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<Image Imageset="BaseImage001" Image="icon0_list_down">
+					<Area X="81" Y="6" />
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound="interface/public_mouseover_00.wav" ClickSound="interface/public_mouseclick_00.wav" />
+		</Window>
+
+		<Window ClassName="MacroEdit" Id="2">
+			<Size X="104" Y="4" Width="129" Height="21" />
+			<Imagery>
+				<DefaultFrameImagery Templete="slot_empty_white">
+					<Area X="-6" Y="-4" Width="147" Height="22" AutoResize="False"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo MaxLength="50" TextColor="FFCE4E00" BkColor="FF000000" Align="Left" Style="Normal" Size="13" />
+		</Window>
+	</Window>
+	
+	
+	<Window ClassName="SettingMacroItemWnd" Id="302">
+		<Size X="21" Y="232" Width="245" Height="22" />
+		<ExStyle>IWS_START_HIDE</ExStyle>
+
+		<Window ClassName="SettingMacroItemBtn" Id="1">
+			<Size X="0" Y="0" Width="96" Height="22" />
+			<Title>
+				<Format X="61" Y="4" Size="13" Style="Normal" HorzAlign="Center" />
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Disable" Text="FFA7A7A7" Back="FF000000" />
+				<Text>전체</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<Image Imageset="BaseImage001" Image="icon0_list_down">
+					<Area X="81" Y="6" />
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound="interface/public_mouseover_00.wav" ClickSound="interface/public_mouseclick_00.wav" />
+		</Window>
+
+		<Window ClassName="MacroEdit" Id="2">
+			<Size X="104" Y="4" Width="129" Height="21" />
+			<Imagery>
+				<DefaultFrameImagery Templete="slot_empty_white">
+					<Area X="-6" Y="-4" Width="147" Height="22" AutoResize="False"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo MaxLength="50" TextColor="FFCE4E00" BkColor="FF000000" Align="Left" Style="Normal" Size="13" />
+		</Window>
+	</Window>	
+	
+	<Window ClassName="SettingMacroItemWnd" Id="303">
+		<Size X="21" Y="256" Width="245" Height="22" />
+		<ExStyle>IWS_START_HIDE</ExStyle>
+
+		<Window ClassName="SettingMacroItemBtn" Id="1">
+			<Size X="0" Y="0" Width="96" Height="22" />
+			<Title>
+				<Format X="61" Y="4" Size="13" Style="Normal" HorzAlign="Center" />
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Disable" Text="FFA7A7A7" Back="FF000000" />
+				<Text>전체</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<Image Imageset="BaseImage001" Image="icon0_list_down">
+					<Area X="81" Y="6" />
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound="interface/public_mouseover_00.wav" ClickSound="interface/public_mouseclick_00.wav" />
+		</Window>
+
+		<Window ClassName="MacroEdit" Id="2">
+			<Size X="104" Y="4" Width="129" Height="21" />
+			<Imagery>
+				<DefaultFrameImagery Templete="slot_empty_white">
+					<Area X="-6" Y="-4" Width="147" Height="22" AutoResize="False"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo MaxLength="50" TextColor="FFCE4E00" BkColor="FF000000" Align="Left" Style="Normal" Size="13" />
+		</Window>
+	</Window>	
+	
+	<Window ClassName="SettingMacroItemWnd" Id="304">
+		<Size X="21" Y="280" Width="245" Height="22" />
+		<ExStyle>IWS_START_HIDE</ExStyle>
+
+		<Window ClassName="SettingMacroItemBtn" Id="1">
+			<Size X="0" Y="0" Width="96" Height="22" />
+			<Title>
+				<Format X="61" Y="4" Size="13" Style="Normal" HorzAlign="Center" />
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Disable" Text="FFA7A7A7" Back="FF000000" />
+				<Text>전체</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<Image Imageset="BaseImage001" Image="icon0_list_down">
+					<Area X="81" Y="6" />
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound="interface/public_mouseover_00.wav" ClickSound="interface/public_mouseclick_00.wav" />
+		</Window>
+
+		<Window ClassName="MacroEdit" Id="2">
+			<Size X="104" Y="4" Width="129" Height="21" />
+			<Imagery>
+				<DefaultFrameImagery Templete="slot_empty_white">
+					<Area X="-6" Y="-4" Width="147" Height="22" AutoResize="False"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo MaxLength="50" TextColor="FFCE4E00" BkColor="FF000000" Align="Left" Style="Normal" Size="13" />
+		</Window>
+	</Window>
+	
+	<Window ClassName="SettingMacroItemWnd" Id="305">
+		<Size X="21" Y="304" Width="245" Height="22" />
+		<ExStyle>IWS_START_HIDE</ExStyle>
+
+		<Window ClassName="SettingMacroItemBtn" Id="1">
+			<Size X="0" Y="0" Width="96" Height="22" />
+			<Title>
+				<Format X="61" Y="4" Size="13" Style="Normal" HorzAlign="Center" />
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Disable" Text="FFA7A7A7" Back="FF000000" />
+				<Text>전체</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<Image Imageset="BaseImage001" Image="icon0_list_down">
+					<Area X="81" Y="6" />
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound="interface/public_mouseover_00.wav" ClickSound="interface/public_mouseclick_00.wav" />
+		</Window>
+
+		<Window ClassName="MacroEdit" Id="2">
+			<Size X="104" Y="4" Width="129" Height="21" />
+			<Imagery>
+				<DefaultFrameImagery Templete="slot_empty_white">
+					<Area X="-6" Y="-4" Width="147" Height="22" AutoResize="False"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo MaxLength="50" TextColor="FFCE4E00" BkColor="FF000000" Align="Left" Style="Normal" Size="13" />
+		</Window>
+	</Window>
+	
+	<Window ClassName="SettingMacroItemWnd" Id="306">
+		<Size X="21" Y="328" Width="245" Height="22" />
+		<ExStyle>IWS_START_HIDE</ExStyle>
+
+		<Window ClassName="SettingMacroItemBtn" Id="1">
+			<Size X="0" Y="0" Width="96" Height="22" />
+			<Title>
+				<Format X="61" Y="4" Size="13" Style="Normal" HorzAlign="Center" />
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Disable" Text="FFA7A7A7" Back="FF000000" />
+				<Text>전체</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<Image Imageset="BaseImage001" Image="icon0_list_down">
+					<Area X="81" Y="6" />
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound="interface/public_mouseover_00.wav" ClickSound="interface/public_mouseclick_00.wav" />
+		</Window>
+
+		<Window ClassName="MacroEdit" Id="2">
+			<Size X="104" Y="4" Width="129" Height="21" />
+			<Imagery>
+				<DefaultFrameImagery Templete="slot_empty_white">
+					<Area X="-6" Y="-4" Width="147" Height="22" AutoResize="False"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo MaxLength="50" TextColor="FFCE4E00" BkColor="FF000000" Align="Left" Style="Normal" Size="13" />
+		</Window>
+	</Window>
+
+	<Window ClassName="SettingMacroItemWnd" Id="307">
+		<Size X="270" Y="208" Width="245" Height="22" />
+		<ExStyle>IWS_START_HIDE</ExStyle>
+
+		<Window ClassName="SettingMacroItemBtn" Id="1">
+			<Size X="0" Y="0" Width="96" Height="22" />
+			<Title>
+				<Format X="61" Y="4" Size="13" Style="Normal" HorzAlign="Center" />
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Disable" Text="FFA7A7A7" Back="FF000000" />
+				<Text>전체</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<Image Imageset="BaseImage001" Image="icon0_list_down">
+					<Area X="81" Y="6" />
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound="interface/public_mouseover_00.wav" ClickSound="interface/public_mouseclick_00.wav" />
+		</Window>
+
+		<Window ClassName="MacroEdit" Id="2">
+			<Size X="104" Y="4" Width="129" Height="21" />
+			<Imagery>
+				<DefaultFrameImagery Templete="slot_empty_white">
+					<Area X="-6" Y="-4" Width="147" Height="22" AutoResize="False"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo MaxLength="50" TextColor="FFCE4E00" BkColor="FF000000" Align="Left" Style="Normal" Size="13" />
+		</Window>
+	</Window>	
+	
+	<Window ClassName="SettingMacroItemWnd" Id="308">
+		<Size X="270" Y="232" Width="245" Height="22" />
+		<ExStyle>IWS_START_HIDE</ExStyle>
+
+		<Window ClassName="SettingMacroItemBtn" Id="1">
+			<Size X="0" Y="0" Width="96" Height="22" />
+			<Title>
+				<Format X="61" Y="4" Size="13" Style="Normal" HorzAlign="Center" />
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Disable" Text="FFA7A7A7" Back="FF000000" />
+				<Text>전체</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<Image Imageset="BaseImage001" Image="icon0_list_down">
+					<Area X="81" Y="6" />
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound="interface/public_mouseover_00.wav" ClickSound="interface/public_mouseclick_00.wav" />
+		</Window>
+
+		<Window ClassName="MacroEdit" Id="2">
+			<Size X="104" Y="4" Width="129" Height="21" />
+			<Imagery>
+				<DefaultFrameImagery Templete="slot_empty_white">
+					<Area X="-6" Y="-4" Width="147" Height="22" AutoResize="False"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo MaxLength="50" TextColor="FFCE4E00" BkColor="FF000000" Align="Left" Style="Normal" Size="13" />
+		</Window>
+	</Window>	
+	
+	<Window ClassName="SettingMacroItemWnd" Id="309">
+		<Size X="270" Y="256" Width="245" Height="22" />
+		<ExStyle>IWS_START_HIDE</ExStyle>
+
+		<Window ClassName="SettingMacroItemBtn" Id="1">
+			<Size X="0" Y="0" Width="96" Height="22" />
+			<Title>
+				<Format X="61" Y="4" Size="13" Style="Normal" HorzAlign="Center" />
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Disable" Text="FFA7A7A7" Back="FF000000" />
+				<Text>전체</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<Image Imageset="BaseImage001" Image="icon0_list_down">
+					<Area X="81" Y="6" />
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound="interface/public_mouseover_00.wav" ClickSound="interface/public_mouseclick_00.wav" />
+		</Window>
+
+		<Window ClassName="MacroEdit" Id="2">
+			<Size X="104" Y="4" Width="129" Height="21" />
+			<Imagery>
+				<DefaultFrameImagery Templete="slot_empty_white">
+					<Area X="-6" Y="-4" Width="147" Height="22" AutoResize="False"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo MaxLength="50" TextColor="FFCE4E00" BkColor="FF000000" Align="Left" Style="Normal" Size="13" />
+		</Window>
+	</Window>	
+	
+	<Window ClassName="SettingMacroItemWnd" Id="310">
+		<Size X="270" Y="280" Width="245" Height="22" />
+		<ExStyle>IWS_START_HIDE</ExStyle>
+
+		<Window ClassName="SettingMacroItemBtn" Id="1">
+			<Size X="0" Y="0" Width="96" Height="22" />
+			<Title>
+				<Format X="61" Y="4" Size="13" Style="Normal" HorzAlign="Center" />
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Disable" Text="FFA7A7A7" Back="FF000000" />
+				<Text>전체</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<Image Imageset="BaseImage001" Image="icon0_list_down">
+					<Area X="81" Y="6" />
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound="interface/public_mouseover_00.wav" ClickSound="interface/public_mouseclick_00.wav" />
+		</Window>
+
+		<Window ClassName="MacroEdit" Id="2">
+			<Size X="104" Y="4" Width="129" Height="21" />
+			<Imagery>
+				<DefaultFrameImagery Templete="slot_empty_white">
+					<Area X="-6" Y="-4" Width="147" Height="22" AutoResize="False"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo MaxLength="50" TextColor="FFCE4E00" BkColor="FF000000" Align="Left" Style="Normal" Size="13" />
+		</Window>
+	</Window>
+	
+	<Window ClassName="SettingMacroItemWnd" Id="311">
+		<Size X="270" Y="304" Width="245" Height="22" />
+		<ExStyle>IWS_START_HIDE</ExStyle>
+
+		<Window ClassName="SettingMacroItemBtn" Id="1">
+			<Size X="0" Y="0" Width="96" Height="22" />
+			<Title>
+				<Format X="61" Y="4" Size="13" Style="Normal" HorzAlign="Center" />
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Disable" Text="FFA7A7A7" Back="FF000000" />
+				<Text>전체</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<Image Imageset="BaseImage001" Image="icon0_list_down">
+					<Area X="81" Y="6" />
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound="interface/public_mouseover_00.wav" ClickSound="interface/public_mouseclick_00.wav" />
+		</Window>
+
+		<Window ClassName="MacroEdit" Id="2">
+			<Size X="104" Y="4" Width="129" Height="21" />
+			<Imagery>
+				<DefaultFrameImagery Templete="slot_empty_white">
+					<Area X="-6" Y="-4" Width="147" Height="22" AutoResize="False"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo MaxLength="50" TextColor="FFCE4E00" BkColor="FF000000" Align="Left" Style="Normal" Size="13" />
+		</Window>
+	</Window>
+	
+	<Window ClassName="SettingMacroItemWnd" Id="312">
+		<Size X="270" Y="328" Width="245" Height="22" />
+		<ExStyle>IWS_START_HIDE</ExStyle>
+
+		<Window ClassName="SettingMacroItemBtn" Id="1">
+			<Size X="0" Y="0" Width="96" Height="22" />
+			<Title>
+				<Format X="61" Y="4" Size="13" Style="Normal" HorzAlign="Center" />
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Over" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Push" Text="FF3A3A3A" Back="FF000000" />
+				<Color Type="Disable" Text="FFA7A7A7" Back="FF000000" />
+				<Text>전체</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Disable" Templete="bt_empty">
+					<Area X="0" Y="0" Width="96" Height="22"/>
+				</DefaultFrameImagery>
+				<Image Imageset="BaseImage001" Image="icon0_list_down">
+					<Area X="81" Y="6" />
+				</Image>
+			</Imagery>
+			<ExtraInfo OverSound="interface/public_mouseover_00.wav" ClickSound="interface/public_mouseclick_00.wav" />
+		</Window>
+
+		<Window ClassName="MacroEdit" Id="2">
+			<Size X="104" Y="4" Width="129" Height="21" />
+			<Imagery>
+				<DefaultFrameImagery Templete="slot_empty_white">
+					<Area X="-6" Y="-4" Width="147" Height="22" AutoResize="False"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo MaxLength="50" TextColor="FFCE4E00" BkColor="FF000000" Align="Left" Style="Normal" Size="13" />
+		</Window>
+	</Window>	
+</Window>

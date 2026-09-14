@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="PackageItemBuyWnd" Id="505">
+	<Size X="496" Y="0" Width="258" Height="506" />
+	<Style>IWS_PROCESS|IWS_CHILD_ONLY_RESPONSE|IWS_START_HIDE</Style>
+	<Imagery>
+	</Imagery>
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="27" Y="448" Width="204" Height="31"/>
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Title>
+			<Format X="102" Y="7" Size="14" Style="Outline_full_3x" DisableStyle="Outline_full_3x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF117222"/>
+			<Text>결정</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt006_green_nor">
+				<Area X="0" Y="0" Width="204" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt006_green_nor">
+				<Area X="0" Y="0" Width="204" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="204" Height="31"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt006_green_down">
+				<Area X="0" Y="0" Width="204" Height="31"/>
+			</DefaultFrameImagery>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	                   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<!-- 선택 버튼들 -->
+	<Window ClassName="PackageItemBtn" Id="101">
+		<Size X="27" Y="59" Width="204" Height="23" />
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="204" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="204" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="204" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="204" Height="23"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="188" Y="8" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	                   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PackageItemBtn" Id="102">
+		<Size X="27" Y="296" Width="204" Height="23" />
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="204" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="204" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="204" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="204" Height="23"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="188" Y="8" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	                   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PackageItemBtn" Id="103">
+		<Size X="27" Y="320" Width="204" Height="23" />
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="204" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="204" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="204" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="204" Height="23"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="188" Y="8" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	                   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PackageItemBtn" Id="104">
+		<Size X="27" Y="344" Width="204" Height="23" />
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="204" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="204" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="204" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="204" Height="23"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="188" Y="8" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	                   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PackageItemBtn" Id="105">
+		<Size X="27" Y="368" Width="204" Height="23" />
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="204" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="204" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="204" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="204" Height="23"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="188" Y="8" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	                   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PackageItemBtn" Id="106">
+		<Size X="27" Y="392" Width="204" Height="23" />
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="204" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="204" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="204" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="204" Height="23"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="188" Y="8" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	                   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="PackageItemBtn" Id="107">
+		<Size X="27" Y="416" Width="204" Height="23" />
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="204" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt007_gray_nor">
+				<Area X="0" Y="0" Width="204" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="204" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt007_gray_down">
+				<Area X="0" Y="0" Width="204" Height="23"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_down" >
+				<Area X="188" Y="8" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	                   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<!-- 리스트 윈도우 -->
+	<Window ClassName="NewShopPullDownWnd" Id="1001">
+		<Size X="0" Y="0" Width="204" Height="21" />
+		<Style>IWS_START_HIDE|IWS_PROCESS|IWS_TOPMOST</Style>
+		<Imagery>
+			<DefaultFrameImagery Type="Selected" Templete="tooltip2">
+				<Area X="0" Y="0" Width="204" Height="21"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="NoneSelected" Templete="tooltip2">
+				<Area X="0" Y="0" Width="204" Height="21"/>
+			</DefaultFrameImagery>
+			<Image Type="DarkLine" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="70" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="LightLine" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="70" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="OverLine" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="70" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+		</Imagery>
+		<ExtraInfo StartHGap   = "8" 
+       		      	   EndHGap     = "8"
+			   ItemHSize   = "21"
+			   ItemMaxPage = "8"
+			   FontSize    = "0.65f" />
+
+		<!--////////////////////////// scroll /////////////////////////////////////////////-->
+		<Window ClassName="ioScroll" Id="1000">
+			<Size X="182" Y="7" Width="15" Height="168" />
+			<Style>IWS_PROCESS</Style>
+			<ExStyle>IWS_EX_VSCROLL</ExStyle>
+			<Imagery>
+				<DefaultFrameImagery Templete="scrollbar_back">
+					<Area X="5" Y="10" Width="5" Height="148"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo PageRange="1" StartTime="500" CurTime ="100"/>
+
+			<Window ClassName="ioButton" Id="1">
+				<Size X="0" Y="0" Width="15" Height="10" />
+				<Imagery>
+					<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0" Reverse="Vert"/>
+					</Image>
+					<Image Type="Over" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0" Reverse="Vert"/>
+					</Image>
+					<Image Type="Push" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0" Reverse="Vert"/>
+					</Image>
+				</Imagery>
+				<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+				           ClickSound = "interface/public_mouseclick_00.wav"/>					
+			</Window>
+			<Window ClassName="ioButton" Id="2">
+				<Size X="0" Y="158" Width="15" Height="10" />
+				<Imagery>
+					<Image Type="Normal" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0"/>
+					</Image>
+					<Image Type="Over" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0"/>
+					</Image>
+					<Image Type="Push" Imageset="BaseImage001" Image="scrollbar_arrow_down" >
+						<Area X="3" Y="0"/>
+					</Image>
+				</Imagery>
+				<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+				           ClickSound = "interface/public_mouseclick_00.wav"/>					
+			</Window>
+			<Window ClassName="ioSlide" Id="3">
+				<Size X="0" Y="10" Width="15" Height="30" />
+				<DragRect Left="0" Top="0" Right="15" Bottom="30" />
+				<ExStyle>IWS_EX_NOTIFY_MOVED</ExStyle>
+				<Style>IWS_CANMOVE</Style>
+				<Imagery>
+					<DefaultFrameImagery Templete="scrollbar_drag">
+						<Area X="0" Y="0" Width="15" Height="30"/>
+					</DefaultFrameImagery>
+					<Image Type="Icon_Slide" Imageset="BaseImage001" Image="scrollbar_drag_icon"/>
+				</Imagery>
+			</Window>
+		</Window>
+	</Window>
+
+</Window>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="MiniMap" Id="6004">
+	<Size X="-15" Y="15" XAlign="Right" YAlign="Top" Width="220" Height="157" />
+	<DragRect Left="0" Top="0" Right="220" Bottom="157" />
+	<Style>IWS_PROCESS|IWS_CANMOVE|IWS_BACKMOST</Style>
+	<Imagery>
+		<Image Type="SpotUserBlue"	    Imageset="BaseImage013" Image="Minimap_Player_Blue" />
+		<Image Type="SpotUserRed"	      Imageset="BaseImage013" Image="Minimap_Player_Red" />
+		<Image Type="SpotDropUserBlue"	Imageset="BaseImage013" Image="Minimap_Player_Blue_Drop" />
+		<Image Type="SpotDropUserRed"	  Imageset="BaseImage013" Image="Minimap_Player_Red_Drop" />
+		<Image Type="SpotUserMe"	      Imageset="BaseImage013" Image="Minimap_Player_Me" />
+		<Image Type="SpotPrisonerBlue"	Imageset="BaseImage013" Image="Minimap_Death_Blue" />
+		<Image Type="SpotPrisonerRed"  	Imageset="BaseImage013" Image="Minimap_Death_Red" />
+		<Image Type="SpotPrisonerMe"	  Imageset="BaseImage013" Image="Minimap_Death_Me" />
+		<Image Type="SpotSymbolBlue"	  Imageset="BaseImage013" Image="Minimap_Stone_Blue" />
+		<Image Type="SpotSymbolRed"	    Imageset="BaseImage013" Image="Minimap_Stone_Red" />
+		<Image Type="SpotSymbolNeutral" Imageset="BaseImage013" Image="Minimap_Stone_Gray" />
+		<Image Type="SpotCrownBlue"	    Imageset="BaseImage013" Image="Minimap_Crown_Blue" />
+		<Image Type="SpotCrownRed"	    Imageset="BaseImage013" Image="Minimap_Crown_Red" />
+		<Image Type="SpotCrownNeutral"	Imageset="BaseImage013" Image="Minimap_Crown_Gray" />
+		<Image Type="SpotCrownMe"	      Imageset="BaseImage013" Image="Minimap_Crown_Me" />
+		<Image Type="SpotAreaMe"	      Imageset="BaseImage013" Image="Minimap_Square" />
+		<Image Type="SpotBossMon"	      Imageset="BaseImage014" Image="minimap_pve_boss" />
+		<Image Type="SpotDropBossMon"	  Imageset="BaseImage014" Image="minimap_pve_boss" />
+		<Image Type="SpotDeathMon"	    Imageset="BaseImage013" Image="Minimap_Player_Red_Drop" />
+		<Image Type="SpotBall"		      Imageset="BaseImage013" Image="Minimap_Soccer_Gray" />
+		<Image Type="SpotBlueNexus"	    	Imageset="BaseImage013" Image="Minimap_Defense1_Base_Blue" />
+		<Image Type="SpotRedNexus"	    Imageset="BaseImage013" Image="Minimap_Defense1_Base_Red2" />
+		<Image Type="SpotBlueLair"	    	Imageset="BaseImage013" Image="Minimap_Defense1_Lair_Blue" />
+		<Image Type="SpotRedLair"	    Imageset="BaseImage013" Image="Minimap_Defense1_Lair_Red" />
+		<Image Type="SpotBlueTower"	    	Imageset="BaseImage013" Image="Minimap_Defense1_Tower_Blue" />
+		<Image Type="SpotRedTower"	    Imageset="BaseImage013" Image="Minimap_Defense1_Tower_Red" />
+		<Image Type="SpotNpcBlue"	    Imageset="BaseImage013" Image="Minimap_Defense1_Minimon_Blue" />
+		<Image Type="SpotNpcRed"	      Imageset="BaseImage013" Image="Minimap_Defense1_Minimon_Red" />
+		<Image Type="SpotRoulette"	      Imageset="BaseImage013" Image="Minimap_Plaza_Roulette" />
+		<Image Type="SpotDobuleCrownDropRed"	Imageset="BaseImage013" Image="Minimap_Crown_Red_Drop" />
+		<Image Type="SpotDobuleCrownDropBlue"	Imageset="BaseImage013" Image="Minimap_Crown_Blue_Drop" />
+		<Image Type="SpotStar"      Imageset="BaseImage013" Image="today_mimimap_star" />
+		<Image Type="SpotStarOn"    Imageset="BaseImage013" Image="today_mimimap_star_on" />
+		<Image Type="SpotShuffleMonster" Imageset="BaseImage013" Image="today_mimimap_mon" />
+		<Image Type="SpotShuffleBuffBox" Imageset="BaseImage013" Image="today_mimimap_que" />
+		<Image Type="SpotCheckPoint"	Imageset="BaseImage013" Image="Minimap_Training_Goal" />		
+		<Image Type="SpotGoal"			Imageset="BaseImage013" Image="Minimap_Training_Goal" />		
+		<Image Type="SpotItem"			Imageset="BaseImage013" Image="Minimap_Training_Item" />		
+		<Image Type="SpotBomb"			Imageset="BaseImage013" Image="Minimap_Training_Bomb" />
+		<Image Type="FlagNeutral"		Imageset="BaseImage042" Image="Minimap_Flag_Gray" />
+		<Image Type="FlagBlue"			Imageset="BaseImage042" Image="Minimap_Flag_Blue" />
+		<Image Type="FlagRed"			Imageset="BaseImage042" Image="Minimap_Flag_Red" />
+		<Image Type="FlagMe"			Imageset="BaseImage042" Image="Minimap_Flag_Me" />
+	</Imagery>
+</Window>

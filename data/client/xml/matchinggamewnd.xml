@@ -1,0 +1,1651 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="MatchingGameWnd" Id="6318">
+	<Size X="0" Y="0" XAlign="Center" YAlign="Center" Width="772" Height="409" />
+	<DragRect Left="0" Top="0" Right="772" Bottom="39" />
+	<Style>IWS_START_HIDE|IWS_PROCESS|IWS_TOPMOST|IWS_CANMOVE|IWS_EXIT_ESC</Style>
+	<Title>
+		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Text>짝맞추기</Text>
+	</Title>
+ 	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+			<Area X="0" Y="0" Width="772" Height="409"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title">
+			<Area X="6" Y="6" Width="760" Height="36"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="MainBack" Templete="win3_frame90">
+			<Area X="12" Y="49" Width="408" Height="344"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="MainTitle" Templete="win3_multiply_top">
+			<Area X="12" Y="49" Width="408" Height="32"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="MissionBack" Templete="win_frameinner80_b2_mid">
+			<Area X="430" Y="81" Width="332" Height="86"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="MissionTitle" Templete="win_frameinner80_f1_top">
+			<Area X="430" Y="49" Width="332" Height="32"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="MissionBottom" Templete="win_frameinner80_d2_bottom">
+			<Area X="430" Y="167" Width="332" Height="75"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="RewardBack" Templete="win_frameinner80_b2_bottom">
+			<Area X="430" Y="281" Width="332" Height="114"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="RewardTitle" Templete="win_frameinner80_f1_top">
+			<Area X="430" Y="249" Width="332" Height="32"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="GameDisabled" Templete="win_frameinner_dimmed">
+			<Area X="0" Y="0" Width="408" Height="344"/>
+		</DefaultFrameImagery>
+
+		<Image Type="TicketIcon" Imageset="UIIconPack129" Image="ticket_CardFlip_gold">
+			<Area X="169" Y="81" Width="32" Height="32" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+		<Image Type="MissionLine1" Imageset="BaseImage001" Image="strip_gray_af">
+			<Area X="432" Y="81" Width = "328" Height = "2" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply"/>
+		</Image>
+		<Image Type="MissionLine2" Imageset="BaseImage001" Image="strip_gray_af">
+			<Area X="432" Y="165" Width = "328" Height = "2" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply"/>
+		</Image>
+		<Image Type="RewardLine" Imageset="BaseImage001" Image="strip_gray_af">
+			<Area X="432" Y="281" Width = "328" Height = "2" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply"/>
+		</Image>
+		<Image Type="RewardIcon1" Imageset="BaseImage001" Image="strip_gray_af">
+			<Area X="504" Y="311"/>
+		</Image>
+		<Image Type="RewardIcon2" Imageset="BaseImage001" Image="strip_gray_af">
+			<Area X="598" Y="311"/>
+		</Image>
+		<Image Type="RewardIcon3" Imageset="BaseImage001" Image="strip_gray_af">
+			<Area X="710" Y="311"/>
+		</Image>
+		<Image Type="GaugeBackLeft" Imageset="BaseImage044" Image="event_gaugebar_bg_left">
+			<Area X="455" Y="321" Height="22" Width="9"/>
+		</Image>
+		<Image Type="GaugeBackCenter" Imageset="BaseImage044" Image="event_gaugebar_bg_center">
+			<Area X="464" Y="321" Height="22" Width="265" HorzAlign="Stretch" VertAlign="Stretch"/>
+		</Image>
+		<Image Type="GaugeBackRight" Imageset="BaseImage044" Image="event_gaugebar_bg_right">
+			<Area X="729" Y="321" Height="22" Width="9"/>
+		</Image>
+	
+		<Image Type="CardImage1" Imageset="SoldierIconPack001" Image="001"/>
+		<Image Type="CardImage2" Imageset="SoldierIconPack001" Image="002"/>
+		<Image Type="CardImage3" Imageset="SoldierIconPack001" Image="003"/>
+		<Image Type="CardImage4" Imageset="SoldierIconPack001" Image="004"/>
+		<Image Type="CardImage5" Imageset="SoldierIconPack001" Image="005"/>
+		<Image Type="CardImage6" Imageset="SoldierIconPack001" Image="006"/>
+		<Image Type="CardImage7" Imageset="SoldierIconPack001" Image="007"/>
+		<Image Type="CardImage8" Imageset="SoldierIconPack001" Image="008"/>
+		<Image Type="CardImage9" Imageset="SoldierIconPack001" Image="009"/>
+		<Image Type="CardImage10" Imageset="SoldierIconPack001" Image="010"/>
+		<Image Type="CardImage11" Imageset="SoldierIconPack001" Image="011"/>
+		<Image Type="CardImage12" Imageset="SoldierIconPack001" Image="012"/>
+		<Image Type="CardImage13" Imageset="SoldierIconPack001" Image="013"/>
+		<Image Type="CardImage14" Imageset="SoldierIconPack001" Image="014"/>
+		<Image Type="CardImage15" Imageset="SoldierIconPack001" Image="015"/>
+		<Image Type="Lucky1" Imageset="UIIconPack129" Image="CardFlip_Icon_lucky1"/>
+		<Image Type="Lucky2" Imageset="UIIconPack129" Image="CardFlip_Icon_lucky2"/>
+		<Image Type="LuckyCard1" Imageset="UIIconPack129" Image="CardFlip_Icon_lucky1"/>
+		<Image Type="LuckyCard2" Imageset="UIIconPack129" Image="CardFlip_Icon_lucky2"/>
+		<Image Type="NormalTicket" Imageset="UIIconPack129" Image="ticket_CardFlip_normal"/>
+		<Image Type="PremiumTicket" Imageset="UIIconPack129" Image="ticket_CardFlip_gold"/>
+		<Image Type="TimeOver" Imageset="BaseImage046" Image="eventmission_end"/>
+		<Image Type="MissionCheck" Imageset="BaseImage029" Image="stamp_attend2"/>
+		<Image Type="MissionEnable" Imageset="BaseImage031" Image="buff_beginner_effect"/>
+		<Image Type="GaugeBarLeft" Imageset="BaseImage044" Image="event_gaugebar_fg_left"/>
+		<Image Type="GaugeBarCenter" Imageset="BaseImage044" Image="event_gaugebar_fg_center"/>
+		<Image Type="GaugeBarRight" Imageset="BaseImage044" Image="event_gaugebar_fg_right"/>
+		<Image Type="ButtonImage" Imageset="UIIconPack129" Image="CardFlip_Icon"/>
+		<Image Type="Complete" Imageset="BaseImage006" Image="icontext_complete"/>
+		<Image Type="Count_3" Imageset="BaseImage006" Image="icon0_warcount3" />
+		<Image Type="Count_2" Imageset="BaseImage006" Image="icon0_warcount2" />
+		<Image Type="Count_1" Imageset="BaseImage006" Image="icon0_warcount1" />
+		<Image Type="Count_0" Imageset="BaseImage006" Image="icon0_warcount0" />
+		<Image Type="Count_Circle" Imageset="BaseImage005" Image="icon0_warcountcircle" />
+	</Imagery>
+	<Text>
+		<Format Type="Limit_Name" X="172" Y="54" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF333333"/>
+		<Text>제한시간: 00:00</Text>
+	</Text>
+	<Text>
+		<Format Type="Mission" X="443" Y="57" Size="14" Style="Outline_full_2x" HorzAlign="Left"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF333333"/>
+		<Text>미션</Text>
+	</Text>
+	<Text>
+		<Format Type="Mission_Reward" X="545" Y="187" Size="14" Style="Outline_full_2x" HorzAlign="Left"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF333333"/>
+		<Text>미션 보상 : 땡땡땡 상자</Text>
+	</Text>
+	<Text>
+		<Format X="545" Y="209" Size="13" Style="Outline_full_2x" HorzAlign="Left"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF333333"/>
+		<Text>클로버를 모두 찾고 선물을 받으세요</Text>
+	</Text>
+	<Text>
+		<Format X="443" Y="257" Size="14" Style="Outline_full_2x" HorzAlign="Left"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF333333"/>
+		<Text>짝맞추기 보상</Text>
+	</Text>
+	<Text>
+		<Format Type="Matching_Count" X="747" Y="257" Size="13" Style="Outline_full_2x" HorzAlign="Right"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF333333"/>
+		<Text>누적 참여횟수 : 5회</Text>
+	</Text>
+	<Text>
+		<Format X="504" Y="361" Size="16" Style="Outline_full_2x" HorzAlign="Center"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF333333"/>
+		<Text>3회</Text>
+	</Text>
+	<Text>
+		<Format X="598" Y="361" Size="16" Style="Outline_full_2x" HorzAlign="Center"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF333333"/>
+		<Text>7회</Text>
+	</Text>
+	<Text>
+		<Format X="710" Y="361" Size="16" Style="Outline_full_2x" HorzAlign="Center"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF333333"/>
+		<Text>15회</Text>
+	</Text>
+
+	<ExtraInfo
+		MissionSuccess = "보상을 획득했습니다!"
+		MissionFail = "보상을 획득하지 못했습니다."
+		MissionDescription = "제한 시간내에 짝을 맞추면 보상을 받을 수 있습니다."
+		MissionReward = "미션 보상 : %s"
+		LimitTime = "제한시간 : %d : %d"
+		NormalTicket = "티켓 보유량 : %d"
+		PremiumTicket = "티켓 보유량 : %d"
+		MatchingCount = "짝맞추기 성공 횟수 : %d회"
+		GameExitWarning = "짝맞추기를 종료하시겠습니까?#(게임 중 종료 시 보상을 획득 할 수 없습니다.)"
+
+		Opening_Effect_Gap_Time = "50"
+		Max_Result_Effect = "6"
+		Result_Effect_1 = "BaseEffect002#effect_success_01"
+		Result_Effect_2 = "BaseEffect002#effect_success_02"
+		Result_Effect_3 = "BaseEffect002#effect_success_03"
+		Result_Effect_4 = "BaseEffect002#effect_success_04"
+		Result_Effect_5 = "BaseEffect002#effect_success_05"
+		Result_Effect_6 = "BaseEffect002#effect_success_06"
+
+		SoundMatchingSuccess = "Interface/compound_ok_01.wav"
+		SoundMatchingAllSuccess = "Interface/mode/champion_timeout.wav"
+		SoundGetReward = "Interface/Mission_clear.wav"
+		SoundCountDown3 = "Interface/mode/count_3.wav"
+		SoundCountDown2 = "Interface/mode/count_2.wav"
+		SoundCountDown1 = "Interface/mode/count_1.wav"
+		SoundCountDown0 = "Interface/mode/count_0_start.wav"
+	/>
+	
+	<Window ClassName="ioButton" Id="1">
+		<Size X="736" Y="11" Width="23" Height="23"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+            		<Image Type="Disable" Imageset="BaseImage001" Image="icon0_x_small_grayframe" >
+				<Area X="0" Y="0" />
+			</Image>
+            		<Image Type="NormalList" Imageset="BaseImage001" Image="icon0_x" >
+				<Area X="5" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="MatchingGameCardButton" Id="101">
+		<Size X="30" Y="89" Width="52" Height="52" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Normal" Imageset="UIIconPack129" Image="CardFlip_Icon">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Over" Imageset="UIIconPack129" Image="CardFlip_Icon_hover">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Push" Imageset="UIIconPack129" Image="CardFlip_Icon_press">
+				<Area X="32" Y="32" Width="50" Height="50" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+		</Imagery>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		 ClickSound = "interface/public_mouseclick_00.wav"
+		 EffectXPos="15"
+		 EffectYPos="17"
+
+		Card_Opening_Time = "250"
+		Card_Open_Time = "450"
+		Opening_Effect_Gap_Time = "30"
+		Max_Card_Opening_Effect = "8"
+		Card_Opening_Effect_1 = "BaseImage044#eventcardFlipEffect_0"
+		Card_Opening_Effect_2 = "BaseImage044#eventcardFlipEffect_1"
+		Card_Opening_Effect_3 = "BaseImage044#eventcardFlipEffect_2"
+		Card_Opening_Effect_4 = "BaseImage044#eventcardFlipEffect_3"
+		Card_Opening_Effect_5 = "BaseImage044#eventcardFlipEffect_4"
+		Card_Opening_Effect_6 = "BaseImage044#eventcardFlipEffect_5"
+		Card_Opening_Effect_7 = "BaseImage044#eventcardFlipEffect_6"
+		Card_Opening_Effect_8 = "BaseImage044#eventcardFlipEffect_7"
+
+		Matching_Effect_Gap_Time = "70"
+		Max_Card_Matching_Effect = "9"
+		Card_Matching_Effect_1 = "BaseEffect006#eventcardFlip_success_1"
+		Card_Matching_Effect_2 = "BaseEffect006#eventcardFlip_success_2"
+		Card_Matching_Effect_3 = "BaseEffect006#eventcardFlip_success_3"
+		Card_Matching_Effect_4 = "BaseEffect006#eventcardFlip_success_4"
+		Card_Matching_Effect_5 = "BaseEffect006#eventcardFlip_success_5"
+		Card_Matching_Effect_6 = "BaseEffect006#eventcardFlip_success_6"
+		Card_Matching_Effect_7 = "BaseEffect006#eventcardFlip_success_7"
+		Card_Matching_Effect_8 = "BaseEffect006#eventcardFlip_success_8"
+		Card_Matching_Effect_9 = "BaseEffect006#eventcardFlip_success_9"/>
+	</Window>
+
+	<Window ClassName="MatchingGameCardButton" Id="102">
+		<Size X="94" Y="89" Width="52" Height="52" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Normal" Imageset="UIIconPack129" Image="CardFlip_Icon">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Over" Imageset="UIIconPack129" Image="CardFlip_Icon_hover">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Push" Imageset="UIIconPack129" Image="CardFlip_Icon_press">
+				<Area X="32" Y="32" Width="50" Height="50" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+		</Imagery>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		 ClickSound = "interface/public_mouseclick_00.wav"
+		 EffectXPos="15"
+		 EffectYPos="17"
+
+		Card_Opening_Time = "250"
+		Card_Open_Time = "450"
+		Opening_Effect_Gap_Time = "30"
+		Max_Card_Opening_Effect = "8"
+		Card_Opening_Effect_1 = "BaseImage044#eventcardFlipEffect_0"
+		Card_Opening_Effect_2 = "BaseImage044#eventcardFlipEffect_1"
+		Card_Opening_Effect_3 = "BaseImage044#eventcardFlipEffect_2"
+		Card_Opening_Effect_4 = "BaseImage044#eventcardFlipEffect_3"
+		Card_Opening_Effect_5 = "BaseImage044#eventcardFlipEffect_4"
+		Card_Opening_Effect_6 = "BaseImage044#eventcardFlipEffect_5"
+		Card_Opening_Effect_7 = "BaseImage044#eventcardFlipEffect_6"
+		Card_Opening_Effect_8 = "BaseImage044#eventcardFlipEffect_7"
+
+		Matching_Effect_Gap_Time = "70"
+		Max_Card_Matching_Effect = "9"
+		Card_Matching_Effect_1 = "BaseEffect006#eventcardFlip_success_1"
+		Card_Matching_Effect_2 = "BaseEffect006#eventcardFlip_success_2"
+		Card_Matching_Effect_3 = "BaseEffect006#eventcardFlip_success_3"
+		Card_Matching_Effect_4 = "BaseEffect006#eventcardFlip_success_4"
+		Card_Matching_Effect_5 = "BaseEffect006#eventcardFlip_success_5"
+		Card_Matching_Effect_6 = "BaseEffect006#eventcardFlip_success_6"
+		Card_Matching_Effect_7 = "BaseEffect006#eventcardFlip_success_7"
+		Card_Matching_Effect_8 = "BaseEffect006#eventcardFlip_success_8"
+		Card_Matching_Effect_9 = "BaseEffect006#eventcardFlip_success_9"/>
+	</Window>
+
+	<Window ClassName="MatchingGameCardButton" Id="103">
+		<Size X="158" Y="89" Width="52" Height="52" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Normal" Imageset="UIIconPack129" Image="CardFlip_Icon">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Over" Imageset="UIIconPack129" Image="CardFlip_Icon_hover">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Push" Imageset="UIIconPack129" Image="CardFlip_Icon_press">
+				<Area X="32" Y="32" Width="50" Height="50" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+		</Imagery>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		 ClickSound = "interface/public_mouseclick_00.wav"
+		 EffectXPos="15"
+		 EffectYPos="17"
+
+		Card_Opening_Time = "250"
+		Card_Open_Time = "450"
+		Opening_Effect_Gap_Time = "30"
+		Max_Card_Opening_Effect = "8"
+		Card_Opening_Effect_1 = "BaseImage044#eventcardFlipEffect_0"
+		Card_Opening_Effect_2 = "BaseImage044#eventcardFlipEffect_1"
+		Card_Opening_Effect_3 = "BaseImage044#eventcardFlipEffect_2"
+		Card_Opening_Effect_4 = "BaseImage044#eventcardFlipEffect_3"
+		Card_Opening_Effect_5 = "BaseImage044#eventcardFlipEffect_4"
+		Card_Opening_Effect_6 = "BaseImage044#eventcardFlipEffect_5"
+		Card_Opening_Effect_7 = "BaseImage044#eventcardFlipEffect_6"
+		Card_Opening_Effect_8 = "BaseImage044#eventcardFlipEffect_7"
+
+		Matching_Effect_Gap_Time = "70"
+		Max_Card_Matching_Effect = "9"
+		Card_Matching_Effect_1 = "BaseEffect006#eventcardFlip_success_1"
+		Card_Matching_Effect_2 = "BaseEffect006#eventcardFlip_success_2"
+		Card_Matching_Effect_3 = "BaseEffect006#eventcardFlip_success_3"
+		Card_Matching_Effect_4 = "BaseEffect006#eventcardFlip_success_4"
+		Card_Matching_Effect_5 = "BaseEffect006#eventcardFlip_success_5"
+		Card_Matching_Effect_6 = "BaseEffect006#eventcardFlip_success_6"
+		Card_Matching_Effect_7 = "BaseEffect006#eventcardFlip_success_7"
+		Card_Matching_Effect_8 = "BaseEffect006#eventcardFlip_success_8"
+		Card_Matching_Effect_9 = "BaseEffect006#eventcardFlip_success_9"/>
+	</Window>
+
+	<Window ClassName="MatchingGameCardButton" Id="104">
+		<Size X="222" Y="89" Width="52" Height="52" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Normal" Imageset="UIIconPack129" Image="CardFlip_Icon">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Over" Imageset="UIIconPack129" Image="CardFlip_Icon_hover">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Push" Imageset="UIIconPack129" Image="CardFlip_Icon_press">
+				<Area X="32" Y="32" Width="50" Height="50" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+		</Imagery>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		 ClickSound = "interface/public_mouseclick_00.wav"
+		 EffectXPos="15"
+		 EffectYPos="17"
+
+		Card_Opening_Time = "250"
+		Card_Open_Time = "450"
+		Opening_Effect_Gap_Time = "30"
+		Max_Card_Opening_Effect = "8"
+		Card_Opening_Effect_1 = "BaseImage044#eventcardFlipEffect_0"
+		Card_Opening_Effect_2 = "BaseImage044#eventcardFlipEffect_1"
+		Card_Opening_Effect_3 = "BaseImage044#eventcardFlipEffect_2"
+		Card_Opening_Effect_4 = "BaseImage044#eventcardFlipEffect_3"
+		Card_Opening_Effect_5 = "BaseImage044#eventcardFlipEffect_4"
+		Card_Opening_Effect_6 = "BaseImage044#eventcardFlipEffect_5"
+		Card_Opening_Effect_7 = "BaseImage044#eventcardFlipEffect_6"
+		Card_Opening_Effect_8 = "BaseImage044#eventcardFlipEffect_7"
+
+		Matching_Effect_Gap_Time = "70"
+		Max_Card_Matching_Effect = "9"
+		Card_Matching_Effect_1 = "BaseEffect006#eventcardFlip_success_1"
+		Card_Matching_Effect_2 = "BaseEffect006#eventcardFlip_success_2"
+		Card_Matching_Effect_3 = "BaseEffect006#eventcardFlip_success_3"
+		Card_Matching_Effect_4 = "BaseEffect006#eventcardFlip_success_4"
+		Card_Matching_Effect_5 = "BaseEffect006#eventcardFlip_success_5"
+		Card_Matching_Effect_6 = "BaseEffect006#eventcardFlip_success_6"
+		Card_Matching_Effect_7 = "BaseEffect006#eventcardFlip_success_7"
+		Card_Matching_Effect_8 = "BaseEffect006#eventcardFlip_success_8"
+		Card_Matching_Effect_9 = "BaseEffect006#eventcardFlip_success_9"/>
+	</Window>
+
+	<Window ClassName="MatchingGameCardButton" Id="105">
+		<Size X="286" Y="89" Width="52" Height="52" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Normal" Imageset="UIIconPack129" Image="CardFlip_Icon">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Over" Imageset="UIIconPack129" Image="CardFlip_Icon_hover">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Push" Imageset="UIIconPack129" Image="CardFlip_Icon_press">
+				<Area X="32" Y="32" Width="50" Height="50" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+		</Imagery>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		 ClickSound = "interface/public_mouseclick_00.wav"
+		 EffectXPos="15"
+		 EffectYPos="17"
+
+		Card_Opening_Time = "250"
+		Card_Open_Time = "450"
+		Opening_Effect_Gap_Time = "30"
+		Max_Card_Opening_Effect = "8"
+		Card_Opening_Effect_1 = "BaseImage044#eventcardFlipEffect_0"
+		Card_Opening_Effect_2 = "BaseImage044#eventcardFlipEffect_1"
+		Card_Opening_Effect_3 = "BaseImage044#eventcardFlipEffect_2"
+		Card_Opening_Effect_4 = "BaseImage044#eventcardFlipEffect_3"
+		Card_Opening_Effect_5 = "BaseImage044#eventcardFlipEffect_4"
+		Card_Opening_Effect_6 = "BaseImage044#eventcardFlipEffect_5"
+		Card_Opening_Effect_7 = "BaseImage044#eventcardFlipEffect_6"
+		Card_Opening_Effect_8 = "BaseImage044#eventcardFlipEffect_7"
+
+		Matching_Effect_Gap_Time = "70"
+		Max_Card_Matching_Effect = "9"
+		Card_Matching_Effect_1 = "BaseEffect006#eventcardFlip_success_1"
+		Card_Matching_Effect_2 = "BaseEffect006#eventcardFlip_success_2"
+		Card_Matching_Effect_3 = "BaseEffect006#eventcardFlip_success_3"
+		Card_Matching_Effect_4 = "BaseEffect006#eventcardFlip_success_4"
+		Card_Matching_Effect_5 = "BaseEffect006#eventcardFlip_success_5"
+		Card_Matching_Effect_6 = "BaseEffect006#eventcardFlip_success_6"
+		Card_Matching_Effect_7 = "BaseEffect006#eventcardFlip_success_7"
+		Card_Matching_Effect_8 = "BaseEffect006#eventcardFlip_success_8"
+		Card_Matching_Effect_9 = "BaseEffect006#eventcardFlip_success_9"/>
+	</Window>
+
+	<Window ClassName="MatchingGameCardButton" Id="106">
+		<Size X="350" Y="89" Width="52" Height="52" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Normal" Imageset="UIIconPack129" Image="CardFlip_Icon">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Over" Imageset="UIIconPack129" Image="CardFlip_Icon_hover">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Push" Imageset="UIIconPack129" Image="CardFlip_Icon_press">
+				<Area X="32" Y="32" Width="50" Height="50" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+		</Imagery>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		 ClickSound = "interface/public_mouseclick_00.wav"
+		 EffectXPos="15"
+		 EffectYPos="17"
+
+		Card_Opening_Time = "250"
+		Card_Open_Time = "450"
+		Opening_Effect_Gap_Time = "30"
+		Max_Card_Opening_Effect = "8"
+		Card_Opening_Effect_1 = "BaseImage044#eventcardFlipEffect_0"
+		Card_Opening_Effect_2 = "BaseImage044#eventcardFlipEffect_1"
+		Card_Opening_Effect_3 = "BaseImage044#eventcardFlipEffect_2"
+		Card_Opening_Effect_4 = "BaseImage044#eventcardFlipEffect_3"
+		Card_Opening_Effect_5 = "BaseImage044#eventcardFlipEffect_4"
+		Card_Opening_Effect_6 = "BaseImage044#eventcardFlipEffect_5"
+		Card_Opening_Effect_7 = "BaseImage044#eventcardFlipEffect_6"
+		Card_Opening_Effect_8 = "BaseImage044#eventcardFlipEffect_7"
+
+		Matching_Effect_Gap_Time = "70"
+		Max_Card_Matching_Effect = "9"
+		Card_Matching_Effect_1 = "BaseEffect006#eventcardFlip_success_1"
+		Card_Matching_Effect_2 = "BaseEffect006#eventcardFlip_success_2"
+		Card_Matching_Effect_3 = "BaseEffect006#eventcardFlip_success_3"
+		Card_Matching_Effect_4 = "BaseEffect006#eventcardFlip_success_4"
+		Card_Matching_Effect_5 = "BaseEffect006#eventcardFlip_success_5"
+		Card_Matching_Effect_6 = "BaseEffect006#eventcardFlip_success_6"
+		Card_Matching_Effect_7 = "BaseEffect006#eventcardFlip_success_7"
+		Card_Matching_Effect_8 = "BaseEffect006#eventcardFlip_success_8"
+		Card_Matching_Effect_9 = "BaseEffect006#eventcardFlip_success_9"/>
+	</Window>
+
+	<Window ClassName="MatchingGameCardButton" Id="107">
+		<Size X="30" Y="149" Width="52" Height="52" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Normal" Imageset="UIIconPack129" Image="CardFlip_Icon">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Over" Imageset="UIIconPack129" Image="CardFlip_Icon_hover">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Push" Imageset="UIIconPack129" Image="CardFlip_Icon_press">
+				<Area X="32" Y="32" Width="50" Height="50" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+		</Imagery>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		 ClickSound = "interface/public_mouseclick_00.wav"
+		 EffectXPos="15"
+		 EffectYPos="17"
+
+		Card_Opening_Time = "250"
+		Card_Open_Time = "450"
+		Opening_Effect_Gap_Time = "30"
+		Max_Card_Opening_Effect = "8"
+		Card_Opening_Effect_1 = "BaseImage044#eventcardFlipEffect_0"
+		Card_Opening_Effect_2 = "BaseImage044#eventcardFlipEffect_1"
+		Card_Opening_Effect_3 = "BaseImage044#eventcardFlipEffect_2"
+		Card_Opening_Effect_4 = "BaseImage044#eventcardFlipEffect_3"
+		Card_Opening_Effect_5 = "BaseImage044#eventcardFlipEffect_4"
+		Card_Opening_Effect_6 = "BaseImage044#eventcardFlipEffect_5"
+		Card_Opening_Effect_7 = "BaseImage044#eventcardFlipEffect_6"
+		Card_Opening_Effect_8 = "BaseImage044#eventcardFlipEffect_7"
+
+		Matching_Effect_Gap_Time = "70"
+		Max_Card_Matching_Effect = "9"
+		Card_Matching_Effect_1 = "BaseEffect006#eventcardFlip_success_1"
+		Card_Matching_Effect_2 = "BaseEffect006#eventcardFlip_success_2"
+		Card_Matching_Effect_3 = "BaseEffect006#eventcardFlip_success_3"
+		Card_Matching_Effect_4 = "BaseEffect006#eventcardFlip_success_4"
+		Card_Matching_Effect_5 = "BaseEffect006#eventcardFlip_success_5"
+		Card_Matching_Effect_6 = "BaseEffect006#eventcardFlip_success_6"
+		Card_Matching_Effect_7 = "BaseEffect006#eventcardFlip_success_7"
+		Card_Matching_Effect_8 = "BaseEffect006#eventcardFlip_success_8"
+		Card_Matching_Effect_9 = "BaseEffect006#eventcardFlip_success_9"/>
+	</Window>
+
+	<Window ClassName="MatchingGameCardButton" Id="108">
+		<Size X="94" Y="149" Width="52" Height="52" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Normal" Imageset="UIIconPack129" Image="CardFlip_Icon">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Over" Imageset="UIIconPack129" Image="CardFlip_Icon_hover">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Push" Imageset="UIIconPack129" Image="CardFlip_Icon_press">
+				<Area X="32" Y="32" Width="50" Height="50" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+		</Imagery>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		 ClickSound = "interface/public_mouseclick_00.wav"
+		 EffectXPos="15"
+		 EffectYPos="17"
+
+		Card_Opening_Time = "250"
+		Card_Open_Time = "450"
+		Opening_Effect_Gap_Time = "30"
+		Max_Card_Opening_Effect = "8"
+		Card_Opening_Effect_1 = "BaseImage044#eventcardFlipEffect_0"
+		Card_Opening_Effect_2 = "BaseImage044#eventcardFlipEffect_1"
+		Card_Opening_Effect_3 = "BaseImage044#eventcardFlipEffect_2"
+		Card_Opening_Effect_4 = "BaseImage044#eventcardFlipEffect_3"
+		Card_Opening_Effect_5 = "BaseImage044#eventcardFlipEffect_4"
+		Card_Opening_Effect_6 = "BaseImage044#eventcardFlipEffect_5"
+		Card_Opening_Effect_7 = "BaseImage044#eventcardFlipEffect_6"
+		Card_Opening_Effect_8 = "BaseImage044#eventcardFlipEffect_7"
+
+		Matching_Effect_Gap_Time = "70"
+		Max_Card_Matching_Effect = "9"
+		Card_Matching_Effect_1 = "BaseEffect006#eventcardFlip_success_1"
+		Card_Matching_Effect_2 = "BaseEffect006#eventcardFlip_success_2"
+		Card_Matching_Effect_3 = "BaseEffect006#eventcardFlip_success_3"
+		Card_Matching_Effect_4 = "BaseEffect006#eventcardFlip_success_4"
+		Card_Matching_Effect_5 = "BaseEffect006#eventcardFlip_success_5"
+		Card_Matching_Effect_6 = "BaseEffect006#eventcardFlip_success_6"
+		Card_Matching_Effect_7 = "BaseEffect006#eventcardFlip_success_7"
+		Card_Matching_Effect_8 = "BaseEffect006#eventcardFlip_success_8"
+		Card_Matching_Effect_9 = "BaseEffect006#eventcardFlip_success_9"/>
+	</Window>
+
+	<Window ClassName="MatchingGameCardButton" Id="109">
+		<Size X="158" Y="149" Width="52" Height="52" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Normal" Imageset="UIIconPack129" Image="CardFlip_Icon">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Over" Imageset="UIIconPack129" Image="CardFlip_Icon_hover">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Push" Imageset="UIIconPack129" Image="CardFlip_Icon_press">
+				<Area X="32" Y="32" Width="50" Height="50" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+		</Imagery>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		 ClickSound = "interface/public_mouseclick_00.wav"
+		 EffectXPos="15"
+		 EffectYPos="17"
+
+		Card_Opening_Time = "250"
+		Card_Open_Time = "450"
+		Opening_Effect_Gap_Time = "30"
+		Max_Card_Opening_Effect = "8"
+		Card_Opening_Effect_1 = "BaseImage044#eventcardFlipEffect_0"
+		Card_Opening_Effect_2 = "BaseImage044#eventcardFlipEffect_1"
+		Card_Opening_Effect_3 = "BaseImage044#eventcardFlipEffect_2"
+		Card_Opening_Effect_4 = "BaseImage044#eventcardFlipEffect_3"
+		Card_Opening_Effect_5 = "BaseImage044#eventcardFlipEffect_4"
+		Card_Opening_Effect_6 = "BaseImage044#eventcardFlipEffect_5"
+		Card_Opening_Effect_7 = "BaseImage044#eventcardFlipEffect_6"
+		Card_Opening_Effect_8 = "BaseImage044#eventcardFlipEffect_7"
+
+		Matching_Effect_Gap_Time = "70"
+		Max_Card_Matching_Effect = "9"
+		Card_Matching_Effect_1 = "BaseEffect006#eventcardFlip_success_1"
+		Card_Matching_Effect_2 = "BaseEffect006#eventcardFlip_success_2"
+		Card_Matching_Effect_3 = "BaseEffect006#eventcardFlip_success_3"
+		Card_Matching_Effect_4 = "BaseEffect006#eventcardFlip_success_4"
+		Card_Matching_Effect_5 = "BaseEffect006#eventcardFlip_success_5"
+		Card_Matching_Effect_6 = "BaseEffect006#eventcardFlip_success_6"
+		Card_Matching_Effect_7 = "BaseEffect006#eventcardFlip_success_7"
+		Card_Matching_Effect_8 = "BaseEffect006#eventcardFlip_success_8"
+		Card_Matching_Effect_9 = "BaseEffect006#eventcardFlip_success_9"/>
+	</Window>
+
+	<Window ClassName="MatchingGameCardButton" Id="110">
+		<Size X="222" Y="149" Width="52" Height="52" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Normal" Imageset="UIIconPack129" Image="CardFlip_Icon">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Over" Imageset="UIIconPack129" Image="CardFlip_Icon_hover">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Push" Imageset="UIIconPack129" Image="CardFlip_Icon_press">
+				<Area X="32" Y="32" Width="50" Height="50" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+		</Imagery>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		 ClickSound = "interface/public_mouseclick_00.wav"
+		 EffectXPos="15"
+		 EffectYPos="17"
+
+		Card_Opening_Time = "250"
+		Card_Open_Time = "450"
+		Opening_Effect_Gap_Time = "30"
+		Max_Card_Opening_Effect = "8"
+		Card_Opening_Effect_1 = "BaseImage044#eventcardFlipEffect_0"
+		Card_Opening_Effect_2 = "BaseImage044#eventcardFlipEffect_1"
+		Card_Opening_Effect_3 = "BaseImage044#eventcardFlipEffect_2"
+		Card_Opening_Effect_4 = "BaseImage044#eventcardFlipEffect_3"
+		Card_Opening_Effect_5 = "BaseImage044#eventcardFlipEffect_4"
+		Card_Opening_Effect_6 = "BaseImage044#eventcardFlipEffect_5"
+		Card_Opening_Effect_7 = "BaseImage044#eventcardFlipEffect_6"
+		Card_Opening_Effect_8 = "BaseImage044#eventcardFlipEffect_7"
+
+		Matching_Effect_Gap_Time = "70"
+		Max_Card_Matching_Effect = "9"
+		Card_Matching_Effect_1 = "BaseEffect006#eventcardFlip_success_1"
+		Card_Matching_Effect_2 = "BaseEffect006#eventcardFlip_success_2"
+		Card_Matching_Effect_3 = "BaseEffect006#eventcardFlip_success_3"
+		Card_Matching_Effect_4 = "BaseEffect006#eventcardFlip_success_4"
+		Card_Matching_Effect_5 = "BaseEffect006#eventcardFlip_success_5"
+		Card_Matching_Effect_6 = "BaseEffect006#eventcardFlip_success_6"
+		Card_Matching_Effect_7 = "BaseEffect006#eventcardFlip_success_7"
+		Card_Matching_Effect_8 = "BaseEffect006#eventcardFlip_success_8"
+		Card_Matching_Effect_9 = "BaseEffect006#eventcardFlip_success_9"/>
+	</Window>
+
+	<Window ClassName="MatchingGameCardButton" Id="111">
+		<Size X="286" Y="149" Width="52" Height="52" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Normal" Imageset="UIIconPack129" Image="CardFlip_Icon">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Over" Imageset="UIIconPack129" Image="CardFlip_Icon_hover">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Push" Imageset="UIIconPack129" Image="CardFlip_Icon_press">
+				<Area X="32" Y="32" Width="50" Height="50" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+		</Imagery>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		 ClickSound = "interface/public_mouseclick_00.wav"
+		 EffectXPos="15"
+		 EffectYPos="17"
+
+		Card_Opening_Time = "250"
+		Card_Open_Time = "450"
+		Opening_Effect_Gap_Time = "30"
+		Max_Card_Opening_Effect = "8"
+		Card_Opening_Effect_1 = "BaseImage044#eventcardFlipEffect_0"
+		Card_Opening_Effect_2 = "BaseImage044#eventcardFlipEffect_1"
+		Card_Opening_Effect_3 = "BaseImage044#eventcardFlipEffect_2"
+		Card_Opening_Effect_4 = "BaseImage044#eventcardFlipEffect_3"
+		Card_Opening_Effect_5 = "BaseImage044#eventcardFlipEffect_4"
+		Card_Opening_Effect_6 = "BaseImage044#eventcardFlipEffect_5"
+		Card_Opening_Effect_7 = "BaseImage044#eventcardFlipEffect_6"
+		Card_Opening_Effect_8 = "BaseImage044#eventcardFlipEffect_7"
+
+		Matching_Effect_Gap_Time = "70"
+		Max_Card_Matching_Effect = "9"
+		Card_Matching_Effect_1 = "BaseEffect006#eventcardFlip_success_1"
+		Card_Matching_Effect_2 = "BaseEffect006#eventcardFlip_success_2"
+		Card_Matching_Effect_3 = "BaseEffect006#eventcardFlip_success_3"
+		Card_Matching_Effect_4 = "BaseEffect006#eventcardFlip_success_4"
+		Card_Matching_Effect_5 = "BaseEffect006#eventcardFlip_success_5"
+		Card_Matching_Effect_6 = "BaseEffect006#eventcardFlip_success_6"
+		Card_Matching_Effect_7 = "BaseEffect006#eventcardFlip_success_7"
+		Card_Matching_Effect_8 = "BaseEffect006#eventcardFlip_success_8"
+		Card_Matching_Effect_9 = "BaseEffect006#eventcardFlip_success_9"/>
+	</Window>
+
+	<Window ClassName="MatchingGameCardButton" Id="112">
+		<Size X="350" Y="149" Width="52" Height="52" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Normal" Imageset="UIIconPack129" Image="CardFlip_Icon">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Over" Imageset="UIIconPack129" Image="CardFlip_Icon_hover">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Push" Imageset="UIIconPack129" Image="CardFlip_Icon_press">
+				<Area X="32" Y="32" Width="50" Height="50" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+		</Imagery>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		 ClickSound = "interface/public_mouseclick_00.wav"
+		 EffectXPos="15"
+		 EffectYPos="17"
+
+		Card_Opening_Time = "250"
+		Card_Open_Time = "450"
+		Opening_Effect_Gap_Time = "30"
+		Max_Card_Opening_Effect = "8"
+		Card_Opening_Effect_1 = "BaseImage044#eventcardFlipEffect_0"
+		Card_Opening_Effect_2 = "BaseImage044#eventcardFlipEffect_1"
+		Card_Opening_Effect_3 = "BaseImage044#eventcardFlipEffect_2"
+		Card_Opening_Effect_4 = "BaseImage044#eventcardFlipEffect_3"
+		Card_Opening_Effect_5 = "BaseImage044#eventcardFlipEffect_4"
+		Card_Opening_Effect_6 = "BaseImage044#eventcardFlipEffect_5"
+		Card_Opening_Effect_7 = "BaseImage044#eventcardFlipEffect_6"
+		Card_Opening_Effect_8 = "BaseImage044#eventcardFlipEffect_7"
+
+		Matching_Effect_Gap_Time = "70"
+		Max_Card_Matching_Effect = "9"
+		Card_Matching_Effect_1 = "BaseEffect006#eventcardFlip_success_1"
+		Card_Matching_Effect_2 = "BaseEffect006#eventcardFlip_success_2"
+		Card_Matching_Effect_3 = "BaseEffect006#eventcardFlip_success_3"
+		Card_Matching_Effect_4 = "BaseEffect006#eventcardFlip_success_4"
+		Card_Matching_Effect_5 = "BaseEffect006#eventcardFlip_success_5"
+		Card_Matching_Effect_6 = "BaseEffect006#eventcardFlip_success_6"
+		Card_Matching_Effect_7 = "BaseEffect006#eventcardFlip_success_7"
+		Card_Matching_Effect_8 = "BaseEffect006#eventcardFlip_success_8"
+		Card_Matching_Effect_9 = "BaseEffect006#eventcardFlip_success_9"/>
+	</Window>
+
+	<Window ClassName="MatchingGameCardButton" Id="113">
+		<Size X="30" Y="209" Width="52" Height="52" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Normal" Imageset="UIIconPack129" Image="CardFlip_Icon">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Over" Imageset="UIIconPack129" Image="CardFlip_Icon_hover">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Push" Imageset="UIIconPack129" Image="CardFlip_Icon_press">
+				<Area X="32" Y="32" Width="50" Height="50" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+		</Imagery>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		 ClickSound = "interface/public_mouseclick_00.wav"
+		 EffectXPos="15"
+		 EffectYPos="17"
+
+		Card_Opening_Time = "250"
+		Card_Open_Time = "450"
+		Opening_Effect_Gap_Time = "30"
+		Max_Card_Opening_Effect = "8"
+		Card_Opening_Effect_1 = "BaseImage044#eventcardFlipEffect_0"
+		Card_Opening_Effect_2 = "BaseImage044#eventcardFlipEffect_1"
+		Card_Opening_Effect_3 = "BaseImage044#eventcardFlipEffect_2"
+		Card_Opening_Effect_4 = "BaseImage044#eventcardFlipEffect_3"
+		Card_Opening_Effect_5 = "BaseImage044#eventcardFlipEffect_4"
+		Card_Opening_Effect_6 = "BaseImage044#eventcardFlipEffect_5"
+		Card_Opening_Effect_7 = "BaseImage044#eventcardFlipEffect_6"
+		Card_Opening_Effect_8 = "BaseImage044#eventcardFlipEffect_7"
+
+		Matching_Effect_Gap_Time = "70"
+		Max_Card_Matching_Effect = "9"
+		Card_Matching_Effect_1 = "BaseEffect006#eventcardFlip_success_1"
+		Card_Matching_Effect_2 = "BaseEffect006#eventcardFlip_success_2"
+		Card_Matching_Effect_3 = "BaseEffect006#eventcardFlip_success_3"
+		Card_Matching_Effect_4 = "BaseEffect006#eventcardFlip_success_4"
+		Card_Matching_Effect_5 = "BaseEffect006#eventcardFlip_success_5"
+		Card_Matching_Effect_6 = "BaseEffect006#eventcardFlip_success_6"
+		Card_Matching_Effect_7 = "BaseEffect006#eventcardFlip_success_7"
+		Card_Matching_Effect_8 = "BaseEffect006#eventcardFlip_success_8"
+		Card_Matching_Effect_9 = "BaseEffect006#eventcardFlip_success_9"/>
+	</Window>
+
+	<Window ClassName="MatchingGameCardButton" Id="114">
+		<Size X="94" Y="209" Width="52" Height="52" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Normal" Imageset="UIIconPack129" Image="CardFlip_Icon">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Over" Imageset="UIIconPack129" Image="CardFlip_Icon_hover">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Push" Imageset="UIIconPack129" Image="CardFlip_Icon_press">
+				<Area X="32" Y="32" Width="50" Height="50" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+		</Imagery>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		 ClickSound = "interface/public_mouseclick_00.wav"
+		 EffectXPos="15"
+		 EffectYPos="17"
+
+		Card_Opening_Time = "250"
+		Card_Open_Time = "450"
+		Opening_Effect_Gap_Time = "30"
+		Max_Card_Opening_Effect = "8"
+		Card_Opening_Effect_1 = "BaseImage044#eventcardFlipEffect_0"
+		Card_Opening_Effect_2 = "BaseImage044#eventcardFlipEffect_1"
+		Card_Opening_Effect_3 = "BaseImage044#eventcardFlipEffect_2"
+		Card_Opening_Effect_4 = "BaseImage044#eventcardFlipEffect_3"
+		Card_Opening_Effect_5 = "BaseImage044#eventcardFlipEffect_4"
+		Card_Opening_Effect_6 = "BaseImage044#eventcardFlipEffect_5"
+		Card_Opening_Effect_7 = "BaseImage044#eventcardFlipEffect_6"
+		Card_Opening_Effect_8 = "BaseImage044#eventcardFlipEffect_7"
+
+		Matching_Effect_Gap_Time = "70"
+		Max_Card_Matching_Effect = "9"
+		Card_Matching_Effect_1 = "BaseEffect006#eventcardFlip_success_1"
+		Card_Matching_Effect_2 = "BaseEffect006#eventcardFlip_success_2"
+		Card_Matching_Effect_3 = "BaseEffect006#eventcardFlip_success_3"
+		Card_Matching_Effect_4 = "BaseEffect006#eventcardFlip_success_4"
+		Card_Matching_Effect_5 = "BaseEffect006#eventcardFlip_success_5"
+		Card_Matching_Effect_6 = "BaseEffect006#eventcardFlip_success_6"
+		Card_Matching_Effect_7 = "BaseEffect006#eventcardFlip_success_7"
+		Card_Matching_Effect_8 = "BaseEffect006#eventcardFlip_success_8"
+		Card_Matching_Effect_9 = "BaseEffect006#eventcardFlip_success_9"/>
+	</Window>
+
+	<Window ClassName="MatchingGameCardButton" Id="115">
+		<Size X="158" Y="209" Width="52" Height="52" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Normal" Imageset="UIIconPack129" Image="CardFlip_Icon">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Over" Imageset="UIIconPack129" Image="CardFlip_Icon_hover">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Push" Imageset="UIIconPack129" Image="CardFlip_Icon_press">
+				<Area X="32" Y="32" Width="50" Height="50" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+		</Imagery>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		 ClickSound = "interface/public_mouseclick_00.wav"
+		 EffectXPos="15"
+		 EffectYPos="17"
+
+		Card_Opening_Time = "250"
+		Card_Open_Time = "450"
+		Opening_Effect_Gap_Time = "30"
+		Max_Card_Opening_Effect = "8"
+		Card_Opening_Effect_1 = "BaseImage044#eventcardFlipEffect_0"
+		Card_Opening_Effect_2 = "BaseImage044#eventcardFlipEffect_1"
+		Card_Opening_Effect_3 = "BaseImage044#eventcardFlipEffect_2"
+		Card_Opening_Effect_4 = "BaseImage044#eventcardFlipEffect_3"
+		Card_Opening_Effect_5 = "BaseImage044#eventcardFlipEffect_4"
+		Card_Opening_Effect_6 = "BaseImage044#eventcardFlipEffect_5"
+		Card_Opening_Effect_7 = "BaseImage044#eventcardFlipEffect_6"
+		Card_Opening_Effect_8 = "BaseImage044#eventcardFlipEffect_7"
+
+		Matching_Effect_Gap_Time = "70"
+		Max_Card_Matching_Effect = "9"
+		Card_Matching_Effect_1 = "BaseEffect006#eventcardFlip_success_1"
+		Card_Matching_Effect_2 = "BaseEffect006#eventcardFlip_success_2"
+		Card_Matching_Effect_3 = "BaseEffect006#eventcardFlip_success_3"
+		Card_Matching_Effect_4 = "BaseEffect006#eventcardFlip_success_4"
+		Card_Matching_Effect_5 = "BaseEffect006#eventcardFlip_success_5"
+		Card_Matching_Effect_6 = "BaseEffect006#eventcardFlip_success_6"
+		Card_Matching_Effect_7 = "BaseEffect006#eventcardFlip_success_7"
+		Card_Matching_Effect_8 = "BaseEffect006#eventcardFlip_success_8"
+		Card_Matching_Effect_9 = "BaseEffect006#eventcardFlip_success_9"/>
+	</Window>
+
+	<Window ClassName="MatchingGameCardButton" Id="116">
+		<Size X="222" Y="209" Width="52" Height="52" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Normal" Imageset="UIIconPack129" Image="CardFlip_Icon">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Over" Imageset="UIIconPack129" Image="CardFlip_Icon_hover">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Push" Imageset="UIIconPack129" Image="CardFlip_Icon_press">
+				<Area X="32" Y="32" Width="50" Height="50" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+		</Imagery>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		 ClickSound = "interface/public_mouseclick_00.wav"
+		 EffectXPos="15"
+		 EffectYPos="17"
+
+		Card_Opening_Time = "250"
+		Card_Open_Time = "450"
+		Opening_Effect_Gap_Time = "30"
+		Max_Card_Opening_Effect = "8"
+		Card_Opening_Effect_1 = "BaseImage044#eventcardFlipEffect_0"
+		Card_Opening_Effect_2 = "BaseImage044#eventcardFlipEffect_1"
+		Card_Opening_Effect_3 = "BaseImage044#eventcardFlipEffect_2"
+		Card_Opening_Effect_4 = "BaseImage044#eventcardFlipEffect_3"
+		Card_Opening_Effect_5 = "BaseImage044#eventcardFlipEffect_4"
+		Card_Opening_Effect_6 = "BaseImage044#eventcardFlipEffect_5"
+		Card_Opening_Effect_7 = "BaseImage044#eventcardFlipEffect_6"
+		Card_Opening_Effect_8 = "BaseImage044#eventcardFlipEffect_7"
+
+		Matching_Effect_Gap_Time = "70"
+		Max_Card_Matching_Effect = "9"
+		Card_Matching_Effect_1 = "BaseEffect006#eventcardFlip_success_1"
+		Card_Matching_Effect_2 = "BaseEffect006#eventcardFlip_success_2"
+		Card_Matching_Effect_3 = "BaseEffect006#eventcardFlip_success_3"
+		Card_Matching_Effect_4 = "BaseEffect006#eventcardFlip_success_4"
+		Card_Matching_Effect_5 = "BaseEffect006#eventcardFlip_success_5"
+		Card_Matching_Effect_6 = "BaseEffect006#eventcardFlip_success_6"
+		Card_Matching_Effect_7 = "BaseEffect006#eventcardFlip_success_7"
+		Card_Matching_Effect_8 = "BaseEffect006#eventcardFlip_success_8"
+		Card_Matching_Effect_9 = "BaseEffect006#eventcardFlip_success_9"/>
+	</Window>
+
+	<Window ClassName="MatchingGameCardButton" Id="117">
+		<Size X="286" Y="209" Width="52" Height="52" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Normal" Imageset="UIIconPack129" Image="CardFlip_Icon">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Over" Imageset="UIIconPack129" Image="CardFlip_Icon_hover">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Push" Imageset="UIIconPack129" Image="CardFlip_Icon_press">
+				<Area X="32" Y="32" Width="50" Height="50" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+		</Imagery>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		 ClickSound = "interface/public_mouseclick_00.wav"
+		 EffectXPos="15"
+		 EffectYPos="17"
+
+		Card_Opening_Time = "250"
+		Card_Open_Time = "450"
+		Opening_Effect_Gap_Time = "30"
+		Max_Card_Opening_Effect = "8"
+		Card_Opening_Effect_1 = "BaseImage044#eventcardFlipEffect_0"
+		Card_Opening_Effect_2 = "BaseImage044#eventcardFlipEffect_1"
+		Card_Opening_Effect_3 = "BaseImage044#eventcardFlipEffect_2"
+		Card_Opening_Effect_4 = "BaseImage044#eventcardFlipEffect_3"
+		Card_Opening_Effect_5 = "BaseImage044#eventcardFlipEffect_4"
+		Card_Opening_Effect_6 = "BaseImage044#eventcardFlipEffect_5"
+		Card_Opening_Effect_7 = "BaseImage044#eventcardFlipEffect_6"
+		Card_Opening_Effect_8 = "BaseImage044#eventcardFlipEffect_7"
+
+		Matching_Effect_Gap_Time = "70"
+		Max_Card_Matching_Effect = "9"
+		Card_Matching_Effect_1 = "BaseEffect006#eventcardFlip_success_1"
+		Card_Matching_Effect_2 = "BaseEffect006#eventcardFlip_success_2"
+		Card_Matching_Effect_3 = "BaseEffect006#eventcardFlip_success_3"
+		Card_Matching_Effect_4 = "BaseEffect006#eventcardFlip_success_4"
+		Card_Matching_Effect_5 = "BaseEffect006#eventcardFlip_success_5"
+		Card_Matching_Effect_6 = "BaseEffect006#eventcardFlip_success_6"
+		Card_Matching_Effect_7 = "BaseEffect006#eventcardFlip_success_7"
+		Card_Matching_Effect_8 = "BaseEffect006#eventcardFlip_success_8"
+		Card_Matching_Effect_9 = "BaseEffect006#eventcardFlip_success_9"/>
+	</Window>
+
+	<Window ClassName="MatchingGameCardButton" Id="118">
+		<Size X="350" Y="209" Width="52" Height="52" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Normal" Imageset="UIIconPack129" Image="CardFlip_Icon">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Over" Imageset="UIIconPack129" Image="CardFlip_Icon_hover">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Push" Imageset="UIIconPack129" Image="CardFlip_Icon_press">
+				<Area X="32" Y="32" Width="50" Height="50" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+		</Imagery>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		 ClickSound = "interface/public_mouseclick_00.wav"
+		 EffectXPos="15"
+		 EffectYPos="17"
+
+		Card_Opening_Time = "250"
+		Card_Open_Time = "450"
+		Opening_Effect_Gap_Time = "30"
+		Max_Card_Opening_Effect = "8"
+		Card_Opening_Effect_1 = "BaseImage044#eventcardFlipEffect_0"
+		Card_Opening_Effect_2 = "BaseImage044#eventcardFlipEffect_1"
+		Card_Opening_Effect_3 = "BaseImage044#eventcardFlipEffect_2"
+		Card_Opening_Effect_4 = "BaseImage044#eventcardFlipEffect_3"
+		Card_Opening_Effect_5 = "BaseImage044#eventcardFlipEffect_4"
+		Card_Opening_Effect_6 = "BaseImage044#eventcardFlipEffect_5"
+		Card_Opening_Effect_7 = "BaseImage044#eventcardFlipEffect_6"
+		Card_Opening_Effect_8 = "BaseImage044#eventcardFlipEffect_7"
+
+		Matching_Effect_Gap_Time = "70"
+		Max_Card_Matching_Effect = "9"
+		Card_Matching_Effect_1 = "BaseEffect006#eventcardFlip_success_1"
+		Card_Matching_Effect_2 = "BaseEffect006#eventcardFlip_success_2"
+		Card_Matching_Effect_3 = "BaseEffect006#eventcardFlip_success_3"
+		Card_Matching_Effect_4 = "BaseEffect006#eventcardFlip_success_4"
+		Card_Matching_Effect_5 = "BaseEffect006#eventcardFlip_success_5"
+		Card_Matching_Effect_6 = "BaseEffect006#eventcardFlip_success_6"
+		Card_Matching_Effect_7 = "BaseEffect006#eventcardFlip_success_7"
+		Card_Matching_Effect_8 = "BaseEffect006#eventcardFlip_success_8"
+		Card_Matching_Effect_9 = "BaseEffect006#eventcardFlip_success_9"/>
+	</Window>
+
+	<Window ClassName="MatchingGameCardButton" Id="119">
+		<Size X="30" Y="269" Width="52" Height="52" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Normal" Imageset="UIIconPack129" Image="CardFlip_Icon">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Over" Imageset="UIIconPack129" Image="CardFlip_Icon_hover">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Push" Imageset="UIIconPack129" Image="CardFlip_Icon_press">
+				<Area X="32" Y="32" Width="50" Height="50" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+		</Imagery>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		 ClickSound = "interface/public_mouseclick_00.wav"
+		 EffectXPos="15"
+		 EffectYPos="17"
+
+		Card_Opening_Time = "250"
+		Card_Open_Time = "450"
+		Opening_Effect_Gap_Time = "30"
+		Max_Card_Opening_Effect = "8"
+		Card_Opening_Effect_1 = "BaseImage044#eventcardFlipEffect_0"
+		Card_Opening_Effect_2 = "BaseImage044#eventcardFlipEffect_1"
+		Card_Opening_Effect_3 = "BaseImage044#eventcardFlipEffect_2"
+		Card_Opening_Effect_4 = "BaseImage044#eventcardFlipEffect_3"
+		Card_Opening_Effect_5 = "BaseImage044#eventcardFlipEffect_4"
+		Card_Opening_Effect_6 = "BaseImage044#eventcardFlipEffect_5"
+		Card_Opening_Effect_7 = "BaseImage044#eventcardFlipEffect_6"
+		Card_Opening_Effect_8 = "BaseImage044#eventcardFlipEffect_7"
+
+		Matching_Effect_Gap_Time = "70"
+		Max_Card_Matching_Effect = "9"
+		Card_Matching_Effect_1 = "BaseEffect006#eventcardFlip_success_1"
+		Card_Matching_Effect_2 = "BaseEffect006#eventcardFlip_success_2"
+		Card_Matching_Effect_3 = "BaseEffect006#eventcardFlip_success_3"
+		Card_Matching_Effect_4 = "BaseEffect006#eventcardFlip_success_4"
+		Card_Matching_Effect_5 = "BaseEffect006#eventcardFlip_success_5"
+		Card_Matching_Effect_6 = "BaseEffect006#eventcardFlip_success_6"
+		Card_Matching_Effect_7 = "BaseEffect006#eventcardFlip_success_7"
+		Card_Matching_Effect_8 = "BaseEffect006#eventcardFlip_success_8"
+		Card_Matching_Effect_9 = "BaseEffect006#eventcardFlip_success_9"/>
+	</Window>
+
+	<Window ClassName="MatchingGameCardButton" Id="120">
+		<Size X="94" Y="269" Width="52" Height="52" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Normal" Imageset="UIIconPack129" Image="CardFlip_Icon">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Over" Imageset="UIIconPack129" Image="CardFlip_Icon_hover">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Push" Imageset="UIIconPack129" Image="CardFlip_Icon_press">
+				<Area X="32" Y="32" Width="50" Height="50" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+		</Imagery>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		 ClickSound = "interface/public_mouseclick_00.wav"
+		 EffectXPos="15"
+		 EffectYPos="17"
+
+		Card_Opening_Time = "250"
+		Card_Open_Time = "450"
+		Opening_Effect_Gap_Time = "30"
+		Max_Card_Opening_Effect = "8"
+		Card_Opening_Effect_1 = "BaseImage044#eventcardFlipEffect_0"
+		Card_Opening_Effect_2 = "BaseImage044#eventcardFlipEffect_1"
+		Card_Opening_Effect_3 = "BaseImage044#eventcardFlipEffect_2"
+		Card_Opening_Effect_4 = "BaseImage044#eventcardFlipEffect_3"
+		Card_Opening_Effect_5 = "BaseImage044#eventcardFlipEffect_4"
+		Card_Opening_Effect_6 = "BaseImage044#eventcardFlipEffect_5"
+		Card_Opening_Effect_7 = "BaseImage044#eventcardFlipEffect_6"
+		Card_Opening_Effect_8 = "BaseImage044#eventcardFlipEffect_7"
+
+		Matching_Effect_Gap_Time = "70"
+		Max_Card_Matching_Effect = "9"
+		Card_Matching_Effect_1 = "BaseEffect006#eventcardFlip_success_1"
+		Card_Matching_Effect_2 = "BaseEffect006#eventcardFlip_success_2"
+		Card_Matching_Effect_3 = "BaseEffect006#eventcardFlip_success_3"
+		Card_Matching_Effect_4 = "BaseEffect006#eventcardFlip_success_4"
+		Card_Matching_Effect_5 = "BaseEffect006#eventcardFlip_success_5"
+		Card_Matching_Effect_6 = "BaseEffect006#eventcardFlip_success_6"
+		Card_Matching_Effect_7 = "BaseEffect006#eventcardFlip_success_7"
+		Card_Matching_Effect_8 = "BaseEffect006#eventcardFlip_success_8"
+		Card_Matching_Effect_9 = "BaseEffect006#eventcardFlip_success_9"/>
+	</Window>
+
+	<Window ClassName="MatchingGameCardButton" Id="121">
+		<Size X="158" Y="269" Width="52" Height="52" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Normal" Imageset="UIIconPack129" Image="CardFlip_Icon">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Over" Imageset="UIIconPack129" Image="CardFlip_Icon_hover">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Push" Imageset="UIIconPack129" Image="CardFlip_Icon_press">
+				<Area X="32" Y="32" Width="50" Height="50" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+		</Imagery>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		 ClickSound = "interface/public_mouseclick_00.wav"
+		 EffectXPos="15"
+		 EffectYPos="17"
+
+		Card_Opening_Time = "250"
+		Card_Open_Time = "450"
+		Opening_Effect_Gap_Time = "30"
+		Max_Card_Opening_Effect = "8"
+		Card_Opening_Effect_1 = "BaseImage044#eventcardFlipEffect_0"
+		Card_Opening_Effect_2 = "BaseImage044#eventcardFlipEffect_1"
+		Card_Opening_Effect_3 = "BaseImage044#eventcardFlipEffect_2"
+		Card_Opening_Effect_4 = "BaseImage044#eventcardFlipEffect_3"
+		Card_Opening_Effect_5 = "BaseImage044#eventcardFlipEffect_4"
+		Card_Opening_Effect_6 = "BaseImage044#eventcardFlipEffect_5"
+		Card_Opening_Effect_7 = "BaseImage044#eventcardFlipEffect_6"
+		Card_Opening_Effect_8 = "BaseImage044#eventcardFlipEffect_7"
+
+		Matching_Effect_Gap_Time = "70"
+		Max_Card_Matching_Effect = "9"
+		Card_Matching_Effect_1 = "BaseEffect006#eventcardFlip_success_1"
+		Card_Matching_Effect_2 = "BaseEffect006#eventcardFlip_success_2"
+		Card_Matching_Effect_3 = "BaseEffect006#eventcardFlip_success_3"
+		Card_Matching_Effect_4 = "BaseEffect006#eventcardFlip_success_4"
+		Card_Matching_Effect_5 = "BaseEffect006#eventcardFlip_success_5"
+		Card_Matching_Effect_6 = "BaseEffect006#eventcardFlip_success_6"
+		Card_Matching_Effect_7 = "BaseEffect006#eventcardFlip_success_7"
+		Card_Matching_Effect_8 = "BaseEffect006#eventcardFlip_success_8"
+		Card_Matching_Effect_9 = "BaseEffect006#eventcardFlip_success_9"/>
+	</Window>
+
+	<Window ClassName="MatchingGameCardButton" Id="122">
+		<Size X="222" Y="269" Width="52" Height="52" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Normal" Imageset="UIIconPack129" Image="CardFlip_Icon">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Over" Imageset="UIIconPack129" Image="CardFlip_Icon_hover">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Push" Imageset="UIIconPack129" Image="CardFlip_Icon_press">
+				<Area X="32" Y="32" Width="50" Height="50" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+		</Imagery>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		 ClickSound = "interface/public_mouseclick_00.wav"
+		 EffectXPos="15"
+		 EffectYPos="17"
+
+		Card_Opening_Time = "250"
+		Card_Open_Time = "450"
+		Opening_Effect_Gap_Time = "30"
+		Max_Card_Opening_Effect = "8"
+		Card_Opening_Effect_1 = "BaseImage044#eventcardFlipEffect_0"
+		Card_Opening_Effect_2 = "BaseImage044#eventcardFlipEffect_1"
+		Card_Opening_Effect_3 = "BaseImage044#eventcardFlipEffect_2"
+		Card_Opening_Effect_4 = "BaseImage044#eventcardFlipEffect_3"
+		Card_Opening_Effect_5 = "BaseImage044#eventcardFlipEffect_4"
+		Card_Opening_Effect_6 = "BaseImage044#eventcardFlipEffect_5"
+		Card_Opening_Effect_7 = "BaseImage044#eventcardFlipEffect_6"
+		Card_Opening_Effect_8 = "BaseImage044#eventcardFlipEffect_7"
+
+		Matching_Effect_Gap_Time = "70"
+		Max_Card_Matching_Effect = "9"
+		Card_Matching_Effect_1 = "BaseEffect006#eventcardFlip_success_1"
+		Card_Matching_Effect_2 = "BaseEffect006#eventcardFlip_success_2"
+		Card_Matching_Effect_3 = "BaseEffect006#eventcardFlip_success_3"
+		Card_Matching_Effect_4 = "BaseEffect006#eventcardFlip_success_4"
+		Card_Matching_Effect_5 = "BaseEffect006#eventcardFlip_success_5"
+		Card_Matching_Effect_6 = "BaseEffect006#eventcardFlip_success_6"
+		Card_Matching_Effect_7 = "BaseEffect006#eventcardFlip_success_7"
+		Card_Matching_Effect_8 = "BaseEffect006#eventcardFlip_success_8"
+		Card_Matching_Effect_9 = "BaseEffect006#eventcardFlip_success_9"/>
+	</Window>
+
+	<Window ClassName="MatchingGameCardButton" Id="123">
+		<Size X="286" Y="269" Width="52" Height="52" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Normal" Imageset="UIIconPack129" Image="CardFlip_Icon">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Over" Imageset="UIIconPack129" Image="CardFlip_Icon_hover">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Push" Imageset="UIIconPack129" Image="CardFlip_Icon_press">
+				<Area X="32" Y="32" Width="50" Height="50" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+		</Imagery>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		 ClickSound = "interface/public_mouseclick_00.wav"
+		 EffectXPos="15"
+		 EffectYPos="17"
+
+		Card_Opening_Time = "250"
+		Card_Open_Time = "450"
+		Opening_Effect_Gap_Time = "30"
+		Max_Card_Opening_Effect = "8"
+		Card_Opening_Effect_1 = "BaseImage044#eventcardFlipEffect_0"
+		Card_Opening_Effect_2 = "BaseImage044#eventcardFlipEffect_1"
+		Card_Opening_Effect_3 = "BaseImage044#eventcardFlipEffect_2"
+		Card_Opening_Effect_4 = "BaseImage044#eventcardFlipEffect_3"
+		Card_Opening_Effect_5 = "BaseImage044#eventcardFlipEffect_4"
+		Card_Opening_Effect_6 = "BaseImage044#eventcardFlipEffect_5"
+		Card_Opening_Effect_7 = "BaseImage044#eventcardFlipEffect_6"
+		Card_Opening_Effect_8 = "BaseImage044#eventcardFlipEffect_7"
+
+		Matching_Effect_Gap_Time = "70"
+		Max_Card_Matching_Effect = "9"
+		Card_Matching_Effect_1 = "BaseEffect006#eventcardFlip_success_1"
+		Card_Matching_Effect_2 = "BaseEffect006#eventcardFlip_success_2"
+		Card_Matching_Effect_3 = "BaseEffect006#eventcardFlip_success_3"
+		Card_Matching_Effect_4 = "BaseEffect006#eventcardFlip_success_4"
+		Card_Matching_Effect_5 = "BaseEffect006#eventcardFlip_success_5"
+		Card_Matching_Effect_6 = "BaseEffect006#eventcardFlip_success_6"
+		Card_Matching_Effect_7 = "BaseEffect006#eventcardFlip_success_7"
+		Card_Matching_Effect_8 = "BaseEffect006#eventcardFlip_success_8"
+		Card_Matching_Effect_9 = "BaseEffect006#eventcardFlip_success_9"/>
+	</Window>
+
+	<Window ClassName="MatchingGameCardButton" Id="124">
+		<Size X="350" Y="269" Width="52" Height="52" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Normal" Imageset="UIIconPack129" Image="CardFlip_Icon">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Over" Imageset="UIIconPack129" Image="CardFlip_Icon_hover">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Push" Imageset="UIIconPack129" Image="CardFlip_Icon_press">
+				<Area X="32" Y="32" Width="50" Height="50" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+		</Imagery>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		 ClickSound = "interface/public_mouseclick_00.wav"
+		 EffectXPos="15"
+		 EffectYPos="17"
+
+		Card_Opening_Time = "250"
+		Card_Open_Time = "450"
+		Opening_Effect_Gap_Time = "30"
+		Max_Card_Opening_Effect = "8"
+		Card_Opening_Effect_1 = "BaseImage044#eventcardFlipEffect_0"
+		Card_Opening_Effect_2 = "BaseImage044#eventcardFlipEffect_1"
+		Card_Opening_Effect_3 = "BaseImage044#eventcardFlipEffect_2"
+		Card_Opening_Effect_4 = "BaseImage044#eventcardFlipEffect_3"
+		Card_Opening_Effect_5 = "BaseImage044#eventcardFlipEffect_4"
+		Card_Opening_Effect_6 = "BaseImage044#eventcardFlipEffect_5"
+		Card_Opening_Effect_7 = "BaseImage044#eventcardFlipEffect_6"
+		Card_Opening_Effect_8 = "BaseImage044#eventcardFlipEffect_7"
+
+		Matching_Effect_Gap_Time = "70"
+		Max_Card_Matching_Effect = "9"
+		Card_Matching_Effect_1 = "BaseEffect006#eventcardFlip_success_1"
+		Card_Matching_Effect_2 = "BaseEffect006#eventcardFlip_success_2"
+		Card_Matching_Effect_3 = "BaseEffect006#eventcardFlip_success_3"
+		Card_Matching_Effect_4 = "BaseEffect006#eventcardFlip_success_4"
+		Card_Matching_Effect_5 = "BaseEffect006#eventcardFlip_success_5"
+		Card_Matching_Effect_6 = "BaseEffect006#eventcardFlip_success_6"
+		Card_Matching_Effect_7 = "BaseEffect006#eventcardFlip_success_7"
+		Card_Matching_Effect_8 = "BaseEffect006#eventcardFlip_success_8"
+		Card_Matching_Effect_9 = "BaseEffect006#eventcardFlip_success_9"/>
+	</Window>
+
+	<Window ClassName="MatchingGameCardButton" Id="125">
+		<Size X="30" Y="329" Width="52" Height="52" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Normal" Imageset="UIIconPack129" Image="CardFlip_Icon">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Over" Imageset="UIIconPack129" Image="CardFlip_Icon_hover">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Push" Imageset="UIIconPack129" Image="CardFlip_Icon_press">
+				<Area X="32" Y="32" Width="50" Height="50" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+		</Imagery>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		 ClickSound = "interface/public_mouseclick_00.wav"
+		 EffectXPos="15"
+		 EffectYPos="17"
+
+		Card_Opening_Time = "250"
+		Card_Open_Time = "450"
+		Opening_Effect_Gap_Time = "30"
+		Max_Card_Opening_Effect = "8"
+		Card_Opening_Effect_1 = "BaseImage044#eventcardFlipEffect_0"
+		Card_Opening_Effect_2 = "BaseImage044#eventcardFlipEffect_1"
+		Card_Opening_Effect_3 = "BaseImage044#eventcardFlipEffect_2"
+		Card_Opening_Effect_4 = "BaseImage044#eventcardFlipEffect_3"
+		Card_Opening_Effect_5 = "BaseImage044#eventcardFlipEffect_4"
+		Card_Opening_Effect_6 = "BaseImage044#eventcardFlipEffect_5"
+		Card_Opening_Effect_7 = "BaseImage044#eventcardFlipEffect_6"
+		Card_Opening_Effect_8 = "BaseImage044#eventcardFlipEffect_7"
+
+		Matching_Effect_Gap_Time = "70"
+		Max_Card_Matching_Effect = "9"
+		Card_Matching_Effect_1 = "BaseEffect006#eventcardFlip_success_1"
+		Card_Matching_Effect_2 = "BaseEffect006#eventcardFlip_success_2"
+		Card_Matching_Effect_3 = "BaseEffect006#eventcardFlip_success_3"
+		Card_Matching_Effect_4 = "BaseEffect006#eventcardFlip_success_4"
+		Card_Matching_Effect_5 = "BaseEffect006#eventcardFlip_success_5"
+		Card_Matching_Effect_6 = "BaseEffect006#eventcardFlip_success_6"
+		Card_Matching_Effect_7 = "BaseEffect006#eventcardFlip_success_7"
+		Card_Matching_Effect_8 = "BaseEffect006#eventcardFlip_success_8"
+		Card_Matching_Effect_9 = "BaseEffect006#eventcardFlip_success_9"/>
+	</Window>
+
+	<Window ClassName="MatchingGameCardButton" Id="126">
+		<Size X="94" Y="329" Width="52" Height="52" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Normal" Imageset="UIIconPack129" Image="CardFlip_Icon">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Over" Imageset="UIIconPack129" Image="CardFlip_Icon_hover">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Push" Imageset="UIIconPack129" Image="CardFlip_Icon_press">
+				<Area X="32" Y="32" Width="50" Height="50" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+		</Imagery>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		 ClickSound = "interface/public_mouseclick_00.wav"
+		 EffectXPos="15"
+		 EffectYPos="17"
+
+		Card_Opening_Time = "250"
+		Card_Open_Time = "450"
+		Opening_Effect_Gap_Time = "30"
+		Max_Card_Opening_Effect = "8"
+		Card_Opening_Effect_1 = "BaseImage044#eventcardFlipEffect_0"
+		Card_Opening_Effect_2 = "BaseImage044#eventcardFlipEffect_1"
+		Card_Opening_Effect_3 = "BaseImage044#eventcardFlipEffect_2"
+		Card_Opening_Effect_4 = "BaseImage044#eventcardFlipEffect_3"
+		Card_Opening_Effect_5 = "BaseImage044#eventcardFlipEffect_4"
+		Card_Opening_Effect_6 = "BaseImage044#eventcardFlipEffect_5"
+		Card_Opening_Effect_7 = "BaseImage044#eventcardFlipEffect_6"
+		Card_Opening_Effect_8 = "BaseImage044#eventcardFlipEffect_7"
+
+		Matching_Effect_Gap_Time = "70"
+		Max_Card_Matching_Effect = "9"
+		Card_Matching_Effect_1 = "BaseEffect006#eventcardFlip_success_1"
+		Card_Matching_Effect_2 = "BaseEffect006#eventcardFlip_success_2"
+		Card_Matching_Effect_3 = "BaseEffect006#eventcardFlip_success_3"
+		Card_Matching_Effect_4 = "BaseEffect006#eventcardFlip_success_4"
+		Card_Matching_Effect_5 = "BaseEffect006#eventcardFlip_success_5"
+		Card_Matching_Effect_6 = "BaseEffect006#eventcardFlip_success_6"
+		Card_Matching_Effect_7 = "BaseEffect006#eventcardFlip_success_7"
+		Card_Matching_Effect_8 = "BaseEffect006#eventcardFlip_success_8"
+		Card_Matching_Effect_9 = "BaseEffect006#eventcardFlip_success_9"/>
+	</Window>
+
+	<Window ClassName="MatchingGameCardButton" Id="127">
+		<Size X="158" Y="329" Width="52" Height="52" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Normal" Imageset="UIIconPack129" Image="CardFlip_Icon">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Over" Imageset="UIIconPack129" Image="CardFlip_Icon_hover">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Push" Imageset="UIIconPack129" Image="CardFlip_Icon_press">
+				<Area X="32" Y="32" Width="50" Height="50" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+		</Imagery>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		 ClickSound = "interface/public_mouseclick_00.wav"
+		 EffectXPos="15"
+		 EffectYPos="17"
+
+		Card_Opening_Time = "250"
+		Card_Open_Time = "450"
+		Opening_Effect_Gap_Time = "30"
+		Max_Card_Opening_Effect = "8"
+		Card_Opening_Effect_1 = "BaseImage044#eventcardFlipEffect_0"
+		Card_Opening_Effect_2 = "BaseImage044#eventcardFlipEffect_1"
+		Card_Opening_Effect_3 = "BaseImage044#eventcardFlipEffect_2"
+		Card_Opening_Effect_4 = "BaseImage044#eventcardFlipEffect_3"
+		Card_Opening_Effect_5 = "BaseImage044#eventcardFlipEffect_4"
+		Card_Opening_Effect_6 = "BaseImage044#eventcardFlipEffect_5"
+		Card_Opening_Effect_7 = "BaseImage044#eventcardFlipEffect_6"
+		Card_Opening_Effect_8 = "BaseImage044#eventcardFlipEffect_7"
+
+		Matching_Effect_Gap_Time = "70"
+		Max_Card_Matching_Effect = "9"
+		Card_Matching_Effect_1 = "BaseEffect006#eventcardFlip_success_1"
+		Card_Matching_Effect_2 = "BaseEffect006#eventcardFlip_success_2"
+		Card_Matching_Effect_3 = "BaseEffect006#eventcardFlip_success_3"
+		Card_Matching_Effect_4 = "BaseEffect006#eventcardFlip_success_4"
+		Card_Matching_Effect_5 = "BaseEffect006#eventcardFlip_success_5"
+		Card_Matching_Effect_6 = "BaseEffect006#eventcardFlip_success_6"
+		Card_Matching_Effect_7 = "BaseEffect006#eventcardFlip_success_7"
+		Card_Matching_Effect_8 = "BaseEffect006#eventcardFlip_success_8"
+		Card_Matching_Effect_9 = "BaseEffect006#eventcardFlip_success_9"/>
+	</Window>
+
+	<Window ClassName="MatchingGameCardButton" Id="128">
+		<Size X="222" Y="329" Width="52" Height="52" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Normal" Imageset="UIIconPack129" Image="CardFlip_Icon">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Over" Imageset="UIIconPack129" Image="CardFlip_Icon_hover">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Push" Imageset="UIIconPack129" Image="CardFlip_Icon_press">
+				<Area X="32" Y="32" Width="50" Height="50" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+		</Imagery>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		 ClickSound = "interface/public_mouseclick_00.wav"
+		 EffectXPos="15"
+		 EffectYPos="17"
+
+		Card_Opening_Time = "250"
+		Card_Open_Time = "450"
+		Opening_Effect_Gap_Time = "30"
+		Max_Card_Opening_Effect = "8"
+		Card_Opening_Effect_1 = "BaseImage044#eventcardFlipEffect_0"
+		Card_Opening_Effect_2 = "BaseImage044#eventcardFlipEffect_1"
+		Card_Opening_Effect_3 = "BaseImage044#eventcardFlipEffect_2"
+		Card_Opening_Effect_4 = "BaseImage044#eventcardFlipEffect_3"
+		Card_Opening_Effect_5 = "BaseImage044#eventcardFlipEffect_4"
+		Card_Opening_Effect_6 = "BaseImage044#eventcardFlipEffect_5"
+		Card_Opening_Effect_7 = "BaseImage044#eventcardFlipEffect_6"
+		Card_Opening_Effect_8 = "BaseImage044#eventcardFlipEffect_7"
+
+		Matching_Effect_Gap_Time = "70"
+		Max_Card_Matching_Effect = "9"
+		Card_Matching_Effect_1 = "BaseEffect006#eventcardFlip_success_1"
+		Card_Matching_Effect_2 = "BaseEffect006#eventcardFlip_success_2"
+		Card_Matching_Effect_3 = "BaseEffect006#eventcardFlip_success_3"
+		Card_Matching_Effect_4 = "BaseEffect006#eventcardFlip_success_4"
+		Card_Matching_Effect_5 = "BaseEffect006#eventcardFlip_success_5"
+		Card_Matching_Effect_6 = "BaseEffect006#eventcardFlip_success_6"
+		Card_Matching_Effect_7 = "BaseEffect006#eventcardFlip_success_7"
+		Card_Matching_Effect_8 = "BaseEffect006#eventcardFlip_success_8"
+		Card_Matching_Effect_9 = "BaseEffect006#eventcardFlip_success_9"/>
+	</Window>
+
+	<Window ClassName="MatchingGameCardButton" Id="129">
+		<Size X="286" Y="329" Width="52" Height="52" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Normal" Imageset="UIIconPack129" Image="CardFlip_Icon">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Over" Imageset="UIIconPack129" Image="CardFlip_Icon_hover">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Push" Imageset="UIIconPack129" Image="CardFlip_Icon_press">
+				<Area X="32" Y="32" Width="50" Height="50" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+		</Imagery>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		 ClickSound = "interface/public_mouseclick_00.wav"
+		 EffectXPos="15"
+		 EffectYPos="17"
+
+		Card_Opening_Time = "250"
+		Card_Open_Time = "450"
+		Opening_Effect_Gap_Time = "30"
+		Max_Card_Opening_Effect = "8"
+		Card_Opening_Effect_1 = "BaseImage044#eventcardFlipEffect_0"
+		Card_Opening_Effect_2 = "BaseImage044#eventcardFlipEffect_1"
+		Card_Opening_Effect_3 = "BaseImage044#eventcardFlipEffect_2"
+		Card_Opening_Effect_4 = "BaseImage044#eventcardFlipEffect_3"
+		Card_Opening_Effect_5 = "BaseImage044#eventcardFlipEffect_4"
+		Card_Opening_Effect_6 = "BaseImage044#eventcardFlipEffect_5"
+		Card_Opening_Effect_7 = "BaseImage044#eventcardFlipEffect_6"
+		Card_Opening_Effect_8 = "BaseImage044#eventcardFlipEffect_7"
+
+		Matching_Effect_Gap_Time = "70"
+		Max_Card_Matching_Effect = "9"
+		Card_Matching_Effect_1 = "BaseEffect006#eventcardFlip_success_1"
+		Card_Matching_Effect_2 = "BaseEffect006#eventcardFlip_success_2"
+		Card_Matching_Effect_3 = "BaseEffect006#eventcardFlip_success_3"
+		Card_Matching_Effect_4 = "BaseEffect006#eventcardFlip_success_4"
+		Card_Matching_Effect_5 = "BaseEffect006#eventcardFlip_success_5"
+		Card_Matching_Effect_6 = "BaseEffect006#eventcardFlip_success_6"
+		Card_Matching_Effect_7 = "BaseEffect006#eventcardFlip_success_7"
+		Card_Matching_Effect_8 = "BaseEffect006#eventcardFlip_success_8"
+		Card_Matching_Effect_9 = "BaseEffect006#eventcardFlip_success_9"/>
+	</Window>
+
+	<Window ClassName="MatchingGameCardButton" Id="130">
+		<Size X="350" Y="329" Width="52" Height="52" />
+		<Style>IWS_PROCESS</Style> 
+		<Imagery>
+			<Image Type="Normal" Imageset="UIIconPack129" Image="CardFlip_Icon">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Over" Imageset="UIIconPack129" Image="CardFlip_Icon_hover">
+				<Area X="32" Y="32" Width="52" Height="52" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+			<Image Type="Push" Imageset="UIIconPack129" Image="CardFlip_Icon_press">
+				<Area X="32" Y="32" Width="50" Height="50" HorzAlign="Stretch" VertAlign="Stretch" TexFilter="bilinear"/>
+			</Image>
+		</Imagery>
+	<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		 ClickSound = "interface/public_mouseclick_00.wav"
+		 EffectXPos="15"
+		 EffectYPos="17"
+
+		Card_Opening_Time = "250"
+		Card_Open_Time = "450"
+		Opening_Effect_Gap_Time = "30"
+		Max_Card_Opening_Effect = "8"
+		Card_Opening_Effect_1 = "BaseImage044#eventcardFlipEffect_0"
+		Card_Opening_Effect_2 = "BaseImage044#eventcardFlipEffect_1"
+		Card_Opening_Effect_3 = "BaseImage044#eventcardFlipEffect_2"
+		Card_Opening_Effect_4 = "BaseImage044#eventcardFlipEffect_3"
+		Card_Opening_Effect_5 = "BaseImage044#eventcardFlipEffect_4"
+		Card_Opening_Effect_6 = "BaseImage044#eventcardFlipEffect_5"
+		Card_Opening_Effect_7 = "BaseImage044#eventcardFlipEffect_6"
+		Card_Opening_Effect_8 = "BaseImage044#eventcardFlipEffect_7"
+
+		Matching_Effect_Gap_Time = "70"
+		Max_Card_Matching_Effect = "9"
+		Card_Matching_Effect_1 = "BaseEffect006#eventcardFlip_success_1"
+		Card_Matching_Effect_2 = "BaseEffect006#eventcardFlip_success_2"
+		Card_Matching_Effect_3 = "BaseEffect006#eventcardFlip_success_3"
+		Card_Matching_Effect_4 = "BaseEffect006#eventcardFlip_success_4"
+		Card_Matching_Effect_5 = "BaseEffect006#eventcardFlip_success_5"
+		Card_Matching_Effect_6 = "BaseEffect006#eventcardFlip_success_6"
+		Card_Matching_Effect_7 = "BaseEffect006#eventcardFlip_success_7"
+		Card_Matching_Effect_8 = "BaseEffect006#eventcardFlip_success_8"
+		Card_Matching_Effect_9 = "BaseEffect006#eventcardFlip_success_9"/>
+	</Window>
+	
+	<Window ClassName="ioButton" Id="201">
+		<Size X="54" Y="247" Width="154" Height="47" />
+		<Style>IWS_TOPMOST</Style> 
+		<Title>
+			<Format X="77" Y="12" Size="14" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal"  Text="FFFFFFFF" Back="FF006633"/>
+			<Color Type="Over"  Text="FFFFFFFF" Back="FF006633"/>
+			<Color Type="Push"  Text="FFFFFFFF" Back="FF006633"/>
+			<Color Type="Disable"  Text="FFA7A7A7" Back="FF000000"/>
+			<Text>시작하기</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt005_green_nor">
+				<Area X="0" Y="0" Width="154" Height="47"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt005_green_nor">
+				<Area X="0" Y="0" Width="154" Height="47"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt017_overadd">
+				<Area X="3" Y="1" Width="152" Height="41"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt005_green_down">
+				<Area X="0" Y="0" Width="154" Height="47"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt005_gray_nor">
+				<Area X="0" Y="0" Width="154" Height="47"/>
+			</DefaultFrameImagery>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="ioButton" Id="202">
+		<Size X="225" Y="247" Width="154" Height="47" />
+		<Style>IWS_TOPMOST</Style> 
+		<Title>
+			<Format X="77" Y="12" Size="14" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal"  Text="FFFFFFFF" Back="FF993300"/>
+			<Color Type="Over"  Text="FFFFFFFF" Back="FF993300"/>
+			<Color Type="Push"  Text="FFFFFFFF" Back="FF993300"/>
+			<Color Type="Disable"  Text="FFA7A7A7" Back="FF000000"/>
+			<Text>프리미엄 시작</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt005_redbrown_nor">
+				<Area X="0" Y="0" Width="154" Height="47"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt005_redbrown_nor">
+				<Area X="0" Y="0" Width="154" Height="47"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt017_overadd">
+				<Area X="3" Y="1" Width="152" Height="41"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt005_redbrown_down">
+				<Area X="0" Y="0" Width="154" Height="47"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Disable" Templete="bt005_gray_nor">
+				<Area X="0" Y="0" Width="154" Height="47"/>
+			</DefaultFrameImagery>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	<Window ClassName="ioButton" Id="203">
+		<Size X="138" Y="260" Width="154" Height="47" />
+		<Style>IWS_TOPMOST</Style> 
+		<Title>
+			<Format X="77" Y="12" Size="14" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal"  Text="FFFFFFFF" Back="FF993300"/>
+			<Color Type="Over"  Text="FFFFFFFF" Back="FF993300"/>
+			<Color Type="Push"  Text="FFFFFFFF" Back="FF993300"/>
+			<Color Type="Disable"  Text="FFFFFFFF" Back="FF993300"/>
+			<Text>확인</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt005_redbrown_nor">
+				<Area X="0" Y="0" Width="154" Height="47"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt005_redbrown_nor">
+				<Area X="0" Y="0" Width="154" Height="47"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt017_overadd">
+				<Area X="3" Y="1" Width="152" Height="41"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt005_redbrown_down">
+				<Area X="0" Y="0" Width="154" Height="47"/>
+			</DefaultFrameImagery>
+		</Imagery>
+    		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+</Window>

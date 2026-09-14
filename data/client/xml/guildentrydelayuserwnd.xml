@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="GuildEntryDelayUserWnd" Id="6048">
+	<Size X="0" Y="0" Width="207" Height="249"/>
+	<DragRect Left="0" Top="0" Right="207" Bottom="249" />
+	<Style>IWS_START_HIDE|IWS_EXIT_ESC|IWS_PROCESS|IWS_CANMOVE</Style>
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Title>
+		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
+		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
+		<Text>길드가입 대기자</Text>
+	</Title>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
+			<Area X="0" Y="0" Width="207" Height="201"/>
+		</DefaultFrameImagery>	
+		<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title">
+			<Area X="5" Y="6" Width="197" Height="36"/>
+		</DefaultFrameImagery>
+		<DefaultFrameImagery Type="BottomFrm" Templete="win1_multiply_bottom">
+			<Area X="0" Y="199" Width="207" Height="50"/>
+		</DefaultFrameImagery>
+	</Imagery>
+
+	<Window ClassName="ioButton" Id="1">
+		<Size X="173" Y="11" Width="23" Height="23"/>
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt002_blue_nor">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt002_blue_down">
+				<Area X="0" Y="0" Width="23" Height="23"/>
+			</DefaultFrameImagery>
+                        <Image Type="Disable" Imageset="BaseImage001" Image="icon0_x_grayframe" >
+				<Area X="0" Y="0" />
+			</Image>
+                        <Image Type="NormalList" Imageset="BaseImage001" Image="icon0_x" >
+				<Area X="5" Y="5" />
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="2">
+		<Size X="37" Y="166" Width="43" Height="18" />
+		<Style>IWS_BACKMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_left" >
+				<Area X="17" Y="4"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioButton" Id="3">
+		<Size X="127" Y="166" Width="43" Height="18" />
+		<Style>IWS_BACKMOST</Style> 
+		<Imagery>
+			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+				<Area X="0" Y="0" Width="43" Height="18"/>
+			</DefaultFrameImagery>
+			<Image Imageset="BaseImage001" Image="icon0_list_left" >
+				<Area X="17" Y="4" Reverse="Horz"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="ioCheckButton" Id="4">
+		<Size X="17" Y="216" Width="16" Height="16" />
+		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
+		<Title>
+			<Format X="20" Y="1" Size="12" Style="Normal" HorzAlign="Left"/>
+			<Color Type="Normal" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>게임 끄기 전까지 표시 안함</Text>
+		</Title>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="check_box_off" >
+				<Area X="0" Y="0"/>
+			</Image>
+			<Image Type="Check" Imageset="BaseImage001" Image="check_box_on" >
+				<Area X="0" Y="0"/>
+			</Image>
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+		           ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+
+	<Window ClassName="GuildEntryDelayUserBtn" Id="10">
+		<Size X="17" Y="54" Width="173" Height="21" />	
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="173" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="173" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="173" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+		</Imagery>
+		
+		<Window ClassName="ioButton" Id="1">
+			<Size X="107" Y="1" Width="32" Height="18" />
+			<Title>
+				<Format X="16" Y="3" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF3A3A3A"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>수락</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           	   ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+
+		<Window ClassName="ioButton" Id="2">
+			<Size X="140" Y="1" Width="32" Height="18" />
+			<Title>
+				<Format X="16" Y="3" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF3A3A3A"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>거절</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="GuildEntryDelayUserBtn" Id="11">
+		<Size X="17" Y="75" Width="173" Height="21" />	
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="173" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="173" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="173" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+		</Imagery>
+		
+		<Window ClassName="ioButton" Id="1">
+			<Size X="107" Y="1" Width="32" Height="18" />
+			<Title>
+				<Format X="16" Y="3" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF3A3A3A"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>수락</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           	   ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+
+		<Window ClassName="ioButton" Id="2">
+			<Size X="140" Y="1" Width="32" Height="18" />
+			<Title>
+				<Format X="16" Y="3" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF3A3A3A"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>거절</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="GuildEntryDelayUserBtn" Id="12">
+		<Size X="17" Y="96" Width="173" Height="21" />	
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="173" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="173" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="173" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+		</Imagery>
+		
+		<Window ClassName="ioButton" Id="1">
+			<Size X="107" Y="1" Width="32" Height="18" />
+			<Title>
+				<Format X="16" Y="3" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF3A3A3A"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>수락</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           	   ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+
+		<Window ClassName="ioButton" Id="2">
+			<Size X="140" Y="1" Width="32" Height="18" />
+			<Title>
+				<Format X="16" Y="3" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF3A3A3A"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>거절</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="GuildEntryDelayUserBtn" Id="13">
+		<Size X="17" Y="117" Width="173" Height="21" />	
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_light" >
+				<Area X="0" Y="0" Width="173" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="173" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="173" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+		</Imagery>
+		
+		<Window ClassName="ioButton" Id="1">
+			<Size X="107" Y="1" Width="32" Height="18" />
+			<Title>
+				<Format X="16" Y="3" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF3A3A3A"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>수락</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           	   ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+
+		<Window ClassName="ioButton" Id="2">
+			<Size X="140" Y="1" Width="32" Height="18" />
+			<Title>
+				<Format X="16" Y="3" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF3A3A3A"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>거절</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+
+	<Window ClassName="GuildEntryDelayUserBtn" Id="14">
+		<Size X="17" Y="138" Width="173" Height="21" />	
+		<Style>IWS_PROCESS</Style>
+		<Imagery>
+			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_dark" >
+				<Area X="0" Y="0" Width="173" Height="21" HorzAlign="Stretch" VertAlign="Stretch" RenderType="Multiply" />
+			</Image>
+			<Image Type="Over" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="173" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+			<Image Type="Push" Imageset="BaseImage001" Image="strip_gray_on" >
+				<Area X="0" Y="0" Width="173" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
+			</Image>
+		</Imagery>
+		
+		<Window ClassName="ioButton" Id="1">
+			<Size X="107" Y="1" Width="32" Height="18" />
+			<Title>
+				<Format X="16" Y="3" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF3A3A3A"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>수락</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+        	           	   ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+
+		<Window ClassName="ioButton" Id="2">
+			<Size X="140" Y="1" Width="32" Height="18" />
+			<Title>
+				<Format X="16" Y="3" Size="11" Style="Normal" HorzAlign="Center"/>
+				<Color Type="Normal" Text="FF3A3A3A" Back="FF3A3A3A"/>
+				<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
+				<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
+				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
+				<Text>거절</Text>
+			</Title>
+			<Imagery>
+				<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Over" Templete="bt008_gray_nor">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+				<DefaultFrameImagery Type="Push" Templete="bt008_gray_down">
+					<Area X="0" Y="0" Width="32" Height="18"/>
+				</DefaultFrameImagery>
+			</Imagery>
+			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	        	           ClickSound = "interface/public_mouseclick_00.wav"/>
+		</Window>
+	</Window>
+
+</Window>

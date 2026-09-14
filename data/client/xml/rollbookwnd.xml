@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window ClassName="RollBookWnd" Id="6272">
+	<Size X="0" Y="-20" XAlign="Center" YAlign="Center" Width="629" Height="442"/>
+	<DragRect Left="0" Top="0" Right="629" Bottom="33" />
+	<Style>IWS_START_HIDE|IWS_EXIT_ESC|IWS_PROCESS</Style>
+	<ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="win1_frame_calendar">
+			<Area X="0" Y="0" Width="629" Height="442"/>
+		</DefaultFrameImagery>
+		
+		<DefaultFrameImagery Type="NormalTitle" Templete="win3_title">
+			<Area X="0" Y="0" Width="619" Height="33"/>
+		</DefaultFrameImagery>
+			
+		<DefaultFrameImagery Type="ReturnTitle" Templete="win1_title">
+			<Area X="0" Y="0" Width="619" Height="33"/>
+		</DefaultFrameImagery>
+			
+		<DefaultFrameImagery Type="NewTitle" Templete="win2_title">
+			<Area X="0" Y="0" Width="619" Height="33"/>
+		</DefaultFrameImagery>
+		
+		<Image Type="RewardIconBG" Imageset="BaseImage002" Image="iconeffect_1"/>
+		<Image Type="GainIcon" Imageset="BaseImage029" Image="stamp_attend2"/>
+		<Image Type="EmphasizeEffect" Imageset="BaseImage031" Image="calendar_eff"/>
+		<Image Type="HiddenIcon" Imageset="UIIconPack54" Image="event_secret"/>
+		<Image Type="costume_image" Imageset="BaseImage031" Image="costume_mark"/>
+		<!-- 달력 보상 라인 -->
+		<DefaultFrameImagery Type="NormalList" Templete="frame_calendar">
+			<Area X="27" Y="58" Width="576" Height="310" AutoResize="False" />
+		</DefaultFrameImagery>
+		
+		<Image Type="NormalList" Imageset="BaseImage031" Image="strip_calendar" >
+			<Area X="29" Y="135" Width="572" Height="2" VertAlign="Stretch" HorzAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage031" Image="strip_calendar" >
+			<Area X="29" Y="212" Width="572" Height="2" VertAlign="Stretch" HorzAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage031" Image="strip_calendar" >
+			<Area X="29" Y="289" Width="572" Height="2" VertAlign="Stretch" HorzAlign="Stretch" />
+		</Image>
+		
+		<Image Type="NormalList" Imageset="BaseImage031" Image="strip_calendar" >
+			<Area X="109" Y="60" Width="2" Height="306" VertAlign="Stretch" HorzAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage031" Image="strip_calendar" >
+			<Area X="191" Y="60" Width="2" Height="306" VertAlign="Stretch" HorzAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage031" Image="strip_calendar" >
+			<Area X="273" Y="60" Width="2" Height="306" VertAlign="Stretch" HorzAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage031" Image="strip_calendar" >
+			<Area X="355" Y="60" Width="2" Height="306" VertAlign="Stretch" HorzAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage031" Image="strip_calendar" >
+			<Area X="437" Y="60" Width="2" Height="306" VertAlign="Stretch" HorzAlign="Stretch" />
+		</Image>
+		<Image Type="NormalList" Imageset="BaseImage031" Image="strip_calendar" >
+			<Area X="519" Y="60" Width="2" Height="306" VertAlign="Stretch" HorzAlign="Stretch" />
+		</Image>
+		
+	</Imagery>
+	<ExtraInfo EmphasizeEffectDuration ="800" 
+			   EmphasizeEffectAlphaSpeed ="-300.0f" 
+			   EmphasizeEffectScaleSpeed ="0.6160f" 
+			   TodayRewardStartScale = "10.0f"
+			   TodayRewardScaleSpeed = "40.0f"
+			   Reward = "interface/Mission_clear.wav"
+			   />
+	
+	<Window ClassName="RollBookCloseBtn" Id="1">
+		<Size X="418" Y="379" Width="185" Height="41" />
+		<Style>IWS_BACKMOST</Style>
+		<Title>
+			<Format X="92" Y="9" Size="17" Style="Outline_full_2x" HorzAlign="Center"/>
+			<Color Type="Normal" Text="FFFFFFFF" Back="FF4B3923"/>
+			<Color Type="Over" Text="FFFFFFFF" Back="FF4B3923"/>
+			<Color Type="Push" Text="FFFFFFFF" Back="FF4B3923"/>
+			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
+			<Text>닫기(SPACE)</Text>
+		</Title>
+		<Imagery>
+			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">
+				<Area X="0" Y="0" Width="185" Height="41"/>
+			</DefaultFrameImagery>
+			
+			<DefaultFrameImagery Type="NormalBack" Templete="bt001_calendar_brown_nor">
+				<Area X="0" Y="0" Width="185" Height="41"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ReturnBack" Templete="bt001_calendar_blue_nor">
+				<Area X="0" Y="0" Width="185" Height="41"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="NewBack" Templete="bt001_calendar_pink_nor">
+				<Area X="0" Y="0" Width="185" Height="41"/>
+			</DefaultFrameImagery>
+			
+			<DefaultFrameImagery Type="NormalDown" Templete="bt001_calendar_brown_down">
+				<Area X="0" Y="0" Width="185" Height="41"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="ReturnDown" Templete="bt001_calendar_blue_down">
+				<Area X="0" Y="0" Width="185" Height="41"/>
+			</DefaultFrameImagery>
+			<DefaultFrameImagery Type="NewDown" Templete="bt001_calendar_pink_down">
+				<Area X="0" Y="0" Width="185" Height="41"/>
+			</DefaultFrameImagery>		
+			
+		</Imagery>
+		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
+	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
+	</Window>
+	
+	<Window ClassName="RollBookToolTip" Id="10">
+    <!--Width와 Height,Text내용은 소스에서 결정-->
+	<Size X="0" Y="0" Width="500" Height="500" />
+	<Style>IWS_START_HIDE|IWS_PROCESS</Style>
+	<Imagery>
+		<DefaultFrameImagery Type="Selected" Templete="tooltip2">
+				<Area X="0" Y="0" Width="164" Height="49" /> 
+		</DefaultFrameImagery>
+	</Imagery>
+	<ExtraInfo RewardInfoOver = "interface/public_mouseover_00.wav"/>
+	</Window>
+	
+</Window>
