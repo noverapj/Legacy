@@ -32,13 +32,14 @@ See [DATABASE.md](DATABASE.md) for database setup.
 
 ## Client side (data/client/)
 
-Deploy by copying both folders into the client directory, next to the client
+Deploy by copying the folders into the client directory, next to the client
 executable.
 
 | Path | Purpose |
-| --- | --- |
+|---|---|
 | `config/` | Client configuration and game data tables (`sp2*.ini`) |
 | `xml/` | UI and definition XML files |
+| `resource/text/` | Localization string tables (`text.txt` Korean, `text_en.txt` English) |
 
 ## Sanitization policy
 
