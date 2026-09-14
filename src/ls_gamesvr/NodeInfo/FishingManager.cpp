@@ -180,7 +180,7 @@ bool FishingManager::GetPrivateRewardInfo( int orderNum, PrivateRewardInfo &Rewa
 	if ( m_vPrivateRewardList.empty() )
 		return false;
 
-	if( COMPARE(orderNum,0,m_vPrivateRewardList.size()) )
+	if (COMPARE(orderNum, 0, (int)m_vPrivateRewardList.size()))
 	{
 		RewardInfo = m_vPrivateRewardList[orderNum];
 		return true;

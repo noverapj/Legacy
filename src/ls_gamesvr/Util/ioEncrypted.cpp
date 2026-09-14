@@ -153,7 +153,8 @@ bool Decode15( char *szCipher, char *szUserKey, char *szPlain, NationType eNatio
 		LOG.PrintTimeAndLog( LOG_DEBUG_LEVEL,"Decode15 - Error -6");
 		return false;
 	}
-	strncpy(szPlain, (char*)Plain, decodeLen);
+
+	strncpy_s(szPlain, DATA_LEN, (char*)Plain, decodeLen);
 
 	return true;
 }

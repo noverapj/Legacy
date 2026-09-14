@@ -33400,7 +33400,7 @@ void User::SendSelectUserShutDown(SP2Packet& rkPacket)
 	PACKET_GUARD_VOID( pk.Write(iHour) );
 	PACKET_GUARD_VOID( pk.Write(00) );
 
-	DBTIMESTAMP dts = { iYear, iMonth, iDay, iHour, 0, 0, 0, };
+	DBTIMESTAMP dts = { (SHORT)iYear, (USHORT)iMonth, (USHORT)iDay, (USHORT)iHour, 0, 0, 0 };
 
 	m_UserSelectShutDown.SetSelectShutDown( 1, dts );
 
@@ -37393,7 +37393,7 @@ void User::CheckPopupStoreIndex()
 		return;
 
 	m_vecSendPopupIndex.clear();
-	DWORD dwArray[5] = { m_dwTotalMoney, m_dwMonthMoney, GetCash(), GetGradeLevel(), m_dwTotalPlayTime } ;
+	DWORD dwArray[5] = { m_dwTotalMoney, m_dwMonthMoney, (DWORD)GetCash(), (DWORD)GetGradeLevel(), m_dwTotalPlayTime };
 	g_SpecialGoodsMgr.GetPopupStoreIndex( m_vecUsePopupIndex, m_vecSendPopupIndex, dwArray );
 
 	int nSize = m_vecSendPopupIndex.size();
@@ -41518,12 +41518,13 @@ void User::OnPracticeEnter( SP2Packet &rkPacket )
 
 	boost::posix_time::time_duration diff = boost::posix_time::microsec_clock::local_time() -  pPractice->GetBoostPracticeEndTime();
 	int ms = diff.total_milliseconds();
-	if(abs(ms) < HackCheck::CheckTime( HackCheck::HT_MACRO ))
+
+	if ((DWORD)abs(ms) < HackCheck::CheckTime(HackCheck::HT_MACRO))
 	{	
 		int iAbusing = pPractice->GetAbusingCount() + 1;
 		pPractice->SetAbusingCount(iAbusing);
 
-		if(iAbusing >= HackCheck::MacroCount( HackCheck::HT_MACRO ))
+		if ((DWORD)iAbusing >= HackCheck::MacroCount(HackCheck::HT_MACRO))
 		{
 			m_MacroQuiz = HackCheck::GenerateProblem( HackCheck::HT_MACRO );
 			m_dwMacroQuizLimitTime  = TIMEGETTIME() + HackCheck::ServerAnswerTime( HackCheck::HT_MACRO );

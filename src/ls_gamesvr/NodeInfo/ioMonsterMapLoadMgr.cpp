@@ -544,7 +544,7 @@ void ioMonsterMapLoadMgr::LoadMonsterTreasureCardTable()
 	ioINILoader kLoader( "config/sp2_monster_treasure_card.ini" );
 
 	int i = 0;
-	char szKey[MAX_PATH], szBuf[MAX_PATH];
+	char szKey[MAX_PATH];
 	kLoader.SetTitle( "common" );
 
 	// 선물 리스트

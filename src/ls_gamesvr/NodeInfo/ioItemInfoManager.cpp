@@ -1861,7 +1861,8 @@ bool ioItemPriceManager::IsActiveBuyHero(int iClassType)
 		return false;
 	
 	bool bState = false;
-	for( int i = 0 ; i < m_vPriceList.size() ; ++i )
+
+	for (int i = 0; i < (int)m_vPriceList.size(); ++i)
 	{
 		PriceData *pPrice = m_vPriceList[i];
 		if( !pPrice ) continue;

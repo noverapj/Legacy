@@ -257,7 +257,7 @@ bool ServerNodeManager::ConnectTo( DWORD dwServerIndex, const char *ServerIP, in
 	}
 	sockaddr_in serv_addr;
 	serv_addr.sin_family		= AF_INET;
-	serv_addr.sin_addr.s_addr	= inet_addr( ServerIP );
+	inet_pton(AF_INET, ServerIP, &serv_addr.sin_addr);
 	serv_addr.sin_port			= htons( iSSPort );
 
 	LOOP_GUARD();

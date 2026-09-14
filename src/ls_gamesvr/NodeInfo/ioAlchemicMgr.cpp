@@ -2136,7 +2136,7 @@ int ioAlchemicMgr::GetItemPeriodTime( int iPieceCnt )
 	int iListCnt = m_ItemPeriodInfoList.size();
 	for( int i=0; i < iListCnt; ++i )
 	{
-		if( COMPARE( iPieceCnt, iCurCnt, m_ItemPeriodInfoList[i].m_dwLimitCnt+1 ) )
+		if (COMPARE(iPieceCnt, iCurCnt, (int)(m_ItemPeriodInfoList[i].m_dwLimitCnt + 1)))
 		{
 			int iTable = m_ItemPeriodInfoList[i].m_dwTableNum;
 			NewAlchemicPeriodTableMap::iterator iter = m_ItemPeriodTabelMap.find( iTable );
@@ -2177,7 +2177,7 @@ int ioAlchemicMgr::GetSouleStoneGainCnt()
 	int iRandom = m_DisassembleRandom.Random(m_iTotalSoulStoneRandom);
 	int iCurPosition = 0;
 
-	for( int i = 0; i < m_vSoultoneRandomInfo.size(); i++ )
+	for( int i = 0; i < (int)m_vSoultoneRandomInfo.size(); i++ )
 	{
 		int iCurRate = m_vSoultoneRandomInfo[i];
 		if( COMPARE(iRandom, iCurPosition, iCurPosition+iCurRate) )

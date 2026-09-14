@@ -3149,7 +3149,7 @@ bool ioPresentHelper::SendRandPresentByRisingGashapon( User* pUser, DWORD dwEtcI
 	if(pUser->GetRisingBuyCount() == ( pItem->GetFocusCount() - 1 ))
 	{
 		bFocusItem = true;
-		for(int getted_count = 0; getted_count < vGettedIndex.size() ; ++getted_count)
+		for(int getted_count = 0; getted_count < (int)vGettedIndex.size() ; ++getted_count)
 		{
 			if(vGettedIndex[getted_count] == iFocusIndex)
 			{
@@ -3183,10 +3183,10 @@ bool ioPresentHelper::SendRandPresentByRisingGashapon( User* pUser, DWORD dwEtcI
 
 		// È¹µæÇÑ ¾ÆÀÌÅÛ Á¦¿ÜÇÑ ¸®½ºÆ® »Ì±â.
 		bool bMatch = false;
-		for(int present_count = 0; present_count < vPresentList.size() ; ++present_count)
+		for(int present_count = 0; present_count < (int)vPresentList.size() ; ++present_count)
 		{
 			bMatch = false;
-			for(int getted_count = 0; getted_count < vGettedIndex.size() ; ++getted_count)
+			for(int getted_count = 0; getted_count < (int)vGettedIndex.size() ; ++getted_count)
 			{
 				if(vGettedIndex[getted_count] == present_count)
 				{
@@ -3234,7 +3234,7 @@ bool ioPresentHelper::SendRandPresentByRisingGashapon( User* pUser, DWORD dwEtcI
 				m_iValue1 = vRandPresent[i].m_iPresentValue1;
 				m_iValue2 = vRandPresent[i].m_iPresentValue2;
 				// °¡»þÆù ÀÎµ¦½º ±¸ÇÏ±â
-				for(int present_count = 0; present_count < vPresentList.size() ; ++present_count)
+				for (int present_count = 0; present_count < (int)vPresentList.size(); ++present_count)
 				{
 					if(vPresentList[present_count].m_iPresentType == vRandPresent[i].m_iPresentType &&
 						vPresentList[present_count].m_iPresentValue1 == vRandPresent[i].m_iPresentValue1 &&

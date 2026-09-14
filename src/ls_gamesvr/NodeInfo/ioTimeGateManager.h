@@ -21,7 +21,7 @@ public:
 
 	
 
-	typedef struct TimeGateInfo
+	struct TimeGateInfo
 	{
 		int iList;
 		int iItemCount;

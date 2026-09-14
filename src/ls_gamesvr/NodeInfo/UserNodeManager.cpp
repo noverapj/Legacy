@@ -13804,7 +13804,7 @@ void UserNodeManager::OnResultUpdateUserTimeGateData(CQueryResultData *query_dat
 
 			pUser->SetUserTimeGate( cLastOpenTime.GetTime() ); 	// 마지막 오픈시간
 
-			printf("cLastOpenTime.GetTime()%d\n", pUser->GetUserTimeGate());
+			printf("cLastOpenTime.GetTime() %lld\n", pUser->GetUserTimeGate());
 
 			int iItemList = 0, iPresentType = 0, iValue1 = 0, iValue2 = 0;
 			bool bAlarm = false;

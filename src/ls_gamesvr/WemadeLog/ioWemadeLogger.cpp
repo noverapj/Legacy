@@ -49,7 +49,7 @@ BOOL ioWemadeLogger::Create()
 		int iIndex = rand() % m_vServers.size();
 		WemadeLOG.PrintTimeAndLog( 0, "ioWemadeLogger::Create - %s", m_vServers[iIndex].c_str() );
 
-		m_LogServer.sin_addr.s_addr = inet_addr(m_vServers[iIndex].c_str());
+		inet_pton(AF_INET, m_vServers[iIndex].c_str(), &m_LogServer.sin_addr);
 	}
 	else
 	{

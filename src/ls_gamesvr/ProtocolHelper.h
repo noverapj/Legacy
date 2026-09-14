@@ -1093,7 +1093,7 @@
 		 break; \
      default: \
          char buf[100]; \
-         sprintf(buf, "0x%x", packetID); \
+         sprintf_s(buf, sizeof(buf), "0x%x", packetID); \
          (p) = buf; \
          break; \
      } \
@@ -1557,9 +1557,9 @@
 	 case SSTPK_DICE_GAME_GET_INFO: \
 		 (p) = "SSTPK_DICE_GAME_GET_INFO"; \
 	     break; \
-     default: \
+    default: \
          char buf[100]; \
-         sprintf(buf, "0x%x", packetID); \
+         sprintf_s(buf, sizeof(buf), "0x%x", packetID); \
          (p) = buf; \
          break; \
      } \

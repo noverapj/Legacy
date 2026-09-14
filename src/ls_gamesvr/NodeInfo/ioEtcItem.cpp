@@ -3021,7 +3021,7 @@ void ioEtcItemLuckyCoin::LoadProperty( ioINILoader &rkLoader )
 	// 초기화.
 	m_ExchangePresent.clear();
 
-	char szKey[MAX_PATH], szBuf[MAX_PATH];
+	char szKey[MAX_PATH];
 	int iMaxExchangePresent = rkLoader.LoadInt( "max_present", 0 );
 	for(int i = 0;i < iMaxExchangePresent;i++)
 	{
@@ -3193,7 +3193,7 @@ void ioEtcItemRainbowMixer::LoadProperty( ioINILoader &rkLoader )
 	// 초기화.
 	m_MixerPresent.clear();
 
-	char szKey[MAX_PATH], szBuf[MAX_PATH];
+	char szKey[MAX_PATH];
 	int iMaxExchangePresent = rkLoader.LoadInt( "max_present", 0 );
 	for(int i = 0;i < iMaxExchangePresent;i++)
 	{

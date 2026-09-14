@@ -47,7 +47,7 @@
     <TargetName>$(ProjectName)D</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <LinkIncremental>true</LinkIncremental>
+    <LinkIncremental>false</LinkIncremental>
     <OutDir>../../../build/Server/ls_gamesvr/</OutDir>
     <IntDir>./$(ProjectName)\$(Configuration)\</IntDir>
     <IncludePath>C:\Program Files\boost\boost_1_50\;$(IncludePath)</IncludePath>
@@ -125,7 +125,7 @@ REM "$(ProjectDir)..\..\src\ls_gamesvr\CTPKTDefineToStringParser.exe" "$(Project
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>../../lib;C:\Boost\boost_1_84_0\lib32-msvc-14.3</AdditionalLibraryDirectories>
       <ProgramDatabaseFile>../../../build/zone_dist/pdb/$(TargetName).pdb</ProgramDatabaseFile>
-      <AdditionalDependencies>INI.lib;log.lib;Psapi.lib;wininet.lib;dbghelp.lib;CrashFind.lib;winmm.lib;ws2_32.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);FrameTimerDLL.lib;iocpSocketDLL.lib;NMCrypt.lib</AdditionalDependencies>
+      <AdditionalDependencies>INI.lib;log.lib;Psapi.lib;wininet.lib;dbghelp.lib;CrashFind.lib;winmm.lib;ws2_32.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);FrameTimerDLL.lib;iocpSocketDLL.lib</AdditionalDependencies>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries);libc.lib;</IgnoreSpecificDefaultLibraries>
       <StackReserveSize>10485760</StackReserveSize>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>

@@ -289,10 +289,10 @@ int ioPowerUpManager::ItemPowerUp(User *pUser, const int iTargetIndex, const int
 		int iItemGrade = ConvertRareItemToRareItemGrade(stExtraItem.m_iItemCode);
 		IntVec& vPowerUPCode = it->second;
 
-		if( iItemGrade >= vPowerUPCode.size() - 1 || 0 > iItemGrade )
+		if( iItemGrade >= (int)vPowerUPCode.size() - 1 || 0 > iItemGrade )
 			return POWER_UP_DISABLE_TARGET;
 
-		if( iItemGrade + 1 >= m_vRareItemNeedMaterialCnt.size() )
+		if( iItemGrade + 1 >= (int)m_vRareItemNeedMaterialCnt.size() )
 			return POWER_UP_DISABLE_TARGET;
 
 		iNeedMaterialCount = m_vRareItemNeedMaterialCnt[iItemGrade + 1];
@@ -393,10 +393,10 @@ int ioPowerUpManager::ItemPowerDown(User *pUser, const int iTargetIndex, const i
 		int iItemGrade = ConvertRareItemToRareItemGrade(stExtraItem.m_iItemCode);
 		IntVec& vPowerUPCode = it->second;
 
-		if( iItemGrade >= vPowerUPCode.size() || 0 > iItemGrade )
+		if (iItemGrade >= (int)vPowerUPCode.size() || 0 > iItemGrade)
 			return POWER_DOWN_DISABLE_TARGET;
 
-		if( iItemGrade >= m_vRareItemDownNeedMaterialCnt.size() )
+		if (iItemGrade >= (int)m_vRareItemDownNeedMaterialCnt.size())
 			return POWER_DOWN_DISABLE_TARGET;
 
 		iNeedMaterialCount = m_vRareItemDownNeedMaterialCnt[iItemGrade];

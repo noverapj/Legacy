@@ -229,7 +229,8 @@ void CTowerDefMode::CheckStartCoin()
 	DWORD curTime = TIMEGETTIME();
 
 	DWORD recordSize = m_vRecordList.size();
-	for(int i = 0; i < recordSize; ++i)
+
+	for (DWORD i = 0; i < recordSize; ++i)
 	{
 		MonsterSurvivalRecord & rkRecord = m_vRecordList[i];
 		if(rkRecord.pUser == NULL)

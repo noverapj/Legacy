@@ -125,7 +125,7 @@ bool MainServerNode::ConnectTo()
 	}
 	sockaddr_in serv_addr;
 	serv_addr.sin_family		= AF_INET;
-	serv_addr.sin_addr.s_addr	= inet_addr( m_szMainIP.c_str() );
+	inet_pton(AF_INET, m_szMainIP.c_str(), &serv_addr.sin_addr);
 	serv_addr.sin_port			= htons( m_iMainPort );
 
 	if( ::connect( socket, (sockaddr*)&serv_addr, sizeof(serv_addr) ) != 0 )

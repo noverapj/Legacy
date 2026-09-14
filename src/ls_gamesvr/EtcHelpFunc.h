@@ -159,7 +159,6 @@ namespace Help
 
 	DWORD GetUserDBAgentID( const ioHashString &rPrivateID );
 
-	bool GetLocalIpAddressList( OUT ioHashStringVec &rvIPList, IN bool bMessageBox );
 
 	// Monster Dungeon
 	bool IsMonsterDungeonMode(ModeType eMode);

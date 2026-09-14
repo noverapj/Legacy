@@ -144,7 +144,7 @@ void DBAgentNode::Reconnect()
 
 	sockaddr_in serv_addr;
 	serv_addr.sin_family		= AF_INET;
-	serv_addr.sin_addr.s_addr	= inet_addr( m_szConnectIP.c_str() );
+	inet_pton(AF_INET, m_szConnectIP.c_str(), &serv_addr.sin_addr);
 	serv_addr.sin_port			= htons( m_iConnectPort );
 	if( ::connect( socket, (sockaddr*)&serv_addr, sizeof(serv_addr) ) != 0 )
 	{
@@ -243,7 +243,7 @@ bool DBClient::ConnectTo()
 
 		sockaddr_in serv_addr;
 		serv_addr.sin_family		= AF_INET;
-		serv_addr.sin_addr.s_addr	= inet_addr((*i).first.c_str() );
+		inet_pton(AF_INET, (*i).first.c_str(), &serv_addr.sin_addr);
 		serv_addr.sin_port			= htons( (*i).second );
 		if( ::connect( socket, (sockaddr*)&serv_addr, sizeof(serv_addr) ) != 0 )
 		{

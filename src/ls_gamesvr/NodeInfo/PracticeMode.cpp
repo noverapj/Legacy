@@ -500,7 +500,7 @@ void PracticeMode::OnPracticeResult( User *pUser, SP2Packet &rkPacket )
 		iEndTime = ms;
 	}
 
-	if(iEndTime < kPractice.m_dwTime)
+	if (iEndTime < (int)kPractice.m_dwTime)
 	{
 		bUpdate = true;
 	}
@@ -543,7 +543,7 @@ void PracticeMode::OnPracticeResult( User *pUser, SP2Packet &rkPacket )
 	ioHashString szSendID		= g_MainServer.GetSendID();
 	CTimeSpan cPresentGapTime( pkPractice->PresentTime, 0, 0, 0 );
 	CTime kPresentTime = CTime::GetCurrentTime() + cPresentGapTime;
-	if( g_PracticeMgr.E_GRADE_A <= dwGrade )
+	if( g_PracticeMgr.E_GRADE_A <= (int)dwGrade )
 	{
 			RewardType = pkPractice->RewardAType;
 			RewardValue = pkPractice->RewardAValue;
@@ -554,7 +554,7 @@ void PracticeMode::OnPracticeResult( User *pUser, SP2Packet &rkPacket )
 				RewardCount, 0, 0, LogDBClient::PST_PRACTICE, "PracticePresent" );
 			pUser->SendPresentMemory();
 	}
-	if( g_PracticeMgr.E_GRADE_B <= dwGrade )
+	if( g_PracticeMgr.E_GRADE_B <= (int)dwGrade )
 	{
 			RewardType = pkPractice->RewardBType;
 			RewardValue = pkPractice->RewardBValue;
@@ -565,7 +565,8 @@ void PracticeMode::OnPracticeResult( User *pUser, SP2Packet &rkPacket )
 				RewardCount, 0, 0, LogDBClient::PST_PRACTICE, "PracticePresent" );
 			pUser->SendPresentMemory();
 	}
-	if( g_PracticeMgr.E_GRADE_C <= dwGrade )
+
+	if (g_PracticeMgr.E_GRADE_C <= (int)dwGrade)
 	{
 			RewardType = pkPractice->RewardCType;
 			RewardValue = pkPractice->RewardCValue;

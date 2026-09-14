@@ -690,61 +690,6 @@ BOOL ioMainProcess::LoadINI()
 	return TRUE;
 }
 
-bool ioMainProcess::SetLocalIP( int iPrivateIPFirstByte )
-{
-	ioHashStringVec vIPList;
-	if( !Help::GetLocalIpAddressList( vIPList, false ) ) 
-		return false;
-
-	int iSize = vIPList.size();
-
-	// 1, 2 아니면 에러
-	if( !COMPARE( iSize, 1, 3 ) )
-	{
-		
-		CriticalLOG.PrintTimeAndLog( LOG_DEBUG_LEVEL, "%s Size Error %d", __FUNCTION__, iSize );
-		return false;
-	}
-
-	// 1
-	if( iSize == 1 ) 
-	{
-		m_szPublicIP  = vIPList[0];
-		m_szPrivateIP = vIPList[0];
-
-		if( m_szPrivateIP.IsEmpty() || m_szPublicIP.IsEmpty() )
-		{
-			
-			CriticalLOG.PrintTimeAndLog( LOG_DEBUG_LEVEL, "%s Local IP Error %s:%s", __FUNCTION__, m_szPrivateIP.c_str(), m_szPublicIP.c_str() );
-			return false;
-		}
-
-		return true;
-	}
-
-	// 2
-	for (int i = 0; i < iSize ; i++)
-	{
-		if( atoi( vIPList[i].c_str() ) != iPrivateIPFirstByte )
-		{
-			m_szPublicIP = vIPList[i];
-		}
-		else
-		{
-			m_szPrivateIP = vIPList[i];
-		}
-	}
-
-	if( m_szPrivateIP.IsEmpty() || m_szPublicIP.IsEmpty() )
-	{
-		
-		CriticalLOG.PrintTimeAndLog( LOG_DEBUG_LEVEL, "%s Local IP Empty %s:%s", __FUNCTION__, m_szPrivateIP.c_str(), m_szPublicIP.c_str() );
-		return false;
-	}
-
-	return true;
-}
-
 void ioMainProcess::CheckTestZone( const char *szIP )
 {
 	if( strcmp( szIP, "211.239.156.226")  == 0 ||

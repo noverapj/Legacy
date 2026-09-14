@@ -611,7 +611,7 @@ void RaidMode::OnLastPlayRecordInfo( User *pUser, SP2Packet &rkPacket )
 
 			// 기여도 최대치 제한..
 			if(m_dwMaxContributePoint > 0)
-				iContribute	   = min(iContribute, m_dwMaxContributePoint);
+				iContribute = min(iContribute, (int)m_dwMaxContributePoint);
 
 			pRecord->iContribute	   = iContribute;
 			pRecord->iUniqueTotalKill  = iUniqueTotalKill;

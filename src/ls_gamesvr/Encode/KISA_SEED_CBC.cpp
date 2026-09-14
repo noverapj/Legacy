@@ -549,7 +549,6 @@ int SEED_CBC_Encrypt( IN BYTE *pbszUserKey, IN BYTE *pbszIV, IN BYTE *pbszPlainT
 	int outlen = 0;
 	int nRetOutLeng = 0;
 	int nPaddingLeng = 0;
-	int i;
 	int nPlainTextPadding = (BLOCK_SIZE_SEED - (nPlainTextLen % BLOCK_SIZE_SEED));
 	newpbszPlainText = (unsigned char*)malloc(sizeof(unsigned char) * (nPlainTextLen + nPlainTextPadding));
 	memcpy(newpbszPlainText, pbszPlainText, nPlainTextLen);

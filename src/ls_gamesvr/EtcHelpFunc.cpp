@@ -1144,54 +1144,6 @@ DWORD GetUserDBAgentID( const ioHashString &rPrivateID )
 	return dwUserAgentID;
 }
 
-// WSAStartup() 호출 이후에 호출해야함
-bool GetLocalIpAddressList( OUT ioHashStringVec &rvIPList, IN bool bMessageBox )
-{
-	char szHostName[MAX_PATH];
-	ZeroMemory( szHostName, sizeof( szHostName ) );
-	gethostname(szHostName, sizeof(szHostName));
-
-	LPHOSTENT lpstHostent = gethostbyname(szHostName);
-	if ( !lpstHostent ) 
-	{
-		if( bMessageBox )
-			CriticalLOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "GetLocalIpAddressList lpstHostend == NULL.", "IOEnter", MB_OK  );
-		else
-			LOG.PrintTimeAndLog( LOG_DEBUG_LEVEL,"%s lpstHostend == NULL.", __FUNCTION__ );
-		return false;
-	}
-
-	enum { MAX_LOOP = 100, };
-	LPIN_ADDR lpstInAddr = NULL;
-	if( lpstHostent->h_addrtype == AF_INET )
-	{
-		for (int i = 0; i < MAX_LOOP ; i++) // 100개까지 NIC 확인
-		{
-			lpstInAddr = (LPIN_ADDR)* lpstHostent->h_addr_list;
-
-			if( lpstInAddr == NULL )
-				break;
-
-			char szTemp[MAX_PATH]="";
-			StringCbCopy( szTemp, sizeof( szTemp ), inet_ntoa(*lpstInAddr) );
-			ioHashString sTemp = szTemp;
-			rvIPList.push_back( sTemp );			
-
-			lpstHostent->h_addr_list++;
-		}
-	}
-
-	if( rvIPList.empty() )
-	{
-		if( bMessageBox )
-			CriticalLOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "GetLocalIpAddressList Local IP empty.", "IOEnter", MB_OK  );
-		else
-			LOG.PrintTimeAndLog( LOG_DEBUG_LEVEL,"%s Local IP empty.", __FUNCTION__ );
-		return false;
-	}
-
-	return true;
-}
 
 //////////////////////////////////////////////////////////////////////////
 // PVE

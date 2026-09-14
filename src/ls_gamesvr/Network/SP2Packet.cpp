@@ -1137,7 +1137,7 @@ void SP2Packet::GetStringOfStream(std::string & str)
 	char const hex[16] = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A',   'B','C','D','E','F'};
 
 	char buf[100]; 
-	sprintf(buf, "0x%x", this->GetPacketID());
+	sprintf_s(buf, sizeof(buf), "0x%x", this->GetPacketID());
 
 	str.append("ID: ");
 	str.append(buf);
@@ -1154,7 +1154,7 @@ void SP2Packet::GetStringOfStream(std::string & str)
 
 	str.append(", Body: ");
 	str.append("(Size:");
-	sprintf(buf, "%d", this->GetBufferSize() - sizeof(PACKETHEADER));
+	sprintf_s(buf, sizeof(buf), "%d", this->GetBufferSize() - sizeof(PACKETHEADER));
 	str.append(buf);
 	str.append("), ");
 

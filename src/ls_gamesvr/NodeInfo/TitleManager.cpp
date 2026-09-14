@@ -159,14 +159,14 @@ BOOL TitleManager::IsLevelUp(const DWORD dwCode, const int iLevel, const DWORD d
 	for( int i = 0; i < 1; i++ )
 	{
 		IntVec& vInfo = m_vPremiumTable[i];
-		if( vInfo.size() < iLevel )
+		if ((int)vInfo.size() < iLevel)
 			return FALSE;
 
 		for( int j = 0; j < (int)vInfo.size(); j++ )
 		{
 			if( iLevel == j )
 			{
-				if( vInfo[j] <= dwValue )
+				if (vInfo[j] <= (int)dwValue)
 					return TRUE;
 
 				return FALSE;

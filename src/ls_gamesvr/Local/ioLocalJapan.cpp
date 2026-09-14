@@ -4,13 +4,18 @@
 #include "../MainProcess.h"
 #include "../Util/ioEncrypted.h"
 #include <strsafe.h>
-#include "../Netmarble/NMCrypt.h"
 #include "../EtcHelpFunc.h"
 #include "../Util/md5.h"
 #include "ioLocalJapanLanguage.h"
 #include "../NodeInfo/User.h"
 #include "../Channeling/ioChannelingNodeParent.h"
 #include "../BillingRelayServer/BillingRelayServer.h"
+
+static int DecryptString(const char* psSource, const char* psKey, char* psTarget)
+{
+	LOG.PrintTimeAndLog(LOG_DEBUG_LEVEL, "%s NMCrypt removed - DecryptString stub", __FUNCTION__);
+	return -1;
+}
 
 ioLocalJapan::ioLocalJapan(void)
 {
@@ -82,7 +87,7 @@ bool ioLocalJapan::ParseLoginData( IN ioHashString &rsEncLoginKeyAndID, OUT char
 		char szDecryptData[MAX_KEY_DATA];
 		ZeroMemory( szDecryptData, MAX_KEY_DATA );
 		int iReturn = DecryptString( szEncDataList[iCheckArray], JAPAN_CRYPT_KEY, szDecryptData );
-		if( CRYPT_SUCCESS != iReturn )
+		if( 0 != iReturn )
 		{
 			LOG.PrintTimeAndLog( LOG_DEBUG_LEVEL, "%s Error Decrypt.(%d:%d)", __FUNCTION__, iCheckArray, iReturn );
 			return false;

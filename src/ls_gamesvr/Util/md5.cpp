@@ -170,7 +170,7 @@ void MD5Final(unsigned char digest[16], MD5Context *ctx)
  */
 void MD5Transform(DWORD buf[4], DWORD const in[16])
 {
-    register DWORD a, b, c, d;
+    DWORD a, b, c, d;
 
     a = buf[0];
     b = buf[1];

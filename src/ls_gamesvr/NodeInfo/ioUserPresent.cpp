@@ -174,7 +174,7 @@ void ioUserPresent::DBtoPresentData( CQueryResultData *query_data )
 				continue; // 삭제 처리된 선물은 패스. 매일 새벽 일괄 삭제됨
 			}
 
-			if( ( g_PresentHelper.GetCanPresentCnt()) > (vNewPresent.size() + m_vPresentList.size()) )
+			if ((g_PresentHelper.GetCanPresentCnt()) > (int)(vNewPresent.size() + m_vPresentList.size()))
 			{
 				m_dwLastDBIndex = max( m_dwLastDBIndex, kData.m_dwIndex );    // 마지막 DB 인덱스
 				kData.m_dwSlotIndex = GetLastPresentSlotIndex();			  // 슬롯 인덱스 생성

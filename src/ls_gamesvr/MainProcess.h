@@ -352,9 +352,6 @@ public:
 	void IncreaseRoomPosCheckCnt( int iType );
 	void SendRoomPosCheckCnt();
 
-private:
-	bool SetLocalIP( int iPrivateIPFirstByte );
-
 public:
 	DWORD GetDBQueryTime() const { return m_dwDBQueryTime; }
 	DWORD GetDBQuerySendTime() const { return m_dwDBQuerySendTime; }
