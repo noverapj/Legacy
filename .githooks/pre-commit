@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Blocks credentials and internal-network material from data/.
+
+PATTERN='PW=[0-9a-fA-F]{16,}|D:\\Github|172\.20\.|172\.30\.|210\.118\.'
+
+HITS=$(git grep --cached -l -E "$PATTERN" -- 'data/' 2>/dev/null)
+
+if [ -n "$HITS" ]; then
+    echo "ERROR: data/ contains blocked material (credentials, dev paths, or internal IPs):"
+    echo "$HITS" | sed 's/^/  /'
+    echo ""
+    echo "Sanitize these files and stage again."
+    exit 1
+fi
