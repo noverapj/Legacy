@@ -34,7 +34,7 @@ launcher, patcher, monitoring, and the tools used to build and operate it.
 
 | Path | Contents |
 |---|---|
-| `src/LSClient/` | The complete game client — 3,600+ files: gameplay modes, characters, skills, items, UI, networking |
+| `src/NoveraClient/` | The complete game client — 3,600+ files: gameplay modes, characters, skills, items, UI, networking |
 | `src/io3DEngine/` | The client's 3D rendering and scene engine |
 | `src/ioPac/` | Resource package (`.iop`) reader/writer |
 | `src/ioFreeType/`, `src/OggVorbis/` | Text rendering and audio decoding |
