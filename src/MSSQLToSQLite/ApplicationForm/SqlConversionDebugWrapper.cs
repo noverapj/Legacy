@@ -5,6 +5,7 @@ using System.Data.SQLite;
 using System.Diagnostics;
 using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using ClassLibrary;
 
 #endregion
@@ -139,6 +140,22 @@ public class SqlConversionDebugWrapper
                         // If the file wasn't created, create an empty SQLite database file
                         LogToMainForm("[Debug] SQLite file not created, creating a new empty database", 2);
                         CreateEmptySqLiteDatabase(sqlitePath, password, selectedTables);
+                    }
+
+                    // Create views once tables (and data) exist. Views depend only
+                    // on tables, so this runs after both branches above.
+                    if (createViews)
+                    {
+                        try
+                        {
+                            var views = GetDatabaseViews(sqlServerConnString);
+                            LogToMainForm($"[View] Found {views.Count} views in source database");
+                            CreateSqLiteViews(sqlitePath, views);
+                        }
+                        catch (Exception viewEx)
+                        {
+                            LogToMainForm($"[View] View conversion failed: {viewEx.Message}", 2);
+                        }
                     }
                 }
                 else if (done && !success)
@@ -304,6 +321,129 @@ public class SqlConversionDebugWrapper
         {
             LogToMainForm($"[Debug] Failed to create empty SQLite database: {ex.Message}", 2);
         }
+    }
+
+    /// <summary>
+    ///     Fetches all view definitions from the SQL Server database.
+    ///     Returns a list of (name, definition) tuples.
+    /// </summary>
+    private static List<(string Name, string Sql)> GetDatabaseViews(string sqlConnString)
+    {
+        var views = new List<(string Name, string Sql)>();
+        using (var connection = new SqlConnection(sqlConnString))
+        {
+            connection.Open();
+            const string query = @"
+SELECT v.name, m.definition
+FROM sys.views v
+LEFT JOIN sys.sql_modules m ON m.object_id = v.object_id
+ORDER BY v.name";
+            using var command = new SqlCommand(query, connection);
+            using var reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                var name = reader.GetString(0);
+                if (reader.IsDBNull(1))
+                {
+                    LogToMainForm($"[View] Skipping '{name}': no definition available", 1);
+                    continue;
+                }
+                views.Add((name, reader.GetString(1)));
+            }
+        }
+
+        return views;
+    }
+
+    /// <summary>
+    ///     Transforms a SQL Server (T-SQL) view definition into SQLite-compatible SQL.
+    ///     Handles the common MSSQL constructs found in this codebase:
+    ///     - Schema prefixes ([dbo]. / dbo. / DBO.)
+    ///     - NOLOCK table hints (WITH (NOLOCK))
+    ///     - Unicode literals (N'...')
+    ///     - ISNULL(...) -> IFNULL(...)
+    /// </summary>
+    private static string TransformViewSqlToSqLite(string viewSql)
+    {
+        var result = viewSql;
+
+        // Remove schema prefixes: "[dbo].[x]" -> "[x]", "[dbo].x" -> "x"
+        result = Regex.Replace(result, @"\[dbo\]\.", "", RegexOptions.IgnoreCase);
+
+        // Remove bare schema prefixes: "dbo.x" -> "x" (but not inside identifiers)
+        result = Regex.Replace(result, @"\b(dbo|DBO)\.", "");
+
+        // Remove NOLOCK and similar table hints: "WITH (NOLOCK)" / "WITH(NOLOCK)"
+        result = Regex.Replace(result, @"\bWITH\s*\(\s*NOLOCK\s*\)", "", RegexOptions.IgnoreCase);
+
+        // Unicode string literals: N'...' -> '...'
+        result = Regex.Replace(result, @"\bN'", "'");
+
+        // ISNULL(a, b) -> IFNULL(a, b)
+        result = Regex.Replace(result, @"\bISNULL\s*\(", "IFNULL(", RegexOptions.IgnoreCase);
+
+        return result;
+    }
+
+    /// <summary>
+    ///     Creates the given views in the SQLite database. Uses a multi-pass retry
+    ///     loop so inter-view dependencies (a view selecting from another view)
+    ///     resolve automatically regardless of alphabetical order. Views that
+    ///     still fail after all passes are skipped with a warning.
+    /// </summary>
+    private static void CreateSqLiteViews(string sqlitePath, List<(string Name, string Sql)> views)
+    {
+        if (views == null || views.Count == 0)
+        {
+            LogToMainForm("[View] No views to create");
+            return;
+        }
+
+        var connString = $"Data Source={sqlitePath};Version=3;";
+        using var connection = new SQLiteConnection(connString);
+        connection.Open();
+
+        var pending = new List<(string Name, string Sql)>(views);
+        var lastErrors = new Dictionary<string, string>();
+        const int maxPasses = 10;
+
+        for (var pass = 1; pending.Count > 0 && pass <= maxPasses; pass++)
+        {
+            var stillPending = new List<(string Name, string Sql)>();
+
+            foreach (var (name, rawSql) in pending)
+            {
+                var sqliteSql = TransformViewSqlToSqLite(rawSql);
+                try
+                {
+                    using var command = new SQLiteCommand(sqliteSql, connection);
+                    command.ExecuteNonQuery();
+                    LogToMainForm($"[View] Created '{name}' (pass {pass})");
+                    lastErrors.Remove(name);
+                }
+                catch (Exception ex)
+                {
+                    // Remember the failure reason and retry on the next pass
+                    stillPending.Add((name, rawSql));
+                    lastErrors[name] = ex.Message;
+                    LogToMainForm($"[View] Pass {pass}: '{name}' failed: {ex.Message}", 1);
+                }
+            }
+
+            // No progress means remaining failures are not dependency-order issues
+            if (stillPending.Count == pending.Count)
+            {
+                LogToMainForm($"[View] No progress on {stillPending.Count} view(s) - giving up on them", 1);
+                break;
+            }
+
+            pending = stillPending;
+        }
+
+        foreach (var kv in lastErrors)
+            LogToMainForm($"[View] SKIPPED '{kv.Key}' (final): {kv.Value}", 2);
+
+        LogToMainForm($"[View] Done: {views.Count - lastErrors.Count}/{views.Count} views created");
     }
 
     /// <summary>

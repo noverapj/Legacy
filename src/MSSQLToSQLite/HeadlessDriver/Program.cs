@@ -3,19 +3,21 @@ using ApplicationForm;
 using ClassLibrary;
 
 // Headless driver for SqlConversionDebugWrapper (GUI-free conversion)
-// Usage: HeadlessDriver.exe "<mssql conn string>" "<output sqlite path>"
+// Usage: HeadlessDriver.exe "<mssql conn string>" "<output sqlite path>" [views=true|false]
 
 if (args.Length < 2)
 {
-    Console.WriteLine("Usage: HeadlessDriver.exe \"<mssql conn string>\" \"<output sqlite path>\"");
+    Console.WriteLine("Usage: HeadlessDriver.exe \"<mssql conn string>\" \"<output sqlite path>\" [views=true|false]");
     return 1;
 }
 
 string connString = args[0];
 string sqlitePath = Path.GetFullPath(args[1]);
+bool includeViews = args.Length < 3 || !string.Equals(args[2], "false", StringComparison.OrdinalIgnoreCase);
 
 Console.WriteLine($"Source : {connString}");
 Console.WriteLine($"Target : {sqlitePath}");
+Console.WriteLine($"Views  : {(includeViews ? "yes" : "no")}");
 
 SqlConversionHandler handler = (done, success, percent, msg) =>
 {
@@ -39,7 +41,7 @@ try
         selectAllTables,    // convert every table
         null,               // no view failure handler (views disabled)
         true,              // create triggers
-        false,              // create views: no
+        includeViews,       // create views
         true,              // treat GUIDs as strings
         false,              // silent
         false,              // debug output
