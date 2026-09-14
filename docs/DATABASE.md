@@ -30,6 +30,25 @@ The two `ls_dbagent` instances are configured through:
 | `ls_dbagent_log.ini` | Log DB agent — logger mode (`LogServerPort` set) |
 | `ls_query.ini` | Query registry — maps query IDs to stored procedures |
 
-`ls_dbagent` also has a small utility mode to encode credentials:
-`ls_dbagent.exe -x <password>` prints the encoded string for use in the
-dbagent INI.
+Template copies live in `data/server/ls_dbagent/` — see
+[CONFIG.md](CONFIG.md).
+
+### Password encoding
+
+The `[SQL] PW=` value is not the plaintext password. It is produced by a
+double XOR against a fixed 30-byte key, then hex encoded
+(`cQueryManager::Encode` in `src/ls_dbagent/Database/cQueryManager.cpp`).
+The agent decodes it at startup.
+
+To generate it for your own SQL password, run the encoder mode:
+
+```
+ls_dbagent.exe -x <plaintext-password>
+```
+
+Paste the printed string into `PW=` of both `ls_dbagent_game.ini` and
+`ls_dbagent_log.ini`.
+
+The encoding is reversible obfuscation, not a hash — never commit real or
+encoded credentials under `data/`. The published templates carry
+`PW=CHANGE_ME`; the pre-commit hook blocks credential-shaped values.
