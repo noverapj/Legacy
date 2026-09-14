@@ -201,11 +201,11 @@ void ioLocalUS::SetTimeZone()
 	// 유저PC설정이 다를 수 있으므로 정해진 [타임존]으로 변경
 	if( m_bEU )
 	{
-		_putenv("TZ=GMT-1"); // 영국 // 써머타임이면 : TZ=GMT-1 | 써머타임 아니면 : TZ=GMT
+		_putenv("TZ=UTC0"); // 영국 // 써머타임이면 : TZ=GMT-1 | 써머타임 아니면 : TZ=GMT
 	}
 	else
 	{
-		putenv("TZ=GMT+8"); // 미국 // 써머타임이면 : TZ=GMT+7 | 써머타임 아니면 : TZ=GMT+8
+		putenv("TZ=UTC0"); // 미국 // 써머타임이면 : TZ=GMT+7 | 써머타임 아니면 : TZ=GMT+8
 	}
 
 	_tzset();

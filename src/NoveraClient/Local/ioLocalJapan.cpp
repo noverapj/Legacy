@@ -131,7 +131,7 @@ bool ioLocalJapan::IsRightNewID( const char *szID )
 void ioLocalJapan::SetTimeZone()
 {
 	// 유저PC설정이 다를 수 있으므로 정해진 [타임존]으로 변경
-	_putenv("TZ=GMT-9"); 
+	_putenv("TZ=UTC0");
 	_tzset();
 	//
 }

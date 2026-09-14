@@ -163,7 +163,7 @@ bool ioLocalIndonesia::IsRightNewID( const char *szID )
 void ioLocalIndonesia::SetTimeZone()
 {
 	// 유저PC설정이 다를 수 있으므로 정해진 [타임존]으로 변경
-	_putenv("TZ=GMT-7"); 
+	_putenv("TZ=UTC0"); 
 	_tzset();
 	//
 }
