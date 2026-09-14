@@ -2,7 +2,16 @@
 
 Requires **SQL Server** (runs fine on SQL Server for Linux).
 
-Each database ships in two encodings — pick one per database:
+Schema scripts ship in per-target directories — pick the one matching your
+SQL Server platform:
+
+| Location | Data paths written into `CREATE DATABASE` | Notes |
+|---|---|---|
+| `sql/` | `/var/opt/mssql/data/` | Original export (140 tables) |
+| `sql/linux/` | `/var/opt/mssql/data/` | Regenerated export (143 tables, includes newer objects) |
+| `sql/windows/` | `C:\Program Files\Microsoft SQL Server\MSSQL\DATA\` | Regenerated export (143 tables, includes newer objects) |
+
+Every location carries the same files in two encodings — pick one per database:
 
 | Script (UNICODE — recommended) | Script (ANSI) | Database name |
 |---|---|---|
@@ -15,10 +24,19 @@ Each database ships in two encodings — pick one per database:
   tooling explicitly expects ANSI/Korean codepage input.
 - Restore the **log databases first**, then the game database (the game DB
   contains cross-database procedures referencing the log DBs).
-- The `CREATE DATABASE` headers contain the original production Windows
-  paths — either edit them, or (recommended) strip the header block and
-  pre-create each database yourself. On Linux, data files conventionally go
-  to `/var/opt/mssql/data/`.
+- If the `CREATE DATABASE` data paths do not match your installation, either
+  edit them, or (recommended) strip the header block and pre-create each
+  database yourself.
+
+## SQLite copies (sql/lite/)
+
+`sql/lite/` holds schema-only SQLite versions of the same databases
+(`.db` files plus matching `.sql` dumps, no data) — usable for inspection
+and tooling without a SQL Server instance. They are produced by the
+`src/MSSQLToSQLite` headless converter.
+
+To regenerate the SQL Server schema exports themselves, see
+[SMO-DB-EXPORT.md](SMO-DB-EXPORT.md).
 
 ## DB agent configuration
 
