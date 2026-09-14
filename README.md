@@ -1,5 +1,9 @@
 # NOVERA Legacy
 
+<p align="center">
+  <img src=".github/assets/hero-img.png" alt="NOVERA Legacy" width="920">
+</p>
+
 **Copyright NOVERA OSS.** The revived source tree of the classic Korean
 action-brawler *Lost Saga* — game client, server suite, launcher, and
 tooling — now building with Visual Studio 2022 (C++17).
