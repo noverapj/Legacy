@@ -103,7 +103,8 @@ jobs:
         run: |
           jq -n \
             --arg tag "${GITHUB_REF_NAME}" \
-            --rawfile body notes-gitea.md
+            --rawfile body notes-gitea.md \
+            '{tag_name: $tag, name: $tag, body: $body}' > payload.json
           curl -sSf -X POST "https://gitea.com/api/v1/repos/NOVERA/Legacy/releases" \
             -H "Authorization: token ${GITEA_TOKEN}" \
             -H "Content-Type: application/json" \
