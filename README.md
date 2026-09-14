@@ -8,9 +8,18 @@ tooling — now building with Visual Studio 2022 (C++17).
 > game-preservation purposes only**. It is not affiliated with, endorsed by,
 > or connected to the original developers or publishers of Lost Saga. No
 > game client binaries, assets, or copyrighted media are included in this
-> repository. You must provide your own game client and data files.
+> repository. You must provide your own game client and resource files.
 
 ---
+
+## Project direction
+
+NOVERA Legacy is the open, self-hostable continuation of Lost Saga. There is
+no official server to join and none is planned — the tree ships complete
+source, databases, and runtime configuration so anyone can run the game on
+their own machine. The project preserves the game and improves it:
+incremental, real changes, not a replica of any specific Korean season.
+Contributions are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## What's inside
 
@@ -56,22 +65,25 @@ launcher, patcher, monitoring, and the tools used to build and operate it.
 | `extra/` | Developer utilities — opcode-to-string parser, encoder, CRC/INI checkers, billing lists, static libs |
 | `Tools/` | Prebuilt developer tools (LSPacketSniffer, LSController, VCSGen) |
 | `sql/` | SQL Server schemas — `LosaGame`, `LosaGame_log`, `LosaLogData` (ANSI + UNICODE variants) |
+| `data/` | Sanitized runtime configuration — server and client templates ([guide](docs/CONFIG.md)) |
 | `win/` | Visual Studio 2022 solutions and project files |
 | `lib/` | Bundled legacy binaries — CrashFind, FlashDX, OpenSSL, frame timer, and friends |
-| `docs/` | [Building](docs/BUILDING.md) and [database setup](docs/DATABASE.md) guides |
+| `docs/` | [Building](docs/BUILDING.md), [database setup](docs/DATABASE.md), [configuration](docs/CONFIG.md), [release process](docs/release.md), and [SMO export](docs/SMO-DB-EXPORT.md) guides |
 
-## Getting the binaries
+## Running it yourself
 
-Prebuilt server binaries are published on the
-[Releases](https://github.com/noverapj/Legacy/releases) page — download the
-latest archive, extract it, and:
+There is no official server and no prebuilt binary distribution — the tree
+is meant to be built and run on your own machine:
 
-1. **Restore the databases** — see [docs/DATABASE.md](docs/DATABASE.md).
-2. **Configure the server INIs** (SQL connection, ports).
-3. **Start the servers** in dependency order: dbagent → billingsvr →
+1. **Build** the client and server suite — see [docs/BUILDING.md](docs/BUILDING.md).
+2. **Restore the databases** — see [docs/DATABASE.md](docs/DATABASE.md).
+3. **Deploy the runtime configuration** from `data/` — see
+   [docs/CONFIG.md](docs/CONFIG.md).
+4. **Start the servers** in dependency order: dbagent → billingsvr →
    mainsvr → gamesvr → filewritesvr.
 
-To build everything from source instead, see [docs/BUILDING.md](docs/BUILDING.md).
+Releases on the mirrors carry automatically generated notes; the source at
+each tag is the complete package.
 
 ## License
 
