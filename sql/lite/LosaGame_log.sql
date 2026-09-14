@@ -22,4 +22,9 @@ CREATE TABLE [log_level_playtime] ([idx] INTEGER NOT NULL, [userLevel] INTEGER N
 CREATE TABLE [log_mannerpoint] ([idx] INTEGER NOT NULL, [playType] INTEGER NOT NULL, [modeType] INTEGER NOT NULL, [sub1Type] INTEGER NOT NULL, [sub2Type] INTEGER NOT NULL, [reportIDX] INTEGER, [reportNick] TEXT, [reportpubIP] TEXT NOT NULL, [reportpriIP] TEXT NOT NULL, [receiveIDX] TEXT, [receiveNick] TEXT, [receivepubIP] TEXT NOT NULL, [roomInfo] TEXT, [chatInfo] TEXT, [note] TEXT, [reason] TEXT, [flag] INTEGER NOT NULL, [resultType] INTEGER NOT NULL, [regDate] TEXT NOT NULL);
 CREATE TABLE [log_mannerpoint_sitevisit] ([idx] INTEGER NOT NULL, [accountIDX] INTEGER NOT NULL, [point] INTEGER NOT NULL, [userIP] TEXT NOT NULL, [regDate] TEXT NOT NULL);
 CREATE TABLE [log_tooni_migration] ([idx] INTEGER NOT NULL, [TooniIDX] INTEGER NOT NULL, [TooniID] TEXT NOT NULL, [AccountIDX] INTEGER NOT NULL, [RegDate] TEXT NOT NULL, PRIMARY KEY ([RegDate], [idx]));
+CREATE INDEX [accountidx] ON [log_data_clover] ([accountIDX] ASC);
+CREATE INDEX [index] ON [log_data_clover] ([idx] ASC);
+CREATE INDEX [regDate] ON [log_data_clover] ([regDate] ASC);
+CREATE INDEX [NC_log_tooni_migration_AccountIDX] ON [log_tooni_migration] ([AccountIDX] ASC);
+CREATE INDEX [NC_log_tooni_migration_TooniID] ON [log_tooni_migration] ([TooniID] ASC);
 COMMIT;
