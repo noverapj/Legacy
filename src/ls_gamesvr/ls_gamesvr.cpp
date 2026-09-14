@@ -27,6 +27,9 @@ LONG __stdcall ExceptCallBack ( EXCEPTION_POINTERS * pExPtrs );
 
 int _tmain(int argc, _TCHAR* argv[])
 {
+	_putenv("TZ=UTC0");
+	_tzset();
+
 	ServiceLS *service = new ServiceLS( argc, argv );
 
 	service->ServiceMainProc();
