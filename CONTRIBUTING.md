@@ -7,6 +7,8 @@ protocol work, tooling improvements, and documentation are all welcome.
 
 1. Build the tree — see [docs/BUILDING.md](docs/BUILDING.md).
 2. Set up the databases — see [docs/DATABASE.md](docs/DATABASE.md).
+3. Deploy the runtime configuration from `data/` — see
+   [docs/CONFIG.md](docs/CONFIG.md).
 
 ## Ground rules
 
@@ -17,13 +19,28 @@ protocol work, tooling improvements, and documentation are all welcome.
 - **Wire protocol changes need justification.** If a pull request changes
   packet structure (field order, sizes, framing), describe the compatibility
   impact in detail.
-- **No client binaries or assets.** Contributions must contain source or
-  tooling only — never game client files or copyrighted media.
+- **No client binaries or assets.** Contributions must contain source,
+  tooling, or configuration only — never game client binaries or
+  copyrighted media. Runtime configuration belongs under `data/` and must
+  not contain real credentials, internal network addresses, or local
+  absolute paths — a pre-commit hook blocks them.
 
 ## Commits
 
 Follow [Conventional Commits](https://www.conventionalcommits.org/), in
 lowercase English: `feat:`, `fix:`, `docs:`, `chore:`.
+
+Commit messages must use the `type(scope): description` form and are
+validated by `.githooks/commit-msg`. Valid scopes: `client`, `engine`,
+`gamesvr`, `mainsvr`, `billingsvr`, `dbagent`, `filewritesvr`, `loginsvr`,
+`relaysvr`, `launcher`, `tools`, `sql`, `data`, `solution`, `tooling`,
+`ci`, `deps`, `readme`.
+
+Enable the hooks after cloning:
+
+```
+git config core.hooksPath .githooks
+```
 
 ## Pull requests
 
