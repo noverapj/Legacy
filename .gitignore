@@ -83,3 +83,6 @@ Version.h
 # DXSDK (bundled for developers without DirectX SDK install)
 !lib/DXSDK/
 !lib/DXSDK/**
+
+# SQLite binary databases (regenerate via MSSQLToSQLite HeadlessDriver or from the .sql schema)
+sql/lite/*.db
