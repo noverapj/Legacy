@@ -157,6 +157,18 @@ public class SqlConversionDebugWrapper
                             LogToMainForm($"[View] View conversion failed: {viewEx.Message}", 2);
                         }
                     }
+
+                    // Create secondary indexes last: data is already in place,
+                    // so each index is built in one pass instead of maintained
+                    // row-by-row during transfer.
+                    try
+                    {
+                        CreateSqLiteIndexes(sqlitePath, selectedTables);
+                    }
+                    catch (Exception indexEx)
+                    {
+                        LogToMainForm($"[Index] Index conversion failed: {indexEx.Message}", 2);
+                    }
                 }
                 else if (done && !success)
                 {
@@ -444,6 +456,64 @@ ORDER BY v.name";
             LogToMainForm($"[View] SKIPPED '{kv.Key}' (final): {kv.Value}", 2);
 
         LogToMainForm($"[View] Done: {views.Count - lastErrors.Count}/{views.Count} views created");
+    }
+
+    /// <summary>
+    ///     Creates the secondary indexes captured in the table schemas.
+    ///     Index names are deduplicated across tables (SQLite index names are
+    ///     database-global) by suffixing the table name on collision.
+    ///     Individual failures are skipped with a warning (non-fatal).
+    /// </summary>
+    private static void CreateSqLiteIndexes(string sqlitePath, List<TableSchema> tables)
+    {
+        var totalCount = tables.Sum(t => t.Indexes?.Count ?? 0);
+        if (totalCount == 0)
+        {
+            LogToMainForm("[Index] No secondary indexes found in source schema");
+            return;
+        }
+
+        var connString = $"Data Source={sqlitePath};Version=3;";
+        using var connection = new SQLiteConnection(connString);
+        connection.Open();
+
+        var usedNames = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        var created = 0;
+        var skipped = 0;
+
+        foreach (var table in tables)
+        {
+            if (table.Indexes == null) continue;
+            foreach (var index in table.Indexes)
+            {
+                var name = index.IndexName;
+                if (!usedNames.Add(name))
+                {
+                    name = $"{index.IndexName}_{table.TableName}";
+                    if (!usedNames.Add(name))
+                        name = $"{name}_{usedNames.Count}";
+                }
+
+                var columns = string.Join(", ",
+                    index.Columns.Select(c => $"[{c.ColumnName}] {(c.IsAscending ? "ASC" : "DESC")}"));
+                var uniquePrefix = index.IsUnique ? "UNIQUE " : string.Empty;
+
+                try
+                {
+                    using var command =
+                        new SQLiteCommand($"CREATE {uniquePrefix}INDEX [{name}] ON [{table.TableName}] ({columns})", connection);
+                    command.ExecuteNonQuery();
+                    created++;
+                }
+                catch (Exception ex)
+                {
+                    skipped++;
+                    LogToMainForm($"[Index] SKIPPED '{name}' on '{table.TableName}': {ex.Message}", 2);
+                }
+            }
+        }
+
+        LogToMainForm($"[Index] Done: {created}/{totalCount} created, {skipped} skipped");
     }
 
     /// <summary>
@@ -1232,6 +1302,7 @@ ORDER BY v.name";
                     GetColumnsForTable(connection, table);
                     GetPrimaryKeyForTable(connection, table);
                     GetForeignKeysForTable(connection, table);
+                    GetIndexesForTable(connection, table);
                 }
             }
 
@@ -1391,6 +1462,76 @@ ORDER BY v.name";
         catch (Exception ex)
         {
             Console.WriteLine($"[DebugWrapper] Error getting foreign keys for table {table.TableName}: {ex.Message}");
+        }
+    }
+
+    /// <summary>
+    ///     Gets the secondary indexes for a table (excluding primary keys,
+    ///     heaps and filtered indexes - those cannot be represented 1:1).
+    ///     Unique constraints are included since SQLite has no ALTER-style
+    ///     unique constraints in the generated DDL.
+    /// </summary>
+    private static void GetIndexesForTable(SqlConnection connection, TableSchema table)
+    {
+        try
+        {
+            const string sql = @"
+                SELECT
+                    i.name AS IndexName,
+                    i.is_unique AS IsUnique,
+                    c.name AS ColumnName,
+                    ic.is_descending_key AS IsDescending
+                FROM
+                    sys.indexes i
+                    INNER JOIN sys.index_columns ic ON ic.object_id = i.object_id AND ic.index_id = i.index_id
+                    INNER JOIN sys.tables t ON i.object_id = t.object_id
+                    INNER JOIN sys.schemas s ON t.schema_id = s.schema_id
+                    INNER JOIN sys.columns c ON c.object_id = ic.object_id AND c.column_id = ic.column_id
+                WHERE
+                    t.name = @TableName
+                    AND s.name = @SchemaName
+                    AND i.is_primary_key = 0
+                    AND i.name IS NOT NULL
+                    AND i.has_filter = 0
+                    AND ic.is_included_column = 0
+                ORDER BY
+                    i.name, ic.key_ordinal";
+
+            using var command = new SqlCommand(sql, connection);
+            command.Parameters.AddWithValue("@TableName", table.TableName);
+            command.Parameters.AddWithValue("@SchemaName", table.TableSchemaName);
+
+            var byName = new Dictionary<string, IndexSchema>();
+            using (var reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    var indexName = reader["IndexName"].ToString();
+                    if (!byName.TryGetValue(indexName, out var index))
+                    {
+                        index = new IndexSchema
+                        {
+                            IndexName = indexName,
+                            IsUnique = Convert.ToBoolean(reader["IsUnique"]),
+                            Columns = new List<IndexColumn>()
+                        };
+                        byName[indexName] = index;
+                    }
+
+                    index.Columns.Add(new IndexColumn
+                    {
+                        ColumnName = reader["ColumnName"].ToString(),
+                        IsAscending = !Convert.ToBoolean(reader["IsDescending"])
+                    });
+                }
+            }
+
+            foreach (var index in byName.Values)
+                table.Indexes.Add(index);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[DebugWrapper] Error getting indexes for table {table.TableName}: {ex.Message}");
         }
     }
 
