@@ -60,6 +60,8 @@ public:
 public:
 	void SetUseStringMgr( bool bUseStringMgr );
 	void SetStringMgrKeyName( const char *szStringMgrKeyName );
+	const char* GetStringMgrKeyName(){ return m_szStringMgrKeyName; }
+
 
 public:
 	ioXMLElement();

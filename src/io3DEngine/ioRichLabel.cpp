@@ -253,16 +253,24 @@ void	ioRichLabel::SetText( ioXMLElement& xElement )
 	ioXMLElement child = xElement.FirstChild();
 	while ( !child.IsEmpty() )
 	{			
-		if ( strcmp( child.GetTagName(), "TextBlock" ) == 0 ) 
-		{			
-			char txt[ MAX_PATH ];
-			strcpy_s( txt, child.GetStringAttribute( "Text" ) );
-			ChangeCharSet( txt, '#', '\n' );
+		if (strcmp(child.GetTagName(), "TextBlock") == 0)
+		{
+			char txt[MAX_PATH];
+			ioHashString szTxt;
 
-			TextStyle style = ioStringConverter::ParseTextStyle( child.GetStringAttribute( "Style" ) );
-			DWORD color = ioStringConverter::ParseColor( child.GetStringAttribute( "Color" ) );			
 
-			AddText( child.GetIntAttribute( "Size" ), style, color, txt, true );
+			child.SetStringMgrKeyName(xElement.GetStringMgrKeyName());
+			child.SetUseStringMgr(true);
+			szTxt = child.GetStringAttribute("Text");
+			child.SetUseStringMgr(false);
+
+			sprintf_s(txt, "%s", szTxt.c_str());
+			ChangeCharSet(txt, '#', '\n');
+
+			TextStyle style = ioStringConverter::ParseTextStyle(child.GetStringAttribute("Style"));
+			DWORD color = ioStringConverter::ParseColor(child.GetStringAttribute("Color"));
+
+			AddText(child.GetIntAttribute("Size"), style, color, txt, true);
 		}
 		else if ( strcmp( child.GetTagName(), "Format" ) == 0 )
 		{
