@@ -43,6 +43,7 @@ It is unrelated to release versions and must not be edited manually.
   the previous tag and the new tag.
 - Commits are grouped under: Features, Bug Fixes, Reverts, Performance,
   Refactoring, Documentation, Miscellaneous.
+- Each entry links to the corresponding commit on the respective platform.
 - If there is no previous tag, each group is summarized instead: total commit
   count plus the latest 15 subjects.
 

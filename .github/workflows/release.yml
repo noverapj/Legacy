@@ -35,7 +35,7 @@ jobs:
             : > "${workdir}/${f}.txt"
           done
 
-          git log --no-merges --format='%s' "${RANGE}" | while read -r subject; do
+          git log --no-merges --format='%h %s' "${RANGE}" | while read -r sha subject; do
             [ -n "${subject}" ] || continue
             prefix=${subject%%[(:! ]*}
             prefix=${prefix,,}
@@ -48,7 +48,7 @@ jobs:
               docs) file=docs ;;
               *) file=misc ;;
             esac
-            printf '%s\n' "${subject}" >> "${workdir}/${file}.txt"
+            printf '%s\n' "- [${subject}](COMMITURL/${sha})" >> "${workdir}/${file}.txt"
           done
 
           emit() {
@@ -59,14 +59,14 @@ jobs:
               {
                 echo "## ${title}"
                 echo ""
-                sed 's/^/- /' "${file}"
+                cat "${file}"
                 echo ""
               }
             else
               {
                 echo "## ${title} (${count} commits, latest ${MAX} shown)"
                 echo ""
-                head -n "${MAX}" "${file}" | sed 's/^/- /'
+                head -n "${MAX}" "${file}"
                 echo ""
               }
             fi
@@ -84,6 +84,10 @@ jobs:
 
           [ -s notes.md ] || echo "No changes." > notes.md
 
+          sed 's#COMMITURL#https://github.com/noverapj/Legacy/commit#g' notes.md > notes-github.md
+          sed 's#COMMITURL#https://gitea.com/NOVERA/Legacy/commit#g' notes.md > notes-gitea.md
+          sed 's#COMMITURL#https://gitlab.com/noverapj/legacy/commit#g' notes.md > notes-gitlab.md
+
       - name: Create GitHub release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -91,7 +95,7 @@ jobs:
           gh release create "${GITHUB_REF_NAME}" \
             --repo "${GITHUB_REPOSITORY}" \
             --title "${GITHUB_REF_NAME}" \
-            --notes-file notes.md
+            --notes-file notes-github.md
 
       - name: Create Gitea release
         env:
@@ -99,8 +103,7 @@ jobs:
         run: |
           jq -n \
             --arg tag "${GITHUB_REF_NAME}" \
-            --rawfile body notes.md \
-            '{tag_name: $tag, name: $tag, body: $body}' > payload.json
+            --rawfile body notes-gitea.md
           curl -sSf -X POST "https://gitea.com/api/v1/repos/NOVERA/Legacy/releases" \
             -H "Authorization: token ${GITEA_TOKEN}" \
             -H "Content-Type: application/json" \
@@ -112,7 +115,7 @@ jobs:
         run: |
           jq -n \
             --arg tag "${GITHUB_REF_NAME}" \
-            --rawfile body notes.md \
+            --rawfile body notes-gitlab.md \
             '{tag_name: $tag, name: $tag, description: $body}' > payload.json
           curl -sSf -X POST "https://gitlab.com/api/v4/projects/noverapj%2Flegacy/releases" \
             -H "PRIVATE-TOKEN: ${GITLAB_TOKEN}" \
