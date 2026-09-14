@@ -2,7 +2,7 @@
 
 # Blocks credentials and internal-network material from data/.
 
-PATTERN='PW=[0-9a-fA-F]{16,}|D:\\Github|172\.20\.|172\.30\.|210\.118\.'
+PATTERN='PW=[0-9a-fA-F]{16,}|D:\\Github|172\.20\.|172\.30\.|210\.118\.|10\.0\.5\.|10\.0\.17\.|10\.20\.|183\.111\.|DaumApikey[[:space:]]*=[[:space:]]*[0-9a-f]{16,}|NexonClientSecret[[:space:]]*=[[:space:]]*[0-9a-f]{16,}'
 
 HITS=$(git grep --cached -l -E "$PATTERN" -- 'data/' 2>/dev/null)
 
