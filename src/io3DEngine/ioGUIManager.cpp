@@ -908,42 +908,53 @@ ioWnd* ioGUIManager::AddWnd( const char *szXMLFileName, ioWnd *pParent )
 	return LoadWnd( xRootElement, pParent );
 }
 
-ioWnd* ioGUIManager::AddWndByTemplate( ioHashString &szClassName, ioWnd *pParent, DWORD dwTPID, DWORD dwTemplateID /* = -1 */ )
+ioWnd* ioGUIManager::AddWndByTemplate(ioHashString& szClassName, ioWnd* pParent, DWORD dwTPID, DWORD dwTemplateID /* = -1 */)
 {
-	ioXMLElement* pElement = pParent->FindTemplate( szClassName, dwTemplateID );
+	ioXMLElement* pElement = pParent->FindTemplate(szClassName, dwTemplateID);
 
-	if( !pElement || !pElement->IsTagRight( "Template" ) )
-		return NULL;
+	if (!pElement || !pElement->IsTagRight("Template"))
+		return nullptr;
 
-	ioWnd *pNewWnd = CreateNewWindow( szClassName );
-	if( pNewWnd )
+	ioWnd* pNewWnd = CreateNewWindow(szClassName);
+	if (pNewWnd)
 	{
-		pNewWnd->SetID( dwTPID );
-		pNewWnd->SetClassName( szClassName.c_str() );
-		pNewWnd->SetInnerUniqueIndex( ++m_dwInnerUniqueIndexCounter );
-		pNewWnd->SetTemplateChild( true );
+		pNewWnd->SetID(dwTPID);
+		pNewWnd->SetClassName(szClassName.c_str());
+		pNewWnd->SetInnerUniqueIndex(++m_dwInnerUniqueIndexCounter);
+		pNewWnd->SetTemplateChild(true);
 
-		pParent->AddChild( pNewWnd );
-		
+		pParent->AddChild(pNewWnd);
+
+#ifdef STRING_MANAGER
+		ioHashString szSavedKeyName = m_szStringMgrKeyName;
+		const char* szTemplateKey = pElement->GetStringMgrKeyName();
+		if (szTemplateKey && szTemplateKey[0])
+			m_szStringMgrKeyName = szTemplateKey;
+#endif
+
 
 		ioXMLElement xProperty = pElement->FirstChild();
-		while( !xProperty.IsEmpty() )
+		while (!xProperty.IsEmpty())
 		{
-			LoadProperty( xProperty, pNewWnd );
+			LoadProperty(xProperty, pNewWnd);
 
 			xProperty = xProperty.NextSibling();
 		}
 
+#ifdef STRING_MANAGER
+		m_szStringMgrKeyName = szSavedKeyName;
+#endif
+
 		pNewWnd->iwm_create();
 
-		if( !pNewWnd->HasWndStyle( IWS_START_HIDE ) )
+		if (!pNewWnd->HasWndStyle(IWS_START_HIDE))
 		{
 			pNewWnd->ShowWnd();
 		}
 	}
 	else
 	{
-		LOG.PrintTimeAndLog( 0, "ioGUIManager::LoadWnd - %s Unknown ClassName", szClassName.c_str() );
+		LOG.PrintTimeAndLog(0, "ioGUIManager::LoadWnd - %s Unknown ClassName", szClassName.c_str());
 	}
 
 	return pNewWnd;
@@ -1019,6 +1030,11 @@ void ioGUIManager::LoadTemplate( ioXMLElement &xElement, ioWnd *pParent )
 
 	ioXMLElement* pNewElement = new ioXMLElement;
 	pNewElement->Copy( xElement );
+
+#ifdef STRING_MANAGER
+	pNewElement->SetStringMgrKeyName(m_szStringMgrKeyName.c_str());
+#endif
+
 	pParent->AddTemplate( pNewElement );
 }
 
