@@ -53,6 +53,7 @@ public:
 	virtual bool IsChangeServerHelp() { return true; }
 	virtual bool IsSendCollisionPos() { return false; }
 	virtual bool IsLimitStartCancel() { return true; }
+	virtual DWORD GetUserSyncIntervalTime() { return 1000; }
 
 	virtual int GetCashPageWidth();
 	virtual int GetCashPageHeight();

@@ -2349,10 +2349,8 @@ void ioPlayStage::ProcessSyncControl()
 	if( !P2PNetwork::IsNetworkPlaying() || !IsNetworkMode() )
 		return;
 
-	DWORD dwTime = 500;
-	if( ioLocalManager::GetLocalType() == ioLocalManager::LCT_INDONESIA || 
-		ioLocalManager::GetLocalType() == ioLocalManager::LCT_TAIWAN ) 
-		dwTime = 1000;
+	ioLocalParent *pLocal = g_LocalMgr.GetLocal( ioLocalManager::GetLocalType() );
+	DWORD dwTime = pLocal ? pLocal->GetUserSyncIntervalTime() : 500;
 
 	if( m_UserSyncTimer.IsTimePast( dwTime ) )
 	{

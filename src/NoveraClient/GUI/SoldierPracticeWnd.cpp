@@ -114,7 +114,8 @@ void PracticeHelpWnd::SetStep( int iStep )
 	m_iCurTextTickCount = 0;
 	m_iCurTextLineCount = 0;
 
-	if( ioLocalManager::GetLocalType() != ioLocalManager::LCT_KOREA )
+	ioLocalParent *pLocal = g_LocalMgr.GetLocal( ioLocalManager::GetLocalType() );
+	if( !pLocal || !pLocal->IsHangeulTextTick() )
 	{
 		SplitDescription( kHelp.m_szHelp );
 
@@ -357,7 +358,8 @@ void PracticeHelpWnd::OnProcess( float fTimePerSec )
 			}		
 		}
 	}	
-	if( ioLocalManager::GetLocalType() != ioLocalManager::LCT_KOREA )
+	ioLocalParent *pLocal = g_LocalMgr.GetLocal( ioLocalManager::GetLocalType() );
+	if( !pLocal || !pLocal->IsHangeulTextTick() )
 		ProcessTextTick();
 	else
 		ProcessIoStringTick();
@@ -380,7 +382,8 @@ void PracticeHelpWnd::OnRender()
 	}
 
 	//////////////////////////////////////////////////////////////////////////
-	if( ioLocalManager::GetLocalType() != ioLocalManager::LCT_KOREA )
+	ioLocalParent *pLocal = g_LocalMgr.GetLocal( ioLocalManager::GetLocalType() );
+	if( !pLocal || !pLocal->IsHangeulTextTick() )
 	{
 		g_FontMgr.SetAlignType( TAT_LEFT );
 		g_FontMgr.SetTextStyle( TS_NORMAL );

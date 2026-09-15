@@ -13483,7 +13483,7 @@ void ioApplication::OnEtcItemCloverUpdate( SP2Packet &rkPacket )
 bool ioApplication::IsWemadeChannelingGetCash()
 {
 	ioLocalParent *pLocal = g_LocalMgr.GetLocal( ioLocalManager::GetLocalType() );
-	if( pLocal && pLocal->GetType() == ioLocalManager::LCT_KOREA )
+	if( pLocal && pLocal->IsChannelingGetCash() )
 	{
 		ioChannelingNodeParent *pNode = g_ChannelingMgr.GetNode( g_MyInfo.GetChannelingType() );
 		if( pNode && pNode->GetType() == CNT_WEMADEBUY )

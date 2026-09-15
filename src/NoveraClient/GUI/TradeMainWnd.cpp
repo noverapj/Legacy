@@ -1145,7 +1145,7 @@ void TradeMainWnd::UpdateTradeItemList()
 				std::transform( szName.begin(), szName.end(), szName.begin(), tolower );
 
 				ioLocalParent *pLocal = g_LocalMgr.GetLocal( ioLocalManager::GetLocalType() );
-				if( pLocal && pLocal->GetType() == ioLocalManager::LCT_KOREA )
+				if( pLocal && pLocal->IsTwoByteSearch() )
 				{
 					//조합형 글자 비교(초성 비교 초함)
 					if( !Help::Strstr( szName.c_str(), m_CurrFindKeyWord.c_str() ) )

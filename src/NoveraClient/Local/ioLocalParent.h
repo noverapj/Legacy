@@ -91,6 +91,11 @@ public:
 	virtual int GetCashPageHeight() { return 0; }
 	virtual void OnCashPageHide(){}
 
+	virtual bool IsHangeulTextTick(){ return false; }
+	virtual DWORD GetUserSyncIntervalTime(){ return 500; }
+	virtual bool IsChannelingGetCash(){ return false; }
+	virtual bool IsTwoByteSearch(){ return false; }
+
 public:
 	ioLocalParent(void);
 	virtual ~ioLocalParent(void);

@@ -46,8 +46,8 @@ public:
 	virtual bool IsFirstIDCheckPass() { return true; }
 	virtual bool IsMyHomePage();
 	virtual bool IsShowRegulation();
-
 	virtual bool IsFirstIDControlAltCtrl() { return false; }
+	virtual DWORD GetUserSyncIntervalTime() { return 1000; }
 
 public:
 	ioLocalTaiwan(void);
