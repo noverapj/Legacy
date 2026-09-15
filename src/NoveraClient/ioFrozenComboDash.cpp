@@ -860,20 +860,30 @@ void ioFrozenComboDash::CheckKeyReserve( ioBaseChar *pOwner )
 	}
 
 	bool bIsAttackKey = pOwner->IsAttackKey();
+
+#ifndef SHIPPING
 	if( bIsAttackKey )
 	{
 		LOG.PrintTimeAndLog( 0, "ioFrozenComboDash::CheckKeyReserve IsAttackKey: %d ", bIsAttackKey );
 	}
+#endif
+
 	bool bEnableAttackState = m_bEnableAttackState;
+#ifndef SHIPPING
 	if( bEnableAttackState )
 	{
 		LOG.PrintTimeAndLog( 0, "ioFrozenComboDash::CheckKeyReserve m_bEnableAttackState: %d",  bEnableAttackState);
 	}
+#endif
+
 	bool bIsAttackKeyDown = pOwner->IsAttackKeyDown();
+#ifndef SHIPPING
+
 	if( bIsAttackKeyDown )
 	{
 		LOG.PrintTimeAndLog( 0, "ioFrozenComboDash::CheckKeyReserve IsAttackKeyDown: %d",  bIsAttackKeyDown);
 	}
+#endif
 
 	if( pOwner->IsDefenseKeyDown() && !m_bEnableDefenseState && !bReserveSkill )
 	{
