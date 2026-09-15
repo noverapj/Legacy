@@ -97,32 +97,9 @@ void ioLocalIndonesia::FillLoginData( OUT SP2Packet &rkPacket )
 	m_sLoginEncodePW.Clear();
 }
 
-void ioLocalIndonesia::SendWindowMsg( int iMsgType )
-{
-
-}
-
-void ioLocalIndonesia::GetClassTypeForTutorialDropItem( int &riClassType )
-{
-
-}
-
-int ioLocalIndonesia::GetFirstIDMaxSize()
-{
-	return 12;
-}
-
 bool ioLocalIndonesia::IsShowFirstIDWnd()
 {
 	return true;
-}
-
-void ioLocalIndonesia::OpenFillCashPage()
-{
-	if( g_MyInfo.IsEntryFormality() )
-		g_App.OpenFillCashPage();
-	else
-		g_App.OpenCashEntryPage();
 }
 
 const char * ioLocalIndonesia::GetGuildMasterPostion()
@@ -145,29 +122,6 @@ const char * ioLocalIndonesia::GetGuildAdminPosition()
 	return "Member"; //Except Extracting Hangeul
 }
 
-bool ioLocalIndonesia::IsRightNewID( const char *szID )
-{
-	int size = strlen(szID);
-	for (int i=0; i<size; i++)
-	{
-		if ((!COMPARE(szID[i], 'A', 'Z'+1)) &&
-			(!COMPARE(szID[i], 'a', 'z'+1)) &&
-			(!COMPARE(szID[i], '0', '9'+1)) )
-		{
-			return false;
-		}
-	}
-	return true;
-}
-
-void ioLocalIndonesia::SetTimeZone()
-{
-	// 유저PC설정이 다를 수 있으므로 정해진 [타임존]으로 변경
-	_putenv("TZ=UTC0"); 
-	_tzset();
-	//
-}
-
 bool ioLocalIndonesia::IsSendGashaponList()
 {
 	return true;
@@ -175,17 +129,7 @@ bool ioLocalIndonesia::IsSendGashaponList()
 
 void ioLocalIndonesia::GetChangedString( OUT char *szCheckString )
 {
-		strlwr( szCheckString );
-}
-
-bool ioLocalIndonesia::IsExecuteLuncher()
-{
-	return false;
-}
-
-bool ioLocalIndonesia::IsKoreaGameLimit()
-{
-	return false;
+	strlwr( szCheckString );
 }
 
 bool ioLocalIndonesia::IsCheckKorean()
@@ -194,11 +138,6 @@ bool ioLocalIndonesia::IsCheckKorean()
 }
 
 bool ioLocalIndonesia::IsMyHomePage()
-{
-	return false;
-}
-
-bool ioLocalIndonesia::IsShowExtraGoodsList()
 {
 	return false;
 }
@@ -243,29 +182,9 @@ DWORD ioLocalIndonesia::GetResourceIDErrorSolutionO()
 	return IDB_SOLUTION_O_ID;
 }
 
-const char * ioLocalIndonesia::GetErrorSolutionURL()
-{
-	return "http://forum.gemscool.com/forum-143.html";
-}
-
-bool ioLocalIndonesia::SetPresentRecvDisableMsg( int iPresentType )
-{
-	return false;
-}
-
-int ioLocalIndonesia::GetLimitGradeLevel()
-{
-	return -1;
-}
-
 const char * ioLocalIndonesia::GetBillingErrorMent(ioHashString &sServerError)
 {
 	return "KREON Error : ";
-}
-
-int ioLocalIndonesia::GetLicenseDate()
-{
-	return 20121130;
 }
 
 int ioLocalIndonesia::GetCashPageWidth()

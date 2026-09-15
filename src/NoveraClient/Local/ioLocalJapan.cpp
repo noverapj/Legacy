@@ -71,36 +71,9 @@ void ioLocalJapan::FillLoginData( OUT SP2Packet &rkPacket )
 
 }
 
-void ioLocalJapan::SendWindowMsg( int iMsgType )
-{
-
-}
-
-void ioLocalJapan::GetClassTypeForTutorialDropItem( int &riClassType )
-{
-
-}
-
-
-int ioLocalJapan::GetFirstIDMaxSize()
-{
-	return 12;
-}
-
 bool ioLocalJapan::IsShowFirstIDWnd()
 {
 	return false;
-}
-
-void ioLocalJapan::OpenFillCashPage()
-{
-	if( g_BrowserMgr.GetCashURL().IsEmpty() )
-		return;
-
-	if( Setting::FullScreen() )
-		ShowWindow( g_App.GetHWnd(), SW_MINIMIZE );
-
-	Help::ExcuteWeb( g_BrowserMgr.GetCashURL().c_str() );
 }
 
 const char * ioLocalJapan::GetGuildMasterPostion()
@@ -123,19 +96,6 @@ const char * ioLocalJapan::GetGuildAdminPosition()
 	return GUILD_GENERAL_POSTION_JP;
 }
 
-bool ioLocalJapan::IsRightNewID( const char *szID )
-{
-	return true;
-}
-
-void ioLocalJapan::SetTimeZone()
-{
-	// 유저PC설정이 다를 수 있으므로 정해진 [타임존]으로 변경
-	_putenv("TZ=UTC0");
-	_tzset();
-	//
-}
-
 bool ioLocalJapan::IsSendGashaponList()
 {
 	return false;
@@ -146,16 +106,6 @@ void ioLocalJapan::GetChangedString( OUT char *szCheckString )
 	// 아무일도 하지 않음
 }
 
-bool ioLocalJapan::IsExecuteLuncher()
-{
-	return false;
-}
-
-bool ioLocalJapan::IsKoreaGameLimit()
-{
-	return false;
-}
-
 bool ioLocalJapan::IsCheckKorean()
 {
 	return true;
@@ -164,11 +114,6 @@ bool ioLocalJapan::IsCheckKorean()
 bool ioLocalJapan::IsMyHomePage()
 {
 	return true;
-}
-
-bool ioLocalJapan::IsShowExtraGoodsList()
-{
-	return false;
 }
 
 bool ioLocalJapan::IsShowRegulation()
@@ -211,27 +156,7 @@ DWORD ioLocalJapan::GetResourceIDErrorSolutionO()
 	return IDB_SOLUTION_O_JP;
 }
 
-const char * ioLocalJapan::GetErrorSolutionURL()
-{
-	return "http://www.lostsaga.jp";
-}
-
-bool ioLocalJapan::SetPresentRecvDisableMsg( int iPresentType )
-{
-	return false;
-}
-
-int ioLocalJapan::GetLimitGradeLevel()
-{
-	return -1;
-}
-
 const char * ioLocalJapan::GetBillingErrorMent(ioHashString &sServerError)
 {
 	return "CJIJ Billing Error : ";
-}
-
-int ioLocalJapan::GetLicenseDate()
-{
-	return 20121130;
 }

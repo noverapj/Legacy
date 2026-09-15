@@ -91,33 +91,9 @@ void ioLocalKorea::FillLoginData( OUT SP2Packet &rkPacket )
 
 }
 
-void ioLocalKorea::SendWindowMsg( int iMsgType )
-{
-
-}
-
-void ioLocalKorea::GetClassTypeForTutorialDropItem( int &riClassType )
-{
-
-}
-
-
-int ioLocalKorea::GetFirstIDMaxSize()
-{
-	return 12;
-}
-
 bool ioLocalKorea::IsShowFirstIDWnd()
 {
 	return false;
-}
-
-void ioLocalKorea::OpenFillCashPage()
-{
-	if( g_MyInfo.IsEntryFormality() )
-		g_App.OpenFillCashPage();
-	else
-		g_App.OpenCashEntryPage();
 }
 
 const char * ioLocalKorea::GetGuildMasterPostion()
@@ -140,19 +116,6 @@ const char * ioLocalKorea::GetGuildAdminPosition()
 	return "Admin"; //Except Extracting Hangeul
 }
 
-bool ioLocalKorea::IsRightNewID( const char *szID )
-{
-	return true;
-}
-
-void ioLocalKorea::SetTimeZone()
-{
-	// 유저PC설정이 다를 수 있으므로 정해진 [타임존]으로 변경
-	_putenv("TZ=UTC0"); 
-	_tzset();
-	//
-}
-
 bool ioLocalKorea::IsSendGashaponList()
 {
 	return false;
@@ -163,16 +126,6 @@ void ioLocalKorea::GetChangedString( OUT char *szCheckString )
 	// 아무일도 하지 않음
 }
 
-bool ioLocalKorea::IsExecuteLuncher()
-{
-	return true;
-}
-
-bool ioLocalKorea::IsKoreaGameLimit()
-{
-	return true;
-}
-
 bool ioLocalKorea::IsCheckKorean()
 {
 	return true;
@@ -181,11 +134,6 @@ bool ioLocalKorea::IsCheckKorean()
 bool ioLocalKorea::IsMyHomePage()
 {
 	return true;
-}
-
-bool ioLocalKorea::IsShowExtraGoodsList()
-{
-	return false;
 }
 
 bool ioLocalKorea::IsShowRegulation()
@@ -228,21 +176,6 @@ DWORD ioLocalKorea::GetResourceIDErrorSolutionO()
 	return IDB_SOLUTION_O;
 }
 
-const char * ioLocalKorea::GetErrorSolutionURL()
-{
-	return "http://www.lostsaga.com/common/rgfaq.asp?errnumber=%d";
-}
-
-bool ioLocalKorea::SetPresentRecvDisableMsg( int iPresentType )
-{
-	return false;
-}
-
-int ioLocalKorea::GetLimitGradeLevel()
-{
-	return -1;
-}
-
 const char * ioLocalKorea::GetBillingErrorMent(ioHashString &sServerError)
 {
 	ioChannelingNodeParent *pChannelingNode = g_ChannelingMgr.GetNode( g_MyInfo.GetChannelingType() );
@@ -250,11 +183,6 @@ const char * ioLocalKorea::GetBillingErrorMent(ioHashString &sServerError)
 		return pChannelingNode->GetBillingErrorMent(sServerError);
 
 	return "Billing Error : ";
-}
-
-int ioLocalKorea::GetLicenseDate()
-{
-	return 30111131;
 }
 
 DWORD ioLocalKorea::GetCashSendTime()

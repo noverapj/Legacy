@@ -15,7 +15,6 @@ ioLocalUS::ioLocalUS(void)
 
 ioLocalUS::~ioLocalUS(void)
 {
-	SendWindowMsg( OGP_LM_LOGIN_CLOSE );
 }
 
 ioLocalManager::LocalType ioLocalUS::GetType()
@@ -97,47 +96,9 @@ void ioLocalUS::FillLoginData( SP2Packet &rkPacket )
 	m_szBillingUserKey.Clear();
 }
 
-void ioLocalUS::SendWindowMsg( int iMsgType )
-{
-	HWND hWnd = FindWindow("TOGPLAUNCHERFRAME", NULL);
-
-	if( !hWnd )
-		return;
-
-	enum { SERVICE_ID = 9, SERVICE_EU_ID = 17, };
-
-	int iServiceID = SERVICE_ID;
-	if( m_bEU )
-		iServiceID = SERVICE_EU_ID;
-
-	::PostMessage(hWnd, WM_USER + 200, iMsgType, iServiceID ); 
-}
-
-void ioLocalUS::GetClassTypeForTutorialDropItem( int &riClassType )
-{
-	enum { CLASS_TYPE_SHADOW = 12, };
-	riClassType = CLASS_TYPE_SHADOW;
-}
-
-
-int ioLocalUS::GetFirstIDMaxSize()
-{
-	return 12;
-}
-
 bool ioLocalUS::IsShowFirstIDWnd()
 {
 	return true;
-}
-
-void ioLocalUS::OpenFillCashPage()
-{
-	if( Setting::FullScreen() )
-		ShowWindow( g_App.GetHWnd(), SW_MINIMIZE );
-
-	SendWindowMsg( OGP_LM_BROWSER_ASTRO );
-
-	g_GUIMgr.HideWnd( NEW_SHOP_WND );
 }
 
 const char * ioLocalUS::GetGuildMasterPostion()
@@ -160,58 +121,6 @@ const char *ioLocalUS::GetGuildAdminPosition()
 	return "Member"; //Except Extracting Hangeul
 }
 
-bool ioLocalUS::IsRightNewID( const char *szID )
-{
-	int size = strlen(szID);
-	for (int i=0; i<size; i++)
-	{
-		if ((!COMPARE(szID[i], 'A', 'Z'+1)) &&
-			(!COMPARE(szID[i], 'a', 'z'+1)) &&
-			(!COMPARE(szID[i], '0', '9'+1)) &&
-					  szID[i] != '!' &&
-			          szID[i] != '$' &&
-					  szID[i] != '^' &&
-					  szID[i] != '*' &&
-					  szID[i] != '(' &&
-					  szID[i] != ')' &&
-					  szID[i] != '_' &&
-					  szID[i] != '-' &&
-					  szID[i] != '=' &&
-					  szID[i] != '+' &&
-					  szID[i] != '|' &&
-					  szID[i] != '[' &&
-					  szID[i] != ']' &&
-					  szID[i] != '{' &&
-					  szID[i] != '}' &&
-					  szID[i] != '<' &&
-					  szID[i] != '>' &&
-					  szID[i] != '?' &&
-					  szID[i] != '~' &&
-					  szID[i] != '.' &&
-					  szID[i] != ',' )
-		{
-			return false;
-		}
-	}
-	return true;
-}
-
-void ioLocalUS::SetTimeZone()
-{
-	// 유저PC설정이 다를 수 있으므로 정해진 [타임존]으로 변경
-	if( m_bEU )
-	{
-		_putenv("TZ=UTC0"); // 영국 // 써머타임이면 : TZ=GMT-1 | 써머타임 아니면 : TZ=GMT
-	}
-	else
-	{
-		putenv("TZ=UTC0"); // 미국 // 써머타임이면 : TZ=GMT+7 | 써머타임 아니면 : TZ=GMT+8
-	}
-
-	_tzset();
-	//
-}
-
 bool ioLocalUS::IsSendGashaponList()
 {
 	return true;
@@ -222,16 +131,6 @@ void ioLocalUS::GetChangedString( OUT char *szCheckString )
 	strlwr( szCheckString );
 }
 
-bool ioLocalUS::IsExecuteLuncher()
-{
-	return false;
-}
-
-bool ioLocalUS::IsKoreaGameLimit()
-{
-	return false;
-}
-
 bool ioLocalUS::IsCheckKorean()
 {
 	return false;
@@ -240,11 +139,6 @@ bool ioLocalUS::IsCheckKorean()
 bool ioLocalUS::IsMyHomePage()
 {
 	return false;
-}
-
-bool ioLocalUS::IsShowExtraGoodsList()
-{
-	return true;
 }
 
 bool ioLocalUS::IsShowRegulation()
@@ -287,27 +181,7 @@ DWORD ioLocalUS::GetResourceIDErrorSolutionO()
 	return -1;
 }
 
-const char * ioLocalUS::GetErrorSolutionURL()
-{
-	return "http://lostsaga.ogplanet.com";
-}
-
-bool ioLocalUS::SetPresentRecvDisableMsg( int iPresentType )
-{
-	return false;
-}
-
-int ioLocalUS::GetLimitGradeLevel()
-{
-	return -1;
-}
-
 const char * ioLocalUS::GetBillingErrorMent(ioHashString &sServerError)
 {
 	return "OGP Error : ";
-}
-
-int ioLocalUS::GetLicenseDate()
-{
-	return 20121130;
 }

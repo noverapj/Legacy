@@ -32,45 +32,45 @@ public:
 	virtual void SetLoginData( const ioHashString &szBillingUserKey ) = 0;
 	virtual void FillLoginData( OUT SP2Packet &rkPacket ) = 0;
 
-	virtual void SendWindowMsg( int iMsgType ) = 0;
+	virtual void SendWindowMsg( int iMsgType ){}
 
-	virtual void GetClassTypeForTutorialDropItem( int &riClassType ) = 0;
+	virtual void GetClassTypeForTutorialDropItem( int &riClassType ){}
 
 	virtual const char *GetGuildMasterPostion() = 0;
 	virtual const char *GetGuildSecondMasterPosition() = 0;
 	virtual const char *GetGuildGeneralPosition() = 0;
 	virtual const char *GetGuildAdminPosition() = 0;
-	virtual const char *GetErrorSolutionURL() = 0;
+	virtual const char *GetErrorSolutionURL();
 	virtual const char *GetBillingErrorMent(ioHashString &sServerError) = 0;
 
-	virtual int  GetFirstIDMaxSize() = 0;
+	virtual int  GetFirstIDMaxSize(){ return 12; }
 	virtual bool IsShowFirstIDWnd() = 0;
 
-	virtual void OpenFillCashPage() = 0;
-	virtual bool IsRightNewID( const char *szID ) = 0;
-	virtual void SetTimeZone() = 0;
+	virtual void OpenFillCashPage();
+	virtual bool IsRightNewID( const char *szID );
+	virtual void SetTimeZone();
 	virtual bool IsSendGashaponList() = 0;
 	virtual void GetChangedString( OUT char *szCheckString ) = 0;
 
-	virtual bool IsExecuteLuncher() = 0;
-	virtual bool IsKoreaGameLimit() = 0;
+	virtual bool IsExecuteLuncher(){ return false; }
+	virtual bool IsKoreaGameLimit(){ return false; }
 	virtual bool IsCheckKorean() = 0;
 	virtual bool IsFirstIDCheckPass() { return false; }
 	virtual bool IsMyHomePage() = 0;
-	virtual bool IsShowExtraGoodsList() = 0;
+	virtual bool IsShowExtraGoodsList(){ return false; }
 	virtual bool IsShowRegulation() = 0;
 	virtual bool IsStartFullScreen(){ return false; }
 	virtual bool IsTooltipAutoLine(){ return false; }
 	virtual bool IsMileage() { return false; }
 
-	virtual bool SetPresentRecvDisableMsg( int iPresentType ) = 0;
+	virtual bool SetPresentRecvDisableMsg( int iPresentType ){ return false; }
 
-    virtual int GetLimitGradeLevel() = 0; // -1이면 limit가 없음.
+	virtual int GetLimitGradeLevel(){ return -1; } // -1 means no limit.
 
 	virtual bool IsEndFishingByMove() { return true; }
 
 	virtual bool IsRightLicense();
-	virtual int GetLicenseDate() { return 0; }
+	virtual int GetLicenseDate() { return 30111131; }
 	virtual bool IsShowFirstSoldierSelectWnd() { return false; }
 
 	virtual void ExitAction(){}

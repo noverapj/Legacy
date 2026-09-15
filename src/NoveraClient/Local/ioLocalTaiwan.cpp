@@ -76,36 +76,9 @@ void ioLocalTaiwan::FillLoginData( OUT SP2Packet &rkPacket )
 	m_sLoginEncodePW.Clear();
 }
 
-void ioLocalTaiwan::SendWindowMsg( int iMsgType )
-{
-
-}
-
-void ioLocalTaiwan::GetClassTypeForTutorialDropItem( int &riClassType )
-{
-
-}
-
-
-int ioLocalTaiwan::GetFirstIDMaxSize()
-{
-	return 12;
-}
-
 bool ioLocalTaiwan::IsShowFirstIDWnd()
 {
 	return true;
-}
-
-void ioLocalTaiwan::OpenFillCashPage()
-{
-	if( g_BrowserMgr.GetCashURL().IsEmpty() )
-		return;
-
-	if( Setting::FullScreen() )
-		ShowWindow( g_App.GetHWnd(), SW_MINIMIZE );
-			
-	Help::ExcuteWeb( g_BrowserMgr.GetCashURL().c_str() );
 }
 
 const char * ioLocalTaiwan::GetGuildMasterPostion()
@@ -128,19 +101,6 @@ const char * ioLocalTaiwan::GetGuildAdminPosition()
 	return GUILD_GENERAL_POSTION_TW;
 }
 
-bool ioLocalTaiwan::IsRightNewID( const char *szID )
-{
-	return true;
-}
-
-void ioLocalTaiwan::SetTimeZone()
-{
-	// 유저PC설정이 다를 수 있으므로 정해진 [타임존]으로 변경
-	_putenv("TZ=UTC0");
-	_tzset();
-	//
-}
-
 bool ioLocalTaiwan::IsSendGashaponList()
 {
 	return false;
@@ -151,27 +111,12 @@ void ioLocalTaiwan::GetChangedString( OUT char *szCheckString )
 	// 아무일도 하지 않음
 }
 
-bool ioLocalTaiwan::IsExecuteLuncher()
-{
-	return false;
-}
-
-bool ioLocalTaiwan::IsKoreaGameLimit()
-{
-	return false;
-}
-
 bool ioLocalTaiwan::IsCheckKorean()
 {
 	return false;
 }
 
 bool ioLocalTaiwan::IsMyHomePage()
-{
-	return false;
-}
-
-bool ioLocalTaiwan::IsShowExtraGoodsList()
 {
 	return false;
 }
@@ -216,27 +161,7 @@ DWORD ioLocalTaiwan::GetResourceIDErrorSolutionO()
 	return IDB_SOLUTION_O_TW;
 }
 
-const char * ioLocalTaiwan::GetErrorSolutionURL()
-{
-	return "http://lostsaga.gamon.net/app/help/faq.aspx";
-}
-
-bool ioLocalTaiwan::SetPresentRecvDisableMsg( int iPresentType )
-{
-	return false;
-}
-
-int ioLocalTaiwan::GetLimitGradeLevel()
-{
-	return -1;
-}
-
 const char * ioLocalTaiwan::GetBillingErrorMent(ioHashString &sServerError)
 {
 	return "GaMonster Billing Error : ";
-}
-
-int ioLocalTaiwan::GetLicenseDate()
-{
-	return 20121130;
 }

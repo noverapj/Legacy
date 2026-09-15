@@ -97,32 +97,9 @@ void ioLocalPhilippine::FillLoginData( OUT SP2Packet &rkPacket )
 	m_sLoginEncodePW.Clear();
 }
 
-void ioLocalPhilippine::SendWindowMsg( int iMsgType )
-{
-
-}
-
-void ioLocalPhilippine::GetClassTypeForTutorialDropItem( int &riClassType )
-{
-
-}
-
-int ioLocalPhilippine::GetFirstIDMaxSize()
-{
-	return 12;
-}
-
 bool ioLocalPhilippine::IsShowFirstIDWnd()
 {
 	return true;
-}
-
-void ioLocalPhilippine::OpenFillCashPage()
-{
-	if( g_MyInfo.IsEntryFormality() )
-		g_App.OpenFillCashPage();
-	else
-		g_App.OpenCashEntryPage();
 }
 
 const char * ioLocalPhilippine::GetGuildMasterPostion()
@@ -145,29 +122,6 @@ const char * ioLocalPhilippine::GetGuildAdminPosition()
 	return "Member"; //Except Extracting Hangeul
 }
 
-bool ioLocalPhilippine::IsRightNewID( const char *szID )
-{
-	int size = strlen(szID);
-	for (int i=0; i<size; i++)
-	{
-		if ((!COMPARE(szID[i], 'A', 'Z'+1)) &&
-			(!COMPARE(szID[i], 'a', 'z'+1)) &&
-			(!COMPARE(szID[i], '0', '9'+1)) )
-		{
-			return false;
-		}
-	}
-	return true;
-}
-
-void ioLocalPhilippine::SetTimeZone()
-{
-	// 유저PC설정이 다를 수 있으므로 정해진 [타임존]으로 변경
-	_putenv("TZ=GMT-7"); 
-	_tzset();
-	//
-}
-
 bool ioLocalPhilippine::IsSendGashaponList()
 {
 	return true;
@@ -178,27 +132,12 @@ void ioLocalPhilippine::GetChangedString( OUT char *szCheckString )
 		strlwr( szCheckString );
 }
 
-bool ioLocalPhilippine::IsExecuteLuncher()
-{
-	return false;
-}
-
-bool ioLocalPhilippine::IsKoreaGameLimit()
-{
-	return false;
-}
-
 bool ioLocalPhilippine::IsCheckKorean()
 {
 	return false;
 }
 
 bool ioLocalPhilippine::IsMyHomePage()
-{
-	return false;
-}
-
-bool ioLocalPhilippine::IsShowExtraGoodsList()
 {
 	return false;
 }
@@ -243,29 +182,9 @@ DWORD ioLocalPhilippine::GetResourceIDErrorSolutionO()
 	return IDB_SOLUTION_O_PLP;
 }
 
-const char * ioLocalPhilippine::GetErrorSolutionURL()
-{
-	return "";
-}
-
-bool ioLocalPhilippine::SetPresentRecvDisableMsg( int iPresentType )
-{
-	return false;
-}
-
-int ioLocalPhilippine::GetLimitGradeLevel()
-{
-	return -1;
-}
-
 const char * ioLocalPhilippine::GetBillingErrorMent(ioHashString &sServerError)
 {
 	return "Philippine Error : ";
-}
-
-int ioLocalPhilippine::GetLicenseDate()
-{
-	return 20201130;
 }
 
 

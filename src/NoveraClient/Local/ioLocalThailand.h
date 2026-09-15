@@ -30,43 +30,22 @@ public:
 	virtual void SetLoginData( const ioHashString &szBillingUserKey );
 	virtual void FillLoginData( OUT SP2Packet &rkPacket );
 
-	virtual void SendWindowMsg( int iMsgType );
-
-	virtual void GetClassTypeForTutorialDropItem( int &riClassType );
-
 	virtual const char *GetGuildMasterPostion();
 	virtual const char *GetGuildSecondMasterPosition();
 	virtual const char *GetGuildGeneralPosition();
 	virtual const char *GetGuildAdminPosition();
-	virtual const char *GetErrorSolutionURL();
 	virtual const char *GetBillingErrorMent(ioHashString &sServerError);
 
-	virtual int  GetFirstIDMaxSize();
 	virtual bool IsShowFirstIDWnd();
-
-	virtual void OpenFillCashPage();
-
-	virtual bool IsRightNewID( const char *szID );
-
-	virtual void SetTimeZone();
 
 	virtual bool IsSendGashaponList();
 	virtual void GetChangedString( OUT char *szCheckString );
-	
-	virtual bool IsExecuteLuncher();
-	virtual bool IsKoreaGameLimit();
+
 	virtual bool IsCheckKorean();
 	virtual bool IsFirstIDCheckPass() { return true; }
 	virtual bool IsMyHomePage();
-	virtual bool IsShowExtraGoodsList();
 	virtual bool IsShowRegulation();
 	virtual bool IsPCRoomBonusSoldier() { return true; }
-
-	virtual bool SetPresentRecvDisableMsg( int iPresentType );
-
-	virtual int GetLimitGradeLevel();
-
-	virtual int GetLicenseDate();
 
 	virtual void ExitAction();
 	virtual void ShowHackShieldErrorDlg( const ioHashString &rsPrivateID );

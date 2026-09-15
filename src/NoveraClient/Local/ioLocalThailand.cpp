@@ -74,33 +74,9 @@ void ioLocalThailand::FillLoginData( OUT SP2Packet &rkPacket )
 	m_sLoginEncodePW.Clear();
 }
 
-void ioLocalThailand::SendWindowMsg( int iMsgType )
-{
-
-}
-
-void ioLocalThailand::GetClassTypeForTutorialDropItem( int &riClassType )
-{
-
-}
-
-
-int ioLocalThailand::GetFirstIDMaxSize()
-{
-	return 12;
-}
-
 bool ioLocalThailand::IsShowFirstIDWnd()
 {
 	return true;
-}
-
-void ioLocalThailand::OpenFillCashPage()
-{
-	if( Setting::FullScreen() )
-		ShowWindow( g_App.GetHWnd(), SW_MINIMIZE );
-
-	Help::ExcuteWeb( g_BrowserMgr.GetCashURL().c_str() );
 }
 
 const char * ioLocalThailand::GetGuildMasterPostion()
@@ -123,19 +99,6 @@ const char * ioLocalThailand::GetGuildAdminPosition()
 	return GUILD_GENERAL_POSTION_TH;
 }
 
-bool ioLocalThailand::IsRightNewID( const char *szID )
-{
-	return true;
-}
-
-void ioLocalThailand::SetTimeZone()
-{
-	// 유저PC설정이 다를 수 있으므로 정해진 [타임존]으로 변경
-	_putenv("TZ=UTC0");
-	_tzset();
-	//
-}
-
 bool ioLocalThailand::IsSendGashaponList()
 {
 	return true;
@@ -146,16 +109,6 @@ void ioLocalThailand::GetChangedString( OUT char *szCheckString )
 	// 아무일도 하지 않음
 }
 
-bool ioLocalThailand::IsExecuteLuncher()
-{
-	return false;
-}
-
-bool ioLocalThailand::IsKoreaGameLimit()
-{
-	return true;
-}
-
 bool ioLocalThailand::IsCheckKorean()
 {
 	return false;
@@ -164,11 +117,6 @@ bool ioLocalThailand::IsCheckKorean()
 bool ioLocalThailand::IsMyHomePage()
 {
 	return true;
-}
-
-bool ioLocalThailand::IsShowExtraGoodsList()
-{
-	return false;
 }
 
 bool ioLocalThailand::IsShowRegulation()
@@ -211,29 +159,9 @@ DWORD ioLocalThailand::GetResourceIDErrorSolutionO()
 	return IDB_SOLUTION_O_TH;
 }
 
-const char * ioLocalThailand::GetErrorSolutionURL()
-{
-	return "http://www.lostsaga.in.th";
-}
-
-bool ioLocalThailand::SetPresentRecvDisableMsg( int iPresentType )
-{
-	return false;
-}
-
-int ioLocalThailand::GetLimitGradeLevel()
-{
-	return -1;
-}
-
 const char * ioLocalThailand::GetBillingErrorMent(ioHashString &sServerError)
 {
 	return "ASIASOFT Billing Error : ";
-}
-
-int ioLocalThailand::GetLicenseDate()
-{
-	return 20121130;
 }
 
 void ioLocalThailand::ExitAction()

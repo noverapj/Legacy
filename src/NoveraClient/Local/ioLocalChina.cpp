@@ -15,7 +15,7 @@ ioLocalChina::~ioLocalChina(void)
 
 ioLocalManager::LocalType ioLocalChina::GetType()
 {
-	return ioLocalManager::LCT_THAILAND;
+	return ioLocalManager::LCT_CHINA;
 }
 
 const char * ioLocalChina::GetTextListFileName()
@@ -68,33 +68,9 @@ void ioLocalChina::FillLoginData( OUT SP2Packet &rkPacket )
 
 }
 
-void ioLocalChina::SendWindowMsg( int iMsgType )
-{
-
-}
-
-void ioLocalChina::GetClassTypeForTutorialDropItem( int &riClassType )
-{
-
-}
-
-
-int ioLocalChina::GetFirstIDMaxSize()
-{
-	return 12;
-}
-
 bool ioLocalChina::IsShowFirstIDWnd()
 {
 	return false;
-}
-
-void ioLocalChina::OpenFillCashPage()
-{
-	if( g_MyInfo.IsEntryFormality() )
-		g_App.OpenFillCashPage();
-	else
-		g_App.OpenCashEntryPage();
 }
 
 const char * ioLocalChina::GetGuildMasterPostion()
@@ -117,19 +93,6 @@ const char * ioLocalChina::GetGuildAdminPosition()
 	return GUILD_GENERAL_POSTION_CH;
 }
 
-bool ioLocalChina::IsRightNewID( const char *szID )
-{
-	return true;
-}
-
-void ioLocalChina::SetTimeZone()
-{
-	// 유저PC설정이 다를 수 있으므로 정해진 [타임존]으로 변경
-	_putenv("TZ=UTC0"); 
-	_tzset();
-	//
-}
-
 bool ioLocalChina::IsSendGashaponList()
 {
 	return false;
@@ -140,16 +103,6 @@ void ioLocalChina::GetChangedString( OUT char *szCheckString )
 	// 아무일도 하지 않음
 }
 
-bool ioLocalChina::IsExecuteLuncher()
-{
-	return false;
-}
-
-bool ioLocalChina::IsKoreaGameLimit()
-{
-	return false;
-}
-
 bool ioLocalChina::IsCheckKorean()
 {
 	return true;
@@ -158,11 +111,6 @@ bool ioLocalChina::IsCheckKorean()
 bool ioLocalChina::IsMyHomePage()
 {
 	return true;
-}
-
-bool ioLocalChina::IsShowExtraGoodsList()
-{
-	return false;
 }
 
 bool ioLocalChina::IsShowRegulation()
@@ -205,27 +153,7 @@ DWORD ioLocalChina::GetResourceIDErrorSolutionO()
 	return IDB_SOLUTION_O;
 }
 
-const char * ioLocalChina::GetErrorSolutionURL()
-{
-	return "http://www.lostsaga.com/common/rgfaq.asp?errnumber=%d";
-}
-
-bool ioLocalChina::SetPresentRecvDisableMsg( int iPresentType )
-{
-	return false;
-}
-
-int ioLocalChina::GetLimitGradeLevel()
-{
-	return -1;
-}
-
 const char * ioLocalChina::GetBillingErrorMent(ioHashString &sServerError)
 {
 	return "ASIASOFT Billing Error : ";
-}
-
-int ioLocalChina::GetLicenseDate()
-{
-	return 20121130;
 }
