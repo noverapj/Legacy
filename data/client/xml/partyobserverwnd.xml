@@ -8,7 +8,7 @@
 		<Format X="12" Y="10" Size="13" Style="Outline_full_2x" HorzAlign="Left"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
 		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
-		<Text>관전자</Text>
+		<Text>STR(1)</Text>
 	</Title>
 	<Imagery>
 		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
@@ -66,7 +66,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF215AA2"/>
-			<Text>관전하기</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt007_blue_nor">
@@ -100,7 +100,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF9F291A"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF9F291A"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF215AA2"/>
-			<Text>관전취소</Text>
+			<Text>STR(3)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt007_red_nor">

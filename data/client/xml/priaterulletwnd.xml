@@ -8,7 +8,7 @@
 		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
 		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
-		<Text>공포의 오크통</Text>
+		<Text>STR(1)</Text>
 	</Title>
 	<Imagery>
 		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
@@ -126,16 +126,16 @@
 		<Window ClassName="ioRichLabel" Id="1">
 			<Size X="63" Y="23" Width="94" Height="21"/>
 			<ExtraInfo VertGap="3" HorzAlign="Left" VertAlign="Top" >
-				<TextBlock Text="보너스 보상" Size="18" Color="FF3A3A3A"/>
+				<TextBlock Text="STR(2)" Size="18" Color="FF3A3A3A"/>
 			</ExtraInfo>
 		</Window>
 		<Window ClassName="ioRichLabel" Id="2">
 			<Size X="10" Y="54" Width="188" Height="203"/>
 			<ExtraInfo VertGap="3" HorzAlign="Left" VertAlign="Top" >
-				<TextBlock Text="개발자K를 날리는 데 " Size="12" Color="FF6E6E6E"/>
-				<TextBlock Text="사용된 검의 #" Size="12" Color="FFB91600"/>
-				<TextBlock Text="개수" Size="12" Color="FFB91600"/>
-				<TextBlock Text="에 알맞은 보상이 지급됩니다." Size="12" Color="FF6E6E6E"/>
+				<TextBlock Text="STR(3)" Size="12" Color="FF6E6E6E"/>
+				<TextBlock Text="STR(4)" Size="12" Color="FFB91600"/>
+				<TextBlock Text="STR(5)" Size="12" Color="FFB91600"/>
+				<TextBlock Text="STR(6)" Size="12" Color="FF6E6E6E"/>
 			</ExtraInfo>
 		</Window>
 	</Window>
@@ -191,27 +191,27 @@
 	<Window ClassName="ioRichLabel" Id="2">
 		<Size X="502" Y="93" Width="140" Height="25"/>
 		<ExtraInfo VertGap="3" HorzAlign="Left" VertAlign="Top" >
-			<TextBlock Text="오크통 게임룰" Size="22" Color="FF7F3F01"/>
+			<TextBlock Text="STR(7)" Size="22" Color="FF7F3F01"/>
 		</ExtraInfo>
 	</Window>
 	<Window ClassName="ioRichLabel" Id="3">
 		<Size X="436" Y="131" Width="300" Height="280"/>
 		<ExtraInfo VertGap="3" HorzAlign="Left" VertAlign="Top" >
-			<TextBlock Text="- [오크통]은 앞뒤로 존재하는 40개 구멍에,#" Size="12" Color="FF7F3F01"/>
-			<TextBlock Text="  보유하고 있는 검을 꽂아 [개발자K]에게 데미지를#" Size="12" Color="FF7F3F01"/>
-			<TextBlock Text="  입히면 보상을 획득 할 수 있는 미니 게임입니다.#" Size="12" Color="FF7F3F01"/>
-			<TextBlock Text="  보상은 [개발자K]의 표정이 크게 바뀔 때 마다#" Size="12" Color="FF7F3F01"/>
-			<TextBlock Text="  지급됩니다.#" Size="13" Color="FF7F3F01"/>
-			<TextBlock Text="- 간혹 [크리티컬]이 발생하는데, 이는 [개발자 K]에게#" Size="12" Color="FF7F3F01"/>
-			<TextBlock Text="  좀 더 강력한 데미지를 주게 됩니다.#" Size="12" Color="FF7F3F01"/>			
-			<TextBlock Text="- [개발자 K]의 체력을 모두 소모시켜 날려버리면,#" Size="12" Color="FF7F3F01"/>
-			<TextBlock Text="  모든 보상이 지급됩니다.#" Size="12" Color="FF7F3F01"/>
-			<TextBlock Text="  [개발자 K]를 날렸을 때, 사용된 검의 개수에 따라#" Size="12" Color="FF7F3F01"/>
-			<TextBlock Text="  [보너스 보상]이 추가 지급 됩니다.#" Size="12" Color="FF7F3F01"/>
-			<TextBlock Text="- 운이 좋으면 [개발자 K]를 적은 기회로 날릴 수#" Size="12" Color="FF7F3F01"/>
-			<TextBlock Text="  있습니다.#" Size="12" Color="FF7F3F01"/>
-			<TextBlock Text="- [개발자 K]를 날리거나 도중에 게임을 초기화 할 수#" Size="12" Color="FF7F3F01"/>
-			<TextBlock Text="  있으며, 보유하고 있던 검은 그대로 유지됩니다.#" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="STR(8)" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="STR(9)" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="STR(10)" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="STR(11)" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="STR(12)" Size="13" Color="FF7F3F01"/>
+			<TextBlock Text="STR(13)" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="STR(14)" Size="12" Color="FF7F3F01"/>			
+			<TextBlock Text="STR(15)" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="STR(16)" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="STR(17)" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="STR(18)" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="STR(19)" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="STR(20)" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="STR(21)" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="STR(22)" Size="12" Color="FF7F3F01"/>
 		</ExtraInfo>
 	</Window>	
 	<!-- 게임 룰 설명 종료-->
@@ -224,7 +224,7 @@
 			<Color Type="Over"  Text="FFF2FBE2" Back="FF4D2B17"/>
 			<Color Type="Push"  Text="FFF2FBE2" Back="FF4D2B17"/>
 			<Color Type="Disable"  Text="FFF2FBE2" Back="FF4D2B17"/>
-			<Text>시작하기</Text>
+			<Text>STR(23)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt017_brown_nor">
@@ -453,7 +453,7 @@
 			<Color Type="Over"  Text="FFFEBE2" Back="FF4D2B17"/>
 			<Color Type="Push"  Text="FFFEBE2" Back="FF4D2B17"/>
 			<Color Type="Disable"  Text="FFFEBE2" Back="FF4D2B17"/>
-			<Text>초기화</Text>
+			<Text>STR(24)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt017_red_nor">
@@ -483,7 +483,7 @@
 			<Color Type="Over"  Text="FFFEBE2" Back="FF4D2B17"/>
 			<Color Type="Push"  Text="FFFEBE2" Back="FF4D2B17"/>
 			<Color Type="Disable"  Text="FFFEBE2" Back="FF4D2B17"/>
-			<Text>도움말</Text>
+			<Text>STR(25)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt017_brown_nor">
@@ -558,7 +558,7 @@
 			<Color Type="Over"  Text="FFF2FBE2" Back="FF4D2B17"/>
 			<Color Type="Push"  Text="FFF2FBE2" Back="FF4D2B17"/>
 			<Color Type="Disable"  Text="FFF2FBE2" Back="FF4D2B17"/>
-			<Text>새로 시작하기</Text>
+			<Text>STR(26)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt017_red_nor">

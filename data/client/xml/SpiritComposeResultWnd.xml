@@ -3,8 +3,8 @@
   <Style>IWS_START_HIDE|IWS_MODAL|IWS_PROCESS</Style>
   <ExStyle>IWS_EX_SHOW_HIDE_ACTION</ExStyle>
   <Size X="0" Y="0" Width="258" Height="506" />
-  <ExtraInfo mortmain="영구용병"
-             composedesc="합성으로 획득한 용병은 보관함에서 확인가능합니다."
+  <ExtraInfo mortmain="STR(1)"
+             composedesc="STR(2)"
              showtime="3000"/>
   <Imagery>
     <Image Type="Title" Imageset="BaseImage042" Image="slot_spirit_title" >

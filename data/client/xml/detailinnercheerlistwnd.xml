@@ -310,7 +310,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FFAA374D"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FFAA374D"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>우승응원 결정</Text>
+			<Text>STR(1)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_pink_nor">

@@ -18,7 +18,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>≥¨ΩÀ¥Î</Text>
+			<Text>STR(1)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="fish_tap2">
@@ -46,7 +46,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>πÃ≥¢</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="fish_tap2">
@@ -74,7 +74,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>≥¨Ω√≈Õ</Text>
+			<Text>STR(3)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="fish_tap2">
@@ -299,7 +299,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF215AA2"/>
-			<Text>≥¨¿∫ æ∆¿Ã≈€ ∆«∏≈</Text>
+			<Text>STR(4)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt007_blue_nor">
@@ -328,7 +328,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>≥¨Ω√«œ±‚</Text>
+			<Text>STR(5)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -371,7 +371,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>¿Â∫Ò/¿Â∫Ò«ÿ¡¶</Text>
+			<Text>STR(6)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -401,7 +401,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FFAB750B"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FFAB750B"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>±∏¿‘«œ±‚</Text>
+			<Text>STR(7)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt007_gold_nor">

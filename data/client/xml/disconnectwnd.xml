@@ -6,7 +6,7 @@
 	<Title>
 		<Format X="151" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Center"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
-		<Text>연결 종료</Text>
+		<Text>STR(1)</Text>
 	</Title>
 	<Imagery>
 		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
@@ -35,7 +35,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF9F291A"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF9F291A"/>
 			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
-			<Text>바로 종료</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_red_nor">

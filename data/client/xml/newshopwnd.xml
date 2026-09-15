@@ -7,7 +7,7 @@
 	<Title>
 		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
-		<Text>상점</Text>
+		<Text>STR(1)</Text>
 	</Title>
 	<Imagery>
 		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
@@ -47,111 +47,111 @@
 		</Image>
 	</Imagery>
 	<ExtraInfo	Max_101    = "6"
-				Name_101_1 = "전체"				
+				Name_101_1 = "STR(2)"				
 				Type_101_1 = "0"				
-				Name_101_2 = "용병"
+				Name_101_2 = "STR(3)"
 				Type_101_2 = "1"
-				Name_101_3 = "장비"
+				Name_101_3 = "STR(4)"
 				Type_101_3 = "2"
-				Name_101_4 = "코스튬"
+				Name_101_4 = "STR(5)"
 				Type_101_4 = "5"
-				Name_101_5 = "치장"
+				Name_101_5 = "STR(6)"
 				Type_101_5 = "3"
-				Name_101_6 = "특별"
+				Name_101_6 = "STR(7)"
 				Type_101_6 = "4"
 				
 				Max_102    = "7"
-				Name_102_1 = "전체"
+				Name_102_1 = "STR(8)"
 				Type_102_1 = "0"
-				Name_102_2 = "프리미엄"
+				Name_102_2 = "STR(9)"
 				Type_102_2 = "5"
-				Name_102_3 = "근거리"
+				Name_102_3 = "STR(10)"
 				Type_102_3 = "1"
-				Name_102_4 = "원거리"
+				Name_102_4 = "STR(11)"
 				Type_102_4 = "2"
-				Name_102_5 = "마법"
+				Name_102_5 = "STR(12)"
 				Type_102_5 = "3"
-				Name_102_6 = "특수"
+				Name_102_6 = "STR(13)"
 				Type_102_6 = "4"
-				Name_102_7 = "★패키지"
+				Name_102_7 = "STR(14)"
 				Type_102_7 = "10000"
 
 				Max_103    = "7"
-				Name_103_1 = "전체"
+				Name_103_1 = "STR(15)"
 				Type_103_1 = "0"
-				Name_103_2 = "보급"
+				Name_103_2 = "STR(16)"
 				Type_103_2 = "1"
-				Name_103_3 = "무기"
+				Name_103_3 = "STR(17)"
 				Type_103_3 = "2"
-				Name_103_4 = "갑옷"
+				Name_103_4 = "STR(18)"
 				Type_103_4 = "3"
-				Name_103_5 = "투구"
+				Name_103_5 = "STR(19)"
 				Type_103_5 = "4"
-				Name_103_6 = "망토"
+				Name_103_6 = "STR(20)"
 				Type_103_6 = "5"
-				Name_103_7 = "★기능"
+				Name_103_7 = "STR(21)"
 				Type_103_7 = "10000"
 
 				Max_104    = "9"
-				Name_104_1 = "전체"
+				Name_104_1 = "STR(22)"
 				Type_104_1 = "0"
-				Name_104_2 = "성별"
+				Name_104_2 = "STR(23)"
 				Type_104_2 = "5"
-				Name_104_3 = "머리"
+				Name_104_3 = "STR(24)"
 				Type_104_3 = "2"
-				Name_104_4 = "머리색"
+				Name_104_4 = "STR(25)"
 				Type_104_4 = "4"
-				Name_104_5 = "얼굴"
+				Name_104_5 = "STR(26)"
 				Type_104_5 = "1"
-				Name_104_6 = "피부색"
+				Name_104_6 = "STR(27)"
 				Type_104_6 = "3"
-				Name_104_7 = "기본옷"
+				Name_104_7 = "STR(28)"
 				Type_104_7 = "7"
-				Name_104_8 = "모션"
+				Name_104_8 = "STR(29)"
 				Type_104_8 = "20000"
-				Name_104_9 = "★패키지"
+				Name_104_9 = "STR(30)"
 				Type_104_9 = "10000"
 
 				Max_105    = "7"
-				Name_105_1 = "전체"
+				Name_105_1 = "STR(31)"
 				Type_105_1 = "0"
-				Name_105_2 = "기능"
+				Name_105_2 = "STR(32)"
 				Type_105_2 = "1"
-				Name_105_3 = "프리미엄"
+				Name_105_3 = "STR(33)"
 				Type_105_3 = "2"
-				Name_105_4 = "놀이"
+				Name_105_4 = "STR(34)"
 				Type_105_4 = "3"
-				Name_105_5 = "길드본부"
+				Name_105_5 = "STR(35)"
 				Type_105_5 = "4"
-				Name_105_6 = "개인본부"
+				Name_105_6 = "STR(36)"
 				Type_105_6 = "5"
-				Name_105_7 = "낚시"
+				Name_105_7 = "STR(37)"
 				Type_105_7 = "6"
 				
 				Max_106    = "3"
-				Name_106_1 = "클로버샵"
+				Name_106_1 = "STR(38)"
 				Type_106_1 = "1001913"
-				Name_106_2 = "이벤트샵"
+				Name_106_2 = "STR(39)"
 				Type_106_2 = "1000049"
-				Name_106_3 = "M-코인샵"
+				Name_106_3 = "STR(40)"
 				Type_106_3 = "1005633"
 				
 				Max_107    = "6"
-				Name_107_1 = "전체"
+				Name_107_1 = "STR(41)"
 				Type_107_1 = "0"
-				Name_107_2 = "보급"
+				Name_107_2 = "STR(42)"
 				Type_107_2 = "1"
-				Name_107_3 = "갑옷"
+				Name_107_3 = "STR(43)"
 				Type_107_3 = "2"
-				Name_107_4 = "투구"
+				Name_107_4 = "STR(44)"
 				Type_107_4 = "3"
-				Name_107_5 = "망토"
+				Name_107_5 = "STR(45)"
 				Type_107_5 = "4"
-				Name_107_6 = "★기능"
+				Name_107_6 = "STR(46)"
 				Type_107_6 = "10000"
 				
 				Max_108    = "1"
-				Name_108_1 = "전체"
+				Name_108_1 = "STR(47)"
 				Type_108_1 = "777"							
 				
 				TabScreenGapTime = "200"
@@ -159,8 +159,8 @@
 
 				DefaultShowTab = "101"
 				BonusCashTooltipCheckDuration = "60000"
-              Rand_URL_Fail_Msg1="확률확인은 로비에서만 가능합니다."
-              Rand_URL_Fail_Msg2="확률확인은 광장/훈련소/본부에서만 가능합니다."/>
+              Rand_URL_Fail_Msg1="STR(48)"
+              Rand_URL_Fail_Msg2="STR(49)"/>
 
 	<Window ClassName="ioButton" Id="1">
 		<Size X="598" Y="11" Width="99" Height="22" />
@@ -170,7 +170,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF786023"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF786023"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF786023"/>
-			<Text>골드충전</Text>
+			<Text>STR(50)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt002_gold_nor">
@@ -298,7 +298,7 @@
       <Color Type="Over" Text="FFFFFFFF" Back="FF20394F"/>
       <Color Type="Push" Text="FFFFFFFF" Back="FF20394F"/>
       <Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-      <Text>확률안내</Text>
+      <Text>STR(51)</Text>
     </Title>
     <ExtraInfo OverSound = "interface/public_mouseover_00.wav" ClickSound = "interface/public_mouseclick_00.wav"/>
   </Window>
@@ -311,7 +311,7 @@
 			<Color Type="Over" Text="FF8D5704" Back="FF000000"/>
 			<Color Type="Push" Text="FF8D5704" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>금주의 상품</Text>
+			<Text>STR(52)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="tap2_off">
@@ -338,7 +338,7 @@
 			<Color Type="Over" Text="FF8D5704" Back="FF000000"/>
 			<Color Type="Push" Text="FF8D5704" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>비밀상점</Text>
+			<Text>STR(53)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="tap2_off">
@@ -365,7 +365,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>용병</Text>
+			<Text>STR(54)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="tap2_off">
@@ -393,7 +393,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>장비</Text>
+			<Text>STR(55)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="tap2_off">
@@ -421,7 +421,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>코스튬</Text>
+			<Text>STR(56)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="tap2_off">
@@ -449,7 +449,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>치장</Text>
+			<Text>STR(57)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="tap2_off">
@@ -477,7 +477,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>특별</Text>
+			<Text>STR(58)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="tap2_off">
@@ -505,7 +505,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>이벤트</Text>
+			<Text>STR(59)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="tap2_off">
@@ -1417,9 +1417,9 @@
 		<Window ClassName="ioRichLabel" Id="1">
 			<Size X="7" Y="4" Width="145" Height="23"/>
 			<ExtraInfo VertGap="3" HorzAlign="Left" VertAlign="Center" >
-				<TextBlock Text="보너스캐시 " Size="12" Color="FF3A3A3A"/>
-				<TextBlock Text="기간만료 " Size="12"  Color="FFB91600"/>
-				<TextBlock Text="임박 " Size="12"  Color="FF3A3A3A"/>
+				<TextBlock Text="STR(60)" Size="12" Color="FF3A3A3A"/>
+				<TextBlock Text="STR(61)" Size="12"  Color="FFB91600"/>
+				<TextBlock Text="STR(62)" Size="12"  Color="FF3A3A3A"/>
 			</ExtraInfo>
 		</Window>
 	</Window>

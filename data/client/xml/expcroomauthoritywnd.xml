@@ -7,7 +7,7 @@
 		<Format X="224" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Center"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FFAA374D"/>
 		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FFAA374D"/>
-		<Text>PC방 혜택이 적용 됩니다</Text>
+		<Text>STR(1)</Text>
 	</Title>
 	<Imagery>
 		<DefaultFrameImagery Type="Selected" Templete="win2_frame90">
@@ -32,7 +32,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FFAA374D"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FFAA374D"/>
 			<Color Type="Disable" Text="FF323232" Back="FFAA374D"/>
-			<Text>보너스용병 선택하러 가기 (SPACE)</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_pink_nor">

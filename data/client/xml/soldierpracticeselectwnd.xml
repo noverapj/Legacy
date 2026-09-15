@@ -7,7 +7,7 @@
 	<Title>
 		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
-		<Text>훈련 용병 선택</Text>
+		<Text>STR(1)</Text>
 	</Title>
 	<Imagery>
 		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
@@ -59,17 +59,17 @@
              ClassType36 = "165"
              ClassType37 = "167"
              TabCount="6"
-             TabText1="전체"
+             TabText1="STR(2)"
              TabIndex1="-1"
-             TabText2="유니크"
+             TabText2="STR(3)"
              TabIndex2="4"
-             TabText3="프리미엄"
+             TabText3="STR(4)"
              TabIndex3="2"
-             TabText4="아이돌"
+             TabText4="STR(5)"
              TabIndex4="6"
-             TabText5="레어"
+             TabText5="STR(6)"
              TabIndex5="3"
-             TabText6="일반"
+             TabText6="STR(7)"
              TabIndex6="0"/>
 
 	<Window ClassName="ioButton" Id="1">
@@ -152,7 +152,7 @@
       <Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
       <Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
       <Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-      <Text>용병</Text>
+      <Text>STR(8)</Text>
     </Title>
     <Imagery>
       <DefaultFrameImagery Type="Normal" Templete="tap2_off">

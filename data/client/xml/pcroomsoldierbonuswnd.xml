@@ -7,7 +7,7 @@
 		<Format X="191" Y="10" Size="13" Style="Outline_full_2x" HorzAlign="Center"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FF9A273B"/>
 		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF9A273B"/>
-		<Text>PC방 보너스용병 선택 (SPACE로 선택 가능)</Text>
+		<Text>STR(1)</Text>
 	</Title>
 	<Imagery>
 		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">

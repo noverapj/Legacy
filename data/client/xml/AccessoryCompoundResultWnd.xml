@@ -12,8 +12,8 @@
 		         Icon_Scale_Time = "50"
 		         rolling_sound = "interface/compound_effect_01.wav"
 		         success_sound = "interface/compound_ok_01.wav"
-             rolling_msg = "합성중입니다. 잠시만 기다려주세요."
-             result_msg="합성을 완료하였습니다."
+             rolling_msg = "STR(1)"
+             result_msg="STR(2)"
              Effect_Gap_Time = "50"
              Max_Rolling_Effect = "9"
              Rolling_Effect_1 = "BaseEffect002#effect_roll_01"
@@ -46,7 +46,7 @@
 			<Color Type="Over" Text="FFA7A7A7" Back="FFA7A7A7"/>
 			<Color Type="Push" Text="FFA7A7A7" Back="FFA7A7A7"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FFA7A7A7"/>
-			<Text>합성중...</Text>
+			<Text>STR(3)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt_empty">
@@ -75,7 +75,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>아이템 보기</Text>
+			<Text>STR(4)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">

@@ -6,7 +6,7 @@
 		<Format X="13" Y="11" Size="18" Style="Outline_full_2x" HorzAlign="Left"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
 		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
-		<Text>해외(1)</Text>
+		<Text>STR(27)</Text>
 	</Title>
 	<Imagery>
 		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
@@ -25,41 +25,41 @@
 	</Imagery>
 	<ExtraInfo Max_Present   = "13"
                    Icon_Name_1   = "SoldierIconPack002#023"
-                   Present_Name1_1= "해외(2)"
-		   Present_Name2_1= "해외(3)"
+                   Present_Name1_1= "STR(28)"
+		   Present_Name2_1= "STR(29)"
 		   Icon_Name_2   = "SoldierIconPack002#023"
-                   Present_Name1_2= "해외(4)"
-                   Present_Name2_2= "해외(5)"
+                   Present_Name1_2= "STR(30)"
+                   Present_Name2_2= "STR(31)"
 		   Icon_Name_3   = "SoldierIconPack001#016"
-                   Present_Name1_3= "해외(6)"
-                   Present_Name2_3= "해외(7)"
+                   Present_Name1_3= "STR(32)"
+                   Present_Name2_3= "STR(33)"
 		   Icon_Name_4   = "SoldierIconPack001#017"
-                   Present_Name1_4= "해외(8)"
-                   Present_Name2_4= "해외(9)"
+                   Present_Name1_4= "STR(34)"
+                   Present_Name2_4= "STR(35)"
 		   Icon_Name_5   = "SoldierIconPack001#009"
-                   Present_Name1_5= "해외(10)"
-                   Present_Name2_5= "해외(11)"
+                   Present_Name1_5= "STR(36)"
+                   Present_Name2_5= "STR(37)"
    		   Icon_Name_6   = "UIIconPack6#goods_yell"
-                   Present_Name1_6= "해외(12)"
-                   Present_Name2_6= "해외(13)"
+                   Present_Name1_6= "STR(38)"
+                   Present_Name2_6= "STR(39)"
 		   Icon_Name_7   = "UIIconPack8#goods_exp100pro"
-                   Present_Name1_7= "해외(14)"
-                   Present_Name2_7= "해외(15)"
+                   Present_Name1_7= "STR(40)"
+                   Present_Name2_7= "STR(41)"
 		   Icon_Name_8   = "UIIconPack8#goods_peso40pro"
-                   Present_Name1_8= "해외(16)"
-                   Present_Name2_8= "해외(17)"
+                   Present_Name1_8= "STR(42)"
+                   Present_Name2_8= "STR(43)"
 		   Icon_Name_9   = "UIIconPack8#goods_growrecovery"
-                   Present_Name1_9= "해외(18)"
-                   Present_Name2_9= "해외(19)"
+                   Present_Name1_9= "STR(44)"
+                   Present_Name2_9= "STR(45)"
 		   Icon_Name_10   = "UIIconPack9#goods_fishing_rod2"
-                   Present_Name1_10= "해외(20)"
-                   Present_Name2_10= "해외(21)"
+                   Present_Name1_10= "STR(46)"
+                   Present_Name2_10= "STR(47)"
 		   Icon_Name_11   = "UIIconPack9#goods_fishing_bait2" 
-                   Present_Name1_11= "해외(22)"
-                   Present_Name2_11= "해외(23)"
+                   Present_Name1_11= "STR(48)"
+                   Present_Name2_11= "STR(49)"
    		   Icon_Name_12    = "UIIconPack6#goods_yell"
-                   Present_Name1_12= "해외(24)"
-                   Present_Name2_12= "해외(25)"/>
+                   Present_Name1_12= "STR(50)"
+                   Present_Name2_12= "STR(51)"/>
 
 
 	<Window ClassName="ioRadioButton" Id="10">

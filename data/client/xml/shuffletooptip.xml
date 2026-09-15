@@ -29,12 +29,12 @@
 	<Window ClassName="ioRichLabel" Id="1">
 		<Size X="7" Y="6" Width="256" Height="170"/>
 		<ExtraInfo VertGap="5" HorzAlign="Left" VertAlign="Center" >
-		  <TextBlock Text="오늘의 모드는?#" Size="12" Color="FF5B3714"/>
+		  <TextBlock Text="STR(1)" Size="12" Color="FF5B3714"/>
 			<TextBlock Text="(" Size="12"  Color="FFB91600"/>
-			<TextBlock Text="팀 데스매치" Size="12"  Color="FFB91600"/>									
+			<TextBlock Text="STR(2)" Size="12"  Color="FFB91600"/>									
 			<TextBlock Text=")#" Size="12"  Color="FFB91600"/>				
-			<TextBlock Text="계급이 비슷한 유저와 1개의 모드를 플레이한뒤#" Size="12"  Color="FF6E6E6E"/>
-			<TextBlock Text="스타 코인을 모아보세요!#" Size="12"  Color="FF6E6E6E"/>
+			<TextBlock Text="STR(3)" Size="12"  Color="FF6E6E6E"/>
+			<TextBlock Text="STR(4)" Size="12"  Color="FF6E6E6E"/>
 		</ExtraInfo>
 	</Window>
 	
@@ -43,12 +43,12 @@
 		<Style>IWS_START_HIDE|IWS_BACKMOST</Style> 
 		<Size X="7" Y="6" Width="256" Height="170"/>
 		<ExtraInfo VertGap="5" HorzAlign="Left" VertAlign="Center" >
-		  <TextBlock Text="오늘의 모드는?#" Size="12" Color="FF5B3714"/>
+		  <TextBlock Text="STR(5)" Size="12" Color="FF5B3714"/>
 			<TextBlock Text="(" Size="12"  Color="FFB91600"/>
-			<TextBlock Text="팀 데스매치" Size="12"  Color="FFB91600"/>									
+			<TextBlock Text="STR(6)" Size="12"  Color="FFB91600"/>									
 			<TextBlock Text=")#" Size="12"  Color="FFB91600"/>				
-			<TextBlock Text="계급이 비슷한 유저와 1개의 모드를 플레이한뒤#" Size="12"  Color="FF6E6E6E"/>
-			<TextBlock Text="스타 코인을 모아보세요!#" Size="12"  Color="FF6E6E6E"/>
+			<TextBlock Text="STR(7)" Size="12"  Color="FF6E6E6E"/>
+			<TextBlock Text="STR(8)" Size="12"  Color="FF6E6E6E"/>
 		</ExtraInfo>
 	</Window>
 	
@@ -57,12 +57,12 @@
 		<Style>IWS_START_HIDE|IWS_BACKMOST</Style> 
 		<Size X="7" Y="6" Width="256" Height="170"/>
 		<ExtraInfo VertGap="5" HorzAlign="Left" VertAlign="Center" >
-		  <TextBlock Text="오늘의 모드는?#" Size="12" Color="FF5B3714"/>
+		  <TextBlock Text="STR(9)" Size="12" Color="FF5B3714"/>
 			<TextBlock Text="(" Size="12"  Color="FFB91600"/>
-			<TextBlock Text="팀 데스매치" Size="12"  Color="FFB91600"/>									
+			<TextBlock Text="STR(10)" Size="12"  Color="FFB91600"/>									
 			<TextBlock Text=")#" Size="12"  Color="FFB91600"/>				
-			<TextBlock Text="계급이 비슷한 유저와 1개의 모드를 플레이한뒤#" Size="12"  Color="FF6E6E6E"/>
-			<TextBlock Text="스타 코인을 모아보세요!#" Size="12"  Color="FF6E6E6E"/>
+			<TextBlock Text="STR(11)" Size="12"  Color="FF6E6E6E"/>
+			<TextBlock Text="STR(12)" Size="12"  Color="FF6E6E6E"/>
 		</ExtraInfo>
 	</Window>
 	
@@ -71,12 +71,12 @@
 		<Style>IWS_START_HIDE|IWS_BACKMOST</Style> 
 		<Size X="7" Y="6" Width="256" Height="170"/>
 		<ExtraInfo VertGap="5" HorzAlign="Left" VertAlign="Center" >
-		  <TextBlock Text="오늘의 모드는?#" Size="12" Color="FF5B3714"/>
+		  <TextBlock Text="STR(13)" Size="12" Color="FF5B3714"/>
 			<TextBlock Text="(" Size="12"  Color="FFB91600"/>
-			<TextBlock Text="팀 데스매치" Size="12"  Color="FFB91600"/>									
+			<TextBlock Text="STR(14)" Size="12"  Color="FFB91600"/>									
 			<TextBlock Text=")#" Size="12"  Color="FFB91600"/>				
-			<TextBlock Text="계급이 비슷한 유저와 1개의 모드를 플레이한뒤#" Size="12"  Color="FF6E6E6E"/>
-			<TextBlock Text="스타 코인을 모아보세요!#" Size="12"  Color="FF6E6E6E"/>
+			<TextBlock Text="STR(15)" Size="12"  Color="FF6E6E6E"/>
+			<TextBlock Text="STR(16)" Size="12"  Color="FF6E6E6E"/>
 		</ExtraInfo>
 	</Window>
 	
@@ -85,12 +85,12 @@
 		<Style>IWS_START_HIDE|IWS_BACKMOST</Style> 
 		<Size X="7" Y="6" Width="256" Height="170"/>
 		<ExtraInfo VertGap="5" HorzAlign="Left" VertAlign="Center" >
-			<TextBlock Text="오늘의 모드는?#" Size="12" Color="FF5B3714"/>
+			<TextBlock Text="STR(17)" Size="12" Color="FF5B3714"/>
 			<TextBlock Text="(" Size="12"  Color="FFB91600"/>
-			<TextBlock Text="팀 데스매치" Size="12"  Color="FFB91600"/>									
+			<TextBlock Text="STR(18)" Size="12"  Color="FFB91600"/>									
 			<TextBlock Text=")#" Size="12"  Color="FFB91600"/>				
-			<TextBlock Text="계급이 비슷한 유저와 1개의 모드를 플레이한뒤#" Size="12"  Color="FF6E6E6E"/>
-			<TextBlock Text="스타 코인을 모아보세요!#" Size="12"  Color="FF6E6E6E"/>
+			<TextBlock Text="STR(19)" Size="12"  Color="FF6E6E6E"/>
+			<TextBlock Text="STR(20)" Size="12"  Color="FF6E6E6E"/>
 		</ExtraInfo>
 	</Window>
 	
@@ -99,12 +99,12 @@
 		<Style>IWS_START_HIDE|IWS_BACKMOST</Style> 
 			<Size X="7" Y="6" Width="256" Height="170"/>
 		<ExtraInfo VertGap="5" HorzAlign="Left" VertAlign="Center" >
-			<TextBlock Text="오늘의 모드는?#" Size="12" Color="FF5B3714"/>
+			<TextBlock Text="STR(21)" Size="12" Color="FF5B3714"/>
 			<TextBlock Text="(" Size="12"  Color="FFB91600"/>
-			<TextBlock Text="팀 데스매치" Size="12"  Color="FFB91600"/>									
+			<TextBlock Text="STR(22)" Size="12"  Color="FFB91600"/>									
 			<TextBlock Text=")#" Size="12"  Color="FFB91600"/>				
-			<TextBlock Text="계급이 비슷한 유저와 1개의 모드를 플레이한뒤#" Size="12"  Color="FF6E6E6E"/>
-			<TextBlock Text="스타 코인을 모아보세요!#" Size="12"  Color="FF6E6E6E"/>
+			<TextBlock Text="STR(23)" Size="12"  Color="FF6E6E6E"/>
+			<TextBlock Text="STR(24)" Size="12"  Color="FF6E6E6E"/>
 		</ExtraInfo>
 	</Window>
 	
@@ -113,12 +113,12 @@
 		<Style>IWS_START_HIDE|IWS_BACKMOST</Style> 
 	<Size X="7" Y="6" Width="256" Height="170"/>
 		<ExtraInfo VertGap="5" HorzAlign="Left" VertAlign="Center" >
-			<TextBlock Text="오늘의 모드는?#" Size="12" Color="FF5B3714"/>
+			<TextBlock Text="STR(25)" Size="12" Color="FF5B3714"/>
 			<TextBlock Text="(" Size="12"  Color="FFB91600"/>
-			<TextBlock Text="팀 데스매치" Size="12"  Color="FFB91600"/>									
+			<TextBlock Text="STR(26)" Size="12"  Color="FFB91600"/>									
 			<TextBlock Text=")#" Size="12"  Color="FFB91600"/>				
-			<TextBlock Text="계급이 비슷한 유저와 1개의 모드를 플레이한뒤#" Size="12"  Color="FF6E6E6E"/>
-			<TextBlock Text="스타 코인을 모아보세요!#" Size="12"  Color="FF6E6E6E"/>
+			<TextBlock Text="STR(27)" Size="12"  Color="FF6E6E6E"/>
+			<TextBlock Text="STR(28)" Size="12"  Color="FF6E6E6E"/>
 		</ExtraInfo>
 	</Window>
 	
@@ -127,10 +127,10 @@
 		<Style>IWS_START_HIDE|IWS_BACKMOST</Style>
 		<Size X="7" Y="6" Width="256" Height="170"/>
 		<ExtraInfo VertGap="5" HorzAlign="Left" VertAlign="Center" >
-			<TextBlock Text="오늘의 모드란?#" Size="12" Color="FF6E6E6E" Style="Outline"/>
-			<TextBlock Text="자신과 계급이 비슷한 유저와 매일 1개의#" Size="12"  Color="FF6E6E6E"/>
-			<TextBlock Text="게임 모드를 플레이 하여 스타코인 획득이#" Size="12"  Color="FF6E6E6E"/>
-			<TextBlock Text="가능합니다. 스타 코인은 과연 어디에 사용될까요?#" Size="12" Color="FF6E6E6E"/>
+			<TextBlock Text="STR(29)" Size="12" Color="FF6E6E6E" Style="Outline"/>
+			<TextBlock Text="STR(30)" Size="12"  Color="FF6E6E6E"/>
+			<TextBlock Text="STR(31)" Size="12"  Color="FF6E6E6E"/>
+			<TextBlock Text="STR(32)" Size="12" Color="FF6E6E6E"/>
 		</ExtraInfo>
 	</Window>
 </Window>

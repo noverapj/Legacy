@@ -78,7 +78,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF4B3923"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF4B3923"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>´Ý±â(SPACE)</Text>
+			<Text>STR(1)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="OverAdd" Templete="bt_overadd">

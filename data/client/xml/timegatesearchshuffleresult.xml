@@ -6,7 +6,7 @@
 	<Title>
 		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
-		<Text>오늘의 모드</Text>
+		<Text>STR(1)</Text>
 	</Title>
 	<Imagery>
 		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
@@ -60,7 +60,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
-			<Text>다시 검색하기 (SPACE)</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_blue_nor">
@@ -86,9 +86,9 @@
 		<Size X="0" Y="144" Width="302" Height="0"/>
 		<Style>IWS_BACKMOST</Style>
 		<ExtraInfo VertGap="7" HorzAlign="Center" VertAlign="Center" >
-			<TextBlock Text="조건에 맞는 방을 찾을 수 없습니다#" Size="13" Color="FF6E6E6E" />
-			<TextBlock Text="전투방 목록에서 참여할 방을 직접 고르시거나#" Size="13"  Color="FF6E6E6E"/>
-			<TextBlock Text="[다시 검색하기] 버튼을 눌러주세요#" Size="13"  Color="FF6E6E6E"/>
+			<TextBlock Text="STR(3)" Size="13" Color="FF6E6E6E" />
+			<TextBlock Text="STR(4)" Size="13"  Color="FF6E6E6E"/>
+			<TextBlock Text="STR(5)" Size="13"  Color="FF6E6E6E"/>
 		</ExtraInfo>
 	</Window>
 	
@@ -98,9 +98,9 @@
 		<Size X="0" Y="144" Width="302" Height="0"/>
 		<Style>IWS_BACKMOST</Style>
 		<ExtraInfo VertGap="7" HorzAlign="Center" VertAlign="Center" >
-			<TextBlock Text="조건에 맞는 방을 찾을 수 없습니다#" Size="13" Color="FF6E6E6E" />
-			<TextBlock Text="전투방 목록에서 참여할 방을 직접 고르시거나#" Size="13"  Color="FF6E6E6E"/>
-			<TextBlock Text="[다시 검색하기] 버튼을 눌러주세요#" Size="13"  Color="FF6E6E6E"/>
+			<TextBlock Text="STR(6)" Size="13" Color="FF6E6E6E" />
+			<TextBlock Text="STR(7)" Size="13"  Color="FF6E6E6E"/>
+			<TextBlock Text="STR(8)" Size="13"  Color="FF6E6E6E"/>
 		</ExtraInfo>
 	</Window>
 	
@@ -110,9 +110,9 @@
 		<Size X="0" Y="144" Width="302" Height="0"/>
 		<Style>IWS_BACKMOST</Style>
 		<ExtraInfo VertGap="7" HorzAlign="Center" VertAlign="Center" >
-			<TextBlock Text="조건에 맞는 방을 찾을 수 없습니다#" Size="13" Color="FF6E6E6E" />
-			<TextBlock Text="전투방 목록에서 참여할 방을 직접 고르시거나#" Size="13"  Color="FF6E6E6E"/>
-			<TextBlock Text="[다시 검색하기] 버튼을 눌러주세요#" Size="13"  Color="FF6E6E6E"/>
+			<TextBlock Text="STR(9)" Size="13" Color="FF6E6E6E" />
+			<TextBlock Text="STR(10)" Size="13"  Color="FF6E6E6E"/>
+			<TextBlock Text="STR(11)" Size="13"  Color="FF6E6E6E"/>
 		</ExtraInfo>
 	</Window>
 	
@@ -122,9 +122,9 @@
 		<Size X="0" Y="144" Width="302" Height="0"/>
 		<Style>IWS_BACKMOST</Style>
 		<ExtraInfo VertGap="7" HorzAlign="Center" VertAlign="Center" >
-			<TextBlock Text="조건에 맞는 방을 찾을 수 없습니다#" Size="13" Color="FF6E6E6E" />
-			<TextBlock Text="전투방 목록에서 참여할 방을 직접 고르시거나#" Size="13"  Color="FF6E6E6E"/>
-			<TextBlock Text="[다시 검색하기] 버튼을 눌러주세요#" Size="13"  Color="FF6E6E6E"/>
+			<TextBlock Text="STR(12)" Size="13" Color="FF6E6E6E" />
+			<TextBlock Text="STR(13)" Size="13"  Color="FF6E6E6E"/>
+			<TextBlock Text="STR(14)" Size="13"  Color="FF6E6E6E"/>
 		</ExtraInfo>
 	</Window>
 	
@@ -134,9 +134,9 @@
 		<Size X="0" Y="144" Width="302" Height="0"/>
 		<Style>IWS_BACKMOST</Style>
 		<ExtraInfo VertGap="7" HorzAlign="Center" VertAlign="Center" >
-			<TextBlock Text="조건에 맞는 방을 찾을 수 없습니다#" Size="13" Color="FF6E6E6E" />
-			<TextBlock Text="전투방 목록에서 참여할 방을 직접 고르시거나#" Size="13"  Color="FF6E6E6E"/>
-			<TextBlock Text="[다시 검색하기] 버튼을 눌러주세요#" Size="13"  Color="FF6E6E6E"/>
+			<TextBlock Text="STR(15)" Size="13" Color="FF6E6E6E" />
+			<TextBlock Text="STR(16)" Size="13"  Color="FF6E6E6E"/>
+			<TextBlock Text="STR(17)" Size="13"  Color="FF6E6E6E"/>
 		</ExtraInfo>
 	</Window>
 	
@@ -146,9 +146,9 @@
 		<Size X="0" Y="144" Width="302" Height="0"/>
 		<Style>IWS_BACKMOST</Style>
 		<ExtraInfo VertGap="7" HorzAlign="Center" VertAlign="Center" >
-			<TextBlock Text="조건에 맞는 방을 찾을 수 없습니다#" Size="13" Color="FF6E6E6E" />
-			<TextBlock Text="전투방 목록에서 참여할 방을 직접 고르시거나#" Size="13"  Color="FF6E6E6E"/>
-			<TextBlock Text="[다시 검색하기] 버튼을 눌러주세요#" Size="13"  Color="FF6E6E6E"/>
+			<TextBlock Text="STR(18)" Size="13" Color="FF6E6E6E" />
+			<TextBlock Text="STR(19)" Size="13"  Color="FF6E6E6E"/>
+			<TextBlock Text="STR(20)" Size="13"  Color="FF6E6E6E"/>
 		</ExtraInfo>
 	</Window>
 	
@@ -158,9 +158,9 @@
 		<Size X="0" Y="144" Width="302" Height="0"/>
 		<Style>IWS_BACKMOST</Style>
 		<ExtraInfo VertGap="7" HorzAlign="Center" VertAlign="Center" >
-			<TextBlock Text="조건에 맞는 방을 찾을 수 없습니다#" Size="13" Color="FF6E6E6E" />
-			<TextBlock Text="전투방 목록에서 참여할 방을 직접 고르시거나#" Size="13"  Color="FF6E6E6E"/>
-			<TextBlock Text="[다시 검색하기] 버튼을 눌러주세요#" Size="13"  Color="FF6E6E6E"/>
+			<TextBlock Text="STR(21)" Size="13" Color="FF6E6E6E" />
+			<TextBlock Text="STR(22)" Size="13"  Color="FF6E6E6E"/>
+			<TextBlock Text="STR(23)" Size="13"  Color="FF6E6E6E"/>
 		</ExtraInfo>
 	</Window>
 	
@@ -170,9 +170,9 @@
 		<Size X="0" Y="144" Width="302" Height="0"/>
 		<Style>IWS_BACKMOST</Style>
 		<ExtraInfo VertGap="7" HorzAlign="Center" VertAlign="Center" >
-			<TextBlock Text="조건에 맞는 방을 찾을 수 없습니다#" Size="13" Color="FF6E6E6E" />
-			<TextBlock Text="전투방 목록에서 참여할 방을 직접 고르시거나#" Size="13"  Color="FF6E6E6E"/>
-			<TextBlock Text="[다시 검색하기] 버튼을 눌러주세요#" Size="13"  Color="FF6E6E6E"/>
+			<TextBlock Text="STR(24)" Size="13" Color="FF6E6E6E" />
+			<TextBlock Text="STR(25)" Size="13"  Color="FF6E6E6E"/>
+			<TextBlock Text="STR(26)" Size="13"  Color="FF6E6E6E"/>
 		</ExtraInfo>
 	</Window>
 	
@@ -186,7 +186,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
-			<Text>닫기 (ESC)</Text>
+			<Text>STR(27)</Text>
 		</Title>
 		
 		

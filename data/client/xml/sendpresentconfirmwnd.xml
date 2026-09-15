@@ -7,7 +7,7 @@
 		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FFA62B41"/>
 		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FFA62B41"/>
-		<Text>선물하기</Text>
+		<Text>STR(1)</Text>
 	</Title>
 	<Imagery>
 		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
@@ -60,7 +60,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FFA62B41"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FFA62B41"/>
 			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
-			<Text>선물 발송</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_pink_nor">
@@ -94,7 +94,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF215AA2"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FF323232" Back="FF215AA2"/>
-			<Text>취소</Text>
+			<Text>STR(3)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
@@ -122,7 +122,7 @@
 			<Color Type="Over" Text="FF117222" Back="FF215AA2"/>
 			<Color Type="Push" Text="FF117222" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF215AA2"/>
-			<Text>[청약철회 규정보기]</Text>
+			<Text>STR(4)</Text>
 		</Title>
 		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
 	             	   ClickSound = "interface/public_mouseclick_00.wav"/>

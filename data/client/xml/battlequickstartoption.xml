@@ -7,7 +7,7 @@
 		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
 		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
-		<Text>빠른참가＆방정렬 설정</Text>
+		<Text>STR(1)</Text>
 	</Title>
 	<Imagery>
 		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
@@ -65,7 +65,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FF323232" Back="FF215AA2"/>
-			<Text>빠른 참가(SPACE)</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_blue_nor">
@@ -93,7 +93,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF215AA2"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FF323232" Back="FF215AA2"/>
-			<Text>설정 완료</Text>
+			<Text>STR(3)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
@@ -121,7 +121,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>양팀 같은 인원</Text>
+			<Text>STR(4)</Text>
 		</Title>
 		<Imagery>
 			<Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
@@ -168,7 +168,7 @@
 				<Color Type="Over" Text="FF6E6E6E" Back="FF215AA2"/>
 				<Color Type="Push" Text="FF6E6E6E" Back="FF215AA2"/>
 				<Color Type="Disable" Text="FF323232" Back="FF215AA2"/>
-				<Text>최소 1명</Text>
+				<Text>STR(5)</Text>
 			</Title>
 			<Imagery>
 				<Image Imageset="BaseImage004" Image="scrollbar2_drag_arrow" >
@@ -190,7 +190,7 @@
 				<Color Type="Over" Text="FF6E6E6E" Back="FF215AA2"/>
 				<Color Type="Push" Text="FF6E6E6E" Back="FF215AA2"/>
 				<Color Type="Disable" Text="FF323232" Back="FF215AA2"/>
-				<Text>최소 16명</Text>
+				<Text>STR(6)</Text>
 			</Title>
 			<Imagery>
 				<Image Imageset="BaseImage004" Image="scrollbar2_drag_arrow" >
@@ -211,7 +211,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF20394F"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF20394F"/>
 			<Color Type="Disable" Text="FF323232" Back="FF20394F"/>
-			<Text>모드별 공략보기</Text>
+			<Text>STR(7)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
@@ -255,7 +255,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
-			<Text>랜덤게임</Text>
+			<Text>STR(8)</Text>
 		</Title>
 
 		<Imagery>
@@ -278,7 +278,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
-			<Text>포로탈출</Text>
+			<Text>STR(9)</Text>
 		</Title>
 		<Imagery>
 			<Image Type="Normal" Imageset="BaseImage020" Image="mode_prisoner" />
@@ -300,7 +300,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
-			<Text>팀데스매치</Text>
+			<Text>STR(10)</Text>
 		</Title>
 		<Imagery>
 			<Image Type="Normal" Imageset="BaseImage020" Image="mode_teamdeath" />
@@ -322,7 +322,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
-			<Text>AI팀데스매치</Text>
+			<Text>STR(11)</Text>
 		</Title>
 		<Imagery>
 			<Image Type="Normal" Imageset="BaseImage021" Image="mode_ai01_teamdeath" />
@@ -341,7 +341,7 @@
 				<Color Type="Over" Text="FF10538D" Back="FF000000"/>
 				<Color Type="Push" Text="FF10538D" Back="FF000000"/>
 				<Color Type="Disable" Text="FF10538D" Back="FF000000"/>
-				<Text>쉬움</Text>
+				<Text>STR(12)</Text>
 			</Title>
 			<Imagery>
 				<Image Type="Normal" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
@@ -362,7 +362,7 @@
 				<Color Type="Over" Text="FF10538D" Back="FF000000"/>
 				<Color Type="Push" Text="FF10538D" Back="FF000000"/>
 				<Color Type="Disable" Text="FF10538D" Back="FF000000"/>
-				<Text>보통</Text>
+				<Text>STR(13)</Text>
 			</Title>
 			<Imagery>
 				<Image Type="Normal" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
@@ -385,7 +385,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
-			<Text>드워프모드</Text>
+			<Text>STR(14)</Text>
 		</Title>
 		<Imagery>
 			<Image Type="Normal" Imageset="BaseImage021" Image="mode_dwarf" />
@@ -407,7 +407,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
-			<Text>데스매치</Text>
+			<Text>STR(15)</Text>
 		</Title>
 		<Imagery>
 			<Image Type="Normal" Imageset="BaseImage020" Image="mode_deathmatch" />
@@ -429,7 +429,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
-			<Text>챔피언모드</Text>
+			<Text>STR(16)</Text>
 		</Title>
 		<Imagery>
 			<Image Type="Normal" Imageset="BaseImage020" Image="mode_champion" />
@@ -451,7 +451,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
-			<Text>파워스톤</Text>
+			<Text>STR(17)</Text>
 		</Title>
 		<Imagery>
 			<Image Type="Normal" Imageset="BaseImage020" Image="mode_stone" />
@@ -473,7 +473,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
-			<Text>보스레이드</Text>
+			<Text>STR(18)</Text>
 		</Title>
 		<Imagery>
 			<Image Type="Normal" Imageset="BaseImage020" Image="mode_boss" />
@@ -495,7 +495,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
-			<Text>강시서바이벌</Text>
+			<Text>STR(19)</Text>
 		</Title>
 		<Imagery>
 			<Image Type="Normal" Imageset="BaseImage020" Image="mode_gangsi" />
@@ -517,7 +517,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
-			<Text>깊은 숲</Text>
+			<Text>STR(20)</Text>
 		</Title>
 		<Imagery>
 			<Image Type="Normal" Imageset="BaseImage020" Image="mode_pve01" />
@@ -625,7 +625,7 @@
 				<Color Type="Over" Text="FF10538D" Back="FF000000"/>
 				<Color Type="Push" Text="FF10538D" Back="FF000000"/>
 				<Color Type="Disable" Text="FF10538D" Back="FF000000"/>
-				<Text>쉬움</Text>
+				<Text>STR(21)</Text>
 			</Title>
 			<Imagery>
 				<Image Type="Normal" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
@@ -646,7 +646,7 @@
 				<Color Type="Over" Text="FF10538D" Back="FF000000"/>
 				<Color Type="Push" Text="FF10538D" Back="FF000000"/>
 				<Color Type="Disable" Text="FF10538D" Back="FF000000"/>
-				<Text>마스터</Text>
+				<Text>STR(22)</Text>
 			</Title>
 			<Imagery>
 				<Image Type="Normal" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
@@ -669,7 +669,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
-			<Text>스노우타운</Text>
+			<Text>STR(23)</Text>
 		</Title>
 		<Imagery>
 			<Image Type="Normal" Imageset="BaseImage020" Image="mode_pve02" />
@@ -688,7 +688,7 @@
 				<Color Type="Over" Text="FF10538D" Back="FF000000"/>
 				<Color Type="Push" Text="FF10538D" Back="FF000000"/>
 				<Color Type="Disable" Text="FF10538D" Back="FF000000"/>
-				<Text>쉬움</Text>
+				<Text>STR(24)</Text>
 			</Title>
 			<Imagery>
 				<Image Type="Normal" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
@@ -709,7 +709,7 @@
 				<Color Type="Over" Text="FF10538D" Back="FF000000"/>
 				<Color Type="Push" Text="FF10538D" Back="FF000000"/>
 				<Color Type="Disable" Text="FF10538D" Back="FF000000"/>
-				<Text>마스터</Text>
+				<Text>STR(25)</Text>
 			</Title>
 			<Imagery>
 				<Image Type="Normal" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
@@ -732,7 +732,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
-			<Text>불의 신전</Text>
+			<Text>STR(26)</Text>
 		</Title>
 		<Imagery>
 			<Image Type="Normal" Imageset="BaseImage021" Image="mode_pve03" />
@@ -751,7 +751,7 @@
 				<Color Type="Over" Text="FF10538D" Back="FF000000"/>
 				<Color Type="Push" Text="FF10538D" Back="FF000000"/>
 				<Color Type="Disable" Text="FF10538D" Back="FF000000"/>
-				<Text>쉬움</Text>
+				<Text>STR(27)</Text>
 			</Title>
 			<Imagery>
 				<Image Type="Normal" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
@@ -772,7 +772,7 @@
 				<Color Type="Over" Text="FF10538D" Back="FF000000"/>
 				<Color Type="Push" Text="FF10538D" Back="FF000000"/>
 				<Color Type="Disable" Text="FF10538D" Back="FF000000"/>
-				<Text>마스터</Text>
+				<Text>STR(28)</Text>
 			</Title>
 			<Imagery>
 				<Image Type="Normal" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
@@ -795,7 +795,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
-			<Text>비밀공장</Text>
+			<Text>STR(29)</Text>
 		</Title>
 		<Imagery>
 			<Image Type="Normal" Imageset="BaseImage021" Image="mode_pve04" />
@@ -814,7 +814,7 @@
 				<Color Type="Over" Text="FF10538D" Back="FF000000"/>
 				<Color Type="Push" Text="FF10538D" Back="FF000000"/>
 				<Color Type="Disable" Text="FF10538D" Back="FF000000"/>
-				<Text>쉬움</Text>
+				<Text>STR(30)</Text>
 			</Title>
 			<Imagery>
 				<Image Type="Normal" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
@@ -835,7 +835,7 @@
 				<Color Type="Over" Text="FF10538D" Back="FF000000"/>
 				<Color Type="Push" Text="FF10538D" Back="FF000000"/>
 				<Color Type="Disable" Text="FF10538D" Back="FF000000"/>
-				<Text>마스터</Text>
+				<Text>STR(31)</Text>
 			</Title>
 			<Imagery>
 				<Image Type="Normal" Imageset="BaseImage009" Image="quickstart_pve_gradebg01" />
@@ -858,7 +858,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
-			<Text>레이드</Text>
+			<Text>STR(32)</Text>
 		</Title>
 		<Imagery>
 			<Image Type="Normal" Imageset="BaseImage021" Image="mode_pve05" />
@@ -880,7 +880,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
-			<Text>팬티몬</Text>
+			<Text>STR(33)</Text>
 		</Title>
 		<Imagery>
 			<Image Type="Normal" Imageset="BaseImage021" Image="mode_pantymon" />
@@ -902,7 +902,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
-			<Text>클래식</Text>
+			<Text>STR(34)</Text>
 		</Title>
 		<Imagery>
 			<Image Type="Normal" Imageset="BaseImage021" Image="mode_classic" />
@@ -924,7 +924,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
-			<Text>해골영웅</Text>
+			<Text>STR(35)</Text>
 		</Title>
 		<Imagery>
 			<Image Type="Normal" Imageset="BaseImage020" Image="mode_pve00" />
@@ -944,7 +944,7 @@
 				<Color Type="Over" Text="FF10538D" Back="FF000000"/>
 				<Color Type="Push" Text="FF10538D" Back="FF000000"/>
 				<Color Type="Disable" Text="FF10538D" Back="FF000000"/>
-				<Text>1층</Text>
+				<Text>STR(36)</Text>
 			</Title>
 			<Imagery>
 				<Image Type="Normal" Imageset="BaseImage009" Image="quickstart_pve_gradebg" />
@@ -965,7 +965,7 @@
 				<Color Type="Over" Text="FF10538D" Back="FF000000"/>
 				<Color Type="Push" Text="FF10538D" Back="FF000000"/>
 				<Color Type="Disable" Text="FF10538D" Back="FF000000"/>
-				<Text>21층</Text>
+				<Text>STR(37)</Text>
 			</Title>
 			<Imagery>
 				<Image Type="Normal" Imageset="BaseImage009" Image="quickstart_pve_gradebg" />
@@ -986,7 +986,7 @@
 				<Color Type="Over" Text="FF10538D" Back="FF000000"/>
 				<Color Type="Push" Text="FF10538D" Back="FF000000"/>
 				<Color Type="Disable" Text="FF10538D" Back="FF000000"/>
-				<Text>41층</Text>
+				<Text>STR(38)</Text>
 			</Title>
 			<Imagery>
 				<Image Type="Normal" Imageset="BaseImage009" Image="quickstart_pve_gradebg" />
@@ -1011,7 +1011,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
-			<Text>더블크라운</Text>
+			<Text>STR(39)</Text>
 		</Title>
 		<Imagery>
 			<Image Type="Normal" Imageset="BaseImage020" Image="mode_king" />
@@ -1033,7 +1033,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
-			<Text>축구경기</Text>
+			<Text>STR(40)</Text>
 		</Title>
 		<Imagery>
 			<Image Type="Normal" Imageset="BaseImage020" Image="mode_soccer" />
@@ -1055,7 +1055,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
-			<Text>깃발모드</Text>
+			<Text>STR(41)</Text>
 		</Title>
 		<Imagery>
 			<Image Type="Normal" Imageset="BaseImage020" Image="mode_flag" />
@@ -1077,7 +1077,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
-			<Text>아레나모드</Text>
+			<Text>STR(42)</Text>
 		</Title>
 		<Imagery>
 			<Image Type="Normal" Imageset="BaseImage020" Image="mode_arena" />
@@ -1121,7 +1121,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
-			<Text>배틀모드</Text>
+			<Text>STR(43)</Text>
 		</Title>
 		<Imagery>
 			<Image Type="Normal" Imageset="BaseImage020" Image="mode_battlemod" />
@@ -1184,7 +1184,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="FF215AA2"/>
-			<Text>파밍모드</Text>
+			<Text>STR(44)</Text>
 		</Title>
 		<Imagery>
 			<Image Type="Normal" Imageset="BaseImage021" Image="mode_farming" />

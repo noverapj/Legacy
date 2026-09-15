@@ -28,7 +28,7 @@
 			<Area X="13" Y="0"/>
 		</Image>
 	</Imagery>	
-	<ExtraInfo TextInfo1="%d위"
-			   TextInfo2="기록없음"
+	<ExtraInfo TextInfo1="STR(1)"
+			   TextInfo2="STR(2)"
 			 />
 	</Window>

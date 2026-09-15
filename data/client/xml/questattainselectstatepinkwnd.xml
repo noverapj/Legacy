@@ -95,7 +95,7 @@
       <Color Type="Over" Text="FFB23F00" Back="FFB23F00"/>
       <Color Type="Push" Text="FFB23F00" Back="FFB23F00"/>
       <Color Type="Disable" Text="FFB23F00" Back="FFB23F00"/>
-      <Text>원하는 보상을 N개 선택하세요.</Text>
+      <Text>STR(1)</Text>
     </Title>
   </Window>
 
@@ -212,7 +212,7 @@
       <Color Type="Over" Text="FFFFFFFF" Back="FFB91600"/>
       <Color Type="Push" Text="FFFFFFFF" Back="FFB91600"/>
       <Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-      <Text>보상받기 (SPACE)</Text>
+      <Text>STR(2)</Text>
     </Title>
     <Imagery>
       <DefaultFrameImagery Type="Normal" Templete="bt006_red_nor">

@@ -16,25 +16,25 @@
     </DefaultFrameImagery>
     <Image Type="BlackStrip" Imageset="BaseImage001" Image="strip_black200"/>
   </Imagery>
-  <ExtraInfo ReinforceStateMsg1="강화할 액세서리를 선택하세요."
-             ReinforceStateMsg2="이미 최대로 강화되어 있습니다."
-             ReinforceStateMsg3="재료 악세서리를 선택하세요."
-             ReinforceStateMsg4="액세서리 강화가 가능합니다."
-             ReinforceStateMsg5="악세사리를 강화중입니다."
+  <ExtraInfo ReinforceStateMsg1="STR(1)"
+             ReinforceStateMsg2="STR(2)"
+             ReinforceStateMsg3="STR(3)"
+             ReinforceStateMsg4="STR(4)"
+             ReinforceStateMsg5="STR(5)"
              ReinforceText="- 강화 시 다른 악세사리가 필요합니다.\n- 최대 수치로 강화된 액세서리는 강화할   수 없습니다.\n- 재료로 사용한 액세서리는 사라집니다.\n- 24시간 미만 남은 재료 액세서리는         기간이 추가되지 않습니다."
-             ReinforceAlarm="선택하신 액세서리는 최대 수치로서 강화할 수 없습니다."
-             AccessoryDesc1="강화할"
-             AccessoryDesc2="악세서리 아이템"
-             AccessoryDesc3="강화재료"
-             AccessoryDesc4="악세서리 아이템"
-             AccessoryDesc5="좌측에서 아이템을 선택해주세요."
+             ReinforceAlarm="STR(6)"
+             AccessoryDesc1="STR(7)"
+             AccessoryDesc2="STR(8)"
+             AccessoryDesc3="STR(9)"
+             AccessoryDesc4="STR(10)"
+             AccessoryDesc5="STR(11)"
              RollingTime = "1500"
 			       ReinforceRollingSound = "interface/spirit/compose_rolling_01.wav"
 			       ReinforceResultSound = "interface/spirit/compose_result_01.wav" 
-             ReinforceResultMsg1="강화에 성공하였습니다."
-             ReinforceResultMsg2="강화를 완료하였습니다."
-             ReinforceResultDesc="강화 수치를 확인 하세요!!"
-             AccessoryReinforeTimeOut="기간만료된 악세사리는 강화하거나 재료로 사용할 수 없습니다."
+             ReinforceResultMsg1="STR(12)"
+             ReinforceResultMsg2="STR(13)"
+             ReinforceResultDesc="STR(14)"
+             AccessoryReinforeTimeOut="STR(15)"
              Effect_Gap_Time = "50"
              Max_Rolling_Effect = "9"
 	           Rolling_Effect_1 = "BaseEffect002#effect_roll_01"
@@ -66,7 +66,7 @@
       <Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
       <Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
       <Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-      <Text>장착</Text>
+      <Text>STR(16)</Text>
     </Title>
     <Imagery>
       <DefaultFrameImagery Type="Normal" Templete="tap2_off">
@@ -93,7 +93,7 @@
       <Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
       <Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
       <Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-      <Text>강화</Text>
+      <Text>STR(17)</Text>
     </Title>
     <Imagery>
       <DefaultFrameImagery Type="Normal" Templete="tap2_off">
@@ -121,7 +121,7 @@
       <Color Type="Over" Text="FFFFFFFF" Back="FF1646B2"/>
       <Color Type="Push" Text="FFFFFFFF" Back="FF1646B2"/>
       <Color Type="Disable" Text="FFA7A7A7" Back="FF1646B2"/>
-      <Text>내 용병 선택</Text>
+      <Text>STR(18)</Text>
     </Title>
     <Imagery>
       <Image Type="Normal" Imageset="BaseImage034" Image="hero_select_nor_middle">
@@ -187,7 +187,7 @@
       <Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
       <Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
       <Color Type="Disable" Text="FFA7A7A7" Back="FF6E6E6E"/>
-      <Text>강화하기</Text>
+      <Text>STR(19)</Text>
     </Title>
     <Imagery>
       <DefaultFrameImagery Type="Normal" Templete="bt006_green_nor">
@@ -219,7 +219,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FFA7A7A7"/>
-			<Text>추가사용</Text>
+			<Text>STR(20)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_green_nor">
@@ -251,7 +251,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>아이템 보기</Text>
+			<Text>STR(21)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
@@ -280,7 +280,7 @@
     <Title>
       <Format X="102" Y="7" Size="13" Style="Normal" HorzAlign="Center"/>
       <Color Type="Normal" Text="FFA7A7A7" Back="FFA7A7A7"/>
-      <Text>강화중...</Text>
+      <Text>STR(22)</Text>
     </Title>
     <Imagery>
       <DefaultFrameImagery Templete="bt_empty">
@@ -299,7 +299,7 @@
       <Color Type="Over" Text="FF6E6E6E" Back="FFFFFFFF"/>
       <Color Type="Push" Text="FF6E6E6E" Back="FFFFFFFF"/>
       <Color Type="Disable" Text="FFA7A7A7" Back="FFFFFFFF"/>
-      <Text>반지</Text>
+      <Text>STR(23)</Text>
     </Title>
     <Imagery>
       <DefaultFrameImagery Type="StatePinkFrm" Templete="state_pink">
@@ -324,7 +324,7 @@
       <Color Type="Over" Text="FF6E6E6E" Back="FFFFFFFF"/>
       <Color Type="Push" Text="FF6E6E6E" Back="FFFFFFFF"/>
       <Color Type="Disable" Text="FFA7A7A7" Back="FFFFFFFF"/>
-      <Text>목걸이</Text>
+      <Text>STR(24)</Text>
     </Title>
     <Imagery>
       <DefaultFrameImagery Type="StatePinkFrm" Templete="state_pink">
@@ -349,7 +349,7 @@
       <Color Type="Over" Text="FF6E6E6E" Back="FFFFFFFF"/>
       <Color Type="Push" Text="FF6E6E6E" Back="FFFFFFFF"/>
       <Color Type="Disable" Text="FFA7A7A7" Back="FFFFFFFF"/>
-      <Text>팔찌</Text>
+      <Text>STR(25)</Text>
     </Title>
     <Imagery>
       <DefaultFrameImagery Type="StatePinkFrm" Templete="state_pink">

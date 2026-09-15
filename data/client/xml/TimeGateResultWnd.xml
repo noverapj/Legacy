@@ -14,7 +14,7 @@
     </Effect>
 	</Imagery>
   <ExtraInfo Rolling_Total_Time = "1500"
-             ResultMsg="해당 아이템은 보관함에서 확인하세요."
+             ResultMsg="STR(1)"
              Rolling_Sound = "interface/effect_randombox_rolling.wav"
 		     Result_Sound = "interface/effect_randombox_good.wav"
              EffectPosX="167"
@@ -29,7 +29,7 @@
       <Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
       <Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
       <Color Type="Disable" Text="FFA7A7A7" Back="FFA7A7A7"/>
-      <Text>닫기 (ESC)</Text>
+      <Text>STR(2)</Text>
     </Title>
     <Imagery>
       <DefaultFrameImagery Type="Normal" Templete="bt006_blue_nor">

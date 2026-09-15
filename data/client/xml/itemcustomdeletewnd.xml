@@ -6,7 +6,7 @@
 		<Format X="13" Y="11" Size="18" Style="Outline_full_2x" HorzAlign="Left"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
 		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
-		<Text>장비 스킨 삭제</Text>
+		<Text>STR(1)</Text>
 	</Title>
 	<Imagery>
 		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
@@ -60,7 +60,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFa7a7a7" Back="FF215AA2"/>
-			<Text>남성 삭제</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_blue_nor">
@@ -92,7 +92,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF9F291A"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF9F291A"/>
 			<Color Type="Disable" Text="FFa7a7a7" Back="FF9F291A"/>
-			<Text>여성 삭제</Text>
+			<Text>STR(3)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_red_nor">

@@ -23,7 +23,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="117222"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="117222"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="117222"/>
-			<Text>추가사용</Text>
+			<Text>STR(1)</Text>
 		</Title>		
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_green_nor">
@@ -52,7 +52,7 @@
 			<Color Type="Over" Text="3a3a3a" Back="FFFFFFFF"/>
 			<Color Type="Push" Text="3a3a3a" Back="FFFFFFFF"/>
 			<Color Type="Disable" Text="3a3a3a" Back="FFFFFFFF"/>
-			<Text>용병보기</Text>
+			<Text>STR(2)</Text>
 		</Title>		
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">

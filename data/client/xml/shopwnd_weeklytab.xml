@@ -49,7 +49,7 @@
                     <Imagery />
                     <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
                         <TextBlock Text="19,000" Size="13" Style="Bold" Color="ffffffff" />
-                        <TextBlock Text=" °ñµå" Size="13" Style="Normal" Color="fff7cfac" />
+                        <TextBlock Text="STR(1)" Size="13" Style="Normal" Color="fff7cfac" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -176,7 +176,7 @@
                     <Imagery />
                     <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
                         <TextBlock Text="19,000" Size="13" Style="Bold" Color="ffffffff" />
-                        <TextBlock Text=" °ñµå" Size="13" Style="Normal" Color="fff7cfac" />
+                        <TextBlock Text="STR(2)" Size="13" Style="Normal" Color="fff7cfac" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -303,7 +303,7 @@
                     <Imagery />
                     <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
                         <TextBlock Text="19,000" Size="13" Style="Bold" Color="ffffffff" />
-                        <TextBlock Text=" °ñµå" Size="13" Style="Normal" Color="fff7cfac" />
+                        <TextBlock Text="STR(3)" Size="13" Style="Normal" Color="fff7cfac" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -430,7 +430,7 @@
                     <Imagery />
                     <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
                         <TextBlock Text="19,000" Size="13" Style="Bold" Color="ffffffff" />
-                        <TextBlock Text=" °ñµå" Size="13" Style="Normal" Color="fff7cfac" />
+                        <TextBlock Text="STR(4)" Size="13" Style="Normal" Color="fff7cfac" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -557,7 +557,7 @@
                     <Imagery />
                     <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
                         <TextBlock Text="19,000" Size="13" Style="Bold" Color="ffffffff" />
-                        <TextBlock Text=" °ñµå" Size="13" Style="Normal" Color="fff7cfac" />
+                        <TextBlock Text="STR(5)" Size="13" Style="Normal" Color="fff7cfac" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -684,7 +684,7 @@
                     <Imagery />
                     <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
                         <TextBlock Text="19,000" Size="13" Style="Bold" Color="ffffffff" />
-                        <TextBlock Text=" °ñµå" Size="13" Style="Normal" Color="fff7cfac" />
+                        <TextBlock Text="STR(6)" Size="13" Style="Normal" Color="fff7cfac" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -811,7 +811,7 @@
                     <Imagery />
                     <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
                         <TextBlock Text="19,000" Size="13" Style="Bold" Color="ffffffff" />
-                        <TextBlock Text=" °ñµå" Size="13" Style="Normal" Color="fff7cfac" />
+                        <TextBlock Text="STR(7)" Size="13" Style="Normal" Color="fff7cfac" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -938,7 +938,7 @@
                     <Imagery />
                     <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
                         <TextBlock Text="19,000" Size="13" Style="Bold" Color="ffffffff" />
-                        <TextBlock Text=" °ñµå" Size="13" Style="Normal" Color="fff7cfac" />
+                        <TextBlock Text="STR(8)" Size="13" Style="Normal" Color="fff7cfac" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -1065,7 +1065,7 @@
                     <Imagery />
                     <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
                         <TextBlock Text="19,000" Size="13" Style="Bold" Color="ffffffff" />
-                        <TextBlock Text=" °ñµå" Size="13" Style="Normal" Color="fff7cfac" />
+                        <TextBlock Text="STR(9)" Size="13" Style="Normal" Color="fff7cfac" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -1192,7 +1192,7 @@
                     <Imagery />
                     <ExtraInfo HorzAlign="Center" VertAlign="Center" VertGap="0">
                         <TextBlock Text="19,000" Size="13" Style="Bold" Color="ffffffff" />
-                        <TextBlock Text=" °ñµå" Size="13" Style="Normal" Color="fff7cfac" />
+                        <TextBlock Text="STR(10)" Size="13" Style="Normal" Color="fff7cfac" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>

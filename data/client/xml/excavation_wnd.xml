@@ -12,10 +12,10 @@
 		<Image Type="HotKey2" Imageset="BaseImage046" Image="ruindig_button2" />
 	</Imagery>
 	<ExtraInfo
-		TextExp = "Å½»ç·¹º§"
-		TextExcavationRecharge = "¹ß±¼ÁØºñÁß"
-		TextExcavationReady = "¹ß±¼°¡´É"
-		TextExcavationCount = "¹ß±¼È½¼ö"
+		TextExp = "STR(1)"
+		TextExcavationRecharge = "STR(2)"
+		TextExcavationReady = "STR(3)"
+		TextExcavationCount = "STR(4)"
 		RechargeSound = "interface/artifact/excavation_recharge_01.wav"
 	/>
 
@@ -37,7 +37,7 @@
 			<Color Back = "FF1646B2" Text = "FFFFFFFF" Type = "Over"/>
 			<Color Back = "FF1646B2" Text = "FFFFFFFF" Type = "Push"/>
 			<Color Back = "FF1646B2" Text = "FFFFFFFF" Type = "Disable"/>
-			<Text>Å½»çÈ½¼öÃæÀüÇÏ±â</Text>
+			<Text>STR(5)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type = "Normal" Templete = "bt007_blue_nor">
@@ -66,7 +66,7 @@
 			<Color Text = "FF3A3A3A" Type = "Over"/>
 			<Color Text = "FF3A3A3A" Type = "Push"/>
 			<Color Text = "FF3A3A3A" Type = "Disable"/>
-			<Text>Áß´ÜÇÏ±â</Text>
+			<Text>STR(6)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type = "Normal" Templete = "bt007_gray_nor">
@@ -90,7 +90,7 @@
 	<Text>
 		<Format X = "111" Y = "30" Type = "exc_count" Size = "12" Style = "Normal" HorzAlign = "Left"/>
 		<Color Text="FF97CDFF"/>
-		<Text>¹ß±¼È½¼ö 3/5</Text>
+		<Text>STR(7)</Text>
 	</Text>
 
 	<Text>
@@ -102,7 +102,7 @@
 	<Text>
 		<Format X = "14" Y = "107" Type = "exc_lv" Size = "12" Style = "Normal" HorzAlign = "Left"/>
 		<Color Text="FF4A4849"/>
-		<Text>Å½»ç·¹º§ 999</Text>
+		<Text>STR(8)</Text>
 	</Text>
 
 	<Text>

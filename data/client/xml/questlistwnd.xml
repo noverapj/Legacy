@@ -64,7 +64,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>진행중</Text>
+			<Text>STR(1)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="mission_off_brown">
@@ -92,7 +92,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>완료</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="mission_off_brown">
@@ -145,7 +145,7 @@
 				<Color Type="Over" Text="FFFFFFFF" Back="FF4B3923"/>
 				<Color Type="Push" Text="FFFFFFFF" Back="FF4B3923"/>
 				<Color Type="Disable" Text="FFA7A7A7" Back="FFA7A7A7"/>
-			<Text>결과</Text>
+			<Text>STR(3)</Text>
 			</Title>
 			<Imagery>
 				<DefaultFrameImagery Type="Normal" Templete="bt006_brown_nor">
@@ -238,7 +238,7 @@
 				<Color Type="Over" Text="FFFFFFFF" Back="FF4B3923"/>
 				<Color Type="Push" Text="FFFFFFFF" Back="FF4B3923"/>
 				<Color Type="Disable" Text="FFA7A7A7" Back="FFA7A7A7"/>
-			<Text>결과</Text>
+			<Text>STR(4)</Text>
 			</Title>
 			<Imagery>
 				<DefaultFrameImagery Type="Normal" Templete="bt006_brown_nor">
@@ -330,7 +330,7 @@
 				<Color Type="Over" Text="FFFFFFFF" Back="FF4B3923"/>
 				<Color Type="Push" Text="FFFFFFFF" Back="FF4B3923"/>
 				<Color Type="Disable" Text="FFA7A7A7" Back="FFA7A7A7"/>
-			<Text>결과</Text>
+			<Text>STR(5)</Text>
 			</Title>
 			<Imagery>
 				<DefaultFrameImagery Type="Normal" Templete="bt006_brown_nor">
@@ -422,7 +422,7 @@
 				<Color Type="Over" Text="FFFFFFFF" Back="FF4B3923"/>
 				<Color Type="Push" Text="FFFFFFFF" Back="FF4B3923"/>
 				<Color Type="Disable" Text="FFA7A7A7" Back="FFA7A7A7"/>
-			<Text>결과</Text>
+			<Text>STR(6)</Text>
 			</Title>
 			<Imagery>
 				<DefaultFrameImagery Type="Normal" Templete="bt006_brown_nor">
@@ -514,7 +514,7 @@
 				<Color Type="Over" Text="FFFFFFFF" Back="FF4B3923"/>
 				<Color Type="Push" Text="FFFFFFFF" Back="FF4B3923"/>
 				<Color Type="Disable" Text="FFA7A7A7" Back="FFA7A7A7"/>
-			<Text>결과</Text>
+			<Text>STR(7)</Text>
 			</Title>
 			<Imagery>
 				<DefaultFrameImagery Type="Normal" Templete="bt006_brown_nor">

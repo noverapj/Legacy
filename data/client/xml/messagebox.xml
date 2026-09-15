@@ -6,7 +6,7 @@
 	<Title>
 		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
-		<Text>알림</Text>
+		<Text>STR(1)</Text>
 	</Title>
 	<Imagery>
 		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
@@ -71,7 +71,7 @@
 		</Imagery>
 		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
 	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
-		<ExtraInfo TitleName="확인" HotKey="SPACE"/>
+		<ExtraInfo TitleName="STR(2)" HotKey="SPACE"/>
 	</Window>
 
 	<Window ClassName="ioMessageBoxBtn" Id="3">
@@ -99,7 +99,7 @@
 		</Imagery>
 		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
 	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
-		<ExtraInfo TitleName="취소" HotKey="ESC"/>
+		<ExtraInfo TitleName="STR(3)" HotKey="ESC"/>
 	</Window>
 
 	<Window ClassName="ioMessageBoxBtn" Id="4">
@@ -127,6 +127,6 @@
 		</Imagery>
 		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
 	             	   ClickSound = "interface/public_mouseclick_00.wav"/>
-		<ExtraInfo TitleName="닫기" HotKey="ESC"/>
+		<ExtraInfo TitleName="STR(4)" HotKey="ESC"/>
 	</Window>
 </Window>

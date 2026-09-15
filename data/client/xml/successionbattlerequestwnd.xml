@@ -8,7 +8,7 @@
 		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
 		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
-		<Text>재대결하기</Text>
+		<Text>STR(1)</Text>
 		
 	</Title> 
 	<Imagery>
@@ -26,7 +26,7 @@
 		<Image Type="IconName" Imageset="UIIconPack117" Image="mode_1vs1_revenge" />
 	</Imagery>
 	
-	<ExtraInfo WaitTime = "5" ReplyWaitTime = "5000" ReplyWaitMent = "답변을 기다리는 중..%d" />
+	<ExtraInfo WaitTime = "5" ReplyWaitTime = "5000" ReplyWaitMent = "STR(2)" />
 	
 	<Window ClassName="ioButton" Id="1">
 		<Size X="379" Y="11" Width="23" Height="23"/>
@@ -63,7 +63,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF215AA2"/>
-			<Text>재대결 신청하기(SPACE)...</Text>
+			<Text>STR(3)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_blue_nor">
@@ -92,7 +92,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="117222"/>
-			<Text>답변을 기다리는 중...</Text>
+			<Text>STR(4)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_blue_nor">
@@ -123,7 +123,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF215AA2"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF215AA2"/>
-			<Text>닫기</Text>
+			<Text>STR(5)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">

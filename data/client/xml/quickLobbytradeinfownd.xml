@@ -6,7 +6,7 @@
 		<Format X="103" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Center"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
 		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
-		<Text>내가 등록한 장비</Text>
+		<Text>STR(1)</Text>
 	</Title>
 	<Imagery>
 		<DefaultFrameImagery Type="Selected" Templete="win1_frame80">

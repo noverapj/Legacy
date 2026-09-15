@@ -5,7 +5,7 @@
 	<Title>
 		<Format X="110" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Center"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
-		<Text>최종스코어</Text>
+		<Text>STR(1)</Text>
 	</Title>	
 	<Imagery>
 		<DefaultFrameImagery Type="SelectedTitle" Templete="win1_title">

@@ -38,7 +38,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF20394F"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF20394F"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>팀정보 변경</Text>
+			<Text>STR(1)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
@@ -116,7 +116,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>비슷한 수준만 검색</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
@@ -145,7 +145,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>같은 인원만 검색</Text>
+			<Text>STR(3)</Text>
 		</Title>
 		<Imagery>
 			<Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
@@ -174,7 +174,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>상대방 채팅 안보기</Text>
+			<Text>STR(4)</Text>
 		</Title>
 		<Imagery>
 			<Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
@@ -203,7 +203,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>네트워크 불량시 강제퇴장</Text>
+			<Text>STR(5)</Text>
 		</Title>
 		<Imagery>
 			<Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
@@ -231,7 +231,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Disable" Text="FF6E6E6E" Back="FF000000"/>
-			<Text>팀랭킹</Text>
+			<Text>STR(6)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt005_gray_nor">
@@ -259,7 +259,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>초대</Text>
+			<Text>STR(7)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt005_gray_nor">
@@ -287,7 +287,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF0B7222"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF0B7222"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>검색시작</Text>
+			<Text>STR(8)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt005_green_nor">
@@ -328,7 +328,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF9f291a"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF9f291a"/>
 			<Color Type="Disable" Text="FF6E6E6E" Back="FF000000"/>
-			<Text>검색취소</Text>
+			<Text>STR(9)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt005_red_nor">
@@ -359,7 +359,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF20394F"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF20394F"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF20394F"/>
-			<Text>나가기</Text>
+			<Text>STR(10)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">

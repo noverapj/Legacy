@@ -11,7 +11,7 @@
         <Color Type="Push" Text="ff000000" Back="ff000000" />
         <Color Type="Disable" Text="ff000000" Back="ff000000" />
         <Color Type="NoneSelected" Text="ff000000" Back="ff000000" />
-        <Text>전투</Text>
+        <Text>STR(1)</Text>
     </Title>
 	<Imagery>
         <DefaultFrameImagery Type="Selected" Templete="win1_frame90">
@@ -55,7 +55,7 @@
 			<Format X="103" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Center"/>
 			<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
 			<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
-			<Text>내가 등록한 장비</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Selected" Templete="win1_frame80">

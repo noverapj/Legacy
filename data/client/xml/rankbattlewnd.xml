@@ -91,18 +91,18 @@
     <Image Type="text_back" Imageset="BaseImage002" Image="iconeffect_8" />
 	</Imagery>
   <ExtraInfo BackOGG="bgm/bgm_ladder_01.ogg"
-             DescString1="%d위 %s %s"
-             DescString2="순위없음 %s %s"
-             DescString3="포인트 %d점"
-             DescString4="%d 점"
-             DescString5="%d 승"
-             DescString6="%d 패"
-             OnModeNMapRender1="모드"
-             OnModeNMapRender2="랭킹전"
-             OnModeNMapRender3="맵"
-             OnModeNMapRender4="대회 전용맵"
-             RemainTime="상대방 검색중..%d"
-             AlarmText="매칭범위 소폭 상승"/>
+             DescString1="STR(1)"
+             DescString2="STR(2)"
+             DescString3="STR(3)"
+             DescString4="STR(4)"
+             DescString5="STR(5)"
+             DescString6="STR(6)"
+             OnModeNMapRender1="STR(7)"
+             OnModeNMapRender2="STR(8)"
+             OnModeNMapRender3="STR(9)"
+             OnModeNMapRender4="STR(10)"
+             RemainTime="STR(11)"
+             AlarmText="STR(12)"/>
 
   <Window ClassName="ioButton" Id="1">
     <Size X="27" Y="98" Width="127" Height="246" />
@@ -124,7 +124,7 @@
       <Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
       <Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
       <Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-      <Text>랭킹 그래프</Text>
+      <Text>STR(13)</Text>
     </Title>
     <Imagery>
       <DefaultFrameImagery Type="Normal" Templete="tap2_off">
@@ -152,7 +152,7 @@
       <Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
       <Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
       <Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-      <Text>랭킹 상위 100인</Text>
+      <Text>STR(14)</Text>
     </Title>
     <Imagery>
       <DefaultFrameImagery Type="Normal" Templete="tap2_off">
@@ -180,7 +180,7 @@
       <Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
       <Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
       <Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-      <Text>대전 기록</Text>
+      <Text>STR(15)</Text>
     </Title>
     <Imagery>
       <DefaultFrameImagery Type="Normal" Templete="tap2_off">
@@ -209,7 +209,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>비슷한 수준만 검색</Text>
+			<Text>STR(16)</Text>
 		</Title>
 		<Imagery>
       <Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
@@ -232,7 +232,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>상대방 채팅 안보기</Text>
+			<Text>STR(17)</Text>
 		</Title>
 		<Imagery>
 			<Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
@@ -252,7 +252,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>네트워크 불량시 강제퇴장</Text>
+			<Text>STR(18)</Text>
 		</Title>
 		<Imagery>
       <Image Type="Normal" Imageset="BaseImage001" Image="check_box_off" >
@@ -274,7 +274,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF0B7222"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF0B7222"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>검색시작</Text>
+			<Text>STR(19)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt005_green_nor">
@@ -311,7 +311,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF9f291a"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF9f291a"/>
 			<Color Type="Disable" Text="FF6E6E6E" Back="FF000000"/>
-			<Text>검색취소</Text>
+			<Text>STR(20)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt005_red_nor">
@@ -342,7 +342,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF20394F"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF20394F"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF20394F"/>
-			<Text>나가기</Text>
+			<Text>STR(21)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">

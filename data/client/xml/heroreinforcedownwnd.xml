@@ -41,7 +41,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="117222"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="117222"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="117222"/>
-			<Text>용병 진화</Text>
+			<Text>STR(1)</Text>
 		</Title>
 		
 		<Imagery>

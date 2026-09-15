@@ -7,7 +7,7 @@
 		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
 		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
-		<Text>대진 배정</Text>
+		<Text>STR(1)</Text>
 	</Title>
 	<Imagery>
 		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
@@ -80,7 +80,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FF323232" Back="FF215AA2"/>
-			<Text>배정 완료</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_blue_nor">
@@ -107,7 +107,7 @@
 			<Color Type="Over" Text="FF3A3A39" Back="FF215AA2"/>
 			<Color Type="Push" Text="FF3A3A39" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FF323232" Back="FF215AA2"/>
-			<Text>취소</Text>
+			<Text>STR(3)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
@@ -193,7 +193,7 @@
   	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-  	  	<Text>미지정 대회팀</Text>
+  	  	<Text>STR(4)</Text>
   	  </Title>
   	  <Imagery>
   	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -230,7 +230,7 @@
   	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-  	  	<Text>미지정 대회팀</Text>
+  	  	<Text>STR(5)</Text>
   	  </Title>
   	  <Imagery>
   	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -267,7 +267,7 @@
   	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-  	  	<Text>미지정 대회팀</Text>
+  	  	<Text>STR(6)</Text>
   	  </Title>
   	  <Imagery>
   	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -304,7 +304,7 @@
   	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-  	  	<Text>미지정 대회팀</Text>
+  	  	<Text>STR(7)</Text>
   	  </Title>
   	  <Imagery>
   	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -341,7 +341,7 @@
   	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-  	  	<Text>미지정 대회팀</Text>
+  	  	<Text>STR(8)</Text>
   	  </Title>
   	  <Imagery>
   	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -378,7 +378,7 @@
   	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-  	  	<Text>미지정 대회팀</Text>
+  	  	<Text>STR(9)</Text>
   	  </Title>
   	  <Imagery>
   	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -415,7 +415,7 @@
   	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-  	  	<Text>미지정 대회팀</Text>
+  	  	<Text>STR(10)</Text>
   	  </Title>
   	  <Imagery>
   	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -452,7 +452,7 @@
   	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-  	  	<Text>미지정 대회팀</Text>
+  	  	<Text>STR(11)</Text>
   	  </Title>
   	  <Imagery>
   	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -489,7 +489,7 @@
   	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-  	  	<Text>미지정 대회팀</Text>
+  	  	<Text>STR(12)</Text>
   	  </Title>
   	  <Imagery>
   	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -526,7 +526,7 @@
   	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-  	  	<Text>미지정 대회팀</Text>
+  	  	<Text>STR(13)</Text>
   	  </Title>
   	  <Imagery>
   	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -563,7 +563,7 @@
   	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
   	   	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-  		 	<Text>미지정 대회팀</Text>
+  		 	<Text>STR(14)</Text>
   		 </Title>
   		 <Imagery>
   		 	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -600,7 +600,7 @@
   		  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
   		  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
   		  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-  		  	<Text>미지정 대회팀</Text>
+  		  	<Text>STR(15)</Text>
   		  </Title>
   		  <Imagery>
   		  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -637,7 +637,7 @@
   		 	<Color Type="Over" Text="FF117222" Back="FF000000"/>
   		 	<Color Type="Push" Text="FF117222" Back="FF000000"/>
   		 	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-  		 	<Text>미지정 대회팀</Text>
+  		 	<Text>STR(16)</Text>
   		 </Title>
   		 <Imagery>
   		 	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -674,7 +674,7 @@
   		  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
   		  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
   		  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-  		  	<Text>미지정 대회팀</Text>
+  		  	<Text>STR(17)</Text>
   		  </Title>
   		  <Imagery>
   		  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -711,7 +711,7 @@
   		  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
   		  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
   		  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-  		  	<Text>미지정 대회팀</Text>
+  		  	<Text>STR(18)</Text>
   		  </Title>
   		  <Imagery>
   		  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -748,7 +748,7 @@
   		  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
   		  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
   		  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-  		  	<Text>미지정 대회팀</Text>
+  		  	<Text>STR(19)</Text>
   		  </Title>
   		  <Imagery>
   		  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -847,7 +847,7 @@
   	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-  	  	<Text>지정 대회팀</Text>
+  	  	<Text>STR(20)</Text>
   	  </Title>
   	  <Imagery>
   	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -884,7 +884,7 @@
   	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-  	  	<Text>지정 대회팀</Text>
+  	  	<Text>STR(21)</Text>
   	  </Title>
   	  <Imagery>
   	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -921,7 +921,7 @@
   	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-  	  	<Text>지정 대회팀</Text>
+  	  	<Text>STR(22)</Text>
   	  </Title>
   	  <Imagery>
   	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -958,7 +958,7 @@
   	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-  	  	<Text>지정 대회팀</Text>
+  	  	<Text>STR(23)</Text>
   	  </Title>
   	  <Imagery>
   	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -995,7 +995,7 @@
   	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-  	  	<Text>지정 대회팀</Text>
+  	  	<Text>STR(24)</Text>
   	  </Title>
   	  <Imagery>
   	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -1032,7 +1032,7 @@
   	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-  	  	<Text>지정 대회팀</Text>
+  	  	<Text>STR(25)</Text>
   	  </Title>
   	  <Imagery>
   	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -1069,7 +1069,7 @@
   	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-  	  	<Text>지정 대회팀</Text>
+  	  	<Text>STR(26)</Text>
   	  </Title>
   	  <Imagery>
   	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -1106,7 +1106,7 @@
   	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-  	  	<Text>지정 대회팀</Text>
+  	  	<Text>STR(27)</Text>
   	  </Title>
   	  <Imagery>
   	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -1143,7 +1143,7 @@
   	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-  	  	<Text>지정 대회팀</Text>
+  	  	<Text>STR(28)</Text>
   	  </Title>
   	  <Imagery>
   	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -1180,7 +1180,7 @@
   	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-  	  	<Text>지정 대회팀</Text>
+  	  	<Text>STR(29)</Text>
   	  </Title>
   	  <Imagery>
   	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -1217,7 +1217,7 @@
   	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-  	  	<Text>지정 대회팀</Text>
+  	  	<Text>STR(30)</Text>
   	  </Title>
   	  <Imagery>
   	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -1254,7 +1254,7 @@
   	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-  	  	<Text>지정 대회팀</Text>
+  	  	<Text>STR(31)</Text>
   	  </Title>
   	  <Imagery>
   	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -1291,7 +1291,7 @@
   	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-  	  	<Text>지정 대회팀</Text>
+  	  	<Text>STR(32)</Text>
   	  </Title>
   	  <Imagery>
   	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -1328,7 +1328,7 @@
   	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-  	  	<Text>지정 대회팀</Text>
+  	  	<Text>STR(33)</Text>
   	  </Title>
   	  <Imagery>
   	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -1365,7 +1365,7 @@
   	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-  	  	<Text>지정 대회팀</Text>
+  	  	<Text>STR(34)</Text>
   	  </Title>
   	  <Imagery>
   	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -1402,7 +1402,7 @@
   	  	<Color Type="Over" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Push" Text="FF117222" Back="FF000000"/>
   	  	<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-  	  	<Text>지정 대회팀</Text>
+  	  	<Text>STR(35)</Text>
   	  </Title>
   	  <Imagery>
   	  	<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">

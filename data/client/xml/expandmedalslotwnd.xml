@@ -47,7 +47,7 @@
 		</Imagery>
 		<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
 			   ClickSound = "interface/public_mouseclick_00.wav"
-			   DescText = "용병을 선택하세요" />
+			   DescText = "STR(1)" />
 	</Window>
 
 	<!-- 사용 -->

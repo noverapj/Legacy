@@ -32,7 +32,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF117222"/>
-			<Text>변경하기</Text>
+			<Text>STR(1)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_green_nor">

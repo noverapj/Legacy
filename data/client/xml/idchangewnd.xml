@@ -7,7 +7,7 @@
 		<Format X="125" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Center"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
 		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
-		<Text>닉네임 변경 완료</Text>
+		<Text>STR(1)</Text>
 	</Title> 
 	<Imagery>
 		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
@@ -41,7 +41,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FFB91600"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FFB91600"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FFA7A7A7"/>
-			<Text>종료</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_red_nor">

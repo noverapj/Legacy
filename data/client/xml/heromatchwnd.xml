@@ -80,7 +80,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
-			<Text>대전 참여하기</Text>
+			<Text>STR(1)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt005_blue_nor">
@@ -111,7 +111,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF9F291A"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF9F291A"/>
 			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
-			<Text>대전 참여하기</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt005_red_nor">
@@ -142,7 +142,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
 			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
-			<Text>대전 참여하기</Text>
+			<Text>STR(3)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt005_green_nor">
@@ -173,7 +173,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
-			<Text>랭킹</Text>
+			<Text>STR(4)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt005_blue_nor">
@@ -201,7 +201,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF9F291A"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF9F291A"/>
 			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
-			<Text>랭킹</Text>
+			<Text>STR(5)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt005_red_nor">
@@ -229,7 +229,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
 			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
-			<Text>랭킹</Text>
+			<Text>STR(6)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt005_green_nor">
@@ -365,11 +365,11 @@
 	<Window ClassName="ioRichLabel" Id="100">
 		<Size X="12" Y="332" Width="420" Height="70"/>
 		<ExtraInfo VertGap="3" HorzAlign="Left" VertAlign="Top" >
-			<TextBlock Text="래더전이란?#" Size="12" Color="FF6E6E6E"/>
-			<TextBlock Text="상대진영과 1:1로 겨룰 수 있는 대전입니다.#" Size="12" Color="FF6E6E6E"/>
-			<TextBlock Text="대회포인트를 기본으로 지급하며,#" Size="12" Color="FF6E6E6E"/>
-			<TextBlock Text="시즌 성적에 따라 타이틀 및 보상보너스까지 제공합니다.#" Size="12" Color="FF6E6E6E"/>
-			<TextBlock Text="진영을 탈퇴해도 전적이 유지되니 많은 참여 바랍니다.#" Size="12" Color="FF6E6E6E"/>
+			<TextBlock Text="STR(7)" Size="12" Color="FF6E6E6E"/>
+			<TextBlock Text="STR(8)" Size="12" Color="FF6E6E6E"/>
+			<TextBlock Text="STR(9)" Size="12" Color="FF6E6E6E"/>
+			<TextBlock Text="STR(10)" Size="12" Color="FF6E6E6E"/>
+			<TextBlock Text="STR(11)" Size="12" Color="FF6E6E6E"/>
 		</ExtraInfo>
 	</Window>
 </Window>

@@ -53,7 +53,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF215AA2"/>
-			<Text>나가기 (SPACE)</Text>
+			<Text>STR(1)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_blue_nor">
@@ -87,7 +87,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF9F291A"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF9F291A"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF9F291A"/>
-			<Text>나가기 (SPACE)</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_red_nor">
@@ -121,7 +121,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF215AA2"/>
-			<Text>도전 포기 (SPACE)</Text>
+			<Text>STR(3)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_blue_nor">
@@ -155,7 +155,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF9F291A"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF9F291A"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF9F291A"/>
-			<Text>도전 포기 (SPACE)</Text>
+			<Text>STR(4)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_red_nor">
@@ -190,7 +190,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF215AA2"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FF323232" Back="FF215AA2"/>
-			<Text>다른방보기</Text>
+			<Text>STR(5)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
@@ -218,7 +218,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FFAD4800"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FFAD4800"/>
 			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
-			<Text>빠른참가</Text>
+			<Text>STR(6)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_redbrown_rightcut_nor">

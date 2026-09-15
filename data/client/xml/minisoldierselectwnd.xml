@@ -34,11 +34,11 @@
 		<Window ClassName="ioRichLabel" Id="1">
 			<Size X="7" Y="6" Width="230" Height="100"/>
 			<ExtraInfo VertGap="3" HorzAlign="Center" VertAlign="Center" >
-				<TextBlock Text="<빠른 용병 교체>#" Size="12" Color="FF6E6E6E"/>
-				<TextBlock Text="빠른 교체 게이지가 활성화된#" Size="12"  Color="FF6E6E6E"/>
-				<TextBlock Text="상태에서는 특정 공격, 피격 중에도#" Size="12"  Color="FF6E6E6E"/>
-				<TextBlock Text="원하는 용병으로 교체할 수 있습니다.#" Size="12"  Color="FF6E6E6E"/>
-				<TextBlock Text="- 옵션 → 게임 설정에서 슬롯on/off - #" Size="12"  Color="FF6E6E6E"/>
+				<TextBlock Text="STR(1)" Size="12" Color="FF6E6E6E"/>
+				<TextBlock Text="STR(2)" Size="12"  Color="FF6E6E6E"/>
+				<TextBlock Text="STR(3)" Size="12"  Color="FF6E6E6E"/>
+				<TextBlock Text="STR(4)" Size="12"  Color="FF6E6E6E"/>
+				<TextBlock Text="STR(5)" Size="12"  Color="FF6E6E6E"/>
 			</ExtraInfo>
 		</Window>
 	</Window>

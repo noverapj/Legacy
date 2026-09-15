@@ -29,7 +29,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF20394F"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF20394F"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>내정보</Text>
+			<Text>STR(1)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
@@ -85,10 +85,10 @@
 		<Window ClassName="ioRichLabel" Id="1">
 			<Size X="7" Y="6" Width="164" Height="49"/>
 			<ExtraInfo VertGap="3" HorzAlign="Left" VertAlign="Center" >				
-				<TextBlock Text="초보자 버프 상태#" Size="12"  Color="FF117222"/>
-				<TextBlock Text="공격/방어/이동속도/#" Size="12"  Color="FFB91600"/>
-				<TextBlock Text="드랍피해감소 상승!#" Size="12"  Color="FFB91600"/>
-				<TextBlock Text="하사 5호봉까지 적용됩니다.#" Size="12"  Color="FF6E6E6E"/>			
+				<TextBlock Text="STR(2)" Size="12"  Color="FF117222"/>
+				<TextBlock Text="STR(3)" Size="12"  Color="FFB91600"/>
+				<TextBlock Text="STR(4)" Size="12"  Color="FFB91600"/>
+				<TextBlock Text="STR(5)" Size="12"  Color="FF6E6E6E"/>			
 				</ExtraInfo>
 		</Window>
 	</Window>

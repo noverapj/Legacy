@@ -8,7 +8,7 @@
 		<Format X="13" Y="11" Size="18" Style="Outline_full_2x" HorzAlign="Left"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
 		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
-		<Text>선택하기</Text>
+		<Text>STR(1)</Text>
 	</Title> 
 	<Imagery>
 		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
@@ -64,7 +64,7 @@
       <Color Type="Over" Text="FF3a3a3a" Back="FF117222"/>
       <Color Type="Push" Text="FF3a3a3a" Back="FF117222"/>
       <Color Type="Disable" Text="FFa7a7a7" Back="FF117222"/>
-      <Text>검색하기 (ENTER)</Text>
+      <Text>STR(2)</Text>
     </Title>
     <Imagery>
       <DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -95,7 +95,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>전체</Text>
+			<Text>STR(3)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="tap3_off">
@@ -789,7 +789,7 @@
 				<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
 				<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
 				<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-				<Text>선택</Text>
+				<Text>STR(4)</Text>
 			</Title>
 			<Imagery>
 				<DefaultFrameImagery Type="Normal" Templete="bt007_green_nor">
@@ -873,7 +873,7 @@
         <Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
         <Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
         <Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-        <Text>선택</Text>
+        <Text>STR(5)</Text>
       </Title>
       <Imagery>
         <DefaultFrameImagery Type="Normal" Templete="bt007_green_nor">
@@ -957,7 +957,7 @@
         <Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
         <Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
         <Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-        <Text>선택</Text>
+        <Text>STR(6)</Text>
       </Title>
       <Imagery>
         <DefaultFrameImagery Type="Normal" Templete="bt007_green_nor">
@@ -1041,7 +1041,7 @@
         <Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
         <Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
         <Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-        <Text>선택</Text>
+        <Text>STR(7)</Text>
       </Title>
       <Imagery>
         <DefaultFrameImagery Type="Normal" Templete="bt007_green_nor">
@@ -1125,7 +1125,7 @@
         <Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
         <Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
         <Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-        <Text>선택</Text>
+        <Text>STR(8)</Text>
       </Title>
       <Imagery>
         <DefaultFrameImagery Type="Normal" Templete="bt007_green_nor">
@@ -1208,7 +1208,7 @@
         <Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
         <Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
         <Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-        <Text>선택</Text>
+        <Text>STR(9)</Text>
       </Title>
       <Imagery>
         <DefaultFrameImagery Type="Normal" Templete="bt007_green_nor">
@@ -1291,7 +1291,7 @@
         <Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
         <Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
         <Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-        <Text>선택</Text>
+        <Text>STR(10)</Text>
       </Title>
       <Imagery>
         <DefaultFrameImagery Type="Normal" Templete="bt007_green_nor">
@@ -1375,7 +1375,7 @@
         <Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
         <Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
         <Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-        <Text>선택</Text>
+        <Text>STR(11)</Text>
       </Title>
       <Imagery>
         <DefaultFrameImagery Type="Normal" Templete="bt007_green_nor">

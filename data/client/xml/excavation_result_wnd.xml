@@ -69,7 +69,7 @@
 		<Format X = "13" Y = "11" Size = "17" Style = "Outline_2x" HorzAlign = "Left" VertAlign = "Top"/>
 		<Color Type = "Normal" Text = "FFFFFFFF" Back = "FF0C426F"/>
 		<Color Type = "NoneSelected" Text = "FFFFFFFF" Back = "FF0C426F"/>
-		<Text>유물발견</Text>
+		<Text>STR(1)</Text>
 	</Title>
 	<Window ClassName = "ioButton" Id = "1">
 		<Size X = "17" Y = "298" Width = "209" Height = "33"/>
@@ -79,7 +79,7 @@
 			<Color Type = "Over" Text = "FFFFFFFF" Back = "FF117222"/>
 			<Color Type = "Push" Text = "FFFFFFFF" Back = "FF117222"/>
 			<Color Type = "Disable" Text = "FF6E6E6E" Back = "FF117222"/>
-			<Text>재감정하기(-100페소)</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type = "Normal" Templete = "bt006_green_nor">
@@ -107,7 +107,7 @@
 			<Color Type = "Over" Text = "FFFFFFFF" Back = "FF215AA2"/>
 			<Color Type = "Push" Text = "FFFFFFFF" Back = "FF215AA2"/>
 			<Color Type = "Disable" Text = "FF6E6E6E" Back = "FF215AA2"/>
-			<Text>결정하기</Text>
+			<Text>STR(3)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type = "Normal" Templete = "bt006_blue_nor">
@@ -157,13 +157,13 @@
 		</Imagery>
 	</Window>
 	<ExtraInfo
-		TextPriceRolling = "감정중..."
-		TextPrice        = "유물감정가 : %s페소"
-		TextEtcItemDesc  = "인벤토리에 즉시 지급됩니다."
-		TextAutoClose    = "자동으로 팝업이 닫힙니다..."
-		TextPrice1Button = "재감정하기(%s 페소)"
-		TextPrice2Button = "재감정불가"
-		TextPrice3Button = "재감정하기 위한 페소가 부족합니다!"
+		TextPriceRolling = "STR(4)"
+		TextPrice        = "STR(5)"
+		TextEtcItemDesc  = "STR(6)"
+		TextAutoClose    = "STR(7)"
+		TextPrice1Button = "STR(8)"
+		TextPrice2Button = "STR(9)"
+		TextPrice3Button = "STR(10)"
 		
 		RollingTime       = "1500"
 		RollingChangeTime = "50"
@@ -182,21 +182,21 @@
 	<Text>
 		<Format Type = "item_name" X = "177" Y = "144" Size = "17" Style = "Normal" HorzAlign = "Center" VertAlign = "Top"/>
 		<Color Text = "FF1646B2"/>
-		<Text>아이템이름</Text>
+		<Text>STR(11)</Text>
 	</Text>
 	<Text>
 		<Format Type = "item_count" X = "177" Y = "167" Size = "17" Style = "Normal" HorzAlign = "Center" VertAlign = "Top"/>
 		<Color Text = "FF1646B2"/>
-		<Text>아이템갯수</Text>
+		<Text>STR(12)</Text>
 	</Text>
 	<Text>
 		<Format Type = "desc" X = "177" Y = "199" Size = "13" Style = "Normal" HorzAlign = "Center" VertAlign = "Top"/>
 		<Color Text = "FF6E6E6E"/>
-		<Text>아이템설명</Text>
+		<Text>STR(13)</Text>
 	</Text>
 	<Text>
 		<Format Type = "price" X = "177" Y = "219" Size = "13" Style = "Normal" HorzAlign = "Center" VertAlign = "Top"/>
 		<Color Text = "FF117222"/>
-		<Text>감정가</Text>
+		<Text>STR(14)</Text>
 	</Text>
 </Window>

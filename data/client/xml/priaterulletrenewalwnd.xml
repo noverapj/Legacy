@@ -8,7 +8,7 @@
 		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
 		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
-		<Text>공포의 오크통</Text>
+		<Text>STR(1)</Text>
 	</Title>
 	<Imagery>
 		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
@@ -145,53 +145,53 @@
 	<Window ClassName="ioRichLabel" Id="2">
 		<Size X="422" Y="107" Width="300" Height="25"/>
 		<ExtraInfo VertGap="3" HorzAlign="Center" VertAlign="Top" >
-			<TextBlock Text="좀비처럼 돌아온 오크통!" Size="24" Color="FF7F3101"/>
+			<TextBlock Text="STR(2)" Size="24" Color="FF7F3101"/>
 		</ExtraInfo>
 	</Window>
 	
 	<Window ClassName="ioRichLabel" Id="3">
 		<Size X="422" Y="136" Width="300" Height="25"/>
 		<ExtraInfo VertGap="3" HorzAlign="Center" VertAlign="Top" >
-			<TextBlock Text="신중하게 검을 꽂아 보상을 받아가세요!!" Size="14" Color="FF7F3F01"/>
+			<TextBlock Text="STR(3)" Size="14" Color="FF7F3F01"/>
 		</ExtraInfo>
 	</Window>
 	<!-- 1Page-->
 	<Window ClassName="ioRichLabel" Id="4">
 		<Size X="433" Y="170" Width="300" Height="10"/>
 		<ExtraInfo VertGap="3" HorzAlign="Left" VertAlign="Top" >
-			<TextBlock Text="<장난감 검>#" Size="12" Color="FF7F3F01"/>
-			<TextBlock Text="1. 장난감 검은 상점의 특별탭에서 구매할 수#" Size="12" Color="FF7F3F01"/>
-			<TextBlock Text="   있습니다.#" Size="12" Color="FF7F3F01"/>
-			<TextBlock Text="2. 하루에 검을 오크통에 50회 꽂을 수 있습니다.#" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="STR(4)" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="STR(5)" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="STR(6)" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="STR(7)" Size="12" Color="FF7F3F01"/>
 		</ExtraInfo>
 	</Window>
 
 	<Window ClassName="ioRichLabel" Id="5">
 		<Size X="433" Y="245" Width="300" Height="10"/>
 		<ExtraInfo VertGap="3" HorzAlign="Left" VertAlign="Top" >
-			<TextBlock Text="<보상 획득>#" Size="12" Color="FF7F3F01"/>
-			<TextBlock Text="1. 검을 꽂을 때마다 개발자K가 날아가지 않으면#" Size="12" Color="FF7F3F01"/>
-			<TextBlock Text="   단계별로 보상을 획득 가능한 상태가 됩니다#" Size="12" Color="FF7F3F01"/>
-			<TextBlock Text="2. 진행 중에 [보상 받기]를 누르면 획득 가능한#" Size="12" Color="FF7F3F01"/>
-			<TextBlock Text="   상태의 보상을 받을 수 있습니다" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="STR(8)" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="STR(9)" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="STR(10)" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="STR(11)" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="STR(12)" Size="12" Color="FF7F3F01"/>
 		</ExtraInfo>
 	</Window>
 	
 	<Window ClassName="ioRichLabel" Id="6">
 		<Size X="433" Y="338" Width="300" Height="10"/>
 		<ExtraInfo VertGap="3" HorzAlign="Left" VertAlign="Top" >
-			<TextBlock Text="<꽝>#" Size="12" Color="FF7F3F01"/>
-			<TextBlock Text="1. 진행 중에 운이 나빠 개발자 K가 날아갔다면 마지막#" Size="12" Color="FF7F3F01"/>
-			<TextBlock Text="   보상만 얻을 수 있으니 신중하세요!#" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="STR(13)" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="STR(14)" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="STR(15)" Size="12" Color="FF7F3F01"/>
 		</ExtraInfo>
 	</Window>
 	<!-- 2Page-->
 	<Window ClassName="ioRichLabel" Id="7">
 		<Size X="433" Y="170" Width="300" Height="10"/>
 		<ExtraInfo VertGap="3" HorzAlign="Left" VertAlign="Top" >
-			<TextBlock Text="<보상>#" Size="12" Color="FF7F3F01"/>
-			<TextBlock Text="1. 보상은 단계별로 무작위로 지급되며 단계가 올라갈#" Size="12" Color="FF7F3F01"/>
-			<TextBlock Text="   수록 높은 가치의 아이템이 나올 확률이 높아집니다" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="STR(16)" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="STR(17)" Size="12" Color="FF7F3F01"/>
+			<TextBlock Text="STR(18)" Size="12" Color="FF7F3F01"/>
 		</ExtraInfo>
 	</Window>
 	<!-- 사용안함
@@ -223,7 +223,7 @@
 			<Color Type="Over"  Text="FFF2FBE2" Back="FF4D2B17"/>
 			<Color Type="Push"  Text="FFF2FBE2" Back="FF4D2B17"/>
 			<Color Type="Disable"  Text="FFF2FBE2" Back="FF4D2B17"/>
-			<Text>시작하기</Text>
+			<Text>STR(19)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt017_brown_nor">
@@ -720,7 +720,7 @@
 			<Color Type="Over"  Text="FFFEBE2" Back="FF4D2B17"/>
 			<Color Type="Push"  Text="FFFEBE2" Back="FF4D2B17"/>
 			<Color Type="Disable"  Text="FFFEBE2" Back="FF4D2B17"/>
-			<Text>도움말</Text>
+			<Text>STR(20)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt017_brown_nor">
@@ -827,7 +827,7 @@
 			<Color Type="Over"  Text="FFFEFBE2" Back="FF4D2B17"/>
 			<Color Type="Push"  Text="FFFEFBE2" Back="FF4D2B17"/>
 			<Color Type="Disable"  Text="FFF2FBE2" Back="FF4D2B17"/>
-			<Text>새로 시작하기</Text>
+			<Text>STR(21)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt017_red_nor">
@@ -856,7 +856,7 @@
 			<Color Type="Over"  Text="FFFEBE2" Back="FF4D2B17"/>
 			<Color Type="Push"  Text="FFFEBE2" Back="FF4D2B17"/>
 			<Color Type="Disable"  Text="FFFEBE2" Back="FF4D2B17"/>
-			<Text>보상받기</Text>
+			<Text>STR(22)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt017_brown_nor">
@@ -885,7 +885,7 @@
 			<Color Type="Over"  Text="FFA8875A" Back="FFA8875A"/>
 			<Color Type="Push"  Text="FFA8875A" Back="FFA8875A"/>
 			<Color Type="Disable"  Text="FFA8875A" Back="FFA8875A"/>
-			<Text>확인중...</Text>
+			<Text>STR(23)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt_empty">

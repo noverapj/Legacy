@@ -15,12 +15,12 @@
 	</Imagery>
   <ExtraInfo EffectPosX="167"
              EffectPosY="330"
-			 ExitBtn="닫기"
-			 TextInfo1="축하드립니다! 새로운 기록을 달성하였습니다."
-			 TextInfo2="갱신시간"
-			 TextUpdateInfo1="기존 %d위에서"
-			 TextUpdateInfo2="(▲%d위) "
-			 TextUpdateInfo3="상승"
+			 ExitBtn="STR(1)"
+			 TextInfo1="STR(2)"
+			 TextInfo2="STR(3)"
+			 TextUpdateInfo1="STR(4)"
+			 TextUpdateInfo2="STR(5)"
+			 TextUpdateInfo3="STR(6)"
 			 />
 
   <Window ClassName="ioButton" Id="1">
@@ -31,7 +31,7 @@
       <Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
       <Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
       <Color Type="Disable" Text="FFA7A7A7" Back="FFA7A7A7"/>
-      <Text>닫기</Text>
+      <Text>STR(7)</Text>
     </Title>
     <Imagery>
       <DefaultFrameImagery Type="Normal" Templete="bt006_blue_nor">

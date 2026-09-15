@@ -23,7 +23,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
-			<Text>정부군가입</Text>
+			<Text>STR(1)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt005_blue_nor">
@@ -51,7 +51,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF9F291A"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF9F291A"/>
 			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
-			<Text>반란군가입</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt005_red_nor">
@@ -100,7 +100,7 @@
 			<Color Type="Over" Text="FFFF8200" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFF8200" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
-			<Text>[대회 운영 규칙]</Text>
+			<Text>STR(3)</Text>
 		</Title>
 		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
 	                   ClickSound = "interface/public_mouseclick_00.wav"/>

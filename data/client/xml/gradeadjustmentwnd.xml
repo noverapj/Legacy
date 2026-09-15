@@ -63,29 +63,29 @@
              soulstonetext="<c:0xFF6a6869>보유소울스톤\n<c:0xFFb91600>%d<c:0xFF6a6869>개"
 			 
              Max_101    = "6"             
-	         Name_101_1 = "전체"
+	         Name_101_1 = "STR(13)"
              Type_101_1 = "0"
-             Name_101_2 = "프리미엄"
+             Name_101_2 = "STR(14)"
              Type_101_2 = "5"
-             Name_101_3 = "근거리"
+             Name_101_3 = "STR(15)"
              Type_101_3 = "1"
-             Name_101_4 = "원거리"
+             Name_101_4 = "STR(16)"
              Type_101_4 = "2"
-             Name_101_5 = "마법"
+             Name_101_5 = "STR(17)"
              Type_101_5 = "3"
-             Name_101_6 = "특수"
+             Name_101_6 = "STR(18)"
              Type_101_6 = "4"
 			 
 			 Max_102    = "5"
-	         Name_102_1 = "전체"
+	         Name_102_1 = "STR(19)"
              Type_102_1 = "0"
-             Name_102_2 = "무기"
+             Name_102_2 = "STR(20)"
              Type_102_2 = "1"
-             Name_102_3 = "갑옷"
+             Name_102_3 = "STR(21)"
              Type_102_3 = "2"
-             Name_102_4 = "투구"
+             Name_102_4 = "STR(22)"
              Type_102_4 = "3"
-             Name_102_5 = "망토"
+             Name_102_5 = "STR(23)"
              Type_102_5 = "4"/>
 
 	<Window ClassName="ioButton" Id="1">
@@ -127,7 +127,7 @@
       <Color Type="Over" Text="FF3a3a3a" Back="FF117222"/>
       <Color Type="Push" Text="FF3a3a3a" Back="FF117222"/>
       <Color Type="Disable" Text="FFa7a7a7" Back="FF117222"/>
-      <Text>검색하기 (ENTER)</Text>
+      <Text>STR(24)</Text>
     </Title>
     <Imagery>
       <DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -156,7 +156,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>용병</Text>
+			<Text>STR(25)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="tap2_off">
@@ -187,7 +187,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>장비</Text>
+			<Text>STR(26)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="tap2_off">
@@ -1056,7 +1056,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="117222"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="117222"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FFFFFFFF"/>
-			<Text>?? 진화</Text>
+			<Text>STR(27)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_green_nor">
@@ -1088,7 +1088,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FFFFFFFF"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FFFFFFFF"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FFFFFFFF"/>
-			<Text>되돌리기</Text>
+			<Text>STR(28)</Text>
 		</Title>
 		
 		<Imagery>

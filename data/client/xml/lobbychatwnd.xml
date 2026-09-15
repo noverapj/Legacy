@@ -125,7 +125,7 @@
 				<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
-				<Text>·Îºñ</Text>
+				<Text>STR(1)</Text>
 			</Title>
 			<Imagery>
 				<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">

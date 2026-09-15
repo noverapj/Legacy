@@ -369,7 +369,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FFAD4800"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FFAD4800"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>출석체크 하기(SPACE)</Text>
+			<Text>STR(1)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt005_redbrown_nor">
@@ -433,7 +433,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FFAD4800"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FFAD4800"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>종료하기 (SPACE)</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt005_redbrown_nor">

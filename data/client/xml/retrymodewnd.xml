@@ -12,7 +12,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF133454"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF133454"/>
 			<Color Type="Disable" Text="FF808080" Back="FF133454"/>
-			<Text>다시하기 (B.SPACE)</Text>
+			<Text>STR(1)</Text>
 		</Title>
 		<Style>IWS_BACKMOST|IWS_PROCESS</Style> 
 	<Imagery>

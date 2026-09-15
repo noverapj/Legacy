@@ -5,7 +5,7 @@
 	<Title>
 		<Format X="265" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Center"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
-		<Text>°æÇèÄ¡</Text>
+		<Text>STR(1)</Text>
 	</Title>
 	<Imagery>
 		<Image Type="BackEffect" Imageset="BaseImage005" Image="iconeffect_9"/>

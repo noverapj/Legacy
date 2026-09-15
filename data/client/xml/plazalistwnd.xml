@@ -11,7 +11,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF0B7222"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF0B7222"/>
 			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
-			<Text>광장만들기</Text>
+			<Text>STR(1)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt005_green_nor">

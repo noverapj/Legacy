@@ -5,14 +5,14 @@
 	<Style>IWS_PROCESS|IWS_CHILD_ONLY_RESPONSE|IWS_START_HIDE</Style>
 	<Imagery>
 	</Imagery>
-	<ExtraInfo GrowthBtn1 = "무기 스킬"
-		   GrowthBtn2 = "갑옷 스킬"
-		   GrowthBtn3 = "투구 스킬"
-		   GrowthBtn4 = "망토 스킬"
-		   GrowthBtn5 = "기본 공격력"
-		   GrowthBtn6 = "기본 방어력"
-		   GrowthBtn7 = "이동 속도"
-		   GrowthBtn8 = "드랍피해감소" 
+	<ExtraInfo GrowthBtn1 = "STR(1)"
+		   GrowthBtn2 = "STR(2)"
+		   GrowthBtn3 = "STR(3)"
+		   GrowthBtn4 = "STR(4)"
+		   GrowthBtn5 = "STR(5)"
+		   GrowthBtn6 = "STR(6)"
+		   GrowthBtn7 = "STR(7)"
+		   GrowthBtn8 = "STR(8)" 
 
                            MaxClass    = "37" 
 	                    ClassType1 = "78" 
@@ -95,7 +95,7 @@
 		</Imagery>
 		<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
 			   ClickSound = "interface/public_mouseclick_00.wav"
-			   DescText = "용병을 선택하세요" />
+			   DescText = "STR(9)" />
 	</Window>
 
 	<!-- 성장 버튼 -->
@@ -130,7 +130,7 @@
 		</Imagery>
 		<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
 			   ClickSound = "interface/public_mouseclick_00.wav"
-			   DescText = "항목을 선택하세요" />
+			   DescText = "STR(10)" />
 	</Window>
 
 	<!-- 사용 -->
@@ -143,7 +143,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF117222"/>
-			<Text>복구하기</Text>
+			<Text>STR(11)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_green_nor">

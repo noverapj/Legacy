@@ -22,7 +22,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>쪽지 보내기</Text>
+			<Text>STR(1)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_blue_nor">
@@ -132,7 +132,7 @@
 				<Color Type="Over" Text="FF117222" Back="FF000000"/>
 				<Color Type="Push" Text="FF117222" Back="FF000000"/>
 				<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-				<Text>아이디▶</Text>
+				<Text>STR(2)</Text>
 			</Title>
 			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
 	        	     	   ClickSound = "interface/public_mouseclick_00.wav"/>
@@ -146,7 +146,7 @@
 				<Color Type="Over" Text="FF117222" Back="FF000000"/>
 				<Color Type="Push" Text="FF117222" Back="FF000000"/>
 				<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-				<Text>친구추가</Text>
+				<Text>STR(3)</Text>
 			</Title>
 			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
 	        	     	   ClickSound = "interface/public_mouseclick_00.wav"/>
@@ -160,7 +160,7 @@
 				<Color Type="Over" Text="FF117222" Back="FF000000"/>
 				<Color Type="Push" Text="FF117222" Back="FF000000"/>
 				<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-				<Text>답장</Text>
+				<Text>STR(4)</Text>
 			</Title>
 			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
 	        	     	   ClickSound = "interface/public_mouseclick_00.wav"/>
@@ -174,7 +174,7 @@
 				<Color Type="Over" Text="FF117222" Back="FF000000"/>
 				<Color Type="Push" Text="FF117222" Back="FF000000"/>
 				<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-				<Text>삭제</Text>
+				<Text>STR(5)</Text>
 			</Title>
 			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
 	        	     	   ClickSound = "interface/public_mouseclick_00.wav"/>
@@ -213,7 +213,7 @@
 				<Color Type="Over" Text="FF117222" Back="FF000000"/>
 				<Color Type="Push" Text="FF117222" Back="FF000000"/>
 				<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-				<Text>아이디▶</Text>
+				<Text>STR(6)</Text>
 			</Title>
 			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
 	        	     	   ClickSound = "interface/public_mouseclick_00.wav"/>
@@ -227,7 +227,7 @@
 				<Color Type="Over" Text="FF117222" Back="FF000000"/>
 				<Color Type="Push" Text="FF117222" Back="FF000000"/>
 				<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-				<Text>친구추가</Text>
+				<Text>STR(7)</Text>
 			</Title>
 			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
 	        	     	   ClickSound = "interface/public_mouseclick_00.wav"/>
@@ -241,7 +241,7 @@
 				<Color Type="Over" Text="FF117222" Back="FF000000"/>
 				<Color Type="Push" Text="FF117222" Back="FF000000"/>
 				<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-				<Text>답장</Text>
+				<Text>STR(8)</Text>
 			</Title>
 			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
 	        	     	   ClickSound = "interface/public_mouseclick_00.wav"/>
@@ -255,7 +255,7 @@
 				<Color Type="Over" Text="FF117222" Back="FF000000"/>
 				<Color Type="Push" Text="FF117222" Back="FF000000"/>
 				<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-				<Text>삭제</Text>
+				<Text>STR(9)</Text>
 			</Title>
 			<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
 	        	     	   ClickSound = "interface/public_mouseclick_00.wav"/>

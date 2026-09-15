@@ -8,7 +8,7 @@
 		<Format X="217" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Center"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FF4B3923"/>
 		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF4B3923"/>
-		<Text>퀘스트제목</Text>
+		<Text>STR(1)</Text>
 	</Title> 
 	<ExtraInfo ShowSnd = "interface/quest/quest_open_01.wav" 
 	       	   TickSnd = ""
@@ -95,7 +95,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF4B3923"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF4B3923"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF4B3923"/>
-			<Text>수락 (SPACE)</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_brown_nor">

@@ -7,7 +7,7 @@
 		<Format X="13" Y="11" Size="18" Style="Outline_full_2x" HorzAlign="Left"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
 		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
-		<Text>내가 등록한 장비</Text>
+		<Text>STR(1)</Text>
 	</Title>
 	<Imagery>
 		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
@@ -48,7 +48,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215aa2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215aa2"/>
 			<Color Type="Disable" Text="FFa7a7a7" Back="FF215aa2"/>
-			<Text>확인</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_blue_nor">
@@ -76,7 +76,7 @@
 			<Color Type="Over" Text="b91600" Back="FF117222"/>
 			<Color Type="Push" Text="b91600" Back="FF117222"/>
 			<Color Type="Disable" Text="FFa7a7a7" Back="FF117222"/>
-			<Text>등록해제</Text>
+			<Text>STR(3)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">

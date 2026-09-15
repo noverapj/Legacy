@@ -51,9 +51,9 @@
             <Size X="82" Y="81" Width="274" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
             <Imagery />
             <ExtraInfo HorzAlign="Left" VertAlign="Bottom" MSVertAlign="Center" VertGap="2">
-                <TextBlock Text="Lv3 사이보그#" Size="17" Style="Normal" Color="ff000000" />
-                <TextBlock Text="남은시간 13일 03:54:14#" Size="11" Style="Normal" Color="ffff80c0" />
-                <TextBlock Text="보유중" Size="11" Style="Normal" Color="ff0080c0" />
+                <TextBlock Text="STR(1)" Size="17" Style="Normal" Color="ff000000" />
+                <TextBlock Text="STR(2)" Size="11" Style="Normal" Color="ffff80c0" />
+                <TextBlock Text="STR(3)" Size="11" Style="Normal" Color="ff0080c0" />
                 <ToolInfo />
             </ExtraInfo>
         </Window>
@@ -61,7 +61,7 @@
             <Size X="18" Y="115" Width="358" Height="20" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
             <Imagery />
             <ExtraInfo HorzAlign="Left" VertAlign="Bottom" MSVertAlign="Top" VertGap="0">
-                <TextBlock Text="미래의 기술과 발사체로 다수의 적을 제압하는데 특화되어 있습니당." Size="12" Style="Normal" Color="ff000000" />
+                <TextBlock Text="STR(4)" Size="12" Style="Normal" Color="ff000000" />
                 <ToolInfo />
             </ExtraInfo>
         </Window>
@@ -82,8 +82,8 @@
                     <Size X="22" Y="2" Width="223" Height="16" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo HorzAlign="Left" VertAlign="Bottom" MSVertAlign="Top" VertGap="0">
-                        <TextBlock Text="2시간 고용" Size="12" Style="Normal" Color="ff000000" />
-                        <TextBlock Text="  (소령3호봉 제한)" Size="12" Style="Normal" Color="ffffffff" />
+                        <TextBlock Text="STR(5)" Size="12" Style="Normal" Color="ff000000" />
+                        <TextBlock Text="STR(6)" Size="12" Style="Normal" Color="ffffffff" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -106,8 +106,8 @@
                     <Size X="22" Y="2" Width="223" Height="16" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo HorzAlign="Left" VertAlign="Bottom" MSVertAlign="Top" VertGap="0">
-                        <TextBlock Text="2시간 고용" Size="12" Style="Normal" Color="ff000000" />
-                        <TextBlock Text="  (소령3호봉 제한)" Size="12" Style="Normal" Color="ffffffff" />
+                        <TextBlock Text="STR(7)" Size="12" Style="Normal" Color="ff000000" />
+                        <TextBlock Text="STR(8)" Size="12" Style="Normal" Color="ffffffff" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -131,7 +131,7 @@
                     <Size X="22" Y="2" Width="224" Height="16" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo HorzAlign="Left" VertAlign="Bottom" MSVertAlign="Top" VertGap="0">
-                        <TextBlock Text="2시간 고용" Size="12" Style="Normal" Color="ff000000" />
+                        <TextBlock Text="STR(9)" Size="12" Style="Normal" Color="ff000000" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -154,7 +154,7 @@
                     <Size X="22" Y="2" Width="222" Height="16" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo HorzAlign="Left" VertAlign="Bottom" MSVertAlign="Top" VertGap="0">
-                        <TextBlock Text="2시간 고용" Size="12" Style="Normal" Color="ff000000" />
+                        <TextBlock Text="STR(10)" Size="12" Style="Normal" Color="ff000000" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>

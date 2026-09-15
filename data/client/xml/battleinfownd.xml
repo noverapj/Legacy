@@ -25,7 +25,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF20394F"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF20394F"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>³»Á¤º¸</Text>
+			<Text>STR(1)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">

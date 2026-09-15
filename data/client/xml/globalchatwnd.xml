@@ -125,7 +125,7 @@
 				<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
-				<Text>ÆÀ</Text>
+				<Text>STR(1)</Text>
 			</Title>
 			<Imagery>
 				<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
@@ -159,7 +159,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF000000"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF000000"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="FF000000"/>
-			<Text>ÀüÃ¼</Text>
+			<Text>STR(2)</Text>
 		</Title>
 
 		<Imagery>
@@ -188,7 +188,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF000000"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF000000"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="FF000000"/>
-			<Text>ÈÆ·Ã¼Ò</Text>
+			<Text>STR(3)</Text>
 		</Title>
 
 		<Imagery>
@@ -217,7 +217,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF000000"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF000000"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="FF000000"/>
-			<Text>½Ã½ºÅÛ</Text>
+			<Text>STR(4)</Text>
 		</Title>
 
 		<Imagery>
@@ -246,7 +246,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF000000"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF000000"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="FF000000"/>
-			<Text>Ä¿½ºÅÒ</Text>
+			<Text>STR(5)</Text>
 		</Title>
 
 		<Imagery>

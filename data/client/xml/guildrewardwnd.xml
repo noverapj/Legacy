@@ -32,8 +32,8 @@
 		</Image>
 	</Imagery>
 	
-	<ExtraInfo AttendTitle = "출석 보상 목록" 
-	           RankTitle = "등급 보상 목록"/>
+	<ExtraInfo AttendTitle = "STR(1)" 
+	           RankTitle = "STR(2)"/>
 
 	<Window ClassName="ioRadioButton" Id="10">
 		<Size X="17" Y="49" Width="82" Height="27" />

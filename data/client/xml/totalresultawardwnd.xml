@@ -6,7 +6,7 @@
 	<Title>
 		<Format X="265" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Center"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
-		<Text>½Ã»ó½Ä</Text>
+		<Text>STR(1)</Text>
 	</Title>
 
 	<Window ClassName="AwardSlotWnd" Id="1">

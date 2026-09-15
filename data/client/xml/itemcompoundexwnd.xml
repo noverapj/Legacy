@@ -22,7 +22,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF117222"/>
-			<Text>장비 강화</Text>
+			<Text>STR(1)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_green_nor">
@@ -74,7 +74,7 @@
 		</Imagery>
 		<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
 			   ClickSound = "interface/public_mouseclick_00.wav"
-			   DescText = "강화 장비를 선택하세요" />
+			   DescText = "STR(2)" />
 	</Window>
 
 	<!-- 타겟 아이콘 -->

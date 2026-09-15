@@ -28,7 +28,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF1646B2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF1646B2"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF1646B2"/>
-			<Text>구입</Text>
+			<Text>STR(1)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_blue_nor">
@@ -56,7 +56,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FFAB750B"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FFAB750B"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>구입</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_gold_nor">
@@ -90,7 +90,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FFAA374D"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FFAA374D"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>선물</Text>
+			<Text>STR(3)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_pink_nor">
@@ -124,7 +124,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>치장</Text>
+			<Text>STR(4)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
@@ -157,7 +157,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF1646B2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF1646B2"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF1646B2"/>
-			<Text>내 용병 선택</Text>
+			<Text>STR(5)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt007_blue_nor">
@@ -185,7 +185,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>획득가능 목록</Text>
+			<Text>STR(6)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
@@ -213,7 +213,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>추가구입</Text>
+			<Text>STR(7)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_green_nor">
@@ -244,7 +244,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>아이템 보기</Text>
+			<Text>STR(8)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
@@ -306,7 +306,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>추천치장 미리보기</Text>
+			<Text>STR(9)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -337,7 +337,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF1646B2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF1646B2"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF1646B2"/>
-			<Text>구입</Text>
+			<Text>STR(10)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_blue_nor">
@@ -365,7 +365,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF1646B2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF1646B2"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF1646B2"/>
-			<Text>내 용병 선택</Text>
+			<Text>STR(11)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt007_blue_nor">

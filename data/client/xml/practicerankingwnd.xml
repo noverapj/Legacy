@@ -8,7 +8,7 @@
 		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
 		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
-		<Text>수련장 랭킹보상</Text>
+		<Text>STR(27)</Text>
 	</Title>
 	<Imagery>
 		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
@@ -48,30 +48,30 @@
 			<Area X="0" Y="0" Width="146" Height="21" HorzAlign="Stretch" VertAlign="Stretch" />
 		</Image>		
 	</Imagery>
-  <ExtraInfo TextInfo1="수련장순위"
-			 TextInfo2="보상내역"
-			 TextInfo3="수련장 랭킹 보상 안내"
-			 Rank="%d위"
-			 RewardInfo1="1등"
-			 RewardInfo2="101등"
-			 RewardInfo3="501등"	
-			 RewardInfo4="1001등"
-			 RewardInfo_1="100등"
-			 RewardInfo_2="500등"
-			 RewardInfo_3="1000등"	
+  <ExtraInfo TextInfo1="STR(28)"
+			 TextInfo2="STR(29)"
+			 TextInfo3="STR(30)"
+			 Rank="STR(31)"
+			 RewardInfo1="STR(32)"
+			 RewardInfo2="STR(33)"
+			 RewardInfo3="STR(34)"	
+			 RewardInfo4="STR(35)"
+			 RewardInfo_1="STR(36)"
+			 RewardInfo_2="STR(37)"
+			 RewardInfo_3="STR(38)"	
 			 RewardInfo_4=""
-			 RewardNameInfo1="상자"
-			 RewardNameInfo2="좋은상자"
-			 RewardNameInfo3="좀좋은상자"
-			 RewardNameInfo4="완전좋은상자"
-			 RewardDetail1="차원조각 5,000개 or 페소 200,000 or 정기 50개(종류랜덤)"
-			 RewardDetail2="차원조각 1,000개 or 페소 10,000 or 정기 20개(종류랜덤)"
-			 RewardDetail3="차원조각 50개 or 페소 2,000 or 정기 5개(종류랜덤)"
-			 RewardDetail4="차원조각 10개 or 페소 500 or 정기 1개(종류랜덤)"			 
-			 Help="※랭킹보상은 랜덤박스로 지급되며, 박스 내 상자 구성품 중 한 아이템만 획득 가능하십니다"
-			 List1="순위"
-			 List2="보상"
-			 List3="상자구성품"
+			 RewardNameInfo1="STR(39)"
+			 RewardNameInfo2="STR(40)"
+			 RewardNameInfo3="STR(41)"
+			 RewardNameInfo4="STR(42)"
+			 RewardDetail1="STR(43)"
+			 RewardDetail2="STR(44)"
+			 RewardDetail3="STR(45)"
+			 RewardDetail4="STR(46)"			 
+			 Help="STR(47)"
+			 List1="STR(48)"
+			 List2="STR(49)"
+			 List3="STR(50)"
 			 />
 	
 		<Window ClassName="ioButton" Id="3"><!--닫기-->
@@ -108,7 +108,7 @@
 				<Color Type="Over" Text="FF3a3a3a" Back="FF000000"/>
 				<Color Type="Push" Text="FF3a3a3a" Back="FF000000"/>
 				<Color Type="Disable" Text="FF323232" Back="FF000000"/>
-			<Text>닫기(ESC)</Text>
+			<Text>STR(51)</Text>
 			</Title>
 			<Imagery>
 				<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">

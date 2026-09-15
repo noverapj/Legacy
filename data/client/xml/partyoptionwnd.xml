@@ -8,7 +8,7 @@
 		<Format X="12" Y="10" Size="13" Style="Outline_full_2x" HorzAlign="Left"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
 		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
-		<Text>유저모드</Text>
+		<Text>STR(1)</Text>
 	</Title>
 	<Imagery>
 		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
@@ -27,7 +27,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF20394F"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF20394F"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF20394F"/>
-			<Text>수동 선택</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt011_blue_nor">
@@ -58,7 +58,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF20394F"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF20394F"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF20394F"/>
-			<Text>초기화</Text>
+			<Text>STR(3)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt011_blue_nor">
@@ -86,7 +86,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>용병육성</Text>
+			<Text>STR(4)</Text>
 		</Title>
 	</Window>
 
@@ -98,7 +98,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>있음</Text>
+			<Text>STR(5)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
@@ -133,7 +133,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>용병교체</Text>
+			<Text>STR(6)</Text>
 		</Title>
 	</Window>
 
@@ -145,7 +145,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>가능</Text>
+			<Text>STR(7)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
@@ -180,7 +180,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>KO 조건</Text>
+			<Text>STR(8)</Text>
 		</Title>
 	</Window>
 
@@ -192,7 +192,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>맨몸 + 체력없음</Text>
+			<Text>STR(9)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
@@ -227,7 +227,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>드랍피해</Text>
+			<Text>STR(10)</Text>
 		</Title>
 	</Window>
 
@@ -239,7 +239,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>기본</Text>
+			<Text>STR(11)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
@@ -274,7 +274,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>팀원공격</Text>
+			<Text>STR(12)</Text>
 		</Title>
 	</Window>
 
@@ -286,7 +286,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>불가</Text>
+			<Text>STR(13)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
@@ -321,7 +321,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>장비사용</Text>
+			<Text>STR(14)</Text>
 		</Title>
 	</Window>
 
@@ -333,7 +333,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>있음</Text>
+			<Text>STR(15)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
@@ -368,7 +368,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>스킬사용</Text>
+			<Text>STR(16)</Text>
 		</Title>
 	</Window>
 
@@ -380,7 +380,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>기본</Text>
+			<Text>STR(17)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
@@ -415,7 +415,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>KO 효과</Text>
+			<Text>STR(18)</Text>
 		</Title>
 	</Window>
 
@@ -427,7 +427,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>스킬회복</Text>
+			<Text>STR(19)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
@@ -462,7 +462,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>기립시간</Text>
+			<Text>STR(20)</Text>
 		</Title>
 	</Window>
 
@@ -474,7 +474,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>기본</Text>
+			<Text>STR(21)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
@@ -509,7 +509,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>중력효과</Text>
+			<Text>STR(22)</Text>
 		</Title>
 	</Window>
 
@@ -521,7 +521,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>기본</Text>
+			<Text>STR(23)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
@@ -556,7 +556,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>포로탈출</Text>
+			<Text>STR(24)</Text>
 		</Title>
 	</Window>
 
@@ -568,7 +568,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>5 라운드</Text>
+			<Text>STR(25)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
@@ -603,7 +603,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>포로탈출</Text>
+			<Text>STR(26)</Text>
 		</Title>
 	</Window>
 
@@ -615,7 +615,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>180초</Text>
+			<Text>STR(27)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
@@ -650,7 +650,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>용병상태</Text>
+			<Text>STR(28)</Text>
 		</Title>
 	</Window>
 
@@ -662,7 +662,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>기본</Text>
+			<Text>STR(29)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
@@ -697,7 +697,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>기본</Text>
+			<Text>STR(30)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
@@ -732,7 +732,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>용병체력</Text>
+			<Text>STR(31)</Text>
 		</Title>
 	</Window>
 
@@ -744,7 +744,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>기본</Text>
+			<Text>STR(32)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
@@ -779,7 +779,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>기본</Text>
+			<Text>STR(33)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
@@ -814,7 +814,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>이동속도</Text>
+			<Text>STR(34)</Text>
 		</Title>
 	</Window>
 
@@ -826,7 +826,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>기본</Text>
+			<Text>STR(35)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
@@ -861,7 +861,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>기본</Text>
+			<Text>STR(36)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
@@ -896,7 +896,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>타격효과</Text>
+			<Text>STR(37)</Text>
 		</Title>
 	</Window>
 
@@ -908,7 +908,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>정상</Text>
+			<Text>STR(38)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">
@@ -943,7 +943,7 @@
 			<Color Type="Over" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Push" Text="FF6E6E6E" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>정상</Text>
+			<Text>STR(39)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">

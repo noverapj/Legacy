@@ -36,8 +36,8 @@
   <Window ClassName="TotalResultSpiritRewardWnd" Id="8">
     <Size X="0" Y="0" Width="211" Height="57"/>
     <Style>IWS_PROCESS|IWS_START_HIDE</Style>
-    <ExtraInfo DescText1="Á¤±â Ãß°¡È¹µæ"
-               DescText2="%s %d°³"/>
+    <ExtraInfo DescText1="STR(1)"
+               DescText2="STR(2)"/>
     <Imagery>
       <DefaultFrameImagery Templete="win1_frame80">
         <Area X="0" Y="0" Width="211" Height="57"/>

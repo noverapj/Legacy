@@ -7,7 +7,7 @@
 		<Format X="125" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Center"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FFAA374D"/>
 		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FFAA374D"/>
-		<Text>무료지원 용병고용</Text>
+		<Text>STR(1)</Text>
 	</Title>
 	<Imagery>
 		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
@@ -31,7 +31,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FFAA374D"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FFAA374D"/>
 			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
-			<Text>고용</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_pink_nor">

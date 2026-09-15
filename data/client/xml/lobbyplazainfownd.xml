@@ -32,7 +32,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF20394F"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF20394F"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>내정보</Text>
+			<Text>STR(1)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt002_blue_nor">
@@ -66,7 +66,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>미션</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="tap2_off">
@@ -96,7 +96,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-			<Text>퀘스트</Text>
+			<Text>STR(3)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="tap2_off">
@@ -147,10 +147,10 @@
 		<Window ClassName="ioRichLabel" Id="1">
 			<Size X="7" Y="6" Width="164" Height="49"/>
 			<ExtraInfo VertGap="3" HorzAlign="Left" VertAlign="Center" >				
-				<TextBlock Text="초보자 버프 상태#" Size="12"  Color="FF117222"/>
-				<TextBlock Text="공격/방어/이동속도/#" Size="12"  Color="FFB91600"/>
-				<TextBlock Text="드랍피해감소 상승!#" Size="12"  Color="FFB91600"/>
-				<TextBlock Text="하사 5호봉까지 적용됩니다.#" Size="12"  Color="FF6E6E6E"/>			
+				<TextBlock Text="STR(4)" Size="12"  Color="FF117222"/>
+				<TextBlock Text="STR(5)" Size="12"  Color="FFB91600"/>
+				<TextBlock Text="STR(6)" Size="12"  Color="FFB91600"/>
+				<TextBlock Text="STR(7)" Size="12"  Color="FF6E6E6E"/>			
 				</ExtraInfo>
 		</Window>
 	</Window>
@@ -178,9 +178,9 @@
     </Imagery>
     <ExtraInfo OverSound = "interface/public_mouseover_00.wav"
                ClickSound = "interface/public_mouseclick_00.wav"
-               TimeGateText1="소환까지 %02d:%02d"
-               TimeGateText2="소환까지 1분 미만"
-               TimeGateText3="소환하기"
+               TimeGateText1="STR(8)"
+               TimeGateText2="STR(9)"
+               TimeGateText3="STR(10)"
                EffectAniTime="100"/>
   </Window>
 </Window>

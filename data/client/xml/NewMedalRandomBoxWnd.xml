@@ -6,7 +6,7 @@
     <Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
     <Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
     <Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
-    <Text>사용하기</Text>
+    <Text>STR(1)</Text>
   </Title>
 	<Imagery>
     <DefaultFrameImagery Type="Selected" Templete="win1_frame90">
@@ -31,18 +31,18 @@
 	<ExtraInfo Rolling_Total_Time = "1500"
 		         Rolling_Sound = "event/event_rolling_02.wav"
 		         Result_Sound = "equip/equip_get_01.wav"
-             TitleSubText="선택 가능 : %d개"
-             SelectText="원하는 스탯 %d개를 선택해주세요"
-             LoopText="메달제작중입니다. 잠시만 기다려주세요"
-             ResultText="이 능력치로 결정하시겠습니까?"
-             CheckText1="기본공격력"
-             CheckText2="기본방어력"
-             CheckText3="이동속도"
-             CheckText4="드랍피해감소"
-             CheckText5="무기스킬"
-             CheckText6="갑옷스킬"
-             CheckText7="투구스킬"
-             CheckText8="망토스킬"
+             TitleSubText="STR(2)"
+             SelectText="STR(3)"
+             LoopText="STR(4)"
+             ResultText="STR(5)"
+             CheckText1="STR(6)"
+             CheckText2="STR(7)"
+             CheckText3="STR(8)"
+             CheckText4="STR(9)"
+             CheckText5="STR(10)"
+             CheckText6="STR(11)"
+             CheckText7="STR(12)"
+             CheckText8="STR(13)"
              CheckIcon1="UIIconPack8#up_attack"
              CheckIcon2="UIIconPack8#up_defense"
              CheckIcon3="UIIconPack8#up_speed"
@@ -53,7 +53,7 @@
              CheckIcon8="UIIconPack120#costomemedal_skill03"          
              EffectPosX="180"
              EffectPosY="149"
-             Recv_Stat_Error_Message="선물정보가 일치하지 않습니다."/>
+             Recv_Stat_Error_Message="STR(14)"/>
 
   <Window ClassName="ioButton" Id="1">
     <Size X="326" Y="11" Width="23" Height="23"/>
@@ -89,7 +89,7 @@
       <Color Type="Over" Text="FF3A3A3A" Back="FF215AA2"/>
       <Color Type="Push" Text="FF3A3A3A" Back="FF215AA2"/>
       <Color Type="Disable" Text="FFA7A7A7" Back="FFA7A7A7"/>
-      <Text>처음으로</Text>
+      <Text>STR(15)</Text>
     </Title>
     <Imagery>
       <DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
@@ -120,7 +120,7 @@
       <Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
       <Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
       <Color Type="Disable" Text="FFA7A7A7" Back="FFA7A7A7"/>
-      <Text>제작하기</Text>
+      <Text>STR(16)</Text>
     </Title>
     <Imagery>
       <DefaultFrameImagery Type="Normal" Templete="bt006_blue_nor">
@@ -151,7 +151,7 @@
 			<Color Type="Over" Text="FFA7A7A7" Back="FFA7A7A7"/>
 			<Color Type="Push" Text="FFA7A7A7" Back="FFA7A7A7"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FFA7A7A7"/>
-			<Text>확인중...</Text>
+			<Text>STR(17)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt_empty">
@@ -179,7 +179,7 @@
       <Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
       <Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
       <Color Type="Disable" Text="FFA7A7A7" Back="FFA7A7A7"/>
-      <Text>결정하기</Text>
+      <Text>STR(18)</Text>
     </Title>
     <Imagery>
       <DefaultFrameImagery Type="Normal" Templete="bt006_blue_nor">
@@ -210,7 +210,7 @@
       <Color Type="Over" Text="FF3A3A3A" Back="FF215AA2"/>
       <Color Type="Push" Text="FF3A3A3A" Back="FF215AA2"/>
       <Color Type="Disable" Text="FF3A3A3A" Back="FFA7A7A7"/>
-      <Text>다시하기</Text>
+      <Text>STR(19)</Text>
     </Title>
     <Imagery>
       <DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">

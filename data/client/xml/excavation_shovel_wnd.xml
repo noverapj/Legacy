@@ -19,7 +19,7 @@
 		<Format X = "13" Y = "11" Size = "17" Style = "Outline_2x" HorzAlign = "Left" VertAlign = "Top"/>
 		<Color Type = "Normal" Text = "FFFFFFFF" Back = "FF0C426F"/>
 		<Color Type = "NoneSelected" Text = "FFFFFFFF" Back = "FF0C426F"/>
-		<Text>발굴횟수충전</Text>
+		<Text>STR(1)</Text>
 	</Title>
 	<Window ClassName = "ioButton" Id = "1">
 		<Size X = "317" Y = "11" Width = "23" Height = "23"/>
@@ -58,7 +58,7 @@
 			<Color Type = "Over" Text = "FFFFFFFF" Back = "FF215AA2"/>
 			<Color Type = "Push" Text = "FFFFFFFF" Back = "FF215AA2"/>
 			<Color Type = "Disable" Text = "FF6E6E6E" Back = "FF215AA2"/>
-			<Text>충전하기(SPACE)</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type = "Normal" Templete = "bt006_blue_nor">
@@ -87,7 +87,7 @@
 			<Color Type = "Over" Text = "FFFFFFFF" Back = "FF215AA2"/>
 			<Color Type = "Push" Text = "FFFFFFFF" Back = "FF215AA2"/>
 			<Color Type = "Disable" Text = "FFFFFFFF" Back = "FF215AA2"/>
-			<Text>상점가기</Text>
+			<Text>STR(3)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type = "Normal" Templete = "bt006_blue_nor">
@@ -115,7 +115,7 @@
 			<Color Type = "Over" Text = "FF3A3A3A"/>
 			<Color Type = "Push" Text = "FF3A3A3A"/>
 			<Color Type = "Disable" Text = "FF3A3A3A"/>
-			<Text>취소(ESC)</Text>
+			<Text>STR(4)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type = "Normal" Templete = "bt006_gray_nor">
@@ -136,15 +136,15 @@
 		</Imagery>
 	</Window>
 	<ExtraInfo
-		TextCurrentCount = "(현재 아이템 %d개)"
-		TextShovelCharge = "횟수를 추가하시겠습니까?"
-		TextBuyChargeItem = "충전 아이템을 구매하시겠습니까?"
-		TextImpossibleCharge = "충전횟수가 가득차있어 충전이 불가능합니다"
+		TextCurrentCount = "STR(5)"
+		TextShovelCharge = "STR(6)"
+		TextBuyChargeItem = "STR(7)"
+		TextImpossibleCharge = "STR(8)"
 	/>
 	<Text>
 		<Format X = "177" Y = "150" Type = "excavation_full" Size = "14" Style = "Normal" HorzAlign = "Center" VertAlign = "Top"/>
 		<Color Text = "FF1646B2"/>
-		<Text>아이템을 1회 소모하여 발굴 횟수를 +1 합니다</Text>
+		<Text>STR(9)</Text>
 	</Text>
 </Window>
 

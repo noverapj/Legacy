@@ -56,7 +56,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="117222"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="117222"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="117222"/>
-			<Text>장비 진화</Text>
+			<Text>STR(1)</Text>
 		</Title>		
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_green_nor">

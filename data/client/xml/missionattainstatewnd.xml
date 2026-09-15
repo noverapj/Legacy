@@ -9,7 +9,7 @@
 		<Color Type="Over" Text="FFFFFFFF" Back="FF4B3923"/>
 		<Color Type="Push" Text="FFFFFFFF" Back="FF4B3923"/>
 		<Color Type="Disable" Text="FFFFFFFF" Back="FF4B3923"/>
-		<Text>미션 완료</Text>
+		<Text>STR(1)</Text>
 	</Title>
 	<ExtraInfo Reward = "interface/Mission_clear.wav"/>
 	<Imagery>		
@@ -45,7 +45,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF9F291A"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF9F291A"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF9F291A"/>
-			<Text>확인 (SPACE)</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_red_nor">

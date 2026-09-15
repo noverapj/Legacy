@@ -125,7 +125,7 @@
       <Title>
         <Format X="1" Y="0" Size="18" Style="Normal" HorzAlign="Center"/>
         <Color Type="Normal" Text="fabd52" />
-        <Text>영구용병 패키지</Text>
+        <Text>STR(1)</Text>
       </Title>
     </Window>
     <!-- 아이템 이름 -->
@@ -135,7 +135,7 @@
       <Title>
         <Format X="0" Y="0" Size="18" Style="Normal" HorzAlign="Center"/>
         <Color Type="Normal" Text="ffffff" />
-        <Text>1개</Text>
+        <Text>STR(2)</Text>
       </Title>
     </Window>
 
@@ -189,7 +189,7 @@
       <Title>
         <Format X="0" Y="0" Size="12" Style="Normal" HorzAlign="Center" VertAlign="Center"/>
         <Color Type="Normal" Text="6e6e6e" />
-        <Text>아이콘에 마우스 오버시 상세 설명을 볼 수 있습니다</Text>
+        <Text>STR(3)</Text>
       </Title>
     </Window>
 
@@ -200,7 +200,7 @@
       <Title>
         <Format X="0" Y="0" Size="12" Style="Normal" HorzAlign="Center" VertAlign="Center"/>
         <Color Type="Normal" Text="6e6e6e" />
-        <Text>구입하신 아이템은 선물함에서 확인하실 수 있습니다.</Text>
+        <Text>STR(4)</Text>
       </Title>
     </Window>
 
@@ -256,7 +256,7 @@
         <Title>
           <Format X="0" Y="0" Size="12" Style="Normal" HorzAlign="Left" VertAlign="Top"/>
           <Color Type="Normal" Text="e4b262" />
-          <Text>내 골드 :</Text>
+          <Text>STR(5)</Text>
         </Title>
       </Window>
       <Window ClassName="ioWnd" Id="602">

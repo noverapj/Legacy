@@ -6,7 +6,7 @@
 		<Format X="102" Y="11" Size="18" Style="Outline_full_2x" HorzAlign="Center"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
 		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
-		<Text>시간육성 종료</Text>
+		<Text>STR(1)</Text>
 	</Title>
 	<Imagery>
 		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
@@ -33,7 +33,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
 			<Color Type="Disable" Text="FFa7a7a7" Back="FF117222"/>
-			<Text>용병보기</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_green_nor">
@@ -91,7 +91,7 @@
 			<Color Type="Over" Text="FF3a3a3a" Back="FF117222"/>
 			<Color Type="Push" Text="FF3a3a3a" Back="FF117222"/>
 			<Color Type="Disable" Text="FFa7a7a7" Back="FF117222"/>
-			<Text>확인</Text>
+			<Text>STR(3)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">

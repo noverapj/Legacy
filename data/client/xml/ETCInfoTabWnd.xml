@@ -66,7 +66,7 @@
                     <Size X="17" Y="164" Width="330" Height="224" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo HorzAlign="Left" VertAlign="Bottom" VertGap="0">
-                        <TextBlock Text="Test입니다. 임시로 만들어 놓은 거니깐... 신경쓰지 마셈" Size="13" Style="Normal" Color="ff000000" />
+                        <TextBlock Text="STR(1)" Size="13" Style="Normal" Color="ff000000" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>

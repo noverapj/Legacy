@@ -8,7 +8,7 @@
 		<Format X="12" Y="10" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
 		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
-		<Text>뱀주사위</Text>
+		<Text>STR(1)</Text>
 	</Title>
  	<Imagery>
 		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
@@ -55,11 +55,11 @@
 	</Imagery>
 
 	<ExtraInfo
-		ChangeReward = "보상 바꾸기 x %d"
-		ChangeBoard = "게임판 바꾸기 x %d"
-		ErrorDice = "[주사위] 아이템이 없습니다."
-		ErrorReward = "[보상 변경권] 아이템이 없습니다."
-		ErrorBoard = "[게임판 변경권] 아이템이 없습니다."
+		ChangeReward = "STR(2)"
+		ChangeBoard = "STR(3)"
+		ErrorDice = "STR(4)"
+		ErrorReward = "STR(5)"
+		ErrorBoard = "STR(6)"
 
 		PlayerPieceSpeed = "1000"
 		PlayerSnakeLadderSpeed = "500"
@@ -141,7 +141,7 @@
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF215AA2"/>
-			<Text>주사위 굴리기</Text>
+			<Text>STR(7)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt005_blue_nor">
@@ -172,7 +172,7 @@
 			<Color Type="Over"  Text="FFFFFFFF" Back="FF006633"/>
 			<Color Type="Push"  Text="FFFFFFFF" Back="FF006633"/>
 			<Color Type="Disable"  Text="FFA7A7A7" Back="FF000000"/>
-			<Text>게임판 바꾸기 X5</Text>
+			<Text>STR(8)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_green_nor">
@@ -206,7 +206,7 @@
 			<Color Type="Over"  Text="FFFFFFFF" Back="FF006633"/>
 			<Color Type="Push"  Text="FFFFFFFF" Back="FF006633"/>
 			<Color Type="Disable"  Text="FFA7A7A7" Back="FF000000"/>
-			<Text>보상 변경권</Text>
+			<Text>STR(9)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_green_nor">
@@ -727,7 +727,7 @@
 		<Text>
 			<Format Type="GameEndInfo" X ="272" Y="150" Size="14" Style="Outline_full_2x" HorzAlign="Left" RenderPos="AfterRender"/>
 			<Color Text="FFFFFFFF" Back="FF000000"/>
-			<Text>보상은 보관함으로 즉시 지급 됩니다.</Text>
+			<Text>STR(10)</Text>
 		</Text>
 
 		<Window ClassName="ioButton" Id="1">
@@ -738,7 +738,7 @@
 				<Color Type="Over"  Text="FFFFFFFF" Back="FF854314"/>
 				<Color Type="Push"  Text="FFFFFFFF" Back="FF854314"/>
 				<Color Type="Disable"  Text="FFA7A7A7" Back="FF854314"/>
-				<Text>다시 하기</Text>
+				<Text>STR(11)</Text>
 			</Title>
 			<Imagery>
 				<DefaultFrameImagery Type="Normal" Templete="bt005_redbrown_nor">

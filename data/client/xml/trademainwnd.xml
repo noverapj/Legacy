@@ -15,7 +15,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF0B7222"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF0B7222"/>
 			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
-			<Text>봉인된 장비 등록하기</Text>
+			<Text>STR(1)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt005_green_nor">
@@ -47,7 +47,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Disable" Text="FF6E6E6E" Back="FF000000"/>
-			<Text>전체 부위</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -80,7 +80,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Disable" Text="FF6E6E6E" Back="FF000000"/>
-			<Text>전체 등급</Text>
+			<Text>STR(3)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -113,7 +113,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Disable" Text="FF6E6E6E" Back="FF000000"/>
-			<Text>전체 가격</Text>
+			<Text>STR(4)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -200,7 +200,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF000000"/>
 			<Color Type="Disable" Text="FF6E6E6E" Back="FF000000"/>
-			<Text>새로 고침</Text>
+			<Text>STR(5)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt008_gray_nor">

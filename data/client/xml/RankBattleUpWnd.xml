@@ -8,7 +8,7 @@
 		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
 		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
-		<Text>랭킹계급 상승</Text>
+		<Text>STR(1)</Text>
 	</Title>
 	<Imagery>
 		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
@@ -30,13 +30,13 @@
     <Image Type="RankIcon6" Imageset="UIIconPack113" Image="rank_6_master" />
 	</Imagery>
 	<ExtraInfo Level_Up_Sound = "interface/ceremony/grade_up_01.wav"
-             TitleUp="랭킹계급 상승"
-             TitleDown="랭킹계급 하락"
-             DescUp="랭킹 계급이 한단계 상승하였습니다."
-             DescDown="랭킹 계급이 한단계 하락하였습니다."
-             RankUpText1="랭킹계급"
-             RankUpText2="달성!!"
-             RankDownText="랭킹계급 하락!!"/>
+             TitleUp="STR(2)"
+             TitleDown="STR(3)"
+             DescUp="STR(4)"
+             DescDown="STR(5)"
+             RankUpText1="STR(6)"
+             RankUpText2="STR(7)"
+             RankDownText="STR(8)"/>
 
 	<Window ClassName="ioButton" Id="1">
 		<Size X="216" Y="11" Width="23" Height="23"/>
@@ -72,7 +72,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215AA2"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF215AA2"/>
-			<Text>닫기 (ESC)</Text>
+			<Text>STR(9)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_blue_nor">

@@ -8,7 +8,7 @@
 		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FFA62B41"/>
 		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FFA62B41"/>
-		<Text>전투체험용병 도착</Text>
+		<Text>STR(1)</Text>
 	</Title>
 	<Imagery>
 		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
@@ -55,7 +55,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FFA62B41"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FFA62B41"/>
 			<Color Type="Disable" Text="FF323232" Back="FFA62B41"/>
-			<Text>닫기 (ESC)</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_pink_nor">

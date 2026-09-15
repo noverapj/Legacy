@@ -17,7 +17,7 @@
 		<Format X = "13" Y = "11" Size = "17" Style = "Outline_2x" HorzAlign = "Left" VertAlign = "Top"/>
 		<Color Type = "Normal" Text = "FFFFFFFF" Back = "FF0C426F"/>
 		<Color Type = "NoneSelected" Text = "FFFFFFFF" Back = "FF0C426F"/>
-		<Text>탐사레벨업</Text>
+		<Text>STR(1)</Text>
 	</Title>
 	<Window ClassName = "ioButton" Id = "1">
 		<Size X = "285" Y = "11" Width = "23" Height = "23"/>
@@ -56,7 +56,7 @@
 			<Color Type = "Over" Text = "FFFFFFFF" Back = "FF215AA2"/>
 			<Color Type = "Push" Text = "FFFFFFFF" Back = "FF215AA2"/>
 			<Color Type = "Disable" Text = "FFFFFFFF" Back = "FF215AA2"/>
-			<Text>닫기(ESC)</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type = "Normal" Templete = "bt006_blue_nor">
@@ -89,15 +89,15 @@
 	</Window>
 
 	<ExtraInfo
-		TextExcavation = "탐사"
-		TextLevel = "레벨 %d"
-		TextLevelUp = "달성!!"
-		TextKitLevelUp = "탐사키트가 레벨업 되었습니다"
+		TextExcavation = "STR(3)"
+		TextLevel = "STR(4)"
+		TextLevelUp = "STR(5)"
+		TextKitLevelUp = "STR(6)"
 		Level_Up_Sound = "interface/ceremony/grade_up_01.wav"
 	/>
 	<Text>
 		<Format X = "160" Y = "166" Type = "excavation_full" Size = "14" Style = "Normal" HorzAlign = "Center" VertAlign = "Top"/>
 		<Color Text = "FF3A3A3A"/>
-		<Text>탐사 레벨업마다 발굴횟수가 가득 충전됩니다</Text>
+		<Text>STR(7)</Text>
 	</Text>
 </Window>

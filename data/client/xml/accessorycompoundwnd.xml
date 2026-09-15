@@ -10,8 +10,8 @@
       <Area X="47" Y="99" />
     </Image>
 	</Imagery>
-  <ExtraInfo CompoundErrMsg1="합성할 악세사리를 선택하지 않았습니다."
-             CompoundErrMsg2="재료 악세사리를 모두 선택하지 않았습니다." />
+  <ExtraInfo CompoundErrMsg1="STR(1)"
+             CompoundErrMsg2="STR(2)" />
 	<!-- 사용 -->
 	<Window ClassName="ioButton" Id="1">
 		<ExStyle>IWS_EX_PUSH_DOUBLE</ExStyle>
@@ -22,7 +22,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF117222"/>
-			<Text>장비 강화</Text>
+			<Text>STR(3)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_green_nor">
@@ -74,7 +74,7 @@
 		</Imagery>
 		<ExtraInfo OverSound  = "interface/public_mouseover_00.wav" 
 			   ClickSound = "interface/public_mouseclick_00.wav"
-			   DescText = "강화 악세사리를 선택하세요" />
+			   DescText = "STR(4)" />
 	</Window>
 
 	<!-- 재료 버튼 -->
@@ -110,7 +110,7 @@
     </Imagery>
     <ExtraInfo OverSound  = "interface/public_mouseover_00.wav"
 			   ClickSound = "interface/public_mouseclick_00.wav"
-			   DescText = "재료 악세사리를 선택하세요" />
+			   DescText = "STR(5)" />
   </Window>
 
   <!-- 버튼2 -->
@@ -145,7 +145,7 @@
     </Imagery>
     <ExtraInfo OverSound  = "interface/public_mouseover_00.wav"
 			   ClickSound = "interface/public_mouseclick_00.wav"
-			   DescText = "재료 악세사리를 선택하세요" />
+			   DescText = "STR(6)" />
   </Window>
 
   <!-- 버튼3 -->
@@ -180,7 +180,7 @@
     </Imagery>
     <ExtraInfo OverSound  = "interface/public_mouseover_00.wav"
 			   ClickSound = "interface/public_mouseclick_00.wav"
-			   DescText = "재료 악세사리를 선택하세요" />
+			   DescText = "STR(7)" />
   </Window>
 
 	<!-- 타겟 아이콘 -->

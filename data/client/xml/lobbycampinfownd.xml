@@ -6,7 +6,7 @@
 		<Format X="103" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Center"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
 		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
-		<Text>진영 정보</Text>
+		<Text>STR(1)</Text>
 	</Title>
 	<Imagery>
 		<DefaultFrameImagery Type="Selected" Templete="win1_frame80">
@@ -41,7 +41,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
 			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
-			<Text>진영 탈퇴</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
@@ -70,7 +70,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
 			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
-			<Text>진영전?</Text>
+			<Text>STR(3)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
@@ -98,7 +98,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
 			<Color Type="Disable" Text="FF323232" Back="FF000000"/>
-			<Text>길드 가입 및 생성</Text>
+			<Text>STR(4)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_gray_nor">
@@ -126,7 +126,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
 			<Color Type="Disable" Text="FF3A3A3A" Back="FF3A3A3A"/>
-			<Text>내 진영</Text>
+			<Text>STR(5)</Text>
 		</Title>
 		<Imagery>
 			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_dark2" >
@@ -146,7 +146,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
 			<Color Type="Disable" Text="FF3A3A3A" Back="FF3A3A3A"/>
-			<Text>내 길드</Text>
+			<Text>STR(6)</Text>
 		</Title>
 		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
 	                   ClickSound = "interface/public_mouseclick_00.wav"/>
@@ -160,7 +160,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FFFFFFFF"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FFFFFFFF"/>
 			<Color Type="Disable" Text="FF3A3A3A" Back="FF3A3A3A"/>
-			<Text>대회 포인트</Text>
+			<Text>STR(7)</Text>
 		</Title>
 		<Imagery>
 			<Image Type="Normal" Imageset="BaseImage001" Image="strip_gray_dark2" >
@@ -180,7 +180,7 @@
 			<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
 			<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
 			<Color Type="Disable" Text="FF3A3A3A" Back="FF3A3A3A"/>
-			<Text>진영 랭킹</Text>
+			<Text>STR(8)</Text>
 		</Title>
 		<ExtraInfo OverSound = "interface/public_mouseover_00.wav" 
 	                   ClickSound = "interface/public_mouseclick_00.wav"/>

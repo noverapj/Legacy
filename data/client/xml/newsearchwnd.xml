@@ -25,7 +25,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF194871"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF194871"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="FF000000"/>
-			<Text>전체</Text>
+			<Text>STR(1)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt001_shop_search_nor">
@@ -96,7 +96,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF194871"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF194871"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="FF000000"/>
-			<Text>검색(Enter)</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<Image Type="Normal" Imageset="BaseImage034" Image="new_item_search_nor">
@@ -118,7 +118,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF000000"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF000000"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="FF000000"/>
-			<Text>검색</Text>
+			<Text>STR(3)</Text>
 		</Title>
 		<Imagery>
 			<Image Type="Normal" Imageset="BaseImage031" Image="shop_renewal_check_radio_off" >
@@ -145,7 +145,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215aa2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215aa2"/>
 			<Color Type="Disable" Text="FFFFFFFF" Back="FF000000"/>
-			<Text>검색(Enter)</Text>
+			<Text>STR(4)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt1905_search_nor">
@@ -171,7 +171,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF215aa2"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF215aa2"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FFFFFFFF"/>
-			<Text>다음(TAB)</Text>
+			<Text>STR(5)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt1905_search_nor">

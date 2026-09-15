@@ -81,7 +81,7 @@
 				<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Disable" Text="FF3A3A3A" Back="FF3A3A3A"/>
-				<Text>내용</Text>
+				<Text>STR(1)</Text>
 			</Title>
 			<Imagery>
 				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -109,7 +109,7 @@
 				<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Disable" Text="FF3A3A3A" Back="FF3A3A3A"/>
-				<Text>결과</Text>
+				<Text>STR(2)</Text>
 			</Title>
 			<Imagery>
 				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -162,7 +162,7 @@
 				<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Disable" Text="FF3A3A3A" Back="FF3A3A3A"/>
-				<Text>내용</Text>
+				<Text>STR(3)</Text>
 			</Title>
 			<Imagery>
 				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -190,7 +190,7 @@
 				<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Disable" Text="FF3A3A3A" Back="FF3A3A3A"/>
-				<Text>결과</Text>
+				<Text>STR(4)</Text>
 			</Title>
 			<Imagery>
 				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -243,7 +243,7 @@
 				<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Disable" Text="FF3A3A3A" Back="FF3A3A3A"/>
-				<Text>내용</Text>
+				<Text>STR(5)</Text>
 			</Title>
 			<Imagery>
 				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -271,7 +271,7 @@
 				<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Disable" Text="FF3A3A3A" Back="FF3A3A3A"/>
-				<Text>결과</Text>
+				<Text>STR(6)</Text>
 			</Title>
 			<Imagery>
 				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -324,7 +324,7 @@
 				<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Disable" Text="FF3A3A3A" Back="FF3A3A3A"/>
-				<Text>내용</Text>
+				<Text>STR(7)</Text>
 			</Title>
 			<Imagery>
 				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -352,7 +352,7 @@
 				<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Disable" Text="FF3A3A3A" Back="FF3A3A3A"/>
-				<Text>결과</Text>
+				<Text>STR(8)</Text>
 			</Title>
 			<Imagery>
 				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -405,7 +405,7 @@
 				<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Disable" Text="FF3A3A3A" Back="FF3A3A3A"/>
-				<Text>내용</Text>
+				<Text>STR(9)</Text>
 			</Title>
 			<Imagery>
 				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -433,7 +433,7 @@
 				<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Disable" Text="FF3A3A3A" Back="FF3A3A3A"/>
-				<Text>결과</Text>
+				<Text>STR(10)</Text>
 			</Title>
 			<Imagery>
 				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -486,7 +486,7 @@
 				<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Disable" Text="FF3A3A3A" Back="FF3A3A3A"/>
-				<Text>내용</Text>
+				<Text>STR(11)</Text>
 			</Title>
 			<Imagery>
 				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -514,7 +514,7 @@
 				<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Disable" Text="FF3A3A3A" Back="FF3A3A3A"/>
-				<Text>결과</Text>
+				<Text>STR(12)</Text>
 			</Title>
 			<Imagery>
 				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -567,7 +567,7 @@
 				<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Disable" Text="FF3A3A3A" Back="FF3A3A3A"/>
-				<Text>내용</Text>
+				<Text>STR(13)</Text>
 			</Title>
 			<Imagery>
 				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -595,7 +595,7 @@
 				<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Disable" Text="FF3A3A3A" Back="FF3A3A3A"/>
-				<Text>결과</Text>
+				<Text>STR(14)</Text>
 			</Title>
 			<Imagery>
 				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -648,7 +648,7 @@
 				<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Disable" Text="FF3A3A3A" Back="FF3A3A3A"/>
-				<Text>내용</Text>
+				<Text>STR(15)</Text>
 			</Title>
 			<Imagery>
 				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">
@@ -676,7 +676,7 @@
 				<Color Type="Over" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Push" Text="FF3A3A3A" Back="FF3A3A3A"/>
 				<Color Type="Disable" Text="FF3A3A3A" Back="FF3A3A3A"/>
-				<Text>결과</Text>
+				<Text>STR(16)</Text>
 			</Title>
 			<Imagery>
 				<DefaultFrameImagery Type="Normal" Templete="bt007_gray_nor">

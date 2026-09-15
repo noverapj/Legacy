@@ -7,7 +7,7 @@
 		<Format X="175" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Center"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FF9A273B"/>
 		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF9A273B"/>
-		<Text>지금부터 PC방 보너스를 받게됩니다</Text>
+		<Text>STR(1)</Text>
 	</Title>
 	<ExtraInfo PesoBonus="40" ExpBonus="40"/>
 	<Imagery>
@@ -46,7 +46,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF9A273B"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF9A273B"/>
 			<Color Type="Disable" Text="FF323232" Back="FF9A273B"/>
-			<Text>보너스용병 선택하기 (SPACE)</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_pink_nor">

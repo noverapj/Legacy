@@ -53,9 +53,9 @@
 		<Window ClassName="ioRichLabel" Id="1">
 			<Size X="7" Y="4" Width="145" Height="23"/>
 			<ExtraInfo VertGap="3" HorzAlign="Left" VertAlign="Center" >
-				<TextBlock Text="보너스캐시 " Size="12" Color="FF3A3A3A"/>
-				<TextBlock Text="기간만료 " Size="12"  Color="FFB91600"/>
-				<TextBlock Text="임박 " Size="12"  Color="FF3A3A3A"/>
+				<TextBlock Text="STR(1)" Size="12" Color="FF3A3A3A"/>
+				<TextBlock Text="STR(2)" Size="12"  Color="FFB91600"/>
+				<TextBlock Text="STR(3)" Size="12"  Color="FF3A3A3A"/>
 			</ExtraInfo>
 		</Window>
 	</Window>

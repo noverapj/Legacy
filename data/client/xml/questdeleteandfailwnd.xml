@@ -41,7 +41,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FF4B3923"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FF4B3923"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF4B3923"/>
-			<Text>Ã¢´Ý±â (ESC)</Text>
+			<Text>STR(1)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_brown_nor">
@@ -70,7 +70,7 @@
 			<Color Type="Over" Text="FFFFFFFF" Back="FFAA374D"/>
 			<Color Type="Push" Text="FFFFFFFF" Back="FFAA374D"/>
 			<Color Type="Disable" Text="FFA7A7A7" Back="FF4B3923"/>
-			<Text>Ã¢´Ý±â (ESC)</Text>
+			<Text>STR(2)</Text>
 		</Title>
 		<Imagery>
 			<DefaultFrameImagery Type="Normal" Templete="bt006_pink_nor">

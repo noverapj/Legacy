@@ -6,7 +6,7 @@
 		<Format X="13" Y="11" Size="17" Style="Outline_full_2x" HorzAlign="Left"/>
 		<Color Type="Normal" Text="FFFFFFFF" Back="FF0C426F"/>
 		<Color Type="NoneSelected" Text="FFFFFFFF" Back="FF0C426F"/>
-		<Text>육성창</Text>
+		<Text>STR(1)</Text>
 	</Title>
 	<Imagery>
 		<DefaultFrameImagery Type="Selected" Templete="win1_frame90">
@@ -30,37 +30,37 @@
     <Image Type="gauge_gray" Imageset="BaseImage034" Image="gauge_promote_gray" />
     <Image Type="gauge_green" Imageset="BaseImage034" Image="gauge_promote_green" />
 	</Imagery>
-  <ExtraInfo CharGrowth1 = "공격력"
-             CharGrowth2 = "방어력"
-             CharGrowth3 = "이동속도"
-             CharGrowth4 = "드랍피해감소"
-             ItemGrowth1 = "무기스킬"
-             ItemGrowth2 = "갑옷스킬"
-             ItemGrowth3 = "투구스킬"
-             ItemGrowth4 = "망토스킬"
+  <ExtraInfo CharGrowth1 = "STR(2)"
+             CharGrowth2 = "STR(3)"
+             CharGrowth3 = "STR(4)"
+             CharGrowth4 = "STR(5)"
+             ItemGrowth1 = "STR(6)"
+             ItemGrowth2 = "STR(7)"
+             ItemGrowth3 = "STR(8)"
+             ItemGrowth4 = "STR(9)"
              CharIcon1 = "UIIconPack8#up_attack"
              CharIcon2 = "UIIconPack8#up_defense"
              CharIcon3 = "UIIconPack8#up_speed"
              CharIcon4 = "UIIconPack8#up_drop"
-             CurGrowthText="육성현황"
-             GrowthText="육성하기"
-             ConfirmText="즉시 육성하시겠습니까?"
-             NoMoneyText="페소가 부족하여 육성을 할 수 없습니다."
-             BeforeRenderText1="영구고용"
-             BeforeRenderText2="체험"
-             BeforeRenderText3="PC방"
-             BeforeRenderText4="이벤트"
-             BeforeRenderText5="%d분"
-             BeforeRenderText6="%d시간"
-             BeforeRenderText7="%d시간 %d분"
-             BeforeRenderText8="전투체험"
-             BeforeRenderText9="%s진화(영구)"
-             BeforeRenderText10="프리데이"
-             PointPesoText1="육성비용"
-             PointPesoText2="남은 육성포인트"
-             PointPesoText3="소비 육성포인트"
-             PointPesoText4="내 페소"
-             PointPesoText5="소비 페소"/>
+             CurGrowthText="STR(10)"
+             GrowthText="STR(11)"
+             ConfirmText="STR(12)"
+             NoMoneyText="STR(13)"
+             BeforeRenderText1="STR(14)"
+             BeforeRenderText2="STR(15)"
+             BeforeRenderText3="STR(16)"
+             BeforeRenderText4="STR(17)"
+             BeforeRenderText5="STR(18)"
+             BeforeRenderText6="STR(19)"
+             BeforeRenderText7="STR(20)"
+             BeforeRenderText8="STR(21)"
+             BeforeRenderText9="STR(22)"
+             BeforeRenderText10="STR(23)"
+             PointPesoText1="STR(24)"
+             PointPesoText2="STR(25)"
+             PointPesoText3="STR(26)"
+             PointPesoText4="STR(27)"
+             PointPesoText5="STR(28)"/>
 
   <Window ClassName="ioButton" Id="1">
     <Size X="355" Y="11" Width="23" Height="23"/>
@@ -96,7 +96,7 @@
       <Color Type="Over" Text="FFFFFFFF" Back="FF117222"/>
       <Color Type="Push" Text="FFFFFFFF" Back="FF117222"/>
       <Color Type="Disable" Text="FFA7A7A7" Back="FF000000"/>
-      <Text>육성하기</Text>
+      <Text>STR(29)</Text>
     </Title>
     <Imagery>
       <DefaultFrameImagery Type="Normal" Templete="bt006_green_nor">
