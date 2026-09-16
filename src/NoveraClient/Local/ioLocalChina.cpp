@@ -25,7 +25,12 @@ const char * ioLocalChina::GetTextListFileName()
 
 const char * ioLocalChina::GetMemTextList()
 {
-	return ChinaLanguage::GetMemTextList(); 
+	return ChinaLanguage::GetMemTextList();
+}
+
+const char * ioLocalChina::GetFontFileName()
+{
+	return "chinese.ttf";
 }
 
 DWORD ioLocalChina::GetResourceIDTitleCashBmp()

@@ -1608,7 +1608,11 @@ bool ioApplication::Setup()
 
 	wsprintf( szPath, "%s/Font", m_szResourcePath );
 	m_pFontMgr->SetStartDir( szPath );
-	m_pFontMgr->SetFont( "lostsaga.ttf" );
+
+	ioLocalParent *pLocal = g_LocalMgr.GetLocal( ioLocalManager::GetLocalType() );
+	if( pLocal )
+		m_pFontMgr->SetFont( pLocal->GetFontFileName() );
+
 	ioINILoader_e kLoader( "config/sp2.ini" );
 	kLoader.SetTitle_e( "font" );
 	m_pFontMgr->SetFontSize( kLoader.LoadInt_e( "size", 24 ),  kLoader.LoadInt_e( "whitespacesize", 7 ) );

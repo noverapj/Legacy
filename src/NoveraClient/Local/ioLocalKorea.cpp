@@ -24,6 +24,11 @@ const char * ioLocalKorea::GetTextListFileName()
 	return "text.txt";
 }
 
+const char * ioLocalKorea::GetFontFileName()
+{
+	return "korea.ttf";
+}
+
 const char * ioLocalKorea::GetMemTextList()
 {
 	return "|EXE_WinMain_1|보안프로그램에서 에러가 발생하였습니다.|" //Except Extracting Hangeul

@@ -31,6 +31,11 @@ ioFTFaceImpl::~ioFTFaceImpl()
 	FreeFTFace();
 }
 
+void ioFTFaceImpl::SetCodePage( int iCodePage )
+{
+	m_iCodePage = iCodePage;
+}
+
 void ioFTFaceImpl::InitFTFace( const std::string &szName, FT_Face pFace )
 {
 	FreeFTFace();
@@ -78,24 +83,24 @@ void ioFTFaceImpl::UpdateGlyphGlobalInfo()
 	if( !m_FTFace )	return;
 
 	float fWidthRate  = (float)m_FTFace->size->metrics.x_ppem / (float)m_FTFace->units_per_EM;
-	float fHeightRate = (float)m_FTFace->size->metrics.y_ppem / (float)m_FTFace->units_per_EM;
 
 	if( FT_IS_SCALABLE( m_FTFace ) )
 	{
 		float fBoxWidth  = (float)( m_FTFace->bbox.xMax - m_FTFace->bbox.xMin );
-		float fBoxHeight = (float)( m_FTFace->bbox.yMax - m_FTFace->bbox.yMin );
-
 		m_iMaxGlyphWidth  = (int)( fBoxWidth * fWidthRate + 0.99999f );
-		m_iMaxGlyphHeight = (int)( fBoxHeight * fHeightRate  + 0.99999f );
 	}
 	else
 	{
 		m_iMaxGlyphWidth  = m_FTFace->size->metrics.max_advance >> 6;
-		m_iMaxGlyphHeight = m_FTFace->size->metrics.height >> 6;
 	}
 
-	int iMaxBearingY = max( m_FTFace->ascender, m_FTFace->bbox.yMax );
-	m_iMaxGlyphBearingY = (int)( (float)iMaxBearingY * fHeightRate + 0.99999f );
+	// Fixed vertical layout ratios of the original font (NanumGothic):
+	// baseline ascent 858/1000 em, line box height 1081/1000 em.
+	// Keeps UI text position identical regardless of each font's own metrics.
+	int iPixelSize = m_FTFace->size->metrics.y_ppem;
+
+	m_iMaxGlyphHeight   = (int)( 1.081f * (float)iPixelSize + 0.99999f );
+	m_iMaxGlyphBearingY = (int)( 0.858f * (float)iPixelSize + 0.99999f );
 }
 
 int ioFTFaceImpl::GetMaxGlyphWidth() const
@@ -295,20 +300,12 @@ const GlyphImg* ioFTFaceImpl::AddNewGlyphImg( WORD wCode )
 
 				uByte = pSrc[ j>>3 ] << (j%8);
 
-#if defined( SRC_OVERSEAS )
 				if( IsDBCSLeadByteEx( m_iCodePage, uByte ) )
-#else
-				if( IsDBCSLeadByte( uByte ) )
-#endif
 					bCode = 0xf0;
 
 				uByte = pSrc[ (j+1)>>3 ] << ( (j+1)%8 );
 
-#if defined( SRC_OVERSEAS )
 				if( IsDBCSLeadByteEx( m_iCodePage, uByte ) )
-#else
-				if( IsDBCSLeadByte( uByte ) )
-#endif
 					bCode |= 0x0f;
 
 				*pBuf++ = bCode;
@@ -317,11 +314,7 @@ const GlyphImg* ioFTFaceImpl::AddNewGlyphImg( WORD wCode )
 			if( iWidth & 1 )
 			{
 				uByte = pSrc[ j>>3 ] << (j%8);
-#if defined( SRC_OVERSEAS )
 				if( IsDBCSLeadByteEx( m_iCodePage, uByte ) )
-#else
-				if( IsDBCSLeadByte( uByte ) )
-#endif
 				{
 					*pBuf++ = 0xf0;
 				}
@@ -341,29 +334,9 @@ FT_GlyphSlot ioFTFaceImpl::FindGlyphSlot( WORD wCode )
 	if( m_FTFace )
 	{
 
-// 해외버전에서는 single byte check 와 double byte check를 분류하도록 한다.
-#if defined( SRC_OVERSEAS )
-
 		BYTE szBuf[3];
 		wchar_t wWideChar;
 
-#if defined( SINGLE_BYTE_CHECK )
-		// single byte
-		// 문자표를 확인하여 체크할 문자열 코드 범위를 세팅해준다.
-		if( wCode >= 0x00 && wCode <= 0xFF )
-		{
-			szBuf[0] = wCode;
-			szBuf[1] = 0;
-			MultiByteToWideChar( m_iCodePage, 0, (LPCSTR)szBuf, 1, &wWideChar, 1 );
-		}
-		else
-		{
-			szBuf[0] = wCode;
-			szBuf[1] = 0;
-			MultiByteToWideChar( CP_ACP, 0, (LPCSTR)szBuf, 1, &wWideChar, 1 );
-		}		
-#else
-		// double bytes
 		if( IsDBCSLeadByteEx( m_iCodePage, ( wCode >> 8 ) & 0xff ) )
 		{
 			szBuf[1] = wCode & 0xff;
@@ -378,28 +351,9 @@ FT_GlyphSlot ioFTFaceImpl::FindGlyphSlot( WORD wCode )
 			szBuf[2] = 0;
 			MultiByteToWideChar( m_iCodePage, 0, (LPCSTR)szBuf, 1, &wWideChar, 1 );
 		}
-#endif
-
-// 국내 버전에서는 기존 코드와 동일하게 가도록 한다.
-#else
-		char szBuf[3];
-		wchar_t wWideChar;
-		if( wCode > 0xff )
-		{
-			szBuf[0] = ( wCode & 0xff00 ) >> 8;
-			szBuf[1] = wCode & 0xff;
-			szBuf[2] = '\0';
-			MultiByteToWideChar( CP_ACP, 0, szBuf, 2, &wWideChar, 1 );
-		}
-		else
-		{
-			szBuf[0] = (BYTE)wCode;
-			szBuf[1] = '\0';
-			MultiByteToWideChar( CP_ACP, 0, szBuf, 1, &wWideChar, 1 );
-		}
 
 		wWideChar = ConvertToCharCode( wWideChar );
-#endif
+
 		FT_Error ftError = FT_Load_Char( m_FTFace, wWideChar, FT_LOAD_RENDER | FT_LOAD_TARGET_NORMAL );
 		if( ftError == 0 )
 		{

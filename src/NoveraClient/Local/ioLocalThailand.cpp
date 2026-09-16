@@ -26,6 +26,11 @@ const char * ioLocalThailand::GetTextListFileName()
 	return "text.txt";
 }
 
+const char * ioLocalThailand::GetFontFileName()
+{
+	return "thailand.ttf";
+}
+
 const char * ioLocalThailand::GetMemTextList()
 {
 	return ThailandLanguage::GetMemTextList(); 

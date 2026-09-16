@@ -35,6 +35,7 @@ public:
 	virtual void SetDeviceResolution( int iHorz, int iVert );
 
 	virtual void SetWhiteSpaceSize( int iSize );
+	virtual void SetCodePage( int iCodePage );
 
 public:
 	virtual const GlyphImg* GetGlyphImg( WORD wCode );

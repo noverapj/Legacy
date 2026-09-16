@@ -98,6 +98,8 @@ public:
 
 	virtual int GetCountryCodePage(){ return 949; }
 
+	virtual const char* GetFontFileName();
+
 public:
 	ioLocalParent(void);
 	virtual ~ioLocalParent(void);

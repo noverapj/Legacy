@@ -43,6 +43,7 @@ public:
 	virtual bool IsShowRegulation();
 	virtual bool IsHeadquarterWebPage() { return true; }
 	virtual bool IsPCRoomBonusSoldier() { return true; }
+	virtual const char* GetFontFileName();
 	virtual bool IsHangeulTextTick() { return true; }
 	virtual bool IsChannelingGetCash() { return true; }
 	virtual bool IsTwoByteSearch() { return true; }

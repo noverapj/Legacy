@@ -46,6 +46,11 @@ const char * ioLocalParent::GetErrorSolutionURL()
 	return "https://github.com/noverapj/Legacy/issues";
 }
 
+const char * ioLocalParent::GetFontFileName()
+{
+	return "lostsaga.ttf";
+}
+
 bool ioLocalParent::IsRightLicense()
 {
 	SYSTEMTIME st;

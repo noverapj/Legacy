@@ -181,10 +181,13 @@ bool ioFontManager::LoadFile( const ioHashString &name, ioFont *pFont )
 	{
 		m_MemFile.AllocateMemory( kStream.GetSize(), kStream.GetPtr() );
 
-		pFace = pFTMgr->OpenNewFaceFromMemory( name.c_str(),
-											   m_MemFile.GetPtr(),
-											   m_MemFile.GetMemFileSize(),
-											   0 );
+	pFace = pFTMgr->OpenNewFaceFromMemory( name.c_str(),
+										   m_MemFile.GetPtr(),
+										   m_MemFile.GetMemFileSize(),
+										   0 );
+
+	if( pFace )
+		pFace->SetCodePage( ioText::GetCodePage() );
 
 		AddMem( name.c_str(), kStream.GetSize() );
 	}

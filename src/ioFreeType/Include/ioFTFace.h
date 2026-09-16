@@ -9,9 +9,10 @@ class FREETYPE_API ioFTFace
 {
 public:
 	virtual void SetCharSize( int iSize ) = 0;
-	virtual void SetDeviceResolution( int iHorz, int iVert ) = 0;	
+	virtual void SetDeviceResolution( int iHorz, int iVert ) = 0;
 
 	virtual void SetWhiteSpaceSize( int iSize ) = 0;
+	virtual void SetCodePage( int iCodePage ) = 0;
 
 public:
 	virtual const GlyphImg* GetGlyphImg( WORD wCode ) = 0;

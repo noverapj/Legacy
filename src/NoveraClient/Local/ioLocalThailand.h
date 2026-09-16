@@ -47,6 +47,7 @@ public:
 	virtual bool IsShowRegulation();
 	virtual bool IsPCRoomBonusSoldier() { return true; }
 	virtual int GetCountryCodePage() { return 874; }
+	virtual const char* GetFontFileName();
 
 	virtual void ExitAction();
 	virtual void ShowHackShieldErrorDlg( const ioHashString &rsPrivateID );

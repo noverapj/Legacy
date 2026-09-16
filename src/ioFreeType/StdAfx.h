@@ -80,10 +80,10 @@
 #include "../LSLog/include/LSLog.h"
 
 #ifdef _DEBUG
-	#pragma comment(lib, "../LSLog/bin/LSLogd.lib" )
+	#pragma comment(lib, "../../lib/LSLogd.lib" )
 	#pragma comment(lib, "FreeType/Lib/freetype2312.lib")
 #else
-	#pragma comment(lib, "../LSLog/bin/LSLog.lib" )
+	#pragma comment(lib, "../../lib/LSLog.lib" )
 	#pragma comment(lib, "FreeType/Lib/freetype2312_D.lib")
 #endif
 

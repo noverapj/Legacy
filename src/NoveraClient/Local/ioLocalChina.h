@@ -42,6 +42,8 @@ public:
 	virtual bool IsMyHomePage();
 	virtual bool IsShowRegulation();
 
+	virtual const char* GetFontFileName();
+
 public:
 	ioLocalChina(void);
 	virtual ~ioLocalChina(void);

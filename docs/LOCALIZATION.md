@@ -78,6 +78,55 @@ pwsh scripts/ini-str-convert.ps1 -Mode Verify   # folder-by-folder progress
 UTF-8 lines or BOMs into pure CP949 (strict round-trip, character-count
 invariant enforced before any write).
 
+## Fonts
+
+Font selection is a per-locale virtual: `ioLocalParent::GetFontFileName()`
+(default `lostsaga.ttf`), called from `ioApplication.cpp` after font manager
+init. Font files live in `data/client/resource/font/` in this repo and are
+loaded from `resource/Font/` in the runtime client directory.
+
+| Locale | File | Font |
+|---|---|---|
+| Korea | `korea.ttf` | NanumGothic OTF (original client font) |
+| Thailand | `thailand.ttf` | Noto Sans Thai |
+| China | `chinese.ttf` | FZLanTingHeiS-DB1-GBK (remastered CN client font) |
+| All others (default) | `lostsaga.ttf` | Noto Sans CJK KR Bold (universal: Hangul, Han S+T, Kana, Latin, Cyrillic) |
+
+### Vertical layout normalization
+
+UI text position is computed from the font's baseline ascent and line box
+height (`ioFTFaceImpl::UpdateGlyphGlobalInfo`). Historically these came
+from each font's own metrics, which shifted the whole UI whenever a font
+with a different `max(hhea.ascender, head.yMax)` or bbox was loaded
+(e.g. Noto Sans CJK `head.yMax` = 1806/1000 em vs NanumGothic 858).
+The engine now uses fixed ratios — baseline ascent `0.858`, line box
+height `1.081` of the pixel size — matching NanumGothic exactly, so any
+font renders at identical positions. No per-font patching is required.
+
+`scripts/patch-font-metrics.py` aligns a font's own tables to the same
+ratios (head `-223/858`, hhea `800/-300`) for hygiene with external tools:
+
+```
+python scripts/patch-font-metrics.py --check <font.ttf>   # inspect metrics
+python scripts/patch-font-metrics.py <font.ttf>            # patch in place
+```
+
+Pitfall: fontTools `recalcBBoxes=True` (the default) recomputes
+`head.yMin/yMax` from the CFF FontBBox on save and silently reverts the
+patch; the script sets it to False. Also note the client pipeline only
+supports static OTF/TTF — variable fonts (`fvar`) are untested.
+
+### Adding a font
+
+1. Drop the file into `resource/Font/`
+2. Add/override `GetFontFileName()` in the locale class (declaration in
+   the header, definition in the cpp)
+3. Optionally verify metrics with `--check`; patch if you want clean tables
+4. Check the license — `OFL.txt` must ship alongside OFL fonts.
+   `chinese.ttf` (FZLanTingHei) is a commercial font inherited from the
+   original CN client — a future swap to Noto Sans SC would remove that
+   licensing concern
+
 ## Known gaps
 
 - 13 multi-line texts (literal `\n` plus color markup) remain hardcoded — the
