@@ -22,9 +22,9 @@ ioLocalManager::LocalType ioLocalUS::GetType()
 	return ioLocalManager::LCT_US;
 }
 
-const char * ioLocalUS::GetTextListFileName()
+const char * ioLocalUS::GetTextDirName()
 {
-	return "text_us.txt";
+	return "us";
 }
 
 const char *ioLocalUS::GetMemTextList()

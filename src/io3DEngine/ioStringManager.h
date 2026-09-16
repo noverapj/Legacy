@@ -79,15 +79,17 @@ protected:
 #endif
 
 protected:
-	bool				 m_bIsUseSecond;
-	StringInfoMap        m_StringInfoMap;
-	StringInfoMap        m_2ndStringInfoMap;
+	StringInfoMap        m_AppStringMap;
+	StringInfoMap        m_UiStringMap;
+	StringInfoMap        m_ConfigStringMap;
 
 protected:
+	StringInfoMap& GetTable( FileNamePrefix eFileNamePrefix );
+	StringInfoMap& GetTableByKey( const char *szKey );
 	int GetStringMgrTextNum( const char *szText );
 
 public:
-	void LoadData( const char *szPath, const char *szFileName, const char *szMemTextList, bool bLoadMemText = false );
+	void LoadData( const char *szPath, const char *szFileName, FileNamePrefix eTable, const char *szMemTextList = NULL, bool bLoadMemText = false );
 
 public:
 	char *GetString( const char *szFileName, const char *szSecondKeyName,  int iNum, FileNamePrefix eFileNamePrefix );

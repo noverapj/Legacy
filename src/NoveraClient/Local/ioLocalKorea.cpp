@@ -19,9 +19,9 @@ ioLocalManager::LocalType ioLocalKorea::GetType()
 	return ioLocalManager::LCT_KOREA;
 }
 
-const char * ioLocalKorea::GetTextListFileName()
+const char * ioLocalKorea::GetTextDirName()
 {
-	return "text.txt";
+	return "kr";
 }
 
 const char * ioLocalKorea::GetFontFileName()

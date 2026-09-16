@@ -1,15 +1,30 @@
 # Localization String Tables
 
 Client strings resolve through `ioStringManager` (`src/io3DEngine/ioStringManager.cpp`)
-at runtime. User-visible text can live in the text tables under
-`data/client/resource/text/`:
+at runtime. Tables are split per source and per locale under
+`data/client/resource/text/{locale}/`:
 
-- `text.txt` — Korean
-- `text_en.txt` — English
+| File | Prefix | Content |
+|---|---|---|
+| `app.txt` | `exe_` | Strings referenced from C++ code via the `STR(n)` macro |
+| `ui.txt` | `xml_` | Strings referenced from client XML UI files |
+| `config.txt` | `ini_` | Strings referenced from config ini files (items, quests, ...) |
+
+Locale directories: `kr`, `us`, `jp`, `th`, `cn`, `tw`, `id`, `ph` (from
+`ioLocalParent::GetTextDirName()`). There is **no fallback**: a missing file
+leaves that table empty and unresolved keys display raw in the UI, plus a
+`Load Failed` line in the client log — by design, so missing coverage is
+immediately visible. Currently only `kr` (all three files) and `us`
+(`app.txt`) are populated; the other locales need their own tables.
 
 Entry format: `|key|text|`, CP949 encoded. The loader lowercases keys and
 decodes literal `\r` / `\n` into newlines. The `|` character cannot appear
 inside a value.
+
+`scripts/split-text-table.ps1` performed the one-time migration from the
+legacy flat `text.txt` / `text_en.txt` files (byte-preserving; the legacy
+files used a `[vNNNN]` header and mixed LF/CRLF endings that the engine
+tolerates). Remove the flat files after verifying the split at runtime.
 
 ## Key formats
 
@@ -49,7 +64,8 @@ Rules:
 - Only values containing hangul are converted — everything else is byte-identical
 - Per-file numbering continues after the highest existing `STR(n)`, so legacy references are never reassigned
 - Strict CP949 round-trip per file; anything that fails to decode is skipped and reported
-- Appends `|XML_<FileBase>_<n>|<text>|` entries to `text.txt` — `text_en.txt` is never touched
+- Appends `|XML_<FileBase>_<n>|<text>|` entries to `kr/ui.txt` — other
+  locales are never touched
 
 ## Config converter tool
 
@@ -139,5 +155,5 @@ supports static OTF/TTF — variable fonts (`fvar`) are untested.
   `224MB_Jump_charge_Att_Air`, and `225MB_Dash_att03_defense` are
   referenced by weapon attributes but were never defined in any buff file
 - `xml/xml/` is excluded by the converter (stale duplicate of two windows)
-- English locale: `text_en.txt` has no `xml_` or `ini_` entries yet —
-  converted content shows raw keys there until entries are added
+- English locale: `us/` only has `app.txt` — `xml_` and `ini_` content
+  shows raw keys there until `us/ui.txt` and `us/config.txt` are filled

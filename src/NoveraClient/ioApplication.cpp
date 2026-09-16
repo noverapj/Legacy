@@ -974,9 +974,13 @@ bool ioApplication::SetupBeforeLogin()
 
 	char szPath[MAX_PATH];
 	ioLocalParent *pLocal = g_LocalMgr.GetLocal( ioLocalManager::GetLocalType() );
-	wsprintf( szPath, "%s/text", m_szResourcePath );
 	if( pLocal )
-		g_StringMgr.LoadData( szPath, pLocal->GetTextListFileName(), "" );
+	{
+		wsprintf( szPath, "%s/text/%s", m_szResourcePath, pLocal->GetTextDirName() );
+		g_StringMgr.LoadData( szPath, "app.txt", ioStringManager::FNP_EXE );
+		g_StringMgr.LoadData( szPath, "ui.txt", ioStringManager::FNP_XML );
+		g_StringMgr.LoadData( szPath, "config.txt", ioStringManager::FNP_INI );
+	}
 
 	m_pNetworkTable = new ioUserNetworkTable;
 	m_bNetworkPlay = true;

@@ -22,9 +22,9 @@ ioLocalManager::LocalType ioLocalIndonesia::GetType()
 	return ioLocalManager::LCT_INDONESIA;
 }
 
-const char * ioLocalIndonesia::GetTextListFileName()
+const char * ioLocalIndonesia::GetTextDirName()
 {
-	return "text_id.txt";
+	return "id";
 }
 
 const char * ioLocalIndonesia::GetMemTextList()

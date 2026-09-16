@@ -18,9 +18,9 @@ ioLocalManager::LocalType ioLocalChina::GetType()
 	return ioLocalManager::LCT_CHINA;
 }
 
-const char * ioLocalChina::GetTextListFileName()
+const char * ioLocalChina::GetTextDirName()
 {
-	return "text.txt";
+	return "cn";
 }
 
 const char * ioLocalChina::GetMemTextList()

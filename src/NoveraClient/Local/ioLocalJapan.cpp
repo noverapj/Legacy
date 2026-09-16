@@ -21,9 +21,9 @@ ioLocalManager::LocalType ioLocalJapan::GetType()
 	return ioLocalManager::LCT_JAPAN;
 }
 
-const char * ioLocalJapan::GetTextListFileName()
+const char * ioLocalJapan::GetTextDirName()
 {
-	return "text.txt";
+	return "jp";
 }
 
 const char * ioLocalJapan::GetMemTextList()

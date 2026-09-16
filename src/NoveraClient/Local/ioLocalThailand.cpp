@@ -21,9 +21,9 @@ ioLocalManager::LocalType ioLocalThailand::GetType()
 	return ioLocalManager::LCT_THAILAND;
 }
 
-const char * ioLocalThailand::GetTextListFileName()
+const char * ioLocalThailand::GetTextDirName()
 {
-	return "text.txt";
+	return "th";
 }
 
 const char * ioLocalThailand::GetFontFileName()

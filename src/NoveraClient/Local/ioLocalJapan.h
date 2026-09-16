@@ -6,7 +6,7 @@ class ioLocalJapan : public ioLocalParent
 {
 public:
 	virtual ioLocalManager::LocalType GetType();
-	virtual const char *GetTextListFileName();
+	virtual const char *GetTextDirName();
 	virtual const char *GetMemTextList();
 
 	virtual DWORD GetResourceIDTitleCashBmp();

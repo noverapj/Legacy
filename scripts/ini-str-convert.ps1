@@ -11,7 +11,7 @@ param(
 
 $RepoRoot = Split-Path -Parent $PSScriptRoot
 if (-not $ConfigDir) { $ConfigDir = Join-Path $RepoRoot 'data/client/config' }
-if (-not $TextTable) { $TextTable = Join-Path $RepoRoot 'data/client/resource/text/text.txt' }
+if (-not $TextTable) { $TextTable = Join-Path $RepoRoot 'data/client/resource/text/kr/config.txt' }
 
 $Enc = [System.Text.Encoding]::GetEncoding(949,
     [System.Text.EncoderFallback]::ExceptionFallback,

@@ -22,9 +22,9 @@ ioLocalManager::LocalType ioLocalPhilippine::GetType()
 	return ioLocalManager::LCT_PHILIPPINE;
 }
 
-const char * ioLocalPhilippine::GetTextListFileName()
+const char * ioLocalPhilippine::GetTextDirName()
 {
-	return "text_id.txt";
+	return "ph";
 }
 
 const char * ioLocalPhilippine::GetMemTextList()

@@ -22,9 +22,9 @@ ioLocalManager::LocalType ioLocalTaiwan::GetType()
 	return ioLocalManager::LCT_TAIWAN;
 }
 
-const char * ioLocalTaiwan::GetTextListFileName()
+const char * ioLocalTaiwan::GetTextDirName()
 {
-	return "text_tw.txt";
+	return "tw";
 }
 
 const char * ioLocalTaiwan::GetMemTextList()

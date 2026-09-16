@@ -11,7 +11,7 @@ protected:
 
 public:
 	virtual ioLocalManager::LocalType GetType() = 0;
-	virtual const char *GetTextListFileName() = 0;
+	virtual const char *GetTextDirName() = 0;
 	virtual const char *GetMemTextList() = 0;
 
 	virtual DWORD GetResourceIDTitleCashBmp()  = 0;

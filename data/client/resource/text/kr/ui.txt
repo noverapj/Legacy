@@ -1,0 +1,3637 @@
+|XML_gashaponpresentlistwnd_27|해외(1)|
+|XML_gashaponpresentlistwnd_28|해외(2)|
+|XML_gashaponpresentlistwnd_29|해외(3)|
+|XML_gashaponpresentlistwnd_30|해외(4)|
+|XML_gashaponpresentlistwnd_31|해외(5)|
+|XML_gashaponpresentlistwnd_32|해외(6)|
+|XML_gashaponpresentlistwnd_33|해외(7)|
+|XML_gashaponpresentlistwnd_34|해외(8)|
+|XML_gashaponpresentlistwnd_35|해외(9)|
+|XML_gashaponpresentlistwnd_36|해외(10)|
+|XML_gashaponpresentlistwnd_37|해외(11)|
+|XML_gashaponpresentlistwnd_38|해외(12)|
+|XML_gashaponpresentlistwnd_39|해외(13)|
+|XML_gashaponpresentlistwnd_40|해외(14)|
+|XML_gashaponpresentlistwnd_41|해외(15)|
+|XML_gashaponpresentlistwnd_42|해외(16)|
+|XML_gashaponpresentlistwnd_43|해외(17)|
+|XML_gashaponpresentlistwnd_44|해외(18)|
+|XML_gashaponpresentlistwnd_45|해외(19)|
+|XML_gashaponpresentlistwnd_46|해외(20)|
+|XML_gashaponpresentlistwnd_47|해외(21)|
+|XML_gashaponpresentlistwnd_48|해외(22)|
+|XML_gashaponpresentlistwnd_49|해외(23)|
+|XML_gashaponpresentlistwnd_50|해외(24)|
+|XML_gashaponpresentlistwnd_51|해외(25)|
+|XML_lobbymainwnd_1|보너스캐시 |
+|XML_lobbymainwnd_2|기간만료 |
+|XML_lobbymainwnd_3|임박 |
+|XML_lobbywnd_1|훈련소|
+|XML_lobbywnd_2|개인본부|
+|XML_lobbywnd_3|길드본부|
+|XML_myinventorywnd_1|내아이템|
+|XML_myinventorywnd_2|전체|
+|XML_myinventorywnd_3|프리미엄|
+|XML_myinventorywnd_4|근거리|
+|XML_myinventorywnd_5|원거리|
+|XML_myinventorywnd_6|마법|
+|XML_myinventorywnd_7|특수|
+|XML_myinventorywnd_8|★패키지|
+|XML_myinventorywnd_9|전체|
+|XML_myinventorywnd_10|무기|
+|XML_myinventorywnd_11|갑옷|
+|XML_myinventorywnd_12|투구|
+|XML_myinventorywnd_13|망토|
+|XML_myinventorywnd_14|메달|
+|XML_myinventorywnd_15|★기능|
+|XML_myinventorywnd_16|전체|
+|XML_myinventorywnd_17|성별|
+|XML_myinventorywnd_18|머리|
+|XML_myinventorywnd_19|머리색|
+|XML_myinventorywnd_20|얼굴|
+|XML_myinventorywnd_21|피부색|
+|XML_myinventorywnd_22|기본옷|
+|XML_myinventorywnd_23|★패키지|
+|XML_myinventorywnd_24|전체|
+|XML_myinventorywnd_25|유니크|
+|XML_myinventorywnd_26|레어|
+|XML_myinventorywnd_27|일반|
+|XML_myinventorywnd_28|전체|
+|XML_myinventorywnd_29|기능|
+|XML_myinventorywnd_30|프리미엄|
+|XML_myinventorywnd_31|놀이|
+|XML_myinventorywnd_32|낚시|
+|XML_myinventorywnd_33|선물함|
+|XML_myinventorywnd_34|임시보관함|
+|XML_myinventorywnd_35|전체|
+|XML_myinventorywnd_36|갑옷|
+|XML_myinventorywnd_37|투구|
+|XML_myinventorywnd_38|망토|
+|XML_myinventorywnd_39|★기능|
+|XML_myinventorywnd_40|전체|
+|XML_myinventorywnd_41|반지|
+|XML_myinventorywnd_42|목걸이|
+|XML_myinventorywnd_43|팔찌|
+|XML_myinventorywnd_44|용병|
+|XML_myinventorywnd_45|장비|
+|XML_myinventorywnd_46|치장|
+|XML_myinventorywnd_47|정기|
+|XML_myinventorywnd_48|특별|
+|XML_myinventorywnd_49|보관함|
+|XML_myinventorywnd_50|코스튬|
+|XML_myinventorywnd_51|액세서리|
+|XML_myinventorywnd_52|기간만료된 악세사리는 장착할 수 없습니다.|
+|XML_myinventorywnd_53|기간만료로 삭제하시겠습니까?|
+|XML_myinventorywnd_54|골드충전|
+|XML_myinventorywnd_55|용병|
+|XML_myinventorywnd_56|장착|
+|XML_myinventorywnd_57|해제|
+|XML_myinventorywnd_58|팔기|
+|XML_myinventorywnd_59|바로받기|
+|XML_myinventorywnd_60|분해|
+|XML_myinventorywnd_61|추가 기능|
+|XML_myinventorywnd_62|사용설정|
+|XML_myinventorywnd_63|팔기|
+|XML_myinventorywnd_64|개인본부 꾸미기 아이템|
+|XML_myinventorywnd_65|육성하기|
+|XML_myinventorywnd_66|코스튬#|
+|XML_myinventorywnd_67|장비|
+|XML_myinventorywnd_68|의|
+|XML_myinventorywnd_69|외형|
+|XML_myinventorywnd_70|변경시켜주는 #|
+|XML_myinventorywnd_71|특별한 외형장비아이템#|
+|XML_myinventorywnd_72|단, 스킬은 바뀌지 않음.#|
+|XML_myinventorywnd_73|옵션->게임탭#|
+|XML_myinventorywnd_74|에서 다른유저의 코스튬#|
+|XML_myinventorywnd_75|ON/OFF 설정 변경 가능.#|
+|XML_myinventorywnd_76|<주의 사항>#|
+|XML_myinventorywnd_77|※ 본부,광장,몬스터던전#|
+|XML_myinventorywnd_78|    에서는 모든유저의 #|
+|XML_myinventorywnd_79|    코스튬 착용 모습 적용|
+|XML_myinventorywnd_80|보너스캐시 |
+|XML_myinventorywnd_81|기간만료 |
+|XML_myinventorywnd_82|임박 |
+|XML_newshopwnd_1|상점|
+|XML_newshopwnd_2|전체|
+|XML_newshopwnd_3|용병|
+|XML_newshopwnd_4|장비|
+|XML_newshopwnd_5|코스튬|
+|XML_newshopwnd_6|치장|
+|XML_newshopwnd_7|특별|
+|XML_newshopwnd_8|전체|
+|XML_newshopwnd_9|프리미엄|
+|XML_newshopwnd_10|근거리|
+|XML_newshopwnd_11|원거리|
+|XML_newshopwnd_12|마법|
+|XML_newshopwnd_13|특수|
+|XML_newshopwnd_14|★패키지|
+|XML_newshopwnd_15|전체|
+|XML_newshopwnd_16|보급|
+|XML_newshopwnd_17|무기|
+|XML_newshopwnd_18|갑옷|
+|XML_newshopwnd_19|투구|
+|XML_newshopwnd_20|망토|
+|XML_newshopwnd_21|★기능|
+|XML_newshopwnd_22|전체|
+|XML_newshopwnd_23|성별|
+|XML_newshopwnd_24|머리|
+|XML_newshopwnd_25|머리색|
+|XML_newshopwnd_26|얼굴|
+|XML_newshopwnd_27|피부색|
+|XML_newshopwnd_28|기본옷|
+|XML_newshopwnd_29|모션|
+|XML_newshopwnd_30|★패키지|
+|XML_newshopwnd_31|전체|
+|XML_newshopwnd_32|기능|
+|XML_newshopwnd_33|프리미엄|
+|XML_newshopwnd_34|놀이|
+|XML_newshopwnd_35|길드본부|
+|XML_newshopwnd_36|개인본부|
+|XML_newshopwnd_37|낚시|
+|XML_newshopwnd_38|클로버샵|
+|XML_newshopwnd_39|이벤트샵|
+|XML_newshopwnd_40|M-코인샵|
+|XML_newshopwnd_41|전체|
+|XML_newshopwnd_42|보급|
+|XML_newshopwnd_43|갑옷|
+|XML_newshopwnd_44|투구|
+|XML_newshopwnd_45|망토|
+|XML_newshopwnd_46|★기능|
+|XML_newshopwnd_47|전체|
+|XML_newshopwnd_48|확률확인은 로비에서만 가능합니다.|
+|XML_newshopwnd_49|확률확인은 광장/훈련소/본부에서만 가능합니다.|
+|XML_newshopwnd_50|골드충전|
+|XML_newshopwnd_51|확률안내|
+|XML_newshopwnd_52|금주의 상품|
+|XML_newshopwnd_53|비밀상점|
+|XML_newshopwnd_54|용병|
+|XML_newshopwnd_55|장비|
+|XML_newshopwnd_56|코스튬|
+|XML_newshopwnd_57|치장|
+|XML_newshopwnd_58|특별|
+|XML_newshopwnd_59|이벤트|
+|XML_newshopwnd_60|보너스캐시 |
+|XML_newshopwnd_61|기간만료 |
+|XML_newshopwnd_62|임박 |
+|XML_plazamainwnd_1|광장정보|
+|XML_plazamainwnd_2|초대|
+|XML_plazamainwnd_3|방정보 변경|
+|XML_trainingfuncwnd_1|전투|
+|XML_trainingfuncwnd_2|내가 등록한 장비|
+|XML_tutorialwnd_1|튜토리얼|
+|XML_tutorialwnd_2|다음 (SPACE)|
+|XML_tutorialwnd_3|완료 (SPACE)|
+|XML_abuseproblemwnd_1|미활동 용병단 검사|
+|XML_abuseproblemwnd_2|확인 (ENTER)|
+|XML_AccessoryCompoundResultWnd_1|합성중입니다. 잠시만 기다려주세요.|
+|XML_AccessoryCompoundResultWnd_2|합성을 완료하였습니다.|
+|XML_AccessoryCompoundResultWnd_3|합성중...|
+|XML_AccessoryCompoundResultWnd_4|아이템 보기|
+|XML_accessorycompoundwnd_1|합성할 악세사리를 선택하지 않았습니다.|
+|XML_accessorycompoundwnd_2|재료 악세사리를 모두 선택하지 않았습니다.|
+|XML_accessorycompoundwnd_3|장비 강화|
+|XML_accessorycompoundwnd_4|강화 악세사리를 선택하세요|
+|XML_accessorycompoundwnd_5|재료 악세사리를 선택하세요|
+|XML_accessorycompoundwnd_6|재료 악세사리를 선택하세요|
+|XML_accessorycompoundwnd_7|재료 악세사리를 선택하세요|
+|XML_AccessoryFuncWnd_1|강화할 액세서리를 선택하세요.|
+|XML_AccessoryFuncWnd_2|이미 최대로 강화되어 있습니다.|
+|XML_AccessoryFuncWnd_3|재료 악세서리를 선택하세요.|
+|XML_AccessoryFuncWnd_4|액세서리 강화가 가능합니다.|
+|XML_AccessoryFuncWnd_5|악세사리를 강화중입니다.|
+|XML_AccessoryFuncWnd_6|선택하신 액세서리는 최대 수치로서 강화할 수 없습니다.|
+|XML_AccessoryFuncWnd_7|강화할|
+|XML_AccessoryFuncWnd_8|악세서리 아이템|
+|XML_AccessoryFuncWnd_9|강화재료|
+|XML_AccessoryFuncWnd_10|악세서리 아이템|
+|XML_AccessoryFuncWnd_11|좌측에서 아이템을 선택해주세요.|
+|XML_AccessoryFuncWnd_12|강화에 성공하였습니다.|
+|XML_AccessoryFuncWnd_13|강화를 완료하였습니다.|
+|XML_AccessoryFuncWnd_14|강화 수치를 확인 하세요!!|
+|XML_AccessoryFuncWnd_15|기간만료된 악세사리는 강화하거나 재료로 사용할 수 없습니다.|
+|XML_AccessoryFuncWnd_16|장착|
+|XML_AccessoryFuncWnd_17|강화|
+|XML_AccessoryFuncWnd_18|내 용병 선택|
+|XML_AccessoryFuncWnd_19|강화하기|
+|XML_AccessoryFuncWnd_20|추가사용|
+|XML_AccessoryFuncWnd_21|아이템 보기|
+|XML_AccessoryFuncWnd_22|강화중...|
+|XML_AccessoryFuncWnd_23|반지|
+|XML_AccessoryFuncWnd_24|목걸이|
+|XML_AccessoryFuncWnd_25|팔찌|
+|XML_accessoryrechargeprocesswnd_1|액세서리 연장|
+|XML_accessoryrechargeprocesswnd_2|액세서리 연장|
+|XML_accessoryrechargeprocesswnd_3|취소|
+|XML_accessoryrechargeprocesswnd_4|액세서리 기간 연장 중..|
+|XML_accessoryrechargeprocesswnd_5|추가 사용|
+|XML_accessoryrechargeprocesswnd_6|아이템보기|
+|XML_accessoryrechargeprocesswnd_7|아이템보기|
+|XML_accessoryrechargewnd_1|액세서리 선택하기|
+|XML_accessoryrechargewnd_2|전체|
+|XML_accessoryrechargewnd_3|반지|
+|XML_accessoryrechargewnd_4|목걸이|
+|XML_accessoryrechargewnd_5|팔찌|
+|XML_accessoryreleasewnd_1|액세서리 해제|
+|XML_accessoryreleasewnd_2|모두 확인|
+|XML_accessoryreleasewnd_3|닫기|
+|XML_accessoryselectwnd_1|선택하기|
+|XML_accessoryselectwnd_2|검색하기 (ENTER)|
+|XML_accessoryselectwnd_3|전체|
+|XML_accessoryselectwnd_4|반지|
+|XML_accessoryselectwnd_5|목걸이|
+|XML_accessoryselectwnd_6|팔찌|
+|XML_accessoryselectwnd_7|선택|
+|XML_accessoryselectwnd_8|선택|
+|XML_accessoryselectwnd_9|선택|
+|XML_accessoryselectwnd_10|선택|
+|XML_accessoryselectwnd_11|선택|
+|XML_accessoryselectwnd_12|선택|
+|XML_accessoryselectwnd_13|선택|
+|XML_accessoryselectwnd_14|선택|
+|XML_AlchemicChangeAlarmWnd_1|조각전환알림|
+|XML_AlchemicChangeAlarmWnd_2|페소전환금액 : %s페소|
+|XML_AlchemicChangeAlarmWnd_3|(보유조각 총갯수 : %s개)|
+|XML_AlchemicChangeAlarmWnd_4|선물함으로이동(SPACE)|
+|XML_AlchemicChangeAlarmWnd_5|닫기(ESC)|
+|XML_attendancewnd_1|출석체크 하기(SPACE)|
+|XML_attendancewnd_2|종료하기 (SPACE)|
+|XML_awakereleasewnd_1|각성 해제|
+|XML_awakereleasewnd_2|모두 확인|
+|XML_awakereleasewnd_3|닫기|
+|XML_backgroundchangewnd_1|변경할 화면을 선택하세요|
+|XML_backgroundfilelistwnd_1|배경화면 설정|
+|XML_backgroundfilelistwnd_2|상위 폴더|
+|XML_backgroundfilelistwnd_3|파일 해제|
+|XML_bankruptcycharwnd_1|무료지원 용병고용|
+|XML_bankruptcycharwnd_2|고용|
+|XML_battlechatwnd_1|로비|
+|XML_battleinfownd_1|내정보|
+|XML_battlelockproblemwnd_1|매크로 신고 문제 풀이|
+|XML_battlelockproblemwnd_2|확인 (ENTER)|
+|XML_battlemoderoomwnd_1|팀정보 변경|
+|XML_battlemoderoomwnd_2|비슷한 수준만 검색|
+|XML_battlemoderoomwnd_3|같은 인원만 검색|
+|XML_battlemoderoomwnd_4|상대방 채팅 안보기|
+|XML_battlemoderoomwnd_5|네트워크 불량시 강제퇴장|
+|XML_battlemoderoomwnd_6|팀랭킹|
+|XML_battlemoderoomwnd_7|초대|
+|XML_battlemoderoomwnd_8|검색시작|
+|XML_battlemoderoomwnd_9|검색취소|
+|XML_battlemoderoomwnd_10|나가기|
+|XML_battlequickstartoption_1|빠른참가＆방정렬 설정|
+|XML_battlequickstartoption_2|빠른 참가(SPACE)|
+|XML_battlequickstartoption_3|설정 완료|
+|XML_battlequickstartoption_4|양팀 같은 인원|
+|XML_battlequickstartoption_5|최소 1명|
+|XML_battlequickstartoption_6|최소 16명|
+|XML_battlequickstartoption_7|모드별 공략보기|
+|XML_battlequickstartoption_8|랜덤게임|
+|XML_battlequickstartoption_9|포로탈출|
+|XML_battlequickstartoption_10|팀데스매치|
+|XML_battlequickstartoption_11|AI팀데스매치|
+|XML_battlequickstartoption_12|쉬움|
+|XML_battlequickstartoption_13|보통|
+|XML_battlequickstartoption_14|드워프모드|
+|XML_battlequickstartoption_15|데스매치|
+|XML_battlequickstartoption_16|챔피언모드|
+|XML_battlequickstartoption_17|파워스톤|
+|XML_battlequickstartoption_18|보스레이드|
+|XML_battlequickstartoption_19|강시서바이벌|
+|XML_battlequickstartoption_20|깊은 숲|
+|XML_battlequickstartoption_21|쉬움|
+|XML_battlequickstartoption_22|마스터|
+|XML_battlequickstartoption_23|스노우타운|
+|XML_battlequickstartoption_24|쉬움|
+|XML_battlequickstartoption_25|마스터|
+|XML_battlequickstartoption_26|불의 신전|
+|XML_battlequickstartoption_27|쉬움|
+|XML_battlequickstartoption_28|마스터|
+|XML_battlequickstartoption_29|비밀공장|
+|XML_battlequickstartoption_30|쉬움|
+|XML_battlequickstartoption_31|마스터|
+|XML_battlequickstartoption_32|레이드|
+|XML_battlequickstartoption_33|팬티몬|
+|XML_battlequickstartoption_34|클래식|
+|XML_battlequickstartoption_35|해골영웅|
+|XML_battlequickstartoption_36|1층|
+|XML_battlequickstartoption_37|21층|
+|XML_battlequickstartoption_38|41층|
+|XML_battlequickstartoption_39|더블크라운|
+|XML_battlequickstartoption_40|축구경기|
+|XML_battlequickstartoption_41|깃발모드|
+|XML_battlequickstartoption_42|아레나모드|
+|XML_battlequickstartoption_43|배틀모드|
+|XML_battlequickstartoption_44|파밍모드|
+|XML_battleroomexitmsgbox_1|나가기 (SPACE)|
+|XML_battleroomexitmsgbox_2|나가기 (SPACE)|
+|XML_battleroomexitmsgbox_3|도전 포기 (SPACE)|
+|XML_battleroomexitmsgbox_4|도전 포기 (SPACE)|
+|XML_battleroomexitmsgbox_5|다른방보기|
+|XML_battleroomexitmsgbox_6|빠른참가|
+|XML_battleroomexitpopup_1|나가기 예약 (SPACE)|
+|XML_battleroomexitpopup_2|예약 취소 (SPACE)|
+|XML_battleroomexitpopup_3|도전 포기 (SPACE)|
+|XML_battleroomexitpopup_4|포기 취소 (SPACE)|
+|XML_battleroomexitpopup_5|즉시나가기(벌금)|
+|XML_battleroomexitroomlistwnd_1|새로 고침|
+|XML_billingwantwnd_1|골드부족|
+|XML_billingwantwnd_2|충전(SPACE)|
+|XML_billingwantwnd_3|취소|
+|XML_billingwantwnd_4|충전(SPACE)|
+|XML_billingwantwnd_5|취소|
+|XML_bingomsgbox_1|사용확인|
+|XML_bingomsgbox_2|사용 (SPACE)|
+|XML_bingomsgbox_3|취소 (ESC)|
+|XML_bingomsgbox_4|취소|
+|XML_bingomsgbox_5|초기화 (SPACE)|
+|XML_bingomsgbox_6|초기화|
+|XML_bingomsgbox_7|닫기 (ESC)|
+|XML_bingorewardwnd_1|보상 목록|
+|XML_bingorightwnd_1|게임 시작하기|
+|XML_bingorightwnd_2|빙고 숫자뽑기|
+|XML_bingorightwnd_3|숫자 섞기|
+|XML_bingorightwnd_4|보상 바꾸기|
+|XML_bingorightwnd_5|당첨 숫자 뽑기|
+|XML_bingorightwnd_6|초기화|
+|XML_bingorightwnd_7|보상목록|
+|XML_bingorightwnd_8|새로 시작하기|
+|XML_bingorightwnd_9|창닫기|
+|XML_bingownd_1|빙고|
+|XML_changebingownd_1|고정된빙고|
+|XML_blacklistinsertwnd_1|차단추가|
+|XML_blacklistinsertwnd_2|차단|
+|XML_blacklistinsertwnd_3|취소|
+|XML_bonuscashwnd_1|보너스 골드|
+|XML_bonuscashwnd_2|사용가능 골드|
+|XML_bonuscashwnd_3|사용불가 골드|
+|XML_campenteralarmwnd_1|가입|
+|XML_campenteralarmwnd_2|가입 결정|
+|XML_campenteralarmwnd_3|취소|
+|XML_campentermodalwnd_1|새로운 진영전|
+|XML_campentermodalwnd_2|나중에 가입|
+|XML_campenterresultwnd_1|진영 가입완료|
+|XML_campenterresultwnd_2|닫기|
+|XML_campenterresultwnd_3|진영이란?|
+|XML_campenterwnd_1|정부군가입|
+|XML_campenterwnd_2|반란군가입|
+|XML_campenterwnd_3|[대회 운영 규칙]|
+|XML_campinfownd_1|진영 정보|
+|XML_campinfownd_2|내진영|
+|XML_campinfownd_3|내길드|
+|XML_campinfownd_4|대회포인트|
+|XML_campinfownd_5|진영랭킹|
+|XML_campinfownd_6|예상보상|
+|XML_campjoinneedpopup_1|진영 가입 필요|
+|XML_campjoinneedpopup_2|진영 가입하러 가기|
+|XML_campjoinneedpopup_3|취소|
+|XML_campmainwnd_1|진영 정보|
+|XML_campmainwnd_2|진영전 참여|
+|XML_campmainwnd_3|래더전 참여|
+|XML_campseasonbonus_1|진영전 결과|
+|XML_campseasonbonus_2|닫기|
+|XML_changenameresultwnd_1|아이템 보기|
+|XML_changenamewnd_1|변경하기|
+|XML_changetradestateconfirmwnd_1|봉인하기|
+|XML_changetradestateconfirmwnd_2|봉인하기|
+|XML_changetradestateconfirmwnd_3|취소|
+|XML_changetradestateresultwnd_1|추가사용|
+|XML_changetradestateresultwnd_2|아이템 보기|
+|XML_changetradestatewnd_1|봉인|
+|XML_changetradestatewnd_2|전체|
+|XML_changetradestatewnd_3|무기|
+|XML_changetradestatewnd_4|갑옷|
+|XML_changetradestatewnd_5|투구|
+|XML_changetradestatewnd_6|망토|
+|XML_changetradestatewnd_7|거래봉인|
+|XML_changetradestatewnd_8|거래봉인|
+|XML_changetradestatewnd_9|거래봉인|
+|XML_changetradestatewnd_10|거래봉인|
+|XML_changetradestatewnd_11|거래봉인|
+|XML_changetradestatewnd_12|거래봉인|
+|XML_changetradestatewnd_13|거래봉인|
+|XML_changetradestatewnd_14|거래봉인|
+|XML_channelchatwnd_1|입력|
+|XML_channelchatwnd_2|초대하기|
+|XML_channelchatwnd_3|나가기|
+|XML_channelinvitewnd_1|초대하기|
+|XML_channelinvitewnd_2|초대|
+|XML_channelinvitewnd_3|취소|
+|XML_charrentalacquirewnd_1|전투체험용병 도착|
+|XML_charrentalacquirewnd_2|닫기 (ESC)|
+|XML_charrentalrequestwnd_1|전투체험신청 도착|
+|XML_charrentalrequestwnd_2|전투체험|
+|XML_charrentalrequestwnd_3|거절|
+|XML_charrentalreturnwnd_1|전투체험용병 복귀|
+|XML_charrentalreturnwnd_2|닫기 (ESC)|
+|XML_chatmodewnd_1|대화상태|
+|XML_chatmodewnd_2|대화상태 해제 (SPACE)|
+|XML_chatmodewnd_3|취소 (ESC)|
+|XML_chatoptionwnd_1|채팅 옵션|
+|XML_chatoptionwnd_2|결정|
+|XML_chatoptionwnd_3|취소|
+|XML_chatoptionwnd_4|초기화|
+|XML_chatoptionwnd_5|사용안함|
+|XML_chatoptionwnd_6|그라데이션 40％|
+|XML_chatoptionwnd_7|그라데이션 80％|
+|XML_chatoptionwnd_8|사각형 40％|
+|XML_chatoptionwnd_9|사각형 80％|
+|XML_chatoptionwnd_10|채팅 보기|
+|XML_chatoptionwnd_11|외침 보기|
+|XML_chatoptionwnd_12|시스템 알림 보기|
+|XML_clauseviewwnd_1|청약철회 규정|
+|XML_clauseviewwnd_2|닫기 (ESC)|
+|XML_costumecustomchangeconfirmwnd_1|변경확인|
+|XML_costumecustomchangeconfirmwnd_2|변경하기|
+|XML_costumecustomchangeconfirmwnd_3|취소|
+|XML_costumecustomdeletewnd_1|코스튬 스킨 삭제|
+|XML_costumecustomdeletewnd_2|남성 삭제|
+|XML_costumecustomdeletewnd_3|여성 삭제|
+|XML_costumecustommakecompletewnd_1|변경완료|
+|XML_costumecustommakecompletewnd_2|아이템보기|
+|XML_costumecustommakecompletewnd_3|창닫기|
+|XML_costumecustommakeconfirmwnd_1|변경확인|
+|XML_costumecustommakeconfirmwnd_2|변경하기|
+|XML_costumecustommakeconfirmwnd_3|취소|
+|XML_costumecustommakewnd_1|스킨 변경|
+|XML_costumecustommakewnd_2|스킨 변경할 코스튬 선택|
+|XML_costumecustommakewnd_3|파일 올리기 (0/0)|
+|XML_costumecustommakewnd_4|원본 파일 다운로드|
+|XML_costumecustommakewnd_5|3D뷰 자세히보기|
+|XML_costumecustommakewnd_6|변경하기|
+|XML_costumecustommakewnd_7|스킨변경 방법 공략보기|
+|XML_costumecustomselectwnd_1|코스튬 선택하기|
+|XML_costumecustomselectwnd_2|전체|
+|XML_costumecustomselectwnd_3|무기|
+|XML_costumecustomselectwnd_4|갑옷|
+|XML_costumecustomselectwnd_5|투구|
+|XML_costumecustomselectwnd_6|망토|
+|XML_costumecustomselectwnd_7|남성|
+|XML_costumecustomselectwnd_8|남성|
+|XML_costumecustomselectwnd_9|여성|
+|XML_costumecustomselectwnd_10|남성|
+|XML_costumecustomselectwnd_11|남성|
+|XML_costumecustomselectwnd_12|여성|
+|XML_costumecustomselectwnd_13|남성|
+|XML_costumecustomselectwnd_14|남성|
+|XML_costumecustomselectwnd_15|여성|
+|XML_costumecustomselectwnd_16|남성|
+|XML_costumecustomselectwnd_17|남성|
+|XML_costumecustomselectwnd_18|여성|
+|XML_costumecustomselectwnd_19|남성|
+|XML_costumecustomselectwnd_20|남성|
+|XML_costumecustomselectwnd_21|여성|
+|XML_costumecustomselectwnd_22|남성|
+|XML_costumecustomselectwnd_23|남성|
+|XML_costumecustomselectwnd_24|여성|
+|XML_costumecustomselectwnd_25|남성|
+|XML_costumecustomselectwnd_26|남성|
+|XML_costumecustomselectwnd_27|여성|
+|XML_costumecustomselectwnd_28|남성|
+|XML_costumecustomselectwnd_29|남성|
+|XML_costumecustomselectwnd_30|여성|
+|XML_costumelistwnd_1|획득가능 코스튬목록|
+|XML_costumelistwnd_2|전체|
+|XML_costumelistwnd_3|무기|
+|XML_costumelistwnd_4|갑옷|
+|XML_costumelistwnd_5|투구|
+|XML_costumelistwnd_6|망토|
+|XML_costumerandombox_1|확인중...|
+|XML_costumerandombox_2|아이템 보기|
+|XML_costumereleasewnd_1|코스튬 해제|
+|XML_costumereleasewnd_2|모두 확인|
+|XML_costumereleasewnd_3|닫기|
+|XML_customtournamentalarmrewardwnd_1|대회 포상|
+|XML_customtournamentalarmrewardwnd_2|닫기|
+|XML_customtournamentallocateresultwnd_1|대진배정 완료|
+|XML_customtournamentallocateresultwnd_2|닫기|
+|XML_customtournamentallocatewnd_1|대진 배정|
+|XML_customtournamentallocatewnd_2|배정 완료|
+|XML_customtournamentallocatewnd_3|취소|
+|XML_customtournamentallocatewnd_4|미지정 대회팀|
+|XML_customtournamentallocatewnd_5|미지정 대회팀|
+|XML_customtournamentallocatewnd_6|미지정 대회팀|
+|XML_customtournamentallocatewnd_7|미지정 대회팀|
+|XML_customtournamentallocatewnd_8|미지정 대회팀|
+|XML_customtournamentallocatewnd_9|미지정 대회팀|
+|XML_customtournamentallocatewnd_10|미지정 대회팀|
+|XML_customtournamentallocatewnd_11|미지정 대회팀|
+|XML_customtournamentallocatewnd_12|미지정 대회팀|
+|XML_customtournamentallocatewnd_13|미지정 대회팀|
+|XML_customtournamentallocatewnd_14|미지정 대회팀|
+|XML_customtournamentallocatewnd_15|미지정 대회팀|
+|XML_customtournamentallocatewnd_16|미지정 대회팀|
+|XML_customtournamentallocatewnd_17|미지정 대회팀|
+|XML_customtournamentallocatewnd_18|미지정 대회팀|
+|XML_customtournamentallocatewnd_19|미지정 대회팀|
+|XML_customtournamentallocatewnd_20|지정 대회팀|
+|XML_customtournamentallocatewnd_21|지정 대회팀|
+|XML_customtournamentallocatewnd_22|지정 대회팀|
+|XML_customtournamentallocatewnd_23|지정 대회팀|
+|XML_customtournamentallocatewnd_24|지정 대회팀|
+|XML_customtournamentallocatewnd_25|지정 대회팀|
+|XML_customtournamentallocatewnd_26|지정 대회팀|
+|XML_customtournamentallocatewnd_27|지정 대회팀|
+|XML_customtournamentallocatewnd_28|지정 대회팀|
+|XML_customtournamentallocatewnd_29|지정 대회팀|
+|XML_customtournamentallocatewnd_30|지정 대회팀|
+|XML_customtournamentallocatewnd_31|지정 대회팀|
+|XML_customtournamentallocatewnd_32|지정 대회팀|
+|XML_customtournamentallocatewnd_33|지정 대회팀|
+|XML_customtournamentallocatewnd_34|지정 대회팀|
+|XML_customtournamentallocatewnd_35|지정 대회팀|
+|XML_customtournamentcalendarwnd_1|날짜와 시간을 선택하세요|
+|XML_customtournamentcalendarwnd_2|확인|
+|XML_customtournamentcalendarwnd_3|취소|
+|XML_customtournamentcalendarwnd_4|시|
+|XML_customtournamentcalendarwnd_5|분|
+|XML_customtournamentcreateresultwnd_1|대회만들기 완료|
+|XML_customtournamentcreateresultwnd_2|닫기|
+|XML_customtournamentcreateresultwnd_3|대회정보 바로가기|
+|XML_customtournamentcreatewnd_1|대회 만들기|
+|XML_customtournamentcreatewnd_2|대회란?|
+|XML_customtournamentcreatewnd_3|샘플1|
+|XML_customtournamentcreatewnd_4|불러오기|
+|XML_customtournamentcreatewnd_5|샘플1|
+|XML_customtournamentcreatewnd_6|불러오기|
+|XML_customtournamentcreatewnd_7|강수|
+|XML_customtournamentcreatewnd_8|대회종류|
+|XML_customtournamentcreatewnd_9|인원|
+|XML_customtournamentcreatewnd_10|대회성격|
+|XML_customtournamentcreatewnd_11|[대회 운영 규칙]|
+|XML_customtournamentcreatewnd_12|대회 만들기 결정|
+|XML_customtournamentdelaycreateteamlistwnd_1|팀 생성 권한 요청자|
+|XML_customtournamentdelaycreateteamlistwnd_2|게임 끄기 전까지 표시 안함|
+|XML_customtournamentdelaycreateteamlistwnd_3|수락|
+|XML_customtournamentdelaycreateteamlistwnd_4|거절|
+|XML_customtournamentdelaycreateteamlistwnd_5|수락|
+|XML_customtournamentdelaycreateteamlistwnd_6|거절|
+|XML_customtournamentdelaycreateteamlistwnd_7|수락|
+|XML_customtournamentdelaycreateteamlistwnd_8|거절|
+|XML_customtournamentdelaycreateteamlistwnd_9|수락|
+|XML_customtournamentdelaycreateteamlistwnd_10|거절|
+|XML_customtournamentdelaycreateteamlistwnd_11|수락|
+|XML_customtournamentdelaycreateteamlistwnd_12|거절|
+|XML_customtournamententrylistwnd_1|참가현황|
+|XML_customtournamententrylistwnd_2|팀 생성 권한 요청자 보기|
+|XML_customtournamentnoticewnd_1|공지사항|
+|XML_customtournamentnoticewnd_2|닫기|
+|XML_customtournamentnoticewnd_3|확인|
+|XML_customtournamentrewardselectwnd_1|보상 추가|
+|XML_customtournamentrewardselectwnd_2|대회코인 충전|
+|XML_customtournamentrewardselectwnd_3|대회코인으로 구입|
+|XML_customtournamentrewardselectwnd_4|취소|
+|XML_decoitemlistwnd_1|획득가능 치장목록|
+|XML_decoitemlistwnd_2|전체|
+|XML_decoitemlistwnd_3|성별|
+|XML_decoitemlistwnd_4|머리|
+|XML_decoitemlistwnd_5|머리색|
+|XML_decoitemlistwnd_6|얼굴|
+|XML_decoitemlistwnd_7|피부색|
+|XML_decoitemlistwnd_8|기본옷|
+|XML_detailinnerawardwnd_1|보상 추가|
+|XML_detailinnercheerlistwnd_1|우승응원 결정|
+|XML_detailinnerdefinewnd_1|공지 작성|
+|XML_detailinnerschedulewnd_1|시작하기|
+|XML_dicegamewnd_1|뱀주사위|
+|XML_dicegamewnd_2|보상 바꾸기 x %d|
+|XML_dicegamewnd_3|게임판 바꾸기 x %d|
+|XML_dicegamewnd_4|[주사위] 아이템이 없습니다.|
+|XML_dicegamewnd_5|[보상 변경권] 아이템이 없습니다.|
+|XML_dicegamewnd_6|[게임판 변경권] 아이템이 없습니다.|
+|XML_dicegamewnd_7|주사위 굴리기|
+|XML_dicegamewnd_8|게임판 바꾸기 X5|
+|XML_dicegamewnd_9|보상 변경권|
+|XML_dicegamewnd_10|보상은 보관함으로 즉시 지급 됩니다.|
+|XML_dicegamewnd_11|다시 하기|
+|XML_disconnectwnd_1|연결 종료|
+|XML_disconnectwnd_2|바로 종료|
+|XML_enablepoweruplistwnd_1|진화가능 목록|
+|XML_enablepoweruplistwnd_2|용병|
+|XML_enablepoweruplistwnd_3|무기|
+|XML_enablepoweruplistwnd_4|갑옷|
+|XML_enablepoweruplistwnd_5|투구|
+|XML_enablepoweruplistwnd_6|망토|
+|XML_ETCInfoTabWnd_1|Test입니다. 임시로 만들어 놓은 거니깐... 신경쓰지 마셈|
+|XML_etcitemslotwnd_1|몬스터 던전용 아이템 설정|
+|XML_etcitemslotwnd_2|단축키 변경|
+|XML_etcitemslotwnd_3|닫기|
+|XML_etcmotionselectwnd_1|모션 추가기능 설정|
+|XML_etcmotionselectwnd_2|설정 완료|
+|XML_etcmotionselectwnd_3|취소|
+|XML_etcmotionselectwnd_4|설정 안함|
+|XML_excavation_levelup_wnd_1|탐사레벨업|
+|XML_excavation_levelup_wnd_2|닫기(ESC)|
+|XML_excavation_levelup_wnd_3|탐사|
+|XML_excavation_levelup_wnd_4|레벨 %d|
+|XML_excavation_levelup_wnd_5|달성!!|
+|XML_excavation_levelup_wnd_6|탐사키트가 레벨업 되었습니다|
+|XML_excavation_levelup_wnd_7|탐사 레벨업마다 발굴횟수가 가득 충전됩니다|
+|XML_excavation_result_wnd_1|유물발견|
+|XML_excavation_result_wnd_2|재감정하기(-100페소)|
+|XML_excavation_result_wnd_3|결정하기|
+|XML_excavation_result_wnd_4|감정중...|
+|XML_excavation_result_wnd_5|유물감정가 : %s페소|
+|XML_excavation_result_wnd_6|인벤토리에 즉시 지급됩니다.|
+|XML_excavation_result_wnd_7|자동으로 팝업이 닫힙니다...|
+|XML_excavation_result_wnd_8|재감정하기(%s 페소)|
+|XML_excavation_result_wnd_9|재감정불가|
+|XML_excavation_result_wnd_10|재감정하기 위한 페소가 부족합니다!|
+|XML_excavation_result_wnd_11|아이템이름|
+|XML_excavation_result_wnd_12|아이템갯수|
+|XML_excavation_result_wnd_13|아이템설명|
+|XML_excavation_result_wnd_14|감정가|
+|XML_excavation_shovel_wnd_1|발굴횟수충전|
+|XML_excavation_shovel_wnd_2|충전하기(SPACE)|
+|XML_excavation_shovel_wnd_3|상점가기|
+|XML_excavation_shovel_wnd_4|취소(ESC)|
+|XML_excavation_shovel_wnd_5|(현재 아이템 %d개)|
+|XML_excavation_shovel_wnd_6|횟수를 추가하시겠습니까?|
+|XML_excavation_shovel_wnd_7|충전 아이템을 구매하시겠습니까?|
+|XML_excavation_shovel_wnd_8|충전횟수가 가득차있어 충전이 불가능합니다|
+|XML_excavation_shovel_wnd_9|아이템을 1회 소모하여 발굴 횟수를 +1 합니다|
+|XML_excavation_wnd_1|탐사레벨|
+|XML_excavation_wnd_2|발굴준비중|
+|XML_excavation_wnd_3|발굴가능|
+|XML_excavation_wnd_4|발굴횟수|
+|XML_excavation_wnd_5|탐사횟수충전하기|
+|XML_excavation_wnd_6|중단하기|
+|XML_excavation_wnd_7|발굴횟수 3/5|
+|XML_excavation_wnd_8|탐사레벨 999|
+|XML_excavationbuypopup_1|탐사 키트 필요|
+|XML_excavationbuypopup_2|상점가기|
+|XML_excavationbuypopup_3|취소|
+|XML_excavationresultwnd_1|유물발견!!|
+|XML_excavationresultwnd_2|내 장비 가기 (SPACE)|
+|XML_excavationresultwnd_3|닫기 (ESC)|
+|XML_exitmsgbox_1|나가기 예약 (SPACE)|
+|XML_exitmsgbox_2|취소|
+|XML_exitmsgbox_3|즉시나가기(벌금)|
+|XML_exitmsgbox_4|예약 취소 (SPACE)|
+|XML_exitmsgbox_5|도전포기|
+|XML_exitmsgbox_6|포기취소|
+|XML_exmedalslotreleasewnd_1|메달슬롯 잠김|
+|XML_exmedalslotreleasewnd_2|모두 확인|
+|XML_exmedalslotreleasewnd_3|닫기|
+|XML_expandmedalslotresultwnd_1|용병보기|
+|XML_expandmedalslotwnd_1|용병을 선택하세요|
+|XML_expcroomauthoritywnd_1|PC방 혜택이 적용 됩니다|
+|XML_expcroomauthoritywnd_2|보너스용병 선택하러 가기 (SPACE)|
+|XML_expcroomsoldierbonuswnd_1|PC방 보너스용병 선택|
+|XML_expcroomsoldierbonuswnd_2|보너스 용병 받기(SPACE)|
+|XML_extraitemequipconfirmwnd_1|변경확인|
+|XML_extraitemequipconfirmwnd_2|장착하기|
+|XML_extraitemequipconfirmwnd_3|취소|
+|XML_ExtraItemFuncWnd_1|영구용병에게만 사용할 수 있습니다.|
+|XML_ExtraItemFuncWnd_2|메달슬롯 오픈은 로비에서만 가능합니다.|
+|XML_ExtraItemFuncWnd_3|전투체험 용병으로는 불가능합니다.|
+|XML_ExtraItemFuncWnd_4|메달슬롯 오픈은 광장/본부에서만 가능합니다.|
+|XML_ExtraItemFuncWnd_5|PC방 용병은 선택 할 수 없습니다.|
+|XML_ExtraItemFuncWnd_6|강화에 필요한 재료가 부족합니다.|
+|XML_ExtraItemFuncWnd_7|강화하려는 장비가 선택되지 않았습니다.|
+|XML_ExtraItemFuncWnd_8|강화하려는 장비가 없습니다.|
+|XML_ExtraItemFuncWnd_9|영구장비만 강화할 수 있습니다.|
+|XML_ExtraItemFuncWnd_10|메달%d|
+|XML_ExtraItemFuncWnd_11|레벨제한%d|
+|XML_ExtraItemFuncWnd_12|성공 확률|
+|XML_ExtraItemFuncWnd_13|실패 경험치|
+|XML_ExtraItemFuncWnd_14|강화하려는 장비가 +%d 이상일 경우#장비 강화 실패시 +%d로 고정됩니다.|
+|XML_ExtraItemFuncWnd_15|%s +%d(봉인)|
+|XML_ExtraItemFuncWnd_16|%s +%d(봉인가능)|
+|XML_ExtraItemFuncWnd_17|장비강화를 완료했습니다.|
+|XML_ExtraItemFuncWnd_18|강화중입니다. 잠시만 기다려주세요.|
+|XML_ExtraItemFuncWnd_19|+%d 강화에 성공했습니다|
+|XML_ExtraItemFuncWnd_20|+%d 초월강화에 성공했습니다|
+|XML_ExtraItemFuncWnd_21|강화에 실패했습니다.|
+|XML_ExtraItemFuncWnd_22|초월강화에 실패했습니다.|
+|XML_ExtraItemFuncWnd_23|+%d 로 돌아갑니다.|
+|XML_ExtraItemFuncWnd_24|장비 강화 (%s 페소)|
+|XML_ExtraItemFuncWnd_25|장비가 선택되지 않았습니다.|
+|XML_ExtraItemFuncWnd_26|강화재료가 부족합니다.|
+|XML_ExtraItemFuncWnd_27|★초월강화는<c:0xFFB91600>+26 부터 +30<c:0xFF3A3A3A>까지 능력치가 <c:0xFFB91600>5씩 <c:0xFF3A3A3A>증가한다. 실패경험치가 쌓이지 않고 <c:0xFFB91600>실패 시 +25<c:0xFF3A3A3A>로 돌아간다.|
+|XML_ExtraItemFuncWnd_28|장착|
+|XML_ExtraItemFuncWnd_29|강화|
+|XML_ExtraItemFuncWnd_30|내 용병 선택|
+|XML_ExtraItemFuncWnd_31|무기|
+|XML_ExtraItemFuncWnd_32|갑옷|
+|XML_ExtraItemFuncWnd_33|투구|
+|XML_ExtraItemFuncWnd_34|망토|
+|XML_ExtraItemFuncWnd_35|장비 강화|
+|XML_ExtraItemFuncWnd_36|강화중...|
+|XML_ExtraItemFuncWnd_37|재료를 선택하세요|
+|XML_ExtraItemFuncWnd_38|실패 경험치란?#|
+|XML_ExtraItemFuncWnd_39|강화에 실패할 경우#|
+|XML_ExtraItemFuncWnd_40|실패 경험치가 쌓이게 되며#|
+|XML_ExtraItemFuncWnd_41|이에 따라 다음 강화#|
+|XML_ExtraItemFuncWnd_42|성공률이 증가하게 됩니다.|
+|XML_ExtraItemFuncWnd_43|추가사용|
+|XML_ExtraItemFuncWnd_44|아이템 보기|
+|XML_extraitemlistwnd_1|획득가능 장비목록|
+|XML_extraitemlistwnd_2|전체|
+|XML_extraitemlistwnd_3|무기|
+|XML_extraitemlistwnd_4|갑옷|
+|XML_extraitemlistwnd_5|투구|
+|XML_extraitemlistwnd_6|망토|
+|XML_extraitemrandombox_1|확인중...|
+|XML_extraitemrandombox_2|아이템 보기|
+|XML_extraitemreleasewnd_1|장비 해제|
+|XML_extraitemreleasewnd_2|모두 확인|
+|XML_extraitemreleasewnd_3|닫기|
+|XML_fightclubfightnpccontinuewnd_1|재도전|
+|XML_fightclubfightnpccontinuewnd_2|룸으로|
+|XML_filelistwnd_1|파일찾기|
+|XML_filelistwnd_2|상위 폴더|
+|XML_firstsoldierwnd_1|최초 용병고용|
+|XML_firstsoldierwnd_2|고용|
+|XML_fishingautosellquestion_1|자동 판매|
+|XML_fishingautosellquestion_2|확인 (ENTER)|
+|XML_fishingautosellquestion_3|취소|
+|XML_fishingbuywnd_1|상점가기|
+|XML_fishingbuywnd_2|취소|
+|XML_fishingdropzoneinducewnd_1|낚시 불가|
+|XML_fishingdropzoneinducewnd_2|닫기 (ESC)|
+|XML_fishingdropzoneinducewnd_3|닫기 (ESC)|
+|XML_fishingdropzoneinducewnd_4|추가구입|
+|XML_fishinginventorywnd_1|낚싯대|
+|XML_fishinginventorywnd_2|미끼|
+|XML_fishinginventorywnd_3|낚시터|
+|XML_fishinginventorywnd_4|낚은 아이템 판매|
+|XML_fishinginventorywnd_5|낚시하기|
+|XML_fishinginventorywnd_6|장비/장비해제|
+|XML_fishinginventorywnd_7|구입하기|
+|XML_fishinglevelupbox_1|낚시 레벨업|
+|XML_fishinglevelupbox_2|닫기 (ESC)|
+|XML_fishingmessagebox_1|낚은 아이템 판매|
+|XML_fishingmessagebox_2|자동 판매|
+|XML_fishingmessagebox_3|개별 판매|
+|XML_fishingmessagebox_4|취소|
+|XML_fishingmessagebox_5|닫기|
+|XML_fishingmessagebox_6|다른 아이템 더 팔기|
+|XML_fishingmessagebox_7|자동 판매 중지|
+|XML_friendapplicationwnd_1|친구신청|
+|XML_friendapplicationwnd_2|친구신청하기|
+|XML_friendapplicationwnd_3|취소|
+|XML_frienddeletewnd_1|친구삭제|
+|XML_frienddeletewnd_2|친구삭제 결정|
+|XML_frienddeletewnd_3|취소|
+|XML_friendrequestwnd_1|친구신청 도착|
+|XML_friendrequestwnd_2|님의 친구신청 도착|
+|XML_friendrequestwnd_3|수락|
+|XML_friendrequestwnd_4|거절|
+|XML_friendrequestwnd_5|차단|
+|XML_friendrequestwnd_6|게임 끄기 전까지 표시 안함|
+|XML_gameoptionsettinggametab_1|결정|
+|XML_gameoptionsettinggametab_2|취소|
+|XML_gameoptionsettinggametab_3|적용|
+|XML_gameoptionsettinggametab_4|초기화|
+|XML_gameoptionsettinggametab_5|일반전투 초대거절 (친구/길드 제외)|
+|XML_gameoptionsettinggametab_6|진영전투 초대거절 (친구/길드 제외)|
+|XML_gameoptionsettinggametab_7|채팅내용 안보기 (친구/길드 제외)|
+|XML_gameoptionsettinggametab_8|게임 말풍선 안보기 (이모티콘 제외)|
+|XML_gameoptionsettinggametab_9|길드메신저알림 안보기|
+|XML_gameoptionsettinggametab_10|게임 스킬＆버프 이모티콘 표시|
+|XML_gameoptionsettinggametab_11|게임 용병단축키슬롯 안보기|
+|XML_gameoptionsettinggametab_12|게임 빠른 용병 교체 슬롯 숨기기|
+|XML_gameoptionsettinggametab_13|욕설 필터링|
+|XML_gameoptionsettinggametab_14|대체어|
+|XML_gameoptionsettinggametab_15|별표(*)|
+|XML_gameoptionsettinggametab_16|전투 중 상대코스튬 보기|
+|XML_gameoptionsettinggametab_17|전체|
+|XML_gameoptionsettinggametab_18|전체|
+|XML_gameoptionsettinggametab_19|전체|
+|XML_gameoptionsettinggametab_20|전체|
+|XML_gameoptionsettinggametab_21|전체|
+|XML_gameoptionsettinggametab_22|전체|
+|XML_gameoptionsettinggametab_23|전체|
+|XML_gameoptionsettinggametab_24|전체|
+|XML_gameoptionsettinggametab_25|전체|
+|XML_gameoptionsettinggametab_26|전체|
+|XML_gameoptionsettinggametab_27|전체|
+|XML_gameoptionsettinggametab_28|전체|
+|XML_gameoptionsettingjoykeytab_1|결정|
+|XML_gameoptionsettingjoykeytab_2|취소|
+|XML_gameoptionsettingjoykeytab_3|적용|
+|XML_gameoptionsettingjoykeytab_4|초기화|
+|XML_gameoptionsettingjoykeytab_5|활성|
+|XML_gameoptionsettingjoykeytab_6|비활성|
+|XML_gameoptionsettingkeyinput_1|키입력|
+|XML_gameoptionsettingkeyinput_2|설정하지 않음|
+|XML_gameoptionsettingkeyinput_3|사용|
+|XML_gameoptionsettingkeyinput_4|취소|
+|XML_gameoptionsettingkeytab_1|결정|
+|XML_gameoptionsettingkeytab_2|취소|
+|XML_gameoptionsettingkeytab_3|적용|
+|XML_gameoptionsettingkeytab_4|초기화|
+|XML_gameoptionsettingmovieandshottab_1|결정|
+|XML_gameoptionsettingmovieandshottab_2|취소|
+|XML_gameoptionsettingmovieandshottab_3|적용|
+|XML_gameoptionsettingmovieandshottab_4|초기화|
+|XML_gameoptionsettingmovieandshottab_5|동영상 크기|
+|XML_gameoptionsettingmovieandshottab_6|전체 모드|
+|XML_gameoptionsettingmovieandshottab_7|동영상 프레임|
+|XML_gameoptionsettingmovieandshottab_8|동영상 화질|
+|XML_gameoptionsettingmovieandshottab_9|중간|
+|XML_gameoptionsettingmovieandshottab_10|동영상 음질|
+|XML_gameoptionsettingmovieandshottab_11|기본음질|
+|XML_gameoptionsettingmovieandshottab_12|동영상 코덱|
+|XML_gameoptionsettingmovieandshottab_13|스샷 파일 종류|
+|XML_gameoptionsettingmovieandshottab_14|저장 위치|
+|XML_gameoptionsettingmovieandshottab_15|촬영모드 전환|
+|XML_gameoptionsettingmovieandshottab_16|스샷모드|
+|XML_gameoptionsettingmovieandshottab_17|영화모드|
+|XML_gameoptionsettingmovieandshottab_18|촬영모드 표시설정|
+|XML_gameoptionsettingmovieandshottab_19|닉네임|
+|XML_gameoptionsettingmovieandshottab_20|체력|
+|XML_gameoptionsettingmovieandshottab_21|팀원판|
+|XML_gameoptionsettingmovieandshottab_22|말풍선|
+|XML_gameoptionsettingmovieandshottab_23|인터페이스|
+|XML_gameoptionspectab_1|최고사양|
+|XML_gameoptionspectab_2|고사양|
+|XML_gameoptionspectab_3|중사양|
+|XML_gameoptionspectab_4|저사양|
+|XML_gameoptionspectab_5|최저사양|
+|XML_gameoptionspectab_6|수동|
+|XML_gameoptionspectab_7|성능 자동 체크|
+|XML_gameoptionspectab_8|화면 모드|
+|XML_gameoptionspectab_9|전체 모드|
+|XML_gameoptionspectab_10|화면 해상도|
+|XML_gameoptionspectab_11|필터 효과|
+|XML_gameoptionspectab_12|사용안함|
+|XML_gameoptionspectab_13|가장자리효과|
+|XML_gameoptionspectab_14|사용안함|
+|XML_gameoptionspectab_15|안티알리아싱|
+|XML_gameoptionspectab_16|없음|
+|XML_gameoptionspectab_17|상|
+|XML_gameoptionspectab_18|중|
+|XML_gameoptionspectab_19|하|
+|XML_gameoptionspectab_20|배경 오브젝트|
+|XML_gameoptionspectab_21|상|
+|XML_gameoptionspectab_22|중|
+|XML_gameoptionspectab_23|하|
+|XML_gameoptionspectab_24|라이트 품질|
+|XML_gameoptionspectab_25|상|
+|XML_gameoptionspectab_26|중|
+|XML_gameoptionspectab_27|하|
+|XML_gameoptionspectab_28|텍스쳐 품질|
+|XML_gameoptionspectab_29|상|
+|XML_gameoptionspectab_30|중|
+|XML_gameoptionspectab_31|하|
+|XML_gameoptionspectab_32|이펙트 품질|
+|XML_gameoptionspectab_33|상|
+|XML_gameoptionspectab_34|중|
+|XML_gameoptionspectab_35|하|
+|XML_gameoptionspectab_36|그래픽 옵션|
+|XML_gameoptionspectab_37|화면 뽀샤시|
+|XML_gameoptionspectab_38|궤적 뽀샤시|
+|XML_gameoptionspectab_39|캐릭터 그림자|
+|XML_gameoptionspectab_40|맵 배경효과|
+|XML_gameoptionspectab_41|캐릭터 외곽선|
+|XML_gameoptionspectab_42|맵 외곽선|
+|XML_gameoptionspectab_43|16비트 색표현|
+|XML_gameoptionspectab_44|CPU애니메이션|
+|XML_gameoptionspectab_45|동영상 촬영시 깜빡임 방지|
+|XML_gameoptionspectab_46|결정|
+|XML_gameoptionspectab_47|취소|
+|XML_gameoptionspectab_48|적용|
+|XML_gameoptionspectab_49|배경화면 설정|
+|XML_gameoptionvolumetab_1|배경음|
+|XML_gameoptionvolumetab_2|효과음|
+|XML_gameoptionvolumetab_3|음성|
+|XML_gameoptionvolumetab_4|마이크 활성화|
+|XML_gameoptionvolumetab_5|마이크|
+|XML_gameoptionvolumetab_6|결정|
+|XML_gameoptionvolumetab_7|취소|
+|XML_gameoptionvolumetab_8|적용|
+|XML_gameoptionvolumetab_9|킬 사운드|
+|XML_gameoptionvolumetab_10|콤보 사운드|
+|XML_gameoptionvolumetab_11|아이돌 사운드|
+|XML_gameoptionwnd_1|옵션|
+|XML_gameoptionwnd_2|인터페이스 기본위치로|
+|XML_gameoptionwnd_3|성능|
+|XML_gameoptionwnd_4|소리|
+|XML_gameoptionwnd_5|게임|
+|XML_gameoptionwnd_6|영상＆스샷|
+|XML_gameoptionwnd_7|키보드|
+|XML_gameoptionwnd_8|조이패드|
+|XML_gashaponwnd_1|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_2|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_3|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_4|[내아이템]-[선물]에서 받기를 선택해주세요. |
+|XML_gashaponwnd_5|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_6|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_7|페소는 선물로 지급됩니다.|
+|XML_gashaponwnd_8|페소는 선물로 지급됩니다.|
+|XML_gashaponwnd_9|페소는 선물로 지급됩니다.|
+|XML_gashaponwnd_10|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_11|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_12|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_13|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_14|페소는 선물로 지급됩니다.|
+|XML_gashaponwnd_15|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_16|용병 소환서 10장 선물함에 도착.|
+|XML_gashaponwnd_17|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_18|페소는 선물로 지급됩니다.|
+|XML_gashaponwnd_19|아이템이 선물로 지급되었습니다.|
+|XML_gashaponwnd_20|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_21|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_22|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_23|아이템이 선물로 지급되었습니다.|
+|XML_gashaponwnd_24|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_25|아이템이 지급되었습니다.|
+|XML_gashaponwnd_26|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_27|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_28|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_29|강화카드는 선물로 지급됩니다.|
+|XML_gashaponwnd_30|주화는 선물로 지급됩니다.|
+|XML_gashaponwnd_31|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_32|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_33|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_34|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_35|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_36|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_37|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_38|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_39|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_40|아이템이 선물로 지급되었습니다.|
+|XML_gashaponwnd_41|아이템이 선물로 지급되었습니다.|
+|XML_gashaponwnd_42|아이템이 선물로 지급되었습니다.|
+|XML_gashaponwnd_43|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_44|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_45|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_46|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_47|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_48|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_49|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_50|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_51|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_52|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_53|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_54|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_55|페소는 선물로 지급됩니다.|
+|XML_gashaponwnd_56|페소는 선물로 지급됩니다.|
+|XML_gashaponwnd_57|페소는 선물로 지급됩니다.|
+|XML_gashaponwnd_58|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_59|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_60|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_61|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_62|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_63|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_64|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_65|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_66|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_67|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_68|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_69|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_70|정기는 선물로 지급됩니다.|
+|XML_gashaponwnd_71|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_72|메달은 선물로 지급됩니다.|
+|XML_gashaponwnd_73|메달은 선물로 지급됩니다.|
+|XML_gashaponwnd_74|메달은 선물로 지급됩니다.|
+|XML_gashaponwnd_75|메달은 선물로 지급됩니다.|
+|XML_gashaponwnd_76|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_77|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_78|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_79|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_80|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_81|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_82|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_83|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_84|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_85|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_86|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_87|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_88|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_89|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_90|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_91|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_92|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_93|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_94|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_95|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_96|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_97|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_98|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_99|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_100|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_101|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_102|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_103|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_104|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_105|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_106|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_107|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_108|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_109|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_110|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_111|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_112|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_113|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_114|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_115|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_116|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_117|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_118|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_119|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_120|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_121|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_122|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_123|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_124|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_125|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_126|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_127|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_128|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_129|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_130|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_131|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_132|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_133|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_134|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_135|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_136|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_137|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_138|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_139|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_140|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_141|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_142|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_143|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_144|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_145|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_146|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_147|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_148|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_149|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_150|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_151|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_152|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_153|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_154|메달은 선물로 지급됩니다.|
+|XML_gashaponwnd_155|메달은 선물로 지급됩니다.|
+|XML_gashaponwnd_156|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_157|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_158|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_159|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_160|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_161|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_162|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_163|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_164|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_165|메달은 선물로 지급됩니다.|
+|XML_gashaponwnd_166|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_167|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_168|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_169|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_170|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_171|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_172|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_173|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_174|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_175|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_176|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_177|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_178|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_179|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_180|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_181|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_182|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_183|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_184|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_185|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_186|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_187|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_188|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_189|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_190|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_191|페소는 선물로 지급됩니다.|
+|XML_gashaponwnd_192|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_193|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_194|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_195|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_196|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_197|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_198|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_199|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_200|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_201|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_202|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_203|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_204|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_205|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_206|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_207|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_208|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_209|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_210|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_211|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_212|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_213|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_214|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_215|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_216|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_217|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_218|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_219|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_220|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_221|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_222|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_223|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_224|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_225|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_226|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_227|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_228|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_229|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_230|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_231|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_232|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_233|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_234|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_235|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_236|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_237|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_238|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_239|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_240|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_241|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_242|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_243|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_244|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_245|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_246|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_247|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_248|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_249|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_250|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_251|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_252|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_253|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_254|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_255|[내아이템]-[선물]에서 받기를 선택해주세요.|
+|XML_gashaponwnd_256|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_257|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_258|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_259|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_260|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_261|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_262|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_263|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_264|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_265|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_266|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_267|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_268|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_269|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_270|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_271|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_272|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_273|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_274|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_275|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_276|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_277|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_278|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_279|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_280|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_281|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_282|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_283|페소는 선물로 지급됩니다.|
+|XML_gashaponwnd_284|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_285|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_286|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_287|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_288|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_289|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_290|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_291|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_292|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_293|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_294|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_295|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_296|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_297|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_298|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_299|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_300|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_301|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_302|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_303|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_304|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_305|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_306|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_307|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_308|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_309|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_310|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_311|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_312|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_313|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_314|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_315|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_316|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_317|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_318|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_319|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_320|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_321|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_322|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_323|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_324|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_325|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_326|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_327|무지개소환서는 선물로 지급됩니다.|
+|XML_gashaponwnd_328|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_329|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_330|무지개소환서는 선물로 지급됩니다.|
+|XML_gashaponwnd_331|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_332|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_333|무지개소환서는 선물로 지급됩니다.|
+|XML_gashaponwnd_334|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_335|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_336|무지개소환서는 선물로 지급됩니다.|
+|XML_gashaponwnd_337|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_338|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_339|무지개소환서는 선물로 지급됩니다.|
+|XML_gashaponwnd_340|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_341|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_342|무지개소환서는 선물로 지급됩니다.|
+|XML_gashaponwnd_343|황금알은 선물로 지급됩니다.|
+|XML_gashaponwnd_344|황금알은 선물로 지급됩니다.|
+|XML_gashaponwnd_345|황금알은 선물로 지급됩니다.|
+|XML_gashaponwnd_346|황금알은 선물로 지급됩니다.|
+|XML_gashaponwnd_347|황금알은 선물로 지급됩니다.|
+|XML_gashaponwnd_348|황금알은 선물로 지급됩니다.|
+|XML_gashaponwnd_349|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_350|용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_351|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_352|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_353|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_354|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_355|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_356|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_357|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_358|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_359|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_360|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_361|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_362|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_363|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_364|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_365|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_366|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_367|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_368|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_369|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_370|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_371|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_372|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_373|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_374|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_375|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_376|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_377|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_378|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_379|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_380|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_381|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_382|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_383|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_384|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_385|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_386|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_387|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_388|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_389|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_390|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_391|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_392|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_393|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_394|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_395|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_396|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_397|장비는 선물로 지급됩니다|
+|XML_gashaponwnd_398|장비는 선물로 지급됩니다|
+|XML_gashaponwnd_399|용병은 선물로 지급됩니다|
+|XML_gashaponwnd_400|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_401|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_402|용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_403|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_404|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_405|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_406|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_407|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_408|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_409|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_410|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_411|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_412|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_413|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_414|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_415|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_416|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_417|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_418|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_419|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_420|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_421|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_422|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_423|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_424|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_425|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_426|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_427|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_428|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_429|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_430|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_431|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_432|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_433|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_434|메달은 선물로 지급됩니다.|
+|XML_gashaponwnd_435|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_436|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_437|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_438|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_439|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_440|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_441|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_442|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_443|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_444|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_445|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_446|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_447|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_448|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_449|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_450|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_451|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_452|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_453|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_454|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_455|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_456|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_457|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_458|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_459|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_460|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_461|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_462|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_463|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_464|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_465|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_466|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_467|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_468|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_469|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_470|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_471|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_472|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_473|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_474|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_475|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_476|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_477|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_478|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_479|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_480|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_481|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_482|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_483|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_484|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_485|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_486|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_487|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_488|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_489|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_490|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_491|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_492|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_493|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_494|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_495|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_496|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_497|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_498|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_499|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_500|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_501|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_502|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_503|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_504|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_505|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_506|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_507|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_508|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_509|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_510|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_511|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_512|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_513|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_514|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_515|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_516|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_517|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_518|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_519|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_520|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_521|메달은 선물로 지급됩니다.|
+|XML_gashaponwnd_522|메달은 선물로 지급됩니다.|
+|XML_gashaponwnd_523|메달은 선물로 지급됩니다.|
+|XML_gashaponwnd_524|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_525|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_526|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_527|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_528|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_529|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_530|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_531|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_532|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_533|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_534|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_535|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_536|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_537|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_538|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_539|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_540|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_541|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_542|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_543|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_544|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_545|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_546|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_547|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_548|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_549|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_550|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_551|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_552|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_553|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_554|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_555|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_556|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_557|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_558|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_559|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_560|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_561|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_562|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_563|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_564|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_565|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_566|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_567|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_568|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_569|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_570|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_571|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_572|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_573|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_574|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_575|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_576|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_577|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_578|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_579|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_580|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_581|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_582|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_583|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_584|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_585|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_586|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_587|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_588|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_589|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_590|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_591|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_592|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_593|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_594|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_595|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_596|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_597|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_598|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_599|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_600|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_601|클로버는 선물로 지급됩니다.|
+|XML_gashaponwnd_602|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_603|페소는 선물로 지급됩니다.|
+|XML_gashaponwnd_604|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_605|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_606|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_607|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_608|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_609|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_610|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_611|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_612|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_613|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_614|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_615|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_616|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_617|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_618|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_619|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_620|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_621|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_622|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_623|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_624|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_625|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_626|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_627|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_628|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_629|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_630|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_631|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_632|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_633|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_634|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_635|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_636|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_637|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_638|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_639|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_640|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_641|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_642|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_643|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_644|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_645|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_646|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_647|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_648|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_649|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_650|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_651|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_652|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_653|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_654|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_655|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_656|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_657|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_658|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_659|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_660|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_661|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_662|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_663|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_664|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_665|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_666|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_667|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_668|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_669|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_670|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_671|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_672|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_673|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_674|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_675|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_676|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_677|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_678|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_679|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_680|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_681|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_682|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_683|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_684|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_685|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_686|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_687|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_688|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_689|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_690|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_691|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_692|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_693|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_694|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_695|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_696|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_697|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_698|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_699|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_700|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_701|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_702|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_703|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_704|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_705|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_706|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_707|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_708|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_709|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_710|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_711|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_712|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_713|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_714|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_715|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_716|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_717|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_718|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_719|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_720|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_721|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_722|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_723|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_724|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_725|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_726|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_727|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_728|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_729|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_730|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_731|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_732|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_733|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_734|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_735|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_736|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_737|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_738|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_739|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_740|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_741|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_742|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_743|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_744|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_745|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_746|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_747|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_748|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_749|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_750|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_751|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_752|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_753|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_754|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_755|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_756|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_757|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_758|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_759|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_760|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_761|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_762|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_763|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_764|소환된 용병은 선물로 지급됩니다.|
+|XML_gashaponwnd_765|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_766|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_767|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_768|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_769|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_770|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_771|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_772|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_773|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_774|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_775|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_776|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_777|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_778|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_779|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_780|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_781|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_782|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_783|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_784|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_785|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_786|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_787|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_788|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_789|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_790|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_791|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_792|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_793|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_794|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_795|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_796|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_797|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_798|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_799|아이템은 선물로 지급됩니다|
+|XML_gashaponwnd_800|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_801|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_802|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_803|아이템은 선물로 지급됩니다.|
+|XML_gashaponwnd_804|확인중...|
+|XML_gashaponwnd_805|추가사용|
+|XML_gashaponwnd_806|아이템 보기|
+|XML_globalchatwnd_1|팀|
+|XML_globalchatwnd_2|전체|
+|XML_globalchatwnd_3|훈련소|
+|XML_globalchatwnd_4|시스템|
+|XML_globalchatwnd_5|커스텀|
+|XML_gradeadjustmentwnd_13|전체|
+|XML_gradeadjustmentwnd_14|프리미엄|
+|XML_gradeadjustmentwnd_15|근거리|
+|XML_gradeadjustmentwnd_16|원거리|
+|XML_gradeadjustmentwnd_17|마법|
+|XML_gradeadjustmentwnd_18|특수|
+|XML_gradeadjustmentwnd_19|전체|
+|XML_gradeadjustmentwnd_20|무기|
+|XML_gradeadjustmentwnd_21|갑옷|
+|XML_gradeadjustmentwnd_22|투구|
+|XML_gradeadjustmentwnd_23|망토|
+|XML_gradeadjustmentwnd_24|검색하기 (ENTER)|
+|XML_gradeadjustmentwnd_25|용병|
+|XML_gradeadjustmentwnd_26|장비|
+|XML_gradeadjustmentwnd_27|?? 진화|
+|XML_gradeadjustmentwnd_28|되돌리기|
+|XML_gradeupwnd_1|계급업|
+|XML_gradeupwnd_2|닫기(ESC)|
+|XML_growthalldowndonewnd_1|아이템 보기|
+|XML_growthalldowndonewnd_2|추가사용|
+|XML_growthalldownselectwnd_1|용병을 선택하세요|
+|XML_growthalldownselectwnd_2|복구하기|
+|XML_growthdowndonewnd_1|아이템 보기|
+|XML_growthdowndonewnd_2|추가사용|
+|XML_growthdownselectwnd_1|무기 스킬|
+|XML_growthdownselectwnd_2|갑옷 스킬|
+|XML_growthdownselectwnd_3|투구 스킬|
+|XML_growthdownselectwnd_4|망토 스킬|
+|XML_growthdownselectwnd_5|기본 공격력|
+|XML_growthdownselectwnd_6|기본 방어력|
+|XML_growthdownselectwnd_7|이동 속도|
+|XML_growthdownselectwnd_8|드랍피해감소|
+|XML_growthdownselectwnd_9|용병을 선택하세요|
+|XML_growthdownselectwnd_10|항목을 선택하세요|
+|XML_growthdownselectwnd_11|복구하기|
+|XML_growthselectwnd_1|육성창|
+|XML_growthselectwnd_2|공격력|
+|XML_growthselectwnd_3|방어력|
+|XML_growthselectwnd_4|이동속도|
+|XML_growthselectwnd_5|드랍피해감소|
+|XML_growthselectwnd_6|무기스킬|
+|XML_growthselectwnd_7|갑옷스킬|
+|XML_growthselectwnd_8|투구스킬|
+|XML_growthselectwnd_9|망토스킬|
+|XML_growthselectwnd_10|육성현황|
+|XML_growthselectwnd_11|육성하기|
+|XML_growthselectwnd_12|즉시 육성하시겠습니까?|
+|XML_growthselectwnd_13|페소가 부족하여 육성을 할 수 없습니다.|
+|XML_growthselectwnd_14|영구고용|
+|XML_growthselectwnd_15|체험|
+|XML_growthselectwnd_16|PC방|
+|XML_growthselectwnd_17|이벤트|
+|XML_growthselectwnd_18|%d분|
+|XML_growthselectwnd_19|%d시간|
+|XML_growthselectwnd_20|%d시간 %d분|
+|XML_growthselectwnd_21|전투체험|
+|XML_growthselectwnd_22|%s진화(영구)|
+|XML_growthselectwnd_23|프리데이|
+|XML_growthselectwnd_24|육성비용|
+|XML_growthselectwnd_25|남은 육성포인트|
+|XML_growthselectwnd_26|소비 육성포인트|
+|XML_growthselectwnd_27|내 페소|
+|XML_growthselectwnd_28|소비 페소|
+|XML_growthselectwnd_29|육성하기|
+|XML_guildattendrewardwnd_1|길드 출석 보상|
+|XML_guildattendrewardwnd_2|닫기(ESC)|
+|XML_guildchatwnd_1|입력|
+|XML_guildchatwnd_2|길드정보|
+|XML_guildchatwnd_3|길드홈피|
+|XML_guildcreatewnd_1|길드 생성|
+|XML_guildcreatewnd_2|길드를 생성합니다!!|
+|XML_guildcreatewnd_3|취소|
+|XML_guildentrydelayuserwnd_1|길드가입 대기자|
+|XML_guildentrydelayuserwnd_2|게임 끄기 전까지 표시 안함|
+|XML_guildentrydelayuserwnd_3|수락|
+|XML_guildentrydelayuserwnd_4|거절|
+|XML_guildentrydelayuserwnd_5|수락|
+|XML_guildentrydelayuserwnd_6|거절|
+|XML_guildentrydelayuserwnd_7|수락|
+|XML_guildentrydelayuserwnd_8|거절|
+|XML_guildentrydelayuserwnd_9|수락|
+|XML_guildentrydelayuserwnd_10|거절|
+|XML_guildentrydelayuserwnd_11|수락|
+|XML_guildentrydelayuserwnd_12|거절|
+|XML_guildetcitempopup_1|상점가기|
+|XML_guildetcitempopup_2|길드 생성권 사용하기|
+|XML_guildetcitempopup_3|상점가기|
+|XML_guildetcitempopup_4|길드마크 변경권 사용하기|
+|XML_guildetcitempopup_5|취소|
+|XML_guildeventpopup_1|길드정보 보기|
+|XML_guildeventpopup_2|닫기|
+|XML_guildherorankinglistwnd_1|랭킹|
+|XML_guildherorankinglistwnd_2|길드 랭킹|
+|XML_guildherorankinglistwnd_3|래더 랭킹|
+|XML_guildhqetcitemneedpopup_1|길드 본부 생성권 필요|
+|XML_guildhqetcitemneedpopup_2|상점가기|
+|XML_guildhqetcitemneedpopup_3|길드본부 생성권 사용하기|
+|XML_guildhqetcitemneedpopup_4|취소|
+|XML_guildinfownd_1|길드 홈피|
+|XML_guildinfownd_2|마크 변경|
+|XML_guildinfownd_3|소개 변경|
+|XML_guildinfownd_4|가입 신청|
+|XML_guildinfownd_5|가입 취소|
+|XML_guildinfownd_6|길드 초대|
+|XML_guildinfownd_7|가입 대기|
+|XML_guildinfownd_8|길드 탈퇴|
+|XML_guildinfownd_9|길드본부|
+|XML_guildinfownd_10|출석하기|
+|XML_guildinfownd_11|보상받기|
+|XML_guildinfownd_12|등급 보상|
+|XML_guildinfownd_13|출석보상|
+|XML_guildinvitationwnd_1|가입권유하기|
+|XML_guildinvitationwnd_2|가입권유 메세지 발송|
+|XML_guildinvitationwnd_3|취소|
+|XML_guildinvitationwnd_4|친구검색|
+|XML_guildinvitedwnd_1|길드가입 권유|
+|XML_guildinvitedwnd_2|가입신청 가기|
+|XML_guildinvitedwnd_3|거절|
+|XML_guildinvitedwnd_4|게임 끄기 전까지 표시 안함|
+|XML_guildmainwnd_1|길드|
+|XML_guildmainwnd_2|길드본부 꾸미기 아이템|
+|XML_guildmainwnd_3|길드 정보|
+|XML_guildmainwnd_4|길드원|
+|XML_guildmainwnd_5|길드 정보|
+|XML_guildmainwnd_6|길드원|
+|XML_guildmainwnd_7|출석 정보|
+|XML_guildmainwnd_8|꾸미기 권한|
+|XML_guildmarkchangewnd_1|길드마크 변경|
+|XML_guildmarkchangewnd_2|파일찾기|
+|XML_guildmarkchangewnd_3|파일찾기|
+|XML_guildmarkchangewnd_4|변경 완료|
+|XML_guildmarkchangewnd_5|취소|
+|XML_guildnamechangewnd_1|길드이름 변경 완료|
+|XML_guildnamechangewnd_2|확인|
+|XML_guildrankinglistwnd_1|길드 생성|
+|XML_guildrankrewardwnd_1|길드 등급 보상|
+|XML_guildrankrewardwnd_2|닫기(ESC)|
+|XML_guildrewardwnd_1|출석 보상 목록|
+|XML_guildrewardwnd_2|등급 보상 목록|
+|XML_guildtitlechangewnd_1|길드소개 변경|
+|XML_guildtitlechangewnd_2|변경|
+|XML_guildtitlechangewnd_3|취소|
+|XML_hackproblemwnd_1|속도조작 용병단검사|
+|XML_hackproblemwnd_2|확인 (ENTER)|
+|XML_headquartersinfownd_1|훈련소정보|
+|XML_headquartersinfownd_2|입장|
+|XML_headquartersinfownd_3|취소|
+|XML_headquartersinvitedwnd_1|훈련소|
+|XML_headquartersinvitedwnd_2|수락|
+|XML_headquartersinvitedwnd_3|거절|
+|XML_headquartersinvitedwnd_4|친구초대 외엔 표시 안함|
+|XML_headquartersinvitelistwnd_1|초대하기|
+|XML_headquartersinvitelistwnd_2|현재페이지 모두 초대|
+|XML_headquartersinvitelistwnd_3|초대하기|
+|XML_headquartersinvitelistwnd_4|초대|
+|XML_headquartersinvitelistwnd_5|초대|
+|XML_headquartersinvitelistwnd_6|초대|
+|XML_headquartersinvitelistwnd_7|초대|
+|XML_headquartersinvitelistwnd_8|초대|
+|XML_headquartersinvitelistwnd_9|초대|
+|XML_headquartersinvitelistwnd_10|초대|
+|XML_headquartersinvitelistwnd_11|초대|
+|XML_headquartersinvitelistwnd_12|초대|
+|XML_headquartersinvitelistwnd_13|초대|
+|XML_headquartersjoinrequestwnd_1|띵똥~♪|
+|XML_headquartersjoinrequestwnd_2|수락 (SPACE)|
+|XML_headquartersjoinrequestwnd_3|거절|
+|XML_headquartersmainwnd_1|훈련소|
+|XML_headquartersmainwnd_2|초대|
+|XML_headquartersmainwnd_3|방정보 변경|
+|XML_headquartersownerwnd_1|훈련소 정보변경|
+|XML_headquartersownerwnd_2|변경 완료|
+|XML_headquartersownerwnd_3|취소|
+|XML_heromainwnd_1|래더전 참여|
+|XML_heromainwnd_2|진영 정보|
+|XML_heromatchwnd_1|대전 참여하기|
+|XML_heromatchwnd_2|대전 참여하기|
+|XML_heromatchwnd_3|대전 참여하기|
+|XML_heromatchwnd_4|랭킹|
+|XML_heromatchwnd_5|랭킹|
+|XML_heromatchwnd_6|랭킹|
+|XML_heromatchwnd_7|래더전이란?#|
+|XML_heromatchwnd_8|상대진영과 1:1로 겨룰 수 있는 대전입니다.#|
+|XML_heromatchwnd_9|대회포인트를 기본으로 지급하며,#|
+|XML_heromatchwnd_10|시즌 성적에 따라 타이틀 및 보상보너스까지 제공합니다.#|
+|XML_heromatchwnd_11|진영을 탈퇴해도 전적이 유지되니 많은 참여 바랍니다.#|
+|XML_heroreinforcedonewnd_1|추가사용|
+|XML_heroreinforcedonewnd_2|용병보기|
+|XML_heroreinforcedownwnd_1|용병 진화|
+|XML_homeetcitemneedpopup_1|개인본부 임대권 필요|
+|XML_homeetcitemneedpopup_2|상점가기|
+|XML_homeetcitemneedpopup_3|취소|
+|XML_houseinfownd_1|개인본부 정보|
+|XML_houseinfownd_2|입장|
+|XML_houseinfownd_3|취소|
+|XML_houseinvitedwnd_1|개인본부|
+|XML_houseinvitedwnd_2|수락|
+|XML_houseinvitedwnd_3|거절|
+|XML_houseinvitedwnd_4|친구초대 외엔 표시 안함|
+|XML_houseinvitelist_1|초대하기|
+|XML_houseinvitelist_2|현재페이지 모두 초대|
+|XML_houseinvitelist_3|초대하기|
+|XML_houseinvitelist_4|초대|
+|XML_houseinvitelist_5|초대|
+|XML_houseinvitelist_6|초대|
+|XML_houseinvitelist_7|초대|
+|XML_houseinvitelist_8|초대|
+|XML_houseinvitelist_9|초대|
+|XML_houseinvitelist_10|초대|
+|XML_houseinvitelist_11|초대|
+|XML_houseinvitelist_12|초대|
+|XML_houseinvitelist_13|초대|
+|XML_houseinvitelistwnd_1|초대하기|
+|XML_houseinvitelistwnd_2|현재페이지 모두 초대|
+|XML_houseinvitelistwnd_3|초대하기|
+|XML_houseinvitelistwnd_4|초대|
+|XML_houseinvitelistwnd_5|초대|
+|XML_houseinvitelistwnd_6|초대|
+|XML_houseinvitelistwnd_7|초대|
+|XML_houseinvitelistwnd_8|초대|
+|XML_houseinvitelistwnd_9|초대|
+|XML_houseinvitelistwnd_10|초대|
+|XML_houseinvitelistwnd_11|초대|
+|XML_houseinvitelistwnd_12|초대|
+|XML_houseinvitelistwnd_13|초대|
+|XML_housejoinrequestwnd_1|띵똥~♪|
+|XML_housejoinrequestwnd_2|수락 (SPACE)|
+|XML_housejoinrequestwnd_3|거절|
+|XML_housemainwnd_1|개인본부|
+|XML_housemainwnd_2|초대|
+|XML_housingblockinvenwnd_1|길드본부 꾸미기|
+|XML_housingblockinvenwnd_2|상점|
+|XML_housingblockinvenwnd_3|검색하기 (ENTER)|
+|XML_housingblockinvenwnd_4|전체|
+|XML_housingblockinvenwnd_5|블럭|
+|XML_housingblockinvenwnd_6|타일|
+|XML_housingblockinvenwnd_7|장식물|
+|XML_housingblockinvenwnd_8|기능|
+|XML_housingblocksetupwnd_1|꾸미기 리스트 보기|
+|XML_housingblocksetupwnd_2|★설치모드#|
+|XML_housingblocksetupwnd_3|- Q,R키 : |
+|XML_housingblocksetupwnd_4|아이템 변경#|
+|XML_housingblocksetupwnd_5|- W,E키 : |
+|XML_housingblocksetupwnd_6|아이템 회전#|
+|XML_housingblocksetupwnd_7|- D키 : |
+|XML_housingblocksetupwnd_8|설치#|
+|XML_housingblocksetupwnd_9|- F키 : |
+|XML_housingblocksetupwnd_10|회수모드로 변경#|
+|XML_housingblocksetupwnd_11|- A, S키 : |
+|XML_housingblocksetupwnd_12|상승, 하강#|
+|XML_housingblocksetupwnd_13|- 화살표 : |
+|XML_housingblocksetupwnd_14|아이템 이동#|
+|XML_housingblocksetupwnd_15|- 마우스 : |
+|XML_housingblocksetupwnd_16|카메라 시점 변경#|
+|XML_housingblocksetupwnd_17|★회수모드#|
+|XML_housingblocksetupwnd_18|- D키 : |
+|XML_housingblocksetupwnd_19|회수#|
+|XML_housingblocksetupwnd_20|- F키 : |
+|XML_housingblocksetupwnd_21|설치모드로 변경#|
+|XML_housingblocksetupwnd_22|- A, S키 : |
+|XML_housingblocksetupwnd_23|상승, 하강#|
+|XML_housingblocksetupwnd_24|- 화살표 : |
+|XML_housingblocksetupwnd_25|아이템 선택#|
+|XML_housingblocksetupwnd_26|- 마우스 : |
+|XML_housingblocksetupwnd_27|카메라 시점 변경#|
+|XML_idchangewnd_1|닉네임 변경 완료|
+|XML_idchangewnd_2|종료|
+|XML_influencewnd_1|길드 랭킹|
+|XML_influencewnd_2|래더 랭킹|
+|XML_invenfourextracompoundbuyresultwnd_1|합성중...|
+|XML_invenfourextracompoundbuyresultwnd_2|추가사용|
+|XML_invenfourextracompoundbuyresultwnd_3|아이템 보기|
+|XML_invenfourextracompoundbuywnd_1|용병소환 시작|
+|XML_invenfourextracompoundbuywnd_2|무기 재료 장비를 선택하세요|
+|XML_invenfourextracompoundbuywnd_3|갑옷 재료 장비를 선택하세요|
+|XML_invenfourextracompoundbuywnd_4|투구 재료 장비를 선택하세요|
+|XML_invenfourextracompoundbuywnd_5|망토 재료 장비를 선택하세요|
+|XML_invensoldierexpbonusresultwnd_1|용병 보기|
+|XML_invensoldierexpbonuswnd_1|결정|
+|XML_invensoldierselectbuyagreewnd_1|최종확인|
+|XML_invensoldierselectbuyagreewnd_2|결정|
+|XML_invensoldierselectbuyagreewnd_3|취소|
+|XML_invensoldierselectbuyresultwnd_1|아이템 보기|
+|XML_invensoldierselectbuywnd_1|결정|
+|XML_inventoryselectitemwnd_1|선택하기|
+|XML_inventoryselectitemwnd_2|검색하기 (ENTER)|
+|XML_inventoryselectitemwnd_3|전체|
+|XML_inventoryselectitemwnd_4|선택|
+|XML_inventoryselectitemwnd_5|선택|
+|XML_inventoryselectitemwnd_6|선택|
+|XML_inventoryselectitemwnd_7|선택|
+|XML_inventoryselectitemwnd_8|선택|
+|XML_inventoryselectitemwnd_9|선택|
+|XML_inventoryselectitemwnd_10|선택|
+|XML_inventoryselectitemwnd_11|선택|
+|XML_inviteprogresswnd_1|초대하기|
+|XML_itemcompoundexresultwnd_1|강화중...|
+|XML_itemcompoundexresultwnd_2|추가사용|
+|XML_itemcompoundexresultwnd_3|아이템 보기|
+|XML_itemcompoundexwnd_1|장비 강화|
+|XML_itemcompoundexwnd_2|강화 장비를 선택하세요|
+|XML_itemcompoundresultwnd_1|강화중...|
+|XML_itemcompoundresultwnd_2|추가사용|
+|XML_itemcompoundresultwnd_3|아이템 보기|
+|XML_itemcompoundwnd_1|장비 강화|
+|XML_itemcompoundwnd_2|강화 장비를 선택하세요|
+|XML_itemcompoundwnd_3|재료 장비를 선택하세요|
+|XML_itemcustomchangeconfirmwnd_1|변경확인|
+|XML_itemcustomchangeconfirmwnd_2|변경하기|
+|XML_itemcustomchangeconfirmwnd_3|취소|
+|XML_itemcustomdeletewnd_1|장비 스킨 삭제|
+|XML_itemcustomdeletewnd_2|남성 삭제|
+|XML_itemcustomdeletewnd_3|여성 삭제|
+|XML_itemcustommakecompletewnd_1|변경완료|
+|XML_itemcustommakecompletewnd_2|아이템보기|
+|XML_itemcustommakecompletewnd_3|창닫기|
+|XML_itemcustommakeconfirmwnd_1|변경확인|
+|XML_itemcustommakeconfirmwnd_2|변경하기|
+|XML_itemcustommakeconfirmwnd_3|취소|
+|XML_itemcustommakedownloadwnd_1|저장확인|
+|XML_itemcustommakedownloadwnd_2|확인|
+|XML_itemcustommakeuploadwnd_1|파일 올리기|
+|XML_itemcustommakeuploadwnd_2|올리기|
+|XML_itemcustommakeuploadwnd_3|취소|
+|XML_itemcustommakeuploadwnd_4|파일찾기|
+|XML_itemcustommakeuploadwnd_5|파일찾기|
+|XML_itemcustommakeuploadwnd_6|파일찾기|
+|XML_itemcustommakeuploadwnd_7|파일찾기|
+|XML_itemcustommakeuploadwnd_8|파일찾기|
+|XML_itemcustommakeuploadwnd_9|파일찾기|
+|XML_itemcustommakeuploadwnd_10|파일찾기|
+|XML_itemcustommakeuploadwnd_11|파일찾기|
+|XML_itemcustommakeuploadwnd_12|파일찾기|
+|XML_itemcustommakeuploadwnd_13|파일찾기|
+|XML_itemcustommakewnd_1|스킨 변경|
+|XML_itemcustommakewnd_2|스킨 변경할 장비 선택|
+|XML_itemcustommakewnd_3|파일 올리기 (0/0)|
+|XML_itemcustommakewnd_4|원본 파일 다운로드|
+|XML_itemcustommakewnd_5|3D뷰 자세히보기|
+|XML_itemcustommakewnd_6|변경하기|
+|XML_itemcustommakewnd_7|스킨변경 방법 공략보기|
+|XML_itemcustomselectwnd_1|장비 선택하기|
+|XML_itemcustomselectwnd_2|전체|
+|XML_itemcustomselectwnd_3|무기|
+|XML_itemcustomselectwnd_4|갑옷|
+|XML_itemcustomselectwnd_5|투구|
+|XML_itemcustomselectwnd_6|망토|
+|XML_itemcustomselectwnd_7|남성|
+|XML_itemcustomselectwnd_8|남성|
+|XML_itemcustomselectwnd_9|여성|
+|XML_itemcustomselectwnd_10|남성|
+|XML_itemcustomselectwnd_11|남성|
+|XML_itemcustomselectwnd_12|여성|
+|XML_itemcustomselectwnd_13|남성|
+|XML_itemcustomselectwnd_14|남성|
+|XML_itemcustomselectwnd_15|여성|
+|XML_itemcustomselectwnd_16|남성|
+|XML_itemcustomselectwnd_17|남성|
+|XML_itemcustomselectwnd_18|여성|
+|XML_itemcustomselectwnd_19|남성|
+|XML_itemcustomselectwnd_20|남성|
+|XML_itemcustomselectwnd_21|여성|
+|XML_itemcustomselectwnd_22|남성|
+|XML_itemcustomselectwnd_23|남성|
+|XML_itemcustomselectwnd_24|여성|
+|XML_itemcustomselectwnd_25|남성|
+|XML_itemcustomselectwnd_26|남성|
+|XML_itemcustomselectwnd_27|여성|
+|XML_itemcustomselectwnd_28|남성|
+|XML_itemcustomselectwnd_29|남성|
+|XML_itemcustomselectwnd_30|여성|
+|XML_itemcustomtrainmakewnd_1|스킨 변경 연습|
+|XML_itemcustomtrainmakewnd_2|스킨 변경할 장비 선택|
+|XML_itemcustomtrainmakewnd_3|파일 올리기 (0/0)|
+|XML_itemcustomtrainmakewnd_4|원본 파일 다운로드|
+|XML_itemcustomtrainmakewnd_5|3D뷰 자세히보기|
+|XML_itemcustomtrainmakewnd_6|변경하기|
+|XML_itemcustomtrainmakewnd_7|스킨변경 방법 공략보기|
+|XML_itemcustomtrainselectwnd_1|장비 선택하기 (전체 장비)|
+|XML_itemcustomtrainselectwnd_2|전체|
+|XML_itemcustomtrainselectwnd_3|무기|
+|XML_itemcustomtrainselectwnd_4|갑옷|
+|XML_itemcustomtrainselectwnd_5|투구|
+|XML_itemcustomtrainselectwnd_6|망토|
+|XML_itemcustomtrainselectwnd_7|남성|
+|XML_itemcustomtrainselectwnd_8|여성|
+|XML_itemcustomtrainselectwnd_9|남성|
+|XML_itemcustomtrainselectwnd_10|여성|
+|XML_itemcustomtrainselectwnd_11|남성|
+|XML_itemcustomtrainselectwnd_12|여성|
+|XML_itemcustomtrainselectwnd_13|남성|
+|XML_itemcustomtrainselectwnd_14|여성|
+|XML_itemcustomtrainselectwnd_15|남성|
+|XML_itemcustomtrainselectwnd_16|여성|
+|XML_itemcustomtrainselectwnd_17|남성|
+|XML_itemcustomtrainselectwnd_18|여성|
+|XML_itemcustomtrainselectwnd_19|남성|
+|XML_itemcustomtrainselectwnd_20|여성|
+|XML_itemcustomtrainselectwnd_21|남성|
+|XML_itemcustomtrainselectwnd_22|여성|
+|XML_itemcustomwantetcitemwnd_1|변경하기|
+|XML_itemcustomwantetcitemwnd_2|아이템보기|
+|XML_itemcustomwantetcitemwnd_3|내 아이템|
+|XML_itemcustomwantetcitemwnd_4|취소|
+|XML_itemgoldboxwnd_1|상자 열기|
+|XML_itemgrowthcatalystresultwnd_1|성장중...|
+|XML_itemgrowthcatalystresultwnd_2|추가사용|
+|XML_itemgrowthcatalystresultwnd_3|아이템 보기|
+|XML_itemgrowthcatalystwnd_1|장비 성장|
+|XML_itemgrowthcatalystwnd_2|성장 전용 장비를 선택하세요|
+|XML_itemlostsagamixerresultwnd_1|뽑기중...|
+|XML_itemlostsagamixerresultwnd_2|추가사용|
+|XML_itemlostsagamixerresultwnd_3|아이템 보기|
+|XML_itemlostsagamixerwnd_1|조합 하기|
+|XML_itemluckycoinresultwnd_1|뽑기중...|
+|XML_itemluckycoinresultwnd_2|추가사용|
+|XML_itemluckycoinresultwnd_3|아이템 보기|
+|XML_itemluckycoinwnd_1|교환하기|
+|XML_itemluckycoinwnd_2|상품 종류를 선택하세요|
+|XML_itemmaterialcompoundresultwnd_1|강화중...|
+|XML_itemmaterialcompoundresultwnd_2|추가사용|
+|XML_itemmaterialcompoundresultwnd_3|아이템 보기|
+|XML_itemmaterialcompoundwnd_1|장비가 선택되지 않았습니다.|
+|XML_itemmaterialcompoundwnd_2|강화재료가 부족합니다.|
+|XML_itemmaterialcompoundwnd_3|장비 강화|
+|XML_itemmaterialcompoundwnd_4|강화 장비를 선택하세요|
+|XML_itemmaterialcompoundwnd_5|재료를 선택하세요|
+|XML_itemmaterialcompoundwnd_6|실패 경험치란?#|
+|XML_itemmaterialcompoundwnd_7|강화에 실패할 경우#|
+|XML_itemmaterialcompoundwnd_8|실패 경험치가 쌓이게 되며#|
+|XML_itemmaterialcompoundwnd_9|이에 따라 다음 강화#|
+|XML_itemmaterialcompoundwnd_10|성공률이 증가하게 됩니다.|
+|XML_itemmultiplecompoundresultwnd_1|합성중...|
+|XML_itemmultiplecompoundresultwnd_2|추가사용|
+|XML_itemmultiplecompoundresultwnd_3|아이템 보기|
+|XML_itemmultiplecompoundwnd_1|장비 합성|
+|XML_itemmultiplecompoundwnd_2|재료 장비를 선택하세요|
+|XML_itemmultiplecompoundwnd_3|재료 장비를 선택하세요|
+|XML_itemmultiplecompoundwnd_4|재료 장비를 선택하세요|
+|XML_itemnewmultiplecompoundwnd_1|합성하기|
+|XML_itemnewmultiplecompoundwnd_2|재료 장비를 선택하세요|
+|XML_itemnewmultiplecompoundwnd_3|재료 장비를 선택하세요|
+|XML_itemnewmultiplecompoundwnd_4|재료 장비를 선택하세요|
+|XML_itemrainbowmixerresultwnd_1|뽑기중...|
+|XML_itemrainbowmixerresultwnd_2|추가사용|
+|XML_itemrainbowmixerresultwnd_3|아이템 보기|
+|XML_itemrainbowmixerwnd_1|조합 하기|
+|XML_itemrechargeprocesswnd_1|장비연장|
+|XML_itemrechargeprocesswnd_2|장비 연장|
+|XML_itemrechargeprocesswnd_3|취소|
+|XML_itemrechargeprocesswnd_4|장비 기간 연장 중..|
+|XML_itemrechargeprocesswnd_5|추가 사용|
+|XML_itemrechargeprocesswnd_6|아이템보기|
+|XML_itemrechargeprocesswnd_7|아이템보기|
+|XML_itemrechargewnd_1|장비 선택하기|
+|XML_itemrechargewnd_2|전체|
+|XML_itemrechargewnd_3|무기|
+|XML_itemrechargewnd_4|갑옷|
+|XML_itemrechargewnd_5|투구|
+|XML_itemrechargewnd_6|망토|
+|XML_itemrecvsellinfownd_1|아이템 보기|
+|XML_itemreinforcedonewnd_1|추가사용|
+|XML_itemreinforcedonewnd_2|아이템보기|
+|XML_itemreinforcedownwnd_1|장비 진화|
+|XML_itemresellwnd_1|팔기|
+|XML_itemresellwnd_2|취소|
+|XML_joinrequestprogresswnd_1|띵똥~♪|
+|XML_kickvoteprogresswnd_1|강제퇴장투표|
+|XML_kickvoteprogresswnd_2|찬성 (SPACE)|
+|XML_kickvoteprogresswnd_3|반대 (ESC)|
+|XML_kickvotereasonwnd_1|강제퇴장투표|
+|XML_kickvotereasonwnd_2|투표시작|
+|XML_kickvotereasonwnd_3|취소|
+|XML_kickvotereasonwnd_4|비매너 플레이|
+|XML_kickvotereasonwnd_5|네트워크 이상|
+|XML_kickvotereasonwnd_6|게임중 자리비움|
+|XML_kickvotereasonwnd_7|플레이 수준차이|
+|XML_ladderbattleherownd_1|랭킹 그래프|
+|XML_ladderbattleherownd_2|랭킹 상위 100인|
+|XML_ladderbattleherownd_3|대전 기록|
+|XML_ladderbattlewnd_1|팀정보 변경|
+|XML_ladderbattlewnd_2|비슷한 수준만 검색|
+|XML_ladderbattlewnd_3|같은 인원만 검색|
+|XML_ladderbattlewnd_4|상대방 채팅 안보기|
+|XML_ladderbattlewnd_5|네트워크 불량시 강제퇴장|
+|XML_ladderbattlewnd_6|팀랭킹|
+|XML_ladderbattlewnd_7|초대|
+|XML_ladderbattlewnd_8|검색시작|
+|XML_ladderbattlewnd_9|검색취소|
+|XML_ladderbattlewnd_10|나가기|
+|XML_ladderchatwnd_1|로비|
+|XML_laddercreatewnd_1|팀만들기|
+|XML_laddercreatewnd_2|만들기|
+|XML_laddercreatewnd_3|취소|
+|XML_laddercreatewnd_4|길드원만 참여 가능한 길드팀|
+|XML_laddercreatewnd_5|모드|
+|XML_ladderownerwnd_1|팀 정보변경|
+|XML_ladderownerwnd_2|변경 완료|
+|XML_ladderownerwnd_3|취소|
+|XML_ladderownerwnd_4|길드원만 참여 가능한 길드팀|
+|XML_ladderpasswordwnd_1|비밀번호 입력|
+|XML_ladderpasswordwnd_2|확인|
+|XML_ladderpasswordwnd_3|취소|
+|XML_ladderrankinglistwnd_1|진영전투 랭킹|
+|XML_ladderrankinglistwnd_2|팀랭킹|
+|XML_ladderrankinglistwnd_3|개인랭킹|
+|XML_ladderteaminfownd_1|진영팀초대메시지|
+|XML_ladderteaminfownd_2|입장|
+|XML_ladderteaminfownd_3|취소|
+|XML_ladderteaminfownd_4|개발자입장|
+|XML_ladderteaminvitedwnd_1|진영팀초대메시지|
+|XML_ladderteaminvitedwnd_2|수락|
+|XML_ladderteaminvitedwnd_3|거절|
+|XML_ladderteaminvitedwnd_4|친구초대 외엔 표시 안함|
+|XML_ladderteaminvitelistwnd_1|초대하기|
+|XML_ladderteaminvitelistwnd_2|현재페이지 모두 초대|
+|XML_ladderteaminvitelistwnd_3|초대하기|
+|XML_ladderteaminvitelistwnd_4|초대|
+|XML_ladderteaminvitelistwnd_5|초대|
+|XML_ladderteaminvitelistwnd_6|초대|
+|XML_ladderteaminvitelistwnd_7|초대|
+|XML_ladderteaminvitelistwnd_8|초대|
+|XML_ladderteaminvitelistwnd_9|초대|
+|XML_ladderteaminvitelistwnd_10|초대|
+|XML_ladderteaminvitelistwnd_11|초대|
+|XML_ladderteaminvitelistwnd_12|초대|
+|XML_ladderteaminvitelistwnd_13|초대|
+|XML_ladderteamlistwnd_1|랭킹|
+|XML_ladderteamlistwnd_2|랭킹|
+|XML_lobbybattleinfownd_1|내정보|
+|XML_lobbybattleinfownd_2|미션|
+|XML_lobbybattleinfownd_3|퀘스트|
+|XML_lobbybattleinfownd_4|초보자 버프 상태#|
+|XML_lobbybattleinfownd_5|공격/방어/이동속도/#|
+|XML_lobbybattleinfownd_6|드랍피해감소 상승!#|
+|XML_lobbybattleinfownd_7|하사 5호봉까지 적용됩니다.#|
+|XML_lobbybattleinfownd_8|소환까지 %02d:%02d|
+|XML_lobbybattleinfownd_9|소환까지 1분 미만|
+|XML_lobbybattleinfownd_10|소환하기|
+|XML_lobbycampinfownd_1|진영 정보|
+|XML_lobbycampinfownd_2|진영 탈퇴|
+|XML_lobbycampinfownd_3|진영전?|
+|XML_lobbycampinfownd_4|길드 가입 및 생성|
+|XML_lobbycampinfownd_5|내 진영|
+|XML_lobbycampinfownd_6|내 길드|
+|XML_lobbycampinfownd_7|대회 포인트|
+|XML_lobbycampinfownd_8|진영 랭킹|
+|XML_lobbychatwnd_1|로비|
+|XML_lobbydungeoninfownd_1|던전 정보|
+|XML_lobbyfriendlistwnd_1|친구 신청하는 법|
+|XML_lobbyguilduserlistwnd_1|길드 가입하는 법|
+|XML_lobbylockproblemwnd_1|로비 잠김|
+|XML_lobbylockproblemwnd_2|확인 (ENTER)|
+|XML_lobbymainmissionwnd_1|일일|
+|XML_lobbymainmissionwnd_2|주간|
+|XML_lobbymainmissionwnd_3|월간|
+|XML_lobbymainmissionwnd_4|보상받기|
+|XML_lobbymainmissionwnd_5|보상받기|
+|XML_lobbymainmissionwnd_6|보상받기|
+|XML_lobbymainmissionwnd_7|보상받기|
+|XML_lobbymainmissionwnd_8|보상받기|
+|XML_lobbyownertradelistwnd_1|내가 등록한 장비|
+|XML_lobbyplazainfownd_1|내정보|
+|XML_lobbyplazainfownd_2|미션|
+|XML_lobbyplazainfownd_3|퀘스트|
+|XML_lobbyplazainfownd_4|초보자 버프 상태#|
+|XML_lobbyplazainfownd_5|공격/방어/이동속도/#|
+|XML_lobbyplazainfownd_6|드랍피해감소 상승!#|
+|XML_lobbyplazainfownd_7|하사 5호봉까지 적용됩니다.#|
+|XML_lobbyplazainfownd_8|소환까지 %02d:%02d|
+|XML_lobbyplazainfownd_9|소환까지 1분 미만|
+|XML_lobbyplazainfownd_10|소환하기|
+|XML_lobbyquestalarmwnd_1|퀘스트 알리미|
+|XML_lobbyquestalarmwnd_2|다른 퀘스트 보기|
+|XML_lobbyquestnewalramwnd_1|진행중|
+|XML_lobbytradeinfownd_1|내정보|
+|XML_lobbytradeinfownd_2|초보자 버프 상태#|
+|XML_lobbytradeinfownd_3|공격/방어/이동속도/#|
+|XML_lobbytradeinfownd_4|드랍피해감소 상승!#|
+|XML_lobbytradeinfownd_5|하사 5호봉까지 적용됩니다.#|
+|XML_lobbyuserlistwnd_1|로비|
+|XML_lobbyuserlistwnd_2|친구|
+|XML_lobbyuserlistwnd_3|길드|
+|XML_mainmissionwnd_1|일일미션|
+|XML_mainmissionwnd_2|주간미션|
+|XML_mainmissionwnd_3|월간미션|
+|XML_mainmissionwnd_4|보상받기|
+|XML_mainmissionwnd_5|보상받기|
+|XML_mainmissionwnd_6|보상받기|
+|XML_mainmissionwnd_7|보상받기|
+|XML_mainmissionwnd_8|보상받기|
+|XML_mannerdeclarationwnd_1|신고|
+|XML_mannerdeclarationwnd_2|매크로 신고|
+|XML_mannerdeclarationwnd_3|채팅 신고|
+|XML_mannertrialwnd_1|신고|
+|XML_mannertrialwnd_2|신고하기|
+|XML_mannertrialwnd_3|취소|
+|XML_mannervaluationchatwnd_1|채팅 / 쪽지|
+|XML_mannervaluationchatwnd_2|1:1 채팅|
+|XML_mannervaluationchatwnd_3|쪽지 보내기|
+|XML_mannervaluationextensionwnd_1|유저ID가표시됨|
+|XML_mannervaluationextensionwnd_2|마이홈피|
+|XML_mannervaluationextensionwnd_3|래더|
+|XML_mannervaluationextensionwnd_4|개인본부|
+|XML_mannervaluationextensionwnd_5|훈련소|
+|XML_mannervaluationextensionwnd_6|대화|
+|XML_mannervaluationextensionwnd_7|친구+|
+|XML_mannervaluationextensionwnd_8|친구-|
+|XML_mannervaluationextensionwnd_9|절친+|
+|XML_mannervaluationextensionwnd_10|절친-|
+|XML_mannervaluationextensionwnd_11|차단+|
+|XML_mannervaluationextensionwnd_12|차단-|
+|XML_mannervaluationextensionwnd_13|신고|
+|XML_mannervaluationextensionwnd_14|강퇴|
+|XML_mannervaluationextensionwnd_15|칭호|
+|XML_mannervaluationextensionwnd_16|종합정보|
+|XML_mannervaluationextensionwnd_17|상세정보|
+|XML_mannervaluationextensionwnd_18|전투체험|
+|XML_mannervaluationextensionwnd_19|체험|
+|XML_mannervaluationextensionwnd_20|전투체험설정|
+|XML_mannervaluationextensionwnd_21|전투체험해제|
+|XML_mannervaluationextensionwnd_22|전투체험|
+|XML_mannervaluationextensionwnd_23|체험|
+|XML_mannervaluationextensionwnd_24|전투체험설정|
+|XML_mannervaluationextensionwnd_25|전투체험해제|
+|XML_mannervaluationextensionwnd_26|전투체험|
+|XML_mannervaluationextensionwnd_27|체험|
+|XML_mannervaluationextensionwnd_28|전투체험설정|
+|XML_mannervaluationextensionwnd_29|전투체험해제|
+|XML_mannervaluationextensionwnd_30|전투체험|
+|XML_mannervaluationextensionwnd_31|체험|
+|XML_mannervaluationextensionwnd_32|전투체험설정|
+|XML_mannervaluationextensionwnd_33|전투체험해제|
+|XML_mannervaluationextensionwnd_34|전투체험|
+|XML_mannervaluationextensionwnd_35|체험|
+|XML_mannervaluationextensionwnd_36|전투체험설정|
+|XML_mannervaluationextensionwnd_37|전투체험해제|
+|XML_mannervaluationextensionwnd_38|전투체험|
+|XML_mannervaluationextensionwnd_39|체험|
+|XML_mannervaluationextensionwnd_40|전투체험설정|
+|XML_mannervaluationextensionwnd_41|전투체험해제|
+|XML_mannervaluationextensionwnd_42|대표 용병 교체|
+|XML_mannervaluationwnd_1|유저ID가표시됨|
+|XML_mannervaluationwnd_2|마이홈피|
+|XML_mannervaluationwnd_3|랭킹보기|
+|XML_mannervaluationwnd_4|대화|
+|XML_mannervaluationwnd_5|쪽지|
+|XML_mannervaluationwnd_6|친구+|
+|XML_mannervaluationwnd_7|친구-|
+|XML_mannervaluationwnd_8|차단|
+|XML_mannervaluationwnd_9|해제|
+|XML_mannervaluationwnd_10|신고|
+|XML_mannervaluationwnd_11|강퇴|
+|XML_mannervaluationwnd_12|길드가입권유|
+|XML_mannervaluationwnd_13|길드보기|
+|XML_mannervaluationwnd_14|종합정보|
+|XML_mannervaluationwnd_15|상세레벨|
+|XML_manuallistwnd_1|공략|
+|XML_matchinggamewnd_1|짝맞추기|
+|XML_matchinggamewnd_2|제한시간: 00:00|
+|XML_matchinggamewnd_3|미션|
+|XML_matchinggamewnd_4|미션 보상 : 땡땡땡 상자|
+|XML_matchinggamewnd_5|클로버를 모두 찾고 선물을 받으세요|
+|XML_matchinggamewnd_6|짝맞추기 보상|
+|XML_matchinggamewnd_7|누적 참여횟수 : 5회|
+|XML_matchinggamewnd_8|3회|
+|XML_matchinggamewnd_9|7회|
+|XML_matchinggamewnd_10|15회|
+|XML_matchinggamewnd_11|보상을 획득했습니다!|
+|XML_matchinggamewnd_12|보상을 획득하지 못했습니다.|
+|XML_matchinggamewnd_13|제한 시간내에 짝을 맞추면 보상을 받을 수 있습니다.|
+|XML_matchinggamewnd_14|미션 보상 : %s|
+|XML_matchinggamewnd_15|제한시간 : %d : %d|
+|XML_matchinggamewnd_16|티켓 보유량 : %d|
+|XML_matchinggamewnd_17|티켓 보유량 : %d|
+|XML_matchinggamewnd_18|짝맞추기 성공 횟수 : %d회|
+|XML_matchinggamewnd_19|짝맞추기를 종료하시겠습니까?#(게임 중 종료 시 보상을 획득 할 수 없습니다.)|
+|XML_matchinggamewnd_20|시작하기|
+|XML_matchinggamewnd_21|프리미엄 시작|
+|XML_matchinggamewnd_22|확인|
+|XML_memolistwnd_1|쪽지 보내기|
+|XML_memolistwnd_2|아이디▶|
+|XML_memolistwnd_3|친구추가|
+|XML_memolistwnd_4|답장|
+|XML_memolistwnd_5|삭제|
+|XML_memolistwnd_6|아이디▶|
+|XML_memolistwnd_7|친구추가|
+|XML_memolistwnd_8|답장|
+|XML_memolistwnd_9|삭제|
+|XML_messagebox_1|알림|
+|XML_messagebox_2|확인|
+|XML_messagebox_3|취소|
+|XML_messagebox_4|닫기|
+|XML_messagebox3_1|알림|
+|XML_messagebox3_2|확인|
+|XML_messagebox3_3|취소|
+|XML_messagebox3_4|닫기|
+|XML_messagebox4_1|알림|
+|XML_messengerwnd_1|메신저|
+|XML_messengerwnd_2|친구?|
+|XML_messengerwnd_3|절친?|
+|XML_messengerwnd_4|클로버?|
+|XML_messengerwnd_5|목록|
+|XML_messengerwnd_6|채널|
+|XML_messengerwnd_7|채널|
+|XML_messengerwnd_8|길드|
+|XML_middlejoindelaywnd_1|잠시 기다려주세요|
+|XML_minisoldierselectwnd_1|<빠른 용병 교체>#|
+|XML_minisoldierselectwnd_2|빠른 교체 게이지가 활성화된#|
+|XML_minisoldierselectwnd_3|상태에서는 특정 공격, 피격 중에도#|
+|XML_minisoldierselectwnd_4|원하는 용병으로 교체할 수 있습니다.#|
+|XML_minisoldierselectwnd_5|- 옵션 → 게임 설정에서 슬롯on/off - #|
+|XML_missionattainstatewnd_1|미션 완료|
+|XML_missionattainstatewnd_2|확인 (SPACE)|
+|XML_missionquestmainwnd_1|미션|
+|XML_missionquestmainwnd_2|퀘스트|
+|XML_monstercoinusewnd_1|나가기|
+|XML_monstercoinusewnd_2|상점|
+|XML_monstercoinusewnd_3|부활(Space)|
+|XML_monstercoinusewnd_4|취소(Esc)|
+|XML_monstercoinusewnd_5|확인(Esc)|
+|XML_moviemodehelpwnd_1|영화모드|
+|XML_moviemodehelpwnd_2|영화모드로 전환 (SPACE)|
+|XML_moviemodehelpwnd_3|취소 (ESC)|
+|XML_multisupergashponinvenwnd_1|확인중...|
+|XML_multisupergashponinvenwnd_2|아이템 보기|
+|XML_multisupergashponshopwnd_1|확인중...|
+|XML_multisupergashponshopwnd_2|추가구입|
+|XML_multisupergashponshopwnd_3|아이템 보기|
+|XML_myinventoryinfownd_1|연장|
+|XML_myinventoryinfownd_2|해고|
+|XML_myinventoryinfownd_3|분해|
+|XML_myinventoryinfownd_4|청약철회|
+|XML_myinventoryinfownd_5|PC방 용병 교체|
+|XML_myinventoryinfownd_6|진화|
+|XML_myinventoryinfownd_7|연장|
+|XML_myinventoryinfownd_8|해고|
+|XML_myinventoryinfownd_9|분해|
+|XML_myinventoryinfownd_10|용병 진화란?#|
+|XML_myinventoryinfownd_11|소울스톤을 사용하여 용병에게#|
+|XML_myinventoryinfownd_12|새로운 기술을 부여하거나#|
+|XML_myinventoryinfownd_13|기본성능|
+|XML_myinventoryinfownd_14|을 향상시켜주는#|
+|XML_myinventoryinfownd_15|시스템입니다. 진화한 용병은#|
+|XML_myinventoryinfownd_16|같은 단계로 진화된 장비만#|
+|XML_myinventoryinfownd_17|장착이 가능|
+|XML_myinventoryinfownd_18|하며 장비 진화시#|
+|XML_myinventoryinfownd_19|외형이 변경되고 |
+|XML_myinventoryinfownd_20|스킨은 제거#|
+|XML_myinventoryinfownd_21|됩니다. 진화된 장비의#|
+|XML_myinventoryinfownd_22|강화 수치는 유지됩니다.|
+|XML_myinventoryinfownd_23|추가구입|
+|XML_myinventoryinfownd_24|팔기|
+|XML_myinventoryinfownd_25|사용하기|
+|XML_myinventoryinfownd_26|받기|
+|XML_myinventoryinfownd_27|선물하기|
+|XML_myinventoryinfownd_28|사용하기|
+|XML_myinventoryinfownd_29|분해하기|
+|XML_myinventoryinfownd_30|사용하기|
+|XML_myinventoryinfownd_31|프리데이 용병 교체|
+|XML_myinventoryinfownd_32|내 용병 선택|
+|XML_myinventoryinfownd_33|장착|
+|XML_myinventoryinfownd_34|용병|
+|XML_myinventoryinfownd_35|무기|
+|XML_myinventoryinfownd_36|갑옷|
+|XML_myinventoryinfownd_37|투구|
+|XML_myinventoryinfownd_38|망토|
+|XML_myitemselectewnd_1|선택하기|
+|XML_myitemselectewnd_2|검색하기 (ENTER)|
+|XML_myitemselectewnd_3|전체|
+|XML_myitemselectewnd_4|무기|
+|XML_myitemselectewnd_5|갑옷|
+|XML_myitemselectewnd_6|투구|
+|XML_myitemselectewnd_7|망토|
+|XML_myitemselectewnd_8|선택|
+|XML_myitemselectewnd_9|선택|
+|XML_myitemselectewnd_10|선택|
+|XML_myitemselectewnd_11|선택|
+|XML_myitemselectewnd_12|선택|
+|XML_myitemselectewnd_13|선택|
+|XML_myitemselectewnd_14|선택|
+|XML_myitemselectewnd_15|선택|
+|XML_myladderteaminfownd_1|진영팀|
+|XML_myladderteaminfownd_2|닫기|
+|XML_myladderteaminfownd_3|팀정보 변경|
+|XML_MySpiritSelectWnd_1|선택하기|
+|XML_MySpiritSelectWnd_2|유니크|
+|XML_MySpiritSelectWnd_3|프리미엄|
+|XML_MySpiritSelectWnd_4|아이돌|
+|XML_MySpiritSelectWnd_5|레어|
+|XML_MySpiritSelectWnd_6|일반|
+|XML_MySpiritSelectWnd_7|정기전환은 같은 등급의 정기만 가능합니다.|
+|XML_MySpiritSelectWnd_8|검색하기 (ENTER)|
+|XML_MySpiritSelectWnd_9|전체|
+|XML_MySpiritSelectWnd_10|선택|
+|XML_namedtitlepremiumresultwnd_1|아이템 보기|
+|XML_namedtitlepremiumresultwnd_2|추가사용|
+|XML_namedtitlepremiumselectwnd_1|변경하기|
+|XML_namedtitlepremiumselectwnd_2|칭호를 선택하세요|
+|XML_namedtitleresultwnd_1|아이템 보기|
+|XML_namedtitleselectwnd_1|칭호|
+|XML_namedtitleselectwnd_2|칭호 없음|
+|XML_namedtitleselectwnd_3|전체|
+|XML_namedtitleselectwnd_4|일반|
+|XML_namedtitleselectwnd_5|프리미엄|
+|XML_NewMedalRandomBoxWnd_1|사용하기|
+|XML_NewMedalRandomBoxWnd_2|선택 가능 : %d개|
+|XML_NewMedalRandomBoxWnd_3|원하는 스탯 %d개를 선택해주세요|
+|XML_NewMedalRandomBoxWnd_4|메달제작중입니다. 잠시만 기다려주세요|
+|XML_NewMedalRandomBoxWnd_5|이 능력치로 결정하시겠습니까?|
+|XML_NewMedalRandomBoxWnd_6|기본공격력|
+|XML_NewMedalRandomBoxWnd_7|기본방어력|
+|XML_NewMedalRandomBoxWnd_8|이동속도|
+|XML_NewMedalRandomBoxWnd_9|드랍피해감소|
+|XML_NewMedalRandomBoxWnd_10|무기스킬|
+|XML_NewMedalRandomBoxWnd_11|갑옷스킬|
+|XML_NewMedalRandomBoxWnd_12|투구스킬|
+|XML_NewMedalRandomBoxWnd_13|망토스킬|
+|XML_NewMedalRandomBoxWnd_14|선물정보가 일치하지 않습니다.|
+|XML_NewMedalRandomBoxWnd_15|처음으로|
+|XML_NewMedalRandomBoxWnd_16|제작하기|
+|XML_NewMedalRandomBoxWnd_17|확인중...|
+|XML_NewMedalRandomBoxWnd_18|결정하기|
+|XML_NewMedalRandomBoxWnd_19|다시하기|
+|XML_newsearchwnd_1|전체|
+|XML_newsearchwnd_2|검색(Enter)|
+|XML_newsearchwnd_3|검색|
+|XML_newsearchwnd_4|검색(Enter)|
+|XML_newsearchwnd_5|다음(TAB)|
+|XML_newshopboughtwnd_1|소환된 용병은 선물로 지급됩니다.|
+|XML_newshopboughtwnd_2|[내아이템]-[선물함]에서 받기를 선택해주세요.|
+|XML_newshopboughtwnd_3|★획득하신 장비는 내아이템의 장비에서|
+|XML_newshopboughtwnd_4|보유 용병에 장착하여 사용할 수 있습니다.|
+|XML_newshopboughtwnd_5|확인중...|
+|XML_newshopboughtwnd_6|추가구입|
+|XML_newshopboughtwnd_7|아이템 보기|
+|XML_newshopbuyconfirmwnd_1|알림|
+|XML_newshopbuyconfirmwnd_2|확인 (SPACE)|
+|XML_newshopbuyconfirmwnd_3|취소 (ESC)|
+|XML_newshopbuyconfirmwnd_4|[청약철회 규정보기]|
+|XML_newshopbuywnd_1|구입|
+|XML_newshopbuywnd_2|구입|
+|XML_newshopbuywnd_3|선물|
+|XML_newshopbuywnd_4|치장|
+|XML_newshopbuywnd_5|내 용병 선택|
+|XML_newshopbuywnd_6|획득가능 목록|
+|XML_newshopbuywnd_7|추가구입|
+|XML_newshopbuywnd_8|아이템 보기|
+|XML_newshopbuywnd_9|추천치장 미리보기|
+|XML_newshopbuywnd_10|구입|
+|XML_newshopbuywnd_11|내 용병 선택|
+|XML_newshopitempurchaseleedwnd_1|상점가기|
+|XML_newshopitempurchaseleedwnd_2|취소|
+|XML_newshopneedlevelwnd_1|계급제한알림|
+|XML_newshopneedlevelwnd_2|구입|
+|XML_newshopneedlevelwnd_3|창닫기(ESC)|
+|XML_newshopneedpesownd_1|페소부족알림|
+|XML_newshopneedpesownd_2|자세히보기|
+|XML_newshopneedpesownd_3|자세히보기|
+|XML_newshopneedpesownd_4|자세히보기|
+|XML_newshopneedpesownd_5|창닫기(ESC)|
+|XML_newshopsearchwnd_1|정렬|
+|XML_newshopsearchwnd_2|검색|
+|XML_newshopsearchwnd_3|정렬|
+|XML_newshopsearchwnd_4|정렬|
+|XML_newshopselectitemwnd_1|선택하기|
+|XML_newshopselectitemwnd_2|검색하기 (ENTER)|
+|XML_newshopselectitemwnd_3|전체|
+|XML_newshopselectitemwnd_4|선택|
+|XML_newshopselectitemwnd_5|선택|
+|XML_newshopselectitemwnd_6|선택|
+|XML_newshopselectitemwnd_7|선택|
+|XML_newshopselectitemwnd_8|선택|
+|XML_newshopselectitemwnd_9|선택|
+|XML_newshopselectitemwnd_10|선택|
+|XML_newshopselectitemwnd_11|선택|
+|XML_ObserverInfoWnd_1|옵저버 모드 입니다. (SPACE로 관전모드 전환 가능)|
+|XML_ObserverInfoWnd_2|A키 : 상승 / S키 하강 / 방향키 이동|
+|XML_ObserverInfoWnd_3|관전 모드 입니다. (SPACE로 옵저버모드 전환 가능)|
+|XML_ObserverInfoWnd_4|A키 : 영화모드 / S키 시점 변경|
+|XML_packageitembuyagreewnd_1|최종확인|
+|XML_packageitembuyagreewnd_2|결정|
+|XML_packageitembuyagreewnd_3|취소|
+|XML_packageitembuyresultwnd_1|아이템 보기|
+|XML_packageitembuywnd_1|결정|
+|XML_partybattlesimplewnd_1|전투정보|
+|XML_partybattlesimplewnd_2|초대하기|
+|XML_partybattlesimplewnd_3|관전|
+|XML_partybattlesimplewnd_4|유저모드|
+|XML_partybattlesimplewnd_5|팀섞어시작|
+|XML_partybattlesimplewnd_6|중간참여불가|
+|XML_partybattlesimplewnd_7|도전자 받기|
+|XML_partybattlesimplewnd_8|자동시작|
+|XML_partybattlesimplewnd_9|네트워크 불량시 강제퇴장|
+|XML_partybattlesimplewnd_10|방정보 변경|
+|XML_partycataloguewnd_1|1vs1모드는 상사 이상부터#플레이가 가능합니다.|
+|XML_partycataloguewnd_2|아직 오픈시간이 아닙니다.#플레이 가능 시간 : 10:00 ~ 24:00|
+|XML_partycataloguewnd_3|방만들기|
+|XML_partycataloguewnd_4|빠른참가|
+|XML_partycataloguewnd_5|새로 고침|
+|XML_partycataloguewnd_6|오늘의모드|
+|XML_partycataloguewnd_7|랭킹전|
+|XML_partycataloguewnd_8|1vs1모드|
+|XML_partycataloguewnd_9|1vs1모드|
+|XML_partycataloguewnd_10|방만들기|
+|XML_partycataloguewnd_11|빠른참가|
+|XML_partycreatewnd_1|방만들기|
+|XML_partycreatewnd_2|방만들기|
+|XML_partycreatewnd_3|취소|
+|XML_partycreatewnd_4|모드|
+|XML_partyinfownd_1|전투정보|
+|XML_partyinfownd_2|입장|
+|XML_partyinfownd_3|관전|
+|XML_partyinfownd_4|취소|
+|XML_partyinfownd_5|모드명|
+|XML_partyinfownd_6|개발자입장|
+|XML_partyinvitedwnd_1|전투초대메시지|
+|XML_partyinvitedwnd_2|수락|
+|XML_partyinvitedwnd_3|거절|
+|XML_partyinvitedwnd_4|친구초대 외엔 표시 안함|
+|XML_partyinvitelistwnd_1|초대하기|
+|XML_partyinvitelistwnd_2|현재페이지 모두 초대|
+|XML_partyinvitelistwnd_3|초대하기|
+|XML_partyinvitelistwnd_4|초대|
+|XML_partyinvitelistwnd_5|초대|
+|XML_partyinvitelistwnd_6|초대|
+|XML_partyinvitelistwnd_7|초대|
+|XML_partyinvitelistwnd_8|초대|
+|XML_partyinvitelistwnd_9|초대|
+|XML_partyinvitelistwnd_10|초대|
+|XML_partyinvitelistwnd_11|초대|
+|XML_partyinvitelistwnd_12|초대|
+|XML_partyinvitelistwnd_13|초대|
+|XML_partyobserverwnd_1|관전자|
+|XML_partyobserverwnd_2|관전하기|
+|XML_partyobserverwnd_3|관전취소|
+|XML_partyoptionwnd_1|유저모드|
+|XML_partyoptionwnd_2|수동 선택|
+|XML_partyoptionwnd_3|초기화|
+|XML_partyoptionwnd_4|용병육성|
+|XML_partyoptionwnd_5|있음|
+|XML_partyoptionwnd_6|용병교체|
+|XML_partyoptionwnd_7|가능|
+|XML_partyoptionwnd_8|KO 조건|
+|XML_partyoptionwnd_9|맨몸 + 체력없음|
+|XML_partyoptionwnd_10|드랍피해|
+|XML_partyoptionwnd_11|기본|
+|XML_partyoptionwnd_12|팀원공격|
+|XML_partyoptionwnd_13|불가|
+|XML_partyoptionwnd_14|장비사용|
+|XML_partyoptionwnd_15|있음|
+|XML_partyoptionwnd_16|스킬사용|
+|XML_partyoptionwnd_17|기본|
+|XML_partyoptionwnd_18|KO 효과|
+|XML_partyoptionwnd_19|스킬회복|
+|XML_partyoptionwnd_20|기립시간|
+|XML_partyoptionwnd_21|기본|
+|XML_partyoptionwnd_22|중력효과|
+|XML_partyoptionwnd_23|기본|
+|XML_partyoptionwnd_24|포로탈출|
+|XML_partyoptionwnd_25|5 라운드|
+|XML_partyoptionwnd_26|포로탈출|
+|XML_partyoptionwnd_27|180초|
+|XML_partyoptionwnd_28|용병상태|
+|XML_partyoptionwnd_29|기본|
+|XML_partyoptionwnd_30|기본|
+|XML_partyoptionwnd_31|용병체력|
+|XML_partyoptionwnd_32|기본|
+|XML_partyoptionwnd_33|기본|
+|XML_partyoptionwnd_34|이동속도|
+|XML_partyoptionwnd_35|기본|
+|XML_partyoptionwnd_36|기본|
+|XML_partyoptionwnd_37|타격효과|
+|XML_partyoptionwnd_38|정상|
+|XML_partyoptionwnd_39|정상|
+|XML_partyownerwnd_1|방정보 변경|
+|XML_partyownerwnd_2|변경 완료|
+|XML_partyownerwnd_3|취소|
+|XML_partypasswordwnd_1|비밀번호 입력|
+|XML_partypasswordwnd_2|확인|
+|XML_partypasswordwnd_3|취소|
+|XML_partyshambattlewnd_1|방정보 변경|
+|XML_partyshambattlewnd_2|유저모드|
+|XML_partyshambattlewnd_3|팀섞어시작|
+|XML_partyshambattlewnd_4|중간참여불가|
+|XML_partyshambattlewnd_5|도전자 받기|
+|XML_partyshambattlewnd_6|자동시작|
+|XML_partyshambattlewnd_7|네트워크 불량시 강제퇴장|
+|XML_partyshambattlewnd_8|팀변경|
+|XML_partyshambattlewnd_9|관전|
+|XML_partyshambattlewnd_10|초대|
+|XML_partyshambattlewnd_11|게임시작|
+|XML_partyshambattlewnd_12|시작취소|
+|XML_partyshambattlewnd_13|나가기|
+|XML_pcroomauthoritywnd_1|지금부터 PC방 보너스를 받게됩니다|
+|XML_pcroomauthoritywnd_2|보너스용병 선택하기 (SPACE)|
+|XML_pcroomsoldierbonuswnd_1|PC방 보너스용병 선택 (SPACE로 선택 가능)|
+|XML_petcompoundwnd_1|합성하기|
+|XML_petcompoundwnd_2|뒤로|
+|XML_petcompoundwnd_3|확인|
+|XML_petcompoundwnd_4|확인|
+|XML_petcompoundwnd_5|합성할 펫을 선택해주세요|
+|XML_petcompoundwnd_6|합성#|
+|XML_petcompoundwnd_7|합성에 필요한 펫은 최대#레벨이어야 하고,대상 펫과 #동일한 랭크이어야 합니다.|
+|XML_peteatwnd_1|먹이주기|
+|XML_peteatwnd_2|뒤로|
+|XML_peteatwnd_3|확인|
+|XML_peteatwnd_4|먹이를 선택해주세요|
+|XML_peteatwnd_5|먹이#|
+|XML_peteatwnd_6|펫먹이는 상점에서 구매하#여 사용할 수 있습니다|
+|XML_peteggresultwnd_1|확인중...|
+|XML_peteggresultwnd_2|부화 펫 보기|
+|XML_peteggresultwnd_3|추가사용|
+|XML_petemptywnd_1|펫 필요|
+|XML_petemptywnd_2|상점가기|
+|XML_petemptywnd_3|취소|
+|XML_petemptywnd_4|[펫]이 필요합니다.#|
+|XML_petemptywnd_5|펫의 능력치는 모든 용병에게 적용됩니다.#|
+|XML_petemptywnd_6|상점 - 특별에서 구입하실 수 있습니다.|
+|XML_petresellwnd_1|펫 판매하기|
+|XML_petresellwnd_2|판매|
+|XML_petresellwnd_3|취소|
+|XML_petwnd_1|펫|
+|XML_petwnd_2|골드충전|
+|XML_petwnd_3|상점|
+|XML_petwnd_4|펫장착하기|
+|XML_petwnd_5|펫장착해제|
+|XML_petwnd_6|판매|
+|XML_petwnd_7|먹이|
+|XML_petwnd_8|합성|
+|XML_petwnd_9|먹이#|
+|XML_petwnd_10|펫먹이 |
+|XML_petwnd_11|및 |
+|XML_petwnd_12|차원조각|
+|XML_petwnd_13|을 먹일#|
+|XML_petwnd_14|경우 경험치를 획득하고 일정#|
+|XML_petwnd_15|획득 시 레벨업 함.#|
+|XML_petwnd_16|<먹이 획득방법>#|
+|XML_petwnd_17|1) 상점에서 구매#|
+|XML_petwnd_18|합성#|
+|XML_petwnd_19|레벨(MAX)|
+|XML_petwnd_20|여야 합성가능 하#|
+|XML_petwnd_21|며 랭크에 따라 외형이 변함.#|
+|XML_petwnd_22|<합성 조건>#|
+|XML_petwnd_23|1) 같은 펫끼리 합성 시#|
+|XML_petwnd_24|  - 100％ 랭크 업#|
+|XML_petwnd_25|2) 다른 펫끼리 합성 시#|
+|XML_petwnd_26|  - 낮은 확률로 랭크 업 또는#|
+|XML_petwnd_27|    같은 랭크의 다른 펫 획득.#|
+|XML_pinkmessagebox_1|알림|
+|XML_pinkmessagebox_2|확인|
+|XML_pinkmessagebox_3|취소|
+|XML_pinkmessagebox_4|닫기|
+|XML_plazacreatewnd_1|광장만들기|
+|XML_plazacreatewnd_2|만들기|
+|XML_plazacreatewnd_3|취소|
+|XML_plazacreatewnd_4|모드|
+|XML_plazacreatewnd_5|맵|
+|XML_plazainvitedwnd_1|광장초대메시지|
+|XML_plazainvitedwnd_2|수락|
+|XML_plazainvitedwnd_3|거절|
+|XML_plazainvitedwnd_4|친구초대 외엔 표시 안함|
+|XML_plazainvitelistwnd_1|초대하기|
+|XML_plazainvitelistwnd_2|현재페이지 모두 초대|
+|XML_plazainvitelistwnd_3|초대하기|
+|XML_plazainvitelistwnd_4|초대|
+|XML_plazainvitelistwnd_5|초대|
+|XML_plazainvitelistwnd_6|초대|
+|XML_plazainvitelistwnd_7|초대|
+|XML_plazainvitelistwnd_8|초대|
+|XML_plazainvitelistwnd_9|초대|
+|XML_plazainvitelistwnd_10|초대|
+|XML_plazainvitelistwnd_11|초대|
+|XML_plazainvitelistwnd_12|초대|
+|XML_plazainvitelistwnd_13|초대|
+|XML_plazalistwnd_1|광장만들기|
+|XML_plazaownerwnd_1|광장 정보변경|
+|XML_plazaownerwnd_2|변경 완료|
+|XML_plazaownerwnd_3|취소|
+|XML_plazapasswordwnd_1|비밀번호 입력|
+|XML_plazapasswordwnd_2|확인|
+|XML_plazapasswordwnd_3|취소|
+|XML_plazaroominfownd_1|광장정보|
+|XML_plazaroominfownd_2|입장|
+|XML_plazaroominfownd_3|취소|
+|XML_popupstore_1|영구용병 패키지|
+|XML_popupstore_2|1개|
+|XML_popupstore_3|아이콘에 마우스 오버시 상세 설명을 볼 수 있습니다|
+|XML_popupstore_4|구입하신 아이템은 선물함에서 확인하실 수 있습니다.|
+|XML_popupstore_5|내 골드 :|
+|XML_powerupselectwnd_1|검색하기 (ENTER)|
+|XML_powerupselectwnd_2|전체|
+|XML_powerupselectwnd_3|이름없음1|
+|XML_powerupselectwnd_4|이름없음2|
+|XML_powerupselectwnd_5|이름없음3|
+|XML_powerupselectwnd_6|이름없음4|
+|XML_powerupselectwnd_7|이름없음4|
+|XML_powerupselectwnd_8|전체|
+|XML_powerupselectwnd_9|이름없음1|
+|XML_powerupselectwnd_10|이름없음2|
+|XML_powerupselectwnd_11|이름없음3|
+|XML_powerupselectwnd_12|이름없음4|
+|XML_powerupselectwnd_13|선택|
+|XML_powerupselectwnd_14|선택|
+|XML_powerupselectwnd_15|선택|
+|XML_powerupselectwnd_16|선택|
+|XML_powerupselectwnd_17|선택|
+|XML_powerupselectwnd_18|선택|
+|XML_powerupselectwnd_19|선택|
+|XML_powerupselectwnd_20|선택|
+|XML_PracticeInfoWnd_1|%d위|
+|XML_PracticeInfoWnd_2|기록없음|
+|XML_PracticeLobbyInfoWnd_1|포로구출|
+|XML_PracticeLobbyInfoWnd_2|수련장 공략|
+|XML_PracticeLobbyInfoWnd_3|보상|
+|XML_PracticeLobbyInfoWnd_4|1성보상|
+|XML_PracticeLobbyInfoWnd_5|2성보상|
+|XML_PracticeLobbyInfoWnd_6|3성보상|
+|XML_PracticeLobbyInfoWnd_7|랭킹|
+|XML_PracticeLobbyInfoWnd_8|기록없음|
+|XML_PracticeLobbyInfoWnd_9|현재 %d위 %s|
+|XML_PracticeLobbyInfoWnd_10|%d위|
+|XML_PracticeLobbyInfoWnd_11|시작하기(무료이용)|
+|XML_PracticeLobbyInfoWnd_12|수련장랭킹?#|
+|XML_PracticeLobbyInfoWnd_13|순위는 실시간 갱신되며 매주#|
+|XML_PracticeLobbyInfoWnd_14|점검시 초기화 됩니다.#|
+|XML_PracticeLobbyInfoWnd_15|매주 기록 초기화 시 랭킹#|
+|XML_PracticeLobbyInfoWnd_16|순위에 따라 보상이 자동#|
+|XML_PracticeLobbyInfoWnd_17|지급됩니다|
+|XML_PracticeLobbyInfoWnd_18|랭킹보상보기|
+|XML_PracticeRankingWnd_1|수련장 랭킹보상|
+|XML_PracticeRankingWnd_2|수련장순위|
+|XML_PracticeRankingWnd_3|보상내역|
+|XML_PracticeRankingWnd_4|수련장 랭킹 보상 안내|
+|XML_PracticeRankingWnd_5|%d위|
+|XML_PracticeRankingWnd_6|2등|
+|XML_PracticeRankingWnd_7|101등|
+|XML_PracticeRankingWnd_8|501등|
+|XML_PracticeRankingWnd_9|1등|
+|XML_PracticeRankingWnd_10|100등|
+|XML_PracticeRankingWnd_11|500등|
+|XML_PracticeRankingWnd_12|1000등|
+|XML_PracticeRankingWnd_13|금궤|
+|XML_PracticeRankingWnd_14|은궤|
+|XML_PracticeRankingWnd_15|동궤|
+|XML_PracticeRankingWnd_16|목궤|
+|XML_PracticeRankingWnd_17|차원조각 2000개 / 페소 30만 / 정기 5개 / 용병 경험치 선택권|
+|XML_PracticeRankingWnd_18|차원조각 500개 / 페소 5만 / 용병 경험치 가챠 x2|
+|XML_PracticeRankingWnd_19|차원조각 100개 / 페소 1만 / 용병 경험치 가챠|
+|XML_PracticeRankingWnd_20|차원조각 100개 / 페소 1만|
+|XML_PracticeRankingWnd_21|※랭킹보상은 매주 수요일마다 선물함으로 지급됩니다.|
+|XML_PracticeRankingWnd_22|순위|
+|XML_PracticeRankingWnd_23|보상|
+|XML_PracticeRankingWnd_24|상자구성품|
+|XML_PracticeRankingWnd_25|기록없음|
+|XML_PracticeRankingWnd_26|닫기(ESC)|
+|XML_PracticeResultWnd_1|다시하기|
+|XML_PracticeResultWnd_2|나가기|
+|XML_PracticeResultWnd_3|%d성 달성|
+|XML_PracticeResultWnd_4|목표를 완수하여 보상이 지급되었습니다.|
+|XML_PracticeResultWnd_5|보상획득 실패|
+|XML_PracticeResultWnd_6|목표달성/실패|
+|XML_PracticeResultWnd_7|다시하기|
+|XML_PracticeResultWnd_8|나가기|
+|XML_PracticeUpdateRank_1|닫기|
+|XML_PracticeUpdateRank_2|축하드립니다! 새로운 기록을 달성하였습니다.|
+|XML_PracticeUpdateRank_3|갱신시간|
+|XML_PracticeUpdateRank_4|기존 %d위에서|
+|XML_PracticeUpdateRank_5|(▲%d위) |
+|XML_PracticeUpdateRank_6|상승|
+|XML_PracticeUpdateRank_7|닫기|
+|XML_practicehelpwnd_1|연습하기|
+|XML_practicehelpwnd_2|다음 (SPACE)|
+|XML_practicehelpwnd_3|종료 (SPACE)|
+|XML_practicehelpwnd_4|이전|
+|XML_practicerankingwnd_27|수련장 랭킹보상|
+|XML_practicerankingwnd_28|수련장순위|
+|XML_practicerankingwnd_29|보상내역|
+|XML_practicerankingwnd_30|수련장 랭킹 보상 안내|
+|XML_practicerankingwnd_31|%d위|
+|XML_practicerankingwnd_32|1등|
+|XML_practicerankingwnd_33|101등|
+|XML_practicerankingwnd_34|501등|
+|XML_practicerankingwnd_35|1001등|
+|XML_practicerankingwnd_36|100등|
+|XML_practicerankingwnd_37|500등|
+|XML_practicerankingwnd_38|1000등|
+|XML_practicerankingwnd_39|상자|
+|XML_practicerankingwnd_40|좋은상자|
+|XML_practicerankingwnd_41|좀좋은상자|
+|XML_practicerankingwnd_42|완전좋은상자|
+|XML_practicerankingwnd_43|차원조각 5,000개 or 페소 200,000 or 정기 50개(종류랜덤)|
+|XML_practicerankingwnd_44|차원조각 1,000개 or 페소 10,000 or 정기 20개(종류랜덤)|
+|XML_practicerankingwnd_45|차원조각 50개 or 페소 2,000 or 정기 5개(종류랜덤)|
+|XML_practicerankingwnd_46|차원조각 10개 or 페소 500 or 정기 1개(종류랜덤)|
+|XML_practicerankingwnd_47|※랭킹보상은 랜덤박스로 지급되며, 박스 내 상자 구성품 중 한 아이템만 획득 가능하십니다|
+|XML_practicerankingwnd_48|순위|
+|XML_practicerankingwnd_49|보상|
+|XML_practicerankingwnd_50|상자구성품|
+|XML_practicerankingwnd_51|닫기(ESC)|
+|XML_presentalarmwnd_1|선물 도착|
+|XML_presentalarmwnd_2|내아이템 - 선물함 가기|
+|XML_presentdeletewnd_1|선물 삭제|
+|XML_presentdeletewnd_2|모두 확인|
+|XML_presentdeletewnd_3|닫기|
+|XML_presenttimecashalarmwnd_1|선물 도착|
+|XML_presenttimecashalarmwnd_2|확인|
+|XML_presenttimecashreleasewnd_1|보너스 캐쉬 지급 해제|
+|XML_presenttimecashreleasewnd_2|확인|
+|XML_presetsoldierpackageresultwnd_1|용병 보기|
+|XML_presetsoldierpackagewnd_1|결정|
+|XML_priaterulletrenewalwnd_1|공포의 오크통|
+|XML_priaterulletrenewalwnd_2|좀비처럼 돌아온 오크통!|
+|XML_priaterulletrenewalwnd_3|신중하게 검을 꽂아 보상을 받아가세요!!|
+|XML_priaterulletrenewalwnd_4|<장난감 검>#|
+|XML_priaterulletrenewalwnd_5|1. 장난감 검은 상점의 특별탭에서 구매할 수#|
+|XML_priaterulletrenewalwnd_6|   있습니다.#|
+|XML_priaterulletrenewalwnd_7|2. 하루에 검을 오크통에 50회 꽂을 수 있습니다.#|
+|XML_priaterulletrenewalwnd_8|<보상 획득>#|
+|XML_priaterulletrenewalwnd_9|1. 검을 꽂을 때마다 개발자K가 날아가지 않으면#|
+|XML_priaterulletrenewalwnd_10|   단계별로 보상을 획득 가능한 상태가 됩니다#|
+|XML_priaterulletrenewalwnd_11|2. 진행 중에 [보상 받기]를 누르면 획득 가능한#|
+|XML_priaterulletrenewalwnd_12|   상태의 보상을 받을 수 있습니다|
+|XML_priaterulletrenewalwnd_13|<꽝>#|
+|XML_priaterulletrenewalwnd_14|1. 진행 중에 운이 나빠 개발자 K가 날아갔다면 마지막#|
+|XML_priaterulletrenewalwnd_15|   보상만 얻을 수 있으니 신중하세요!#|
+|XML_priaterulletrenewalwnd_16|<보상>#|
+|XML_priaterulletrenewalwnd_17|1. 보상은 단계별로 무작위로 지급되며 단계가 올라갈#|
+|XML_priaterulletrenewalwnd_18|   수록 높은 가치의 아이템이 나올 확률이 높아집니다|
+|XML_priaterulletrenewalwnd_19|시작하기|
+|XML_priaterulletrenewalwnd_20|도움말|
+|XML_priaterulletrenewalwnd_21|새로 시작하기|
+|XML_priaterulletrenewalwnd_22|보상받기|
+|XML_priaterulletrenewalwnd_23|확인중...|
+|XML_priaterulletwnd_1|공포의 오크통|
+|XML_priaterulletwnd_2|보너스 보상|
+|XML_priaterulletwnd_3|개발자K를 날리는 데 |
+|XML_priaterulletwnd_4|사용된 검의 #|
+|XML_priaterulletwnd_5|개수|
+|XML_priaterulletwnd_6|에 알맞은 보상이 지급됩니다.|
+|XML_priaterulletwnd_7|오크통 게임룰|
+|XML_priaterulletwnd_8|- [오크통]은 앞뒤로 존재하는 40개 구멍에,#|
+|XML_priaterulletwnd_9|  보유하고 있는 검을 꽂아 [개발자K]에게 데미지를#|
+|XML_priaterulletwnd_10|  입히면 보상을 획득 할 수 있는 미니 게임입니다.#|
+|XML_priaterulletwnd_11|  보상은 [개발자K]의 표정이 크게 바뀔 때 마다#|
+|XML_priaterulletwnd_12|  지급됩니다.#|
+|XML_priaterulletwnd_13|- 간혹 [크리티컬]이 발생하는데, 이는 [개발자 K]에게#|
+|XML_priaterulletwnd_14|  좀 더 강력한 데미지를 주게 됩니다.#|
+|XML_priaterulletwnd_15|- [개발자 K]의 체력을 모두 소모시켜 날려버리면,#|
+|XML_priaterulletwnd_16|  모든 보상이 지급됩니다.#|
+|XML_priaterulletwnd_17|  [개발자 K]를 날렸을 때, 사용된 검의 개수에 따라#|
+|XML_priaterulletwnd_18|  [보너스 보상]이 추가 지급 됩니다.#|
+|XML_priaterulletwnd_19|- 운이 좋으면 [개발자 K]를 적은 기회로 날릴 수#|
+|XML_priaterulletwnd_20|  있습니다.#|
+|XML_priaterulletwnd_21|- [개발자 K]를 날리거나 도중에 게임을 초기화 할 수#|
+|XML_priaterulletwnd_22|  있으며, 보유하고 있던 검은 그대로 유지됩니다.#|
+|XML_priaterulletwnd_23|시작하기|
+|XML_priaterulletwnd_24|초기화|
+|XML_priaterulletwnd_25|도움말|
+|XML_priaterulletwnd_26|새로 시작하기|
+|XML_privaterulletresetpopup_1|초기화|
+|XML_privaterulletresetpopup_2|초기화 (SPACE)|
+|XML_privaterulletresetpopup_3|취소|
+|XML_questattainselectstatebrownwnd_1|원하는 보상을 N개 선택하세요.|
+|XML_questattainselectstatebrownwnd_2|보상받기 (SPACE)|
+|XML_questattainselectstatepinkwnd_1|원하는 보상을 N개 선택하세요.|
+|XML_questattainselectstatepinkwnd_2|보상받기 (SPACE)|
+|XML_questattainstatewnd_1|보상받기 (SPACE)|
+|XML_questcompletelistwnd_1|내용|
+|XML_questcompletelistwnd_2|결과|
+|XML_questcompletelistwnd_3|내용|
+|XML_questcompletelistwnd_4|결과|
+|XML_questcompletelistwnd_5|내용|
+|XML_questcompletelistwnd_6|결과|
+|XML_questcompletelistwnd_7|내용|
+|XML_questcompletelistwnd_8|결과|
+|XML_questcompletelistwnd_9|내용|
+|XML_questcompletelistwnd_10|결과|
+|XML_questcompletelistwnd_11|내용|
+|XML_questcompletelistwnd_12|결과|
+|XML_questcompletelistwnd_13|내용|
+|XML_questcompletelistwnd_14|결과|
+|XML_questcompletelistwnd_15|내용|
+|XML_questcompletelistwnd_16|결과|
+|XML_questdeleteandfailwnd_1|창닫기 (ESC)|
+|XML_questdeleteandfailwnd_2|창닫기 (ESC)|
+|XML_questlistwnd_1|진행중|
+|XML_questlistwnd_2|완료|
+|XML_questlistwnd_3|결과|
+|XML_questlistwnd_4|결과|
+|XML_questlistwnd_5|결과|
+|XML_questlistwnd_6|결과|
+|XML_questlistwnd_7|결과|
+|XML_questmainwnd_1|퀘스트|
+|XML_questmainwnd_2|진행중|
+|XML_questmainwnd_3|완료|
+|XML_questoccurstatebrownwnd_1|퀘스트제목|
+|XML_questoccurstatebrownwnd_2|퀘스트 완료시 아래 보상 중 N개를 선택할 수 있습니다.|
+|XML_questoccurstatebrownwnd_3|수락 (SPACE)|
+|XML_questoccurstatepinkwnd_1|퀘스트제목|
+|XML_questoccurstatepinkwnd_2|퀘스트 완료시 아래 보상 중 N개를 선택할 수 있습니다.|
+|XML_questoccurstatepinkwnd_3|수락 (SPACE)|
+|XML_questoccurstatewnd_1|퀘스트제목|
+|XML_questoccurstatewnd_2|수락 (SPACE)|
+|XML_questprogressinfobrownwnd_1|퀘스트제목|
+|XML_questprogressinfobrownwnd_2|퀘스트 알림이 추가|
+|XML_questprogressinfobrownwnd_3|퀘스트 알림이 빼기|
+|XML_questprogressinfopinkwnd_1|퀘스트제목|
+|XML_questprogressinfopinkwnd_2|퀘스트 알림이 추가|
+|XML_questprogressinfopinkwnd_3|퀘스트 알림이 빼기|
+|XML_questprogressinfownd_1|퀘스트제목|
+|XML_questprogressinfownd_2|퀘스트 알림이 추가|
+|XML_questprogressinfownd_3|퀘스트 알림이 빼기|
+|XML_quicklobbyexitwnd_1|게임메뉴|
+|XML_quickLobbytradeinfownd_1|내가 등록한 장비|
+|XML_QuickLobbyWnd_1|전투|
+|XML_randomdecoselectwnd_1|치장을 적용할 용병을 선택하세요|
+|XML_randomdecoselectwnd_2|적용|
+|XML_randomdecoselectwnd_3|용병보기|
+|XML_randomdecownd_1|확인중...|
+|XML_randomdecownd_2|추가사용|
+|XML_randomdecownd_3|아이템 보기|
+|XML_RankBattleUpWnd_1|랭킹계급 상승|
+|XML_RankBattleUpWnd_2|랭킹계급 상승|
+|XML_RankBattleUpWnd_3|랭킹계급 하락|
+|XML_RankBattleUpWnd_4|랭킹 계급이 한단계 상승하였습니다.|
+|XML_RankBattleUpWnd_5|랭킹 계급이 한단계 하락하였습니다.|
+|XML_RankBattleUpWnd_6|랭킹계급|
+|XML_RankBattleUpWnd_7|달성!!|
+|XML_RankBattleUpWnd_8|랭킹계급 하락!!|
+|XML_RankBattleUpWnd_9|닫기 (ESC)|
+|XML_rankbattlewnd_1|%d위 %s %s|
+|XML_rankbattlewnd_2|순위없음 %s %s|
+|XML_rankbattlewnd_3|포인트 %d점|
+|XML_rankbattlewnd_4|%d 점|
+|XML_rankbattlewnd_5|%d 승|
+|XML_rankbattlewnd_6|%d 패|
+|XML_rankbattlewnd_7|모드|
+|XML_rankbattlewnd_8|랭킹전|
+|XML_rankbattlewnd_9|맵|
+|XML_rankbattlewnd_10|대회 전용맵|
+|XML_rankbattlewnd_11|상대방 검색중..%d|
+|XML_rankbattlewnd_12|매칭범위 소폭 상승|
+|XML_rankbattlewnd_13|랭킹 그래프|
+|XML_rankbattlewnd_14|랭킹 상위 100인|
+|XML_rankbattlewnd_15|대전 기록|
+|XML_rankbattlewnd_16|비슷한 수준만 검색|
+|XML_rankbattlewnd_17|상대방 채팅 안보기|
+|XML_rankbattlewnd_18|네트워크 불량시 강제퇴장|
+|XML_rankbattlewnd_19|검색시작|
+|XML_rankbattlewnd_20|검색취소|
+|XML_rankbattlewnd_21|나가기|
+|XML_recordinitresultwnd_1|아이템 보기|
+|XML_recordinitwnd_1|초기화|
+|XML_ReinForceSelectWnd_1|소울스톤|
+|XML_relativegradebonuswnd_1|장군 활동 결과|
+|XML_relativegradebonuswnd_2|닫기|
+|XML_rentalsoldierlimitpopupwnd_1|용병전투체험종료|
+|XML_rentalsoldierlimitpopupwnd_2|용병교체하기|
+|XML_resolutionconfirm_1|해상도 설정|
+|XML_resolutionconfirm_2|변경 완료|
+|XML_resolutionconfirm_3|취소|
+|XML_retrymodewnd_1|다시하기 (B.SPACE)|
+|XML_rollbookwnd_1|닫기(SPACE)|
+|XML_roulettehelpwnd_1|복불복 돌림판 이벤트|
+|XML_roulettehelpwnd_2|닫기 (ESC)|
+|XML_roundresultmainwnd_1|방정보|
+|XML_roundstatemainwnd_1|방정보|
+|XML_runningmannamewnd_1|이름표 입력|
+|XML_runningmannamewnd_2|확인 (ENTER)|
+|XML_selectextragashaponsubwnd_1|장비 선택하기|
+|XML_selectextragashaponsubwnd_2|검색하기 (ENTER)|
+|XML_selectextragashaponsubwnd_3|전체|
+|XML_selectextragashaponsubwnd_4|무기|
+|XML_selectextragashaponsubwnd_5|갑옷|
+|XML_selectextragashaponsubwnd_6|투구|
+|XML_selectextragashaponsubwnd_7|망토|
+|XML_selectextragashaponsubwnd_8|선택|
+|XML_selectextragashaponsubwnd_9|선택|
+|XML_selectextragashaponsubwnd_10|선택|
+|XML_selectextragashaponsubwnd_11|선택|
+|XML_selectextragashaponsubwnd_12|선택|
+|XML_selectextragashaponsubwnd_13|선택|
+|XML_selectextragashaponsubwnd_14|선택|
+|XML_selectextragashaponsubwnd_15|선택|
+|XML_selectextragashaponwnd_1|5인용 소원상자|
+|XML_selectextragashaponwnd_2|취소|
+|XML_selectextragashaponwnd_3|획득중...|
+|XML_selectextragashaponwnd_4|추가구입|
+|XML_selectextragashaponwnd_5|아이템보기|
+|XML_selectextragashaponwnd_6|확인|
+|XML_selectgashaponsubwnd_1|선택하기|
+|XML_selectgashaponsubwnd_2|검색하기 (ENTER)|
+|XML_selectgashaponsubwnd_3|전체|
+|XML_selectgashaponsubwnd_4|이름없음1|
+|XML_selectgashaponsubwnd_5|이름없음2|
+|XML_selectgashaponsubwnd_6|이름없음3|
+|XML_selectgashaponsubwnd_7|이름없음4|
+|XML_selectgashaponsubwnd_8|선택|
+|XML_selectgashaponsubwnd_9|선택|
+|XML_selectgashaponsubwnd_10|선택|
+|XML_selectgashaponsubwnd_11|선택|
+|XML_selectgashaponsubwnd_12|선택|
+|XML_selectgashaponsubwnd_13|선택|
+|XML_selectgashaponsubwnd_14|선택|
+|XML_selectgashaponsubwnd_15|선택|
+|XML_selectgashaponwnd_1|5인용 소원상자|
+|XML_selectgashaponwnd_2|취소|
+|XML_selectgashaponwnd_3|획득중...|
+|XML_selectgashaponwnd_4|추가구입|
+|XML_selectgashaponwnd_5|아이템보기|
+|XML_selectgashaponwnd_6|확인|
+|XML_sendpresentconfirmwnd_1|선물하기|
+|XML_sendpresentconfirmwnd_2|선물 발송|
+|XML_sendpresentconfirmwnd_3|취소|
+|XML_sendpresentconfirmwnd_4|[청약철회 규정보기]|
+|XML_sendpresentidwnd_1|선물하기|
+|XML_sendpresentidwnd_2|다음|
+|XML_sendpresentidwnd_3|취소|
+|XML_sendpresentidwnd_4|선물받을 친구를 선택하세요|
+|XML_shopbuywnd_1|Lv3 사이보그#|
+|XML_shopbuywnd_2|남은시간 13일 03:54:14#|
+|XML_shopbuywnd_3|보유중|
+|XML_shopbuywnd_4|미래의 기술과 발사체로 다수의 적을 제압하는데 특화되어 있습니당.|
+|XML_shopbuywnd_5|2시간 고용|
+|XML_shopbuywnd_6|  (소령3호봉 제한)|
+|XML_shopbuywnd_7|2시간 고용|
+|XML_shopbuywnd_8|  (소령3호봉 제한)|
+|XML_shopbuywnd_9|2시간 고용|
+|XML_shopbuywnd_10|2시간 고용|
+|XML_shopwnd_etctab_1| 골드|
+|XML_shopwnd_etctab_2| 골드|
+|XML_shopwnd_etctab_3| 골드|
+|XML_shopwnd_etctab_4| 골드|
+|XML_shopwnd_etctab_5| 골드|
+|XML_shopwnd_etctab_6| 골드|
+|XML_shopwnd_etctab_7| 골드|
+|XML_shopwnd_etctab_8| 골드|
+|XML_shopwnd_etctab_9| 골드|
+|XML_shopwnd_etctab_10| 골드|
+|XML_shopwnd_etctab_11| 골드|
+|XML_shopwnd_etctab_12| 골드|
+|XML_shopwnd_etctab_13| 골드|
+|XML_shopwnd_etctab_14| 골드|
+|XML_shopwnd_etctab_15| 골드|
+|XML_shopwnd_weeklytab_1| 골드|
+|XML_shopwnd_weeklytab_2| 골드|
+|XML_shopwnd_weeklytab_3| 골드|
+|XML_shopwnd_weeklytab_4| 골드|
+|XML_shopwnd_weeklytab_5| 골드|
+|XML_shopwnd_weeklytab_6| 골드|
+|XML_shopwnd_weeklytab_7| 골드|
+|XML_shopwnd_weeklytab_8| 골드|
+|XML_shopwnd_weeklytab_9| 골드|
+|XML_shopwnd_weeklytab_10| 골드|
+|XML_shufflebonusresultwnd_1|알림|
+|XML_shufflebonusresultwnd_2|계속하기|
+|XML_shufflebonusresultwnd_3|로비로 이동|
+|XML_shuffletooptip_1|오늘의 모드는?#|
+|XML_shuffletooptip_2|팀 데스매치|
+|XML_shuffletooptip_3|계급이 비슷한 유저와 1개의 모드를 플레이한뒤#|
+|XML_shuffletooptip_4|스타 코인을 모아보세요!#|
+|XML_shuffletooptip_5|오늘의 모드는?#|
+|XML_shuffletooptip_6|팀 데스매치|
+|XML_shuffletooptip_7|계급이 비슷한 유저와 1개의 모드를 플레이한뒤#|
+|XML_shuffletooptip_8|스타 코인을 모아보세요!#|
+|XML_shuffletooptip_9|오늘의 모드는?#|
+|XML_shuffletooptip_10|팀 데스매치|
+|XML_shuffletooptip_11|계급이 비슷한 유저와 1개의 모드를 플레이한뒤#|
+|XML_shuffletooptip_12|스타 코인을 모아보세요!#|
+|XML_shuffletooptip_13|오늘의 모드는?#|
+|XML_shuffletooptip_14|팀 데스매치|
+|XML_shuffletooptip_15|계급이 비슷한 유저와 1개의 모드를 플레이한뒤#|
+|XML_shuffletooptip_16|스타 코인을 모아보세요!#|
+|XML_shuffletooptip_17|오늘의 모드는?#|
+|XML_shuffletooptip_18|팀 데스매치|
+|XML_shuffletooptip_19|계급이 비슷한 유저와 1개의 모드를 플레이한뒤#|
+|XML_shuffletooptip_20|스타 코인을 모아보세요!#|
+|XML_shuffletooptip_21|오늘의 모드는?#|
+|XML_shuffletooptip_22|팀 데스매치|
+|XML_shuffletooptip_23|계급이 비슷한 유저와 1개의 모드를 플레이한뒤#|
+|XML_shuffletooptip_24|스타 코인을 모아보세요!#|
+|XML_shuffletooptip_25|오늘의 모드는?#|
+|XML_shuffletooptip_26|팀 데스매치|
+|XML_shuffletooptip_27|계급이 비슷한 유저와 1개의 모드를 플레이한뒤#|
+|XML_shuffletooptip_28|스타 코인을 모아보세요!#|
+|XML_shuffletooptip_29|오늘의 모드란?#|
+|XML_shuffletooptip_30|자신과 계급이 비슷한 유저와 매일 1개의#|
+|XML_shuffletooptip_31|게임 모드를 플레이 하여 스타코인 획득이#|
+|XML_shuffletooptip_32|가능합니다. 스타 코인은 과연 어디에 사용될까요?#|
+|XML_soldierdismissalwnd_1|용병해고|
+|XML_soldierdismissalwnd_2|기간제 용병은 분해할 수 없습니다.|
+|XML_soldierdismissalwnd_3|해고|
+|XML_soldierdismissalwnd_4|취소|
+|XML_soldierdisplayalarmwnd_1|필요|
+|XML_soldierdisplayalarmwnd_2|취소|
+|XML_soldierdisplayalarmwnd_3|상점가기|
+|XML_soldierdisplaychangewnd_1|진열 위치 지정|
+|XML_soldierdisplaychangewnd_2|위치 저장 (SPACE)|
+|XML_soldierdisplaychangewnd_3|취소 (ESC)|
+|XML_soldierdisplayselectwnd_1|진열 용병 선택|
+|XML_soldierexperiencewnd_1|체험상태|
+|XML_soldierexperiencewnd_2|닫기 (ESC)|
+|XML_soldierlevelupwnd_1|용병 레벨업|
+|XML_soldierlevelupwnd_2|닫기(ESC)|
+|XML_soldierlimitpopupwnd_1|용병기간만료|
+|XML_soldierlimitpopupwnd_2|상점가기|
+|XML_soldierpracticeselectwnd_1|훈련 용병 선택|
+|XML_soldierpracticeselectwnd_2|전체|
+|XML_soldierpracticeselectwnd_3|유니크|
+|XML_soldierpracticeselectwnd_4|프리미엄|
+|XML_soldierpracticeselectwnd_5|아이돌|
+|XML_soldierpracticeselectwnd_6|레어|
+|XML_soldierpracticeselectwnd_7|일반|
+|XML_soldierpracticeselectwnd_8|용병|
+|XML_soldierselectwnd_1|재고용|
+|XML_soldierselectwnd_2|용병고용|
+|XML_soldierselectwnd_3|전투체험|
+|XML_soldierselectwnd_4|전투체험중|
+|XML_soldierselectwnd_5|전투체험|
+|XML_soldierselectwnd_6|재고용|
+|XML_soldierselectwnd_7|용병고용|
+|XML_soldierselectwnd_8|전투체험|
+|XML_soldierselectwnd_9|전투체험중|
+|XML_soldierselectwnd_10|전투체험|
+|XML_soldierselectwnd_11|재고용|
+|XML_soldierselectwnd_12|용병고용|
+|XML_soldierselectwnd_13|전투체험|
+|XML_soldierselectwnd_14|전투체험중|
+|XML_soldierselectwnd_15|전투체험|
+|XML_soldierselectwnd_16|재고용|
+|XML_soldierselectwnd_17|용병고용|
+|XML_soldierselectwnd_18|전투체험|
+|XML_soldierselectwnd_19|전투체험중|
+|XML_soldierselectwnd_20|전투체험|
+|XML_soldierselectwnd_21|재고용|
+|XML_soldierselectwnd_22|용병고용|
+|XML_soldierselectwnd_23|전투체험|
+|XML_soldierselectwnd_24|전투체험중|
+|XML_soldierselectwnd_25|전투체험|
+|XML_soldierselectwnd_26|재고용|
+|XML_soldierselectwnd_27|용병고용|
+|XML_soldierselectwnd_28|전투체험|
+|XML_soldierselectwnd_29|전투체험중|
+|XML_soldierselectwnd_30|전투체험|
+|XML_soldierselectwnd_31|재고용|
+|XML_soldierselectwnd_32|용병고용|
+|XML_soldierselectwnd_33|전투체험|
+|XML_soldierselectwnd_34|전투체험중|
+|XML_soldierselectwnd_35|전투체험|
+|XML_soldierselectwnd_36|재고용|
+|XML_soldierselectwnd_37|용병고용|
+|XML_soldierselectwnd_38|전투체험|
+|XML_soldierselectwnd_39|전투체험중|
+|XML_soldierselectwnd_40|전투체험|
+|XML_soldierselectwnd_41|재고용|
+|XML_soldierselectwnd_42|용병고용|
+|XML_soldierselectwnd_43|전투체험|
+|XML_soldierselectwnd_44|전투체험중|
+|XML_soldierselectwnd_45|전투체험|
+|XML_soldierselectwnd_46|재고용|
+|XML_soldierselectwnd_47|용병고용|
+|XML_soldierselectwnd_48|전투체험|
+|XML_soldierselectwnd_49|전투체험중|
+|XML_soldierselectwnd_50|전투체험|
+|XML_soldierselectwnd_51|재고용|
+|XML_soldierselectwnd_52|용병고용|
+|XML_soldierselectwnd_53|전투체험|
+|XML_soldierselectwnd_54|전투체험중|
+|XML_soldierselectwnd_55|전투체험|
+|XML_soldierselectwnd_56|재고용|
+|XML_soldierselectwnd_57|용병고용|
+|XML_soldierselectwnd_58|전투체험|
+|XML_soldierselectwnd_59|전투체험중|
+|XML_soldierselectwnd_60|전투체험|
+|XML_soldierselectwnd_61|두줄로보기|
+|XML_soldierselectwnd_62|한줄로보기|
+|XML_soldierselectwnd_63|용병합쳐서보기|
+|XML_soldierselectwnd_64|용병펼쳐서보기|
+|XML_soldierselectwnd_65|용병/NPC 진열|
+|XML_soulstonebuywnd_1|소울스톤 필요|
+|XML_soulstonebuywnd_2|상점가기|
+|XML_soulstonebuywnd_3|취소|
+|XML_SpiritComposeResultWnd_1|영구용병|
+|XML_SpiritComposeResultWnd_2|합성으로 획득한 용병은 보관함에서 확인가능합니다.|
+|XML_spiritfuncwnd_1|용병정기를 선택해주세요.|
+|XML_spiritfuncwnd_2|정기개수가 부족합니다.|
+|XML_spiritfuncwnd_3|정기를 합성해주세요.|
+|XML_spiritfuncwnd_4|정기를 합성중입니다.|
+|XML_spiritfuncwnd_5|합성하고자 하는 용병정기를 선택해주세요. 모자른 정기는 미지의 정기로 대체가능합니다.|
+|XML_spiritfuncwnd_6|선택하신 정기는 영구용병으로 소지하고 있으므로 합성이 불가합니다.|
+|XML_spiritfuncwnd_7|용병정기를 선택해주세요.|
+|XML_spiritfuncwnd_8|정기개수가 부족합니다.|
+|XML_spiritfuncwnd_9|현재개수 %s|
+|XML_spiritfuncwnd_10|(최대개수 %s)|
+|XML_spiritfuncwnd_11|해당 정기를 보유하고 있지 않습니다.|
+|XML_spiritfuncwnd_12|용병정기를 선택해주세요.|
+|XML_spiritfuncwnd_13|전환할 정기를 선택해주세요|
+|XML_spiritfuncwnd_14|정기를 전환해주세요.|
+|XML_spiritfuncwnd_15|정기를 전환중입니다.|
+|XML_spiritfuncwnd_16|용병정기를 선택해주세요.|
+|XML_spiritfuncwnd_17|전환할 정기를 선택해주세요|
+|XML_spiritfuncwnd_18|합성|
+|XML_spiritfuncwnd_19|전환|
+|XML_spiritfuncwnd_20|합성하기|
+|XML_spiritfuncwnd_21|합성중...|
+|XML_spiritfuncwnd_22|정기선택|
+|XML_spiritfuncwnd_23|전환하기|
+|XML_spiritfuncwnd_24|전환중...|
+|XML_successionbattlereplywnd_1|재대결하기|
+|XML_successionbattlereplywnd_2|수락하기|
+|XML_successionbattlereplywnd_3|거절하기|
+|XML_successionbattlerequestwnd_1|재대결하기|
+|XML_successionbattlerequestwnd_2|답변을 기다리는 중..%d|
+|XML_successionbattlerequestwnd_3|재대결 신청하기(SPACE)...|
+|XML_successionbattlerequestwnd_4|답변을 기다리는 중...|
+|XML_successionbattlerequestwnd_5|닫기|
+|XML_successionbattlewnd_1|1vs1모드|
+|XML_successionbattlewnd_2|상대방 찾는 중..%d|
+|XML_successionbattlewnd_3|이벤트 기간 : 매월 첫주 점검 부터 ~ 마지막 주 점검까지|
+|XML_successionbattlewnd_4|상대찾기 (SPACE)|
+|XML_successionbattlewnd_5|매칭취소|
+|XML_supergashponinvenwnd_1|확인중...|
+|XML_supergashponinvenwnd_2|아이템 보기|
+|XML_supergashponshopwnd_1|확인중...|
+|XML_supergashponshopwnd_2|추가구입|
+|XML_supergashponshopwnd_3|아이템 보기|
+|XML_TimeGateResultWnd_1|해당 아이템은 보관함에서 확인하세요.|
+|XML_TimeGateResultWnd_2|닫기 (ESC)|
+|XML_timegatesearch_1|빠른시작|
+|XML_timegatesearchresult_1|빠른참가|
+|XML_timegatesearchresult_2|검색 수정 (SPACE)|
+|XML_timegatesearchresult_3|다시 검색하기|
+|XML_timegatesearchresult_4|닫기 (ESC)|
+|XML_timegatesearchshuffle_1|오늘의 모드|
+|XML_timegatesearchshuffle_2|매일매일 지정된 모드를 반복해서 플레이하고#|
+|XML_timegatesearchshuffle_3|플레이 점수에 따라 스타코인 자동으로 획득!!#|
+|XML_timegatesearchshuffle_4|스타코인을 모아 다양한 상품과 교환해보세요!!#|
+|XML_timegatesearchshuffle_5|매일매일 지정된 모드를 반복해서 플레이하고#|
+|XML_timegatesearchshuffle_6|플레이 점수에 따라 스타코인 자동으로 획득!!#|
+|XML_timegatesearchshuffle_7|스타코인을 모아 다양한 상품과 교환해보세요!!#|
+|XML_timegatesearchshuffle_8|매일매일 지정된 모드를 반복해서 플레이하고#|
+|XML_timegatesearchshuffle_9|플레이 점수에 따라 스타코인 자동으로 획득!!#|
+|XML_timegatesearchshuffle_10|스타코인을 모아 다양한 상품과 교환해보세요!!#|
+|XML_timegatesearchshuffle_11|매일매일 지정된 모드를 반복해서 플레이하고#|
+|XML_timegatesearchshuffle_12|플레이 점수에 따라 스타코인 자동으로 획득!!#|
+|XML_timegatesearchshuffle_13|스타코인을 모아 다양한 상품과 교환해보세요!!#|
+|XML_timegatesearchshuffle_14|매일매일 지정된 모드를 반복해서 플레이하고#|
+|XML_timegatesearchshuffle_15|플레이 점수에 따라 스타코인 자동으로 획득!!#|
+|XML_timegatesearchshuffle_16|스타코인을 모아 다양한 상품과 교환해보세요!!#|
+|XML_timegatesearchshuffle_17|매일매일 지정된 모드를 반복해서 플레이하고#|
+|XML_timegatesearchshuffle_18|플레이 점수에 따라 스타코인 자동으로 획득!!#|
+|XML_timegatesearchshuffle_19|스타코인을 모아 다양한 상품과 교환해보세요!!#|
+|XML_timegatesearchshuffle_20|매일매일 지정된 모드를 반복해서 플레이하고#|
+|XML_timegatesearchshuffle_21|플레이 점수에 따라 스타코인 자동으로 획득!!#|
+|XML_timegatesearchshuffle_22|스타코인을 모아 다양한 상품과 교환해보세요!!#|
+|XML_timegatesearchshuffle_23|매일매일 지정된 모드를 반복해서 플레이하고#|
+|XML_timegatesearchshuffle_24|플레이 점수에 따라 스타코인 자동으로 획득!!#|
+|XML_timegatesearchshuffle_25|스타코인을 모아 다양한 상품과 교환해보세요!!#|
+|XML_timegatesearchshuffle_26| 함께할 유저를 찾는중..#|
+|XML_timegatesearchshuffle_27|참여취소|
+|XML_timegatesearchshuffleresult_1|오늘의 모드|
+|XML_timegatesearchshuffleresult_2|다시 검색하기 (SPACE)|
+|XML_timegatesearchshuffleresult_3|조건에 맞는 방을 찾을 수 없습니다#|
+|XML_timegatesearchshuffleresult_4|전투방 목록에서 참여할 방을 직접 고르시거나#|
+|XML_timegatesearchshuffleresult_5|[다시 검색하기] 버튼을 눌러주세요#|
+|XML_timegatesearchshuffleresult_6|조건에 맞는 방을 찾을 수 없습니다#|
+|XML_timegatesearchshuffleresult_7|전투방 목록에서 참여할 방을 직접 고르시거나#|
+|XML_timegatesearchshuffleresult_8|[다시 검색하기] 버튼을 눌러주세요#|
+|XML_timegatesearchshuffleresult_9|조건에 맞는 방을 찾을 수 없습니다#|
+|XML_timegatesearchshuffleresult_10|전투방 목록에서 참여할 방을 직접 고르시거나#|
+|XML_timegatesearchshuffleresult_11|[다시 검색하기] 버튼을 눌러주세요#|
+|XML_timegatesearchshuffleresult_12|조건에 맞는 방을 찾을 수 없습니다#|
+|XML_timegatesearchshuffleresult_13|전투방 목록에서 참여할 방을 직접 고르시거나#|
+|XML_timegatesearchshuffleresult_14|[다시 검색하기] 버튼을 눌러주세요#|
+|XML_timegatesearchshuffleresult_15|조건에 맞는 방을 찾을 수 없습니다#|
+|XML_timegatesearchshuffleresult_16|전투방 목록에서 참여할 방을 직접 고르시거나#|
+|XML_timegatesearchshuffleresult_17|[다시 검색하기] 버튼을 눌러주세요#|
+|XML_timegatesearchshuffleresult_18|조건에 맞는 방을 찾을 수 없습니다#|
+|XML_timegatesearchshuffleresult_19|전투방 목록에서 참여할 방을 직접 고르시거나#|
+|XML_timegatesearchshuffleresult_20|[다시 검색하기] 버튼을 눌러주세요#|
+|XML_timegatesearchshuffleresult_21|조건에 맞는 방을 찾을 수 없습니다#|
+|XML_timegatesearchshuffleresult_22|전투방 목록에서 참여할 방을 직접 고르시거나#|
+|XML_timegatesearchshuffleresult_23|[다시 검색하기] 버튼을 눌러주세요#|
+|XML_timegatesearchshuffleresult_24|조건에 맞는 방을 찾을 수 없습니다#|
+|XML_timegatesearchshuffleresult_25|전투방 목록에서 참여할 방을 직접 고르시거나#|
+|XML_timegatesearchshuffleresult_26|[다시 검색하기] 버튼을 눌러주세요#|
+|XML_timegatesearchshuffleresult_27|닫기 (ESC)|
+|XML_timegrowthendwnd_1|시간육성 종료|
+|XML_timegrowthendwnd_2|용병보기|
+|XML_timegrowthendwnd_3|확인|
+|XML_awake_normal_tooltip_1|일반각성#|
+|XML_awake_normal_tooltip_2|해당 용병의 |
+|XML_awake_normal_tooltip_3|모든 육성을 +10#|
+|XML_awake_normal_tooltip_4|하는 기능입니다.#|
+|XML_awake_rare_tooltip_1|초월각성#|
+|XML_awake_rare_tooltip_2|해당 용병의 |
+|XML_awake_rare_tooltip_3|모든 육성을 +25#|
+|XML_awake_rare_tooltip_4|하는 기능입니다.#|
+|XML_awake_rare_tooltip_5|차원 조각은 |
+|XML_awake_rare_tooltip_6|영구용병 또는 #|
+|XML_awake_rare_tooltip_7|영구장비 분해 시|
+|XML_awake_rare_tooltip_8|획득합니다.|
+|XML_powerup_tooltip_1|진화란?#|
+|XML_powerup_tooltip_2|소울스톤을 사용하여 용병에게#|
+|XML_powerup_tooltip_3|새로운 기술을 부여하거나#|
+|XML_powerup_tooltip_4|기본성능|
+|XML_powerup_tooltip_5|을 향상시켜주는#|
+|XML_powerup_tooltip_6|시스템입니다. 진화한 용병은#|
+|XML_powerup_tooltip_7|같은 단계로 진화된 장비만#|
+|XML_powerup_tooltip_8|장착이 가능|
+|XML_powerup_tooltip_9|하며 장비 진화시#|
+|XML_powerup_tooltip_10|외형이 변경되고 |
+|XML_powerup_tooltip_11|스킨은 제거#|
+|XML_powerup_tooltip_12|됩니다. 진화된 장비의#|
+|XML_powerup_tooltip_13|강화 수치는 유지됩니다.|
+|XML_totalresultawardwnd_1|시상식|
+|XML_totalresultchatwnd_1|전체|
+|XML_totalresultexpwnd_1|경험치|
+|XML_totalresultmainwnd_1|정기 추가획득|
+|XML_totalresultmainwnd_2|%s %d개|
+|XML_totalresultraidcardwnd_1|잠시 기다려 주세요|
+|XML_totalresultrawardwnd_1|보상|
+|XML_totalresultscorewnd_1|최종스코어|
+|XML_totalresulttreasurecardwnd_1|잠시 기다려 주세요|
+|XML_tournamentbattleinvitewnd_1|대회 초대|
+|XML_tournamentbattleinvitewnd_2|경기장 입장|
+|XML_tournamentcheerpopupwnd_1|우승응원 결정|
+|XML_tournamentcheerpopupwnd_2|결정(SPACE)|
+|XML_tournamentcheerpopupwnd_3|취소(ESC)|
+|XML_tournamentcoinneedpopup_1|대회코인이 부족합니다.|
+|XML_tournamentcoinneedpopup_2|상점가기|
+|XML_tournamentcoinneedpopup_3|취소|
+|XML_tournamentdetailmainwnd_1|대회|
+|XML_tournamentdetailmainwnd_2|지난대회정보|
+|XML_tournamentdetailmainwnd_3|대회란?|
+|XML_tournamentdetailmainwnd_4|대회정보|
+|XML_tournamentdetailmainwnd_5|우승응원|
+|XML_tournamentdetailmainwnd_6|대진배정|
+|XML_tournamentdetailmainwnd_7|대회일정|
+|XML_tournamentdetailmainwnd_8|포상|
+|XML_tournamentdetailmainwnd_9|입장안내|
+|XML_tournamentdetailmainwnd_10|관전입장|
+|XML_tournamentdetailmainwnd_11|초대하기|
+|XML_tournamentdetailschedulewnd_1|1조 대회팀|
+|XML_tournamentdetailschedulewnd_2|1조 대회팀|
+|XML_tournamentdetailschedulewnd_3|1조 대회팀|
+|XML_tournamentdetailschedulewnd_4|1조 대회팀|
+|XML_tournamentdetailschedulewnd_5|1조 대회팀|
+|XML_tournamentdetailschedulewnd_6|1조 대회팀|
+|XML_tournamentdetailschedulewnd_7|1조 대회팀|
+|XML_tournamentdetailschedulewnd_8|1조 대회팀|
+|XML_tournamentdetailschedulewnd_9|1조 대회팀|
+|XML_tournamentdetailschedulewnd_10|1조 대회팀|
+|XML_tournamentdetailschedulewnd_11|1조 대회팀|
+|XML_tournamentdetailschedulewnd_12|1조 대회팀|
+|XML_tournamentdetailschedulewnd_13|1조 대회팀|
+|XML_tournamentdetailschedulewnd_14|1조 대회팀|
+|XML_tournamentdetailschedulewnd_15|1조 대회팀|
+|XML_tournamentdetailschedulewnd_16|1조 대회팀|
+|XML_tournamentdetailschedulewnd_17|1조 대회팀|
+|XML_tournamentdetailschedulewnd_18|1조 대회팀|
+|XML_tournamentdetailschedulewnd_19|1조 대회팀|
+|XML_tournamentdetailschedulewnd_20|1조 대회팀|
+|XML_tournamentdetailschedulewnd_21|1조 대회팀|
+|XML_tournamentdetailschedulewnd_22|1조 대회팀|
+|XML_tournamentdetailschedulewnd_23|1조 대회팀|
+|XML_tournamentdetailschedulewnd_24|1조 대회팀|
+|XML_tournamentdetailschedulewnd_25|1조 대회팀|
+|XML_tournamentdetailschedulewnd_26|1조 대회팀|
+|XML_tournamentdetailschedulewnd_27|1조 대회팀|
+|XML_tournamentdetailschedulewnd_28|1조 대회팀|
+|XML_tournamentdetailschedulewnd_29|1조 대회팀|
+|XML_tournamentdetailschedulewnd_30|1조 대회팀|
+|XML_tournamentdetailschedulewnd_31|1조 대회팀|
+|XML_tournamentetcitemneedpopup_1|대회 생성권 필요|
+|XML_tournamentetcitemneedpopup_2|상점가기|
+|XML_tournamentetcitemneedpopup_3|취소|
+|XML_tournamentetcitemusepopup_1|대회 생성권 사용|
+|XML_tournamentetcitemusepopup_2|사용하러 가기|
+|XML_tournamentetcitemusepopup_3|취소|
+|XML_tournamentetcitemusepopup_4|대회 생성권|
+|XML_tournamentetcitemusepopup_5|프리미엄 대회 생성권|
+|XML_tournamentinfownd_1|나의 대회팀|
+|XML_tournamentinfownd_2|대회 바로가기|
+|XML_tournamentinfownd_3|대회 바로가기|
+|XML_tournamentinfownd_4|대회 바로가기|
+|XML_tournamentinfownd_5|대회 만들기|
+|XML_tournamentinvitationwnd_1|모집하기|
+|XML_tournamentinvitationwnd_2|참가권유 메세지 발송|
+|XML_tournamentinvitationwnd_3|취소|
+|XML_tournamentinvitationwnd_4|친구검색|
+|XML_tournamentjoinconfirmagreewnd_1|팀 생성 권한 획득|
+|XML_tournamentjoinconfirmagreewnd_2|확인|
+|XML_tournamentmainwnd_1|대회정보|
+|XML_tournamentmainwnd_2|대회 참가하기|
+|XML_tournamentmainwnd_3|대회 입장|
+|XML_tournamentmatchlosealarmwnd_1|참여 마감|
+|XML_tournamentmatchlosealarmwnd_2|닫기 (ESC)|
+|XML_tournamentmatchwinalarmwnd_1|승리|
+|XML_tournamentmatchwinalarmwnd_2|닫기 (ESC)|
+|XML_tournamentpredictpopupwnd_1|승리예측|
+|XML_tournamentpredictpopupwnd_2|승리예측 결정|
+|XML_tournamentpredictpopupwnd_3|취소|
+|XML_tournamentrewardalarmwnd_1|대회 포상|
+|XML_tournamentrewardalarmwnd_2|확인|
+|XML_tournamentroomlistwnd_1|관전입장|
+|XML_tournamentruleagreeconfirmwnd_1|대회 운영규칙|
+|XML_tournamentruleagreeconfirmwnd_2|닫기 (ESC)|
+|XML_tournamentteamalarmwnd_1|대회팀 가입 권유|
+|XML_tournamentteamalarmwnd_2|팀정보 보기|
+|XML_tournamentteamalarmwnd_3|닫기|
+|XML_tournamentteamcreatecomplete_1|팀만들기 완료|
+|XML_tournamentteamcreatecomplete_2|팀정보 보기|
+|XML_tournamentteamcreatecomplete_3|닫기|
+|XML_tournamentteamcreatewnd_1|대회 참가하기|
+|XML_tournamentteamcreatewnd_2|팀만들기|
+|XML_tournamentteamcreatewnd_3|친구의 팀 가입 권유를 기다려보겠습니다|
+|XML_tournamentteamentrydelayuserwnd_1|대회팀 가입 대기자|
+|XML_tournamentteamentrydelayuserwnd_2|게임 끄기 전까지 표시 안함|
+|XML_tournamentteamentrydelayuserwnd_3|수락|
+|XML_tournamentteamentrydelayuserwnd_4|거절|
+|XML_tournamentteamentrydelayuserwnd_5|수락|
+|XML_tournamentteamentrydelayuserwnd_6|거절|
+|XML_tournamentteamentrydelayuserwnd_7|수락|
+|XML_tournamentteamentrydelayuserwnd_8|거절|
+|XML_tournamentteamentrydelayuserwnd_9|수락|
+|XML_tournamentteamentrydelayuserwnd_10|거절|
+|XML_tournamentteamentrydelayuserwnd_11|수락|
+|XML_tournamentteamentrydelayuserwnd_12|거절|
+|XML_tournamentteameventwnd_1|대회팀 가입 완료|
+|XML_tournamentteameventwnd_2|팀정보 보기|
+|XML_tournamentteameventwnd_3|닫기|
+|XML_tournamentteameventwnd_4|확인|
+|XML_tournamentteaminfownd_1|팀 정보|
+|XML_tournamentteaminfownd_2|모집하기|
+|XML_tournamentteaminfownd_3|가입대기자|
+|XML_tournamentteaminfownd_4|대회란?|
+|XML_tournamentteaminfownd_5|팀 탈퇴|
+|XML_tournamentteaminfownd_6|대회팀 가입 신청하기|
+|XML_tournamentteaminvitationwnd_1|모집하기|
+|XML_tournamentteaminvitationwnd_2|가입권유 메세지 발송|
+|XML_tournamentteaminvitationwnd_3|취소|
+|XML_tournamentteaminvitationwnd_4|친구검색|
+|XML_tournamentteaminvitedwnd_1|대회팀 가입 권유|
+|XML_tournamentteaminvitedwnd_2|가입신청 가기|
+|XML_tournamentteaminvitedwnd_3|거절|
+|XML_tournamentteaminvitedwnd_4|게임 끄기 전까지 표시 안함|
+|XML_tournamentunearnedwinalarmwnd_1|승리|
+|XML_tournamentunearnedwinalarmwnd_2|닫기 (ESC)|
+|XML_tradeitembuyresultwnd_1|구매완료|
+|XML_tradeitembuyresultwnd_2|아이템보기|
+|XML_tradeitembuyresultwnd_3|확인|
+|XML_tradeitembuywnd_1|구매하기|
+|XML_tradeitembuywnd_2|구매하기|
+|XML_tradeitembuywnd_3|취소|
+|XML_tradeitemcancelresultwnd_1|등록해제|
+|XML_tradeitemcancelresultwnd_2|아이템보기|
+|XML_tradeitemcancelresultwnd_3|확인|
+|XML_tradeitemcancelwnd_1|내가 등록한 장비|
+|XML_tradeitemcancelwnd_2|확인|
+|XML_tradeitemcancelwnd_3|등록해제|
+|XML_tradeitemregisterconfirmwnd_1|장비 등록하기|
+|XML_tradeitemregisterconfirmwnd_2|등록하기|
+|XML_tradeitemregisterconfirmwnd_3|취소|
+|XML_tradeitemregisterresultwnd_1|등록완료|
+|XML_tradeitemregisterresultwnd_2|완료|
+|XML_tradeitemregisterwnd_1|봉인된 장비 등록하기|
+|XML_tradeitemregisterwnd_2|전체|
+|XML_tradeitemregisterwnd_3|무기|
+|XML_tradeitemregisterwnd_4|갑옷|
+|XML_tradeitemregisterwnd_5|투구|
+|XML_tradeitemregisterwnd_6|망토|
+|XML_tradeitemregisterwnd_7|등록하기|
+|XML_tradeitemregisterwnd_8|등록하기|
+|XML_tradeitemregisterwnd_9|등록하기|
+|XML_tradeitemregisterwnd_10|등록하기|
+|XML_tradeitemregisterwnd_11|등록하기|
+|XML_tradeitemregisterwnd_12|등록하기|
+|XML_tradeitemregisterwnd_13|등록하기|
+|XML_tradeitemregisterwnd_14|등록하기|
+|XML_trademainwnd_1|봉인된 장비 등록하기|
+|XML_trademainwnd_2|전체 부위|
+|XML_trademainwnd_3|전체 등급|
+|XML_trademainwnd_4|전체 가격|
+|XML_trademainwnd_5|새로 고침|
+|XML_uniqueitemmultiplecompoundresultwnd_1|합성중...|
+|XML_uniqueitemmultiplecompoundresultwnd_2|추가사용|
+|XML_uniqueitemmultiplecompoundresultwnd_3|아이템 보기|
+|XML_uniqueitemmultiplecompoundwnd_1|장비 강화|
+|XML_uniqueitemmultiplecompoundwnd_2|재료 장비를 선택하세요|
+|XML_uniqueitemmultiplecompoundwnd_3|재료 장비를 선택하세요|
+|XML_uniqueitemmultiplecompoundwnd_4|재료 장비를 선택하세요|
+|XML_usepresentetcitemconfirmwnd_1|선물하기|
+|XML_usepresentetcitemconfirmwnd_2|선물 발송|
+|XML_usepresentetcitemconfirmwnd_3|취소|
+|XML_usepresentetcitemwnd_1|선물하기|
+|XML_usepresentetcitemwnd_2|다음|
+|XML_usepresentetcitemwnd_3|취소|
+|XML_usepresentetcitemwnd_4|선물선택|
+|XML_usepresentetcitemwnd_5|선물받을 친구를 선택하세요|
+|XML_userblocktypealarm_1|게임내 비매너 행위에 따른 제재|
+|XML_userblocktypealarm_2|닫기 (ESC)|
+|XML_userlistwnd_1|친구|
+|XML_userlistwnd_2|길드|
+|XML_userlistwnd_3|차단|
+|XML_userlistwnd_4|친구신청|
+|XML_userlistwnd_5|길드정보|
+|XML_userlistwnd_6|길드홈피|
+|XML_userlistwnd_7|차단추가|
+|XML_userselectherobonuswnd_1|프리데이 용병 선택|
+|XML_userselectherobonuswnd_2|프리데이 용병 받기(SPACE)|

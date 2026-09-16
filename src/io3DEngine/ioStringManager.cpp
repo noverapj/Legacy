@@ -15,12 +15,37 @@ ioStringManager::ioStringManager(void)
 
 ioStringManager::~ioStringManager(void)
 {
-	m_StringInfoMap.clear();
+	m_AppStringMap.clear();
+	m_UiStringMap.clear();
+	m_ConfigStringMap.clear();
 }
 
 ioStringManager & ioStringManager::GetSingleton()
 {
 	return Singleton< ioStringManager >::GetSingleton();
+}
+
+ioStringManager::StringInfoMap& ioStringManager::GetTable( FileNamePrefix eFileNamePrefix )
+{
+	switch( eFileNamePrefix )
+	{
+	case FNP_XML:
+		return m_UiStringMap;
+	case FNP_INI:
+		return m_ConfigStringMap;
+	case FNP_EXE:
+	default:
+		return m_AppStringMap;
+	}
+}
+
+ioStringManager::StringInfoMap& ioStringManager::GetTableByKey( const char *szKey )
+{
+	if( strnicmp( szKey, "xml_", 4 ) == 0 )
+		return m_UiStringMap;
+	else if( strnicmp( szKey, "ini_", 4 ) == 0 )
+		return m_ConfigStringMap;
+	return m_AppStringMap;
 }
 
 char * ioStringManager::GetString( const char *szFileName, const char *szSecondKeyName, int iNum, FileNamePrefix eFileNamePrefix )
@@ -37,8 +62,9 @@ char * ioStringManager::GetString( const char *szFileName, const char *szSecondK
 
 	strlwr( szKeyName );
 
-	StringInfoMap::iterator iter = m_StringInfoMap.find( szKeyName );
-	if( iter != m_StringInfoMap.end() )
+	StringInfoMap &kTable = GetTable( eFileNamePrefix );
+	StringInfoMap::iterator iter = kTable.find( szKeyName );
+	if( iter != kTable.end() )
 		return (char*)iter->second.c_str();
 
 	return szKeyName;
@@ -86,7 +112,7 @@ void ioStringManager::GetStringINI( IN const char *szKey, IN const char *szSecon
 }
 
 const char* ioStringManager::GetStringByID(const char* key)
-{	
+{
 	char cKey[MAX_PATH] = {0,};
 
 	int nSize = strlen(key);
@@ -101,22 +127,11 @@ const char* ioStringManager::GetStringByID(const char* key)
 		}
 	}
 
-	StringInfoMap::iterator it;
-	if(!m_bIsUseSecond)
+	StringInfoMap &kTable = GetTableByKey( cKey );
+	StringInfoMap::iterator it = kTable.find(ioHashString(cKey));
+	if(it == kTable.end())
 	{
-		it = m_StringInfoMap.find(ioHashString(cKey)); 
-		if(it == m_StringInfoMap.end())
-		{
-			return key;
-		}
-	}
-	else
-	{
-		it = m_2ndStringInfoMap.find(ioHashString(cKey)); 
-		if(it == m_2ndStringInfoMap.end())
-		{
-			return key;
-		}
+		return key;
 	}
 
 	return it->second.c_str();
@@ -125,33 +140,21 @@ const char* ioStringManager::GetStringByID(const char* key)
 void ioStringManager::GetStringByID(const char* key, char* out, int len)
 {
 
-	StringInfoMap::iterator it;
-
-	if(!m_bIsUseSecond)
+	StringInfoMap &kTable = GetTableByKey( key );
+	StringInfoMap::iterator it = kTable.find(ioHashString(key));
+	if(it == kTable.end())
 	{
-		it = m_StringInfoMap.find(ioHashString(key)); 
-		if(it == m_StringInfoMap.end())
-		{
-			sprintf_s(out, len, "%s", key);
-			return;
-		}
-	}
-	else
-	{
-		it = m_2ndStringInfoMap.find(ioHashString(key)); 
-		if(it == m_2ndStringInfoMap.end())
-		{
-			sprintf_s(out, len, "%s", key);
-			return;
-		}
+		sprintf_s(out, len, "%s", key);
+		return;
 	}
 
 	sprintf_s(out, len, "%s", it->second.c_str());
 }
 
-void ioStringManager::LoadData( const char *szPath, const char *szFileName, const char *szMemTextList, bool bLoadMemText /*= false */ )
+void ioStringManager::LoadData( const char *szPath, const char *szFileName, FileNamePrefix eTable, const char *szMemTextList /* = NULL */, bool bLoadMemText /* = false */ )
 {
-	m_StringInfoMap.clear();
+	StringInfoMap &kTable = GetTable( eTable );
+	kTable.clear();
 	
 	char szFullPath[MAX_PATH] ="";
 #ifndef EXTRACT_HANGEUL_TOOL
@@ -253,15 +256,15 @@ void ioStringManager::LoadData( const char *szPath, const char *szFileName, cons
 #ifndef EXTRACT_HANGEUL_TOOL
 				strlwr( szKey );
 #endif
-				StringInfoMap::iterator iter = m_StringInfoMap.find( szKey );
-				if( iter != m_StringInfoMap.end() )
+				StringInfoMap::iterator iter = kTable.find( szKey );
+				if( iter != kTable.end() )
 				{
 					if( !bLoadMemText )
 						LOG.PrintTimeAndLog( 0, "%s duplicate Text :Line%d:%s" , __FUNCTION__, iLine, szKey );
 					continue;
 				}
 
-				m_StringInfoMap.insert( StringInfoMap::value_type( ioHashString( szKey ), ioHashString( szText ) ) );
+				kTable.insert( StringInfoMap::value_type( ioHashString( szKey ), ioHashString( szText ) ) );
 				continue;
 			}
 		}
@@ -338,9 +341,13 @@ void ioStringManager::WrtieTextList( const char *szFileName )
 	if( !pFile )
 		return;
 
-	for(StringInfoMap::iterator iter = m_StringInfoMap.begin(); iter != m_StringInfoMap.end(); ++iter)
+	StringInfoMap *pTables[] = { &m_AppStringMap, &m_UiStringMap, &m_ConfigStringMap };
+	for( int i=0 ; i<3 ; i++ )
 	{
-		fprintf( pFile, "|%s|%s|\r\n", iter->first.c_str(), iter->second.c_str() );   
+		for( StringInfoMap::iterator iter = pTables[i]->begin() ; iter != pTables[i]->end() ; ++iter )
+		{
+			fprintf( pFile, "|%s|%s|\r\n", iter->first.c_str(), iter->second.c_str() );
+		}
 	}
 
 	fclose( pFile );
@@ -351,11 +358,12 @@ bool ioStringManager::InsertTextList( const char *szFunc, int iFuncNum, const ch
 	char szKey[MAX_PATH]="";
 	StringCbPrintf( szKey, sizeof( szKey ),  "EXE_%s_%d", szFunc, iFuncNum );
 
-	StringInfoMap::iterator iter = m_StringInfoMap.find( szKey );
-	if( iter != m_StringInfoMap.end() )
+	StringInfoMap &kTable = GetTable( FNP_EXE );
+	StringInfoMap::iterator iter = kTable.find( szKey );
+	if( iter != kTable.end() )
 		return false;
 
-	m_StringInfoMap.insert( StringInfoMap::value_type( ioHashString( szKey ), ioHashString( szText ) ) );
+	kTable.insert( StringInfoMap::value_type( ioHashString( szKey ), ioHashString( szText ) ) );
 	return true;
 }
 #endif

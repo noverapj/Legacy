@@ -115,7 +115,7 @@ int WINAPI WinMain( HINSTANCE hInstance,
 		ioLocalParent *pLocal = g_LocalMgr.GetLocal( ioLocalManager::GetLocalType() );
 		ioStringManager *pStringMgr = new ioStringManager;
 		if( pStringMgr && pLocal )
-			pStringMgr->LoadData( "", "", pLocal->GetMemTextList(), true );
+			pStringMgr->LoadData( "", "", ioStringManager::FNP_EXE, pLocal->GetMemTextList(), true );
 
 		char szError[MAX_PATH*2]="";
 		g_ioNProtect.GetStartErrorMsg( szError, sizeof( szError ) );
@@ -147,7 +147,7 @@ int WINAPI WinMain( HINSTANCE hInstance,
 	ioLocalParent *pLocal = g_LocalMgr.GetLocal( ioLocalManager::GetLocalType() );
 	ioStringManager *pStringMgr = new ioStringManager;
 	if( pStringMgr && pLocal )
-		pStringMgr->LoadData( "", "", pLocal->GetMemTextList(), true );
+		pStringMgr->LoadData( "", "", ioStringManager::FNP_EXE, pLocal->GetMemTextList(), true );
 
 
 	if( pLocal && !pLocal->IsRightLicense() )
