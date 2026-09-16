@@ -1157,7 +1157,7 @@ void RaidReadyCountWnd::RenderCount( int iXPos, int iYPos )
 	g_FontMgr.SetTextStyle( TS_OUTLINE_FULL_2X );
 	g_FontMgr.SetAlignType( TAT_CENTER );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_WHITE );
-	g_FontMgr.PrintTextAlpha( iXPos, iYPos + 59, FONT_SIZE_16, m_nCountTextAlpha, "10초 후 보스가 등장합니다." );
+	g_FontMgr.PrintTextAlpha( iXPos, iYPos + 59, FONT_SIZE_16, m_nCountTextAlpha, STR(1) );
 }
 
 void RaidReadyCountWnd::RenderGO( int iXPos, int iYPos )

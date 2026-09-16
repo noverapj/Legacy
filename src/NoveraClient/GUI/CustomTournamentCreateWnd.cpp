@@ -228,7 +228,7 @@ void CustomTournamentCreateWnd::CreateCustomData()
 	{
 		TournamentScale kData;
 		kData.m_Index = 0;
-		kData.m_szMenuName = "선택안함";
+		kData.m_szMenuName = STR(1);
 		m_vTournamentScaleList.push_back( kData );
 	}
 
@@ -238,7 +238,7 @@ void CustomTournamentCreateWnd::CreateCustomData()
 		kData.m_Index = i;
 
 		int iRound = (int)pow(2.0, (double)i);
-		sprintf_s_e( szBuf, "%d강(%d회전)", iRound, i );
+		SafeSprintf( szBuf, sizeof(szBuf), STR(2), iRound, i );
 		kData.m_szMenuName = szBuf;
 		kData.m_iTournamentRound = i;
 
@@ -257,7 +257,7 @@ void CustomTournamentCreateWnd::CreateCustomData()
 	//선택안함 세팅
 	{
 		TournamentMatchType kData;
-		kData.m_szMenuName ="선택안함";
+		kData.m_szMenuName =STR(1);
 		m_vMatchTypeList.push_back( kData );
 	}
 
@@ -304,7 +304,7 @@ void CustomTournamentCreateWnd::CreateCustomData()
 	//선택안함 세팅
 	{
 		TournamentProgressType kData;
-		kData.m_szMenuName = "선택안함";
+		kData.m_szMenuName = STR(1);
 		kData.m_Type = 0;
 		m_vTournamentProgressTypeList.push_back( kData );
 	}	
@@ -467,7 +467,7 @@ void CustomTournamentCreateWnd::CreateTournamentUserNumberList()
 		for( int i = m_CurTournamentType.m_iMinUser; i <= m_CurTournamentType.m_iMaxUser; ++i )
 		{
 			char szMenu[MAX_PATH];
-			sprintf_s_e( szMenu, "%d인", i );
+			SafeSprintf( szMenu, sizeof(szMenu), STR(1), i );
 			pList->AddList( ID_TOURNAMENT_USERNUMBER_LIST, i, szMenu, NULL );
 		}
 	}
@@ -653,11 +653,11 @@ void CustomTournamentCreateWnd::SetTournamentUserNumber( int iNumber )
 
 	if( m_CurTournamentUserNumber == 0 )
 	{
-		sprintf_s( szMenu, "?명" );
+		sprintf_s( szMenu, STR(1) );
 	}
 	else
 	{
-		sprintf_s_e( szMenu, "%d인", m_CurTournamentUserNumber );
+		SafeSprintf( szMenu, sizeof(szMenu), STR(2), m_CurTournamentUserNumber );
 	}
 
 	if( pWnd )
@@ -802,14 +802,14 @@ bool CustomTournamentCreateWnd::CheckEnableTournament()
 	if( m_szTournamentName.IsEmpty() )
 	{
 		InitEditWnd();
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "대회 이름을 입력하세요" );		
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );		
 		return false;
 	}
 
 	if( !g_App.IsRightID( m_szTournamentName.c_str() ) )
 	{
 		InitEditWnd();
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "잘못된 대회 이름입니다" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return false;
 	}
 
@@ -817,7 +817,7 @@ bool CustomTournamentCreateWnd::CheckEnableTournament()
 	if( g_App.IsNotMakeID( m_szTournamentName.c_str(), szNotMakeString ) )
 	{
 		InitEditWnd();
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "사용이 금지된 이름입니다(%s)", szNotMakeString.c_str() );		
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3), szNotMakeString.c_str() );		
 		return false;
 	}
 
@@ -825,7 +825,7 @@ bool CustomTournamentCreateWnd::CheckEnableTournament()
 	if( pLocal && !pLocal->IsRightNewID( m_szTournamentName.c_str() ) )
 	{
 		InitEditWnd();
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "사용이 금지된 이름입니다" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 		return false;
 	}
 
@@ -834,57 +834,57 @@ bool CustomTournamentCreateWnd::CheckEnableTournament()
 	if( m_szTournamentName != szSlangName )
 	{
 		InitEditWnd();
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "사용이 금지된 이름입니다(1)" );		
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );		
 		return false;
 	}
 
 	if( !Help::IsOnlyEngHanNumText( m_szTournamentName.c_str() ) )
 	{
 		InitEditWnd();
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "사용이 금지된 이름입니다(2)" );			
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(6) );			
 		return false;
 	}
 
 	if( g_SlangUtil.IsLimitedGuildName( m_szTournamentName.c_str() ) )
 	{
 		InitEditWnd();
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "사용이 금지된 이름입니다(3)" );		
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(7) );		
 		return false;
 	}
 
 	if( m_CurBannerMark.m_Index == 0 )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "대회배너(대)를 선택해주세요" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(8) );
 		return false;
 	}
 	else if( m_CurBanner.m_Index == 0 )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "대회배너(소)를 선택해주세요" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(9) );
 		return false;
 	}
 	else if( m_CurTournamentScale.m_Index == 0 )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "대회규모를 선택해주세요" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(10) );
 		return false;
 	}
 	else if( m_CurTournamentType.m_iTournamentMatchType == 0 )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "대회종류를 선택해주세요" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(11) );
 		return false;
 	}
 	else if( m_CurTournamentUserNumber == 0 )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "대회종류의 인원수를 선택해주세요" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(12) );
 		return false;
 	}
 	else if( m_CurTournamentProgressType.m_Type == 0 )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "대회성격을 선택해주세요" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(13) );
 		return false;
 	}
 	else if( m_CurTournamentScheduleVec.empty() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "대회일정을 선택해주세요" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(14) );
 		return false;
 	}
 	else if( !m_CurTournamentScheduleVec.empty() && m_CurTournamentProgressType.m_Type != TournamentNode::CPT_OFFLINE )
@@ -902,12 +902,12 @@ bool CustomTournamentCreateWnd::CheckEnableTournament()
 
 			if( TourDate.GetDate() == 0 )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "대회 일정 선택이 완료되지 않았습니다. # 대회일정을 선택해주세요" );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(15) );
 				return false;
 			}
 			else if( TourDate < kNowDate )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "대회 일정이 현재 시각보다 # 이전 일정이 존재합니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(16) );
 				return false;
 			}
 		}
@@ -933,24 +933,24 @@ void CustomTournamentCreateWnd::TournamentStartMessage()
 			kPrinter[0].SetTextStyle( TS_NORMAL );
 			kPrinter[0].SetBkColor( 0, 0, 0 );
 			kPrinter[0].SetTextColor( TCT_DEFAULT_GRAY );
-			kPrinter[0].AddTextPiece( FONT_SIZE_13, "%s 대회 시작하시겠습니까?", m_szTournamentName.c_str() );
+			kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(1), m_szTournamentName.c_str() );
 
 			kPrinter[1].SetTextStyle( TS_NORMAL );
 			kPrinter[1].SetBkColor( 0, 0, 0 );
 			kPrinter[1].SetTextColor( TCT_DEFAULT_GREEN );
-			kPrinter[1].AddTextPiece( FONT_SIZE_13, "[대회 시작 : %d/%d/%d(%s) %d:%d]", rkStartDate.m_iYear, rkStartDate.m_iMonth, rkStartDate.m_iDay, DateHelp::GetWeekDayString( rkStartDate.m_iDayOfWeek ), rkStartDate.m_iHour, rkStartDate.m_iMin );
+			kPrinter[1].AddTextPiece( FONT_SIZE_13, STR(2), rkStartDate.m_iYear, rkStartDate.m_iMonth, rkStartDate.m_iDay, DateHelp::GetWeekDayString( rkStartDate.m_iDayOfWeek ), rkStartDate.m_iHour, rkStartDate.m_iMin );
 
 			kPrinter[2].SetTextStyle( TS_NORMAL );
 			kPrinter[2].SetBkColor( 0, 0, 0 );
 			kPrinter[2].SetTextColor( TCT_DEFAULT_GREEN );
-			kPrinter[2].AddTextPiece( FONT_SIZE_13, "[대회 종료 : %d/%d/%d(%s) %d:%d]", rkEndDate.m_iYear, rkEndDate.m_iMonth, rkEndDate.m_iDay, DateHelp::GetWeekDayString( rkEndDate.m_iDayOfWeek ), rkEndDate.m_iHour, rkEndDate.m_iMin );
+			kPrinter[2].AddTextPiece( FONT_SIZE_13, STR(3), rkEndDate.m_iYear, rkEndDate.m_iMonth, rkEndDate.m_iDay, DateHelp::GetWeekDayString( rkEndDate.m_iDayOfWeek ), rkEndDate.m_iHour, rkEndDate.m_iMin );
 
 			if( 30 > pWnd->GetTournamentStartRemainTime() && m_CurTournamentProgressType.m_Type == TournamentNode::CPT_ONLINE )
 			{
 				kPrinter[3].SetTextStyle( TS_NORMAL );
 				kPrinter[3].SetBkColor( 0, 0, 0 );
 				kPrinter[3].SetTextColor( TCT_DEFAULT_RED );
-				kPrinter[3].AddTextPiece( FONT_SIZE_13, "모집마감까지 %d분밖에 안남았습니다.", pWnd->GetTournamentStartRemainTime() );
+				kPrinter[3].AddTextPiece( FONT_SIZE_13, STR(4), pWnd->GetTournamentStartRemainTime() );
 			}
 			g_GUIMgr.SetPrevMsgListBox( NULL, MB_YESNO, this, kPrinter );
 		}
@@ -1116,7 +1116,7 @@ void CustomTournamentCreateWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 			else if( cmd == IOEX_BTNUP )
 			{
 				KillKeyFoucs();
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "배너(소) 불러오기 기능은 # 프리미엄 대회 생성권만 가능합니다. # (추후 판매 예정)" );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 			}
 		}
 		break;	
@@ -1144,7 +1144,7 @@ void CustomTournamentCreateWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 			else if( cmd == IOEX_BTNUP )
 			{
 				KillKeyFoucs();
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "배너(대) 불러오기 기능은 # 프리미엄 대회 생성권만 가능합니다. # (추후 판매 예정)" );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 			}
 		}
 		break;
@@ -1181,7 +1181,7 @@ void CustomTournamentCreateWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 
 				if( m_CurTournamentUserNumber <= 0 )
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "대회종류를 먼저 선택해주세요" );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 				}
 				else
 				{
@@ -1232,7 +1232,7 @@ void CustomTournamentCreateWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 				}
 				else
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "대회 운영규칙에 동의하셔야 대회생성이 가능 합니다.# [대회 운영 규칙] 클릭하시면 내용확인이 가능합니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 				}
 			}
 		}
@@ -1400,37 +1400,37 @@ void CustomTournamentCreateWnd::OnBackLineRender( int iXPos, int iYPos )
 	g_FontMgr.SetAlignType( TAT_LEFT );
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
-	g_FontMgr.PrintTextWidthCut( iXPos + 447, iYPos + 63, FONT_SIZE_13, 103.0f, "대회이름" );
+	g_FontMgr.PrintTextWidthCut( iXPos + 447, iYPos + 63, FONT_SIZE_13, 103.0f, STR(1) );
 
 	g_FontMgr.SetTextStyle( TS_NORMAL );
 	g_FontMgr.SetAlignType( TAT_LEFT );
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
-	g_FontMgr.PrintTextWidthCut( iXPos + 447, iYPos + 87, FONT_SIZE_13, 103.0f, "대회배너(대)" );
+	g_FontMgr.PrintTextWidthCut( iXPos + 447, iYPos + 87, FONT_SIZE_13, 103.0f, STR(2) );
 
 	g_FontMgr.SetTextStyle( TS_NORMAL );
 	g_FontMgr.SetAlignType( TAT_LEFT );
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
-	g_FontMgr.PrintTextWidthCut( iXPos + 447, iYPos + 111, FONT_SIZE_13, 103.0f, "대회배너(소)" );
+	g_FontMgr.PrintTextWidthCut( iXPos + 447, iYPos + 111, FONT_SIZE_13, 103.0f, STR(3) );
 
 	g_FontMgr.SetTextStyle( TS_NORMAL );
 	g_FontMgr.SetAlignType( TAT_LEFT );
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
-	g_FontMgr.PrintTextWidthCut( iXPos + 447, iYPos + 135, FONT_SIZE_13, 103.0f, "대회규모" );
+	g_FontMgr.PrintTextWidthCut( iXPos + 447, iYPos + 135, FONT_SIZE_13, 103.0f, STR(4) );
 
 	g_FontMgr.SetTextStyle( TS_NORMAL );
 	g_FontMgr.SetAlignType( TAT_LEFT );
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
-	g_FontMgr.PrintTextWidthCut( iXPos + 447, iYPos + 159, FONT_SIZE_13, 103.0f, "대회종류" );
+	g_FontMgr.PrintTextWidthCut( iXPos + 447, iYPos + 159, FONT_SIZE_13, 103.0f, STR(5) );
 
 	g_FontMgr.SetTextStyle( TS_NORMAL );
 	g_FontMgr.SetAlignType( TAT_LEFT );
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
-	g_FontMgr.PrintTextWidthCut( iXPos + 447, iYPos + 183, FONT_SIZE_13, 103.0f, "대회성격" );
+	g_FontMgr.PrintTextWidthCut( iXPos + 447, iYPos + 183, FONT_SIZE_13, 103.0f, STR(6) );
 }
 
 void CustomTournamentCreateWnd::OnRegulationRender( int iXPos, int iYPos )
@@ -1439,7 +1439,7 @@ void CustomTournamentCreateWnd::OnRegulationRender( int iXPos, int iYPos )
 	g_FontMgr.SetAlignType( TAT_LEFT );
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
-	g_FontMgr.PrintTextWidthCut( iXPos + 545, iYPos + 424, FONT_SIZE_13, 103.0f, "에 동의합니다." );
+	g_FontMgr.PrintTextWidthCut( iXPos + 545, iYPos + 424, FONT_SIZE_13, 103.0f, STR(1) );
 }
 
 void CustomTournamentCreateWnd::OnDevideWndDotRender( int iXPos, int iYPos )
@@ -1670,7 +1670,7 @@ void CustomTournamentViewWnd::OnExplainRender( int iXPos, int iYPos )
 	g_FontMgr.SetAlignType( TAT_CENTER );
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( 255, 255, 255 );
-	g_FontMgr.PrintText( iXPos + 96, iYPos + 344, FONT_SIZE_12, "대회규모" );
+	g_FontMgr.PrintText( iXPos + 96, iYPos + 344, FONT_SIZE_12, STR(1) );
 
 	g_FontMgr.SetTextStyle( TS_NORMAL );
 	g_FontMgr.SetAlignType( TAT_CENTER );
@@ -1683,7 +1683,7 @@ void CustomTournamentViewWnd::OnExplainRender( int iXPos, int iYPos )
 	g_FontMgr.SetAlignType( TAT_CENTER );
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( 255, 255, 255 );
-	g_FontMgr.PrintText( iXPos + 218, iYPos + 344, FONT_SIZE_12, "대회종류" );
+	g_FontMgr.PrintText( iXPos + 218, iYPos + 344, FONT_SIZE_12, STR(2) );
 
 	g_FontMgr.SetTextStyle( TS_NORMAL );
 	g_FontMgr.SetAlignType( TAT_CENTER );
@@ -1691,7 +1691,7 @@ void CustomTournamentViewWnd::OnExplainRender( int iXPos, int iYPos )
 	g_FontMgr.SetTextColor( 255, 180, 0 );
 
 	if( 0 < m_iUserNumber )
-		g_FontMgr.PrintText( iXPos + 218, iYPos + 358, FONT_SIZE_12, "%s %d인", m_szTournamentType.c_str(), m_iUserNumber );
+		g_FontMgr.PrintText( iXPos + 218, iYPos + 358, FONT_SIZE_12, STR(3), m_szTournamentType.c_str(), m_iUserNumber );
 	else
 		g_FontMgr.PrintText( iXPos + 218, iYPos + 358, FONT_SIZE_12, "%s", m_szTournamentType.c_str() );
 
@@ -1701,7 +1701,7 @@ void CustomTournamentViewWnd::OnExplainRender( int iXPos, int iYPos )
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( 255, 255, 255 );
 
-	g_FontMgr.PrintText( iXPos + 340, iYPos + 344, FONT_SIZE_12, "모집마감" );
+	g_FontMgr.PrintText( iXPos + 340, iYPos + 344, FONT_SIZE_12, STR(4) );
 
 	g_FontMgr.SetTextStyle( TS_NORMAL );
 	g_FontMgr.SetAlignType( TAT_CENTER );
@@ -1710,12 +1710,12 @@ void CustomTournamentViewWnd::OnExplainRender( int iXPos, int iYPos )
 
 	if( m_dwManualTournament == TournamentNode::CPT_OFFLINE )
 	{
-		g_FontMgr.PrintText( iXPos + 340, iYPos + 358, FONT_SIZE_12, "수동진행" );
+		g_FontMgr.PrintText( iXPos + 340, iYPos + 358, FONT_SIZE_12, STR(5) );
 	}
 	else
 	{
 		if( m_TournamentDate.isEmpty() )
-			g_FontMgr.PrintText( iXPos + 340, iYPos + 358, FONT_SIZE_12, "선택안함" );
+			g_FontMgr.PrintText( iXPos + 340, iYPos + 358, FONT_SIZE_12, STR(6) );
 		else
 			g_FontMgr.PrintText( iXPos + 340, iYPos + 358, FONT_SIZE_12, "%02d/%02d %02d:%02d", m_TournamentDate.m_iMonth, m_TournamentDate.m_iDay, m_TournamentDate.m_iHour, m_TournamentDate.m_iMin );
 	}
@@ -1737,10 +1737,10 @@ void CustomTournamentViewWnd::OnExtraExplainRender( int iXPos, int iYPos )
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( D3DCOLOR_XRGB( 255, 60, 0 ) );
-	kPrinter.AddTextPiece( FONT_SIZE_12, "포상설정, 공지작성, 대회참가권유" );
+	kPrinter.AddTextPiece( FONT_SIZE_12, STR(1) );
 
 	kPrinter.SetTextColor( D3DCOLOR_XRGB( 227, 196, 129 ) );
-	kPrinter.AddTextPiece( FONT_SIZE_12, "는 대회를 만든 후 가능합니다." );
+	kPrinter.AddTextPiece( FONT_SIZE_12, STR(2) );
 	kPrinter.PrintFullText( iXPos + 218, iYPos + 421, TAT_CENTER );
 	kPrinter.ClearList();
 }
@@ -1771,21 +1771,21 @@ void CustomTournamentViewWnd::OnScheduleRender( int iXPos, int iYPos )
 		g_FontMgr.SetAlignType( TAT_CENTER );
 		g_FontMgr.SetBkColor( 0, 0, 0 );
 		g_FontMgr.SetTextColor( 255, 255, 255 );
-		g_FontMgr.PrintTextWidthCut( iXPos + 128, iYPos + 387, FONT_SIZE_11, 173.0f, "%s 대회 모집", m_szTournamentName.c_str() );
+		g_FontMgr.PrintTextWidthCut( iXPos + 128, iYPos + 387, FONT_SIZE_11, 173.0f, STR(1), m_szTournamentName.c_str() );
 
 		//
 		g_FontMgr.SetTextStyle( TS_NORMAL );
 		g_FontMgr.SetAlignType( TAT_CENTER );
 		g_FontMgr.SetBkColor( 0, 0, 0 );
 		g_FontMgr.SetTextColor( 255, 255, 255 );
-		g_FontMgr.PrintTextWidthCut( iXPos + 265, iYPos + 387, FONT_SIZE_11, 80.0f, "대진발표" );
+		g_FontMgr.PrintTextWidthCut( iXPos + 265, iYPos + 387, FONT_SIZE_11, 80.0f, STR(2) );
 
 		//
 		g_FontMgr.SetTextStyle( TS_NORMAL );
 		g_FontMgr.SetAlignType( TAT_CENTER );
 		g_FontMgr.SetBkColor( 0, 0, 0 );
 		g_FontMgr.SetTextColor( 255, 255, 255 );
-		g_FontMgr.PrintTextWidthCut( iXPos + 355, iYPos + 387, FONT_SIZE_11, 80.0f, "대회기간" );
+		g_FontMgr.PrintTextWidthCut( iXPos + 355, iYPos + 387, FONT_SIZE_11, 80.0f, STR(3) );
 	}	
 	else if( m_dwManualTournament == TournamentNode::CPT_OFFLINE )
 	{
@@ -1800,7 +1800,7 @@ void CustomTournamentViewWnd::OnScheduleRender( int iXPos, int iYPos )
 		g_FontMgr.SetAlignType( TAT_CENTER );
 		g_FontMgr.SetBkColor( 0, 0, 0 );
 		g_FontMgr.SetTextColor( 255, 255, 255 );
-		g_FontMgr.PrintTextWidthCut( iXPos + 218, iYPos + 387, FONT_SIZE_11, 355.0f, "%s 대회(오프라인형)", m_szTournamentName.c_str()  );
+		g_FontMgr.PrintTextWidthCut( iXPos + 218, iYPos + 387, FONT_SIZE_11, 355.0f, STR(4), m_szTournamentName.c_str()  );
 	}
 	else
 	{
@@ -1815,7 +1815,7 @@ void CustomTournamentViewWnd::OnScheduleRender( int iXPos, int iYPos )
 		g_FontMgr.SetAlignType( TAT_CENTER );
 		g_FontMgr.SetBkColor( 0, 0, 0 );
 		g_FontMgr.SetTextColor( 255, 255, 255 );
-		g_FontMgr.PrintTextWidthCut( iXPos + 218, iYPos + 387, FONT_SIZE_11, 355.0f, "선택안함" );
+		g_FontMgr.PrintTextWidthCut( iXPos + 218, iYPos + 387, FONT_SIZE_11, 355.0f, STR(5) );
 	}
 }
 
@@ -2066,14 +2066,14 @@ void CustomTournamentScheduleWnd::SetTournamentSchedule( int iTournamentRound )
 	//모집마감
 	{
 		ScheduleSet kSet;
-		kSet.m_szMenuName = "모집마감";
+		kSet.m_szMenuName = STR(1);
 		kSet.m_iPos = TournamentNode::STATE_TEAM_APP;
 		kSet.m_CalendarSet.SetClear();
 
-		kSet.m_szTitle = "모집마감 날짜와 시간을 선택하세요";
+		kSet.m_szTitle = STR(2);
 		kSet.m_szMentList.clear();
-		kSet.m_szMentList.push_back( "모집마감일 까지만 참가를 받게 되니 기간을 충분히 확보하세요." );
-		kSet.m_szMentList.push_back( "모든 대회 일정들은 2주 내에만 지정할 수 있습니다." );
+		kSet.m_szMentList.push_back( STR(3) );
+		kSet.m_szMentList.push_back( STR(4) );
 
 		m_vScheduleSet.push_back( kSet );
 	}
@@ -2081,14 +2081,14 @@ void CustomTournamentScheduleWnd::SetTournamentSchedule( int iTournamentRound )
 	//대진발표
 	{
 		ScheduleSet kSet;
-		kSet.m_szMenuName = "대진발표";
+		kSet.m_szMenuName = STR(5);
 		kSet.m_iPos = TournamentNode::STATE_TEAM_DELAY;
 		kSet.m_CalendarSet.SetClear();
 
-		kSet.m_szTitle = "대진발표 날짜와 시간을 선택하세요";
+		kSet.m_szTitle = STR(6);
 		kSet.m_szMentList.clear();
-		kSet.m_szMentList.push_back( "모집마감일로 부터 대진발표일까지 주최자가 직접 대진 배정을" );
-		kSet.m_szMentList.push_back( "할 수 있습니다.대진 배정을 놓치면 랜덤배정됩니다." );
+		kSet.m_szMentList.push_back( STR(7) );
+		kSet.m_szMentList.push_back( STR(8) );
 
 		m_vScheduleSet.push_back( kSet );
 	}
@@ -2100,14 +2100,14 @@ void CustomTournamentScheduleWnd::SetTournamentSchedule( int iTournamentRound )
 	{
 		if( i == m_iTournamentMaxRound-1 )
 		{
-			sprintf_s_e( szMenu, "결승");
-			sprintf_s_e( szTitle, "결승 날짜와 시간을 선택하세요");
+			SafeSprintf( szMenu, sizeof(szMenu), STR(9) );
+			SafeSprintf( szTitle, sizeof(szTitle), STR(10) );
 		}
 		else
 		{
 			int iRound = Help::TournamentCurrentRoundWithTeam( (int)pow( 2.0, (double)m_iTournamentMaxRound ), i );
-			sprintf_s_e( szMenu,  "%d강", iRound );
-			sprintf_s_e( szTitle, "%d강 날짜와 시간을 선택하세요", iRound );
+			SafeSprintf( szMenu,  sizeof(szMenu),  STR(11), iRound );
+			SafeSprintf( szTitle, sizeof(szTitle), STR(12), iRound );
 		}
 
 		ScheduleSet kSet;
@@ -2119,12 +2119,12 @@ void CustomTournamentScheduleWnd::SetTournamentSchedule( int iTournamentRound )
 		ChangeTimeText( m_iMatchStartHour, szStartHour );
 		ChangeTimeText( m_iMatchEndHour, szEndHour );
 		char szBuff[MAX_PATH];
-		sprintf_s_e( szBuff, "경기 시간은 %s:00 ~ %s: 00만 가능합니다.", szStartHour.c_str(), szEndHour.c_str() );
+		SafeSprintf( szBuff, sizeof(szBuff), STR(13), szStartHour.c_str(), szEndHour.c_str() );
 
 		kSet.m_szTitle = szTitle;
 		kSet.m_szMentList.clear();
 		kSet.m_szMentList.push_back( szBuff );
-		sprintf_s( szBuff, "경기 일정은 최소 %d분 정도의 간격을 두어야 합니다.", m_iScheduleGapTime );
+		sprintf_s( szBuff, STR(14), m_iScheduleGapTime );
 		kSet.m_szMentList.push_back( szBuff );
 		m_vScheduleSet.push_back( kSet );
 	}
@@ -2132,14 +2132,14 @@ void CustomTournamentScheduleWnd::SetTournamentSchedule( int iTournamentRound )
 	//대회종료
 	{
 		ScheduleSet kSet;
-		kSet.m_szMenuName = "대회종료";
+		kSet.m_szMenuName = STR(15);
 		kSet.m_iPos = TournamentNode::STATE_TOURNAMENT + iTournamentRound;
 		kSet.m_CalendarSet.SetClear();
 
-		kSet.m_szTitle = "대회종료 날짜와 시간을 선택하세요";
+		kSet.m_szTitle = STR(16);
 		kSet.m_szMentList.clear();
-		kSet.m_szMentList.push_back( "대회 종료일에 주최하신 대회가 삭제됩니다." );
-		kSet.m_szMentList.push_back( "대회 결과를 즐길 수 있는 기간을 충분히 확보하세요." );
+		kSet.m_szMentList.push_back( STR(17) );
+		kSet.m_szMentList.push_back( STR(18) );
 
 		m_vScheduleSet.push_back( kSet );
 	}
@@ -2253,7 +2253,7 @@ void CustomTournamentScheduleWnd::SetTournamentCalendar( ioCalendarSet& kSelectD
 			ioHashString szStartHour, szStartMin, szEndHour, szEndMin;
 			ChangeTimeText( m_iMatchStartHour, szStartHour );
 			ChangeTimeText( m_iMatchEndHour, szEndHour );
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "경기 시간은 # %s:00 ~ %s:00만 가능합니다", szStartHour.c_str(), szEndHour.c_str() );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1), szStartHour.c_str(), szEndHour.c_str() );
 			return;
 		}
 	}
@@ -2289,30 +2289,30 @@ void CustomTournamentScheduleWnd::SetTournamentCalendar( ioCalendarSet& kSelectD
 	{
 		if( kSelectDateSet < kStartDateSet )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "모든 대회일정들은 # 2주 내에만 지정할 수 있습니다.");
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2));
 		}
 		else if( iGapTime < m_iScheduleGapTime )
 		{
 			if( kCurSet.m_iPos == TournamentNode::STATE_TOURNAMENT )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, " 최초 경기 일정은 # 대진 배정일로부터 최소 %d분 이후의 시간이어야 합니다.", m_iScheduleGapTime );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3), m_iScheduleGapTime );
 			}
 			else if( kCurSet.m_iPos == TournamentNode::STATE_TEAM_DELAY )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, " 대진배정일은 # 모집마감일로부터 최소 %d분 이후의 시간이어야 합니다.", m_iScheduleGapTime );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4), m_iScheduleGapTime );
 			}
 			else
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "경기일정은 # 최소 %d분 이후의 시간이어야 합니다.", m_iScheduleGapTime );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5), m_iScheduleGapTime );
 			}
 		}
 		else if( m_iTournamentPeriod * 24 * 60 <= iGapTime )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "모든 대회일정들은 # 2주 내에만 지정할 수 있습니다.");
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2));
 		}
 		else
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "잘못된 대회일정입니다.");
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(6));
 		}
 	}
 }
@@ -2349,22 +2349,22 @@ void CustomTournamentScheduleWnd::SetResetMessage( int iPos )
 {
 	if( iPos == TournamentNode::STATE_TEAM_DELAY )
 	{
-		g_GUIMgr.SetMsgBox( MB_YESNO, this, "대진배정과의 일정간격이 짧습니다. # 이후 일정들을 초기화 하시겠습니까?");
+		g_GUIMgr.SetMsgBox( MB_YESNO, this, STR(1));
 	}
 	else if( iPos == TournamentNode::STATE_TOURNAMENT + m_iTournamentMaxRound )
 	{
-		g_GUIMgr.SetMsgBox( MB_YESNO, this, "대회종료와의 일정간격이 짧습니다. # 이후 일정을 초기화 하시겠습니까?");
+		g_GUIMgr.SetMsgBox( MB_YESNO, this, STR(2));
 	}
 	else if( iPos >= TournamentNode::STATE_TOURNAMENT )
 	{
 		int iNextPos = iPos - TournamentNode::STATE_TOURNAMENT;
 		int iRound = Help::TournamentCurrentRoundWithTeam( (int)pow( 2.0, (double)m_iTournamentMaxRound ), iNextPos );
 
-		g_GUIMgr.SetMsgBox( MB_YESNO, this, "%d강과의 일정간격이 짧습니다. # 이후 일정들을 초기화 하시겠습니까?", iRound );
+		g_GUIMgr.SetMsgBox( MB_YESNO, this, STR(3), iRound );
 	}
 	else
 	{
-		g_GUIMgr.SetMsgBox( MB_YESNO, this, "일정들을 초기화 하시겠습니까?");
+		g_GUIMgr.SetMsgBox( MB_YESNO, this, STR(4));
 	}
 }
 
@@ -2407,7 +2407,7 @@ void CustomTournamentScheduleWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param
 		{
 			if( cmd == IOCM_USER_DEFINED )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "모든 대회일정들은 # 2주 내에만 지정할 수 있습니다.");
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1));
 			}
 			else
 			{
@@ -2419,7 +2419,7 @@ void CustomTournamentScheduleWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param
 
 					if( kSelectDateSet.isEmpty() )
 					{
-						g_GUIMgr.SetMsgBox( MB_OK, NULL, "날짜와 시간을 선택 해주세요");
+						g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2));
 					}
 					else
 					{	
@@ -2552,20 +2552,20 @@ void CustomTournamentScheduleWnd::OnScheduleRender( int iXPos, int iYPos )
 			else
 			{
 				g_FontMgr.SetTextColor( TCT_DEFAULT_LIGHTGRAY );
-				g_FontMgr.PrintTextWidthCut( iXPos + 232 + iXOffset, iYPos + 4 + iYOffset, FONT_SIZE_13, 175.0f, "주최자 수동진행" );				
+				g_FontMgr.PrintTextWidthCut( iXPos + 232 + iXOffset, iYPos + 4 + iYOffset, FONT_SIZE_13, 175.0f, STR(1) );				
 			}
 		}
 		else if( m_TournamentProgressType == 0 )
 		{
 			g_FontMgr.SetTextColor( TCT_DEFAULT_LIGHTGRAY );
-			g_FontMgr.PrintTextWidthCut( iXPos + 232 + iXOffset, iYPos + 4 + iYOffset, FONT_SIZE_13, 175.0f, "선택안함" );
+			g_FontMgr.PrintTextWidthCut( iXPos + 232 + iXOffset, iYPos + 4 + iYOffset, FONT_SIZE_13, 175.0f, STR(2) );
 		}
 		else
 		{
 			if( kSet.m_CalendarSet.isEmpty() )
 			{
 				g_FontMgr.SetTextColor( TCT_DEFAULT_LIGHTGRAY );
-				g_FontMgr.PrintTextWidthCut( iXPos + 232 + iXOffset, iYPos + 4 + iYOffset, FONT_SIZE_13, 175.0f, "선택안함" );
+				g_FontMgr.PrintTextWidthCut( iXPos + 232 + iXOffset, iYPos + 4 + iYOffset, FONT_SIZE_13, 175.0f, STR(2) );
 			}
 			else
 			{
@@ -2676,29 +2676,29 @@ void CustomTournamentCreateResultWnd::OnRender()
 	g_FontMgr.SetAlignType( TAT_CENTER );
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	g_FontMgr.PrintTextWidthCut( iXPos + 151, iYPos + 145,FONT_SIZE_17, 268.0f, "%s 대회생성", m_szCustomTournamentTtitle.c_str() );
+	g_FontMgr.PrintTextWidthCut( iXPos + 151, iYPos + 145,FONT_SIZE_17, 268.0f, STR(1), m_szCustomTournamentTtitle.c_str() );
 
 	g_FontMgr.SetTextStyle( TS_NORMAL );
 	g_FontMgr.SetAlignType( TAT_CENTER );
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
-	g_FontMgr.PrintText( iXPos + 151, iYPos + 169, FONT_SIZE_13, "대회팀 모집을 시작하였습니다." );
+	g_FontMgr.PrintText( iXPos + 151, iYPos + 169, FONT_SIZE_13, STR(2) );
 
 	ioComplexStringPrinter kPrinter;
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( TCT_DEFAULT_GREEN );
-	kPrinter.AddTextPiece( FONT_SIZE_13, "포상설정, 공지작성, 대회참가권유 설정");
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(3));
 
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_13, "을" );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(4) );
 	kPrinter.PrintFullText( iXPos + 151, iYPos + 189, TAT_CENTER );
 
 	g_FontMgr.SetTextStyle( TS_NORMAL );
 	g_FontMgr.SetAlignType( TAT_CENTER );
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
-	g_FontMgr.PrintText( iXPos + 151, iYPos + 209, FONT_SIZE_13, "대회정보창에서 할 수 있습니다." );
+	g_FontMgr.PrintText( iXPos + 151, iYPos + 209, FONT_SIZE_13, STR(5) );
 }

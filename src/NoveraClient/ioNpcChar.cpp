@@ -894,7 +894,7 @@ void ioNpcChar::ExceptionStartAI()
 
 	char szExceptionLOG[MAX_PATH] = "";
 	m_pCreator->GetRoomIndex();
-	sprintf( szExceptionLOG, "[ÇØ°ñ¿µ¿õ](%d) - %s - %s - %s - %s : %u : %u", m_pCreator->GetRoomIndex(),      //Except Extracting Hangeul
+	sprintf( szExceptionLOG, STR(1), m_pCreator->GetRoomIndex(),      //Except Extracting Hangeul
 							 g_MyInfo.GetPublicID().c_str(), GetCharName().c_str(), GetViewName().c_str(), GetSyncUser().c_str(),
 							 m_dwCurrentStartTime, m_dwStartTime );
 

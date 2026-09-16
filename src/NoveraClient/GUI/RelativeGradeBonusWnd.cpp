@@ -191,21 +191,21 @@ void RelativeGradeBonusWnd::OnRender()
 	kPrinter.SetBkColor( 0, 0, 0 );
 
 	kPrinter.SetTextColor( TCT_DEFAULT_GREEN );
-	kPrinter.AddTextPiece( FONT_SIZE_13, "%s점", m_szLastExp );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(1), m_szLastExp );
 
 	kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_13, "의 누적 장군 경험치로 " );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(2) );
 
 	char szGradeName[MAX_PATH] = "";
 	g_LevelMgr.GetGradeName( g_MyInfo.GetGradeLevel(), szGradeName, sizeof( szGradeName ), false, true );
 	kPrinter.SetTextColor( TCT_DEFAULT_GREEN );
-	kPrinter.AddTextPiece( FONT_SIZE_13, "%s 달성!", szGradeName );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(3), szGradeName );
 
 	kPrinter.PrintFullText( iXPos + 173, iYPos + 181, TAT_CENTER );
 	kPrinter.ClearList();
 
 	kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_13, "(달성가능 최고계급은 매주 장군 수에 따라 변동)" );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(4) );
 	kPrinter.PrintFullText( iXPos + 173, iYPos + 199, TAT_CENTER );
 	kPrinter.ClearList();
 
@@ -213,12 +213,12 @@ void RelativeGradeBonusWnd::OnRender()
 	g_FontMgr.SetAlignType( TAT_CENTER );
 	g_FontMgr.SetBkColor( TCT_DEFAULT_DARKGRAY );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	g_FontMgr.PrintText( iXPos + 69, iYPos + 323, FONT_SIZE_13, "장군 랭킹" );
-	g_FontMgr.PrintText( iXPos + 173, iYPos + 323, FONT_SIZE_13, "획득 보상" );
-	g_FontMgr.PrintText( iXPos + 277, iYPos + 323, FONT_SIZE_13, "획득 보상" );
+	g_FontMgr.PrintText( iXPos + 69, iYPos + 323, FONT_SIZE_13, STR(5) );
+	g_FontMgr.PrintText( iXPos + 173, iYPos + 323, FONT_SIZE_13, STR(6) );
+	g_FontMgr.PrintText( iXPos + 277, iYPos + 323, FONT_SIZE_13, STR(6) );
 
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GREEN );
-	g_FontMgr.PrintText( iXPos + 69, iYPos + 341, FONT_SIZE_13, "%d 위", g_MyInfo.GetUserRanking() );
+	g_FontMgr.PrintText( iXPos + 69, iYPos + 341, FONT_SIZE_13, STR(7), g_MyInfo.GetUserRanking() );
 	if( !m_szReward[0].IsEmpty() )
 		g_FontMgr.PrintText( iXPos + 173, iYPos + 341, FONT_SIZE_13, "%s", m_szReward[0] );
 	if( !m_szReward[1].IsEmpty() )

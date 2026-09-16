@@ -1050,13 +1050,13 @@ void ioTowerDefMode::OnUseMonsterCoin( SP2Packet &rkPacket )
 			m_dwCurStartCoinTime	= 0;
 
 			g_MyInfo.UseModeStartMonsterCoin( m_iUseMonsterCoinCnt, false, nUseCoinCount, nUseGoldCoinCount );
-			g_ChatMgr.SetSystemMsg("몬스터던전 플레이를 위해 몬스터코인 %d개 소모.", m_iUseMonsterCoinCnt );
+			g_ChatMgr.SetSystemMsg(STR(1), m_iUseMonsterCoinCnt );
 		}
 		break;
 
 	case USE_MONSTER_COIN_FAIL_CNT:
 		{
-			g_ChatMgr.SetSystemMsg("보유중인 코인이 없습니다.");
+			g_ChatMgr.SetSystemMsg(STR(2));
 			m_bUsingMonsterCoin = false;
 			int iMonsterCoin, iGoldMonsterCoin;
 			rkPacket >> iMonsterCoin >> iGoldMonsterCoin;
@@ -1923,7 +1923,7 @@ void ioTowerDefMode::OnTreasureCardCommand( SP2Packet &rkPacket )
 					TCPNetwork::MouseBusy( false );
 			}
 
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "갯수초과" );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		}
 		break;
 	case TREASURE_CARD_MAX_SLOT_CLICK:
@@ -1941,7 +1941,7 @@ void ioTowerDefMode::OnTreasureCardCommand( SP2Packet &rkPacket )
 					TCPNetwork::MouseBusy( false );
 			}
 
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "빈칸없음" );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		}
 		break;
 	}

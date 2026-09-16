@@ -837,7 +837,7 @@ void VoiceChatWnd::SetAnnounceVoiceChat()
 	}
 	else if( g_ShuffleRoomMgr.IsShuffleRoom() )
 	{
-		g_ChatMgr.SetSystemMsg( "오늘의모드에서는 음성채팅 불가능." );
+		g_ChatMgr.SetSystemMsg( STR(11) );
 	}
 	else if( m_pPlayStage->GetModeType() != MT_HEADQUARTERS && 
 		     m_pPlayStage->GetModeType() != MT_TRAINING	&& 
@@ -872,7 +872,7 @@ void VoiceChatWnd::SetAnnounceVoiceChat()
 	else if( m_pPlayStage->GetModeType() != MT_HEADQUARTERS && m_pPlayStage->GetModeType() != MT_TRAINING && m_pPlayStage->GetModeType() != MT_HOUSE && g_LadderTeamMgr.IsLadderTeam() )
 		g_ChatMgr.SetSystemMsg( STR(8) );
 	else if( m_pPlayStage->GetModeType() == MT_HEADQUARTERS && !g_BattleRoomMgr.IsBattleRoom() && !g_LadderTeamMgr.IsLadderTeam() )
-		g_ChatMgr.SetSystemMsg( "훈련소에서는 음성채팅 가능" );
+		g_ChatMgr.SetSystemMsg( STR(12) );
 	else if( m_pPlayStage->GetModeType() == MT_HOUSE && !g_BattleRoomMgr.IsBattleRoom() && !g_LadderTeamMgr.IsLadderTeam() )
 		g_ChatMgr.SetSystemMsg( STR(9) );
 	else if ( m_pPlayStage->IsCustomPlazaMode() && !g_BattleRoomMgr.IsBattleRoom() && !g_LadderTeamMgr.IsLadderTeam() )

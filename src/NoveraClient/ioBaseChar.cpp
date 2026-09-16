@@ -43803,7 +43803,7 @@ bool ioBaseChar::EnableFishing( bool bFirst, bool bFishingUIOpen )
 		{
 			if( !pWorld->CheckFishEnable( vTargetPos ) )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "설치된 낚시터에서만 낚시가 가능합니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(19) );
 				return false;
 			}
 		}

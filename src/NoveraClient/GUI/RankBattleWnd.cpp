@@ -540,7 +540,7 @@ void RankBattleWnd::OnRender()
 	kPrinter.SetTextStyle( TS_OUTLINE_FULL_2X );
 	kPrinter.SetBkColor( 12, 66, 111 );
 	kPrinter.SetTextColor( 255, 255, 255 );
-	kPrinter.AddTextPiece( FONT_SIZE_17, "·©Å·Àü" );
+	kPrinter.AddTextPiece( FONT_SIZE_17, STR(1) );
 
 	kPrinter.SetTextColor( TCT_DEFAULT_LIGHTGRAY );
 	kPrinter.AddTextPiece( FONT_SIZE_17, " | " );

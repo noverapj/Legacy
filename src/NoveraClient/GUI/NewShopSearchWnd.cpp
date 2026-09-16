@@ -556,7 +556,7 @@ void NewShopSearchWnd::OnRender()
 			g_FontMgr.SetTextStyle( TS_NORMAL );
 			g_FontMgr.SetBkColor( 0, 0, 0 );
 			g_FontMgr.SetTextColor( TCT_DEFAULT_WHITE );
-			g_FontMgr.PrintText( iXPos + 211, iYPos + 7, FONT_SIZE_12, "검색결과를 찾을 수 없습니다." );
+			g_FontMgr.PrintText( iXPos + 211, iYPos + 7, FONT_SIZE_12, STR(1) );
 		}
 		break;
 	}

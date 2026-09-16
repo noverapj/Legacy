@@ -105,12 +105,12 @@ void CQuickModeToolTip::OnRender()
 
 	
 	char szPlayer[MAX_PATH];
-	sprintf(szPlayer, "최소 %d명 ~ 최대 %d명", m_nMinPlayer, m_nMaxPlayer);
+	sprintf(szPlayer, STR(1), m_nMinPlayer, m_nMaxPlayer);
 
 	g_FontMgr.SetTextColor(TCT_DEFAULT_GRAY);
 	g_FontMgr.PrintText(iXPos + START_TITLE_X, iYPos + START_HELP_Y, FONT_SIZE_12, szPlayer);
 
 	if(m_bSamePlayer)
-		g_FontMgr.PrintText(iXPos + START_TITLE_X, iYPos + START_HELP_Y + LINE_GAP_HEIGHT, FONT_SIZE_12, "양팀 같은 인원");
+		g_FontMgr.PrintText(iXPos + START_TITLE_X, iYPos + START_HELP_Y + LINE_GAP_HEIGHT, FONT_SIZE_12, STR(2));
 
 }

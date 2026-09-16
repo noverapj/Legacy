@@ -251,7 +251,7 @@ void SelectExtraInfoWnd::RenderDesc( int iXPos, int iYPos )
 		m_szDescArray[0].SetTextStyle( TS_NORMAL );
 		m_szDescArray[0].SetBkColor( 0, 0, 0 );	
 		m_szDescArray[0].SetTextColor( TCT_DEFAULT_GRAY );
-		m_szDescArray[0].AddTextPiece( FONT_SIZE_13, "없음" );
+		m_szDescArray[0].AddTextPiece( FONT_SIZE_13, STR(1) );
 		m_szDescArray[0].PrintFullTextWidthCut( iXPos, iYPos, TAT_CENTER, INVENTORY_ITEM_INFO_WIDTHCUT_SIZE );
 
 		m_szDescArray[1].SetTextStyle( TS_NORMAL );
@@ -348,7 +348,7 @@ bool SelectExtraInfoWnd::SetExtraItemInfo()
 	m_szDescArray[1].SetTextStyle( TS_NORMAL );
 	m_szDescArray[1].SetBkColor( 0, 0, 0 );	
 	m_szDescArray[1].SetTextColor( TCT_DEFAULT_BLUE );
-	m_szDescArray[1].AddTextPiece( FONT_SIZE_13, "영구사용" );
+	m_szDescArray[1].AddTextPiece( FONT_SIZE_13, STR(1) );
 
 	return true;
 }
@@ -1428,7 +1428,7 @@ SelectExtraGashaponWnd::SelectExtraGashaponWnd(void)
 		m_iExtraItemCodes[i] = 0;
 	}
 
-	m_sDescCard = "아래 10개 중 1개를 랜덤으로 획득할 수 있습니다";
+	m_sDescCard = STR(1);
 
 	m_pLineLeft   = NULL;
 	m_pLineCenter = NULL;
@@ -1497,7 +1497,7 @@ void SelectExtraGashaponWnd::CheckBuy()
 	if( g_MyInfo.GetEntryType() == ET_TERMINATION || g_MyInfo.GetEntryType() == ET_TEMPORARY ||
 		g_MyInfo.IsExpertEntryTemporary() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "회원확인후 구매가 가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 
@@ -1513,7 +1513,7 @@ void SelectExtraGashaponWnd::CheckBuy()
 	}
 	if( bError )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "아이템을 선택해 주세요." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return;
 	}
 
@@ -1529,7 +1529,7 @@ void SelectExtraGashaponWnd::CheckBuy()
 
 	if( iCash <= 0 )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "캐쉬 가격이 잘못되었습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		return;
 	}
 
@@ -1549,7 +1549,7 @@ void SelectExtraGashaponWnd::CheckBuy()
 	// show confirm 
 	char szPrice[MAX_PATH]="";
 	Help::ConvertNumToStrComma( iCash, szPrice, sizeof( szPrice ) );
-	StringCbCat( szPrice, sizeof( szPrice ), " 골드");
+	StringCbCat( szPrice, sizeof( szPrice ), STR(4));
 
 	ioComplexStringPrinter kPrinter[MAX_MSG_LIST_SIZE];
 	kPrinter[0].SetTextStyle( TS_NORMAL );
@@ -1560,12 +1560,12 @@ void SelectExtraGashaponWnd::CheckBuy()
 	kPrinter[1].SetTextStyle( TS_NORMAL );
 	kPrinter[1].SetBkColor( 0, 0, 0 );	
 	kPrinter[1].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter[1].AddTextPiece( FONT_SIZE_13, "구매금액 : %s", szPrice );
+	kPrinter[1].AddTextPiece( FONT_SIZE_13, STR(5), szPrice );
 
 	kPrinter[2].SetTextStyle( TS_NORMAL );
 	kPrinter[2].SetBkColor( 0, 0, 0 );	
 	kPrinter[2].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter[2].AddTextPiece( FONT_SIZE_13, "구매하시겠습니까?" );
+	kPrinter[2].AddTextPiece( FONT_SIZE_13, STR(6) );
 
 	kPrinter[3].SetTextStyle( TS_NORMAL );
 	kPrinter[3].SetBkColor( 0, 0, 0 );	
@@ -1575,7 +1575,7 @@ void SelectExtraGashaponWnd::CheckBuy()
 	kPrinter[4].SetTextStyle( TS_NORMAL );
 	kPrinter[4].SetBkColor( 0, 0, 0 );	
 	kPrinter[4].SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter[4].AddTextPiece( FONT_SIZE_13, "본 상품은 청약철회 제외 상품입니다" );
+	kPrinter[4].AddTextPiece( FONT_SIZE_13, STR(7) );
 
 	kPrinter[5].SetTextStyle( TS_NORMAL );
 	kPrinter[5].SetBkColor( 0, 0, 0 );	
@@ -1597,7 +1597,7 @@ void SelectExtraGashaponWnd::CheckUse()
 	if( g_MyInfo.GetEntryType() == ET_TERMINATION || g_MyInfo.GetEntryType() == ET_TEMPORARY ||
 		g_MyInfo.IsExpertEntryTemporary() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "회원확인후 구매가 가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 
@@ -1613,11 +1613,11 @@ void SelectExtraGashaponWnd::CheckUse()
 	}
 	if( bError )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "아이템을 선택해 주세요." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return;
 	}
 
-	g_GUIMgr.SetMsgBox( MB_YESNO, this, "사용하시겠습니까?" );
+	g_GUIMgr.SetMsgBox( MB_YESNO, this, STR(3) );
 }
 
 void SelectExtraGashaponWnd::ParseExtraInfo( ioXMLElement &xElement )
@@ -1823,7 +1823,7 @@ void SelectExtraGashaponWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 
 				if( !bCan )
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "카드 선택은 %d개까지 가능합니다.", m_iMaxSelectItem );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1), m_iMaxSelectItem );
 					return;
 				}
 
@@ -2061,7 +2061,7 @@ void SelectExtraGashaponWnd::OnRender()
 	kPrinter.SetBkColor( 0, 0, 0 );
 	if( m_szMent1.IsEmpty() )
 	{
-		kPrinter.AddTextPiece( FONT_SIZE_13, "카드를 클릭하여 원하는 장비로 변경하세요" );
+		kPrinter.AddTextPiece( FONT_SIZE_13, STR(1) );
 	}
 	else
 	{
@@ -2074,11 +2074,11 @@ void SelectExtraGashaponWnd::OnRender()
 	if( m_szMent2.IsEmpty() )
 	{
 		kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-		kPrinter.AddTextPiece( FONT_SIZE_13, "장비 변경시 2개째 부터 ");
+		kPrinter.AddTextPiece( FONT_SIZE_13, STR(2));
 		kPrinter.SetTextColor( TCT_DEFAULT_GOLD );
-		kPrinter.AddTextPiece( FONT_SIZE_13, "1,000 골드씩 ");
+		kPrinter.AddTextPiece( FONT_SIZE_13, STR(3));
 		kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-		kPrinter.AddTextPiece( FONT_SIZE_13, "비용이 증가합니다");
+		kPrinter.AddTextPiece( FONT_SIZE_13, STR(4));
 	}
 	else
 	{
@@ -2090,7 +2090,7 @@ void SelectExtraGashaponWnd::OnRender()
 	kPrinter.ClearList();
 	
 	char szSelect[MAX_PATH]="";
-	StringCbPrintf( szSelect, sizeof( szSelect ), "변경 가능 : %d개", m_iMaxSelectItem - (m_iEtcItemArray+1) );
+	StringCbPrintf( szSelect, sizeof( szSelect ), STR(5), m_iMaxSelectItem - (m_iEtcItemArray+1) );
 
 	kPrinter.SetTextColor( TCT_DEFAULT_RED );	
 	kPrinter.AddTextPiece( FONT_SIZE_15, szSelect );
@@ -2145,7 +2145,7 @@ void SelectExtraGashaponWnd::SetSelectExtraItem( int iItemCode )
 	{
 		if( vCheck[i] == vCheck[i+1] )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "같은 아이템은 선택할 수 없습니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 			return;
 		}
 	}
@@ -2200,9 +2200,9 @@ void SelectExtraGashaponWnd::SetTitleBuyBtn( int iCashArray )
 
 	char szTitle[MAX_PATH]="";
 	if ( m_UseType == UT_BUY_BTN )
-		StringCbPrintf( szTitle, sizeof( szTitle ), "구입 결정 (%s 골드)", szPrice );
+		StringCbPrintf( szTitle, sizeof( szTitle ), STR(1), szPrice );
 	else if ( m_UseType == UT_USE_BTN )
-		StringCbPrintf( szTitle, sizeof( szTitle ), "사용하기!" );
+		StringCbPrintf( szTitle, sizeof( szTitle ), STR(2) );
 
 	ioWnd *pWnd = FindChildWnd( ID_BUY );
 	if( pWnd )

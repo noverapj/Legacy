@@ -652,7 +652,7 @@ void PowerUpSelectInfoWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 			}
 			else
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, this, "타입 에러" );
+				g_GUIMgr.SetMsgBox( MB_OK, this, STR(1) );
 				break;
 			}
 			if( GetParent() )
@@ -744,7 +744,7 @@ void PowerUpSelectInfoWnd::RenderDesc( int iXPos, int iYPos )
 		m_szDescArray[0].SetTextStyle( TS_NORMAL );
 		m_szDescArray[0].SetBkColor( 0, 0, 0 );	
 		m_szDescArray[0].SetTextColor( TCT_DEFAULT_GRAY );
-		m_szDescArray[0].AddTextPiece( FONT_SIZE_13, "없음" );
+		m_szDescArray[0].AddTextPiece( FONT_SIZE_13, STR(1) );
 		m_szDescArray[0].PrintFullTextWidthCut( iXPos, iYPos, TAT_CENTER, INVENTORY_ITEM_INFO_WIDTHCUT_SIZE );
 
 		m_szDescArray[1].SetTextStyle( TS_NORMAL );

@@ -1905,11 +1905,11 @@ void ioModeSelectInfo::GetBattleAIUIList( ioWnd *pParseWnd )
 	ModeMapSelectList *pMapList = dynamic_cast<ModeMapSelectList*>(pParseWnd);
 
 	MapInfo kList;
-	kList.m_MapTitle = "쉬움";
+	kList.m_MapTitle = STR(1);
 	kList.m_MapIndex = 0;
 	pMapList->AddList( kList.m_MapIndex, false, kList.m_MapTitle, -1, -1, NULL );
 
-	kList.m_MapTitle = "보통";
+	kList.m_MapTitle = STR(2);
 	kList.m_MapIndex = 1;
 	pMapList->AddList( kList.m_MapIndex, false, kList.m_MapTitle, -1, -1, NULL );	
 }

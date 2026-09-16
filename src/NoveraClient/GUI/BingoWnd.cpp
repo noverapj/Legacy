@@ -266,11 +266,11 @@ void BingoWnd::iwm_bingo_btn( DWORD dwID )
 	{
 		m_iSelectDummyCode = dwEtcCode;
 		m_iSelectNumber	   = iNumber;
-		g_GUIMgr.SetMsgBox( MB_YESNO, this, "[%s] 아이템을 사용하시겠습니까?", pItem->GetName() );
+		g_GUIMgr.SetMsgBox( MB_YESNO, this, STR(1), pItem->GetName() );
 	}
 	else
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, this, "[%s] 아이템을 소지 하지 않았습니다.", pItem->GetName() );
+		g_GUIMgr.SetMsgBox( MB_OK, this, STR(2), pItem->GetName() );
 	}
 }
 

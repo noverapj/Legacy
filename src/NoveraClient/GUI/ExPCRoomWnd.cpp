@@ -365,7 +365,7 @@ void ExPCRoomSoldierBonusWnd::InsertSelectInfo( int iClassType, bool bCharDelete
 			//플레이 중인 용병이 나와있다면 교체 못하도록 함
 			if( g_MyInfo.GetClassType() == m_PCRoomSoldierSelectVec[i].m_iClassType )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "플레이 중인 용병을#다른 용병으로 교체 해주세요" );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 				return;
 			}
 		}
@@ -622,7 +622,7 @@ void ExPCRoomSoldierBonusWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 				{
 					if( iSelectClass == g_MyInfo.GetClassType() )
 					{
-						g_GUIMgr.SetMsgBox( MB_OK, NULL, "플레이 중인 용병은#해제 할 수 없습니다." );
+						g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );
 						return;
 					}
 
@@ -718,14 +718,14 @@ ioHashString ExPCRoomSoldierBonusWnd::GetGradeType( int iType )
 	switch( iType )
 	{
 	case 2:
-		return "프리미엄";
+		return STR(1);
 	case 3:
-		return "레어";
+		return STR(2);
 	case 4:
-		return "유니크";
+		return STR(3);
 	}
 
-	return "일반";
+	return STR(4);
 }
 
 void ExPCRoomSoldierBonusWnd::OnRenderAfterChild()

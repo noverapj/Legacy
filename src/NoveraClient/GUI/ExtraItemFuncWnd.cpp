@@ -1646,7 +1646,7 @@ void ExtraItemFuncWnd::GetMaterialList( vNewShopPullDownItem &rkList )
 			return;
 
 		NewShopPullDownItem kItem;
-		wsprintf_e( szCnt, "%d개", iHaveCount );
+		SafeSprintf( szCnt, sizeof(szCnt), STR(1), iHaveCount );
 
 		kItem.m_dwTextColor = TCT_DEFAULT_GREEN;
 		kItem.m_dwCntTextColor = TCT_DEFAULT_GREEN;
@@ -1668,7 +1668,7 @@ void ExtraItemFuncWnd::GetMaterialList( vNewShopPullDownItem &rkList )
 
 		kItem.m_dwTextColor = TCT_DEFAULT_GREEN;
 		kItem.m_dwCntTextColor = TCT_DEFAULT_GREEN;
-		kItem.m_szName      = "페소";
+		kItem.m_szName      = STR(2);
 		kItem.m_iMagicCode	= 0;
 		kItem.m_bCount = true;
 		kItem.m_szCnt = szCnt;
@@ -1742,7 +1742,7 @@ void ExtraItemFuncWnd::SelectClickAction( int iIndex )
 				if( kSlot.m_PeriodType != EPT_MORTMAIN )
 					g_GUIMgr.SetMsgBox( MB_OK, NULL, m_szErrMsg[8].c_str() );
 				else if( kSlot.m_iReinforce >= g_CompoundMaterialMgr.GetMaxReinforce() )
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "이미 강화수치가 최대입니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 				else
 				{
 					m_iSelectExtraItemIndex = iIndex;

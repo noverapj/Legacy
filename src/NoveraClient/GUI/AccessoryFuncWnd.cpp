@@ -443,7 +443,7 @@ void AccessoryFuncWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 		if( cmd == IOBN_BTNUP )
 		{
 			if( m_CharInfo.m_chExerciseStyle == EXERCISE_RENTAL )
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "전투체험 용병으로는 불가능합니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 			else
 			{
 				int iSlot = dwID - ID_ACCESSORY_RING_BTN;
@@ -655,7 +655,7 @@ void AccessoryFuncWnd::UISoldierSelectWndBtnUp( int iSoldierArray )
 	
 	if( g_MyInfo.IsCharExerciseStyle( iSoldierArray, EXERCISE_PCROOM ) && pInvenWnd->GetCurTabID() == MyInventoryWnd::ID_DECO_TAB_BTN )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "PC방 용병은 선택 할 수 없습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 

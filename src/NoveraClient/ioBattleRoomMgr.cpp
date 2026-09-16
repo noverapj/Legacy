@@ -447,7 +447,7 @@ void ioBattleRoomMgr::ChangeMyOwner()
 			if( pNode && pNode->IsLogSend() && IsTournamentModeType() )
 			{
 				char szLog[MAX_PATH];
-				sprintf( szLog, "[대회로그] 방장이 바뀜 - %s -> %s", m_szPrevMyOwnerID.c_str(), m_BattleRoom.m_szOwnerName.c_str() );
+				sprintf( szLog, STR(4), m_szPrevMyOwnerID.c_str(), m_BattleRoom.m_szOwnerName.c_str() );
 
 				SP2Packet kPacket2( LUPK_LOG );
 				kPacket2 << "TournamentLog";  // 로그 파일 타입
@@ -1050,7 +1050,7 @@ bool ioBattleRoomMgr::ApplyBattleRoomInfo( SP2Packet &rkPacket, bool &rBattleRoo
 	if( pNode && pNode->IsLogSend() && IsTournamentModeType() )
 	{
 		char szLog[MAX_PATH];
-		sprintf( szLog, "[대회로그] 대회 배틀룸 입장(자신) - %s", g_MyInfo.GetPublicID().c_str() );
+		sprintf( szLog, STR(1), g_MyInfo.GetPublicID().c_str() );
 
 		SP2Packet kPacket2( LUPK_LOG );
 		kPacket2 << "TournamentLog";  // 로그 파일 타입
@@ -1092,7 +1092,7 @@ ioHashString ioBattleRoomMgr::ApplyJoinUserInfo( SP2Packet &rkPacket )
 	if( pNode && pNode->IsLogSend() && IsTournamentModeType() )
 	{
 		char szLog[MAX_PATH];
-		sprintf( szLog, "[대회로그] 대회 배틀룸 입장(다른유저) - %s", kInfo.m_szUserID );
+		sprintf( szLog, STR(1), kInfo.m_szUserID );
 
 		SP2Packet kPacket2( LUPK_LOG );
 		kPacket2 << "TournamentLog";  // 로그 파일 타입

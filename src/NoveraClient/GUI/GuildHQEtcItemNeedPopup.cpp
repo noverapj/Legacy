@@ -28,14 +28,14 @@ void GuildHQEtcItemNeedPopup::iwm_show()
 		{
 			HideChildWnd( ID_USE_ITEM ); 
 			ShowChildWnd( ID_CREATE_ITEM_BUY ); 
-			SetTitleText( "길드 본부 생성권 필요" );
+			SetTitleText( STR(1) );
 		}
 		break;
 	case PUT_USE_HQ:
 		{
 			HideChildWnd( ID_CREATE_ITEM_BUY );
 			ShowChildWnd( ID_USE_ITEM );
-			SetTitleText( "길드 본부 생성권 사용" );
+			SetTitleText( STR(2) );
 		}
 		break;
 	}
@@ -120,25 +120,25 @@ void GuildHQEtcItemNeedPopup::OnRender()
 			g_FontMgr.SetBkColor( 0, 0, 0 );
 
 			g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
-			g_FontMgr.PrintText( iXPos + 151, iYPos + 144, FONT_SIZE_13, "[길드본부 생성권]이 필요합니다." );
+			g_FontMgr.PrintText( iXPos + 151, iYPos + 144, FONT_SIZE_13, STR(1) );
 
 			ioComplexStringPrinter kPrinter;
 			kPrinter.SetTextStyle( TS_NORMAL );
 			kPrinter.SetBkColor( 0, 0, 0 );
 			kPrinter.SetTextColor( TCT_DEFAULT_RED );
-			kPrinter.AddTextPiece( FONT_SIZE_13, "길드 마스터");
+			kPrinter.AddTextPiece( FONT_SIZE_13, STR(2));
 
 			kPrinter.SetTextStyle( TS_NORMAL );
 			kPrinter.SetBkColor( 0, 0, 0 );
 			kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-			kPrinter.AddTextPiece( FONT_SIZE_12, "만 구매 가능한 아이템입니다." );
+			kPrinter.AddTextPiece( FONT_SIZE_12, STR(3) );
 			kPrinter.PrintFullText( iXPos + 151, iYPos + 164, TAT_CENTER );
 
 			g_FontMgr.SetTextStyle( TS_NORMAL );
 			g_FontMgr.SetAlignType( TAT_CENTER );
 			g_FontMgr.SetBkColor( 0, 0, 0 );
 			g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );	
-			g_FontMgr.PrintText( iXPos + 151, iYPos + 184, FONT_SIZE_13, "상점 - 특별에서 구입하실 수 있습니다." );
+			g_FontMgr.PrintText( iXPos + 151, iYPos + 184, FONT_SIZE_13, STR(4) );
 		}
 		break;
 	case PUT_USE_HQ:
@@ -148,19 +148,19 @@ void GuildHQEtcItemNeedPopup::OnRender()
 			g_FontMgr.SetBkColor( 0, 0, 0 );
 
 			g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
-			g_FontMgr.PrintText( iXPos + 151, iYPos + 144, FONT_SIZE_13, "보유 중인 [길드본부 생성권]으로 활성화시킵니다." );
+			g_FontMgr.PrintText( iXPos + 151, iYPos + 144, FONT_SIZE_13, STR(5) );
 
 			g_FontMgr.SetTextStyle( TS_NORMAL );
 			g_FontMgr.SetAlignType( TAT_CENTER );
 			g_FontMgr.SetBkColor( 0, 0, 0 );
 			g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );	
-			g_FontMgr.PrintText( iXPos + 151, iYPos + 164, FONT_SIZE_13, "진영구분없이 친구들과 함께 할 수 있습니다." );
+			g_FontMgr.PrintText( iXPos + 151, iYPos + 164, FONT_SIZE_13, STR(6) );
 
 			g_FontMgr.SetTextStyle( TS_NORMAL );
 			g_FontMgr.SetAlignType( TAT_CENTER );
 			g_FontMgr.SetBkColor( 0, 0, 0 );
 			g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );	
-			g_FontMgr.PrintText( iXPos + 151, iYPos + 184, FONT_SIZE_13, "길드원들과 함께 멋진 아지트를 만들어보세요." );
+			g_FontMgr.PrintText( iXPos + 151, iYPos + 184, FONT_SIZE_13, STR(7) );
 		}
 		break;
 	}

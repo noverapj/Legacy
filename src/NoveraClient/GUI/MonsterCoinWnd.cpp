@@ -437,7 +437,7 @@ void MonsterCoinUseWnd::OnRender()
 			if(ioPlayMode::GetModeType() == MT_MONSTER_SURVIVAL)
 				vDescVec.push_back( ioHashString(STR(3)) );
 			else
-				vDescVec.push_back("몬스터 코인이 없으면 몬스터던전을");
+				vDescVec.push_back(STR(21));
 
 			vDescVec.push_back( ioHashString(STR(4)) );
 			vDescVec.push_back( ioHashString(STR(5)) );
@@ -464,7 +464,7 @@ void MonsterCoinUseWnd::OnRender()
 			SafeSprintf( szTemp, sizeof( szTemp ), STR(2), m_iStartUseCoinCnt );
 			vBigDescVec.push_back( ioHashString(szTemp) );
 
-			vDescVec.push_back("몬스터 코인이 없으면 몬스터던전을");
+			vDescVec.push_back(STR(21));
 
 			vDescVec.push_back( ioHashString(STR(4)) );
 			vDescVec.push_back( ioHashString(STR(5)) );
@@ -489,12 +489,12 @@ void MonsterCoinUseWnd::OnRender()
 			vBigDescVec.push_back( ioHashString("레이드를 플레이하려면") );
 
 			char szTemp[MAX_PATH]="";
-			SafeSprintf( szTemp, sizeof( szTemp ), "레이드 티켓이 %d개 필요합니다.", m_iStartUseCoinCnt );
+			SafeSprintf( szTemp, sizeof( szTemp ), STR(22), m_iStartUseCoinCnt );
 			vBigDescVec.push_back( ioHashString(szTemp) );
 
-			vDescVec.push_back("레이드 티켓이 없으면 레이드를");
-			vDescVec.push_back( "플레이할 수 없습니다. 레이드 티켓은" );
-			vDescVec.push_back( "매일 5시에 충전됩니다." );
+			vDescVec.push_back(STR(23));
+			vDescVec.push_back( STR(24) );
+			vDescVec.push_back( STR(25) );
 		}
 		break;
 	case USETYPE_REVIVAL_COIN:

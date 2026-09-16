@@ -1924,7 +1924,7 @@ void ioSP2GUIManager::ShowReserveMsgBox( int iReserveMsgBox /* = -1  */ )
 				SetMsgBox( MB_OK, NULL, STR(2) );
 				break;
 			case MB_RESERVE_EXCEPTION_BATTLE_ROOM:
-				SetMsgBox( MB_OK, NULL, "룸에 입장할 수 없습니다." );
+				SetMsgBox( MB_OK, NULL, STR(40) );
 				break;
 			case MB_RESERVE_SPEEDHACK:
 				kPrinter[0].SetTextStyle( TS_NORMAL );
@@ -2047,7 +2047,7 @@ void ioSP2GUIManager::ShowReserveMsgBox( int iReserveMsgBox /* = -1  */ )
 				SetMsgBox( MB_OK, NULL, STR(22) );
 				break;
 			case MB_UDP_FAIL_EXIT_ROOM:
-				SetMsgBox( MB_OK, NULL, "룸에서 핑이 좋지않아 #광장으로 소환되었습니다." );
+				SetMsgBox( MB_OK, NULL, STR(41) );
 				break;
 			case MB_RESERVED_CHANGE_ID:
 				SetMsgBox( MB_OK, NULL, STR(24));
@@ -2075,7 +2075,7 @@ void ioSP2GUIManager::ShowReserveMsgBox( int iReserveMsgBox /* = -1  */ )
 				SetMsgBox( MB_OK, NULL, STR(31) );
 				break;
 			case MB_RAID_COIN_LACK:
-				SetMsgBox( MB_OK, NULL, "레이드 티켓이 부족하여 방에서 이탈되었습니다.#(이탈 페널티는 적용되지 않았습니다.)" );
+				SetMsgBox( MB_OK, NULL, STR(42) );
 				break;
 			case MB_RESERVE_BAD_NETWORK_KICK:
 				{
@@ -2114,49 +2114,49 @@ void ioSP2GUIManager::ShowReserveMsgBox( int iReserveMsgBox /* = -1  */ )
 				SetMsgBox( MB_OK, NULL, STR(26) );		
 				break;
 			case MB_SHUFFLE_ROOM_KICK_OUT:
-				SetMsgBox( MB_OK, NULL, "실력이 너무 뛰어나 유저보호를 위해 전투방에서#이탈되셨습니다." );		
+				SetMsgBox( MB_OK, NULL, STR(43) );		
 				break;
 			case MB_BATTLEROOM_JOIN_SEARCH_FAILED:
-				SetMsgBox( MB_OK, NULL, "참여 가능한 전투방이 없습니다." );
+				SetMsgBox( MB_OK, NULL, STR(44) );
 				break;
 			case MB_BATTLEROOM_JOIN_NOT_NODE:
-				SetMsgBox( MB_OK, NULL, "존재하지 않는 전투방입니다." );
+				SetMsgBox( MB_OK, NULL, STR(45) );
 				break;
 			case MB_BATTLEROOM_JOIN_FULL_USER:
-				SetMsgBox( MB_OK, NULL, "인원이 초과 되었습니다." );
+				SetMsgBox( MB_OK, NULL, STR(46) );
 				break;
 			case MB_BATTLEROOM_JOIN_NOT_PASSWORD:
-				SetMsgBox( MB_OK, NULL, "비밀번호가 정확하지 않습니다" );
+				SetMsgBox( MB_OK, NULL, STR(47) );
 				break;
 			case MB_BATTLEROOM_JOIN_EXCEPTION:
-				SetMsgBox( MB_OK, NULL, "예외 오류가 발생되었습니다." );
+				SetMsgBox( MB_OK, NULL, STR(48) );
 				break;
 			case MB_BATTLEROOM_JOIN_TIME_CLOSE:
-				SetMsgBox( MB_OK, NULL, "플레이가 많이 진행되어서#참가할 수 없습니다." );
+				SetMsgBox( MB_OK, NULL, STR(49) );
 				break;
 			case MB_BATTLEROOM_JOIN_START_ROOM_ENTER_X:
-				SetMsgBox( MB_OK, NULL, "도중참가 불가로 설정되어 #참가할 수 없습니다." );
+				SetMsgBox( MB_OK, NULL, STR(50) );
 				break;
 			case MB_BATTLEROOM_JOIN_SAFETY_ROOM:
-				SetMsgBox( MB_OK, NULL, "데스매치 - 초보 모드에 참가할 수 없습니다." );
+				SetMsgBox( MB_OK, NULL, STR(51) );
 				break;
 			case MB_BATTLEROOM_JOIN_MAP_LIMIT_PLAYER:
-				SetMsgBox( MB_OK, NULL, "맵 최대 인원이 초과 되었습니다." );
+				SetMsgBox( MB_OK, NULL, STR(52) );
 				break;
 			case MB_BATTLEROOM_JOIN_MAP_LIMIT_GRADE:
-				SetMsgBox( MB_OK, NULL, "계급 제한에 걸려 입장 할 수 없습니다" );
+				SetMsgBox( MB_OK, NULL, STR(53) );
 				break;
 			case MB_BATTLEROOM_JOIN_NO_CHALLENGER:
-				SetMsgBox( MB_OK, NULL, "도전자를 받지 않습니다." );
+				SetMsgBox( MB_OK, NULL, STR(54) );
 				break;
 			case MB_HOUSE_KICK_OUT:
-				SetMsgBox( MB_OK, NULL, "개인본부에서 강제퇴장#되었습니다." );
+				SetMsgBox( MB_OK, NULL, STR(55) );
 				break;
 			case MB_HOUSE_MASTER_OUT:
-				SetMsgBox( MB_OK, NULL, "주인이 개인본부에서 퇴장하여#개인본부에서 이탈되었습니다." );
+				SetMsgBox( MB_OK, NULL, STR(56) );
 				break;
 			case MB_ROOM_EXCEPTION:
-				SetMsgBox( MB_OK, NULL, "예외 오류가 발생되었습니다." );
+				SetMsgBox( MB_OK, NULL, STR(48) );
 				break;
 			case MB_FLAG_MODE_ERROR:
 				SetMsgBox( MB_OK, NULL, STR(39) );

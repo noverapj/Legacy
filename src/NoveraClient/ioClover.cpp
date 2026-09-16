@@ -220,9 +220,9 @@ const ioHashString &ioClover::GetRemainString( int iRemainSec )
 
 	char szBuf[MAX_PATH] = "";
 	if( iHour > 0 )
-		wsprintf_e( szBuf, "%d시간 %02d분", iHour, iMinute );
+		SafeSprintf( szBuf, sizeof(szBuf), STR(1), iHour, iMinute );
 	else
-		wsprintf_e( szBuf, "%d분 %02d초", iMinute, iSec );
+		SafeSprintf( szBuf, sizeof(szBuf), STR(2), iMinute, iSec );
 	szReturn = szBuf;
 
 	return szReturn;

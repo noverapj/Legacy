@@ -4220,9 +4220,9 @@ void ioMonsterSurvivalMode::OnUseMonsterCoin( SP2Packet &rkPacket )
 			if( 0 < nUseCoinCount && 0 == nUseGoldCoinCount )
 				g_ChatMgr.SetSystemMsg( STR(3), nUseCoinCount );
 			else if( 0 == nUseCoinCount && 0 < nUseGoldCoinCount )
-				g_ChatMgr.SetSystemMsg( "해골영웅 플레이를 위해 골드 몬스터코인 %d개 소모", nUseGoldCoinCount );
+				g_ChatMgr.SetSystemMsg( STR(7), nUseGoldCoinCount );
 			else if( 0 < nUseCoinCount && 0 < nUseGoldCoinCount )
-				g_ChatMgr.SetSystemMsg( "해골영웅 플레이를 위해 몬스터코인 %d개, 골드 몬스터코인 %d개 소모", nUseCoinCount, nUseGoldCoinCount );
+				g_ChatMgr.SetSystemMsg( STR(8), nUseCoinCount, nUseGoldCoinCount );
 		}
 		break;
 	case USE_MONSTER_COIN_REVIVAL_OK:

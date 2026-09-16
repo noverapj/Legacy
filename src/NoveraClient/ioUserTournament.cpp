@@ -228,7 +228,7 @@ void ioUserTournament::SetTeamUserAdd( DWORD dwTeamIndex, SP2Packet &rkPacket )
 			if( rkTeamData.m_dwTeamOwnerIndex == g_MyInfo.GetUserIndex() )
 			{
 				// 팀원 가입 UI 표시
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "가입 수락이 완료되었습니다" );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 			}
 			else if( dwUserIndex != g_MyInfo.GetUserIndex() )
 			{

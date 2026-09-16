@@ -194,7 +194,7 @@ void PlazaNPCGaugeWnd::RenderBossMonster( int iXPos, int iYPos )
 		g_FontMgr.SetTextStyle( TS_OUTLINE_FULL_2X );
 		g_FontMgr.SetAlignType( TAT_LEFT );
 		g_FontMgr.SetTextColor( TCT_DEFAULT_WHITE );
-		g_FontMgr.PrintText( iXPos + 155, iYPos + 63, FONT_SIZE_14, "도주까지" );
+		g_FontMgr.PrintText( iXPos + 155, iYPos + 63, FONT_SIZE_14, STR(1) );
 
 		g_FontMgr.SetBkColor( 0, 0, 0 );
 		g_FontMgr.SetTextStyle( TS_OUTLINE_FULL_2X );
@@ -289,7 +289,7 @@ void PlazaNPCGaugeWnd::RenderRaidBossMonster( int iXPos, int iYPos )
 		g_FontMgr.SetTextStyle( TS_OUTLINE_FULL_2X );
 		g_FontMgr.SetAlignType( TAT_CENTER );
 		g_FontMgr.SetTextColor( TCT_DEFAULT_WHITE );
-		g_FontMgr.PrintText( iXPos + 141, iYPos + 47, FONT_SIZE_14, "현재순위 : %d위(총%d명)", m_nCurRank, m_nTotalPlayer );
+		g_FontMgr.PrintText( iXPos + 141, iYPos + 47, FONT_SIZE_14, STR(1), m_nCurRank, m_nTotalPlayer );
 	}
 
 	if( m_pRaidGauge )

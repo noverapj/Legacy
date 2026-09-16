@@ -1006,7 +1006,7 @@ void PresentTimeCashAlarmWnd::PrintManual( int nXPos, int nYPos, float fScale )
 	g_FontMgr.SetTextStyle( TS_NORMAL );
 	g_FontMgr.SetAlignType( TAT_CENTER );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_RED );
-	g_FontMgr.PrintText( nXPos, nYPos + 18, FONT_SIZE_13, "[개발자K]" );
+	g_FontMgr.PrintText( nXPos, nYPos + 18, FONT_SIZE_13, STR(1) );
 }
 
 void PresentTimeCashAlarmWnd::ShowPresentTimeCashAlarmWnd( int nAddCash )
@@ -1115,7 +1115,7 @@ void PresentTimeCashReleaseWnd::OnRender()
 	g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
 	g_FontMgr.PrintText( iXPos + 103, iYPos + 144, FONT_SIZE_13, "%s", m_szItemName.c_str() );  
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
-	g_FontMgr.PrintText( iXPos + 103, iYPos + 162, FONT_SIZE_13, "기간만료로 해제되었습니다" ); 
+	g_FontMgr.PrintText( iXPos + 103, iYPos + 162, FONT_SIZE_13, STR(1) ); 
 }
 
 void PresentTimeCashReleaseWnd::ShowPresentTimeCashReleaseWnd( DWORD dwEtcItemCode )

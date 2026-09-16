@@ -169,7 +169,7 @@ void InventorySelectItemBtn::SetBlank()
 	m_szDescArray[0].SetTextStyle( TS_NORMAL );
 	m_szDescArray[0].SetBkColor( 0, 0, 0 );	
 	m_szDescArray[0].SetTextColor( TCT_DEFAULT_GRAY );
-	m_szDescArray[0].AddTextPiece( FONT_SIZE_13, "없음" );
+	m_szDescArray[0].AddTextPiece( FONT_SIZE_13, STR(1) );
 
 	m_szDescArray[1].SetTextStyle( TS_NORMAL );
 	m_szDescArray[1].SetBkColor( 0, 0, 0 );	
@@ -292,11 +292,11 @@ void InventorySelectItemWnd::ShowInventorySelectItemWnd( vInventorySelectItemLis
 	m_bIsCostume = bIsCostume;
 
 	if ( szTitleName.IsEmpty() )
-		SetTitleText( "선택하기" );
+		SetTitleText( STR(1) );
 	else
 	{
 		char szBuf[MAX_PATH];
-		wsprintf_e( szBuf, "%s(%d개)", szTitleName.c_str(), m_iEtcItemCount );
+		SafeSprintf( szBuf, sizeof(szBuf), STR(2), szTitleName.c_str(), m_iEtcItemCount );
 		SetTitleText( szBuf );
 	}
 	
@@ -331,7 +331,7 @@ void InventorySelectItemWnd::SetRadioBtn( const ioHashStringVec& vRadioBtnNameLi
 			InventorySelectItemRadioButton *pRadioButton = dynamic_cast<InventorySelectItemRadioButton *>( FindChildWnd( ID_TAB1_1_BTN ) );
 			if ( !pRadioButton )
 				break;
-			pRadioButton->SetTitleText( "전체" );
+			pRadioButton->SetTitleText( STR(1) );
 			pRadioButton->ShowWnd();
 		}
 		break;

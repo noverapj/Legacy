@@ -441,7 +441,7 @@ void PetCompoundWnd::GetMaterialList( vNewShopPullDownItem &rkList )
 		kItem.m_szName = szName;
 
 		ioHashString szRank = g_PetInfoMgr.GetRankName( sPetTargetSlot.m_PetRankType );
-		StringCbPrintf( szCnt, sizeof( szCnt ), "·©Å© %s", szRank.c_str() );		
+		StringCbPrintf( szCnt, sizeof( szCnt ), STR(2), szRank.c_str() );		
 		kItem.m_bCount = true;
 		kItem.m_szCnt = szCnt;
 		kItem.m_dwCntTextColor = TCT_DEFAULT_BLUE;

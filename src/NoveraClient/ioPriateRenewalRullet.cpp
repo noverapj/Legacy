@@ -341,22 +341,22 @@ void ioPriateRenewalRullet::RenewalOakSwordUse( SP2Packet &rkPacket )
 	}
 	else if ( iType == OAK_BARREL_ERR_HOLE_INDEX )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "초과된 인덱스 입니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 	else if ( iType == OAK_BARREL_ERR_HOLE_DUPLICATED )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "이미 장착된 인덱스 입니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return;
 	}
 	else if ( iType == OAK_BARREL_ERR_LIMIT_SWORD )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "일일 최대 한도를 초과" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		return;
 	}
 	else
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "오크통 에러 타입 : %d", iType );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4), iType );
 		return;
 	}
 	
@@ -400,12 +400,12 @@ void ioPriateRenewalRullet::RenewalOakGetReward( SP2Packet &rkPacket )
 	}
 	else if ( iType == OAK_BARREL_ERR_REWARD_STEP )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "보상 단계가 맞지 않습니다.", iType );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1), iType );
 		return;
 	}
 	else
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "오크통 에러 타입 : %d", iType );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2), iType );
 		return;
 	}
 }
@@ -427,7 +427,7 @@ bool ioPriateRenewalRullet::SendRewardRequest()
 {
 	if ( m_iCurrEnableRewardTurnNumber <= 0 )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "보상 가능한 아이템이 하나 이상 있어야 합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return false;
 	}
 	TCPNetwork::MouseBusy( true );

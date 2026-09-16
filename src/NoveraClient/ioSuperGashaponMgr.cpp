@@ -381,13 +381,13 @@ void ioSuperGashaponMgr::PrintDefaultAlaram( const ioHashString& szSendID, const
 	kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), szSendID.c_str() );
 
 	kPrinter.SetTextColor( g_ChatMgr.GetChatColor() );
-	kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "¥‘¿Ã " );
+	kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), STR(1) );
 
 	kPrinter.SetTextColor( TCT_DEFAULT_VIOLET );
 	kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "[%s]", szEtcItemName.c_str() );
 
 	kPrinter.SetTextColor( g_ChatMgr.GetChatColor() );
-	kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "ø°º≠ " );
+	kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), STR(2) );
 
 	vSuperGashaponElement::const_iterator iter = rkPackage.m_vSuperGashaponElement.begin();
 	if( iter != rkPackage.m_vSuperGashaponElement.end() )
@@ -403,17 +403,17 @@ void ioSuperGashaponMgr::PrintDefaultAlaram( const ioHashString& szSendID, const
 		else
 		{
 			kPrinter.SetTextColor( TCT_DEFAULT_VIOLET );
-			kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "%s ø‹ %d∞≥ ", m_szBuffer, max( 0, rkPackage.m_vSuperGashaponElement.size() - 1 ) );
+			kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), STR(3), m_szBuffer, max( 0, rkPackage.m_vSuperGashaponElement.size() - 1 ) );
 		}
 
 		kPrinter.SetTextColor( g_ChatMgr.GetChatColor() );
-		kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "æ∆¿Ã≈€¿ª »πµÊ«œø¥Ω¿¥œ¥Ÿ!!" );
+		kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), STR(4) );
 	}	
 	else
 	{
 		LOG.PrintTimeAndLog( 0, "%s Element Empty", __FUNCTION__ );
 	}	
-	g_ChatMgr.SetChatComplexString( "»πµÊ", kPrinter );
+	g_ChatMgr.SetChatComplexString( STR(5), kPrinter );
 }
 
 bool ioSuperGashaponMgr::SendAutoUse( DWORD dwEtcItemType, byte eType )

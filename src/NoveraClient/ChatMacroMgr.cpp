@@ -588,7 +588,7 @@ void ChatMacroMgr::OnMacroScreenShotMode()
 	}
 	else if( m_pPlayStage->GetModeType() == MT_PRACTICE )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "수련장에서는 스크린샷 모드를 사용할 수 없습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return;
 	}
 
@@ -1399,13 +1399,13 @@ void ChatMacroMgr::OnMacroSuperGashaponAllPackage( char *szMacro )
 	ioEtcItem* pItem = g_EtcItemMgr.FindEtcItem( dwEtcItemCode );
 	if( !pItem )
 	{
-		g_ChatMgr.SetSystemMsg( "잘못된 특별아이템 코드입니다 : %d", dwEtcItemCode );
+		g_ChatMgr.SetSystemMsg( STR(1), dwEtcItemCode );
 		return;
 	}
 
 	if( !g_SuperGashaponMgr.IsSuperGashpon( dwEtcItemCode ) )
 	{
-		g_ChatMgr.SetSystemMsg( "슈퍼가챠가 아닙니다. : %d", dwEtcItemCode );
+		g_ChatMgr.SetSystemMsg( STR(2), dwEtcItemCode );
 		return;
 	}
 
@@ -1423,7 +1423,7 @@ void ChatMacroMgr::OnMacroSuperGashaponPackage( char *szMacro )
 	StringVector kString = ioStringConverter::Split( szMacro, "." );
 	if( kString.size() < 2 )
 	{
-		g_ChatMgr.SetSystemMsg( "값 2개의 필요(etcitemcode.present_index)" );
+		g_ChatMgr.SetSystemMsg( STR(1) );
 		return;
 	}
 
@@ -1433,20 +1433,20 @@ void ChatMacroMgr::OnMacroSuperGashaponPackage( char *szMacro )
 	ioEtcItem* pItem = g_EtcItemMgr.FindEtcItem( dwEtcItemCode );
 	if( !pItem )
 	{
-		g_ChatMgr.SetSystemMsg( "잘못된 특별아이템 코드입니다 : %d", dwEtcItemCode );
+		g_ChatMgr.SetSystemMsg( STR(2), dwEtcItemCode );
 		return;
 	}
 
 	if( !g_SuperGashaponMgr.IsSuperGashpon( dwEtcItemCode ) )
 	{
-		g_ChatMgr.SetSystemMsg( "슈퍼가챠가 아닙니다. : %d", dwEtcItemCode );
+		g_ChatMgr.SetSystemMsg( STR(3), dwEtcItemCode );
 		return;
 	}
 	
 	const ioSuperGashaponMgr::SuperGashaponPackage& rkPresent = g_SuperGashaponMgr.GetSuperGashaponPackage( dwEtcItemCode, iPackageIndex );
 	if( (int)rkPresent.m_vSuperGashaponElement.size() <= iPackageIndex )
 	{
-		g_ChatMgr.SetSystemMsg( "package_index가 유효하지 않습니다", rkPresent.m_vSuperGashaponElement.size() );
+		g_ChatMgr.SetSystemMsg( STR(4), rkPresent.m_vSuperGashaponElement.size() );
 		return;
 	}
 
@@ -1467,13 +1467,13 @@ void ChatMacroMgr::OnMacroSuperGashaponInfo( char *szMacro )
 	ioEtcItem* pItem = g_EtcItemMgr.FindEtcItem( dwEtcItemCode );
 	if( !pItem )
 	{
-		g_ChatMgr.SetSystemMsg( "잘못된 특별아이템 코드입니다 : %d", dwEtcItemCode );
+		g_ChatMgr.SetSystemMsg( STR(1), dwEtcItemCode );
 		return;
 	}
 
 	if( !g_SuperGashaponMgr.IsSuperGashpon( dwEtcItemCode ) )
 	{
-		g_ChatMgr.SetSystemMsg( "슈퍼가챠가 아닙니다. : %d", dwEtcItemCode );
+		g_ChatMgr.SetSystemMsg( STR(2), dwEtcItemCode );
 		return;
 	}
 
@@ -1495,13 +1495,13 @@ void ChatMacroMgr::OnMacroSuperGashaponInfoReset( char *szMacro )
 	ioEtcItem* pItem = g_EtcItemMgr.FindEtcItem( dwEtcItemCode );
 	if( !pItem )
 	{
-		g_ChatMgr.SetSystemMsg( "잘못된 특별아이템 코드입니다 : %d", dwEtcItemCode );
+		g_ChatMgr.SetSystemMsg( STR(1), dwEtcItemCode );
 		return;
 	}
 
 	if( !g_SuperGashaponMgr.IsSuperGashpon( dwEtcItemCode ) )
 	{
-		g_ChatMgr.SetSystemMsg( "슈퍼가챠가 아닙니다. : %d", dwEtcItemCode );
+		g_ChatMgr.SetSystemMsg( STR(2), dwEtcItemCode );
 		return;
 	}
 
@@ -1543,7 +1543,7 @@ void ChatMacroMgr::OnMacroAttendanceAddDay( char *szMacro )
 
 	if( iDayCount <= 0 )
 	{
-		g_ChatMgr.SetSystemMsg( "값이 0을 넘겨야 합니다.(iDayCount)" );
+		g_ChatMgr.SetSystemMsg( STR(1) );
 		return;
 	}
 			
@@ -1564,7 +1564,7 @@ void ChatMacroMgr::OnMacroAttendancePrevMonth( char *szMacro )
 	
 	if( iDayCount <= 0 )
 	{
-		g_ChatMgr.SetSystemMsg( "값이 0을 넘겨야 합니다.(iDayCount)" );
+		g_ChatMgr.SetSystemMsg( STR(1) );
 		return;
 	}
 
@@ -1592,7 +1592,7 @@ void ChatMacroMgr::OnMacroAttendanceDateModify( char *szMacro )
 	StringVector kString = ioStringConverter::Split( szMacro, "." );
 	if( kString.size() < 3 )
 	{
-		g_ChatMgr.SetSystemMsg( "값 3개의 필요(year.month.day) - ex)13.9.23" );
+		g_ChatMgr.SetSystemMsg( STR(1) );
 		return;
 	}
 
@@ -1602,19 +1602,19 @@ void ChatMacroMgr::OnMacroAttendanceDateModify( char *szMacro )
 	
 	if( iYear <= 0 || 99 < iYear )
 	{
-		g_ChatMgr.SetSystemMsg( "년 값이 잘못됬습니다( 0 ~ 99 )" );
+		g_ChatMgr.SetSystemMsg( STR(2) );
 		return;
 	}
 
 	if( iMonth < 1 || 12 < iMonth )
 	{
-		g_ChatMgr.SetSystemMsg( "월 값이 잘못됬습니다" );
+		g_ChatMgr.SetSystemMsg( STR(3) );
 		return;
 	}
 
 	if( iDay < 1 || DateHelp::GetMonthDayPeriod( iYear, iMonth ) < iDay )
 	{
-		g_ChatMgr.SetSystemMsg( "일 값이 잘못됬습니다( 최대 : %d, 입력 : %d)", DateHelp::GetMonthDayPeriod( iYear, iMonth ), iDay );
+		g_ChatMgr.SetSystemMsg( STR(4), DateHelp::GetMonthDayPeriod( iYear, iMonth ), iDay );
 		return;
 	}
 
@@ -1632,7 +1632,7 @@ void ChatMacroMgr::OnMacroAwake( char *szMacro )
 	StringVector kString = ioStringConverter::Split( szMacro, "." );
 	if( kString.size() < 2 )
 	{
-		g_ChatMgr.SetSystemMsg( "값 2개의 필요(용병번호.현재시간 기준으로 종료될 분) - ex)1.10 - 아이언나이트 10분뒤 종료" );
+		g_ChatMgr.SetSystemMsg( STR(1) );
 		return;
 	}
 
@@ -1651,7 +1651,7 @@ void ChatMacroMgr::OnMacroCharPowerUpAdd( char *szMacro )
 	StringVector kString = ioStringConverter::Split( szMacro, "." );
 	if( kString.size() < 1 )
 	{
-		g_ChatMgr.SetSystemMsg( "값 2개의 필요(용병번호) - ex)1 - 아이언나이트 용병강화" );
+		g_ChatMgr.SetSystemMsg( STR(1) );
 		return;
 	}
 
@@ -1677,7 +1677,7 @@ void ChatMacroMgr::OnMacroItemSlotIndex( char *szMacro )
 	StringVector kString = ioStringConverter::Split( szMacro, "." );
 	if( kString.empty() )
 	{
-		g_ChatMgr.SetSystemMsg( "값 1개의 필요(아이템코드) - ex)/아이템슬롯 100001" );
+		g_ChatMgr.SetSystemMsg( STR(1) );
 		return;
 	}
 
@@ -1686,7 +1686,7 @@ void ChatMacroMgr::OnMacroItemSlotIndex( char *szMacro )
 	ioUserExtraItem* pExtraItem = g_MyInfo.GetUserExtraItem();
 	if( !pExtraItem )
 	{
-		g_ChatMgr.SetSystemMsg( "아이템 슬롯 에러" );
+		g_ChatMgr.SetSystemMsg( STR(2) );
 		return;
 	}
 
@@ -1704,7 +1704,7 @@ void ChatMacroMgr::OnMacroItemPowerUpAdd( char *szMacro )
 	StringVector kString = ioStringConverter::Split( szMacro, "." );
 	if( kString.size() < 1 )
 	{
-		g_ChatMgr.SetSystemMsg( "값 1개의 필요(아이템슬롯) - ex)1" );
+		g_ChatMgr.SetSystemMsg( STR(1) );
 		return;
 	}
 
@@ -1821,7 +1821,7 @@ void ChatMacroMgr::OnMacroRollBookWndShow( char *szMacro )
 	StringVector kString = ioStringConverter::Split( szMacro, "." );
 	if( kString.size() < 2 )  
 	{
-		g_ChatMgr.SetSystemMsg( "값 2개 필요. /누적출석부보자 번호.위치" );
+		g_ChatMgr.SetSystemMsg( STR(1) );
 		return;
 	}
 
@@ -1853,7 +1853,7 @@ void ChatMacroMgr::OnMacroRollBookProgress( char *szMacro )
 
 	if( iProgressCount <= 0 && iProgressCount > 7 )
 	{
-		g_ChatMgr.SetSystemMsg( "값이 1~7사이의 값이여야 합니다." );
+		g_ChatMgr.SetSystemMsg( STR(1) );
 		return;
 	}
 
@@ -1873,7 +1873,7 @@ void ChatMacroMgr::OnMacroTimerChange( char *szMacro )
 	StringVector kString = ioStringConverter::Split( szMacro, "." );
 	if( kString.size() != 1 )
 	{
-		g_ChatMgr.SetSystemMsg( "값 1개의 필요( 0, 1 )" );
+		g_ChatMgr.SetSystemMsg( STR(1) );
 		return;
 	}
 
@@ -1891,7 +1891,7 @@ void ChatMacroMgr::OnMacroHousingTest( char *szMacro )
 
 	if( !m_pPlayStage || m_pPlayStage->GetPlazaModeType() != PT_GUILD )
 	{
-		g_ChatMgr.SetSystemMsg( "길드 본부 내에서만 사용 가능합니다." );
+		g_ChatMgr.SetSystemMsg( STR(1) );
 	}
 		
 	LOG.PrintTimeAndLog(0, "----------------------------------------------------------------------------------------------" );
@@ -1912,7 +1912,7 @@ void ChatMacroMgr::OnMacroHousingCommand( char *szMacro )
 	StringVector kString = ioStringConverter::Split( szMacro, "." );
 	if( kString.size() < 1 )
 	{
-		g_ChatMgr.SetSystemMsg( "타입 필요" );
+		g_ChatMgr.SetSystemMsg( STR(1) );
 		return;
 	}
 
@@ -1923,7 +1923,7 @@ void ChatMacroMgr::OnMacroHousingCommand( char *szMacro )
 		{
 			if( kString.size() != 2 )
 			{
-				g_ChatMgr.SetSystemMsg( "2개의 값 필요" );
+				g_ChatMgr.SetSystemMsg( STR(2) );
 				return;
 			}
 
@@ -1948,7 +1948,7 @@ void ChatMacroMgr::OnMacroHousingCommand( char *szMacro )
 		{
 			if( kString.size() != 5 )
 			{
-				g_ChatMgr.SetSystemMsg( "5개의 값 필요" );
+				g_ChatMgr.SetSystemMsg( STR(3) );
 				return;
 			}
 			
@@ -1990,7 +1990,7 @@ void ChatMacroMgr::OnMacroTournamentNextState( char *szMacro )
 	kPacket << DEVELOPER_TOURNAMENT_MACRO;
 	kPacket << TM_NEXT_STATE;
 	TCPNetwork::SendToServer( kPacket );
-	g_ChatMgr.SetSystemMsg( "[대회 진행 매크로 전송]" );
+	g_ChatMgr.SetSystemMsg( STR(1) );
 #endif
 }
 
@@ -2001,7 +2001,7 @@ void ChatMacroMgr::OnMacroTournamentResult( char *szMacro )
 	kPacket << DEVELOPER_TOURNAMENT_MACRO;
 	kPacket << TM_RESULT;
 	TCPNetwork::SendToServer( kPacket );
-	g_ChatMgr.SetSystemMsg( "[대회 보상 처리 매크로 전송]" );
+	g_ChatMgr.SetSystemMsg( STR(1) );
 #endif
 }
 
@@ -2614,7 +2614,7 @@ bool ChatMacroMgr::SetCreateStructMacro( int iMacroType, char *szMacro )
 
 	if( m_pPlayStage->GetModeType() == MT_TRAINING && m_pPlayStage->GetBlockWorld() != NULL )
 	{
-		g_ChatMgr.SetSystemMsg( "길드 본부 에서는 사용 할 수 없습니다." );
+		g_ChatMgr.SetSystemMsg( STR(8) );
 		return false;
 	}
 
@@ -2812,7 +2812,7 @@ void ChatMacroMgr::OnMacroSetDateMission( char *szMacro )
 	StringVector kString = ioStringConverter::Split( szMacro, "." );
 	if( kString.size() < 3 )
 	{
-		g_ChatMgr.SetSystemMsg( "미션 값 부족 : /미션 DateType.Day.Request Min" );
+		g_ChatMgr.SetSystemMsg( STR(1) );
 		return;
 	}
 
@@ -2821,7 +2821,7 @@ void ChatMacroMgr::OnMacroSetDateMission( char *szMacro )
 	int		  iChangeTime	= atoi( kString[2].c_str() );		//iChangeTime 후에 다음미션으로 바뀔것인가.
 	if ( iChangeTime <= 0 )
 	{
-		g_ChatMgr.SetSystemMsg( "요청가능한 시간이 아닙니다. : /미션 DateType.Day.Request Min" );
+		g_ChatMgr.SetSystemMsg( STR(2) );
 		return;
 	}
 
@@ -2843,7 +2843,7 @@ void ChatMacroMgr::OnMacroSetNextDateMission( char *szMacro )
 	StringVector kString = ioStringConverter::Split( szMacro, "." );
 	if( kString.size() < 2 )
 	{
-		g_ChatMgr.SetSystemMsg( "미션 값 부족 : /다음미션 DateType.Request Min" );
+		g_ChatMgr.SetSystemMsg( STR(1) );
 		return;
 	}
 
@@ -2851,7 +2851,7 @@ void ChatMacroMgr::OnMacroSetNextDateMission( char *szMacro )
 	int		  iChangeTime	= atoi( kString[1].c_str() );		//iChangeTime 후에 다음미션으로 바뀔것인가.
 	if ( iChangeTime <= 0 )
 	{
-		g_ChatMgr.SetSystemMsg( "요청가능한 시간이 아닙니다. : /다음미션 DateType.Request Min" );
+		g_ChatMgr.SetSystemMsg( STR(2) );
 		return;
 	}
 
@@ -2872,7 +2872,7 @@ void ChatMacroMgr::OnMacroSetMissionValue( char *szMacro )
 	StringVector kString = ioStringConverter::Split( szMacro, "." );
 	if( kString.size() < 2 )
 	{
-		g_ChatMgr.SetSystemMsg( "값 부족 : /미션갱신 missionCode.Value" );
+		g_ChatMgr.SetSystemMsg( STR(1) );
 		return;
 	}
 
@@ -2882,7 +2882,7 @@ void ChatMacroMgr::OnMacroSetMissionValue( char *szMacro )
 	const ioMission* const pMission = g_MissionManager.GetMissionToCode( iMagicCode );
 	if ( !pMission )
 	{
-		g_ChatMgr.SetSystemMsg( "존재하지 않는 미션 코드입니다." );
+		g_ChatMgr.SetSystemMsg( STR(2) );
 		return;
 	}
 

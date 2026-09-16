@@ -199,7 +199,7 @@ void ioUserCostume::GetUseInfo( int nSlotIndex, ioHashString &rsInfo )
 
 	char szText[MAX_PATH]="";
 	if( kSlot.m_PeriodType == PCPT_MORTMAIN )
-		SafeSprintf( szText, sizeof( szText ), "영구사용" );
+		SafeSprintf( szText, sizeof( szText ), STR(1) );
 	else 
 		Help::GetRemainTime( kSlot.GetYear(), kSlot.GetMonth(), kSlot.GetDay(), kSlot.GetHour(), kSlot.GetMinute(), szText, sizeof( szText ) );
 

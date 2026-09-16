@@ -129,12 +129,12 @@ void TrainingFuncMenuWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 				}
 				else
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "길드장만이 활성화 할 수 있는 기능입니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 				}
 			}
 			else
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "가입된 길드가 없습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 			}
 			
 		}

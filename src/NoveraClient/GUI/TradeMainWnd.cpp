@@ -441,7 +441,7 @@ void TradeItemBuyWnd::OnRender()
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_12, "수수료(%.2f％)", fTexRate );
+	kPrinter.AddTextPiece( FONT_SIZE_12, STR(11), fTexRate );
 	kPrinter.PrintFullText( iXPos+PRICE_TEXT_X, iYPos+PRICE_TEXT_Y+21, TAT_LEFT );
 	kPrinter.ClearList();
 
@@ -1201,7 +1201,7 @@ void TradeMainWnd::SetSortTypeList()
 	NewShopPullDownItem kItem1;
 	kItem1.m_iMagicCode = ioItem::IT_NONE;
 
-	SafeSprintf( szName, sizeof( szName ),"전체 부위" );
+	SafeSprintf( szName, sizeof( szName ),STR(6) );
 	kItem1.m_dwTextColor = TCT_DEFAULT_DARKGRAY;
 	kItem1.m_szName      = szName;
 	m_vSlotSortTypeList.push_back( kItem1 );
@@ -1252,7 +1252,7 @@ void TradeMainWnd::SetGradeSortTypeList()
 	// 전체
 	NewShopPullDownItem kItem1;
 	kItem1.m_iMagicCode = TIT_NONE;
-	SafeSprintf( szName, sizeof( szName ), "전체 등급" );
+	SafeSprintf( szName, sizeof( szName ), STR(1) );
 	kItem1.m_dwTextColor = TCT_DEFAULT_DARKGRAY;
 	kItem1.m_szName      = szName;
 	m_vGradeSortTypeList.push_back( kItem1 );
@@ -1260,7 +1260,7 @@ void TradeMainWnd::SetGradeSortTypeList()
 	// 고급
 	NewShopPullDownItem kItem2;
 	kItem2.m_iMagicCode = TIT_PRIMIUM;
-	SafeSprintf( szName, sizeof( szName ), "고급" );
+	SafeSprintf( szName, sizeof( szName ), STR(2) );
 	kItem2.m_dwTextColor = TCT_DEFAULT_DARKGRAY;
 	kItem2.m_szName      = szName;
 	m_vGradeSortTypeList.push_back( kItem2 );
@@ -1268,7 +1268,7 @@ void TradeMainWnd::SetGradeSortTypeList()
 	// 레어
 	NewShopPullDownItem kItem3;
 	kItem3.m_iMagicCode = TIT_RARE;
-	SafeSprintf( szName, sizeof( szName ), "레어" );
+	SafeSprintf( szName, sizeof( szName ), STR(3) );
 	kItem3.m_dwTextColor = TCT_DEFAULT_DARKGRAY;
 	kItem3.m_szName      = szName;
 	m_vGradeSortTypeList.push_back( kItem3 );
@@ -1276,7 +1276,7 @@ void TradeMainWnd::SetGradeSortTypeList()
 	//유니크
 	NewShopPullDownItem kItem4;
 	kItem4.m_iMagicCode = TIT_UNIQUE;
-	SafeSprintf( szName, sizeof( szName ), "유니크" );
+	SafeSprintf( szName, sizeof( szName ), STR(4) );
 	kItem4.m_dwTextColor = TCT_DEFAULT_DARKGRAY;
 	kItem4.m_szName      = szName;
 	m_vGradeSortTypeList.push_back( kItem4 );
@@ -1284,7 +1284,7 @@ void TradeMainWnd::SetGradeSortTypeList()
 	//아이돌
 	NewShopPullDownItem kItem5;
 	kItem5.m_iMagicCode = TIT_IDOL;
-	SafeSprintf( szName, sizeof( szName ), "아이돌" );
+	SafeSprintf( szName, sizeof( szName ), STR(5) );
 	kItem5.m_dwTextColor = TCT_DEFAULT_DARKGRAY;
 	kItem5.m_szName      = szName;
 	m_vGradeSortTypeList.push_back( kItem5 );
@@ -1299,7 +1299,7 @@ void TradeMainWnd::SetPriceSortTypeList()
 	// 전체
 	NewShopPullDownItem kItem1;
 	kItem1.m_iMagicCode = PRICE_NONE;
-	SafeSprintf( szName, sizeof( szName ), "전체 가격" );
+	SafeSprintf( szName, sizeof( szName ), STR(1) );
 	kItem1.m_dwTextColor = TCT_DEFAULT_DARKGRAY;
 	kItem1.m_szName      = szName;
 	m_vPriceSortTypeList.push_back( kItem1 );
@@ -1307,7 +1307,7 @@ void TradeMainWnd::SetPriceSortTypeList()
 	// 고급
 	NewShopPullDownItem kItem2;
 	kItem2.m_iMagicCode = PRICE_UP;
-	SafeSprintf( szName, sizeof( szName ), "높은 가격 순" );
+	SafeSprintf( szName, sizeof( szName ), STR(2) );
 	kItem2.m_dwTextColor = TCT_DEFAULT_DARKGRAY;
 	kItem2.m_szName      = szName;
 	m_vPriceSortTypeList.push_back( kItem2 );
@@ -1315,7 +1315,7 @@ void TradeMainWnd::SetPriceSortTypeList()
 	// 레어
 	NewShopPullDownItem kItem3;
 	kItem3.m_iMagicCode = PRICE_DOWN;
-	SafeSprintf( szName, sizeof( szName ), "낮은 가격 순" );
+	SafeSprintf( szName, sizeof( szName ), STR(3) );
 	kItem3.m_dwTextColor = TCT_DEFAULT_DARKGRAY;
 	kItem3.m_szName      = szName;
 	m_vPriceSortTypeList.push_back( kItem3 );

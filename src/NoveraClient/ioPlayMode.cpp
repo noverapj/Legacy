@@ -5052,21 +5052,21 @@ void ioPlayMode::OnServerAlarmMent( SP2Packet &rkPacket )
 			kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), szUserName.c_str() );
 
 			kPrinter.SetTextColor( g_ChatMgr.GetChatColor() );
-			kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "님이 " );
+			kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), STR(257) );
 
 			kPrinter.SetTextColor( TCT_DEFAULT_VIOLET );
 			kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), pEtcItem->GetName().c_str() );
 
 			kPrinter.SetTextColor( g_ChatMgr.GetChatColor() );
-			kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "를 사용하여 " );
+			kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), STR(258) );
 
 			kPrinter.SetTextColor( TCT_DEFAULT_VIOLET );
 			kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), pItem->GetName().c_str() );
 
 			kPrinter.SetTextColor( g_ChatMgr.GetChatColor() );
-			kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), " 영구장비 변환에 성공했습니다." );
+			kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), STR(259) );
 
-			g_ChatMgr.SetChatComplexString( "알림", kPrinter );
+			g_ChatMgr.SetChatComplexString( STR(260), kPrinter );
 		}
 	}
 	else if( iMentType == UDP_SERVER_ALARM_COMPOUND_EXTRA_SUCCESS )
@@ -5185,22 +5185,22 @@ void ioPlayMode::OnServerAlarmMent( SP2Packet &rkPacket )
 		kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "%s", szSendID.c_str() );
 
 		kPrinter.SetTextColor( g_ChatMgr.GetChatColor() );
-		kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "님이" );
+		kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), STR(261) );
 
 		kPrinter.SetTextColor( TCT_DEFAULT_VIOLET );
-		kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "%d개", nCount );
+		kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), STR(262), nCount );
 
 		kPrinter.SetTextColor( g_ChatMgr.GetChatColor() );
-		kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "의 검으로 " );
+		kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), STR(263) );
 
 		kPrinter.SetTextColor( TCT_DEFAULT_VIOLET );
 		kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "<%s>", g_PresentMgr.GetPresentValue1Text( eType, Value1, Value2 ).c_str() );
-		g_ChatMgr.SetChatComplexString( "알림", kPrinter );
+		g_ChatMgr.SetChatComplexString( STR(260), kPrinter );
 
 		ioComplexStringPrinter kPrinter2;
 		g_ChatMgr.PresetChatComplexString( MSG_ANNOUNCE_CHAT, kPrinter2 );
 		kPrinter2.SetTextColor( g_ChatMgr.GetChatColor() );
-		kPrinter2.AddTextPiece( g_ChatMgr.GetChatFontScale(), "을(를) 획득했습니다." );
+		kPrinter2.AddTextPiece( g_ChatMgr.GetChatFontScale(), STR(264) );
 		g_ChatMgr.SetChatComplexString( "", kPrinter2 );
 	}
 	else if ( iMentType == UDP_SERVER_ALARM_OAK_RESULT)
@@ -5217,23 +5217,23 @@ void ioPlayMode::OnServerAlarmMent( SP2Packet &rkPacket )
 		kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "%s", szSendID.c_str() );
 
 		kPrinter.SetTextColor( g_ChatMgr.GetChatColor() );
-		kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "님이 오크통" );
+		kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), STR(265) );
 
 		kPrinter.SetTextColor( TCT_DEFAULT_VIOLET );
-		kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "%d단계", iLevel );
+		kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), STR(266), iLevel );
 
 		if ( bSuccess )
 		{
 			kPrinter.SetTextColor( g_ChatMgr.GetChatColor() );
-			kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "를 성공하였습니다." );
+			kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), STR(267) );
 		}
 		else
 		{
 			kPrinter.SetTextColor( g_ChatMgr.GetChatColor() );
-			kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "를 실패하였습니다." );
+			kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), STR(268) );
 		}
 
-		g_ChatMgr.SetChatComplexString( "알림", kPrinter );
+		g_ChatMgr.SetChatComplexString( STR(260), kPrinter );
 	}
 	else if( iMentType == UDP_SERVER_ALARM_TIMEGATE_RESULT )
 	{
@@ -5251,16 +5251,16 @@ void ioPlayMode::OnServerAlarmMent( SP2Packet &rkPacket )
 		kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), szSendID.c_str() );
 
 		kPrinter.SetTextColor( g_ChatMgr.GetChatColor() );
-		kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "님이 타임게이트에서 " );
+		kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), STR(269) );
 
 		kPrinter.SetTextColor( TCT_DEFAULT_VIOLET );
 		kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), g_PresentMgr.GetPresentValue1Text( iPresentType, iValue1, iValue2 ).c_str() );
 		kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "(%s)", g_PresentMgr.GetPresentValue2Text( iPresentType, iValue1, iValue2 ).c_str() );
 
 		kPrinter.SetTextColor( g_ChatMgr.GetChatColor() );
-		kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), " 소환에 성공했습니다." );
+		kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), STR(270) );
 
-		g_ChatMgr.SetChatComplexString( "알림", kPrinter );
+		g_ChatMgr.SetChatComplexString( STR(260), kPrinter );
 	}
 }
 

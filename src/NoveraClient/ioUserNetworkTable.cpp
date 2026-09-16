@@ -629,7 +629,7 @@ void ioUserNetworkTable::HoleRecvProcess()
 		if( g_App.IsP2PDataDBLog() )
 		{
 			char szLOG[2048] = "";
-			sprintf( szLOG, "%d초간 UDP 응답이 없어 서버 중계 요청 보냄: %s(%s) - > %s(%s:%d)",  //Except Extracting Hangeul
+			sprintf( szLOG, STR(1),  //Except Extracting Hangeul
 				            pInfo->m_dwRecvDelayLimitTime/1000, g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str(),
 				            pInfo->m_Name.c_str(), pInfo->m_addrPublic.m_IP, pInfo->m_addrPublic.m_Port );
 			SP2Packet kLogPacket( LUPK_LOG );
@@ -682,7 +682,7 @@ void ioUserNetworkTable::HoleSendComplete( const ioHashString &rkName, const ioH
 		if( g_App.IsP2PDataDBLog() )
 		{
 			char szLOG[2048] = "";
-			sprintf( szLOG, "%s(%s:%d) 유저로부터 Hole 성공 패킷 받음(%s:%s)", //Except Extracting Hangeul
+			sprintf( szLOG, STR(1), //Except Extracting Hangeul
 				            rkName.c_str(), szIP.c_str(), iPort, g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
 			SP2Packet kLogPacket( LUPK_LOG );
 			kLogPacket << "CheckError";  // 로그 파일 타입
@@ -719,7 +719,7 @@ void ioUserNetworkTable::SetUDPRecvTimeOut( const ioHashString &rkName )
 		if( g_App.IsP2PDataDBLog() )
 		{
 			char szLOG[2048] = "";
-			sprintf( szLOG, "%d초간 UDP 응답이 없어 서버 중계 요청 받음: %s(%s:%d) - > %s(%s) ", //Except Extracting Hangeul
+			sprintf( szLOG, STR(1), //Except Extracting Hangeul
 				            pInfo->m_dwRecvDelayLimitTime/1000, pInfo->m_Name.c_str(), pInfo->m_addrPublic.m_IP, pInfo->m_addrPublic.m_Port,
 							g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
 			SP2Packet kLogPacket( LUPK_LOG );

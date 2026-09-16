@@ -2012,17 +2012,17 @@ void MyInventoryInfoWnd::SetSubscriptionItemInfo( int iClassType, const Inventor
 	m_SubscriptionInfo[0].SetTextStyle( TS_NORMAL );
 	m_SubscriptionInfo[0].SetBkColor( 0, 0, 0 );
 	m_SubscriptionInfo[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	m_SubscriptionInfo[0].AddTextPiece( FONT_SIZE_12, "★구매날짜: %s", szDateInfo );
+	m_SubscriptionInfo[0].AddTextPiece( FONT_SIZE_12, STR(2), szDateInfo );
 
 	m_SubscriptionInfo[1].SetTextStyle( TS_NORMAL );
 	m_SubscriptionInfo[1].SetBkColor( 0, 0, 0 );
 	m_SubscriptionInfo[1].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	m_SubscriptionInfo[1].AddTextPiece( FONT_SIZE_12, "★구매골드: %s", szGoldInfo );
+	m_SubscriptionInfo[1].AddTextPiece( FONT_SIZE_12, STR(3), szGoldInfo );
 
 	m_SubscriptionInfo[2].SetTextStyle( TS_NORMAL );
 	m_SubscriptionInfo[2].SetBkColor( 0, 0, 0 );
 	m_SubscriptionInfo[2].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	m_SubscriptionInfo[2].AddTextPiece( FONT_SIZE_12, "★구매보너스골드: %s", szBonusGoldInfo );
+	m_SubscriptionInfo[2].AddTextPiece( FONT_SIZE_12, STR(4), szBonusGoldInfo );
 
 	m_pManual = ioPresentInvenManualMgr::GetSingletonPtr();
 }
@@ -2175,21 +2175,21 @@ void MyInventoryInfoWnd::ShowSubscriptionRetrCheckLimit()
 	kPrinter[0].SetTextStyle( TS_NORMAL );
 	kPrinter[0].SetBkColor( 0, 0, 0 );	
 	kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter[0].AddTextPiece( FONT_SIZE_13, "본 상품은 구매한지" );
+	kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(1) );
 
 	kPrinter[1].SetTextStyle( TS_NORMAL );
 	kPrinter[1].SetBkColor( 0, 0, 0 );	
 	kPrinter[1].SetTextColor( TCT_DEFAULT_RED ); 
-	kPrinter[1].AddTextPiece( FONT_SIZE_13,"7일이 경과" );
+	kPrinter[1].AddTextPiece( FONT_SIZE_13,STR(2) );
 	kPrinter[1].SetTextColor( TCT_DEFAULT_DARKGRAY ); 
-	kPrinter[1].AddTextPiece( FONT_SIZE_13,"하여 " );
+	kPrinter[1].AddTextPiece( FONT_SIZE_13,STR(3) );
 	kPrinter[1].SetTextColor( TCT_DEFAULT_RED ); 
-	kPrinter[1].AddTextPiece( FONT_SIZE_13,"청약철회가" );
+	kPrinter[1].AddTextPiece( FONT_SIZE_13,STR(4) );
 
 	kPrinter[2].SetTextStyle( TS_NORMAL );
 	kPrinter[2].SetBkColor( 0, 0, 0 );	
 	kPrinter[2].SetTextColor( TCT_DEFAULT_RED ); 
-	kPrinter[2].AddTextPiece( FONT_SIZE_13, "되지 않습니다." );
+	kPrinter[2].AddTextPiece( FONT_SIZE_13, STR(5) );
 
 	g_GUIMgr.SetPrevMsgListBox( NULL, MB_OK, this, kPrinter );
 }
@@ -2201,17 +2201,17 @@ void MyInventoryInfoWnd::ShowSubscriptionRetrCheck( int iIndex, const ioHashStri
 	kPrinter[0].SetTextStyle( TS_NORMAL );
 	kPrinter[0].SetBkColor( 0, 0, 0 );	
 	kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter[0].AddTextPiece( FONT_SIZE_13, "청약철회 하시겠습니까?" );
+	kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(1) );
 
 	kPrinter[1].SetTextStyle( TS_NORMAL );
 	kPrinter[1].SetBkColor( 0, 0, 0 );
 	kPrinter[1].SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter[1].AddTextPiece( FONT_SIZE_13, "보너스 골드 등과 같은 경우엔 정책에 따라" );
+	kPrinter[1].AddTextPiece( FONT_SIZE_13, STR(2) );
 
 	kPrinter[2].SetTextStyle( TS_NORMAL );
 	kPrinter[2].SetBkColor( 0, 0, 0 );	
 	kPrinter[2].SetTextColor( TCT_DEFAULT_GRAY ); 
-	kPrinter[2].AddTextPiece( FONT_SIZE_13, "환불 금액에 포함되지 않을 수도 있습니다." );
+	kPrinter[2].AddTextPiece( FONT_SIZE_13, STR(3) );
 
 	g_GUIMgr.SetPrevMsgListBox( NULL, MB_YESNO, this, kPrinter );
 }
@@ -2595,21 +2595,21 @@ void MyInventoryInfoWnd::RenderSoldierInfo()
 			if( szPowerupName.IsEmpty() )
 				SafeSprintf( szText, sizeof( szText ), STR(9), iMinute );
 			else			
-				SafeSprintf( szText, sizeof( szText ), "%s(%d분)", szPowerupName.c_str(), iMinute );	
+				SafeSprintf( szText, sizeof( szText ), STR(15), szPowerupName.c_str(), iMinute );	
 		}
 		else if( iMinute == 0 )
 		{
 			if( szPowerupName.IsEmpty() )
 				SafeSprintf( szText, sizeof( szText ), STR(10), iHour );
 			else
-				SafeSprintf( szText, sizeof( szText ), "%s(%d시간)", szPowerupName.c_str(), iHour );
+				SafeSprintf( szText, sizeof( szText ), STR(16), szPowerupName.c_str(), iHour );
 		}
 		else
 		{
 			if( szPowerupName.IsEmpty() )
 				SafeSprintf( szText, sizeof( szText ), STR(11), iHour, iMinute );
 			else
-				SafeSprintf( szText, sizeof( szText ), "%s(%d시간 %d분)", szPowerupName.c_str(), iHour, iMinute );
+				SafeSprintf( szText, sizeof( szText ), STR(17), szPowerupName.c_str(), iHour, iMinute );
 		}
 	}
 
@@ -3074,7 +3074,7 @@ void MyInventoryInfoWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 		if( cmd == IOBN_BTNUP )
 		{
 			if( m_CharInfo.m_chExerciseStyle == EXERCISE_RENTAL )
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "전투체험 용병으로는 불가능합니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 			else
 			{
 				int nSlot = dwID - ID_WEAPON_COSTUME_BTN;
@@ -3264,7 +3264,7 @@ void MyInventoryInfoWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 
 				if( bCheck )
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "출전중인 용병은#진화할 수 없습니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 					break;
 				}
 			}
@@ -4301,7 +4301,7 @@ void MyInventoryInfoWnd::UISoldierSelectWndBtnUp( int iSoldierArray )
 	
 	if( g_MyInfo.IsCharExerciseStyle( iSoldierArray, EXERCISE_PCROOM ) && pInvenWnd->GetCurTabID() == MyInventoryWnd::ID_DECO_TAB_BTN )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "PC방 용병은 선택 할 수 없습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 
@@ -4692,12 +4692,12 @@ void SoldierDismissalWnd::iwm_show()
 	switch( m_DismissalType )
 	{
 	case SDT_DISMISSAL:
-		SetTitleText( "용병해고" );
+		SetTitleText( STR(1) );
 		break;
 	case SDT_DISASSEMBLE:
 	case SDT_DISASSEMBLE_PRESENT:
 	case SDT_DISASSEMBLE_SUBSCRIPTION:
-		SetTitleText( "용병분해" );
+		SetTitleText( STR(2) );
 		break;
 	}
 
@@ -4710,12 +4710,12 @@ void SoldierDismissalWnd::iwm_show()
 		switch( m_DismissalType )
 		{
 		case SDT_DISMISSAL:
-			pDismissalBtn->SetTitleText( "해고" );
+			pDismissalBtn->SetTitleText( STR(3) );
 			break;
 		case SDT_DISASSEMBLE:
 		case SDT_DISASSEMBLE_PRESENT:
 		case SDT_DISASSEMBLE_SUBSCRIPTION:
-			pDismissalBtn->SetTitleText( "분해" );
+			pDismissalBtn->SetTitleText( STR(4) );
 			break;
 		}
 
@@ -4783,9 +4783,9 @@ void SoldierDismissalWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 					StringCbCopy( szText3, sizeof(szText3), STR(3) );
 					break;
 				case SDT_DISASSEMBLE:
-					StringCbCopy( szText1, sizeof(szText1), "영구용병분해를 입력하세요" );
-					StringCbCopy( szText2, sizeof(szText2), "영구용병분해" );
-					StringCbCopy( szText3, sizeof(szText3), "영구용병분해를 입력하세요" );
+					StringCbCopy( szText1, sizeof(szText1), STR(4) );
+					StringCbCopy( szText2, sizeof(szText2), STR(5) );
+					StringCbCopy( szText3, sizeof(szText3), STR(4) );
 					break;
 				}
 
@@ -4857,7 +4857,7 @@ void SoldierDismissalWnd::OnRender()
 	if( m_DismissalType == SDT_DISMISSAL )
 		g_FontMgr.PrintText( iXPos + 125, iYPos + 146, FONT_SIZE_17, STR(1), g_MyInfo.GetClassName( m_iClassType, g_MyInfo.GetCharPowerUpGradeByClassType( m_iClassType ) ) );
 	else
-		g_FontMgr.PrintText( iXPos + 125, iYPos + 146, FONT_SIZE_17, "%s 분해", g_MyInfo.GetClassName( m_iClassType, g_MyInfo.GetCharPowerUpGradeByClassType( m_iClassType ) ) );
+		g_FontMgr.PrintText( iXPos + 125, iYPos + 146, FONT_SIZE_17, STR(13), g_MyInfo.GetClassName( m_iClassType, g_MyInfo.GetCharPowerUpGradeByClassType( m_iClassType ) ) );
 
 	ioComplexStringPrinter kPrinter;
 	kPrinter.SetBkColor( 0, 0, 0 );
@@ -4867,7 +4867,7 @@ void SoldierDismissalWnd::OnRender()
 	if( m_DismissalType == SDT_DISMISSAL )
 		kPrinter.AddTextPiece( FONT_SIZE_13, STR(2) );
 	else
-		kPrinter.AddTextPiece( FONT_SIZE_13, "용병 분해시 해당 용병은 사라지지만" );
+		kPrinter.AddTextPiece( FONT_SIZE_13, STR(14) );
 
 	kPrinter.PrintFullText( iXPos + 125, iYPos + 169, TAT_CENTER );
 	kPrinter.ClearList();
@@ -4930,13 +4930,13 @@ void SoldierDismissalWnd::OnRender()
 		}
 		else
 		{
-			kPrinter.AddTextPiece( FONT_SIZE_13, "분해 : " );
+			kPrinter.AddTextPiece( FONT_SIZE_13, STR(15) );
 			kPrinter.SetTextColor( TCT_DEFAULT_BLUE );
 		}
 
 		char szKey[MAX_PATH] = "";
 		Help::ConvertNumToStrComma( g_SpiritMgr.GetDecomposeQuantity( m_iClassType ), szConvertNum, sizeof( szConvertNum ) );
-		sprintf_e( szKey, "%s %s개획득", g_SpiritMgr.GetDecomposeSpiritName(m_iClassType).c_str(), szConvertNum );
+		SafeSprintf( szKey, sizeof(szKey), STR(16), g_SpiritMgr.GetDecomposeSpiritName(m_iClassType).c_str(), szConvertNum );
 		kPrinter.AddTextPiece( FONT_SIZE_13, szKey );
 	}
 
@@ -4950,7 +4950,7 @@ void SoldierDismissalWnd::OnRender()
 		kPrinter.SetTextStyle( TS_NORMAL );
 		kPrinter.SetBkColor( 0, 0, 0 );
 		kPrinter.SetTextColor( TCT_DEFAULT_BLUE );
-		kPrinter.AddTextPiece( FONT_SIZE_13, "소울스톤 획득" );
+		kPrinter.AddTextPiece( FONT_SIZE_13, STR(17) );
 		kPrinter.PrintFullText( iXPos + 125, iYPos + 272, TAT_CENTER );
 		kPrinter.ClearList();
 	}
@@ -4990,7 +4990,7 @@ void SoldierDismissalWnd::OnRender()
 		if( m_DismissalType == SDT_DISMISSAL )
 			kPrinter.AddTextPiece( FONT_SIZE_13, STR(9) );
 		else
-			kPrinter.AddTextPiece( FONT_SIZE_13, "영구용병분해" );
+			kPrinter.AddTextPiece( FONT_SIZE_13, STR(18) );
 
 		kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
 
@@ -4998,7 +4998,7 @@ void SoldierDismissalWnd::OnRender()
 			kPrinter.AddTextPiece( FONT_SIZE_13, STR(10) );
 		else
 		{
-			kPrinter.AddTextPiece( FONT_SIZE_13, "] 입력후 분해를 누르세요" );
+			kPrinter.AddTextPiece( FONT_SIZE_13, STR(19) );
 			iText1YPos = iYPos + 300;
 			iEditFrmYPos = iYPos + 319;
 		}
@@ -5019,7 +5019,7 @@ void SoldierDismissalWnd::OnRender()
 				kPrinter.AddTextPiece( FONT_SIZE_12, STR(11) );
 			else
 			{
-				kPrinter.AddTextPiece( FONT_SIZE_12, "영구용병분해를 입력하세요" );
+				kPrinter.AddTextPiece( FONT_SIZE_12, STR(20) );
 				iText2YPos = iYPos + 292;
 			}
 
@@ -5036,13 +5036,13 @@ bool SoldierDismissalWnd::CheckDisassemble()
 
 	if( g_MyInfo.GetCharCount() <= 1 )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "마지막 보유 용병은#분해할 수 없습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return false;
 	}
 
 	if( g_MyInfo.IsTutorialUser() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "튜토리얼 중에는 용병 분해가#불가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return false;
 	}
 
@@ -5059,20 +5059,20 @@ bool SoldierDismissalWnd::CheckDisassemble()
 
 		if( bCheck )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "출전중인 용병은#분해할 수 없습니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 			return false;
 		}
 	}
 
 	if( g_MyInfo.IsCharRentalToClassType( m_iClassType ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "전투체험 설정이 되어있는 용병은#분해가 불가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 		return false;
 	}
 
 	if( g_MyInfo.IsCharExerciseStyleToClassType( m_iClassType, EXERCISE_RENTAL ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "전투체험 용병으로는 불가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );
 		return false;
 	}	
 
@@ -5083,13 +5083,13 @@ bool SoldierDismissalWnd::CheckDisassemble()
 		!g_MyInfo.IsCharExercise( iCharArray )   &&
 		iNoneExerciseActiveChar == 1             )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "고용시간이 남아있는 마지막 용병은#분해할 수 없습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(6) );
 		return false;
 	}
 
 	if( iCharArray == -1 )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "보유하고 있지 않은 용병입니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(7) );
 		return false;
 	}
 
@@ -5097,7 +5097,7 @@ bool SoldierDismissalWnd::CheckDisassemble()
 	int iTotalLimit = g_MyInfo.GetCharTotalSecond( iCharArray ) / 60 / 60;
 	if( !g_MyInfo.IsCharMortmain( m_iClassType ) && iTotalLimit < 1 )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "남은 시간이 적어 분해할 수 없습니다" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(8) );
 		return false;
 	}
 
@@ -5114,7 +5114,7 @@ void SoldierDismissalWnd::SendDisassemble()
 
 	if( dwCharIndex == 0 )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "예외 오류가 발생하였습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 	TCPNetwork::MouseBusy( true );
@@ -5422,7 +5422,7 @@ void ItemRecvSellInfoWnd::OnRender()
 		}
 		break;
 	case ITEM_DISASSEMBLE:
-		g_FontMgr.PrintText( iXPos+FINAL_DESC_X, iYPos+FINAL_DESC_Y, FONT_SIZE_17, "분해가 완료되었습니다" );
+		g_FontMgr.PrintText( iXPos+FINAL_DESC_X, iYPos+FINAL_DESC_Y, FONT_SIZE_17, STR(4) );
 		break;
 	default:
 		g_FontMgr.PrintText( iXPos+FINAL_DESC_X, iYPos+FINAL_DESC_Y, FONT_SIZE_17, STR(3) );

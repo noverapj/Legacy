@@ -52,7 +52,10 @@ $Enc = [System.Text.Encoding]::GetEncoding(949,
 $EntryPattern  = [regex]'^\|EXE_(.+)_(\d+)\|(.*)\|$'
 $KoreanLiteral = [regex]'"((?:[^"\\\r\n]|\\n|\\r)*[가-힣](?:[^"\\\r\n]|\\n|\\r)*)"'
 $StrRefPattern = [regex]'STR\((\d+)\)'
-$DefPattern    = [regex]'^[\w\s:<>,*&]+\b([\w:~]+)\s*\('
+# Captures the MSVC __FUNCTION__ form: "Class::Function" for members
+# (the leading char class deliberately excludes ':' so the class prefix
+# stays inside the capture group), plain name for free functions.
+$DefPattern    = [regex]'^[ \t]*(?:[\w\s<>,*&]+\b)?((?:\w+::)*~?\w+)\s*\('
 
 $Keywords = @('if','else','for','while','switch','return','case','do','sizeof','new','delete','throw','try','catch','assert','sizeof')
 
@@ -62,34 +65,96 @@ $AllowList = @(
     'sprintf','SafeSprintf','StringCbPrintf','wsprintf','SetText','SetComment',
     'AddChat','SetNotice','SetTitle\(','SetString','SetSubTitle','SetHelpText',
     'SetToolTip','SetDesc','AddTitle','SetMessage','SetRankText','SetStateText',
-    'SetInfoText','SetGuideText','SetResultText','SetItemText','SetGradeText'
+    'SetInfoText','SetGuideText','SetResultText','SetItemText','SetGradeText',
+    'ChangeOwnerCommandButton',
+    'SetSystemMsg','SetInfomationMsg','SetPrevMsgBox','SetChatComplexString',
+    'SetInfoAndShow','SetSearching','SetHostChange',
+    'SetPrevMsgListBoxWithTitle','SetPrevMsgListPinkBoxWithTitle',
+    'OnRenderQuestTitle',
+    'StringCbCopy\(','StringCbCat\(',
+    'm_sz\w+\s*=',
+    'push_back\s*\(',
+    'value_type\s*\(',
+    'sz\w+\s*=',
+    'rsText\s*=',
+    'm_s\w+\s*=',
+    'kModeTitle\s*\+=',
+    'kList\.m_\w+\s*=',
+    'ioHashString\s+\w+\s*=',
+    'return\s'
 )
 # internal contexts - literals may be identifiers, never convert
 $DenyList = @(
     'strcmp','stricmp','strncmp','strnicmp','strstr','HashString\s*\(',
-    'FindWnd','FindChildWnd','GetPrivateProfile','strlwr\s*\(','atoi\s*\('
+    'FindWnd','FindChildWnd','GetPrivateProfile','strlwr\s*\(','atoi\s*\(',
+    'strcpy\s*\(',
+    'char\s+\w+\s*\['
 )
 
 function Read-StrictCp949 {
+    # Returns @{ Text; Utf8 } - a few source files are UTF-8 with BOM
+    # (MSVC reads them as UTF-8; the rest of the codebase is CP949).
     param([string]$FilePath)
     try {
         $inBytes = [System.IO.File]::ReadAllBytes($FilePath)
-        return $Enc.GetString($inBytes)
+        if ($inBytes.Length -ge 3 -and $inBytes[0] -eq 0xEF -and $inBytes[1] -eq 0xBB -and $inBytes[2] -eq 0xBF) {
+            $text = [System.Text.Encoding]::UTF8.GetString($inBytes, 3, $inBytes.Length - 3)
+            # strict check: decoded text must be re-encodable (rejects corrupted files)
+            [void][System.Text.Encoding]::UTF8.GetBytes($text)
+            return @{ Text = $text; Utf8 = $true }
+        }
+        $text2 = $Enc.GetString($inBytes)
+        return @{ Text = $text2; Utf8 = $false }
     } catch {
         return $null
     }
 }
 
+function Write-SourceFile {
+    param([string]$FilePath, [string]$Text, [bool]$Utf8)
+    if ($Utf8) {
+        $utf8Enc = New-Object System.Text.UTF8Encoding($true)
+        [System.IO.File]::WriteAllText($FilePath, $Text, $utf8Enc)
+    }
+    else {
+        [System.IO.File]::WriteAllBytes($FilePath, $Enc.GetBytes($Text))
+    }
+}
+
 function Test-FileHasStrAccess {
+    # ioStringManager.h is included by stdafx.h, and every client .cpp
+    # includes stdafx.h first - so any of these markers is sufficient.
     param([string]$Text)
-    return ($Text -match 'STR\(') -or ($Text -match 'g_StringMgr') -or ($Text -match 'ioStringManager\.h')
+    return ($Text -match 'STR\(') -or ($Text -match 'g_StringMgr') -or ($Text -match 'ioStringManager\.h') -or ($Text -match '(?im)^#include\s+"stdafx\.h"')
+}
+
+function Update-FunctionContext {
+    # Tracks the current function for the MSVC __FUNCTION__ key.
+    # Definitions may be indented (namespace-wrapped files); statement
+    # lines ending in ';' or ',' (optionally followed by a trailing //
+    # comment) are never definitions; the context resets at a column-0
+    # closing brace. NOTE: $CurrentCtx is deliberately UNtyped so $null
+    # survives parameter binding ([string] would coerce $null to '').
+    param([string]$Line, $CurrentCtx)
+    if ($Line.Length -eq 0) { return $CurrentCtx }
+    $col0 = ($Line[0] -ne ' ' -and $Line[0] -ne "`t")
+    if ($col0 -and $Line.TrimEnd() -match '^\}\s*(//.*)?$') { return $null }
+    $te = $Line.TrimEnd()
+    if ($te -match '[;,]\s*(//.*)?$') { return $CurrentCtx }
+    $dm = $DefPattern.Match($Line)
+    if ($dm.Success) {
+        $name = $dm.Groups[1].Value
+        if ($Keywords -notcontains $name) { return $name }
+    }
+    return $CurrentCtx
 }
 
 # --- load existing exe_ keys: func -> max n ---
 $funcMax = @{}
 $entryKeys = [System.Collections.Generic.HashSet[string]]::new()
 $tableLines = [System.Collections.Generic.List[string]]::new()
-$tableContent = Read-StrictCp949 -FilePath $TextTable
+$tableRead = Read-StrictCp949 -FilePath $TextTable
+$tableContent = if ($null -ne $tableRead) { $tableRead.Text } else { $null }
 if ($null -eq $tableContent) { throw "Cannot decode table: $TextTable" }
 foreach ($line in ($tableContent -split "`r?`n")) {
     [void]$tableLines.Add($line)
@@ -118,20 +183,15 @@ if ($Mode -eq 'Verify') {
     $missing = [System.Collections.Generic.List[string]]::new()
     $refs = 0
     foreach ($f in $files) {
-        $s = Read-StrictCp949 -FilePath $f.FullName
-        if ($null -eq $s) { continue }
-        $lines = $s -split "`r`n"
+        $read = Read-StrictCp949 -FilePath $f.FullName
+        if ($null -eq $read) { continue }
+        $s = $read.Text
+        $lines = $s -split '\r\n|\n|\r'
         $ctx = $null
         for ($i = 0; $i -lt $lines.Count; $i++) {
             $line = $lines[$i]
             if ($line.Length -eq 0) { continue }
-            if ($line[0] -ne ' ' -and $line[0] -ne "`t") {
-                $dm = $DefPattern.Match($line)
-                if ($dm.Success -and -not $line.TrimEnd().EndsWith(';')) {
-                    $name = $dm.Groups[1].Value
-                    if ($Keywords -notcontains $name) { $ctx = $name }
-                }
-            }
+            $ctx = Update-FunctionContext -Line $line -CurrentCtx $ctx
             foreach ($sm in $StrRefPattern.Matches($line)) {
                 $refs++
                 if ($null -ne $ctx) {
@@ -160,12 +220,16 @@ $allowRegex = ($AllowList -join '|')
 $denyRegex  = ($DenyList -join '|')
 
 foreach ($f in $files) {
-    $s = Read-StrictCp949 -FilePath $f.FullName
-    if ($null -eq $s) { Write-Host "DECODE-FAIL: $($f.Name)"; $totals.decodeFails++; continue }
+    $read = Read-StrictCp949 -FilePath $f.FullName
+    if ($null -eq $read) { Write-Host "DECODE-FAIL: $($f.Name)"; $totals.decodeFails++; continue }
+    $s = $read.Text
+    $fileUtf8 = $read.Utf8
 
     $hasStrAccess = Test-FileHasStrAccess -Text $s
 
-    $lines = $s -split "`r`n"
+    # preserve the file's own newline style when writing back
+    $newline = if ($s -match "`r`n") { "`r`n" } else { "`n" }
+    $lines = $s -split '\r\n|\n|\r'
     $ctx = $null
     $ctxMax = @{}
     $ctxDedupe = @{}
@@ -176,15 +240,7 @@ foreach ($f in $files) {
         $line = $lines[$i]
         if ($line.Length -eq 0) { continue }
 
-        # function context tracking: col-0 definition lines
-        if ($line[0] -ne ' ' -and $line[0] -ne "`t") {
-            $dm = $DefPattern.Match($line)
-            if ($dm.Success -and -not $line.TrimEnd().EndsWith(';')) {
-                $name = $dm.Groups[1].Value
-                if ($Keywords -notcontains $name) { $ctx = $name }
-            }
-            elseif ($line.TrimEnd() -eq '}') { $ctx = $null }
-        }
+        $ctx = Update-FunctionContext -Line $line -CurrentCtx $ctx
 
         if (-not $KoreanLiteral.IsMatch($line)) { continue }
 
@@ -193,13 +249,13 @@ foreach ($f in $files) {
         if ($line -match 'LOG\.') { $totals.log++; continue }
 
         # find all Korean literals on this line with positions
-        $matches = $KoreanLiteral.Matches($line)
-        if ($matches.Count -eq 0) { continue }
+        $litMatches = $KoreanLiteral.Matches($line)
+        if ($litMatches.Count -eq 0) { continue }
 
         # adjacent concat guard: a literal followed (spaces) by another quote
         $lineConcat = $false
-        for ($k = 0; $k -lt $matches.Count; $k++) {
-            $after = $line.Substring($matches[$k].Index + $matches[$k].Length)
+        for ($k = 0; $k -lt $litMatches.Count; $k++) {
+            $after = $line.Substring($litMatches[$k].Index + $litMatches[$k].Length)
             if ($after -match '^[ \t]*"') { $lineConcat = $true; break }
         }
         if ($lineConcat) { $totals.concat++; continue }
@@ -223,11 +279,15 @@ foreach ($f in $files) {
             continue
         }
 
-        foreach ($m in $matches) {
+        foreach ($m in $litMatches) {
             $val = $m.Groups[1].Value
             # escape guard: only \n and \r sequences allowed
             $stripped = $val -replace '\\n', '' -replace '\\r', ''
             if ($stripped.Contains('\')) { $totals.escape++; $fileEvents.Add("ESCAPE-SKIP line $($i+1): $val"); continue }
+            # file-ref guard: literals that are filenames must stay raw
+            if ($val -match '\.(txt|ini|xml|lua)\s*$') { $totals.escape++; $fileEvents.Add("FILE-REF-SKIP line $($i+1): $val"); continue }
+            # table encoding guard: every entry value must be CP949-encodable
+            try { [void]$Enc.GetBytes($val) } catch { $totals.escape++; $fileEvents.Add("ENCODING-SKIP line $($i+1): $val"); continue }
 
             $n = 0
             if ($ctxDedupe.ContainsKey($ctx) -and $ctxDedupe[$ctx].ContainsKey($val)) {
@@ -242,13 +302,8 @@ foreach ($f in $files) {
                     $subCtx = $null
                     for ($j = 0; $j -lt $lines.Count; $j++) {
                         $l2 = $lines[$j]
-                        if ($l2.Length -gt 0 -and $l2[0] -ne ' ' -and $l2[0] -ne "`t") {
-                            $dm2 = $DefPattern.Match($l2)
-                            if ($dm2.Success -and -not $l2.TrimEnd().EndsWith(';')) {
-                                $nm2 = $dm2.Groups[1].Value
-                                if ($Keywords -notcontains $nm2) { $subCtx = $nm2 }
-                            }
-                            elseif ($l2.TrimEnd() -eq '}') { $subCtx = $null }
+                        if ($l2.Length -gt 0) {
+                            $subCtx = Update-FunctionContext -Line $l2 -CurrentCtx $subCtx
                         }
                         if ($subCtx -eq $ctx) {
                             foreach ($sm2 in $StrRefPattern.Matches($l2)) {
@@ -303,7 +358,7 @@ foreach ($f in $files) {
             $outLines[$ln] = $txt
         }
 
-        $result = $outLines -join "`r`n"
+        $result = $outLines -join $newline
         # self-check: hangul removed equals hangul inside converted literals
         $hangBefore = ([regex]::Matches($s, '[가-힣]')).Count
         $hangAfter  = ([regex]::Matches($result, '[가-힣]')).Count
@@ -317,8 +372,7 @@ foreach ($f in $files) {
             continue
         }
 
-        [System.IO.File]::WriteAllBytes($f.FullName, $Enc.GetBytes($result))
-        $totals.files++
+        Write-SourceFile -FilePath $f.FullName -Text $result -Utf8 $fileUtf8        $totals.files++
         Write-Host ("CONVERTED {0,-44} strings={1,-4}" -f $f.Name, $fileSpans.Count)
     }
 }

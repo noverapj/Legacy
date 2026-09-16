@@ -418,16 +418,16 @@ void PartyInfoWnd::SetInfo( SP2Packet &rkPacket )
 		SafeSprintf( szBtnTitle, sizeof( szBtnTitle ), STR(17) );
 		break;
 	case MT_TOWER_DEFENSE:
-		SafeSprintf( szTitle, sizeof( szTitle ), "깊은 숲 %d/%d", m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
-		SafeSprintf( szBtnTitle, sizeof( szBtnTitle ), "깊은 숲?" );
+		SafeSprintf( szTitle, sizeof( szTitle ), STR(46), m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
+		SafeSprintf( szBtnTitle, sizeof( szBtnTitle ), STR(47) );
 		break;
 	case MT_DARK_XMAS:
-		SafeSprintf( szTitle, sizeof( szTitle ), "스노우타운 %d/%d", m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
-		SafeSprintf( szBtnTitle, sizeof( szBtnTitle ), "스노우타운?" );
+		SafeSprintf( szTitle, sizeof( szTitle ), STR(48), m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
+		SafeSprintf( szBtnTitle, sizeof( szBtnTitle ), STR(49) );
 		break;
 	case MT_FIRE_TEMPLE:
-		SafeSprintf( szTitle, sizeof( szTitle ), "불의 신전 %d/%d", m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
-		SafeSprintf( szBtnTitle, sizeof( szBtnTitle ), "불의 신전?" );
+		SafeSprintf( szTitle, sizeof( szTitle ), STR(50), m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
+		SafeSprintf( szBtnTitle, sizeof( szBtnTitle ), STR(51) );
 		break;
 	case MT_SYMBOL:
 		SafeSprintf( szTitle, sizeof( szTitle ), STR(6), m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
@@ -470,28 +470,28 @@ void PartyInfoWnd::SetInfo( SP2Packet &rkPacket )
 		SafeSprintf( szBtnTitle, sizeof( szBtnTitle ), STR(31) );
 		break;
 	case MT_DOUBLE_CROWN:
-		SafeSprintf( szTitle, sizeof( szTitle ), "더블 크라운 %d/%d", m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
-		SafeSprintf( szBtnTitle, sizeof( szBtnTitle ), "더블 크라운?" );
+		SafeSprintf( szTitle, sizeof( szTitle ), STR(52), m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
+		SafeSprintf( szBtnTitle, sizeof( szBtnTitle ), STR(53) );
 		break;
 	case MT_FACTORY:
-		SafeSprintf( szTitle, sizeof( szTitle ), "비밀공장 %d/%d", m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
-		SafeSprintf( szBtnTitle, sizeof( szBtnTitle ), "비밀공장?" );
+		SafeSprintf( szTitle, sizeof( szTitle ), STR(54), m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
+		SafeSprintf( szBtnTitle, sizeof( szBtnTitle ), STR(55) );
 		break;
 	case MT_TEAM_SURVIVAL_AI:
 		SafeSprintf( szTitle, sizeof( szTitle ), STR(36), m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
 		SafeSprintf( szBtnTitle, sizeof( szBtnTitle ), STR(37) );
 		break;
 	case MT_RAID:
-		SafeSprintf( szTitle, sizeof( szTitle ), "레이드 %d/%d", m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
-		SafeSprintf( szBtnTitle, sizeof( szBtnTitle ), "레이드?" );
+		SafeSprintf( szTitle, sizeof( szTitle ), STR(56), m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
+		SafeSprintf( szBtnTitle, sizeof( szBtnTitle ), STR(57) );
 		break;
 	case MT_UNDERWEAR:
-		SafeSprintf( szTitle, sizeof( szTitle ), "팬티몬 %d/%d", m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
-		SafeSprintf( szBtnTitle, sizeof( szBtnTitle ), "팬티몬?" );
+		SafeSprintf( szTitle, sizeof( szTitle ), STR(58), m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
+		SafeSprintf( szBtnTitle, sizeof( szBtnTitle ), STR(59) );
 		break;
 	case MT_CBT:
-		SafeSprintf( szTitle, sizeof( szTitle ), "클베모드 %d/%d", m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
-		SafeSprintf( szBtnTitle, sizeof( szBtnTitle ), "클베모드?" );
+		SafeSprintf( szTitle, sizeof( szTitle ), STR(60), m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
+		SafeSprintf( szBtnTitle, sizeof( szBtnTitle ), STR(61) );
 		break;
 	case MT_FLAG_CAPTURE:
 		SafeSprintf( szTitle, sizeof( szTitle ), STR(38), m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
@@ -795,7 +795,7 @@ void PartyInfoWnd::JoinBattleRoom( bool bObserver )
 
 			if( !g_App.IsMeDeveloper() && dwOwenrIndex != g_MyInfo.GetUserIndex() )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "대회 경기방 관전은 주최자 및 기자단만 입장이 가능합니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 				return;
 			}
 		}
@@ -858,7 +858,7 @@ void PartyInfoWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 		{
 			if( m_BattleRoomInfo.m_iBattleEventType == BET_TOURNAMENT_BATTLE )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "대회 경기방은 입장이 불가능합니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(23) );
 			}
 			else if( g_BattleRoomMgr.IsKickOutRoom( m_BattleRoomInfo.m_dwIndex ) )
 			{
@@ -1099,7 +1099,7 @@ void PartyInfoWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 		{
 			if( m_vUserList.empty() )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "동기화될 유저가 존재하지 않습니다." ); //Except Extracting Hangeul
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(24) ); //Except Extracting Hangeul
 			}
 			else
 			{
@@ -3185,13 +3185,13 @@ void PartyInvitedWnd::SetInfo(  SP2Packet &rkPacket, ioPlayStage *pPlayStage )
 		SafeSprintf( szTitle, sizeof( szTitle ), STR(3), m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
 		break;
 	case MT_TOWER_DEFENSE://UNDONE Tower defense PartyInviteWnd
-		SafeSprintf( szTitle, sizeof( szTitle ), "깊은 숲 %d/%d", m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
+		SafeSprintf( szTitle, sizeof( szTitle ), STR(21), m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
 		break;
 	case MT_DARK_XMAS:
-		SafeSprintf( szTitle, sizeof( szTitle ), "스노우타운 %d/%d", m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
+		SafeSprintf( szTitle, sizeof( szTitle ), STR(22), m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
 		break;
 	case MT_FIRE_TEMPLE:
-		SafeSprintf( szTitle, sizeof( szTitle ), "불의 신전 %d/%d", m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
+		SafeSprintf( szTitle, sizeof( szTitle ), STR(23), m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
 		break;
 	case MT_SYMBOL:
 		SafeSprintf( szTitle, sizeof( szTitle ), STR(4), m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
@@ -3224,22 +3224,22 @@ void PartyInvitedWnd::SetInfo(  SP2Packet &rkPacket, ioPlayStage *pPlayStage )
 		SafeSprintf( szTitle, sizeof( szTitle ), STR(14), m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
 		break;
 	case MT_DOUBLE_CROWN:
-		SafeSprintf( szTitle, sizeof( szTitle ), "더블 크라운 %d/%d", m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
+		SafeSprintf( szTitle, sizeof( szTitle ), STR(24), m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
 		break;
 	case MT_FACTORY:
-		SafeSprintf( szTitle, sizeof( szTitle ), "비밀공장 %d/%d", m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
+		SafeSprintf( szTitle, sizeof( szTitle ), STR(25), m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
 		break;
 	case MT_TEAM_SURVIVAL_AI:
-		SafeSprintf( szTitle, sizeof( szTitle ), "AI팀데스매치 %d/%d", m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
+		SafeSprintf( szTitle, sizeof( szTitle ), STR(26), m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
 		break;
 	case MT_RAID:
-		SafeSprintf( szTitle, sizeof( szTitle ), "레이드 %d/%d", m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
+		SafeSprintf( szTitle, sizeof( szTitle ), STR(27), m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
 		break;
 	case MT_UNDERWEAR:
-		SafeSprintf( szTitle, sizeof( szTitle ), "팬티몬 %d/%d", m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
+		SafeSprintf( szTitle, sizeof( szTitle ), STR(28), m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
 		break;
 	case MT_CBT:
-		SafeSprintf( szTitle, sizeof( szTitle ), "클베모드 %d/%d", m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
+		SafeSprintf( szTitle, sizeof( szTitle ), STR(29), m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
 		break;
 	case MT_FLAG_CAPTURE:
 		SafeSprintf( szTitle, sizeof( szTitle ), STR(17), m_BattleRoomInfo.m_iCurPlayer, m_BattleRoomInfo.m_iMaxPlayerBlue + m_BattleRoomInfo.m_iMaxPlayerRed );
@@ -4160,13 +4160,13 @@ void BattleQuickStartOption::FavoriteCommand( ioWnd *pWnd, int cmd, DWORD param 
 				}
 				else if( g_BattleRoomMgr.GetQuickStartModeType() == BMT_USER_CUSTOM )
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "유저모드는 빠른시작이 불가능합니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 				}
 				else if( !g_MyInfo.IsTutorialUser() )
 				{
 					if( g_LadderTeamMgr.IsLadderTeam() )
 					{
-						g_GUIMgr.SetMsgBox( MB_OK, NULL, "진영전 중에는 빠른전투를 할 수 없습니다.");
+						g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2));
 					}
 					else
 					{
@@ -4177,7 +4177,7 @@ void BattleQuickStartOption::FavoriteCommand( ioWnd *pWnd, int cmd, DWORD param 
 								pSearchWnd->HideWnd();
 							else
 							{
-								pSearchWnd->SetSearching( "조건에 맞는 전투방을 검색중 . . .", TimeGateSearch::ST_PARTY_JOIN );		
+								pSearchWnd->SetSearching( STR(3), TimeGateSearch::ST_PARTY_JOIN );		
 							}
 						}
 					}		
@@ -4441,7 +4441,7 @@ void BattleQuickStartOption::SetTitleAndSizeWnd( KINDWND eKind )
 	{
 	case E_FAVORITE:
 		{
-			SetTitleText( "빠른참가＆방정렬 설정" );
+			SetTitleText( STR(1) );
 			SetSize( 670, 521 );
 			ShowChildWnd(ID_JOIN);
 			ShowChildWnd(ID_COMPLETE);
@@ -4462,7 +4462,7 @@ void BattleQuickStartOption::SetTitleAndSizeWnd( KINDWND eKind )
 
 	case E_CREATEBATTLE:
 		{
-			SetTitleText( "모드 선택" );
+			SetTitleText( STR(2) );
 			SetSize( 670, 458 );
 			HideChildWnd(ID_JOIN);
 			HideChildWnd(ID_COMPLETE);
@@ -4482,7 +4482,7 @@ void BattleQuickStartOption::SetTitleAndSizeWnd( KINDWND eKind )
 		break;
 
 	case E_LADDERBATTLE:
-		SetTitleText( "모드 선택" );
+		SetTitleText( STR(2) );
 		SetSize( 670, 458 );
 		HideChildWnd(ID_JOIN);
 		HideChildWnd(ID_COMPLETE);

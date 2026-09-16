@@ -2708,7 +2708,7 @@ void CenterInfoWnd::RenderSuddenDeathTime( int iXPos, int iYPos )
 	kPrinter.SetTextStyle( TS_OUTLINE_FULL_2X );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( TCT_DEFAULT_WHITE );
-	kPrinter.AddTextPiece( FONT_SIZE_14, "서든데스에서 결판나지 않으면 기여도로 승패 판정" );
+	kPrinter.AddTextPiece( FONT_SIZE_14, STR(1) );
 	kPrinter.PrintFullText( iXPos, iYPos + 18, TAT_CENTER );
 }
 
@@ -3272,7 +3272,7 @@ void CenterInfoWnd::RenderDoubleCrownGauge( int iXPos, int iYPos )
 	kPrinter.SetTextStyle( TS_OUTLINE_FULL_2X );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( TCT_DEFAULT_WHITE );
-	kPrinter.AddTextPiece( FONT_SIZE_14, "정해진 시간 동안 왕을 보호하고, 상대팀 왕관을 떨어트려라!" );
+	kPrinter.AddTextPiece( FONT_SIZE_14, STR(1) );
 	kPrinter.PrintFullText( iXPos, iYPos + 18, TAT_CENTER, MAX_ALPHA_RATE );
 }
 

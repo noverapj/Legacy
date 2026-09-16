@@ -133,7 +133,7 @@ void HeroReinforceDownWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 
 				if( bCheck )
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "출전중인 용병은#진화할 수 없습니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 					break;
 				}
 			}
@@ -374,7 +374,7 @@ void HeroReinforceDoneWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 
 					if( bCheck )
 					{
-						g_GUIMgr.SetMsgBox( MB_OK, NULL, "출전중인 용병은#진화할 수 없습니다." );
+						g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 						break;
 					}
 				}

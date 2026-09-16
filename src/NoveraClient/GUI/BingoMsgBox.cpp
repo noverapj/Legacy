@@ -179,22 +179,22 @@ void BingoMsgBox::PrintText( int iXPos, int iYPos )
 		{
 		case ioBingo::BT_RAND:
 			{
-				kPrinter.AddTextPiece( FONT_SIZE_13, "모든 숫자가 초기화되며 바뀝니다." );
+				kPrinter.AddTextPiece( FONT_SIZE_13, STR(1) );
 				kPrinter.PrintFullText( iXPos + 151, iYPos + 144, TAT_CENTER );
 				kPrinter.ClearList();
 
-				kPrinter.AddTextPiece( FONT_SIZE_13, "모든 보상도 초기화되지만, 바뀌진 않습니다." );
+				kPrinter.AddTextPiece( FONT_SIZE_13, STR(2) );
 				kPrinter.PrintFullText( iXPos + 151, iYPos + 164, TAT_CENTER );
 				kPrinter.ClearList();
 			}
 			break;
 		case ioBingo::BT_FIXED:
 			{
-				kPrinter.AddTextPiece( FONT_SIZE_13, "모든 숫자와 보상이 초기화됩니다." );
+				kPrinter.AddTextPiece( FONT_SIZE_13, STR(3) );
 				kPrinter.PrintFullText( iXPos + 151, iYPos + 144, TAT_CENTER );
 				kPrinter.ClearList();
 
-				kPrinter.AddTextPiece( FONT_SIZE_13, "초기화 이후 다시 진행 가능합니다." );
+				kPrinter.AddTextPiece( FONT_SIZE_13, STR(4) );
 				kPrinter.PrintFullText( iXPos + 151, iYPos + 164, TAT_CENTER );
 				kPrinter.ClearList();
 			}
@@ -211,16 +211,16 @@ void BingoMsgBox::PrintText( int iXPos, int iYPos )
 			kPrinter.SetBkColor( 0, 0, 0 );
 
 			kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kPrinter.AddTextPiece( FONT_SIZE_13, "보유 중인 [%s] 아이템을", m_szItemName );
+			kPrinter.AddTextPiece( FONT_SIZE_13, STR(5), m_szItemName );
 			kPrinter.PrintFullText( iXPos + 151, iYPos + 144, TAT_CENTER );
 			kPrinter.ClearList();
 
-			kPrinter.AddTextPiece( FONT_SIZE_13, "사용하시겠습니까?" );
+			kPrinter.AddTextPiece( FONT_SIZE_13, STR(6) );
 			kPrinter.PrintFullText( iXPos + 151, iYPos + 164, TAT_CENTER );
 			kPrinter.ClearList();
 
 			kPrinter.SetTextColor( TCT_DEFAULT_GREEN );
-			kPrinter.AddTextPiece( FONT_SIZE_13, "( %d개 보유 )", m_iItemCount );
+			kPrinter.AddTextPiece( FONT_SIZE_13, STR(7), m_iItemCount );
 			kPrinter.PrintFullText( iXPos + 151, iYPos + 184, TAT_CENTER );
 			kPrinter.ClearList();
 
@@ -233,7 +233,7 @@ void BingoMsgBox::PrintText( int iXPos, int iYPos )
 			kPrinter.SetBkColor( 0, 0, 0 );
 
 			kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kPrinter.AddTextPiece( FONT_SIZE_13, "[%s] 아이템이 없습니다.", m_szItemName );
+			kPrinter.AddTextPiece( FONT_SIZE_13, STR(8), m_szItemName );
 			kPrinter.PrintFullText( iXPos + 151, iYPos + 144, TAT_CENTER );
 			kPrinter.ClearList();
 
@@ -401,7 +401,7 @@ void BingoMsgBox::SetInfo( UseType eType, int iBingoType )
 			m_szItemName.Clear();
 			m_pIcon = m_pInit;
 
-			SetTitleText( "초기화" );
+			SetTitleText( STR(1) );
 		}
 		break;
 	}

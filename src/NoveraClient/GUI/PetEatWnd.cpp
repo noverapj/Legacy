@@ -345,7 +345,7 @@ void PetEatWnd::GetMaterialList( vNewShopPullDownItem &rkList )
 				continue;
 
 			char szCnt[MAX_PATH]="";	
-			wsprintf_e( szCnt, "%d°³", nMaterialCount );
+			SafeSprintf( szCnt, sizeof(szCnt), STR(1), nMaterialCount );
 
 			kItem.m_dwTextColor = TCT_DEFAULT_DARKGRAY;
 			kItem.m_dwCntTextColor = TCT_DEFAULT_DARKGRAY;

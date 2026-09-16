@@ -147,7 +147,7 @@ void GuildHomeAdminListBtn::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 			{
 				if( m_UserPos == pLocal->GetGuildMasterPostion() || m_UserPos == pLocal->GetGuildSecondMasterPosition() )
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "길드장 및 부길드장은#편집권한을 해제 할 수 없습니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 					ioCheckButton* pButton = dynamic_cast<ioCheckButton*>( FindChildWnd( ID_CHECK_BOX ) );
 					if( pButton )
 						pButton->SetCheck( true );

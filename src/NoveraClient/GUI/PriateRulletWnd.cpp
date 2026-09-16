@@ -193,7 +193,7 @@ void SwordFrameButton::OnRender()
 		g_FontMgr.SetTextStyle( TS_NORMAL );
 		g_FontMgr.SetBkColor( 0, 0, 0 );
 		g_FontMgr.SetTextColor( TCT_DEFAULT_WHITE );
-		g_FontMgr.PrintText( iXPos + 39, iYPos + 103, FONT_SIZE_12, "%d개", m_Count );
+		g_FontMgr.PrintText( iXPos + 39, iYPos + 103, FONT_SIZE_12, STR(1), m_Count );
 	}
 }
 
@@ -1806,7 +1806,7 @@ void PriateRulletWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 				
 				if( nCount <= 0 )
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "보유한 칼이 없습니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 					return;
 				}
 
@@ -1814,14 +1814,14 @@ void PriateRulletWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 				{
 					if( m_StickedSwordCode == 0 )
 					{
-						g_GUIMgr.SetMsgBox( MB_OK, NULL, "칼을 선택해서 오크통 구멍에# 꼽아주세요." );
+						g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 					}
 					else
 					{	
 						DWORD dwIndex = dwID - ID_OAK_HOLE_BUTTON01;
 						if( !pRullet->SendRulletUse( m_bDevelopKBack ? dwIndex + ioPriateRullet::RULLET_BACK : dwIndex, m_StickedSwordCode ) )
 						{
-							g_GUIMgr.SetMsgBox( MB_OK, NULL, "이미 칼이 꽃혀 있습니다." );
+							g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 						}
 					}
 				}
@@ -2405,7 +2405,7 @@ void PriateRulletWnd::PreRender( int iXPos, int iYPos )
 	g_FontMgr.SetTextStyle( TS_OUTLINE_2X );
 	g_FontMgr.SetBkColor( 0xFF512F0F );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_WHITE );
-	g_FontMgr.PrintText( iXPos + 568, iYPos + 247, FONT_SIZE_13, "%d개 사용", m_nSwordUseCount );
+	g_FontMgr.PrintText( iXPos + 568, iYPos + 247, FONT_SIZE_13, STR(1), m_nSwordUseCount );
 }
 
 void PriateRulletWnd::PlayRender( int iXPos, int iYPos )
@@ -2425,7 +2425,7 @@ void PriateRulletWnd::PlayRender( int iXPos, int iYPos )
 	g_FontMgr.SetTextStyle( TS_OUTLINE_2X );
 	g_FontMgr.SetBkColor( 0xFF512F0F );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_WHITE );
-	g_FontMgr.PrintText( iXPos + 568, iYPos + 247, FONT_SIZE_13, "%d개 사용", m_nSwordUseCount );
+	g_FontMgr.PrintText( iXPos + 568, iYPos + 247, FONT_SIZE_13, STR(1), m_nSwordUseCount );
 }
 
 void PriateRulletWnd::DevelopKRender( int iXPos, int iYPos )
@@ -2553,7 +2553,7 @@ void PriateRulletWnd::EndPreRender( int iXPos, int iYPos )
 	g_FontMgr.SetTextStyle( TS_OUTLINE_2X );
 	g_FontMgr.SetBkColor( 0xFF512F0F );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_WHITE );
-	g_FontMgr.PrintText( iXPos + 568, iYPos + 247, FONT_SIZE_13, "%d개 사용", m_nSwordUseCount );
+	g_FontMgr.PrintText( iXPos + 568, iYPos + 247, FONT_SIZE_13, STR(1), m_nSwordUseCount );
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -2723,7 +2723,7 @@ void PrivateRulletBonusRewardTooltip::ProcessOnAllReward()
 			if( kSet.pSubImage )
 				kSet.pSubImage->SetScale( 0.56f, 0.56f );
 
-			wsprintf_e( szBuf, "%d ~ %d개", pReward->m_nMin, pReward->m_nMax );
+			SafeSprintf( szBuf, sizeof(szBuf), STR(1), pReward->m_nMin, pReward->m_nMax );
 			kSet.szName		= szBuf;
 			kSet.m_nMax		= pReward->m_nMax;
 			kSet.m_bHidden	= pReward->m_bHidden;
@@ -3036,6 +3036,6 @@ void PrivateRulletResetPopup::OnRender()
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 
 	g_FontMgr.SetTextColor( TCT_DEFAULT_RED );
-	g_FontMgr.PrintText( iXPos + 151, iYPos + 144, FONT_SIZE_13, "사용된 검은 다시 회수되지 않습니다." );
-	g_FontMgr.PrintText( iXPos + 151, iYPos + 162, FONT_SIZE_13, "초기화 이후 다시 진행 가능합니다." );
+	g_FontMgr.PrintText( iXPos + 151, iYPos + 144, FONT_SIZE_13, STR(1) );
+	g_FontMgr.PrintText( iXPos + 151, iYPos + 162, FONT_SIZE_13, STR(2) );
 }

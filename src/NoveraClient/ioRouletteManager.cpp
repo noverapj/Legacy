@@ -816,7 +816,7 @@ void ioRouletteManager::OnRouletteStart( SP2Packet &rkPacket )
 		break;
 	case ROULETTE_JOIN_TIME_OVER:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "아직 참여할 수 없습니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 			RemoveJoinUser( g_MyInfo.GetPublicID() );
 			m_bEnableJoin = false;
 			m_RouletteState = RS_END;
@@ -828,7 +828,7 @@ void ioRouletteManager::OnRouletteStart( SP2Packet &rkPacket )
 		break;
 	case ROULETTE_JOIN_ALREADY:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "이미 참여했습니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		}
 		break;
 	}

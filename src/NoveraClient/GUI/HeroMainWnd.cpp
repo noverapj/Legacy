@@ -1033,7 +1033,7 @@ void HeroMatchWnd::OnRenderHeroTitleByPlaza( int iXPos, int iYPos )
 	else
 	{
 		int iBonus = (float)( g_LevelMgr.GetHeroTitleBonus( g_MyInfo.GetHeroTitle() ) * FLOAT100 ) + 0.001f;
-		g_FontMgr.PrintText( iXPos + 63, iYPos + 203, FONT_SIZE_13, "Æä¼Ò + %d£¥", iBonus );
+		g_FontMgr.PrintText( iXPos + 63, iYPos + 203, FONT_SIZE_13, STR(1), iBonus );
 	}
 	g_FontMgr.PrintText( iXPos + 63, iYPos + 224, FONT_SIZE_13, "-" );
 }
@@ -1086,8 +1086,8 @@ void HeroMatchWnd::OnRenderSeasonRecordByPlaza( int iXPos, int iYPos )
 		g_FontMgr.SetBkColor( 110, 110, 110 );
 
 	g_FontMgr.SetTextColor( TCT_DEFAULT_WHITE );
-	g_FontMgr.PrintText( iXPos + 63, iYPos + 182, FONT_SIZE_13, "½Â", g_MyInfo.GetHeroSeasonWin() );
-	g_FontMgr.PrintText( iXPos + 63, iYPos + 203, FONT_SIZE_13, "ÆÐ", g_MyInfo.GetHeroSeasonLose() );
+	g_FontMgr.PrintText( iXPos + 63, iYPos + 182, FONT_SIZE_13, STR(1), g_MyInfo.GetHeroSeasonWin() );
+	g_FontMgr.PrintText( iXPos + 63, iYPos + 203, FONT_SIZE_13, STR(2), g_MyInfo.GetHeroSeasonLose() );
 	g_FontMgr.PrintText( iXPos + 63, iYPos + 224, FONT_SIZE_13, "-" );
 }
 
@@ -1918,7 +1918,7 @@ void HeroMatchTop100Btn::OnRender()
 			g_FontMgr.PrintText( iXPos + 220, iYPos + 5, FONT_SIZE_12, STR(3), kInfo.m_iWin, kInfo.m_iLose );
 
 			g_FontMgr.SetAlignType( TAT_RIGHT );
-			g_FontMgr.PrintText( iXPos + 303, iYPos + 5, FONT_SIZE_12, "%dÁ¡", kInfo.m_iRankPoint );
+			g_FontMgr.PrintText( iXPos + 303, iYPos + 5, FONT_SIZE_12, STR(5), kInfo.m_iRankPoint );
 			return;
 		}
 	}

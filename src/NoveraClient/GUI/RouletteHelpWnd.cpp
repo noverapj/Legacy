@@ -82,24 +82,24 @@ void RouletteHelpWnd::OnRender()
 	g_FontMgr.SetTextStyle( TS_NORMAL );
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	g_FontMgr.PrintText( iXPos + 65, iYPos + 55, FONT_SIZE_13, "쿠폰으로 누구나 돌림판을 돌릴 수 있습니다." );
+	g_FontMgr.PrintText( iXPos + 65, iYPos + 55, FONT_SIZE_13, STR(1) );
 
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
-	g_FontMgr.PrintText( iXPos + 65, iYPos + 75, FONT_SIZE_11, "쿠폰은 광장의 곰을 잡으면 얻을 수 있습니다." );
+	g_FontMgr.PrintText( iXPos + 65, iYPos + 75, FONT_SIZE_11, STR(2) );
 
 	g_FontMgr.SetTextColor( 184, 37, 37 );
-	g_FontMgr.PrintText( iXPos + 18, iYPos + 101, FONT_SIZE_13, "참여 방법 : 돌림판의 버튼 위에 올라가서 A(점프)키를" );
-	g_FontMgr.PrintText( iXPos + 18, iYPos + 121, FONT_SIZE_13, "누르면 자동으로 참여됩니다." );
+	g_FontMgr.PrintText( iXPos + 18, iYPos + 101, FONT_SIZE_13, STR(3) );
+	g_FontMgr.PrintText( iXPos + 18, iYPos + 121, FONT_SIZE_13, STR(4) );
 
 	g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	g_FontMgr.PrintText( iXPos + 18, iYPos + 151, FONT_SIZE_13, "●여러 사람이 동시에 참여할 수 있습니다" );
-	g_FontMgr.PrintText( iXPos + 18, iYPos + 171, FONT_SIZE_13, "●동시 참여 인원이 많을수록 1등 확률이 높아집니다" );
-	g_FontMgr.PrintText( iXPos + 18, iYPos + 191, FONT_SIZE_13, "●1등에 당첨되면 참여한 모두가 상품을 획득합니다" );
+	g_FontMgr.PrintText( iXPos + 18, iYPos + 151, FONT_SIZE_13, STR(5) );
+	g_FontMgr.PrintText( iXPos + 18, iYPos + 171, FONT_SIZE_13, STR(6) );
+	g_FontMgr.PrintText( iXPos + 18, iYPos + 191, FONT_SIZE_13, STR(7) );
 
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
-	g_FontMgr.PrintText( iXPos + 25, iYPos + 228, FONT_SIZE_13, "동시 참여 인원" );
+	g_FontMgr.PrintText( iXPos + 25, iYPos + 228, FONT_SIZE_13, STR(8) );
 	g_FontMgr.SetAlignType( TAT_RIGHT );
-	g_FontMgr.PrintText( iXPos + 301, iYPos + 228, FONT_SIZE_13, "1등 확률" );
+	g_FontMgr.PrintText( iXPos + 301, iYPos + 228, FONT_SIZE_13, STR(9) );
 
 	int iSize = g_RouletteMgr.GetResultGroupMaxArray();
 	for( int i=0; i<iSize; ++i )
@@ -110,9 +110,9 @@ void RouletteHelpWnd::OnRender()
 		g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
 		g_FontMgr.SetAlignType( TAT_LEFT );
 		if( i==0 )
-			g_FontMgr.PrintText( iXPos + 25, iYPos + 254 + i * 24, FONT_SIZE_13, "%d명이하", iMax );
+			g_FontMgr.PrintText( iXPos + 25, iYPos + 254 + i * 24, FONT_SIZE_13, STR(10), iMax );
 		else
-			g_FontMgr.PrintText( iXPos + 25, iYPos + 254 + i * 24, FONT_SIZE_13, "%d명~%d명", iMin, iMax );
+			g_FontMgr.PrintText( iXPos + 25, iYPos + 254 + i * 24, FONT_SIZE_13, STR(11), iMin, iMax );
 
 		g_FontMgr.SetAlignType( TAT_RIGHT );
 		g_FontMgr.PrintText( iXPos + 301, iYPos + 254 + i * 24, FONT_SIZE_13, "%d%%", iRate );
@@ -203,7 +203,7 @@ void RouletteCenterHelpWnd::OnRender()
 	g_FontMgr.SetTextStyle( TS_OUTLINE_2X );
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_WHITE );
-	g_FontMgr.PrintTextAlpha( iXPos, iYPos+2, FONT_SIZE_14, m_iAlphaRate, "A(점프)키를 누르면 돌림판 이벤트에 참여됩니다." );
+	g_FontMgr.PrintTextAlpha( iXPos, iYPos+2, FONT_SIZE_14, m_iAlphaRate, STR(1) );
 }
 
 void RouletteCenterHelpWnd::SetInfo()

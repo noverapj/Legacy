@@ -125,12 +125,12 @@ void ioAccessoryInfoManager::OnAccessoryBuyResult( SP2Packet &rkPacket )
 		return;
 	case ITEM_BUY_NON_EXIST_GOODS:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "존재하지 않는 상품입니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		}
 		break;
 	case ITEM_BUY_PESO_SHORTAGE:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "페소가 부족합니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		}
 		break;
 	}
@@ -185,7 +185,7 @@ void ioAccessoryInfoManager::OnAccessorySellResult( SP2Packet &rkPacket )
 		// 데이터 삭제
 		if( !g_MyInfo.DeleteAccessory( iSlotIndex ) )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "액세서리 팔기 예외오류" );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 			return;
 		}
 
@@ -221,14 +221,14 @@ void ioAccessoryInfoManager::OnAccessorySellResult( SP2Packet &rkPacket )
 				kDesc1.SetTextStyle( TS_NORMAL );
 				kDesc1.SetBkColor( 0, 0, 0 );	
 				kDesc1.SetTextColor( TCT_DEFAULT_DARKGRAY );
-				kDesc1.AddTextPiece( FONT_SIZE_12, "★ [%s] 판매 완료.", szItemName.c_str() );
+				kDesc1.AddTextPiece( FONT_SIZE_12, STR(2), szItemName.c_str() );
 				vDesc.push_back( kDesc1 ); 
 
 				ioComplexStringPrinter kDesc2;
 				kDesc2.SetTextStyle( TS_NORMAL );
 				kDesc2.SetBkColor( 0, 0, 0 );
 				kDesc2.SetTextColor( TCT_DEFAULT_DARKGRAY );
-				kDesc2.AddTextPiece( FONT_SIZE_12, "★ %s페소가 지급되었습니다.", szConvertNum );
+				kDesc2.AddTextPiece( FONT_SIZE_12, STR(3), szConvertNum );
 				vDesc.push_back( kDesc2 );
 			}
 			else
@@ -244,7 +244,7 @@ void ioAccessoryInfoManager::OnAccessorySellResult( SP2Packet &rkPacket )
 		}
 	}
 	else
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "액세서리 팔기 실패(%d)", eResult );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4), eResult );
 }
 
 void ioAccessoryInfoManager::OnAccessoryPresentResult( SP2Packet &rkPacket )

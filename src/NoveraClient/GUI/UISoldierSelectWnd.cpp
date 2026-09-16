@@ -156,7 +156,7 @@ void UISoldierBtn::RenderInfo( float fXPos, float fYPos )
 	if( m_bPCRoomOpen || g_MyInfo.IsCharExerciseStyle( m_iSoldierArray, EXERCISE_PCROOM ) ) 
 	{
 		if( g_MyInfo.GetPCRoomAuthority() == FREEDAY_EVENT_CODE )
-			g_FontMgr.PrintText( fXPos + 29, fYPos + 42, FONT_SIZE_10, "프리데이" );
+			g_FontMgr.PrintText( fXPos + 29, fYPos + 42, FONT_SIZE_10, STR(4) );
 		else
 			g_FontMgr.PrintText( fXPos + 29, fYPos + 42, FONT_SIZE_10, STR(1) );
 	}

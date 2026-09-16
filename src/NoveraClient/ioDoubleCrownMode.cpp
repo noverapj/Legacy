@@ -1112,35 +1112,35 @@ void ioDoubleCrownMode::SetRoundEndInfo( WinTeamType eTeam, bool bRoundSetEnd )
 
 			if( 0 < m_dwBlueContribute || 0 < m_dwRedContribute )
 			{
-				kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "기여도 판정에 의한 " );
+				kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), STR(1) );
 			}
 
 			// 팀 표시
 			if( eViewTeam == TEAM_BLUE )
 			{
 				kPrinter.SetTextColor( TCT_DEFAULT_BLUE );
-				kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "블루팀 " );
+				kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), STR(2) );
 			}
 			else if( eViewTeam == TEAM_RED )
 			{
 				kPrinter.SetTextColor( TCT_DEFAULT_RED );
-				kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "레드팀 " );
+				kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), STR(3) );
 			}
 
 			kPrinter.SetTextColor( g_ChatMgr.GetChatColor() );
 			if( IsWinTeam( eTeam, eViewTeam ) )
-				kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "승리" );
+				kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), STR(4) );
 			else if( eTeam == WTT_DRAW )
-				kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "무승부" );
+				kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), STR(5) );
 			else
-				kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "패배" );
+				kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), STR(6) );
 
 			if( 0 < m_dwBlueContribute || 0 < m_dwRedContribute )
 			{
 				kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "(%d％ vs %d％)", m_dwBlueContribute, m_dwRedContribute );
 			}
 
-			g_ChatMgr.SetChatComplexString( "정보", kPrinter );
+			g_ChatMgr.SetChatComplexString( STR(7), kPrinter );
 		}
 	}
 }
@@ -2186,7 +2186,7 @@ void ioDoubleCrownMode::ContributeRoundAllPercent( DWORD dwCurTime, DWORD dwTota
 		int iPraise = g_MyInfo.CheckContributePraise( iOwnerContribute );
 		if( iPraise > 0 )
 		{
-			g_ChatMgr.SetSystemMsg( "기여도 %d 이상 돌파!", iPraise );
+			g_ChatMgr.SetSystemMsg( STR(1), iPraise );
 			g_ModeHelpMgr.ShowContributePraise( iPraise );
 		}
 	}
@@ -2771,8 +2771,8 @@ void ioDoubleCrownMode::OnRoundJoinView( SP2Packet &rkPacket )
 		SetBlindMode( true );
 		g_GUIMgr.SetSkipUIByBlind( false );
 
-		g_ChatMgr.SetInfomationMsg( "다음 라운드가 시작될때까지 대기해주세요." );
-		g_ChatMgr.SetInfomationMsg( "방어키(S)로 시점을 변경할 수 있습니다." );
+		g_ChatMgr.SetInfomationMsg( STR(1) );
+		g_ChatMgr.SetInfomationMsg( STR(2) );
 
 		rkPacket >> m_dwCurRoundDuration;
 		rkPacket >> m_fCurRedCrownPoint;
@@ -2848,8 +2848,8 @@ void ioDoubleCrownMode::OnRoundJoinObserver( SP2Packet &rkPacket )
 
 		g_ModeHelpMgr.InitModeHelp();
 
-		g_ChatMgr.SetInfomationMsg( "관전모드" );
-		g_ChatMgr.SetInfomationMsg( "방어키(S)로 시점을 변경할 수 있습니다." );
+		g_ChatMgr.SetInfomationMsg( STR(1) );
+		g_ChatMgr.SetInfomationMsg( STR(2) );
 
 		rkPacket >> m_dwCurRoundDuration;
 		rkPacket >> m_fCurRedCrownPoint;

@@ -209,8 +209,8 @@ bool ioSubscriptionMgr::RecvEtcItem( SubscriptionData &rkData, int &iItemType, C
 			break;
 		case SHOP_TAB_TYPE_COSTUME:
 			{
-				szMainTab = "코스튬";
-				szSmallTab = "기능";
+				szMainTab = STR(20);
+				szSmallTab = STR(21);
 				iItemType = ItemRecvSellInfoWnd::ITEM_COSTUME;
 			}
 			break;
@@ -628,7 +628,7 @@ void ioSubscriptionMgr::ApplySubscriptionRecv( SP2Packet &rkPacket, ioPlayStage 
 							kDesc.SetTextStyle( TS_NORMAL );
 							kDesc.SetBkColor( 0, 0, 0 );	
 							kDesc.SetTextColor( TCT_DEFAULT_DARKGRAY );
-							kDesc.AddTextPiece( FONT_SIZE_12, "★ 정기에서 확인 및 사용 가능합니다." );
+							kDesc.AddTextPiece( FONT_SIZE_12, STR(43) );
 							vDesc.push_back( kDesc );
 
 							// MyInven Update
@@ -691,7 +691,7 @@ void ioSubscriptionMgr::ApplySubscriptionRecv( SP2Packet &rkPacket, ioPlayStage 
 							kDesc.SetTextStyle( TS_NORMAL );
 							kDesc.SetBkColor( 0, 0, 0 );	
 							kDesc.SetTextColor( TCT_DEFAULT_DARKGRAY );
-							kDesc.AddTextPiece( FONT_SIZE_12, "★ 코스튬!" );
+							kDesc.AddTextPiece( FONT_SIZE_12, STR(44) );
 							vDesc.push_back( kDesc );
 
 							// MyInven Update
@@ -728,7 +728,7 @@ void ioSubscriptionMgr::ApplySubscriptionRecv( SP2Packet &rkPacket, ioPlayStage 
 							kDesc.SetTextStyle( TS_NORMAL );
 							kDesc.SetBkColor( 0, 0, 0 );	
 							kDesc.SetTextColor( TCT_DEFAULT_DARKGRAY );
-							kDesc.AddTextPiece( FONT_SIZE_12, "★ 액세서리!" );
+							kDesc.AddTextPiece( FONT_SIZE_12, STR(45) );
 							vDesc.push_back( kDesc );
 
 							// MyInven Update
@@ -790,9 +790,9 @@ void ioSubscriptionMgr::ApplySubscriptionRecv( SP2Packet &rkPacket, ioPlayStage 
 					ioHashString sSubIcon = pItem->GetSubIconName();
 					ioHashString sTitle= pItem->GetName();
 					ioHashStringVec sDescVec;
-					sDescVec.push_back( "[용병슬롯확장]이 필요합니다." );
-					sDescVec.push_back( "용병 슬롯을 확장하기 위해 구입해주세요." );
-					sDescVec.push_back( "상점 - 특별에서 구입하실 수 있습니다." );
+					sDescVec.push_back( STR(46) );
+					sDescVec.push_back( STR(47) );
+					sDescVec.push_back( STR(48) );
 					if( pPurchaseLeedWnd->SetInfo( ioEtcItem::EIT_ETC_CHAR_SLOT_EXTEND, sIcon, sSubIcon, sTitle, sDescVec ) )
 						pPurchaseLeedWnd->ShowWnd();
 				}
@@ -848,10 +848,10 @@ void ioSubscriptionMgr::ApplySubscriptionRecv( SP2Packet &rkPacket, ioPlayStage 
 		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(7) );
 		break;
 	case SUBSCRIPTION_RECV_MAX_COUNT:
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "갯수초과" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(49) );
 		break;
 	case SUBSCRIPTION_RECV_MAX_SLOT:
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "빈칸없음" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(50) );
 		break;
 	case SUBSCRIPTION_RECV_PRESET_FAIL:
 		{
@@ -933,22 +933,22 @@ void ioSubscriptionMgr::ApplySubscriptionRetr( SP2Packet &rkPacket )
 			kPrinter[0].SetTextStyle( TS_NORMAL );
 			kPrinter[0].SetBkColor( 0, 0, 0 );	
 			kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kPrinter[0].AddTextPiece( FONT_SIZE_13, "청약철회가 완료되었습니다." );
+			kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(1) );
 
 			kPrinter[1].SetTextStyle( TS_NORMAL );
 			kPrinter[1].SetBkColor( 0, 0, 0 );	
 			kPrinter[1].SetTextColor( TCT_DEFAULT_RED ); 
-			kPrinter[1].AddTextPiece( FONT_SIZE_13, "환불된 골드 : %s", szConvertNum );
+			kPrinter[1].AddTextPiece( FONT_SIZE_13, STR(2), szConvertNum );
 
 			kPrinter[2].SetTextStyle( TS_NORMAL );
 			kPrinter[2].SetBkColor( 0, 0, 0 );	
 			kPrinter[2].SetTextColor( TCT_DEFAULT_GRAY );
-			kPrinter[2].AddTextPiece( FONT_SIZE_13, "보너스 골드 등과 같은 경우엔 정책에 따라" );
+			kPrinter[2].AddTextPiece( FONT_SIZE_13, STR(3) );
 
 			kPrinter[3].SetTextStyle( TS_NORMAL );
 			kPrinter[3].SetBkColor( 0, 0, 0 );	
 			kPrinter[3].SetTextColor( TCT_DEFAULT_GRAY );
-			kPrinter[3].AddTextPiece( FONT_SIZE_13, "환불 금액에 포함되지 않을 수도 있습니다." );
+			kPrinter[3].AddTextPiece( FONT_SIZE_13, STR(4) );
 
 			g_GUIMgr.SetPrevMsgListBox( NULL, MB_OK, NULL, kPrinter );
 		}
@@ -958,17 +958,17 @@ void ioSubscriptionMgr::ApplySubscriptionRetr( SP2Packet &rkPacket )
 			int iErrorNum;
 			rkPacket >> iErrorNum;
 
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "청약철회 오류:%d", iErrorNum );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5), iErrorNum );
 		}
 		break;
 	case SUBSCRIPTION_RETR_NONE_INDEX:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "선택한 청약상품이 없습니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(6) );
 		}
 		break;
 	case SUBSCRIPTION_RETR_NONE_ITEM:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "선택한 청약상품이 없습니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(6) );
 		}
 		break;
 	case SUBSCRIPTION_RETR_LIMIT_DATE:

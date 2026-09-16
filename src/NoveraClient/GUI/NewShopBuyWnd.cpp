@@ -2364,7 +2364,7 @@ void NewShopBuyWnd::OnRender()
 		g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
 
 		if( m_bSubscriptionResult )
-			g_FontMgr.PrintText( pWnd->GetDerivedPosX() + 102, pWnd->GetDerivedPosY() - 22, FONT_SIZE_12, "[보관함]-[임시보관함]에서 받아주세요" );
+			g_FontMgr.PrintText( pWnd->GetDerivedPosX() + 102, pWnd->GetDerivedPosY() - 22, FONT_SIZE_12, STR(7) );
 		else
 			g_FontMgr.PrintText( pWnd->GetDerivedPosX() + 102, pWnd->GetDerivedPosY() - 22, FONT_SIZE_12, STR(5) );
 
@@ -3005,7 +3005,7 @@ bool NewShopBuyWnd::CheckSoldierBuy( DWORD dwID )
 			int iCurrCharGoldTime =  g_MyInfo.GetCharTotalSecond( g_MyInfo.GetClassArray( iClassType ) ) + (int)g_ClassPrice.GetDefaultLimit();
 			if( iCurrCharGoldTime >= g_ClassPrice.GetPeriodCharGoldChargeLimit() )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "골드충전으로 %d시간을 초과할 수 없습니다.", ( iPeriodCharGoldChargeLimit / 60 ) / 60 );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(11), ( iPeriodCharGoldChargeLimit / 60 ) / 60 );
 				return false;
 			}
 		}
@@ -3026,9 +3026,9 @@ bool NewShopBuyWnd::CheckSoldierBuy( DWORD dwID )
 					ioHashString sSubIcon = pItem->GetSubIconName();
 					ioHashString sTitle= pItem->GetName();
 					ioHashStringVec sDescVec;
-					sDescVec.push_back( "[용병슬롯확장]이 필요합니다." );
-					sDescVec.push_back( "용병 슬롯을 확장하기 위해 구입해주세요." );
-					sDescVec.push_back( "상점 - 특별에서 구입하실 수 있습니다." );
+					sDescVec.push_back( STR(12) );
+					sDescVec.push_back( STR(13) );
+					sDescVec.push_back( STR(14) );
 					if( pPurchaseLeedWnd->SetInfo( ioEtcItem::EIT_ETC_CHAR_SLOT_EXTEND, sIcon, sSubIcon, sTitle, sDescVec ) )
 						pPurchaseLeedWnd->ShowWnd();
 				}
@@ -3349,13 +3349,13 @@ bool NewShopBuyWnd::CheckEtcBuy( DWORD dwID )
 		ioGuildData *pGuildData = g_GuildInfo.GetGuildData( g_GuildInfo.GetGuildIndex() );
 		if( !pGuildData )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "길드에 가입된 상태에서만#구입이 가능한 아이템 입니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(23) );
 			return false;
 		}
 
 		if( pGuildData->GetGuildMasterName() != g_MyInfo.GetPublicID() )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "길드장만 구입 할 수 있는 아이템 입니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(24) );
 			return false;
 		}
 	}
@@ -3519,7 +3519,7 @@ bool NewShopBuyWnd::CheckCostumeBuy( DWORD dwID )
 		{
 			char szHelp[MAX_PATH]="";
 			g_LevelMgr.GetGradeName( m_kItemInfo.m_iNeedLevel, szHelp, sizeof( szHelp ), false );
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "%s 계급이 되어야 구매가 가능합니다.",  szHelp );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1),  szHelp );
 			return false;
 		}
 	}
@@ -3535,7 +3535,7 @@ bool NewShopBuyWnd::CheckCostumeBuy( DWORD dwID )
 		{
 			if( g_PresentMgr.GetMaxPresent() >= (int)g_PresentMgr.GetLimitPresentSize() )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "선물함이 꽉 찼습니다.#선물함을 비워주시고 사용해 주세요." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 				return false;
 			}
 		}
@@ -4068,13 +4068,13 @@ void NewShopBuyWnd::ShowBuyConfirmMsg( DWORD dwID, const char *szName, int iType
 		kPrinter[4].SetTextStyle( TS_NORMAL );
 		kPrinter[4].SetBkColor( 0, 0, 0 );	
 		kPrinter[4].SetTextColor( TCT_DEFAULT_BLUE );
-		SafeSprintf( szText, sizeof(szText), "보너스 골드 : %d 골드 사용", iUsingBounsCash );
+		SafeSprintf( szText, sizeof(szText), STR(15), iUsingBounsCash );
 		kPrinter[4].AddTextPiece( FONT_SIZE_13, szText );
 
 		kPrinter[5].SetTextStyle( TS_NORMAL );
 		kPrinter[5].SetBkColor( 0, 0, 0 );	
 		kPrinter[5].SetTextColor( TCT_DEFAULT_GRAY );
-		kPrinter[5].AddTextPiece( FONT_SIZE_13, "보너스 골드 사용시 청약철회에서 제외" );
+		kPrinter[5].AddTextPiece( FONT_SIZE_13, STR(16) );
 
 		kPrinter[6].SetTextStyle( TS_NORMAL );
 		kPrinter[6].SetBkColor( 0, 0, 0 );	
@@ -5633,9 +5633,9 @@ void NewShopBuyWnd::SetEquipChangeSexTypeTitle( int nType )
 	else if ( nType == PRESENT_COSTUME_BOX )
 	{
 		if( !m_bEquipChangeFemale )
-			pBtn->SetTitleText( "여성코스튬보기" );
+			pBtn->SetTitleText( STR(3) );
 		else
-			pBtn->SetTitleText( "남성코스튬보기" );
+			pBtn->SetTitleText( STR(4) );
 	}
 }
 

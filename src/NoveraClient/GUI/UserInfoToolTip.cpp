@@ -236,8 +236,8 @@ void UserInfoToolTip::OnRender()
 			g_FontMgr.PrintText( iXPos + GROWTH_XOFFSET, iYPos + GROWTH_YOFFSET + iExtra_Add_Y, FONT_SIZE_11, STR(1) );
 			
 			// UIÄÚ½ºÆ¬ °ü·Ã (ÄÚ½ºÆ¬ UI ¼³Á¤)
-			g_FontMgr.PrintText( iXPos + COSTUME_XOFFSET, iYPos + COSTUME_YOFFSET + iExtra_Add_Y, FONT_SIZE_11, "ÀåÂøÄÚ½ºÆ¬" );
-			g_FontMgr.PrintText( iXPos + ACCESSORY_XOFFSET, iYPos + ACCESSORY_YOFFSET + iExtra_Add_Y, FONT_SIZE_11, "ÀåÂø¾×¼¼¼­¸®" );
+			g_FontMgr.PrintText( iXPos + COSTUME_XOFFSET, iYPos + COSTUME_YOFFSET + iExtra_Add_Y, FONT_SIZE_11, STR(4) );
+			g_FontMgr.PrintText( iXPos + ACCESSORY_XOFFSET, iYPos + ACCESSORY_YOFFSET + iExtra_Add_Y, FONT_SIZE_11, STR(5) );
 			g_FontMgr.PrintText( iXPos + MEDAL_XOFFSET, iYPos + MEDAL_YOFFSET + iExtra_Add_Y, FONT_SIZE_11, STR(2) );
 
 			for( int i = 0;i < MAX_INFO_BOX;i++)

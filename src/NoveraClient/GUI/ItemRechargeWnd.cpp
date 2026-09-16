@@ -164,7 +164,7 @@ void ItemIconButton::RenderOtherInfo( int iXPos, int iYPos )
 		g_FontMgr.SetAlignType( TAT_CENTER );
 		g_FontMgr.SetBkColor( 0, 0, 0 );
 		g_FontMgr.SetTextColor( TCT_DEFAULT_WHITE );
-		g_FontMgr.PrintText( iTextX, iTextY, FONT_SIZE_11, "장착중" );
+		g_FontMgr.PrintText( iTextX, iTextY, FONT_SIZE_11, STR(1) );
 	}
 
 	// Num
@@ -328,7 +328,7 @@ void ItemInfoButton::RenderDesc( int iXPos, int iYPos )
 		m_szDescArray[0].SetTextStyle( TS_NORMAL );
 		m_szDescArray[0].SetBkColor( 0, 0, 0 );	
 		m_szDescArray[0].SetTextColor( TCT_DEFAULT_GRAY );
-		m_szDescArray[0].AddTextPiece( FONT_SIZE_13, "없음" );
+		m_szDescArray[0].AddTextPiece( FONT_SIZE_13, STR(1) );
 		m_szDescArray[0].PrintFullTextWidthCut( iXPos + 51, iYPos + 105, TAT_CENTER, INVENTORY_ITEM_INFO_WIDTHCUT_SIZE );
 
 		m_szDescArray[1].SetTextStyle( TS_NORMAL );
@@ -431,9 +431,9 @@ bool ItemInfoButton::SetExtraItemInfo()
 	m_szDescArray[2].SetTextColor( TCT_DEFAULT_GRAY );
 
 	if( iEnableClass > 0 )
-		m_szDescArray[2].AddTextPiece( FONT_SIZE_11, "Lv%d %s 제한", iLimitLevel, g_MyInfo.GetClassName(iEnableClass, ConvertPowerUpItemToChar( iPowerUpItemGrade ) ) );
+		m_szDescArray[2].AddTextPiece( FONT_SIZE_11, STR(1), iLimitLevel, g_MyInfo.GetClassName(iEnableClass, ConvertPowerUpItemToChar( iPowerUpItemGrade ) ) );
 	else
-		m_szDescArray[2].AddTextPiece( FONT_SIZE_11, "Lv%d 제한", iLimitLevel );
+		m_szDescArray[2].AddTextPiece( FONT_SIZE_11, STR(2), iLimitLevel );
 
 	return true;
 }
@@ -557,7 +557,7 @@ void ItemRechargeWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 						{
 							if( kSlot.m_PeriodType == EPT_MORTMAIN )
 							{
-								g_GUIMgr.SetMsgBox( MB_OK, NULL, "영구장비는 기간연장을 할 수 없습니다." );
+								g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 								return;
 							}
 							else
@@ -568,7 +568,7 @@ void ItemRechargeWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 						}
 					}
 
-					g_GUIMgr.SetMsgBox( MB_OK, this, "장비충전중 예외상황이 발생했습니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, this, STR(2) );
 				}
 			}
 		}
@@ -760,15 +760,15 @@ void ItemRechargeWnd::ProcessCustomBtnTooltip()
 				if( rkCharInfo.m_sex == 1 )
 				{
 					kPrinter[iLine].SetTextColor( TCT_DEFAULT_BLUE );
-					kPrinter[iLine].AddTextPiece( FONT_SIZE_12, "%s - 남성", szClassName.c_str() );
+					kPrinter[iLine].AddTextPiece( FONT_SIZE_12, STR(1), szClassName.c_str() );
 				}
 				else
 				{
 					kPrinter[iLine].SetTextColor( TCT_DEFAULT_RED );
-					kPrinter[iLine].AddTextPiece( FONT_SIZE_12, "%s - 여성", szClassName.c_str() );
+					kPrinter[iLine].AddTextPiece( FONT_SIZE_12, STR(2), szClassName.c_str() );
 				}
 				kPrinter[iLine].SetTextColor( TCT_DEFAULT_GRAY );
-				kPrinter[iLine].AddTextPiece( FONT_SIZE_12, "이 착용중입니다." );
+				kPrinter[iLine].AddTextPiece( FONT_SIZE_12, STR(3) );
 				iLine++;
 			}
 		}
@@ -782,22 +782,22 @@ void ItemRechargeWnd::ProcessCustomBtnTooltip()
 		case IT_NORMAL_WEAPON:
 		case IT_EXTRA_WEAPON:
 		case IT_RARE_WEAPON:
-			kPrinter[iLine].AddTextPiece( FONT_SIZE_13, "무기장비는 " );
+			kPrinter[iLine].AddTextPiece( FONT_SIZE_13, STR(4) );
 			break;
 		case IT_NORMAL_ARMOR:
 		case IT_EXTRA_ARMOR:
 		case IT_RARE_ARMOR:
-			kPrinter[iLine].AddTextPiece( FONT_SIZE_13, "갑옷장비는 " );
+			kPrinter[iLine].AddTextPiece( FONT_SIZE_13, STR(5) );
 			break;
 		case IT_NORMAL_HELMET:
 		case IT_EXTRA_HELMET:
 		case IT_RARE_HELMET:
-			kPrinter[iLine].AddTextPiece( FONT_SIZE_13, "투구장비는 " );
+			kPrinter[iLine].AddTextPiece( FONT_SIZE_13, STR(6) );
 			break;
 		case IT_NORMAL_CLOAK:
 		case IT_EXTRA_CLOAK:
 		case IT_RARE_CLOAK:
-			kPrinter[iLine].AddTextPiece( FONT_SIZE_13, "망토장비는 " );
+			kPrinter[iLine].AddTextPiece( FONT_SIZE_13, STR(7) );
 			break;
 		}
 
@@ -808,18 +808,18 @@ void ItemRechargeWnd::ProcessCustomBtnTooltip()
 		kPrinter[iLine].SetTextColor( TCT_DEFAULT_RED );
 		if( iLimitDay > 0 && iLimitHour > 0 )
 		{
-			kPrinter[iLine].AddTextPiece( FONT_SIZE_12, "%d일 %d시간 연장시 ", iLimitDay, iLimitHour );
+			kPrinter[iLine].AddTextPiece( FONT_SIZE_12, STR(8), iLimitDay, iLimitHour );
 		}
 		else if( iLimitDay > 0 )
 		{
-			kPrinter[iLine].AddTextPiece( FONT_SIZE_12, "%d일 연장시 ", iLimitDay );
+			kPrinter[iLine].AddTextPiece( FONT_SIZE_12, STR(9), iLimitDay );
 		}
 		else
 		{
-			kPrinter[iLine].AddTextPiece( FONT_SIZE_12, "%d시간 연장시 ", iLimitHour );
+			kPrinter[iLine].AddTextPiece( FONT_SIZE_12, STR(10), iLimitHour );
 		}
 		kPrinter[iLine].SetTextColor( TCT_DEFAULT_GRAY );
-		kPrinter[iLine].AddTextPiece( FONT_SIZE_12, "영구장비로 변경됩니다." );
+		kPrinter[iLine].AddTextPiece( FONT_SIZE_12, STR(11) );
 		iLine++;
 
 		time_t kLimitTime = DateHelp::ConvertSecondTime( kSlot.GetYear(), kSlot.GetMonth(), kSlot.GetDay(), kSlot.GetHour(), kSlot.GetMinute(), 0 );
@@ -838,9 +838,9 @@ void ItemRechargeWnd::ProcessCustomBtnTooltip()
 		kPrinter[iLine].SetTextStyle( TS_NORMAL );
 		kPrinter[iLine].SetBkColor( 0, 0, 0 );
 		kPrinter[iLine].SetTextColor( TCT_DEFAULT_DARKGRAY );
-		kPrinter[iLine].AddTextPiece( FONT_SIZE_12, "▶ 남은 기간 : " );
+		kPrinter[iLine].AddTextPiece( FONT_SIZE_12, STR(12) );
 		kPrinter[iLine].SetTextColor( TCT_DEFAULT_RED );
-		kPrinter[iLine].AddTextPiece( FONT_SIZE_12, "%d일 %d시간 %d분", iDay, iHour, iMinute );
+		kPrinter[iLine].AddTextPiece( FONT_SIZE_12, STR(13), iDay, iHour, iMinute );
 	}
 
 	RechargeItemTooltip *pTooltip = dynamic_cast<RechargeItemTooltip*>(FindChildWnd( ID_TOOL_TIP ));
@@ -1279,9 +1279,9 @@ void ItemRechargeProcessWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 			{
 				ioEtcItem *pItem = g_EtcItemMgr.FindEtcItem( m_dwUseEtcItemIndex );
 				if( pItem )
-					g_GUIMgr.SetMsgBox( MB_OK, this, "%s가 없습니다.", pItem->GetName().c_str() );
+					g_GUIMgr.SetMsgBox( MB_OK, this, STR(1), pItem->GetName().c_str() );
 				else
-					g_GUIMgr.SetMsgBox( MB_OK, this, "장비충전중 예외상황이 발생했습니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, this, STR(2) );
 			}
 			else
 				SetUIProcessState();
@@ -1294,9 +1294,9 @@ void ItemRechargeProcessWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 			{
 				ioEtcItem *pItem = g_EtcItemMgr.FindEtcItem( m_dwUseEtcItemIndex );
 				if( pItem )
-					g_GUIMgr.SetMsgBox( MB_OK, this, "%s가 없습니다.", pItem->GetName().c_str() );
+					g_GUIMgr.SetMsgBox( MB_OK, this, STR(1), pItem->GetName().c_str() );
 				else
-					g_GUIMgr.SetMsgBox( MB_OK, this, "장비충전중 예외상황이 발생했습니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, this, STR(2) );
 			}
 			else
 				SetUIStartState();
@@ -1374,11 +1374,11 @@ void ItemRechargeProcessWnd::OnRender()
 			}
 			
 			kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-			kPrinter.AddTextPiece( FONT_SIZE_13, "장비연장 아이템을 이용하여" );
+			kPrinter.AddTextPiece( FONT_SIZE_13, STR(1) );
 			kPrinter.PrintFullText( iXPos + 124, iYPos + 197, TAT_CENTER );
 			kPrinter.ClearList();
 
-			kPrinter.AddTextPiece( FONT_SIZE_13, "기간을 연장 하시겠습니까?" );
+			kPrinter.AddTextPiece( FONT_SIZE_13, STR(2) );
 			kPrinter.PrintFullText( iXPos + 124, iYPos + 215, TAT_CENTER );
 			kPrinter.ClearList();
 
@@ -1397,11 +1397,11 @@ void ItemRechargeProcessWnd::OnRender()
 			kPrinter.ClearList();
 
 			kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-			kPrinter.AddTextPiece( FONT_SIZE_13, "장비의 기간을 연장 중입니다." );
+			kPrinter.AddTextPiece( FONT_SIZE_13, STR(3) );
 			kPrinter.PrintFullText( iXPos + 124, iYPos + 197, TAT_CENTER );
 			kPrinter.ClearList();
 
-			kPrinter.AddTextPiece( FONT_SIZE_13, "잠시만 기다려주세요." );
+			kPrinter.AddTextPiece( FONT_SIZE_13, STR(4) );
 			kPrinter.PrintFullText( iXPos + 124, iYPos + 215, TAT_CENTER );
 			kPrinter.ClearList();
 
@@ -1425,17 +1425,17 @@ void ItemRechargeProcessWnd::OnRender()
 					if( kSlot.m_PeriodType == EPT_MORTMAIN )
 					{
 						kPrinter.SetTextColor( TCT_DEFAULT_BLUE );
-						kPrinter.AddTextPiece( FONT_SIZE_16, "영구장비 달성" );
+						kPrinter.AddTextPiece( FONT_SIZE_16, STR(5) );
 						kPrinter.PrintFullText( iXPos + 124, iYPos + 171, TAT_CENTER );
 						kPrinter.ClearList();
 
 						kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-						kPrinter.AddTextPiece( FONT_SIZE_13, "축하합니다!" );
+						kPrinter.AddTextPiece( FONT_SIZE_13, STR(6) );
 						kPrinter.PrintFullText( iXPos + 124, iYPos + 197, TAT_CENTER );
 						kPrinter.ClearList();
 
 						kPrinter.SetTextColor( TCT_DEFAULT_RED );
-						kPrinter.AddTextPiece( FONT_SIZE_13, "영구장비로 변환되었습니다" );
+						kPrinter.AddTextPiece( FONT_SIZE_13, STR(7) );
 						kPrinter.PrintFullText( iXPos + 124, iYPos + 215, TAT_CENTER );
 						kPrinter.ClearList();
 
@@ -1449,14 +1449,14 @@ void ItemRechargeProcessWnd::OnRender()
 						kPrinter.ClearList();
 
 						kPrinter.SetTextColor( TCT_DEFAULT_GREEN );
-						kPrinter.AddTextPiece( FONT_SIZE_13, "기간연장을 완료했습니다." );
+						kPrinter.AddTextPiece( FONT_SIZE_13, STR(8) );
 						kPrinter.PrintFullText( iXPos + 124, iYPos + 197, TAT_CENTER );
 						kPrinter.ClearList();
 
 						char szRemain[MAX_PATH] = "";
 						Help::GetRemainTime( kSlot.GetYear(), kSlot.GetMonth(), kSlot.GetDay(), kSlot.GetHour(), kSlot.GetMinute(), szRemain, sizeof(szRemain) );
 						kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-						kPrinter.AddTextPiece( FONT_SIZE_13, "총 잔여시간 " );
+						kPrinter.AddTextPiece( FONT_SIZE_13, STR(9) );
 						kPrinter.SetTextColor( TCT_DEFAULT_RED );
 						kPrinter.AddTextPiece( FONT_SIZE_13, szRemain );
 						kPrinter.PrintFullText( iXPos + 124, iYPos + 215, TAT_CENTER );
@@ -1592,17 +1592,17 @@ void ItemRechargeProcessWnd::SetUIProcessState()
 				int iLimitHour= iPromotionTime % 24;
 				if( iLimitDay > 0 && iLimitHour > 0 )
 				{
-					wsprintf( szTime, "+ %d일 %d시간", iLimitDay, iLimitHour );
+					wsprintf( szTime, STR(1), iLimitDay, iLimitHour );
 					szText = szTime;
 				}
 				else if( iLimitDay > 0 )
 				{
-					wsprintf( szTime, "+ %d일", iLimitDay );
+					wsprintf( szTime, STR(2), iLimitDay );
 					szText = szTime;
 				}
 				else
 				{
-					wsprintf( szTime, "+ %d시간", iLimitHour );
+					wsprintf( szTime, STR(3), iLimitHour );
 					szText = szTime;
 				}
 
@@ -1628,15 +1628,15 @@ void ItemRechargeProcessWnd::SetUIEndState( int iRechargeHour )
 	int iLimitHour= iPromotionTime % 24;
 	if( iLimitDay > 0 && iLimitHour > 0 )
 	{
-		wsprintf( szTime, "%d일 %d시간", iLimitDay, iLimitHour );
+		wsprintf( szTime, STR(1), iLimitDay, iLimitHour );
 	}
 	else if( iLimitDay > 0 )
 	{
-		wsprintf( szTime, "%d일", iLimitDay );
+		wsprintf( szTime, STR(2), iLimitDay );
 	}
 	else
 	{
-		wsprintf( szTime, "%d시간", iLimitHour );
+		wsprintf( szTime, STR(3), iLimitHour );
 	}
 	
 	m_RechargeTime.Clear();
@@ -1950,7 +1950,7 @@ void AccessoryInfoButton::RenderDesc( int iXPos, int iYPos )
 		m_szDescArray[0].SetTextStyle( TS_NORMAL );
 		m_szDescArray[0].SetBkColor( 0, 0, 0 );	
 		m_szDescArray[0].SetTextColor( TCT_DEFAULT_GRAY );
-		m_szDescArray[0].AddTextPiece( FONT_SIZE_13, "없음" );
+		m_szDescArray[0].AddTextPiece( FONT_SIZE_13, STR(1) );
 		m_szDescArray[0].PrintFullTextWidthCut( iXPos + 51, iYPos + 105, TAT_CENTER, INVENTORY_ITEM_INFO_WIDTHCUT_SIZE );
 
 		m_szDescArray[1].SetTextStyle( TS_NORMAL );
@@ -2351,9 +2351,9 @@ void AccessoryRechargeProcessWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param
 			{
 				ioEtcItem *pItem = g_EtcItemMgr.FindEtcItem( m_dwUseEtcItemIndex );
 				if( pItem )
-					g_GUIMgr.SetMsgBox( MB_OK, this, "%s이 없습니다.", pItem->GetName().c_str() );
+					g_GUIMgr.SetMsgBox( MB_OK, this, STR(1), pItem->GetName().c_str() );
 				else
-					g_GUIMgr.SetMsgBox( MB_OK, this, "액세서리 충전중 예외상황이 발생했습니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, this, STR(2) );
 			}
 			else
 				SetUIProcessState();
@@ -2366,9 +2366,9 @@ void AccessoryRechargeProcessWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param
 			{
 				ioEtcItem *pItem = g_EtcItemMgr.FindEtcItem( m_dwUseEtcItemIndex );
 				if( pItem )
-					g_GUIMgr.SetMsgBox( MB_OK, this, "%s이 없습니다.", pItem->GetName().c_str() );
+					g_GUIMgr.SetMsgBox( MB_OK, this, STR(1), pItem->GetName().c_str() );
 				else
-					g_GUIMgr.SetMsgBox( MB_OK, this, "액세서리 충전중 예외상황이 발생했습니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, this, STR(2) );
 			}
 			else
 				SetUIStartState();
@@ -2441,11 +2441,11 @@ void AccessoryRechargeProcessWnd::OnRender()
 			}
 
 			kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-			kPrinter.AddTextPiece( FONT_SIZE_13, "액세서리 연장 아이템을 이용하여" );
+			kPrinter.AddTextPiece( FONT_SIZE_13, STR(1) );
 			kPrinter.PrintFullText( iXPos + 124, iYPos + 197, TAT_CENTER );
 			kPrinter.ClearList();
 
-			kPrinter.AddTextPiece( FONT_SIZE_13, "기간을 연장 하시겠습니까?" );
+			kPrinter.AddTextPiece( FONT_SIZE_13, STR(2) );
 			kPrinter.PrintFullText( iXPos + 124, iYPos + 215, TAT_CENTER );
 			kPrinter.ClearList();
 
@@ -2466,11 +2466,11 @@ void AccessoryRechargeProcessWnd::OnRender()
 				kPrinter.ClearList();
 
 				kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-				kPrinter.AddTextPiece( FONT_SIZE_13, "액세서리의 기간을 연장 중입니다." );
+				kPrinter.AddTextPiece( FONT_SIZE_13, STR(3) );
 				kPrinter.PrintFullText( iXPos + 124, iYPos + 197, TAT_CENTER );
 				kPrinter.ClearList();
 
-				kPrinter.AddTextPiece( FONT_SIZE_13, "잠시만 기다려주세요." );
+				kPrinter.AddTextPiece( FONT_SIZE_13, STR(4) );
 				kPrinter.PrintFullText( iXPos + 124, iYPos + 215, TAT_CENTER );
 				kPrinter.ClearList();
 
@@ -2495,17 +2495,17 @@ void AccessoryRechargeProcessWnd::OnRender()
 					if( kSlot.m_PeriodType == EPT_MORTMAIN )
 					{
 						kPrinter.SetTextColor( TCT_DEFAULT_BLUE );
-						kPrinter.AddTextPiece( FONT_SIZE_16, "영구 액세서리 달성" );
+						kPrinter.AddTextPiece( FONT_SIZE_16, STR(5) );
 						kPrinter.PrintFullText( iXPos + 124, iYPos + 171, TAT_CENTER );
 						kPrinter.ClearList();
 
 						kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-						kPrinter.AddTextPiece( FONT_SIZE_13, "축하합니다!" );
+						kPrinter.AddTextPiece( FONT_SIZE_13, STR(6) );
 						kPrinter.PrintFullText( iXPos + 124, iYPos + 197, TAT_CENTER );
 						kPrinter.ClearList();
 
 						kPrinter.SetTextColor( TCT_DEFAULT_RED );
-						kPrinter.AddTextPiece( FONT_SIZE_13, "영구액세서리로 변환되었습니다" );
+						kPrinter.AddTextPiece( FONT_SIZE_13, STR(7) );
 						kPrinter.PrintFullText( iXPos + 124, iYPos + 215, TAT_CENTER );
 						kPrinter.ClearList();
 
@@ -2519,14 +2519,14 @@ void AccessoryRechargeProcessWnd::OnRender()
 						kPrinter.ClearList();
 
 						kPrinter.SetTextColor( TCT_DEFAULT_GREEN );
-						kPrinter.AddTextPiece( FONT_SIZE_13, "기간연장을 완료했습니다." );
+						kPrinter.AddTextPiece( FONT_SIZE_13, STR(8) );
 						kPrinter.PrintFullText( iXPos + 124, iYPos + 197, TAT_CENTER );
 						kPrinter.ClearList();
 
 						char szRemain[MAX_PATH] = "";
 						Help::GetRemainTime( kSlot.GetYear(), kSlot.GetMonth(), kSlot.GetDay(), kSlot.GetHour(), kSlot.GetMinute(), szRemain, sizeof(szRemain), true );
 						kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-						kPrinter.AddTextPiece( FONT_SIZE_13, "총 잔여시간 " );
+						kPrinter.AddTextPiece( FONT_SIZE_13, STR(9) );
 						kPrinter.SetTextColor( TCT_DEFAULT_RED );
 						kPrinter.AddTextPiece( FONT_SIZE_13, szRemain );
 						kPrinter.PrintFullText( iXPos + 124, iYPos + 215, TAT_CENTER );
@@ -2657,17 +2657,17 @@ void AccessoryRechargeProcessWnd::SetUIProcessState()
 				int iLimitHour= iPromotionTime % 24;
 				if( iLimitDay > 0 && iLimitHour > 0 )
 				{
-					wsprintf( szTime, "+ %d일 %d시간", iLimitDay, iLimitHour );
+					wsprintf( szTime, STR(1), iLimitDay, iLimitHour );
 					szText = szTime;
 				}
 				else if( iLimitDay > 0 )
 				{
-					wsprintf( szTime, "+ %d일", iLimitDay );
+					wsprintf( szTime, STR(2), iLimitDay );
 					szText = szTime;
 				}
 				else
 				{
-					wsprintf( szTime, "+ %d시간", iLimitHour );
+					wsprintf( szTime, STR(3), iLimitHour );
 					szText = szTime;
 				}
 
@@ -2693,15 +2693,15 @@ void AccessoryRechargeProcessWnd::SetUIEndState( int iRechargeHour )
 	int iLimitHour= iPromotionTime % 24;
 	if( iLimitDay > 0 && iLimitHour > 0 )
 	{
-		wsprintf( szTime, "%d일 %d시간", iLimitDay, iLimitHour );
+		wsprintf( szTime, STR(1), iLimitDay, iLimitHour );
 	}
 	else if( iLimitDay > 0 )
 	{
-		wsprintf( szTime, "%d일", iLimitDay );
+		wsprintf( szTime, STR(2), iLimitDay );
 	}
 	else
 	{
-		wsprintf( szTime, "%d시간", iLimitHour );
+		wsprintf( szTime, STR(3), iLimitHour );
 	}
 
 	m_RechargeTime.Clear();
@@ -2873,7 +2873,7 @@ void AccessoryRechargeWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 						{
 							if( kSlot.m_PeriodType == EPT_MORTMAIN )
 							{
-								g_GUIMgr.SetMsgBox( MB_OK, NULL, "영구액세서리는 기간연장을 할 수 없습니다." );
+								g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 								return;
 							}
 							else
@@ -2884,7 +2884,7 @@ void AccessoryRechargeWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 						}
 					}
 
-					g_GUIMgr.SetMsgBox( MB_OK, this, "액세서리 충전중 예외상황이 발생했습니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, this, STR(2) );
 				}
 			}
 		}
@@ -3069,15 +3069,15 @@ void AccessoryRechargeWnd::ProcessCustomBtnTooltip()
 				if( rkCharInfo.m_sex == 1 )
 				{
 					kPrinter[iLine].SetTextColor( TCT_DEFAULT_BLUE );
-					kPrinter[iLine].AddTextPiece( FONT_SIZE_12, "%s - 남성", szClassName.c_str() );
+					kPrinter[iLine].AddTextPiece( FONT_SIZE_12, STR(1), szClassName.c_str() );
 				}
 				else
 				{
 					kPrinter[iLine].SetTextColor( TCT_DEFAULT_RED );
-					kPrinter[iLine].AddTextPiece( FONT_SIZE_12, "%s - 여성", szClassName.c_str() );
+					kPrinter[iLine].AddTextPiece( FONT_SIZE_12, STR(2), szClassName.c_str() );
 				}
 				kPrinter[iLine].SetTextColor( TCT_DEFAULT_GRAY );
-				kPrinter[iLine].AddTextPiece( FONT_SIZE_12, "이 착용중입니다." );
+				kPrinter[iLine].AddTextPiece( FONT_SIZE_12, STR(3) );
 				iLine++;
 			}
 		}

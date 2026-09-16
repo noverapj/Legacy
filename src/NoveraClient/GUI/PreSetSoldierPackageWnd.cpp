@@ -84,7 +84,7 @@ void PreSetSoldierPackageWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 			// 용병패키지 UI 예외처리
 			if( m_CharInfo.m_class_type == 0 )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "선택 가능한 용병이 없습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 				return;
 			}
 
@@ -238,7 +238,7 @@ void PreSetSoldierPackageResultWnd::OnRender()
 
 	if( m_iLimitTime == 0 )
 	{
-		g_FontMgr.PrintText( iXPos+FINAL_DESC_X, iYPos+FINAL_DESC_Y, FONT_SIZE_17, "영구사용 획득" );
+		g_FontMgr.PrintText( iXPos+FINAL_DESC_X, iYPos+FINAL_DESC_Y, FONT_SIZE_17, STR(1) );
 	}
 	else
 	{
@@ -247,11 +247,11 @@ void PreSetSoldierPackageResultWnd::OnRender()
 		int iHour   = iTotalLimitDate / 60;
 		int iMinute = iTotalLimitDate % 60;
 		if( iMinute == 0 )
-			SafeSprintf( szTemp, sizeof( szTemp ), "%d시간", iHour );
+			SafeSprintf( szTemp, sizeof( szTemp ), STR(2), iHour );
 		else
-			SafeSprintf( szTemp, sizeof( szTemp ), "%d시간 %d분", iHour, iMinute );
+			SafeSprintf( szTemp, sizeof( szTemp ), STR(3), iHour, iMinute );
 
-		g_FontMgr.PrintText( iXPos+FINAL_DESC_X, iYPos+FINAL_DESC_Y, FONT_SIZE_17, "%s 획득", szTemp );
+		g_FontMgr.PrintText( iXPos+FINAL_DESC_X, iYPos+FINAL_DESC_Y, FONT_SIZE_17, STR(4), szTemp );
 	}
 }
 

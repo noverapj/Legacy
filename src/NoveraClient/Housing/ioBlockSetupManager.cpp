@@ -100,35 +100,35 @@ void ioBlockSetupManager::BeginSetUpState()
 
 	if( pOwner->GetState() == CS_FISHING || pOwner->GetState() == CS_EXCAVATING )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "낚시나 탐사 중에는 사용 할 수 없습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 
 	// 캐릭터 상태 체크
 	if( pOwner->GetState() != CS_DELAY || pOwner->IsCatchMode() || pOwner->IsPrisonerMode() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "정지해 있는 상태에서만 편집 할 수 있습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return;
 	}
 	
 	// Buff 체크
 	if( pOwner->HasBuff( BT_LIMIT_MOVE ) || pOwner->HasBuff( BT_LIMIT_ACTION ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "정지해 있는 상태에서만 편집 할 수 있습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return;
 	}
 
 	// 아이템 체크
 	if( pOwner->IsHasCrownByAllMode() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "왕관을 벗어야만 편집 할 수 있습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		return;
 	}
 
 	// 광장 체크
 	if( pOwner->GetCreator() == NULL || pOwner->GetCreator()->GetBlockWorld() == NULL )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "편집 할 수 없는 모드 입니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 		return;
 	}
 
@@ -346,10 +346,10 @@ void ioBlockSetupManager::OnSetUpState( SP2Packet &rkPacket )
 			switch( eModeType )
 			{
 			case BMT_GUILD:
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "지금 다른 길드원이 길드를 꾸미고 있는 중이니,#잠시 기다렸다가 시도해 주세요." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 				break;
 			default:
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "꾸미기 진행 에러" );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 				break;
 			}
 			ApplyEndSetUpState();
@@ -360,13 +360,13 @@ void ioBlockSetupManager::OnSetUpState( SP2Packet &rkPacket )
 			switch( eModeType )
 			{
 			case BMT_GUILD:
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "길드장이 지정한 유저만#꾸미기가 가능합니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 				break;
 			case BMT_PERSONAL:
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "개인본부 소유주만#꾸미기가 가능합니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 				break;
 			default:
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "꾸미기 권한이 없습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );
 				break;
 			}
 			ApplyEndSetUpState();
@@ -374,7 +374,7 @@ void ioBlockSetupManager::OnSetUpState( SP2Packet &rkPacket )
 		break;
 	case CONSTRUCT_MODE_EXCEPTION:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "꾸미기 상태로 전환 할 수 없는 모드입니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(6) );
 			ApplyEndSetUpState();
 		}
 		break;
@@ -454,32 +454,32 @@ void ioBlockSetupManager::OnSetUpBlock( SP2Packet &rkPacket )
 			}
 			else
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "설치 할 수 없습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 				EndSetUpState();
 			}
 		}
 		break;
 	case CONSTRUCT_POS_INVALID:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "잘못된 위치 입니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 			EndSetUpState();
 		}
 		break;
 	case CONSTRUCT_BLOCK_SHORTAGE:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "수량이 부족 합니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 			EndSetUpState();
 		}
 		break;
 	case CONSTRUCT_BLOCK_EXCEPTION:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "꾸미기 아이템 설치 예외 오류" );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 			EndSetUpState();
 		}
 		break;
 	case CONSTRUCT_BLOCK_MAX_COUNT:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "최대치에 도달하여 더이상 설 치 할 수 없습니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );
 			EndSetUpState();
 		}
 		break;
@@ -549,13 +549,13 @@ void ioBlockSetupManager::OnRemoveBlock( SP2Packet &rkPacket )
 		break;
 	case RETRIEVE_BLOCK_NONE_INFO:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "일치하는 꾸미기 아이템을 찾을 수 없습니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 			EndSetUpState();
 		}
 		break;
 	case RETRIEVE_BLOCK_EXCEPTION:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "꾸미기 아이템 삭제 예외 오류" );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 			EndSetUpState();
 		}
 		break;

@@ -24,25 +24,25 @@ void SuccessionBattleWnd::iwm_create()
 	m_szDescArray[0].SetTextStyle( TS_NORMAL );
 	m_szDescArray[0].SetBkColor( 0, 0, 0 );	
 	m_szDescArray[0].SetTextColor( TCT_DEFAULT_DARKGRAY ); // 진회
-	m_szDescArray[0].AddTextPiece( FONT_SIZE_13, "실력이 비슷한 유저와 매칭이 되어 다른 유저에게" );
+	m_szDescArray[0].AddTextPiece( FONT_SIZE_13, STR(1) );
 
 	m_szDescArray[1].ClearList();
 	m_szDescArray[1].SetTextStyle( TS_NORMAL );
 	m_szDescArray[1].SetBkColor( 0, 0, 0 );	
 	m_szDescArray[1].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	m_szDescArray[1].AddTextPiece( FONT_SIZE_13, "방해 받지 않고 1vs1로 대전을 할 수 있는 모드" );
+	m_szDescArray[1].AddTextPiece( FONT_SIZE_13, STR(2) );
 
 	m_szDescArray[2].ClearList();
 	m_szDescArray[2].SetTextStyle( TS_NORMAL );
 	m_szDescArray[2].SetBkColor( 0, 0, 0 );	
 	m_szDescArray[2].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	m_szDescArray[2].AddTextPiece( FONT_SIZE_13, "입니다. 연승을 할 수록 보상이 커지며, 진 경우엔" );
+	m_szDescArray[2].AddTextPiece( FONT_SIZE_13, STR(3) );
 
 	m_szDescArray[3].ClearList();
 	m_szDescArray[3].SetTextStyle( TS_NORMAL );
 	m_szDescArray[3].SetBkColor( 0, 0, 0 );	
 	m_szDescArray[3].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	m_szDescArray[3].AddTextPiece( FONT_SIZE_13, "같은 상대에게 재 대결을 신청 할 수 있습니다." );
+	m_szDescArray[3].AddTextPiece( FONT_SIZE_13, STR(4) );
 }
 
 void SuccessionBattleWnd::AddRenderImage( const ioHashString &szType, ioUIRenderImage *pImage )
@@ -90,7 +90,7 @@ void SuccessionBattleWnd::iwm_show()
 	ioButton *pBtn = static_cast<ioButton*>( FindChildWnd(ID_CANCEL) );
 	if( pBtn )
 	{
-		pBtn->SetTitleText( "매칭취소" );
+		pBtn->SetTitleText( STR(1) );
 	}
 
 	m_dwMatchingCancelCheckTime = 0;
@@ -135,7 +135,7 @@ void SuccessionBattleWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 			ioButton *pBtn = static_cast<ioButton*>( FindChildWnd(ID_CANCEL) );
 			if( pBtn )
 			{
-				pBtn->SetTitleText( "매칭취소" );
+				pBtn->SetTitleText( STR(1) );
 			}
 
 			if( P2PNetwork::IsNetworkPlaying() )
@@ -169,7 +169,7 @@ void SuccessionBattleWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 
 				ioButton *pBtn = static_cast<ioButton*>( pWnd );
 				if( pBtn )
-					pBtn->SetTitleText( "취소중.." );
+					pBtn->SetTitleText( STR(2) );
 			}
 			else
 				MatchingCancel();
@@ -225,7 +225,7 @@ void SuccessionBattleWnd::OnProcess( float fTimePerSec )
 			if( pBtn )
 			{
 				char szBuf[MAX_PATH] = "";
-				wsprintf( szBuf, "취소중..%d", dwGap/1000+1 );
+				wsprintf( szBuf, STR(1), dwGap/1000+1 );
 				pBtn->SetTitleText( szBuf );
 			}
 		}
@@ -281,17 +281,17 @@ void SuccessionBattleWnd::OnRender()
 	if ( rkCurSuccessionCnt == 0 )
 	{
 		g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
-		g_FontMgr.PrintText( iXPos + 195, iYPos + 169, FONT_SIZE_15, "연승을 세워보세요" );
+		g_FontMgr.PrintText( iXPos + 195, iYPos + 169, FONT_SIZE_15, STR(1) );
 	}
 	else if ( rkCurSuccessionCnt == rkMaxSuccessionCnt )
 	{
 		g_FontMgr.SetTextColor( TCT_DEFAULT_RED );
-		g_FontMgr.PrintText( iXPos + 195, iYPos + 169, FONT_SIZE_15, "최대연승 달성중" );
+		g_FontMgr.PrintText( iXPos + 195, iYPos + 169, FONT_SIZE_15, STR(2) );
 	}
 	else if ( rkCurSuccessionCnt > 0 )
 	{
 		g_FontMgr.SetTextColor( TCT_DEFAULT_BLUE );
-		g_FontMgr.PrintText( iXPos + 195, iYPos + 169, FONT_SIZE_15, "연승진행중" );
+		g_FontMgr.PrintText( iXPos + 195, iYPos + 169, FONT_SIZE_15, STR(3) );
 	}
 
 	//최대 연승
@@ -299,7 +299,7 @@ void SuccessionBattleWnd::OnRender()
 	g_FontMgr.SetAlignType( TAT_LEFT );
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	g_FontMgr.PrintText( iXPos + 47, iYPos + 213, FONT_SIZE_15, "최대연승" );
+	g_FontMgr.PrintText( iXPos + 47, iYPos + 213, FONT_SIZE_15, STR(4) );
 
 	if ( m_pMaxWinNum )
 	{
@@ -337,13 +337,13 @@ void SuccessionBattleWnd::OnRender()
 	g_FontMgr.SetAlignType( TAT_LEFT );
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	g_FontMgr.PrintText( iXPos + 209, iYPos + 213, FONT_SIZE_15, "현재" );
+	g_FontMgr.PrintText( iXPos + 209, iYPos + 213, FONT_SIZE_15, STR(5) );
 
 	g_FontMgr.SetTextStyle( TS_NORMAL );	
 	g_FontMgr.SetAlignType( TAT_LEFT );
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	g_FontMgr.PrintText( iXPos + 295, iYPos + 213, FONT_SIZE_15, "연승중" );
+	g_FontMgr.PrintText( iXPos + 295, iYPos + 213, FONT_SIZE_15, STR(6) );
 
 	if ( m_pCurWinNum )
 	{
@@ -427,7 +427,7 @@ void SuccessionBattleWnd::MatchingFail()
 	ioButton *pBtn = static_cast<ioButton*>( FindChildWnd(ID_CANCEL) );
 	if( pBtn )
 	{
-		pBtn->SetTitleText( "매칭취소" );
+		pBtn->SetTitleText( STR(1) );
 	}
 
 	m_dwMatchingCancelCheckTime = 0;
@@ -482,19 +482,19 @@ void SuccessionBattleRequestWnd::iwm_create()
 	m_szDescArray[0].SetTextStyle( TS_NORMAL );
 	m_szDescArray[0].SetBkColor( 0, 0, 0 );	
 	m_szDescArray[0].SetTextColor( TCT_DEFAULT_DARKGRAY ); // 진회
-	m_szDescArray[0].AddTextPiece( FONT_SIZE_14, "연승에 실패 하였습니다!" );
+	m_szDescArray[0].AddTextPiece( FONT_SIZE_14, STR(1) );
 
 	m_szDescArray[1].ClearList();
 	m_szDescArray[1].SetTextStyle( TS_NORMAL );
 	m_szDescArray[1].SetBkColor( 0, 0, 0 );	
 	m_szDescArray[1].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	m_szDescArray[1].AddTextPiece( FONT_SIZE_14, "같은 상대에게 대결을 신청하시겠습니까?" );
+	m_szDescArray[1].AddTextPiece( FONT_SIZE_14, STR(2) );
 
 	m_szDescArray[2].ClearList();
 	m_szDescArray[2].SetTextStyle( TS_NORMAL );
 	m_szDescArray[2].SetBkColor( 0, 0, 0 );	
 	m_szDescArray[2].SetTextColor( TCT_DEFAULT_GRAY );
-	m_szDescArray[2].AddTextPiece( FONT_SIZE_14, "(복수는 1회만 가능합니다)" );
+	m_szDescArray[2].AddTextPiece( FONT_SIZE_14, STR(3) );
 }
 
 void SuccessionBattleRequestWnd::AddRenderImage( const ioHashString &szType, ioUIRenderImage *pImage )
@@ -602,7 +602,7 @@ void SuccessionBattleRequestWnd::OnProcess( float fTimePerSec )
 			return;
 		}
 		char szTitle[MAX_PATH] = "";
-		SafeSprintf( szTitle, sizeof( szTitle ), "재대결 신청하기(SPACE)...%d", (int)m_fCurWaitTime + 1 );
+		SafeSprintf( szTitle, sizeof( szTitle ), STR(1), (int)m_fCurWaitTime + 1 );
 		pRequest->SetTitleText( szTitle );
 		
 	}
@@ -649,19 +649,19 @@ void SuccessionBattleReplyWnd::iwm_create()
 	m_szDescArray[0].SetTextStyle( TS_NORMAL );
 	m_szDescArray[0].SetBkColor( 0, 0, 0 );	
 	m_szDescArray[0].SetTextColor( TCT_DEFAULT_DARKGRAY ); // 진회
-	m_szDescArray[0].AddTextPiece( FONT_SIZE_14, "같은 상대에게 재대결 신청이 들어왔습니다!" );
+	m_szDescArray[0].AddTextPiece( FONT_SIZE_14, STR(1) );
 
 	m_szDescArray[1].ClearList();
 	m_szDescArray[1].SetTextStyle( TS_NORMAL );
 	m_szDescArray[1].SetBkColor( 0, 0, 0 );	
 	m_szDescArray[1].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	m_szDescArray[1].AddTextPiece( FONT_SIZE_14, "수락하시겠습니까?" );
+	m_szDescArray[1].AddTextPiece( FONT_SIZE_14, STR(2) );
 
 	m_szDescArray[2].ClearList();
 	m_szDescArray[2].SetTextStyle( TS_NORMAL );
 	m_szDescArray[2].SetBkColor( 0, 0, 0 );	
 	m_szDescArray[2].SetTextColor( TCT_DEFAULT_GRAY );
-	m_szDescArray[2].AddTextPiece( FONT_SIZE_14, "(복수는 1회만 가능하며,거절시에 패널티는 없습니다)" );
+	m_szDescArray[2].AddTextPiece( FONT_SIZE_14, STR(3) );
 }
 
 void SuccessionBattleReplyWnd::AddRenderImage( const ioHashString &szType, ioUIRenderImage *pImage )
@@ -761,7 +761,7 @@ void SuccessionBattleReplyWnd::OnProcess( float fTimePerSec )
 	if ( pRequest )
 	{
 		char szTitle[MAX_PATH] = "";
-		SafeSprintf( szTitle, sizeof( szTitle ), "수락하기(SPACE)...%d", (int)m_fCurWaitTime + 1);
+		SafeSprintf( szTitle, sizeof( szTitle ), STR(1), (int)m_fCurWaitTime + 1);
 		pRequest->SetTitleText( szTitle );
 	}
 }
@@ -1497,8 +1497,8 @@ void SuccessionMatchVersusSceneWnd::OnRenderBlueChar( int iXPos, int iYPos )
 	g_FontMgr.SetBkColor( TCT_DEFAULT_BLUE );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_WHITE );
 	g_FontMgr.PrintText( iXPos + 73, iYPos + 182, FONT_SIZE_13, "%s", m_BlueData.m_szUserID.c_str() );
-	g_FontMgr.PrintText( iXPos + 73, iYPos + 203, FONT_SIZE_13, "최대연승 %d", m_BlueData.m_iMaxSuccessionWin );
-	g_FontMgr.PrintText( iXPos + 73, iYPos + 224, FONT_SIZE_13, "(현재연승 %d)", m_BlueData.m_iCurSuccessionWin );
+	g_FontMgr.PrintText( iXPos + 73, iYPos + 203, FONT_SIZE_13, STR(1), m_BlueData.m_iMaxSuccessionWin );
+	g_FontMgr.PrintText( iXPos + 73, iYPos + 224, FONT_SIZE_13, STR(2), m_BlueData.m_iCurSuccessionWin );
 	
 	if( m_BlueData.m_dwAniState == CARD_ANI_BACK && m_pBackFrame && m_BlueData.m_fAniRate > 0.0f )
 	{
@@ -1552,8 +1552,8 @@ void SuccessionMatchVersusSceneWnd::OnRenderRedChar( int iXPos, int iYPos )
 	g_FontMgr.SetBkColor( TCT_DEFAULT_RED );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_WHITE );
 	g_FontMgr.PrintText( iXPos + 73, iYPos + 182, FONT_SIZE_13, "%s", m_RedData.m_szUserID.c_str() );
-	g_FontMgr.PrintText( iXPos + 73, iYPos + 203, FONT_SIZE_13, "최대연승 %d", m_RedData.m_iMaxSuccessionWin );
-	g_FontMgr.PrintText( iXPos + 73, iYPos + 224, FONT_SIZE_13, "(현재연승 %d)", m_RedData.m_iCurSuccessionWin );
+	g_FontMgr.PrintText( iXPos + 73, iYPos + 203, FONT_SIZE_13, STR(1), m_RedData.m_iMaxSuccessionWin );
+	g_FontMgr.PrintText( iXPos + 73, iYPos + 224, FONT_SIZE_13, STR(2), m_RedData.m_iCurSuccessionWin );
 
 	if( m_RedData.m_dwAniState == CARD_ANI_BACK && m_pBackFrame && m_RedData.m_fAniRate > 0.0f )
 	{

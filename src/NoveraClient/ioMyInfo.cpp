@@ -5541,9 +5541,9 @@ bool ioMyInfo::IsExtraItemFull( bool bSetMsgBox )
 					ioHashString sSubIcon = pItem->GetSubIconName();
 					ioHashString sTitle= pItem->GetName();
 					ioHashStringVec sDescVec;
-					sDescVec.push_back( "[장비슬롯확장]이 필요합니다." );
-					sDescVec.push_back( "부족한 장비 슬롯을 위해 구입해주세요." );
-					sDescVec.push_back( "상점 - 특별에서 구입하실 수 있습니다." );
+					sDescVec.push_back( STR(2) );
+					sDescVec.push_back( STR(3) );
+					sDescVec.push_back( STR(4) );
 					if( pPurchaseLeedWnd->SetInfo( ioEtcItem::EIT_ETC_EXTRAITEM_SLOT_EXTEND, sIcon, sSubIcon, sTitle, sDescVec ) )
 						pPurchaseLeedWnd->ShowWnd();
 				}
@@ -6564,7 +6564,7 @@ void ioMyInfo::ApplyEquipChangeNamedTitle( DWORD dwCode, BYTE byEquip )
 		NamedTitleSlot kNewEquipSlot;
 		if( !m_pUserNamedTitle.GetNamedTitleSlot( dwCode, kNewEquipSlot ) )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "해당 칭호가 존재하지 않습니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 			LOG.PrintTimeAndLog( 0, "ioMyInfo::ApplyChangeNamedTitle Wrong SlotIndex : %d", dwCode );
 			return;
 		}
@@ -6579,7 +6579,7 @@ void ioMyInfo::ApplyGradeChangeNamedTitle( DWORD dwCode, int nGrade )
 	NamedTitleSlot kNewEquipSlot;
 	if( !m_pUserNamedTitle.GetNamedTitleSlot( dwCode, kNewEquipSlot ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "해당 칭호가 존재하지 않습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		LOG.PrintTimeAndLog( 0, "ioMyInfo::ApplyChangeNamedTitle Wrong SlotIndex : %d", dwCode );
 		return;
 	}
@@ -6593,7 +6593,7 @@ void ioMyInfo::ApplyPremiumChangeNamedTitle( DWORD dwCode )
 	NamedTitleSlot kNewEquipSlot;
 	if( !m_pUserNamedTitle.GetNamedTitleSlot( dwCode, kNewEquipSlot ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "해당 칭호가 존재하지 않습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		LOG.PrintTimeAndLog( 0, "ioMyInfo::ApplyChangeNamedTitle Wrong SlotIndex : %d", dwCode );
 		return;
 	}
@@ -6680,7 +6680,7 @@ void ioMyInfo::ApplyChangeAccessory( int iCharArray, int iSlot, int iSlotIndex, 
 {
 	if( !COMPARE( iCharArray, 0, GetCharCount() ) ) 
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "예외 오류 발생1");
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1));
 		LOG.PrintTimeAndLog( 0, "%s Wrong Array : %d", __FUNCTION__, iCharArray );
 		return;
 	}
@@ -6703,7 +6703,7 @@ void ioMyInfo::ApplyChangeAccessory( int iCharArray, int iSlot, int iSlotIndex, 
 		AccessorySlot kSlot;
 		if( !m_UserAccessory.GetAccessorySlot( iSlotIndex, kSlot ) )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "예외 오류 발생2");
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2));
 			LOG.PrintTimeAndLog( 0, "%s Wrong SlotIndex : %d", __FUNCTION__, iSlotIndex );
 			return;
 		}

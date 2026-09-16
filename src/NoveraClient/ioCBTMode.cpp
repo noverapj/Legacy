@@ -2178,8 +2178,8 @@ void ioCBTMode::OnRoundJoinView( SP2Packet &rkPacket )
 		SetBlindMode( true );
 		g_GUIMgr.SetSkipUIByBlind( false );		
 
-		g_ChatMgr.SetInfomationMsg( "다음 라운드가 시작될때까지 대기해주세요." );
-		g_ChatMgr.SetInfomationMsg( "방어키(S)로 시점을 변경할 수 있습니다." );
+		g_ChatMgr.SetInfomationMsg( STR(1) );
+		g_ChatMgr.SetInfomationMsg( STR(2) );
 
 		rkPacket >> m_dwCurRoundDuration;
 	}
@@ -2241,8 +2241,8 @@ void ioCBTMode::OnRoundJoinObserver( SP2Packet &rkPacket )
 
 		g_ModeHelpMgr.InitModeHelp();
 
-		g_ChatMgr.SetInfomationMsg( "관전모드" );
-		g_ChatMgr.SetInfomationMsg( "방어키(S)로 시점을 변경할 수 있습니다." );
+		g_ChatMgr.SetInfomationMsg( STR(1) );
+		g_ChatMgr.SetInfomationMsg( STR(2) );
 
 		rkPacket >> m_dwCurRoundDuration;
 

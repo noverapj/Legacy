@@ -240,32 +240,32 @@ void ioBingoRewardWnd::OnRender()
 	kPrinter[0].SetTextStyle( TS_NORMAL);
 	kPrinter[0].SetBkColor( 0, 0, 0 );	
 	kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY ); 
-	kPrinter[0].AddTextPiece( FONT_SIZE_13, "빙고 및  모두빙고 보상은" );
+	kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(1) );
 
 	kPrinter[0].SetTextStyle( TS_NORMAL);
 	kPrinter[0].SetBkColor( 0, 0, 0 );	
 	kPrinter[0].SetTextColor( TCT_DEFAULT_RED ); 
-	kPrinter[0].AddTextPiece( FONT_SIZE_13, " 위 보상목록중 랜덤으로 배치" );
+	kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(2) );
 
 	kPrinter[0].SetTextStyle( TS_NORMAL);
 	kPrinter[0].SetBkColor( 0, 0, 0 );	
 	kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY ); 
-	kPrinter[0].AddTextPiece( FONT_SIZE_13, "됩니다." );
+	kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(3) );
 
 	kPrinter[1].SetTextStyle( TS_NORMAL);
 	kPrinter[1].SetBkColor( 0, 0, 0 );	
 	kPrinter[1].SetTextColor( TCT_DEFAULT_DARKGRAY ); 
-	kPrinter[1].AddTextPiece( FONT_SIZE_13, "일부 아이템들은 어떤 아이템인지 모르게" );
+	kPrinter[1].AddTextPiece( FONT_SIZE_13, STR(4) );
 
 	kPrinter[1].SetTextStyle( TS_NORMAL);
 	kPrinter[1].SetBkColor( 0, 0, 0 );	
 	kPrinter[1].SetTextColor( TCT_DEFAULT_RED ); 
-	kPrinter[1].AddTextPiece( FONT_SIZE_13, " 가려서 배치되기도" );
+	kPrinter[1].AddTextPiece( FONT_SIZE_13, STR(5) );
 
 	kPrinter[1].SetTextStyle( TS_NORMAL);
 	kPrinter[1].SetBkColor( 0, 0, 0 );	
 	kPrinter[1].SetTextColor( TCT_DEFAULT_DARKGRAY ); 
-	kPrinter[1].AddTextPiece( FONT_SIZE_13, " 합니다.");
+	kPrinter[1].AddTextPiece( FONT_SIZE_13, STR(6));
 
 
 	for (int i = 0; i < MAX_TEXT ; i++)

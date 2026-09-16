@@ -686,7 +686,7 @@ void TotalResultExpGradeWnd::OnRender()
 
 		kPrinter.SetTextStyle( TS_NORMAL );
 		kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-		kPrinter.AddTextPiece( FONT_SIZE_12, "%s점", szConvertText );
+		kPrinter.AddTextPiece( FONT_SIZE_12, STR(4), szConvertText );
 		kPrinter.PrintFullText( iXPos + 490, iYPos, TAT_RIGHT );
 	}
 	else
@@ -1507,7 +1507,7 @@ void TotalResultRawardWnd::OnRenderBonusTtitle( int iXPos, int iYPos )
 	g_FontMgr.SetAlignType( TAT_CENTER );
 	g_FontMgr.SetTextStyle( TS_NORMAL );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
-	g_FontMgr.PrintText( iXPos + 93, iYPos - 4, FONT_SIZE_11, "보너스 내역" );
+	g_FontMgr.PrintText( iXPos + 93, iYPos - 4, FONT_SIZE_11, STR(1) );
 }
 
 void TotalResultRawardWnd::OnRenderBonus( int iXPos, int iYPos )
@@ -2133,29 +2133,29 @@ void TotalResultRawardWnd::OnRenderShufflePoint( int iXPos, int iYPos )
 	g_FontMgr.SetAlignType( TAT_CENTER );
 	g_FontMgr.SetTextStyle( TS_NORMAL );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	g_FontMgr.PrintText( iXPos + 33, iYPos + 50,  FONT_SIZE_10, "스타코인" );
+	g_FontMgr.PrintText( iXPos + 33, iYPos + 50,  FONT_SIZE_10, STR(1) );
 	
 	ioComplexStringPrinter kPrinter;
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetTextColor( TCT_DEFAULT_BLUE );
 	kPrinter.AddTextPiece( FONT_SIZE_10, "%d", m_iPlayPoint + m_iWinningPoint + m_iConsecutivePoint + m_iAwardPoint );
 	kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_10, "개" );
+	kPrinter.AddTextPiece( FONT_SIZE_10, STR(2) );
 	kPrinter.PrintFullText( iXPos + 33, iYPos + 62, TAT_CENTER );
 	kPrinter.ClearList();
 	
-	g_FontMgr.PrintText( iXPos + 66, iYPos + 9,  FONT_SIZE_10, "플레이점수" );
-	g_FontMgr.PrintText( iXPos + 66, iYPos + 26, FONT_SIZE_10, "연승보너스" );
-	g_FontMgr.PrintText( iXPos + 66, iYPos + 43, FONT_SIZE_10, "연속게임 보너스" );
-	g_FontMgr.PrintText( iXPos + 66, iYPos + 60, FONT_SIZE_10, "수상 보너스" );
+	g_FontMgr.PrintText( iXPos + 66, iYPos + 9,  FONT_SIZE_10, STR(3) );
+	g_FontMgr.PrintText( iXPos + 66, iYPos + 26, FONT_SIZE_10, STR(4) );
+	g_FontMgr.PrintText( iXPos + 66, iYPos + 43, FONT_SIZE_10, STR(5) );
+	g_FontMgr.PrintText( iXPos + 66, iYPos + 60, FONT_SIZE_10, STR(6) );
 
 	g_FontMgr.SetAlignType( TAT_RIGHT );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_BLUE );
-	g_FontMgr.PrintText( iXPos + 178, iYPos + 9,  FONT_SIZE_10, "%d개", m_iPlayPoint );
+	g_FontMgr.PrintText( iXPos + 178, iYPos + 9,  FONT_SIZE_10, STR(7), m_iPlayPoint );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GREEN );
-	g_FontMgr.PrintText( iXPos + 178, iYPos + 26, FONT_SIZE_10, "＋%d개", m_iWinningPoint );
-	g_FontMgr.PrintText( iXPos + 178, iYPos + 43, FONT_SIZE_10, "＋%d개", m_iConsecutivePoint );
-	g_FontMgr.PrintText( iXPos + 178, iYPos + 60, FONT_SIZE_10, "＋%d개", m_iAwardPoint );
+	g_FontMgr.PrintText( iXPos + 178, iYPos + 26, FONT_SIZE_10, STR(8), m_iWinningPoint );
+	g_FontMgr.PrintText( iXPos + 178, iYPos + 43, FONT_SIZE_10, STR(8), m_iConsecutivePoint );
+	g_FontMgr.PrintText( iXPos + 178, iYPos + 60, FONT_SIZE_10, STR(8), m_iAwardPoint );
 }
 
 void TotalResultRawardWnd::OnRenderSuccessionPeso( int iXPos, int iYPos )
@@ -2181,14 +2181,14 @@ void TotalResultRawardWnd::OnRenderSuccessionPeso( int iXPos, int iYPos )
 	g_FontMgr.SetAlignType( TAT_LEFT );
 	g_FontMgr.SetTextStyle( TS_NORMAL );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	g_FontMgr.PrintText( iXPos + 61, iYPos + 13,  FONT_SIZE_13, "1vs1모드 추가획득" );
+	g_FontMgr.PrintText( iXPos + 61, iYPos + 13,  FONT_SIZE_13, STR(1) );
 
 	ioComplexStringPrinter kPrinter;
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetTextColor( TCT_DEFAULT_RED );
-	kPrinter.AddTextPiece( FONT_SIZE_13, "%d연승 ", g_MyInfo.GetCurSuccessionCount() );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(2), g_MyInfo.GetCurSuccessionCount() );
 	kPrinter.SetTextColor( TCT_DEFAULT_BLUE );
-	kPrinter.AddTextPiece( FONT_SIZE_13, "%d페소", m_iSuccessionBonusPeso );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(3), m_iSuccessionBonusPeso );
 	kPrinter.PrintFullText( iXPos + 61, iYPos + 31, TAT_LEFT );
 	kPrinter.ClearList();
 }

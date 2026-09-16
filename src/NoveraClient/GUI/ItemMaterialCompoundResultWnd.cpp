@@ -640,7 +640,7 @@ void ItemMaterialCompoundResultWnd::RenderFailExp( int iXPos, int iYPos )
 			kPrinter.SetTextStyle( TS_NORMAL );
 			kPrinter.SetBkColor( 0, 0, 0 );
 			kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kPrinter.AddTextPiece( FONT_SIZE_12, "실패 경험치 %.2f％", m_fNewFailExpRate * FLOAT100 );	
+			kPrinter.AddTextPiece( FONT_SIZE_12, STR(3), m_fNewFailExpRate * FLOAT100 );	
 			kPrinter.PrintFullText( iXPos + TEXT_X_OFFSET1, iYPos + TEXT_Y_OFFSET1, TAT_CENTER );
 			kPrinter.ClearList();	
 		

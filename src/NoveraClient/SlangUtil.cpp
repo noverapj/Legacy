@@ -490,7 +490,7 @@ const char* CSlangUtil::ConvertStringWithPreLine( const char* szOriginalStr )
 				{
 					// 사이즈 오버?
 					char szError[MAX_PATH] = "";
-					sprintf( szError, "크래쉬 위험 함수 : CSlangUtil::ConvertStringWithPreLine Type A:%s - %d", g_MyInfo.GetPublicID().c_str(), iNewLength ); //Except Extracting Hangeul
+					sprintf( szError, STR(1), g_MyInfo.GetPublicID().c_str(), iNewLength ); //Except Extracting Hangeul
 					SP2Packet kPacket( LUPK_LOG );
 					kPacket << "ClientError";  // 로그 파일 타입
 					kPacket << szError;
@@ -536,7 +536,7 @@ const char* CSlangUtil::ConvertStringWithPreLine( const char* szOriginalStr )
 				{
 					// 사이즈 오버?
 					char szError[MAX_PATH] = "";
-					sprintf( szError, "크래쉬 위험 함수 : CSlangUtil::ConvertStringWithPreLine Type B:%s - %d", g_MyInfo.GetPublicID().c_str(), iNewLength ); //Except Extracting Hangeul
+					sprintf( szError, STR(2), g_MyInfo.GetPublicID().c_str(), iNewLength ); //Except Extracting Hangeul
 					SP2Packet kPacket( LUPK_LOG );
 					kPacket << "ClientError";  // 로그 파일 타입
 					kPacket << szError;

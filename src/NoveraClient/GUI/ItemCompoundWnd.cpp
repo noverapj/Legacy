@@ -1320,7 +1320,7 @@ void ItemLuckyCoinWnd::GetItemList( vInventorySelectItemList &rkList, ioHashStri
 		if ( kItem.m_szSubText.IsEmpty() )
 		{
 			char szKey[MAX_PATH];
-			sprintf_e( szKey, "%d°³", kItem.m_iNeedCoin );
+			SafeSprintf( szKey, sizeof(szKey), STR(1), kItem.m_iNeedCoin );
 			kItem.m_szSubText = szKey;
 		}
 		kItem.m_nGrade = nGrade;

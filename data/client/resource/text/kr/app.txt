@@ -6339,3 +6339,2587 @@
 |EXE_ioMultiSuperGashaponMgr::PrintDefaultAlaram_6|아이템을 추가 획득하였습니다!!|
 |EXE_ioMultiSuperGashaponMgr::PrintDefaultAlaram_7|아이템을 획득하였습니다!!|
 |EXE_ioMultiSuperGashaponMgr::PrintDefaultAlaram_8|획득|
+|EXE_ChatMacroMgr::OnMacroScreenShotMode_2|수련장에서는 스크린샷 모드를 사용할 수 없습니다.|
+|EXE_ChatMacroMgr::OnMacroSuperGashaponAllPackage_1|잘못된 특별아이템 코드입니다 : %d|
+|EXE_ChatMacroMgr::OnMacroSuperGashaponAllPackage_2|슈퍼가챠가 아닙니다. : %d|
+|EXE_ChatMacroMgr::OnMacroSuperGashaponPackage_1|값 2개의 필요(etcitemcode.present_index)|
+|EXE_ChatMacroMgr::OnMacroSuperGashaponPackage_2|잘못된 특별아이템 코드입니다 : %d|
+|EXE_ChatMacroMgr::OnMacroSuperGashaponPackage_3|슈퍼가챠가 아닙니다. : %d|
+|EXE_ChatMacroMgr::OnMacroSuperGashaponPackage_4|package_index가 유효하지 않습니다|
+|EXE_ChatMacroMgr::OnMacroSuperGashaponInfo_1|잘못된 특별아이템 코드입니다 : %d|
+|EXE_ChatMacroMgr::OnMacroSuperGashaponInfo_2|슈퍼가챠가 아닙니다. : %d|
+|EXE_ChatMacroMgr::OnMacroSuperGashaponInfoReset_1|잘못된 특별아이템 코드입니다 : %d|
+|EXE_ChatMacroMgr::OnMacroSuperGashaponInfoReset_2|슈퍼가챠가 아닙니다. : %d|
+|EXE_ChatMacroMgr::OnMacroAttendanceAddDay_1|값이 0을 넘겨야 합니다.(iDayCount)|
+|EXE_ChatMacroMgr::OnMacroAttendancePrevMonth_1|값이 0을 넘겨야 합니다.(iDayCount)|
+|EXE_ChatMacroMgr::OnMacroAttendanceDateModify_1|값 3개의 필요(year.month.day) - ex)13.9.23|
+|EXE_ChatMacroMgr::OnMacroAttendanceDateModify_2|년 값이 잘못됬습니다( 0 ~ 99 )|
+|EXE_ChatMacroMgr::OnMacroAttendanceDateModify_3|월 값이 잘못됬습니다|
+|EXE_ChatMacroMgr::OnMacroAttendanceDateModify_4|일 값이 잘못됬습니다( 최대 : %d, 입력 : %d)|
+|EXE_ChatMacroMgr::OnMacroAwake_1|값 2개의 필요(용병번호.현재시간 기준으로 종료될 분) - ex)1.10 - 아이언나이트 10분뒤 종료|
+|EXE_ChatMacroMgr::OnMacroCharPowerUpAdd_1|값 2개의 필요(용병번호) - ex)1 - 아이언나이트 용병강화|
+|EXE_ChatMacroMgr::OnMacroItemSlotIndex_1|값 1개의 필요(아이템코드) - ex)/아이템슬롯 100001|
+|EXE_ChatMacroMgr::OnMacroItemSlotIndex_2|아이템 슬롯 에러|
+|EXE_ChatMacroMgr::OnMacroItemPowerUpAdd_1|값 1개의 필요(아이템슬롯) - ex)1|
+|EXE_ChatMacroMgr::OnMacroRollBookWndShow_1|값 2개 필요. /누적출석부보자 번호.위치|
+|EXE_ChatMacroMgr::OnMacroRollBookProgress_1|값이 1~7사이의 값이여야 합니다.|
+|EXE_ChatMacroMgr::OnMacroTimerChange_1|값 1개의 필요( 0, 1 )|
+|EXE_ChatMacroMgr::OnMacroHousingTest_1|길드 본부 내에서만 사용 가능합니다.|
+|EXE_ChatMacroMgr::OnMacroHousingCommand_1|타입 필요|
+|EXE_ChatMacroMgr::OnMacroHousingCommand_2|2개의 값 필요|
+|EXE_ChatMacroMgr::OnMacroHousingCommand_3|5개의 값 필요|
+|EXE_ChatMacroMgr::OnMacroTournamentNextState_1|[대회 진행 매크로 전송]|
+|EXE_ChatMacroMgr::OnMacroTournamentResult_1|[대회 보상 처리 매크로 전송]|
+|EXE_ChatMacroMgr::SetCreateStructMacro_8|길드 본부 에서는 사용 할 수 없습니다.|
+|EXE_ChatMacroMgr::OnMacroSetDateMission_1|미션 값 부족 : /미션 DateType.Day.Request Min|
+|EXE_ChatMacroMgr::OnMacroSetDateMission_2|요청가능한 시간이 아닙니다. : /미션 DateType.Day.Request Min|
+|EXE_ChatMacroMgr::OnMacroSetNextDateMission_1|미션 값 부족 : /다음미션 DateType.Request Min|
+|EXE_ChatMacroMgr::OnMacroSetNextDateMission_2|요청가능한 시간이 아닙니다. : /다음미션 DateType.Request Min|
+|EXE_ChatMacroMgr::OnMacroSetMissionValue_1|값 부족 : /미션갱신 missionCode.Value|
+|EXE_ChatMacroMgr::OnMacroSetMissionValue_2|존재하지 않는 미션 코드입니다.|
+|EXE_ioSP2ChatManager::SetEtcItemObtainMsg_11|%s (%d개 보유)|
+|EXE_ioSP2ChatManager::SetCostumeObtainMsg_1|[%s +%d일] 장비 획득|
+|EXE_ioSP2ChatManager::SetCostumeObtainMsg_2|[%s +%d시간] 장비 획득|
+|EXE_ioSP2ChatManager::SetCostumeObtainMsg_3|[%s] 영구 장비 획득|
+|EXE_ioSP2ChatManager::SetJoinUserChatMsg_9| 초보자 버프|
+|EXE_ioSP2ChatManager::SetJoinUserChatMsg_10| 상태.|
+|EXE_ioSP2ChatManager::SetKickHighLevelUserChatMsg_1|님, 실력이 너무 뛰어나 유저보호를 위해 전투방에서|
+|EXE_ioSP2ChatManager::SetKickHighLevelUserChatMsg_2|이탈되셨습니다.|
+|EXE_ioSP2ChatManager::SetKickHighLevelUserChatMsg_3|정보|
+|EXE_ioSP2ChatManager::SetKickLowLevelUserChatMsg_1|님을 보호하기 위해 해당 전투방에서 이탈되셨습니다.|
+|EXE_ioSP2ChatManager::SetKickLowLevelUserChatMsg_2|정보|
+|EXE_ioSP2ChatManager::SetKickSysError_1|내부 시스템에러로 모드가 종료 처리 되었습니다.|
+|EXE_ioSP2ChatManager::SetKickSysError_2|정보|
+|EXE_ioSP2ChatManager::SendChatLog_22|깊은 숲|
+|EXE_ioSP2ChatManager::SendChatLog_23|스노우타운|
+|EXE_ioSP2ChatManager::SendChatLog_24|불의 신전|
+|EXE_ioSP2ChatManager::SendChatLog_25|훈련소|
+|EXE_ioSP2ChatManager::SendChatLog_26|더블 크라운|
+|EXE_ioSP2ChatManager::SendChatLog_27|오늘의모드|
+|EXE_ioSP2ChatManager::SendChatLog_28|비밀공장|
+|EXE_ioSP2ChatManager::SendChatLog_29|팀서바이벌AI|
+|EXE_ioSP2ChatManager::SendChatLog_30|개인본부|
+|EXE_ioSP2ChatManager::SendChatLog_31|레이드|
+|EXE_ioSP2ChatManager::SendChatLog_32|팬티몬|
+|EXE_ioSP2ChatManager::SendChatLog_33|클베모드|
+|EXE_ConvertTournamentRoundResultText_1|우승|
+|EXE_ConvertTournamentRoundResultText_2|준우승|
+|EXE_ConvertTournamentRoundResultText_3|%d강|
+|EXE_ConvertTournamentRoundProressText_1|결승|
+|EXE_ConvertTournamentRoundProressText_2|준결승|
+|EXE_ConvertTournamentRoundProressText_3|%d강|
+|EXE_AccessoryFuncWnd::iwm_command_1|전투체험 용병으로는 불가능합니다.|
+|EXE_AccessoryFuncWnd::UISoldierSelectWndBtnUp_1|PC방 용병은 선택 할 수 없습니다.|
+|EXE_AttendanceWnd::OnRender_1|※ <개발자K와 출석 Check> 달력은 매월 1일마다 초기화됩니다.|
+|EXE_AttendanceWnd::OnRender_2|※ <출석체크 하기(SPACE)> 버튼을 누르면 선물함으로 보상이 지급됩니다.|
+|EXE_AttendanceWnd::OnTtitleRender_1|월|
+|EXE_AttendanceWnd::OnCalanderRender_1|일|
+|EXE_AttendanceWnd::OnCalanderRender_2|월|
+|EXE_AttendanceWnd::OnCalanderRender_3|화|
+|EXE_AttendanceWnd::OnCalanderRender_4|수|
+|EXE_AttendanceWnd::OnCalanderRender_5|목|
+|EXE_AttendanceWnd::OnCalanderRender_6|금|
+|EXE_AttendanceWnd::OnCalanderRender_7|토|
+|EXE_AttendanceWnd::OnAccrueTtitleRender_1|현재 누적 출석 %d일|
+|EXE_AttendanceWnd::OnAccrueRewardRender_1|%d일|
+|EXE_AttendanceWnd::OnTodayAndAccrueRewardRender_1|오늘의 상품|
+|EXE_AttendanceWnd::OnTodayAndAccrueRewardRender_2|누적 출석 상품|
+|EXE_BillingWantWnd::iwm_command_2|골드충전은 광장/개인본부/훈련소에서만 가능합니다.|
+|EXE_BingoHelpToolTip::OnRender_1|배치된 25개 숫자의 자리를 서로서로 섞습니다.|
+|EXE_BingoHelpToolTip::OnRender_2|한줄로 빙고된 숫자는 섞이지 않습니다.|
+|EXE_BingoHelpToolTip::OnRender_3|배치된 13개의 보상을 보상목록에서 다시 뽑습니다.|
+|EXE_BingoHelpToolTip::OnRender_4|이미 획득된 보상은 바뀌지 않습니다.|
+|EXE_BingoHelpToolTip::OnRender_5|배치된 숫자중|
+|EXE_BingoHelpToolTip::OnRender_6|획득되지도 중복되지도 않는 숫자를|
+|EXE_BingoHelpToolTip::OnRender_7|반드시 뽑습니다.|
+|EXE_BingoMsgBox::PrintText_1|모든 숫자가 초기화되며 바뀝니다.|
+|EXE_BingoMsgBox::PrintText_2|모든 보상도 초기화되지만, 바뀌진 않습니다.|
+|EXE_BingoMsgBox::PrintText_3|모든 숫자와 보상이 초기화됩니다.|
+|EXE_BingoMsgBox::PrintText_4|초기화 이후 다시 진행 가능합니다.|
+|EXE_BingoMsgBox::PrintText_5|보유 중인 [%s] 아이템을|
+|EXE_BingoMsgBox::PrintText_6|사용하시겠습니까?|
+|EXE_BingoMsgBox::PrintText_7|( %d개 보유 )|
+|EXE_BingoMsgBox::PrintText_8|[%s] 아이템이 없습니다.|
+|EXE_BingoMsgBox::SetInfo_1|초기화|
+|EXE_BingoWnd::iwm_bingo_btn_1|[%s] 아이템을 사용하시겠습니까?|
+|EXE_BingoWnd::iwm_bingo_btn_2|[%s] 아이템을 소지 하지 않았습니다.|
+|EXE_BonusCashWnd::OnRender_1|내 총 보너스 골드 : %d 골드|
+|EXE_BonusCashWnd::OnRender_2|보너스 골드는 만료일이 짧을수록 먼저 소진됩니다.|
+|EXE_BonusCashWnd::OnRender_3|만료내역은 최대 30개까지 저장됩니다.|
+|EXE_BonusCashBtn::SetInfo_1|%d.%d.%d (%02d:%02d까지)|
+|EXE_BonusCashBtn::SetInfo_2|%d 골드|
+|EXE_BonusCashProgressWnd::OnRender_1|만료일자|
+|EXE_BonusCashProgressWnd::OnRender_2|획득금액|
+|EXE_BonusCashProgressWnd::OnRender_3|남은금액|
+|EXE_BonusCashProgressWnd::OnRender_4|진행중인 보너스 골드 내역이 없습니다. |
+|EXE_BonusCashExpireWnd::OnRender_1|만료일자|
+|EXE_BonusCashExpireWnd::OnRender_2|획득금액|
+|EXE_BonusCashExpireWnd::OnRender_3|남은금액|
+|EXE_BonusCashExpireWnd::OnRender_4|기간 만료 내역이 없습니다. |
+|EXE_BriefingWnd::RenderBriefingFinalResult_1|팀기여도|
+|EXE_CampMyInfoBtn::OnTournamentPointRender_1|%s 점|
+|EXE_CampMyInfoBtn::OnCampRankRender_3|%s 위|
+|EXE_LobbyCampInfoWnd::iwm_command_8|대회팀이 존재 할떈 진영을 탈퇴 할 수 없습니다.|
+|EXE_LobbyCampInfoWnd::UpdateGuildButton_1|길드 가입 및 생성|
+|EXE_LobbyCampInfoWnd::OnRenderCampInfo_16|%s 진영전|
+|EXE_LobbyCampInfoWnd::OnRenderCampInfo_17|아침|
+|EXE_LobbyCampInfoWnd::OnRenderCampInfo_18|낮|
+|EXE_LobbyCampInfoWnd::OnRenderCampInfo_19|밤|
+|EXE_LobbyCampInfoWnd::OnRenderCampInfo_20|새벽|
+|EXE_LobbyCampInfoWnd::OnRenderCampInfo_21|매일 %s %d시 ~ %s %d시|
+|EXE_InfluenceBtn::OnRender_1|- 위|
+|EXE_InfluenceBtn::OnRender_2|%d 위|
+|EXE_InfluenceWnd::OnExplainRender_1|위쪽 탭의 |
+|EXE_InfluenceWnd::OnExplainRender_2|진영전과 래더전|
+|EXE_InfluenceWnd::OnExplainRender_3|참여를 통해 대회포인트를 획득하시면|
+|EXE_InfluenceWnd::OnExplainRender_4|진영전 종료시 보상|
+|EXE_InfluenceWnd::OnExplainRender_5|을 드립니다.|
+|EXE_InfluenceWnd::OnScheduleRender_1|%s 참가|
+|EXE_CampEnterWnd::iwm_command_4|양진영의 세력비를 맞추기 위해 %s에 # 가입이 불가능합니다.|
+|EXE_CampEnterWnd::iwm_command_5|대회 운영규칙에 동의하셔야 가입이 가능합니다.# [대회 운영 규칙] 클릭하시면 내용확인이 가능합니다.|
+|EXE_CampEnterWnd::iwm_command_6|진영가입 가능한 기간이 아닙니다.|
+|EXE_CampEnterWnd::UpdateMainUI_1|%s 가입|
+|EXE_CampEnterWnd::OnExplainRender_1|%s의 |
+|EXE_CampEnterWnd::OnExplainRender_2| 진영전이 열렸습니다.|
+|EXE_CampEnterWnd::OnExplainRender_3|아래버튼을 눌러 마음에 드는 진영에 가입하세요|
+|EXE_CampEnterWnd::OnExplainRender_4|에 동의합니다.|
+|EXE_CampEnterModalWnd::UpdateMainUI_1|%s 가입|
+|EXE_CampEnterModalWnd::OnExplainRender_1|%s의 |
+|EXE_CampEnterModalWnd::OnExplainRender_2| 진영전이 열렸습니다.|
+|EXE_CampEnterModalWnd::OnExplainRender_3|아래버튼을 눌러 마음에 드는 진영에 가입하세요|
+|EXE_CampSeasonBonus::OnRenderMap_5|%s(%s점)|
+|EXE_RaidReadyCountWnd::RenderCount_1|10초 후 보스가 등장합니다.|
+|EXE_CenterInfoWnd::RenderSuddenDeathTime_1|서든데스에서 결판나지 않으면 기여도로 승패 판정|
+|EXE_CenterInfoWnd::RenderDoubleCrownGauge_1|정해진 시간 동안 왕을 보호하고, 상대팀 왕관을 떨어트려라!|
+|EXE_ChatMacro::SetMacroText_45|/레벨업|
+|EXE_ChatMacro::SetMacroText_46|/빙고선물줘|
+|EXE_ChatMacro::SetMacroText_47|/곰소환|
+|EXE_ChatMacro::SetMacroText_48|/슈퍼가챠다내놔|
+|EXE_ChatMacro::SetMacroText_49|/슈퍼가챠내놔|
+|EXE_ChatMacro::SetMacroText_50|/슈퍼가챠확인|
+|EXE_ChatMacro::SetMacroText_51|/슈퍼가챠없애|
+|EXE_ChatMacro::SetMacroText_52|/체크시작|
+|EXE_ChatMacro::SetMacroText_53|/체크종료|
+|EXE_ChatMacro::SetMacroText_54|/출석부보자|
+|EXE_ChatMacro::SetMacroText_55|/출석일추가|
+|EXE_ChatMacro::SetMacroText_56|/출석부이전달추가|
+|EXE_ChatMacro::SetMacroText_57|/출석부초기화|
+|EXE_ChatMacro::SetMacroText_58|/출석체크시간수정|
+|EXE_ChatMacro::SetMacroText_59|/각성종료|
+|EXE_ChatMacro::SetMacroText_60|/용병강화|
+|EXE_ChatMacro::SetMacroText_61|/아이템슬롯|
+|EXE_ChatMacro::SetMacroText_62|/아이템진화|
+|EXE_ChatMacro::SetMacroText_63|/캐릭터정보|
+|EXE_ChatMacro::SetMacroText_64|/미션|
+|EXE_ChatMacro::SetMacroText_65|/다음미션|
+|EXE_ChatMacro::SetMacroText_66|/미션갱신|
+|EXE_ChatMacro::SetMacroText_67|/누적출석부보자|
+|EXE_ChatMacro::SetMacroText_68|/누적출석|
+|EXE_ChatMacro::SetMacroText_69|/편하게살자|
+|EXE_ChatMacro::SetMacroText_70|/대회진행|
+|EXE_ChatMacro::SetMacroText_71|/대회보상|
+|EXE_ChatMacro::SetMacroText_72|/수련장|
+|EXE_CloverToolTip::RenderSendInfoString_1|친구가 된지 |
+|EXE_CloverToolTip::RenderSendInfoString_2|%d분|
+|EXE_CloverToolTip::RenderSendInfoString_3|%d시간|
+|EXE_CloverToolTip::RenderSendInfoString_4| 후 부터|
+|EXE_CloverToolTip::RenderSendInfoString_5|클로버를 주고 받을 수 있습니다.|
+|EXE_CloverToolTip::RenderSendInfoString_6| 후 부터 보낼 수 있습니다.|
+|EXE_CloverToolTip::RenderSendInfoString_7|%s 님께 현재까지|
+|EXE_CloverToolTip::RenderSendInfoString_8|받은 클로버 : %d|
+|EXE_CloverToolTip::RenderSendInfoString_9|보낸 클로버 : %d|
+|EXE_CloverToolTip::RenderSendInfoString_10| 후 다시 보낼 수 있습니다.|
+|EXE_CloverToolTip::RenderSendInfoString_11|클로버를 보내시려면 |
+|EXE_CloverToolTip::RenderSendInfoString_12|클릭|
+|EXE_CloverToolTip::RenderSendInfoString_13|하세요.|
+|EXE_CloverToolTip::RenderRecvInfoString_1|%s 님으로부터|
+|EXE_CloverToolTip::RenderRecvInfoString_2|클로버 %d개 도착|
+|EXE_CloverToolTip::RenderRecvInfoString_3| 후 사라집니다.|
+|EXE_CloverToolTip::RenderRecvInfoString_4|클로버를 받으시려면 |
+|EXE_CloverToolTip::RenderRecvInfoString_5|클릭|
+|EXE_CloverToolTip::RenderRecvInfoString_6|하세요.|
+|EXE_CostumeCustomInfoWnd::RenderDesc_1|없음|
+|EXE_CostumeCustomInfoWnd::SetCostumeInfo_1|영구사용|
+|EXE_CostumeCustomInfoWnd::SetCostumeInfo_2|%s 전용|
+|EXE_CostumeCustomInfoWnd::SetCostumeInfo_3|제한없음|
+|EXE_CostumeCustomSelectWnd::OnCostumeCustomInfoPush_1|존재하지 않는 장비입니다.|
+|EXE_CostumeCustomSelectWnd::OnCostumeCustomInfoPush_2|착용 중인 코스튬은 스킨을 할 수 없습니다.|
+|EXE_CostumeCustomSelectWnd::OnRender_1|보유하고 있는|
+|EXE_CostumeCustomSelectWnd::OnRender_2| 영구 코스튬만 스킨 변경이 가능합니다|
+|EXE_CostumeCustomSelectWnd::OnRender_3|아이템 하나로|
+|EXE_CostumeCustomSelectWnd::OnRender_4| 남성용|
+|EXE_CostumeCustomSelectWnd::OnRender_5|여성용|
+|EXE_CostumeCustomSelectWnd::OnRender_6| 코스튬 중 한가지 선택 후 변경이 가능합니다 |
+|EXE_CostumeCustomSelectWnd::OnRender_7|★ 변경한 스킨은 다른 스킨으로 덮어쓸 수 있습니다|
+|EXE_CostumeCustomSelectWnd::ProcessCustomBtnTooltip_1|코스튬 스킨 - |
+|EXE_CostumeCustomSelectWnd::ProcessCustomBtnTooltip_2|남성|
+|EXE_CostumeCustomSelectWnd::ProcessCustomBtnTooltip_3|여성 |
+|EXE_CostumeCustomSelectWnd::ProcessCustomBtnTooltip_4|남성 |
+|EXE_CostumeCustomSelectWnd::ProcessCustomBtnTooltip_5|이 적용되어있습니다|
+|EXE_CostumeCustomSelectWnd::ProcessCustomBtnTooltip_6|＊아이콘을 |
+|EXE_CostumeCustomSelectWnd::ProcessCustomBtnTooltip_7|클릭하면 자세히|
+|EXE_CostumeCustomSelectWnd::ProcessCustomBtnTooltip_8| 볼 수 있습니다|
+|EXE_CostumeCustomSelectWnd::ProcessCustomBtnTooltip_9|%s - 남성|
+|EXE_CostumeCustomSelectWnd::ProcessCustomBtnTooltip_10|%s - 여성|
+|EXE_CostumeCustomSelectWnd::ProcessCustomBtnTooltip_11|이 착용 중입니다.|
+|EXE_CostumeCustomMakeWnd::AfterViewLSCTexture_1|파일 올리기 (%d/%d)|
+|EXE_CostumeCustomMakeWnd::SetCostumeInfo_1|전투체험 설정이 되어있는 용병은#장비 스킨이 불가능합니다.|
+|EXE_CostumeCustomMakeWnd::SetCostumeInfo_2|착용 중인 장비는 스킨이 불가능합니다.|
+|EXE_CostumeCustomMakeWnd::SetCostumeInfo_3| (남성)|
+|EXE_CostumeCustomMakeWnd::SetCostumeInfo_4| (여성)|
+|EXE_CostumeCustomMakeWnd::SetCostumeInfo_5|[%s] (남성)은#이미지없이 이펙트만으로 제작되어서#스킨 변경이 불가능합니다|
+|EXE_CostumeCustomMakeWnd::SetCostumeInfo_6|[%s] (여성)은#이미지없이 이펙트만으로 제작되어서#스킨 변경이 불가능합니다|
+|EXE_CostumeCustomMakeWnd::SetCostumeInfo_7|(총 %d개의 텍스쳐 파일(jpg)이 필요합니다)|
+|EXE_CostumeCustomMakeWnd::SetCostumeInfo_8|파일 올리기 (0/%d)|
+|EXE_CostumeCustomMakeWnd::UploadTexture_1|변경 가능한 텍스쳐가 없습니다.|
+|EXE_CostumeCustomMakeWnd::DownloadTexture_1|변경 가능한 텍스쳐가 없습니다.|
+|EXE_CostumeCustomMakeWnd::DownloadTexture_2|(%s) 텍스쳐를 저장하던 중에 오류가 발생했습니다(1)|
+|EXE_CostumeCustomMakeWnd::DownloadTexture_3|(%s) 텍스쳐를 저장하던 중에 오류가 발생했습니다(2)|
+|EXE_CostumeCustomMakeWnd::StartCustomFileMake_1|변경된 데이터가 존재하지 않습니다 (1)|
+|EXE_CostumeCustomMakeWnd::StartCustomFileMake_2|변경된 데이터가 존재하지 않습니다#(%s)|
+|EXE_CostumeCustomMakeWnd::StartCustomFileMake_3|(%s) 텍스쳐를 불러오던 중에 오류가 발생했습니다|
+|EXE_CostumeCustomMakeWnd::iwm_command_1|[장비스킨]#아이템을 보유하고 있지 않습니다|
+|EXE_CostumeCustomMakeWnd::iwm_command_2|선택된 텍스쳐가 없습니다|
+|EXE_CostumeCustomMakeWnd::OnRender_1|다운받거나 직접 제작한|
+|EXE_CostumeCustomMakeWnd::OnRender_2|텍스쳐 파일을 올립니다|
+|EXE_CostumeCustomMakeWnd::OnRender_3|텍스쳐 파일 원본을 받아서|
+|EXE_CostumeCustomMakeWnd::OnRender_4|수정합니다|
+|EXE_CostumeCustomMakeWnd::OnRender_5|텍스쳐 파일을 확대해서|
+|EXE_CostumeCustomMakeWnd::OnRender_6|자세히 확인합니다|
+|EXE_CostumeCustomMakeWnd::EndFileUpload_1|장비스킨 업로드에 실패했습니다#잠시 후 다시 시도해주세요|
+|EXE_CostumeCustomMakeWnd::EndFileUpload_2|장비스킨 업로드가 중단 되었습니다|
+|EXE_CostumeCustomMakeWnd::EndFileUpload_3|장비스킨을 적용할 대상을 찾지 못했습니다|
+|EXE_CostumeCustomMake3DViewWnd::OnRender_1|이동|
+|EXE_CostumeCustomMake3DViewWnd::OnRender_2|회전|
+|EXE_CostumeCustomMake3DViewWnd::OnRender_3|확대|
+|EXE_CostumeCustomMake3DViewWnd::OnRender_4|원본|
+|EXE_CostumeCustomMake3DViewWnd::OnRender_5|변경|
+|EXE_CostumeCustomMakeDetailViewWnd::CreateCharacter_1|%s (남성)|
+|EXE_CostumeCustomMakeDetailViewWnd::CreateCharacter_2|%s (여성)|
+|EXE_CostumeCustomMakeDetailViewWnd::OnRender_1|스킨 파일 자세히보기 : |
+|EXE_CostumeCustomMakeDetailViewWnd::OnRender_2|이동|
+|EXE_CostumeCustomMakeDetailViewWnd::OnRender_3|회전|
+|EXE_CostumeCustomMakeDetailViewWnd::OnRender_4|확대|
+|EXE_CostumeCustomMakeConfirmWnd::OnRender_1|장비의 스킨을 변경하면|
+|EXE_CostumeCustomMakeConfirmWnd::OnRender_2|앞으로 거래소에서|
+|EXE_CostumeCustomMakeConfirmWnd::OnRender_3|거래가 불가능|
+|EXE_CostumeCustomMakeConfirmWnd::OnRender_4|합니다.|
+|EXE_CostumeCustomMakeCompleteWnd::OnRender_1|남성|
+|EXE_CostumeCustomMakeCompleteWnd::OnRender_2|여성|
+|EXE_CostumeCustomMakeCompleteWnd::OnRender_3|스킨 변경이 완료되었습니다|
+|EXE_CostumeCustomMakeCompleteWnd::OnRender_4|변경한 스킨은 다른 스킨으로|
+|EXE_CostumeCustomMakeCompleteWnd::OnRender_5|덮어쓰거나 삭제할 수 있습니다|
+|EXE_CostumeCustomChangeConfirmWnd::OnRender_1|남성|
+|EXE_CostumeCustomChangeConfirmWnd::OnRender_2|여성|
+|EXE_CostumeCustomChangeConfirmWnd::OnRender_3|스킨을 변경하시겠습니까?|
+|EXE_CostumeCustomChangeConfirmWnd::OnRender_4|＊부적절한 이미지를 사용한 경우|
+|EXE_CostumeCustomChangeConfirmWnd::OnRender_5|사전 통보없이 관리자에 의해|
+|EXE_CostumeCustomChangeConfirmWnd::OnRender_6|제재 및 변경 될 수 있습니다|
+|EXE_CostumeCustomDeleteWnd::SetSlotIndex_1|존재하지 않는 코스튬입니다|
+|EXE_CostumeCustomDeleteWnd::SetSlotIndex_2|스킨이 적용되지 않은 코스튬입니다|
+|EXE_CostumeCustomDeleteWnd::iwm_command_1|[코스튬스킨삭제]를 입력하고 삭제를 누르세요|
+|EXE_CostumeCustomDeleteWnd::OnRender_1|코스스킨을|
+|EXE_CostumeCustomDeleteWnd::OnRender_2|삭제하시겠습니까?|
+|EXE_CostumeCustomDeleteWnd::OnRender_3|[코스튬스킨삭제]를 입력하세요|
+|EXE_CostumeCustomDeleteWnd::OnRender_4|코스튬스킨삭제 입력하세요|
+|EXE_CostumeCustomDeleteWnd::OnRender_5|*적용된 스킨이 삭제되면|
+|EXE_CostumeCustomDeleteWnd::OnRender_6|원본 스킨|
+|EXE_CostumeCustomDeleteWnd::OnRender_7|으로 돌아옵니다|
+|EXE_CostumeCustomDeleteWnd::OnRender_8|남성|
+|EXE_CostumeCustomDeleteWnd::OnRender_9|과|
+|EXE_CostumeCustomDeleteWnd::OnRender_10| 여성|
+|EXE_CostumeCustomDeleteWnd::OnRender_11| 스킨 모두 적용시|
+|EXE_CostumeCustomDeleteWnd::OnRender_12|따로 따로 삭제가 가능합니다|
+|EXE_CostumeCustomGlobalDetailViewWnd::CreateCharacter_1|%s (남성,여성)|
+|EXE_CostumeCustomGlobalDetailViewWnd::CreateCharacter_2|%s (남성)|
+|EXE_CostumeCustomGlobalDetailViewWnd::CreateCharacter_3|%s (여성)|
+|EXE_CostumeCustomGlobalDetailViewWnd::OnRender_1|스킨 파일 자세히보기 : |
+|EXE_CostumeCustomGlobalDetailViewWnd::OnRender_2|이동|
+|EXE_CostumeCustomGlobalDetailViewWnd::OnRender_3|회전|
+|EXE_CostumeCustomGlobalDetailViewWnd::OnRender_4|확대|
+|EXE_CostumeCustomThumbnailWnd::OnRender_1|남성|
+|EXE_CostumeCustomThumbnailWnd::OnRender_2|여성|
+|EXE_CustomTournamentCreateWnd::CreateCustomData_1|선택안함|
+|EXE_CustomTournamentCreateWnd::CreateCustomData_2|%d강(%d회전)|
+|EXE_CustomTournamentCreateWnd::CreateTournamentUserNumberList_1|%d인|
+|EXE_CustomTournamentCreateWnd::SetTournamentUserNumber_1|?명|
+|EXE_CustomTournamentCreateWnd::SetTournamentUserNumber_2|%d인|
+|EXE_CustomTournamentCreateWnd::CheckEnableTournament_1|대회 이름을 입력하세요|
+|EXE_CustomTournamentCreateWnd::CheckEnableTournament_2|잘못된 대회 이름입니다|
+|EXE_CustomTournamentCreateWnd::CheckEnableTournament_3|사용이 금지된 이름입니다(%s)|
+|EXE_CustomTournamentCreateWnd::CheckEnableTournament_4|사용이 금지된 이름입니다|
+|EXE_CustomTournamentCreateWnd::CheckEnableTournament_5|사용이 금지된 이름입니다(1)|
+|EXE_CustomTournamentCreateWnd::CheckEnableTournament_6|사용이 금지된 이름입니다(2)|
+|EXE_CustomTournamentCreateWnd::CheckEnableTournament_7|사용이 금지된 이름입니다(3)|
+|EXE_CustomTournamentCreateWnd::CheckEnableTournament_8|대회배너(대)를 선택해주세요|
+|EXE_CustomTournamentCreateWnd::CheckEnableTournament_9|대회배너(소)를 선택해주세요|
+|EXE_CustomTournamentCreateWnd::CheckEnableTournament_10|대회규모를 선택해주세요|
+|EXE_CustomTournamentCreateWnd::CheckEnableTournament_11|대회종류를 선택해주세요|
+|EXE_CustomTournamentCreateWnd::CheckEnableTournament_12|대회종류의 인원수를 선택해주세요|
+|EXE_CustomTournamentCreateWnd::CheckEnableTournament_13|대회성격을 선택해주세요|
+|EXE_CustomTournamentCreateWnd::CheckEnableTournament_14|대회일정을 선택해주세요|
+|EXE_CustomTournamentCreateWnd::CheckEnableTournament_15|대회 일정 선택이 완료되지 않았습니다. # 대회일정을 선택해주세요|
+|EXE_CustomTournamentCreateWnd::CheckEnableTournament_16|대회 일정이 현재 시각보다 # 이전 일정이 존재합니다.|
+|EXE_CustomTournamentCreateWnd::TournamentStartMessage_1|%s 대회 시작하시겠습니까?|
+|EXE_CustomTournamentCreateWnd::TournamentStartMessage_2|[대회 시작 : %d/%d/%d(%s) %d:%d]|
+|EXE_CustomTournamentCreateWnd::TournamentStartMessage_3|[대회 종료 : %d/%d/%d(%s) %d:%d]|
+|EXE_CustomTournamentCreateWnd::TournamentStartMessage_4|모집마감까지 %d분밖에 안남았습니다.|
+|EXE_CustomTournamentCreateWnd::iwm_command_1|배너(소) 불러오기 기능은 # 프리미엄 대회 생성권만 가능합니다. # (추후 판매 예정)|
+|EXE_CustomTournamentCreateWnd::iwm_command_2|배너(대) 불러오기 기능은 # 프리미엄 대회 생성권만 가능합니다. # (추후 판매 예정)|
+|EXE_CustomTournamentCreateWnd::iwm_command_3|대회종류를 먼저 선택해주세요|
+|EXE_CustomTournamentCreateWnd::iwm_command_4|대회 운영규칙에 동의하셔야 대회생성이 가능 합니다.# [대회 운영 규칙] 클릭하시면 내용확인이 가능합니다.|
+|EXE_CustomTournamentCreateWnd::OnBackLineRender_1|대회이름|
+|EXE_CustomTournamentCreateWnd::OnBackLineRender_2|대회배너(대)|
+|EXE_CustomTournamentCreateWnd::OnBackLineRender_3|대회배너(소)|
+|EXE_CustomTournamentCreateWnd::OnBackLineRender_4|대회규모|
+|EXE_CustomTournamentCreateWnd::OnBackLineRender_5|대회종류|
+|EXE_CustomTournamentCreateWnd::OnBackLineRender_6|대회성격|
+|EXE_CustomTournamentCreateWnd::OnRegulationRender_1|에 동의합니다.|
+|EXE_CustomTournamentViewWnd::OnExplainRender_1|대회규모|
+|EXE_CustomTournamentViewWnd::OnExplainRender_2|대회종류|
+|EXE_CustomTournamentViewWnd::OnExplainRender_3|%s %d인|
+|EXE_CustomTournamentViewWnd::OnExplainRender_4|모집마감|
+|EXE_CustomTournamentViewWnd::OnExplainRender_5|수동진행|
+|EXE_CustomTournamentViewWnd::OnExplainRender_6|선택안함|
+|EXE_CustomTournamentViewWnd::OnExtraExplainRender_1|포상설정, 공지작성, 대회참가권유|
+|EXE_CustomTournamentViewWnd::OnExtraExplainRender_2|는 대회를 만든 후 가능합니다.|
+|EXE_CustomTournamentViewWnd::OnScheduleRender_1|%s 대회 모집|
+|EXE_CustomTournamentViewWnd::OnScheduleRender_2|대진발표|
+|EXE_CustomTournamentViewWnd::OnScheduleRender_3|대회기간|
+|EXE_CustomTournamentViewWnd::OnScheduleRender_4|%s 대회(오프라인형)|
+|EXE_CustomTournamentViewWnd::OnScheduleRender_5|선택안함|
+|EXE_CustomTournamentScheduleWnd::SetTournamentSchedule_1|모집마감|
+|EXE_CustomTournamentScheduleWnd::SetTournamentSchedule_2|모집마감 날짜와 시간을 선택하세요|
+|EXE_CustomTournamentScheduleWnd::SetTournamentSchedule_3|모집마감일 까지만 참가를 받게 되니 기간을 충분히 확보하세요.|
+|EXE_CustomTournamentScheduleWnd::SetTournamentSchedule_4|모든 대회 일정들은 2주 내에만 지정할 수 있습니다.|
+|EXE_CustomTournamentScheduleWnd::SetTournamentSchedule_5|대진발표|
+|EXE_CustomTournamentScheduleWnd::SetTournamentSchedule_6|대진발표 날짜와 시간을 선택하세요|
+|EXE_CustomTournamentScheduleWnd::SetTournamentSchedule_7|모집마감일로 부터 대진발표일까지 주최자가 직접 대진 배정을|
+|EXE_CustomTournamentScheduleWnd::SetTournamentSchedule_8|할 수 있습니다.대진 배정을 놓치면 랜덤배정됩니다.|
+|EXE_CustomTournamentScheduleWnd::SetTournamentSchedule_9|결승|
+|EXE_CustomTournamentScheduleWnd::SetTournamentSchedule_10|결승 날짜와 시간을 선택하세요|
+|EXE_CustomTournamentScheduleWnd::SetTournamentSchedule_11|%d강|
+|EXE_CustomTournamentScheduleWnd::SetTournamentSchedule_12|%d강 날짜와 시간을 선택하세요|
+|EXE_CustomTournamentScheduleWnd::SetTournamentSchedule_13|경기 시간은 %s:00 ~ %s: 00만 가능합니다.|
+|EXE_CustomTournamentScheduleWnd::SetTournamentSchedule_14|경기 일정은 최소 %d분 정도의 간격을 두어야 합니다.|
+|EXE_CustomTournamentScheduleWnd::SetTournamentSchedule_15|대회종료|
+|EXE_CustomTournamentScheduleWnd::SetTournamentSchedule_16|대회종료 날짜와 시간을 선택하세요|
+|EXE_CustomTournamentScheduleWnd::SetTournamentSchedule_17|대회 종료일에 주최하신 대회가 삭제됩니다.|
+|EXE_CustomTournamentScheduleWnd::SetTournamentSchedule_18|대회 결과를 즐길 수 있는 기간을 충분히 확보하세요.|
+|EXE_CustomTournamentScheduleWnd::SetTournamentCalendar_1|경기 시간은 # %s:00 ~ %s:00만 가능합니다|
+|EXE_CustomTournamentScheduleWnd::SetTournamentCalendar_2|모든 대회일정들은 # 2주 내에만 지정할 수 있습니다.|
+|EXE_CustomTournamentScheduleWnd::SetTournamentCalendar_3| 최초 경기 일정은 # 대진 배정일로부터 최소 %d분 이후의 시간이어야 합니다.|
+|EXE_CustomTournamentScheduleWnd::SetTournamentCalendar_4| 대진배정일은 # 모집마감일로부터 최소 %d분 이후의 시간이어야 합니다.|
+|EXE_CustomTournamentScheduleWnd::SetTournamentCalendar_5|경기일정은 # 최소 %d분 이후의 시간이어야 합니다.|
+|EXE_CustomTournamentScheduleWnd::SetTournamentCalendar_6|잘못된 대회일정입니다.|
+|EXE_CustomTournamentScheduleWnd::SetResetMessage_1|대진배정과의 일정간격이 짧습니다. # 이후 일정들을 초기화 하시겠습니까?|
+|EXE_CustomTournamentScheduleWnd::SetResetMessage_2|대회종료와의 일정간격이 짧습니다. # 이후 일정을 초기화 하시겠습니까?|
+|EXE_CustomTournamentScheduleWnd::SetResetMessage_3|%d강과의 일정간격이 짧습니다. # 이후 일정들을 초기화 하시겠습니까?|
+|EXE_CustomTournamentScheduleWnd::SetResetMessage_4|일정들을 초기화 하시겠습니까?|
+|EXE_CustomTournamentScheduleWnd::iwm_command_1|모든 대회일정들은 # 2주 내에만 지정할 수 있습니다.|
+|EXE_CustomTournamentScheduleWnd::iwm_command_2|날짜와 시간을 선택 해주세요|
+|EXE_CustomTournamentScheduleWnd::OnScheduleRender_1|주최자 수동진행|
+|EXE_CustomTournamentScheduleWnd::OnScheduleRender_2|선택안함|
+|EXE_CustomTournamentCreateResultWnd::OnRender_1|%s 대회생성|
+|EXE_CustomTournamentCreateResultWnd::OnRender_2|대회팀 모집을 시작하였습니다.|
+|EXE_CustomTournamentCreateResultWnd::OnRender_3|포상설정, 공지작성, 대회참가권유 설정|
+|EXE_CustomTournamentCreateResultWnd::OnRender_4|을|
+|EXE_CustomTournamentCreateResultWnd::OnRender_5|대회정보창에서 할 수 있습니다.|
+|EXE_CustomTournamentNoticeWnd::iwm_command_1|공지사항에는 비속어나 욕설을 사용할 수 없습니다.|
+|EXE_CustomTournamentNoticeWnd::iwm_command_2|공지사항은 대회 주최자만 수정 할 수 있습니다.|
+|EXE_CustomTournamentNoticeWnd::SendNoticeData_1|'_'문자는 예약된 시스템 문자입니다. # 사용 하실 수 없습니다|
+|EXE_CustomTournamentNoticeWnd::SendNoticeData_2|공지사항 내용을 입력해주세요|
+|EXE_CustomTournamentAllocateWnd::SetCustomTournamentData_1|대회 배정정보를 불러올 수 없습니다.|
+|EXE_CustomTournamentAllocateWnd::SetAllocateMessage_1|직접 배정된 팀 : |
+|EXE_CustomTournamentAllocateWnd::SetAllocateMessage_2|자동 배정될 팀 : |
+|EXE_CustomTournamentAllocateWnd::SetAllocateMessage_3|총 |
+|EXE_CustomTournamentAllocateWnd::SetAllocateMessage_4|%d 팀이 대회에 출전|
+|EXE_CustomTournamentAllocateWnd::SetAllocateMessage_5|합니다.|
+|EXE_CustomTournamentAllocateWnd::SetAllocateMessage_6|대진 배정을 완료하시겠습니까?|
+|EXE_CustomTournamentAllocateWnd::SetAllocateMessage_7|배정되지 않은 팀 : |
+|EXE_CustomTournamentAllocateWnd::OnRender_1|배정|
+|EXE_CustomTournamentAllocateWnd::OnRender_2|제외|
+|EXE_CustomTournamentAllocateWnd::OnRender_3|왼쪽의 참가 신청팀을 오른쪽으로 드래그해서 대회에 출전시켜주세요.|
+|EXE_CustomTournamentAllocateWnd::OnRender_4|남은 팀 자동 배정|
+|EXE_UnAllocateButton::SetCustomTeamData_1|참가신청팀 없음|
+|EXE_AllocatedButton::SetCustomTeamData_1|%d번 대회팀|
+|EXE_AllocatedWnd::iwm_command_1|왼쪽의 참가 신청팀을#드래그해서 대회에 출전시켜주세요.|
+|EXE_CustomTournamentAllocateResultWnd::OnRender_1|대진배정이 완료 되었습니다.|
+|EXE_CustomTournamentAllocateResultWnd::OnRender_2|지금 바로 대진표가 공개됩니다.|
+|EXE_CustomTournamentAllocateResultWnd::OnRender_3|대진배정이 완료된 이후에는 대진배정 수정이|
+|EXE_CustomTournamentAllocateResultWnd::OnRender_4| 불가능합니다.|
+|EXE_CustomTournamentRewardSelectWnd::SetCustomTournamentData_1|대회 정보를 불러올 수 없습니다.|
+|EXE_CustomTournamentRewardSelectWnd::SetCustomTournamentData_2|%s 보상 추가|
+|EXE_CustomTournamentRewardSelectWnd::UpdateTournamentRewardPrice_1|%d 대회코인으로 구입|
+|EXE_CustomTournamentRewardSelectWnd::UpdateTournamentRewardPrice_2|구입하기|
+|EXE_CustomTournamentRewardSelectWnd::SendBuyRewardItem_1|선택 가능한 보상 최대 개수를 초과하였습니다.|
+|EXE_CustomTournamentRewardSelectWnd::iwm_command_1|총 %d 대회코인을 사용하여# 보상아이템을 구매 하시겠습니까?|
+|EXE_CustomTournamentRewardSelectWnd::iwm_command_2|포상아이템을 선택해주세요|
+|EXE_CustomTournamentRewardSelectWnd::iwm_command_3|선택 가능한 보상 최대 개수를 초과하였습니다.|
+|EXE_CustomTournamentRewardSelectWnd::OnRender_1|내 대회코인 : %d |
+|EXE_CustomTournamentRewardSelectWnd::OnPirceRender_1|(%s %d팀 × 팀 당 %d명) |
+|EXE_CustomTournamentRewardSelectWnd::OnPirceRender_2|× %d개 |
+|EXE_TournamentCoinItemNeedPopup::OnRender_1|[대회코인]이 부족합니다.|
+|EXE_TournamentCoinItemNeedPopup::OnRender_2|대회코인으로 보상을 구입할 수 있으며|
+|EXE_TournamentCoinItemNeedPopup::OnRender_3|상점 - 특별에서 구입하실 수 있습니다.|
+|EXE_TournamentAlarmCustomRewardWnd::OnCustomRewardResultRender_1|우승을 축하합니다.|
+|EXE_TournamentAlarmCustomRewardWnd::OnCustomRewardResultRender_2|준우승을 축하합니다.|
+|EXE_TournamentAlarmCustomRewardWnd::OnCustomRewardResultRender_3|%d강 달성을 축하합니다.|
+|EXE_TournamentAlarmCustomRewardWnd::OnCustomRewardResultRender_4|획득가능한 보상은 없습니다.|
+|EXE_TournamentAlarmCustomRewardWnd::OnCustomRewardResultRender_5|주최자님이 보상을 드립니다.|
+|EXE_TournamentAlarmCustomRewardWnd::OnCustomRewardResultRender_6|대회 성적에 따라 팀 소속의 각 개인당|
+|EXE_TournamentAlarmCustomRewardWnd::OnCustomRewardResultRender_7|획득가능한 보상입니다.|
+|EXE_TournamentDetailInnerCustomWnd::OnCustomRewardResultRender_1|우승을 축하합니다.|
+|EXE_TournamentDetailInnerCustomWnd::OnCustomRewardResultRender_2|준우승을 축하합니다.|
+|EXE_TournamentDetailInnerCustomWnd::OnCustomRewardResultRender_3|%d강 달성을 축하합니다.|
+|EXE_TournamentDetailInnerCustomWnd::OnCustomRewardResultRender_4|획득가능한 보상은 없습니다.|
+|EXE_TournamentDetailInnerCustomWnd::OnCustomRewardResultRender_5|주최자님이 보상을 드립니다.|
+|EXE_TournamentDetailInnerCustomWnd::OnCustomRewardResultRender_6|대회 참가시 대회성적에 따라 획득가능한 보상입니다.|
+|EXE_TournamentDetailInnerCustomWnd::OnCustomRewardResultRender_7|포상기간에 접속하시면 선물로 획득하실 수 있습니다.|
+|EXE_TournamentDetailInnerCustomWnd::OnCustomRewardNoneRender_1|대회에 참가 하지 않았습니다|
+|EXE_TournamentDetailInnerCustomWnd::OnCustomRewardNoneRender_2|획득 가능한 보상은 없습니다|
+|EXE_TournamentDetailInnerCustomWnd::OnCustomRewardNoneRender_3|대회 참가시 대회성적에 따라 획득가능한 보상입니다.|
+|EXE_TournamentDetailInnerCustomWnd::OnCustomRewardNoneRender_4|포상기간에 접속하시면 선물로 획득하실 수 있습니다.|
+|EXE_TournamentDetailInnerCustomWnd::OnCustomNoneRender_1|대회성적 보상|
+|EXE_TournamentDetailInnerCustomWnd::OnCustomNoneRender_2|대회 참가시 대회성적에 따라 획득가능한 보상입니다.|
+|EXE_TournamentDetailInnerCustomWnd::OnCustomNoneRender_3|포상기간에 접속하시면 선물로 획득하실 수 있습니다.|
+|EXE_TournamentDetailInnerAllocateWnd::OnAllocateNoneRender_1|지금은|
+|EXE_TournamentDetailInnerAllocateWnd::OnAllocateNoneRender_2|대진배정 기간이 아닙니다|
+|EXE_TournamentDetailInnerAllocateWnd::OnAllocateNoneRender_3|모집기간 동안 참가 신청한 팀들로 주최자가 대진표를 작성하는 기간입니다.|
+|EXE_TournamentDetailInnerAllocateWnd::OnAllocateNoneRender_4|주최자가 대진표를 작성하면 대회일정은 빨리 공개될 수도 있습니다.|
+|EXE_TournamentDetailInnerAllocateWnd::OAllocateRender_1|대진배정이|
+|EXE_TournamentDetailInnerAllocateWnd::OAllocateRender_2|진행되고 있습니다|
+|EXE_TournamentDetailInnerAllocateWnd::OAllocateRender_3|모집기간 동안 참가 신청한 팀들로 주최자가 대진표를 작성하는 기간입니다.|
+|EXE_TournamentDetailInnerAllocateWnd::OAllocateRender_4|주최자가 대진표를 작성하면 대회일정은 빨리 공개될 수도 있습니다.|
+|EXE_TournamentDetailInnerAllocateWnd::OAllocateDone_1|총 %d개 팀이|
+|EXE_TournamentDetailInnerAllocateWnd::OAllocateDone_2|대회일정에 배치 되었습니다|
+|EXE_TournamentDetailInnerAllocateWnd::OAllocateDone_3|모집기간 동안 참가 신청한 팀들로 주최자가 대진표를 작성하는 기간입니다.|
+|EXE_TournamentDetailInnerAllocateWnd::OAllocateDone_4|주최자가 대진표를 작성하면 대회일정은 빨리 공개될 수도 있습니다.|
+|EXE_DisconnectWnd::OnRender_17|셧다운제에 의해 게임 이용이 차단됩니다.|
+|EXE_EtcItemSlotWnd::iwm_command_1|쿨타임이 남아 있으면#아이템 교체를 할 수 없습니다.|
+|EXE_EtcItemSlotWnd::iwm_dropitem_1|쿨타임이 남아 있으면#아이템 교체를 할 수 없습니다.|
+|EXE_EtcItemSlotWnd::OnRender_1|드래그로 원하는 슬롯에 배치가 가능합니다.|
+|EXE_EtcItemSlotWnd::OnRender_2|슬롯 배치 중인 아이템|
+|EXE_EtcItemSlotWnd::OnRender_3|내가 보유 중인 아이템|
+|EXE_ExpandMedalSlotWnd::CheckEnableSlot_7|메달슬롯 오픈은 광장/훈련소/개인본부에서만 가능합니다.|
+|EXE_ExPCRoomSoldierBonusWnd::InsertSelectInfo_1|플레이 중인 용병을#다른 용병으로 교체 해주세요|
+|EXE_ExPCRoomSoldierBonusWnd::iwm_command_5|플레이 중인 용병은#해제 할 수 없습니다.|
+|EXE_ExPCRoomSoldierBonusWnd::GetGradeType_1|프리미엄|
+|EXE_ExPCRoomSoldierBonusWnd::GetGradeType_2|레어|
+|EXE_ExPCRoomSoldierBonusWnd::GetGradeType_3|유니크|
+|EXE_ExPCRoomSoldierBonusWnd::GetGradeType_4|일반|
+|EXE_ExtraItemFuncWnd::GetMaterialList_1|%d개|
+|EXE_ExtraItemFuncWnd::GetMaterialList_2|페소|
+|EXE_ExtraItemFuncWnd::SelectClickAction_1|이미 강화수치가 최대입니다.|
+|EXE_보상배율에_1|연승|
+|EXE_보상배율에_2|연승격파|
+|EXE_보상배율에_3|레벨업|
+|EXE_보상배율에_4|명성제한|
+|EXE_보상배율에_5|용병 보유|
+|EXE_보상배율에_6|아이템|
+|EXE_보상배율에_7|길드|
+|EXE_보상배율에_8|친구|
+|EXE_보상배율에_9|PC방|
+|EXE_보상배율에_10|모드|
+|EXE_보상배율에_11|이벤트|
+|EXE_FightClubRoundEndWnd::OnRenderCheerResult_1|내가 응원한 유저가 승리하면 페소 보너스를 받을 수 있습니다|
+|EXE_FightClubRoundEndWnd::OnRenderCheerResult_2|내가 응원한 유저가 승리했습니다|
+|EXE_FightClubRoundEndWnd::OnRenderCheerResult_3|내가 응원한 유저가 패배했습니다|
+|EXE_FightClubFightNPCContinueWnd::OnRenderContinue_1|%d라운드에 다시 도전 하시겠습니까?|
+|EXE_FirstIDChangeWnd::FirstIDChangeWnd_3|닉네임을 입력하세요.|
+|EXE_FirstIDChangeWnd::FirstIDChangeWnd_4|사용할 수 없는 닉네임입니다.|
+|EXE_FishingBaitListWnd::OnRender_2|%s ∞개|
+|EXE_FishingInventoryWnd::SetUpFishingGround_8|길드 본부 에서는 사용 할 수 없습니다.|
+|EXE_FishingInventoryWnd::UpdateBait_5|%s ∞개|
+|EXE_SettingKeyItemWnd::SetHelpText_99|소모품1|
+|EXE_SettingKeyItemWnd::SetHelpText_100|소모품2|
+|EXE_SettingKeyItemWnd::SetHelpText_101|소모품3|
+|EXE_SettingKeyItemWnd::SetHelpText_102|소모품4|
+|EXE_SettingKeyItemWnd::SetHelpText_103|펫|
+|EXE_GameOptionMovieScreenShotTab::iwm_command_3|수련장에서는 스크린샷 모드를 사용할 수 없습니다.|
+|EXE_GameOptionVolumeTab::OnRender_3|볼륨 설정|
+|EXE_GameOptionVolumeTab::OnRender_4|음성채팅 설정|
+|EXE_GameOptionSpecTab::iwm_command_3|배경화면 설정은 광장과 본부에서#가능합니다.|
+|EXE_BackgroundChangeBtn::OnRender_5|광장으로 퇴장|
+|EXE_BackgroundChangeBtn::OnRender_6|본부로 퇴장|
+|EXE_JoinRequestProgressWnd::OnRender_4|개인본부|
+|EXE_JoinRequestProgressWnd::OnRender_5|훈련소|
+|EXE_GlobalChatWnd::CheckRoomTitle_6|전투|
+|EXE_GlobalChatWnd::CheckRoomTitle_7|개인본부|
+|EXE_CalendarWnd::InitCalendarButton_1|%d년 %d월|
+|EXE_CalendarWnd::iwm_command_1|날짜와 시간을 선택 해주세요|
+|EXE_CalendarWnd::iwm_command_2|올바른 시간을 입력 해주세요|
+|EXE_CalendarWnd::iwm_command_3|올바른 분을 입력 해주세요|
+|EXE_GradeAdjustmentWnd::Reinforce_1|아이템 슬롯 에러|
+|EXE_GradeAdjustmentWnd::Reinforce_2|해당 슬롯을 찾을 수 없습니다.|
+|EXE_GrowthAllDownDoneWnd::ShowGrowthAllDownDone_1|육성 복구|
+|EXE_GrowthAllDownDoneWnd::ShowGrowthAllDownDone_2|★ 육성포인트와 페소가 복구되었습니다.|
+|EXE_GrowthAllDownDoneWnd::ShowGrowthAllDownDone_3|★ 육성포인트 |
+|EXE_GrowthAllDownDoneWnd::ShowGrowthAllDownDone_4|%s 복구|
+|EXE_GrowthAllDownDoneWnd::ShowGrowthAllDownDone_5|★ 페소 |
+|EXE_GrowthAllDownDoneWnd::ShowGrowthAllDownDone_6|복구되었습니다|
+|EXE_GrowthAllDownSelectWnd::UpdateData_1|육성포인트 |
+|EXE_GrowthAllDownSelectWnd::UpdateData_2|%s 복구|
+|EXE_GrowthAllDownSelectWnd::UpdateData_3|페소 |
+|EXE_GrowthAllDownSelectWnd::SendGrowthDown_1|용병이 선택되지 않았습니다.|
+|EXE_GrowthAllDownSelectWnd::SendGrowthDown_2|전투체험 설정이 되어있는 용병은#육성 복구가 불가능합니다.|
+|EXE_GrowthAllDownSelectWnd::SendGrowthDown_3|전투체험 용병으로는 불가능합니다.|
+|EXE_GrowthAllDownSelectWnd::SendGrowthDown_4|육성이 없는 용병입니다.|
+|EXE_GrowthAllDownSelectWnd::SendGrowthDown_5|선택하신 용병이 시간육성중이라 복구가 불가능합니다.|
+|EXE_GrowthAllDownSelectWnd::SendGrowthDown_6|시간육성을 취소 또는 완료후 다시 시도하여 주십시오.|
+|EXE_GrowthAllDownSelectWnd::CheckSelectBtn_1|용병이 선택되지 않았습니다.|
+|EXE_GrowthAllDownSelectWnd::CheckSelectBtn_2|전투체험 설정이 되어있는 용병은#육성 복구가 불가능합니다.|
+|EXE_GrowthAllDownSelectWnd::CheckSelectBtn_3|전투체험 용병으로는 불가능합니다.|
+|EXE_GrowthAllDownSelectWnd::CheckSelectBtn_4|육성이 없는 용병입니다.|
+|EXE_GrowthAllDownSelectWnd::CheckSelectBtn_5|선택하신 용병이 시간육성중이라 복구가 불가능합니다.|
+|EXE_GrowthAllDownSelectWnd::CheckSelectBtn_6|시간육성을 취소 또는 완료후 다시 시도하여 주십시오.|
+|EXE_GrowthAllDownSelectWnd::CheckSelectBtn_7|육성복구 아이템을|
+|EXE_GrowthAllDownSelectWnd::CheckSelectBtn_8|정말 사용하시겠습니까?|
+|EXE_GrowthAllDownSelectWnd::CheckSelectBtn_9|육성복구|
+|EXE_GrowthAllDownSelectWnd::CheckSelectBtn_10|사용|
+|EXE_GrowthAllDownSelectWnd::CheckSelectBtn_11|취소|
+|EXE_GuildHomeAdminListBtn::iwm_command_1|길드장 및 부길드장은#편집권한을 해제 할 수 없습니다.|
+|EXE_GuildHQEtcItemNeedPopup::iwm_show_1|길드 본부 생성권 필요|
+|EXE_GuildHQEtcItemNeedPopup::iwm_show_2|길드 본부 생성권 사용|
+|EXE_GuildHQEtcItemNeedPopup::OnRender_1|[길드본부 생성권]이 필요합니다.|
+|EXE_GuildHQEtcItemNeedPopup::OnRender_2|길드 마스터|
+|EXE_GuildHQEtcItemNeedPopup::OnRender_3|만 구매 가능한 아이템입니다.|
+|EXE_GuildHQEtcItemNeedPopup::OnRender_4|상점 - 특별에서 구입하실 수 있습니다.|
+|EXE_GuildHQEtcItemNeedPopup::OnRender_5|보유 중인 [길드본부 생성권]으로 활성화시킵니다.|
+|EXE_GuildHQEtcItemNeedPopup::OnRender_6|진영구분없이 친구들과 함께 할 수 있습니다.|
+|EXE_GuildHQEtcItemNeedPopup::OnRender_7|길드원들과 함께 멋진 아지트를 만들어보세요.|
+|EXE_GuildPossibleRewardListWnd::SetTitleByType_1|어제 길드 출석 인원|
+|EXE_GuildPossibleRewardListWnd::SetTitleByType_2|에 따라|
+|EXE_GuildPossibleRewardListWnd::SetTitleByType_3|보상 1개를 랜덤으로 주는 아이템이 지급됩니다.|
+|EXE_GuildPossibleRewardListWnd::SetTitleByType_4|대회 시즌 후 달성한 길드 등급 |
+|EXE_GuildAttendUserBtn::OnRender_1|어제/|
+|EXE_GuildAttendUserBtn::OnRender_2|오늘|
+|EXE_GuildAttendRewardWnd::SettingRewardInfo_1|길드 |
+|EXE_GuildAttendRewardWnd::SettingRewardInfo_2|%d명|
+|EXE_GuildAttendRewardWnd::SettingRewardInfo_3|출석!!|
+|EXE_GuildAttendRewardWnd::SettingRewardInfo_4|%s 획득!!!|
+|EXE_GuildRankRewardWnd::SettingRewardInfo_1|%s등급|
+|EXE_GuildRankRewardWnd::SettingRewardInfo_2|길드 |
+|EXE_GuildRankRewardWnd::SettingRewardInfo_3|달성!!|
+|EXE_GuildRankRewardWnd::SettingRewardInfo_4|%s 획득!!!|
+|EXE_GuildEventPopup::OnRender_17|편집권한이 부여 되었습니다.|
+|EXE_GuildEventPopup::OnRender_18|길드 본부 편집권한|
+|EXE_GuildEventPopup::OnRender_19|편집권한이 해제 되었습니다.|
+|EXE_GuildInfoWnd::iwm_command_7|출석 정보 갱신 완료 # 출석 버튼을 다시 눌러주시기 바랍니다.|
+|EXE_GuildInfoWnd::iwm_command_8|길드 출석은 가입 후#다음날(새벽 5시)부터 가능합니다.|
+|EXE_GuildInfoWnd::iwm_command_9|이미 출석 하셨습니다.|
+|EXE_GuildInfoWnd::iwm_command_10|출석 보상 받기는 가입 후 다음날#(새벽 5시)부터 가능합니다.|
+|EXE_GuildInfoWnd::iwm_command_11|어제 출석한 인원이 없습니다.|
+|EXE_GuildInfoWnd::iwm_command_12|이미 보상 받으셨습니다.|
+|EXE_GuildInfoWnd::iwm_command_13|전투 중에는 입장이 불가능합니다.|
+|EXE_GuildInfoWnd::iwm_command_14|진영팀 중에는 입장이 불가능합니다|
+|EXE_GuildInfoWnd::iwm_command_15|오늘의 모드 중에는 입장이 불가능합니다|
+|EXE_GuildInfoWnd::iwm_command_16|랭킹전 중에는 입장이 불가능합니다|
+|EXE_GuildInfoWnd::iwm_command_17|길드장만이 활성화 할 수 있는 기능입니다.|
+|EXE_GuildInfoWnd::iwm_command_18|가입된 길드가 없습니다.|
+|EXE_GuildInfoWnd::OnRender_21|현재인원|
+|EXE_GuildInfoWnd::OnRender_22|최대인원|
+|EXE_GuildInfoWnd::OnRender_23|%d 명 (초과)|
+|EXE_GuildInfoWnd::OnRender_24|%d 명|
+|EXE_GuildMainWnd::UpdateTitle_4|%s 길드|
+|EXE_GuildMainWnd::UpdateTitle_5|길드원 %d/%d|
+|EXE_GuildMainWnd::UpdateTitle_6|출석 정보 %d/%d|
+|EXE_GuildInvitedWnd::OnRender_7|%s 길드|
+|EXE_GuildInvitedWnd::OnRender_8|의 길드가입 권유 도착|
+|EXE_GuildEtcItemPopup::OnRender_13|진영구분없이 친구들과 함께할 수 있습니다.|
+|EXE_GuildEtcItemPopup::OnRender_14|길드원들과 함께 최고의 길드를 만들어보세요.|
+|EXE_MenuBtn::OnRender_21|미션|
+|EXE_MenuBtn::OnRenderTooltipSecretShopOpen_1|마감임박|
+|EXE_MenuBtn::OnRenderTooltipEvent_1|이벤트 상품|
+|EXE_MenuBtn::OnRenderTooltipEvent_2|%d개|
+|EXE_MenuBtn::OnRenderTooltipSoliderGrowth_1|육성중 용병|
+|EXE_MenuBtn::OnRenderTooltipSoliderGrowth_2|%d / %d명|
+|EXE_MenuBtn::OnRenderTooltipTimePresent_1|안받은 상품|
+|EXE_MenuBtn::OnRenderTooltipTimePresent_2|%d개|
+|EXE_MenuBtn::OnRenderTooltipTimeRollBook_1|안받은 상품|
+|EXE_MenuBtn::OnRenderTooltipTimeRollBook_2|1개|
+|EXE_MessengerBtn::OnRender_6|클로버/쪽지 |
+|EXE_MessengerBtn::OnRender_7|%d/%d개|
+|EXE_HelpWnd::iwm_command_3|튜토리얼을 완료하면#광장으로 이동이 가능합니다.|
+|EXE_HelpWnd::iwm_command_4|사용 가능한 용병을 구입하시면 #방 정보 이용이 가능합니다.|
+|EXE_HelpWnd::iwm_command_5|튜토리얼을 완료하면#출석부 이용이 가능합니다.|
+|EXE_HelpWnd::iwm_command_6|출석부는 정회원 전환 시 확인할 수 있습니다.|
+|EXE_HelpWnd::iwm_command_7|로비로 이동시 확인 가능합니다.|
+|EXE_HelpWnd::MessengerProcess_2|사용 가능한 용병을 구입하시면 #메신저 이용이 가능합니다.|
+|EXE_HeroMatchWnd::OnRenderHeroTitleByPlaza_1|페소 + %d％|
+|EXE_HeroMatchWnd::OnRenderSeasonRecordByPlaza_1|승|
+|EXE_HeroMatchWnd::OnRenderSeasonRecordByPlaza_2|패|
+|EXE_HeroMatchTop100Btn::OnRender_5|%d점|
+|EXE_HeroReinforceDownWnd::iwm_command_3|출전중인 용병은#진화할 수 없습니다.|
+|EXE_HeroReinforceDoneWnd::iwm_command_3|출전중인 용병은#진화할 수 없습니다.|
+|EXE_HomeEtcItemNeedPopup::OnRender_1|[개인본부 임대권]이 필요합니다.|
+|EXE_HomeEtcItemNeedPopup::OnRender_2|소지 하고 있는 동안|
+|EXE_HomeEtcItemNeedPopup::OnRender_3|개인본부를 소유 할 수 있도록 하는 아이템입니다.|
+|EXE_HomeEtcItemNeedPopup::OnRender_4|상점 - 특별에서 구입하실 수 있습니다.|
+|EXE_HouseInfoWnd::SetInfo_1|개인본부 주인이#입장 하지 않았습니다|
+|EXE_HouseInfoWnd::SetInfo_2|개인본부 %d/%d|
+|EXE_HouseInfoWnd::JoinHouseRoom_1|튜토리얼을 완료하면#입장이 가능합니다.|
+|EXE_HouseInfoWnd::JoinHouseRoom_2|용병이 있어야 개인본부 참가가 가능합니다.|
+|EXE_HouseInfoWnd::JoinHouseRoom_3|체험용병이 아닌 일반용병이#있어야 개인본부 참가가 가능합니다.|
+|EXE_HouseInfoWnd::JoinHouseRoom_4|전투 중에는 개인본부 입장이 불가능합니다.|
+|EXE_HouseInfoWnd::JoinHouseRoom_5|진영/래더 중에는 개인본부 입장이 불가능합니다.|
+|EXE_HouseInfoWnd::JoinHouseRoom_6|현재 개인본부입니다.|
+|EXE_HouseInfoWnd::OnRender_1|개인본부 맵|
+|EXE_HouseJoinRequestWnd::SetRequestName_1|띵똥. . %d|
+|EXE_HouseJoinRequestWnd::OnProcess_1|띵똥. . %d|
+|EXE_HouseJoinRequestWnd::OnRender_1|님이 방문하고자 합니다|
+|EXE_HouseMainOptionWnd::CommandOption_1|강제퇴장은 방장만 시킬 수 있습니다.|
+|EXE_HouseMainOptionWnd::CommandOption_2|자신을 강제퇴장 시킬 수 없습니다.|
+|EXE_HouseMainOptionWnd::CommandOption_3|개발자나 마스터를 강제퇴장 시킬 수 없습니다.|
+|EXE_HouseMainOptionWnd::CommandOption_4|%s님을 강제퇴장 #시키겠습니까?|
+|EXE_HouseMainOptionWnd::CommandOption_5|슬롯은 방장만 열거나 닫을 수 있습니다.|
+|EXE_HouseMainOptionWnd::SetOptionInfo_1|슬롯 열기|
+|EXE_HouseMainOptionWnd::SetOptionInfo_2|슬롯 닫기|
+|EXE_HouseMainOptionWnd::SetOptionInfo_3|유저정보|
+|EXE_HouseMainOptionWnd::SetOptionInfo_4|%s 정보|
+|EXE_HouseMainOptionWnd::SetOptionInfo_5|강제퇴장 시키기|
+|EXE_HouseMainOptionWnd::SetOptionInfo_6|슬롯열기|
+|EXE_HouseMainWnd::iwm_command_1|개인본부 주인만 초대가 가능합니다.|
+|EXE_HouseMainWnd::UpdateInfo_1|개인본부 %d/%d|
+|EXE_HouseMainWnd::OnRender_1|개인본부 맵|
+|EXE_HouseMainWnd::OnRenderBar_1|빈자리|
+|EXE_HouseMainWnd::OnRenderBar_2|닫힘|
+|EXE_HouseOwnerWnd::OnRender_1|열어놓음|
+|EXE_HouseOwnerWnd::OnRender_2|(아무나 방문 가능하게 열어놓습니다)|
+|EXE_HouseOwnerWnd::OnRender_3|잠금|
+|EXE_HouseOwnerWnd::OnRender_4|(주인의 초대를 제외하곤 아무도 들어오지 못합니다)|
+|EXE_HouseInviteList::iwm_command_1|개발자나 마스터는 초대할 수 없습니다.|
+|EXE_HouseInviteList::iwm_command_2|개인본부 정원을 초과하였습니다.|
+|EXE_HouseInviteListWnd::NameInvite_1|개인본부 정원을 초과하였습니다.|
+|EXE_HouseInviteListWnd::NameInvite_2|잘못된 닉네임입니다.|
+|EXE_HouseInviteListWnd::NameInvite_3|자신의 닉네임입니다.|
+|EXE_HouseInviteListWnd::NameInvite_4|개발자는 초대할 수 없습니다.|
+|EXE_HouseInviteListWnd::AllInvite_1|개인본부 정원을 초과하였습니다.|
+|EXE_HouseInviteListWnd::AllInvite_2|초대 가능한 유저가 없습니다.|
+|EXE_HouseInviteListWnd::OnRender_1|초대가능한 인원이 없습니다|
+|EXE_HouseInvitedWnd::SetInfo_1|개인본부 %d/%d|
+|EXE_HouseInvitedWnd::JoinHouse_1|튜토리얼을 완료하면#입장이 가능합니다.|
+|EXE_HouseInvitedWnd::JoinHouse_2|용병이 있어야#개인본부 참가가 가능합니다.|
+|EXE_HouseInvitedWnd::JoinHouse_3|체험용병이 아닌 일반용병이 있어야#개인본부 참가가 가능합니다.|
+|EXE_HouseInvitedWnd::JoinHouse_4|전투 중에는 개인본부 입장이 불가능합니다.|
+|EXE_HouseInvitedWnd::JoinHouse_5|진영/래더 중에는#개인본부 입장이 불가능합니다.|
+|EXE_HouseInvitedWnd::iwm_show_1|초대수락 . . %d|
+|EXE_HouseInvitedWnd::OnRender_1|개인 본부 맵|
+|EXE_HouseInvitedWnd::OnProcess_1|초대수락 . . %d|
+|EXE_InventorySelectItemBtn::SetBlank_1|없음|
+|EXE_InventorySelectItemWnd::ShowInventorySelectItemWnd_1|선택하기|
+|EXE_InventorySelectItemWnd::ShowInventorySelectItemWnd_2|%s(%d개)|
+|EXE_InventorySelectItemWnd::SetRadioBtn_1|전체|
+|EXE_ioAccessoryReleseWnd::OnRender_1|%s 의|
+|EXE_ioAccessoryReleseWnd::OnRender_2|기간만료로 해제되었습니다|
+|EXE_ioAwakeReleaseWnd::OnRender_1|%s의|
+|EXE_ioAwakeReleaseWnd::OnRender_2|%s이|
+|EXE_ioAwakeReleaseWnd::OnRender_3|기간만료로 해제되었습니다.|
+|EXE_ioAwakeReleaseWnd::iwm_show_1|%s 해제|
+|EXE_ioBingoRewardWnd::OnRender_1|빙고 및  모두빙고 보상은|
+|EXE_ioBingoRewardWnd::OnRender_2| 위 보상목록중 랜덤으로 배치|
+|EXE_ioBingoRewardWnd::OnRender_3|됩니다.|
+|EXE_ioBingoRewardWnd::OnRender_4|일부 아이템들은 어떤 아이템인지 모르게|
+|EXE_ioBingoRewardWnd::OnRender_5| 가려서 배치되기도|
+|EXE_ioBingoRewardWnd::OnRender_6| 합니다.|
+|EXE_ioCostumeListWnd::OnRender_1|★무기 장비는 해당 무기의 |
+|EXE_ioCostumeListWnd::OnRender_2|고유용병|
+|EXE_ioCostumeListWnd::OnRender_3|만이 착용 가능합니다.|
+|EXE_ioCostumeRandomBox::OnRender_1|장비를 획득했습니다|
+|EXE_ioCostumeRandomBox::OnRender_2|아이템을 선택중입니다.|
+|EXE_ioCostumeRandomBox::OnRender_3|잠시만 기다려주세요.|
+|EXE_ioCostumeRandomBox::OnRender_4|영구사용|
+|EXE_ioCostumeRandomBox::OnRender_5|%d일|
+|EXE_ioCostumeRandomBox::OnRender_6|%d시간|
+|EXE_ioCostumeReleaseWnd::OnRender_1|%s의|
+|EXE_ioCostumeReleaseWnd::OnRender_2|기간만료로 해제되었습니다|
+|EXE_ioExitMsgBox::SetMsgInfo_5|광장으로 이동하시겠습니까?|
+|EXE_ioExitMsgBox::SetMsgInfo_6|즉시나가기(벌금)|
+|EXE_ioExitMsgBox::SetMsgInfo_7|즉시나가기|
+|EXE_ioExitMsgBox::OnRender_10|도전포기|
+|EXE_ioExitMsgBox::OnRender_11|를 하면 |
+|EXE_ioExitMsgBox::OnRender_12|보상획득|
+|EXE_ioExitMsgBox::OnRender_13|이 가능합니다.|
+|EXE_ioExitMsgBox::OnRender_14|광장으로 나가시겠습니까?|
+|EXE_ioBattleRoomExitMsgBox::iwm_command_1|유저모드는 빠른시작이 불가능합니다|
+|EXE_ioBattleRoomExitMsgBox::iwm_command_2|진영전 중에는 빠른전투를 할 수 없습니다.|
+|EXE_ioBattleRoomExitMsgBox::iwm_command_3|조건에 맞는 전투방을 검색중 . . .|
+|EXE_ioBattleRoomExitMsgBox::ExitLogByRegularTournament_1|[대회로그] 대회방 나가기(전투방 나가기 버튼) - %s|
+|EXE_ioBattleRoomExitMsgBox::OnRender_1|나가기|
+|EXE_ioBattleRoomExitMsgBox::OnRender_2|지금 나가면 도중이탈벌금|
+|EXE_ioBattleRoomExitMsgBox::OnRender_3|%d페소|
+|EXE_ioBattleRoomExitMsgBox::OnRender_4|가 징수됩니다.|
+|EXE_ioBattleRoomExitMsgBox::OnRender_5|나가기 . . %d|
+|EXE_ioBattleRoomExitMsgBox::OnRender_6|지금 나가면 페널티가 적용되지 않습니다.|
+|EXE_ioBattleRoomExitMsgBox::OnRender_7|도전포기|
+|EXE_ioBattleRoomExitMsgBox::OnRender_8|를 하면 |
+|EXE_ioBattleRoomExitMsgBox::OnRender_9|보상획득|
+|EXE_ioBattleRoomExitMsgBox::OnRender_10|이 가능합니다.|
+|EXE_ioBattleRoomExitMsgBox::OnRender_11|이 방을 나가시겠습니까?|
+|EXE_ioBattleRoomExitPopup::SetPopupType_1|즉시나가기(벌금)|
+|EXE_ioBattleRoomExitPopup::SetPopupType_2|즉시나가기|
+|EXE_ioBattleRoomExitPopup::ExitLogByRegularTournament_1|[대회로그] 대회방 나가기(나가기 예약) - %s|
+|EXE_ioBattleRoomExitPopup::ExitLogByRegularTournament_2|[대회로그] 대회방 나가기(나가기 취소) - %s|
+|EXE_ioBattleRoomExitPopup::ExitLogByRegularTournament_3|[대회로그] 대회방 나가기(항복) - %s|
+|EXE_ioBattleRoomExitPopup::ExitLogByRegularTournament_4|[대회로그] 대회방 나가기(빠른 나가기) - %s|
+|EXE_ioBattleRoomExitPopup::ExitLogByRegularTournament_5|[대회로그] 대회방 나가기(알수 없는 나가기) - %s|
+|EXE_ioBattleRoomExitPopup::OnRender_1|알림|
+|EXE_ioBattleRoomExitPopup::OnRender_2|지금 나가면 도중이탈벌금|
+|EXE_ioBattleRoomExitPopup::OnRender_3|%d페소|
+|EXE_ioBattleRoomExitPopup::OnRender_4|가 징수됩니다.|
+|EXE_ioBattleRoomExitPopup::OnRender_5|도전포기|
+|EXE_ioBattleRoomExitPopup::OnRender_6|를 하면 |
+|EXE_ioBattleRoomExitPopup::OnRender_7|보상획득|
+|EXE_ioBattleRoomExitPopup::OnRender_8|이 가능합니다.|
+|EXE_ioHousingBlockInvenItemButton::OnRender_1| %s개|
+|EXE_ioHousingBlockInvenWnd::iwm_show_1|길드본부 꾸미기|
+|EXE_ioHousingBlockInvenWnd::iwm_show_2|개인본부 꾸미기|
+|EXE_ioHousingBlockInvenWnd::iwm_command_1|갯수가 0개인 아이템은 # 사용 할 수 없습니다.|
+|EXE_ioHousingBlockInvenToolTip::RenderDesc_1|%s개|
+|EXE_ioHousingBlockSetupWnd::iwm_command_1|여기에는 설치 할 수 없습니다.|
+|EXE_ioHousingBlockSetupWnd::iwm_command_2|선택된 블럭이 없습니다.|
+|EXE_ioHousingBlockSetupWnd::OnBlockDescRender_1|넓이%d × 깊이%d × 높이%d|
+|EXE_ioHousingBlockSetupWnd::OnBlockDescRender_2|%d개|
+|EXE_ioHousingBlockSetupWnd::OnRemoveDescRender_1| 마법진으로 아이템 선택 후|
+|EXE_ioHousingBlockSetupWnd::OnRemoveDescRender_2| D키 입력|
+|EXE_ioSP2GUIManager::ShowReserveMsgBox_40|룸에 입장할 수 없습니다.|
+|EXE_ioSP2GUIManager::ShowReserveMsgBox_41|룸에서 핑이 좋지않아 #광장으로 소환되었습니다.|
+|EXE_ioSP2GUIManager::ShowReserveMsgBox_42|레이드 티켓이 부족하여 방에서 이탈되었습니다.#(이탈 페널티는 적용되지 않았습니다.)|
+|EXE_ioSP2GUIManager::ShowReserveMsgBox_43|실력이 너무 뛰어나 유저보호를 위해 전투방에서#이탈되셨습니다.|
+|EXE_ioSP2GUIManager::ShowReserveMsgBox_44|참여 가능한 전투방이 없습니다.|
+|EXE_ioSP2GUIManager::ShowReserveMsgBox_45|존재하지 않는 전투방입니다.|
+|EXE_ioSP2GUIManager::ShowReserveMsgBox_46|인원이 초과 되었습니다.|
+|EXE_ioSP2GUIManager::ShowReserveMsgBox_47|비밀번호가 정확하지 않습니다|
+|EXE_ioSP2GUIManager::ShowReserveMsgBox_48|예외 오류가 발생되었습니다.|
+|EXE_ioSP2GUIManager::ShowReserveMsgBox_49|플레이가 많이 진행되어서#참가할 수 없습니다.|
+|EXE_ioSP2GUIManager::ShowReserveMsgBox_50|도중참가 불가로 설정되어 #참가할 수 없습니다.|
+|EXE_ioSP2GUIManager::ShowReserveMsgBox_51|데스매치 - 초보 모드에 참가할 수 없습니다.|
+|EXE_ioSP2GUIManager::ShowReserveMsgBox_52|맵 최대 인원이 초과 되었습니다.|
+|EXE_ioSP2GUIManager::ShowReserveMsgBox_53|계급 제한에 걸려 입장 할 수 없습니다|
+|EXE_ioSP2GUIManager::ShowReserveMsgBox_54|도전자를 받지 않습니다.|
+|EXE_ioSP2GUIManager::ShowReserveMsgBox_55|개인본부에서 강제퇴장#되었습니다.|
+|EXE_ioSP2GUIManager::ShowReserveMsgBox_56|주인이 개인본부에서 퇴장하여#개인본부에서 이탈되었습니다.|
+|EXE_SuccessionBattleWnd::iwm_create_1|실력이 비슷한 유저와 매칭이 되어 다른 유저에게|
+|EXE_SuccessionBattleWnd::iwm_create_2|방해 받지 않고 1vs1로 대전을 할 수 있는 모드|
+|EXE_SuccessionBattleWnd::iwm_create_3|입니다. 연승을 할 수록 보상이 커지며, 진 경우엔|
+|EXE_SuccessionBattleWnd::iwm_create_4|같은 상대에게 재 대결을 신청 할 수 있습니다.|
+|EXE_SuccessionBattleWnd::iwm_show_1|매칭취소|
+|EXE_SuccessionBattleWnd::iwm_command_1|매칭취소|
+|EXE_SuccessionBattleWnd::iwm_command_2|취소중..|
+|EXE_SuccessionBattleWnd::OnProcess_1|취소중..%d|
+|EXE_SuccessionBattleWnd::OnRender_1|연승을 세워보세요|
+|EXE_SuccessionBattleWnd::OnRender_2|최대연승 달성중|
+|EXE_SuccessionBattleWnd::OnRender_3|연승진행중|
+|EXE_SuccessionBattleWnd::OnRender_4|최대연승|
+|EXE_SuccessionBattleWnd::OnRender_5|현재|
+|EXE_SuccessionBattleWnd::OnRender_6|연승중|
+|EXE_SuccessionBattleWnd::MatchingFail_1|매칭취소|
+|EXE_SuccessionBattleRequestWnd::iwm_create_1|연승에 실패 하였습니다!|
+|EXE_SuccessionBattleRequestWnd::iwm_create_2|같은 상대에게 대결을 신청하시겠습니까?|
+|EXE_SuccessionBattleRequestWnd::iwm_create_3|(복수는 1회만 가능합니다)|
+|EXE_SuccessionBattleRequestWnd::OnProcess_1|재대결 신청하기(SPACE)...%d|
+|EXE_SuccessionBattleReplyWnd::iwm_create_1|같은 상대에게 재대결 신청이 들어왔습니다!|
+|EXE_SuccessionBattleReplyWnd::iwm_create_2|수락하시겠습니까?|
+|EXE_SuccessionBattleReplyWnd::iwm_create_3|(복수는 1회만 가능하며,거절시에 패널티는 없습니다)|
+|EXE_SuccessionBattleReplyWnd::OnProcess_1|수락하기(SPACE)...%d|
+|EXE_SuccessionMatchVersusSceneWnd::OnRenderBlueChar_1|최대연승 %d|
+|EXE_SuccessionMatchVersusSceneWnd::OnRenderBlueChar_2|(현재연승 %d)|
+|EXE_SuccessionMatchVersusSceneWnd::OnRenderRedChar_1|최대연승 %d|
+|EXE_SuccessionMatchVersusSceneWnd::OnRenderRedChar_2|(현재연승 %d)|
+|EXE_ItemLuckyCoinWnd::GetItemList_1|%d개|
+|EXE_ItemCustomSelectWnd::OnItemCustomInfoPush_2|착용 중인 장비는 스킨 을 할 수 없습니다.|
+|EXE_ItemCustomMakeWnd::SetExtraItemInfo_9|착용 중인 장비는 스킨이 불가능합니다.|
+|EXE_ItemMaterialCompoundResultWnd::RenderFailExp_3|실패 경험치 %.2f％|
+|EXE_ItemMaterialCompoundWnd::GetMaterialList_1|%d개|
+|EXE_ItemMaterialCompoundWnd::GetMaterialList_2|페소|
+|EXE_UniqueItemMultipleCompoundResultWnd::OnRender_1|장비합성을 성공했습니다|
+|EXE_UniqueItemMultipleCompoundResultWnd::OnRender_2|합성중입니다. 잠시만 기다려주세요.|
+|EXE_UniqueItemMultipleCompoundResultWnd::OnRender_3|영구사용|
+|EXE_ItemNewMultipleCompoundWnd::LoadMedalItemList_1|Lv%d 제한|
+|EXE_ItemNewMultipleCompoundWnd::LoadCostumeItemList_1|%s 전용|
+|EXE_ItemNewMultipleCompoundWnd::LoadCostumeItemList_2|장착제한없음|
+|EXE_ItemNewMultipleCompoundWnd::LoadExtraItemList_3|영구장비|
+|EXE_ItemNewMultipleCompoundWnd::SendMedalItemCompound_1|재료에 사용될 장비가 선택되지 않았습니다.|
+|EXE_ItemNewMultipleCompoundWnd::SendCostumeItemCompound_1|재료에 사용될 장비가 선택되지 않았습니다.|
+|EXE_ItemNewMultipleCompoundWnd::SendExtraItemCompound_1|재료에 사용될 장비가 선택되지 않았습니다.|
+|EXE_ItemIconButton::RenderOtherInfo_1|장착중|
+|EXE_ItemInfoButton::RenderDesc_1|없음|
+|EXE_ItemInfoButton::SetExtraItemInfo_1|Lv%d %s 제한|
+|EXE_ItemInfoButton::SetExtraItemInfo_2|Lv%d 제한|
+|EXE_ItemRechargeWnd::iwm_command_1|영구장비는 기간연장을 할 수 없습니다.|
+|EXE_ItemRechargeWnd::iwm_command_2|장비충전중 예외상황이 발생했습니다.|
+|EXE_ItemRechargeWnd::ProcessCustomBtnTooltip_1|%s - 남성|
+|EXE_ItemRechargeWnd::ProcessCustomBtnTooltip_2|%s - 여성|
+|EXE_ItemRechargeWnd::ProcessCustomBtnTooltip_3|이 착용중입니다.|
+|EXE_ItemRechargeWnd::ProcessCustomBtnTooltip_4|무기장비는 |
+|EXE_ItemRechargeWnd::ProcessCustomBtnTooltip_5|갑옷장비는 |
+|EXE_ItemRechargeWnd::ProcessCustomBtnTooltip_6|투구장비는 |
+|EXE_ItemRechargeWnd::ProcessCustomBtnTooltip_7|망토장비는 |
+|EXE_ItemRechargeWnd::ProcessCustomBtnTooltip_8|%d일 %d시간 연장시 |
+|EXE_ItemRechargeWnd::ProcessCustomBtnTooltip_9|%d일 연장시 |
+|EXE_ItemRechargeWnd::ProcessCustomBtnTooltip_10|%d시간 연장시 |
+|EXE_ItemRechargeWnd::ProcessCustomBtnTooltip_11|영구장비로 변경됩니다.|
+|EXE_ItemRechargeWnd::ProcessCustomBtnTooltip_12|▶ 남은 기간 : |
+|EXE_ItemRechargeWnd::ProcessCustomBtnTooltip_13|%d일 %d시간 %d분|
+|EXE_ItemRechargeProcessWnd::iwm_command_1|%s가 없습니다.|
+|EXE_ItemRechargeProcessWnd::iwm_command_2|장비충전중 예외상황이 발생했습니다.|
+|EXE_ItemRechargeProcessWnd::OnRender_1|장비연장 아이템을 이용하여|
+|EXE_ItemRechargeProcessWnd::OnRender_2|기간을 연장 하시겠습니까?|
+|EXE_ItemRechargeProcessWnd::OnRender_3|장비의 기간을 연장 중입니다.|
+|EXE_ItemRechargeProcessWnd::OnRender_4|잠시만 기다려주세요.|
+|EXE_ItemRechargeProcessWnd::OnRender_5|영구장비 달성|
+|EXE_ItemRechargeProcessWnd::OnRender_6|축하합니다!|
+|EXE_ItemRechargeProcessWnd::OnRender_7|영구장비로 변환되었습니다|
+|EXE_ItemRechargeProcessWnd::OnRender_8|기간연장을 완료했습니다.|
+|EXE_ItemRechargeProcessWnd::OnRender_9|총 잔여시간 |
+|EXE_ItemRechargeProcessWnd::SetUIProcessState_1|+ %d일 %d시간|
+|EXE_ItemRechargeProcessWnd::SetUIProcessState_2|+ %d일|
+|EXE_ItemRechargeProcessWnd::SetUIProcessState_3|+ %d시간|
+|EXE_ItemRechargeProcessWnd::SetUIEndState_1|%d일 %d시간|
+|EXE_ItemRechargeProcessWnd::SetUIEndState_2|%d일|
+|EXE_ItemRechargeProcessWnd::SetUIEndState_3|%d시간|
+|EXE_AccessoryInfoButton::RenderDesc_1|없음|
+|EXE_AccessoryRechargeProcessWnd::iwm_command_1|%s이 없습니다.|
+|EXE_AccessoryRechargeProcessWnd::iwm_command_2|액세서리 충전중 예외상황이 발생했습니다.|
+|EXE_AccessoryRechargeProcessWnd::OnRender_1|액세서리 연장 아이템을 이용하여|
+|EXE_AccessoryRechargeProcessWnd::OnRender_2|기간을 연장 하시겠습니까?|
+|EXE_AccessoryRechargeProcessWnd::OnRender_3|액세서리의 기간을 연장 중입니다.|
+|EXE_AccessoryRechargeProcessWnd::OnRender_4|잠시만 기다려주세요.|
+|EXE_AccessoryRechargeProcessWnd::OnRender_5|영구 액세서리 달성|
+|EXE_AccessoryRechargeProcessWnd::OnRender_6|축하합니다!|
+|EXE_AccessoryRechargeProcessWnd::OnRender_7|영구액세서리로 변환되었습니다|
+|EXE_AccessoryRechargeProcessWnd::OnRender_8|기간연장을 완료했습니다.|
+|EXE_AccessoryRechargeProcessWnd::OnRender_9|총 잔여시간 |
+|EXE_AccessoryRechargeProcessWnd::SetUIProcessState_1|+ %d일 %d시간|
+|EXE_AccessoryRechargeProcessWnd::SetUIProcessState_2|+ %d일|
+|EXE_AccessoryRechargeProcessWnd::SetUIProcessState_3|+ %d시간|
+|EXE_AccessoryRechargeProcessWnd::SetUIEndState_1|%d일 %d시간|
+|EXE_AccessoryRechargeProcessWnd::SetUIEndState_2|%d일|
+|EXE_AccessoryRechargeProcessWnd::SetUIEndState_3|%d시간|
+|EXE_AccessoryRechargeWnd::iwm_command_1|영구액세서리는 기간연장을 할 수 없습니다.|
+|EXE_AccessoryRechargeWnd::iwm_command_2|액세서리 충전중 예외상황이 발생했습니다.|
+|EXE_AccessoryRechargeWnd::ProcessCustomBtnTooltip_1|%s - 남성|
+|EXE_AccessoryRechargeWnd::ProcessCustomBtnTooltip_2|%s - 여성|
+|EXE_AccessoryRechargeWnd::ProcessCustomBtnTooltip_3|이 착용중입니다.|
+|EXE_ItemReinforceDownWnd::iwm_command_7|아이템 슬롯 에러|
+|EXE_ItemReinforceDownWnd::iwm_command_8|해당 슬롯을 찾을 수 없습니다.|
+|EXE_ItemReinforceDoneWnd::iwm_command_3|아이템 슬롯 에러|
+|EXE_ItemReinforceDoneWnd::iwm_command_4|해당 슬롯을 찾을 수 없습니다.|
+|EXE_ItemResellWnd::iwm_show_1|팔기|
+|EXE_ItemResellWnd::iwm_show_2|분해|
+|EXE_ItemResellWnd::iwm_command_4|영구장비분해를 입력하세요|
+|EXE_ItemResellWnd::iwm_command_5|영구장비분해|
+|EXE_ItemResellWnd::iwm_command_6|영구메달팔기를 입력하세요|
+|EXE_ItemResellWnd::iwm_command_7|영구메달팔기|
+|EXE_ItemResellWnd::iwm_command_8|영구코스튬팔기를 입력하세요|
+|EXE_ItemResellWnd::iwm_command_9|영구코스튬팔기|
+|EXE_ItemResellWnd::iwm_command_10|액세서리팔기를 입력하세요|
+|EXE_ItemResellWnd::iwm_command_11|액세서리팔기|
+|EXE_ItemResellWnd::OnRender_4|영구장비분해|
+|EXE_ItemResellWnd::OnRender_5|] 입력후 분해를 누르세요|
+|EXE_ItemResellWnd::OnRender_6|영구장비분해를 입력하세요|
+|EXE_ItemResellWnd::OnRender_7|영구메달팔기|
+|EXE_ItemResellWnd::OnRender_8|] 입력후 팔기를 누르세요|
+|EXE_ItemResellWnd::OnRender_9|영구메달팔기를 입력하세요|
+|EXE_ItemResellWnd::OnRender_10|영구코스튬팔기|
+|EXE_ItemResellWnd::OnRender_11|영구코스튬팔기를 입력하세요|
+|EXE_ItemResellWnd::OnRender_12|액세서리팔기|
+|EXE_ItemResellWnd::OnRender_13|액세서리팔기를 입력하세요|
+|EXE_KickVoteResultHelp_53|강퇴 가능 시간이 지나갔습니다.|
+|EXE_LadderTeamCreateBtn::OnRender_1|%s 팀 만들기|
+|EXE_LadderTeamInfoWnd::SetInfo_5|%s %d/%d(비밀팀)|
+|EXE_MyLadderTeamInfoWnd::iwm_show_5|%s %d/%d(비밀팀)|
+|EXE_LobbyBtn::OnRender_15|수련장|
+|EXE_LobbyBtn::OnRender_16|수련모드|
+|EXE_LobbyBtn::OnRender_17|휴식중|
+|EXE_LobbyBtn::OnRender_18|모집중|
+|EXE_LobbyBtn::OnRender_19|응원중|
+|EXE_LobbyBtn::OnRender_20|대회중|
+|EXE_LobbyBtn::OnRender_21|대회|
+|EXE_LobbyBtn::OnRender_22|토너먼트|
+|EXE_LobbyWnd::OnCreateHeadquarters_3|오늘의 모드 중에는 입장이 불가능합니다|
+|EXE_LobbyWnd::OnCreateHeadquarters_4|랭킹전 중에는 입장이 불가능합니다|
+|EXE_LobbyWnd::OnCreateGuildHeadquarters_1|전투 중에는 입장이 불가능합니다.|
+|EXE_LobbyWnd::OnCreateGuildHeadquarters_2|진영/래더 중에는 입장이 불가능합니다|
+|EXE_LobbyWnd::OnCreateGuildHeadquarters_3|오늘의 모드 중에는 입장이 불가능합니다|
+|EXE_LobbyWnd::OnCreateGuildHeadquarters_4|랭킹전 중에는 입장이 불가능합니다|
+|EXE_LobbyWnd::OnCreateHouse_1|전투 중에는 입장이 불가능합니다|
+|EXE_LobbyWnd::OnCreateHouse_2|래더 중에는 입장이 불가능합니다|
+|EXE_LobbyWnd::OnCreateHouse_3|오늘의 모드 중에는 입장이 불가능합니다|
+|EXE_LobbyWnd::OnCreateHouse_4|랭킹전 중에는 입장이 불가능합니다|
+|EXE_LobbyWnd::iwm_command_1|길드장만이 활성화 할 수 있는 기능입니다.|
+|EXE_LobbyWnd::iwm_command_2|가입된 길드가 없습니다.|
+|EXE_LobbyWnd::OnRender_6|%s : %s개|
+|EXE_LobbyWnd::OnRender_7|클로버 : %s개|
+|EXE_LobbyWnd::RenderGradeExp_2| %d위|
+|EXE_MannerTrialWnd::OnRender_11|신고대상자:%s:|
+|EXE_MannerTrialWnd::OnRender_12|신고접수자:%s:|
+|EXE_MannerTrialWnd::OnRender_13|욕설,불법프로그램 사용자 등 비매너 행위에 대해 신고가 가능합니다.|
+|EXE_MannerTrialWnd::OnRender_14|신고 시 |
+|EXE_MannerTrialWnd::OnRender_15|신고대상자의 모든 데이터가 저장되고, 게임 데이터 검토가 진행 되어|
+|EXE_MannerTrialWnd::OnRender_16|운영정책에 의거 제재 조치 |
+|EXE_MannerTrialWnd::OnRender_17|됩니다. |
+|EXE_MannerTrialWnd::OnRender_18|만약, 허위 신고 또는 신고 악용일 경우 최대|
+|EXE_MannerTrialWnd::OnRender_19|제한 90일 제재 조치|
+|EXE_MannerTrialWnd::OnRender_20|를 받을 수 있으니 신중히 신고해 주시기 바랍니다.|
+|EXE_MannerTrialWnd::OnRender_21|신고 이유를 간략히 적어 주세요. (예: 불법프로그램 사용자 신고)|
+|EXE_MannerValuationExtensionWnd::OnKickVote_4|대회 경기방은 강퇴가 되지 않습니다.|
+|EXE_MannerValuationExtensionWnd::OnKickVote_5|랭킹전은 강퇴 기능이 적용되지 않습니다.|
+|EXE_MannerValuationExtensionWnd::OnKickVote_6|몬스터 출현으로 강퇴 기능이#일시적으로 중단됩니다.|
+|EXE_MannerValuationExtensionWnd::OnKickVote_7|강퇴 가능 시간이 초과하였습니다.|
+|EXE_MannerValuationExtensionWnd::iwm_command_2|해당 유저는 개인본부가# 활성화 되지 않았습니다.|
+|EXE_MannerValuationExtensionWnd::OnRenderGradeInfo_4|%s (%s점)|
+|EXE_MannerValuationExtensionWnd::OnRenderSuccession_1|1vs1모드|
+|EXE_MannerValuationExtensionWnd::OnRenderSuccession_2|최대연승|
+|EXE_MannerValuationExtensionWnd::OnRenderSuccession_3|(현재연승 %d)|
+|EXE_MannerValuationExtensionWnd::OnRenderSuccession_4|(현재연승 0)|
+|EXE_MannerValuationSlotTooltip::OnRenderTooltip_3|장착코스튬|
+|EXE_MannerValuationSlotTooltip::OnRenderTooltip_4|장착액세서리|
+|EXE_MessengerWnd::OnRender_1|나의|
+|EXE_MessengerWnd::OnRender_2|선물용|
+|EXE_MissionQuestMainWnd::ChangeTitle_1|미션|
+|EXE_MissionQuestMainWnd::ChangeTitle_2|퀘스트|
+|EXE_MainMissionWnd::UpdateRadioBtn_1|일일미션(%d)|
+|EXE_MainMissionWnd::UpdateRadioBtn_2|주간미션(%d)|
+|EXE_MainMissionWnd::UpdateRadioBtn_3|월간미션(%d)|
+|EXE_MissionInfoBtn::iwm_command_1|미션 진행중 입니다.|
+|EXE_MissionInfoBtn::OnRender_1|내용없음|
+|EXE_MissionInfoBtn::OnRender_2|미션 대기중|
+|EXE_LobbyMissionInfoBtn::OnRender_1|내용없음|
+|EXE_LobbyMissionInfoBtn::OnRender_2|미션 대기중|
+|EXE_MissionToolTip::SetInfo_1|보상 : %s|
+|EXE_MissionToolTip::SetInfo_2|보상 : %s [메달] %s|
+|EXE_MissionToolTip::SetInfo_3|보상 : %s %s|
+|EXE_MonsterCoinUseWnd::OnRender_21|몬스터 코인이 없으면 몬스터던전을|
+|EXE_MonsterCoinUseWnd::OnRender_22|레이드 티켓이 %d개 필요합니다.|
+|EXE_MonsterCoinUseWnd::OnRender_23|레이드 티켓이 없으면 레이드를|
+|EXE_MonsterCoinUseWnd::OnRender_24|플레이할 수 없습니다. 레이드 티켓은|
+|EXE_MonsterCoinUseWnd::OnRender_25|매일 5시에 충전됩니다.|
+|EXE_MultiSuperGashaponWnd::CheckRollingEnd_1|구매에 실패 하였습니다.# 잠시후 다시 시도해주세요|
+|EXE_MultiSuperGashaponWnd::OnExtraItemRender_1|봉인가능|
+|EXE_MultiSuperGashaponWnd::OnExtraItemRender_2|봉인|
+|EXE_MultiSuperGashaponWnd::OnMentBuyRender_1|구매가 완료되었습니다|
+|EXE_MultiSuperGashaponWnd::OnMentBuyRender_2|선물함|
+|EXE_MultiSuperGashaponWnd::OnMentBuyRender_3|에서 확인하세요|
+|EXE_MultiSuperGashaponWnd::OnMentBuyRender_4|본상품은 청약철회 제외 상품입니다|
+|EXE_MultiSuperGashaponToastPopupWnd::iwm_show_1|추가 획득 아이템의 총갯수 %d개|
+|EXE_MyInventoryInfoWnd::SetSubscriptionItemInfo_2|★구매날짜: %s|
+|EXE_MyInventoryInfoWnd::SetSubscriptionItemInfo_3|★구매골드: %s|
+|EXE_MyInventoryInfoWnd::SetSubscriptionItemInfo_4|★구매보너스골드: %s|
+|EXE_MyInventoryInfoWnd::ShowSubscriptionRetrCheckLimit_1|본 상품은 구매한지|
+|EXE_MyInventoryInfoWnd::ShowSubscriptionRetrCheckLimit_2|7일이 경과|
+|EXE_MyInventoryInfoWnd::ShowSubscriptionRetrCheckLimit_3|하여 |
+|EXE_MyInventoryInfoWnd::ShowSubscriptionRetrCheckLimit_4|청약철회가|
+|EXE_MyInventoryInfoWnd::ShowSubscriptionRetrCheckLimit_5|되지 않습니다.|
+|EXE_MyInventoryInfoWnd::ShowSubscriptionRetrCheck_1|청약철회 하시겠습니까?|
+|EXE_MyInventoryInfoWnd::ShowSubscriptionRetrCheck_2|보너스 골드 등과 같은 경우엔 정책에 따라|
+|EXE_MyInventoryInfoWnd::ShowSubscriptionRetrCheck_3|환불 금액에 포함되지 않을 수도 있습니다.|
+|EXE_MyInventoryInfoWnd::RenderSoldierInfo_15|%s(%d분)|
+|EXE_MyInventoryInfoWnd::RenderSoldierInfo_16|%s(%d시간)|
+|EXE_MyInventoryInfoWnd::RenderSoldierInfo_17|%s(%d시간 %d분)|
+|EXE_MyInventoryInfoWnd::iwm_command_2|전투체험 용병으로는 불가능합니다.|
+|EXE_MyInventoryInfoWnd::iwm_command_3|출전중인 용병은#진화할 수 없습니다.|
+|EXE_MyInventoryInfoWnd::UISoldierSelectWndBtnUp_1|PC방 용병은 선택 할 수 없습니다.|
+|EXE_SoldierDismissalWnd::iwm_show_1|용병해고|
+|EXE_SoldierDismissalWnd::iwm_show_2|용병분해|
+|EXE_SoldierDismissalWnd::iwm_show_3|해고|
+|EXE_SoldierDismissalWnd::iwm_show_4|분해|
+|EXE_SoldierDismissalWnd::iwm_command_4|영구용병분해를 입력하세요|
+|EXE_SoldierDismissalWnd::iwm_command_5|영구용병분해|
+|EXE_SoldierDismissalWnd::OnRender_13|%s 분해|
+|EXE_SoldierDismissalWnd::OnRender_14|용병 분해시 해당 용병은 사라지지만|
+|EXE_SoldierDismissalWnd::OnRender_15|분해 : |
+|EXE_SoldierDismissalWnd::OnRender_16|%s %s개획득|
+|EXE_SoldierDismissalWnd::OnRender_17|소울스톤 획득|
+|EXE_SoldierDismissalWnd::OnRender_18|영구용병분해|
+|EXE_SoldierDismissalWnd::OnRender_19|] 입력후 분해를 누르세요|
+|EXE_SoldierDismissalWnd::OnRender_20|영구용병분해를 입력하세요|
+|EXE_SoldierDismissalWnd::CheckDisassemble_1|마지막 보유 용병은#분해할 수 없습니다.|
+|EXE_SoldierDismissalWnd::CheckDisassemble_2|튜토리얼 중에는 용병 분해가#불가능합니다.|
+|EXE_SoldierDismissalWnd::CheckDisassemble_3|출전중인 용병은#분해할 수 없습니다.|
+|EXE_SoldierDismissalWnd::CheckDisassemble_4|전투체험 설정이 되어있는 용병은#분해가 불가능합니다.|
+|EXE_SoldierDismissalWnd::CheckDisassemble_5|전투체험 용병으로는 불가능합니다.|
+|EXE_SoldierDismissalWnd::CheckDisassemble_6|고용시간이 남아있는 마지막 용병은#분해할 수 없습니다.|
+|EXE_SoldierDismissalWnd::CheckDisassemble_7|보유하고 있지 않은 용병입니다.|
+|EXE_SoldierDismissalWnd::CheckDisassemble_8|남은 시간이 적어 분해할 수 없습니다|
+|EXE_SoldierDismissalWnd::SendDisassemble_1|예외 오류가 발생하였습니다.|
+|EXE_ItemRecvSellInfoWnd::OnRender_4|분해가 완료되었습니다|
+|EXE_InventoryItemWnd::SetSubscriptionItemInfo_1|자세히보기|
+|EXE_InventoryItemWnd::SetSubscriptionItemInfo_2|[메달] %s|
+|EXE_InventoryItemWnd::SetSubscriptionItemInfo_3|구매한 아이템|
+|EXE_InventoryItemWnd::SetCostumeInfo_1|%s 전용|
+|EXE_InventoryItemWnd::SetCostumeInfo_2|장착제한없음|
+|EXE_InventorySoldierItemWnd::iwm_command_17|육성할 수 없는 모드입니다.|
+|EXE_InventorySoldierItemWnd::BeforeRenderDesc_11|%s(체험)|
+|EXE_InventorySoldierItemWnd::BeforeRenderDesc_12|%s(프리데이)|
+|EXE_InventorySoldierItemWnd::BeforeRenderDesc_13|%s(이벤트)|
+|EXE_InventorySoldierItemWnd::BeforeRenderDesc_14|%s(%d분)|
+|EXE_InventorySoldierItemWnd::BeforeRenderDesc_15|%s(%d시간)|
+|EXE_InventorySoldierItemWnd::BeforeRenderDesc_16|%s(%d시간 %d분)|
+|EXE_MyInventoryWnd::iwm_command_2|골드충전은 광장/훈련소/본부에서만 가능합니다.|
+|EXE_MyInventoryWnd::OnRenderAfterChild_5|%s : %s개|
+|EXE_MyInventoryWnd::OnRenderAfterChild_6|클로버 : %s개|
+|EXE_MyInventoryWnd::ProcessCustomBtnTooltipCostume_1|남성|
+|EXE_MyInventoryWnd::ProcessCustomBtnTooltipCostume_2|여성 |
+|EXE_MyInventoryWnd::ProcessCustomBtnTooltipCostume_3|남성 |
+|EXE_MyInventoryWnd::ProcessCustomBtnTooltipCostume_4|장비 스킨이 적용되어있습니다|
+|EXE_MyInventoryWnd::ProcessCustomBtnTooltipCostume_5|＊아이콘을 클릭해서 |
+|EXE_MyInventoryWnd::ProcessCustomBtnTooltipCostume_6|삭제|
+|EXE_MyInventoryWnd::ProcessCustomBtnTooltipCostume_7|할 수 있습니다|
+|EXE_MyInventoryWnd::ProcessCustomBtnTooltipCostumePresent_1|장비 스킨 - |
+|EXE_MyInventoryWnd::ProcessCustomBtnTooltipCostumePresent_2|남성|
+|EXE_MyInventoryWnd::ProcessCustomBtnTooltipCostumePresent_3|여성 |
+|EXE_MyInventoryWnd::ProcessCustomBtnTooltipCostumePresent_4|남성 |
+|EXE_MyInventoryWnd::ProcessCustomBtnTooltipCostumePresent_5|이 적용되어있습니다|
+|EXE_MyInventoryWnd::ProcessCustomBtnTooltipCostumePresent_6|＊아이콘을 |
+|EXE_MyInventoryWnd::ProcessCustomBtnTooltipCostumePresent_7|클릭하면 자세히|
+|EXE_MyInventoryWnd::ProcessCustomBtnTooltipCostumePresent_8| 볼 수 있습니다|
+|EXE_MyInventoryWnd::OnItemCustomInfoPush_3|장비스킨 삭제는 광장이나 본부에서만 가능합니다|
+|EXE_MyInventoryWnd::SetEquipExtraItem_21|수련장에서는 장비를 교체할 수 없습니다.|
+|EXE_MyInventoryWnd::SetEquipExtraItem_22|%s만 착용가능합니다.|
+|EXE_MyInventoryWnd::SetEquipCostume_1|코스튬 장착중 오류1|
+|EXE_MyInventoryWnd::SetEquipCostume_2|코스튬 장착중 오류2|
+|EXE_MyInventoryWnd::SetEquipCostume_3|전투체험 설정이 되어있는 용병은#장비 장착이 불가능합니다.|
+|EXE_MyInventoryWnd::SetEquipCostume_4|전투체험 용병으로는 불가능합니다.|
+|EXE_MyInventoryWnd::SetEquipCostume_5|코스튬 장착중 오류3|
+|EXE_MyInventoryWnd::SetEquipCostume_6|코스튬 장착중 오류4|
+|EXE_MyInventoryWnd::SetEquipCostume_7|코스튬 장착중 오류5|
+|EXE_MyInventoryWnd::SetEquipCostume_8|코스튬 장착중 오류6|
+|EXE_MyInventoryWnd::SetEquipCostume_9|선택한 장비는|
+|EXE_MyInventoryWnd::SetEquipCostume_10|%s만 착용가능합니다.|
+|EXE_MyInventoryWnd::SetEquipCostume_11|착용할 수 없습니다.|
+|EXE_MyInventoryWnd::SetEquipAccessory_1|액세서리 장착중 오류1|
+|EXE_MyInventoryWnd::SetEquipAccessory_2|액세서리 장착중 오류2|
+|EXE_MyInventoryWnd::SetEquipAccessory_3|전투체험 설정이 되어있는 용병은#장비 장착이 불가능합니다.|
+|EXE_MyInventoryWnd::SetEquipAccessory_4|전투체험 용병으로는 불가능합니다.|
+|EXE_MyInventoryWnd::SetEquipAccessory_5|액세서리 장착중 오류3|
+|EXE_MyInventoryWnd::SetEquipAccessory_6|액세서리 장착중 오류4|
+|EXE_MyInventoryWnd::SetEquipAccessory_7|액세서리 장착중 오류5|
+|EXE_MyInventoryWnd::SetEquipAccessory_8|액세서리 장착중 오류6|
+|EXE_MyInventoryWnd::SetEquipAccessory_9|선택한 장비는|
+|EXE_MyInventoryWnd::SetEquipAccessory_10|%s만 착용가능합니다.|
+|EXE_MyInventoryWnd::SetEquipAccessory_11|%s 남성만 착용가능합니다.|
+|EXE_MyInventoryWnd::SetEquipAccessory_12|%s 여성만 착용가능합니다.|
+|EXE_MyInventoryWnd::SetEquipAccessory_13|착용할 수 없습니다.|
+|EXE_MyInventoryWnd::SetEquipAccessory_14|남성만 착용가능합니다.|
+|EXE_MyInventoryWnd::SetEquipAccessory_15|여성만 착용가능합니다.|
+|EXE_MyInventoryWnd::SetReleaseCostume_1|코스튬 해제 오류1|
+|EXE_MyInventoryWnd::SetReleaseCostume_2|전투체험 설정이 되어있는 용병은#장비 해제가 불가능합니다.|
+|EXE_MyInventoryWnd::SetReleaseCostume_3|전투체험 용병으로는 불가능합니다.|
+|EXE_MyInventoryWnd::SetReleaseCostume_4|코스튬 해제 오류2|
+|EXE_MyInventoryWnd::SetReleaseCostume_5|코스튬 해제 오류3|
+|EXE_MyInventoryWnd::SetReleaseAccessory_1|액세서리 해제 오류1|
+|EXE_MyInventoryWnd::SetReleaseAccessory_2|전투체험 설정이 되어있는 용병은#장비 해제가 불가능합니다.|
+|EXE_MyInventoryWnd::SetReleaseAccessory_3|전투체험 용병으로는 불가능합니다.|
+|EXE_MyInventoryWnd::SetReleaseAccessory_4|액세서리 해제 오류2|
+|EXE_MyInventoryWnd::SetReleaseAccessory_5|액세서리 해제 오류3|
+|EXE_MyInventoryWnd::SetReSellMedalItem_1|예외 오류 발생1|
+|EXE_MyInventoryWnd::SetReSellMedalItem_2|예외 오류 발생2|
+|EXE_MyInventoryWnd::SetReSellMedalItem_3|예외 오류 발생3|
+|EXE_MyInventoryWnd::SetReSellMedalItem_4|예외 오류 발생5|
+|EXE_MyInventoryWnd::SetReSellMedalItem_5|위 메달을 판매합니다.|
+|EXE_MyInventoryWnd::SetReSellMedalItem_6|예상 환불금액 :|
+|EXE_MyInventoryWnd::SetReSellMedalItem_7|%s 페소|
+|EXE_MyInventoryWnd::SetReSellMedalItem_8|(다소 차이가 있을 수 있습니다)|
+|EXE_MyInventoryWnd::SetReSellMedalItem_9|메달팔기|
+|EXE_MyInventoryWnd::SetReSellCostume_1|코스튬 판매 오류 발생1|
+|EXE_MyInventoryWnd::SetReSellCostume_2|코스튬 판매 오류 발생2|
+|EXE_MyInventoryWnd::SetReSellCostume_3|코스튬 판매 오류 발생3|
+|EXE_MyInventoryWnd::SetReSellCostume_4|코스튬 판매 오류 발생4|
+|EXE_MyInventoryWnd::SetReSellCostume_5|위 코스튬을 판매합니다.|
+|EXE_MyInventoryWnd::SetReSellCostume_6|예상 환불금액 : |
+|EXE_MyInventoryWnd::SetReSellCostume_7|%s 페소|
+|EXE_MyInventoryWnd::SetReSellCostume_8|(다소 차이가 있을 수 있습니다)|
+|EXE_MyInventoryWnd::SetReSellCostume_9|코스튬팔기|
+|EXE_MyInventoryWnd::SetDisassembleExtraItem_1|예외 오류 발생1|
+|EXE_MyInventoryWnd::SetDisassembleExtraItem_2|예외 오류 발생2|
+|EXE_MyInventoryWnd::SetDisassembleExtraItem_3|예외 오류 발생3|
+|EXE_MyInventoryWnd::SetDisassembleExtraItem_4|예외 오류 발생4|
+|EXE_MyInventoryWnd::SetDisassembleExtraItem_5|기간제 장비는 분해할 수 없습니다.|
+|EXE_MyInventoryWnd::SetDisassembleExtraItem_6|위 장비를 분해합니다.|
+|EXE_MyInventoryWnd::SetDisassembleExtraItem_7|분해 : |
+|EXE_MyInventoryWnd::SetDisassembleExtraItem_8|%s 획득|
+|EXE_MyInventoryWnd::SetDisassembleExtraItem_9|장비분해|
+|EXE_MyInventoryWnd::CheckTimeEndMedalItem_1|기간만료로 판매할 수 없습니다.|
+|EXE_MyInventoryWnd::CheckTimeEndCostume_1|기간만료로 판매할 수 없습니다.|
+|EXE_SpiritItemWnd::OnRender_1|보유|
+|EXE_SpiritItemWnd::SetSpiritItemResell_1|%s개|
+|EXE_MyInventoryWnd::ShowNamedTitlePremiumSelectWnd_1|변경할 칭호가 없습니다.|
+|EXE_MyInventoryWnd::SetReSellAccessory_1|액세서리 판매 오류 발생1|
+|EXE_MyInventoryWnd::SetReSellAccessory_2|액세서리 판매 오류 발생2|
+|EXE_MyInventoryWnd::SetReSellAccessory_3|액세서리 판매 오류 발생3|
+|EXE_MyInventoryWnd::SetReSellAccessory_4|액세서리 판매 오류 발생4|
+|EXE_MyInventoryWnd::SetReSellAccessory_5|위 액세서리를 판매합니다.|
+|EXE_MyInventoryWnd::SetReSellAccessory_6|예상 환불금액 : |
+|EXE_MyInventoryWnd::SetReSellAccessory_7|%s 페소|
+|EXE_MyInventoryWnd::SetReSellAccessory_8|(다소 차이가 있을 수 있습니다)|
+|EXE_MyInventoryWnd::SetReSellAccessory_9|액세서리 팔기|
+|EXE_MyInventoryWnd::SetReSellDeco_1|치장 판매 오류 발생1|
+|EXE_MyInventoryWnd::SetReSellDeco_2|치장 판매 오류 발생2|
+|EXE_MyInventoryWnd::SetReSellDeco_3|치장 판매 오류 발생3|
+|EXE_MyInventoryWnd::SetReSellDeco_4|치장 판매 오류 발생4|
+|EXE_MyInventoryWnd::SetReSellDeco_5|치장 판매 오류 발생5|
+|EXE_MyInventoryWnd::SetReSellDeco_6|영구사용|
+|EXE_MyInventoryWnd::SetReSellDeco_7|위 치장을 판매합니다.|
+|EXE_MyInventoryWnd::SetReSellDeco_8|예상 환불금액 : |
+|EXE_MyInventoryWnd::SetReSellDeco_9|%s 페소|
+|EXE_MyInventoryWnd::SetReSellDeco_10|(다소 차이가 있을 수 있습니다)|
+|EXE_MyInventoryWnd::SetReSellDeco_11|치장 팔기|
+|EXE_MyInventoryWnd::CheckTimeEndAccessory_1|기간만료로 판매할 수 없습니다.|
+|EXE_ItemSelectInfoWnd::RenderDesc_1|없음|
+|EXE_ItemSelectInfoWnd::OnRenderAfterChild_1|보유중|
+|EXE_NamedTitlePremiumSelectWnd::iwm_show_1|칭호를 선택하세요|
+|EXE_NamedTitlePremiumSelectWnd::CheckRecvBtn_1|칭호가 선택되지 않았습니다.|
+|EXE_NamedTitlePremiumSelectWnd::CheckRecvBtn_2|프리미엄 칭호 변경권을|
+|EXE_NamedTitlePremiumSelectWnd::CheckRecvBtn_3|정말 사용하시겠습니까?|
+|EXE_NamedTitlePremiumSelectWnd::CheckRecvBtn_4|프리미엄칭호|
+|EXE_NamedTitlePremiumSelectWnd::CheckRecvBtn_5|확인|
+|EXE_NamedTitlePremiumSelectWnd::CheckRecvBtn_6|취소|
+|EXE_NamedTitleResultWnd::ShowResult_1|칭호:|
+|EXE_NamedTitleResultWnd::ShowResult_2|★ 해당 상품은 |
+|EXE_NamedTitleResultWnd::ShowResult_3|내정보창|
+|EXE_NamedTitleResultWnd::ShowResult_4|에 칭호 버튼을|
+|EXE_NamedTitleResultWnd::ShowResult_5|클릭하시면 확인하실 수 있습니다.|
+|EXE_NamedTitleResultWnd::ShowResult_6|적용되었습니다.|
+|EXE_NamedTitlePremiumResultWnd::ShowResult_1|프리미엄 칭호 변경|
+|EXE_NamedTitlePremiumResultWnd::ShowResult_2|칭호가 프리미엄으로 변경되었습니다.|
+|EXE_NamedTitleSelectWnd::ShowSelectWnd_1|칭호가 없습니다.|
+|EXE_NamedTitleSelectWnd::ShowSelectWnd_2|칭호가 없습니다|
+|EXE_NamedTitleSelectWnd::ShowSelectWnd_3|검색결과를 찾을 수 없습니다|
+|EXE_NewShopBuyWnd::OnRender_7|[보관함]-[임시보관함]에서 받아주세요|
+|EXE_NewShopBuyWnd::CheckSoldierBuy_11|골드충전으로 %d시간을 초과할 수 없습니다.|
+|EXE_NewShopBuyWnd::CheckSoldierBuy_12|[용병슬롯확장]이 필요합니다.|
+|EXE_NewShopBuyWnd::CheckSoldierBuy_13|용병 슬롯을 확장하기 위해 구입해주세요.|
+|EXE_NewShopBuyWnd::CheckSoldierBuy_14|상점 - 특별에서 구입하실 수 있습니다.|
+|EXE_COMPARE_23|길드에 가입된 상태에서만#구입이 가능한 아이템 입니다.|
+|EXE_COMPARE_24|길드장만 구입 할 수 있는 아이템 입니다.|
+|EXE_NewShopBuyWnd::CheckCostumeBuy_1|%s 계급이 되어야 구매가 가능합니다.|
+|EXE_NewShopBuyWnd::CheckCostumeBuy_2|선물함이 꽉 찼습니다.#선물함을 비워주시고 사용해 주세요.|
+|EXE_NewShopBuyWnd::ShowBuyConfirmMsg_15|보너스 골드 : %d 골드 사용|
+|EXE_NewShopBuyWnd::ShowBuyConfirmMsg_16|보너스 골드 사용시 청약철회에서 제외|
+|EXE_NewShopBuyWnd::SetEquipChangeSexTypeTitle_3|여성코스튬보기|
+|EXE_NewShopBuyWnd::SetEquipChangeSexTypeTitle_4|남성코스튬보기|
+|EXE_NewShopSearchWnd::OnRender_1|검색결과를 찾을 수 없습니다.|
+|EXE_ioProductLinkButton::OnNormalRender_1|%s 골드|
+|EXE_ioProductLinkButton::OnNormalRender_2|%s 페소|
+|EXE_ioProductLinkButton::OnNormalRender_3|자세히보기|
+|EXE_ioProductLinkButton::OnDrawDisabled_1|상품없음|
+|EXE_ioProductIconButton::OnMarkRender_1|보유중|
+|EXE_NewShopToolTip::SetInfo_9|%s 대회코인|
+|EXE_NewShopWnd::iwm_command_2|골드충전은 광장/개인본부/훈련소에서만 가능합니다.|
+|EXE_NewShopWnd::iwm_command_3|상점 첫페이지 바로가기|
+|EXE_NewShopWnd::OnRenderAfterChild_5|%s : %s개|
+|EXE_NewShopWnd::OnRenderAfterChild_6|클로버 : %s개|
+|EXE_PartyInfoWnd::SetInfo_46|깊은 숲 %d/%d|
+|EXE_PartyInfoWnd::SetInfo_47|깊은 숲?|
+|EXE_PartyInfoWnd::SetInfo_48|스노우타운 %d/%d|
+|EXE_PartyInfoWnd::SetInfo_49|스노우타운?|
+|EXE_PartyInfoWnd::SetInfo_50|불의 신전 %d/%d|
+|EXE_PartyInfoWnd::SetInfo_51|불의 신전?|
+|EXE_PartyInfoWnd::SetInfo_52|더블 크라운 %d/%d|
+|EXE_PartyInfoWnd::SetInfo_53|더블 크라운?|
+|EXE_PartyInfoWnd::SetInfo_54|비밀공장 %d/%d|
+|EXE_PartyInfoWnd::SetInfo_55|비밀공장?|
+|EXE_PartyInfoWnd::SetInfo_56|레이드 %d/%d|
+|EXE_PartyInfoWnd::SetInfo_57|레이드?|
+|EXE_PartyInfoWnd::SetInfo_58|팬티몬 %d/%d|
+|EXE_PartyInfoWnd::SetInfo_59|팬티몬?|
+|EXE_PartyInfoWnd::SetInfo_60|클베모드 %d/%d|
+|EXE_PartyInfoWnd::SetInfo_61|클베모드?|
+|EXE_PartyInfoWnd::JoinBattleRoom_1|대회 경기방 관전은 주최자 및 기자단만 입장이 가능합니다.|
+|EXE_PartyInfoWnd::iwm_command_23|대회 경기방은 입장이 불가능합니다.|
+|EXE_PartyInfoWnd::iwm_command_24|동기화될 유저가 존재하지 않습니다.|
+|EXE_PartyInvitedWnd::SetInfo_21|깊은 숲 %d/%d|
+|EXE_PartyInvitedWnd::SetInfo_22|스노우타운 %d/%d|
+|EXE_PartyInvitedWnd::SetInfo_23|불의 신전 %d/%d|
+|EXE_PartyInvitedWnd::SetInfo_24|더블 크라운 %d/%d|
+|EXE_PartyInvitedWnd::SetInfo_25|비밀공장 %d/%d|
+|EXE_PartyInvitedWnd::SetInfo_26|AI팀데스매치 %d/%d|
+|EXE_PartyInvitedWnd::SetInfo_27|레이드 %d/%d|
+|EXE_PartyInvitedWnd::SetInfo_28|팬티몬 %d/%d|
+|EXE_PartyInvitedWnd::SetInfo_29|클베모드 %d/%d|
+|EXE_BattleQuickStartOption::FavoriteCommand_1|유저모드는 빠른시작이 불가능합니다.|
+|EXE_BattleQuickStartOption::FavoriteCommand_2|진영전 중에는 빠른전투를 할 수 없습니다.|
+|EXE_BattleQuickStartOption::FavoriteCommand_3|조건에 맞는 전투방을 검색중 . . .|
+|EXE_BattleQuickStartOption::SetTitleAndSizeWnd_1|빠른참가＆방정렬 설정|
+|EXE_BattleQuickStartOption::SetTitleAndSizeWnd_2|모드 선택|
+|EXE_PartyModeNMapBtn::OnAiRender_1|쉬움|
+|EXE_PartyModeNMapBtn::OnAiRender_2|보통|
+|EXE_PartyShamBattleWnd::iwm_command_41|대회방에는 초대가 되지 않습니다.|
+|EXE_PartyShamBattleWnd::iwm_command_42|랭킹전 중에는 초대가 되지 않습니다.|
+|EXE_PartyShamBattleWnd::iwm_command_43|티켓이 없는 유저가 |
+|EXE_PartyShamBattleWnd::iwm_command_44|%d명|
+|EXE_PartyShamBattleWnd::iwm_command_45|레이드를 플레이하려면 각자|
+|EXE_PartyShamBattleWnd::iwm_command_46|레이드 티켓이 %d개씩 필요합니다.|
+|EXE_PartyShamBattleWnd::UpdateShamBattleTournament_1|%s 정규 대회|
+|EXE_PartyShamBattleWnd::UpdateShamBattleTournament_2|%s 대회|
+|EXE_PartyShamBattleWnd::UpdateShamBattleTournament_3|결승|
+|EXE_PartyShamBattleWnd::UpdateShamBattleTournament_4|%d강|
+|EXE_PartyShamBattleWnd::SetModeStart_3|[대회로그] 54321 카운트 시작 - %s|
+|EXE_PartyShamBattleWnd::ProcessTournament_1|[대회로그] 5분 대기 완료 - %s|
+|EXE_PartyShamBattleWnd::ProcessModeStart_1|[대회로그] 54321 카운트 완료 - %s|
+|EXE_PartyShamBattleWnd::ProcessModeStart_2|[대회로그] 상대 유저가 모두 이탈하여 대회를 시작할 수 없음 - %s|
+|EXE_PartyShamBattleWnd::OnTournamentEntrySearchRender_1|예비엔트리 검색중|
+|EXE_PartyShamBattleWnd::OnTournamentEntrySearchRender_2|상대팀의 미참가로|
+|EXE_PartyShamBattleWnd::OnTournamentEntrySearchRender_3|다른팀을 검색 중입니다.|
+|EXE_PartyShamBattleWnd::OnTournamentRender_1|● 게임이 시작될 때까지 잠시 기다려주세요.|
+|EXE_PartyShamBattleWnd::OnTournamentRender_2|곧 시작됩니다!!|
+|EXE_PartyShamBattleWnd::OnTournamentRender_3|%d분 %d초 |
+|EXE_PartyShamBattleWnd::OnTournamentRender_4|%d초 |
+|EXE_PartyShamBattleWnd::OnTournamentRender_5| 후 게임시작|
+|EXE_PartyShamBattleWnd::OnModeNMapRender_4|쉬움|
+|EXE_PartyShamBattleWnd::OnModeNMapRender_5|보통|
+|EXE_PartyBattleSimpleWnd::OnRender_2|(쉬움)|
+|EXE_PartyBattleSimpleWnd::OnRender_3|(보통)|
+|EXE_PetCompoundWnd::GetMaterialList_2|랭크 %s|
+|EXE_PetEatWnd::GetMaterialList_1|%d개|
+|EXE_PetWnd::iwm_command_5|골드충전은 광장이나 본부에서만 가능합니다.|
+|EXE_PlazaMainOptionWnd::CommandOption_7|몬스터 출현으로 강퇴 기능이#일시적으로 중단됩니다.|
+|EXE_PlazaMainWnd::iwm_command_3|길드 본부에서는#초대 할 수 없습니다.|
+|EXE_PlazaMainWnd::OnRender_2|길드 본부|
+|EXE_PlazaNPCGaugeWnd::RenderBossMonster_1|도주까지|
+|EXE_PlazaNPCGaugeWnd::RenderRaidBossMonster_1|현재순위 : %d위(총%d명)|
+|EXE_PopupStoreWnd::OnUpdatePresentWnd_1|(%d%%%%할인)|
+|EXE_PowerUpSelectInfoWnd::iwm_command_1|타입 에러|
+|EXE_PowerUpSelectInfoWnd::RenderDesc_1|없음|
+|EXE_PracticeRankingWnd::RenderRankBoard_1|기록없음|
+|EXE_PracticeRankingWnd::RenderRewardIconBoard_1|기준일 %s ~ %s|
+|EXE_PracticeRankingWnd::RenderRewardIconBoard_2|0개|
+|EXE_PracticeRankingWnd::RenderRewardIconBoard_3|%d개|
+|EXE_PresentTimeCashAlarmWnd::PrintManual_1|[개발자K]|
+|EXE_PresentTimeCashReleaseWnd::OnRender_1|기간만료로 해제되었습니다|
+|EXE_PreSetSoldierPackageWnd::iwm_command_1|선택 가능한 용병이 없습니다.|
+|EXE_PreSetSoldierPackageResultWnd::OnRender_1|영구사용 획득|
+|EXE_PreSetSoldierPackageResultWnd::OnRender_2|%d시간|
+|EXE_PreSetSoldierPackageResultWnd::OnRender_3|%d시간 %d분|
+|EXE_PreSetSoldierPackageResultWnd::OnRender_4|%s 획득|
+|EXE_PriateRulletRenewalWnd::iwm_command_1|보유한 칼이 없습니다.|
+|EXE_PriateRulletRenewalWnd::iwm_command_2|모든 보상 받기에 성공하셨습니다.# 보상받기 버튼을 눌러주세요.|
+|EXE_PriateRulletRenewalWnd::iwm_command_3|이미 칼이 꽃혀 있습니다.|
+|EXE_PriateRulletRenewalWnd::PreRender_1|%d개|
+|EXE_PriateRulletRenewalWnd::PreRender_2|※보상받기 클릭 후 |
+|EXE_PriateRulletRenewalWnd::PreRender_3|랜덤으로 보상 획득|
+|EXE_PriateRulletRenewalWnd::PlayRender_1|%d개|
+|EXE_PriateRulletRenewalWnd::PlayRender_2|※보상받기 클릭 후 |
+|EXE_PriateRulletRenewalWnd::PlayRender_3|랜덤으로 보상 획득|
+|EXE_PriateRulletRenewalWnd::EndPreRender_1|%d개|
+|EXE_PriateRulletRenewalWnd::EndPreRender_2|※보상받기 클릭 후 |
+|EXE_PriateRulletRenewalWnd::EndPreRender_3|랜덤으로 보상 획득|
+|EXE_PriateRulletRenewalWnd::RollingRender_1|%d개|
+|EXE_PriateRulletRenewalWnd::RollingRender_2|※보상받기 클릭 후 |
+|EXE_PriateRulletRenewalWnd::RollingRender_3|랜덤으로 보상 획득|
+|EXE_PriateRulletRenewalWnd::RollingEndRender_1|%d개|
+|EXE_PriateRulletRenewalWnd::RollingEndRender_2|※보상받기 클릭 후 |
+|EXE_PriateRulletRenewalWnd::RollingEndRender_3|랜덤으로 보상 획득|
+|EXE_PriateRulletRenewalWnd::SetToolTipText_1|보상목록|
+|EXE_PriateRulletRenewalWnd::SetToolTipText_2|아래 아이템중 랜덤으로 지급|
+|EXE_PriateRulletRenewalWnd::FailRender_1|※보상받기 클릭 후 |
+|EXE_PriateRulletRenewalWnd::FailRender_2|랜덤으로 보상 획득|
+|EXE_PriateRulletRenewalWnd::FailRender_3|아쉽게도 여기까지~|
+|EXE_PriateRulletRenewalWnd::FailRender_4|힘내시라고 마지막 상품을 지급해 드립니다.|
+|EXE_PriateRulletRenewalWnd::FailRender_5|※ 보관함에서 확인하세요|
+|EXE_PriateRulletRenewalWnd::FailRender_6|%d개|
+|EXE_SwordFrameButton::OnRender_1|%d개|
+|EXE_PriateRulletWnd::iwm_command_1|보유한 칼이 없습니다.|
+|EXE_PriateRulletWnd::iwm_command_2|칼을 선택해서 오크통 구멍에# 꼽아주세요.|
+|EXE_PriateRulletWnd::iwm_command_3|이미 칼이 꽃혀 있습니다.|
+|EXE_PriateRulletWnd::PreRender_1|%d개 사용|
+|EXE_PriateRulletWnd::PlayRender_1|%d개 사용|
+|EXE_PriateRulletWnd::EndPreRender_1|%d개 사용|
+|EXE_PrivateRulletBonusRewardTooltip::ProcessOnAllReward_1|%d ~ %d개|
+|EXE_PrivateRulletResetPopup::OnRender_1|사용된 검은 다시 회수되지 않습니다.|
+|EXE_PrivateRulletResetPopup::OnRender_2|초기화 이후 다시 진행 가능합니다.|
+|EXE_QuestAttainStateWnd::OnRenderReward_2|%s [메달] %s|
+|EXE_LobbyQuestNewAlarmBtn::OnRender_1|내용없음|
+|EXE_LobbyQuestNewAlarmBtn::OnRender_2|퀘스트 대기중|
+|EXE_LobbyQuestNewAlarmBtn::OnRender_3|달성|
+|EXE_LobbyQuestNewAlarmBtn::OnRender_4|완료|
+|EXE_QuestListWnd::ChangeTitle_1|진행중(%d)|
+|EXE_QuestListWnd::ChangeTitle_2|완료(%d)|
+|EXE_NewQuestListBtn::OnRender_1|내용없음|
+|EXE_NewQuestListBtn::OnRender_2|퀘스트 대기중|
+|EXE_NewQuestListBtn::OnRenderText_1|진행전|
+|EXE_QuickLobbyWnd::SeTitle_1|전투|
+|EXE_QuickLobbyWnd::SeTitle_2|대회-예선대회|
+|EXE_QuickLobbyWnd::SeTitle_3|광장|
+|EXE_QuickLobbyWnd::SeTitle_4|거래소|
+|EXE_QuickLobbyWnd::SeTitle_5|대회-토너먼트|
+|EXE_QuickLobbyWnd::OnCreateHeadquarters_1|전투 중에는 훈련소 입장이 불가능합니다.|
+|EXE_QuickLobbyWnd::OnCreateHeadquarters_2|진영팀 중에는 훈련소 입장이 불가능합니다.|
+|EXE_CQuickModeToolTip::OnRender_1|최소 %d명 ~ 최대 %d명|
+|EXE_CQuickModeToolTip::OnRender_2|양팀 같은 인원|
+|EXE_RankBattleWnd::OnRender_1|랭킹전|
+|EXE_RelativeGradeBonusWnd::OnRender_1|%s점|
+|EXE_RelativeGradeBonusWnd::OnRender_2|의 누적 장군 경험치로 |
+|EXE_RelativeGradeBonusWnd::OnRender_3|%s 달성!|
+|EXE_RelativeGradeBonusWnd::OnRender_4|(달성가능 최고계급은 매주 장군 수에 따라 변동)|
+|EXE_RelativeGradeBonusWnd::OnRender_5|장군 랭킹|
+|EXE_RelativeGradeBonusWnd::OnRender_6|획득 보상|
+|EXE_RelativeGradeBonusWnd::OnRender_7|%d 위|
+|EXE_RouletteHelpWnd::OnRender_1|쿠폰으로 누구나 돌림판을 돌릴 수 있습니다.|
+|EXE_RouletteHelpWnd::OnRender_2|쿠폰은 광장의 곰을 잡으면 얻을 수 있습니다.|
+|EXE_RouletteHelpWnd::OnRender_3|참여 방법 : 돌림판의 버튼 위에 올라가서 A(점프)키를|
+|EXE_RouletteHelpWnd::OnRender_4|누르면 자동으로 참여됩니다.|
+|EXE_RouletteHelpWnd::OnRender_5|●여러 사람이 동시에 참여할 수 있습니다|
+|EXE_RouletteHelpWnd::OnRender_6|●동시 참여 인원이 많을수록 1등 확률이 높아집니다|
+|EXE_RouletteHelpWnd::OnRender_7|●1등에 당첨되면 참여한 모두가 상품을 획득합니다|
+|EXE_RouletteHelpWnd::OnRender_8|동시 참여 인원|
+|EXE_RouletteHelpWnd::OnRender_9|1등 확률|
+|EXE_RouletteHelpWnd::OnRender_10|%d명이하|
+|EXE_RouletteHelpWnd::OnRender_11|%d명~%d명|
+|EXE_RouletteCenterHelpWnd::OnRender_1|A(점프)키를 누르면 돌림판 이벤트에 참여됩니다.|
+|EXE_RoundStateUserWnd::OnRenderStarCount_1|%d개|
+|EXE_RoundStateUserWnd::OnRenderTowerDefUser_1|닉네임|
+|EXE_RoundStateUserWnd::OnRenderTowerDefUser_2|공격|
+|EXE_RoundStateUserWnd::OnRenderTowerDefUser_3|방어|
+|EXE_RoundStateUserWnd::OnRenderTowerDefUser_4|타임|
+|EXE_RoundStateUserWnd::OnRenderTowerDefUser_5|핑|
+|EXE_RoundStateUserWnd::OnRenderShuffleBonusUser_1|닉네임|
+|EXE_RoundStateUserWnd::OnRenderShuffleBonusUser_2|별|
+|EXE_RoundStateUserWnd::OnRenderShuffleBonusUser_3|핑|
+|EXE_RoundStateUserWnd::OnRenderRaidUser_1|닉네임|
+|EXE_RoundStateUserWnd::OnRenderRaidUser_2|티켓|
+|EXE_RoundStateUserWnd::OnRenderRaidUser_3|기여도|
+|EXE_RoundStateUserWnd::OnRenderRaidUser_4|킬데스|
+|EXE_RoundStateUserWnd::OnRenderRaidUser_5|핑|
+|EXE_RoundStateUserWnd::OnRenderSuccessionUser_1|닉네임|
+|EXE_RoundStateUserWnd::OnRenderSuccessionUser_2|핑|
+|EXE_RoundStateMainWnd::SetHeadequartersScore_3|훈련소|
+|EXE_RoundStateMainWnd::SetHeadequartersScore_4|개인본부|
+|EXE_RoundStateMainWnd::SetSingleScore_4|결승|
+|EXE_RoundStateMainWnd::SetSingleScore_5|%d강|
+|EXE_RoundStateMainWnd::SetSingleScore_6|진행 현황|
+|EXE_RoundStateMainWnd::SetTowerDefScore_1|진행 현황|
+|EXE_RoundStateMainWnd::SetTowerDefScore_2|%s(비밀방)|
+|EXE_RoundStateMainWnd::SetTeamScore_7|결승|
+|EXE_RoundStateMainWnd::SetTeamScore_8|%d강|
+|EXE_RoundStateMainWnd::SetTeamScore_9|진행 현황|
+|EXE_RoundStateMainWnd::SetStarCountScore_1|진행 현황|
+|EXE_RoundStateMainWnd::SetRaidCoinCountScore_1|진행 현황|
+|EXE_RoundStateMainWnd::SetRaidCoinCountScore_2|%s(비밀방)|
+|EXE_RoundResultMainWnd::SetTeamScore_7|결승|
+|EXE_RoundResultMainWnd::SetTeamScore_8|%d강|
+|EXE_SelectExtraInfoWnd::RenderDesc_1|없음|
+|EXE_SelectExtraInfoWnd::SetExtraItemInfo_1|영구사용|
+|EXE_SelectExtraGashaponWnd::SelectExtraGashaponWnd_1|아래 10개 중 1개를 랜덤으로 획득할 수 있습니다|
+|EXE_SelectExtraGashaponWnd::CheckBuy_1|회원확인후 구매가 가능합니다.|
+|EXE_SelectExtraGashaponWnd::CheckBuy_2|아이템을 선택해 주세요.|
+|EXE_SelectExtraGashaponWnd::CheckBuy_3|캐쉬 가격이 잘못되었습니다.|
+|EXE_SelectExtraGashaponWnd::CheckBuy_4| 골드|
+|EXE_SelectExtraGashaponWnd::CheckBuy_5|구매금액 : %s|
+|EXE_SelectExtraGashaponWnd::CheckBuy_6|구매하시겠습니까?|
+|EXE_SelectExtraGashaponWnd::CheckBuy_7|본 상품은 청약철회 제외 상품입니다|
+|EXE_SelectExtraGashaponWnd::CheckUse_1|회원확인후 구매가 가능합니다.|
+|EXE_SelectExtraGashaponWnd::CheckUse_2|아이템을 선택해 주세요.|
+|EXE_SelectExtraGashaponWnd::CheckUse_3|사용하시겠습니까?|
+|EXE_SelectExtraGashaponWnd::iwm_command_1|카드 선택은 %d개까지 가능합니다.|
+|EXE_SelectExtraGashaponWnd::OnRender_1|카드를 클릭하여 원하는 장비로 변경하세요|
+|EXE_SelectExtraGashaponWnd::OnRender_2|장비 변경시 2개째 부터 |
+|EXE_SelectExtraGashaponWnd::OnRender_3|1,000 골드씩 |
+|EXE_SelectExtraGashaponWnd::OnRender_4|비용이 증가합니다|
+|EXE_SelectExtraGashaponWnd::OnRender_5|변경 가능 : %d개|
+|EXE_SelectExtraGashaponWnd::SetSelectExtraItem_1|같은 아이템은 선택할 수 없습니다.|
+|EXE_SelectExtraGashaponWnd::SetTitleBuyBtn_1|구입 결정 (%s 골드)|
+|EXE_SelectExtraGashaponWnd::SetTitleBuyBtn_2|사용하기!|
+|EXE_SelectGashaponWnd::SelectGashaponWnd_1|아래 10개 중 1개를 랜덤으로 획득할 수 있습니다|
+|EXE_SelectGashaponWnd::CheckBuy_1|회원확인후 구매가 가능합니다.|
+|EXE_SelectGashaponWnd::CheckBuy_2|아이템을 선택해 주세요.|
+|EXE_SelectGashaponWnd::CheckBuy_3|캐쉬 가격이 잘못되었습니다.|
+|EXE_SelectGashaponWnd::CheckBuy_4| 골드|
+|EXE_SelectGashaponWnd::CheckBuy_5|구매금액 : %s|
+|EXE_SelectGashaponWnd::CheckBuy_6|구매하시겠습니까?|
+|EXE_SelectGashaponWnd::CheckBuy_7|본 상품은 청약철회 제외 상품입니다|
+|EXE_SelectGashaponWnd::CheckUse_1|회원확인후 구매가 가능합니다.|
+|EXE_SelectGashaponWnd::CheckUse_2|아이템을 선택해 주세요.|
+|EXE_SelectGashaponWnd::CheckUse_3|사용하시겠습니까?|
+|EXE_SelectGashaponWnd::iwm_command_1|카드 선택은 %d개까지 가능합니다.|
+|EXE_SelectGashaponWnd::OnRender_1|카드를 클릭하여 원하는 장비로 변경하세요|
+|EXE_SelectGashaponWnd::OnRender_2|장비 변경시 2개째 부터 |
+|EXE_SelectGashaponWnd::OnRender_3|1,000 골드씩 |
+|EXE_SelectGashaponWnd::OnRender_4|비용이 증가합니다|
+|EXE_SelectGashaponWnd::OnRender_5|변경 가능 : %d개|
+|EXE_SelectGashaponWnd::SetSelectItem_2|같은 아이템은 선택할 수 없습니다.|
+|EXE_SelectGashaponWnd::SetTitleBuyBtn_1|구입 결정 (%s 골드)|
+|EXE_SelectGashaponWnd::SetTitleBuyBtn_2|사용하기!|
+|EXE_SelectGashaponItemInfoWnd::RenderDesc_1|없음|
+|EXE_SelectMaterialItemBtn::InitData_1|재료|
+|EXE_ShuffleBonusResultWnd::iwm_command_1|계속하기 (대기중)|
+|EXE_ShuffleBonusResultWnd::OnRender_1|획득한 별의 누적 갯수는|
+|EXE_ShuffleBonusResultWnd::OnRender_2|%d개|
+|EXE_ShuffleBonusResultWnd::OnRender_3|입니다.|
+|EXE_ShuffleBonusResultWnd::OnRender_4|오늘의모드는 자동으로 계속하도록 진행됩니다.|
+|EXE_ShuffleBonusResultWnd::OnRender_5|그만하실 분은 아래의 버튼으로|
+|EXE_ShuffleBonusResultWnd::OnRender_6|로비로 이동하실 수 있습니다.|
+|EXE_ShuffleBonusResultWnd::OnRender_7|광장으로 이동하실 수 있습니다.|
+|EXE_ShuffleRankWnd::OnRankRender_1|별거지|
+|EXE_ShuffleRankWnd::OnRankRender_2|%d위|
+|EXE_ShuffleRankWnd::OnRankRender_3|님 |
+|EXE_SoldierLimitPopupWnd::iwm_hide_1|사용 가능한 용병 없음|
+|EXE_SoldierLimitPopupWnd::OnRender_6|사용하고 싶은 용병을|
+|EXE_SoldierLimitPopupWnd::OnRender_7|상점에서 고용해 주세요.|
+|EXE_SuperGashaponWnd::CheckRollingEnd_1|구매에 실패 하였습니다.# 잠시후 다시 시도해주세요|
+|EXE_SuperGashaponWnd::OnExtraItemRender_1|봉인가능|
+|EXE_SuperGashaponWnd::OnExtraItemRender_2|봉인|
+|EXE_SuperGashaponWnd::OnMentBuyRender_1|구매가 완료되었습니다|
+|EXE_SuperGashaponWnd::OnMentBuyRender_2|선물함|
+|EXE_SuperGashaponWnd::OnMentBuyRender_3|에서 확인하세요|
+|EXE_SuperGashaponWnd::OnMentBuyRender_4|본상품은 청약철회 제외 상품입니다|
+|EXE_TotalResultTreasureCardWnd::iwm_show_2|잠시 기다려 주세요|
+|EXE_TotalResultTreasureCardWnd::SendTimeOut_1|잠시 기다려 주세요|
+|EXE_TotalResultTreasureCardWnd::ProcessState_4|잠시 기다려 주세요 . . %d|
+|EXE_TotalResultTreasureCardWnd::ProcessState_5|보물 카드를 %d개 선택해 주세요 . . %d|
+|EXE_TotalResultTournamentWnd::SetTournamentData_1|관전자|
+|EXE_TotalResultTournamentWnd::OnTeamNameRender_1|%s 대회팀|
+|EXE_TotalResultTournamentWnd::OnProgressGaugeRender_1|결승|
+|EXE_TotalResultTournamentWnd::OnProgressGaugeRender_2|%d강|
+|EXE_ResultScoreUserWnd::OnRenderResult_14|별 획득 %d|
+|EXE_ResultScoreUserWnd::OnRenderResult_15|헌터 코인 획득 %d|
+|EXE_ResultScoreUserWnd::OnRenderUser_3|%d개|
+|EXE_ResultScoreUserWnd::OnRenderShuffleResult_1|내가 획득한|
+|EXE_ResultScoreUserWnd::OnRenderShuffleResult_2|스타 코인 갯수|
+|EXE_ResultScoreUserWnd::OnRenderShuffleResult_3|개|
+|EXE_ResultScoreUserWnd::OnRenderShuffleResult_4|(획득갯수 × 보너스)|
+|EXE_ResultRaidScoreUserBtn::OnRenderRank_4|공격 %s|
+|EXE_ResultRaidScoreUserBtn::OnRenderRank_5|방어 %s|
+|EXE_ResultRaidScoreUserBtn::OnRenderRank_6|타임 %s|
+|EXE_TotalResultScoreWnd::SetSingleScore_4|보너스모드|
+|EXE_TotalResultScoreWnd::SetSingleScore_5|레이드|
+|EXE_TotalResultScoreWnd::SetTeamScore_13|더블크라운|
+|EXE_TotalResultScoreWnd::SetTeamScore_14|팬티몬|
+|EXE_TotalResultScoreWnd::SetTeamScore_15|클베모드|
+|EXE_TotalResultMainWnd::iwm_show_1|대회 결과|
+|EXE_TotalResultRaidCardWnd::iwm_show_1|잠시 기다려 주세요|
+|EXE_TotalResultRaidCardWnd::SendTimeOut_1|잠시 기다려 주세요|
+|EXE_TotalResultRaidCardWnd::ProcessState_1|잠시 기다려 주세요 . . %d|
+|EXE_TotalResultRaidCardWnd::ProcessState_2|보물 카드를 %d개 선택해 주세요 . . %d|
+|EXE_TotalResultExpGradeWnd::OnRender_4|%s점|
+|EXE_TotalResultRawardWnd::OnRenderBonusTtitle_1|보너스 내역|
+|EXE_TotalResultRawardWnd::OnRenderShufflePoint_1|스타코인|
+|EXE_TotalResultRawardWnd::OnRenderShufflePoint_2|개|
+|EXE_TotalResultRawardWnd::OnRenderShufflePoint_3|플레이점수|
+|EXE_TotalResultRawardWnd::OnRenderShufflePoint_4|연승보너스|
+|EXE_TotalResultRawardWnd::OnRenderShufflePoint_5|연속게임 보너스|
+|EXE_TotalResultRawardWnd::OnRenderShufflePoint_6|수상 보너스|
+|EXE_TotalResultRawardWnd::OnRenderShufflePoint_7|%d개|
+|EXE_TotalResultRawardWnd::OnRenderShufflePoint_8|＋%d개|
+|EXE_TotalResultRawardWnd::OnRenderSuccessionPeso_1|1vs1모드 추가획득|
+|EXE_TotalResultRawardWnd::OnRenderSuccessionPeso_2|%d연승 |
+|EXE_TotalResultRawardWnd::OnRenderSuccessionPeso_3|%d페소|
+|EXE_TournamentTeamCharWnd::OnRender_1|주최자 수동진행|
+|EXE_TournamentDetailMainWnd::SetTournamentData_1|대회 정보를 불러올 수 없습니다.|
+|EXE_TournamentDetailMainWnd::SetTournamentTtitle_1|%s 정규 대회|
+|EXE_TournamentDetailMainWnd::SetTournamentTtitle_2|%s 대회|
+|EXE_TournamentDetailMainWnd::EnterButtonExPopup_1|현재는 팀 모집 기간입니다.|
+|EXE_TournamentDetailMainWnd::EnterButtonExPopup_2|현재는 다음 경기의 대기 기간입니다.|
+|EXE_TournamentDetailMainWnd::EnterButtonExPopup_3|대회가 종료되었습니다.|
+|EXE_TournamentDetailMainWnd::EnterButtonExPopup_4|경기시간으로부터 5분 후 미참가팀이 발생한#경기장이 있다면, 대회로부터의#입장초대 메세지가 발송될 수 있습니다.|
+|EXE_TournamentDetailMainWnd::EnterButtonExPopup_5|참가할 다음 경기가 없습니다.#대회일정의 팀이름을 클릭하여 승패예측 및 관전에 참여해보세요.|
+|EXE_TournamentDetailMainWnd::EnterButtonExPopup_6|참가할 다음 경기가 없습니다.|
+|EXE_TournamentDetailMainWnd::EnterButtonExPopup_7|해당시간에 대회로부터의 입장초대 메세지가 발송됩니다.#꼭 접속하고 있다가 참여하시기 바랍니다.|
+|EXE_TournamentDetailMainWnd::EnterButtonExPopup_8|모집기간이 지나 참가가 불가능합니다.#대회일정의 팀이름을 클릭하여 승패예측 및 관전에#참여해보세요.|
+|EXE_TournamentDetailMainWnd::EnterButtonExPopup_9|모집기간이 지나 참가가 불가능합니다.|
+|EXE_TournamentDetailMainWnd::iwm_command_1|지난 대회 정보는 준비중입니다.|
+|EXE_TournamentDetailMainWnd::iwm_command_2|우승 응원은 차후 업데이트 될 예정입니다.|
+|EXE_TournamentDetailMainWnd::iwm_command_3|주최자 수동진행|
+|EXE_TournamentDetailMainWnd::iwm_command_4|결승전|
+|EXE_TournamentDetailMainWnd::iwm_command_5|%d강|
+|EXE_TournamentDetailMainWnd::iwm_command_6|%s# %s 초대가 발송될 예정입니다.|
+|EXE_TournamentDetailFrameInfoWnd::OnInfoRender_1|주최자 수동진행|
+|EXE_TournamentDetailFrameInfoWnd::OnInfoRender_2|%d/%d(%s) ~ 주최자 수동진행|
+|EXE_TournamentDetailFrameInfoWnd::OnInfoRender_3|모집기간|
+|EXE_TournamentDetailInnerPageNoticeWnd::iwm_command_1|공지사항은 대회 주최자만 수정 할 수 있습니다.|
+|EXE_TournamentDetailInnerPageNoticeWnd::OnHelpWndRender_1|대회란|
+|EXE_TournamentDetailInnerPageNoticeWnd::OnHelpWndRender_2|무엇입니까?|
+|EXE_TournamentDetailInnerPageNoticeWnd::OnHelpWndRender_3|양 진영 중 최고의 팀을 뽑는|
+|EXE_TournamentDetailInnerPageNoticeWnd::OnHelpWndRender_4|진영전 최후의 전투입니다.|
+|EXE_TournamentDetailInnerPageNoticeWnd::OnHelpWndRender_5|각 진영의 대회팀들이|
+|EXE_TournamentDetailInnerPageNoticeWnd::OnHelpWndRender_6|토너먼트 형식으로 대진|
+|EXE_TournamentDetailInnerPageNoticeWnd::OnHelpWndRender_7|을 펼치며|
+|EXE_TournamentDetailInnerPageNoticeWnd::OnHelpWndRender_8|마지막엔 양 진영 최고의 두 팀이|
+|EXE_TournamentDetailInnerPageNoticeWnd::OnHelpWndRender_9|우승을 겨루는 시합입니다.|
+|EXE_TournamentDetailInnerPageNoticeWnd::OnHelpWndRender_10|경기에 직접 참여하지 않아도|
+|EXE_TournamentDetailInnerPageNoticeWnd::OnHelpWndRender_11|우승응원 및 승리예측|
+|EXE_TournamentDetailInnerPageNoticeWnd::OnHelpWndRender_12|하기로|
+|EXE_TournamentDetailInnerPageNoticeWnd::OnHelpWndRender_13|쉽게 참여할 수 있습니다.|
+|EXE_TournamentDetailInnerPageNoticeWnd::OnNoticeWndRender_1|공지 사항|
+|EXE_TournamentDetailInnerPageNoticeWnd::OnNoticeWndRender_2|대회|
+|EXE_TournamentDetailInnerPageNoticeWnd::OnNoticeWndRender_3|주최자가 언제나 공지사항 작성 및|
+|EXE_TournamentDetailInnerPageNoticeWnd::OnNoticeWndRender_4|수정이 가능합니다.|
+|EXE_TournamentDetailInnerPageNoticeWnd::OnNoticeWndRender_5|우리 대회에|
+|EXE_TournamentDetailInnerPageNoticeWnd::OnNoticeWndRender_6|오신것을 환영합니다.|
+|EXE_TournamentDetailInnerPageScheduleWnd::IwmOwnerNormalCommand_1|대진 배정기간이 아닙니다.|
+|EXE_TournamentDetailInnerPageScheduleWnd::IwmOwnerExCommand_1|경기를 시작 할 수 없습니다 # 경기간 최소 시작 간격은 %d분입니다.|
+|EXE_TournamentDetailInnerPageScheduleWnd::IwmOwnerExCommand_2|모든 경기가 종료 되어 # 더 이상 대회를 진행 할 수 없습니다.|
+|EXE_TournamentDetailInnerPageScheduleWnd::IwmOwnerExCommand_3|대진 배정이 완료 되었습니다.|
+|EXE_TournamentDetailInnerPageScheduleWnd::IwmOwnerExCommand_4|대진 배정기간이 아닙니다.|
+|EXE_TournamentDetailInnerPageScheduleWnd::SetTournamentStart_1|모집을 마감하시겠습니까?|
+|EXE_TournamentDetailInnerPageScheduleWnd::SetTournamentStart_2|%d강 시작하시겠습니까?|
+|EXE_TournamentDetailInnerPageScheduleWnd::SetTournamentStart_3|%d강 시작 가능한팀 : %d팀|
+|EXE_TournamentDetailInnerPageScheduleWnd::SetTournamentStart_4|결승 시작하시겠습니까?|
+|EXE_TournamentDetailInnerPageScheduleWnd::SetTournamentStart_5|결승 시작 가능한팀 : %d팀|
+|EXE_TournamentDetailInnerPageScheduleWnd::UpdateOwnerCommandOnline_1|대진 배정하기|
+|EXE_TournamentDetailInnerPageScheduleWnd::UpdateOwnerCommandOffline_1|모집 마감하기|
+|EXE_TournamentDetailInnerPageScheduleWnd::UpdateOwnerCommandOffline_2|모집 마감 처리중|
+|EXE_TournamentDetailInnerPageScheduleWnd::UpdateOwnerCommandOffline_3|대진 배정 하기|
+|EXE_TournamentDetailInnerPageScheduleWnd::UpdateOwnerCommandOffline_4|대진 배정 처리중|
+|EXE_TournamentDetailInnerPageScheduleWnd::UpdateOwnerCommandOffline_5|대회 종료|
+|EXE_TournamentDetailInnerPageScheduleWnd::UpdateOwnerCommandStateTournament_1|%d강 시작하기|
+|EXE_TournamentDetailInnerPageScheduleWnd::UpdateOwnerCommandStateTournament_2|%d강 시작 준비중|
+|EXE_TournamentDetailInnerPageScheduleWnd::UpdateOwnerCommandStateTournament_3|결승 시작 준비중|
+|EXE_TournamentDetailInnerPageScheduleWnd::UpdateOwnerCommandStateTournament_4|결승 시작|
+|EXE_TournamentDetailInnerPageScheduleWnd::UpdateOwnerCommandStateTournament_5|경기 시작 준비중|
+|EXE_TournamentDetailInnerPageScheduleWnd::OnScheduleMentRender_1|전체 일정표|
+|EXE_TournamentDetailInnerPageScheduleWnd::OnScheduleMentRender_2|대회|
+|EXE_TournamentDetailInnerPageScheduleWnd::OnScheduleMentRender_3|%s %d인으로|
+|EXE_TournamentDetailInnerPageScheduleWnd::OnScheduleMentRender_4|총 %d회전이 치뤄집니다.|
+|EXE_TournamentDetailInnerPageScheduleWnd::OnScheduleRegularRender_1|결승|
+|EXE_TournamentDetailInnerPageScheduleWnd::OnScheduleRegularRender_2|%d강|
+|EXE_TournamentDetailInnerPageScheduleWnd::OnScheduleCustomRender_1|대회종료|
+|EXE_TournamentDetailInnerPageScheduleWnd::OnScheduleCustomRender_2|모집마감|
+|EXE_TournamentDetailInnerPageScheduleWnd::OnScheduleCustomRender_3|대진배정|
+|EXE_TournamentDetailInnerPageScheduleWnd::OnScheduleCustomRender_4|결승|
+|EXE_TournamentDetailInnerPageScheduleWnd::OnScheduleCustomRender_5|%d강|
+|EXE_TournamentDetailInnerPageScheduleWnd::OnScheduleCustomRender_6|주최자 수동진행|
+|EXE_TournamentDetailInnerPageRewardWnd::iwm_command_1|더이상 보상을 추가 할 수 없습니다.|
+|EXE_TournamentDetailInnerPageRewardWnd::iwm_command_2|보상은 모집기간에만 추가 할 수 있습니다.|
+|EXE_TournamentDetailInnerPageRewardWnd::OnRewardWndRender_1|우승 보상|
+|EXE_TournamentDetailInnerPageRewardWnd::OnRewardWndRender_2|준우승 보상|
+|EXE_TournamentDetailInnerPageRewardWnd::OnRewardWndRender_3|%d강 보상|
+|EXE_TournamentDetailInnerPageRewardWnd::OnRewardWndRender_4|우승|
+|EXE_TournamentDetailInnerPageRewardWnd::OnRewardWndRender_5|준우승|
+|EXE_TournamentDetailInnerPageRewardWnd::OnRewardWndRender_6|%d강|
+|EXE_TournamentDetailInnerPageRewardWnd::OnRewardWndRender_7|대회성적 보상|
+|EXE_TournamentDetailInnerPageRewardWnd::OnRewardWndRender_8|대회팀 소속의 각 개인당 |
+|EXE_TournamentDetailInnerPageRewardWnd::OnRewardWndRender_9|획득가능한 보상입니다.|
+|EXE_TournamentDetailFrameCheerWnd::OnInfoRender_1|주최자 수동진행|
+|EXE_TournamentDetailFrameCheerWnd::OnInfoRender_2|%d/%d(%s) ~ 주최자 수동진행|
+|EXE_TournamentDetailFrameCheerWnd::OnInfoRender_3|응원기간|
+|EXE_CheerListRadioBtn::OnRender_1|%d 응원|
+|EXE_TournamentDetailInnerCheerListWnd::iwm_command_1|응원할 팀을 선택해주세요|
+|EXE_TournamentDetailInnerCheerListWnd::CalcCheerPoint_1|%s 페소|
+|EXE_TournamentDetailInnerCheerListWnd::CalcCheerPoint_2|????? 페소|
+|EXE_TournamentDetailInnerCheerListWnd::CalcCheerPoint_3|0 페소|
+|EXE_TournamentDetailInnerCheerListWnd::OnCheckCheerState_1|우승응원 결정|
+|EXE_TournamentDetailInnerCheerListWnd::OnCheckCheerState_2|응원기간이 아닙니다.|
+|EXE_TournamentDetailInnerCheerListWnd::OnCheckCheerState_3|결정되었습니다|
+|EXE_TournamentDetailInnerCheerListWnd::OnCheckCheerState_4|응원기간이 종료 되었습니다|
+|EXE_TournamentDetailInnerCheerListWnd::OnMentRender_1|우승응원에|
+|EXE_TournamentDetailInnerCheerListWnd::OnMentRender_2|참가하지 않음|
+|EXE_TournamentDetailInnerCheerListWnd::OnMentRender_3|우승응원하기|
+|EXE_TournamentDetailInnerCheerListWnd::OnMentRender_4|우승할 것 같은 팀에게 응원을 해보세요.|
+|EXE_TournamentDetailInnerCheerListWnd::OnMentRender_5|응원한 팀이 우승하면 응원 보상을 드립니다.|
+|EXE_TournamentDetailInnerCheerListWnd::OnMentRender_6|응원이 적은 팀일수록 응원 보상이 커지며|
+|EXE_TournamentDetailInnerCheerListWnd::OnMentRender_7|응원기간 동안 보상은 바뀔 수 있습니다.|
+|EXE_TournamentDetailInnerCheerListWnd::OnCheerPointRender_1|응원자 보상|
+|EXE_TournamentDetailInnerCheerListWnd::OnCheerRender_1|아직 응원기간이 아닙니다.|
+|EXE_TournamentDetailInnerCheerListWnd::OnCheerRender_2|응원 기간에 오시면 참여 하실 수 있습니다.|
+|EXE_TournamentDetailInnerCheerListWnd::OnCheerRender_3|대회에 참여 한 팀이 없습니다.|
+|EXE_TournamentCheerPopUpWnd::OnRender_1|응원 결정 후 취소는 불가능합니다.|
+|EXE_TournamentCheerPopUpWnd::OnRender_2|응원 팀이 만약 첫경기에 참가하지 않으면|
+|EXE_TournamentCheerPopUpWnd::OnRender_3|대진표에서 제외될 수도 있습니다.|
+|EXE_TournamentPredictPopUpWnd::OnRender_1|의|
+|EXE_TournamentPredictPopUpWnd::OnRender_2|승리를 예측하시겠습니까?|
+|EXE_TournamentPredictPopUpWnd::OnRender_3|승리예측게임은 일정마다 한번씩만 가능하며|
+|EXE_TournamentPredictPopUpWnd::OnRender_4|결승에 가까워질 수록 보상이 높습니다.|
+|EXE_TournamentPredictPopUpWnd::OnRender_5|예측한 팀 승리시 보상:|
+|EXE_TournamentPredictPopUpWnd::OnRender_6|%d 페소|
+|EXE_TournamentPredictPopUpWnd::OnRender_7|예측한 팀 패배시 보상:|
+|EXE_MatchBtn::ChangeEmptyTeamStyle_1|%d번 대회팀|
+|EXE_TournamentDetailScheduleFrameWnd::round_command_1|존재 하지 않는 팀입니다.|
+|EXE_TournamentDetailScheduleFrameWnd::OnRoundTextRender_1|주최자 수동진행|
+|EXE_TournamentDetailScheduleFrameWnd::OnRoundTextRender_2|결승|
+|EXE_TournamentDetailScheduleFrameWnd::OnRoundTextRender_3|대회 우승|
+|EXE_TournamentDetailScheduleFrameWnd::OnRoundTextRender_4|%d강|
+|EXE_TournamentDetailFrameAwardWnd::OnRegularMentRender_1|정규대회 포상은 |
+|EXE_TournamentDetailFrameAwardWnd::OnRegularMentRender_2|포상기간에 접속|
+|EXE_TournamentDetailFrameAwardWnd::OnRegularMentRender_3|하시면 획득하실 수 있습니다.|
+|EXE_TournamentDetailFrameAwardWnd::OnCusotmMentRender_1|대회포상은 |
+|EXE_TournamentDetailFrameAwardWnd::OnCusotmMentRender_2|포상기간에 접속|
+|EXE_TournamentDetailFrameAwardWnd::OnCusotmMentRender_3|하시면 획득하실 수 있습니다.|
+|EXE_TournamentDetailFrameAwardWnd::OnRewardRender_1|포상기간|
+|EXE_TournamentDetailFrameAllocateWnd::OnMentRender_1|대진배정이 완료되면 |
+|EXE_TournamentDetailFrameAllocateWnd::OnMentRender_2|대회일정|
+|EXE_TournamentDetailFrameAllocateWnd::OnMentRender_3|에 팀이 배치됩니다|
+|EXE_TournamentDetailFrameAllocateWnd::OnAllocateRender_1|대진배정기간|
+|EXE_TournamentDetailInnerRewardWnd::OnTournamentRewardResultRender_1|대회성적 보상|
+|EXE_TournamentDetailInnerRewardWnd::OnTournamentRewardResultRender_2|대회 참가시 대회성적에 따라|
+|EXE_TournamentDetailInnerRewardWnd::OnTournamentRewardResultRender_3|획득가능한 보상입니다.|
+|EXE_TournamentDetailInnerRewardWnd::OnTournamentRewardNoneRender_1|대회에|
+|EXE_TournamentDetailInnerRewardWnd::OnTournamentRewardNoneRender_2|참가하지 않음|
+|EXE_TournamentDetailInnerRewardWnd::OnTournamentRewardNoneRender_3|대회 팀 소속의 각 개인당|
+|EXE_TournamentDetailInnerRewardWnd::OnTournamentRewardNoneRender_4|획득가능한 보상입니다.|
+|EXE_TournamentDetailInnerRewardWnd::OnTournamentNoneRender_1|대회성적 보상|
+|EXE_TournamentDetailInnerRewardWnd::OnTournamentNoneRender_2|대회 참가시 대회성적에 따라|
+|EXE_TournamentDetailInnerRewardWnd::OnTournamentNoneRender_3|획득가능한 보상입니다.|
+|EXE_TournamentDetailInnerCampRewardWnd::OnCampRewardResultRender_1|승리 보상|
+|EXE_TournamentDetailInnerCampRewardWnd::OnCampRewardResultRender_2|패배 보상|
+|EXE_TournamentDetailInnerCampRewardWnd::OnCampRewardResultRender_3|보유한 대회포인트에 따라|
+|EXE_TournamentDetailInnerCampRewardWnd::OnCampRewardResultRender_4|획득가능한 보상입니다.|
+|EXE_TournamentDetailInnerCampRewardWnd::OnCampRewardNoneRender_1|진영전에|
+|EXE_TournamentDetailInnerCampRewardWnd::OnCampRewardNoneRender_2|참가하지 않음|
+|EXE_TournamentDetailInnerCampRewardWnd::OnCampRewardNoneRender_3|보유한 대회포인트에 따라|
+|EXE_TournamentDetailInnerCampRewardWnd::OnCampRewardNoneRender_4|획득가능한 보상입니다.|
+|EXE_TournamentDetailInnerCampRewardWnd::OnCampNoneRender_1|진영 보상|
+|EXE_TournamentDetailInnerCampRewardWnd::OnCampNoneRender_2|보유한 대회포인트에 따라|
+|EXE_TournamentDetailInnerCampRewardWnd::OnCampNoneRender_3|획득가능한 보상입니다.|
+|EXE_TournamentDetailInnerCheerWnd::OnCheerRewardResultRender_1|우승응원 보상|
+|EXE_TournamentDetailInnerCheerWnd::OnCheerRewardResultRender_2|응원한 대회팀이 우승할 경우|
+|EXE_TournamentDetailInnerCheerWnd::OnCheerRewardResultRender_3|획득가능한 보상입니다.|
+|EXE_TournamentDetailInnerCheerWnd::OnCheerRewardResultRender_4|%d 페소|
+|EXE_TournamentDetailInnerCheerWnd::OnCheerRewardNoneRender_1|우승응원에|
+|EXE_TournamentDetailInnerCheerWnd::OnCheerRewardNoneRender_2|참가하지 않음|
+|EXE_TournamentDetailInnerCheerWnd::OnCheerRewardNoneRender_3|응원한 대회팀이 우승할 경우|
+|EXE_TournamentDetailInnerCheerWnd::OnCheerRewardNoneRender_4|획득가능한 보상입니다.|
+|EXE_TournamentDetailInnerCheerWnd::OnCheerNoneRender_1|우승응원 보상|
+|EXE_TournamentDetailInnerCheerWnd::OnCheerNoneRender_2|응원한 대회팀이 우승할 경우|
+|EXE_TournamentDetailInnerCheerWnd::OnCheerNoneRender_3|획득가능한 보상입니다.|
+|EXE_TournamentAlarmRewardWnd::OnResultRender_1|대회성적 보상|
+|EXE_TournamentAlarmRewardWnd::OnResultRender_2|대회 참가시 대회성적에 따라|
+|EXE_TournamentAlarmRewardWnd::OnResultRender_3|획득가능한 보상입니다.|
+|EXE_TournamentAlarmRewardWnd::OnResultNoneRender_1|대회에|
+|EXE_TournamentAlarmRewardWnd::OnResultNoneRender_2|참가하지 않음|
+|EXE_TournamentAlarmRewardWnd::OnResultNoneRender_3|대회 팀 소속의 각 개인당|
+|EXE_TournamentAlarmRewardWnd::OnResultNoneRender_4|획득가능한 보상입니다.|
+|EXE_TournamentAlarmCampRewardWnd::OnResultRender_1|승리 보상|
+|EXE_TournamentAlarmCampRewardWnd::OnResultRender_2|패배 보상|
+|EXE_TournamentAlarmCampRewardWnd::OnResultRender_3|보유한 대회포인트에 따라|
+|EXE_TournamentAlarmCampRewardWnd::OnResultRender_4|획득가능한 보상입니다.|
+|EXE_TournamentAlarmCampRewardWnd::OnResultRender_5|%s 페소|
+|EXE_TournamentAlarmCampRewardWnd::OnResultNoneRender_1|진영전에|
+|EXE_TournamentAlarmCampRewardWnd::OnResultNoneRender_2|참가하지 않음|
+|EXE_TournamentAlarmCampRewardWnd::OnResultNoneRender_3|보유한 대회포인트에 따라|
+|EXE_TournamentAlarmCampRewardWnd::OnResultNoneRender_4|획득가능한 보상입니다.|
+|EXE_TournamentAlarmCheerRewardWnd::OnResultRender_1|우승응원 보상|
+|EXE_TournamentAlarmCheerRewardWnd::OnResultRender_2|응원한 대회팀이 우승할 경우|
+|EXE_TournamentAlarmCheerRewardWnd::OnResultRender_3|획득가능한 보상입니다.|
+|EXE_TournamentAlarmCheerRewardWnd::OnResultRender_4|%d 페소|
+|EXE_TournamentAlarmCheerRewardWnd::OnResultNoneRender_1|우승응원 보상|
+|EXE_TournamentAlarmCheerRewardWnd::OnResultNoneRender_2|획득 실패|
+|EXE_TournamentAlarmCheerRewardWnd::OnResultNoneRender_3|응원한 대회팀이 우승할 경우|
+|EXE_TournamentAlarmCheerRewardWnd::OnResultNoneRender_4|획득가능한 보상입니다.|
+|EXE_TournamentRoomListWnd::SetRoomList_1|관전입장 (대기중)|
+|EXE_TournamentRoomListWnd::SetRoomList_2|관전입장 (결승 진행중)|
+|EXE_TournamentRoomListWnd::SetRoomList_3|관전입장 (%d강 진행중)|
+|EXE_TournamentMainWnd::ApplyTournamentConfirmCheck_1|대회가 종료 되었습니다.|
+|EXE_TournamentMainWnd::ApplyTournamentConfirmCheck_2|참가하실 대회는|
+|EXE_TournamentMainWnd::ApplyTournamentConfirmCheck_3|오프라인형 대회|
+|EXE_TournamentMainWnd::ApplyTournamentConfirmCheck_4|이기 때문에|
+|EXE_TournamentMainWnd::ApplyTournamentConfirmCheck_5|대회팀 생성시|
+|EXE_TournamentMainWnd::ApplyTournamentConfirmCheck_6|주최자의 승인이 필요|
+|EXE_TournamentMainWnd::ApplyTournamentConfirmCheck_7|합니다.|
+|EXE_TournamentMainWnd::ApplyTournamentConfirmRequest_1|팀 생성권한 요청을 완료 하였습니다.|
+|EXE_TournamentMainWnd::ApplyTournamentConfirmRequest_2|주최자가 오프라인입니다.#주최자가 온라인 일 경우에만 요청이 가능합니다|
+|EXE_TournamentMainWnd::IwmTournamentConfirmCheck_1|이미 팀 생성 권한을 요청한 대회입니다. # 5분간 재요청이 불가능합니다.|
+|EXE_TournamentMainWnd::UpdateMainUI_1|참가현황보기 (%d팀)|
+|EXE_TournamentMainWnd::UpdateMainUI_2|팀정보 (팀결성 완료)|
+|EXE_TournamentMainWnd::UpdateMainUI_3|팀정보 (%d인 부족)|
+|EXE_TournamentMainWnd::UpdateMainUI_4|대회 참가하기|
+|EXE_TournamentMainWnd::UpdateMainUI_5|나의 대회 보기|
+|EXE_TournamentMainWnd::UpdateMainUI_6|대회 입장|
+|EXE_TournamentMainWnd::UpdateMainUI_7|대회 보기|
+|EXE_TournamentMainWnd::OnExplainRender_1|대회규모|
+|EXE_TournamentMainWnd::OnExplainRender_2|%d강 (%d회전)|
+|EXE_TournamentMainWnd::OnExplainRender_3|대회종류|
+|EXE_TournamentMainWnd::OnExplainRender_4|%s %d인|
+|EXE_TournamentMainWnd::OnExplainRender_5|모집마감|
+|EXE_TournamentMainWnd::OnExplainRender_6|응원마감|
+|EXE_TournamentMainWnd::OnExplainRender_7|대진배정|
+|EXE_TournamentMainWnd::OnExplainRender_8|대회종료|
+|EXE_TournamentMainWnd::OnExplainRender_9|결승|
+|EXE_TournamentMainWnd::OnExplainRender_10|%d강|
+|EXE_TournamentMainWnd::OnExplainRender_11|수동진행|
+|EXE_TournamentMainWnd::OnScheduleRender_1|%s 정규 대회 모집|
+|EXE_TournamentMainWnd::OnScheduleRender_2|%s 대회 모집|
+|EXE_TournamentMainWnd::OnScheduleRender_3|응원기간|
+|EXE_TournamentMainWnd::OnScheduleRender_4|대진발표|
+|EXE_TournamentMainWnd::OnScheduleRender_5|대회기간|
+|EXE_TournamentMainWnd::OnOfflineScheduleRender_1|%s 대회(오프라인형)|
+|EXE_LobbyTournamentInfoWnd::iwm_command_1|대회 만들기 기능은#차후 추가될 예정입니다|
+|EXE_LobbyTournamentTeamBtn::OnRender_1|참가중인 대회가|
+|EXE_LobbyTournamentTeamBtn::OnRender_2|없습니다|
+|EXE_LobbyTournamentTeamBtn::OnRenderData_1|팀정보 요청중%s|
+|EXE_LobbyTournamentTeamBtn::OnRenderData_2|%s 정규 대회팀|
+|EXE_LobbyTournamentTeamBtn::OnRenderData_3|%s 대회팀|
+|EXE_LobbyTournamentTeamBtn::OnRenderData_4|★ 탈락|
+|EXE_LobbyTournamentTeamBtn::OnRenderData_5|★ 우승!!|
+|EXE_LobbyTournamentTeamBtn::OnRenderData_6|★ 준우승!!|
+|EXE_LobbyTournamentTeamBtn::OnRenderData_7|★ %d강 달성!!|
+|EXE_LobbyTournamentTeamBtn::OnRenderData_8|★ 더 이상 경기가 없습니다|
+|EXE_LobbyTournamentTeamBtn::OnRenderData_9|★ 팀결성 완료|
+|EXE_LobbyTournamentTeamBtn::OnRenderData_10|★ %d인 부족|
+|EXE_LobbyTournamentTeamBtn::OnRenderData_11|★ 주최자 수동진행|
+|EXE_LobbyTournamentTeamBtn::OnRenderData_12|★ 모집마감 %02d/%02d %02d:%02d|
+|EXE_LobbyTournamentTeamBtn::OnRenderData_13|★ 응원마감 %02d/%02d %02d:%02d|
+|EXE_LobbyTournamentTeamBtn::OnRenderData_14|★ 예비엔트리|
+|EXE_LobbyTournamentTeamBtn::OnRenderData_15|★ 결승전|
+|EXE_LobbyTournamentTeamBtn::OnRenderData_16|★ %d강|
+|EXE_TournamentTeamCreateWnd::SendTeamCreate_1|선택한 대회가 존재하지 않습니다|
+|EXE_TournamentTeamCreateWnd::SendTeamCreate_2|선택한 대회에 팀이 존재합니다|
+|EXE_TournamentTeamCreateWnd::SendTeamCreate_3|팀 이름을 입력하세요|
+|EXE_TournamentTeamCreateWnd::SendTeamCreate_4|잘못된 팀 이름입니다|
+|EXE_TournamentTeamCreateWnd::SendTeamCreate_5|사용이 금지된 이름입니다(%s)|
+|EXE_TournamentTeamCreateWnd::SendTeamCreate_6|사용이 금지된 이름입니다|
+|EXE_TournamentTeamCreateWnd::SendTeamCreate_7|사용이 금지된 이름입니다(1)|
+|EXE_TournamentTeamCreateWnd::SendTeamCreate_8|사용이 금지된 이름입니다(2)|
+|EXE_TournamentTeamCreateWnd::SendTeamCreate_9|사용이 금지된 이름입니다(3)|
+|EXE_TournamentTeamCreateWnd::SendTeamCreate_10|특별 아이템 인벤토리 에러|
+|EXE_TournamentTeamCreateWnd::OnRender_1|친구의 권유를 받아 팀원으로 참가하거나|
+|EXE_TournamentTeamCreateWnd::OnRender_2|대회팀을 만들어 팀원을 모집하세요.|
+|EXE_TournamentTeamCreateWnd::OnRender_3|모집마감까지 %d인팀을 이루어야 등록됩니다.|
+|EXE_TournamentTeamCreateWnd::OnRender_4|대회팀 이름을 입력하세요|
+|EXE_TournamentTeamCreateComplete::OnRender_1|%s 정규 대회팀|
+|EXE_TournamentTeamCreateComplete::OnRender_2|%s 대회팀|
+|EXE_TournamentTeamUserOptionWnd::CommandOption_1|%s님을 팀에서#탈퇴시키겠습니까?|
+|EXE_TournamentTeamUserOptionWnd::SetOptionInfo_1|정보|
+|EXE_TournamentTeamUserOptionWnd::SetOptionInfo_2|%s 정보|
+|EXE_TournamentTeamUserOptionWnd::SetOptionInfo_3|탈퇴 시키기|
+|EXE_TournamentTeamUserOptionWnd::IsKickUserOK_1|대회정보가 존재하지 않습니다|
+|EXE_TournamentTeamUserOptionWnd::IsKickUserOK_2|대회가 시작되어 강퇴가 불가능합니다|
+|EXE_TournamentTeamUserOptionWnd::IsKickUserOK_3|팀원만 강퇴가 가능합니다|
+|EXE_TournamentTeamUserOptionWnd::IsKickUserOK_4|자신은 강퇴가 불가능합니다|
+|EXE_TournamentTeamUserOptionWnd::IsKickUserOK_5|팀장만 팀원을 강퇴 시킬 수 있습니다|
+|EXE_TournamentTeamInfoWnd::UpdateTournament_1|%s 정규 대회팀|
+|EXE_TournamentTeamInfoWnd::UpdateTournament_2|%s 대회팀|
+|EXE_TournamentTeamInfoWnd::UpdateChildWnd_1|닫기|
+|EXE_TournamentTeamInfoWnd::UpdateChildWnd_2|대회팀 가입 신청하기|
+|EXE_TournamentTeamInfoWnd::IsTeamLeaveOK_1|대회정보가 존재하지 않습니다|
+|EXE_TournamentTeamInfoWnd::IsTeamLeaveOK_2|대회가 시작되어 탈퇴가 불가능합니다|
+|EXE_TournamentTeamInfoWnd::IsTeamLeaveOK_3|팀원만 탈퇴가 가능합니다|
+|EXE_TournamentTeamInfoWnd::IsTeamLeaveOK_4|팀장은 팀원이 있을 경우엔#팀 탈퇴가 불가능합니다|
+|EXE_TournamentTeamInfoWnd::SendTeamLeave_1|[%s]팀에서#탈퇴 하시겠습니까?|
+|EXE_TournamentTeamInfoWnd::SendTeamEntryApp_1|대회에 이미 팀이 존재합니다|
+|EXE_TournamentTeamInfoWnd::SendTeamEntryApp_2|이미 팀원입니다|
+|EXE_TournamentTeamInfoWnd::SendTeamEntryApp_3|팀원이 가득 찼습니다|
+|EXE_TournamentTeamInfoWnd::SendTeamEntryApp_4|진영에 먼저 가입해 주세요.|
+|EXE_TournamentTeamInfoWnd::SendTeamEntryApp_5|같은 진영의 팀만 가입이 가능합니다|
+|EXE_TournamentTeamInfoWnd::SendTeamEntryApp_6|대회 주최자는#대회팀에 가입 할 수 없습니다.|
+|EXE_TournamentTeamInfoWnd::SendTeamEntryApp_7|팀 정보가 정확하지 않습니다#다시 시도해주세요|
+|EXE_TournamentTeamInfoWnd::iwm_command_1|모집기간이 종료되었습니다.|
+|EXE_TournamentTeamInfoWnd::iwm_command_2|팀결성이 완료되었습니다.|
+|EXE_TournamentTeamInfoWnd::OnRender_1|팀결성 완료|
+|EXE_TournamentTeamInfoWnd::OnRender_2|%d인 부족|
+|EXE_TournamentTeamInvitationFriendWnd::iwm_show_1|접속중인 친구가 없습니다|
+|EXE_TournamentTeamInvitationWnd::SendInvitation_1|닉네임을 입력하세요|
+|EXE_TournamentTeamInvitationWnd::SendInvitation_2|잘못된 닉네임입니다|
+|EXE_TournamentTeamInvitationWnd::SendInvitation_3|자신의 닉네임입니다|
+|EXE_TournamentTeamInvitationWnd::SendInvitation_4|개발자나 마스터에게 가입권유는 안됩니다|
+|EXE_TournamentTeamInvitationWnd::SendInvitation_5|대회정보가 존재하지 않습니다#잠시 후 다시 시도해주세요|
+|EXE_TournamentTeamInvitationWnd::SendInvitation_6|팀정보가 존재하지 않습니다#잠시 후 다시 시도해주세요|
+|EXE_TournamentTeamInvitationWnd::SendInvitation_7|팀결성이 완료되어#팀원을 모집할 수 없습니다|
+|EXE_TournamentTeamInvitationWnd::SendInvitation_8|대회 주최자는 초대 할 수 없습니다.|
+|EXE_TournamentTeamInvitationWnd::SendInvitation_9|가입권유 메시지가 발송되었습니다.|
+|EXE_TournamentTeamInvitationWnd::OnRender_1|가입권유 메시지를 받을 닉네임을 입력하세요|
+|EXE_TournamentTeamInvitedWnd::OnRender_1|%s 정규 대회팀|
+|EXE_TournamentTeamInvitedWnd::OnRender_2|%s 대회팀|
+|EXE_TournamentTeamInvitedWnd::OnRender_3|대회팀 가입 신청을 부탁드립니다.|
+|EXE_TournamentTeamInvitedWnd::OnRender_4|보낸이 : |
+|EXE_TournamentTeamEntryDelayUserBtn::IsError_1|자신의 팀만 가능합니다|
+|EXE_TournamentTeamEntryDelayUserBtn::IsError_2|팀장만이 수락이 가능합니다|
+|EXE_TournamentTeamEntryDelayUserBtn::IsError_3|팀모집 기간이 종료되었습니다.|
+|EXE_TournamentTeamEntryDelayUserBtn::IsError_4|다른 진영의 유저는#팀원이 될 수 없습니다|
+|EXE_TournamentTeamEntryDelayUserBtn::IsError_5|팀 정보가 없습니다#잠시 후 다시 시도해주세요|
+|EXE_TournamentTeamEntryDelayUserBtn::IsError_6|대회 정보가 없습니다#잠시 후 다시 시도해주세요|
+|EXE_TournamentTeamEntryDelayUserBtn::iwm_command_1|%s님의 가입 신청을#수락 하시겠습니까?|
+|EXE_TournamentTeamEntryDelayUserBtn::iwm_command_2|%s님의 가입 신청을#거절 하시겠습니까?|
+|EXE_TournamentTeamEntryDelayUserBtn::OnRender_1|대기자가 없습니다|
+|EXE_TournamentTeamEntryDelayUserWnd::OnRender_1|%s 정규 대회팀|
+|EXE_TournamentTeamEntryDelayUserWnd::OnRender_2|%s 대회팀|
+|EXE_TournamentTeamEventWnd::SetTeamEventData_1|대회팀 가입 완료|
+|EXE_TournamentTeamEventWnd::SetTeamEventData_2|대회팀 해체 완료|
+|EXE_TournamentTeamEventWnd::SetTeamEventData_3|대회팀 탈퇴|
+|EXE_TournamentTeamEventWnd::OnJoinRender_1|%s 정규 대회팀|
+|EXE_TournamentTeamEventWnd::OnJoinRender_2|%s 대회팀|
+|EXE_TournamentTeamEventWnd::OnTeamDeleteRender_1|%s 정규 대회팀|
+|EXE_TournamentTeamEventWnd::OnTeamDeleteRender_2|%s 대회팀|
+|EXE_TournamentTeamEventWnd::OnTeamLeaveRender_1|대회팀에서 탈퇴되었습니다.|
+|EXE_TournamentTeamAlarmWnd::SetAlarmData_1|대회팀 팀원 가입|
+|EXE_TournamentTeamAlarmWnd::SetAlarmData_2|대회팀 팀원 탈퇴|
+|EXE_TournamentTeamAlarmWnd::OnRender_1|%s 정규 대회팀|
+|EXE_TournamentTeamAlarmWnd::OnRender_2|%s 대회팀|
+|EXE_TournamentTeamAlarmWnd::OnRender_3|새로운 팀원이 추가되었습니다.|
+|EXE_TournamentTeamAlarmWnd::OnRender_4|가입자 : |
+|EXE_TournamentTeamAlarmWnd::OnRender_5|탈퇴자가 발생하였습니다.|
+|EXE_TournamentTeamAlarmWnd::OnRender_6|탈퇴자 : |
+|EXE_TournamentBattleInviteWnd::UpdateTournament_1|%s 정규 대회|
+|EXE_TournamentBattleInviteWnd::UpdateTournament_2|%s 대회|
+|EXE_TournamentBattleInviteWnd::UpdateTournament_3|[대회로그] 대회경기 초대 -%s- 배틀룸 인덱스 : %d, 블루팀 : %d, 레드팀 : %d, 초대시간 %d|
+|EXE_TournamentBattleInviteWnd::iwm_command_1|[대회로그] 대회방 입장 에러 - %s(배틀룸인덱스 에러 : m_dwBattleIndex == -1 )|
+|EXE_TournamentBattleInviteWnd::iwm_command_2|[대회로그] 대회 배틀룸 입장 - %s - %d|
+|EXE_TournamentBattleInviteWnd::OnRender_1|경기가 |
+|EXE_TournamentBattleInviteWnd::OnRender_2|%d분 %d초 |
+|EXE_TournamentBattleInviteWnd::OnRender_3|%d초 |
+|EXE_TournamentBattleInviteWnd::OnRender_4|남았습니다. 경기장으로 입장해주세요.|
+|EXE_TournamentMatchWinAlarmWnd::OnVictoryRender_1|승리를 축하합니다|
+|EXE_TournamentMatchWinAlarmWnd::OnVictoryRender_2|다음 경기가 있는지 꼭 확인하세요|
+|EXE_TournamentUnearnedWinAlarmWnd::OnVictoryRender_1|%s 정규대회|
+|EXE_TournamentUnearnedWinAlarmWnd::OnVictoryRender_2|%s 대회|
+|EXE_TournamentUnearnedWinAlarmWnd::OnVictoryRender_3|최종 우승!!|
+|EXE_TournamentUnearnedWinAlarmWnd::OnVictoryRender_4|결승 진출!!|
+|EXE_TournamentUnearnedWinAlarmWnd::OnVictoryRender_5|%d 강 부전승|
+|EXE_TournamentEtcItemNeedPopup::OnRender_1|[대회 생성권]이 필요합니다.|
+|EXE_TournamentEtcItemNeedPopup::OnRender_2|대회를 개최할 수 있는 기능이며,|
+|EXE_TournamentEtcItemNeedPopup::OnRender_3|상점 - 특별에서 구입하실 수 있습니다.|
+|EXE_TournamentEtcItemUsePopup::OnRender_1|보유 중인 [%s]을|
+|EXE_TournamentEtcItemUsePopup::OnRender_2|사용하시겠습니까?|
+|EXE_TournamentEtcItemUsePopup::OnRender_3|대회를 개최할 수 있는 기능입니다.|
+|EXE_CustomTournamentEntryListWnd::SetTournament_1|팀 생성권한 요청자 보기 (%d팀)|
+|EXE_CustomTournamentEntryListWnd::SetTournament_2|닫기 (ESC)|
+|EXE_CustomTournamentDelayCreateTeamListBtn::IsError_1|팀모집 기간이 종료되었습니다.|
+|EXE_CustomTournamentDelayCreateTeamListBtn::IsError_2|대회 정보가 없습니다#잠시 후 다시 시도해주세요|
+|EXE_CustomTournamentDelayCreateTeamListBtn::iwm_command_1|%s님의 팀 생성 신청을#수락 하시겠습니까?|
+|EXE_CustomTournamentDelayCreateTeamListBtn::iwm_command_2|%s님의 팀 생성 신청을#거절 하시겠습니까?|
+|EXE_CustomTournamentDelayCreateTeamListBtn::OnRender_1|대기자가 없습니다|
+|EXE_CustomTournamentDelayCreateTeamListWnd::OnRender_1|%s 대회|
+|EXE_CustomTournamentDelayCreateTeamListWnd::OnRender_2|팀 생성 권한요청 도착|
+|EXE_TournamentJoinConfirmAgreeWnd::SetTournament_1|팀 생성 권한 획득|
+|EXE_TournamentJoinConfirmAgreeWnd::SetTournament_2|대회 초대|
+|EXE_TournamentJoinConfirmAgreeWnd::OnRender_1|%s 대회|
+|EXE_TournamentJoinConfirmAgreeWnd::OnRender_2|초대 되었습니다.|
+|EXE_TournamentJoinConfirmAgreeWnd::OnRender_3|팀 생성 권한을 얻었습니다.|
+|EXE_TournamentJoinConfirmAgreeWnd::OnRender_4|대회-토너먼트 탭에서|
+|EXE_TournamentJoinConfirmAgreeWnd::OnRender_5|팀을 생성해 주세요|
+|EXE_TournamentInvitationWnd::SendInvitation_1|닉네임을 입력하세요|
+|EXE_TournamentInvitationWnd::SendInvitation_2|잘못된 닉네임입니다|
+|EXE_TournamentInvitationWnd::SendInvitation_3|자신의 닉네임입니다|
+|EXE_TournamentInvitationWnd::SendInvitation_4|개발자나 마스터에게 가입권유는 안됩니다|
+|EXE_TournamentInvitationWnd::SendInvitation_5|대회정보가 존재하지 않습니다#잠시 후 다시 시도해주세요|
+|EXE_TournamentInvitationWnd::OnRender_1|참가 권유 메시지를 받을 닉네임을 입력하세요|
+|EXE_TradeItemRegisterConfirmWnd::OnRender_11|수수료(%.2f％)|
+|EXE_TradeItemBuyWnd::OnRender_11|수수료(%.2f％)|
+|EXE_TradeMainWnd::SetSortTypeList_6|전체 부위|
+|EXE_TradeMainWnd::SetGradeSortTypeList_1|전체 등급|
+|EXE_TradeMainWnd::SetGradeSortTypeList_2|고급|
+|EXE_TradeMainWnd::SetGradeSortTypeList_3|레어|
+|EXE_TradeMainWnd::SetGradeSortTypeList_4|유니크|
+|EXE_TradeMainWnd::SetGradeSortTypeList_5|아이돌|
+|EXE_TradeMainWnd::SetPriceSortTypeList_1|전체 가격|
+|EXE_TradeMainWnd::SetPriceSortTypeList_2|높은 가격 순|
+|EXE_TradeMainWnd::SetPriceSortTypeList_3|낮은 가격 순|
+|EXE_TrainingFuncMenuWnd::iwm_command_1|길드장만이 활성화 할 수 있는 기능입니다.|
+|EXE_TrainingFuncMenuWnd::iwm_command_2|가입된 길드가 없습니다.|
+|EXE_TrainingFuncWnd::SetTitle_1|전투|
+|EXE_TrainingFuncWnd::SetTitle_2|광장|
+|EXE_TrainingFuncWnd::SetTitle_3|거래소|
+|EXE_TrainingFuncWnd::ShowHeadquartersMsg_1|훈련소로 이동하시겠습니까?|
+|EXE_TrainingFuncWnd::ShowHeadquartersMsg_2|알림|
+|EXE_TrainingFuncWnd::ShowHeadquartersMsg_3|확인|
+|EXE_TrainingFuncWnd::ShowHeadquartersMsg_4|취소|
+|EXE_TrainingFuncWnd::ShowHomeMsg_1|개인본부로 이동하시겠습니까?|
+|EXE_TrainingFuncWnd::ShowHomeMsg_2|알림|
+|EXE_TrainingFuncWnd::ShowHomeMsg_3|확인|
+|EXE_TrainingFuncWnd::ShowHomeMsg_4|취소|
+|EXE_TrainingFuncWnd::ShowGuildHQMsg_1|길드본부로 이동하시겠습니까?|
+|EXE_TrainingFuncWnd::ShowGuildHQMsg_2|알림|
+|EXE_TrainingFuncWnd::ShowGuildHQMsg_3|확인|
+|EXE_TrainingFuncWnd::ShowGuildHQMsg_4|취소|
+|EXE_TrainingFuncWnd::OnCreateHeadquarters_1|전투 중에는 훈련소 입장이 불가능합니다.|
+|EXE_TrainingFuncWnd::OnCreateHouse_1|전투 중에는 개인본부 입장이 불가능합니다.|
+|EXE_TrainingFuncWnd::OnCreateGuildHeadquarters_1|전투 중에는 입장이 불가능합니다.|
+|EXE_TrainingFuncWnd::OnCreateGuildHeadquarters_2|진영/래더 중에는 입장이 불가능합니다|
+|EXE_TrainingFuncWnd::OnCreateGuildHeadquarters_3|오늘의 모드 중에는 입장이 불가능합니다|
+|EXE_TrainingFuncWnd::OnCreateGuildHeadquarters_4|랭킹전 중에는 입장이 불가능합니다|
+|EXE_TutorialKeyboardWnd::OnRenderASD_1|점프|
+|EXE_TutorialKeyboardWnd::OnRenderASD_2|방어|
+|EXE_TutorialKeyboardWnd::OnRenderASD_3|공격|
+|EXE_UISoldierBtn::RenderInfo_4|프리데이|
+|EXE_UsePresentEtcItemWnd::SendPresent_1|친구에게만 보낼 수 있습니다.|
+|EXE_UsePresentEtcItemWnd::SendPresentComplete_1|님께|
+|EXE_UsePresentEtcItemWnd::SendPresentComplete_2|선물 발송을 완료하였습니다.|
+|EXE_UsePresentEtcItemWnd::SendPresentComplete_3|알림|
+|EXE_UsePresentEtcItemWnd::SendPresentComplete_4|확인|
+|EXE_UsePresentEtcItemWnd::SetInfo_1|선물선택|
+|EXE_UsePresentEtcItemWnd::SetInfo_2|선물받을 친구를 선택하세요.|
+|EXE_UsePresentEtcItemWnd::OnRender_1| 아이템이|
+|EXE_UsePresentEtcItemWnd::OnRender_2| 아래와 같은 선물로 변경됩니다|
+|EXE_UsePresentEtcItemWnd::OnRender_3|친구를 선택하신 후 다음을 클릭하세요|
+|EXE_UsePresentEtcItemWnd::SetConfirmWnd_1|먼저 보낼 선물을 선택하세요.|
+|EXE_UsePresentEtcItemWnd::SetConfirmWnd_2|닉네임을 입력하세요.|
+|EXE_UsePresentEtcItemWnd::SetConfirmWnd_3|잘못된 닉네임입니다.|
+|EXE_UsePresentEtcItemWnd::SetConfirmWnd_4|자신의 닉네임입니다.|
+|EXE_UsePresentEtcItemWnd::SetConfirmWnd_5|개발자나 마스터에게는 보낼 수 없습니다.|
+|EXE_FriendListWnd::iwm_show_1|친구가 없습니다..|
+|EXE_PresentListWnd::SetPresentList_1|%s %d개|
+|EXE_PresentListWnd::SetPresentList_2|%d 페소|
+|EXE_PresentListWnd::SetPresentList_3|경험치 +%d|
+|EXE_PresentListWnd::SetPresentList_4|보낼 수 있는 아이템이 없습니다.|
+|EXE_SendPresentEtcItemConfirmWnd::SetInfo_1|%s %d개|
+|EXE_SendPresentEtcItemConfirmWnd::SetInfo_2|%d 페소|
+|EXE_SendPresentEtcItemConfirmWnd::SetInfo_3|경험치 +%d|
+|EXE_SendPresentEtcItemConfirmWnd::SetInfo_4|받는이 : |
+|EXE_SendPresentEtcItemConfirmWnd::SetInfo_5|본 아이템을 선물 하시겠습니까?|
+|EXE_UserInfoToolTip::OnRender_4|장착코스튬|
+|EXE_UserInfoToolTip::OnRender_5|장착액세서리|
+|EXE_UserInfoListWnd::OnRender_1|광장|
+|EXE_UserInfoListWnd::OnRender_2|전투|
+|EXE_UserInfoListWnd::OnRender_3|진영전|
+|EXE_UserInfoListWnd::OnRender_4|로비|
+|EXE_UserInfoListWnd::OnRender_5|훈련소|
+|EXE_UserInfoListWnd::OnRender_6|대회|
+|EXE_UserInfoListWnd::OnRender_7|오늘의모드|
+|EXE_UserInfoListWnd::OnRender_8|길드본부|
+|EXE_UserInfoListWnd::OnRender_9|개인본부|
+|EXE_UserInfoListWnd::CheckInvite_1|%s님은 전투 중이라#초대가 불가능합니다.|
+|EXE_UserInfoListWnd::CheckInvite_2|%s님은 진영전 중이라#초대가 불가능합니다.|
+|EXE_UserInfoListWnd::CheckInvite_3|%s님은 오늘의모드 중이라#초대가 불가능합니다.|
+|EXE_UserInfoListWnd::CheckInvite_4|%s님은 대회 중이라#초대가 불가능합니다.|
+|EXE_UserInfoListWnd::CheckInvite_5|시작 후 참여 X가 설정된 #전투방은 초대가 불가능합니다.|
+|EXE_UserInfoListWnd::CheckInvite_6|전투룸 정원을 초과하였습니다.|
+|EXE_UserInfoListWnd::CheckInvite_7|동일한 전투룸에 있는 유저입니다.|
+|EXE_UserInfoListWnd::CheckInvite_8|초보 팀데스매치는 초대가 불가능합니다.|
+|EXE_UserInfoListWnd::CheckInvite_9|경기 전용 방에서는 방장만 초대가 가능합니다.|
+|EXE_UserInfoListWnd::CheckInvite_10|대회방에는 초대가 되지 않습니다.|
+|EXE_UserInfoListWnd::CheckInvite_11|랭킹전 중에는 초대가 되지 않습니다.|
+|EXE_UserInfoListWnd::CheckInvite_12|진영팀 정원을 초과하였습니다.|
+|EXE_UserInfoListWnd::CheckInvite_13|진영전 중에는 초대가 불가능합니다.|
+|EXE_UserInfoListWnd::CheckInvite_14|진영전 검색 중에는 초대가 불가능합니다.|
+|EXE_UserInfoListWnd::CheckInvite_15|진영이 다른 유저는 초대가 불가능합니다.|
+|EXE_UserInfoListWnd::CheckInvite_16|동일한 진영팀에 있는 유저입니다.|
+|EXE_UserInfoListWnd::CheckMove_1|로비로 따라가기는 불가능합니다.|
+|EXE_UserInfoListWnd::CheckMove_2|전투방에 소속되어있으면#사용할 수 없습니다.|
+|EXE_UserInfoListWnd::CheckMove_3|진영팀에 소속되어있으면#사용할 수 없습니다.|
+|EXE_UserInfoListWnd::SendClover_1|선물용 클로버가 부족합니다.|
+|EXE_UserInfoListWnd::SendClover_2|선물용 클로버는 |
+|EXE_UserInfoListWnd::SendClover_3|%d분|
+|EXE_UserInfoListWnd::SendClover_4|에 %d개씩 충전됩니다.|
+|EXE_UserInfoListWnd::SendClover_5|친구가 된지 |
+|EXE_UserInfoListWnd::SendClover_6|%d시간|
+|EXE_UserInfoListWnd::SendClover_7| 후 부터|
+|EXE_UserInfoListWnd::SendClover_8|클로버를 주고 받을 수 있습니다.|
+|EXE_UserInfoListWnd::SendClover_9| 후 부터 보낼 수 있습니다.|
+|EXE_UserInfoListWnd::SendClover_10|최근에 클로버를 선물하였습니다.|
+|EXE_UserInfoListWnd::SendClover_11| 후 다시 보낼 수 있습니다.|
+|EXE_UserListWnd::OnInsertBestFriend_1|친구 목록을 로드중입니다.#잠시 후 다시 시도해주세요.|
+|EXE_UserListWnd::OnInsertBestFriend_2|절친신청을 받을 친구를 선택하세요.|
+|EXE_UserListWnd::OnInsertBestFriend_3|절친 설정은 친구여야 가능합니다.|
+|EXE_UserListWnd::OnInsertBestFriend_4|%s 님은절친설정 되어있습니다.|
+|EXE_UserListWnd::CheckDeleteBestFriend_1|친구 목록을 로드중입니다.#잠시 후 다시 시도해주세요.|
+|EXE_UserListWnd::CheckDeleteBestFriend_2|%s님은 친구가 아닙니다.|
+|EXE_UserListWnd::CheckDeleteBestFriend_3|%s님은 절친이 아닙니다.|
+|EXE_UserListWnd::_OnDeleteBestFriend_1|친구 목록을 로드중입니다.#잠시 후 다시 시도해주세요.|
+|EXE_UserListWnd::_OnDeleteBestFriend_2|%s님은 친구가 아닙니다.|
+|EXE_UserListWnd::_OnDeleteBestFriend_3|%s님은 절친이 아닙니다.|
+|EXE_UserInfoListOptionWnd::CommandOption_1|절친을 해제하시겠습니까?#절친을 해제하면 절친해제 완료전까지#%s님에게 재설정을 할 수 없습니다.|
+|EXE_UserInfoListOptionWnd::CommandOption_2|목록에서 삭제되었습니다.|
+|EXE_UserInfoListOptionWnd::CommandOption_3|개인본부/길드본부/훈련소/광장에서만#사용 가능합니다.|
+|EXE_UserInfoListOptionWnd::CommandOption_4|용병을 먼저 고용해주세요.|
+|EXE_UserInfoListOptionWnd::CommandOption_5|체험용병이 아닌 일반용병을 고용해주세요.|
+|EXE_UserInfoListOptionWnd::CommandOption_6|튜토리얼을 먼저 완료해주세요.|
+|EXE_UserInfoListOptionWnd::CommandOption_7|진영전투 초대는 %s이상 유저만 가능합니다.|
+|EXE_UserInfoListOptionWnd::SetOptionInfo_1|%s 정보|
+|EXE_UserInfoListOptionWnd::SetOptionInfo_2|초대|
+|EXE_UserInfoListOptionWnd::SetOptionInfo_3|광장 따라가기|
+|EXE_UserInfoListOptionWnd::SetOptionInfo_4|전투 따라가기|
+|EXE_UserInfoListOptionWnd::SetOptionInfo_5|진영전 따라가기|
+|EXE_UserInfoListOptionWnd::SetOptionInfo_6|로비 따라가기|
+|EXE_UserInfoListOptionWnd::SetOptionInfo_7|훈련소 따라가기|
+|EXE_UserInfoListOptionWnd::SetOptionInfo_8|개인본부 따라가기|
+|EXE_UserInfoListOptionWnd::SetOptionInfo_9|본부 따라가기|
+|EXE_UserInfoListOptionWnd::SetOptionInfo_10|절친 해제|
+|EXE_UserInfoListOptionWnd::SetOptionInfo_11|절친으로 등록|
+|EXE_UserInfoListOptionWnd::SetOptionInfo_12|차단 해제|
+|EXE_VoiceChatWnd::SetAnnounceVoiceChat_11|오늘의모드에서는 음성채팅 불가능.|
+|EXE_VoiceChatWnd::SetAnnounceVoiceChat_12|훈련소에서는 음성채팅 가능|
+|EXE_ioBlockSetupManager::BeginSetUpState_1|낚시나 탐사 중에는 사용 할 수 없습니다.|
+|EXE_ioBlockSetupManager::BeginSetUpState_2|정지해 있는 상태에서만 편집 할 수 있습니다.|
+|EXE_ioBlockSetupManager::BeginSetUpState_3|왕관을 벗어야만 편집 할 수 있습니다.|
+|EXE_ioBlockSetupManager::BeginSetUpState_4|편집 할 수 없는 모드 입니다.|
+|EXE_ioBlockSetupManager::OnSetUpState_1|지금 다른 길드원이 길드를 꾸미고 있는 중이니,#잠시 기다렸다가 시도해 주세요.|
+|EXE_ioBlockSetupManager::OnSetUpState_2|꾸미기 진행 에러|
+|EXE_ioBlockSetupManager::OnSetUpState_3|길드장이 지정한 유저만#꾸미기가 가능합니다.|
+|EXE_ioBlockSetupManager::OnSetUpState_4|개인본부 소유주만#꾸미기가 가능합니다.|
+|EXE_ioBlockSetupManager::OnSetUpState_5|꾸미기 권한이 없습니다.|
+|EXE_ioBlockSetupManager::OnSetUpState_6|꾸미기 상태로 전환 할 수 없는 모드입니다.|
+|EXE_ioBlockSetupManager::OnSetUpBlock_1|설치 할 수 없습니다.|
+|EXE_ioBlockSetupManager::OnSetUpBlock_2|잘못된 위치 입니다.|
+|EXE_ioBlockSetupManager::OnSetUpBlock_3|수량이 부족 합니다.|
+|EXE_ioBlockSetupManager::OnSetUpBlock_4|꾸미기 아이템 설치 예외 오류|
+|EXE_ioBlockSetupManager::OnSetUpBlock_5|최대치에 도달하여 더이상 설 치 할 수 없습니다.|
+|EXE_ioBlockSetupManager::OnRemoveBlock_1|일치하는 꾸미기 아이템을 찾을 수 없습니다.|
+|EXE_ioBlockSetupManager::OnRemoveBlock_2|꾸미기 아이템 삭제 예외 오류|
+|EXE_ioGuildBlockStorage::ApplyBlcokInvenItem_1|길드에 가입 하지 않은 유저입니다.|
+|EXE_ioGuildBlockStorage::ApplyBlcokInvenItem_2|길드 본부가 활성화 되지 않았습니다.|
+|EXE_ioGuildBlockStorage::ApplyBlcokInvenItem_3|블럭 인벤토리 에러|
+|EXE_ioAccessoryInfoManager::OnAccessoryBuyResult_1|존재하지 않는 상품입니다.|
+|EXE_ioAccessoryInfoManager::OnAccessoryBuyResult_2|페소가 부족합니다.|
+|EXE_ioAccessoryInfoManager::OnAccessorySellResult_1|액세서리 팔기 예외오류|
+|EXE_ioAccessoryInfoManager::OnAccessorySellResult_2|★ [%s] 판매 완료.|
+|EXE_ioAccessoryInfoManager::OnAccessorySellResult_3|★ %s페소가 지급되었습니다.|
+|EXE_ioAccessoryInfoManager::OnAccessorySellResult_4|액세서리 팔기 실패(%d)|
+|EXE_ioApplication::OpenGuildMarkWnd_5|길드마크는 광장/훈련소/본부에서만 #변경이 가능합니다.|
+|EXE_ioApplication::OpenGuildMarkWnd_6|오늘의모드 참여시에는 불가능합니다.|
+|EXE_strcmp_2|리소스조작 : %s/%s : %s|
+|EXE_ioApplication::AltF4ExitProcess_2|튜토리얼을 완료하면#광장으로 이동이 가능합니다.|
+|EXE_ioApplication::OnSellDecoItem_1|치장 팔기 예외오류|
+|EXE_ioApplication::OnSellDecoItem_2|★ [%s] 판매 완료.|
+|EXE_ioApplication::OnSellDecoItem_3|★ %s페소가 지급되었습니다.|
+|EXE_ioApplication::OnSellDecoItem_4|치장 팔기 실패(%d)|
+|EXE_ioApplication::OnDeveloperMacro_3|존재 하지 않는 EtcItem 입니다. : %d|
+|EXE_ioApplication::OnDeveloperMacro_4|%s : 지급된 수량 : %d / 총 수량 : %d|
+|EXE_ioApplication::OnDeveloperMacro_5|%s : 남은 수량 : %d / 총 수량 : %d|
+|EXE_ioApplication::OnDeveloperMacro_6|%s의 limit정보를 확인 할 수 없습니다(한정판매 상품이 아닙니다.)|
+|EXE_ioApplication::OnDeveloperMacro_7|%s의 limit정보를 확인 할 수 없습니다. : limit : %d, max : %d|
+|EXE_ioApplication::OnExercisePcRoomCharCreate_1|체험용병 구매시 예외오류가 발생하였습니다.#관리자에게 문의하세요.|
+|EXE_ioApplication::OnExercisePcRoomCharCreate_2|체험용병 Index가 초과하여#체험용병 생성이 불가능합니다.|
+|EXE_ioApplication::OnExercisePcRoomCharCreate_3|용병 처리중입니다.#잠시 후 다시 시도해주세요.|
+|EXE_ioApplication::OnExercisePcRoomCharCreate_4|레벨 조건을 만족하지 않습니다.|
+|EXE_ioApplication::OnExercisePcRoomCharCreate_5|골드 처리중입니다.#잠시만 기다려 주세요.|
+|EXE_ioApplication::OnExercisePcRoomCharCreate_6|사용할 수 있는 기간이 아닙니다.|
+|EXE_ioApplication::OnExercisePcRoomCharCreate_7|용병 슬롯이 부족합니다.|
+|EXE_ioApplication::OnExercisePcRoomCharCreate_8|알수 없는 오류 : %d|
+|EXE_ioApplication::OnGuildPositionChange_4|%s님의 길드 본부 편집 권한이# 해제 되었습니다.|
+|EXE_ioApplication::OnGuildPositionChange_5|%s님에게 길드 본부 편집 권한이# 부여 되었습니다.|
+|EXE_ioApplication::OnGuildRoomActive_1|길드 본부가 활성화 되었습니다.|
+|EXE_ioApplication::OnGuildRoomActive_2|길드에 가입 되지 않았습니다.#길드 창설 후 사용 해주세요|
+|EXE_ioApplication::OnGuildRoomActive_3|길드장만이 활성화 할 수 있는 기능입니다.|
+|EXE_ioApplication::OnGuildRoomActive_4|이미 길드 본부가 활성화 되었습니다.|
+|EXE_ioApplication::OnShutDownUser_2|셧다운제에 의해 게임 이용이 차단됩니다.|
+|EXE_ioApplication::OnSelectShutDownUser_2|게임 시간 선택제에 의해 게임 이용이 차단됩니다.|
+|EXE_ioApplication::OnAddCash_1|%s골드|
+|EXE_ioApplication::OnAddCash_2|★ [%s] 사용 완료.|
+|EXE_ioApplication::OnAddCash_3|★ %s골드가 지급되었습니다.|
+|EXE_ioApplication::OnAddCash_4|골드 처리중입니다.#잠시만 기다려 주세요.|
+|EXE_ioApplication::OnAddCash_5|골드 처리가 불가능합니다.#잠시만 기다려 주세요.|
+|EXE_ioApplication::OnAddCash_6|서버이동 중입니다.#잠시만 기다려 주세요.|
+|EXE_ioApplication::OnAddCash_7|예외 오류가 발생되었습니다.|
+|EXE_ioApplication::OnAddCash_8|골드 처리가 실패하였습니다.#관리자에게 문의하세요.|
+|EXE_ioApplication::OnFillCashUrl_1|잠시 후 다시 사용해 주세요(1).|
+|EXE_ioApplication::OnFillCashUrl_2|잠시 후 다시 사용해 주세요(2).|
+|EXE_ioApplication::OnNexonSessionMsg_1|넥슨 PC방 정량제 시간이 만료되어 게임이 종료 됩니다.\r\n이용중인 PC방 담당자에게 문의해 주시기 바랍니다.\r\n(0x10000001)|
+|EXE_ioApplication::OnNexonSessionMsg_2|넥슨 PC방 정량제 시간이 만료되어 게임이 종료 됩니다.\r\n이용중인 PC방 담당자에게 문의해 주시기 바랍니다.\r\n(0x10000002)|
+|EXE_ioApplication::OnNexonSessionMsg_3|ID당 허용 접속자 수가 초과되었습니다.\r\n이용중인 PC방 담당자에게 문의해 주시기 바랍니다.\r\n(0x10000003)|
+|EXE_ioApplication::OnNexonSessionMsg_4|IP당 허용 접속자 수가 초과되었습니다.\r\n이용중인 PC방 담당자에게 문의해 주시기 바랍니다.\r\n(0x10000004)|
+|EXE_ioApplication::OnNexonSessionMsg_5|IP당 허용 접속자 수가 초과되었습니다.\r\n이용중인 PC방 담당자에게 문의해 주시기 바랍니다.\r\n(0x10000005)|
+|EXE_ioApplication::OnNexonSessionMsg_6|차단된 PC방입니다.\r\n넥슨 PC방 고객센터로 문의바랍니다.\r\n(0x10000006)|
+|EXE_ioApplication::OnNexonSessionMsg_7|셧다운 시간입니다.\r\n(0x10000007)|
+|EXE_ioApplication::OnNexonSessionMsg_8|셧다운 시간입니다.\r\n(0x10000008)|
+|EXE_ioApplication::OnNexonSessionMsg_9|혀용된 계정이 아닙니다.\r\n(0x10000009)|
+|EXE_ioApplication::OnNexonSessionMsg_10|최대접속 ID 수를 넘었습니다.\r\n(0x1000000a)|
+|EXE_ioApplication::OnNexonSessionMsg_11|넥슨 PC 방 정량제 시간이 모두 소진되었습니다.\r\n(0x1000000b)|
+|EXE_ioApplication::OnNexonSessionMsg_12|접속이 차단된 PC입니다.\r\n넥슨 PC방 고객센터로 문의바랍니다.\r\n(0x1000000c)|
+|EXE_ioApplication::OnNexonSessionMsg_13|선택적 셧다운 시간입니다.\r\n(0x1000000d)|
+|EXE_ioApplication::OnNexonSessionMsg_14|셧다운 시간입니다.\r\n(0x1000000e)|
+|EXE_ioApplication::OnNexonSessionMsg_15|비정상 접속입니다.\r\n(0x1000000f)|
+|EXE_ioApplication::OnNexonSessionMsg_16|넥슨 계정이 아닙니다.\r\n운영자에게 문의 바랍니다.\r\n(0x10000010)|
+|EXE_ioApplication::OnNexonSessionMsg_17|알 수 없는 오류로 게임 클라이언트를 종료합니다.\r\n운영자에게 문의 바랍니다.\r\n(0x10000011)|
+|EXE_ioApplication::OnNexonSessionMsg_18|나이정보를 확인 중 오류가 발생하였습니다.\r\n잠시 후 다시 로그인하여 주십시오.\r\n(0x10000012)|
+|EXE_ioApplication::OnNexonSessionMsg_19|알 수 없는 오류로 게임 클라이언트를 종료합니다.\r\n운영자에게 문의 바랍니다.\r\n(0x10000013)|
+|EXE_ioApplication::OnNexonSessionMsg_20|PC방 프리미엄 적용 대상이 아닙니다.\r\n넥슨 PC방 고객센터로 문의바랍니다.\r\n(0x10000014)|
+|EXE_ioApplication::OnAttendanceCheck_1|출석기록을 로드 중입니다.|
+|EXE_ioApplication::OnAttendanceCheck_2|이미 출석을 완료하였습니다.|
+|EXE_ioApplication::OnAttendanceCheck_3|출석 체크 오류 - 0|
+|EXE_ioApplication::OnAttendanceCheck_4|출석 체크 오류 - 1|
+|EXE_ioApplication::OnSearchPlazaRoom_1|현재 있는 룸과 동일한 룸입니다.|
+|EXE_ioApplication::OnSearchPlazaRoom_2|잘못된 비밀번호입니다.|
+|EXE_ioApplication::OnSearchPlazaRoom_3|해당 광장의 인원이 #초과되었습니다.|
+|EXE_ioApplication::OnSearchPlazaRoom_4|입장 가능한 광장이 없습니다.|
+|EXE_ioApplication::OnSearchPlazaRoom_5|길드광장에는 길드원만 입장이 가능합니다.|
+|EXE_ioApplication::OnSearchPlazaRoom_6|수준차가 커서 입장할 수 없습니다.|
+|EXE_ioApplication::OnSearchPlazaRoom_7|소유한 캐릭터가 없어 광장에 입장 할 수 없습니다.|
+|EXE_ioApplication::OnSearchPlazaRoom_8|임시가입 유저는 광장에 입장 할 수 없습니다.|
+|EXE_ioApplication::OnSearchPlazaRoom_9|서버 이동이 예약된 유저입니다.|
+|EXE_ioApplication::OnSearchPlazaRoom_10|해당 길드를 찾을 수 없습니다.|
+|EXE_ioApplication::OnJoinHeadQuarters_1|훈련소 주인이 접속 종료하였습니다.|
+|EXE_ioApplication::OnJoinHeadQuarters_2|%s님이 접속 종료되어 %s님의 훈련소에 입장할 수 없습니다.|
+|EXE_ioApplication::OnJoinHeadQuarters_3|훈련소 생성이 실패하였습니다.|
+|EXE_ioApplication::OnJoinHeadQuarters_4|인원이 가득 찼습니다.|
+|EXE_ioApplication::OnJoinHeadQuarters_5|예외 오류가 발생하였습니다#관리자에게 문의하세요|
+|EXE_ioApplication::OnJoinHeadQuarters_6|잠긴 훈련소입니다.|
+|EXE_ioApplication::OnCreatePlaza_1|광장 생성 실패|
+|EXE_ioApplication::OnCreatePlaza_2|길드광장에는 길드원만 입장이 가능합니다.|
+|EXE_ioApplication::OnCreatePlaza_3|캐릭터를 보유하지 않았습니다.|
+|EXE_ioApplication::OnCreatePlaza_4|임시 가입만료 유저가 광장 생성 요청|
+|EXE_ioApplication::OnCreatePlaza_5|서버 이동이 예약된 유저가 광장생성 요청|
+|EXE_ioApplication::OnJoinHouse_1|개인본부 생성이 실패하였습니다.|
+|EXE_ioApplication::OnJoinHouse_2|인원이 가득 찼습니다.|
+|EXE_ioApplication::OnJoinHouse_3|예외 오류가 발생하였습니다#관리자에게 문의하세요|
+|EXE_ioApplication::OnJoinHouse_4|비어있는 개인본부에는#입장 할 수 없습니다.|
+|EXE_ioApplication::OnJoinHouse_5|개인본부 주인이 접속 종료하였습니다.|
+|EXE_ioApplication::OnJoinHouse_6|개인본부가 아직 활성화 되지 않았습니다.|
+|EXE_ioApplication::OnGuildAttend_1|출석 성공!|
+|EXE_ioApplication::OnGuildAttend_2|길드 가입 다음 날 부터 출석이 가능합니다.|
+|EXE_ioApplication::OnGuildAttend_3|길드 출석 실패|
+|EXE_ioApplication::OnGuildAttend_4|출석 정보 갱신 완료 # 출석 버튼을 다시 눌러주시기 바랍니다.|
+|EXE_ioApplication::OnGuildAttend_5|길드 출석 에러|
+|EXE_ioApplication::OnGuildReceiveAttendReward_1|길드 출석 보상 실패|
+|EXE_ioApplication::OnGuildReceiveAttendReward_2|출석 정보 갱신 완료 # 출석 버튼을 다시 눌러주시기 바랍니다.|
+|EXE_ioApplication::OnGuildReceiveAttendReward_3|길드 출석 보상 에러|
+|EXE_ioApplication::OnGuildRankReward_1|길드 랭크 보상 실패|
+|EXE_ioApplication::OnGuildRankReward_2|길드 랭크 보상 에러|
+|EXE_ioApplication::OnGuildMemberAttendInfo_1|길드출석정보 |
+|EXE_ioApplication::OnGuildMemberAttendInfo_2|길드출석정보 에러|
+|EXE_ioApplication::OnGenderChange_1|존재 하지 않는 캐릭터 입니다.|
+|EXE_ioApplication::OnGenderChange_2|캐릭터 성별 전환 에러|
+|EXE_ioApplication::SendNexonAuthLog_1|넥슨 PC방 정량제 시간이 만료되어 게임이 종료 됩니다.(0x10000001) : %s / %s|
+|EXE_ioApplication::SendNexonAuthLog_2|넥슨 PC방 정량제 시간이 만료되어 게임이 종료 됩니다.(0x10000002) %s / %s|
+|EXE_ioApplication::SendNexonAuthLog_3|ID당 허용 접속자 수가 초과되었습니다.(0x10000003) %s / %s|
+|EXE_ioApplication::SendNexonAuthLog_4|IP당 허용 접속자 수가 초과되었습니다.(0x10000004) %s / %s|
+|EXE_ioApplication::SendNexonAuthLog_5|IP당 허용 접속자 수가 초과되었습니다.(0x10000005) %s / %s|
+|EXE_ioApplication::SendNexonAuthLog_6|차단된 PC방입니다.(0x10000006) %s / %s|
+|EXE_ioApplication::SendNexonAuthLog_7|셧다운 시간입니다.(0x10000007) %s / %s|
+|EXE_ioApplication::SendNexonAuthLog_8|셧다운 시간입니다.(0x10000008) %s / %s|
+|EXE_ioApplication::SendNexonAuthLog_9|혀용된 계정이 아닙니다.(0x10000009) %s / %s|
+|EXE_ioApplication::SendNexonAuthLog_10|최대접속 ID 수를 넘었습니다.(0x1000000a) %s / %s|
+|EXE_ioApplication::SendNexonAuthLog_11|넥슨 PC 방 정량제 시간이 모두 소진되었습니다. (0x1000000b) %s / %s|
+|EXE_ioApplication::SendNexonAuthLog_12|접속이 차단된 PC입니다.(0x1000000c) %s / %s|
+|EXE_ioApplication::SendNexonAuthLog_13|선택적 셧다운 시간입니다.(0x1000000d) %s / %s|
+|EXE_ioApplication::SendNexonAuthLog_14|셧다운 시간입니다.(0x1000000e) %s / %s|
+|EXE_ioApplication::SendNexonAuthLog_15|비정상 접속으로 게임 실행을 차단, 세션 서버로 로그아웃 패킷을 전송하지 않는다.(0x10f) %s / %s|
+|EXE_ioApplication::SendNexonAuthLog_16|넥슨 계정이 아닙니다.(0x10000010) %s / %s|
+|EXE_ioApplication::SendNexonAuthLog_17|알 수 없는 오류로 게임 클라이언트를 종료합니다.(0x10000011) %s / %s|
+|EXE_ioApplication::SendNexonAuthLog_18|나이정보를 확인 중 오류가 발생하였습니다.(0x10000012) %s / %s|
+|EXE_ioApplication::SendNexonAuthLog_19|알 수 없는 오류로 게임 클라이언트를 종료합니다.(0x10000013) %s / %s|
+|EXE_ioApplication::SendNexonAuthLog_20|PC방 프리미엄 적용 대상이 아닙니다.(0x10000014) %s / %s|
+|EXE_ioApplication::OnSpiritDecompose_1|%s %s개|
+|EXE_ioApplication::OnSpiritDecompose_2|★ [%s] 분해 완료|
+|EXE_ioApplication::OnSpiritDecompose_3|★ %s %s개 지급|
+|EXE_ioApplication::OnSpiritDelete_1|★ [%s] 판매 완료.|
+|EXE_ioApplication::OnSpiritDelete_2|★ %s페소가 지급되었습니다.|
+|EXE_IsObejctEquipState_19|설치된 낚시터에서만 낚시가 가능합니다.|
+|EXE_ioBaseGUISupport::IsEasterEgg_1|개발자H|
+|EXE_ioBaseGUISupport::NormalRenderGauge_1|< 세주씨에게 발린자 >|
+|EXE_ioBaseGUISupport::ObserverRenderGauge_1|< 세주씨에게 발린자 >|
+|EXE_ioBaseGUISupport::RenderMonsterReward_1|+%d 경험치|
+|EXE_ioBaseGUISupport::RenderMonsterReward_2|+%d 페소|
+|EXE_ioBattleRoomMgr::ChangeMyOwner_4|[대회로그] 방장이 바뀜 - %s -> %s|
+|EXE_ioBattleRoomMgr::ApplyBattleRoomInfo_1|[대회로그] 대회 배틀룸 입장(자신) - %s|
+|EXE_ioBattleRoomMgr::ApplyJoinUserInfo_1|[대회로그] 대회 배틀룸 입장(다른유저) - %s|
+|EXE_ioCBTMode::OnRoundJoinView_1|다음 라운드가 시작될때까지 대기해주세요.|
+|EXE_ioCBTMode::OnRoundJoinView_2|방어키(S)로 시점을 변경할 수 있습니다.|
+|EXE_ioCBTMode::OnRoundJoinObserver_1|관전모드|
+|EXE_ioCBTMode::OnRoundJoinObserver_2|방어키(S)로 시점을 변경할 수 있습니다.|
+|EXE_ioClover::GetRemainString_1|%d시간 %02d분|
+|EXE_ioClover::GetRemainString_2|%d분 %02d초|
+|EXE_ioCostumeInfoManager::OnCostumeBuyResult_1|존재하지 않는 상품입니다.|
+|EXE_ioCostumeInfoManager::OnCostumeBuyResult_2|페소가 부족합니다.|
+|EXE_ioCostumeInfoManager::OnCostumeSellResult_1|코스튬 팔기 예외오류|
+|EXE_ioCostumeInfoManager::OnCostumeSellResult_2|★ [%s] 판매 완료.|
+|EXE_ioCostumeInfoManager::OnCostumeSellResult_3|★ %s페소가 지급되었습니다.|
+|EXE_ioCostumeInfoManager::OnCostumeSellResult_4|코스튬 팔기 실패(%d)|
+|EXE_ioCostumeInfoManager::OnCostumeChange_1|코스튬 교체중 아이템 생성 실패: %d|
+|EXE_ioCostumeInfoManager::OnCostumeChange_2|코스튬 교체 실패: %d|
+|EXE_ioDoubleCrownMode::SetRoundEndInfo_1|기여도 판정에 의한 |
+|EXE_ioDoubleCrownMode::SetRoundEndInfo_2|블루팀 |
+|EXE_ioDoubleCrownMode::SetRoundEndInfo_3|레드팀 |
+|EXE_ioDoubleCrownMode::SetRoundEndInfo_4|승리|
+|EXE_ioDoubleCrownMode::SetRoundEndInfo_5|무승부|
+|EXE_ioDoubleCrownMode::SetRoundEndInfo_6|패배|
+|EXE_ioDoubleCrownMode::SetRoundEndInfo_7|정보|
+|EXE_ioDoubleCrownMode::ContributeRoundAllPercent_1|기여도 %d 이상 돌파!|
+|EXE_ioDoubleCrownMode::OnRoundJoinView_1|다음 라운드가 시작될때까지 대기해주세요.|
+|EXE_ioDoubleCrownMode::OnRoundJoinView_2|방어키(S)로 시점을 변경할 수 있습니다.|
+|EXE_ioDoubleCrownMode::OnRoundJoinObserver_1|관전모드|
+|EXE_ioDoubleCrownMode::OnRoundJoinObserver_2|방어키(S)로 시점을 변경할 수 있습니다.|
+|EXE_ioEtcItemCustomItemSkin::OnUseBtnPush_2|장비스킨 변경은 광장과 로비에서만 가능합니다.|
+|EXE_ioEtcItemCustomItemSkin::OnUseBtnPush_3|장비스킨 변경은 광장/개인본부/길드본부/훈련소에서만 가능합니다.|
+|EXE_ioEtcItemCustomItemSkinTest::OnUseBtnPush_2|장비스킨 변경은 광장/개인본부/길드본부/훈련소에서만 가능합니다.|
+|EXE_ioEtcItemExpandMedalSlot::OnUseBtnPush_2|메달슬롯 오픈은 광장/개인본부/길드본부/훈련소에서만 가능합니다.|
+|EXE_ioEtcItemPreSetPackage::OnUseBtnPush_1|더 이상 용병을 보유할 수 없습니다.|
+|EXE_ioEtcItemAddCash::OnUseBtnPush_1|채널링 회원은 사용할 수 없는 아이템입니다.|
+|EXE_ioEtcItemBingoNumberGashapon::OnUseBtnPush_1|빙고판이 필요합니다.|
+|EXE_ioEtcItemBingoShuffleNumber::OnUseBtnPush_1|빙고판이 필요합니다.|
+|EXE_ioEtcItemBingoShuffleRewardItem::OnUseBtnPush_1|빙고판이 필요합니다.|
+|EXE_ioEtcItemBingoRandomNumberClear::OnUseBtnPush_1|빙고판이 필요합니다.|
+|EXE_ioEtcItemSuperGashapon::OnUseBtnPush_1|선물함이 꽉 찼습니다.#선물함을 비워주시고 사용해 주세요.|
+|EXE_ioEtcCostumeCustomItemSkin::OnUseBtnPush_1|코스튬스킨 변경은 로비에서만 가능합니다.|
+|EXE_ioEtcCostumeCustomItemSkin::OnUseBtnPush_2|코스튬스킨 변경은 광장/개인본부/길드본부/훈련소에서만 가능합니다.|
+|EXE_ioEtcItemCreateGuildHQCreate::OnUse_1|길드본부가#활성화 되었습니다.|
+|EXE_ioEtcItemCreateMyHomeCreate::OnUse_1|개인본부가#활성화 되었습니다.|
+|EXE_ioEtcItemMultiSuperGashapon::OnUseBtnPush_1|선물함이 꽉 찼습니다.#선물함을 비워주시고 사용해 주세요.|
+|EXE_ConnectAndPlayTimeEventUserNode::OnRecievePacket_1|개발자K의 가위바위보 도전권 1장획득(홈페이지에서 가위바위보를 할 수 있습니다)|
+|EXE_ioFarmingMode::OnRoundJoinView_1|다음 라운드가 시작될때까지 대기해주세요.|
+|EXE_ioFarmingMode::OnRoundJoinView_2|방어키(S)로 시점을 변경할 수 있습니다.|
+|EXE_ioFarmingMode::OnRoundJoinObserver_1|관전모드|
+|EXE_ioFarmingMode::OnRoundJoinObserver_2|방어키(S)로 시점을 변경할 수 있습니다.|
+|EXE_ioFlagCaptureMode::SetRoundEndInfo_1|기여도 판정에 의한 |
+|EXE_ioFlagCaptureMode::SetRoundEndInfo_2|블루팀 |
+|EXE_ioFlagCaptureMode::SetRoundEndInfo_3|레드팀 |
+|EXE_ioFlagCaptureMode::SetRoundEndInfo_4|승리|
+|EXE_ioFlagCaptureMode::SetRoundEndInfo_5|무승부|
+|EXE_ioFlagCaptureMode::SetRoundEndInfo_6|패배|
+|EXE_ioFlagCaptureMode::SetRoundEndInfo_7|정보|
+|EXE_ioFlagCaptureMode::ContributeRoundAllPercent_1|기여도 %d 이상 돌파!|
+|EXE_ioFlagCaptureMode::OnRoundJoinView_1|다음 라운드가 시작될때까지 대기해주세요.|
+|EXE_ioFlagCaptureMode::OnRoundJoinView_2|방어키(S)로 시점을 변경할 수 있습니다.|
+|EXE_ioFlagCaptureMode::OnRoundJoinObserver_1|관전모드|
+|EXE_ioFlagCaptureMode::OnRoundJoinObserver_2|방어키(S)로 시점을 변경할 수 있습니다.|
+|EXE_ioHouseMode::OnHouseCommand_1|님, 강제퇴장|
+|EXE_ioHouseMode::OnHouseCommand_2|정보|
+|EXE_ioItemRechargeManager::ApplyRechargeExtraItem_1|장비충전중 예외상황이 발생했습니다.|
+|EXE_ioItemRechargeManager::ApplyRechargeExtraItem_2|알 수 없는 아이템 입니다.|
+|EXE_ioItemRechargeManager::ApplyRechargeExtraItem_3|사용할 수 없는 아이템 입니다.|
+|EXE_ioAccRechargeManager::ApplyRechargeAccessory_1|액세서리충전중 예외상황이 발생했습니다.|
+|EXE_ioAccRechargeManager::ApplyRechargeAccessory_2|알 수 없는 아이템 입니다.|
+|EXE_ioAccRechargeManager::ApplyRechargeAccessory_3|사용할 수 없는 아이템 입니다.|
+|EXE_ioMissionManager::OnCompensationReceive_1|존재하지 않는 미션입니다.|
+|EXE_ioMissionManager::OnCompensationReceive_2|보상받기를 기다리고 있는 미션입니다.|
+|EXE_ioMissionManager::OnCompensationReceive_3|이미 받은 보상입니다.|
+|EXE_ioMissionManager::OnCompensationReceive_4|제외된 보상입니다.|
+|EXE_ioModeSelectInfo::GetBattleAIUIList_1|쉬움|
+|EXE_ioModeSelectInfo::GetBattleAIUIList_2|보통|
+|EXE_ioMonsterSurvivalMode::OnUseMonsterCoin_7|해골영웅 플레이를 위해 골드 몬스터코인 %d개 소모|
+|EXE_ioMonsterSurvivalMode::OnUseMonsterCoin_8|해골영웅 플레이를 위해 몬스터코인 %d개, 골드 몬스터코인 %d개 소모|
+|EXE_ioMovieMaker::GetMovieFileSize_1| / 실패|
+|EXE_ioMyInfo::IsExtraItemFull_2|[장비슬롯확장]이 필요합니다.|
+|EXE_ioMyInfo::IsExtraItemFull_3|부족한 장비 슬롯을 위해 구입해주세요.|
+|EXE_ioMyInfo::IsExtraItemFull_4|상점 - 특별에서 구입하실 수 있습니다.|
+|EXE_ioMyInfo::ApplyEquipChangeNamedTitle_1|해당 칭호가 존재하지 않습니다.|
+|EXE_ioMyInfo::ApplyGradeChangeNamedTitle_1|해당 칭호가 존재하지 않습니다.|
+|EXE_ioMyInfo::ApplyPremiumChangeNamedTitle_1|해당 칭호가 존재하지 않습니다.|
+|EXE_ioMyInfo::ApplyChangeAccessory_1|예외 오류 발생1|
+|EXE_ioMyInfo::ApplyChangeAccessory_2|예외 오류 발생2|
+|EXE_ioNamedTitleInfoManager::OnNamedTitlePremium_1|칭호 프리미엄 실패: %d|
+|EXE_ioNamedTitleInfoManager::OnNamedTitleEtcUse_1|칭호 특별아이템 사용 실패: %d|
+|EXE_ioNamedTitleInfoManager::OnNamedTitleInsertSuccess_1|칭호 추가 실패|
+|EXE_ioNamedTitleInfoManager::OnNamedTitleUpdateSuccess_1|칭호 정보 변경 실패|
+|EXE_ioNpcChar::ExceptionStartAI_1|[해골영웅](%d) - %s - %s - %s - %s : %u : %u|
+|EXE_ioPlayMode::OnServerAlarmMent_257|님이 |
+|EXE_ioPlayMode::OnServerAlarmMent_258|를 사용하여 |
+|EXE_ioPlayMode::OnServerAlarmMent_259| 영구장비 변환에 성공했습니다.|
+|EXE_ioPlayMode::OnServerAlarmMent_260|알림|
+|EXE_ioPlayMode::OnServerAlarmMent_261|님이|
+|EXE_ioPlayMode::OnServerAlarmMent_262|%d개|
+|EXE_ioPlayMode::OnServerAlarmMent_263|의 검으로 |
+|EXE_ioPlayMode::OnServerAlarmMent_264|을(를) 획득했습니다.|
+|EXE_ioPlayMode::OnServerAlarmMent_265|님이 오크통|
+|EXE_ioPlayMode::OnServerAlarmMent_266|%d단계|
+|EXE_ioPlayMode::OnServerAlarmMent_267|를 성공하였습니다.|
+|EXE_ioPlayMode::OnServerAlarmMent_268|를 실패하였습니다.|
+|EXE_ioPlayMode::OnServerAlarmMent_269|님이 타임게이트에서 |
+|EXE_ioPlayMode::OnServerAlarmMent_270| 소환에 성공했습니다.|
+|EXE_ioPlayStage::ProcessFunctionKey_1|PC방 보너스 용병 선택 중에는#용병을 교체 할 수 없습니다.|
+|EXE_ioPlayStage::OnExitRoom_3|%s님 도전포기|
+|EXE_ioPlayStage::OnExitRoom_4|%s님 도전포기 취소|
+|EXE_ioPlayStage::OnFishingState_2|낚시터를 찾을 수 없습니다.|
+|EXE_ioPlayStage::OnEtcItemBuyResult_8|기간한정 상품 판매기간이 종료 되었습니다.|
+|EXE_ioPlayStage::OnEtcItemBuyResult_9|해당 상품은 매진 되었습니다.|
+|EXE_ioPlayStage::OnEtcItemBuyResult_10|1인 한정구매 제한 갯수를 초과 하였습니다.|
+|EXE_ioPlayStage::OnEtcItemBuyResult_11|길드 아이템은 길드 가입 유저만# 구입 할 수 있습니다.|
+|EXE_ioPlayStage::OnEtcItemBuyResult_12|길드 아이템은 길드 본부가 활성화 되어야# 구입 할 수 있습니다.|
+|EXE_ioPlayStage::OnEtcItemBuyResult_13|개인본부 아이템은 개인본부가 활성화 되어야# 구입 할 수 있습니다.|
+|EXE_ioPlayStage::OnEtcItemBuyResult_14|해당 아이템은 보너스 골드로# 구매가 불가능한 상품입니다..|
+|EXE_ioPlayStage::OnExtraItemBuyResult_9|[장비슬롯확장]이 필요합니다.|
+|EXE_ioPlayStage::OnExtraItemBuyResult_10|부족한 장비 슬롯을 위해 구입해주세요.|
+|EXE_ioPlayStage::OnExtraItemBuyResult_11|상점 - 특별에서 구입하실 수 있습니다.|
+|EXE_ioPlayStage::OnMedalItemChange_3|이미 장착 중입니다.|
+|EXE_ioPlayStage::OnCustomMedalItemChange_3|이미 장착 중입니다.|
+|EXE_ioPlayStage::OnBattleRoomJoin_11|도전자를 받지 않습니다.|
+|EXE_ioPlayStage::OnBattleLeaveUser_3|[대회로그] 방 나감 패킷 받음 - %s|
+|EXE_ioPlayStage::OnMacroCmdByKickOut_1|전투방에서 강제퇴장.|
+|EXE_ioPlayStage::OnMacroCmdByKickOut_2|정보|
+|EXE_ioPlayStage::OnMacroCmdByKickOut_3|광장 유저와 음성채팅상태로 변경.|
+|EXE_ioPlayStage::OnMacroCmdByKickOut_4|관리자 없는 광장에서는 음성채팅 불가능.|
+|EXE_ioPlayStage::OnShuffleRoomInfo_1|전투방 유저와 음성채팅상태로 변경.|
+|EXE_Help::IsMonsterDungeonMode_10|[대회로그] %s : 부전승으로 인한 다음라운드 진출|
+|EXE_Help::IsMonsterDungeonMode_11|[대회로그] %s : 치트 유저로 의심되어 룸 이탈 처리|
+|EXE_Help::IsMonsterDungeonMode_12|[대회로그] %s - 상대가 존재 하지 않아 예비엔트리 선정 대기|
+|EXE_Help::IsMonsterDungeonMode_13|[대회로그] %s : 예비엔트리 선정된 팀 : %d|
+|EXE_ioPlayStage::OnGrowthAllLevelDown_1|예외 오류가 발생하였습니다.|
+|EXE_ioPlayStage::OnGrowthAllLevelDown_2|선택하신 용병이 시간육성중이라 복구가 불가능합니다.|
+|EXE_ioPlayStage::OnGrowthAllLevelDown_3|시간육성을 취소 또는 완료후 다시 시도하여 주십시오.|
+|EXE_ioPlayStage::OnPresentBuy_10|해당 상품은 선물할 수 없습니다|
+|EXE_ioPlayStage::OnItemCompound_7|%s 메달 삭제 예외오류, %d|
+|EXE_ioPlayStage::OnItemCompound_8|%s 코스튬 삭제 예외오류 %d|
+|EXE_ioPlayStage::OnExtraItemDisassembleResult_1|장비분해 예외오류1|
+|EXE_ioPlayStage::OnExtraItemDisassembleResult_2|%s %s개|
+|EXE_ioPlayStage::OnExtraItemDisassembleResult_3|★ [%s +%d] 분해 완료.|
+|EXE_ioPlayStage::OnExtraItemDisassembleResult_4|★ %s %s개 지급.|
+|EXE_ioPlayStage::OnExtraItemDisassembleResult_5|장비분해 실패 : %d|
+|EXE_ioPlayStage::OnMedalItemSellResult_1|메달 팔기 예외오류, %d|
+|EXE_ioPlayStage::OnMedalItemSellResult_2|%s 판매 완료.|
+|EXE_ioPlayStage::OnMedalItemSellResult_3|%s페소가 지급되었습니다.|
+|EXE_ioPlayStage::OnMedalItemSellResult_4|메달 팔기 실패 (%d)|
+|EXE_ioPlayStage::OnCustomMedalItemSellResult_1|메달 팔기 예외오류, %d|
+|EXE_ioPlayStage::OnCustomMedalItemSellResult_2|%s 판매 완료.|
+|EXE_ioPlayStage::OnCustomMedalItemSellResult_3|%s페소가 지급되었습니다.|
+|EXE_ioPlayStage::OnCustomMedalItemSellResult_4|메달 팔기 실패 (%d)|
+|EXE_ioPlayStage::OnSendPresentByEtcItemFail_1|보낼 수 없는 아이템입니다.|
+|EXE_ioPlayStage::OnSendPresentByEtcItemFail_2|잘못된 닉네임입니다.|
+|EXE_ioPlayStage::OnReinforceExtraItem_1|장비 강화중 오류가 발생하였습니다. : %d|
+|EXE_ioPlayStage::OnSelectExtraGashaponResult_8|예외 오류가 발생되었습니다.|
+|EXE_ioPlayStage::OnSelectExtraGashaponResult_9|골드 처리중입니다.#잠시만 기다려 주세요.|
+|EXE_ioPlayStage::OnSelectExtraGashaponResult_10|해당 상품을 구입하면#이번달 최대 골드 사용 한도를 초과합니다.#(구매 한도:청소년 55,000원, 성인 330,000원)# #다음달 부터 상품 구매가 가능합니다.|
+|EXE_ioPlayStage::OnSelectExtraGashaponResult_11|골드 처리가 불가능합니다.#잠시만 기다려 주세요.|
+|EXE_ioPlayStage::OnSubscriptionRetrCheck_1|상품이 존재하지 않습니다.|
+|EXE_ioPlayStage::OnSubscriptionRetrCheck_2|청약철회 지원 안함|
+|EXE_ioPlayStage::OnSelectGashaponResult_1|예외 오류가 발생되었습니다.|
+|EXE_ioPlayStage::OnSelectGashaponResult_2|골드 처리중입니다.#잠시만 기다려 주세요.|
+|EXE_ioPlayStage::OnSelectGashaponResult_3|해당 상품을 구입하면#이번달 최대 골드 사용 한도를 초과합니다.#(구매 한도:청소년 55,000원, 성인 330,000원)# #다음달 부터 상품 구매가 가능합니다.|
+|EXE_ioPlayStage::OnSelectGashaponResult_4|골드 처리가 불가능합니다.#잠시만 기다려 주세요.|
+|EXE_ioPlayStage::OnSelectGashaponResult_5|골드 처리가 실패하였습니다.#관리자에게 문의하세요.|
+|EXE_ioPlayStage::OnSelectGashaponResult_6|처리가 실패하였습니다.#관리자에게 문의하세요.|
+|EXE_ioPlayStage::OnSelectGashaponsUseResult_1|예외 오류가 발생되었습니다.|
+|EXE_ioPlayStage::OnPowerUpInfo_1|강화 할 용병을 가지고 있지 않습니다.|
+|EXE_ioPlayStage::OnPowerUpInfo_2|강화 할 아이템을 가지고 있지 않습니다.|
+|EXE_ioPlayStage::OnPowerUpInfo_3|강화 할 수 없는 용병입니다.|
+|EXE_ioPlayStage::OnPowerUpInfo_4|강화 할 수 없는 아이템입니다.|
+|EXE_ioPlayStage::OnPowerUpInfo_5|소울 스톤이 부족합니다.|
+|EXE_ioPlayStage::OnPowerUpInfo_6|알 수없는 오류 : %s, State : %d|
+|EXE_ioPlayStage::OnSuccessionRevengeRequest_1|상대방이 거절하였습니다.|
+|EXE_ioPowerUpManager::ApplyItemPowerUp_1|아이템 슬롯 에러 - 1|
+|EXE_ioPowerUpManager::ApplyItemPowerUp_2|아이템 슬롯 에러 - 2|
+|EXE_ioPresentMgr::RecvEtcItem_20|코스튬|
+|EXE_ioPresentMgr::RecvEtcItem_21|기능|
+|EXE_ioPresentMgr::ApplyPresentRecv_43|★ 정기에서 확인 및 사용 가능합니다.|
+|EXE_ioPresentMgr::ApplyPresentRecv_44|★ 코스튬 받기|
+|EXE_ioPresentMgr::ApplyPresentRecv_45|보너스 캐쉬|
+|EXE_ioPresentMgr::ApplyPresentRecv_46|★ 액세서리 받기|
+|EXE_ioPresentMgr::ApplyPresentRecv_47|[용병슬롯확장]이 필요합니다.|
+|EXE_ioPresentMgr::ApplyPresentRecv_48|용병 슬롯을 확장하기 위해 구입해주세요.|
+|EXE_ioPresentMgr::ApplyPresentRecv_49|상점 - 특별에서 구입하실 수 있습니다.|
+|EXE_ioPresentMgr::ApplyPresentRecv_50|[장비슬롯확장]이 필요합니다.|
+|EXE_ioPresentMgr::ApplyPresentRecv_51|부족한 장비 슬롯을 위해 구입해주세요.|
+|EXE_ioPresentMgr::ApplyPresentRecv_52|갯수초과|
+|EXE_ioPresentMgr::ApplyPresentRecv_53|빈칸없음|
+|EXE_ioPresentMgr::ApplyPresentRecv_54|길드에 가입 되있지 않습니다.|
+|EXE_ioPresentMgr::ApplyPresentRecv_55|길드본부가 활성화 되있지 않습니다.|
+|EXE_ioPresentMgr::ApplyPresentRecv_56|개인본부가 활성화 되있지 않습니다.|
+|EXE_ioPresentMgr::ApplyPresentSell_30|판매 할 수 없는 아이템입니다.|
+|EXE_ioPresentMgr::GetPresentValue1Text_6|보너스캐쉬|
+|EXE_ioPresentMgr::GetPresentValue2Text_23|%s개|
+|EXE_ioPresentMgr::GetPresentValue2Text_24|랭크 %s|
+|EXE_ioPresentMgr::GetPresentValue2Text_25|%s 골드|
+|EXE_ioPriateRenewalRullet::RenewalOakSwordUse_1|초과된 인덱스 입니다.|
+|EXE_ioPriateRenewalRullet::RenewalOakSwordUse_2|이미 장착된 인덱스 입니다.|
+|EXE_ioPriateRenewalRullet::RenewalOakSwordUse_3|일일 최대 한도를 초과|
+|EXE_ioPriateRenewalRullet::RenewalOakSwordUse_4|오크통 에러 타입 : %d|
+|EXE_ioPriateRenewalRullet::RenewalOakGetReward_1|보상 단계가 맞지 않습니다.|
+|EXE_ioPriateRenewalRullet::RenewalOakGetReward_2|오크통 에러 타입 : %d|
+|EXE_ioPriateRenewalRullet::SendRewardRequest_1|보상 가능한 아이템이 하나 이상 있어야 합니다.|
+|EXE_ioRaidMode::OnTreasureCardCommand_1|갯수초과|
+|EXE_ioRaidMode::OnTreasureCardCommand_2|빈칸없음|
+|EXE_ioRankBattleManager::SetCancel_1|매칭에 실패했습니다.#다시 시도해주세요. (%d)|
+|EXE_ioRankBattleManager::SetCancel_2|검색시간이 초과되었습니다.#다시 시도해주세요.|
+|EXE_ioRankBattleManager::SetCancel_3|랭킹전은 10시~22시까지 가능합니다.|
+|EXE_ioRankBattleManager::SetCancel_4|간편회원은 랭킹전을 할 수 없습니다.|
+|EXE_ioReservedTask::OnExecuteRecvPCRoom_1|경험치+100％ / 페소+50％|
+|EXE_ioReservedTask::OnExecuteRecvPCRoom_2|PC방 전용 용병 제공|
+|EXE_ioReservedTask::OnExecuteRecvPCRoom_3|낚시/유물탐사 PC방 혜택 제공|
+|EXE_ioRouletteManager::OnRouletteStart_1|아직 참여할 수 없습니다.|
+|EXE_ioRouletteManager::OnRouletteStart_2|이미 참여했습니다.|
+|EXE_ioShuffleRoomMgr::SetKickOutUser_1|님, 강제퇴장 됨.|
+|EXE_ioShuffleRoomMgr::SetKickOutUser_2|정보|
+|EXE_ioShuffleRoomMgr::LeaveRoom_1|전투방에서 이탈.|
+|EXE_ioShuffleRoomMgr::LeaveRoom_2|정보|
+|EXE_ioShuffleRoomMgr::ChangeMyOwner_1|전투|
+|EXE_ioShuffleRoomMgr::JoinUser_1|님, 전투방에 참가.|
+|EXE_ioShuffleRoomMgr::JoinUser_2|정보|
+|EXE_ioShuffleRoomMgr::LeaveUser_1|님, 전투방 이탈.|
+|EXE_ioShuffleRoomMgr::LeaveUser_2|정보|
+|EXE_ioShuffleRoomMgr::GetModeNameByType_1|파워스톤|
+|EXE_ioShuffleRoomMgr::GetModeNameByType_2|포로탈출|
+|EXE_ioShuffleRoomMgr::GetModeNameByType_3|히든크라운|
+|EXE_ioShuffleRoomMgr::GetModeNameByType_4|데스매치|
+|EXE_ioShuffleRoomMgr::GetModeNameByType_5|팀데스매치|
+|EXE_ioShuffleRoomMgr::GetModeNameByType_6|보스레이드|
+|EXE_ioShuffleRoomMgr::GetModeNameByType_7|축구경기|
+|EXE_ioShuffleRoomMgr::GetModeNameByType_8|강시서바이벌|
+|EXE_ioShuffleRoomMgr::GetModeNameByType_9|드워프모드|
+|EXE_ioShuffleRoomMgr::GetModeNameByType_10|챔피언모드|
+|EXE_ioShuffleRoomMgr::GetModeNameByType_11|더블크라운|
+|EXE_ioShuffleRoomMgr::GetModeNameByType_12|보너스스테이지|
+|EXE_ioShuffleRoomMgr::GetModeNameByType_13|팀서바이벌AI|
+|EXE_ioShuffleRoomMgr::GetModeNameByType_14|팬티몬|
+|EXE_ioShuffleRoomMgr::GetModeNameByType_15|클베모드|
+|EXE_ioShuffleRoomMgr::GetModeNameByType_16|깃발모드|
+|EXE_ioShuffleRoomMgr::GetModeNameByType_17|아레나모드|
+|EXE_ioShuffleRoomMgr::GetModeNameByType_18|파밍모드|
+|EXE_ioSoldierAwakeManager::LoadMtrl_1|ioSoldierAwakeManager material_type 으로 기존 조각 설정 버그|
+|EXE_ioSoldierAwakeManager::GetMtrlTitle_1|%s %d개|
+|EXE_ioSoldierAwakeManager::GetAwakeTtitle_1|%s %d일|
+|EXE_ioSoldierAwakeManager::GetRemainTime_1|(1분 미만)|
+|EXE_ioSoldierAwakeManager::GetRemainTime_2|(%d분 남음)|
+|EXE_ioSoldierAwakeManager::GetRemainTime_3|(%d시간 남음)|
+|EXE_ioSoldierAwakeManager::GetRemainTime_4|(%d일 %d시간 남음)|
+|EXE_ioSoldierAwakeManager::GetMenuListName_1|각성정보 없음|
+|EXE_ioSoldierAwakeManager::GetAwakeType_1|잘못된 각성 정보입니다.|
+|EXE_ioSoldierAwakeManager::GetAwakeType_2|잘못된 재료 정보입니다.|
+|EXE_ioSoldierAwakeManager::IsEnableAwakeMtrlUse_1|잘못된 각성 정보입니다.|
+|EXE_ioSoldierAwakeManager::IsEnableAwakeMtrlUse_2|잘못된 재료 정보입니다.|
+|EXE_ioSoldierAwakeManager::AwakeTryMessageBox_1|잘못된 각성 정보입니다.|
+|EXE_ioSoldierAwakeManager::AwakeTryMessageBox_2|잘못된 재료 정보입니다.|
+|EXE_ioSoldierAwakeManager::AwakeTryMessageBox_3|%d일간 |
+|EXE_ioSoldierAwakeManager::AwakeTryMessageBox_4|%s을 하시겠습니까?|
+|EXE_ioSoldierAwakeManager::AwakeTryMessageBox_5|※ 현재의 %s은 사라집니다|
+|EXE_ioSoldierAwakeManager::AwakeTryMessageBox_6|(%d일이 추가됨)|
+|EXE_ioSoldierAwakeManager::AwakeTryMessageBox_7|%s 소모|
+|EXE_ioSoldierAwakeManager::AwakeTryMessageBox_8|(현재 %s개 보유)|
+|EXE_ioSoldierAwakeManager::AwakeTryMessageBox_9|(현재 %s페소 보유)|
+|EXE_ioSoldierAwakeManager::AwakeTryMessageBox_10|확인|
+|EXE_ioSoldierAwakeManager::AwakeTryMessageBox_11|취소|
+|EXE_ioSoldierAwakeManager::AwakeChangeFailMessageBox_1|%s 상태입니다.|
+|EXE_ioSoldierAwakeManager::AwakeChangeFailMessageBox_2|%s을 할 수 없습니다.|
+|EXE_ioSoldierAwakeManager::AwakeChangeFailMessageBox_3|닫기|
+|EXE_ioSoldierAwakeManager::AwakeResultMessageBox_1|각성되었습니다.|
+|EXE_ioSoldierAwakeManager::AwakeResultMessageBox_2|닫기|
+|EXE_ioSoldierAwakeManager::AwakeCharPeriodTypeError_1|기간제 용병은|
+|EXE_ioSoldierAwakeManager::AwakeCharPeriodTypeError_2|%s을 진행할 수 없습니다.|
+|EXE_ioSoldierAwakeManager::AwakeCharPeriodTypeError_3|닫기|
+|EXE_ioSoldierAwakeManager::AwakeCharExerciseTypeError_1|체험 용병은|
+|EXE_ioSoldierAwakeManager::AwakeCharExerciseTypeError_2|%s을 진행할 수 없습니다.|
+|EXE_ioSoldierAwakeManager::AwakeCharExerciseTypeError_3|닫기|
+|EXE_ioSoldierAwakeManager::OnAwakeMenuEvent_1|잘못된 캐릭터 정보입니다.|
+|EXE_ioSoldierAwakeManager::OnAwakeMenuEvent_2|재료가 모자랍니다|
+|EXE_ioSoldierAwakeManager::OnAwakeMenuEvent_3|잘못된 각성형식입니다.|
+|EXE_ioSoldierAwakeManager::SetAwake_1|잘못된 각성 대상 캐릭터입니다|
+|EXE_ioSoldierAwakeManager::SetAwake_2|잘못된 각성 정보입니다.|
+|EXE_ioSoldierAwakeManager::ExtendAwake_1|잘못된 캐릭터입니다(각성)|
+|EXE_ioSoldierAwakeManager::ExtendAwake_2|잘못된 각성 정보입니다.|
+|EXE_ioSoldierAwakeManager::ApplyAwake_1|잘못된 각성대상 캐릭터입니다|
+|EXE_ioSoldierAwakeManager::ApplyAwake_2|해당 각성 재료는 존재 하지 않습니다.|
+|EXE_ioSoldierAwakeManager::ApplyAwake_3|각성 재료가 부족합니다.|
+|EXE_ioSoldierAwakeManager::ApplyAwake_4|잘못된 각성 정보입니다|
+|EXE_ioSoldierAwakeManager::ApplyAwakeExtend_1|잘못된 각성대상 캐릭터입니다|
+|EXE_ioSoldierAwakeManager::ApplyAwakeExtend_2|더 이상 각성시간 연장을 할 수 없습니다.|
+|EXE_ioSoldierAwakeManager::ApplyAwakeExtend_3|해당 각성 재료는 존재 하지 않습니다.|
+|EXE_ioSoldierAwakeManager::ApplyAwakeExtend_4|각성 연장 할 재료가 부족합니다.|
+|EXE_ioSoldierAwakeManager::ApplyAwakeExtend_5|잘못된 각성 정보입니다|
+|EXE_ioTCPSocketManager::ChangeServerProcess_1|%s가 [%s:%d]로 1분30초동안 서버 이동이 완료되지 않았음(%d)|
+|EXE_StringCbPrintf_1|%d초동안 게임서버와 \r\n\r\n정상적으로 네트워크 연결을\r\n\r\n하지 못하였습니다.\r\n\r\n네트워크 회선상에 문제는 없는지\r\n\r\n확인해 주시기 바랍니다.\r\n\r\n(오류번호:327)|
+|EXE_ioSubscriptionMgr::RecvEtcItem_20|코스튬|
+|EXE_ioSubscriptionMgr::RecvEtcItem_21|기능|
+|EXE_ioSubscriptionMgr::ApplySubscriptionRecv_43|★ 정기에서 확인 및 사용 가능합니다.|
+|EXE_ioSubscriptionMgr::ApplySubscriptionRecv_44|★ 코스튬!|
+|EXE_ioSubscriptionMgr::ApplySubscriptionRecv_45|★ 액세서리!|
+|EXE_ioSubscriptionMgr::ApplySubscriptionRecv_46|[용병슬롯확장]이 필요합니다.|
+|EXE_ioSubscriptionMgr::ApplySubscriptionRecv_47|용병 슬롯을 확장하기 위해 구입해주세요.|
+|EXE_ioSubscriptionMgr::ApplySubscriptionRecv_48|상점 - 특별에서 구입하실 수 있습니다.|
+|EXE_ioSubscriptionMgr::ApplySubscriptionRecv_49|갯수초과|
+|EXE_ioSubscriptionMgr::ApplySubscriptionRecv_50|빈칸없음|
+|EXE_ioSubscriptionMgr::ApplySubscriptionRetr_1|청약철회가 완료되었습니다.|
+|EXE_ioSubscriptionMgr::ApplySubscriptionRetr_2|환불된 골드 : %s|
+|EXE_ioSubscriptionMgr::ApplySubscriptionRetr_3|보너스 골드 등과 같은 경우엔 정책에 따라|
+|EXE_ioSubscriptionMgr::ApplySubscriptionRetr_4|환불 금액에 포함되지 않을 수도 있습니다.|
+|EXE_ioSubscriptionMgr::ApplySubscriptionRetr_5|청약철회 오류:%d|
+|EXE_ioSubscriptionMgr::ApplySubscriptionRetr_6|선택한 청약상품이 없습니다.|
+|EXE_ioSuperGashaponMgr::PrintDefaultAlaram_1|님이 |
+|EXE_ioSuperGashaponMgr::PrintDefaultAlaram_2|에서 |
+|EXE_ioSuperGashaponMgr::PrintDefaultAlaram_3|%s 외 %d개 |
+|EXE_ioSuperGashaponMgr::PrintDefaultAlaram_4|아이템을 획득하였습니다!!|
+|EXE_ioSuperGashaponMgr::PrintDefaultAlaram_5|획득|
+|EXE_ioTowerDefMode::OnUseMonsterCoin_1|몬스터던전 플레이를 위해 몬스터코인 %d개 소모.|
+|EXE_ioTowerDefMode::OnUseMonsterCoin_2|보유중인 코인이 없습니다.|
+|EXE_ioTowerDefMode::OnTreasureCardCommand_1|갯수초과|
+|EXE_ioTowerDefMode::OnTreasureCardCommand_2|빈칸없음|
+|EXE_ioUnderwearMode::OnRoundJoinView_1|다음 라운드가 시작될때까지 대기해주세요.|
+|EXE_ioUnderwearMode::OnRoundJoinView_2|방어키(S)로 시점을 변경할 수 있습니다.|
+|EXE_ioUnderwearMode::OnRoundJoinObserver_1|관전모드|
+|EXE_ioUnderwearMode::OnRoundJoinObserver_2|방어키(S)로 시점을 변경할 수 있습니다.|
+|EXE_ioUserAccessory::GetUseInfo_1|영구사용|
+|EXE_ioUserCostume::GetUseInfo_1|영구사용|
+|EXE_ioUserNetworkTable::HoleRecvProcess_1|%d초간 UDP 응답이 없어 서버 중계 요청 보냄: %s(%s) - > %s(%s:%d)|
+|EXE_ioUserNetworkTable::HoleSendComplete_1|%s(%s:%d) 유저로부터 Hole 성공 패킷 받음(%s:%s)|
+|EXE_ioUserNetworkTable::SetUDPRecvTimeOut_1|%d초간 UDP 응답이 없어 서버 중계 요청 받음: %s(%s:%d) - > %s(%s) |
+|EXE_ioUserTournament::SetTeamUserAdd_1|가입 수락이 완료되었습니다|
+|EXE_CSlangUtil::ConvertStringWithPreLine_1|크래쉬 위험 함수 : CSlangUtil::ConvertStringWithPreLine Type A:%s - %d|
+|EXE_CSlangUtil::ConvertStringWithPreLine_2|크래쉬 위험 함수 : CSlangUtil::ConvertStringWithPreLine Type B:%s - %d|
+|EXE_ioConstructHouseSpecialState::SystemChat_1|설치 가능한 영역이 아닙니다.|
+|EXE_ioConstructHouseSpecialState::SystemChat_2|설치 가능한 오브젝트가 없습니다.|
+|EXE_ioConstructHouseSpecialState::SystemChat_3|제거 가능한 오브젝트가 없습니다.|
+|EXE_ioConstructHouseSpecialState::SystemChat_4|최대치에 도달하여 더이상 설 치 할 수 없습니다.|
+|EXE_OnTournamentCreateTeam_1|동일한 팀 이름이 존재합니다|
+|EXE_OnTournamentCreateTeam_2|이미 팀이 존재합니다|
+|EXE_OnTournamentCreateTeam_3|이미 팀에 소속되어있습니다|
+|EXE_OnTournamentCreateTeam_4|대회의 팀 모집 기간이 종료되었습니다|
+|EXE_OnTournamentCreateTeam_5|이미 LSNC예선전에 참가하였기에# 해당대회는 참여가 불가능합니다|
+|EXE_OnTournamentTeamEntryApp_1|[%s]팀에 가입 신청이 완료되었습니다|
+|EXE_OnTournamentTeamEntryApp_2|가입 신청이 완료되었습니다|
+|EXE_OnTournamentTeamEntryApp_3|대회에 이미 팀이 존재합니다|
+|EXE_OnTournamentTeamEntryApp_4|이미 신청한 팀입니다|
+|EXE_OnTournamentTeamEntryApp_5|팀의 대기 인원이 가득 찼습니다|
+|EXE_OnTournamentTeamEntryApp_6|이미 LSNC예선전에 참가하였기에#해당대회는 참여가 불가능합니다|
+|EXE_OnTournamentTeamEntryAgree_1|가입 신청이 취소된 유저입니다|
+|EXE_OnTournamentTeamEntryAgree_2|정회원만 가입이 가능합니다|
+|EXE_OnTournamentTeamEntryAgree_3|이미 팀이 있는 유저입니다|
+|EXE_OnTournamentTeamEntryAgree_4|더이상 팀원을 받을 수 없습니다|
+|EXE_OnTournamentTeamEntryAgree_5|같은 진영의 유저만 팀이 가능합니다|
+|EXE_OnTournamentTeamEntryAgree_6|팀모집 기간이 종료되었습니다.|
+|EXE_OnTournamentTeamLeave_1|대회가 시작되어 탈퇴가 불가능합니다|
+|EXE_OnTournamentTeamLeave_2|회원 정보가 일치하지 않습니다|
+|EXE_OnTournamentCustomCreate_1|사용할 수 없는 대회명입니다|
+|EXE_OnTournamentCustomCreate_2|대회 생성이 실패하였습니다#사용한 생성권은 선물로 반환됩니다|
+|EXE_OnTournamentTeamAllocateData_1| 종료된 대회입니다.|
+|EXE_OnTournamentAnnounceChange_1| 종료된 대회입니다.|
+|EXE_OnTournamentAnnounceChange_2|대회의 주최자가 아닙니다.|
+|EXE_OnTournamentTeamJoinConfirmCommand_1|%s님에게 초대를 발송 하였습니다.|
+|EXE_OnTournamentTeamJoinConfirmCommand_2|%s 님은 오프라인 상태입니다.|
+|EXE_OnTournamentCustomStateStart_1|이미 종료된 대회입니다.|
+|EXE_OnTournamentCustomStateStart_2|대회의 주최자가 아니거나 # 대회 진행 가능시간이 아닙니다.|
+|EXE_OnTournamentCustomRewardBuy_1|대회보상 추가가 완료 되었습니다.|
+|EXE_OnTournamentCustomRewardBuy_2|이미 종료된 대회입니다.|
+|EXE_OnTournamentCustomRewardBuy_3|선택 가능한 보상 최대 개수를 초과하였습니다.|
+|EXE_OnTournamentCustomRewardBuy_4|대회의 주최자가 아닙니다.|
+|EXE_OnTournamentCheerDecision_1|이미 응원하기에 참여 하셨습니다|
+|EXE_OnTournamentCheerDecision_2|존재하지 않는 팀입니다.|
+|EXE_OnTournamentCheerDecision_3|이미 종료된 대회입니다.|
+|EXE_OnTournamentCheerDecision_4|정규대회가 아닙니다.|
+|EXE_OnTournamentCheerDecision_5|응원기간에만 참여 가능합니다.|
+|EXE_OnTournamentCheerDecision_6|응원하기에 실패 하였습니다.|
+|EXE_ioPlayStage::ProcessFunctionKey_2|PC방 보너스 용병 선택 중에는#용병을 교체 할 수 없습니다.|
+|EXE_ioPlayStage::OnExitRoom_5|%s님 도전포기|
+|EXE_ioPlayStage::OnExitRoom_6|%s님 도전포기 취소|
+|EXE_ioPlayStage::OnFishingState_3|낚시터를 찾을 수 없습니다.|
+|EXE_ioPlayStage::OnEtcItemBuyResult_15|기간한정 상품 판매기간이 종료 되었습니다.|
+|EXE_ioPlayStage::OnEtcItemBuyResult_16|해당 상품은 매진 되었습니다.|
+|EXE_ioPlayStage::OnEtcItemBuyResult_17|1인 한정구매 제한 갯수를 초과 하였습니다.|
+|EXE_ioPlayStage::OnEtcItemBuyResult_18|길드 아이템은 길드 가입 유저만# 구입 할 수 있습니다.|
+|EXE_ioPlayStage::OnEtcItemBuyResult_19|길드 아이템은 길드 본부가 활성화 되어야# 구입 할 수 있습니다.|
+|EXE_ioPlayStage::OnEtcItemBuyResult_20|개인본부 아이템은 개인본부가 활성화 되어야# 구입 할 수 있습니다.|
+|EXE_ioPlayStage::OnEtcItemBuyResult_21|해당 아이템은 보너스 골드로# 구매가 불가능한 상품입니다..|
+|EXE_ioPlayStage::OnExtraItemBuyResult_12|[장비슬롯확장]이 필요합니다.|
+|EXE_ioPlayStage::OnExtraItemBuyResult_13|부족한 장비 슬롯을 위해 구입해주세요.|
+|EXE_ioPlayStage::OnExtraItemBuyResult_14|상점 - 특별에서 구입하실 수 있습니다.|
+|EXE_ioPlayStage::OnMedalItemChange_4|이미 장착 중입니다.|
+|EXE_ioPlayStage::OnCustomMedalItemChange_4|이미 장착 중입니다.|
+|EXE_ioPlayStage::OnBattleRoomJoin_12|도전자를 받지 않습니다.|
+|EXE_ioPlayStage::OnBattleLeaveUser_4|[대회로그] 방 나감 패킷 받음 - %s|
+|EXE_ioPlayStage::OnMacroCmdByKickOut_5|전투방에서 강제퇴장.|
+|EXE_ioPlayStage::OnMacroCmdByKickOut_6|정보|
+|EXE_ioPlayStage::OnMacroCmdByKickOut_7|광장 유저와 음성채팅상태로 변경.|
+|EXE_ioPlayStage::OnMacroCmdByKickOut_8|관리자 없는 광장에서는 음성채팅 불가능.|
+|EXE_ioPlayStage::OnShuffleRoomInfo_2|전투방 유저와 음성채팅상태로 변경.|
+|EXE_Help::IsMonsterDungeonMode_14|[대회로그] %s : 부전승으로 인한 다음라운드 진출|
+|EXE_Help::IsMonsterDungeonMode_15|[대회로그] %s : 치트 유저로 의심되어 룸 이탈 처리|
+|EXE_Help::IsMonsterDungeonMode_16|[대회로그] %s - 상대가 존재 하지 않아 예비엔트리 선정 대기|
+|EXE_Help::IsMonsterDungeonMode_17|[대회로그] %s : 예비엔트리 선정된 팀 : %d|
+|EXE_ioPlayStage::OnGrowthAllLevelDown_4|예외 오류가 발생하였습니다.|
+|EXE_ioPlayStage::OnGrowthAllLevelDown_5|선택하신 용병이 시간육성중이라 복구가 불가능합니다.|
+|EXE_ioPlayStage::OnGrowthAllLevelDown_6|시간육성을 취소 또는 완료후 다시 시도하여 주십시오.|
+|EXE_ioPlayStage::OnPresentBuy_11|해당 상품은 선물할 수 없습니다|
+|EXE_ioPlayStage::OnItemCompound_9|%s 메달 삭제 예외오류, %d|
+|EXE_ioPlayStage::OnItemCompound_10|%s 코스튬 삭제 예외오류 %d|
+|EXE_ioPlayStage::OnExtraItemDisassembleResult_6|장비분해 예외오류1|
+|EXE_ioPlayStage::OnExtraItemDisassembleResult_7|%s %s개|
+|EXE_ioPlayStage::OnExtraItemDisassembleResult_8|★ [%s +%d] 분해 완료.|
+|EXE_ioPlayStage::OnExtraItemDisassembleResult_9|★ %s %s개 지급.|
+|EXE_ioPlayStage::OnExtraItemDisassembleResult_10|장비분해 실패 : %d|
+|EXE_ioPlayStage::OnMedalItemSellResult_5|메달 팔기 예외오류, %d|
+|EXE_ioPlayStage::OnMedalItemSellResult_6|%s 판매 완료.|
+|EXE_ioPlayStage::OnMedalItemSellResult_7|%s페소가 지급되었습니다.|
+|EXE_ioPlayStage::OnMedalItemSellResult_8|메달 팔기 실패 (%d)|
+|EXE_ioPlayStage::OnCustomMedalItemSellResult_5|메달 팔기 예외오류, %d|
+|EXE_ioPlayStage::OnCustomMedalItemSellResult_6|%s 판매 완료.|
+|EXE_ioPlayStage::OnCustomMedalItemSellResult_7|%s페소가 지급되었습니다.|
+|EXE_ioPlayStage::OnCustomMedalItemSellResult_8|메달 팔기 실패 (%d)|
+|EXE_ioPlayStage::OnSendPresentByEtcItemFail_3|보낼 수 없는 아이템입니다.|
+|EXE_ioPlayStage::OnSendPresentByEtcItemFail_4|잘못된 닉네임입니다.|
+|EXE_ioPlayStage::OnReinforceExtraItem_2|장비 강화중 오류가 발생하였습니다. : %d|
+|EXE_ioPlayStage::OnSelectExtraGashaponResult_12|예외 오류가 발생되었습니다.|
+|EXE_ioPlayStage::OnSelectExtraGashaponResult_13|골드 처리중입니다.#잠시만 기다려 주세요.|
+|EXE_ioPlayStage::OnSelectExtraGashaponResult_14|해당 상품을 구입하면#이번달 최대 골드 사용 한도를 초과합니다.#(구매 한도:청소년 55,000원, 성인 330,000원)# #다음달 부터 상품 구매가 가능합니다.|
+|EXE_ioPlayStage::OnSelectExtraGashaponResult_15|골드 처리가 불가능합니다.#잠시만 기다려 주세요.|
+|EXE_ioPlayStage::OnSubscriptionRetrCheck_3|상품이 존재하지 않습니다.|
+|EXE_ioPlayStage::OnSubscriptionRetrCheck_4|청약철회 지원 안함|
+|EXE_ioPlayStage::OnSelectGashaponResult_7|예외 오류가 발생되었습니다.|
+|EXE_ioPlayStage::OnSelectGashaponResult_8|골드 처리중입니다.#잠시만 기다려 주세요.|
+|EXE_ioPlayStage::OnSelectGashaponResult_9|해당 상품을 구입하면#이번달 최대 골드 사용 한도를 초과합니다.#(구매 한도:청소년 55,000원, 성인 330,000원)# #다음달 부터 상품 구매가 가능합니다.|
+|EXE_ioPlayStage::OnSelectGashaponResult_10|골드 처리가 불가능합니다.#잠시만 기다려 주세요.|
+|EXE_ioPlayStage::OnSelectGashaponResult_11|골드 처리가 실패하였습니다.#관리자에게 문의하세요.|
+|EXE_ioPlayStage::OnSelectGashaponResult_12|처리가 실패하였습니다.#관리자에게 문의하세요.|
+|EXE_ioPlayStage::OnSelectGashaponsUseResult_2|예외 오류가 발생되었습니다.|
+|EXE_ioPlayStage::OnPowerUpInfo_7|강화 할 용병을 가지고 있지 않습니다.|
+|EXE_ioPlayStage::OnPowerUpInfo_8|강화 할 아이템을 가지고 있지 않습니다.|
+|EXE_ioPlayStage::OnPowerUpInfo_9|강화 할 수 없는 용병입니다.|
+|EXE_ioPlayStage::OnPowerUpInfo_10|강화 할 수 없는 아이템입니다.|
+|EXE_ioPlayStage::OnPowerUpInfo_11|소울 스톤이 부족합니다.|
+|EXE_ioPlayStage::OnPowerUpInfo_12|알 수없는 오류 : %s, State : %d|
+|EXE_ioPlayStage::OnSuccessionRevengeRequest_2|상대방이 거절하였습니다.|

@@ -236,8 +236,8 @@ void ioShuffleRoomMgr::SetKickOutUser( ioHashString szName )
 		kPrinter.SetTextColor( TCT_DEFAULT_BLUE );
 	kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), szName.c_str() );
 	kPrinter.SetTextColor( g_ChatMgr.GetChatColor() );
-	kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "님, 강제퇴장 됨." );
-	g_ChatMgr.SetChatComplexString( "정보", kPrinter );
+	kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), STR(1) );
+	g_ChatMgr.SetChatComplexString( STR(2), kPrinter );
 }
 
 void ioShuffleRoomMgr::LeaveRoom( bool bMove /* = false */ )
@@ -249,8 +249,8 @@ void ioShuffleRoomMgr::LeaveRoom( bool bMove /* = false */ )
 	{
 		ioComplexStringPrinter kPrinter;
 		g_ChatMgr.PresetChatComplexString( MSG_INFO_CHAT, kPrinter );	
-		kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "전투방에서 이탈." );
-		g_ChatMgr.SetChatComplexString( "정보", kPrinter );
+		kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), STR(1) );
+		g_ChatMgr.SetChatComplexString( STR(2), kPrinter );
 	}
 
 	m_bShuffleModePlaying   = true;
@@ -287,7 +287,7 @@ void ioShuffleRoomMgr::ChangeMyOwner()
 	{
 		if( m_szPrevMyOwnerID != m_ShuffleRoom.m_szOwnerName )
 		{
-			g_ChatMgr.SetHostChange( "전투", m_ShuffleRoom.m_szOwnerName.c_str(), TEAM_NONE );
+			g_ChatMgr.SetHostChange( STR(1), m_ShuffleRoom.m_szOwnerName.c_str(), TEAM_NONE );
 		}
 	}
 	m_szPrevMyOwnerID = m_ShuffleRoom.m_szOwnerName;
@@ -429,8 +429,8 @@ void ioShuffleRoomMgr::JoinUser( ShuffleRoomUserInfo &kUser )
 		ioComplexStringPrinter kPrinter;
 		g_ChatMgr.PresetChatComplexString( MSG_INFO_CHAT, kPrinter );
 		kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "%s", kUser.m_szUserID.c_str() );
-		kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "님, 전투방에 참가." );
-		g_ChatMgr.SetChatComplexString( "정보", kPrinter );
+		kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), STR(1) );
+		g_ChatMgr.SetChatComplexString( STR(2), kPrinter );
 	}
 }
 
@@ -471,8 +471,8 @@ void ioShuffleRoomMgr::LeaveUser( ioHashString szUserID, ModeType eModeType )
 				ioComplexStringPrinter kPrinter;
 				g_ChatMgr.PresetChatComplexString( MSG_INFO_CHAT, kPrinter );
 				kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "%s", szUserID.c_str() );
-				kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "님, 전투방 이탈." );
-				g_ChatMgr.SetChatComplexString( "정보", kPrinter );
+				kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), STR(1) );
+				g_ChatMgr.SetChatComplexString( STR(2), kPrinter );
 			}
 		}	
 	}
@@ -927,57 +927,57 @@ void ioShuffleRoomMgr::GetModeNameByType( IN int iType, OUT ioHashString &szMode
 		szModeName = "???";
 		break;
 	case MT_SYMBOL:
-		szModeName = "파워스톤";
+		szModeName = STR(1);
 		break;
 	case MT_CATCH:
-		szModeName = "포로탈출";
+		szModeName = STR(2);
 		break;
 	case MT_KING:
-		szModeName = "히든크라운";
+		szModeName = STR(3);
 		break;
 	case MT_SURVIVAL:
-		szModeName = "데스매치";
+		szModeName = STR(4);
 		break;
 	case MT_TEAM_SURVIVAL:
-		szModeName = "팀데스매치";
+		szModeName = STR(5);
 		break;
 	case MT_BOSS:
-		szModeName = "보스레이드";
+		szModeName = STR(6);
 		break;
 	case MT_FOOTBALL:
-		szModeName = "축구경기";
+		szModeName = STR(7);
 		break;
 	case MT_GANGSI:
-		szModeName = "강시서바이벌";
+		szModeName = STR(8);
 		break;
 	case MT_CATCH_RUNNINGMAN:
-		szModeName = "드워프모드";
+		szModeName = STR(9);
 		break;
 	case MT_FIGHT_CLUB:
-		szModeName = "챔피언모드";
+		szModeName = STR(10);
 		break;
 	case MT_DOUBLE_CROWN:
-		szModeName = "더블크라운";
+		szModeName = STR(11);
 		break;
 	case MT_SHUFFLE_BONUS:
-		szModeName = "보너스스테이지";
+		szModeName = STR(12);
 		break;
 	case MT_TEAM_SURVIVAL_AI:
-		szModeName = "팀서바이벌AI";
+		szModeName = STR(13);
 		break;
 	case MT_UNDERWEAR:
-		szModeName = "팬티몬";
+		szModeName = STR(14);
 		break;
 	case MT_CBT:
-		szModeName = "클베모드";
+		szModeName = STR(15);
 		break;
 	case MT_FLAG_CAPTURE:
-		szModeName = "깃발모드";
+		szModeName = STR(16);
 		break;
 	case MT_ARENA:
-		szModeName = "아레나모드";
+		szModeName = STR(17);
 	case MT_FARMING:
-		szModeName = "파밍모드";
+		szModeName = STR(18);
 		break;
 	}
 }

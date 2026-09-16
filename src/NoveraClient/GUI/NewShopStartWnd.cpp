@@ -652,16 +652,16 @@ void ioProductLinkButton::OnNormalRender( int iXPos, int iYPos )
 	if( !m_szGold.IsEmpty() )
 	{
 		g_FontMgr.SetTextColor( 141, 87, 4 );
-		g_FontMgr.PrintText( iXPos + 45, iYPos + 78, FONT_SIZE_10, "%s 골드", m_szGold );
+		g_FontMgr.PrintText( iXPos + 45, iYPos + 78, FONT_SIZE_10, STR(1), m_szGold );
 	}
 	else if( !m_szPeso.IsEmpty() )
 	{
 		g_FontMgr.SetTextColor( TCT_DEFAULT_BLUE );
-		g_FontMgr.PrintText( iXPos + 45, iYPos + 78, FONT_SIZE_10, "%s 페소", m_szPeso );
+		g_FontMgr.PrintText( iXPos + 45, iYPos + 78, FONT_SIZE_10, STR(2), m_szPeso );
 	}
 
 	g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	g_FontMgr.PrintText( iXPos + 45, iYPos + 100, FONT_SIZE_10, "자세히보기" );
+	g_FontMgr.PrintText( iXPos + 45, iYPos + 100, FONT_SIZE_10, STR(3) );
 }
 
 void ioProductLinkButton::OnDrawNormal( int iXPos, int iYPos )
@@ -690,7 +690,7 @@ void ioProductLinkButton::OnDrawDisabled( int iXPos, int iYPos )
 	g_FontMgr.SetTextStyle( TS_NORMAL );
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_LIGHTGRAY );
-	g_FontMgr.PrintText( iXPos + 45, iYPos + 63, FONT_SIZE_10, "상품없음" );
+	g_FontMgr.PrintText( iXPos + 45, iYPos + 63, FONT_SIZE_10, STR(1) );
 	g_FontMgr.PrintText( iXPos + 45, iYPos + 78, FONT_SIZE_10, "-");
 }
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -980,7 +980,7 @@ void ioProductIconButton::OnMarkRender( int iXPos, int iYPos )
 		g_FontMgr.SetAlignType( TAT_CENTER );
 		g_FontMgr.SetBkColor( 0, 0, 0 );
 		g_FontMgr.SetTextColor( TCT_DEFAULT_WHITE );
-		g_FontMgr.PrintText( iXPos + X_TEXT_OFFSET, iYPos + Y_TEXT_OFFSET, FONT_SIZE_11, "보유중" );
+		g_FontMgr.PrintText( iXPos + X_TEXT_OFFSET, iYPos + Y_TEXT_OFFSET, FONT_SIZE_11, STR(1) );
 	}
 	else if( m_iMarkType == SHOP_MARK_TYPE_LIMIT_GOODS )
 	{

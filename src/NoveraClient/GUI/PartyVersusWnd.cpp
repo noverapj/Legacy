@@ -986,9 +986,9 @@ void PartyModeNMapBtn::OnAiRender( int iXPos, int iYPos )
 	ioHashString szLevel;
 	int iAiLevel = g_BattleRoomMgr.GetAiLevel();
 	if( iAiLevel == 0 )
-		szLevel = "쉬움";
+		szLevel = STR(1);
 	else
-		szLevel = "보통";
+		szLevel = STR(2);
 	g_FontMgr.PrintTextWidthCut( iXPos + 10, iYPos + 8, FONT_SIZE_12,FLOAT90, szLevel.c_str() );
 }
 
@@ -1914,11 +1914,11 @@ void PartyShamBattleWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 			}
 			else if( g_BattleRoomMgr.IsTournamentModeType() )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "대회방에는 초대가 되지 않습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(41) );
 			}
 			else if( g_RankBattleMgr.IsRankBattlePlaying() )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "랭킹전 중에는 초대가 되지 않습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(42) );
 			}
 			else
 			{
@@ -2335,9 +2335,9 @@ void PartyShamBattleWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 						kPrinter[0].SetTextStyle( TS_NORMAL );
 						kPrinter[0].SetBkColor( 0, 0, 0 );	
 						kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-						kPrinter[0].AddTextPiece( FONT_SIZE_13,"티켓이 없는 유저가 ");
+						kPrinter[0].AddTextPiece( FONT_SIZE_13,STR(43));
 						kPrinter[0].SetTextColor( TCT_DEFAULT_GRAY );
-						kPrinter[0].AddTextPiece( FONT_SIZE_13,"%d명", iSize );
+						kPrinter[0].AddTextPiece( FONT_SIZE_13,STR(44), iSize );
 						kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
 						kPrinter[0].AddTextPiece( FONT_SIZE_13,STR(22));
 
@@ -2362,11 +2362,11 @@ void PartyShamBattleWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 						kPrinter[2].SetTextStyle( TS_NORMAL );
 						kPrinter[2].SetBkColor( 0, 0, 0 );	
 						kPrinter[2].SetTextColor( TCT_DEFAULT_DARKGRAY );
-						kPrinter[2].AddTextPiece( FONT_SIZE_13,"레이드를 플레이하려면 각자");
+						kPrinter[2].AddTextPiece( FONT_SIZE_13,STR(45));
 						kPrinter[3].SetTextStyle( TS_NORMAL );
 						kPrinter[3].SetBkColor( 0, 0, 0 );	
 						kPrinter[3].SetTextColor( TCT_DEFAULT_DARKGRAY );
-						kPrinter[3].AddTextPiece( FONT_SIZE_13,"레이드 티켓이 %d개씩 필요합니다.", iUseCoinCnt );
+						kPrinter[3].AddTextPiece( FONT_SIZE_13,STR(46), iUseCoinCnt );
 
 						g_GUIMgr.SetPrevMsgListBox( NULL, MB_OK, NULL, kPrinter );
 						return;
@@ -3458,9 +3458,9 @@ void PartyShamBattleWnd::UpdateShamBattleTournament()
 		//
 		char szTitle[MAX_PATH] = "";
 		if( pTournament->GetType() == TournamentNode::TYPE_REGULAR )
-			sprintf_s_e( szTitle, "%s 정규 대회", pTournament->GetTournamentTitle().c_str() );
+			SafeSprintf( szTitle, sizeof(szTitle), STR(1), pTournament->GetTournamentTitle().c_str() );
 		else
-			sprintf_s_e( szTitle, "%s 대회", pTournament->GetTournamentTitle().c_str() );  
+			SafeSprintf( szTitle, sizeof(szTitle), STR(2), pTournament->GetTournamentTitle().c_str() );  
 		m_szTournamentTitle = szTitle;
 
 		TeamGlobalData *pBlueTeam = g_TournamentTeamMgr.GetTeamData( g_BattleRoomMgr.GetTournamentBlueIndex() );
@@ -3469,9 +3469,9 @@ void PartyShamBattleWnd::UpdateShamBattleTournament()
 			//
 			int iRound = Help::TournamentCurrentRoundWithTeam( pTournament->GetTournamentStartTeamCount(), max( 1, pBlueTeam->GetTourPos() ) - 1 );
 			if( iRound <= 2 )
-				sprintf_s_e( szTitle, "결승" );
+				SafeSprintf( szTitle, sizeof(szTitle), STR(3) );
 			else
-				sprintf_s_e( szTitle, "%d강", iRound );
+				SafeSprintf( szTitle, sizeof(szTitle), STR(4), iRound );
 			m_szTournamentRound = szTitle;
 
 			//
@@ -3490,9 +3490,9 @@ void PartyShamBattleWnd::UpdateShamBattleTournament()
 			{
 				int iRound = Help::TournamentCurrentRoundWithTeam( pTournament->GetTournamentStartTeamCount(), max( 1, pRedTeam->GetTourPos() ) - 1 );
 				if( iRound <= 2 )
-					sprintf_s_e( szTitle, "결승" );
+					SafeSprintf( szTitle, sizeof(szTitle), STR(3) );
 				else
-					sprintf_s_e( szTitle, "%d강", iRound );
+					SafeSprintf( szTitle, sizeof(szTitle), STR(4), iRound );
 				m_szTournamentRound = szTitle;
 			}
 
@@ -3547,7 +3547,7 @@ void PartyShamBattleWnd::SetModeStart( bool isStart, bool isAuto )
 			if( pNode && pNode->IsLogSend() && g_BattleRoomMgr.IsTournamentModeType() )
 			{
 				char szLog[MAX_PATH];
-				sprintf( szLog, "[대회로그] 54321 카운트 시작 - %s", g_MyInfo.GetPublicID().c_str() );
+				sprintf( szLog, STR(3), g_MyInfo.GetPublicID().c_str() );
 
 				SP2Packet kPacket2( LUPK_LOG );
 				kPacket2 << "TournamentLog";  // 로그 파일 타입
@@ -3695,7 +3695,7 @@ void PartyShamBattleWnd::ProcessTournament()
 				if( pNode && pNode->IsLogSend() && g_BattleRoomMgr.IsTournamentModeType() )
 				{
 					char szLog[MAX_PATH];
-					sprintf( szLog, "[대회로그] 5분 대기 완료 - %s", g_MyInfo.GetPublicID().c_str() );
+					sprintf( szLog, STR(1), g_MyInfo.GetPublicID().c_str() );
 
 					SP2Packet kPacket2( LUPK_LOG );
 					kPacket2 << "TournamentLog";  // 로그 파일 타입
@@ -3751,7 +3751,7 @@ void PartyShamBattleWnd::ProcessModeStart()
 							if( pNode && pNode->IsLogSend() && g_BattleRoomMgr.IsTournamentModeType() )
 							{
 								char szLog[MAX_PATH];
-								sprintf( szLog, "[대회로그] 54321 카운트 완료 - %s", g_MyInfo.GetPublicID().c_str() );
+								sprintf( szLog, STR(1), g_MyInfo.GetPublicID().c_str() );
 
 								SP2Packet kPacket2( LUPK_LOG );
 								kPacket2 << "TournamentLog";  // 로그 파일 타입
@@ -3786,7 +3786,7 @@ void PartyShamBattleWnd::ProcessModeStart()
 			if( pNode && pNode->IsLogSend() && g_BattleRoomMgr.IsTournamentModeType() )
 			{
 				char szLog[MAX_PATH];
-				sprintf( szLog, "[대회로그] 상대 유저가 모두 이탈하여 대회를 시작할 수 없음 - %s", g_MyInfo.GetPublicID().c_str() );
+				sprintf( szLog, STR(2), g_MyInfo.GetPublicID().c_str() );
 
 				SP2Packet kPacket2( LUPK_LOG );
 				kPacket2 << "TournamentLog";  // 로그 파일 타입
@@ -4026,19 +4026,19 @@ void PartyShamBattleWnd::OnTournamentEntrySearchRender( int iXPos, int iYPos )
 			ioComplexStringPrinter kPrinter;
 			kPrinter.SetTextStyle( TS_NORMAL );
 			kPrinter.SetTextColor( TCT_DEFAULT_BLUE );
-			kPrinter.AddTextPiece( FONT_SIZE_14, "예비엔트리 검색중" );	
+			kPrinter.AddTextPiece( FONT_SIZE_14, STR(1) );	
 			kPrinter.PrintFullText( iXPos + 129 + 77, iYPos + 185 + 4, TAT_CENTER );
 			kPrinter.ClearList();
 
 			kPrinter.SetTextStyle( TS_NORMAL );
 			kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-			kPrinter.AddTextPiece( FONT_SIZE_11, "상대팀의 미참가로" );	
+			kPrinter.AddTextPiece( FONT_SIZE_11, STR(2) );	
 			kPrinter.PrintFullText( iXPos + 129 + 77, iYPos + 185 + 23, TAT_CENTER );
 			kPrinter.ClearList();
 
 			kPrinter.SetTextStyle( TS_NORMAL );
 			kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-			kPrinter.AddTextPiece( FONT_SIZE_11, "다른팀을 검색 중입니다." );	
+			kPrinter.AddTextPiece( FONT_SIZE_11, STR(3) );	
 			kPrinter.PrintFullText( iXPos + 129 + 77, iYPos + 185 + 35, TAT_CENTER );
 			kPrinter.ClearList();
 		}
@@ -4053,19 +4053,19 @@ void PartyShamBattleWnd::OnTournamentEntrySearchRender( int iXPos, int iYPos )
 			ioComplexStringPrinter kPrinter;
 			kPrinter.SetTextStyle( TS_NORMAL );
 			kPrinter.SetTextColor( TCT_DEFAULT_RED );
-			kPrinter.AddTextPiece( FONT_SIZE_14, "예비엔트리 검색중" );	
+			kPrinter.AddTextPiece( FONT_SIZE_14, STR(1) );	
 			kPrinter.PrintFullText( iXPos + 489 + 77, iYPos + 185 + 4, TAT_CENTER );
 			kPrinter.ClearList();
 
 			kPrinter.SetTextStyle( TS_NORMAL );
 			kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-			kPrinter.AddTextPiece( FONT_SIZE_11, "상대팀의 미참가로" );	
+			kPrinter.AddTextPiece( FONT_SIZE_11, STR(2) );	
 			kPrinter.PrintFullText( iXPos + 489 + 77, iYPos + 185 + 23, TAT_CENTER );
 			kPrinter.ClearList();
 
 			kPrinter.SetTextStyle( TS_NORMAL );
 			kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-			kPrinter.AddTextPiece( FONT_SIZE_11, "다른팀을 검색 중입니다." );	
+			kPrinter.AddTextPiece( FONT_SIZE_11, STR(3) );	
 			kPrinter.PrintFullText( iXPos + 489 + 77, iYPos + 185 + 35, TAT_CENTER );
 			kPrinter.ClearList();
 		}
@@ -4103,7 +4103,7 @@ void PartyShamBattleWnd::OnTournamentRender( int iXPos, int iYPos )
 	//
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_12, "● 게임이 시작될 때까지 잠시 기다려주세요." );
+	kPrinter.AddTextPiece( FONT_SIZE_12, STR(1) );
 	kPrinter.PrintFullText( iXPos + 421, iYPos + 433, TAT_LEFT );
 	kPrinter.ClearList();
 
@@ -4116,17 +4116,17 @@ void PartyShamBattleWnd::OnTournamentRender( int iXPos, int iYPos )
 	kPrinter.SetTextColor( TCT_DEFAULT_RED );
 	if( IsModeStart() )
 	{
-		kPrinter.AddTextPiece( FONT_SIZE_18, "곧 시작됩니다!!" );		
+		kPrinter.AddTextPiece( FONT_SIZE_18, STR(2) );		
 	}
 	else 
 	{
 		int iMinute = g_BattleRoomMgr.GetTournamentStartTime() / 60000;
 		int iSec    = ( g_BattleRoomMgr.GetTournamentStartTime() % 60000 ) / 1000;
 		if( iMinute > 0 )
-			kPrinter.AddTextPiece( FONT_SIZE_18, "%d분 %d초 ", iMinute, iSec );
+			kPrinter.AddTextPiece( FONT_SIZE_18, STR(3), iMinute, iSec );
 		else
-			kPrinter.AddTextPiece( FONT_SIZE_18, "%d초 ", max( 1, iSec ) );
-		kPrinter.AddTextPiece( FONT_SIZE_18, " 후 게임시작" );
+			kPrinter.AddTextPiece( FONT_SIZE_18, STR(4), max( 1, iSec ) );
+		kPrinter.AddTextPiece( FONT_SIZE_18, STR(5) );
 	}
 	kPrinter.PrintFullText( iXPos + 580, iYPos + 476, TAT_CENTER );
 	kPrinter.ClearList();
@@ -4448,9 +4448,9 @@ void PartyShamBattleWnd::OnModeNMapRender( int iXPos, int iYPos )
 		ioHashString szLevel;
 		int iAiLevel = g_BattleRoomMgr.GetAiLevel();
 		if( iAiLevel == 0 )
-			szLevel = "쉬움";
+			szLevel = STR(4);
 		else
-			szLevel = "보통";
+			szLevel = STR(5);
 		g_FontMgr.PrintTextWidthCut( iXPos + 10, iYPos + 8, FONT_SIZE_12,FLOAT90, szLevel.c_str() );
 		m_pModeNMapGrayFrm->SetSize( 163, m_pModeNMapGrayFrm->GetHeight() );
 	}
@@ -5473,9 +5473,9 @@ void PartyBattleSimpleWnd::OnRender()
 		if( bAIMode )
 		{
 			if( g_BattleRoomMgr.GetAiLevel() == 0 )
-				kModeTitle += "(쉬움)";
+				kModeTitle += STR(2);
 			else
-				kModeTitle += "(보통)";
+				kModeTitle += STR(3);
 
 		}
 

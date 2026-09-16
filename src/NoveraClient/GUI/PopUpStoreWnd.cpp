@@ -338,7 +338,7 @@ void PopupStoreWnd::OnUpdatePresentWnd()
 
 		//(50%off)
 #ifdef USE_LIST_ARQUMENTS_TEXT_FUNCTION
-		sprintf_e( szPrice, "(%d%%%%«“¿Œ)", m_OnPopupItemInfo.iDisCount );
+		SafeSprintf( szPrice, sizeof(szPrice), STR(1), m_OnPopupItemInfo.iDisCount );
 #else
 		sprintf_e( szPrice, "(%d%%off)", m_OnPopupItemInfo.iDisCount );
 #endif

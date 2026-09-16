@@ -27,7 +27,7 @@ void NamedTitlePremiumSelectWnd::iwm_show()
 	ioWnd *pSelectBtn = FindChildWnd( ID_SELECT_BTN );
 	if( pSelectBtn )
 	{
-		pSelectBtn->SetTitleText( "칭호를 선택하세요" );
+		pSelectBtn->SetTitleText( STR(1) );
 		pSelectBtn->SetTitleColor( TCT_DEFAULT_DARKGRAY, 0xFF000000 );
 	}
 
@@ -287,7 +287,7 @@ void NamedTitlePremiumSelectWnd::CheckRecvBtn()
 {
 	if ( m_dwCode <= 0 )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "칭호가 선택되지 않았습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 
@@ -295,12 +295,12 @@ void NamedTitlePremiumSelectWnd::CheckRecvBtn()
 	kPrinter[0].SetTextStyle( TS_NORMAL );
 	kPrinter[0].SetBkColor( 0, 0, 0 );
 	kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter[0].AddTextPiece( FONT_SIZE_13, "프리미엄 칭호 변경권을" );
+	kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(2) );
 
 	kPrinter[1].SetTextStyle( TS_NORMAL );
 	kPrinter[1].SetBkColor( 0, 0, 0 );
 	kPrinter[1].SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter[1].AddTextPiece( FONT_SIZE_13, "정말 사용하시겠습니까?" );
+	kPrinter[1].AddTextPiece( FONT_SIZE_13, STR(3) );
 
-	g_GUIMgr.SetPrevMsgListBoxWithTitle( NULL, MB_YESNO, this, kPrinter, "프리미엄칭호", "", "확인", "취소" );
+	g_GUIMgr.SetPrevMsgListBoxWithTitle( NULL, MB_YESNO, this, kPrinter, STR(4), "", STR(5), STR(6) );
 }

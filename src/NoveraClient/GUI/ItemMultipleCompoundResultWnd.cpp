@@ -1571,7 +1571,7 @@ void UniqueItemMultipleCompoundResultWnd::OnRender()
 		g_FontMgr.SetAlignType( TAT_CENTER );
 		g_FontMgr.SetBkColor( 0, 0, 0 );
 		g_FontMgr.SetTextColor( TCT_DEFAULT_GREEN );
-		g_FontMgr.PrintText( iXPos+FINAL_DESC_X, iYPos+FINAL_DESC_Y, FONT_SIZE_17, "장비합성을 성공했습니다" );
+		g_FontMgr.PrintText( iXPos+FINAL_DESC_X, iYPos+FINAL_DESC_Y, FONT_SIZE_17, STR(1) );
 	}
 	else
 	{
@@ -1579,7 +1579,7 @@ void UniqueItemMultipleCompoundResultWnd::OnRender()
 		g_FontMgr.SetAlignType( TAT_LEFT );
 		g_FontMgr.SetBkColor( 0, 0, 0 );
 		g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
-		g_FontMgr.PrintText( iXPos+DESC_X, iYPos+DESC_Y, FONT_SIZE_12, "합성중입니다. 잠시만 기다려주세요." );
+		g_FontMgr.PrintText( iXPos+DESC_X, iYPos+DESC_Y, FONT_SIZE_12, STR(2) );
 	}
 
 	// Reinforce
@@ -1621,7 +1621,7 @@ void UniqueItemMultipleCompoundResultWnd::OnRender()
 
 	char szHack1[] = {'?','?','?','?','?','\0'};
 	ioHashString szName = szHack1;
-	ioHashString szDesc = "영구사용";
+	ioHashString szDesc = STR(3);
 
 	if( m_bFinalResult )
 	{

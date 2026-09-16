@@ -293,7 +293,7 @@ void TradeItemRegisterConfirmWnd::OnRender()
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_12, "¼ö¼ö·á(%.2f£¥)", m_fTexRate );
+	kPrinter.AddTextPiece( FONT_SIZE_12, STR(11), m_fTexRate );
 	kPrinter.PrintFullText( iXPos+PRICE_TEXT_X, iYPos+PRICE_TEXT_Y+24, TAT_LEFT );
 	kPrinter.ClearList();
 

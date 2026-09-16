@@ -110,7 +110,7 @@ void ioSoldierAwakeManager::LoadMtrl( ioINILoader& rkLoader )
 		if( Mtrl.eType == NMT_PIECE )
 		{
 #ifdef _DEBUG
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "ioSoldierAwakeManager material_type 으로 기존 조각 설정 버그" );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 #endif
 			continue;
 		}
@@ -218,7 +218,7 @@ void ioSoldierAwakeManager::GetMtrlTitle( std::string& szTtitle, int nIdx ) cons
 		{			
 			ioEtcItem *pEtcItem = g_EtcItemMgr.FindEtcItem( pMtrl->dwNeedCode );
 			if( pEtcItem )
-				sprintf_s( szBuff, "%s %d개", pEtcItem->GetName().c_str(), pMtrl->nNeedCount );
+				sprintf_s( szBuff, STR(1), pEtcItem->GetName().c_str(), pMtrl->nNeedCount );
 		}
 		else
 		{
@@ -239,7 +239,7 @@ void ioSoldierAwakeManager::GetAwakeTtitle( std::string& szTtitle, int nIdx, int
 	const AwakeInfo* pAwake = GetAwake( nIdx );
 	if( pAwake )
 	{
-		sprintf_s( szBuff, "%s %d일", pAwake->szName.c_str(), nPeriod );
+		sprintf_s( szBuff, STR(1), pAwake->szName.c_str(), nPeriod );
 		szTtitle = szBuff;
 	}
 	else
@@ -314,17 +314,17 @@ void ioSoldierAwakeManager::GetRemainTime( int iLimitTime, std::string& szText )
 	{
 		int iRestMin = GapTime.GetTotalMinutes();
 		if( iRestMin <= 1 )
-			sprintf_s( szBuff, "(1분 미만)", iRestMin );
+			sprintf_s( szBuff, STR(1), iRestMin );
 		else
-			sprintf_s( szBuff, "(%d분 남음)",iRestMin );
+			sprintf_s( szBuff, STR(2),iRestMin );
 	}
 	else if( iRestHour < 24 )
 	{
-		sprintf_s( szBuff, "(%d시간 남음)", iRestHour );
+		sprintf_s( szBuff, STR(3), iRestHour );
 	}
 	else
 	{
-		sprintf_s( szBuff, "(%d일 %d시간 남음)", iRestHour / 24, iRestHour % 24 );
+		sprintf_s( szBuff, STR(4), iRestHour / 24, iRestHour % 24 );
 	}
 
 	szText = szBuff;
@@ -336,7 +336,7 @@ void ioSoldierAwakeManager::GetMenuListName( std::string& szName, int iAwakeType
 	{
 		if( m_AwakeInfoMap.empty() )
 		{
-			szName ="각성정보 없음";
+			szName =STR(1);
 		}
 		else
 		{
@@ -405,14 +405,14 @@ byte ioSoldierAwakeManager::GetAwakeType( const CharAwakePullDownItem* pItem ) c
 	const AwakeProduct* pProduct = GetAwakeProduct( pItem->m_iProductIdx );
 	if( !pProduct )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "잘못된 각성 정보입니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return AWAKE_NONE;
 	}
 
 	const AwakeInfo* pAwake = GetAwake( pProduct->nNeedAwakeIdx );
 	if( !pAwake )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "잘못된 재료 정보입니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return AWAKE_NONE;
 	}
 
@@ -424,14 +424,14 @@ AWAKERESULT ioSoldierAwakeManager::IsEnableAwakeMtrlUse( const CharAwakePullDown
 	const AwakeProduct* pProduct = GetAwakeProduct( pItem->m_iProductIdx );
 	if( !pProduct )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "잘못된 각성 정보입니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return AR_ERROR;
 	}
 
 	const NeedMaterial* pMtrl = GetMtrl( pProduct->nNeedMtrlIdx );
 	if( !pMtrl )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "잘못된 재료 정보입니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return AR_ERROR;
 	}
 
@@ -498,21 +498,21 @@ bool ioSoldierAwakeManager::AwakeTryMessageBox( const ClickPullDownEvent& Event,
 	const AwakeProduct* pProduct = GetAwakeProduct( pItem->m_iProductIdx );
 	if( !pProduct )	
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "잘못된 각성 정보입니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return false;
 	}
 	
 	const AwakeInfo* pInfo = GetAwake( pProduct->nNeedAwakeIdx );
 	if( !pInfo )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "잘못된 각성 정보입니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return false;
 	}
 
 	const NeedMaterial* pMtrl = GetMtrl( pProduct->nNeedMtrlIdx );
 	if( !pMtrl )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "잘못된 재료 정보입니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return false;
 	}
 
@@ -531,9 +531,9 @@ bool ioSoldierAwakeManager::AwakeTryMessageBox( const ClickPullDownEvent& Event,
 	kPrinter[iArray].SetTextStyle( TS_NORMAL );
 	kPrinter[iArray].SetBkColor( 0, 0, 0 );
 	kPrinter[iArray].SetTextColor( TCT_DEFAULT_GREEN );
-	kPrinter[iArray].AddTextPiece( FONT_SIZE_13, "%d일간 ", pProduct->nNeedDay );
+	kPrinter[iArray].AddTextPiece( FONT_SIZE_13, STR(3), pProduct->nNeedDay );
 	kPrinter[iArray].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter[iArray].AddTextPiece( FONT_SIZE_13, "%s을 하시겠습니까?", pInfo->szName.c_str() );
+	kPrinter[iArray].AddTextPiece( FONT_SIZE_13, STR(4), pInfo->szName.c_str() );
 	iArray++;
 
 	if( pInfo->eAwakeType == AWAKE_RARE && pChar->m_data.m_iAwakeType == AWAKE_NORMAL )
@@ -542,7 +542,7 @@ bool ioSoldierAwakeManager::AwakeTryMessageBox( const ClickPullDownEvent& Event,
 		kPrinter[iArray].SetTextStyle( TS_NORMAL );
 		kPrinter[iArray].SetBkColor( 0, 0, 0 );
 		kPrinter[iArray].SetTextColor( TCT_DEFAULT_RED );
-		kPrinter[iArray].AddTextPiece( FONT_SIZE_13, "※ 현재의 %s은 사라집니다", szAwakeTitle.c_str() );
+		kPrinter[iArray].AddTextPiece( FONT_SIZE_13, STR(5), szAwakeTitle.c_str() );
 		iArray++;
 		kPrinter[iArray].AddTextPiece( FONT_SIZE_13, "            " );
 		iArray++;
@@ -552,7 +552,7 @@ bool ioSoldierAwakeManager::AwakeTryMessageBox( const ClickPullDownEvent& Event,
 		kPrinter[iArray].SetTextStyle( TS_NORMAL );
 		kPrinter[iArray].SetBkColor( 0, 0, 0 );
 		kPrinter[iArray].SetTextColor( TCT_DEFAULT_BLUE );
-		kPrinter[iArray].AddTextPiece( FONT_SIZE_13, "(%d일이 추가됨)", pProduct->nNeedDay );
+		kPrinter[iArray].AddTextPiece( FONT_SIZE_13, STR(6), pProduct->nNeedDay );
 		iArray++;
 		kPrinter[iArray].AddTextPiece( FONT_SIZE_13, "            " );
 		iArray++;
@@ -561,7 +561,7 @@ bool ioSoldierAwakeManager::AwakeTryMessageBox( const ClickPullDownEvent& Event,
 	kPrinter[iArray].SetTextStyle( TS_NORMAL );
 	kPrinter[iArray].SetBkColor( 0, 0, 0 );
 	kPrinter[iArray].SetTextColor( TCT_DEFAULT_BLUE );
-	kPrinter[iArray].AddTextPiece( FONT_SIZE_13, "%s 소모", szMtrlTtitle.c_str() );
+	kPrinter[iArray].AddTextPiece( FONT_SIZE_13, STR(7), szMtrlTtitle.c_str() );
 	iArray++;
 
 	int iCount = 0;
@@ -578,16 +578,16 @@ bool ioSoldierAwakeManager::AwakeTryMessageBox( const ClickPullDownEvent& Event,
 			iCount = rkEtcItem.m_iValue1;
 
 		Help::ConvertNumToStrComma( iCount, szCount, sizeof( szCount ) );
-		kPrinter[iArray].AddTextPiece( FONT_SIZE_13, "(현재 %s개 보유)", szCount );
+		kPrinter[iArray].AddTextPiece( FONT_SIZE_13, STR(8), szCount );
 	}
 	else
 	{
 		Help::ConvertNumToStrComma( g_MyInfo.GetMoney(), szCount, sizeof( szCount ) );
-		kPrinter[iArray].AddTextPiece( FONT_SIZE_13, "(현재 %s페소 보유)", szCount );
+		kPrinter[iArray].AddTextPiece( FONT_SIZE_13, STR(9), szCount );
 	}
 	iArray++;
 
-	g_GUIMgr.SetPrevMsgListBoxWithTitle( NULL, MB_YESNO, pCalledWnd, kPrinter, pInfo->szName.c_str(), "확인", "확인", "취소" );
+	g_GUIMgr.SetPrevMsgListBoxWithTitle( NULL, MB_YESNO, pCalledWnd, kPrinter, pInfo->szName.c_str(), STR(10), STR(10), STR(11) );
 	return true;
 }
 
@@ -597,14 +597,14 @@ void ioSoldierAwakeManager::AwakeChangeFailMessageBox( const std::string& szOrgN
 	kPrinter[0].SetTextStyle( TS_NORMAL );
 	kPrinter[0].SetBkColor( 0, 0, 0 );
 	kPrinter[0].SetTextColor( TCT_DEFAULT_RED );	
-	kPrinter[0].AddTextPiece( FONT_SIZE_13, "%s 상태입니다.", szOrgName.c_str() );
+	kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(1), szOrgName.c_str() );
 
 	kPrinter[1].SetTextStyle( TS_NORMAL );
 	kPrinter[1].SetBkColor( 0, 0, 0 );
 	kPrinter[1].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter[1].AddTextPiece( FONT_SIZE_13, "%s을 할 수 없습니다.", szChangeName.c_str() );
+	kPrinter[1].AddTextPiece( FONT_SIZE_13, STR(2), szChangeName.c_str() );
 
-	g_GUIMgr.SetPrevMsgListBoxWithTitle( NULL, MB_OK, NULL, kPrinter, szChangeName.c_str(), "닫기", "닫기", "닫기" );
+	g_GUIMgr.SetPrevMsgListBoxWithTitle( NULL, MB_OK, NULL, kPrinter, szChangeName.c_str(), STR(3), STR(3), STR(3) );
 }
 
 void ioSoldierAwakeManager::AwakeResultMessageBox( const std::string& szName, int iLimitTime )
@@ -613,7 +613,7 @@ void ioSoldierAwakeManager::AwakeResultMessageBox( const std::string& szName, in
 	kPrinter[0].SetTextStyle( TS_NORMAL );
 	kPrinter[0].SetBkColor( 0, 0, 0 );
 	kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );	
-	kPrinter[0].AddTextPiece( FONT_SIZE_13, "각성되었습니다." );
+	kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(1) );
 
 	std::string szRemainTime;
 	GetRemainTime( iLimitTime, szRemainTime );
@@ -622,7 +622,7 @@ void ioSoldierAwakeManager::AwakeResultMessageBox( const std::string& szName, in
 	kPrinter[1].SetTextColor( TCT_DEFAULT_GREEN );
 	kPrinter[1].AddTextPiece( FONT_SIZE_13, "%s", szRemainTime.c_str() );
 
-	g_GUIMgr.SetPrevMsgListBoxWithTitle( NULL, MB_OK, NULL, kPrinter, szName.c_str(), "닫기", "닫기", "닫기" );
+	g_GUIMgr.SetPrevMsgListBoxWithTitle( NULL, MB_OK, NULL, kPrinter, szName.c_str(), STR(2), STR(2), STR(2) );
 }
 
 void ioSoldierAwakeManager::AwakeCharPeriodTypeError( const std::string& szName ) const
@@ -631,14 +631,14 @@ void ioSoldierAwakeManager::AwakeCharPeriodTypeError( const std::string& szName 
 	kPrinter[0].SetTextStyle( TS_NORMAL );
 	kPrinter[0].SetBkColor( 0, 0, 0 );
 	kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );	
-	kPrinter[0].AddTextPiece( FONT_SIZE_13, "기간제 용병은" );
+	kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(1) );
 	
 	kPrinter[1].SetTextStyle( TS_NORMAL );
 	kPrinter[1].SetBkColor( 0, 0, 0 );
 	kPrinter[1].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter[1].AddTextPiece( FONT_SIZE_13, "%s을 진행할 수 없습니다.", szName.c_str() );
+	kPrinter[1].AddTextPiece( FONT_SIZE_13, STR(2), szName.c_str() );
 
-	g_GUIMgr.SetPrevMsgListBoxWithTitle( NULL, MB_OK, NULL, kPrinter, szName.c_str(), "닫기", "닫기", "닫기" );
+	g_GUIMgr.SetPrevMsgListBoxWithTitle( NULL, MB_OK, NULL, kPrinter, szName.c_str(), STR(3), STR(3), STR(3) );
 }
 
 void ioSoldierAwakeManager::AwakeCharExerciseTypeError( const std::string& szName ) const
@@ -647,14 +647,14 @@ void ioSoldierAwakeManager::AwakeCharExerciseTypeError( const std::string& szNam
 	kPrinter[0].SetTextStyle( TS_NORMAL );
 	kPrinter[0].SetBkColor( 0, 0, 0 );
 	kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );	
-	kPrinter[0].AddTextPiece( FONT_SIZE_13, "체험 용병은" );
+	kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(1) );
 
 	kPrinter[1].SetTextStyle( TS_NORMAL );
 	kPrinter[1].SetBkColor( 0, 0, 0 );
 	kPrinter[1].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter[1].AddTextPiece( FONT_SIZE_13, "%s을 진행할 수 없습니다.", szName.c_str() );
+	kPrinter[1].AddTextPiece( FONT_SIZE_13, STR(2), szName.c_str() );
 
-	g_GUIMgr.SetPrevMsgListBoxWithTitle( NULL, MB_OK, NULL, kPrinter, szName.c_str(), "닫기", "닫기", "닫기" );
+	g_GUIMgr.SetPrevMsgListBoxWithTitle( NULL, MB_OK, NULL, kPrinter, szName.c_str(), STR(3), STR(3), STR(3) );
 }
 
 void ioSoldierAwakeManager::OnAwakeMenuEvent( const ClickPullDownEvent& Event, int iCharArray ) const
@@ -670,7 +670,7 @@ void ioSoldierAwakeManager::OnAwakeMenuEvent( const ClickPullDownEvent& Event, i
 	const CHARACTERDATA* pChar = g_MyInfo.GetCharacterData( iCharArray );
 	if( !pChar )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "잘못된 캐릭터 정보입니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 
@@ -682,7 +682,7 @@ void ioSoldierAwakeManager::OnAwakeMenuEvent( const ClickPullDownEvent& Event, i
 	}
 	else if( eReuslt == AR_FAIL )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "재료가 모자랍니다" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return;
 	}
 
@@ -704,7 +704,7 @@ void ioSoldierAwakeManager::OnAwakeMenuEvent( const ClickPullDownEvent& Event, i
 	}
 	else
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "잘못된 각성형식입니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 	}
 }
 
@@ -712,20 +712,20 @@ void ioSoldierAwakeManager::SetAwake( const CharAwakePullDownItem* pItem, const 
 {
 	if( !pChar )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "잘못된 각성 대상 캐릭터입니다" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 	}
 
 	const AwakeProduct* pProduct = GetAwakeProduct( pItem->m_iProductIdx );
 	if( !pProduct )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "잘못된 각성 정보입니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return;
 	}
 
 	const AwakeInfo* pAwake = GetAwake( pProduct->nNeedAwakeIdx );
 	if( !pAwake )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "잘못된 각성 정보입니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return;
 	}
 	
@@ -753,20 +753,20 @@ void ioSoldierAwakeManager::ExtendAwake( const CharAwakePullDownItem* pItem, con
 {
 	if( !pChar )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "잘못된 캐릭터입니다(각성)" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 	}
 
 	const AwakeProduct* pProduct = GetAwakeProduct( pItem->m_iProductIdx );
 	if( !pProduct )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "잘못된 각성 정보입니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return;
 	}
 
 	const AwakeInfo* pAwake = GetAwake( pProduct->nNeedAwakeIdx );
 	if( !pAwake )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "잘못된 각성 정보입니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return;
 	}
 	
@@ -807,7 +807,7 @@ void ioSoldierAwakeManager::ApplyAwake( SP2Packet &rkPacket )
 		const CHARACTERDATA* pCharData = g_MyInfo.GetCharacterDataByIndex( iCharIndex );
 		if( !pCharData )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "잘못된 각성대상 캐릭터입니다" );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 			return;
 		}
 
@@ -879,17 +879,17 @@ void ioSoldierAwakeManager::ApplyAwake( SP2Packet &rkPacket )
 		{
 		case AWAKE_NONE_MATERIAL:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "해당 각성 재료는 존재 하지 않습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 			}
 			break;
 		case AWAKE_MATERIAL_SHORTAGE:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "각성 재료가 부족합니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 			}
 			break;
 		case AWAKE_EXCEPTION:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "잘못된 각성 정보입니다" );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 			}
 			break;
 		}
@@ -916,7 +916,7 @@ void ioSoldierAwakeManager::ApplyAwakeExtend( SP2Packet &rkPacket )
 		const CHARACTERDATA* pCharData = g_MyInfo.GetCharacterDataByIndex( iCharIndex );
 		if( !pCharData )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "잘못된 각성대상 캐릭터입니다" );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 			return;
 		}	
 		g_MyInfo.ChangeAwakeDate( iCharIndex, iLimitDate );
@@ -957,22 +957,22 @@ void ioSoldierAwakeManager::ApplyAwakeExtend( SP2Packet &rkPacket )
 		{
 		case AWAKE_EXTEND_OVER_DATE:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "더 이상 각성시간 연장을 할 수 없습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 			}
 			break;
 		case AWAKE_EXTEND_NONE_MATERIAL:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "해당 각성 재료는 존재 하지 않습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 			}
 			break;
 		case AWAKE_EXTEND_MATERIAL_SHORTAGE:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "각성 연장 할 재료가 부족합니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 			}
 			break;
 		case AWAKE_EXTEND_EXCEPTION:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "잘못된 각성 정보입니다" );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );
 			}
 			break;
 		}

@@ -2149,11 +2149,11 @@ void ConvertTournamentRoundResultText( OUT ioHashString& szDestTtitle, int iMaxT
 	char szBuff[MAX_PATH];
 	int iRound = TournamentCurrentRoundWithTeam( iMaxTeam, iPos );
 	if( iRound == 1 )
-		sprintf_s_e( szBuff, "¿ì½Â", iRound );
+		SafeSprintf( szBuff, sizeof(szBuff), STR(1), iRound );
 	else if(  iRound == 2 )
-		sprintf_s_e( szBuff, "ÁØ¿ì½Â", iRound );
+		SafeSprintf( szBuff, sizeof(szBuff), STR(2), iRound );
 	else
-		sprintf_s_e( szBuff, "%d°­", iRound );
+		SafeSprintf( szBuff, sizeof(szBuff), STR(3), iRound );
 
 	szDestTtitle = szBuff;
 }
@@ -2163,11 +2163,11 @@ void ConvertTournamentRoundProressText( OUT ioHashString& szDestTtitle, int iMax
 	char szBuff[MAX_PATH];
 	int iRound = TournamentCurrentRoundWithTeam( iMaxTeam, iPos );
 	if( iRound == 1 )
-		sprintf_s_e( szBuff, "°á½Â", iRound );
+		SafeSprintf( szBuff, sizeof(szBuff), STR(1), iRound );
 	else if(  iRound == 2 )
-		sprintf_s_e( szBuff, "ÁØ°á½Â", iRound );
+		SafeSprintf( szBuff, sizeof(szBuff), STR(2), iRound );
 	else
-		sprintf_s_e( szBuff, "%d°­", iRound );
+		SafeSprintf( szBuff, sizeof(szBuff), STR(3), iRound );
 
 	szDestTtitle = szBuff;
 }

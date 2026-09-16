@@ -160,48 +160,48 @@ void MannerTrialWnd::OnRender()
 	g_FontMgr.SetTextStyle( TS_NORMAL );
 	g_FontMgr.SetAlignType( TAT_LEFT );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_RED );
-	g_FontMgr.PrintTextWidthCut( iXPos + 17, iYPos + 53, FONT_SIZE_13, 340.0f, "신고대상자:%s:", m_szTargetID.c_str() );
+	g_FontMgr.PrintTextWidthCut( iXPos + 17, iYPos + 53, FONT_SIZE_13, 340.0f, STR(11), m_szTargetID.c_str() );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_BLUE );
-	g_FontMgr.PrintTextWidthCut( iXPos + 17, iYPos + 71, FONT_SIZE_13, 340.0f, "신고접수자:%s:", g_MyInfo.GetPublicID().c_str() );
+	g_FontMgr.PrintTextWidthCut( iXPos + 17, iYPos + 71, FONT_SIZE_13, 340.0f, STR(12), g_MyInfo.GetPublicID().c_str() );
 
 	enum { MAX_LINE = 5, };
 	ioComplexStringPrinter kPrinter[MAX_LINE];
 	kPrinter[0].SetTextStyle( TS_NORMAL );
 	kPrinter[0].SetTextColor( 0, 0, 0 );
 	kPrinter[0].SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter[0].AddTextPiece( FONT_SIZE_13, "욕설,불법프로그램 사용자 등 비매너 행위에 대해 신고가 가능합니다." );
+	kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(13) );
 	kPrinter[0].PrintFullText(  iXPos + 17, iYPos + 96, TAT_LEFT );
 
 	kPrinter[1].SetTextStyle( TS_NORMAL );
 	kPrinter[1].SetTextColor( 0, 0, 0 );
 	kPrinter[1].SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter[1].AddTextPiece( FONT_SIZE_13, "신고 시 " );
+	kPrinter[1].AddTextPiece( FONT_SIZE_13, STR(14) );
 	kPrinter[1].SetTextColor( TCT_DEFAULT_RED );
-	kPrinter[1].AddTextPiece( FONT_SIZE_13, "신고대상자의 모든 데이터가 저장되고, 게임 데이터 검토가 진행 되어" );
+	kPrinter[1].AddTextPiece( FONT_SIZE_13, STR(15) );
 	kPrinter[1].PrintFullText(  iXPos + 17, iYPos + 114, TAT_LEFT );
 
 	kPrinter[2].SetTextStyle( TS_NORMAL );
 	kPrinter[2].SetTextColor( 0, 0, 0 );
 	kPrinter[2].SetTextColor( TCT_DEFAULT_RED );
-	kPrinter[2].AddTextPiece( FONT_SIZE_13, "운영정책에 의거 제재 조치 " );
+	kPrinter[2].AddTextPiece( FONT_SIZE_13, STR(16) );
 	kPrinter[2].SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter[2].AddTextPiece( FONT_SIZE_13, "됩니다. " );
+	kPrinter[2].AddTextPiece( FONT_SIZE_13, STR(17) );
 	kPrinter[2].SetTextColor( TCT_DEFAULT_BLUE );
-	kPrinter[2].AddTextPiece( FONT_SIZE_13, "만약, 허위 신고 또는 신고 악용일 경우 최대" );
+	kPrinter[2].AddTextPiece( FONT_SIZE_13, STR(18) );
 	kPrinter[2].PrintFullText(  iXPos + 17, iYPos + 132, TAT_LEFT );
 
 	kPrinter[3].SetTextStyle( TS_NORMAL );
 	kPrinter[3].SetTextColor( 0, 0, 0 );
 	kPrinter[3].SetTextColor( TCT_DEFAULT_BLUE );
-	kPrinter[3].AddTextPiece( FONT_SIZE_13, "제한 90일 제재 조치" );
+	kPrinter[3].AddTextPiece( FONT_SIZE_13, STR(19) );
 	kPrinter[3].SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter[3].AddTextPiece( FONT_SIZE_13, "를 받을 수 있으니 신중히 신고해 주시기 바랍니다." );
+	kPrinter[3].AddTextPiece( FONT_SIZE_13, STR(20) );
 	kPrinter[3].PrintFullText(  iXPos + 17, iYPos + 150, TAT_LEFT );
 
 	kPrinter[4].SetTextStyle( TS_NORMAL );
 	kPrinter[4].SetTextColor( 0, 0, 0 );
 	kPrinter[4].SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter[4].AddTextPiece( FONT_SIZE_13, "신고 이유를 간략히 적어 주세요. (예: 불법프로그램 사용자 신고)" );
+	kPrinter[4].AddTextPiece( FONT_SIZE_13, STR(21) );
 	kPrinter[4].PrintFullText(  iXPos + 17, iYPos + 179, TAT_LEFT );
 }
 
@@ -2503,13 +2503,13 @@ void MannerValuationExtensionWnd::OnKickVote()
 
 	if( g_BattleRoomMgr.IsTournamentModeType() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "대회 경기방은 강퇴가 되지 않습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 		return;
 	}
 
 	if( g_RankBattleMgr.IsRankBattlePlaying() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "랭킹전은 강퇴 기능이 적용되지 않습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );
 		return;
 	}
 
@@ -2561,7 +2561,7 @@ void MannerValuationExtensionWnd::OnKickVote()
 			}
 			else if( pMainWnd->IsBugBearEmerge() )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK,  NULL, "몬스터 출현으로 강퇴 기능이#일시적으로 중단됩니다." );			
+				g_GUIMgr.SetMsgBox( MB_OK,  NULL, STR(6) );			
 				return;
 			}
 		}
@@ -2604,7 +2604,7 @@ void MannerValuationExtensionWnd::OnKickVote()
 		DWORD dwEnableTime = g_ShuffleRoomMgr.GetKickOutVoteEnableTime();
 		if( g_ShuffleRoomMgr.IsShuffleRoom() &&  dwEnableTime != 0 && dwEnableTime < FRAMEGETTIME() - pMode->GetModePlayStartTime() )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "강퇴 가능 시간이 초과하였습니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(7) );
 			return;
 		}
 	}
@@ -2724,7 +2724,7 @@ void MannerValuationExtensionWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param
 		}
 		else if( cmd == IOEX_BTNUP )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "해당 유저는 개인본부가# 활성화 되지 않았습니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		}
 		break;
 	case ID_INSERT_FRIEND:
@@ -3123,7 +3123,7 @@ void MannerValuationExtensionWnd::OnRenderGradeInfo( int iXPos, int iYPos )
 		{
 			char szConvertText[MAX_PATH] = "";
 			Help::ConvertNumToStrComma( m_pUserInfo->GetGradeExp(), szConvertText, sizeof( szConvertText ) );
-			g_FontMgr.PrintText( iXPos + 290, iYPos, FONT_SIZE_12, "%s (%s점)", szGradeName, szConvertText );
+			g_FontMgr.PrintText( iXPos + 290, iYPos, FONT_SIZE_12, STR(4), szGradeName, szConvertText );
 		}
 		else
 		{
@@ -3538,7 +3538,7 @@ void MannerValuationExtensionWnd::OnRenderSuccession( int iXPos, int iYPos )
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 
 	g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	g_FontMgr.PrintText( iXPos + 23, iYPos, FONT_SIZE_12, "1vs1모드" );
+	g_FontMgr.PrintText( iXPos + 23, iYPos, FONT_SIZE_12, STR(1) );
 
 	ioComplexStringPrinter kPrinter;
 
@@ -3547,25 +3547,25 @@ void MannerValuationExtensionWnd::OnRenderSuccession( int iXPos, int iYPos )
 	{
 		kPrinter.SetTextStyle( TS_NORMAL );
 		kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-		kPrinter.AddTextPiece( FONT_SIZE_12, "최대연승" );
+		kPrinter.AddTextPiece( FONT_SIZE_12, STR(2) );
 
 		kPrinter.SetTextColor( TCT_DEFAULT_RED );
 		kPrinter.AddTextPiece( FONT_SIZE_12, " %d ", m_pUserInfo->GetMaxSuccessionCount() );
 
 		kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-		kPrinter.AddTextPiece( FONT_SIZE_12, "(현재연승 %d)", m_pUserInfo->GetCurSuccessionCount() );
+		kPrinter.AddTextPiece( FONT_SIZE_12, STR(3), m_pUserInfo->GetCurSuccessionCount() );
 	}
 	else
 	{
 		kPrinter.SetTextStyle( TS_NORMAL );
 		kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-		kPrinter.AddTextPiece( FONT_SIZE_12, "최대연승" );
+		kPrinter.AddTextPiece( FONT_SIZE_12, STR(2) );
 
 		kPrinter.SetTextColor( TCT_DEFAULT_RED );
 		kPrinter.AddTextPiece( FONT_SIZE_12, " 0 " );
 
 		kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-		kPrinter.AddTextPiece( FONT_SIZE_12, "(현재연승 0)" );
+		kPrinter.AddTextPiece( FONT_SIZE_12, STR(4) );
 	}
 	kPrinter.PrintFullText( iXPos + 290, iYPos, TAT_RIGHT );
 }
@@ -4272,8 +4272,8 @@ void MannerValuationSlotTooltip::OnRenderTooltip( int iXPos, int iYPos )
 	g_FontMgr.PrintText( iXPos + 87, iYPos + 52 + iExtra_Add_Y, FONT_SIZE_11, STR(1) );
 	
 	// UI코스튬 관련 (코스튬 UI 설정) + 액세서리
-	g_FontMgr.PrintText( iXPos + 88, iYPos + 153 + iExtra_Add_Y, FONT_SIZE_11, "장착코스튬" );
-	g_FontMgr.PrintText( iXPos + 88, iYPos + 224 + iExtra_Add_Y, FONT_SIZE_11, "장착액세서리" );
+	g_FontMgr.PrintText( iXPos + 88, iYPos + 153 + iExtra_Add_Y, FONT_SIZE_11, STR(3) );
+	g_FontMgr.PrintText( iXPos + 88, iYPos + 224 + iExtra_Add_Y, FONT_SIZE_11, STR(4) );
 	g_FontMgr.PrintText( iXPos + 87, iYPos + 297 + iExtra_Add_Y, FONT_SIZE_11, STR(2) );
 
 	UserInfoCharData &rkUserCharData = m_pUserInfo->GetUserCharData();

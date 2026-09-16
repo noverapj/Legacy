@@ -166,17 +166,17 @@ void ioCostumeListWnd::OnRender()
 	kPrinter[0].SetTextStyle( TS_NORMAL);
 	kPrinter[0].SetBkColor( 0, 0, 0 );	
 	kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY ); 
-	kPrinter[0].AddTextPiece( FONT_SIZE_13, "★무기 장비는 해당 무기의 " );
+	kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(1) );
 
 	kPrinter[0].SetTextStyle( TS_NORMAL);
 	kPrinter[0].SetBkColor( 0, 0, 0 );	
 	kPrinter[0].SetTextColor( TCT_DEFAULT_RED ); 
-	kPrinter[0].AddTextPiece( FONT_SIZE_13, "고유용병" );
+	kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(2) );
 
 	kPrinter[0].SetTextStyle( TS_NORMAL);
 	kPrinter[0].SetBkColor( 0, 0, 0 );	
 	kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY ); 
-	kPrinter[0].AddTextPiece( FONT_SIZE_13, "만이 착용 가능합니다." );
+	kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(3) );
 
 	kPrinter[1].SetTextStyle( TS_NORMAL);
 	kPrinter[1].SetBkColor( 0, 0, 0 );	

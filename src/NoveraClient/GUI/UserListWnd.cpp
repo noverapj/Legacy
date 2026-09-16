@@ -505,31 +505,31 @@ void UserInfoListWnd::OnRender()
 			switch( m_iUserPos )
 			{
 			case UP_TRAINING:
-				szPosition = "광장";
+				szPosition = STR(1);
 				break;
 			case UP_BATTLE_ROOM:
-				szPosition = "전투";
+				szPosition = STR(2);
 				break;
 			case UP_LADDER_TEAM:
-				szPosition = "진영전";
+				szPosition = STR(3);
 				break;
 			case UP_LOBBY:
-				szPosition = "로비";
+				szPosition = STR(4);
 				break;
 			case UP_HEADQUARTERS:
-				szPosition = "훈련소";
+				szPosition = STR(5);
 				break;
 			case UP_TOURNAMENT:
-				szPosition = "대회";
+				szPosition = STR(6);
 				break;
 			case UP_SHUFFLE:
-				szPosition = "오늘의모드";
+				szPosition = STR(7);
 				break;
 			case UP_GUILD_HQ:
-				szPosition = "길드본부";
+				szPosition = STR(8);
 				break;
 			case UP_HOUSE:
-				szPosition = "개인본부";
+				szPosition = STR(9);
 				break;
 			}
 
@@ -589,13 +589,13 @@ bool UserInfoListWnd::CheckInvite( bool bAlarm )
 		if( bAlarm )
 		{
 			if( m_iUserPos == UP_BATTLE_ROOM )
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "%s님은 전투 중이라#초대가 불가능합니다.", m_szUserName.c_str() );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1), m_szUserName.c_str() );
 			else if( m_iUserPos == UP_LADDER_TEAM )
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "%s님은 진영전 중이라#초대가 불가능합니다.", m_szUserName.c_str() );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2), m_szUserName.c_str() );
 			else if( m_iUserPos == UP_SHUFFLE )
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "%s님은 오늘의모드 중이라#초대가 불가능합니다.", m_szUserName.c_str() );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3), m_szUserName.c_str() );
 			else if( m_iUserPos == UP_TOURNAMENT )
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "%s님은 대회 중이라#초대가 불가능합니다.", m_szUserName.c_str() );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4), m_szUserName.c_str() );
 		}
 		return false;
 	}
@@ -604,49 +604,49 @@ bool UserInfoListWnd::CheckInvite( bool bAlarm )
 		if( g_BattleRoomMgr.IsStartRoomEnterX() && g_BattleRoomMgr.IsBattleModePlaying() )
 		{
 			if( bAlarm )
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "시작 후 참여 X가 설정된 #전투방은 초대가 불가능합니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );
 
 			return false;
 		}
 		else if( g_BattleRoomMgr.GetCurPlayer() >= g_BattleRoomMgr.GetMaxPlayer() )
 		{
 			if( bAlarm )
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "전투룸 정원을 초과하였습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(6) );
 
 			return false;
 		}
 		else if( g_BattleRoomMgr.IsHaveUser( m_szUserName ) )
 		{
 			if( bAlarm )
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "동일한 전투룸에 있는 유저입니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(7) );
 
 			return false;
 		}
 		else if( g_BattleRoomMgr.IsSafetyLevelRoom() )
 		{
 			if( bAlarm )
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "초보 팀데스매치는 초대가 불가능합니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(8) );
 
 			return false;
 		}
 		else if( g_BattleRoomMgr.IsBroadcastModeType() && g_MyInfo.GetUserEventType() != USER_TYPE_BROADCAST_MBC )
 		{
 			if( bAlarm )
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "경기 전용 방에서는 방장만 초대가 가능합니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(9) );
 
 			return false;
 		}
 		else if( g_BattleRoomMgr.IsTournamentModeType() )
 		{
 			if( bAlarm )
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "대회방에는 초대가 되지 않습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(10) );
 
 			return false;
 		}
 		else if( g_RankBattleMgr.IsRankBattlePlaying() )
 		{
 			if( bAlarm )
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "랭킹전 중에는 초대가 되지 않습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(11) );
 
 			return false;
 		}
@@ -657,35 +657,35 @@ bool UserInfoListWnd::CheckInvite( bool bAlarm )
 		if( g_LadderTeamMgr.IsLadderTeamFull() )
 		{
 			if( bAlarm )
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "진영팀 정원을 초과하였습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(12) );
 
 			return false;
 		}		
 		else if( g_LadderTeamMgr.IsLadderBattleModePlaying() )
 		{
 			if( bAlarm )
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "진영전 중에는 초대가 불가능합니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(13) );
 
 			return false;
 		}
 		else if( g_LadderTeamMgr.IsSearching() && !g_LadderTeamMgr.IsLadderBattleModePlaying() )
 		{
 			if( bAlarm )
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "진영전 검색 중에는 초대가 불가능합니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(14) );
 
 			return false;
 		}
 		else if( g_UserInfoMgr.GetCampPosition( m_szUserName ) != g_MyInfo.GetUserCampPos() )
 		{
 			if( bAlarm )
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "진영이 다른 유저는 초대가 불가능합니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(15) );
 
 			return false;
 		}
 		else if( g_LadderTeamMgr.IsHaveUser( m_szUserName ) )
 		{
 			if( bAlarm )
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "동일한 진영팀에 있는 유저입니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(16) );
 
 			return false;
 		}
@@ -700,7 +700,7 @@ bool UserInfoListWnd::CheckMove( bool bAlarm )
 	{
 		if( bAlarm )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "로비로 따라가기는 불가능합니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		}
 		return false;
 	}
@@ -708,7 +708,7 @@ bool UserInfoListWnd::CheckMove( bool bAlarm )
 	{
 		if( bAlarm )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "전투방에 소속되어있으면#사용할 수 없습니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		}
 		return false;
 	}
@@ -716,7 +716,7 @@ bool UserInfoListWnd::CheckMove( bool bAlarm )
 	{
 		if( bAlarm )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "진영팀에 소속되어있으면#사용할 수 없습니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		}
 		return false;
 	}
@@ -745,15 +745,15 @@ bool UserInfoListWnd::SendClover()
 			kPrinter[0].SetTextStyle( TS_NORMAL );
 			kPrinter[0].SetBkColor( 0, 0, 0 );
 			kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kPrinter[0].AddTextPiece( FONT_SIZE_13, "선물용 클로버가 부족합니다." );
+			kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(1) );
 			kPrinter[1].SetTextStyle( TS_NORMAL );
 			kPrinter[1].SetBkColor( 0, 0, 0 );
 			kPrinter[1].SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kPrinter[1].AddTextPiece( FONT_SIZE_13, "선물용 클로버는 " );
+			kPrinter[1].AddTextPiece( FONT_SIZE_13, STR(2) );
 			kPrinter[1].SetTextColor( TCT_DEFAULT_RED );
-			kPrinter[1].AddTextPiece( FONT_SIZE_13, "%d분", pClover->GetChargingTime() );
+			kPrinter[1].AddTextPiece( FONT_SIZE_13, STR(3), pClover->GetChargingTime() );
 			kPrinter[1].SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kPrinter[1].AddTextPiece( FONT_SIZE_13, "에 %d개씩 충전됩니다.", pClover->GetChargingCount() );
+			kPrinter[1].AddTextPiece( FONT_SIZE_13, STR(4), pClover->GetChargingCount() );
 
 			g_GUIMgr.SetPrevMsgListBox( NULL, MB_OK, NULL, kPrinter );
 		}
@@ -766,26 +766,26 @@ bool UserInfoListWnd::SendClover()
 			kPrinter[0].SetTextStyle( TS_NORMAL );
 			kPrinter[0].SetBkColor( 0, 0, 0 );
 			kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kPrinter[0].AddTextPiece( FONT_SIZE_13, "친구가 된지 " );
+			kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(5) );
 			kPrinter[0].SetTextColor( TCT_DEFAULT_RED );
 			if( pClover->GetAbusingTime() <= 60 )
-				kPrinter[0].AddTextPiece( FONT_SIZE_12, "%d분", pClover->GetAbusingTime() );
+				kPrinter[0].AddTextPiece( FONT_SIZE_12, STR(3), pClover->GetAbusingTime() );
 			else
-				kPrinter[0].AddTextPiece( FONT_SIZE_12, "%d시간", pClover->GetAbusingTime()/60 );
+				kPrinter[0].AddTextPiece( FONT_SIZE_12, STR(6), pClover->GetAbusingTime()/60 );
 			kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kPrinter[0].AddTextPiece( FONT_SIZE_13, " 후 부터" );
+			kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(7) );
 			
 			kPrinter[1].SetTextStyle( TS_NORMAL );
 			kPrinter[1].SetBkColor( 0, 0, 0 );
 			kPrinter[1].SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kPrinter[1].AddTextPiece( FONT_SIZE_13, "클로버를 주고 받을 수 있습니다." );
+			kPrinter[1].AddTextPiece( FONT_SIZE_13, STR(8) );
 			
 			kPrinter[2].SetTextStyle( TS_NORMAL );
 			kPrinter[2].SetBkColor( 0, 0, 0 );
 			kPrinter[2].SetTextColor( TCT_DEFAULT_RED );
 			kPrinter[2].AddTextPiece( FONT_SIZE_13, "%s", szRemainTime.c_str() );
 			kPrinter[2].SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kPrinter[2].AddTextPiece( FONT_SIZE_13, " 후 부터 보낼 수 있습니다." );
+			kPrinter[2].AddTextPiece( FONT_SIZE_13, STR(9) );
 
 			g_GUIMgr.SetPrevMsgListBox( NULL, MB_OK, NULL, kPrinter );
 		}
@@ -798,14 +798,14 @@ bool UserInfoListWnd::SendClover()
 			kPrinter[0].SetTextStyle( TS_NORMAL );
 			kPrinter[0].SetBkColor( 0, 0, 0 );
 			kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kPrinter[0].AddTextPiece( FONT_SIZE_13, "최근에 클로버를 선물하였습니다." );
+			kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(10) );
 
 			kPrinter[1].SetTextStyle( TS_NORMAL );
 			kPrinter[1].SetBkColor( 0, 0, 0 );
 			kPrinter[1].SetTextColor( TCT_DEFAULT_RED );
 			kPrinter[1].AddTextPiece( FONT_SIZE_13, "%s", szRemainTime.c_str() );
 			kPrinter[1].SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kPrinter[1].AddTextPiece( FONT_SIZE_13, " 후 다시 보낼 수 있습니다." );
+			kPrinter[1].AddTextPiece( FONT_SIZE_13, STR(11) );
 
 			g_GUIMgr.SetPrevMsgListBox( NULL, MB_OK, NULL, kPrinter );
 		}
@@ -1363,26 +1363,26 @@ void UserListWnd::OnInsertBestFriend( const ioHashString & szUserName )
 
 	if( !g_FriendManager.IsLoadingComplete() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "친구 목록을 로드중입니다.#잠시 후 다시 시도해주세요." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 
 	if( szUserName.IsEmpty() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "절친신청을 받을 친구를 선택하세요." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return;
 	}
 
 	FriendNode *pFriend = g_FriendManager.GetNode( szUserName );
 	if( pFriend == NULL )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "절친 설정은 친구여야 가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		return;
 	}
 
 	if( g_FriendManager.GetBestFriendState( pFriend->GetUserIndex() ) == BFT_SET )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "%s 님은절친설정 되어있습니다.", pFriend->GetName().c_str() );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4), pFriend->GetName().c_str() );
 		return;
 	}
 
@@ -1399,20 +1399,20 @@ bool UserListWnd::CheckDeleteBestFriend( const ioHashString & szUserName )
 
 	if( !g_FriendManager.IsLoadingComplete() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "친구 목록을 로드중입니다.#잠시 후 다시 시도해주세요." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return false;
 	}
 
 	FriendNode *pFriendNode = g_FriendManager.GetNode( szUserName );
 	if( pFriendNode == NULL )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "%s님은 친구가 아닙니다.", szUserName.c_str() );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2), szUserName.c_str() );
 		return false;
 	}
 
 	if( g_FriendManager.GetBestFriendState( pFriendNode->GetUserIndex() ) != BFT_SET )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "%s님은 절친이 아닙니다.", pFriendNode->GetName().c_str() );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3), pFriendNode->GetName().c_str() );
 		return false;
 	}
 
@@ -1426,20 +1426,20 @@ void UserListWnd::_OnDeleteBestFriend( const ioHashString & szUserName )
 
 	if( !g_FriendManager.IsLoadingComplete() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "친구 목록을 로드중입니다.#잠시 후 다시 시도해주세요." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 
 	FriendNode *pFriendNode = g_FriendManager.GetNode( szUserName );
 	if( pFriendNode == NULL )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "%s님은 친구가 아닙니다.", szUserName.c_str() );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2), szUserName.c_str() );
 		return;
 	}
 
 	if( g_FriendManager.GetBestFriendState( pFriendNode->GetUserIndex() ) != BFT_SET )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "%s님은 절친이 아닙니다.", pFriendNode->GetName().c_str() );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3), pFriendNode->GetName().c_str() );
 		return;
 	}
 
@@ -1528,7 +1528,7 @@ void UserInfoListOptionWnd::CommandOption( DWORD dwCmd )
 			UserListWnd *pWnd = dynamic_cast<UserListWnd*>(GetParent());
 			if( pWnd && pWnd->CheckDeleteBestFriend( m_szUserID ) )
 			{
-				g_GUIMgr.SetMsgBox( MB_YESNO, this, "절친을 해제하시겠습니까?#절친을 해제하면 절친해제 완료전까지#%s님에게 재설정을 할 수 없습니다.", m_szUserID.c_str() );
+				g_GUIMgr.SetMsgBox( MB_YESNO, this, STR(1), m_szUserID.c_str() );
 				m_dwMsgCmd = OPTION_RELEASE_BEST_FRIEND;
 			}
 		}
@@ -1536,7 +1536,7 @@ void UserInfoListOptionWnd::CommandOption( DWORD dwCmd )
 	case OPTION_BLACK_DELETE:
 		{
 			g_BlackListManager.RemoveBlackList( m_szUserID );
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "목록에서 삭제되었습니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		}
 		break;
 	case OPTION_FOLLOW:
@@ -1544,19 +1544,19 @@ void UserInfoListOptionWnd::CommandOption( DWORD dwCmd )
 		{
 			if( m_pPlayStage->GetModeType() != MT_MYROOM && m_pPlayStage->GetModeType() != MT_TRAINING && m_pPlayStage->GetModeType() != MT_HEADQUARTERS && m_pPlayStage->GetModeType() != MT_HOUSE )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "개인본부/길드본부/훈련소/광장에서만#사용 가능합니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 			}	
 			else if( g_MyInfo.GetActiveCharCount() == 0 )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "용병을 먼저 고용해주세요." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 			}
 			else if( g_MyInfo.GetActiveCharCount() == 1 && g_MyInfo.GetActiveExerciseCharCount() == 1 )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "체험용병이 아닌 일반용병을 고용해주세요." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );
 			}
 			else if( g_MyInfo.IsTutorialUser() )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "튜토리얼을 먼저 완료해주세요." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(6) );
 			}
 			else if( !m_szUserID.IsEmpty() )
 			{
@@ -1603,7 +1603,7 @@ void UserInfoListOptionWnd::CommandOption( DWORD dwCmd )
 					{
 						char szGradeName[MAX_PATH] = "";
 						g_LevelMgr.GetGradeName( g_LadderTeamMgr.GetLadderTeamLimitGrade(), szGradeName, sizeof( szGradeName ), false );
-						g_GUIMgr.SetMsgBox( MB_OK, NULL, "진영전투 초대는 %s이상 유저만 가능합니다.", szGradeName );
+						g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(7), szGradeName );
 					}
 					else
 					{
@@ -1686,7 +1686,7 @@ void UserInfoListOptionWnd::SetOptionInfo( ioPlayStage *pStage, const ioHashStri
 	if( !m_szUserID.IsEmpty() )
 	{
 		char szTitle[MAX_PATH] = "";
-		SafeSprintf( szTitle, sizeof( szTitle ), "%s 정보", m_szUserID.c_str() );
+		SafeSprintf( szTitle, sizeof( szTitle ), STR(1), m_szUserID.c_str() );
 		m_OptionMap.insert( OptionMap::value_type( OPTION_INFO, szTitle ) );
 	}
 
@@ -1700,7 +1700,7 @@ void UserInfoListOptionWnd::SetOptionInfo( ioPlayStage *pStage, const ioHashStri
 			{
 				if( g_BattleRoomMgr.IsBattleRoom() || g_LadderTeamMgr.IsLadderTeam() )
 				{
-					SafeSprintf( szTitle, sizeof( szTitle ), "초대" );
+					SafeSprintf( szTitle, sizeof( szTitle ), STR(2) );
 					m_OptionMap.insert( OptionMap::value_type( OPTION_INVITE, szTitle ) );
 				}
 			}
@@ -1710,32 +1710,32 @@ void UserInfoListOptionWnd::SetOptionInfo( ioPlayStage *pStage, const ioHashStri
 				switch( m_iUserPos )
 				{
 				case UP_TRAINING:
-					SafeSprintf( szTitle, sizeof( szTitle ), "광장 따라가기" );
+					SafeSprintf( szTitle, sizeof( szTitle ), STR(3) );
 					m_OptionMap.insert( OptionMap::value_type( OPTION_FOLLOW, szTitle ) );
 					break;
 				case UP_BATTLE_ROOM:
-					SafeSprintf( szTitle, sizeof( szTitle ), "전투 따라가기" );
+					SafeSprintf( szTitle, sizeof( szTitle ), STR(4) );
 					m_OptionMap.insert( OptionMap::value_type( OPTION_FOLLOW, szTitle ) );
 					break;
 				case UP_LADDER_TEAM:
-					SafeSprintf( szTitle, sizeof( szTitle ), "진영전 따라가기" );
+					SafeSprintf( szTitle, sizeof( szTitle ), STR(5) );
 					m_OptionMap.insert( OptionMap::value_type( OPTION_FOLLOW, szTitle ) );
 					break;
 				case UP_LOBBY:
-					SafeSprintf( szTitle, sizeof( szTitle ), "로비 따라가기" );
+					SafeSprintf( szTitle, sizeof( szTitle ), STR(6) );
 					m_OptionMap.insert( OptionMap::value_type( OPTION_FOLLOW, szTitle ) );
 					break;
 				case UP_HEADQUARTERS:
-					SafeSprintf( szTitle, sizeof( szTitle ), "훈련소 따라가기" );
+					SafeSprintf( szTitle, sizeof( szTitle ), STR(7) );
 					m_OptionMap.insert( OptionMap::value_type( OPTION_FOLLOW, szTitle ) );
 					break;
 				case UP_HOUSE:
-					SafeSprintf( szTitle, sizeof( szTitle ), "개인본부 따라가기" );
+					SafeSprintf( szTitle, sizeof( szTitle ), STR(8) );
 					m_OptionMap.insert( OptionMap::value_type( OPTION_FOLLOW, szTitle ) );
 					break;
 				/*
 				case UP_GUILD_HQ:
-					SafeSprintf( szTitle, sizeof( szTitle ), "본부 따라가기" );
+					SafeSprintf( szTitle, sizeof( szTitle ), STR(9) );
 					m_OptionMap.insert( OptionMap::value_type( OPTION_FOLLOW, szTitle ) );
 					break;
 				*/
@@ -1745,19 +1745,19 @@ void UserInfoListOptionWnd::SetOptionInfo( ioPlayStage *pStage, const ioHashStri
 
 		if( m_bBestFriend )
 		{
-			SafeSprintf( szTitle, sizeof( szTitle ), "절친 해제" );
+			SafeSprintf( szTitle, sizeof( szTitle ), STR(10) );
 			m_OptionMap.insert( OptionMap::value_type( OPTION_RELEASE_BEST_FRIEND, szTitle ) );
 		}
 		else
 		{
-			SafeSprintf( szTitle, sizeof( szTitle ), "절친으로 등록" );
+			SafeSprintf( szTitle, sizeof( szTitle ), STR(11) );
 			m_OptionMap.insert( OptionMap::value_type( OPTION_ADD_BEST_FRIEND, szTitle ) );
 		}
 	}
 	else if( m_iListType == UserInfoListWnd::TYPE_BLACKLIST )
 	{
 		char szTitle[MAX_PATH] = "";
-		SafeSprintf( szTitle, sizeof( szTitle ), "차단 해제" );
+		SafeSprintf( szTitle, sizeof( szTitle ), STR(12) );
 		m_OptionMap.insert( OptionMap::value_type( OPTION_BLACK_DELETE, szTitle ) );
 	}
 

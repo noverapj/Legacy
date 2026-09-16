@@ -754,9 +754,9 @@ void TutorialKeyboardWnd::OnRenderASD( int iXPos, int iYPos )
 	g_FontMgr.SetTextStyle( TS_OUTLINE_FULL_2X );
 	g_FontMgr.SetBkColor( 34, 34, 34 );
 	g_FontMgr.SetTextColor( 204, 204, 204 );
-	g_FontMgr.PrintText( iXPos + 25, iYPos + 18, FONT_SIZE_13, "점프" );
-	g_FontMgr.PrintText( iXPos + 73, iYPos + 18, FONT_SIZE_13, "방어" );
-	g_FontMgr.PrintText( iXPos + 121, iYPos + 18, FONT_SIZE_13, "공격" );
+	g_FontMgr.PrintText( iXPos + 25, iYPos + 18, FONT_SIZE_13, STR(1) );
+	g_FontMgr.PrintText( iXPos + 73, iYPos + 18, FONT_SIZE_13, STR(2) );
+	g_FontMgr.PrintText( iXPos + 121, iYPos + 18, FONT_SIZE_13, STR(3) );
 
 	g_FontMgr.PrintText( iXPos + 26, iYPos + 46, FONT_SIZE_19, "A" );
 	g_FontMgr.PrintText( iXPos + 75, iYPos + 46, FONT_SIZE_19, "S" );

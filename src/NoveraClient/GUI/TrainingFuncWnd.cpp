@@ -220,13 +220,13 @@ void TrainingFuncWnd::SetTitle( DWORD dwWndID )
 	switch( dwWndID )
 	{
 	case ID_BATTLE: 
-		SetTitleText( "전투" );
+		SetTitleText( STR(1) );
 		break;
 	case ID_PLAZA: 
-		SetTitleText( "광장" );
+		SetTitleText( STR(2) );
 		break;
 	case ID_TRADE:
-		SetTitleText( "거래소" );
+		SetTitleText( STR(3) );
 		break;
 	default:
 		SetTitleText( "" );
@@ -344,9 +344,9 @@ void TrainingFuncWnd::ShowHeadquartersMsg()
 	kPrinter[0].SetTextStyle( TS_NORMAL );
 	kPrinter[0].SetBkColor( 0, 0, 0 );
 	kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter[0].AddTextPiece( FONT_SIZE_13, "훈련소로 이동하시겠습니까?" );
+	kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(1) );
 
-	g_GUIMgr.SetPrevMsgListBoxWithTitle( NULL, MB_YESNO, this, kPrinter, "알림", "", "확인", "취소" );
+	g_GUIMgr.SetPrevMsgListBoxWithTitle( NULL, MB_YESNO, this, kPrinter, STR(2), "", STR(3), STR(4) );
 	m_FuncMsgType = FMT_HQ;
 }
 
@@ -357,9 +357,9 @@ void TrainingFuncWnd::ShowHomeMsg()
 	kPrinter[0].SetTextStyle( TS_NORMAL );
 	kPrinter[0].SetBkColor( 0, 0, 0 );
 	kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter[0].AddTextPiece( FONT_SIZE_13, "개인본부로 이동하시겠습니까?" );
+	kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(1) );
 
-	g_GUIMgr.SetPrevMsgListBoxWithTitle( NULL, MB_YESNO, this, kPrinter, "알림", "", "확인", "취소" );
+	g_GUIMgr.SetPrevMsgListBoxWithTitle( NULL, MB_YESNO, this, kPrinter, STR(2), "", STR(3), STR(4) );
 	m_FuncMsgType = FMT_HOME;
 }
 
@@ -370,9 +370,9 @@ void TrainingFuncWnd::ShowGuildHQMsg()
 	kPrinter[0].SetTextStyle( TS_NORMAL );
 	kPrinter[0].SetBkColor( 0, 0, 0 );
 	kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter[0].AddTextPiece( FONT_SIZE_13, "길드본부로 이동하시겠습니까?" );
+	kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(1) );
 
-	g_GUIMgr.SetPrevMsgListBoxWithTitle( NULL, MB_YESNO, this, kPrinter, "알림", "", "확인", "취소" );
+	g_GUIMgr.SetPrevMsgListBoxWithTitle( NULL, MB_YESNO, this, kPrinter, STR(2), "", STR(3), STR(4) );
 	m_FuncMsgType = FMT_GUILD_HQ;
 }
 
@@ -383,7 +383,7 @@ void TrainingFuncWnd::OnCreateHeadquarters()
 
 	if( g_BattleRoomMgr.IsBattleRoom() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "전투 중에는 훈련소 입장이 불가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 
@@ -403,7 +403,7 @@ void TrainingFuncWnd::OnCreateHouse()
 
 	if( g_BattleRoomMgr.IsBattleRoom() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "전투 중에는 개인본부 입장이 불가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 
@@ -423,24 +423,24 @@ void TrainingFuncWnd::OnCreateGuildHeadquarters()
 
 	if( g_BattleRoomMgr.IsBattleRoom() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "전투 중에는 입장이 불가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 
 	if( g_LadderTeamMgr.IsLadderTeam() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "진영/래더 중에는 입장이 불가능합니다" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return;
 	}
 
 	if( g_ShuffleRoomMgr.IsShuffleRoom() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "오늘의 모드 중에는 입장이 불가능합니다" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		return;
 	}
 	if( g_RankBattleMgr.IsRankBattlePlaying() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "랭킹전 중에는 입장이 불가능합니다" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 		return;
 	}
 

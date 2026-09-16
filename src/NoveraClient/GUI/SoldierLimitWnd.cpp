@@ -78,7 +78,7 @@ void SoldierLimitPopupWnd::iwm_show()
 void SoldierLimitPopupWnd::iwm_hide()
 {
 	char szTitle[MAX_PATH] = "";
-	SafeSprintf( szTitle, sizeof( szTitle ), "사용 가능한 용병 없음" );
+	SafeSprintf( szTitle, sizeof( szTitle ), STR(1) );
 	SetTitleText( szTitle );
 }
 
@@ -134,14 +134,14 @@ void SoldierLimitPopupWnd::OnRender()
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );	
 	kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_13, "사용하고 싶은 용병을" );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(6) );
 	kPrinter.PrintFullText( iXPos + 151, iYPos + 164, TAT_CENTER );
 	kPrinter.ClearList();
 
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_13, "상점에서 고용해 주세요." );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(7) );
 	kPrinter.PrintFullText( iXPos + 151, iYPos + 184, TAT_CENTER );
 	kPrinter.ClearList();
 }

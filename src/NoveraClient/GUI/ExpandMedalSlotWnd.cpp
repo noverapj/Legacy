@@ -604,7 +604,7 @@ bool ExpandMedalSlotWnd::CheckEnableSlot()
 				}
 				else
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "메달슬롯 오픈은 광장/훈련소/개인본부에서만 가능합니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(7) );
 				}
 				return false;
 			}

@@ -78,7 +78,7 @@ void UsePresentEtcItemWnd::SendPresent()
 	}
 	else
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "친구에게만 보낼 수 있습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 
@@ -93,14 +93,14 @@ void UsePresentEtcItemWnd::SendPresentComplete()
 	kPrinter[0].SetTextColor( TCT_DEFAULT_GREEN );
 	kPrinter[0].AddTextPiece( FONT_SIZE_13, m_SelectedFriendName.c_str() );
 	kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter[0].AddTextPiece( FONT_SIZE_13, "님께" );
+	kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(1) );
 
 	kPrinter[1].SetTextStyle( TS_NORMAL );
 	kPrinter[1].SetBkColor( 0, 0, 0 );	
 	kPrinter[1].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter[1].AddTextPiece( FONT_SIZE_13, "선물 발송을 완료하였습니다." );
+	kPrinter[1].AddTextPiece( FONT_SIZE_13, STR(2) );
 
-	g_GUIMgr.SetPrevMsgListPinkBoxWithTitle( NULL, MB_OK, NULL, kPrinter, "알림", "확인", "", "" );
+	g_GUIMgr.SetPrevMsgListPinkBoxWithTitle( NULL, MB_OK, NULL, kPrinter, STR(3), STR(4), "", "" );
 }
 
 void UsePresentEtcItemWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
@@ -195,11 +195,11 @@ void UsePresentEtcItemWnd::SetInfo( DWORD dwEtcItemIdx, const ioEtcItemSendPrese
 
 	ioButton *pPresentBtn = dynamic_cast<ioButton*>( FindChildWnd( ID_PRESENT_BTN ) );
 	if( pPresentBtn )
-		pPresentBtn->SetTitleText( "선물선택" );
+		pPresentBtn->SetTitleText( STR(1) );
 
 	ioButton *pFriendBtn = dynamic_cast<ioButton*>( FindChildWnd( ID_FRIEND_BTN ) );
 	if( pFriendBtn )
-		pFriendBtn->SetTitleText( "선물받을 친구를 선택하세요." );
+		pFriendBtn->SetTitleText( STR(2) );
 
 	SAFEDELETE( m_pPresentIcon );
 	SAFEDELETE( m_pSubIcon );
@@ -258,12 +258,12 @@ void UsePresentEtcItemWnd::OnRender()
 	kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
 	kPrinter.AddTextPiece( FONT_SIZE_13, "%s", m_PresentItemName.c_str() );
 	kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_13, " 아이템이" );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(1) );
 	kPrinter.PrintFullTextWidthCut( iXPos + 124, iYPos + 51, TAT_CENTER, 218 );
 	kPrinter.ClearList();
 
 	kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_13, " 아래와 같은 선물로 변경됩니다" );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(2) );
 	kPrinter.PrintFullTextWidthCut( iXPos + 124, iYPos + 69, TAT_CENTER, 218 );
 	kPrinter.ClearList();
 
@@ -271,7 +271,7 @@ void UsePresentEtcItemWnd::OnRender()
 	g_FontMgr.SetTextStyle( TS_NORMAL );
 	g_FontMgr.SetAlignType( TAT_CENTER );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
-	g_FontMgr.PrintText( iXPos + 124, iYPos + 320, FONT_SIZE_13, "친구를 선택하신 후 다음을 클릭하세요" );
+	g_FontMgr.PrintText( iXPos + 124, iYPos + 320, FONT_SIZE_13, STR(3) );
 
 	if( m_pStripGrayDark )
 	{
@@ -304,31 +304,31 @@ void UsePresentEtcItemWnd::SetConfirmWnd()
 {
 	if( m_iSelectedPresent == -1 || m_iSelectedPresent >= (int)m_vPresentList.size() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "먼저 보낼 선물을 선택하세요." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 
 	if( m_SelectedFriendName.IsEmpty() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "닉네임을 입력하세요." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return;
 	}
 
 	if( !g_App.IsRightID( m_SelectedFriendName.c_str() ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "잘못된 닉네임입니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		return;
 	}
 
 	if( m_SelectedFriendName == g_MyInfo.GetPublicID() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "자신의 닉네임입니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 		return;
 	}
 
 	if( g_App.IsAdminID( m_SelectedFriendName.c_str() ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "개발자나 마스터에게는 보낼 수 없습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );
 		return;
 	}
 
@@ -408,7 +408,7 @@ void FriendListWnd::iwm_show()
 
 	if( m_FriendList.empty() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "친구가 없습니다.." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		HideWnd();
 		return;
 	}
@@ -878,13 +878,13 @@ void PresentListWnd::SetPresentList( const ioEtcItemSendPresent::vPresentData &P
 		case PRESENT_ETC_ITEM:
 			{
 				ioHashString szName = g_PresentMgr.GetPresentValue1Text( kPresentData.m_iPresentType, kPresentData.m_iPresentValue1, kPresentData.m_iPresentValue2 );
-				wsprintf_e( szBuf, "%s %d개", szName.c_str(), kPresentData.m_iPresentValue2 );
+				SafeSprintf( szBuf, sizeof(szBuf), STR(1), szName.c_str(), kPresentData.m_iPresentValue2 );
 				szPresentName = szBuf;
 			}
 			break;
 		case PRESENT_PESO:
 			{
-				wsprintf_e( szBuf, "%d 페소", kPresentData.m_iPresentValue1 );
+				SafeSprintf( szBuf, sizeof(szBuf), STR(2), kPresentData.m_iPresentValue1 );
 				szPresentName = szBuf;
 			}
 			break;
@@ -898,7 +898,7 @@ void PresentListWnd::SetPresentList( const ioEtcItemSendPresent::vPresentData &P
 			break;
 		case PRESENT_GRADE_EXP:
 			{
-				wsprintf_e( szBuf, "경험치 +%d", kPresentData.m_iPresentValue1 );
+				SafeSprintf( szBuf, sizeof(szBuf), STR(3), kPresentData.m_iPresentValue1 );
 				szPresentName = szBuf;
 			}
 			break;
@@ -913,7 +913,7 @@ void PresentListWnd::SetPresentList( const ioEtcItemSendPresent::vPresentData &P
 
 	if( m_PresentList.empty() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "보낼 수 있는 아이템이 없습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 		HideWnd();
 	}
 
@@ -949,13 +949,13 @@ void SendPresentEtcItemConfirmWnd::SetInfo( ioWnd *pReturnWnd, const ioHashStrin
 	case PRESENT_ETC_ITEM:
 		{
 			ioHashString szName = g_PresentMgr.GetPresentValue1Text( kPresent.m_iPresentType, kPresent.m_iPresentValue1, kPresent.m_iPresentValue2 );
-			wsprintf_e( szBuf, "%s %d개", szName.c_str(), kPresent.m_iPresentValue2 );
+			SafeSprintf( szBuf, sizeof(szBuf), STR(1), szName.c_str(), kPresent.m_iPresentValue2 );
 			szItemDesc = szBuf;
 		}
 		break;
 	case PRESENT_PESO:
 		{
-			wsprintf_e( szBuf, "%d 페소", kPresent.m_iPresentValue1 );
+			SafeSprintf( szBuf, sizeof(szBuf), STR(2), kPresent.m_iPresentValue1 );
 			szItemDesc = szBuf;
 		}
 		break;
@@ -968,7 +968,7 @@ void SendPresentEtcItemConfirmWnd::SetInfo( ioWnd *pReturnWnd, const ioHashStrin
 		break;
 	case PRESENT_GRADE_EXP:
 		{
-			wsprintf_e( szBuf, "경험치 +%d", kPresent.m_iPresentValue1 );
+			SafeSprintf( szBuf, sizeof(szBuf), STR(3), kPresent.m_iPresentValue1 );
 			szItemDesc = szBuf;
 		}
 		break;
@@ -995,14 +995,14 @@ void SendPresentEtcItemConfirmWnd::SetInfo( ioWnd *pReturnWnd, const ioHashStrin
 	m_PrinterList[1].SetTextStyle( TS_NORMAL );
 	m_PrinterList[1].SetBkColor( 0, 0, 0 );	
 	m_PrinterList[1].SetTextColor( TCT_DEFAULT_GRAY );
-	m_PrinterList[1].AddTextPiece( FONT_SIZE_13, "받는이 : " );
+	m_PrinterList[1].AddTextPiece( FONT_SIZE_13, STR(4) );
 	m_PrinterList[1].SetTextColor( TCT_DEFAULT_GREEN );
 	m_PrinterList[1].AddTextPiece( FONT_SIZE_13, "%s", szFriendName.c_str() );
 
 	m_PrinterList[2].SetTextStyle( TS_NORMAL );
 	m_PrinterList[2].SetBkColor( 0, 0, 0 );	
 	m_PrinterList[2].SetTextColor( TCT_DEFAULT_GRAY );
-	m_PrinterList[2].AddTextPiece( FONT_SIZE_13, "본 아이템을 선물 하시겠습니까?" );
+	m_PrinterList[2].AddTextPiece( FONT_SIZE_13, STR(5) );
 
 	/*
 	int iMinWidth  = GetWidth();

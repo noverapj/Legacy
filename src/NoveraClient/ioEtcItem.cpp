@@ -4065,7 +4065,7 @@ bool ioEtcItemCustomItemSkin::OnUseBtnPush( int iType, ioUserEtcItem *pUserEtcIt
 			g_GUIMgr.ShowWnd( ITEM_CUSTOM_SELECT_WND );
 			return true;
 		}
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "장비스킨 변경은 광장과 로비에서만 가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 	}
 	else
 	{
@@ -4079,7 +4079,7 @@ bool ioEtcItemCustomItemSkin::OnUseBtnPush( int iType, ioUserEtcItem *pUserEtcIt
 			g_GUIMgr.ShowWnd( ITEM_CUSTOM_SELECT_WND );
 			return true;
 		}
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "장비스킨 변경은 광장/개인본부/길드본부/훈련소에서만 가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 	}
 
 	return false;	
@@ -4136,7 +4136,7 @@ bool ioEtcItemCustomItemSkinTest::OnUseBtnPush( int iType, ioUserEtcItem *pUserE
 			g_GUIMgr.ShowWnd( ITEM_CUSTOM_TRAIN_SELECT_WND );
 			return true;
 		}
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "장비스킨 변경은 광장/개인본부/길드본부/훈련소에서만 가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 	}
 
 	return false;	
@@ -5484,7 +5484,7 @@ bool ioEtcItemExpandMedalSlot::OnUseBtnPush( int iType, ioUserEtcItem *pUserEtcI
 				}
 				else
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "메달슬롯 오픈은 광장/개인본부/길드본부/훈련소에서만 가능합니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 				}
 			}
 			
@@ -5757,7 +5757,7 @@ bool ioEtcItemPreSetPackage::OnUseBtnPush( int iType, ioUserEtcItem *pUserEtcIte
 	if( g_MyInfo.GetMortmainCharCount() + g_MyInfo.GetExerciseCharCount() >= g_MyInfo.GetCurMaxCharSlot() )
 	{
 		// 전부 영구 용병이거나 무료 용병이다.
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "더 이상 용병을 보유할 수 없습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return false;
 	}
 
@@ -6106,7 +6106,7 @@ bool ioEtcItemAddCash::OnUseBtnPush( int iType, ioUserEtcItem *pUserEtcItem, boo
 {
 	if( g_MyInfo.GetChannelingType() != CNT_WEMADEBUY )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "채널링 회원은 사용할 수 없는 아이템입니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return false;
 	}
 
@@ -6360,7 +6360,7 @@ bool ioEtcItemBingoNumberGashapon::OnUseBtnPush( int iType, ioUserEtcItem *pUser
 				g_GUIMgr.ShowWnd( BINGO_WND );
 		}
 		else
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "빙고판이 필요합니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 	}
 
 	return true;
@@ -6427,7 +6427,7 @@ bool ioEtcItemBingoShuffleNumber::OnUseBtnPush( int iType, ioUserEtcItem *pUserE
 				g_GUIMgr.ShowWnd( BINGO_WND );
 		}
 		else
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "빙고판이 필요합니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 	}
 
 	return true;
@@ -6494,7 +6494,7 @@ bool ioEtcItemBingoShuffleRewardItem::OnUseBtnPush( int iType, ioUserEtcItem *pU
 				g_GUIMgr.ShowWnd( BINGO_WND );
 		}
 		else
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "빙고판이 필요합니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 	}
 
 	return true;
@@ -6561,7 +6561,7 @@ bool ioEtcItemBingoRandomNumberClear::OnUseBtnPush( int iType, ioUserEtcItem *pU
 				g_GUIMgr.ShowWnd( BINGO_WND );
 		}
 		else
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "빙고판이 필요합니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 	}
 
 	return true;
@@ -6661,7 +6661,7 @@ bool ioEtcItemSuperGashapon::OnUseBtnPush( int iType, ioUserEtcItem *pUserEtcIte
 	
 	if( bPresentLimitCheck && g_PresentMgr.GetMaxPresent() >= (int)g_PresentMgr.GetLimitPresentSize() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "선물함이 꽉 찼습니다.#선물함을 비워주시고 사용해 주세요." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return false;
 	}
 
@@ -7471,7 +7471,7 @@ bool ioEtcCostumeCustomItemSkin::OnUseBtnPush( int iType, ioUserEtcItem *pUserEt
 				return true;
 			}
 		}
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "코스튬스킨 변경은 로비에서만 가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 	}
 	else
 	{
@@ -7485,7 +7485,7 @@ bool ioEtcCostumeCustomItemSkin::OnUseBtnPush( int iType, ioUserEtcItem *pUserEt
 			g_GUIMgr.ShowWnd( COSTUME_CUSTOM_SELECT_WND );
 			return true;
 		}
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "코스튬스킨 변경은 광장/개인본부/길드본부/훈련소에서만 가능합니다." );		
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );		
 	}
 
 	return false;	
@@ -7751,7 +7751,7 @@ void ioEtcItemCreateGuildHQCreate::OnUse( int iType, SP2Packet &rkPacket, ioUser
 	g_QuestMgr.QuestOccurTerm( QO_ETCITEM_USE, iType );
 	g_QuestMgr.QuestCompleteTerm( QC_ETCITEM_USE, iType );
 
-	g_GUIMgr.SetMsgBox( MB_OK, NULL, "길드본부가#활성화 되었습니다." );
+	g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 
 	MyInventoryWnd *pInvenWnd = dynamic_cast<MyInventoryWnd*>(g_GUIMgr.FindWnd(MY_INVENTORY_WND));
 	if( pInvenWnd && pInvenWnd->IsShow() )
@@ -7803,7 +7803,7 @@ void ioEtcItemCreateMyHomeCreate::OnUse( int iType, SP2Packet &rkPacket, ioUserE
 	g_QuestMgr.QuestOccurTerm( QO_ETCITEM_USE, iType );
 	g_QuestMgr.QuestCompleteTerm( QC_ETCITEM_USE, iType );
 
-	g_GUIMgr.SetMsgBox( MB_OK, NULL, "개인본부가#활성화 되었습니다." );
+	g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 
 	MyInventoryWnd *pInvenWnd = dynamic_cast<MyInventoryWnd*>( g_GUIMgr.FindWnd(MY_INVENTORY_WND) );
 	if( pInvenWnd && pInvenWnd->IsShow() )
@@ -8767,7 +8767,7 @@ bool ioEtcItemMultiSuperGashapon::OnUseBtnPush( int iType, ioUserEtcItem *pUserE
 
 	if( bPresentLimitCheck && g_PresentMgr.GetMaxPresent() >= (int)g_PresentMgr.GetLimitPresentSize() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "선물함이 꽉 찼습니다.#선물함을 비워주시고 사용해 주세요." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return false;
 	}
 

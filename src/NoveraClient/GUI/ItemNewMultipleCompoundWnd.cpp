@@ -182,7 +182,7 @@ void ItemNewMultipleCompoundWnd::LoadMedalItemList()
 		pMedalitem->GetUseInfo( kSlot.m_iItemType, kSlot.m_iCustomIndex, kInfo.m_szSubText );
 		int iLimitLevel = g_MedalItemMgr.GetLevelLimit( kSlot.m_iItemType );
 		char szBuf[MAX_PATH];
-		sprintf_e( szBuf, "Lv%d 제한", iLimitLevel );
+		SafeSprintf( szBuf, sizeof(szBuf), STR(1), iLimitLevel );
 		kInfo.m_szSubText2 = szBuf;
 		m_vTotalList.push_back( kInfo );
 	}
@@ -220,11 +220,11 @@ void ItemNewMultipleCompoundWnd::LoadCostumeItemList()
 		char szBuf[MAX_PATH];
 		if( sCostumeInfo.m_nEnableClass > 0 )
 		{
-			sprintf_e( szBuf, "%s 전용", g_MyInfo.GetClassName( sCostumeInfo.m_nEnableClass ));
+			SafeSprintf( szBuf, sizeof(szBuf), STR(1), g_MyInfo.GetClassName( sCostumeInfo.m_nEnableClass ));
 			kInfo.m_szSubText2 = szBuf;
 		}
 		else
-			kInfo.m_szSubText2 = "장착제한없음";
+			kInfo.m_szSubText2 = STR(2);
 
 		kInfo.m_nGrade = sCostumeInfo.m_nGradeType;
 
@@ -262,7 +262,7 @@ void ItemNewMultipleCompoundWnd::LoadExtraItemList()
 		kInfo.m_szIconName = kSlot.m_IconName;
 		kInfo.m_iTabType = kSlot.m_iItemCode/DEFAULT_BASIC_COSTUME_CODE;
 
-		kInfo.m_szSubText = "영구장비"; //어차피 영구장비니께~
+		kInfo.m_szSubText = STR(3); //어차피 영구장비니께~
 
 		char szBuf[MAX_PATH];
 		if( pItem->GetEnableClass() > 0 )
@@ -612,7 +612,7 @@ void ItemNewMultipleCompoundWnd::SendMedalItemCompound()
 
 	if ( vSlotList.size() != MAX_ITEM_BTN )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "재료에 사용될 장비가 선택되지 않았습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 
@@ -669,7 +669,7 @@ void ItemNewMultipleCompoundWnd::SendCostumeItemCompound()
 
 	if ( vSlotList.size() != MAX_ITEM_BTN )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "재료에 사용될 장비가 선택되지 않았습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 
@@ -726,7 +726,7 @@ void ItemNewMultipleCompoundWnd::SendExtraItemCompound()
 
 	if ( vSlotList.size() != MAX_ITEM_BTN )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "재료에 사용될 장비가 선택되지 않았습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 

@@ -1029,14 +1029,14 @@ void ioPowerUpManager::ApplyItemPowerUp( int iIndex, int iCode )
 	ioUserExtraItem* pExtraItem = g_MyInfo.GetUserExtraItem();
 	if( !pExtraItem )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "아이템 슬롯 에러 - 1" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 
 	EXTRAITEMSLOT Slot;
 	if( !pExtraItem->GetExtraItem( iIndex, Slot ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "아이템 슬롯 에러 - 2" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return;
 	}
 	if((iCode/DEFAULT_EXTRA_ITEM_CODE) == 1 && (iCode % DEFAULT_EXTRA_ITEM_CODE) >= DEFAULT_RARE_ITEM_CODE)

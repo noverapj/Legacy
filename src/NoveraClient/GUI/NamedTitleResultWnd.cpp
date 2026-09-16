@@ -110,7 +110,7 @@ void NamedTitleResultWnd::ShowResult( DWORD dwCode, int nLevel, BYTE byPremium )
 	m_Desc[0].SetTextStyle( TS_NORMAL );
 	m_Desc[0].SetBkColor( 0, 0, 0 );	
 	m_Desc[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	m_Desc[0].AddTextPiece( FONT_SIZE_17, "칭호:" );
+	m_Desc[0].AddTextPiece( FONT_SIZE_17, STR(1) );
 
 	m_Desc[0].SetTextColor( g_NamedTitleInfoMgr.GetNamedTitleTextColor( dwCode, nLevel, byPremium, false ) );
 	m_Desc[0].AddTextPiece( FONT_SIZE_17, "%s", sNamedTitleInfo.m_szName.c_str() );
@@ -118,23 +118,23 @@ void NamedTitleResultWnd::ShowResult( DWORD dwCode, int nLevel, BYTE byPremium )
 	m_Desc[1].SetTextStyle( TS_NORMAL );
 	m_Desc[1].SetBkColor( 0, 0, 0 );	
 	m_Desc[1].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	m_Desc[1].AddTextPiece( FONT_SIZE_12, "★ 해당 상품은 " );
+	m_Desc[1].AddTextPiece( FONT_SIZE_12, STR(2) );
 
 	m_Desc[1].SetTextColor( TCT_DEFAULT_RED );
-	m_Desc[1].AddTextPiece( FONT_SIZE_12, "내정보창" );
+	m_Desc[1].AddTextPiece( FONT_SIZE_12, STR(3) );
 
 	m_Desc[1].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	m_Desc[1].AddTextPiece( FONT_SIZE_12, "에 칭호 버튼을" );
+	m_Desc[1].AddTextPiece( FONT_SIZE_12, STR(4) );
 
 	m_Desc[2].SetTextStyle( TS_NORMAL );
 	m_Desc[2].SetBkColor( 0, 0, 0 );	
 	m_Desc[2].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	m_Desc[2].AddTextPiece( FONT_SIZE_12, "클릭하시면 확인하실 수 있습니다." );
+	m_Desc[2].AddTextPiece( FONT_SIZE_12, STR(5) );
 
 	m_Desc[3].SetTextStyle( TS_NORMAL );
 	m_Desc[3].SetBkColor( 0, 0, 0 );	
 	m_Desc[3].SetTextColor( TCT_DEFAULT_GREEN );
-	m_Desc[3].AddTextPiece( FONT_SIZE_17, "적용되었습니다." );
+	m_Desc[3].AddTextPiece( FONT_SIZE_17, STR(6) );
 
 	ShowWnd();
 }
@@ -343,7 +343,7 @@ void NamedTitlePremiumResultWnd::ShowResult( DWORD dwCode, int nLevel, BYTE byPr
 	m_Desc[0].SetTextStyle( TS_NORMAL );
 	m_Desc[0].SetBkColor( 0, 0, 0 );	
 	m_Desc[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	m_Desc[0].AddTextPiece( FONT_SIZE_17, "프리미엄 칭호 변경" );
+	m_Desc[0].AddTextPiece( FONT_SIZE_17, STR(1) );
 
 	m_Desc[1].SetTextStyle( TS_NORMAL );
 	m_Desc[1].SetBkColor( 0, 0, 0 );	
@@ -353,7 +353,7 @@ void NamedTitlePremiumResultWnd::ShowResult( DWORD dwCode, int nLevel, BYTE byPr
 	m_Desc[2].SetTextStyle( TS_NORMAL );
 	m_Desc[2].SetBkColor( 0, 0, 0 );	
 	m_Desc[2].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	m_Desc[2].AddTextPiece( FONT_SIZE_12, "칭호가 프리미엄으로 변경되었습니다." );
+	m_Desc[2].AddTextPiece( FONT_SIZE_12, STR(2) );
 
 	ReBatchButton();
 	ShowWnd();

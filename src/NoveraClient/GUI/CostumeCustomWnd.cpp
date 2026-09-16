@@ -146,7 +146,7 @@ void CostumeCustomInfoWnd::RenderDesc( int iXPos, int iYPos )
 		m_szDescArray[0].SetTextStyle( TS_NORMAL );
 		m_szDescArray[0].SetBkColor( 0, 0, 0 );	
 		m_szDescArray[0].SetTextColor( TCT_DEFAULT_GRAY );
-		m_szDescArray[0].AddTextPiece( FONT_SIZE_13, "없음" );
+		m_szDescArray[0].AddTextPiece( FONT_SIZE_13, STR(1) );
 		m_szDescArray[0].PrintFullTextWidthCut( iXPos, iYPos, TAT_CENTER, INVENTORY_ITEM_INFO_WIDTHCUT_SIZE );
 
 		m_szDescArray[1].SetTextStyle( TS_NORMAL );
@@ -264,7 +264,7 @@ bool CostumeCustomInfoWnd::SetCostumeInfo()
 	m_szDescArray[1].SetTextStyle( TS_NORMAL );
 	m_szDescArray[1].SetBkColor( 0, 0, 0 );	
 	m_szDescArray[1].SetTextColor( TCT_DEFAULT_BLUE );
-	m_szDescArray[1].AddTextPiece( FONT_SIZE_13, "영구사용" );
+	m_szDescArray[1].AddTextPiece( FONT_SIZE_13, STR(1) );
 	
 	// Limit
 	CostumeInfo sCostumeInfo;
@@ -275,9 +275,9 @@ bool CostumeCustomInfoWnd::SetCostumeInfo()
 	m_szDescArray[2].SetTextColor( TCT_DEFAULT_GRAY );
 
 	if( sCostumeInfo.m_nEnableClass > 0 )
-		m_szDescArray[2].AddTextPiece( FONT_SIZE_11, "%s 전용", g_MyInfo.GetClassName( sCostumeInfo.m_nEnableClass ) );
+		m_szDescArray[2].AddTextPiece( FONT_SIZE_11, STR(2), g_MyInfo.GetClassName( sCostumeInfo.m_nEnableClass ) );
 	else
-		m_szDescArray[2].AddTextPiece( FONT_SIZE_11, "제한없음" );
+		m_szDescArray[2].AddTextPiece( FONT_SIZE_11, STR(3) );
 
 	// 클래스 제한이 있는 아이템은 해당 클래스에 여캐가 있어야지만 여성 가능
 	if( sCostumeInfo.m_nEnableClass > 0 )
@@ -449,13 +449,13 @@ void CostumeCustomSelectWnd::OnCostumeCustomInfoPush( DWORD dwID )
 		CostumeSlot kSlot;
 		if( !pCostume->GetCostumeSlot( iMagicCode, kSlot ) )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "존재하지 않는 장비입니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 			return;
 		}
 
 		if( kSlot.m_bEquip )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "착용 중인 코스튬은 스킨을 할 수 없습니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 			return;
 		}
 		
@@ -599,9 +599,9 @@ void CostumeCustomSelectWnd::OnRender()
 	kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
 	kPrinter.AddTextPiece( FONT_SIZE_13, "★" );
 	kPrinter.SetTextColor( TCT_DEFAULT_GREEN );
-	kPrinter.AddTextPiece( FONT_SIZE_13, "보유하고 있는" );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(1) );
 	kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_13, " 영구 코스튬만 스킨 변경이 가능합니다" );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(2) );
 	kPrinter.PrintFullText( iXPos+TEXT_X, iYPos+TEXT_Y, TAT_LEFT );
 	kPrinter.ClearList();
 
@@ -610,22 +610,22 @@ void CostumeCustomSelectWnd::OnRender()
 	kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
 	kPrinter.AddTextPiece( FONT_SIZE_13, "★" );
 	kPrinter.SetTextColor( TCT_DEFAULT_GREEN );
-	kPrinter.AddTextPiece( FONT_SIZE_13, "아이템 하나로" );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(3) );
 	kPrinter.SetTextColor( TCT_DEFAULT_BLUE );
-	kPrinter.AddTextPiece( FONT_SIZE_13, " 남성용" );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(4) );
 	kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
 	kPrinter.AddTextPiece( FONT_SIZE_13, ", " );
 	kPrinter.SetTextColor( TCT_DEFAULT_RED );
-	kPrinter.AddTextPiece( FONT_SIZE_13, "여성용" );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(5) );
 	kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_13, " 코스튬 중 한가지 선택 후 변경이 가능합니다 " );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(6) );
 	kPrinter.PrintFullText( iXPos+TEXT_X, iYPos+TEXT_Y+18, TAT_LEFT );
 	kPrinter.ClearList();
 
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_13, "★ 변경한 스킨은 다른 스킨으로 덮어쓸 수 있습니다" );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(7) );
 	kPrinter.PrintFullText( iXPos+TEXT_X, iYPos+TEXT_Y+36, TAT_LEFT );
 	kPrinter.ClearList();
 }
@@ -663,38 +663,38 @@ void CostumeCustomSelectWnd::ProcessCustomBtnTooltip()
 		kPrinter[0].SetTextStyle( TS_NORMAL );
 		kPrinter[0].SetBkColor( 0, 0, 0 );
 		kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-		kPrinter[0].AddTextPiece( FONT_SIZE_12, "코스튬 스킨 - " );
+		kPrinter[0].AddTextPiece( FONT_SIZE_12, STR(1) );
 
 		if( kSlot.m_dwMaleCustom > 0 && kSlot.m_dwFemaleCustom > 0 )
 		{
 			kPrinter[0].SetTextColor( TCT_DEFAULT_BLUE );
-			kPrinter[0].AddTextPiece( FONT_SIZE_12, "남성" );
+			kPrinter[0].AddTextPiece( FONT_SIZE_12, STR(2) );
 			kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
 			kPrinter[0].AddTextPiece( FONT_SIZE_12, ", " );
 			kPrinter[0].SetTextColor( TCT_DEFAULT_RED );
-			kPrinter[0].AddTextPiece( FONT_SIZE_12, "여성 " );
+			kPrinter[0].AddTextPiece( FONT_SIZE_12, STR(3) );
 		}		
 		else if( kSlot.m_dwMaleCustom > 0 )
 		{
 			kPrinter[0].SetTextColor( TCT_DEFAULT_BLUE );
-			kPrinter[0].AddTextPiece( FONT_SIZE_12, "남성 " );
+			kPrinter[0].AddTextPiece( FONT_SIZE_12, STR(4) );
 		}
 		else if( kSlot.m_dwFemaleCustom > 0 )
 		{
 			kPrinter[0].SetTextColor( TCT_DEFAULT_RED );
-			kPrinter[0].AddTextPiece( FONT_SIZE_12, "여성 " );
+			kPrinter[0].AddTextPiece( FONT_SIZE_12, STR(3) );
 		}
 		kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-		kPrinter[0].AddTextPiece( FONT_SIZE_12, "이 적용되어있습니다" );
+		kPrinter[0].AddTextPiece( FONT_SIZE_12, STR(5) );
 
 		kPrinter[1].SetTextStyle( TS_NORMAL );
 		kPrinter[1].SetBkColor( 0, 0, 0 );
 		kPrinter[1].SetTextColor( TCT_DEFAULT_GRAY );
-		kPrinter[1].AddTextPiece( FONT_SIZE_12, "＊아이콘을 " );
+		kPrinter[1].AddTextPiece( FONT_SIZE_12, STR(6) );
 		kPrinter[1].SetTextColor( TCT_DEFAULT_GREEN );
-		kPrinter[1].AddTextPiece( FONT_SIZE_12, "클릭하면 자세히" );
+		kPrinter[1].AddTextPiece( FONT_SIZE_12, STR(7) );
 		kPrinter[1].SetTextColor( TCT_DEFAULT_GRAY );
-		kPrinter[1].AddTextPiece( FONT_SIZE_12, " 볼 수 있습니다" );
+		kPrinter[1].AddTextPiece( FONT_SIZE_12, STR(8) );
 	}
 
 	CostumeEquipInfo sCostumeEquipInfo;
@@ -736,15 +736,15 @@ void CostumeCustomSelectWnd::ProcessCustomBtnTooltip()
 			if( rkCharInfo.m_sex == 1 )
 			{
 				kPrinter[0].SetTextColor( TCT_DEFAULT_BLUE );
-				kPrinter[0].AddTextPiece( FONT_SIZE_12, "%s - 남성", szClassName.c_str() );
+				kPrinter[0].AddTextPiece( FONT_SIZE_12, STR(9), szClassName.c_str() );
 			}
 			else
 			{
 				kPrinter[0].SetTextColor( TCT_DEFAULT_RED );
-				kPrinter[0].AddTextPiece( FONT_SIZE_12, "%s - 여성", szClassName.c_str() );
+				kPrinter[0].AddTextPiece( FONT_SIZE_12, STR(10), szClassName.c_str() );
 			}
 			kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kPrinter[0].AddTextPiece( FONT_SIZE_12, "이 착용 중입니다." );
+			kPrinter[0].AddTextPiece( FONT_SIZE_12, STR(11) );
 		}
 	}
 
@@ -820,7 +820,7 @@ void CostumeCustomMakeWnd::AfterViewLSCTexture( int iSelectCount )
 	m_TexSelectCount = iSelectCount;
 
 	char szBtnTitle[MAX_PATH] = "";
-	SafeSprintf( szBtnTitle, sizeof( szBtnTitle ), "파일 올리기 (%d/%d)", m_TexSelectCount, (int)m_OriginalTexList.size() );
+	SafeSprintf( szBtnTitle, sizeof( szBtnTitle ), STR(1), m_TexSelectCount, (int)m_OriginalTexList.size() );
 	ioWnd *pUploadBtn = FindChildWnd( ID_UPLOAD_FILE );
 	if( pUploadBtn )
 	{
@@ -852,13 +852,13 @@ void CostumeCustomMakeWnd::SetCostumeInfo( InventoryItemInfo &rkItem, bool bMale
 		{
 			if( g_MyInfo.IsCharRentalToCostume( m_ItemInfo.m_iMagicCode ) )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "전투체험 설정이 되어있는 용병은#장비 스킨이 불가능합니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 				return;
 			}
 		}
 		else
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "착용 중인 장비는 스킨이 불가능합니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 			return;
 		}
 	}
@@ -872,12 +872,12 @@ void CostumeCustomMakeWnd::SetCostumeInfo( InventoryItemInfo &rkItem, bool bMale
 	if( m_bMale )
 	{
 		m_ItemNameMent.SetTextColor( TCT_DEFAULT_BLUE );
-		m_ItemNameMent.AddTextPiece( FONT_SIZE_17, " (남성)" );
+		m_ItemNameMent.AddTextPiece( FONT_SIZE_17, STR(3) );
 	}
 	else
 	{
 		m_ItemNameMent.SetTextColor( TCT_DEFAULT_RED );
-		m_ItemNameMent.AddTextPiece( FONT_SIZE_17, " (여성)" );
+		m_ItemNameMent.AddTextPiece( FONT_SIZE_17, STR(4) );
 	}	
 
 	// Before 세팅
@@ -909,11 +909,11 @@ void CostumeCustomMakeWnd::SetCostumeInfo( InventoryItemInfo &rkItem, bool bMale
 	{
 		if( m_bMale )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "[%s] (남성)은#이미지없이 이펙트만으로 제작되어서#스킨 변경이 불가능합니다", m_szItemName.c_str() );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5), m_szItemName.c_str() );
 		}
 		else
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "[%s] (여성)은#이미지없이 이펙트만으로 제작되어서#스킨 변경이 불가능합니다", m_szItemName.c_str() );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(6), m_szItemName.c_str() );
 		}
 		return;
 	}
@@ -950,10 +950,10 @@ void CostumeCustomMakeWnd::SetCostumeInfo( InventoryItemInfo &rkItem, bool bMale
 	m_TextureCountMent.SetTextStyle( TS_NORMAL );
 	m_TextureCountMent.SetBkColor( 0, 0, 0 );	
 	m_TextureCountMent.SetTextColor( TCT_DEFAULT_ORANGE );
-	m_TextureCountMent.AddTextPiece( FONT_SIZE_13, "(총 %d개의 텍스쳐 파일(jpg)이 필요합니다)", (int)m_OriginalTexList.size() );
+	m_TextureCountMent.AddTextPiece( FONT_SIZE_13, STR(7), (int)m_OriginalTexList.size() );
 
 	char szBtnTitle[MAX_PATH] = "";
-	SafeSprintf( szBtnTitle, sizeof(szBtnTitle), "파일 올리기 (0/%d)", (int)m_OriginalTexList.size() );
+	SafeSprintf( szBtnTitle, sizeof(szBtnTitle), STR(8), (int)m_OriginalTexList.size() );
 	ioWnd *pUploadBtn = FindChildWnd( ID_UPLOAD_FILE );
 	if( pUploadBtn )
 	{
@@ -968,7 +968,7 @@ void CostumeCustomMakeWnd::UploadTexture()
 {
 	if( m_OriginalTexList.empty() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "변경 가능한 텍스쳐가 없습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 
@@ -985,7 +985,7 @@ void CostumeCustomMakeWnd::DownloadTexture()
 {
 	if( m_OriginalTexList.empty() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "변경 가능한 텍스쳐가 없습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 
@@ -1018,7 +1018,7 @@ void CostumeCustomMakeWnd::DownloadTexture()
 
 		if( !pDDSTex )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "(%s) 텍스쳐를 저장하던 중에 오류가 발생했습니다(1)", rkData.m_szTextureName.c_str() );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2), rkData.m_szTextureName.c_str() );
 			return;
 		}
 
@@ -1036,7 +1036,7 @@ void CostumeCustomMakeWnd::DownloadTexture()
 		//
 		if( !Help::CustomTextureToJPG( pDDSTex, szFullPath ) )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "(%s) 텍스쳐를 저장하던 중에 오류가 발생했습니다(2)", rkData.m_szTextureName.c_str() );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3), rkData.m_szTextureName.c_str() );
 
 			if( bTexCreate )
 			{
@@ -1100,7 +1100,7 @@ void CostumeCustomMakeWnd::StartCustomFileMake( DWORD dwUniqueIndex )
 	if( !IsShow() )
 	{
 		TCPNetwork::MouseBusy( false );
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "변경된 데이터가 존재하지 않습니다 (1)" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 
@@ -1120,7 +1120,7 @@ void CostumeCustomMakeWnd::StartCustomFileMake( DWORD dwUniqueIndex )
 		if( strcmp( szExt, ".lsc" ) != 0 )
 		{
 			TCPNetwork::MouseBusy( false );
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "변경된 데이터가 존재하지 않습니다#(%s)", rkData.m_szTextureName.c_str() );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2), rkData.m_szTextureName.c_str() );
 			return;
 		}
 		
@@ -1145,7 +1145,7 @@ void CostumeCustomMakeWnd::StartCustomFileMake( DWORD dwUniqueIndex )
 		if( !pDDSTex )
 		{
 			TCPNetwork::MouseBusy( false );
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "(%s) 텍스쳐를 불러오던 중에 오류가 발생했습니다", rkData.m_szTextureName.c_str() );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3), rkData.m_szTextureName.c_str() );
 			return;
 		}
 		kUpload.m_iSrcWidth  = pDDSTex->GetWidth();
@@ -1254,10 +1254,10 @@ void CostumeCustomMakeWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 				ioUserEtcItem *pUserEtcItem = g_MyInfo.GetUserEtcItem();
 				if( !pUserEtcItem || !pUserEtcItem->GetEtcItem( ioEtcItem::EIT_ETC_CUSTOM_COSTUME_SKIN, kEtcItem ) )
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "[장비스킨]#아이템을 보유하고 있지 않습니다" );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 				}
 				else if( m_TexSelectCount == 0 )
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "선택된 텍스쳐가 없습니다" );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 				else
 				{
 					CostumeCustomChangeConfirmWnd *pChangeConfirmWnd = dynamic_cast< CostumeCustomChangeConfirmWnd * >( g_GUIMgr.FindWnd( COSTUME_CUSTOM_CHANGE_CONFIRM_WND ) );
@@ -1287,14 +1287,14 @@ void CostumeCustomMakeWnd::OnRender()
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
 
-	g_FontMgr.PrintText( iXPos + 92, iYPos + 378, FONT_SIZE_12, "다운받거나 직접 제작한" );
-	g_FontMgr.PrintText( iXPos + 92, iYPos + 393, FONT_SIZE_12, "텍스쳐 파일을 올립니다" );
+	g_FontMgr.PrintText( iXPos + 92, iYPos + 378, FONT_SIZE_12, STR(1) );
+	g_FontMgr.PrintText( iXPos + 92, iYPos + 393, FONT_SIZE_12, STR(2) );
 
-	g_FontMgr.PrintText( iXPos + 245, iYPos + 378, FONT_SIZE_12, "텍스쳐 파일 원본을 받아서" );
-	g_FontMgr.PrintText( iXPos + 245, iYPos + 393, FONT_SIZE_12, "수정합니다" );
+	g_FontMgr.PrintText( iXPos + 245, iYPos + 378, FONT_SIZE_12, STR(3) );
+	g_FontMgr.PrintText( iXPos + 245, iYPos + 393, FONT_SIZE_12, STR(4) );
 
-	g_FontMgr.PrintText( iXPos + 398, iYPos + 378, FONT_SIZE_12, "텍스쳐 파일을 확대해서" );
-	g_FontMgr.PrintText( iXPos + 398, iYPos + 393, FONT_SIZE_12, "자세히 확인합니다" );
+	g_FontMgr.PrintText( iXPos + 398, iYPos + 378, FONT_SIZE_12, STR(5) );
+	g_FontMgr.PrintText( iXPos + 398, iYPos + 393, FONT_SIZE_12, STR(6) );
 
 	m_ItemNameMent.PrintFullText( iXPos + 246, iYPos + 294, TAT_CENTER );
 	m_TextureCountMent.PrintFullText( iXPos + 246, iYPos + 315, TAT_CENTER );
@@ -1340,14 +1340,14 @@ void CostumeCustomMakeWnd::EndFileUpload( DWORD param )
 	{
 		m_eFileUplaodState = FUS_NONE;
 		g_GUIMgr.HideWnd( FILE_WRITE_SERVER_PROCESS );
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "장비스킨 업로드에 실패했습니다#잠시 후 다시 시도해주세요" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 	}
 	else if( param == ioFileWriteClient::RETURN_WND_PARAM_COMPLETE )
 	{
 		if( !IsShow() )
 		{
 			m_eFileUplaodState = FUS_NONE;
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "장비스킨 업로드가 중단 되었습니다" );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		}
 		else
 		{
@@ -1394,14 +1394,14 @@ void CostumeCustomMakeWnd::EndFileUpload( DWORD param )
 					{
 						m_eFileUplaodState = FUS_NONE;
 						g_GUIMgr.HideWnd( FILE_WRITE_SERVER_PROCESS );
-						g_GUIMgr.SetMsgBox( MB_OK, NULL, "장비스킨을 적용할 대상을 찾지 못했습니다" );
+						g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 					}
 				}
 				else
 				{
 					m_eFileUplaodState = FUS_NONE;
 					g_GUIMgr.HideWnd( FILE_WRITE_SERVER_PROCESS );
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "장비스킨을 적용할 대상을 찾지 못했습니다" );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 				}
 			}
 		}
@@ -1717,7 +1717,7 @@ void CostumeCustomMake3DViewWnd::OnRender()
 		g_FontMgr.SetAlignType( TAT_LEFT );
 		g_FontMgr.SetBkColor( 0, 0, 0 );
 		g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
-		g_FontMgr.PrintText( iXPos + 146, iYPos + 39, FONT_SIZE_10, "이동" );
+		g_FontMgr.PrintText( iXPos + 146, iYPos + 39, FONT_SIZE_10, STR(1) );
 	}
 	if( m_pMouseRight )
 	{
@@ -1728,7 +1728,7 @@ void CostumeCustomMake3DViewWnd::OnRender()
 		g_FontMgr.SetAlignType( TAT_LEFT );
 		g_FontMgr.SetBkColor( 0, 0, 0 );
 		g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
-		g_FontMgr.PrintText( iXPos + 168, iYPos + 39, FONT_SIZE_10, "회전" );
+		g_FontMgr.PrintText( iXPos + 168, iYPos + 39, FONT_SIZE_10, STR(2) );
 	}
 	if( m_pMouseMiddle )
 	{
@@ -1739,7 +1739,7 @@ void CostumeCustomMake3DViewWnd::OnRender()
 		g_FontMgr.SetAlignType( TAT_LEFT );
 		g_FontMgr.SetBkColor( 0, 0, 0 );
 		g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
-		g_FontMgr.PrintText( iXPos + 190, iYPos + 39, FONT_SIZE_10, "확대" );
+		g_FontMgr.PrintText( iXPos + 190, iYPos + 39, FONT_SIZE_10, STR(3) );
 	}
 
 	if( m_pUI3DRender )
@@ -1769,7 +1769,7 @@ void CostumeCustomMake3DViewWnd::OnRender()
 				g_FontMgr.SetAlignType( TAT_CENTER );
 				g_FontMgr.SetBkColor( 0, 0, 0 );
 				g_FontMgr.SetTextColor( TCT_DEFAULT_WHITE );
-				g_FontMgr.PrintText( iXPos + 28, iYPos + 10, FONT_SIZE_11, "원본" );
+				g_FontMgr.PrintText( iXPos + 28, iYPos + 10, FONT_SIZE_11, STR(4) );
 			}
 			break;
 		case CostumeCustomMakeWnd::ID_AFTER_VIEW:
@@ -1778,7 +1778,7 @@ void CostumeCustomMake3DViewWnd::OnRender()
 				g_FontMgr.SetAlignType( TAT_CENTER );
 				g_FontMgr.SetBkColor( 0, 0, 0 );
 				g_FontMgr.SetTextColor( TCT_DEFAULT_WHITE );
-				g_FontMgr.PrintText( iXPos + 28, iYPos + 10, FONT_SIZE_11, "변경" );
+				g_FontMgr.PrintText( iXPos + 28, iYPos + 10, FONT_SIZE_11, STR(5) );
 			}
 			break;
 		}
@@ -1909,9 +1909,9 @@ void CostumeCustomMakeDetailViewWnd::CreateCharacter( const CHARACTER &rkInfo, c
 	if( pCharGrp )
 	{	
 		if( m_aMyChar->IsMale() )
-			SafeSprintf( m_szSkinName, sizeof(m_szSkinName), "%s (남성)", sCostumeInfo.m_szName.c_str() );
+			SafeSprintf( m_szSkinName, sizeof(m_szSkinName), STR(1), sCostumeInfo.m_szName.c_str() );
 		else
-			SafeSprintf( m_szSkinName, sizeof(m_szSkinName), "%s (여성)", sCostumeInfo.m_szName.c_str() );
+			SafeSprintf( m_szSkinName, sizeof(m_szSkinName), STR(2), sCostumeInfo.m_szName.c_str() );
 
 		switch( nSubType )
 		{
@@ -2071,7 +2071,7 @@ void CostumeCustomMakeDetailViewWnd::OnRender()
 	kPrinter.SetTextStyle( TS_OUTLINE_FULL_2X );
 	kPrinter.SetBkColor( 12, 66, 111 );	
 	kPrinter.SetTextColor( TCT_DEFAULT_WHITE );
-	kPrinter.AddTextPiece( FONT_SIZE_18, "스킨 파일 자세히보기 : " );
+	kPrinter.AddTextPiece( FONT_SIZE_18, STR(1) );
 
 	kPrinter.SetTextStyle( TS_OUTLINE_FULL_2X );
 	kPrinter.SetBkColor( 12, 66, 111 );	
@@ -2084,9 +2084,9 @@ void CostumeCustomMakeDetailViewWnd::OnRender()
 	g_FontMgr.SetAlignType( TAT_CENTER );
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
-	g_FontMgr.PrintText( iXPos + 36, iYPos + 106, FONT_SIZE_12, "이동" );
-	g_FontMgr.PrintText( iXPos + 68, iYPos + 106, FONT_SIZE_12, "회전" );
-	g_FontMgr.PrintText( iXPos + 100, iYPos + 106, FONT_SIZE_12, "확대" );
+	g_FontMgr.PrintText( iXPos + 36, iYPos + 106, FONT_SIZE_12, STR(2) );
+	g_FontMgr.PrintText( iXPos + 68, iYPos + 106, FONT_SIZE_12, STR(3) );
+	g_FontMgr.PrintText( iXPos + 100, iYPos + 106, FONT_SIZE_12, STR(4) );
 
 	if( m_pUI3DRender )
 	{
@@ -2211,14 +2211,14 @@ void CostumeCustomMakeConfirmWnd::OnRender()
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_13, "장비의 스킨을 변경하면" );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(1) );
 	kPrinter.PrintFullText( iXPos+TEXT_X, iYPos+TEXT_Y, TAT_CENTER );
 	kPrinter.ClearList();
 
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_13, "앞으로 거래소에서" );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(2) );
 	kPrinter.PrintFullText( iXPos+TEXT_X, iYPos+TEXT_Y+20, TAT_CENTER );
 
 	kPrinter.ClearList();
@@ -2226,9 +2226,9 @@ void CostumeCustomMakeConfirmWnd::OnRender()
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( TCT_DEFAULT_RED );
-	kPrinter.AddTextPiece( FONT_SIZE_13, "거래가 불가능" );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(3) );
 	kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_13, "합니다." );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(4) );
 	kPrinter.PrintFullText( iXPos+TEXT_X, iYPos+TEXT_Y+40, TAT_CENTER );
 
 	kPrinter.ClearList();
@@ -2376,18 +2376,18 @@ void CostumeCustomMakeCompleteWnd::OnRender()
 	if( m_bMale )
 	{
 		g_FontMgr.SetTextColor( TCT_DEFAULT_BLUE );
-		g_FontMgr.PrintText( iXPos + 103, iYPos + 170, FONT_SIZE_17, "남성" );
+		g_FontMgr.PrintText( iXPos + 103, iYPos + 170, FONT_SIZE_17, STR(1) );
 	}
 	else
 	{
 		g_FontMgr.SetTextColor( TCT_DEFAULT_RED );
-		g_FontMgr.PrintText( iXPos + 103, iYPos + 170, FONT_SIZE_17, "여성" );
+		g_FontMgr.PrintText( iXPos + 103, iYPos + 170, FONT_SIZE_17, STR(2) );
 	}
 
 	g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	g_FontMgr.PrintText( iXPos + 103, iYPos + 199, FONT_SIZE_13, "스킨 변경이 완료되었습니다" );
-	g_FontMgr.PrintText( iXPos + 103, iYPos + 217, FONT_SIZE_13, "변경한 스킨은 다른 스킨으로" );
-	g_FontMgr.PrintText( iXPos + 103, iYPos + 235, FONT_SIZE_13, "덮어쓰거나 삭제할 수 있습니다" );
+	g_FontMgr.PrintText( iXPos + 103, iYPos + 199, FONT_SIZE_13, STR(3) );
+	g_FontMgr.PrintText( iXPos + 103, iYPos + 217, FONT_SIZE_13, STR(4) );
+	g_FontMgr.PrintText( iXPos + 103, iYPos + 235, FONT_SIZE_13, STR(5) );
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -2467,21 +2467,21 @@ void CostumeCustomChangeConfirmWnd::OnRender()
 	if( m_bMale )
 	{
 		g_FontMgr.SetTextColor( TCT_DEFAULT_BLUE );
-		g_FontMgr.PrintText( iXPos + 103, iYPos + 74, FONT_SIZE_17, "남성" );
+		g_FontMgr.PrintText( iXPos + 103, iYPos + 74, FONT_SIZE_17, STR(1) );
 	}
 	else
 	{
 		g_FontMgr.SetTextColor( TCT_DEFAULT_RED );
-		g_FontMgr.PrintText( iXPos + 103, iYPos + 74, FONT_SIZE_17, "여성" );
+		g_FontMgr.PrintText( iXPos + 103, iYPos + 74, FONT_SIZE_17, STR(2) );
 	}
 
 	g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	g_FontMgr.PrintText( iXPos + 103, iYPos + 101, FONT_SIZE_13, "스킨을 변경하시겠습니까?" );
+	g_FontMgr.PrintText( iXPos + 103, iYPos + 101, FONT_SIZE_13, STR(3) );
 
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
-	g_FontMgr.PrintText( iXPos + 103, iYPos + 128, FONT_SIZE_13, "＊부적절한 이미지를 사용한 경우" );
-	g_FontMgr.PrintText( iXPos + 103, iYPos + 146, FONT_SIZE_13, "사전 통보없이 관리자에 의해" );
-	g_FontMgr.PrintText( iXPos + 103, iYPos + 164, FONT_SIZE_13, "제재 및 변경 될 수 있습니다" );
+	g_FontMgr.PrintText( iXPos + 103, iYPos + 128, FONT_SIZE_13, STR(4) );
+	g_FontMgr.PrintText( iXPos + 103, iYPos + 146, FONT_SIZE_13, STR(5) );
+	g_FontMgr.PrintText( iXPos + 103, iYPos + 164, FONT_SIZE_13, STR(6) );
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -2507,7 +2507,7 @@ void CostumeCustomDeleteWnd::SetSlotIndex( int iSlotIndex )
 
 	CostumeSlot kSlot;
 	if( !pCostume->GetCostumeSlot( m_iSlotIndex, kSlot ) )
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "존재하지 않는 코스튬입니다" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 	else
 	{
 		if( kSlot.m_dwMaleCustom > 0 && kSlot.m_dwFemaleCustom > 0 )
@@ -2537,7 +2537,7 @@ void CostumeCustomDeleteWnd::SetSlotIndex( int iSlotIndex )
 		}
 		else
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "스킨이 적용되지 않은 코스튬입니다" );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		}		
 	}
 }
@@ -2585,7 +2585,7 @@ void CostumeCustomDeleteWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 			if( !pEdit ) return;
 			if( strcmp( pEdit->GetText(), "코스튬스킨삭제" ) != 0 )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "[코스튬스킨삭제]를 입력하고 삭제를 누르세요" );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 				return;
 			}
 			/*
@@ -2607,7 +2607,7 @@ void CostumeCustomDeleteWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 			if( !pEdit ) return;
 			if( strcmp( pEdit->GetText(), "코스튬스킨삭제" ) != 0 )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "[코스튬스킨삭제]를 입력하고 삭제를 누르세요" );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 				return;
 			}
 			/*
@@ -2652,31 +2652,31 @@ void CostumeCustomDeleteWnd::OnRender()
 	g_FontMgr.SetAlignType( TAT_CENTER );
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	g_FontMgr.PrintText( iXPos + 103, iYPos + 53, FONT_SIZE_17, "코스스킨을" );
-	g_FontMgr.PrintText( iXPos + 103, iYPos + 74, FONT_SIZE_17, "삭제하시겠습니까?" );
+	g_FontMgr.PrintText( iXPos + 103, iYPos + 53, FONT_SIZE_17, STR(1) );
+	g_FontMgr.PrintText( iXPos + 103, iYPos + 74, FONT_SIZE_17, STR(2) );
 
 	g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	g_FontMgr.PrintText( iXPos + 103, iYPos + 180, FONT_SIZE_12, "[코스튬스킨삭제]를 입력하세요" );
+	g_FontMgr.PrintText( iXPos + 103, iYPos + 180, FONT_SIZE_12, STR(3) );
 	if( FindChildWnd( ID_DELETE_EDIT ) != ioEdit::m_pKeyFocusEdit )
 	{
 		g_FontMgr.SetTextColor( TCT_DEFAULT_LIGHTGRAY );
-		g_FontMgr.PrintText( iXPos + 103, iYPos + 201, FONT_SIZE_12, "코스튬스킨삭제 입력하세요" );
+		g_FontMgr.PrintText( iXPos + 103, iYPos + 201, FONT_SIZE_12, STR(4) );
 	}
 
 	ioComplexStringPrinter kPrinter;
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );	
 	kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_13, "*적용된 스킨이 삭제되면" );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(5) );
 	kPrinter.PrintFullText( iXPos + 103, iYPos + 98, TAT_CENTER );
 	kPrinter.ClearList();
 
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );	
 	kPrinter.SetTextColor( TCT_DEFAULT_GREEN );
-	kPrinter.AddTextPiece( FONT_SIZE_13, "원본 스킨" );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(6) );
 	kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_13, "으로 돌아옵니다" );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(7) );
 	kPrinter.PrintFullText( iXPos + 103, iYPos + 115, TAT_CENTER );
 	kPrinter.ClearList();
 
@@ -2685,20 +2685,20 @@ void CostumeCustomDeleteWnd::OnRender()
 	kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
 	kPrinter.AddTextPiece( FONT_SIZE_13, "*" );
 	kPrinter.SetTextColor( TCT_DEFAULT_BLUE );
-	kPrinter.AddTextPiece( FONT_SIZE_13, "남성" );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(8) );
 	kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_13, "과" );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(9) );
 	kPrinter.SetTextColor( TCT_DEFAULT_RED );
-	kPrinter.AddTextPiece( FONT_SIZE_13, " 여성" );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(10) );
 	kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_13, " 스킨 모두 적용시" );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(11) );
 	kPrinter.PrintFullText( iXPos + 103, iYPos + 132, TAT_CENTER );
 	kPrinter.ClearList();
 
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );	
 	kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_13, "따로 따로 삭제가 가능합니다" );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(12) );
 	kPrinter.PrintFullText( iXPos + 103, iYPos + 149, TAT_CENTER );
 	kPrinter.ClearList();
 }
@@ -2893,11 +2893,11 @@ void CostumeCustomGlobalDetailViewWnd::CreateCharacter( const CostumeEquipInfo &
 	m_pUI3DRender->SetProjection( FLOAT1, 6000.0f, 45.0f, fAspect );	
 		
 	if( sCostumeEquipInfo.m_Costume_Male_Custom > 0 && sCostumeEquipInfo.m_Costume_Female_Custom > 0 )
-		SafeSprintf( m_szSkinName, sizeof(m_szSkinName), "%s (남성,여성)", sCostumeInfo.m_szName.c_str() );
+		SafeSprintf( m_szSkinName, sizeof(m_szSkinName), STR(1), sCostumeInfo.m_szName.c_str() );
 	else if( sCostumeEquipInfo.m_Costume_Male_Custom > 0 )
-		SafeSprintf( m_szSkinName, sizeof(m_szSkinName), "%s (남성)", sCostumeInfo.m_szName.c_str() );
+		SafeSprintf( m_szSkinName, sizeof(m_szSkinName), STR(2), sCostumeInfo.m_szName.c_str() );
 	else if( sCostumeEquipInfo.m_Costume_Female_Custom > 0 )
-		SafeSprintf( m_szSkinName, sizeof(m_szSkinName), "%s (여성)", sCostumeInfo.m_szName.c_str() );
+		SafeSprintf( m_szSkinName, sizeof(m_szSkinName), STR(3), sCostumeInfo.m_szName.c_str() );
 
 	switch( nSubType )
 	{
@@ -3034,7 +3034,7 @@ void CostumeCustomGlobalDetailViewWnd::OnRender()
 	kPrinter.SetTextStyle( TS_OUTLINE_FULL_2X );
 	kPrinter.SetBkColor( 12, 66, 111 );	
 	kPrinter.SetTextColor( TCT_DEFAULT_WHITE );
-	kPrinter.AddTextPiece( FONT_SIZE_18, "스킨 파일 자세히보기 : " );
+	kPrinter.AddTextPiece( FONT_SIZE_18, STR(1) );
 
 	kPrinter.SetTextStyle( TS_OUTLINE_FULL_2X );
 	kPrinter.SetBkColor( 12, 66, 111 );	
@@ -3047,9 +3047,9 @@ void CostumeCustomGlobalDetailViewWnd::OnRender()
 	g_FontMgr.SetAlignType( TAT_CENTER );
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
-	g_FontMgr.PrintText( iXPos + 36, iYPos + 106, FONT_SIZE_12, "이동" );
-	g_FontMgr.PrintText( iXPos + 68, iYPos + 106, FONT_SIZE_12, "회전" );
-	g_FontMgr.PrintText( iXPos + 100, iYPos + 106, FONT_SIZE_12, "확대" );
+	g_FontMgr.PrintText( iXPos + 36, iYPos + 106, FONT_SIZE_12, STR(2) );
+	g_FontMgr.PrintText( iXPos + 68, iYPos + 106, FONT_SIZE_12, STR(3) );
+	g_FontMgr.PrintText( iXPos + 100, iYPos + 106, FONT_SIZE_12, STR(4) );
 
 	if( m_pUI3DRender )
 	{
@@ -3281,7 +3281,7 @@ void CostumeCustomThumbnailWnd::OnRender()
 				g_FontMgr.SetAlignType( TAT_CENTER );
 				g_FontMgr.SetBkColor( 0, 0, 0 );
 				g_FontMgr.SetTextColor( TCT_DEFAULT_WHITE );
-				g_FontMgr.PrintText( iXPos + 28, iYPos + 10, FONT_SIZE_11, "남성" );
+				g_FontMgr.PrintText( iXPos + 28, iYPos + 10, FONT_SIZE_11, STR(1) );
 			}
 		}
 		else
@@ -3294,7 +3294,7 @@ void CostumeCustomThumbnailWnd::OnRender()
 				g_FontMgr.SetAlignType( TAT_CENTER );
 				g_FontMgr.SetBkColor( 0, 0, 0 );
 				g_FontMgr.SetTextColor( TCT_DEFAULT_WHITE );
-				g_FontMgr.PrintText( iXPos + 28, iYPos + 10, FONT_SIZE_11, "여성" );
+				g_FontMgr.PrintText( iXPos + 28, iYPos + 10, FONT_SIZE_11, STR(2) );
 			}
 		}
 	}

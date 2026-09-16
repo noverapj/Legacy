@@ -1326,8 +1326,8 @@ void ioHouseMode::OnHouseCommand( SP2Packet &rkPacket )
 				kPrinter.SetTextColor( TCT_DEFAULT_VIOLET );
 				kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "%s", kRoomKickOutUser.c_str() );
 				kPrinter.SetTextColor( TCT_DEFAULT_RED );
-				kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "´Ô, °­Á¦ÅðÀå" );
-				g_ChatMgr.SetChatComplexString( "Á¤º¸", kPrinter );
+				kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), STR(1) );
+				g_ChatMgr.SetChatComplexString( STR(2), kPrinter );
 			}
 		}
 		break;

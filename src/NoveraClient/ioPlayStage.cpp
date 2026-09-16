@@ -5663,7 +5663,7 @@ void ioPlayStage::ProcessFunctionKey()
 					pBonusWnd = dynamic_cast<ExPCRoomSoldierBonusWnd*>( g_GUIMgr.FindWnd( EX_PCROOM_SOLDIER_BONUS_WND ) );
 				if( pBonusWnd && pBonusWnd->IsShow() )
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "PC방 보너스 용병 선택 중에는#용병을 교체 할 수 없습니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 					return;
 				}
 
@@ -13377,7 +13377,7 @@ void ioPlayStage::OnExitRoom( SP2Packet &rkPacket )
 	case EXIT_SURRENDER:
 		{
 			rkPacket >> szName;
-			g_ChatMgr.SetSystemMsg("%s님 도전포기", szName.c_str() );
+			g_ChatMgr.SetSystemMsg(STR(5), szName.c_str() );
 
 			TowerDefWnd *pUserGauge = dynamic_cast<TowerDefWnd*>( g_GUIMgr.FindWnd( TOWERDEF_USER_GAUGE_WND ));
 			if(pUserGauge)
@@ -13390,7 +13390,7 @@ void ioPlayStage::OnExitRoom( SP2Packet &rkPacket )
 	case EXIT_NEVER_SURRENDER:
 		{
 			rkPacket >> szName;
-			g_ChatMgr.SetSystemMsg("%s님 도전포기 취소", szName.c_str() );
+			g_ChatMgr.SetSystemMsg(STR(6), szName.c_str() );
 
 			TowerDefWnd *pUserGauge = dynamic_cast<TowerDefWnd*>( g_GUIMgr.FindWnd( TOWERDEF_USER_GAUGE_WND ));
 			if(pUserGauge)
@@ -14424,7 +14424,7 @@ void ioPlayStage::OnFishingState( SP2Packet &rkPacket )
 		{
 			if( pChar->IsOwnerChar() )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "낚시터를 찾을 수 없습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 			}
 
 			if( GetModeType() == MT_TRAINING )
@@ -14437,7 +14437,7 @@ void ioPlayStage::OnFishingState( SP2Packet &rkPacket )
 		{
 			if( pChar->IsOwnerChar() )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "낚시터를 찾을 수 없습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 			}
 
 			if( GetModeType() == MT_TRAINING )
@@ -16934,23 +16934,23 @@ void ioPlayStage::OnEtcItemBuyResult( SP2Packet &rkPacket )
 	}
 	else if( iResult == ETCITEM_BUY_SPECIAL_SHOP_CLOSE )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "기간한정 상품 판매기간이 종료 되었습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(15) );
 	}
 	else if( iResult == ETCITEM_BUY_SPECIAL_SHOP_SOLD_OUT )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "해당 상품은 매진 되었습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(16) );
 	}
 	else if( iResult == ETCITEM_BUY_SPECIAL_SHOP_BUY_LIMIT )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "1인 한정구매 제한 갯수를 초과 하였습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(17) );
 	}
 	else if( iResult == ETCITEM_BUY_NOT_GUILD_USER )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "길드 아이템은 길드 가입 유저만# 구입 할 수 있습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(18) );
 	}
 	else if( iResult == ETCITEM_BUY_GUILD_ROOM_DISABLE )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "길드 아이템은 길드 본부가 활성화 되어야# 구입 할 수 있습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(19) );
 	}
 	else if( iResult == ETCITEM_BUY_BLOCK )
 	{
@@ -16979,11 +16979,11 @@ void ioPlayStage::OnEtcItemBuyResult( SP2Packet &rkPacket )
 	}
 	else if( iResult == ETCITEM_BUY_PERSONAL_HQ_DISABLE )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "개인본부 아이템은 개인본부가 활성화 되어야# 구입 할 수 있습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(20) );
 	}
 	else if( iResult == ETCITEM_BUY_BILLING_SHORTAGE_REAL_CASH )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "해당 아이템은 보너스 골드로# 구매가 불가능한 상품입니다.." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(21) );
 	}
 }
 
@@ -17169,9 +17169,9 @@ void ioPlayStage::OnExtraItemBuyResult( SP2Packet &rkPacket )
 					ioHashString sSubIcon = pItem->GetSubIconName();
 					ioHashString sTitle= pItem->GetName();
 					ioHashStringVec sDescVec;
-					sDescVec.push_back( "[장비슬롯확장]이 필요합니다." );
-					sDescVec.push_back( "부족한 장비 슬롯을 위해 구입해주세요." );
-					sDescVec.push_back( "상점 - 특별에서 구입하실 수 있습니다." );
+					sDescVec.push_back( STR(12) );
+					sDescVec.push_back( STR(13) );
+					sDescVec.push_back( STR(14) );
 					if( pPurchaseLeedWnd->SetInfo( ioEtcItem::EIT_ETC_EXTRAITEM_SLOT_EXTEND, sIcon, sSubIcon, sTitle, sDescVec ) )
 						pPurchaseLeedWnd->ShowWnd();
 				}
@@ -17768,7 +17768,7 @@ void ioPlayStage::OnMedalItemChange( SP2Packet &rkPacket )
 	if ( iResult == MEDALITEM_ALREADY_EQUIPPED )
 	{
 		if ( szPublicID == g_MyInfo.GetPublicID() )
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "이미 장착 중입니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 		return;
 	}
 
@@ -17838,7 +17838,7 @@ void ioPlayStage::OnCustomMedalItemChange( SP2Packet &rkPacket )
 	if ( iResult == MEDALITEM_ALREADY_EQUIPPED )
 	{
 		if ( szPublicID == g_MyInfo.GetPublicID() )
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "이미 장착 중입니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 		return;
 	}
 	if( iResult != MEDALITEM_CHANGE_OK )
@@ -24133,7 +24133,7 @@ void ioPlayStage::OnBattleRoomJoin( SP2Packet &rkPacket )
 			if( bServerMoveType == RET_MOVE_PLAZA_TO_ROOM || bServerMoveType == RET_MOVE_ROOM_TO_ROOM )
 				g_GUIMgr.SetReserveMsgBox( MB_BATTLEROOM_JOIN_NO_CHALLENGER );
 			else
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "도전자를 받지 않습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(12) );
 		}
 		break;
 	}
@@ -24147,7 +24147,7 @@ void ioPlayStage::OnBattleLeaveUser( SP2Packet &rkPacket )
 	if( pNode && pNode->IsLogSend() && g_BattleRoomMgr.IsTournamentModeType() )
 	{
 		char szLog[MAX_PATH];
-		sprintf( szLog, "[대회로그] 방 나감 패킷 받음 - %s", szLeaveUser.c_str() );
+		sprintf( szLog, STR(4), szLeaveUser.c_str() );
 
 		SP2Packet kPacket2( LUPK_LOG );
 		kPacket2 << "TournamentLog";  // 로그 파일 타입
@@ -24297,8 +24297,8 @@ void ioPlayStage::OnMacroCmdByKickOut( SP2Packet &rkPacket )
 				kPrinter.SetTextColor( TCT_DEFAULT_VIOLET );
 				kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "%s", szPartyName.c_str() );
 				kPrinter.SetTextColor( g_ChatMgr.GetChatColor() );
-				kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), "전투방에서 강제퇴장.");
-				g_ChatMgr.SetChatComplexString( "정보", kPrinter );
+				kPrinter.AddTextPiece( g_ChatMgr.GetChatFontScale(), STR(5));
+				g_ChatMgr.SetChatComplexString( STR(6), kPrinter );
 				g_BattleRoomMgr.SetKickOutRoom( g_BattleRoomMgr.GetIndex() );		
 				
 				if( g_BattleRoomMgr.IsBattleRoom() )
@@ -24324,7 +24324,7 @@ void ioPlayStage::OnMacroCmdByKickOut( SP2Packet &rkPacket )
 						TCPNetwork::SendToServer( kPacket );
 
 						if ( Setting::UseVoiceChat() )
-							g_ChatMgr.SetSystemMsg( "광장 유저와 음성채팅상태로 변경." );
+							g_ChatMgr.SetSystemMsg( STR(7) );
 
 #ifndef SHIPPING
 						LOG.PrintTimeAndLog( 0, "%s CTPK_VOICE_INFO_USER | ID_VOICE_ON_ADD_TABLE_REQUEST OR ID_VOICE_OFF_ADD_TABLE_REQUEST | %s", __FUNCTION__, szEmptyString.c_str() );
@@ -24333,7 +24333,7 @@ void ioPlayStage::OnMacroCmdByKickOut( SP2Packet &rkPacket )
 					else if( m_bOpenPlaza )
 					{
 						if ( Setting::UseVoiceChat() )
-							g_ChatMgr.SetSystemMsg( "관리자 없는 광장에서는 음성채팅 불가능." );
+							g_ChatMgr.SetSystemMsg( STR(8) );
 					}
 				}
 
@@ -24557,7 +24557,7 @@ void ioPlayStage::OnShuffleRoomInfo( SP2Packet &rkPacket )
 	bool bFirstEnter = g_ShuffleRoomMgr.ApplyShuffleRoomInfo( rkPacket, bShuffleRoom );
 
 	if ( bFirstEnter && Setting::UseVoiceChat() )
-		g_ChatMgr.SetSystemMsg( "전투방 유저와 음성채팅상태로 변경." );
+		g_ChatMgr.SetSystemMsg( STR(2) );
 
 	if( bFirstEnter )
 	{
@@ -24933,7 +24933,7 @@ void ioPlayStage::OnBattleRoomCmd( SP2Packet &rkPacket )
 			if( pNode && pNode->IsLogSend() && g_BattleRoomMgr.IsTournamentModeType() )
 			{
 				char szLog[MAX_PATH];
-				sprintf( szLog, "[대회로그] %s : 부전승으로 인한 다음라운드 진출", g_MyInfo.GetPublicID().c_str() );
+				sprintf( szLog, STR(14), g_MyInfo.GetPublicID().c_str() );
 
 				SP2Packet kPacket2( LUPK_LOG );
 				kPacket2 << "TournamentLog";  // 로그 파일 타입
@@ -24968,7 +24968,7 @@ void ioPlayStage::OnBattleRoomCmd( SP2Packet &rkPacket )
 			if( pNode && pNode->IsLogSend() && g_BattleRoomMgr.IsTournamentModeType() )
 			{
 				char szLog[MAX_PATH];
-				sprintf( szLog, "[대회로그] %s : 치트 유저로 의심되어 룸 이탈 처리", g_MyInfo.GetPublicID().c_str() );
+				sprintf( szLog, STR(15), g_MyInfo.GetPublicID().c_str() );
 
 				SP2Packet kPacket2( LUPK_LOG );
 				kPacket2 << "TournamentLog";  // 로그 파일 타입
@@ -25000,7 +25000,7 @@ void ioPlayStage::OnBattleRoomCmd( SP2Packet &rkPacket )
 			if( pNode && pNode->IsLogSend() && g_BattleRoomMgr.IsTournamentModeType() )
 			{
 				char szLog[MAX_PATH];
-				sprintf( szLog, "[대회로그] %s - 상대가 존재 하지 않아 예비엔트리 선정 대기", g_MyInfo.GetPublicID().c_str() );
+				sprintf( szLog, STR(16), g_MyInfo.GetPublicID().c_str() );
 
 				SP2Packet kPacket2( LUPK_LOG );
 				kPacket2 << "TournamentLog";  // 로그 파일 타입
@@ -25031,7 +25031,7 @@ void ioPlayStage::OnBattleRoomCmd( SP2Packet &rkPacket )
 			if( pNode && pNode->IsLogSend() && g_BattleRoomMgr.IsTournamentModeType() )
 			{
 				char szLog[MAX_PATH];
-				sprintf( szLog, "[대회로그] %s : 예비엔트리 선정된 팀 : %d", g_MyInfo.GetPublicID().c_str(), dwNewTeam );
+				sprintf( szLog, STR(17), g_MyInfo.GetPublicID().c_str(), dwNewTeam );
 
 				SP2Packet kPacket2( LUPK_LOG );
 				kPacket2 << "TournamentLog";  // 로그 파일 타입
@@ -27424,7 +27424,7 @@ void ioPlayStage::OnGrowthAllLevelDown( SP2Packet &rkPacket )
 	}
 	else if( iResult == GROWTH_ALL_LEVEL_DOWN_FAIL )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "예외 오류가 발생하였습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 	}
 	else if( iResult == GROWTH_ALL_LEVEL_DOWN_TIME_GROWTH )
 	{
@@ -27432,12 +27432,12 @@ void ioPlayStage::OnGrowthAllLevelDown( SP2Packet &rkPacket )
 		kPrinter[0].SetTextStyle( TS_NORMAL );
 		kPrinter[0].SetBkColor( 0, 0, 0 );	
 		kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-		kPrinter[0].AddTextPiece( FONT_SIZE_13, "선택하신 용병이 시간육성중이라 복구가 불가능합니다." );
+		kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(5) );
 
 		kPrinter[1].SetTextStyle( TS_NORMAL );
 		kPrinter[1].SetBkColor( 0, 0, 0 );	
 		kPrinter[1].SetTextColor( TCT_DEFAULT_DARKGRAY );
-		kPrinter[1].AddTextPiece( FONT_SIZE_13, "시간육성을 취소 또는 완료후 다시 시도하여 주십시오." );
+		kPrinter[1].AddTextPiece( FONT_SIZE_13, STR(6) );
 
 		g_GUIMgr.SetPrevMsgListBox( NULL, MB_OK, NULL, kPrinter );
 	}
@@ -28025,7 +28025,7 @@ void ioPlayStage::OnPresentBuy( SP2Packet &rkPacket )
 	}
 	else if( iResult == PRESENT_BUY_DISABLE_SEND )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "해당 상품은 선물할 수 없습니다" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(11) );
 	}
 	else if( iResult == PRESENT_BUY_SUCCESS )
 	{
@@ -28474,19 +28474,19 @@ void ioPlayStage::OnItemCompound( SP2Packet &rkPacket )
 				// 데이터 삭제
 				if( !g_MyInfo.DeleteMedalItem( iItemIndex1, 0 ) )
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "%s 메달 삭제 예외오류, %d", __FUNCTION__, iItemIndex1 );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(9), __FUNCTION__, iItemIndex1 );
 					return;
 				}
 
 				if( !g_MyInfo.DeleteMedalItem( iItemIndex2, 0 ) )
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "%s 메달 삭제 예외오류, %d", __FUNCTION__, iItemIndex2 );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(9), __FUNCTION__, iItemIndex2 );
 					return;
 				}
 
 				if( !g_MyInfo.DeleteMedalItem( iItemIndex3, 0 ) )
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "%s 메달 삭제 예외오류, %d", __FUNCTION__, iItemIndex3 );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(9), __FUNCTION__, iItemIndex3 );
 					return;
 				}
 			}
@@ -28497,19 +28497,19 @@ void ioPlayStage::OnItemCompound( SP2Packet &rkPacket )
 				// 데이터 삭제
 				if( !g_MyInfo.DeleteCostume( iItemIndex1 ) )
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "%s 코스튬 삭제 예외오류 %d", __FUNCTION__, iItemIndex1 );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(10), __FUNCTION__, iItemIndex1 );
 					return;
 				}
 
 				if( !g_MyInfo.DeleteCostume( iItemIndex2 ) )
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "%s 코스튬 삭제 예외오류 %d", __FUNCTION__, iItemIndex2 );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(10), __FUNCTION__, iItemIndex2 );
 					return;
 				}
 
 				if( !g_MyInfo.DeleteCostume( iItemIndex3 ) )
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "%s 코스튬 삭제 예외오류 %d", __FUNCTION__, iItemIndex3 );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(10), __FUNCTION__, iItemIndex3 );
 					return;
 				}
 			}
@@ -31793,7 +31793,7 @@ void ioPlayStage::OnExtraItemDisassembleResult( SP2Packet &rkPacket )
 		// 제거
 		if( !g_MyInfo.DeleteExtraItem( iSlotIndex ) )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "장비분해 예외오류1" );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(6) );
 			return;
 		}
 
@@ -31824,7 +31824,7 @@ void ioPlayStage::OnExtraItemDisassembleResult( SP2Packet &rkPacket )
 			char szKey[MAX_PATH] = "";
 			ioEtcItem *pEtcItem = g_EtcItemMgr.FindEtcItem( iGainCode );
 			if( pEtcItem )
-				sprintf_e( szKey, "%s %s개", pEtcItem->GetName().c_str(), szConvertNum );
+				SafeSprintf( szKey, sizeof(szKey), STR(7), pEtcItem->GetName().c_str(), szConvertNum );
 			
 			kTitle2.AddTextPiece( FONT_SIZE_17, szKey );
 
@@ -31834,7 +31834,7 @@ void ioPlayStage::OnExtraItemDisassembleResult( SP2Packet &rkPacket )
 			kDesc1.SetTextStyle( TS_NORMAL );
 			kDesc1.SetBkColor( 0, 0, 0 );	
 			kDesc1.SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kDesc1.AddTextPiece( FONT_SIZE_12, "★ [%s +%d] 분해 완료.", szItemName.c_str(), iItemReinforce );
+			kDesc1.AddTextPiece( FONT_SIZE_12, STR(8), szItemName.c_str(), iItemReinforce );
 			vDesc.push_back( kDesc1 );
 
 			ioComplexStringPrinter kDesc2;
@@ -31843,7 +31843,7 @@ void ioPlayStage::OnExtraItemDisassembleResult( SP2Packet &rkPacket )
 			kDesc2.SetTextColor( TCT_DEFAULT_DARKGRAY );
 			
 			if( pEtcItem )
-				sprintf_e( szKey, "★ %s %s개 지급.", pEtcItem->GetName().c_str(), szConvertNum );
+				SafeSprintf( szKey, sizeof(szKey), STR(9), pEtcItem->GetName().c_str(), szConvertNum );
 			
 			kDesc2.AddTextPiece( FONT_SIZE_12, szKey );			
 			vDesc.push_back( kDesc2 );
@@ -31857,7 +31857,7 @@ void ioPlayStage::OnExtraItemDisassembleResult( SP2Packet &rkPacket )
 		int iNum;
 		rkPacket >> iNum;
 
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "장비분해 실패 : %d", iNum );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(10), iNum );
 	}
 }
 
@@ -31899,7 +31899,7 @@ void ioPlayStage::OnMedalItemSellResult( SP2Packet &rkPacket )
 
 		if( !g_MyInfo.DeleteMedalItem( iMedalIndex, 0 ) )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "메달 팔기 예외오류, %d", iMedalIndex );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5), iMedalIndex );
 			return;
 		}
 
@@ -31933,14 +31933,14 @@ void ioPlayStage::OnMedalItemSellResult( SP2Packet &rkPacket )
 			kDesc1.SetTextStyle( TS_NORMAL );
 			kDesc1.SetBkColor( 0, 0, 0 );	
 			kDesc1.SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kDesc1.AddTextPiece( FONT_SIZE_12, "%s 판매 완료.", szItemName.c_str() );
+			kDesc1.AddTextPiece( FONT_SIZE_12, STR(6), szItemName.c_str() );
 			vDesc.push_back( kDesc1 );
 
 			ioComplexStringPrinter kDesc2;
 			kDesc2.SetTextStyle( TS_NORMAL );
 			kDesc2.SetBkColor( 0, 0, 0 );
 			kDesc2.SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kDesc2.AddTextPiece( FONT_SIZE_12, "%s페소가 지급되었습니다.", szConvertNum );
+			kDesc2.AddTextPiece( FONT_SIZE_12, STR(7), szConvertNum );
 			vDesc.push_back( kDesc2 );
 
 			pInvenWnd->ShowItemRecvSellInfoWnd( ItemRecvSellInfoWnd::ITEM_SELL, ItemRecvSellInfoWnd::ITEM_MEDAL, szIconName, szSubIconName, vTitle, vDesc, -1, 0, false, false, 0 );
@@ -31953,7 +31953,7 @@ void ioPlayStage::OnMedalItemSellResult( SP2Packet &rkPacket )
 		int iNum;
 		rkPacket >> iNum;
 
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "메달 팔기 실패 (%d)", iNum );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(8), iNum );
 	}
 }
 
@@ -31997,7 +31997,7 @@ void ioPlayStage::OnCustomMedalItemSellResult( SP2Packet &rkPacket )
 
 		if( !g_MyInfo.DeleteMedalItem( iMedalIndex, iCustomIndex ) )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "메달 팔기 예외오류, %d", iMedalIndex );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5), iMedalIndex );
 			return;
 		}
 
@@ -32031,14 +32031,14 @@ void ioPlayStage::OnCustomMedalItemSellResult( SP2Packet &rkPacket )
 			kDesc1.SetTextStyle( TS_NORMAL );
 			kDesc1.SetBkColor( 0, 0, 0 );	
 			kDesc1.SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kDesc1.AddTextPiece( FONT_SIZE_12, "%s 판매 완료.", szItemName.c_str() );
+			kDesc1.AddTextPiece( FONT_SIZE_12, STR(6), szItemName.c_str() );
 			vDesc.push_back( kDesc1 );
 
 			ioComplexStringPrinter kDesc2;
 			kDesc2.SetTextStyle( TS_NORMAL );
 			kDesc2.SetBkColor( 0, 0, 0 );
 			kDesc2.SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kDesc2.AddTextPiece( FONT_SIZE_12, "%s페소가 지급되었습니다.", szConvertNum );
+			kDesc2.AddTextPiece( FONT_SIZE_12, STR(7), szConvertNum );
 			vDesc.push_back( kDesc2 );
 
 			pInvenWnd->ShowItemRecvSellInfoWnd( ItemRecvSellInfoWnd::ITEM_SELL, ItemRecvSellInfoWnd::ITEM_MEDAL, szIconName, szSubIconName, vTitle, vDesc, -1, 0, false, false, 0 );
@@ -32050,7 +32050,7 @@ void ioPlayStage::OnCustomMedalItemSellResult( SP2Packet &rkPacket )
 		int iNum;
 		rkPacket >> iNum;
 
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "메달 팔기 실패 (%d)", iNum );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(8), iNum );
 	}
 }
 
@@ -32063,10 +32063,10 @@ void ioPlayStage::OnSendPresentByEtcItemFail( SP2Packet &rkPacket )
 	switch( iLog )
 	{
 	case INCORRECT_ITEM:
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "보낼 수 없는 아이템입니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		break;
 	case INCORRECT_USER:
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "잘못된 닉네임입니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 		break;
 	}
 }
@@ -32188,7 +32188,7 @@ void ioPlayStage::OnReinforceExtraItem( SP2Packet &rkPacket )
 			int iErrorNum;
 			rkPacket >> iErrorNum;
 
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "장비 강화중 오류가 발생하였습니다. : %d", iErrorNum );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2), iErrorNum );
 		}
 		break;
 	}
@@ -32251,17 +32251,17 @@ void ioPlayStage::OnSelectExtraGashaponResult( SP2Packet &rkPacket )
 		return; ///////////////////////////////////////////////////////////////
 	case BUY_SELECT_EXTRA_GASHAPON_EXCEPTION:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "예외 오류가 발생되었습니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(12) );
 		}
 		break;
 	case BUY_SELECT_EXTRA_GASHAPON_BILLING_WAIT:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "골드 처리중입니다.#잠시만 기다려 주세요." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(13) );
 		}
 		break;
 	case BUY_SELECT_EXTRA_GASHAPON_EXCESS_MAX:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "해당 상품을 구입하면#이번달 최대 골드 사용 한도를 초과합니다.#(구매 한도:청소년 55,000원, 성인 330,000원)# #다음달 부터 상품 구매가 가능합니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(14) );
 		}
 		break;
 	case BUY_SELECT_EXTRA_GASHAPON_BILLING_WANT_OF_CASH:
@@ -32271,7 +32271,7 @@ void ioPlayStage::OnSelectExtraGashaponResult( SP2Packet &rkPacket )
 		break;
 	case BUY_SELECT_EXTRA_GASHAPON_BILLING_DISCONNECT:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "골드 처리가 불가능합니다.#잠시만 기다려 주세요." );	
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(15) );	
 		}
 		break;
 	case BUY_SELECT_EXTRA_GASHAPON_BILLING_FAIL:
@@ -32544,7 +32544,7 @@ void ioPlayStage::OnSubscriptionRetrCheck( SP2Packet &rkPacket )
 		break;
 	case SUBSCRIPTION_RETR_CHECK_NONE_INDEX:
 	case SUBSCRIPTION_RETR_CHECK_NONE_ITEM:
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "상품이 존재하지 않습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		break;
 	case SUBSCRIPTION_RETR_CHECK_LIMIT_DATE:
 		{
@@ -32572,7 +32572,7 @@ void ioPlayStage::OnSubscriptionRetrCheck( SP2Packet &rkPacket )
 		}
 		break;
 	case SUBSCRIPTION_RETR_NOT_SUPPORTED:
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "청약철회 지원 안함" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 		break;
 	}
 }
@@ -32612,17 +32612,17 @@ void ioPlayStage::OnSelectGashaponResult( SP2Packet &rkPacket )
 		{
 		case BUY_SELECT_GASHAPON_EXCEPTION:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "예외 오류가 발생되었습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(7) );
 			}
 			break;
 		case BUY_SELECT_GASHAPON_BILLING_WAIT:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "골드 처리중입니다.#잠시만 기다려 주세요." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(8) );
 			}
 			break;
 		case BUY_SELECT_GASHAPON_EXCESS_MAX:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "해당 상품을 구입하면#이번달 최대 골드 사용 한도를 초과합니다.#(구매 한도:청소년 55,000원, 성인 330,000원)# #다음달 부터 상품 구매가 가능합니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(9) );
 			}
 			break;
 		case BUY_SELECT_GASHAPON_BILLING_WANT_OF_CASH:
@@ -32632,7 +32632,7 @@ void ioPlayStage::OnSelectGashaponResult( SP2Packet &rkPacket )
 			break;
 		case BUY_SELECT_GASHAPON_BILLING_DISCONNECT:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "골드 처리가 불가능합니다.#잠시만 기다려 주세요." );	
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(10) );	
 			}
 			break;
 		case BUY_SELECT_GASHAPON_BILLING_FAIL:
@@ -32643,7 +32643,7 @@ void ioPlayStage::OnSelectGashaponResult( SP2Packet &rkPacket )
 				if( bBillingError )
 					rkPacket >> sBillingError;
 
-				ioHashString sErrorMent = "골드 처리가 실패하였습니다.#관리자에게 문의하세요.";
+				ioHashString sErrorMent = STR(11);
 				if( !bBillingError )
 				{
 					g_GUIMgr.SetMsgBox( MB_OK, NULL, sErrorMent.c_str() );
@@ -32668,7 +32668,7 @@ void ioPlayStage::OnSelectGashaponResult( SP2Packet &rkPacket )
 			break;
 		case BUY_SELECT_GASHAPON_LIMITED_COUNT_OVER:	// 2020-03-26 가차 선택 제한
 			{
-				ioHashString sErrorMent = "처리가 실패하였습니다.#관리자에게 문의하세요.";
+				ioHashString sErrorMent = STR(12);
 				g_GUIMgr.SetMsgBox( MB_OK, NULL, sErrorMent.c_str() );
 			}
 			break;
@@ -32735,7 +32735,7 @@ void ioPlayStage::OnSelectGashaponsUseResult( SP2Packet &rkPacket )
 			pWnd->SetResult( ReusltPresent );
 	}
 	else
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "예외 오류가 발생되었습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 }
 
 void ioPlayStage::OnBingoType( SP2Packet &rkPacket )
@@ -32981,29 +32981,29 @@ void ioPlayStage::OnPowerUpInfo( SP2Packet &rkPacket )
 	case POWER_DOWN_NO_TARGET:
 		{
 			if( eTargetType == PUTT_CHAR )
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "강화 할 용병을 가지고 있지 않습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(7) );
 			else
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "강화 할 아이템을 가지고 있지 않습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(8) );
 		}
 		break;
 	case POWER_UP_DISABLE_TARGET:
 	case POWER_DOWN_DISABLE_TARGET:
 		{
 			if( eTargetType == PUTT_CHAR )
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "강화 할 수 없는 용병입니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(9) );
 			else
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "강화 할 수 없는 아이템입니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(10) );
 		}
 		break;	
 	case POWER_UP_MATERIAL_SHORTAGE:
 	case POWER_DOWN_MATERIAL_SHORTAGE:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "소울 스톤이 부족합니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(11) );
 		}
 		break;
 	default:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "알 수없는 오류 : %s, State : %d", __FUNCTION__, iState );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(12), __FUNCTION__, iState );
 		}
 	}
 	if(iState != POWER_UP_SUCCESS)
@@ -33387,7 +33387,7 @@ void ioPlayStage::OnSuccessionRevengeRequest( SP2Packet &rkPacket )
 	else if ( iFlag == REVENGE_REJECT )
 	{
 		g_GUIMgr.HideWnd( SUCCESSION_BATTLE_REQUEST_WND );
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "상대방이 거절하였습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 	}
 }
 

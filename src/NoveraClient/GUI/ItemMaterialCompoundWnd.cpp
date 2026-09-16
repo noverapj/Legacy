@@ -874,7 +874,7 @@ void ItemMaterialCompoundWnd::GetMaterialList( vNewShopPullDownItem &rkList )
 			return;
 
 		NewShopPullDownItem kItem;
-		wsprintf_e( szCnt, "%d°³", iHaveCount );
+		SafeSprintf( szCnt, sizeof(szCnt), STR(1), iHaveCount );
 
 		kItem.m_dwTextColor = TCT_DEFAULT_GREEN;
 		kItem.m_dwCntTextColor = TCT_DEFAULT_GREEN;
@@ -897,7 +897,7 @@ void ItemMaterialCompoundWnd::GetMaterialList( vNewShopPullDownItem &rkList )
 
 		kItem.m_dwTextColor = TCT_DEFAULT_GREEN;
 		kItem.m_dwCntTextColor = TCT_DEFAULT_GREEN;
-		kItem.m_szName      = "Æä¼Ò";
+		kItem.m_szName      = STR(2);
 		kItem.m_iMagicCode	= 0;
 		kItem.m_bCount = true;
 		kItem.m_szCnt = szCnt;

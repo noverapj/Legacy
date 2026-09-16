@@ -238,19 +238,19 @@ void ioMissionManager::OnCompensationReceive( SP2Packet &rkPacket )
 	}
 	else if ( iType == COMPENSATION_UNKNOWN_MISSION )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "존재하지 않는 미션입니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 	}
 	else if ( iType == COMPENSATION_PROGRESS )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "보상받기를 기다리고 있는 미션입니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 	}
 	else if ( iType == COMPENSATION_ALREADY_RECV )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "이미 받은 보상입니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 	}
 	else if ( iType == COMPENSATION_EXCEPTION )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "제외된 보상입니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 	}
 }
 

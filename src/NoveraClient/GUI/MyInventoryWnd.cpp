@@ -2211,7 +2211,7 @@ bool InventoryItemWnd::SetSubscriptionItemInfo( InventoryItemInfo &rkInfo )
 	ShowChildWnd( ID_ICON_BTN );
 	m_dwCurIconActionID = INVENTORY_ACTION_DETAIL;
 
-	m_szCurActionText = "자세히보기";
+	m_szCurActionText = STR(1);
 	m_pCurActionImg = m_pLeftImg;
 
 	m_iCurXGap = 2;
@@ -2307,7 +2307,7 @@ bool InventoryItemWnd::SetSubscriptionItemInfo( InventoryItemInfo &rkInfo )
 
 	char szUseInfo[MAX_PATH]="";
 	if( sPresentType == PRESENT_MEDALITEM )
-		SafeSprintf( szUseInfo, sizeof( szUseInfo ), "[메달] %s",  szValueText2.c_str() );
+		SafeSprintf( szUseInfo, sizeof( szUseInfo ), STR(2),  szValueText2.c_str() );
 	else
 		StringCbCopy( szUseInfo, sizeof( szUseInfo ), szValueText2.c_str() );
 	m_szDescArray[1].AddTextPiece( FONT_SIZE_11, szUseInfo );
@@ -2316,7 +2316,7 @@ bool InventoryItemWnd::SetSubscriptionItemInfo( InventoryItemInfo &rkInfo )
 	m_szDescArray[2].SetTextStyle( TS_NORMAL );
 	m_szDescArray[2].SetBkColor( 0, 0, 0 );	
 	m_szDescArray[2].SetTextColor( TCT_DEFAULT_GRAY );
-	m_szDescArray[2].AddTextPiece( FONT_SIZE_11, "구매한 아이템" );
+	m_szDescArray[2].AddTextPiece( FONT_SIZE_11, STR(3) );
 
 	return true;
 }
@@ -2401,9 +2401,9 @@ bool InventoryItemWnd::SetCostumeInfo()
 	m_szDescArray[2].SetTextColor( TCT_DEFAULT_GRAY );
 
 	if( sCostumeInfo.m_nEnableClass > 0 )
-		m_szDescArray[2].AddTextPiece( FONT_SIZE_11, "%s 전용", g_MyInfo.GetClassName( sCostumeInfo.m_nEnableClass ) );
+		m_szDescArray[2].AddTextPiece( FONT_SIZE_11, STR(1), g_MyInfo.GetClassName( sCostumeInfo.m_nEnableClass ) );
 	else
-		m_szDescArray[2].AddTextPiece( FONT_SIZE_11, "장착제한없음" );
+		m_szDescArray[2].AddTextPiece( FONT_SIZE_11, STR(2) );
 
 	return true;
 }
@@ -3903,7 +3903,7 @@ void InventorySoldierItemWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 
 			if( Help::IsMonsterDungeonMode( ioPlayMode::GetModeType() ) )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "육성할 수 없는 모드입니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(17) );
 				return;
 			}
 
@@ -3967,7 +3967,7 @@ void InventorySoldierItemWnd::BeforeRenderDesc()
 		if( szPowerupName.IsEmpty() )		
 			SafeSprintf( szText, sizeof( szText ), STR(2) );		
 		else
-			SafeSprintf( szText, sizeof( szText ), "%s(체험)", szPowerupName.c_str() );
+			SafeSprintf( szText, sizeof( szText ), STR(11), szPowerupName.c_str() );
 	}
 	else if( g_MyInfo.IsCharExerciseStyle( iCharArray, EXERCISE_PCROOM ) && !g_MyInfo.IsUserEvent() )
 	{
@@ -3978,14 +3978,14 @@ void InventorySoldierItemWnd::BeforeRenderDesc()
 		if( szPowerupName.IsEmpty() )
 			SafeSprintf( szText, sizeof( szText ), STR(10) );
 		else
-			SafeSprintf( szText, sizeof( szText ), "%s(프리데이)", szPowerupName.c_str() );
+			SafeSprintf( szText, sizeof( szText ), STR(12), szPowerupName.c_str() );
 	}
 	else if( g_MyInfo.IsCharExerciseStyle( iCharArray, EXERCISE_EVENT ) )
 	{
 		if( szPowerupName.IsEmpty() )
 			SafeSprintf( szText, sizeof( szText ), STR(4) );
 		else
-			SafeSprintf( szText, sizeof( szText ), "%s(이벤트)", szPowerupName.c_str() );
+			SafeSprintf( szText, sizeof( szText ), STR(13), szPowerupName.c_str() );
 	}
 	else
 	{
@@ -4001,21 +4001,21 @@ void InventorySoldierItemWnd::BeforeRenderDesc()
 			if( szPowerupName.IsEmpty() )
 				SafeSprintf( szText, sizeof( szText ), STR(5), iMinute );
 			else			
-				SafeSprintf( szText, sizeof( szText ), "%s(%d분)", szPowerupName.c_str(), iMinute );	
+				SafeSprintf( szText, sizeof( szText ), STR(14), szPowerupName.c_str(), iMinute );	
 		}
 		else if( iMinute == 0 )
 		{
 			if( szPowerupName.IsEmpty() )
 				SafeSprintf( szText, sizeof( szText ), STR(6), iHour );
 			else
-				SafeSprintf( szText, sizeof( szText ), "%s(%d시간)", szPowerupName.c_str(), iHour );
+				SafeSprintf( szText, sizeof( szText ), STR(15), szPowerupName.c_str(), iHour );
 		}
 		else
 		{
 			if( szPowerupName.IsEmpty() )
 				SafeSprintf( szText, sizeof( szText ), STR(7), iHour, iMinute );
 			else
-				SafeSprintf( szText, sizeof( szText ), "%s(%d시간 %d분)", szPowerupName.c_str(), iHour, iMinute );
+				SafeSprintf( szText, sizeof( szText ), STR(16), szPowerupName.c_str(), iHour, iMinute );
 		}
 	}
 
@@ -4825,7 +4825,7 @@ void MyInventoryWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 			{
 				if( m_pPlayStage && m_pPlayStage->GetModeType() != MT_TRAINING && m_pPlayStage->GetModeType() != MT_HEADQUARTERS && m_pPlayStage->GetModeType() != MT_HOUSE )
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "골드충전은 광장/훈련소/본부에서만 가능합니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 					return;
 				}
 			}
@@ -7927,9 +7927,9 @@ void MyInventoryWnd::OnRenderAfterChild()
 		kPrinter.SetTextColor( 130, 198, 255 );	
 		ioEtcItem *pEtcItem = g_EtcItemMgr.FindEtcItem( ioEtcItem::EIT_ETC_CLOVER );
 		if( pEtcItem )
-			kPrinter.AddTextPiece( FONT_SIZE_11, "%s : %s개", pEtcItem->GetName().c_str(), szClover );
+			kPrinter.AddTextPiece( FONT_SIZE_11, STR(5), pEtcItem->GetName().c_str(), szClover );
 		else
-			kPrinter.AddTextPiece( FONT_SIZE_11, "클로버 : %s개", szClover );
+			kPrinter.AddTextPiece( FONT_SIZE_11, STR(6), szClover );
 		kPrinter.SetTextColor( TCT_DEFAULT_LIGHTGRAY );		
 		kPrinter.AddTextPiece( FONT_SIZE_11, " / " );
 	}
@@ -8218,33 +8218,33 @@ bool MyInventoryWnd::ProcessCustomBtnTooltipCostume()
 		if( kSlot.m_dwMaleCustom > 0 && kSlot.m_dwFemaleCustom > 0 )
 		{
 			kPrinter[0].SetTextColor( TCT_DEFAULT_BLUE );
-			kPrinter[0].AddTextPiece( FONT_SIZE_12, "남성" );
+			kPrinter[0].AddTextPiece( FONT_SIZE_12, STR(1) );
 			kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
 			kPrinter[0].AddTextPiece( FONT_SIZE_12, ", " );
 			kPrinter[0].SetTextColor( TCT_DEFAULT_RED );
-			kPrinter[0].AddTextPiece( FONT_SIZE_12, "여성 " );
+			kPrinter[0].AddTextPiece( FONT_SIZE_12, STR(2) );
 		}		
 		else if( kSlot.m_dwMaleCustom > 0 )
 		{
 			kPrinter[0].SetTextColor( TCT_DEFAULT_BLUE );
-			kPrinter[0].AddTextPiece( FONT_SIZE_12, "남성 " );
+			kPrinter[0].AddTextPiece( FONT_SIZE_12, STR(3) );
 		}
 		else if( kSlot.m_dwFemaleCustom > 0 )
 		{
 			kPrinter[0].SetTextColor( TCT_DEFAULT_RED );
-			kPrinter[0].AddTextPiece( FONT_SIZE_12, "여성 " );
+			kPrinter[0].AddTextPiece( FONT_SIZE_12, STR(2) );
 		}
 		kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-		kPrinter[0].AddTextPiece( FONT_SIZE_12, "장비 스킨이 적용되어있습니다" );
+		kPrinter[0].AddTextPiece( FONT_SIZE_12, STR(4) );
 
 		kPrinter[1].SetTextStyle( TS_NORMAL );
 		kPrinter[1].SetBkColor( 0, 0, 0 );
 		kPrinter[1].SetTextColor( TCT_DEFAULT_GRAY );
-		kPrinter[1].AddTextPiece( FONT_SIZE_12, "＊아이콘을 클릭해서 " );
+		kPrinter[1].AddTextPiece( FONT_SIZE_12, STR(5) );
 		kPrinter[1].SetTextColor( TCT_DEFAULT_RED );
-		kPrinter[1].AddTextPiece( FONT_SIZE_12, "삭제" );
+		kPrinter[1].AddTextPiece( FONT_SIZE_12, STR(6) );
 		kPrinter[1].SetTextColor( TCT_DEFAULT_GRAY );
-		kPrinter[1].AddTextPiece( FONT_SIZE_12, "할 수 있습니다" );
+		kPrinter[1].AddTextPiece( FONT_SIZE_12, STR(7) );
 	}
 
 	CostumeCustomThumbnailTooltip *pThumbnailTooltip = dynamic_cast<CostumeCustomThumbnailTooltip*>(g_GUIMgr.FindWnd( MY_INVENTORY_COSTUME_CUSTOM_TOOLTIP ));
@@ -8298,38 +8298,38 @@ bool MyInventoryWnd::ProcessCustomBtnTooltipCostumePresent()
 		kPrinter[0].SetTextStyle( TS_NORMAL );
 		kPrinter[0].SetBkColor( 0, 0, 0 );
 		kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-		kPrinter[0].AddTextPiece( FONT_SIZE_12, "장비 스킨 - " );
+		kPrinter[0].AddTextPiece( FONT_SIZE_12, STR(1) );
 
 		if( sCostumeEquipInfo.m_Costume_Male_Custom > 0 && sCostumeEquipInfo.m_Costume_Female_Custom > 0 )
 		{
 			kPrinter[0].SetTextColor( TCT_DEFAULT_BLUE );
-			kPrinter[0].AddTextPiece( FONT_SIZE_12, "남성" );
+			kPrinter[0].AddTextPiece( FONT_SIZE_12, STR(2) );
 			kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
 			kPrinter[0].AddTextPiece( FONT_SIZE_12, ", " );
 			kPrinter[0].SetTextColor( TCT_DEFAULT_RED );
-			kPrinter[0].AddTextPiece( FONT_SIZE_12, "여성 " );
+			kPrinter[0].AddTextPiece( FONT_SIZE_12, STR(3) );
 		}		
 		else if( sCostumeEquipInfo.m_Costume_Male_Custom > 0 )
 		{
 			kPrinter[0].SetTextColor( TCT_DEFAULT_BLUE );
-			kPrinter[0].AddTextPiece( FONT_SIZE_12, "남성 " );
+			kPrinter[0].AddTextPiece( FONT_SIZE_12, STR(4) );
 		}
 		else if( sCostumeEquipInfo.m_Costume_Female_Custom > 0 )
 		{
 			kPrinter[0].SetTextColor( TCT_DEFAULT_RED );
-			kPrinter[0].AddTextPiece( FONT_SIZE_12, "여성 " );
+			kPrinter[0].AddTextPiece( FONT_SIZE_12, STR(3) );
 		}
 		kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-		kPrinter[0].AddTextPiece( FONT_SIZE_12, "이 적용되어있습니다" );
+		kPrinter[0].AddTextPiece( FONT_SIZE_12, STR(5) );
 
 		kPrinter[1].SetTextStyle( TS_NORMAL );
 		kPrinter[1].SetBkColor( 0, 0, 0 );
 		kPrinter[1].SetTextColor( TCT_DEFAULT_GRAY );
-		kPrinter[1].AddTextPiece( FONT_SIZE_12, "＊아이콘을 " );
+		kPrinter[1].AddTextPiece( FONT_SIZE_12, STR(6) );
 		kPrinter[1].SetTextColor( TCT_DEFAULT_GREEN );
-		kPrinter[1].AddTextPiece( FONT_SIZE_12, "클릭하면 자세히" );
+		kPrinter[1].AddTextPiece( FONT_SIZE_12, STR(7) );
 		kPrinter[1].SetTextColor( TCT_DEFAULT_GRAY );
-		kPrinter[1].AddTextPiece( FONT_SIZE_12, " 볼 수 있습니다" );
+		kPrinter[1].AddTextPiece( FONT_SIZE_12, STR(8) );
 	}
 
 	CostumeCustomThumbnailTooltip *pTooltip = dynamic_cast<CostumeCustomThumbnailTooltip*>(g_GUIMgr.FindWnd( PRESENT_COSTUME_THUMBNAIL_TOOLTIP ));
@@ -8643,7 +8643,7 @@ void MyInventoryWnd::OnItemCustomInfoPush( DWORD dwID )
 					}
 					else
 					{
-						g_GUIMgr.SetMsgBox( MB_OK, NULL, "장비스킨 삭제는 광장이나 본부에서만 가능합니다" );
+						g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 					}
 				}
 				else
@@ -8674,7 +8674,7 @@ void MyInventoryWnd::OnItemCustomInfoPush( DWORD dwID )
 						}
 						else
 						{
-							g_GUIMgr.SetMsgBox( MB_OK, NULL, "장비스킨 삭제는 광장이나 본부에서만 가능합니다" );
+							g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 						}
 					}
 					else
@@ -8732,7 +8732,7 @@ void MyInventoryWnd::OnItemCustomInfoPush( DWORD dwID )
 					if( g_App.GetConnectedMoveMode() == ioApplication::CMM_LOBBY )
 						g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 					else
-						g_GUIMgr.SetMsgBox( MB_OK, NULL, "장비스킨 삭제는 광장이나 본부에서만 가능합니다" );
+						g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 				}
 				else
 				{
@@ -8759,7 +8759,7 @@ void MyInventoryWnd::OnItemCustomInfoPush( DWORD dwID )
 						if( g_App.GetConnectedMoveMode() == ioApplication::CMM_LOBBY )
 							g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 						else
-							g_GUIMgr.SetMsgBox( MB_OK, NULL, "장비스킨 삭제는 광장이나 본부에서만 가능합니다" );
+							g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 					}
 					else
 					{
@@ -8837,7 +8837,7 @@ bool MyInventoryWnd::SetEquipExtraItem( DWORD dwID )
 
 	if(m_pPlayStage->GetModeType() == MT_PRACTICE)
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "수련장에서는 장비를 교체할 수 없습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(21) );
 		return false;
 	}
 
@@ -9044,7 +9044,7 @@ bool MyInventoryWnd::SetEquipExtraItem( DWORD dwID )
 			kPrinter[1].SetTextStyle( TS_NORMAL );
 			kPrinter[1].SetBkColor( 0, 0, 0 );
 			kPrinter[1].SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kPrinter[1].AddTextPiece( FONT_SIZE_13, "%s만 착용가능합니다.", szClassName.c_str() );
+			kPrinter[1].AddTextPiece( FONT_SIZE_13, STR(22), szClassName.c_str() );
 
 			g_GUIMgr.SetPrevMsgListBox( NULL, MB_OK, NULL, kPrinter );
 			return false;
@@ -9392,53 +9392,53 @@ bool MyInventoryWnd::SetEquipCostume( DWORD dwID )
 	int nNewSlotIndex = pInvenItem->GetMagicCode();
 	if( nNewSlotIndex <= 0 )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "코스튬 장착중 오류1" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return false;
 	}
 
 	int nCharArray = g_MyInfo.GetClassArray( rkCharInfo.m_class_type );
 	if( !COMPARE( nCharArray, 0, g_MyInfo.GetCharCount() ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "코스튬 장착중 오류2" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return false;
 	}
 
 	if( g_MyInfo.IsCharRentalToClassType( rkCharInfo.m_class_type ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "전투체험 설정이 되어있는 용병은#장비 장착이 불가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		return false;
 	}
 
 	if( g_MyInfo.IsCharExerciseStyleToClassType( rkCharInfo.m_class_type, EXERCISE_RENTAL ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "전투체험 용병으로는 불가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 		return false;
 	}	
 
 	ioUserCostume *pCostume = g_MyInfo.GetUserCostume();
 	if( !pCostume )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "코스튬 장착중 오류3" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );
 		return false;
 	}
 
 	CostumeSlot kSlot;
 	if( !pCostume->GetCostumeSlot( nNewSlotIndex, kSlot ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "코스튬 장착중 오류4" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(6) );
 		return false;
 	}
 
 	if( kSlot.m_bEquip )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "코스튬 장착중 오류5" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(7) );
 		return false;
 	}
 
 	CostumeInfo sCostumeInfo;
 	if( !g_CostumeInfoMgr.GetCostumeInfo( kSlot.m_nCostumeCode, sCostumeInfo ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "코스튬 장착중 오류6" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(8) );
 		return false;
 	}
 
@@ -9454,12 +9454,12 @@ bool MyInventoryWnd::SetEquipCostume( DWORD dwID )
 			kPrinter[0].SetTextStyle( TS_NORMAL );
 			kPrinter[0].SetBkColor( 0, 0, 0 );	
 			kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kPrinter[0].AddTextPiece( FONT_SIZE_13, "선택한 장비는" );
+			kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(9) );
 
 			kPrinter[1].SetTextStyle( TS_NORMAL );
 			kPrinter[1].SetBkColor( 0, 0, 0 );
 			kPrinter[1].SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kPrinter[1].AddTextPiece( FONT_SIZE_13, "%s만 착용가능합니다.", szClassName.c_str() );
+			kPrinter[1].AddTextPiece( FONT_SIZE_13, STR(10), szClassName.c_str() );
 
 			g_GUIMgr.SetPrevMsgListBox( NULL, MB_OK, NULL, kPrinter );
 		}
@@ -9469,12 +9469,12 @@ bool MyInventoryWnd::SetEquipCostume( DWORD dwID )
 			kPrinter[0].SetTextStyle( TS_NORMAL );
 			kPrinter[0].SetBkColor( 0, 0, 0 );	
 			kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kPrinter[0].AddTextPiece( FONT_SIZE_13, "선택한 장비는" );
+			kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(9) );
 
 			kPrinter[1].SetTextStyle( TS_NORMAL );
 			kPrinter[1].SetBkColor( 0, 0, 0 );	
 			kPrinter[1].SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kPrinter[1].AddTextPiece( FONT_SIZE_13, "착용할 수 없습니다." );
+			kPrinter[1].AddTextPiece( FONT_SIZE_13, STR(11) );
 
 			g_GUIMgr.SetPrevMsgListBox( NULL, MB_OK, NULL, kPrinter );
 		}
@@ -9568,46 +9568,46 @@ bool MyInventoryWnd::SetEquipAccessory( DWORD dwID )
 	int iNewSlotIndex = pInvenItem->GetMagicCode();
 	if( iNewSlotIndex <= 0 )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "액세서리 장착중 오류1" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return false;
 	}
 
 	int iCharArray = g_MyInfo.GetClassArray( rkCharInfo.m_class_type );
 	if( !COMPARE( iCharArray, 0, g_MyInfo.GetCharCount() ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "액세서리 장착중 오류2" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return false;
 	}
 
 	if( g_MyInfo.IsCharRentalToClassType( rkCharInfo.m_class_type ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "전투체험 설정이 되어있는 용병은#장비 장착이 불가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		return false;
 	}
 
 	if( g_MyInfo.IsCharExerciseStyleToClassType( rkCharInfo.m_class_type, EXERCISE_RENTAL ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "전투체험 용병으로는 불가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 		return false;
 	}	
 
 	ioUserAccessory *pAccessory = g_MyInfo.GetUserAccessory();
 	if( !pAccessory )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "액세서리 장착중 오류3" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );
 		return false;
 	}
 
 	AccessorySlot kSlot;
 	if( !pAccessory->GetAccessorySlot( iNewSlotIndex, kSlot ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "액세서리 장착중 오류4" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(6) );
 		return false;
 	}
 
 	if( kSlot.m_bEquip )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "액세서리 장착중 오류5" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(7) );
 		return false;
 	}
 
@@ -9625,7 +9625,7 @@ bool MyInventoryWnd::SetEquipAccessory( DWORD dwID )
 	const ioItem *pItem = g_ItemMaker.GetItemConst( kSlot.m_iAccessoryCode, __FUNCTION__ );
 	if( !pItem )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "액세서리 장착중 오류6" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(8) );
 		return false;
 	}
 
@@ -9655,7 +9655,7 @@ bool MyInventoryWnd::SetEquipAccessory( DWORD dwID )
 			kPrinter[0].SetTextStyle( TS_NORMAL );
 			kPrinter[0].SetBkColor( 0, 0, 0 );	
 			kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kPrinter[0].AddTextPiece( FONT_SIZE_13, "선택한 장비는" );
+			kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(9) );
 
 			kPrinter[1].SetTextStyle( TS_NORMAL );
 			kPrinter[1].SetBkColor( 0, 0, 0 );
@@ -9664,13 +9664,13 @@ bool MyInventoryWnd::SetEquipAccessory( DWORD dwID )
 			switch( iOnlySetType )
 			{
 			case ioSetItemInfo::CST_ALL:
-				kPrinter[1].AddTextPiece( FONT_SIZE_13, "%s만 착용가능합니다.", szClassName.c_str() );
+				kPrinter[1].AddTextPiece( FONT_SIZE_13, STR(10), szClassName.c_str() );
 				break;
 			case ioSetItemInfo::CST_MALE:
-				kPrinter[1].AddTextPiece( FONT_SIZE_13, "%s 남성만 착용가능합니다.", szClassName.c_str() );
+				kPrinter[1].AddTextPiece( FONT_SIZE_13, STR(11), szClassName.c_str() );
 				break;
 			case ioSetItemInfo::CST_FEMALE:
-				kPrinter[1].AddTextPiece( FONT_SIZE_13, "%s 여성만 착용가능합니다.", szClassName.c_str() );
+				kPrinter[1].AddTextPiece( FONT_SIZE_13, STR(12), szClassName.c_str() );
 				break;
 			}
 
@@ -9682,7 +9682,7 @@ bool MyInventoryWnd::SetEquipAccessory( DWORD dwID )
 			kPrinter[0].SetTextStyle( TS_NORMAL );
 			kPrinter[0].SetBkColor( 0, 0, 0 );	
 			kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kPrinter[0].AddTextPiece( FONT_SIZE_13, "선택한 장비는" );
+			kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(9) );
 
 			kPrinter[1].SetTextStyle( TS_NORMAL );
 			kPrinter[1].SetBkColor( 0, 0, 0 );	
@@ -9691,13 +9691,13 @@ bool MyInventoryWnd::SetEquipAccessory( DWORD dwID )
 			switch( iOnlySetType )
 			{
 			case ioSetItemInfo::CST_ALL:
-				kPrinter[1].AddTextPiece( FONT_SIZE_13, "착용할 수 없습니다." );
+				kPrinter[1].AddTextPiece( FONT_SIZE_13, STR(13) );
 				break;
 			case ioSetItemInfo::CST_MALE:
-				kPrinter[1].AddTextPiece( FONT_SIZE_13, "남성만 착용가능합니다." );
+				kPrinter[1].AddTextPiece( FONT_SIZE_13, STR(14) );
 				break;
 			case ioSetItemInfo::CST_FEMALE:
-				kPrinter[1].AddTextPiece( FONT_SIZE_13, "여성만 착용가능합니다." );
+				kPrinter[1].AddTextPiece( FONT_SIZE_13, STR(15) );
 				break;
 			}
 
@@ -10031,33 +10031,33 @@ bool MyInventoryWnd::SetReleaseCostume( int iSlotIndex )
 	int nCharArray = g_MyInfo.GetClassArray( rkCharInfo.m_class_type );
 	if( !COMPARE( nCharArray, 0, g_MyInfo.GetCharCount() ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "코스튬 해제 오류1" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return false;
 	}
 
 	if( g_MyInfo.IsCharRentalToClassType( rkCharInfo.m_class_type ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "전투체험 설정이 되어있는 용병은#장비 해제가 불가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return false;
 	}
 
 	if( g_MyInfo.IsCharExerciseStyleToClassType( rkCharInfo.m_class_type, EXERCISE_RENTAL ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "전투체험 용병으로는 불가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		return false;
 	}	
 
 	ioUserCostume *pCostume = g_MyInfo.GetUserCostume();
 	if( !pCostume )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "코스튬 해제 오류2" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 		return false;
 	}
 
 	CostumeSlot kSlot;
 	if( !pCostume->GetCostumeSlot( iSlotIndex, kSlot ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "코스튬 해제 오류3" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );
 		return false;
 	}
 
@@ -10108,33 +10108,33 @@ bool MyInventoryWnd::SetReleaseAccessory( int iSlotIndex )
 	int nCharArray = g_MyInfo.GetClassArray( rkCharInfo.m_class_type );
 	if( !COMPARE( nCharArray, 0, g_MyInfo.GetCharCount() ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "액세서리 해제 오류1" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return false;
 	}
 
 	if( g_MyInfo.IsCharRentalToClassType( rkCharInfo.m_class_type ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "전투체험 설정이 되어있는 용병은#장비 해제가 불가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return false;
 	}
 
 	if( g_MyInfo.IsCharExerciseStyleToClassType( rkCharInfo.m_class_type, EXERCISE_RENTAL ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "전투체험 용병으로는 불가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		return false;
 	}	
 
 	ioUserAccessory *pAccessory = g_MyInfo.GetUserAccessory();
 	if( !pAccessory )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "액세서리 해제 오류2" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 		return false;
 	}
 
 	AccessorySlot kSlot;
 	if( !pAccessory->GetAccessorySlot( iSlotIndex, kSlot ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "액세서리 해제 오류3" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );
 		return false;
 	}
 
@@ -10307,7 +10307,7 @@ bool MyInventoryWnd::SetReSellMedalItem( DWORD dwID )
 	int iMedalIndex = pInvenItem->GetMagicCode();
 	if( iMedalIndex <= 0 )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "예외 오류 발생1" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		LOG.PrintTimeAndLog( 0, "MyInventoryWnd::SetReSellMedalItem Wrong Btn : %d", dwID );
 		return false;
 	}
@@ -10315,7 +10315,7 @@ bool MyInventoryWnd::SetReSellMedalItem( DWORD dwID )
 	ioUserMedalItem *pMedalItem = g_MyInfo.GetUserMedalItem();
 	if( !pMedalItem )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "예외 오류 발생2" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		LOG.PrintTimeAndLog( 0, "MyInventoryWnd::SetReSellMedalItem Don't Have UserMedalItem" );
 		return false;
 	}
@@ -10324,7 +10324,7 @@ bool MyInventoryWnd::SetReSellMedalItem( DWORD dwID )
 	ioUserMedalItem::MEDALITEMSLOT kSlot;
 	if( !pMedalItem->GetMedalItem( iMedalIndex, iCustomIndex, kSlot ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "예외 오류 발생3" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		LOG.PrintTimeAndLog( 0, "MyInventoryWnd::SetReSellMedalItem Not Exist Item : %d", iMedalIndex );
 		return false;
 	}
@@ -10375,7 +10375,7 @@ bool MyInventoryWnd::SetReSellMedalItem( DWORD dwID )
 	const ioMedalItemInfoManager::ItemInfo *kMedalInfo = g_MedalItemMgr.GetItemInfo( kSlot.m_iItemType );
 	if( !kMedalInfo )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "예외 오류 발생5" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 		LOG.PrintTimeAndLog( 0, "MyInventoryWnd::SetReSellMedalItem Not Exist Item : %d", kSlot.m_iItemType );
 		return false;
 	}
@@ -10395,26 +10395,26 @@ bool MyInventoryWnd::SetReSellMedalItem( DWORD dwID )
 	kPrinter[2].SetTextStyle( TS_NORMAL );
 	kPrinter[2].SetBkColor( 0, 0, 0 );
 	kPrinter[2].SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter[2].AddTextPiece( FONT_SIZE_13, "위 메달을 판매합니다." );
+	kPrinter[2].AddTextPiece( FONT_SIZE_13, STR(5) );
 
 	kPrinter[3].SetTextStyle( TS_NORMAL );
 	kPrinter[3].SetBkColor( 0, 0, 0 );
 	kPrinter[3].SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter[3].AddTextPiece( FONT_SIZE_13, "예상 환불금액 :" );
+	kPrinter[3].AddTextPiece( FONT_SIZE_13, STR(6) );
 	kPrinter[3].SetTextColor( TCT_DEFAULT_BLUE );
-	kPrinter[3].AddTextPiece( FONT_SIZE_13, "%s 페소", szConvertNum );
+	kPrinter[3].AddTextPiece( FONT_SIZE_13, STR(7), szConvertNum );
 
 	kPrinter[4].SetTextStyle( TS_NORMAL );
 	kPrinter[4].SetBkColor( 0, 0, 0 );
 	kPrinter[4].SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter[4].AddTextPiece( FONT_SIZE_13, "(다소 차이가 있을 수 있습니다)" );
+	kPrinter[4].AddTextPiece( FONT_SIZE_13, STR(8) );
 
 	ItemResellWnd *pResellWnd = dynamic_cast<ItemResellWnd*>(g_GUIMgr.FindWnd(ITEM_RESELL_WND));
 	if( pResellWnd )
 	{
 		ioUIRenderImage *pImg = g_UIImageSetMgr.CreateImageByFullName( kMedalInfo->m_sIcon );
 		ioUIRenderImage *pSubImg = g_UIImageSetMgr.CreateImageByFullName( kMedalInfo->m_sSubIcon );
-		pResellWnd->SetInfoAndShow( "메달팔기", pImg, pSubImg, 0, kPrinter, this, dwEditType, ACST_SELL_MEDAL, false );
+		pResellWnd->SetInfoAndShow( STR(9), pImg, pSubImg, 0, kPrinter, this, dwEditType, ACST_SELL_MEDAL, false );
 	}
 
 	return true;
@@ -10430,7 +10430,7 @@ bool MyInventoryWnd::SetReSellCostume( DWORD dwID )
 	int iNewSlotIndex = pInvenItem->GetMagicCode();
 	if( iNewSlotIndex <= 0 )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "코스튬 판매 오류 발생1" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		LOG.PrintTimeAndLog( 0, "MyInventoryWnd::SetReSellCostume Wrong Btn : %d", dwID );
 		return false;
 	}
@@ -10438,7 +10438,7 @@ bool MyInventoryWnd::SetReSellCostume( DWORD dwID )
 	ioUserCostume *pCostume = g_MyInfo.GetUserCostume();
 	if( !pCostume )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "코스튬 판매 오류 발생2" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		LOG.PrintTimeAndLog( 0, "MyInventoryWnd::SetReSellCostume Don't Have UserExtraItem" );
 		return false;
 	}
@@ -10446,14 +10446,14 @@ bool MyInventoryWnd::SetReSellCostume( DWORD dwID )
 	CostumeSlot kSlot;
 	if( !pCostume->GetCostumeSlot( iNewSlotIndex, kSlot ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "코스튬 판매 오류 발생3" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		LOG.PrintTimeAndLog( 0, "MyInventoryWnd::SetReSellCostume Not Exist Item : %d", iNewSlotIndex );
 		return false;
 	}
 
 	if( kSlot.m_bEquip )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "코스튬 판매 오류 발생4" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 		LOG.PrintTimeAndLog( 0, "MyInventoryWnd::SetReSellCostume Item : %d", iNewSlotIndex );
 		return false;
 	}
@@ -10503,26 +10503,26 @@ bool MyInventoryWnd::SetReSellCostume( DWORD dwID )
 	kPrinter[2].SetTextStyle( TS_NORMAL );
 	kPrinter[2].SetBkColor( 0, 0, 0 );
 	kPrinter[2].SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter[2].AddTextPiece( FONT_SIZE_13, "위 코스튬을 판매합니다." );
+	kPrinter[2].AddTextPiece( FONT_SIZE_13, STR(5) );
 
 	kPrinter[3].SetTextStyle( TS_NORMAL );
 	kPrinter[3].SetBkColor( 0, 0, 0 );
 	kPrinter[3].SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter[3].AddTextPiece( FONT_SIZE_13, "예상 환불금액 : " );
+	kPrinter[3].AddTextPiece( FONT_SIZE_13, STR(6) );
 	kPrinter[3].SetTextColor( TCT_DEFAULT_BLUE );
-	kPrinter[3].AddTextPiece( FONT_SIZE_13, "%s 페소", szConvertNum );
+	kPrinter[3].AddTextPiece( FONT_SIZE_13, STR(7), szConvertNum );
 
 	kPrinter[4].SetTextStyle( TS_NORMAL );
 	kPrinter[4].SetBkColor( 0, 0, 0 );
 	kPrinter[4].SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter[4].AddTextPiece( FONT_SIZE_13, "(다소 차이가 있을 수 있습니다)" );
+	kPrinter[4].AddTextPiece( FONT_SIZE_13, STR(8) );
 
 	ItemResellWnd *pResellWnd = dynamic_cast<ItemResellWnd*>(g_GUIMgr.FindWnd(ITEM_RESELL_WND));
 	if( pResellWnd )
 	{
 		ioUIRenderImage *pImg = g_UIImageSetMgr.CreateImageByFullName( kSlot.m_IconName );
 		ioUIRenderImage *pSubImg = NULL;
-		pResellWnd->SetInfoAndShow( "코스튬팔기", pImg, pSubImg, 0, kPrinter, this, dwEditType, ACST_SELL_COSTUME, true, g_CostumeInfoMgr.GetGradeType( kSlot.m_nCostumeCode ) );
+		pResellWnd->SetInfoAndShow( STR(9), pImg, pSubImg, 0, kPrinter, this, dwEditType, ACST_SELL_COSTUME, true, g_CostumeInfoMgr.GetGradeType( kSlot.m_nCostumeCode ) );
 	}
 
 	return true;
@@ -10557,27 +10557,27 @@ bool MyInventoryWnd::SetDisassembleExtraItem( DWORD dwID )
 	int iNewSlotIndex = pInvenItem->GetMagicCode();
 	if( iNewSlotIndex <= 0 )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "예외 오류 발생1" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return false;
 	}
 
 	ioUserExtraItem *pExtraItem = g_MyInfo.GetUserExtraItem();
 	if( !pExtraItem )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "예외 오류 발생2" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return false;
 	}
 
 	EXTRAITEMSLOT kSlot;
 	if( !pExtraItem->GetExtraItem( iNewSlotIndex, kSlot ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "예외 오류 발생3" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		return false;
 	}
 
 	if( kSlot.m_bCharEquip )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "예외 오류 발생4" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 		return false;
 	}
 
@@ -10595,7 +10595,7 @@ bool MyInventoryWnd::SetDisassembleExtraItem( DWORD dwID )
 	}
 	else
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "기간제 장비는 분해할 수 없습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );
 		return false;
 	}
 
@@ -10620,17 +10620,17 @@ bool MyInventoryWnd::SetDisassembleExtraItem( DWORD dwID )
 	kPrinter[2].SetTextStyle( TS_NORMAL );
 	kPrinter[2].SetBkColor( 0, 0, 0 );
 	kPrinter[2].SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter[2].AddTextPiece( FONT_SIZE_13, "위 장비를 분해합니다." );
+	kPrinter[2].AddTextPiece( FONT_SIZE_13, STR(6) );
 
 	kPrinter[3].SetTextStyle( TS_NORMAL );
 	kPrinter[3].SetBkColor( 0, 0, 0 );
 	kPrinter[3].SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter[3].AddTextPiece( FONT_SIZE_13, "분해 : " );
+	kPrinter[3].AddTextPiece( FONT_SIZE_13, STR(7) );
 	kPrinter[3].SetTextColor( TCT_DEFAULT_BLUE );
 
 	ioEtcItem *pEtcItem = g_EtcItemMgr.FindEtcItem( ioEtcItem::EIT_ETC_ADDICTIVE_PIECE );
 	if( pEtcItem )
-		kPrinter[3].AddTextPiece( FONT_SIZE_13, "%s 획득", pEtcItem->GetName().c_str() );
+		kPrinter[3].AddTextPiece( FONT_SIZE_13, STR(8), pEtcItem->GetName().c_str() );
 
 	ItemResellWnd *pResellWnd = dynamic_cast<ItemResellWnd*>(g_GUIMgr.FindWnd(ITEM_RESELL_WND));
 	if( pResellWnd )
@@ -10642,7 +10642,7 @@ bool MyInventoryWnd::SetDisassembleExtraItem( DWORD dwID )
 		if( pItem )
 			nGradeType = pItem->GetGradeType();
 
-		pResellWnd->SetInfoAndShow( "장비분해", pImg, pSubImg, kSlot.m_iReinforce, kPrinter, this, dwEditType, ACST_DISASSEMBLE, false, nGradeType );
+		pResellWnd->SetInfoAndShow( STR(9), pImg, pSubImg, kSlot.m_iReinforce, kPrinter, this, dwEditType, ACST_DISASSEMBLE, false, nGradeType );
 	}
 
 	return true;
@@ -10703,7 +10703,7 @@ bool MyInventoryWnd::CheckTimeEndMedalItem( ioUserMedalItem::MEDALITEMSLOT kSlot
 
 		if( iDay <= 0 && iHour <= 0 && iMinute <= 1 )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "기간만료로 판매할 수 없습니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 			return false;
 		}
 	}
@@ -10735,7 +10735,7 @@ bool MyInventoryWnd::CheckTimeEndCostume( int iSlotIndex )
 
 				if( iDay <= 0 && iHour <= 0 && iMinute <= 1 )
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "기간만료로 판매할 수 없습니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 					return false;
 				}
 			}
@@ -10743,7 +10743,7 @@ bool MyInventoryWnd::CheckTimeEndCostume( int iSlotIndex )
 	}
 	else
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "기간만료로 판매할 수 없습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return false;
 	}
 
@@ -13856,7 +13856,7 @@ void SpiritItemWnd::OnRender()
 				m_pSpiritMark->Render( iXPos + 7, iYPos + 7 );
 
 			g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
-			g_FontMgr.PrintText( iXPos + 24, iYPos + 9, FONT_SIZE_11, "보유" );
+			g_FontMgr.PrintText( iXPos + 24, iYPos + 9, FONT_SIZE_11, STR(1) );
 		}
 		if( IsOver() )
 			OnDrawOvered( iXPos, iYPos );
@@ -14002,7 +14002,7 @@ void SpiritItemWnd::SetSpiritItemResell()
 	Help::ConvertNumToStrComma( m_iCount, szConvertNum, sizeof( szConvertNum ) );
 			
 	char szTemp[MAX_PATH] = "";
-	SafeSprintf( szTemp, sizeof( szTemp ), "%s개", szConvertNum );
+	SafeSprintf( szTemp, sizeof( szTemp ), STR(1), szConvertNum );
 	ioHashString szItemInfo = szTemp;
 
 	int iPeso = m_iCount * g_SpiritMgr.GetSellConst( m_iCode );
@@ -14495,7 +14495,7 @@ void MyInventoryWnd::ShowNamedTitlePremiumSelectWnd( DWORD dwEtcItemCode )
 
 	if ( !pUserNamedTitle->IsEnablePremiumNamedTitle() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "변경할 칭호가 없습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 
@@ -14670,7 +14670,7 @@ bool MyInventoryWnd::SetReSellAccessory( DWORD dwID )
 	int iNewSlotIndex = pInvenItem->GetMagicCode();
 	if( iNewSlotIndex <= 0 )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "액세서리 판매 오류 발생1" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		LOG.PrintTimeAndLog( 0, "MyInventoryWnd::SetReSellAccessory Wrong Btn : %d", dwID );
 		return false;
 	}
@@ -14678,7 +14678,7 @@ bool MyInventoryWnd::SetReSellAccessory( DWORD dwID )
 	ioUserAccessory *pAccessory = g_MyInfo.GetUserAccessory();
 	if( !pAccessory )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "액세서리 판매 오류 발생2" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		LOG.PrintTimeAndLog( 0, "MyInventoryWnd::SetReSellAccessory Don't Have UserExtraItem" );
 		return false;
 	}
@@ -14686,14 +14686,14 @@ bool MyInventoryWnd::SetReSellAccessory( DWORD dwID )
 	AccessorySlot kSlot;
 	if( !pAccessory->GetAccessorySlot( iNewSlotIndex, kSlot ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "액세서리 판매 오류 발생3" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		LOG.PrintTimeAndLog( 0, "MyInventoryWnd::SetReSellAccessory Not Exist Item : %d", iNewSlotIndex );
 		return false;
 	}
 
 	if( kSlot.m_bEquip )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "액세서리 판매 오류 발생4" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 		LOG.PrintTimeAndLog( 0, "MyInventoryWnd::SetReSellAccessory Item : %d", iNewSlotIndex );
 		return false;
 	}
@@ -14742,26 +14742,26 @@ bool MyInventoryWnd::SetReSellAccessory( DWORD dwID )
 	kPrinter[2].SetTextStyle( TS_NORMAL );
 	kPrinter[2].SetBkColor( 0, 0, 0 );
 	kPrinter[2].SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter[2].AddTextPiece( FONT_SIZE_13, "위 액세서리를 판매합니다." );
+	kPrinter[2].AddTextPiece( FONT_SIZE_13, STR(5) );
 
 	kPrinter[3].SetTextStyle( TS_NORMAL );
 	kPrinter[3].SetBkColor( 0, 0, 0 );
 	kPrinter[3].SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter[3].AddTextPiece( FONT_SIZE_13, "예상 환불금액 : " );
+	kPrinter[3].AddTextPiece( FONT_SIZE_13, STR(6) );
 	kPrinter[3].SetTextColor( TCT_DEFAULT_BLUE );
-	kPrinter[3].AddTextPiece( FONT_SIZE_13, "%s 페소", szConvertNum );
+	kPrinter[3].AddTextPiece( FONT_SIZE_13, STR(7), szConvertNum );
 
 	kPrinter[4].SetTextStyle( TS_NORMAL );
 	kPrinter[4].SetBkColor( 0, 0, 0 );
 	kPrinter[4].SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter[4].AddTextPiece( FONT_SIZE_13, "(다소 차이가 있을 수 있습니다)" );
+	kPrinter[4].AddTextPiece( FONT_SIZE_13, STR(8) );
 
 	ItemResellWnd *pResellWnd = dynamic_cast<ItemResellWnd*>(g_GUIMgr.FindWnd(ITEM_RESELL_WND));
 	if( pResellWnd )
 	{
 		ioUIRenderImage *pImg = g_UIImageSetMgr.CreateImageByFullName( kSlot.m_IconName );
 		ioUIRenderImage *pSubImg = NULL;
-		pResellWnd->SetInfoAndShow( "액세서리 팔기", pImg, pSubImg, 0, kPrinter, this, dwEditType, ACST_SELL_ACCESSORY, false );
+		pResellWnd->SetInfoAndShow( STR(9), pImg, pSubImg, 0, kPrinter, this, dwEditType, ACST_SELL_ACCESSORY, false );
 	}
 
 	return true;
@@ -14810,32 +14810,32 @@ bool MyInventoryWnd::SetReSellDeco( DWORD dwID )
 	int iCharArray = g_MyInfo.GetClassArray( rkCharInfo.m_class_type );
 	if( !COMPARE( iCharArray, 0, g_MyInfo.GetCharCount() ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "치장 판매 오류 발생1" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		LOG.PrintTimeAndLog( 0, "MyInventoryWnd::SetReSellDeco Wrong Char Array : %d", iCharArray );
 		return false;
 	}
 
 	if( g_MyInfo.IsCharRentalToClassType( rkCharInfo.m_class_type ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "치장 판매 오류 발생2" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return false;
 	}
 
 	if( g_MyInfo.IsCharExerciseStyleToClassType( rkCharInfo.m_class_type, EXERCISE_RENTAL ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "치장 판매 오류 발생3" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		return false;
 	}
 
 	if( iDecoType == UID_KINDRED )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "치장 판매 오류 발생4" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 		return false;
 	}
 	const DecoData *pData =  g_DecorationPrice.GetDecoDataPtr( rkCharInfo.m_sex - 1, iDecoType, iDecoCode );
 	if( !pData ) 
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "치장 판매 오류 발생5" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );
 		return false;
 	}
 
@@ -14856,32 +14856,32 @@ bool MyInventoryWnd::SetReSellDeco( DWORD dwID )
 	kPrinter[1].SetTextStyle( TS_NORMAL );
 	kPrinter[1].SetBkColor( 0, 0, 0 );
 	kPrinter[1].SetTextColor( TCT_DEFAULT_RED );
-	kPrinter[1].AddTextPiece( FONT_SIZE_17, "%s", "영구사용" );
+	kPrinter[1].AddTextPiece( FONT_SIZE_17, "%s", STR(6) );
 
 	// Desc
 	kPrinter[2].SetTextStyle( TS_NORMAL );
 	kPrinter[2].SetBkColor( 0, 0, 0 );
 	kPrinter[2].SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter[2].AddTextPiece( FONT_SIZE_13, "위 치장을 판매합니다." );
+	kPrinter[2].AddTextPiece( FONT_SIZE_13, STR(7) );
 
 	kPrinter[3].SetTextStyle( TS_NORMAL );
 	kPrinter[3].SetBkColor( 0, 0, 0 );
 	kPrinter[3].SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter[3].AddTextPiece( FONT_SIZE_13, "예상 환불금액 : " );
+	kPrinter[3].AddTextPiece( FONT_SIZE_13, STR(8) );
 	kPrinter[3].SetTextColor( TCT_DEFAULT_BLUE );
-	kPrinter[3].AddTextPiece( FONT_SIZE_13, "%s 페소", szConvertNum );
+	kPrinter[3].AddTextPiece( FONT_SIZE_13, STR(9), szConvertNum );
 
 	kPrinter[4].SetTextStyle( TS_NORMAL );
 	kPrinter[4].SetBkColor( 0, 0, 0 );
 	kPrinter[4].SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter[4].AddTextPiece( FONT_SIZE_13, "(다소 차이가 있을 수 있습니다)" );
+	kPrinter[4].AddTextPiece( FONT_SIZE_13, STR(10) );
 
 	ItemResellWnd *pResellWnd = dynamic_cast<ItemResellWnd*>(g_GUIMgr.FindWnd(ITEM_RESELL_WND));
 	if( pResellWnd )
 	{
 		ioUIRenderImage *pImg = g_UIImageSetMgr.CreateImageByFullName( pData->m_szIcon );
 		ioUIRenderImage *pSubImg = NULL;
-		pResellWnd->SetInfoAndShow( "치장 팔기", pImg, pSubImg, 0, kPrinter, this, dwEditType, ACST_SELL_DECO, false );
+		pResellWnd->SetInfoAndShow( STR(11), pImg, pSubImg, 0, kPrinter, this, dwEditType, ACST_SELL_DECO, false );
 	}
 
 	return true;
@@ -14918,7 +14918,7 @@ bool MyInventoryWnd::CheckTimeEndAccessory( int iSlotIndex )
 	}
 	else
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "기간만료로 판매할 수 없습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return false;
 	}
 

@@ -310,31 +310,31 @@ void GrowthAllDownDoneWnd::ShowGrowthAllDownDone( int iClassType, int iReturnPoi
 	m_Desc[1].SetTextStyle( TS_NORMAL );
 	m_Desc[1].SetBkColor( 0, 0, 0 );	
 	m_Desc[1].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	m_Desc[1].AddTextPiece( FONT_SIZE_17, "육성 복구" );
+	m_Desc[1].AddTextPiece( FONT_SIZE_17, STR(1) );
 
 	m_Desc[2].SetTextStyle( TS_NORMAL );
 	m_Desc[2].SetBkColor( 0, 0, 0 );	
 	m_Desc[2].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	m_Desc[2].AddTextPiece( FONT_SIZE_12, "★ 육성포인트와 페소가 복구되었습니다." );
+	m_Desc[2].AddTextPiece( FONT_SIZE_12, STR(2) );
 
 	m_Desc[3].SetTextStyle( TS_NORMAL );
 	m_Desc[3].SetBkColor( 0, 0, 0 );	
 	m_Desc[3].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	m_Desc[3].AddTextPiece( FONT_SIZE_12, "★ 육성포인트 " );
+	m_Desc[3].AddTextPiece( FONT_SIZE_12, STR(3) );
 	m_Desc[3].SetTextColor( TCT_DEFAULT_RED );
-	m_Desc[3].AddTextPiece( FONT_SIZE_12, "%s 복구", szPoint );
+	m_Desc[3].AddTextPiece( FONT_SIZE_12, STR(4), szPoint );
 
 	m_Desc[4].SetTextStyle( TS_NORMAL );
 	m_Desc[4].SetBkColor( 0, 0, 0 );
 	m_Desc[4].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	m_Desc[4].AddTextPiece( FONT_SIZE_12, "★ 페소 " );
+	m_Desc[4].AddTextPiece( FONT_SIZE_12, STR(5) );
 	m_Desc[4].SetTextColor( TCT_DEFAULT_BLUE );
-	m_Desc[4].AddTextPiece( FONT_SIZE_12, "%s 복구", szPeso );
+	m_Desc[4].AddTextPiece( FONT_SIZE_12, STR(4), szPeso );
 
 	m_Desc[5].SetTextStyle( TS_NORMAL );
 	m_Desc[5].SetBkColor( 0, 0, 0 );
 	m_Desc[5].SetTextColor( TCT_DEFAULT_GREEN );
-	m_Desc[5].AddTextPiece( FONT_SIZE_17, "복구되었습니다" );
+	m_Desc[5].AddTextPiece( FONT_SIZE_17, STR(6) );
 
 	ShowWnd();
 }

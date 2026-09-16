@@ -150,7 +150,7 @@ void BillingWantWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 			{
 				if( m_pPlayStage && m_pPlayStage->GetModeType() != MT_TRAINING && m_pPlayStage->GetModeType() != MT_HEADQUARTERS && m_pPlayStage->GetModeType() != MT_HOUSE )
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "골드충전은 광장/개인본부/훈련소에서만 가능합니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 					return;
 				}
 			}

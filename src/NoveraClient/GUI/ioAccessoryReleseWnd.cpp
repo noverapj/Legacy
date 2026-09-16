@@ -64,10 +64,10 @@ void ioAccessoryReleseWnd::OnRender()
 	g_FontMgr.SetAlignType( TAT_CENTER );
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	g_FontMgr.PrintText( iXPos + 103, iYPos + 144, FONT_SIZE_13, "%s 의", m_szClassName.c_str() ); 
+	g_FontMgr.PrintText( iXPos + 103, iYPos + 144, FONT_SIZE_13, STR(1), m_szClassName.c_str() ); 
 	g_FontMgr.PrintText( iXPos + 103, iYPos + 162, FONT_SIZE_13, "%s", m_szItemName.c_str() ); 
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
-	g_FontMgr.PrintText( iXPos + 103, iYPos + 180, FONT_SIZE_13, "기간만료로 해제되었습니다" ); 
+	g_FontMgr.PrintText( iXPos + 103, iYPos + 180, FONT_SIZE_13, STR(2) ); 
 }
 
 void ioAccessoryReleseWnd::iwm_show()

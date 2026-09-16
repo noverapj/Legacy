@@ -82,14 +82,14 @@ void HouseInfoWnd::SetInfo( SP2Packet &rkPacket )
 	}
 	else
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "개인본부 주인이#입장 하지 않았습니다" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		HideWnd();
 		return;
 	}
 
 	// UI TITLE	
 	char szTitle[MAX_PATH] = "";
-	SafeSprintf( szTitle, sizeof( szTitle ), "개인본부 %d/%d", (int)m_vUserList.size(), m_HouseInfo.m_iMaxUserCount );
+	SafeSprintf( szTitle, sizeof( szTitle ), STR(2), (int)m_vUserList.size(), m_HouseInfo.m_iMaxUserCount );
 	SetTitleText( szTitle );
 
 	if( !IsShow() )
@@ -232,42 +232,42 @@ void HouseInfoWnd::JoinHouseRoom()
 	if( g_MyInfo.IsTutorialUser() )
 	{	
 		HideWnd();
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "튜토리얼을 완료하면#입장이 가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 
 	if( g_MyInfo.GetCharCount() == 0 )
 	{
 		HideWnd();
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "용병이 있어야 개인본부 참가가 가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return;
 	}
 
 	if( g_MyInfo.GetActiveCharCount() == 1 && g_MyInfo.GetActiveExerciseCharCount() == 1 )
 	{
 		HideWnd();
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "체험용병이 아닌 일반용병이#있어야 개인본부 참가가 가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		return;
 	}
 
 	if( g_BattleRoomMgr.IsBattleRoom() )
 	{
 		HideWnd();
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "전투 중에는 개인본부 입장이 불가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 		return;
 	}
 
 	if( g_LadderTeamMgr.IsLadderTeam() )
 	{
 		HideWnd();
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "진영/래더 중에는 개인본부 입장이 불가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );
 		return;
 	}
 
 	if( m_bMyCurrentRoom )
 	{
 		HideWnd();
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "현재 개인본부입니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(6) );
 		return;
 	}
 
@@ -374,7 +374,7 @@ void HouseInfoWnd::OnRender()
 	g_FontMgr.PrintTextWidthCut( iXPos + 65, iYPos + 55, FONT_SIZE_13, 300.0f, m_HouseInfo.m_szMasterName.c_str() );
 
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
-	g_FontMgr.PrintTextWidthCut( iXPos + 65, iYPos + 73, FONT_SIZE_11, 300.0f, "개인본부 맵" );
+	g_FontMgr.PrintTextWidthCut( iXPos + 65, iYPos + 73, FONT_SIZE_11, 300.0f, STR(1) );
 
 	int iRealXPos = iXPos + 18;
 	int iRealYPos = iYPos + 100;
@@ -503,7 +503,7 @@ void HouseJoinRequestWnd::SetRequestName( const ioHashString &rkName )
 	m_dwCurrentTime = FRAMEGETTIME();
 
 	char szTitle[MAX_PATH] = "";
-	SafeSprintf( szTitle, sizeof( szTitle ), "띵똥. . %d", REQUEST_DELAY_SEC );
+	SafeSprintf( szTitle, sizeof( szTitle ), STR(1), REQUEST_DELAY_SEC );
 	SetTitleText( szTitle );
 }
 
@@ -527,7 +527,7 @@ void HouseJoinRequestWnd::OnProcess( float fTimePerSec )
 		DWORD dwSec = ((float)(FRAMEGETTIME() - m_dwCurrentTime) / 1000);
 		int   iSec  = max( 0, REQUEST_DELAY_SEC - dwSec );	
 		char szTitle[MAX_PATH] = "";
-		SafeSprintf( szTitle, sizeof( szTitle ), "띵똥. . %d", iSec );
+		SafeSprintf( szTitle, sizeof( szTitle ), STR(1), iSec );
 		SetTitleText( szTitle );
 	}
 }
@@ -559,7 +559,7 @@ void HouseJoinRequestWnd::OnRender()
 	g_FontMgr.PrintTextWidthCut( iXPos + 57, iYPos + 53, FONT_SIZE_13, 133.0f, m_szRequestName.c_str() );
 
 	g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	g_FontMgr.PrintText( iXPos + 57, iYPos + 71, FONT_SIZE_13,  "님이 방문하고자 합니다" );
+	g_FontMgr.PrintText( iXPos + 57, iYPos + 71, FONT_SIZE_13,  STR(1) );
 }
 //////////////////////////////////////////////////////////////////////////
 HouseMainOptionWnd::HouseMainOptionWnd()
@@ -632,30 +632,30 @@ void HouseMainOptionWnd::CommandOption( DWORD dwCmd )
 		{	
 			if( m_szMasterName != g_MyInfo.GetPublicID() )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "강제퇴장은 방장만 시킬 수 있습니다." );			
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );			
 				return;
 			}
 
 			if( g_MyInfo.GetPublicID() == m_szName )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "자신을 강제퇴장 시킬 수 없습니다." );			
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );			
 				return;
 			}			
 
 			if( g_App.IsAdminID( m_szName.c_str() ) )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK,  NULL, "개발자나 마스터를 강제퇴장 시킬 수 없습니다." );			
+				g_GUIMgr.SetMsgBox( MB_OK,  NULL, STR(3) );			
 				return;
 			}
 
-			g_GUIMgr.SetMsgBox( MB_YESNO, this, "%s님을 강제퇴장 #시키겠습니까?", m_szName.c_str() );	
+			g_GUIMgr.SetMsgBox( MB_YESNO, this, STR(4), m_szName.c_str() );	
 		}
 		break;
 	case OPTION_CLOSE:
 		{
 			if( m_szMasterName != g_MyInfo.GetPublicID() )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "슬롯은 방장만 열거나 닫을 수 있습니다." );			
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );			
 				return;
 			}
 
@@ -669,7 +669,7 @@ void HouseMainOptionWnd::CommandOption( DWORD dwCmd )
 		{
 			if( m_szMasterName != g_MyInfo.GetPublicID() )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "슬롯은 방장만 열거나 닫을 수 있습니다." );			
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );			
 				return;
 			}
 
@@ -744,24 +744,24 @@ void HouseMainOptionWnd::SetOptionInfo( const ioHashString &rkName, const ioHash
 		if( rkName.IsEmpty() )
 		{
 			if( m_iSlotArray >= m_iMaxSlot )
-				m_OptionMap.insert( OptionMap::value_type( OPTION_OPEN, "슬롯 열기" ) );
+				m_OptionMap.insert( OptionMap::value_type( OPTION_OPEN, STR(1) ) );
 			else
-				m_OptionMap.insert( OptionMap::value_type( OPTION_CLOSE, "슬롯 닫기" ) );
+				m_OptionMap.insert( OptionMap::value_type( OPTION_CLOSE, STR(2) ) );
 		}
 		else if( rkName == g_MyInfo.GetPublicID() )
 		{
-			m_OptionMap.insert( OptionMap::value_type( OPTION_INFO, "유저정보" ) );
+			m_OptionMap.insert( OptionMap::value_type( OPTION_INFO, STR(3) ) );
 		}
 		else
 		{
 			char szTitle[MAX_PATH] = "";
-			SafeSprintf( szTitle, sizeof( szTitle ), "%s 정보", m_szName.c_str() );
+			SafeSprintf( szTitle, sizeof( szTitle ), STR(4), m_szName.c_str() );
 			m_OptionMap.insert( OptionMap::value_type( OPTION_INFO, szTitle ) );
 
 			//강퇴
 			if( !g_App.IsAdminID( m_szName.c_str() ) )
 			{
-				m_OptionMap.insert( OptionMap::value_type( OPTION_KICK, "강제퇴장 시키기" ) );
+				m_OptionMap.insert( OptionMap::value_type( OPTION_KICK, STR(5) ) );
 			}
 		}
 	}
@@ -769,11 +769,11 @@ void HouseMainOptionWnd::SetOptionInfo( const ioHashString &rkName, const ioHash
 	{
 		if( rkName.IsEmpty() )
 		{	
-			m_OptionMap.insert( OptionMap::value_type( OPTION_OPEN, "슬롯열기" ) );
+			m_OptionMap.insert( OptionMap::value_type( OPTION_OPEN, STR(6) ) );
 		}
 		else
 		{
-			m_OptionMap.insert( OptionMap::value_type( OPTION_INFO, "유저정보" ) );
+			m_OptionMap.insert( OptionMap::value_type( OPTION_INFO, STR(3) ) );
 		}
 	}
 
@@ -1071,7 +1071,7 @@ void HouseMainWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 		{
 			if( m_HouseInfo.m_szMasterName != g_MyInfo.GetPublicID() )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "개인본부 주인만 초대가 가능합니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 				return;
 			}
 
@@ -1116,7 +1116,7 @@ void HouseMainWnd::UpdateInfo()
 	}
 
 	char szTitle[MAX_PATH] = "";
-	SafeSprintf( szTitle, sizeof( szTitle ), "개인본부 %d/%d", (int)m_UserInfoList.size(), m_HouseInfo.m_iMaxUserCount );
+	SafeSprintf( szTitle, sizeof( szTitle ), STR(1), (int)m_UserInfoList.size(), m_HouseInfo.m_iMaxUserCount );
 	SetTitleText( szTitle );
 
 	if( m_HouseInfo.m_szMasterName == g_MyInfo.GetPublicID() )
@@ -1249,7 +1249,7 @@ void HouseMainWnd::OnRender()
 	g_FontMgr.PrintTextWidthCut( iXPos + 65, iYPos + 55, FONT_SIZE_13, 300.0f, m_HouseInfo.m_szMasterName.c_str() );
 
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
-	g_FontMgr.PrintTextWidthCut( iXPos + 65, iYPos + 73, FONT_SIZE_11, 300.0f, "개인본부 맵" );
+	g_FontMgr.PrintTextWidthCut( iXPos + 65, iYPos + 73, FONT_SIZE_11, 300.0f, STR(1) );
 
 	int iRealXPos = iXPos + 18;
 	int iRealYPos = iYPos + 100;
@@ -1315,7 +1315,7 @@ void HouseMainWnd::OnRenderBar( int iXPos, int iYPos, int iMaxSlot, int iCurSlot
 				m_pPeopleOrange->Render( iXPos + 4, iYPos + 2 );
 				g_FontMgr.SetTextColor( TCT_DEFAULT_ORANGE );
 			}
-			g_FontMgr.PrintText( iXPos + 23, iYPos + 3, FONT_SIZE_12, "빈자리" );
+			g_FontMgr.PrintText( iXPos + 23, iYPos + 3, FONT_SIZE_12, STR(1) );
 		}
 		else
 		{
@@ -1332,7 +1332,7 @@ void HouseMainWnd::OnRenderBar( int iXPos, int iYPos, int iMaxSlot, int iCurSlot
 				m_pPeopleGray->Render( iXPos + 4, iYPos + 2 );	
 				g_FontMgr.SetTextColor( TCT_DEFAULT_LIGHTGRAY );		
 			}
-			g_FontMgr.PrintText( iXPos + 23, iYPos + 3, FONT_SIZE_12, "닫힘" );
+			g_FontMgr.PrintText( iXPos + 23, iYPos + 3, FONT_SIZE_12, STR(2) );
 		}
 	}
 	else if( m_MouseOverName == szName ) // 오버 슬롯
@@ -1442,18 +1442,18 @@ void HouseOwnerWnd::OnRender()
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_13, "열어놓음" );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(1) );
 	kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_13, "(아무나 방문 가능하게 열어놓습니다)" );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(2) );
 	kPrinter.PrintFullText( iXPos + 37, iYPos + 57, TAT_LEFT );
 	kPrinter.ClearList();
 
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_13, "잠금" );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(3) );
 	kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_13, "(주인의 초대를 제외하곤 아무도 들어오지 못합니다)" );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(4) );
 	kPrinter.PrintFullText( iXPos + 37, iYPos + 79, TAT_LEFT );
 	kPrinter.ClearList();
 }
@@ -1533,13 +1533,13 @@ void HouseInviteList::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 		{
 			if( g_App.IsAdminID( m_szName.c_str() ) )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "개발자나 마스터는 초대할 수 없습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 				return;
 			}
 
 			if( !m_bInviteActive )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "개인본부 정원을 초과하였습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 				return;
 			}
 
@@ -1810,7 +1810,7 @@ void HouseInviteListWnd::NameInvite()
 {
 	if( !m_bInviteActive )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "개인본부 정원을 초과하였습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 
@@ -1830,20 +1830,20 @@ void HouseInviteListWnd::NameInvite()
 
 	if( !g_App.IsRightID( szName ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "잘못된 닉네임입니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return;
 	}
 
 	ioHashString szIsID = szName;
 	if( g_MyInfo.GetPublicID() == szIsID )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "자신의 닉네임입니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		return;
 	}
 
 	if( g_App.IsAdminID( szName ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "개발자는 초대할 수 없습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 		return;
 	}		
 
@@ -1858,7 +1858,7 @@ void HouseInviteListWnd::AllInvite()
 {
 	if( !m_bInviteActive )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "개인본부 정원을 초과하였습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 
@@ -1875,7 +1875,7 @@ void HouseInviteListWnd::AllInvite()
 
 	if( vSendList.empty() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "초대 가능한 유저가 없습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return;
 	}
 
@@ -1940,7 +1940,7 @@ void HouseInviteListWnd::OnRender()
 		g_FontMgr.SetTextStyle( TS_NORMAL );
 		g_FontMgr.SetAlignType( TAT_CENTER );
 		g_FontMgr.SetTextColor( TCT_DEFAULT_LIGHTGRAY );
-		g_FontMgr.PrintText( iXPos + 151, iYPos + 120, FONT_SIZE_12, "초대가능한 인원이 없습니다" );
+		g_FontMgr.PrintText( iXPos + 151, iYPos + 120, FONT_SIZE_12, STR(1) );
 	}
 }
 
@@ -2153,7 +2153,7 @@ void HouseInvitedWnd::SetInfo( const ioHashString &rkMasterName, SP2Packet &rkPa
 	m_dwStartTime = FRAMEGETTIME();
 
 	char szTitle[MAX_PATH] = "";
-	SafeSprintf( szTitle, sizeof( szTitle ), "개인본부 %d/%d", (int)m_vUserList.size(), m_iMaxPlayer );
+	SafeSprintf( szTitle, sizeof( szTitle ), STR(1), (int)m_vUserList.size(), m_iMaxPlayer );
 	SetTitleText( szTitle );
 
 	if( IsShow() )
@@ -2168,35 +2168,35 @@ void HouseInvitedWnd::JoinHouse()
 	if( g_MyInfo.IsTutorialUser() )
 	{	
 		HideWnd();
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "튜토리얼을 완료하면#입장이 가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 
 	if( g_MyInfo.GetCharCount() == 0 )
 	{
 		HideWnd();
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "용병이 있어야#개인본부 참가가 가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return;
 	}
 
 	if( g_MyInfo.GetActiveCharCount() == 1 && g_MyInfo.GetActiveExerciseCharCount() == 1 )
 	{
 		HideWnd();
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "체험용병이 아닌 일반용병이 있어야#개인본부 참가가 가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		return;
 	}
 
 	if( g_BattleRoomMgr.IsBattleRoom() )
 	{
 		HideWnd();
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "전투 중에는 개인본부 입장이 불가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 		return;
 	}
 
 	if( g_LadderTeamMgr.IsLadderTeam() )
 	{
 		HideWnd();
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "진영/래더 중에는#개인본부 입장이 불가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );
 		return;
 	}
 
@@ -2303,7 +2303,7 @@ void HouseInvitedWnd::iwm_show()
 	if( pAgreeBtn )
 	{
 		char szTitle[MAX_PATH] = "";
-		SafeSprintf( szTitle, sizeof( szTitle ), "초대수락 . . %d", INVITE_DELAY_SEC );
+		SafeSprintf( szTitle, sizeof( szTitle ), STR(1), INVITE_DELAY_SEC );
 		pAgreeBtn->SetTitleText( szTitle );
 	}
 	UpdatePage( 0 );	
@@ -2345,7 +2345,7 @@ void HouseInvitedWnd::OnRender()
 	g_FontMgr.PrintTextWidthCut( iXPos + 65, iYPos + 55, FONT_SIZE_13, 175.0f, m_szMasterName.c_str() );
 
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
-	g_FontMgr.PrintTextWidthCut( iXPos + 65, iYPos + 73, FONT_SIZE_11, 175.0f, "개인 본부 맵" );
+	g_FontMgr.PrintTextWidthCut( iXPos + 65, iYPos + 73, FONT_SIZE_11, 175.0f, STR(1) );
 
 
 	////
@@ -2386,7 +2386,7 @@ void HouseInvitedWnd::OnProcess( float fTimePerSec )
 			DWORD dwSec = ((float)(FRAMEGETTIME() - m_dwStartTime) / 1000);
 			int   iSec  = max( 0, INVITE_DELAY_SEC - dwSec );	
 			char szTitle[MAX_PATH] = "";
-			SafeSprintf( szTitle, sizeof( szTitle ), "초대수락 . . %d", iSec );
+			SafeSprintf( szTitle, sizeof( szTitle ), STR(1), iSec );
 			pBtn->SetTitleText( szTitle );
 		}
 	}

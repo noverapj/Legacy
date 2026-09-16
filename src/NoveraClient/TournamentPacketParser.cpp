@@ -296,27 +296,27 @@ namespace TournamentPacketParser
 			break;
 		case TOURNAMENT_TEAM_CREATE_NAME_ALREADY:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "동일한 팀 이름이 존재합니다" );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 			}
 			break;
 		case TOURNAMENT_TEAM_CREATE_ALREADY_TEAM1:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "이미 팀이 존재합니다" );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 			}
 			break;
 		case TOURNAMENT_TEAM_CREATE_ALREADY_TEAM2:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "이미 팀에 소속되어있습니다" );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 			}
 			break;
 		case TOURNAMENT_TEAM_CREATE_END_LEAGUE:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "대회의 팀 모집 기간이 종료되었습니다" );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 			}
 			break;
 		case TOURNAMENT_TEAM_CREATE_FAILED:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "이미 LSNC예선전에 참가하였기에# 해당대회는 참여가 불가능합니다" );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );
 			}
 		}
 	}
@@ -374,11 +374,11 @@ namespace TournamentPacketParser
 				TeamGlobalData *pTeamData = g_TournamentTeamMgr.GetTeamData( dwTeamIndex, false );
 				if( pTeamData )
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "[%s]팀에 가입 신청이 완료되었습니다", pTeamData->GetTeamName().c_str() );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1), pTeamData->GetTeamName().c_str() );
 				}
 				else
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "가입 신청이 완료되었습니다" );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 				}
 			}
 			break;
@@ -390,22 +390,22 @@ namespace TournamentPacketParser
 			break;
 		case TOURNAMENT_TEAM_ENTRY_APP_ALREADY_TEAM1:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "대회에 이미 팀이 존재합니다" );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 			}
 			break;
 		case TOURNAMENT_TEAM_ENTRY_APP_ALREADY_TEAM2:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "이미 신청한 팀입니다" );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 			}
 			break;
 		case TOURNAMENT_TEAM_ENTRY_APP_FULL_WAITING:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "팀의 대기 인원이 가득 찼습니다" );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );
 			}
 			break;
 		case TOURNAMENT_TEAM_ENTRY_APP_BAN:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "이미 LSNC예선전에 참가하였기에#해당대회는 참여가 불가능합니다" );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(6) );
 			}
 			break;
 		}
@@ -431,32 +431,32 @@ namespace TournamentPacketParser
 			break;
 		case TOURNAMENT_TEAM_ENTRY_AGREE_FAILED1:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "가입 신청이 취소된 유저입니다" );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 			}
 			break;
 		case TOURNAMENT_TEAM_ENTRY_AGREE_FAILED2:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "정회원만 가입이 가능합니다" );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 			}
 			break;
 		case TOURNAMENT_TEAM_ENTRY_AGREE_ALREAY_TEAM:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "이미 팀이 있는 유저입니다" );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 			}
 			break;
 		case TOURNAMENT_TEAM_ENTRY_AGREE_FULL_JOINER:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "더이상 팀원을 받을 수 없습니다" );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 			}
 			break;
 		case TOURNAMENT_TEAM_ENTRY_AGREE_CAMP_NONE:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "같은 진영의 유저만 팀이 가능합니다" );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );
 			}
 			break;
 		case TOURNAMENT_TEAM_ENTRY_AGREE_END_APP:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "팀모집 기간이 종료되었습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(6) );
 			}
 			break;
 		}
@@ -541,13 +541,13 @@ namespace TournamentPacketParser
 		case TOURNAMENT_TEAM_LEAVE_FAILED_STATE:
 			{
 				TCPNetwork::MouseBusy( false );
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "대회가 시작되어 탈퇴가 불가능합니다" );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 			}
 			break;
 		case TOURNAMENT_TEAM_LEAVE_FAILED_NON_MEMBER:
 			{
 				TCPNetwork::MouseBusy( false );
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "회원 정보가 일치하지 않습니다" );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 			}
 			break;
 		}
@@ -670,12 +670,12 @@ namespace TournamentPacketParser
 			break;
 		case TOURNAMENT_CUSTOM_CREATE_NAME_FAILED:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "사용할 수 없는 대회명입니다" );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 			}
 			break;
 		case TOURNAMENT_CUSTOM_CREATE_EXCEPTION:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "대회 생성이 실패하였습니다#사용한 생성권은 선물로 반환됩니다" );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 			}
 			break;
 		}
@@ -755,7 +755,7 @@ namespace TournamentPacketParser
 			break;
 		case TOURNAMENT_TEAM_ALLOCATE_END:	// 대회가 종료되었음
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, " 종료된 대회입니다." );	
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );	
 			}
 			break;
 		}
@@ -832,12 +832,12 @@ namespace TournamentPacketParser
 			break;
 		case TOURNAMENT_ANNOUNCE_CHANGE_CLOSE :
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, " 종료된 대회입니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 			}
 			break;
 		case TOURNAMENT_ANNOUNCE_CHANGE_FAILED:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "대회의 주최자가 아닙니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 			}
 			break;
 		}
@@ -862,14 +862,14 @@ namespace TournamentPacketParser
 			{			
 				ioHashString szUserID;
 				rkPacket >> szUserID;			
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "%s님에게 초대를 발송 하였습니다.", szUserID.c_str() );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1), szUserID.c_str() );
 			}
 			break;
 		case TOURNAMENT_JOIN_CONFIRM_COMMAND_INVITE_OFFLINE:
 			{
 				ioHashString szUserID;
 				rkPacket >> szUserID;			
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "%s 님은 오프라인 상태입니다.", szUserID.c_str() );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2), szUserID.c_str() );
 
 			}
 			break;
@@ -907,12 +907,12 @@ namespace TournamentPacketParser
 			break;
 		case TOURNAMENT_CUSTOM_STATE_START_CLOSE:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "이미 종료된 대회입니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 			}
 			break;
 		case TOURNAMENT_CUSTOM_STATE_START_FAILED:
 			{			
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "대회의 주최자가 아니거나 # 대회 진행 가능시간이 아닙니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 			}
 			break;
 		}
@@ -949,12 +949,12 @@ namespace TournamentPacketParser
 					pNode->SendCustomRewardDataSync();
 
 				g_MyInfo.UseEtcCoinMoney( ioEtcItem::EIT_ETC_TOURNAMENT_COIN, iTotalPrice );
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "대회보상 추가가 완료 되었습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 			}
 			break;
 		case TOURNAMENT_CUSTOM_REWARD_BUY_CLOSE:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "이미 종료된 대회입니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 			}
 			break;
 		case TOURNAMENT_CUSTOM_REWARD_BUY_EMPTY_SLOT:
@@ -963,12 +963,12 @@ namespace TournamentPacketParser
 				if( pWnd && pWnd->IsShow() )
 					pWnd->HideWnd();
 
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "선택 가능한 보상 최대 개수를 초과하였습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 			}
 			break;
 		case TOURNAMENT_CUSTOM_REWARD_BUY_NOT_OWNER:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "대회의 주최자가 아닙니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 			}
 			break;
 		case TOURNAMENT_CUSTOM_REWARD_BUY_COIN_LACK:
@@ -1033,32 +1033,32 @@ namespace TournamentPacketParser
 			break;
 		case TOURNAMENT_CHEER_DECISION_ALREADY:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "이미 응원하기에 참여 하셨습니다" );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 			}
 			break;
 		case TOURNAMENT_CHEER_DECISION_NONE_TEAM:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "존재하지 않는 팀입니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 			}
 			break;
 		case TOURNAMENT_CHEER_DECISION_CLOSE:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "이미 종료된 대회입니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 			}
 			break;
 		case TOURNAMENT_CHEER_DECISION_NOT_REGULAR:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "정규대회가 아닙니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 			}
 			break;
 		case TOURNAMENT_CHEER_DECISION_NOT_TEAM_DELAY:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "응원기간에만 참여 가능합니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );
 			}
 			break;
 		case TOURNAMENT_CHEER_DECISION_FAIL:
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "응원하기에 실패 하였습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(6) );
 			}
 			break;
 		}

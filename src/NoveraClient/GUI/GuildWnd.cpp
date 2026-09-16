@@ -953,26 +953,26 @@ void GuildEventPopup::OnRender()
 	case ioGuildInfo::GUILD_HOME_ADMIN_SET:
 		{
 			g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
-			g_FontMgr.PrintText( iXPos + 103, iYPos + 153, FONT_SIZE_13, "편집권한이 부여 되었습니다." );		
+			g_FontMgr.PrintText( iXPos + 103, iYPos + 153, FONT_SIZE_13, STR(17) );		
 
 			// 타이틀
 			g_FontMgr.SetTextStyle( TS_OUTLINE_FULL_2X );
 			g_FontMgr.SetAlignType( TAT_LEFT );
 			g_FontMgr.SetBkColor( 12, 66, 111 );
 			g_FontMgr.SetTextColor( 255, 255, 255 );
-			g_FontMgr.PrintText( iXPos + 13, iYPos + 11, FONT_SIZE_17, "길드 본부 편집권한" );
+			g_FontMgr.PrintText( iXPos + 13, iYPos + 11, FONT_SIZE_17, STR(18) );
 		}
 		break;
 	case ioGuildInfo::GUILD_HOME_ADMIN_RELEASE:
 		{
 			g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
-			g_FontMgr.PrintText( iXPos + 103, iYPos + 153, FONT_SIZE_13, "편집권한이 해제 되었습니다." );		
+			g_FontMgr.PrintText( iXPos + 103, iYPos + 153, FONT_SIZE_13, STR(19) );		
 			// 타이틀
 			g_FontMgr.SetTextStyle( TS_OUTLINE_FULL_2X );
 			g_FontMgr.SetAlignType( TAT_LEFT );
 			g_FontMgr.SetBkColor( 12, 66, 111 );
 			g_FontMgr.SetTextColor( 255, 255, 255 );
-			g_FontMgr.PrintText( iXPos + 13, iYPos + 11, FONT_SIZE_17, "길드 본부 편집권한" );
+			g_FontMgr.PrintText( iXPos + 13, iYPos + 11, FONT_SIZE_17, STR(18) );
 		}
 		break;
 	}
@@ -2051,7 +2051,7 @@ void GuildInfoWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 				SP2Packet kPacket( CTPK_GUILD_MEMBER_ATTEND_RENEWAL );
 				TCPNetwork::SendToServer( kPacket );
 				TCPNetwork::MouseBusy( true );
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "출석 정보 갱신 완료 # 출석 버튼을 다시 눌러주시기 바랍니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(7) );
 				LOG.PrintTimeAndLog( 0, "%s : Request CTPK_GUILD_MEMBER_ATTEND_RENEWAL, Time : %d " ,__FUNCTION__, g_GuildInfo.GetAttendInfoRequestTime() );
 			}
 			else
@@ -2065,9 +2065,9 @@ void GuildInfoWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 		else if( cmd == IOEX_BTNUP )
 		{
 			if ( g_GuildInfo.CheckGuildCreatedTime() )
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "길드 출석은 가입 후#다음날(새벽 5시)부터 가능합니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(8) );
 			else if ( !g_GuildInfo.CheckEnableAttendTime() )
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "이미 출석 하셨습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(9) );
 		}
 		break;
 	case ID_ACCEPT_REWARD:
@@ -2078,7 +2078,7 @@ void GuildInfoWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 				SP2Packet kPacket( CTPK_GUILD_MEMBER_ATTEND_RENEWAL );
 				TCPNetwork::SendToServer( kPacket );
 				TCPNetwork::MouseBusy( true );
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "출석 정보 갱신 완료 # 출석 버튼을 다시 눌러주시기 바랍니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(7) );
 				LOG.PrintTimeAndLog( 0, "%s : Request CTPK_GUILD_MEMBER_ATTEND_RENEWAL, Time : %d " ,__FUNCTION__, g_GuildInfo.GetAttendInfoRequestTime() );
 			}
 			else
@@ -2093,11 +2093,11 @@ void GuildInfoWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 		else if ( cmd == IOEX_BTNUP)
 		{
 			if ( g_GuildInfo.CheckGuildCreatedTime() )
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "출석 보상 받기는 가입 후 다음날#(새벽 5시)부터 가능합니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(10) );
 			else if ( m_pGuildData->GetYesterdayAttendedCount() <= 0 )
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "어제 출석한 인원이 없습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(11) );
 			else if ( !g_GuildInfo.CheckEnableAttendRewardTime() )
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "이미 보상 받으셨습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(12) );
 		}
 		break;
 	case ID_GUILD_HEADQUATER:
@@ -2108,24 +2108,24 @@ void GuildInfoWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 
 			if( g_BattleRoomMgr.IsBattleRoom() )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "전투 중에는 입장이 불가능합니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(13) );
 				return;
 			}
 
 			if( g_LadderTeamMgr.IsLadderTeam() )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "진영팀 중에는 입장이 불가능합니다" );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(14) );
 				return;
 			}
 
 			if( g_ShuffleRoomMgr.IsShuffleRoom() )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "오늘의 모드 중에는 입장이 불가능합니다" );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(15) );
 				return;
 			}
 			if( g_RankBattleMgr.IsRankBattlePlaying() )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "랭킹전 중에는 입장이 불가능합니다" );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(16) );
 				return;
 			}
 
@@ -2157,11 +2157,11 @@ void GuildInfoWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 					}
 				}
 				else
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "길드장만이 활성화 할 수 있는 기능입니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(17) );
 			}
 			else
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "가입된 길드가 없습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(18) );
 			}
 		}
 		break;
@@ -2197,8 +2197,8 @@ void GuildInfoWnd::OnRender()
 	g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
 	g_FontMgr.PrintText( iXPos + 23, iYPos + 118, FONT_SIZE_12, STR(1) );
 	g_FontMgr.PrintText( iXPos + 23, iYPos + 139, FONT_SIZE_12, STR(3) );
-	g_FontMgr.PrintText( iXPos + 23, iYPos + 160, FONT_SIZE_12, "현재인원" );
-	g_FontMgr.PrintText( iXPos + 23, iYPos + 181, FONT_SIZE_12, "최대인원" );
+	g_FontMgr.PrintText( iXPos + 23, iYPos + 160, FONT_SIZE_12, STR(21) );
+	g_FontMgr.PrintText( iXPos + 23, iYPos + 181, FONT_SIZE_12, STR(22) );
 	g_FontMgr.PrintText( iXPos + 23, iYPos + 202, FONT_SIZE_12, STR(5) );
 	g_FontMgr.PrintText( iXPos + 23, iYPos + 223, FONT_SIZE_12, STR(6) );
 	g_FontMgr.PrintText( iXPos + 23, iYPos + 244, FONT_SIZE_12, STR(7) );
@@ -2248,18 +2248,18 @@ void GuildInfoWnd::OnRender()
 	if( iJoinEntry > iLevelToMaxEntry )
 	{
 		g_FontMgr.SetTextColor( TCT_DEFAULT_RED );
-		g_FontMgr.PrintText( iXPos + 434, iYPos + 160, FONT_SIZE_12, "%d 명 (초과)", iJoinEntry );			
+		g_FontMgr.PrintText( iXPos + 434, iYPos + 160, FONT_SIZE_12, STR(23), iJoinEntry );			
 	}
 	else
 	{
 		g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
-		g_FontMgr.PrintText( iXPos + 434, iYPos + 160, FONT_SIZE_12, "%d 명", iJoinEntry );			
+		g_FontMgr.PrintText( iXPos + 434, iYPos + 160, FONT_SIZE_12, STR(24), iJoinEntry );			
 	}
 
 	// 최대 인원
 	g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
 	// 길드장이 길드원의 최대인원을 제한할 수 있고, 길드에 따른 최대 인원이 정해져있기 때문에 min을 사용.
-	g_FontMgr.PrintText( iXPos + 434, iYPos + 181, FONT_SIZE_12, "%d 명", min( iMaxEntry, iLevelToMaxEntry ) );
+	g_FontMgr.PrintText( iXPos + 434, iYPos + 181, FONT_SIZE_12, STR(24), min( iMaxEntry, iLevelToMaxEntry ) );
 
 	// 랭킹
 	g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
@@ -2640,7 +2640,7 @@ void GuildMainWnd::UpdateTitle()
 
 	// 타이틀 변경
 	char szTitle[MAX_PATH] = "";
-	SafeSprintf( szTitle, sizeof( szTitle ), "%s 길드", m_pGuildData->GetGuildName().c_str() );
+	SafeSprintf( szTitle, sizeof( szTitle ), STR(4), m_pGuildData->GetGuildName().c_str() );
 	SetTitleText( szTitle );
 
 
@@ -2655,12 +2655,12 @@ void GuildMainWnd::UpdateTitle()
 			int iLevelToMaxEntry = g_GuildInfo.GetGuildLevelToMaxEntry( m_pGuildData->GetGuildLevel() );
 			if( iJoinEntry > iLevelToMaxEntry )
 			{		
-				SafeSprintf( szTitle, sizeof( szTitle ), "길드원 %d/%d", iJoinEntry, iLevelToMaxEntry );
+				SafeSprintf( szTitle, sizeof( szTitle ), STR(5), iJoinEntry, iLevelToMaxEntry );
 				pGuildUserBtn->SetTitleColor( 0xFFB91600, 0 );
 			}
 			else
 			{
-				SafeSprintf( szTitle, sizeof( szTitle ), "길드원 %d/%d", iJoinEntry, iMaxEntry );
+				SafeSprintf( szTitle, sizeof( szTitle ), STR(5), iJoinEntry, iMaxEntry );
 				pGuildUserBtn->SetTitleColor( 0xFF3A3A3A, 0 );	
 			}
 			pGuildUserBtn->SetTitleText( szTitle );
@@ -2671,7 +2671,7 @@ void GuildMainWnd::UpdateTitle()
 		{
 			int iJoinEntry = m_pGuildData->GetGuildJoinUser();
 			int iTodayAttendCount  = m_pGuildData->GetTodayAttendedCount();
-			SafeSprintf( szTitle, sizeof( szTitle ), "출석 정보 %d/%d", iTodayAttendCount, iJoinEntry );	
+			SafeSprintf( szTitle, sizeof( szTitle ), STR(6), iTodayAttendCount, iJoinEntry );	
 			pGuildAttendListBtn->SetTitleColor( 0xFF3A3A3A, 0 );	
 			pGuildAttendListBtn->SetTitleText( szTitle );
 		}
@@ -2687,12 +2687,12 @@ void GuildMainWnd::UpdateTitle()
 			int iLevelToMaxEntry = g_GuildInfo.GetGuildLevelToMaxEntry( m_pGuildData->GetGuildLevel() );
 			if( iJoinEntry > iLevelToMaxEntry )
 			{		
-				SafeSprintf( szTitle, sizeof( szTitle ), "길드원 %d/%d", iJoinEntry, iLevelToMaxEntry );
+				SafeSprintf( szTitle, sizeof( szTitle ), STR(5), iJoinEntry, iLevelToMaxEntry );
 				pGuildUserBtn->SetTitleColor( 0xFFB91600, 0 );
 			}
 			else
 			{
-				SafeSprintf( szTitle, sizeof( szTitle ), "길드원 %d/%d", iJoinEntry, iMaxEntry );	
+				SafeSprintf( szTitle, sizeof( szTitle ), STR(5), iJoinEntry, iMaxEntry );	
 				pGuildUserBtn->SetTitleColor( 0xFF3A3A3A, 0 );	
 			}
 			pGuildUserBtn->SetTitleText( szTitle );
@@ -3725,10 +3725,10 @@ void GuildInvitedWnd::OnRender()
 	g_FontMgr.SetAlignType( TAT_LEFT );
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GREEN );
-	g_FontMgr.PrintTextWidthCut( iXPos + 57, iYPos + 53, FONT_SIZE_13, 133.0f, "%s 길드", m_szGuildName.c_str() );
+	g_FontMgr.PrintTextWidthCut( iXPos + 57, iYPos + 53, FONT_SIZE_13, 133.0f, STR(7), m_szGuildName.c_str() );
 	
 	g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	g_FontMgr.PrintTextWidthCut( iXPos + 57, iYPos + 71, FONT_SIZE_13, 133.0f, "의 길드가입 권유 도착" );
+	g_FontMgr.PrintTextWidthCut( iXPos + 57, iYPos + 71, FONT_SIZE_13, 133.0f, STR(8) );
 
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
     g_FontMgr.PrintText( iXPos + 16, iYPos + 99, FONT_SIZE_12, STR(5) );
@@ -4045,7 +4045,7 @@ void GuildEtcItemPopup::OnRender()
 			g_FontMgr.PrintText( iXPos + 151, iYPos + 144, FONT_SIZE_13, STR(1) );
 
 			g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
-			g_FontMgr.PrintText( iXPos + 151, iYPos + 164, FONT_SIZE_13, "진영구분없이 친구들과 함께할 수 있습니다." );
+			g_FontMgr.PrintText( iXPos + 151, iYPos + 164, FONT_SIZE_13, STR(13) );
 			g_FontMgr.PrintText( iXPos + 151, iYPos + 184, FONT_SIZE_13, STR(3) );
 		}
 		break;
@@ -4065,8 +4065,8 @@ void GuildEtcItemPopup::OnRender()
 			g_FontMgr.PrintText( iXPos + 151, iYPos + 144, FONT_SIZE_13, STR(4) );
 
 			g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
-			g_FontMgr.PrintText( iXPos + 151, iYPos + 164, FONT_SIZE_13, "진영구분없이 친구들과 함께할 수 있습니다." );
-			g_FontMgr.PrintText( iXPos + 151, iYPos + 184, FONT_SIZE_13, "길드원들과 함께 최고의 길드를 만들어보세요." );
+			g_FontMgr.PrintText( iXPos + 151, iYPos + 164, FONT_SIZE_13, STR(13) );
+			g_FontMgr.PrintText( iXPos + 151, iYPos + 184, FONT_SIZE_13, STR(14) );
 		}
 		break;
 	case ID_MARK_CHANGE_ITEM_BUY:

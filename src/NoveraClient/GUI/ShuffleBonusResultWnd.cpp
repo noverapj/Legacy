@@ -74,7 +74,7 @@ void ShuffleBonusResultWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 			ioButton *pBtn = dynamic_cast<ioButton*>( FindChildWnd( ID_CONTINUE ) );
 			if( pBtn )
 			{
-				pBtn->SetTitleText( "계속하기 (대기중)" );
+				pBtn->SetTitleText( STR(1) );
 				pBtn->SetInActive();
 			}
 		}
@@ -103,33 +103,33 @@ void ShuffleBonusResultWnd::OnRender()
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( TCT_DEFAULT_DARKGRAY );
 	kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_17, "획득한 별의 누적 갯수는" );
+	kPrinter.AddTextPiece( FONT_SIZE_17, STR(1) );
 	kPrinter.PrintFullTextWidthCut( iXPos + 166, iYPos + 124, TAT_CENTER, 255.0f );
 	kPrinter.ClearList();
 
 	kPrinter.SetTextColor( TCT_DEFAULT_BLUE );
-	kPrinter.AddTextPiece( FONT_SIZE_17, "%d개", g_ShuffleRoomMgr.GetShuffleStarCnt() );
+	kPrinter.AddTextPiece( FONT_SIZE_17, STR(2), g_ShuffleRoomMgr.GetShuffleStarCnt() );
 	kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_17, "입니다." );
+	kPrinter.AddTextPiece( FONT_SIZE_17, STR(3) );
 	kPrinter.PrintFullTextWidthCut( iXPos + 166, iYPos + 147, TAT_CENTER, 255.0f );
 	kPrinter.ClearList();
 
 	kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_13, "오늘의모드는 자동으로 계속하도록 진행됩니다." );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(4) );
 	kPrinter.PrintFullTextWidthCut( iXPos + 166, iYPos + 177, TAT_CENTER, 255.0f );
 	kPrinter.ClearList();
 
-	kPrinter.AddTextPiece( FONT_SIZE_13, "그만하실 분은 아래의 버튼으로" );
+	kPrinter.AddTextPiece( FONT_SIZE_13, STR(5) );
 	kPrinter.PrintFullTextWidthCut( iXPos + 166, iYPos + 195, TAT_CENTER, 255.0f );
 	kPrinter.ClearList();
 
 	if( g_App.GetConnectedMoveMode() == ioApplication::CMM_LOBBY )
 	{
-		kPrinter.AddTextPiece( FONT_SIZE_13, "로비로 이동하실 수 있습니다." );
+		kPrinter.AddTextPiece( FONT_SIZE_13, STR(6) );
 	}
 	else
 	{
-		kPrinter.AddTextPiece( FONT_SIZE_13, "광장으로 이동하실 수 있습니다." );
+		kPrinter.AddTextPiece( FONT_SIZE_13, STR(7) );
 	}
 
 	kPrinter.PrintFullTextWidthCut( iXPos + 166, iYPos + 213, TAT_CENTER, 255.0f );

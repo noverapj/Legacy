@@ -81,24 +81,24 @@ void HomeEtcItemNeedPopup::OnRender()
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 
 	g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	g_FontMgr.PrintText( iXPos + 151, iYPos + 144, FONT_SIZE_13, "[개인본부 임대권]이 필요합니다." );
+	g_FontMgr.PrintText( iXPos + 151, iYPos + 144, FONT_SIZE_13, STR(1) );
 
 	g_FontMgr.SetTextStyle( TS_NORMAL );
 	g_FontMgr.SetAlignType( TAT_CENTER );
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_RED );	
-	g_FontMgr.PrintText( iXPos + 151, iYPos + 164, FONT_SIZE_13, "소지 하고 있는 동안" );
+	g_FontMgr.PrintText( iXPos + 151, iYPos + 164, FONT_SIZE_13, STR(2) );
 
 	g_FontMgr.SetTextStyle( TS_NORMAL );
 	g_FontMgr.SetAlignType( TAT_CENTER );
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );	
-	g_FontMgr.PrintText( iXPos + 151, iYPos + 184, FONT_SIZE_13, "개인본부를 소유 할 수 있도록 하는 아이템입니다." );
+	g_FontMgr.PrintText( iXPos + 151, iYPos + 184, FONT_SIZE_13, STR(3) );
 
 	g_FontMgr.SetTextStyle( TS_NORMAL );
 	g_FontMgr.SetAlignType( TAT_CENTER );
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );	
-	g_FontMgr.PrintText( iXPos + 151, iYPos + 204, FONT_SIZE_13, "상점 - 특별에서 구입하실 수 있습니다." );
+	g_FontMgr.PrintText( iXPos + 151, iYPos + 204, FONT_SIZE_13, STR(4) );
 
 }

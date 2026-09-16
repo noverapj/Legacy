@@ -1465,7 +1465,7 @@ void PlazaMainOptionWnd::CommandOption( DWORD dwCmd )
 
 			if( m_bMonsterBugBear )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK,  NULL, "몬스터 출현으로 강퇴 기능이#일시적으로 중단됩니다." );			
+				g_GUIMgr.SetMsgBox( MB_OK,  NULL, STR(7) );			
 				return;
 			}
 
@@ -1897,7 +1897,7 @@ void PlazaMainWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 		}
 		else if( cmd == IOEX_BTNUP )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "길드 본부에서는#초대 할 수 없습니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		}
 		break;
 	case ID_CHANGE_INFO:
@@ -2177,7 +2177,7 @@ void PlazaMainWnd::OnRender()
 
 	if( m_PlazaInfo.m_ePlazaType == PT_GUILD )
 	{
-		g_FontMgr.PrintTextWidthCut( iXPos + 65, iYPos + 73, FONT_SIZE_11, 300.0f, "길드 본부" );
+		g_FontMgr.PrintTextWidthCut( iXPos + 65, iYPos + 73, FONT_SIZE_11, 300.0f, STR(2) );
 	}
 	else
 	{

@@ -520,8 +520,8 @@ void GameOptionVolumeTab::OnRender()
 	g_FontMgr.SetTextStyle( TS_NORMAL );
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	g_FontMgr.PrintText( iXPos + 44, iYPos + 19, FONT_SIZE_14, "볼륨 설정" );
-	g_FontMgr.PrintText( iXPos + 44, iYPos + 211, FONT_SIZE_14, "음성채팅 설정" );
+	g_FontMgr.PrintText( iXPos + 44, iYPos + 19, FONT_SIZE_14, STR(3) );
+	g_FontMgr.PrintText( iXPos + 44, iYPos + 211, FONT_SIZE_14, STR(4) );
 }
 //------------------------------------------------------------------------------------------------------------------------
 GameSpecRadioBtn::GameSpecRadioBtn()
@@ -1418,7 +1418,7 @@ void GameOptionSpecTab::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 			}
 			else
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "배경화면 설정은 광장과 본부에서#가능합니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 			}
 			
 		}
@@ -1916,11 +1916,11 @@ void BackgroundChangeBtn::OnRender()
 	{
 		if( g_App.GetConnectedMoveMode() == ioApplication::CMM_PLAZA )
 		{
-			g_FontMgr.PrintText( iXPos + 116, iYPos + 75, FONT_SIZE_12, "광장으로 퇴장" );
+			g_FontMgr.PrintText( iXPos + 116, iYPos + 75, FONT_SIZE_12, STR(5) );
 		}
 		else
 		{
-			g_FontMgr.PrintText( iXPos + 116, iYPos + 75, FONT_SIZE_12, "본부로 퇴장" );
+			g_FontMgr.PrintText( iXPos + 116, iYPos + 75, FONT_SIZE_12, STR(6) );
 		}
 	}
 }

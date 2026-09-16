@@ -932,7 +932,7 @@ void ConnectAndPlayTimeEventUserNode::Init()
 
 void ConnectAndPlayTimeEventUserNode::OnRecievePacket( SP2Packet &rkPacket, ioPlayStage *pPlayStage )
 {
-	g_ChatMgr.SetSystemMsg( "개발자K의 가위바위보 도전권 1장획득(홈페이지에서 가위바위보를 할 수 있습니다)" );
+	g_ChatMgr.SetSystemMsg( STR(1) );
 }
 //---------------------------------------------------------------------------------------------------------------------------------
 FreeDayEventUserNode::FreeDayEventUserNode()

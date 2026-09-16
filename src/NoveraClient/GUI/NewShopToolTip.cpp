@@ -413,7 +413,7 @@ bool NewShopToolTip::SetInfo( NewShopItemInfo &rkInfo )
 		m_szDescArray[2].SetTextStyle( TS_NORMAL );
 		m_szDescArray[2].SetBkColor( 0, 0, 0 );	
 		m_szDescArray[2].SetTextColor( TCT_DEFAULT_ORANGE );
-		m_szDescArray[2].AddTextPiece( FONT_SIZE_17, "%s 대회코인", szComma );
+		m_szDescArray[2].AddTextPiece( FONT_SIZE_17, STR(9), szComma );
 	}
 	else
 	{

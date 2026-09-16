@@ -208,7 +208,7 @@ void DisconnectWnd::OnRender()
 	{
 		if( g_MyInfo.GetChannelingType() == CNT_NEXON )
 		{
-			kPrinter.AddTextPiece( FONT_SIZE_13, "셧다운제에 의해 게임 이용이 차단됩니다." );
+			kPrinter.AddTextPiece( FONT_SIZE_13, STR(17) );
 			kPrinter.PrintFullText( iXPos, iYPos + 40, TAT_CENTER );
 			kPrinter.ClearList();
 		}
@@ -229,7 +229,7 @@ void DisconnectWnd::OnRender()
 	{
 		if( g_MyInfo.GetChannelingType() == CNT_NEXON )
 		{
-			kPrinter.AddTextPiece( FONT_SIZE_13, "셧다운제에 의해 게임 이용이 차단됩니다." );
+			kPrinter.AddTextPiece( FONT_SIZE_13, STR(17) );
 			kPrinter.PrintFullText( iXPos, iYPos + 40, TAT_CENTER );
 			kPrinter.ClearList();
 		}

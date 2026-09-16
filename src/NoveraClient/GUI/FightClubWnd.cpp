@@ -3941,9 +3941,9 @@ void FightClubRoundEndWnd::SetBonus( float fBonusArray[ioPlayMode::BA_MAX], bool
 		kData.m_iBonusPeso  = (float)( fBonusArray[ioPlayMode::BA_VICTORIES_PESO] * FLOAT100 ) + 0.001f;
 		kData.m_iBonusExp   = (float)( fBonusArray[ioPlayMode::BA_VICTORIES_PESO] * FLOAT100 ) + 0.001f;
 		if( bChamp )
-			kData.m_szTitle     = "연승";
+			kData.m_szTitle     = STR(1);
 		else
-			kData.m_szTitle     = "연승격파";
+			kData.m_szTitle     = STR(2);
 
 		m_BonusData.push_back( kData );
 		iCurBonusIcon++;
@@ -3960,7 +3960,7 @@ void FightClubRoundEndWnd::SetBonus( float fBonusArray[ioPlayMode::BA_MAX], bool
 			kData.m_dwBonusID	= BONUS_LEVELUP;
 			kData.m_iBonusPeso  = g_MyInfo.GetClassLevelUPPeso( m_PlayClassType[i] );
 			kData.m_iBonusExp   = 0;
-			kData.m_szTitle     = "레벨업";
+			kData.m_szTitle     = STR(3);
 			m_BonusData.push_back( kData );
 			iCurBonusIcon++;
 		}
@@ -3976,7 +3976,7 @@ void FightClubRoundEndWnd::SetBonus( float fBonusArray[ioPlayMode::BA_MAX], bool
 		kData.m_dwBonusID	= BONUS_MANNER;
 		kData.m_iBonusPeso  = (float)( g_MyInfo.GetBlockPointPer() * FLOAT100 ) + 0.001f;
 		kData.m_iBonusExp   = (float)( g_MyInfo.GetBlockPointPer() * FLOAT100 ) + 0.001f;
-		kData.m_szTitle     = "명성제한";
+		kData.m_szTitle     = STR(4);
 		m_BonusData.push_back( kData );
 		iCurBonusIcon++;
 	}
@@ -3991,7 +3991,7 @@ void FightClubRoundEndWnd::SetBonus( float fBonusArray[ioPlayMode::BA_MAX], bool
 		kData.m_dwBonusID	= BONUS_SOLDIER;
 		kData.m_iBonusPeso  = 0;
 		kData.m_iBonusExp   = (float)( fBonusArray[ioPlayMode::BA_SOLDIER_CNT] * FLOAT100 ) + 0.001f;
-		kData.m_szTitle     = "용병 보유";
+		kData.m_szTitle     = STR(5);
 		m_BonusData.push_back( kData );
 		iCurBonusIcon++;
 	}
@@ -4006,7 +4006,7 @@ void FightClubRoundEndWnd::SetBonus( float fBonusArray[ioPlayMode::BA_MAX], bool
 		kData.m_dwBonusID	= BONUS_ETC_ITEM;
 		kData.m_iBonusPeso  = (float)( fBonusArray[ioPlayMode::BA_ETC_ITEM] * FLOAT100 ) + 0.001f;
 		kData.m_iBonusExp   = (float)( fBonusArray[ioPlayMode::BA_ETC_ITEM] * FLOAT100 ) + 0.001f;
-		kData.m_szTitle     = "아이템";
+		kData.m_szTitle     = STR(6);
 		m_BonusData.push_back( kData );
 		iCurBonusIcon++;
 	}
@@ -4021,7 +4021,7 @@ void FightClubRoundEndWnd::SetBonus( float fBonusArray[ioPlayMode::BA_MAX], bool
 		kData.m_dwBonusID	= BONUS_ETC_ITEM_EXP_PESO;
 		kData.m_iBonusPeso  = (float)( fBonusArray[ioPlayMode::BA_ETC_ITEM_PESO] * FLOAT100 ) + 0.001f;
 		kData.m_iBonusExp   = (float)( fBonusArray[ioPlayMode::BA_ETC_ITEM_EXP] * FLOAT100 ) + 0.001f;
-		kData.m_szTitle     = "아이템";
+		kData.m_szTitle     = STR(6);
 		m_BonusData.push_back( kData );
 		iCurBonusIcon++;
 	}
@@ -4036,7 +4036,7 @@ void FightClubRoundEndWnd::SetBonus( float fBonusArray[ioPlayMode::BA_MAX], bool
 		kData.m_dwBonusID	= BONUS_GUILD;
 		kData.m_iBonusPeso  = (float)( fBonusArray[ioPlayMode::BA_GUILD] * FLOAT100 ) + 0.001f;
 		kData.m_iBonusExp   = (float)( fBonusArray[ioPlayMode::BA_GUILD] * FLOAT100 ) + 0.001f;
-		kData.m_szTitle     = "길드";
+		kData.m_szTitle     = STR(7);
 		m_BonusData.push_back( kData );
 		iCurBonusIcon++;
 	}
@@ -4051,7 +4051,7 @@ void FightClubRoundEndWnd::SetBonus( float fBonusArray[ioPlayMode::BA_MAX], bool
 		kData.m_dwBonusID	= BONUS_FRIEND;
 		kData.m_iBonusPeso  = (float)( fBonusArray[ioPlayMode::BA_FRIEND] * FLOAT100 ) + 0.001f;
 		kData.m_iBonusExp   = (float)( fBonusArray[ioPlayMode::BA_FRIEND] * FLOAT100 ) + 0.001f;
-		kData.m_szTitle     = "친구";
+		kData.m_szTitle     = STR(8);
 		m_BonusData.push_back( kData );
 		iCurBonusIcon++;
 	}
@@ -4066,7 +4066,7 @@ void FightClubRoundEndWnd::SetBonus( float fBonusArray[ioPlayMode::BA_MAX], bool
 		kData.m_dwBonusID	= BONUS_PCROOM;
 		kData.m_iBonusPeso  = (float)( fBonusArray[ioPlayMode::BA_PCROOM_PESO] * FLOAT100 ) + 0.001f;
 		kData.m_iBonusExp   = (float)( fBonusArray[ioPlayMode::BA_PCROOM_EXP] * FLOAT100 ) + 0.001f;
-		kData.m_szTitle     = "PC방";
+		kData.m_szTitle     = STR(9);
 		m_BonusData.push_back( kData );
 		iCurBonusIcon++;
 	} // 미션 보너스
@@ -4079,7 +4079,7 @@ void FightClubRoundEndWnd::SetBonus( float fBonusArray[ioPlayMode::BA_MAX], bool
 		kData.m_dwBonusID	= BONUS_MODE;
 		kData.m_iBonusPeso  = (float)( fBonusArray[ioPlayMode::BA_PLAYMODE] * FLOAT100 ) + 0.001f;
 		kData.m_iBonusExp   = (float)( fBonusArray[ioPlayMode::BA_PLAYMODE] * FLOAT100 ) + 0.001f;
-		kData.m_szTitle     = "모드";
+		kData.m_szTitle     = STR(10);
 		m_BonusData.push_back( kData );
 		iCurBonusIcon++;
 	}
@@ -4096,7 +4096,7 @@ void FightClubRoundEndWnd::SetBonus( float fBonusArray[ioPlayMode::BA_MAX], bool
 		kData.m_dwBonusID	= BONUS_EVENT_PESO_EXP;
 		kData.m_iBonusPeso  = (float)( fBonusArray[ioPlayMode::BA_EVENT_PESO] * FLOAT100 ) + 0.001f;
 		kData.m_iBonusExp   = (float)( fBonusArray[ioPlayMode::BA_EVENT] * FLOAT100 ) + 0.001f;
-		kData.m_szTitle     = "이벤트";
+		kData.m_szTitle     = STR(11);
 		m_BonusData.push_back( kData );
 		iCurBonusIcon++;
 	}
@@ -4109,7 +4109,7 @@ void FightClubRoundEndWnd::SetBonus( float fBonusArray[ioPlayMode::BA_MAX], bool
 		kData.m_dwBonusID	= BONUS_PESO_EVENT;
 		kData.m_iBonusPeso  = (float)( fBonusArray[ioPlayMode::BA_EVENT_PESO] * FLOAT100 ) + 0.001f;
 		kData.m_iBonusExp   = 0;
-		kData.m_szTitle     = "이벤트";
+		kData.m_szTitle     = STR(11);
 		m_BonusData.push_back( kData );
 		iCurBonusIcon++;
 	}
@@ -4122,7 +4122,7 @@ void FightClubRoundEndWnd::SetBonus( float fBonusArray[ioPlayMode::BA_MAX], bool
 		kData.m_dwBonusID	= BONUS_EVENT;
 		kData.m_iBonusPeso  = 0;
 		kData.m_iBonusExp   = (float)( fBonusArray[ioPlayMode::BA_EVENT] * FLOAT100 ) + 0.001f;
-		kData.m_szTitle     = "이벤트";
+		kData.m_szTitle     = STR(11);
 		m_BonusData.push_back( kData );
 		iCurBonusIcon++;
 	}
@@ -4847,7 +4847,7 @@ void FightClubRoundEndWnd::OnRenderCheerResult( int iXPos, int iYPos )
 		if(dwCheerTabID == 0)
 		{
 			kPrinter.SetTextColor( 255, 103, 41 ); // 주황
-			kPrinter.AddTextPiece( FONT_SIZE_14, "내가 응원한 유저가 승리하면 페소 보너스를 받을 수 있습니다" );
+			kPrinter.AddTextPiece( FONT_SIZE_14, STR(1) );
 		}
 		else
 		{
@@ -4855,25 +4855,25 @@ void FightClubRoundEndWnd::OnRenderCheerResult( int iXPos, int iYPos )
 			{
 				// 어뷰즈에 의해 페소가 0인 경우
 				kPrinter.SetTextColor( 255, 189, 2 ); // 노랑
-				kPrinter.AddTextPiece( FONT_SIZE_14, "내가 응원한 유저가 승리했습니다" );
+				kPrinter.AddTextPiece( FONT_SIZE_14, STR(2) );
 			}
 			else if(!m_bChampWin && (dwCheerTabID==2))
 			{
 				// 어뷰즈에 의해 페소가 0인 경우
 				kPrinter.SetTextColor( 255, 189, 2 ); // 노랑
-				kPrinter.AddTextPiece( FONT_SIZE_14, "내가 응원한 유저가 승리했습니다" );
+				kPrinter.AddTextPiece( FONT_SIZE_14, STR(2) );
 			}
 			else
 			{
 				kPrinter.SetTextColor( 255, 103, 41 ); // 주황
-				kPrinter.AddTextPiece( FONT_SIZE_14, "내가 응원한 유저가 패배했습니다" );
+				kPrinter.AddTextPiece( FONT_SIZE_14, STR(3) );
 			}
 		}
 	}
 	else
 	{
 		kPrinter.SetTextColor( 255, 189, 2 ); // 노랑
-		kPrinter.AddTextPiece( FONT_SIZE_14, "내가 응원한 유저가 승리했습니다" );
+		kPrinter.AddTextPiece( FONT_SIZE_14, STR(2) );
 	}
 
 	kPrinter.PrintFullText( iXPos, iYPos + 187, TAT_CENTER );
@@ -5312,7 +5312,7 @@ void FightClubFightNPCContinueWnd::OnRenderContinue( int iXPos, int iYPos )
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextStyle( TS_OUTLINE_FULL_2X );
 	kPrinter.SetTextColor( TCT_DEFAULT_WHITE );
-	kPrinter.AddTextPiece( FONT_SIZE_18, "%d라운드에 다시 도전 하시겠습니까?", m_iCurStage );
+	kPrinter.AddTextPiece( FONT_SIZE_18, STR(1), m_iCurStage );
 
 	kPrinter.PrintFullText( iXPos, iYPos+245, TAT_CENTER );
 	kPrinter.ClearList();

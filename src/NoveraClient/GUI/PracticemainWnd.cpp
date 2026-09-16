@@ -1281,7 +1281,7 @@ void PracticeRankingWnd::RenderRankBoard( int iX, int iY )
 		{
 			iRank = g_PracticeMgr.GetMyPreRankInfo()[iIndex].iPracticeRank;
 			if(iRank == 0)
-				wsprintf( szBuf, "기록없음");
+				wsprintf( szBuf, STR(1));
 			else
 				wsprintf( szBuf, m_szRank.c_str(), iRank );
 		}
@@ -1367,7 +1367,7 @@ void PracticeRankingWnd::RenderRewardIconBoard( int iX, int iY )
 	{
 		szEndDate = g_PracticeMgr.GetMyPreRankInfo()[0].strEndDate;
 		szStartDate = g_PracticeMgr.GetMyPreRankInfo()[0].strStartDate;
-		wsprintf( szBuf, "기준일 %s ~ %s", szStartDate.c_str(), szEndDate.c_str());
+		wsprintf( szBuf, STR(1), szStartDate.c_str(), szEndDate.c_str());
 	}
 	
 	g_FontMgr.PrintTextWidthCut( iX + iRewardIconX+355, iY + iRewardIconY + 4, FONT_SIZE_12, 200, szBuf);
@@ -1386,10 +1386,10 @@ void PracticeRankingWnd::RenderRewardIconBoard( int iX, int iY )
 			if(it != m_mapReward.end())
 				iCount = it->second;
 			if(iCount == 0)			
-				g_FontMgr.PrintTextWidthCut( iX+iRewardIconX+53+i*83, iY + iRewardIconY+126, FONT_SIZE_14, 72, "0개" );//개수				
+				g_FontMgr.PrintTextWidthCut( iX+iRewardIconX+53+i*83, iY + iRewardIconY+126, FONT_SIZE_14, 72, STR(2) );//개수				
 			else
 			{
-				wsprintf( szBuf, "%d개", iCount);
+				wsprintf( szBuf, STR(3), iCount);
 				g_FontMgr.PrintTextWidthCut( iX+iRewardIconX+53+i*83, iY + iRewardIconY+126, FONT_SIZE_14, 72, szBuf );//개수				
 			}
 

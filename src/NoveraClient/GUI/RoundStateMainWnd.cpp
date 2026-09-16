@@ -1244,7 +1244,7 @@ void RoundStateUserWnd::OnRenderStarCount( const RoundInfo &rkInfo, int iXPos, i
 		g_FontMgr.SetTextColor( TCT_DEFAULT_RED );
 	g_FontMgr.SetAlignType( TAT_CENTER );
 
-	g_FontMgr.PrintText( iXPos, iYPos, FONT_SIZE_12, "%d개", rkInfo.m_iStarCnt );
+	g_FontMgr.PrintText( iXPos, iYPos, FONT_SIZE_12, STR(1), rkInfo.m_iStarCnt );
 }
 
 void RoundStateUserWnd::OnRenderRaidCoinCount( const RoundInfo &rkInfo, int iXPos, int iYPos )
@@ -2024,13 +2024,13 @@ void RoundStateUserWnd::OnRenderTowerDefUser( int iXPos, int iYPos )
 	g_FontMgr.SetTextColor( TCT_DEFAULT_BLUE );
 
 	g_FontMgr.SetAlignType( TAT_LEFT );
-	g_FontMgr.PrintText( iXPos + 12, iYPos + 62, FONT_SIZE_12, "닉네임" );
+	g_FontMgr.PrintText( iXPos + 12, iYPos + 62, FONT_SIZE_12, STR(1) );
 
 	g_FontMgr.SetAlignType( TAT_CENTER );
-	g_FontMgr.PrintText( iXPos + 352, iYPos + 62, FONT_SIZE_12, "공격" );
-	g_FontMgr.PrintText( iXPos + 403, iYPos + 62, FONT_SIZE_12, "방어" );
-	g_FontMgr.PrintText( iXPos + 454, iYPos + 62, FONT_SIZE_12, "타임" );
-	g_FontMgr.PrintText( iXPos + 505, iYPos + 62, FONT_SIZE_12, "핑" );
+	g_FontMgr.PrintText( iXPos + 352, iYPos + 62, FONT_SIZE_12, STR(2) );
+	g_FontMgr.PrintText( iXPos + 403, iYPos + 62, FONT_SIZE_12, STR(3) );
+	g_FontMgr.PrintText( iXPos + 454, iYPos + 62, FONT_SIZE_12, STR(4) );
+	g_FontMgr.PrintText( iXPos + 505, iYPos + 62, FONT_SIZE_12, STR(5) );
 
 	int iRealXPos = iXPos + m_iLineStartX;
 	int iRealYPos = iYPos + m_iLineStartY;
@@ -2221,11 +2221,11 @@ void RoundStateUserWnd::OnRenderShuffleBonusUser( int iXPos, int iYPos )
 		g_FontMgr.SetTextColor( TCT_DEFAULT_RED );
 
 		g_FontMgr.SetAlignType( TAT_LEFT );
-		g_FontMgr.PrintText( iXPos + 12 + i * m_iLinePlayerGap, iYPos + 62, FONT_SIZE_12, "닉네임" );
+		g_FontMgr.PrintText( iXPos + 12 + i * m_iLinePlayerGap, iYPos + 62, FONT_SIZE_12, STR(1) );
 
 		g_FontMgr.SetAlignType( TAT_CENTER );
-		g_FontMgr.PrintText( iXPos + 261 + i * m_iLinePlayerGap, iYPos + 62, FONT_SIZE_12, "별" );
-		g_FontMgr.PrintText( iXPos + 294 + i * m_iLinePlayerGap, iYPos + 62, FONT_SIZE_12, "핑" );
+		g_FontMgr.PrintText( iXPos + 261 + i * m_iLinePlayerGap, iYPos + 62, FONT_SIZE_12, STR(2) );
+		g_FontMgr.PrintText( iXPos + 294 + i * m_iLinePlayerGap, iYPos + 62, FONT_SIZE_12, STR(3) );
 	}
 
 	int iRealXPos = iXPos + m_iLineStartX;
@@ -2289,13 +2289,13 @@ void RoundStateUserWnd::OnRenderRaidUser( int iXPos, int iYPos )
 		g_FontMgr.SetTextColor( TCT_DEFAULT_BLUE );
 
 		g_FontMgr.SetAlignType( TAT_LEFT );
-		g_FontMgr.PrintText( iXPos + 12 + i * m_iLinePlayerGap, iYPos + 62, FONT_SIZE_12, "닉네임" );
+		g_FontMgr.PrintText( iXPos + 12 + i * m_iLinePlayerGap, iYPos + 62, FONT_SIZE_12, STR(1) );
 
 		g_FontMgr.SetAlignType( TAT_CENTER );
-		g_FontMgr.PrintText( iXPos + 178 + i * m_iLinePlayerGap, iYPos + 62, FONT_SIZE_12, "티켓" );
-		g_FontMgr.PrintText( iXPos + 219 + i * m_iLinePlayerGap, iYPos + 62, FONT_SIZE_12, "기여도" );
-		g_FontMgr.PrintText( iXPos + 261 + i * m_iLinePlayerGap, iYPos + 62, FONT_SIZE_12, "킬데스" );
-		g_FontMgr.PrintText( iXPos + 294 + i * m_iLinePlayerGap, iYPos + 62, FONT_SIZE_12, "핑" );
+		g_FontMgr.PrintText( iXPos + 178 + i * m_iLinePlayerGap, iYPos + 62, FONT_SIZE_12, STR(2) );
+		g_FontMgr.PrintText( iXPos + 219 + i * m_iLinePlayerGap, iYPos + 62, FONT_SIZE_12, STR(3) );
+		g_FontMgr.PrintText( iXPos + 261 + i * m_iLinePlayerGap, iYPos + 62, FONT_SIZE_12, STR(4) );
+		g_FontMgr.PrintText( iXPos + 294 + i * m_iLinePlayerGap, iYPos + 62, FONT_SIZE_12, STR(5) );
 	}
 
 	int iRealXPos = iXPos + m_iLineStartX;
@@ -2366,10 +2366,10 @@ void RoundStateUserWnd::OnRenderSuccessionUser( int iXPos, int iYPos )
 			g_FontMgr.SetTextColor( TCT_DEFAULT_RED );
 
 		g_FontMgr.SetAlignType( TAT_LEFT );
-		g_FontMgr.PrintText( iXPos + 12 + i * m_iLinePlayerGap, iYPos + 62, FONT_SIZE_12, "닉네임" );
+		g_FontMgr.PrintText( iXPos + 12 + i * m_iLinePlayerGap, iYPos + 62, FONT_SIZE_12, STR(1) );
 
 		g_FontMgr.SetAlignType( TAT_CENTER );
-		g_FontMgr.PrintText( iXPos + 294 + i * m_iLinePlayerGap, iYPos + 62, FONT_SIZE_12, "핑" );
+		g_FontMgr.PrintText( iXPos + 294 + i * m_iLinePlayerGap, iYPos + 62, FONT_SIZE_12, STR(2) );
 
 		if ( g_App.IsMeDeveloper() )
 			g_FontMgr.PrintText( iXPos + 261 + i * m_iLinePlayerGap, iYPos + 62, FONT_SIZE_12, "MMR" );
@@ -2553,9 +2553,9 @@ void RoundStateMainWnd::SetHeadequartersScore()
 	m_Title.SetTextColor( TCT_DEFAULT_WHITE );
 
 	if( m_pPlayStage->GetPlayMode()->GetModeType() == MT_HEADQUARTERS )
-		m_Title.AddTextPiece( FONT_SIZE_17, "훈련소" );
+		m_Title.AddTextPiece( FONT_SIZE_17, STR(3) );
 	else if( m_pPlayStage->GetPlayMode()->GetModeType() == MT_HOUSE )
-		m_Title.AddTextPiece( FONT_SIZE_17, "개인본부" );
+		m_Title.AddTextPiece( FONT_SIZE_17, STR(4) );
 	else
 		m_Title.AddTextPiece( FONT_SIZE_17, "" );
 
@@ -2633,11 +2633,11 @@ void RoundStateMainWnd::SetSingleScore()
 
 		if( m_iTournamentCurrentRound  <= 2 )
 		{
-			m_Title.AddTextPiece( FONT_SIZE_17, "결승" );
+			m_Title.AddTextPiece( FONT_SIZE_17, STR(4) );
 		}
 		else
 		{
-			m_Title.AddTextPiece( FONT_SIZE_17, "%d강", m_iTournamentCurrentRound );
+			m_Title.AddTextPiece( FONT_SIZE_17, STR(5), m_iTournamentCurrentRound );
 		}
 	}
 	else if( g_ShuffleRoomMgr.IsShuffleRoom() )
@@ -2647,7 +2647,7 @@ void RoundStateMainWnd::SetSingleScore()
 		m_Title.SetTextStyle( TS_OUTLINE_FULL_2X );
 		m_Title.SetBkColor( 12, 66, 111 );
 		m_Title.SetTextColor( TCT_DEFAULT_WHITE );
-		m_Title.AddTextPiece( FONT_SIZE_17, "진행 현황" );
+		m_Title.AddTextPiece( FONT_SIZE_17, STR(6) );
 		m_Title.SetTextColor( TCT_DEFAULT_LIGHTGRAY );
 		m_Title.AddTextPiece( FONT_SIZE_17, " | " );
 		m_Title.SetTextColor( TCT_DEFAULT_WHITE );
@@ -2660,7 +2660,7 @@ void RoundStateMainWnd::SetSingleScore()
 		m_Title.SetTextStyle( TS_OUTLINE_FULL_2X );
 		m_Title.SetBkColor( 12, 66, 111 );
 		m_Title.SetTextColor( TCT_DEFAULT_WHITE );
-		m_Title.AddTextPiece( FONT_SIZE_17, "진행 현황" );
+		m_Title.AddTextPiece( FONT_SIZE_17, STR(6) );
 	}
 	else
 	{
@@ -2718,14 +2718,14 @@ void RoundStateMainWnd::SetTowerDefScore()
 	m_Title.SetTextStyle( TS_OUTLINE_FULL_2X );
 	m_Title.SetBkColor( 12, 66, 111 );
 	m_Title.SetTextColor( TCT_DEFAULT_WHITE );
-	m_Title.AddTextPiece( FONT_SIZE_17, "진행 현황" );
+	m_Title.AddTextPiece( FONT_SIZE_17, STR(1) );
 	m_Title.SetTextColor( TCT_DEFAULT_LIGHTGRAY );
 	m_Title.AddTextPiece( FONT_SIZE_17, " | " );
 	m_Title.SetTextColor( TCT_DEFAULT_WHITE );
 	if( g_BattleRoomMgr.GetPW().IsEmpty() )
 		m_Title.AddTextPiece( FONT_SIZE_17, "%s", g_BattleRoomMgr.GetName().c_str() );
 	else
-		m_Title.AddTextPiece( FONT_SIZE_17, "%s(비밀방)", g_BattleRoomMgr.GetName().c_str() );		
+		m_Title.AddTextPiece( FONT_SIZE_17, STR(2), g_BattleRoomMgr.GetName().c_str() );		
 
 	// 윈도우 세팅
 	RoundStateUserWnd *pUserWnd = dynamic_cast<RoundStateUserWnd *>(FindChildWnd( ID_SINGLE_WND ));
@@ -2858,11 +2858,11 @@ void RoundStateMainWnd::SetTeamScore( int iBlueWin, int iRedWin )
 		
 		if( m_iTournamentCurrentRound  <= 2 )
 		{
-			m_Title.AddTextPiece( FONT_SIZE_17, "결승" );
+			m_Title.AddTextPiece( FONT_SIZE_17, STR(7) );
 		}
 		else
 		{
-			m_Title.AddTextPiece( FONT_SIZE_17, "%d강", m_iTournamentCurrentRound );
+			m_Title.AddTextPiece( FONT_SIZE_17, STR(8), m_iTournamentCurrentRound );
 		}
 		
 	}
@@ -2889,7 +2889,7 @@ void RoundStateMainWnd::SetTeamScore( int iBlueWin, int iRedWin )
 		m_Title.SetTextStyle( TS_OUTLINE_FULL_2X );
 		m_Title.SetBkColor( 12, 66, 111 );
 		m_Title.SetTextColor( TCT_DEFAULT_WHITE );
-		m_Title.AddTextPiece( FONT_SIZE_17, "진행 현황" );
+		m_Title.AddTextPiece( FONT_SIZE_17, STR(9) );
 		m_Title.SetTextColor( TCT_DEFAULT_LIGHTGRAY );
 		m_Title.AddTextPiece( FONT_SIZE_17, " | " );
 		m_Title.SetTextColor( TCT_DEFAULT_WHITE );
@@ -2902,7 +2902,7 @@ void RoundStateMainWnd::SetTeamScore( int iBlueWin, int iRedWin )
 		m_Title.SetTextStyle( TS_OUTLINE_FULL_2X );
 		m_Title.SetBkColor( 12, 66, 111 );
 		m_Title.SetTextColor( TCT_DEFAULT_WHITE );
-		m_Title.AddTextPiece( FONT_SIZE_17, "진행 현황" );
+		m_Title.AddTextPiece( FONT_SIZE_17, STR(9) );
 	}
 	else
 	{
@@ -2984,7 +2984,7 @@ void RoundStateMainWnd::SetStarCountScore()
 	m_Title.SetTextStyle( TS_OUTLINE_FULL_2X );
 	m_Title.SetBkColor( 12, 66, 111 );
 	m_Title.SetTextColor( TCT_DEFAULT_WHITE );
-	m_Title.AddTextPiece( FONT_SIZE_17, "진행 현황" );
+	m_Title.AddTextPiece( FONT_SIZE_17, STR(1) );
 	m_Title.SetTextColor( TCT_DEFAULT_LIGHTGRAY );
 	m_Title.AddTextPiece( FONT_SIZE_17, " | " );
 	m_Title.SetTextColor( TCT_DEFAULT_WHITE );
@@ -3029,14 +3029,14 @@ void RoundStateMainWnd::SetRaidCoinCountScore()
 	m_Title.SetTextStyle( TS_OUTLINE_FULL_2X );
 	m_Title.SetBkColor( 12, 66, 111 );
 	m_Title.SetTextColor( TCT_DEFAULT_WHITE );
-	m_Title.AddTextPiece( FONT_SIZE_17, "진행 현황" );
+	m_Title.AddTextPiece( FONT_SIZE_17, STR(1) );
 	m_Title.SetTextColor( TCT_DEFAULT_LIGHTGRAY );
 	m_Title.AddTextPiece( FONT_SIZE_17, " | " );
 	m_Title.SetTextColor( TCT_DEFAULT_WHITE );
 	if( g_BattleRoomMgr.GetPW().IsEmpty() )
 		m_Title.AddTextPiece( FONT_SIZE_17, "%s", g_BattleRoomMgr.GetName().c_str() );
 	else
-		m_Title.AddTextPiece( FONT_SIZE_17, "%s(비밀방)", g_BattleRoomMgr.GetName().c_str() );		
+		m_Title.AddTextPiece( FONT_SIZE_17, STR(2), g_BattleRoomMgr.GetName().c_str() );		
 
 	// 윈도우 세팅
 	RoundStateUserWnd *pUserWnd = dynamic_cast<RoundStateUserWnd *>(FindChildWnd( ID_SINGLE_WND ));
@@ -3343,11 +3343,11 @@ void RoundResultMainWnd::SetTeamScore( int iBlueWin, int iRedWin )
 
 		if( m_iTournamentCurrentRound  <= 2 )
 		{
-			m_Title.AddTextPiece( FONT_SIZE_17, "결승" );
+			m_Title.AddTextPiece( FONT_SIZE_17, STR(7) );
 		}
 		else
 		{
-			m_Title.AddTextPiece( FONT_SIZE_17, "%d강", m_iTournamentCurrentRound );
+			m_Title.AddTextPiece( FONT_SIZE_17, STR(8), m_iTournamentCurrentRound );
 		}
 
 	}else if( g_LadderTeamMgr.IsLadderTeam() )

@@ -415,7 +415,7 @@ void ioMovieMaker::GetMovieFileSize( char *szFileSize )
 			sprintf( szFileSize, " / %.1fGB", (double)iMByte / 1024 );
 	}
 	else
-		sprintf( szFileSize, " / ½ÇÆÐ" );
+		sprintf( szFileSize, STR(1) );
 
 	/*
 	struct _stati64 statbuf; 

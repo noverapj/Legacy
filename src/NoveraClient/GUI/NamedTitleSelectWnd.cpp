@@ -494,7 +494,7 @@ void NamedTitleSelectWnd::ShowSelectWnd()
 
 	if ( m_NamedTitleList.empty() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "칭호가 없습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 
@@ -511,13 +511,13 @@ void NamedTitleSelectWnd::ShowSelectWnd()
 	m_szEmpty.SetTextStyle( TS_NORMAL );
 	m_szEmpty.SetBkColor( 0, 0, 0 );
 	m_szEmpty.SetTextColor( TCT_DEFAULT_GRAY );
-	m_szEmpty.AddTextPiece( FONT_SIZE_12, "칭호가 없습니다" );
+	m_szEmpty.AddTextPiece( FONT_SIZE_12, STR(2) );
 
 	m_szNoSearch.ClearList();
 	m_szNoSearch.SetTextStyle( TS_NORMAL );
 	m_szNoSearch.SetBkColor( 0, 0, 0 );
 	m_szNoSearch.SetTextColor( TCT_DEFAULT_GRAY );
-	m_szNoSearch.AddTextPiece( FONT_SIZE_12, "검색결과를 찾을 수 없습니다" );
+	m_szNoSearch.AddTextPiece( FONT_SIZE_12, STR(3) );
 
 	SAFEDELETE( m_pNamedTitleUiMark );
 	m_pNamedTitleUiMark = g_UIImageSetMgr.CreateImageByFullName( g_NamedTitleInfoMgr.GetNamedTitleUiMark() );

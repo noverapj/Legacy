@@ -2773,7 +2773,7 @@ void ioApplication::OpenGuildMarkWnd()
 	{
 		if( pPlayStage->GetModeType() != MT_TRAINING && pPlayStage->GetModeType() != MT_HEADQUARTERS && pPlayStage->GetModeType() != MT_HOUSE )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "길드마크는 광장/훈련소/본부에서만 #변경이 가능합니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );
 			return;
 		}
 	}
@@ -2786,7 +2786,7 @@ void ioApplication::OpenGuildMarkWnd()
 
 	if( g_ShuffleRoomMgr.IsShuffleRoom() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "오늘의모드 참여시에는 불가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(6) );
 		return;
 	}
 
@@ -3352,7 +3352,7 @@ void ioApplication::ResourceFailedCheck()
 			SafeSprintf( g_szErrorLog, sizeof(g_szErrorLog), STR(1), g_ResourceLoader.GetLastFailedFileName().c_str() );
 
 			char szResourceLog[MAX_PATH * 2] = "";
-			sprintf( szResourceLog, "리소스조작 : %s/%s : %s", g_MyInfo.GetPrivateID().c_str(), g_MyInfo.GetPublicID().c_str(), g_szErrorLog ); //Except Extracting Hangeul			
+			sprintf( szResourceLog, STR(2), g_MyInfo.GetPrivateID().c_str(), g_MyInfo.GetPublicID().c_str(), g_szErrorLog ); //Except Extracting Hangeul			
 			SP2Packet kPacket( LUPK_LOG );
 			kPacket << "CheckError";
 			kPacket << szResourceLog;
@@ -4398,7 +4398,7 @@ void ioApplication::AltF4ExitProcess( bool bShowMenu )
 				}
 				else
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "튜토리얼을 완료하면#광장으로 이동이 가능합니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 				}
 				return;
 			}
@@ -8292,7 +8292,7 @@ void ioApplication::OnSellDecoItem( SP2Packet &rkPacket )
 		// 데이터 삭제
 		if( !g_MyInfo.RemoveSlotItem( iItemType, iItemCode ) )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "치장 팔기 예외오류" );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 			return;
 		}
 
@@ -8326,21 +8326,21 @@ void ioApplication::OnSellDecoItem( SP2Packet &rkPacket )
 			kDesc1.SetTextStyle( TS_NORMAL );
 			kDesc1.SetBkColor( 0, 0, 0 );	
 			kDesc1.SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kDesc1.AddTextPiece( FONT_SIZE_12, "★ [%s] 판매 완료.", szItemName.c_str() );
+			kDesc1.AddTextPiece( FONT_SIZE_12, STR(2), szItemName.c_str() );
 			vDesc.push_back( kDesc1 ); 
 
 			ioComplexStringPrinter kDesc2;
 			kDesc2.SetTextStyle( TS_NORMAL );
 			kDesc2.SetBkColor( 0, 0, 0 );
 			kDesc2.SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kDesc2.AddTextPiece( FONT_SIZE_12, "★ %s페소가 지급되었습니다.", szConvertNum );
+			kDesc2.AddTextPiece( FONT_SIZE_12, STR(3), szConvertNum );
 			vDesc.push_back( kDesc2 );
 
 			pInvenWnd->ShowItemRecvSellInfoWnd( ItemRecvSellInfoWnd::ITEM_SELL, ItemRecvSellInfoWnd::ITEM_DECO, szIconName, szSubIconName, vTitle, vDesc, -1, 0, false, false, 0 );
 		}
 	}
 	else
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "치장 팔기 실패(%d)", iResult );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4), iResult );
 }
 
 void ioApplication::OnIncreseStat( SP2Packet &rkPacket )
@@ -9144,21 +9144,21 @@ void ioApplication::OnDeveloperMacro( SP2Packet &rkPacket )
 			ioEtcItem* pEtcItem = g_EtcItemMgr.FindEtcItem( dwEtcItemType ); 
 			if( !pEtcItem )
 			{
-				g_ChatMgr.SetSystemMsg( "존재 하지 않는 EtcItem 입니다. : %d", dwEtcItemType );
+				g_ChatMgr.SetSystemMsg( STR(3), dwEtcItemType );
 				return;
 			}
 
 			if( g_SuperGashaponMgr.IsSuperGashpon( dwEtcItemType ) && 0 < dwMaxLimit )
 			{	
-				g_ChatMgr.SetSystemMsg( "%s : 지급된 수량 : %d / 총 수량 : %d", pEtcItem->GetName().c_str(), dwLimit, dwMaxLimit );
-				g_ChatMgr.SetSystemMsg( "%s : 남은 수량 : %d / 총 수량 : %d", pEtcItem->GetName().c_str(), dwMaxLimit - dwLimit, dwMaxLimit );
+				g_ChatMgr.SetSystemMsg( STR(4), pEtcItem->GetName().c_str(), dwLimit, dwMaxLimit );
+				g_ChatMgr.SetSystemMsg( STR(5), pEtcItem->GetName().c_str(), dwMaxLimit - dwLimit, dwMaxLimit );
 				return;								
 			}
 
 			if( dwLimit == 0 && dwMaxLimit == 0 )
-				g_ChatMgr.SetSystemMsg( "%s의 limit정보를 확인 할 수 없습니다(한정판매 상품이 아닙니다.)", pEtcItem->GetName().c_str() );
+				g_ChatMgr.SetSystemMsg( STR(6), pEtcItem->GetName().c_str() );
 			else
-				g_ChatMgr.SetSystemMsg( "%s의 limit정보를 확인 할 수 없습니다. : limit : %d, max : %d", pEtcItem->GetName().c_str(), dwLimit, dwMaxLimit );
+				g_ChatMgr.SetSystemMsg( STR(7), pEtcItem->GetName().c_str(), dwLimit, dwMaxLimit );
 		}
 		break;
 	case DEVELOPER_ATTENDANCE_RESET:
@@ -9555,27 +9555,27 @@ void ioApplication::OnExercisePcRoomCharCreate( SP2Packet &rkPacket )
 	{
 		if ( iResult == EXERCISE_CHAR_CREATE_EXCEPTION )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "체험용병 구매시 예외오류가 발생하였습니다.#관리자에게 문의하세요." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		} 
 		else if( iResult == EXERCISE_CHAR_CREATE_FAIL_MAKE_INDEX )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "체험용병 Index가 초과하여#체험용병 생성이 불가능합니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		}
 		else if( iResult == EXERCISE_CHAR_CREATE_FAIL_WORKING )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "용병 처리중입니다.#잠시 후 다시 시도해주세요." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		}
 		else if( iResult == EXERCISE_CHAR_CREATE_NEED_LEVEL )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "레벨 조건을 만족하지 않습니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 		}
 		else if( iResult == EXERCISE_CHAR_CREATE_BILLING_WAIT )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "골드 처리중입니다.#잠시만 기다려 주세요." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );
 		}
 		else if( iResult == EXERCISE_CHAR_CREATE_EVENT_END )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "사용할 수 있는 기간이 아닙니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(6) );
 
 			SoldierSelectWnd *pSelectWnd = dynamic_cast<SoldierSelectWnd*>(g_GUIMgr.FindWnd( SOLDIER_SELECT_WND ));	
 			if( pSelectWnd && pSelectWnd->IsShow() )
@@ -9593,11 +9593,11 @@ void ioApplication::OnExercisePcRoomCharCreate( SP2Packet &rkPacket )
 		}
 		else if( iResult == EXERCISE_PCROOM_CHAR_MAX )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "용병 슬롯이 부족합니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(7) );
 		}
 		else
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "알수 없는 오류 : %d", iResult );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(8), iResult );
 		}
 
 		if( pPlayStage )
@@ -11696,7 +11696,7 @@ void ioApplication::OnGuildPositionChange( SP2Packet &rkPacket )
 							{
 								if( szPreUserPosition == pLocal->GetGuildAdminPosition() ) 
 								{
-									g_GUIMgr.SetMsgBox( MB_OK, NULL, "%s님의 길드 본부 편집 권한이# 해제 되었습니다.", szUserName.c_str() );
+									g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4), szUserName.c_str() );
 								}
 								else
 								{
@@ -11705,7 +11705,7 @@ void ioApplication::OnGuildPositionChange( SP2Packet &rkPacket )
 							}
 							else if( szTargetPosition == pLocal->GetGuildAdminPosition() )
 							{
-								g_GUIMgr.SetMsgBox( MB_OK, NULL, "%s님에게 길드 본부 편집 권한이# 부여 되었습니다.", szUserName.c_str() );
+								g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5), szUserName.c_str() );
 							}
 						}
 					}
@@ -11960,22 +11960,22 @@ void ioApplication::OnGuildRoomActive( SP2Packet &rkPacket )
 			if( pGuildData )
 				pGuildData->SetGuildRoomOpen( TRUE );
 
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "길드 본부가 활성화 되었습니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		}
 		break;
 	case GUILD_ROOM_NOT_GUILD:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "길드에 가입 되지 않았습니다.#길드 창설 후 사용 해주세요" );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		}
 		break;
 	case GUILD_ROOM_NOT_GUILD_MASTER:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "길드장만이 활성화 할 수 있는 기능입니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		}
 		break;
 	case GUILD_ROOM_ALREADY_ACTIVE:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "이미 길드 본부가 활성화 되었습니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 		}
 		break;
 	}
@@ -13334,7 +13334,7 @@ void ioApplication::OnShutDownUser( SP2Packet &rkPacket )
 		g_iErrorNumber = 330;
 
 		if( g_MyInfo.GetChannelingType() == CNT_NEXON )
-			SafeSprintf( g_szErrorLog, sizeof(g_szErrorLog), "셧다운제에 의해 게임 이용이 차단됩니다.");
+			SafeSprintf( g_szErrorLog, sizeof(g_szErrorLog), STR(2));
 		else
 			SafeSprintf( g_szErrorLog, sizeof(g_szErrorLog), STR(1));
 
@@ -13374,7 +13374,7 @@ void ioApplication::OnSelectShutDownUser( SP2Packet &rkPacket )
 		g_iErrorNumber = 331;
 
 		if( g_MyInfo.GetChannelingType() == CNT_NEXON )
-			SafeSprintf( g_szErrorLog, sizeof(g_szErrorLog), "게임 시간 선택제에 의해 게임 이용이 차단됩니다.");
+			SafeSprintf( g_szErrorLog, sizeof(g_szErrorLog), STR(2));
 		else
 			SafeSprintf( g_szErrorLog, sizeof(g_szErrorLog), STR(1));
 
@@ -13549,21 +13549,21 @@ void ioApplication::OnAddCash( SP2Packet &rkPacket )
 				kTitle2.SetTextStyle( TS_NORMAL );
 				kTitle2.SetBkColor( 0, 0, 0 );
 				kTitle2.SetTextColor( TCT_DEFAULT_DARKGRAY );
-				kTitle2.AddTextPiece( FONT_SIZE_17, "%s골드", szConvertNum );
+				kTitle2.AddTextPiece( FONT_SIZE_17, STR(1), szConvertNum );
 				vTitle.push_back( kTitle2 );
 
 				ioComplexStringPrinter kDesc1;
 				kDesc1.SetTextStyle( TS_NORMAL );
 				kDesc1.SetBkColor( 0, 0, 0 );	
 				kDesc1.SetTextColor( TCT_DEFAULT_DARKGRAY );
-				kDesc1.AddTextPiece( FONT_SIZE_12, "★ [%s] 사용 완료.", pEtcItem->GetName().c_str() );
+				kDesc1.AddTextPiece( FONT_SIZE_12, STR(2), pEtcItem->GetName().c_str() );
 				vDesc.push_back( kDesc1 );
 
 				ioComplexStringPrinter kDesc2;
 				kDesc2.SetTextStyle( TS_NORMAL );
 				kDesc2.SetBkColor( 0, 0, 0 );
 				kDesc2.SetTextColor( TCT_DEFAULT_DARKGRAY );
-				kDesc2.AddTextPiece( FONT_SIZE_12, "★ %s골드가 지급되었습니다.", szConvertNum );
+				kDesc2.AddTextPiece( FONT_SIZE_12, STR(3), szConvertNum );
 				vDesc.push_back( kDesc1 );
 
 				pInvenWnd->UpdateTab( false, true );
@@ -13583,19 +13583,19 @@ void ioApplication::OnAddCash( SP2Packet &rkPacket )
 	}
 	else if( iType == ADD_CASH_BILLING_WAIT )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "골드 처리중입니다.#잠시만 기다려 주세요." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 	}
 	else if( iType == ADD_CASH_BILLING_DISCONNECT )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "골드 처리가 불가능합니다.#잠시만 기다려 주세요." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );
 	}
 	else if( iType == ADD_CASH_BILLING_MOVING_SERVER )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "서버이동 중입니다.#잠시만 기다려 주세요." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(6) );
 	}
 	else if( iType == ADD_CASH_BILLING_EXCEPTION )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "예외 오류가 발생되었습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(7) );
 	}
 	else if( iType == GET_CASH_BILLING_FAIL )
 	{
@@ -13605,7 +13605,7 @@ void ioApplication::OnAddCash( SP2Packet &rkPacket )
 		if( bBillingError )
 			rkPacket >> sBillingError;
 
-		ioHashString sErrorMent = "골드 처리가 실패하였습니다.#관리자에게 문의하세요.";
+		ioHashString sErrorMent = STR(8);
 		if( !bBillingError )
 			g_GUIMgr.SetMsgBox( MB_OK, NULL, sErrorMent.c_str() );
 		else
@@ -13644,7 +13644,7 @@ void ioApplication::OnFillCashUrl( SP2Packet &rkPacket )
 
 	if( iType != FILL_CASH_URL_OK )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "잠시 후 다시 사용해 주세요(1)." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 
@@ -13653,7 +13653,7 @@ void ioApplication::OnFillCashUrl( SP2Packet &rkPacket )
 
 	if( szLoginCashUrl.IsEmpty() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "잠시 후 다시 사용해 주세요(2)." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return;
 	}
 
@@ -16117,7 +16117,7 @@ void ioApplication::OnNexonSessionMsg( SP2Packet &rkPacket )
 			if( nTime <= 0 )
 			{
 				bShutDown = true;
-				StringCbCopy( szMsg, sizeof(szMsg), "넥슨 PC방 정량제 시간이 만료되어 게임이 종료 됩니다.\r\n이용중인 PC방 담당자에게 문의해 주시기 바랍니다.\r\n(0x10000001)" );
+				StringCbCopy( szMsg, sizeof(szMsg), STR(1) );
 				SendNexonAuthLog( NexonWelcomeMessage );
 			}
 		}
@@ -16125,97 +16125,97 @@ void ioApplication::OnNexonSessionMsg( SP2Packet &rkPacket )
 
 // Shutdown 
 	case NexonTerminate:
-		StringCbCopy( szMsg, sizeof(szMsg), "넥슨 PC방 정량제 시간이 만료되어 게임이 종료 됩니다.\r\n이용중인 PC방 담당자에게 문의해 주시기 바랍니다.\r\n(0x10000002)" );
+		StringCbCopy( szMsg, sizeof(szMsg), STR(2) );
 		SendNexonAuthLog( NexonTerminate );
 		bShutDown = true;
 		break;
 	case NexonIDMaxError:
-		StringCbCopy( szMsg, sizeof(szMsg), "ID당 허용 접속자 수가 초과되었습니다.\r\n이용중인 PC방 담당자에게 문의해 주시기 바랍니다.\r\n(0x10000003)" );
+		StringCbCopy( szMsg, sizeof(szMsg), STR(3) );
 		SendNexonAuthLog( NexonIDMaxError );
 		bShutDown = true;
 		break;
 	case NexonIPDuplicate:
-		StringCbCopy( szMsg, sizeof(szMsg), "IP당 허용 접속자 수가 초과되었습니다.\r\n이용중인 PC방 담당자에게 문의해 주시기 바랍니다.\r\n(0x10000004)" );
+		StringCbCopy( szMsg, sizeof(szMsg), STR(4) );
 		SendNexonAuthLog( NexonIPDuplicate );
 		bShutDown = true;
 		break;
 	case NexonIPMaxError:
-		StringCbCopy( szMsg, sizeof(szMsg), "IP당 허용 접속자 수가 초과되었습니다.\r\n이용중인 PC방 담당자에게 문의해 주시기 바랍니다.\r\n(0x10000005)" );
+		StringCbCopy( szMsg, sizeof(szMsg), STR(5) );
 		SendNexonAuthLog( NexonIPMaxError );
 		bShutDown = true;
 		break;
 	case NexonPCRoomBlocked:
-		StringCbCopy( szMsg, sizeof(szMsg), "차단된 PC방입니다.\r\n넥슨 PC방 고객센터로 문의바랍니다.\r\n(0x10000006)" );
+		StringCbCopy( szMsg, sizeof(szMsg), STR(6) );
 		SendNexonAuthLog( NexonPCRoomBlocked );
 		bShutDown = true;
 		break;
 	case NexonMessageShutDown:
-		StringCbCopy( szMsg, sizeof(szMsg), "셧다운 시간입니다.\r\n(0x10000007)" );
+		StringCbCopy( szMsg, sizeof(szMsg), STR(7) );
 		SendNexonAuthLog( NexonMessageShutDown );
 		bShutDown = true;
 		break;
 	case NexonMessageTerminate:
-		StringCbCopy( szMsg, sizeof(szMsg), "셧다운 시간입니다.\r\n(0x10000008)" );
+		StringCbCopy( szMsg, sizeof(szMsg), STR(8) );
 		SendNexonAuthLog( NexonMessageTerminate );
 		bShutDown = true;
 		break;
 	case NexonAccountNotAllowed:
-		StringCbCopy( szMsg, sizeof(szMsg), "혀용된 계정이 아닙니다.\r\n(0x10000009)" );
+		StringCbCopy( szMsg, sizeof(szMsg), STR(9) );
 		SendNexonAuthLog( NexonAccountNotAllowed );
 		bShutDown = true;
 		break;
 	case NexonAccountMaxConnected:
-		StringCbCopy( szMsg, sizeof(szMsg), "최대접속 ID 수를 넘었습니다.\r\n(0x1000000a)" );
+		StringCbCopy( szMsg, sizeof(szMsg), STR(10) );
 		SendNexonAuthLog( NexonAccountMaxConnected );
 		bShutDown = true;
 		break;
 	case NexonPrepaidExhausted:
-		StringCbCopy( szMsg, sizeof(szMsg), "넥슨 PC 방 정량제 시간이 모두 소진되었습니다.\r\n(0x1000000b)" );
+		StringCbCopy( szMsg, sizeof(szMsg), STR(11) );
 		SendNexonAuthLog( NexonPrepaidExhausted );
 		bShutDown = true;
 		break;
 	case NexonAccountMachineIDBlocked:
-		StringCbCopy( szMsg, sizeof(szMsg), "접속이 차단된 PC입니다.\r\n넥슨 PC방 고객센터로 문의바랍니다.\r\n(0x1000000c)" );
+		StringCbCopy( szMsg, sizeof(szMsg), STR(12) );
 		SendNexonAuthLog( NexonAccountMachineIDBlocked );
 		bShutDown = true;
 		break;
 	case NexonSelectShutdown:
-		StringCbCopy( szMsg, sizeof(szMsg), "선택적 셧다운 시간입니다.\r\n(0x1000000d)" );
+		StringCbCopy( szMsg, sizeof(szMsg), STR(13) );
 		SendNexonAuthLog( NexonSelectShutdown );
 		bShutDown = true;
 		break;
 	case NexonShutDown:
-		StringCbCopy( szMsg, sizeof(szMsg), "셧다운 시간입니다.\r\n(0x1000000e)" );
+		StringCbCopy( szMsg, sizeof(szMsg), STR(14) );
 		SendNexonAuthLog( NexonShutDown );
 		bShutDown = true;
 		break;
 	case NexonForbidden:
-		StringCbCopy( szMsg, sizeof(szMsg), "비정상 접속입니다.\r\n(0x1000000f)" );
+		StringCbCopy( szMsg, sizeof(szMsg), STR(15) );
 		SendNexonAuthLog( NexonForbidden );
 		bShutDown = true;
 		break;
 	case NexonNotNexonUser:
-		StringCbCopy( szMsg, sizeof(szMsg), "넥슨 계정이 아닙니다.\r\n운영자에게 문의 바랍니다.\r\n(0x10000010)" );
+		StringCbCopy( szMsg, sizeof(szMsg), STR(16) );
 		SendNexonAuthLog( NexonNotNexonUser );
 		bShutDown = true;
 		break;
 	case NexonUnknownShutDown:
-		StringCbCopy( szMsg, sizeof(szMsg), "알 수 없는 오류로 게임 클라이언트를 종료합니다.\r\n운영자에게 문의 바랍니다.\r\n(0x10000011)" );
+		StringCbCopy( szMsg, sizeof(szMsg), STR(17) );
 		SendNexonAuthLog( NexonUnknownShutDown );
 		bShutDown = true;
 		break;
 	case NexonAgeError:
-		StringCbCopy( szMsg, sizeof(szMsg), "나이정보를 확인 중 오류가 발생하였습니다.\r\n잠시 후 다시 로그인하여 주십시오.\r\n(0x10000012)" );
+		StringCbCopy( szMsg, sizeof(szMsg), STR(18) );
 		SendNexonAuthLog( NexonAgeError );
 		bShutDown = true;
 		break;
 	case NexonSessionServerError:
-		StringCbCopy( szMsg, sizeof(szMsg), "알 수 없는 오류로 게임 클라이언트를 종료합니다.\r\n운영자에게 문의 바랍니다.\r\n(0x10000013)" );
+		StringCbCopy( szMsg, sizeof(szMsg), STR(19) );
 		SendNexonAuthLog( NexonSessionServerError );
 		bShutDown = true;
 		break;
 	case NexonAddressNotAllowed:
-		StringCbCopy( szMsg, sizeof(szMsg), "PC방 프리미엄 적용 대상이 아닙니다.\r\n넥슨 PC방 고객센터로 문의바랍니다.\r\n(0x10000014)" );
+		StringCbCopy( szMsg, sizeof(szMsg), STR(20) );
 		SendNexonAuthLog( NexonAddressNotAllowed );
 		bShutDown = true;
 		break;
@@ -16259,19 +16259,19 @@ void ioApplication::OnAttendanceCheck( SP2Packet &rkPacket )
 	{
 	case ATTENDANCE_RECORD_SELECT_DB_WAIT:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "출석기록을 로드 중입니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 			return;
 		}
 		break;
 	case ATTENDANCE_RECORD_EXIST:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "이미 출석을 완료하였습니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 			return;
 		}
 		break;
 	case ATTENDANCE_CHECK_FAIL:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "출석 체크 오류 - 0" );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 			return;
 		}
 		break;
@@ -16292,7 +16292,7 @@ void ioApplication::OnAttendanceCheck( SP2Packet &rkPacket )
 	}
 	else
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "출석 체크 오류 - 1" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 	}
 }
 
@@ -16307,36 +16307,36 @@ void ioApplication::OnSearchPlazaRoom( SP2Packet &rkPacket )
 	switch( iResult )
 	{
 	case SEARCH_TRAINING_ERROR_1:         //동일한 룸
-		g_GUIMgr.SetPrevMsgBox( NULL,  MB_OK, NULL, "현재 있는 룸과 동일한 룸입니다." );
+		g_GUIMgr.SetPrevMsgBox( NULL,  MB_OK, NULL, STR(1) );
 		break;
 	case SEARCH_TRAINING_ERROR_2:         //비번 오류
-		g_GUIMgr.SetPrevMsgBox( NULL,  MB_OK, NULL, "잘못된 비밀번호입니다." );
+		g_GUIMgr.SetPrevMsgBox( NULL,  MB_OK, NULL, STR(2) );
 		break;
 	case SEARCH_TRAINING_ERROR_3:         //인원 제한
-		g_GUIMgr.SetPrevMsgBox( NULL,  MB_OK, NULL, "해당 광장의 인원이 #초과되었습니다." );
+		g_GUIMgr.SetPrevMsgBox( NULL,  MB_OK, NULL, STR(3) );
 		break;
 	case SEARCH_TRAINING_ERROR_4:         //없는 광장
-		g_GUIMgr.SetPrevMsgBox( NULL,  MB_OK, NULL, "입장 가능한 광장이 없습니다." );
+		g_GUIMgr.SetPrevMsgBox( NULL,  MB_OK, NULL, STR(4) );
 		break;
 	case SEARCH_TRAINING_ERROR_5:         //입장 신호가 오기전에 훈련이나 전투 룸에 입장되었다.
 		break;
 	case SEARCH_TRAINING_ERROR_6:
-		g_GUIMgr.SetPrevMsgBox( NULL,  MB_OK, NULL, "길드광장에는 길드원만 입장이 가능합니다." );
+		g_GUIMgr.SetPrevMsgBox( NULL,  MB_OK, NULL, STR(5) );
 		break;
 	case SEARCH_TRAINING_ERROR_7:
-		g_GUIMgr.SetPrevMsgBox( NULL,  MB_OK, NULL, "수준차가 커서 입장할 수 없습니다." );
+		g_GUIMgr.SetPrevMsgBox( NULL,  MB_OK, NULL, STR(6) );
 		break;
 	case SEARCH_TRAINING_ERROR_8:
-		g_GUIMgr.SetPrevMsgBox( NULL,  MB_OK, NULL, "소유한 캐릭터가 없어 광장에 입장 할 수 없습니다." );
+		g_GUIMgr.SetPrevMsgBox( NULL,  MB_OK, NULL, STR(7) );
 		break;
 	case SEARCH_TRAINING_ERROR_9:		
-		g_GUIMgr.SetPrevMsgBox( NULL,  MB_OK, NULL, "임시가입 유저는 광장에 입장 할 수 없습니다." );
+		g_GUIMgr.SetPrevMsgBox( NULL,  MB_OK, NULL, STR(8) );
 		break;
 	case SEARCH_TRAINING_ERROR_10:
-		g_GUIMgr.SetPrevMsgBox( NULL,  MB_OK, NULL, "서버 이동이 예약된 유저입니다." );
+		g_GUIMgr.SetPrevMsgBox( NULL,  MB_OK, NULL, STR(9) );
 		break;
 	case SEARCH_TRAINING_ERROR_11:
-		g_GUIMgr.SetPrevMsgBox( NULL,  MB_OK, NULL, "해당 길드를 찾을 수 없습니다." );
+		g_GUIMgr.SetPrevMsgBox( NULL,  MB_OK, NULL, STR(10) );
 		break;
 	}
 
@@ -16363,26 +16363,26 @@ void ioApplication::OnJoinHeadQuarters( SP2Packet &rkPacket )
 	case JOIN_HEADQUARTERS_OWNER_OFFLINE:
 		{
 			if( g_MyInfo.GetJoinHeadquartersRequestName().IsEmpty() )
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "훈련소 주인이 접속 종료하였습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 			else
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "%s님이 접속 종료되어 %s님의 훈련소에 입장할 수 없습니다.", 
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2), 
 					g_MyInfo.GetJoinHeadquartersRequestName().c_str(),
 					g_MyInfo.GetJoinHeadquartersRequestName().c_str() );
 			}
 		}
 		break;
 	case JOIN_HEADQUARTERS_ROOM_CREATE_FAILED:
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "훈련소 생성이 실패하였습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		break;
 	case JOIN_HEADQUARTERS_ROOM_FULL:
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "인원이 가득 찼습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 		break;
 	case JOIN_HEADQUARTERS_EXCEPTION:
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "예외 오류가 발생하였습니다#관리자에게 문의하세요" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );
 		break;
 	case JOIN_HEADQUARTERS_LOCK:
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "잠긴 훈련소입니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(6) );
 		break;
 	case JOIN_HEADQUARTERS_JOIN_REQUEST:
 		{
@@ -16410,19 +16410,19 @@ void ioApplication::OnCreatePlaza( SP2Packet &rkPacket )
 	switch( iResult )
 	{
 	case CREATE_PLAZA_ERROR_1:
-		g_GUIMgr.SetPrevMsgBox( NULL,  MB_OK, NULL, "광장 생성 실패" );		
+		g_GUIMgr.SetPrevMsgBox( NULL,  MB_OK, NULL, STR(1) );		
 		break;
 	case CREATE_PLAZA_ERROR_2:
-		g_GUIMgr.SetPrevMsgBox( NULL,  MB_OK, NULL, "길드광장에는 길드원만 입장이 가능합니다." );
+		g_GUIMgr.SetPrevMsgBox( NULL,  MB_OK, NULL, STR(2) );
 		break;
 	case CREATE_PLAZA_ERROR_3:
-		g_GUIMgr.SetPrevMsgBox( NULL,  MB_OK, NULL, "캐릭터를 보유하지 않았습니다." );
+		g_GUIMgr.SetPrevMsgBox( NULL,  MB_OK, NULL, STR(3) );
 		break;
 	case CREATE_PLAZA_ERROR_4:
-		g_GUIMgr.SetPrevMsgBox( NULL,  MB_OK, NULL, "임시 가입만료 유저가 광장 생성 요청" );
+		g_GUIMgr.SetPrevMsgBox( NULL,  MB_OK, NULL, STR(4) );
 		break;
 	case CREATE_PLAZA_ERROR_5:
-		g_GUIMgr.SetPrevMsgBox( NULL,  MB_OK, NULL, "서버 이동이 예약된 유저가 광장생성 요청" );
+		g_GUIMgr.SetPrevMsgBox( NULL,  MB_OK, NULL, STR(5) );
 		break;
 	}
 
@@ -16447,13 +16447,13 @@ void ioApplication::OnJoinHouse( SP2Packet &rkPacket )
 	case JOIN_PERSONAL_HQ_ALREADY_BATTLE:
 		break;
 	case JOIN_PERSONAL_HQ_ROOM_CREATE_FAILED:
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "개인본부 생성이 실패하였습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		break;
 	case JOIN_PERSONAL_HQ_ROOM_FULL:
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "인원이 가득 찼습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		break;
 	case JOIN_PERSONAL_HQ_EXCEPTION:
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "예외 오류가 발생하였습니다#관리자에게 문의하세요" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		break;
 	case JOIN_PERSONAL_HQ_JOIN_REQUEST:
 		{
@@ -16466,13 +16466,13 @@ void ioApplication::OnJoinHouse( SP2Packet &rkPacket )
 		}
 		break;
 	case JOIN_PERSONAL_HQ_EMPTY:
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "비어있는 개인본부에는#입장 할 수 없습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 		break;
 	case JOIN_PERSONAL_HQ_OWNER_OFFLINE:
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "개인본부 주인이 접속 종료하였습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );
 		break;
 	case JOIN_PERSONAL_HQ_DISABLE:
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "개인본부가 아직 활성화 되지 않았습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(6) );
 		break;
 	}
 
@@ -16571,22 +16571,22 @@ void ioApplication::OnGuildAttend( SP2Packet &rkPacket )
 				if( pGuildMainWnd->IsShow() && pGuildMainWnd->GetGuildIndex() == g_GuildInfo.GetGuildIndex() )
 					pGuildMainWnd->UpdateGuildInfo();
 			}
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "출석 성공!" );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		}
 	}
 	else if ( iState == GUILD_STAY_DAY_SCARCITY )
 	{
 		TCPNetwork::MouseBusy( false );
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "길드 가입 다음 날 부터 출석이 가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 	}
 	else if( iState == GUILD_ATTEND_FAIL )
 	{
 		TCPNetwork::MouseBusy( false );
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "길드 출석 실패" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 	}
 	else if ( iState == GUILD_ATTEND_DATE_PREV )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "출석 정보 갱신 완료 # 출석 버튼을 다시 눌러주시기 바랍니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 		SP2Packet kPacket( CTPK_GUILD_MEMBER_ATTEND_RENEWAL );
 		TCPNetwork::SendToServer( kPacket );
 		TCPNetwork::MouseBusy( true );
@@ -16596,7 +16596,7 @@ void ioApplication::OnGuildAttend( SP2Packet &rkPacket )
 	else
 	{
 		TCPNetwork::MouseBusy( false );
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "길드 출석 에러" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );
 	}
 }
 
@@ -16627,11 +16627,11 @@ void ioApplication::OnGuildReceiveAttendReward( SP2Packet &rkPacket )
 	}
 	else if( iState == GUILD_ATTEND_REWARD_FAIL )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "길드 출석 보상 실패" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 	}
 	else if( iState == GUILD_ATTEND_REWARD_DATE_PREV )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "출석 정보 갱신 완료 # 출석 버튼을 다시 눌러주시기 바랍니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		SP2Packet kPacket( CTPK_GUILD_MEMBER_ATTEND_RENEWAL );
 		TCPNetwork::SendToServer( kPacket );
 		TCPNetwork::MouseBusy( true );
@@ -16639,7 +16639,7 @@ void ioApplication::OnGuildReceiveAttendReward( SP2Packet &rkPacket )
 	}
 	else
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "길드 출석 보상 에러" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 	}
 }
 
@@ -16661,9 +16661,9 @@ void ioApplication::OnGuildRankReward( SP2Packet &rkPacket )
 		LOG.PrintTimeAndLog( 0 , "%s : Accept Guild Rank Reward Data : %d.%d.%d ", __FUNCTION__, task->iPresentType, task->iPresentValue1, task->iPresentValue2 );
 	}
 	else if ( iState == GUILD_RANK_REWARD_FAIL )
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "길드 랭크 보상 실패" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 	else
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "길드 랭크 보상 에러" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 }
 
 void ioApplication::OnGuildMemberAttendInfo( SP2Packet &rkPacket )
@@ -16685,9 +16685,9 @@ void ioApplication::OnGuildMemberAttendInfo( SP2Packet &rkPacket )
 	else if( iType == YESTERDAY_ATTENDANCE_MEMEBER )
 		g_GuildInfo.SetMyGuildMemberYesterdayAttendInfoByPacket( rkPacket );
 	else if( iType == GUILD_ATTEND_INFO_RENWARL_FAIL )
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "길드출석정보 " );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 	else
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "길드출석정보 에러" );	
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );	
 }
 
 void ioApplication::OnGenderChange( SP2Packet &rkPacket )
@@ -16746,12 +16746,12 @@ void ioApplication::OnGenderChange( SP2Packet &rkPacket )
 		break;
 	case CHANGE_GENDER_NON_EXIST_CHAR:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "존재 하지 않는 캐릭터 입니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		}
 		break;
 	case CHANGE_GENDER_EXCEPTION:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "캐릭터 성별 전환 에러" );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		}
 		break;
 	}
@@ -17672,65 +17672,65 @@ void ioApplication::SendNexonAuthLog( int iErrorType )
 		break;
 
 	case NexonWelcomeMessage:
-		sprintf( szLog, "넥슨 PC방 정량제 시간이 만료되어 게임이 종료 됩니다.(0x10000001) : %s / %s", g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
+		sprintf( szLog, STR(1), g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
 		break;
 		/*-----------------Shutdown -----------------*/
 	case NexonTerminate:
-		sprintf( szLog, "넥슨 PC방 정량제 시간이 만료되어 게임이 종료 됩니다.(0x10000002) %s / %s", g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
+		sprintf( szLog, STR(2), g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
 		break;
 	case NexonIDMaxError:
-		sprintf( szLog, "ID당 허용 접속자 수가 초과되었습니다.(0x10000003) %s / %s", g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
+		sprintf( szLog, STR(3), g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
 		break;
 	case NexonIPDuplicate:
-		sprintf( szLog, "IP당 허용 접속자 수가 초과되었습니다.(0x10000004) %s / %s", g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
+		sprintf( szLog, STR(4), g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
 		break;
 	case NexonIPMaxError:
-		sprintf( szLog, "IP당 허용 접속자 수가 초과되었습니다.(0x10000005) %s / %s", g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
+		sprintf( szLog, STR(5), g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
 		break;
 	case NexonPCRoomBlocked:
-		sprintf( szLog, "차단된 PC방입니다.(0x10000006) %s / %s", g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
+		sprintf( szLog, STR(6), g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
 		break;
 	case NexonMessageShutDown:
-		sprintf( szLog, "셧다운 시간입니다.(0x10000007) %s / %s", g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
+		sprintf( szLog, STR(7), g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
 		break;
 	case NexonMessageTerminate:
-		sprintf( szLog, "셧다운 시간입니다.(0x10000008) %s / %s", g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
+		sprintf( szLog, STR(8), g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
 		break;
 	case NexonAccountNotAllowed:
-		sprintf( szLog, "혀용된 계정이 아닙니다.(0x10000009) %s / %s", g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
+		sprintf( szLog, STR(9), g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
 		break;
 	case NexonAccountMaxConnected:
-		sprintf( szLog, "최대접속 ID 수를 넘었습니다.(0x1000000a) %s / %s", g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
+		sprintf( szLog, STR(10), g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
 		break;
 	case NexonPrepaidExhausted:
-		sprintf( szLog, "넥슨 PC 방 정량제 시간이 모두 소진되었습니다. (0x1000000b) %s / %s", g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
+		sprintf( szLog, STR(11), g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
 		break;
 	case NexonAccountMachineIDBlocked:
-		sprintf( szLog, "접속이 차단된 PC입니다.(0x1000000c) %s / %s", g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
+		sprintf( szLog, STR(12), g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
 		break;
 	case NexonSelectShutdown:
-		sprintf( szLog, "선택적 셧다운 시간입니다.(0x1000000d) %s / %s", g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
+		sprintf( szLog, STR(13), g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
 		break;
 	case NexonShutDown:
-		sprintf( szLog, "셧다운 시간입니다.(0x1000000e) %s / %s", g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
+		sprintf( szLog, STR(14), g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
 		break;
 	case NexonForbidden:
-		sprintf( szLog, "비정상 접속으로 게임 실행을 차단, 세션 서버로 로그아웃 패킷을 전송하지 않는다.(0x10f) %s / %s", g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
+		sprintf( szLog, STR(15), g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
 		break;
 	case NexonNotNexonUser:
-		sprintf( szLog, "넥슨 계정이 아닙니다.(0x10000010) %s / %s", g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
+		sprintf( szLog, STR(16), g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
 		break;
 	case NexonUnknownShutDown:
-		sprintf( szLog, "알 수 없는 오류로 게임 클라이언트를 종료합니다.(0x10000011) %s / %s", g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
+		sprintf( szLog, STR(17), g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
 		break;
 	case NexonAgeError:
-		sprintf( szLog, "나이정보를 확인 중 오류가 발생하였습니다.(0x10000012) %s / %s", g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
+		sprintf( szLog, STR(18), g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
 		break;
 	case NexonSessionServerError:
-		sprintf( szLog, "알 수 없는 오류로 게임 클라이언트를 종료합니다.(0x10000013) %s / %s", g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
+		sprintf( szLog, STR(19), g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
 		break;
 	case NexonAddressNotAllowed:
-		sprintf( szLog, "PC방 프리미엄 적용 대상이 아닙니다.(0x10000014) %s / %s", g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
+		sprintf( szLog, STR(20), g_MyInfo.GetPublicID().c_str(), g_MyInfo.GetMyIP().c_str() );
 		break;
 	}
 	// 로그 서버 전송
@@ -17864,7 +17864,7 @@ void ioApplication::OnSpiritDecompose( SP2Packet &rkPacket )
 			kTitle2.SetTextStyle( TS_NORMAL );
 			kTitle2.SetBkColor( 0, 0, 0 );
 			kTitle2.SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kTitle2.AddTextPiece( FONT_SIZE_17, "%s %s개", g_SpiritMgr.GetName(iSpiritCode).c_str(), szConvertNum );
+			kTitle2.AddTextPiece( FONT_SIZE_17, STR(1), g_SpiritMgr.GetName(iSpiritCode).c_str(), szConvertNum );
 			vTitle.push_back( kTitle2 );
 
 			// Desc
@@ -17872,14 +17872,14 @@ void ioApplication::OnSpiritDecompose( SP2Packet &rkPacket )
 			kDesc1.SetTextStyle( TS_NORMAL );
 			kDesc1.SetBkColor( 0, 0, 0 );	
 			kDesc1.SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kDesc1.AddTextPiece( FONT_SIZE_12, "★ [%s] 분해 완료", g_MyInfo.GetClassName( iClassType, iDeleteCharPowerUpGrade ) );
+			kDesc1.AddTextPiece( FONT_SIZE_12, STR(2), g_MyInfo.GetClassName( iClassType, iDeleteCharPowerUpGrade ) );
 			vDesc.push_back( kDesc1 );
 
 			ioComplexStringPrinter kDesc2;
 			kDesc2.SetTextStyle( TS_NORMAL );
 			kDesc2.SetBkColor( 0, 0, 0 );
 			kDesc2.SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kDesc2.AddTextPiece( FONT_SIZE_12, "★ %s %s개 지급", g_SpiritMgr.GetName(iSpiritCode).c_str(), szConvertNum );
+			kDesc2.AddTextPiece( FONT_SIZE_12, STR(3), g_SpiritMgr.GetName(iSpiritCode).c_str(), szConvertNum );
 
 			vDesc.push_back( kDesc2 );
 		}
@@ -17910,7 +17910,7 @@ void ioApplication::OnSpiritDecompose( SP2Packet &rkPacket )
 			kDesc3.SetTextStyle( TS_NORMAL );
 			kDesc3.SetBkColor( 0, 0, 0 );
 			kDesc3.SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kDesc3.AddTextPiece( FONT_SIZE_12, "★ %s %s개 지급", pEtcSoulStone->GetName().c_str(), szConvertNum );
+			kDesc3.AddTextPiece( FONT_SIZE_12, STR(3), pEtcSoulStone->GetName().c_str(), szConvertNum );
 			vDesc.push_back( kDesc3 );
 		}
 
@@ -18038,14 +18038,14 @@ void ioApplication::OnSpiritDelete( SP2Packet &rkPacket )
 		kDesc1.SetTextStyle( TS_NORMAL );
 		kDesc1.SetBkColor( 0, 0, 0 );	
 		kDesc1.SetTextColor( TCT_DEFAULT_DARKGRAY );
-		kDesc1.AddTextPiece( FONT_SIZE_12, "★ [%s] 판매 완료.", szItemName.c_str() );
+		kDesc1.AddTextPiece( FONT_SIZE_12, STR(1), szItemName.c_str() );
 		vDesc.push_back( kDesc1 ); 
 
 		ioComplexStringPrinter kDesc2;
 		kDesc2.SetTextStyle( TS_NORMAL );
 		kDesc2.SetBkColor( 0, 0, 0 );
 		kDesc2.SetTextColor( TCT_DEFAULT_DARKGRAY );
-		kDesc2.AddTextPiece( FONT_SIZE_12, "★ %s페소가 지급되었습니다.", szConvertNum );
+		kDesc2.AddTextPiece( FONT_SIZE_12, STR(2), szConvertNum );
 		vDesc.push_back( kDesc2 );
 
 		pInvenWnd->ShowItemRecvSellInfoWnd( ItemRecvSellInfoWnd::ITEM_SELL, ItemRecvSellInfoWnd::ITEM_ALCHEMIC, g_SpiritMgr.GetIconName(iSpiritCode), szSubIconName, vTitle, vDesc, -1, -1, false, false, 0 );

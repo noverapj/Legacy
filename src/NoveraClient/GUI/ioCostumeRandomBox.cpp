@@ -338,7 +338,7 @@ void ioCostumeRandomBox::OnRender()
 		g_FontMgr.SetAlignType( TAT_CENTER );
 		g_FontMgr.SetBkColor( 0, 0, 0 );
 		g_FontMgr.SetTextColor( TCT_DEFAULT_GREEN );
-		g_FontMgr.PrintText( iXPos+FINAL_DESC_X, iYPos+FINAL_DESC_Y, FONT_SIZE_17, "장비를 획득했습니다" );
+		g_FontMgr.PrintText( iXPos+FINAL_DESC_X, iYPos+FINAL_DESC_Y, FONT_SIZE_17, STR(1) );
 	}
 	else
 	{
@@ -346,13 +346,13 @@ void ioCostumeRandomBox::OnRender()
 		g_FontMgr.SetAlignType( TAT_LEFT );
 		g_FontMgr.SetBkColor( 0, 0, 0 );
 		g_FontMgr.SetTextColor( TCT_DEFAULT_LIGHTGRAY );
-		g_FontMgr.PrintText( iXPos+DESC_X, iYPos+DESC_Y, FONT_SIZE_12, "아이템을 선택중입니다." );
+		g_FontMgr.PrintText( iXPos+DESC_X, iYPos+DESC_Y, FONT_SIZE_12, STR(2) );
 
 		g_FontMgr.SetTextStyle( TS_NORMAL );
 		g_FontMgr.SetAlignType( TAT_LEFT );
 		g_FontMgr.SetBkColor( 0, 0, 0 );
 		g_FontMgr.SetTextColor( TCT_DEFAULT_LIGHTGRAY );
-		g_FontMgr.PrintText( iXPos+DESC_X, iYPos+DESC_Y+18, FONT_SIZE_12, "잠시만 기다려주세요." );
+		g_FontMgr.PrintText( iXPos+DESC_X, iYPos+DESC_Y+18, FONT_SIZE_12, STR(3) );
 	}
 	
 	// Text
@@ -370,17 +370,17 @@ void ioCostumeRandomBox::OnRender()
 
 		if( m_nPeriodTime == 0 )
 		{
-			SafeSprintf( szBuf, sizeof( szBuf ), "영구사용" );
+			SafeSprintf( szBuf, sizeof( szBuf ), STR(4) );
 			szDesc = szBuf;
 		}
 		else if( ( m_nPeriodTime / 24 ) > 0 )
 		{
-			SafeSprintf( szBuf, sizeof( szBuf), "%d일", m_nPeriodTime/24 );
+			SafeSprintf( szBuf, sizeof( szBuf), STR(5), m_nPeriodTime/24 );
 			szDesc = szBuf;
 		}
 		else
 		{
-			SafeSprintf( szBuf, sizeof( szBuf), "%d시간", m_nPeriodTime );
+			SafeSprintf( szBuf, sizeof( szBuf), STR(6), m_nPeriodTime );
 			szDesc = szBuf;
 		}
 	}

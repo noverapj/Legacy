@@ -178,12 +178,12 @@ void ShuffleRankWnd::OnRankRender( int iXPos, int iYPos, int iTeamType, ioHashSt
 	if( bBottom )
 	{
 		g_FontMgr.SetTextColor( 145, 145, 145 );
-		g_FontMgr.PrintTextAlpha( iXPos + 40, iYPos, FONT_SIZE_12, m_iAlphaRate, "º°°ÅÁö" );
+		g_FontMgr.PrintTextAlpha( iXPos + 40, iYPos, FONT_SIZE_12, m_iAlphaRate, STR(1) );
 	}
 	else
 	{
 		g_FontMgr.SetTextColor( GetRankColor( iRank ) );
-		g_FontMgr.PrintTextAlpha( iXPos + 40, iYPos, FONT_SIZE_12, m_iAlphaRate, "%dÀ§", iRank + 1 );
+		g_FontMgr.PrintTextAlpha( iXPos + 40, iYPos, FONT_SIZE_12, m_iAlphaRate, STR(2), iRank + 1 );
 	}
 
 	ioComplexStringPrinter kPrinter;
@@ -198,7 +198,7 @@ void ShuffleRankWnd::OnRankRender( int iXPos, int iYPos, int iTeamType, ioHashSt
 	kPrinter.AddTextPiece( FONT_SIZE_12, "%s", szName.c_str() );
 
 	kPrinter.SetTextColor( TCT_DEFAULT_WHITE );
-	kPrinter.AddTextPiece( FONT_SIZE_12, "´Ô " );
+	kPrinter.AddTextPiece( FONT_SIZE_12, STR(3) );
 	kPrinter.SetTextColor( TCT_EX_YEELOW );
 	kPrinter.AddTextPiece( FONT_SIZE_12, "¡Ú%d", iStar );
 	kPrinter.PrintFullText( iXPos + 46, iYPos, TAT_LEFT, m_iAlphaRate );

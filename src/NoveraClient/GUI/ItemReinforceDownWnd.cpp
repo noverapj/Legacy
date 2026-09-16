@@ -177,7 +177,7 @@ void ItemReinforceDownWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 				ioUserExtraItem *pExtraItem = g_MyInfo.GetUserExtraItem();
 				if( !pExtraItem )
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "아이템 슬롯 에러" );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(7) );
 					return;
 				}
 
@@ -185,7 +185,7 @@ void ItemReinforceDownWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 				ExtraItem.Init();
 				if ( !pExtraItem->GetExtraItem( m_iItemIndex, ExtraItem ) )
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "해당 슬롯을 찾을 수 없습니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(8) );
 					return;
 				}
 
@@ -263,7 +263,7 @@ void ItemReinforceDownWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 					ioUserExtraItem *pExtraItem = g_MyInfo.GetUserExtraItem();
 					if( !pExtraItem )
 					{
-						g_GUIMgr.SetMsgBox( MB_OK, NULL, "아이템 슬롯 에러" );
+						g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(7) );
 						return;
 					}
 
@@ -271,7 +271,7 @@ void ItemReinforceDownWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 					ExtraItem.Init();
 					if ( !pExtraItem->GetExtraItem( m_iItemIndex, ExtraItem ) )
 					{
-						g_GUIMgr.SetMsgBox( MB_OK, NULL, "해당 슬롯을 찾을 수 없습니다." );
+						g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(8) );
 						return;
 
 					}
@@ -820,7 +820,7 @@ void ItemReinforceDoneWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 				ioUserExtraItem *pExtraItem = g_MyInfo.GetUserExtraItem();
 				if( !pExtraItem )
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "아이템 슬롯 에러" );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 					return;
 				}
 
@@ -828,7 +828,7 @@ void ItemReinforceDoneWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 				ExtraItem.Init();
 				if ( !pExtraItem->GetExtraItem( m_iItemIndex, ExtraItem ) )
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "해당 슬롯을 찾을 수 없습니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 					return;
 				}
 
@@ -898,7 +898,7 @@ void ItemReinforceDoneWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 					ioUserExtraItem *pExtraItem = g_MyInfo.GetUserExtraItem();
 					if( !pExtraItem )
 					{
-						g_GUIMgr.SetMsgBox( MB_OK, NULL, "아이템 슬롯 에러" );
+						g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 						return;
 					}
 
@@ -906,7 +906,7 @@ void ItemReinforceDoneWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 					ExtraItem.Init();
 					if ( !pExtraItem->GetExtraItem( m_iItemIndex, ExtraItem ) )
 					{
-						g_GUIMgr.SetMsgBox( MB_OK, NULL, "해당 슬롯을 찾을 수 없습니다." );
+						g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 						return;
 					}
 

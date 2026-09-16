@@ -194,7 +194,7 @@ bool ioTCPSocketManager::ChangeServerProcess()
 		if( REALGETTIME() - m_dwChangeStartTime > MAX_WAITING_CHANGE )
 		{
 			char szServerChangeLOG[MAX_PATH] = "";
-			sprintf( szServerChangeLOG, "%s가 [%s:%d]로 1분30초동안 서버 이동이 완료되지 않았음(%d)", //Except Extracting Hangeul
+			sprintf( szServerChangeLOG, STR(1), //Except Extracting Hangeul
 					 g_MyInfo.GetPublicID().c_str(), m_szServerIP.c_str(), m_iServerPort, (int)m_dwState );
 			
 			SP2Packet kPacket( LUPK_LOG );
@@ -207,7 +207,7 @@ bool ioTCPSocketManager::ChangeServerProcess()
 
 			g_bHappenError = true;
 			g_iErrorNumber = 327; // 오류번호
-			StringCbPrintf( g_szErrorLog, sizeof( g_szErrorLog ), "%d초동안 게임서버와 \r\n\r\n정상적으로 네트워크 연결을\r\n\r\n하지 못하였습니다.\r\n\r\n네트워크 회선상에 문제는 없는지\r\n\r\n확인해 주시기 바랍니다.\r\n\r\n(오류번호:327)"
+			StringCbPrintf( g_szErrorLog, sizeof( g_szErrorLog ), STR(1)
 				            , MAX_WAITING_CHANGE/1000 );
 			
 			//StringCbPrintf( g_szErrorLog, sizeof( g_szErrorLog ), "Tidak bisa connect ke game server %s selama %d detik.\r\n\r\nSilahkan periksa network.\r\n\r\n(Error no : 327)"

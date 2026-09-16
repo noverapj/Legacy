@@ -1241,7 +1241,7 @@ void BriefingWnd::RenderBriefingFinalResult( int iXPos, int iYPos )
 				kPrinter.SetTextStyle( TS_NORMAL );
 				kPrinter.SetBkColor( 0, 0, 0 );
 				kPrinter.SetTextColor( TCT_DEFAULT_WHITE );
-				kPrinter.AddTextPiece( FONT_SIZE_13, "ÆÀ±â¿©µµ" );
+				kPrinter.AddTextPiece( FONT_SIZE_13, STR(1) );
 				
 				kPrinter.SetTextStyle( TS_NORMAL );
 				kPrinter.SetBkColor( 0, 0, 0 );
@@ -1326,7 +1326,7 @@ void BriefingWnd::RenderBriefingFinalResult( int iXPos, int iYPos )
 				kPrinter.SetTextStyle( TS_NORMAL );
 				kPrinter.SetBkColor( 0, 0, 0 );
 				kPrinter.SetTextColor( TCT_DEFAULT_WHITE );
-				kPrinter.AddTextPiece( FONT_SIZE_13, "ÆÀ±â¿©µµ" );
+				kPrinter.AddTextPiece( FONT_SIZE_13, STR(1) );
 
 				kPrinter.SetTextStyle( TS_NORMAL );
 				kPrinter.SetBkColor( 0, 0, 0 );

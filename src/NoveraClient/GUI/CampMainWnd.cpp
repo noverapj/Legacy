@@ -108,7 +108,7 @@ void CampMyInfoBtn::OnTournamentPointRender( int iXPos, int iYPos )
 		g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
 		char szConvertText[MAX_PATH] = "";
 		Help::ConvertNumToStrComma( g_MyInfo.GetLadderPoint(), szConvertText, sizeof( szConvertText ) );
-		g_FontMgr.PrintText( iXPos + 166, iYPos + 3, FONT_SIZE_12, "%s 점", szConvertText );
+		g_FontMgr.PrintText( iXPos + 166, iYPos + 3, FONT_SIZE_12, STR(1), szConvertText );
 	}
 }
 
@@ -129,7 +129,7 @@ void CampMyInfoBtn::OnCampRankRender( int iXPos, int iYPos )
 		g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
 		char szConvertText[MAX_PATH] = "";
 		Help::ConvertNumToStrComma( g_MyInfo.GetCampRank(), szConvertText, sizeof( szConvertText ) );
-		g_FontMgr.PrintText( iXPos + 166, iYPos + 3, FONT_SIZE_12, "%s 위", szConvertText );
+		g_FontMgr.PrintText( iXPos + 166, iYPos + 3, FONT_SIZE_12, STR(3), szConvertText );
 	}
 }
 //////////////////////////////////////////////////////////////////////////
@@ -265,7 +265,7 @@ void LobbyCampInfoWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 			ioUserTournament *pUserTournament = g_MyInfo.GetTournament();			
 			if( pUserTournament->IsAlreadyTeam( pUserTournament->GetTeamIndex( dwIndex ) ) )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "대회팀이 존재 할떈 진영을 탈퇴 할 수 없습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(8) );
 			}
 			else
 			{
@@ -431,7 +431,7 @@ void LobbyCampInfoWnd::UpdateGuildButton()
 		}
 		else
 		{
-			pButton->SetTitleText( "길드 가입 및 생성" );
+			pButton->SetTitleText( STR(1) );
 		}
 	}
 }
@@ -544,7 +544,7 @@ void LobbyCampInfoWnd::OnRenderCampInfo( int iXPos, int iYPos )
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_17, "%s 진영전", m_szTournamentTitle );
+	kPrinter.AddTextPiece( FONT_SIZE_17, STR(16), m_szTournamentTitle );
 	kPrinter.PrintFullText( iXPos + 103, iYPos + 62, TAT_CENTER );
 	kPrinter.ClearList();
 
@@ -569,15 +569,15 @@ void LobbyCampInfoWnd::OnRenderCampInfo( int iXPos, int iYPos )
 
 	//6시  ~ 12 ~ 18 ~  24
 	char szTick[4][MAX_PATH];
-	SafeSprintf( szTick[0], sizeof( szTick[0] ), "아침" );
-	SafeSprintf( szTick[1], sizeof( szTick[1] ), "낮" );
-	SafeSprintf( szTick[2], sizeof( szTick[2] ), "밤" );
-	SafeSprintf( szTick[3], sizeof( szTick[3] ), "새벽" );
+	SafeSprintf( szTick[0], sizeof( szTick[0] ), STR(17) );
+	SafeSprintf( szTick[1], sizeof( szTick[1] ), STR(18) );
+	SafeSprintf( szTick[2], sizeof( szTick[2] ), STR(19) );
+	SafeSprintf( szTick[3], sizeof( szTick[3] ), STR(20) );
 
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_12, "매일 %s %d시 ~ %s %d시", szTick[iStartTick], g_CampMgr.GetTodayStartCampTime(), szTick[iEndTick], g_CampMgr.GetTodayEndCampTime() );
+	kPrinter.AddTextPiece( FONT_SIZE_12, STR(21), szTick[iStartTick], g_CampMgr.GetTodayStartCampTime(), szTick[iEndTick], g_CampMgr.GetTodayEndCampTime() );
 	kPrinter.PrintFullText( iXPos + 103, iYPos + 103, TAT_CENTER );
 	kPrinter.ClearList();
 }
@@ -745,9 +745,9 @@ void InfluenceBtn::OnRender()
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
 	if( m_dwRank == 0 )
-		kPrinter.AddTextPiece( FONT_SIZE_12, "- 위" );
+		kPrinter.AddTextPiece( FONT_SIZE_12, STR(1) );
 	else
-		kPrinter.AddTextPiece( FONT_SIZE_12, "%d 위", m_dwRank );
+		kPrinter.AddTextPiece( FONT_SIZE_12, STR(2), m_dwRank );
 
 	kPrinter.PrintFullText( iXPos + 95, iYPos + 25, TAT_CENTER );
 }
@@ -1045,29 +1045,29 @@ void InfluenceWnd::OnExplainRender( int iXPos, int iYPos )
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( TCT_DEFAULT_WHITE );
-	kPrinter.AddTextPiece( FONT_SIZE_12, "위쪽 탭의 " );
+	kPrinter.AddTextPiece( FONT_SIZE_12, STR(1) );
 
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( D3DCOLOR_XRGB( 0, 155, 255 ) );
-	kPrinter.AddTextPiece( FONT_SIZE_12, "진영전과 래더전" );
+	kPrinter.AddTextPiece( FONT_SIZE_12, STR(2) );
 
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( TCT_DEFAULT_WHITE );
-	kPrinter.AddTextPiece( FONT_SIZE_12, "참여를 통해 대회포인트를 획득하시면" );
+	kPrinter.AddTextPiece( FONT_SIZE_12, STR(3) );
 	kPrinter.PrintFullText( iXPos + 201, iYPos + 293, TAT_CENTER );
 	kPrinter.ClearList();
 
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( D3DCOLOR_XRGB( 0, 180, 0 ) );
-	kPrinter.AddTextPiece( FONT_SIZE_12, "진영전 종료시 보상" );
+	kPrinter.AddTextPiece( FONT_SIZE_12, STR(4) );
 
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( TCT_DEFAULT_WHITE );
-	kPrinter.AddTextPiece( FONT_SIZE_12, "을 드립니다." );
+	kPrinter.AddTextPiece( FONT_SIZE_12, STR(5) );
 	kPrinter.PrintFullText( iXPos + 201, iYPos + 309, TAT_CENTER );
 	kPrinter.ClearList();
 }
@@ -1120,7 +1120,7 @@ void InfluenceWnd::OnScheduleRender( int iXPos, int iYPos )
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( TCT_DEFAULT_WHITE );
-	kPrinter.AddTextPiece( FONT_SIZE_11, "%s 참가", szConvertNum );
+	kPrinter.AddTextPiece( FONT_SIZE_11, STR(1), szConvertNum );
 	
 	kPrinter.PrintFullText( iXPos + 111, iYPos + 336, TAT_CENTER );
 	kPrinter.ClearList();
@@ -1135,7 +1135,7 @@ void InfluenceWnd::OnScheduleRender( int iXPos, int iYPos )
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( TCT_DEFAULT_WHITE );
-	kPrinter.AddTextPiece( FONT_SIZE_11, "%s 참가", szConvertNum );
+	kPrinter.AddTextPiece( FONT_SIZE_11, STR(1), szConvertNum );
 	kPrinter.PrintFullText( iXPos + 291, iYPos + 336, TAT_CENTER );
 }
 //////////////////////////////////////////////////////////////////////////
@@ -1477,7 +1477,7 @@ void CampEnterWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 			else if( g_CampMgr.IsCloseEntry( CAMP_BLUE ) )
 			{
 				char szBuff[MAX_PATH];
-				sprintf_s( szBuff, "양진영의 세력비를 맞추기 위해 %s에 # 가입이 불가능합니다.", m_szBlueCampName.c_str() );
+				sprintf_s( szBuff, STR(4), m_szBlueCampName.c_str() );
 				g_GUIMgr.SetMsgBox( MB_OK, NULL, szBuff );
 			}
 			else
@@ -1502,12 +1502,12 @@ void CampEnterWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 					}
 					else
 					{
-						g_GUIMgr.SetMsgBox( MB_OK, NULL, "대회 운영규칙에 동의하셔야 가입이 가능합니다.# [대회 운영 규칙] 클릭하시면 내용확인이 가능합니다." );
+						g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );
 					}
 				}
 				else
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "진영가입 가능한 기간이 아닙니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(6) );
 				}
 								
 			}
@@ -1529,7 +1529,7 @@ void CampEnterWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 			else if( g_CampMgr.IsCloseEntry( CAMP_RED ) )
 			{
 				char szBuff[MAX_PATH];
-				sprintf_s( szBuff, "양진영의 세력비를 맞추기 위해 %s에 # 가입이 불가능합니다.", m_szRedCampName.c_str() );
+				sprintf_s( szBuff, STR(4), m_szRedCampName.c_str() );
 				g_GUIMgr.SetMsgBox( MB_OK, NULL, szBuff );
 			}
 			else
@@ -1554,12 +1554,12 @@ void CampEnterWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 					}
 					else
 					{
-						g_GUIMgr.SetMsgBox( MB_OK, NULL, "대회 운영규칙에 동의하셔야 가입이 가능합니다.# [대회 운영 규칙] 클릭하시면 내용확인이 가능합니다." );
+						g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );
 					}
 				}
 				else
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "진영가입 가능한 기간이 아닙니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(6) );
 				}
 				
 			}
@@ -1645,7 +1645,7 @@ void CampEnterWnd::UpdateMainUI()
 	if( pButton )
 	{
 		char szBuff[MAX_PATH];
-		sprintf( szBuff, "%s 가입", m_szBlueCampName.c_str() );
+		sprintf( szBuff, STR(1), m_szBlueCampName.c_str() );
 		ioUITitle *pUITitle = pButton->GetTitle();
 		if( pUITitle )
 		{
@@ -1659,7 +1659,7 @@ void CampEnterWnd::UpdateMainUI()
 	if( pButton )
 	{
 		char szBuff[MAX_PATH];
-		sprintf( szBuff, "%s 가입", m_szRedCampName.c_str() );
+		sprintf( szBuff, STR(1), m_szRedCampName.c_str() );
 		ioUITitle *pUITitle = pButton->GetTitle();
 		if( pUITitle )
 		{
@@ -1711,7 +1711,7 @@ void CampEnterWnd::OnExplainRender( int iXPos, int iYPos )
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( TCT_DEFAULT_WHITE );
-	kPrinter.AddTextPiece( FONT_SIZE_12, "%s의 ", m_szTournamentTitile );
+	kPrinter.AddTextPiece( FONT_SIZE_12, STR(1), m_szTournamentTitile );
 
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
@@ -1731,21 +1731,21 @@ void CampEnterWnd::OnExplainRender( int iXPos, int iYPos )
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( TCT_DEFAULT_WHITE );
-	kPrinter.AddTextPiece( FONT_SIZE_12, " 진영전이 열렸습니다." );
+	kPrinter.AddTextPiece( FONT_SIZE_12, STR(2) );
 	kPrinter.PrintFullText( iXPos + 201, iYPos + 293, TAT_CENTER );
 	kPrinter.ClearList();
 	
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( TCT_DEFAULT_WHITE );
-	kPrinter.AddTextPiece( FONT_SIZE_12, "아래버튼을 눌러 마음에 드는 진영에 가입하세요" );
+	kPrinter.AddTextPiece( FONT_SIZE_12, STR(3) );
 	kPrinter.PrintFullText( iXPos + 201, iYPos + 309, TAT_CENTER );
 	kPrinter.ClearList();
 	
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( TCT_DEFAULT_LIGHTGRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_12, "에 동의합니다." );
+	kPrinter.AddTextPiece( FONT_SIZE_12, STR(4) );
 
 	kPrinter.PrintFullText( iXPos + 125, iYPos + 336, TAT_LEFT );
 	kPrinter.ClearList();
@@ -1982,7 +1982,7 @@ void CampEnterModalWnd::UpdateMainUI()
 	if( pButton )
 	{
 		char szBuff[MAX_PATH];
-		sprintf( szBuff, "%s 가입", m_szBlueCampName.c_str() );
+		sprintf( szBuff, STR(1), m_szBlueCampName.c_str() );
 		pButton->SetTitleText( szBuff );
 	}
 
@@ -1990,7 +1990,7 @@ void CampEnterModalWnd::UpdateMainUI()
 	if( pButton )
 	{
 		char szBuff[MAX_PATH];
-		sprintf( szBuff, "%s 가입", m_szRedCampName.c_str() );
+		sprintf( szBuff, STR(1), m_szRedCampName.c_str() );
 		pButton->SetTitleText( szBuff );
 	}
 }
@@ -2036,7 +2036,7 @@ void CampEnterModalWnd::OnExplainRender( int iXPos, int iYPos )
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( TCT_DEFAULT_WHITE );
-	kPrinter.AddTextPiece( FONT_SIZE_12, "%s의 ", m_szTournamentTitile );
+	kPrinter.AddTextPiece( FONT_SIZE_12, STR(1), m_szTournamentTitile );
 
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
@@ -2056,14 +2056,14 @@ void CampEnterModalWnd::OnExplainRender( int iXPos, int iYPos )
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( TCT_DEFAULT_WHITE );
-	kPrinter.AddTextPiece( FONT_SIZE_12, " 진영전이 열렸습니다." );
+	kPrinter.AddTextPiece( FONT_SIZE_12, STR(2) );
 	kPrinter.PrintFullText( iXPos + 208, iYPos + 352, TAT_CENTER );
 	kPrinter.ClearList();
 
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( TCT_DEFAULT_WHITE );
-	kPrinter.AddTextPiece( FONT_SIZE_12, "아래버튼을 눌러 마음에 드는 진영에 가입하세요" );
+	kPrinter.AddTextPiece( FONT_SIZE_12, STR(3) );
 	kPrinter.PrintFullText( iXPos + 208, iYPos + 368, TAT_CENTER );
 	kPrinter.ClearList();
 }
@@ -2434,14 +2434,14 @@ void CampSeasonBonus::OnRenderMap( int iXPos, int iYPos )
 	char szConvertText[MAX_PATH] = "";
 	Help::ConvertNumToStrComma( m_iBlueCampPoint, szConvertText, sizeof( szConvertText ) );
 	
-	g_FontMgr.PrintText( iXPos + 103, iYPos + 213, FONT_SIZE_12, "%s(%s점)", m_szBlueCampName.c_str(), szConvertText );
+	g_FontMgr.PrintText( iXPos + 103, iYPos + 213, FONT_SIZE_12, STR(5), m_szBlueCampName.c_str(), szConvertText );
 
 	g_FontMgr.SetBkColor( 171, 51, 36 );
 	g_FontMgr.SetTextColor( 255, 255, 255 );
 	g_FontMgr.PrintText( iXPos + 241, iYPos + 191, FONT_SIZE_17, STR(3), fRedRate );
 
 	Help::ConvertNumToStrComma( m_iRedCampPoint, szConvertText, sizeof( szConvertText ) );
-	g_FontMgr.PrintText( iXPos + 241, iYPos + 213, FONT_SIZE_12, "%s(%s점)", m_szRedCampName.c_str(), szConvertText );
+	g_FontMgr.PrintText( iXPos + 241, iYPos + 213, FONT_SIZE_12, STR(5), m_szRedCampName.c_str(), szConvertText );
 }
 
 void CampSeasonBonus::OnRenderIcon( int iXPos, int iYPos )

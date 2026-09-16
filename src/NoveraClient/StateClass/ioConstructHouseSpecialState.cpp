@@ -682,16 +682,16 @@ void ioConstructHouseSpecialState::SystemChat( SystemChatType eType )
 		switch( eType )
 		{
 		case SCT_CANT_SETUP:
-			g_ChatMgr.SetSystemMsg( "설치 가능한 영역이 아닙니다." );
+			g_ChatMgr.SetSystemMsg( STR(1) );
 			break;
 		case SCT_NOT_FIND_SETUP_OBJ:
-			g_ChatMgr.SetSystemMsg( "설치 가능한 오브젝트가 없습니다." );
+			g_ChatMgr.SetSystemMsg( STR(2) );
 			break;
 		case SCT_NOT_FIND_RMOVE_OBJ:
-			g_ChatMgr.SetSystemMsg( "제거 가능한 오브젝트가 없습니다." );
+			g_ChatMgr.SetSystemMsg( STR(3) );
 			break;
 		case SCT_BLOCK_MAX:
-			g_ChatMgr.SetSystemMsg( "최대치에 도달하여 더이상 설 치 할 수 없습니다." );
+			g_ChatMgr.SetSystemMsg( STR(4) );
 			break;
 		}
 

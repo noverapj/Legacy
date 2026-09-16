@@ -195,16 +195,16 @@ void LobbyBtn::OnRender()
 			g_FontMgr.SetBkColor( TCT_DEFAULT_DARKGRAY );
 			g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
 			if( m_bClicked )
-				g_FontMgr.PrintText( iXPos + 59, iYPos + 18, FONT_SIZE_16, "수련장" );
+				g_FontMgr.PrintText( iXPos + 59, iYPos + 18, FONT_SIZE_16, STR(15) );
 			else
-				g_FontMgr.PrintText( iXPos + 54, iYPos + 12, FONT_SIZE_16, "수련장" );
+				g_FontMgr.PrintText( iXPos + 54, iYPos + 12, FONT_SIZE_16, STR(15) );
 
 			g_FontMgr.SetBkColor( TCT_DEFAULT_GRAY );
 			g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
 			if(m_bClicked)
-				g_FontMgr.PrintText( iXPos + 59, iYPos + 39, FONT_SIZE_10, "수련모드" );
+				g_FontMgr.PrintText( iXPos + 59, iYPos + 39, FONT_SIZE_10, STR(16) );
 			else
-				g_FontMgr.PrintText( iXPos + 54, iYPos + 32, FONT_SIZE_10, "수련모드" );
+				g_FontMgr.PrintText( iXPos + 54, iYPos + 32, FONT_SIZE_10, STR(16) );
 		}
 		break;
 	case LobbyWnd::ID_CAMP_BTN:
@@ -345,7 +345,7 @@ void LobbyBtn::OnRender()
 						m_pStateGreenFrm->Render( iXPos, iYPos, UI_RENDER_GRAY_LIGHT );
 
 					g_FontMgr.SetTextColor( TCT_DEFAULT_LIGHTGRAY );
-					g_FontMgr.PrintText( iXPos + 27, iYPos + 9, FONT_SIZE_10, "휴식중" );
+					g_FontMgr.PrintText( iXPos + 27, iYPos + 9, FONT_SIZE_10, STR(17) );
 				}
 				else
 				{
@@ -354,14 +354,14 @@ void LobbyBtn::OnRender()
 						if( m_pStateOrangeFrm )
 							m_pStateOrangeFrm->Render( iXPos, iYPos );
 
-						g_FontMgr.PrintText( iXPos + 27, iYPos + 9, FONT_SIZE_10, "모집중" );
+						g_FontMgr.PrintText( iXPos + 27, iYPos + 9, FONT_SIZE_10, STR(18) );
 					}
 					else if( iState == TournamentNode::STATE_TEAM_DELAY )
 					{
 						if( m_pStatePinkFrm )
 							m_pStatePinkFrm->Render( iXPos, iYPos );
 
-						g_FontMgr.PrintText( iXPos + 27, iYPos + 9, FONT_SIZE_10, "응원중" );
+						g_FontMgr.PrintText( iXPos + 27, iYPos + 9, FONT_SIZE_10, STR(19) );
 
 					}
 					else
@@ -369,7 +369,7 @@ void LobbyBtn::OnRender()
 						if( m_pStateGreenFrm )
 							m_pStateGreenFrm->Render( iXPos, iYPos );
 
-						g_FontMgr.PrintText( iXPos + 27, iYPos + 9, FONT_SIZE_10, "대회중" );
+						g_FontMgr.PrintText( iXPos + 27, iYPos + 9, FONT_SIZE_10, STR(20) );
 					}
 				}
 			}
@@ -388,9 +388,9 @@ void LobbyBtn::OnRender()
 				g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
 			}
 			if(m_bClicked)
-				g_FontMgr.PrintText( iXPos + 59, iYPos + 18, FONT_SIZE_16, "대회" );
+				g_FontMgr.PrintText( iXPos + 59, iYPos + 18, FONT_SIZE_16, STR(21) );
 			else
-				g_FontMgr.PrintText( iXPos + 54, iYPos + 12, FONT_SIZE_16, "대회" );
+				g_FontMgr.PrintText( iXPos + 54, iYPos + 12, FONT_SIZE_16, STR(21) );
 
 			if( g_TournamentMgr.IsRegularDisableTournament() )
 			{
@@ -403,9 +403,9 @@ void LobbyBtn::OnRender()
 				g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
 			}
 			if(m_bClicked)
-				g_FontMgr.PrintText( iXPos + 59, iYPos + 39, FONT_SIZE_10, "토너먼트" );
+				g_FontMgr.PrintText( iXPos + 59, iYPos + 39, FONT_SIZE_10, STR(22) );
 			else
-				g_FontMgr.PrintText( iXPos + 54, iYPos + 32, FONT_SIZE_10, "토너먼트" );
+				g_FontMgr.PrintText( iXPos + 54, iYPos + 32, FONT_SIZE_10, STR(22) );
 		}
 		break;
 	}
@@ -796,12 +796,12 @@ void LobbyWnd::OnCreateHeadquarters()
 
 	if( g_ShuffleRoomMgr.IsShuffleRoom() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "오늘의 모드 중에는 입장이 불가능합니다" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		return;
 	}
 	if( g_RankBattleMgr.IsRankBattlePlaying() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "랭킹전 중에는 입장이 불가능합니다" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 		return;
 	}
 
@@ -819,24 +819,24 @@ void LobbyWnd::OnCreateGuildHeadquarters()
 
 	if( g_BattleRoomMgr.IsBattleRoom() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "전투 중에는 입장이 불가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 
 	if( g_LadderTeamMgr.IsLadderTeam() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "진영/래더 중에는 입장이 불가능합니다" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return;
 	}
 
 	if( g_ShuffleRoomMgr.IsShuffleRoom() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "오늘의 모드 중에는 입장이 불가능합니다" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		return;
 	}
 	if( g_RankBattleMgr.IsRankBattlePlaying() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "랭킹전 중에는 입장이 불가능합니다" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 		return;
 	}
 
@@ -853,24 +853,24 @@ void LobbyWnd::OnCreateHouse()
 
 	if( g_BattleRoomMgr.IsBattleRoom() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "전투 중에는 입장이 불가능합니다" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 
 	if( g_LadderTeamMgr.IsLadderTeam() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "래더 중에는 입장이 불가능합니다" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return;
 	}
 
 	if( g_ShuffleRoomMgr.IsShuffleRoom() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "오늘의 모드 중에는 입장이 불가능합니다" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		return;
 	}
 	if( g_RankBattleMgr.IsRankBattlePlaying() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "랭킹전 중에는 입장이 불가능합니다" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 		return;
 	}
 
@@ -938,11 +938,11 @@ void LobbyWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 					}
 				}
 				else
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "길드장만이 활성화 할 수 있는 기능입니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 			}
 			else
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "가입된 길드가 없습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 			}
 		}
 		break;
@@ -1098,9 +1098,9 @@ void LobbyWnd::OnRender()
 		kPrinter.SetTextColor( 130, 198, 255 );	
 		ioEtcItem *pEtcItem = g_EtcItemMgr.FindEtcItem( ioEtcItem::EIT_ETC_CLOVER );
 		if( pEtcItem )
-			kPrinter.AddTextPiece( FONT_SIZE_11, "%s : %s개", pEtcItem->GetName().c_str(), szClover );
+			kPrinter.AddTextPiece( FONT_SIZE_11, STR(6), pEtcItem->GetName().c_str(), szClover );
 		else
-			kPrinter.AddTextPiece( FONT_SIZE_11, "클로버 : %s개", szClover );
+			kPrinter.AddTextPiece( FONT_SIZE_11, STR(7), szClover );
 		kPrinter.SetTextColor( TCT_DEFAULT_LIGHTGRAY );		
 		kPrinter.AddTextPiece( FONT_SIZE_11, " / " );
 	}
@@ -1342,7 +1342,7 @@ void LobbyWnd::RenderGradeExp( int iXPos, int iYPos )
 	int iGaugeWidth = 0;
 	if( g_MyInfo.IsGeneralGrade() )
 	{
-		kPrinter.AddTextPiece( FONT_SIZE_12, " %d위", g_MyInfo.GetUserRanking() );
+		kPrinter.AddTextPiece( FONT_SIZE_12, STR(2), g_MyInfo.GetUserRanking() );
 		iGaugeWidth = m_pGauge->GetWidth();
 	}
 	else

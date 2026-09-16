@@ -680,7 +680,7 @@ void MenuBtn::OnRender()
 			else
 				g_FontMgr.SetTextColor( TCT_DEFAULT_WHITE );
 
-			g_FontMgr.PrintText( fXPos + 23, fYPos + 6, FONT_SIZE_13, "미션" );
+			g_FontMgr.PrintText( fXPos + 23, fYPos + 6, FONT_SIZE_13, STR(21) );
 
 			WORD wCustomKey = g_KeyManager.GetCurrentQuestKey();
 			if( wCustomKey != 0 )
@@ -802,7 +802,7 @@ void MenuBtn::OnRenderTooltipSecretShopOpen( float fXPos, float fYPos, const CTi
 		ioComplexStringPrinter kMentPrinter;
 		kMentPrinter.SetTextStyle( TS_NORMAL );
 		kMentPrinter.SetTextColor( 0xFFFFF150 );
-		kMentPrinter.AddTextPiece( FONT_SIZE_16, "마감임박" );
+		kMentPrinter.AddTextPiece( FONT_SIZE_16, STR(1) );
 		kMentPrinter.PrintFullText( fXPos - 30, fYPos - 34, TAT_CENTER );
 	}
 	else
@@ -840,11 +840,11 @@ void MenuBtn::OnRenderTooltipEvent( float fXPos, float fYPos )
 
 	kMentPrinter.SetTextStyle( TS_NORMAL );
 	kMentPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kMentPrinter.AddTextPiece( FONT_SIZE_12, "이벤트 상품" );
+	kMentPrinter.AddTextPiece( FONT_SIZE_12, STR(1) );
 
 	kCountPrinter.SetTextStyle( TS_NORMAL );
 	kCountPrinter.SetTextColor( TCT_DEFAULT_RED );
-	kCountPrinter.AddTextPiece( FONT_SIZE_12, "%d개", m_iEventItemCnt );
+	kCountPrinter.AddTextPiece( FONT_SIZE_12, STR(2), m_iEventItemCnt );
 
 	float fTextWidth = kMentPrinter.GetFullWidth() + 20;
 	if( fTextWidth < kCountPrinter.GetFullWidth() )
@@ -885,11 +885,11 @@ void MenuBtn::OnRenderTooltipSoliderGrowth( float fXPos, float fYPos )
 
 	kMentPrinter.SetTextStyle( TS_NORMAL );
 	kMentPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kMentPrinter.AddTextPiece( FONT_SIZE_12, "육성중 용병" );
+	kMentPrinter.AddTextPiece( FONT_SIZE_12, STR(1) );
 
 	kCountPrinter.SetTextStyle( TS_NORMAL );
 	kCountPrinter.SetTextColor( TCT_DEFAULT_RED );
-	kCountPrinter.AddTextPiece( FONT_SIZE_12, "%d / %d명", m_iGrowCurrentCount, m_iGrowMaxCount );
+	kCountPrinter.AddTextPiece( FONT_SIZE_12, STR(2), m_iGrowCurrentCount, m_iGrowMaxCount );
 
 	float fTextWidth = kMentPrinter.GetFullWidth() + 20;
 	if( fTextWidth < kCountPrinter.GetFullWidth() )
@@ -910,11 +910,11 @@ void MenuBtn::OnRenderTooltipTimePresent( float fXPos, float fYPos )
 
 	kMentPrinter.SetTextStyle( TS_NORMAL );
 	kMentPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kMentPrinter.AddTextPiece( FONT_SIZE_12, "안받은 상품" );
+	kMentPrinter.AddTextPiece( FONT_SIZE_12, STR(1) );
 
 	kCountPrinter.SetTextStyle( TS_NORMAL );
 	kCountPrinter.SetTextColor( TCT_DEFAULT_RED );
-	kCountPrinter.AddTextPiece( FONT_SIZE_12, "%d개", iMaxPresent + iMaxSubcription );
+	kCountPrinter.AddTextPiece( FONT_SIZE_12, STR(2), iMaxPresent + iMaxSubcription );
 
 	float fTextWidth = kMentPrinter.GetFullWidth() + 20;
 	if( fTextWidth < kCountPrinter.GetFullWidth() )
@@ -936,11 +936,11 @@ void MenuBtn::OnRenderTooltipTimeRollBook( float fXPos, float fYPos )
 
 		kMentPrinter.SetTextStyle( TS_NORMAL );
 		kMentPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-		kMentPrinter.AddTextPiece( FONT_SIZE_12, "안받은 상품" );
+		kMentPrinter.AddTextPiece( FONT_SIZE_12, STR(1) );
 
 		kCountPrinter.SetTextStyle( TS_NORMAL );
 		kCountPrinter.SetTextColor( TCT_DEFAULT_RED );
-		kCountPrinter.AddTextPiece( FONT_SIZE_12, "1개" );
+		kCountPrinter.AddTextPiece( FONT_SIZE_12, STR(2) );
 
 		float fTextWidth = kMentPrinter.GetFullWidth() + 20;
 		if( fTextWidth < kCountPrinter.GetFullWidth() )
@@ -1160,9 +1160,9 @@ void MessengerBtn::OnRender()
 
 		kMemoPrinter.SetTextStyle( TS_NORMAL );
 		kMemoPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-		kMemoPrinter.AddTextPiece( FONT_SIZE_12, "클로버/쪽지 " );
+		kMemoPrinter.AddTextPiece( FONT_SIZE_12, STR(6) );
 		kMemoPrinter.SetTextColor( TCT_DEFAULT_RED );
-		kMemoPrinter.AddTextPiece( FONT_SIZE_12, "%d/%d개", iRecvCloverCount, iNewMemoCount );
+		kMemoPrinter.AddTextPiece( FONT_SIZE_12, STR(7), iRecvCloverCount, iNewMemoCount );
 
 		float fTextWidth = kFriendPrinter.GetFullWidth();
 		if( fTextWidth < kMemoPrinter.GetFullWidth() )
@@ -1492,7 +1492,7 @@ void HelpWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 						}
 						else
 						{
-							g_GUIMgr.SetMsgBox( MB_OK, NULL, "튜토리얼을 완료하면#광장으로 이동이 가능합니다." );
+							g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 						}
 					}
 					else
@@ -1515,7 +1515,7 @@ void HelpWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 								}
 								else
 								{
-									g_GUIMgr.SetMsgBox( MB_OK, NULL, "튜토리얼을 완료하면#광장으로 이동이 가능합니다." );
+									g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 								}
 							}
 							else
@@ -1565,7 +1565,7 @@ void HelpWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 					}
 					else if( g_MyInfo.IsBankruptcy() || g_MyInfo.IsCharBankruptcy() )
 					{
-						g_GUIMgr.SetMsgBox( MB_OK, NULL, "사용 가능한 용병을 구입하시면 #방 정보 이용이 가능합니다." );
+						g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 					}
 					else
 					{
@@ -1585,7 +1585,7 @@ void HelpWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 					}
 					else if( g_MyInfo.IsBankruptcy() || g_MyInfo.IsCharBankruptcy() )
 					{
-						g_GUIMgr.SetMsgBox( MB_OK, NULL, "사용 가능한 용병을 구입하시면 #방 정보 이용이 가능합니다." );
+						g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 					}
 					else
 					{
@@ -1697,17 +1697,17 @@ void HelpWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 		else if ( cmd == IOEX_BTNUP )
 		{
 			if ( g_MyInfo.IsTutorialUser() )
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "튜토리얼을 완료하면#출석부 이용이 가능합니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );
 			else if( g_MyInfo.GetEntryType() == ET_TERMINATION || g_MyInfo.GetEntryType() == ET_TEMPORARY ||
 				g_MyInfo.IsExpertEntryTemporary() )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "출석부는 정회원 전환 시 확인할 수 있습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(6) );
 				g_App.OpenFormalityEntryPage();
 			}
 			else if ( g_MyInfo.GetEntryType() == ET_TEMPORARY )
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "출석부는 정회원 전환 시 확인할 수 있습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(6) );
 			else
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "로비로 이동시 확인 가능합니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(7) );
 		}
 		break;
 	case ID_MINI_HOME:
@@ -2401,7 +2401,7 @@ void HelpWnd::MessengerProcess()
 		}
 		else if( g_MyInfo.IsBankruptcy() || g_MyInfo.IsCharBankruptcy() )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "사용 가능한 용병을 구입하시면 #메신저 이용이 가능합니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 			return;
 		}
 

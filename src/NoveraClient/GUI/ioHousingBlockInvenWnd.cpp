@@ -246,12 +246,12 @@ void ioHousingBlockInvenItemButton::OnRender()
 	if( m_bGray )
 	{
 		g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
-		g_FontMgr.PrintText( iXPos + 42, iYPos + 89, FONT_SIZE_12, " %s개", szNum );
+		g_FontMgr.PrintText( iXPos + 42, iYPos + 89, FONT_SIZE_12, STR(1), szNum );
 	}
 	else
 	{
 		g_FontMgr.SetTextColor( TCT_DEFAULT_RED );
-		g_FontMgr.PrintText( iXPos + 42, iYPos + 89, FONT_SIZE_12, " %s개", szNum );
+		g_FontMgr.PrintText( iXPos + 42, iYPos + 89, FONT_SIZE_12, STR(1), szNum );
 	}
 }
 
@@ -306,10 +306,10 @@ void ioHousingBlockInvenWnd::iwm_show()
 	switch( m_eBlockModeType )
 	{
 	case BMT_GUILD:
-		SetTitleText( "길드본부 꾸미기" );
+		SetTitleText( STR(1) );
 		break;
 	case BMT_PERSONAL:
-		SetTitleText( "개인본부 꾸미기" );
+		SetTitleText( STR(2) );
 		break;
 	}
 }
@@ -634,7 +634,7 @@ void ioHousingBlockInvenWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 				}
 				else
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "갯수가 0개인 아이템은 # 사용 할 수 없습니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 				}
 			}
 		}
@@ -845,7 +845,7 @@ void ioHousingBlockInvenToolTip::RenderDesc( int iXPos, int iYPos )
 	g_FontMgr.PrintTextWidthCut( iXPos + 90, iYPos + 32, FONT_SIZE_17, 130.0f, "%s", m_Name.c_str() );
 
 	g_FontMgr.SetTextColor( TCT_DEFAULT_RED );
-	g_FontMgr.PrintTextWidthCut( iXPos + 90, iYPos + 53, FONT_SIZE_13, 130.0f, "%s개", m_Count.c_str() );
+	g_FontMgr.PrintTextWidthCut( iXPos + 90, iYPos + 53, FONT_SIZE_13, 130.0f, STR(1), m_Count.c_str() );
 }
 
 void ioHousingBlockInvenToolTip::PrintManual( int iXPos, int iYPos, float fScale )

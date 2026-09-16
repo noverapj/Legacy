@@ -778,7 +778,7 @@ void KickVoteResultHelp( ioPlayStage *pPlayStage, int iVoteType, const ioHashStr
 		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(34) );
 		break;
 	case USER_KICK_VOTE_PROPOSAL_ERROR_14:       //오늘의 모드 투표 제안시간 지남
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "강퇴 가능 시간이 지나갔습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(53) );
 		break;
 	}
 }

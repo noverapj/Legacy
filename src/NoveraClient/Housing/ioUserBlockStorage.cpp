@@ -322,17 +322,17 @@ void ioGuildBlockStorage::ApplyBlcokInvenItem( SP2Packet& rkPacket )
 		break;
 	case REQUEST_INVEN_GUILD_DATA_NONE:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "길드에 가입 하지 않은 유저입니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		}
 		break;
 	case REQUEST_INVEN_GUILD_ROOM_DISABLE:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "길드 본부가 활성화 되지 않았습니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		}
 		break;
 	case REQUEST_INVEN_EXCEPTION:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "블럭 인벤토리 에러" );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		}
 		break;
 

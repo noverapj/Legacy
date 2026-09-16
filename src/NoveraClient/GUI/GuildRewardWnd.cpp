@@ -154,13 +154,13 @@ void GuildPossibleRewardListWnd::SetTitleByType()
 		m_UnderLinePrinter[0].AddTextPiece( FONT_SIZE_13, "★ " );
 
 		m_UnderLinePrinter[0].SetTextColor( TCT_DEFAULT_RED ); 
-		m_UnderLinePrinter[0].AddTextPiece( FONT_SIZE_13, "어제 길드 출석 인원" );
+		m_UnderLinePrinter[0].AddTextPiece( FONT_SIZE_13, STR(1) );
 
 		m_UnderLinePrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY ); 
-		m_UnderLinePrinter[0].AddTextPiece( FONT_SIZE_13, "에 따라" );
+		m_UnderLinePrinter[0].AddTextPiece( FONT_SIZE_13, STR(2) );
 
 		m_UnderLinePrinter[1].SetTextColor( TCT_DEFAULT_DARKGRAY ); 
-		m_UnderLinePrinter[1].AddTextPiece( FONT_SIZE_13, "보상 1개를 랜덤으로 주는 아이템이 지급됩니다." );
+		m_UnderLinePrinter[1].AddTextPiece( FONT_SIZE_13, STR(3) );
 	}
 	else if ( m_iRewardType == GuildInfoWnd::RANK_REWARD )
 	{
@@ -170,13 +170,13 @@ void GuildPossibleRewardListWnd::SetTitleByType()
 		m_UnderLinePrinter[0].AddTextPiece( FONT_SIZE_13, "★ " );
 
 		m_UnderLinePrinter[0].SetTextColor( TCT_DEFAULT_RED ); 
-		m_UnderLinePrinter[0].AddTextPiece( FONT_SIZE_13, "대회 시즌 후 달성한 길드 등급 " );
+		m_UnderLinePrinter[0].AddTextPiece( FONT_SIZE_13, STR(4) );
 
 		m_UnderLinePrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY ); 
-		m_UnderLinePrinter[0].AddTextPiece( FONT_SIZE_13, "에 따라" );
+		m_UnderLinePrinter[0].AddTextPiece( FONT_SIZE_13, STR(2) );
 
 		m_UnderLinePrinter[1].SetTextColor( TCT_DEFAULT_DARKGRAY ); 
-		m_UnderLinePrinter[1].AddTextPiece( FONT_SIZE_13, "보상 1개를 랜덤으로 주는 아이템이 지급됩니다." );
+		m_UnderLinePrinter[1].AddTextPiece( FONT_SIZE_13, STR(3) );
 	}
 	else
 		LOG.PrintTimeAndLog( 0, "%s - is not exist RewardType : %d", m_iRewardType );
@@ -475,8 +475,8 @@ void GuildAttendUserBtn::OnRender()
 		// 아이디 
 		g_FontMgr.PrintTextWidthCut( iXPos + ID_X, iYPos + TEXT_Y, FONT_SIZE_12,FLOAT90, m_szUserID.c_str() );
 		//Text
-		g_FontMgr.PrintText( iXPos + YESTERDAY_X, iYPos + TEXT_Y, FONT_SIZE_12, "어제/");
-		g_FontMgr.PrintText( iXPos + TODAY_X, iYPos + TEXT_Y, FONT_SIZE_12, "오늘");
+		g_FontMgr.PrintText( iXPos + YESTERDAY_X, iYPos + TEXT_Y, FONT_SIZE_12, STR(1));
+		g_FontMgr.PrintText( iXPos + TODAY_X, iYPos + TEXT_Y, FONT_SIZE_12, STR(2));
 
 		//아이콘
 		//어제 출석을 한경우
@@ -598,15 +598,15 @@ void GuildAttendRewardWnd::SettingRewardInfo( BYTE btYesterdayAttendCount, short
 	m_AttendNumberPrinter.SetTextStyle( TS_NORMAL );
 	m_AttendNumberPrinter.SetBkColor( 0, 0, 0 );
 	m_AttendNumberPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	m_AttendNumberPrinter.AddTextPiece( FONT_SIZE_17, "길드 " );
+	m_AttendNumberPrinter.AddTextPiece( FONT_SIZE_17, STR(1) );
 	m_AttendNumberPrinter.SetTextColor( TCT_DEFAULT_GREEN );
-	m_AttendNumberPrinter.AddTextPiece( FONT_SIZE_17, "%d명", btYesterdayAttendCount );
+	m_AttendNumberPrinter.AddTextPiece( FONT_SIZE_17, STR(2), btYesterdayAttendCount );
 	m_AttendNumberPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	m_AttendNumberPrinter.AddTextPiece( FONT_SIZE_17, "출석!!" );
+	m_AttendNumberPrinter.AddTextPiece( FONT_SIZE_17, STR(3) );
 
 
 	char szBuf[MAX_PATH] = "";
-	sprintf_s_e( szBuf, "%s 획득!!!", g_PresentMgr.GetPresentValue1Text( iPresentType, iPresentValue1, iPresentValue2 ).c_str() );
+	SafeSprintf( szBuf, sizeof(szBuf), STR(4), g_PresentMgr.GetPresentValue1Text( iPresentType, iPresentValue1, iPresentValue2 ).c_str() );
 
 	m_ItemNamePrinter.SetTextStyle( TS_NORMAL );
 	m_ItemNamePrinter.SetBkColor( 0, 0, 0 );
@@ -671,19 +671,19 @@ void GuildRankRewardWnd::SettingRewardInfo( int iGuildLevel, short iPresentType,
 
 	char szLevelText[MAX_PATH] = "";
 	char szLevel[MAX_GUILD_LEVEL][MAX_LEVEL] = { "F", "E", "D", "C", "B", "A", "S" };
-	sprintf_s_e( szLevelText, "%s등급", szLevel[iGuildLevel] );
+	SafeSprintf( szLevelText, sizeof(szLevelText), STR(1), szLevel[iGuildLevel] );
 
 	m_GuildRankPrinter.SetTextStyle( TS_NORMAL );
 	m_GuildRankPrinter.SetBkColor( 0, 0, 0 );
 	m_GuildRankPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	m_GuildRankPrinter.AddTextPiece( FONT_SIZE_17, "길드 " );
+	m_GuildRankPrinter.AddTextPiece( FONT_SIZE_17, STR(2) );
 	m_GuildRankPrinter.SetTextColor( TCT_DEFAULT_GREEN );
 	m_GuildRankPrinter.AddTextPiece( FONT_SIZE_17, szLevelText );
 	m_GuildRankPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	m_GuildRankPrinter.AddTextPiece( FONT_SIZE_17, "달성!!" );
+	m_GuildRankPrinter.AddTextPiece( FONT_SIZE_17, STR(3) );
 
 	char szBuf[MAX_PATH] = "";
-	sprintf_s_e( szBuf, "%s 획득!!!", g_PresentMgr.GetPresentValue1Text( iPresentType, iPresentValue1, iPresentValue2 ).c_str() );
+	SafeSprintf( szBuf, sizeof(szBuf), STR(4), g_PresentMgr.GetPresentValue1Text( iPresentType, iPresentValue1, iPresentValue2 ).c_str() );
 
 	m_ItemNamePrinter.SetTextStyle( TS_NORMAL );
 	m_ItemNamePrinter.SetBkColor( 0, 0, 0 );

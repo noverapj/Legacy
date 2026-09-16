@@ -249,17 +249,17 @@ bool ioReservedTask::OnExecuteRecvPCRoom( ioTask* pTask )
 			kPrinter[0].SetTextStyle( TS_NORMAL );
 			kPrinter[0].SetBkColor( 0, 0, 0 );
 			kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kPrinter[0].AddTextPiece( FONT_SIZE_13, "경험치+100％ / 페소+50％" );
+			kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(1) );
 
 			kPrinter[1].SetTextStyle( TS_NORMAL );
 			kPrinter[1].SetBkColor( 0, 0, 0 );	
 			kPrinter[1].SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kPrinter[1].AddTextPiece( FONT_SIZE_13, "PC방 전용 용병 제공" );
+			kPrinter[1].AddTextPiece( FONT_SIZE_13, STR(2) );
 
 			kPrinter[2].SetTextStyle( TS_NORMAL );
 			kPrinter[2].SetBkColor( 0, 0, 0 );
 			kPrinter[2].SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kPrinter[2].AddTextPiece( FONT_SIZE_13, "낚시/유물탐사 PC방 혜택 제공" );
+			kPrinter[2].AddTextPiece( FONT_SIZE_13, STR(3) );
 			g_GUIMgr.SetPrevMsgListBoxWithTitle( g_GUIMgr.FindWnd( PCROOM_SOLDIER_BONUS_WND ), MB_OK, NULL, kPrinter, "넥슨 피씨방 혜택 적용 중", "닫기", "확인", "취소" );
 		}
 		else

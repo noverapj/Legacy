@@ -70,12 +70,12 @@ void BingoHelpToolTip::OnRender()
 			kPrinter.SetTextStyle( TS_NORMAL );
 			kPrinter.SetBkColor( TCT_DEFAULT_DARKGRAY );	
 			kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kPrinter.AddTextPiece( FONT_SIZE_12, "배치된 25개 숫자의 자리를 서로서로 섞습니다." );
+			kPrinter.AddTextPiece( FONT_SIZE_12, STR(1) );
 			kPrinter.PrintFullText( iXPos + START_TEXT_XPOS, iYPos + START_TEXT_YPOS, TAT_LEFT );
 			iWidth1 = static_cast<int>( kPrinter.GetFullWidth() );
 			kPrinter.ClearList();
 
-			kPrinter.AddTextPiece( FONT_SIZE_12, "한줄로 빙고된 숫자는 섞이지 않습니다." );
+			kPrinter.AddTextPiece( FONT_SIZE_12, STR(2) );
 			kPrinter.PrintFullText( iXPos + START_TEXT_XPOS, iYPos + START_TEXT_YPOS + TEXT_LINE_GAP, TAT_LEFT );
 			iWidth2 = static_cast<int>( kPrinter.GetFullWidth() );
 			kPrinter.ClearList();
@@ -93,12 +93,12 @@ void BingoHelpToolTip::OnRender()
 			kPrinter.SetTextStyle( TS_NORMAL );
 			kPrinter.SetBkColor( TCT_DEFAULT_DARKGRAY );	
 			kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kPrinter.AddTextPiece( FONT_SIZE_12, "배치된 13개의 보상을 보상목록에서 다시 뽑습니다." );
+			kPrinter.AddTextPiece( FONT_SIZE_12, STR(3) );
 			kPrinter.PrintFullText( iXPos + START_TEXT_XPOS, iYPos + START_TEXT_YPOS, TAT_LEFT );
 			iWidth1 = static_cast<int>( kPrinter.GetFullWidth() );
 			kPrinter.ClearList();
 
-			kPrinter.AddTextPiece( FONT_SIZE_12, "이미 획득된 보상은 바뀌지 않습니다." );
+			kPrinter.AddTextPiece( FONT_SIZE_12, STR(4) );
 			kPrinter.PrintFullText( iXPos + START_TEXT_XPOS, iYPos + START_TEXT_YPOS + TEXT_LINE_GAP, TAT_LEFT );
 			iWidth2 = static_cast<int>( kPrinter.GetFullWidth() );
 			kPrinter.ClearList();
@@ -117,17 +117,17 @@ void BingoHelpToolTip::OnRender()
 			kPrinter.SetTextStyle( TS_NORMAL );
 			kPrinter.SetBkColor( TCT_DEFAULT_DARKGRAY );	
 			kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kPrinter.AddTextPiece( FONT_SIZE_12, "배치된 숫자중" );
+			kPrinter.AddTextPiece( FONT_SIZE_12, STR(5) );
 			kPrinter.PrintFullText( iXPos + START_TEXT_XPOS, iYPos + START_TEXT_YPOS, TAT_LEFT );
 			iWidth1 = static_cast<int>( kPrinter.GetFullWidth() );
 			kPrinter.ClearList();
 
-			kPrinter.AddTextPiece( FONT_SIZE_12, "획득되지도 중복되지도 않는 숫자를" );
+			kPrinter.AddTextPiece( FONT_SIZE_12, STR(6) );
 			kPrinter.PrintFullText( iXPos + START_TEXT_XPOS, iYPos + START_TEXT_YPOS + TEXT_LINE_GAP, TAT_LEFT );
 			iWidth2 = static_cast<int>( kPrinter.GetFullWidth() );
 			kPrinter.ClearList();
 
-			kPrinter.AddTextPiece( FONT_SIZE_12, "반드시 뽑습니다." );
+			kPrinter.AddTextPiece( FONT_SIZE_12, STR(7) );
 			kPrinter.PrintFullText( iXPos + START_TEXT_XPOS, iYPos + START_TEXT_YPOS + TEXT_LINE_GAP * 2, TAT_LEFT );
 			iWidth3 = static_cast<int>( kPrinter.GetFullWidth() );
 			kPrinter.ClearList();

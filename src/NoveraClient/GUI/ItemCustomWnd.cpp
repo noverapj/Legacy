@@ -902,7 +902,7 @@ void ItemCustomSelectWnd::OnItemCustomInfoPush( DWORD dwID )
 
 		if( kSlot.m_bCharEquip )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "착용 중인 장비는 스킨 을 할 수 없습니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 			return;
 		}
 		
@@ -1798,7 +1798,7 @@ void ItemCustomMakeWnd::SetExtraItemInfo( InventoryItemInfo &rkItem, bool bMale 
 		}
 		else
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "착용 중인 장비는 스킨이 불가능합니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(9) );
 			return;
 		}
 	}

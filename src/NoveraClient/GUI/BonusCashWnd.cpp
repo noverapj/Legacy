@@ -68,14 +68,14 @@ void BonusCashWnd::OnRender()
 		kPrinter.SetTextStyle( TS_NORMAL );
 		kPrinter.SetBkColor( 0, 0, 0 );
 		kPrinter.SetTextColor( TCT_DEFAULT_RED );
-		kPrinter.AddTextPiece( FONT_SIZE_13, "내 총 보너스 골드 : %d 골드", g_MyInfo.GetBonusCash() );
+		kPrinter.AddTextPiece( FONT_SIZE_13, STR(1), g_MyInfo.GetBonusCash() );
 		kPrinter.PrintFullText( iXPos + TEXT1_X, iYPos + TEXT1_Y, TAT_CENTER );
 		kPrinter.ClearList();
 
 		kPrinter.SetTextStyle( TS_NORMAL );
 		kPrinter.SetBkColor( 0, 0, 0 );
 		kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-		kPrinter.AddTextPiece( FONT_SIZE_13, "보너스 골드는 만료일이 짧을수록 먼저 소진됩니다." );
+		kPrinter.AddTextPiece( FONT_SIZE_13, STR(2) );
 		kPrinter.PrintFullText( iXPos + TEXT2_X, iYPos + TEXT2_Y, TAT_CENTER );
 	}
 	else if ( m_dwCurButtonID == ID_EXPRIATION_BTN )
@@ -84,14 +84,14 @@ void BonusCashWnd::OnRender()
 		kPrinter.SetTextStyle( TS_NORMAL );
 		kPrinter.SetBkColor( 0, 0, 0 );
 		kPrinter.SetTextColor( TCT_DEFAULT_RED );
-		kPrinter.AddTextPiece( FONT_SIZE_13, "내 총 보너스 골드 : %d 골드", g_MyInfo.GetBonusCash() );
+		kPrinter.AddTextPiece( FONT_SIZE_13, STR(1), g_MyInfo.GetBonusCash() );
 		kPrinter.PrintFullText( iXPos + TEXT1_X, iYPos + TEXT1_Y, TAT_CENTER );
 		kPrinter.ClearList();
 
 		kPrinter.SetTextStyle( TS_NORMAL );
 		kPrinter.SetBkColor( 0, 0, 0 );
 		kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-		kPrinter.AddTextPiece( FONT_SIZE_13, "만료내역은 최대 30개까지 저장됩니다." );
+		kPrinter.AddTextPiece( FONT_SIZE_13, STR(3) );
 		kPrinter.PrintFullText( iXPos + TEXT2_X, iYPos + TEXT2_Y, TAT_CENTER );
 	}
 	
@@ -131,7 +131,7 @@ bool BonusCashBtn::SetInfo( const ioBonusCashManager::BonusCashInfo& rkInfo, boo
 		m_CashInfoList[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
 	else
 		m_CashInfoList[0].SetTextColor( TCT_DEFAULT_GRAY );
-	m_CashInfoList[0].AddTextPiece( FONT_SIZE_12, "%d.%d.%d (%02d:%02d까지)", rkInfo.ExpiredTime.GetYear(), rkInfo.ExpiredTime.GetMonth(), rkInfo.ExpiredTime.GetDay(), rkInfo.ExpiredTime.GetHour(), rkInfo.ExpiredTime.GetMinute() );
+	m_CashInfoList[0].AddTextPiece( FONT_SIZE_12, STR(1), rkInfo.ExpiredTime.GetYear(), rkInfo.ExpiredTime.GetMonth(), rkInfo.ExpiredTime.GetDay(), rkInfo.ExpiredTime.GetHour(), rkInfo.ExpiredTime.GetMinute() );
 
 	m_CashInfoList[1].SetTextStyle( TS_NORMAL );
 	m_CashInfoList[1].SetBkColor( 0, 0, 0 );
@@ -139,7 +139,7 @@ bool BonusCashBtn::SetInfo( const ioBonusCashManager::BonusCashInfo& rkInfo, boo
 		m_CashInfoList[1].SetTextColor( D3DCOLOR_XRGB( 141, 87, 4 ) );
 	else
 		m_CashInfoList[1].SetTextColor( TCT_DEFAULT_GRAY );
-	m_CashInfoList[1].AddTextPiece( FONT_SIZE_12, "%d 골드", rkInfo.iAcquisitionCash );
+	m_CashInfoList[1].AddTextPiece( FONT_SIZE_12, STR(2), rkInfo.iAcquisitionCash );
 
 	m_CashInfoList[2].SetTextStyle( TS_NORMAL );
 	m_CashInfoList[2].SetBkColor( 0, 0, 0 );
@@ -147,7 +147,7 @@ bool BonusCashBtn::SetInfo( const ioBonusCashManager::BonusCashInfo& rkInfo, boo
 		m_CashInfoList[2].SetTextColor( D3DCOLOR_XRGB( 141, 87, 4 ) );
 	else
 		m_CashInfoList[2].SetTextColor( TCT_DEFAULT_GRAY );
-	m_CashInfoList[2].AddTextPiece( FONT_SIZE_12, "%d 골드", rkInfo.iRemainingCash );
+	m_CashInfoList[2].AddTextPiece( FONT_SIZE_12, STR(2), rkInfo.iRemainingCash );
 
 	m_bData = true;
 	return true;
@@ -220,15 +220,15 @@ void BonusCashProgressWnd::OnRender()
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_12, "만료일자" );
+	kPrinter.AddTextPiece( FONT_SIZE_12, STR(1) );
 	kPrinter.PrintFullText( iXPos + TEXT1_X, iYPos + TEXT_UP_Y, TAT_LEFT );
 	kPrinter.ClearList();
 
-	kPrinter.AddTextPiece( FONT_SIZE_12, "획득금액" );
+	kPrinter.AddTextPiece( FONT_SIZE_12, STR(2) );
 	kPrinter.PrintFullText( iXPos + TEXT2_X, iYPos + TEXT_UP_Y, TAT_RIGHT );
 	kPrinter.ClearList();
 
-	kPrinter.AddTextPiece( FONT_SIZE_12, "남은금액" );
+	kPrinter.AddTextPiece( FONT_SIZE_12, STR(3) );
 	kPrinter.PrintFullText( iXPos + TEXT3_X, iYPos + TEXT_UP_Y, TAT_RIGHT );
 	kPrinter.ClearList();
 
@@ -238,7 +238,7 @@ void BonusCashProgressWnd::OnRender()
 		kPrinter.SetTextStyle( TS_NORMAL );
 		kPrinter.SetBkColor( 0, 0, 0 );
 		kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-		kPrinter.AddTextPiece( FONT_SIZE_12, "진행중인 보너스 골드 내역이 없습니다. " );
+		kPrinter.AddTextPiece( FONT_SIZE_12, STR(4) );
 		kPrinter.PrintFullText( iXPos + TEXT4_X, iYPos + TEXT4_Y, TAT_CENTER );
 		return;
 	}
@@ -331,15 +331,15 @@ void BonusCashExpireWnd::OnRender()
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_12, "만료일자" );
+	kPrinter.AddTextPiece( FONT_SIZE_12, STR(1) );
 	kPrinter.PrintFullText( iXPos + TEXT1_X, iYPos + TEXT_UP_Y, TAT_LEFT );
 	kPrinter.ClearList();
 
-	kPrinter.AddTextPiece( FONT_SIZE_12, "획득금액" );
+	kPrinter.AddTextPiece( FONT_SIZE_12, STR(2) );
 	kPrinter.PrintFullText( iXPos + TEXT2_X, iYPos + TEXT_UP_Y, TAT_RIGHT );
 	kPrinter.ClearList();
 
-	kPrinter.AddTextPiece( FONT_SIZE_12, "남은금액" );
+	kPrinter.AddTextPiece( FONT_SIZE_12, STR(3) );
 	kPrinter.PrintFullText( iXPos + TEXT3_X, iYPos + TEXT_UP_Y, TAT_RIGHT );
 	kPrinter.ClearList();
 
@@ -349,7 +349,7 @@ void BonusCashExpireWnd::OnRender()
 		kPrinter.SetTextStyle( TS_NORMAL );
 		kPrinter.SetBkColor( 0, 0, 0 );
 		kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-		kPrinter.AddTextPiece( FONT_SIZE_12, "기간 만료 내역이 없습니다. " );
+		kPrinter.AddTextPiece( FONT_SIZE_12, STR(4) );
 		kPrinter.PrintFullText( iXPos + TEXT4_X, iYPos + TEXT4_Y, TAT_CENTER );
 		return;
 	}

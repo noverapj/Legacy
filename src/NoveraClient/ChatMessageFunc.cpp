@@ -1619,7 +1619,7 @@ void ioSP2ChatManager::SetEtcItemObtainMsg( int iItemType, int iValue )
 	}
 	else if( pEtcItem->GetType() == ioEtcItem::EIT_ETC_CLOVER )
 	{		
-		SafeSprintf( szBuffer, sizeof( szBuffer ), "%s (%d개 보유)", szBuf, g_MyInfo.GetEtcCoinMoney( ioEtcItem::EIT_ETC_CLOVER ) );
+		SafeSprintf( szBuffer, sizeof( szBuffer ), STR(11), szBuf, g_MyInfo.GetEtcCoinMoney( ioEtcItem::EIT_ETC_CLOVER ) );
 	}
 	else if( pEtcItem->GetType() == ioEtcItem::EIT_ETC_MILEAGE_COIN )
 	{		
@@ -1627,7 +1627,7 @@ void ioSP2ChatManager::SetEtcItemObtainMsg( int iItemType, int iValue )
 	}
 	else if( pEtcItem->GetType() == ioEtcItem::EIT_ETC_SOUL_STONE )
 	{		
-		SafeSprintf( szBuffer, sizeof( szBuffer ), "%s (%d개 보유)", szBuf, g_MyInfo.GetEtcCoinMoney( ioEtcItem::EIT_ETC_SOUL_STONE ) );
+		SafeSprintf( szBuffer, sizeof( szBuffer ), STR(11), szBuf, g_MyInfo.GetEtcCoinMoney( ioEtcItem::EIT_ETC_SOUL_STONE ) );
 	}
 	else
 	{
@@ -1703,13 +1703,13 @@ void ioSP2ChatManager::SetCostumeObtainMsg( int nCostumeCode, int nPeriodType, i
 	if( nPeriodType != EPT_MORTMAIN )
 	{
 		if( (nDate/24) > 0 )
-			SafeSprintf( szBuf, sizeof( szBuf ), "[%s +%d일] 장비 획득", szName.c_str(), (nDate/24) );
+			SafeSprintf( szBuf, sizeof( szBuf ), STR(1), szName.c_str(), (nDate/24) );
 		else
-			SafeSprintf( szBuf, sizeof( szBuf ), "[%s +%d시간] 장비 획득", szName.c_str(), nDate );
+			SafeSprintf( szBuf, sizeof( szBuf ), STR(2), szName.c_str(), nDate );
 	}
 	else
 	{
-		SafeSprintf( szBuf, sizeof( szBuf ), "[%s] 영구 장비 획득", szName.c_str() );
+		SafeSprintf( szBuf, sizeof( szBuf ), STR(3), szName.c_str() );
 	}
 	SafeSprintf( m_szMsgBuf, MSG_BUFF_SIZE, szBuf );
 	AddSystemMsg();
@@ -2402,9 +2402,9 @@ void ioSP2ChatManager::SetJoinUserChatMsg( const char *szID, TeamType eTeam, int
 	if ( g_NoviceGradeBenefitMgr.IsBenefitGrade( nGrade ) )
 	{
 		kPrinter.SetTextColor( TCT_DEFAULT_VIOLET );
-		kPrinter.AddTextPiece( GetChatFontScale(), " 초보자 버프" );
+		kPrinter.AddTextPiece( GetChatFontScale(), STR(9) );
 		kPrinter.SetTextColor( GetChatColor() );
-		kPrinter.AddTextPiece( GetChatFontScale(), " 상태." );
+		kPrinter.AddTextPiece( GetChatFontScale(), STR(10) );
 	}
 
 	AddChatItem( STR(1), kPrinter , NULL, true, false );
@@ -2559,15 +2559,15 @@ void ioSP2ChatManager::SetKickHighLevelUserChatMsg( const char *szID, TeamType e
 	kPrinterOne.AddTextPiece( GetChatFontScale(), szID );
 
 	kPrinterOne.SetTextColor( GetChatColor() );
-	kPrinterOne.AddTextPiece( GetChatFontScale(), "님, 실력이 너무 뛰어나 유저보호를 위해 전투방에서" );
+	kPrinterOne.AddTextPiece( GetChatFontScale(), STR(1) );
 
 	ioComplexStringPrinter kPrinterTwo;
 	kPrinterTwo.SetTextStyle( GetTextStyle() );
 	kPrinterTwo.SetBkColor( GetChatBkColor() );
 	kPrinterTwo.SetTextColor( GetChatColor() );
-	kPrinterTwo.AddTextPiece( GetChatFontScale(), "이탈되셨습니다." );
+	kPrinterTwo.AddTextPiece( GetChatFontScale(), STR(2) );
 
-	AddChatItem( "정보", kPrinterOne , NULL, true, false );
+	AddChatItem( STR(3), kPrinterOne , NULL, true, false );
 	AddChatItem( "", kPrinterTwo , NULL, true, false );
 
 	g_SoundMgr.PlaySound( m_SystemMsgSound );
@@ -2588,9 +2588,9 @@ void ioSP2ChatManager::SetKickLowLevelUserChatMsg( const char *szID, TeamType eT
 	kPrinter.SetTextColor( GetChatRedIDColor() );
 	kPrinter.AddTextPiece( GetChatFontScale(), szID );
 	kPrinter.SetTextColor( GetChatColor() );
-	kPrinter.AddTextPiece( GetChatFontScale(), "님을 보호하기 위해 해당 전투방에서 이탈되셨습니다." );
+	kPrinter.AddTextPiece( GetChatFontScale(), STR(1) );
 
-	AddChatItem( "정보", kPrinter , NULL, true, false );
+	AddChatItem( STR(2), kPrinter , NULL, true, false );
 
 	g_SoundMgr.PlaySound( m_SystemMsgSound );
 	m_CurChatSound.Clear();
@@ -2610,9 +2610,9 @@ void ioSP2ChatManager::SetKickSysError( const char *szID, TeamType eTeam )
 	kPrinter.SetTextColor( GetChatRedIDColor() );
 	kPrinter.AddTextPiece( GetChatFontScale(), szID );
 	kPrinter.SetTextColor( GetChatColor() );
-	kPrinter.AddTextPiece( GetChatFontScale(), "내부 시스템에러로 모드가 종료 처리 되었습니다." );
+	kPrinter.AddTextPiece( GetChatFontScale(), STR(1) );
 
-	AddChatItem( "정보", kPrinter , NULL, true, false );
+	AddChatItem( STR(2), kPrinter , NULL, true, false );
 
 	g_SoundMgr.PlaySound( m_SystemMsgSound );
 	m_CurChatSound.Clear();
@@ -2701,13 +2701,13 @@ void ioSP2ChatManager::SendChatLog( ioMannerTrialChatManager::TrialType eTrialTy
 	switch( eModeType )
 	{
 	case MT_TOWER_DEFENSE:
-		SafeSprintf( szModeTypeName, sizeof( szModeTypeName ), "깊은 숲" ); //UNDONE : don't know
+		SafeSprintf( szModeTypeName, sizeof( szModeTypeName ), STR(22) ); //UNDONE : don't know
 		break;
 	case MT_DARK_XMAS:
-		SafeSprintf( szModeTypeName, sizeof( szModeTypeName ), "스노우타운" ); //UNDONE : don't know
+		SafeSprintf( szModeTypeName, sizeof( szModeTypeName ), STR(23) ); //UNDONE : don't know
 		break;
 	case MT_FIRE_TEMPLE:
-		SafeSprintf( szModeTypeName, sizeof( szModeTypeName ), "불의 신전" ); //UNDONE : don't know
+		SafeSprintf( szModeTypeName, sizeof( szModeTypeName ), STR(24) ); //UNDONE : don't know
 		break;
 	case MT_SYMBOL:
 		SafeSprintf( szModeTypeName, sizeof( szModeTypeName ), STR(1) );
@@ -2755,31 +2755,31 @@ void ioSP2ChatManager::SendChatLog( ioMannerTrialChatManager::TrialType eTrialTy
 		SafeSprintf( szModeTypeName, sizeof( szModeTypeName ), STR(14) );
 		break;
 	case MT_HEADQUARTERS:
-		SafeSprintf( szModeTypeName, sizeof( szModeTypeName ), "훈련소" );
+		SafeSprintf( szModeTypeName, sizeof( szModeTypeName ), STR(25) );
 		break;
 	case MT_DOUBLE_CROWN:
-		SafeSprintf( szModeTypeName, sizeof( szModeTypeName ), "더블 크라운" );
+		SafeSprintf( szModeTypeName, sizeof( szModeTypeName ), STR(26) );
 		break;
 	case MT_SHUFFLE_BONUS:
-		SafeSprintf( szModeTypeName, sizeof( szModeTypeName ), "오늘의모드" );
+		SafeSprintf( szModeTypeName, sizeof( szModeTypeName ), STR(27) );
 		break;
 	case MT_FACTORY:
-		SafeSprintf( szModeTypeName, sizeof( szModeTypeName ), "비밀공장" );
+		SafeSprintf( szModeTypeName, sizeof( szModeTypeName ), STR(28) );
 		break;
 	case MT_TEAM_SURVIVAL_AI:
-		SafeSprintf( szModeTypeName, sizeof( szModeTypeName ), "팀서바이벌AI" );
+		SafeSprintf( szModeTypeName, sizeof( szModeTypeName ), STR(29) );
 		break;
 	case MT_HOUSE:
-		SafeSprintf( szModeTypeName, sizeof( szModeTypeName ), "개인본부" );
+		SafeSprintf( szModeTypeName, sizeof( szModeTypeName ), STR(30) );
 		break;
 	case MT_RAID:
-		SafeSprintf( szModeTypeName, sizeof( szModeTypeName ), "레이드" );
+		SafeSprintf( szModeTypeName, sizeof( szModeTypeName ), STR(31) );
 		break;
 	case MT_UNDERWEAR:
-		SafeSprintf( szModeTypeName, sizeof( szModeTypeName ), "팬티몬" );
+		SafeSprintf( szModeTypeName, sizeof( szModeTypeName ), STR(32) );
 		break;
 	case MT_CBT:
-		SafeSprintf( szModeTypeName, sizeof( szModeTypeName ), "클베모드" );
+		SafeSprintf( szModeTypeName, sizeof( szModeTypeName ), STR(33) );
 		break;
 	case MT_FLAG_CAPTURE:
 		SafeSprintf( szModeTypeName, sizeof( szModeTypeName ), STR(18) );

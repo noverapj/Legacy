@@ -348,7 +348,7 @@ void ioExitMsgBox::SetMsgInfo( ioPlayStage *pPlayStage )
 			}
 			else
 			{
-				g_GUIMgr.SetMsgBox( MB_YESNO, this, "광장으로 이동하시겠습니까?"  );
+				g_GUIMgr.SetMsgBox( MB_YESNO, this, STR(5)  );
 			}
 		}
 		else if( g_LadderTeamMgr.IsLadderTeam() && ( !g_LadderTeamMgr.IsLadderBattleModePlaying() || TotalResultMainWnd::IsNoPenalty() ) )
@@ -360,7 +360,7 @@ void ioExitMsgBox::SetMsgInfo( ioPlayStage *pPlayStage )
 			}
 			else
 			{
-				g_GUIMgr.SetMsgBox( MB_YESNO, this, "광장으로 이동하시겠습니까?"  );				
+				g_GUIMgr.SetMsgBox( MB_YESNO, this, STR(5)  );				
 			}
 		}
 		else if( g_BattleRoomMgr.IsBattleRoom() && g_GUIMgr.IsShow( TOURNAMENT_BATTLE_INVITE_WND ) )
@@ -372,7 +372,7 @@ void ioExitMsgBox::SetMsgInfo( ioPlayStage *pPlayStage )
 			}
 			else
 			{
-				g_GUIMgr.SetMsgBox( MB_YESNO, this, "광장으로 이동하시겠습니까?"  );				
+				g_GUIMgr.SetMsgBox( MB_YESNO, this, STR(5)  );				
 			}
 		}
 		else if( g_LadderTeamMgr.IsLadderTeam() && g_GUIMgr.IsShow( TOURNAMENT_BATTLE_INVITE_WND ) )
@@ -384,7 +384,7 @@ void ioExitMsgBox::SetMsgInfo( ioPlayStage *pPlayStage )
 			}
 			else
 			{
-				g_GUIMgr.SetMsgBox( MB_YESNO, this, "광장으로 이동하시겠습니까?"  );				
+				g_GUIMgr.SetMsgBox( MB_YESNO, this, STR(5)  );				
 			}
 		}
 		else if( g_ShuffleRoomMgr.IsShuffleRoom() )
@@ -434,9 +434,9 @@ void ioExitMsgBox::SetMsgInfo( ioPlayStage *pPlayStage )
 	if( pButton )
 	{
 		if( m_bPenaltyExit )
-			pButton->SetTitleText( "즉시나가기(벌금)" );
+			pButton->SetTitleText( STR(6) );
 		else
-			pButton->SetTitleText( "즉시나가기" );
+			pButton->SetTitleText( STR(7) );
 	}
 }
 
@@ -819,13 +819,13 @@ void ioExitMsgBox::OnRender()
 		kPrinter.SetTextStyle( TS_NORMAL );
 		kPrinter.SetBkColor( 0, 0, 0 );
 		kPrinter.SetTextColor( TCT_DEFAULT_GREEN );
-		kPrinter.AddTextPiece( FONT_SIZE_13, "도전포기" );
+		kPrinter.AddTextPiece( FONT_SIZE_13, STR(10) );
 		kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-		kPrinter.AddTextPiece( FONT_SIZE_13, "를 하면 " );
+		kPrinter.AddTextPiece( FONT_SIZE_13, STR(11) );
 		kPrinter.SetTextColor( TCT_DEFAULT_RED );
-		kPrinter.AddTextPiece( FONT_SIZE_13, "보상획득" );
+		kPrinter.AddTextPiece( FONT_SIZE_13, STR(12) );
 		kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-		kPrinter.AddTextPiece( FONT_SIZE_13, "이 가능합니다." );
+		kPrinter.AddTextPiece( FONT_SIZE_13, STR(13) );
 		kPrinter.PrintFullText( iXPos + 206, iYPos + 164, TAT_CENTER );
 	}
 	else
@@ -842,7 +842,7 @@ void ioExitMsgBox::OnRender()
 		}
 		else
 		{
-			kPrinter.AddTextPiece( FONT_SIZE_13, "광장으로 나가시겠습니까?" );
+			kPrinter.AddTextPiece( FONT_SIZE_13, STR(14) );
 		}
 
 		kPrinter.PrintFullText( iXPos + 206, iYPos + 164, TAT_CENTER );
@@ -1136,13 +1136,13 @@ void ioBattleRoomExitMsgBox::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 			}
 			else if( g_BattleRoomMgr.GetQuickStartModeType() == BMT_USER_CUSTOM )
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "유저모드는 빠른시작이 불가능합니다" );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 			}
 			else if( !g_MyInfo.IsTutorialUser() )
 			{
 				if( g_LadderTeamMgr.IsLadderTeam() )
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "진영전 중에는 빠른전투를 할 수 없습니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 				}
 				else
 				{
@@ -1153,7 +1153,7 @@ void ioBattleRoomExitMsgBox::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 							pSearchWnd->HideWnd();
 						else
 						{
-							pSearchWnd->SetSearching( "조건에 맞는 전투방을 검색중 . . .", TimeGateSearch::ST_PARTY_JOIN );		
+							pSearchWnd->SetSearching( STR(3), TimeGateSearch::ST_PARTY_JOIN );		
 						}
 					}
 				}		
@@ -1198,7 +1198,7 @@ void ioBattleRoomExitMsgBox::ExitLogByRegularTournament()
 		return;
 
 	char szLog[MAX_PATH] = "";	
-	sprintf( szLog, "[대회로그] 대회방 나가기(전투방 나가기 버튼) - %s", g_MyInfo.GetPublicID().c_str() );
+	sprintf( szLog, STR(1), g_MyInfo.GetPublicID().c_str() );
 
 	SP2Packet kPacket2( LUPK_LOG );
 	kPacket2 << "TournamentLog";  // 로그 파일 타입
@@ -1292,7 +1292,7 @@ void ioBattleRoomExitMsgBox::OnRender()
 		g_FontMgr.SetTextStyle( TS_OUTLINE_FULL_2X );
 		g_FontMgr.SetBkColor( 33, 90, 162 );
 		g_FontMgr.SetTextColor( 255, 255, 255 );
-		g_FontMgr.PrintText( iXPos + 13, iYPos + 11, FONT_SIZE_17, "나가기" );
+		g_FontMgr.PrintText( iXPos + 13, iYPos + 11, FONT_SIZE_17, STR(1) );
 
 		if( m_pPenaltyIcon )
 			m_pPenaltyIcon->Render( iXPos + 206, iYPos + 98 );
@@ -1300,11 +1300,11 @@ void ioBattleRoomExitMsgBox::OnRender()
 		kPrinter.SetTextStyle( TS_NORMAL );
 		kPrinter.SetBkColor( 0, 0, 0 );
 		kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-		kPrinter.AddTextPiece( FONT_SIZE_13, "지금 나가면 도중이탈벌금" );
+		kPrinter.AddTextPiece( FONT_SIZE_13, STR(2) );
 		kPrinter.SetTextColor( TCT_DEFAULT_RED );
-		kPrinter.AddTextPiece( FONT_SIZE_13, "%d페소", g_MyInfo.GetCurPenaltyPeso() );
+		kPrinter.AddTextPiece( FONT_SIZE_13, STR(3), g_MyInfo.GetCurPenaltyPeso() );
 		kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-		kPrinter.AddTextPiece( FONT_SIZE_13, "가 징수됩니다." );
+		kPrinter.AddTextPiece( FONT_SIZE_13, STR(4) );
 	}
 	else if( COMPARE( m_dwStartTime, 1, 0xFFFFFFFF ) )
 	{
@@ -1313,7 +1313,7 @@ void ioBattleRoomExitMsgBox::OnRender()
 		g_FontMgr.SetTextStyle( TS_OUTLINE_FULL_2X );
 		g_FontMgr.SetBkColor( 33, 90, 162 );
 		g_FontMgr.SetTextColor( 255, 255, 255 );
-		g_FontMgr.PrintText( iXPos + 13, iYPos + 11, FONT_SIZE_17, "나가기 . . %d", max( 30 - iGapSec, 0 ) );
+		g_FontMgr.PrintText( iXPos + 13, iYPos + 11, FONT_SIZE_17, STR(5), max( 30 - iGapSec, 0 ) );
 
 		if( m_pNonePenaltyIcon )
 			m_pNonePenaltyIcon->Render( iXPos + 206, iYPos + 98 );
@@ -1321,7 +1321,7 @@ void ioBattleRoomExitMsgBox::OnRender()
 		kPrinter.SetTextStyle( TS_NORMAL );
 		kPrinter.SetBkColor( 0, 0, 0 );
 		kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-		kPrinter.AddTextPiece( FONT_SIZE_13, "지금 나가면 페널티가 적용되지 않습니다." );
+		kPrinter.AddTextPiece( FONT_SIZE_13, STR(6) );
 	}
 	else
 	{
@@ -1329,7 +1329,7 @@ void ioBattleRoomExitMsgBox::OnRender()
 		g_FontMgr.SetTextStyle( TS_OUTLINE_FULL_2X );
 		g_FontMgr.SetBkColor( 33, 90, 162 );
 		g_FontMgr.SetTextColor( 255, 255, 255 );
-		g_FontMgr.PrintText( iXPos + 13, iYPos + 11, FONT_SIZE_17, "나가기" );
+		g_FontMgr.PrintText( iXPos + 13, iYPos + 11, FONT_SIZE_17, STR(1) );
 
 		if( m_pNonePenaltyIcon )
 			m_pNonePenaltyIcon->Render( iXPos + 206, iYPos + 98 );
@@ -1337,7 +1337,7 @@ void ioBattleRoomExitMsgBox::OnRender()
 		kPrinter.SetTextStyle( TS_NORMAL );
 		kPrinter.SetBkColor( 0, 0, 0 );
 		kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-		kPrinter.AddTextPiece( FONT_SIZE_13, "지금 나가면 페널티가 적용되지 않습니다." );
+		kPrinter.AddTextPiece( FONT_SIZE_13, STR(6) );
 	}
 
 	if( Help::IsMonsterDungeonMode( m_pPlayStage->GetModeType() ) && !m_bObserberUser )
@@ -1347,13 +1347,13 @@ void ioBattleRoomExitMsgBox::OnRender()
 		kPrinter.SetTextStyle( TS_NORMAL );
 		kPrinter.SetBkColor( 0, 0, 0 );
 		kPrinter.SetTextColor( TCT_DEFAULT_GREEN );
-		kPrinter.AddTextPiece( FONT_SIZE_13, "도전포기" );
+		kPrinter.AddTextPiece( FONT_SIZE_13, STR(7) );
 		kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-		kPrinter.AddTextPiece( FONT_SIZE_13, "를 하면 " );
+		kPrinter.AddTextPiece( FONT_SIZE_13, STR(8) );
 		kPrinter.SetTextColor( TCT_DEFAULT_RED );
-		kPrinter.AddTextPiece( FONT_SIZE_13, "보상획득" );
+		kPrinter.AddTextPiece( FONT_SIZE_13, STR(9) );
 		kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-		kPrinter.AddTextPiece( FONT_SIZE_13, "이 가능합니다." );
+		kPrinter.AddTextPiece( FONT_SIZE_13, STR(10) );
 		kPrinter.PrintFullText( iXPos + 206, iYPos + 164, TAT_CENTER );
 	}
 	else
@@ -1363,7 +1363,7 @@ void ioBattleRoomExitMsgBox::OnRender()
 		kPrinter.SetTextStyle( TS_NORMAL );
 		kPrinter.SetBkColor( 0, 0, 0 );
 		kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-		kPrinter.AddTextPiece( FONT_SIZE_13, "이 방을 나가시겠습니까?" );
+		kPrinter.AddTextPiece( FONT_SIZE_13, STR(11) );
 		kPrinter.PrintFullText( iXPos + 206, iYPos + 164, TAT_CENTER );
 	}
 }
@@ -1530,9 +1530,9 @@ void ioBattleRoomExitPopup::SetPopupType( ioPlayStage *pPlayStage, int iPopupTyp
 		pButton->SetWndPos( pButton->GetXPos(), GetHeight() - BTN_BOTTOM_Y );
 
 		if( m_bPenaltyExit )
-			pButton->SetTitleText( "즉시나가기(벌금)" );
+			pButton->SetTitleText( STR(1) );
 		else
-			pButton->SetTitleText( "즉시나가기" );
+			pButton->SetTitleText( STR(2) );
 	}
 	ShowWnd();
 }
@@ -1686,32 +1686,32 @@ void ioBattleRoomExitPopup::ExitLogByRegularTournament( int iType )
 	{
 		case ID_LEAVE_RESERVE:
 			{
-				sprintf( szLog, "[대회로그] 대회방 나가기(나가기 예약) - %s", g_MyInfo.GetPublicID().c_str() );
+				sprintf( szLog, STR(1), g_MyInfo.GetPublicID().c_str() );
 			}
 			break;
 		case ID_RESERVE_CANCEL:
 			{
-				sprintf( szLog, "[대회로그] 대회방 나가기(나가기 취소) - %s", g_MyInfo.GetPublicID().c_str() );
+				sprintf( szLog, STR(2), g_MyInfo.GetPublicID().c_str() );
 			}
 			break;
 		case ID_SURRENDER:
 			{
-				sprintf( szLog, "[대회로그] 대회방 나가기(항복) - %s", g_MyInfo.GetPublicID().c_str() );
+				sprintf( szLog, STR(3), g_MyInfo.GetPublicID().c_str() );
 			}
 			break;
 		case ID_NEVER_SURRENDER:
 			{
-				sprintf( szLog, "[대회로그] 대회방 나가기(항복) - %s", g_MyInfo.GetPublicID().c_str() );
+				sprintf( szLog, STR(3), g_MyInfo.GetPublicID().c_str() );
 			}
 			break;
 		case ID_QUICK_LEAVE:
 			{
-				sprintf( szLog, "[대회로그] 대회방 나가기(빠른 나가기) - %s", g_MyInfo.GetPublicID().c_str() );
+				sprintf( szLog, STR(4), g_MyInfo.GetPublicID().c_str() );
 			}
 			break;
 		default:
 			{
-				sprintf( szLog, "[대회로그] 대회방 나가기(알수 없는 나가기) - %s", g_MyInfo.GetPublicID().c_str() );
+				sprintf( szLog, STR(5), g_MyInfo.GetPublicID().c_str() );
 			}
 			break;
 		
@@ -1749,7 +1749,7 @@ void ioBattleRoomExitPopup::OnRender()
 	g_FontMgr.SetTextStyle( TS_OUTLINE_FULL_2X );
 	g_FontMgr.SetBkColor( 33, 90, 162 );
 	g_FontMgr.SetTextColor( 255, 255, 255 );
-	g_FontMgr.PrintText( iXPos + 13, iYPos + 11, FONT_SIZE_17, "알림" );
+	g_FontMgr.PrintText( iXPos + 13, iYPos + 11, FONT_SIZE_17, STR(1) );
 
 	ioComplexStringPrinter kPrinter;
 
@@ -1759,11 +1759,11 @@ void ioBattleRoomExitPopup::OnRender()
 		kPrinter.SetTextStyle( TS_NORMAL );
 		kPrinter.SetBkColor( 0, 0, 0 );
 		kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-		kPrinter.AddTextPiece( FONT_SIZE_13, "지금 나가면 도중이탈벌금" );
+		kPrinter.AddTextPiece( FONT_SIZE_13, STR(2) );
 		kPrinter.SetTextColor( TCT_DEFAULT_RED );
-		kPrinter.AddTextPiece( FONT_SIZE_13, "%d페소", g_MyInfo.GetCurPenaltyPeso() );
+		kPrinter.AddTextPiece( FONT_SIZE_13, STR(3), g_MyInfo.GetCurPenaltyPeso() );
 		kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-		kPrinter.AddTextPiece( FONT_SIZE_13, "가 징수됩니다." );
+		kPrinter.AddTextPiece( FONT_SIZE_13, STR(4) );
 		kPrinter.PrintFullText( iXPos + 156, iYPos + iCurrentY, TAT_CENTER );
 		kPrinter.ClearList();
 
@@ -1775,13 +1775,13 @@ void ioBattleRoomExitPopup::OnRender()
 		kPrinter.SetTextStyle( TS_NORMAL );
 		kPrinter.SetBkColor( 0, 0, 0 );
 		kPrinter.SetTextColor( TCT_DEFAULT_GREEN );
-		kPrinter.AddTextPiece( FONT_SIZE_13, "도전포기" );
+		kPrinter.AddTextPiece( FONT_SIZE_13, STR(5) );
 		kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-		kPrinter.AddTextPiece( FONT_SIZE_13, "를 하면 " );
+		kPrinter.AddTextPiece( FONT_SIZE_13, STR(6) );
 		kPrinter.SetTextColor( TCT_DEFAULT_GREEN );
-		kPrinter.AddTextPiece( FONT_SIZE_13, "보상획득" );
+		kPrinter.AddTextPiece( FONT_SIZE_13, STR(7) );
 		kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-		kPrinter.AddTextPiece( FONT_SIZE_13, "이 가능합니다." );
+		kPrinter.AddTextPiece( FONT_SIZE_13, STR(8) );
 		kPrinter.PrintFullText( iXPos + 156, iYPos + iCurrentY, TAT_CENTER );
 		kPrinter.ClearList();
 	}

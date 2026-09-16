@@ -246,19 +246,19 @@ void QuickLobbyWnd::SeTitle( DWORD dwWndID )
 	switch( dwWndID )
 	{
 	case BATTLE: 
-		SetTitleText( "전투" );
+		SetTitleText( STR(1) );
 		break;
 	case CAMP:
-		SetTitleText( "대회-예선대회" );
+		SetTitleText( STR(2) );
 		break;
 	case PLAZA: 
-		SetTitleText( "광장" );
+		SetTitleText( STR(3) );
 		break;
 	case TRADE:
-		SetTitleText( "거래소" );
+		SetTitleText( STR(4) );
 		break;
 	case TOURNAMENT:
-		SetTitleText( "대회-토너먼트" );
+		SetTitleText( STR(5) );
 		break;
 	default:
 		SetTitleText( "" );
@@ -286,13 +286,13 @@ void QuickLobbyWnd::OnCreateHeadquarters()
 
 	if( g_BattleRoomMgr.IsBattleRoom() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "전투 중에는 훈련소 입장이 불가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 
 	if( g_LadderTeamMgr.IsLadderTeam() )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "진영팀 중에는 훈련소 입장이 불가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return;
 	}
 

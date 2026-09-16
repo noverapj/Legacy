@@ -1439,7 +1439,7 @@ void QuestAttainStateWnd::OnRenderReward( int iXPos, int iYPos )
 		else
 		{
 			if( iPresentType == PRESENT_MEDALITEM )
-				SafeSprintf( szPresentName, sizeof( szPresentName ), "%s [메달] %s", g_PresentMgr.GetPresentValue1Text( iPresentType, iPresentValue1, iPresentValue2 ).c_str(), g_PresentMgr.GetPresentValue2Text( iPresentType, iPresentValue1, iPresentValue2 ).c_str() );
+				SafeSprintf( szPresentName, sizeof( szPresentName ), STR(2), g_PresentMgr.GetPresentValue1Text( iPresentType, iPresentValue1, iPresentValue2 ).c_str(), g_PresentMgr.GetPresentValue2Text( iPresentType, iPresentValue1, iPresentValue2 ).c_str() );
 			else
 				sprintf_e( szPresentName, "%s %s", g_PresentMgr.GetPresentValue1Text( iPresentType, iPresentValue1, iPresentValue2 ).c_str(), g_PresentMgr.GetPresentValue2Text( iPresentType, iPresentValue1, iPresentValue2 ).c_str() );
 		}
@@ -3930,8 +3930,8 @@ void LobbyQuestNewAlarmBtn::OnRender()
 		g_FontMgr.SetAlignType( TAT_LEFT );
 		g_FontMgr.SetBkColor( 0, 0, 0 );
 		g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY2 );
-		g_FontMgr.PrintText( iXPos + EMPTY_TEXT_POS_X, iYPos + EMPTY_TEXT_POS_Y, FONT_SIZE_11, "내용없음" );
-		g_FontMgr.PrintText( iXPos + EMPTY_TEXT_POS_X, iYPos + EMPTY_TEXT_POS_Y + EMPTY_TEXT_OFFSET_Y_LING_GAP, FONT_SIZE_11, "퀘스트 대기중" );
+		g_FontMgr.PrintText( iXPos + EMPTY_TEXT_POS_X, iYPos + EMPTY_TEXT_POS_Y, FONT_SIZE_11, STR(1) );
+		g_FontMgr.PrintText( iXPos + EMPTY_TEXT_POS_X, iYPos + EMPTY_TEXT_POS_Y + EMPTY_TEXT_OFFSET_Y_LING_GAP, FONT_SIZE_11, STR(2) );
 		return;
 	}
 
@@ -3988,7 +3988,7 @@ void LobbyQuestNewAlarmBtn::OnRender()
 				m_pCostumeMark->Render( iXPos + ICON_POS_X, iYPos + ICON_POS_Y, UI_RENDER_NORMAL, TFO_BILINEAR );
 			}
 
-			OnRenderQuestTitle( iXPos + TEXT_POS_X, iYPos + TEXT_POS_Y, "달성" );
+			OnRenderQuestTitle( iXPos + TEXT_POS_X, iYPos + TEXT_POS_Y, STR(3) );
 		}
 		break;
 	case QS_COMPLETE:
@@ -4012,7 +4012,7 @@ void LobbyQuestNewAlarmBtn::OnRender()
 				m_pCostumeMark->Render( iXPos + ICON_POS_X, iYPos + ICON_POS_Y, UI_RENDER_NORMAL, TFO_BILINEAR );
 			}
 
-			OnRenderQuestTitle( iXPos + TEXT_POS_X, iYPos + TEXT_POS_Y, "완료" );
+			OnRenderQuestTitle( iXPos + TEXT_POS_X, iYPos + TEXT_POS_Y, STR(4) );
 		}
 		break;
 	}
@@ -4257,7 +4257,7 @@ void QuestListWnd::ChangeTitle()
 	ioWnd *pProgressBtn = FindChildWnd( ID_PROGRESS_BTN );
 	if( pProgressBtn )
 	{
-		SafeSprintf( szTitle, sizeof( szTitle ), "진행중(%d)", pQuest->GetMaxQuest( QS_PROGRESS ) );
+		SafeSprintf( szTitle, sizeof( szTitle ), STR(1), pQuest->GetMaxQuest( QS_PROGRESS ) );
 		pProgressBtn->SetTitleText( szTitle );
 	}
 
@@ -4265,7 +4265,7 @@ void QuestListWnd::ChangeTitle()
 	ioWnd *pCompleteBtn = FindChildWnd( ID_COMPLETE_BTN );
 	if( pCompleteBtn )
 	{
-		SafeSprintf( szTitle, sizeof( szTitle ), "완료(%d)", pQuest->GetMaxQuest( QS_ATTAIN ) + pQuest->GetMaxQuest( QS_COMPLETE ) );
+		SafeSprintf( szTitle, sizeof( szTitle ), STR(2), pQuest->GetMaxQuest( QS_ATTAIN ) + pQuest->GetMaxQuest( QS_COMPLETE ) );
 		pCompleteBtn->SetTitleText( szTitle );
 	}
 }
@@ -4532,8 +4532,8 @@ void NewQuestListBtn::OnRender()
 		g_FontMgr.SetAlignType( TAT_LEFT );
 		g_FontMgr.SetBkColor( 0, 0, 0 );
 		g_FontMgr.SetTextColor( 178, 168, 130 );
-		g_FontMgr.PrintText( iXPos + EMPTY_TEXT_POS_X, iYPos + EMPTY_TEXT_POS_Y, FONT_SIZE_13, "내용없음" );
-		g_FontMgr.PrintText( iXPos + EMPTY_TEXT_POS_X, iYPos + EMPTY_TEXT_POS_Y + EMPTY_TEXT_OFFSET_Y_LING_GAP, FONT_SIZE_13, "퀘스트 대기중" );
+		g_FontMgr.PrintText( iXPos + EMPTY_TEXT_POS_X, iYPos + EMPTY_TEXT_POS_Y, FONT_SIZE_13, STR(1) );
+		g_FontMgr.PrintText( iXPos + EMPTY_TEXT_POS_X, iYPos + EMPTY_TEXT_POS_Y + EMPTY_TEXT_OFFSET_Y_LING_GAP, FONT_SIZE_13, STR(2) );
 	}
 	else
 	{
@@ -4645,7 +4645,7 @@ void NewQuestListBtn::OnRenderText( int iXPos, int iYPos )
 		g_FontMgr.SetAlignType( TAT_RIGHT );
 		g_FontMgr.SetTextColor( TCT_DEFAULT_RED );
 		if( m_pQuestParent->GetProgressResult().IsEmpty() )
-			g_FontMgr.PrintText( iXPos + PROGRESS_RESULT_POS_X, iYPos + PROGRESS_RESULT_POS_Y, FONT_SIZE_13, "진행전" );
+			g_FontMgr.PrintText( iXPos + PROGRESS_RESULT_POS_X, iYPos + PROGRESS_RESULT_POS_Y, FONT_SIZE_13, STR(1) );
 		else
 			g_FontMgr.PrintText( iXPos + PROGRESS_RESULT_POS_X, iYPos + PROGRESS_RESULT_POS_Y, FONT_SIZE_13, m_pQuestParent->GetProgressResult().c_str() );
 	}

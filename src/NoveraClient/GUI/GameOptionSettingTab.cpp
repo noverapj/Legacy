@@ -843,13 +843,13 @@ void SettingKeyItemWnd::SetHelpText( IN ItemType eItemType, OUT ioHashString &rs
 	else if(eItemType == IT_TITLE_FUNCTION)
 		rsText = STR(15);
 	else if(eItemType == IT_CONSUMPTION1)
-		rsText = "소모품1";
+		rsText = STR(99);
 	else if(eItemType == IT_CONSUMPTION2)
-		rsText = "소모품2";
+		rsText = STR(100);
 	else if(eItemType == IT_CONSUMPTION3)
-		rsText = "소모품3";
+		rsText = STR(101);
 	else if(eItemType == IT_CONSUMPTION4)
-		rsText = "소모품4";
+		rsText = STR(102);
 	else if(eItemType == IT_HELP)
 		rsText = STR(16);
 	else if(eItemType == IT_SHOP)
@@ -1015,7 +1015,7 @@ void SettingKeyItemWnd::SetHelpText( IN ItemType eItemType, OUT ioHashString &rs
 	else if(eItemType == IT_MACRO12)
 		rsText = STR(55);
 	else if(eItemType == IT_PET)
-		rsText = "펫";
+		rsText = STR(103);
 	else if(eItemType == IT_COOLTIME_RESET)
 		rsText = STR(80);
 }
@@ -2713,7 +2713,7 @@ void GameOptionMovieScreenShotTab::iwm_command( ioWnd *pWnd, int cmd, DWORD para
 				}
 				else if( m_pPlayStage->GetModeType() == MT_PRACTICE )
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "수련장에서는 스크린샷 모드를 사용할 수 없습니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 					return;
 				}
 

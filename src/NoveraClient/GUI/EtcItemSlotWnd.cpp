@@ -156,7 +156,7 @@ void EtcItemSlotWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 				}
 				else
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "쿨타임이 남아 있으면#아이템 교체를 할 수 없습니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 				}
 			}
 		}
@@ -224,7 +224,7 @@ bool EtcItemSlotWnd::iwm_dropitem( ioDragItem *pItem, const ioMouse& mouse, ioWn
 			}
 			else
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "쿨타임이 남아 있으면#아이템 교체를 할 수 없습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 			}
 		}
 		else
@@ -239,7 +239,7 @@ bool EtcItemSlotWnd::iwm_dropitem( ioDragItem *pItem, const ioMouse& mouse, ioWn
 			}
 			else
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "쿨타임이 남아 있으면#아이템 교체를 할 수 없습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 			}
 		}
 	}
@@ -261,7 +261,7 @@ bool EtcItemSlotWnd::iwm_dropitem( ioDragItem *pItem, const ioMouse& mouse, ioWn
 			}
 			else
 			{
-				g_GUIMgr.SetMsgBox( MB_OK, NULL, "쿨타임이 남아 있으면#아이템 교체를 할 수 없습니다." );
+				g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 			}
 		}
 	}
@@ -328,7 +328,7 @@ void EtcItemSlotWnd::OnRender()
 	g_FontMgr.SetTextStyle( TS_NORMAL );
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
-	g_FontMgr.PrintText( iXPos + 151, iYPos + 53, FONT_SIZE_13, "드래그로 원하는 슬롯에 배치가 가능합니다." );
+	g_FontMgr.PrintText( iXPos + 151, iYPos + 53, FONT_SIZE_13, STR(1) );
 
 	if( m_pBoxLeft && m_pBoxTop )
 	{
@@ -350,7 +350,7 @@ void EtcItemSlotWnd::OnRender()
 	g_FontMgr.SetTextStyle( TS_NORMAL );
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_LIGHTGRAY );
-	g_FontMgr.PrintText( iXPos+151, iYPos+80, FONT_SIZE_12,  "슬롯 배치 중인 아이템" );
+	g_FontMgr.PrintText( iXPos+151, iYPos+80, FONT_SIZE_12,  STR(2) );
 
 	if( m_pBoxLeft && m_pBoxTop )
 	{
@@ -372,7 +372,7 @@ void EtcItemSlotWnd::OnRender()
 	g_FontMgr.SetTextStyle( TS_NORMAL );
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_LIGHTGRAY );
-	g_FontMgr.PrintText( iXPos+151, iYPos+176, FONT_SIZE_12,  "내가 보유 중인 아이템" );
+	g_FontMgr.PrintText( iXPos+151, iYPos+176, FONT_SIZE_12,  STR(3) );
 }
 //////////////////////////////////////////////////////////////////////////
 ItemSlotBtn::ItemSlotBtn(void)

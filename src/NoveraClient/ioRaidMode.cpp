@@ -2887,7 +2887,7 @@ void ioRaidMode::OnTreasureCardCommand( SP2Packet &rkPacket )
 					TCPNetwork::MouseBusy( false );
 			}
 
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "°¹¼öÃÊ°ú" );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		}
 		break;
 	case TREASURE_CARD_MAX_SLOT_CLICK:
@@ -2905,7 +2905,7 @@ void ioRaidMode::OnTreasureCardCommand( SP2Packet &rkPacket )
 					TCPNetwork::MouseBusy( false );
 			}
 
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "ºóÄ­¾øÀ½" );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		}
 		break;
 	}

@@ -1676,7 +1676,7 @@ void TotalResultTreasureCardWnd::iwm_show()
 	g_GUIMgr.HideWnd( TRAINING_FUNC_MENU );
 
 	SetAllCardActive( false );
-	SetTitleText( "잠시 기다려 주세요" );
+	SetTitleText( STR(2) );
 }
 
 void TotalResultTreasureCardWnd::iwm_hide()
@@ -1937,7 +1937,7 @@ void TotalResultTreasureCardWnd::SendTimeOut()
 	m_dwState       = STATE_DELAY;
 	m_dwCurrentTime = FRAMEGETTIME();
 
-	SetTitleText( "잠시 기다려 주세요" );
+	SetTitleText( STR(1) );
 	SP2Packet kPacket( CTPK_TREASURE_CARD_COMMAND );
 	kPacket << TREASURE_CARD_CMD_TIME_OUT;
 	TCPNetwork::SendToServer( kPacket );
@@ -1969,11 +1969,11 @@ void TotalResultTreasureCardWnd::ProcessState()
 				char szTitle[MAX_PATH] = "";
 				if( m_iCurrentTreasureCount == 0 )
 				{
-					sprintf( szTitle, "잠시 기다려 주세요 . . %d", m_iCurrentStateSec );
+					sprintf( szTitle, STR(4), m_iCurrentStateSec );
 				}
 				else
 				{
-					sprintf( szTitle, "보물 카드를 %d개 선택해 주세요 . . %d", m_iStartTreasureCount, m_iCurrentStateSec );
+					sprintf( szTitle, STR(5), m_iStartTreasureCount, m_iCurrentStateSec );
 				}
 				SetTitleText( szTitle );
 			}
@@ -2002,11 +2002,11 @@ void TotalResultTreasureCardWnd::ProcessState()
 				char szTitle[MAX_PATH] = "";
 				if( m_iCurrentTreasureCount == 0 )
 				{
-					sprintf( szTitle, "잠시 기다려 주세요 . . %d", m_iCurrentStateSec );
+					sprintf( szTitle, STR(4), m_iCurrentStateSec );
 				}
 				else
 				{
-					sprintf( szTitle, "보물 카드를 %d개 선택해 주세요 . . %d", m_iStartTreasureCount, m_iCurrentStateSec );
+					sprintf( szTitle, STR(5), m_iStartTreasureCount, m_iCurrentStateSec );
 				}
 				SetTitleText( szTitle );
 			}
@@ -2492,7 +2492,7 @@ void TotalResultTournamentWnd::SetTournamentData()
 			else
 				m_eMyTeam = TEAM_RED;
 
-			m_szTournamentTeamName      = "관전자";
+			m_szTournamentTeamName      = STR(1);
 			m_iTournamentCurPos         = pTournament->GetState() - TournamentNode::STATE_TOURNAMENT;
 			m_iTournamentStartTeamCount = pTournament->GetTournamentStartTeamCount();
 			m_iTournamentCurRound       = Help::TournamentCurrentRoundWithTeam( m_iTournamentStartTeamCount, m_iTournamentCurPos );
@@ -2981,7 +2981,7 @@ void TotalResultTournamentWnd::OnTeamNameRender( int iXPos, int iYPos )
 	int iCurXPos = (1.0f - sin( D3DX_PI/2 * m_fTournamentTeamAniRate)) * m_dwTeamNameXPos;
 	BYTE Alpha = sin( D3DX_PI/2 * m_fTournamentTeamAniRate) * 255;
 	
-	g_FontMgr.PrintTextAlpha( iXPos + 512 + iCurXPos, iYPos + 68, FONT_SIZE_20, Alpha, "%s 대회팀", m_szTournamentTeamName );
+	g_FontMgr.PrintTextAlpha( iXPos + 512 + iCurXPos, iYPos + 68, FONT_SIZE_20, Alpha, STR(1), m_szTournamentTeamName );
 }
 
 void TotalResultTournamentWnd::OnTournamentTextRender( int iXPos, int iYPos )
@@ -3282,11 +3282,11 @@ void TotalResultTournamentWnd::OnProgressGaugeRender( int iXPos, int iYPos )
 		}
 		else if( 1 == m_iTournamentMaxRound - i )
 		{
-			kPrinter.AddTextPiece( FONT_SIZE_10, "결승");
+			kPrinter.AddTextPiece( FONT_SIZE_10, STR(1));
 		}
 		else
 		{
-			kPrinter.AddTextPiece( FONT_SIZE_10, "%d강", (int)pow( 2.0, (double)m_iTournamentMaxRound-i ) );
+			kPrinter.AddTextPiece( FONT_SIZE_10, STR(2), (int)pow( 2.0, (double)m_iTournamentMaxRound-i ) );
 		}
 
 		kPrinter.PrintFullText( iXPos + 44 + iXOffset, iYPos + 313, TAT_RIGHT, Alpha );
@@ -4221,9 +4221,9 @@ void ResultScoreUserWnd::OnRenderResult( int iXPos, int iYPos )
 			g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
 
 			if( BattleInfo.m_iModeType == MT_SHUFFLE_BONUS )
-				g_FontMgr.PrintText( iXPos + 13, iYPos + 36, FONT_SIZE_13, "별 획득 %d", GetMyShuffleStar() );
+				g_FontMgr.PrintText( iXPos + 13, iYPos + 36, FONT_SIZE_13, STR(14), GetMyShuffleStar() );
 			else if( BattleInfo.m_iModeType == MT_RAID )
-				g_FontMgr.PrintText( iXPos + 13, iYPos + 36, FONT_SIZE_13, "헌터 코인 획득 %d", GetMyHunterCoin() );
+				g_FontMgr.PrintText( iXPos + 13, iYPos + 36, FONT_SIZE_13, STR(15), GetMyHunterCoin() );
 			else
 				g_FontMgr.PrintText( iXPos + 13, iYPos + 36, FONT_SIZE_13, STR(1), GetMyContribute(), GetMyKO() );
 		}
@@ -4579,12 +4579,12 @@ void ResultScoreUserWnd::OnRenderUser( int iXPos, int iYPos, ModeType eType )
 		{
 		case MT_SHUFFLE_BONUS:
 			{
-				g_FontMgr.PrintText( iXPos + 191, iYPos + 4, FONT_SIZE_12, "%d개", kInfo.m_iStarCount );
+				g_FontMgr.PrintText( iXPos + 191, iYPos + 4, FONT_SIZE_12, STR(3), kInfo.m_iStarCount );
 			}
 			break;
 		case MT_RAID:
 			{
-				g_FontMgr.PrintText( iXPos + 191, iYPos + 4, FONT_SIZE_12, "%d개", kInfo.m_iHunterCoinCnt );
+				g_FontMgr.PrintText( iXPos + 191, iYPos + 4, FONT_SIZE_12, STR(3), kInfo.m_iHunterCoinCnt );
 			}
 			break;
 		default:
@@ -4686,8 +4686,8 @@ void ResultScoreUserWnd::OnRenderShuffleResult( int iXPos, int iYPos )
 	g_FontMgr.SetAlignType( TAT_CENTER );
 	g_FontMgr.SetTextStyle( TS_NORMAL );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	g_FontMgr.PrintText( iXPos + 57, iYPos + 15, FONT_SIZE_12, "내가 획득한");
-	g_FontMgr.PrintText( iXPos + 57, iYPos + 31, FONT_SIZE_12, "스타 코인 갯수");
+	g_FontMgr.PrintText( iXPos + 57, iYPos + 15, FONT_SIZE_12, STR(1));
+	g_FontMgr.PrintText( iXPos + 57, iYPos + 31, FONT_SIZE_12, STR(2));
 
 	if( m_pShuffleResultIconBack )
 		m_pShuffleResultIconBack->Render( iXPos + 57, iYPos + 76, UI_RENDER_MULTIPLY, TFO_BILINEAR );
@@ -4703,7 +4703,7 @@ void ResultScoreUserWnd::OnRenderShuffleResult( int iXPos, int iYPos )
 	g_FontMgr.PrintText( iXPos + 44 - max(0, Seq) * 6, iYPos + 112, FONT_SIZE_20, "%d", m_iStarCountByCalcBonus );
 	
 	g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	g_FontMgr.PrintText( iXPos + 57 + max(0, Seq) * 6, iYPos + 118, FONT_SIZE_12, "개" );
+	g_FontMgr.PrintText( iXPos + 57 + max(0, Seq) * 6, iYPos + 118, FONT_SIZE_12, STR(3) );
 	
 	if( m_pShuffleLine )
 		m_pShuffleLine->Render( iXPos + 12, iYPos + 134, UI_RENDER_NORMAL, TFO_BILINEAR );
@@ -4714,7 +4714,7 @@ void ResultScoreUserWnd::OnRenderShuffleResult( int iXPos, int iYPos )
 	kPrinter.SetTextColor( TCT_DEFAULT_BLUE );
 	kPrinter.AddTextPiece( FONT_SIZE_11, "%d", m_iStarCount );
 	kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter.AddTextPiece( FONT_SIZE_11, "개" );
+	kPrinter.AddTextPiece( FONT_SIZE_11, STR(3) );
 
 	kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
 	kPrinter.AddTextPiece( FONT_SIZE_11, " × " );
@@ -4730,7 +4730,7 @@ void ResultScoreUserWnd::OnRenderShuffleResult( int iXPos, int iYPos )
 	g_FontMgr.SetAlignType( TAT_CENTER );
 	g_FontMgr.SetTextStyle( TS_NORMAL );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_LIGHTGRAY );
-	g_FontMgr.PrintText( iXPos + 57, iYPos + 157, FONT_SIZE_12, "(획득갯수 × 보너스)");
+	g_FontMgr.PrintText( iXPos + 57, iYPos + 157, FONT_SIZE_12, STR(4));
 }
 //////////////////////////////////////////////////////////////////////////
 ResultRaidScoreUserBtn::ResultRaidScoreUserBtn() : m_pPlayStage( NULL )
@@ -5269,17 +5269,17 @@ void ResultRaidScoreUserBtn::OnRenderRank( int iXPos, int iYPos )
 	char szRank[MAX_PATH] = "";
 	// 타격
 	int iRank = GetRankCompare( m_iRankElement[0] );
-	sprintf( szRank, "공격 %s", cRank[iRank]  );
+	sprintf( szRank, STR(4), cRank[iRank]  );
 	g_FontMgr.PrintText( iXPos + 7, iYPos + 166, FONT_SIZE_12, szRank );
 
 	// 데미지
 	iRank = GetRankCompare( m_iRankElement[1] );
-	sprintf( szRank, "방어 %s", cRank[iRank]  );
+	sprintf( szRank, STR(5), cRank[iRank]  );
 	g_FontMgr.PrintText( iXPos + 7, iYPos + 185, FONT_SIZE_12, szRank );
 
 	// 피격
 	iRank = GetRankCompare( m_iRankElement[2] );
-	sprintf( szRank, "타임 %s", cRank[iRank]  );
+	sprintf( szRank, STR(6), cRank[iRank]  );
 	g_FontMgr.PrintText( iXPos + 7, iYPos + 204, FONT_SIZE_12, szRank );
 
 	if( COMPARE( m_iCurrentRank, 0, MAX_RANK ) )
@@ -5620,9 +5620,9 @@ void TotalResultScoreWnd::SetSingleScore()
 	else if( m_pPlayStage->GetModeType() == MT_FIGHT_CLUB )
 		SafeSprintf( szTitle, sizeof( szTitle ), STR(3) );
 	else if( m_pPlayStage->GetModeType() == MT_SHUFFLE_BONUS )
-		SafeSprintf( szTitle, sizeof( szTitle ), "보너스모드" );
+		SafeSprintf( szTitle, sizeof( szTitle ), STR(4) );
 	else if( m_pPlayStage->GetModeType() == MT_RAID )
-		SafeSprintf( szTitle, sizeof( szTitle ), "레이드" );
+		SafeSprintf( szTitle, sizeof( szTitle ), STR(5) );
 	SetTitleText( szTitle );
 
 	// 윈도우 세팅
@@ -5776,7 +5776,7 @@ void TotalResultScoreWnd::SetTeamScore( TeamType eMyTeam, int iBlueWin, int iRed
 		}
 		break;
 	case MT_DOUBLE_CROWN:
-		SafeSprintf( szTitle, sizeof( szTitle ), "더블크라운" );
+		SafeSprintf( szTitle, sizeof( szTitle ), STR(13) );
 		break;
 	case MT_FOOTBALL:
 		SafeSprintf( szTitle, sizeof( szTitle ), STR(5), iBlueWin, iRedWin );		
@@ -5785,10 +5785,10 @@ void TotalResultScoreWnd::SetTeamScore( TeamType eMyTeam, int iBlueWin, int iRed
 		SafeSprintf( szTitle, sizeof( szTitle ), STR(6), iBlueWin, iRedWin );		
 		break;
 	case MT_UNDERWEAR:
-		SafeSprintf( szTitle, sizeof( szTitle ), "팬티몬", iBlueWin, iRedWin );		
+		SafeSprintf( szTitle, sizeof( szTitle ), STR(14), iBlueWin, iRedWin );		
 		break;
 	case MT_CBT:
-		SafeSprintf( szTitle, sizeof( szTitle ), "클베모드", iBlueWin, iRedWin );		
+		SafeSprintf( szTitle, sizeof( szTitle ), STR(15), iBlueWin, iRedWin );		
 		break;
 	case MT_FLAG_CAPTURE:
 		SafeSprintf( szTitle, sizeof( szTitle ), STR(9), iBlueWin, iRedWin );		
@@ -6042,7 +6042,7 @@ void TotalResultMainWnd::iwm_show()
 		m_pTournamentUITitle = new ioUITitle;
 				
 		m_pTournamentUITitle->SetSize( 17 );
-		m_pTournamentUITitle->SetText( "대회 결과", "" );
+		m_pTournamentUITitle->SetText( STR(1), "" );
 		m_pTournamentUITitle->SetStyle( TS_OUTLINE_FULL_2X );
 		m_pTournamentUITitle->SetHorzAlign( TAT_CENTER );
 		m_pTournamentUITitle->SetColor( "Normal", "FFFFFFFF", "FF0C426F" );
@@ -6982,7 +6982,7 @@ void TotalResultRaidCardWnd::iwm_show()
 	g_GUIMgr.HideWnd( TRAINING_FUNC_MENU );
 
 	SetAllCardActive( false );
-	SetTitleText( "잠시 기다려 주세요" );
+	SetTitleText( STR(1) );
 
 	m_dwCurrentTime  = FRAMEGETTIME();
 }
@@ -7245,7 +7245,7 @@ void TotalResultRaidCardWnd::SendTimeOut()
 	m_dwState       = STATE_DELAY;
 	m_dwCurrentTime = FRAMEGETTIME();
 
-	SetTitleText( "잠시 기다려 주세요" );
+	SetTitleText( STR(1) );
 	SP2Packet kPacket( CTPK_TREASURE_CARD_COMMAND );
 	kPacket << TREASURE_CARD_CMD_TIME_OUT;
 	TCPNetwork::SendToServer( kPacket );
@@ -7280,9 +7280,9 @@ void TotalResultRaidCardWnd::ProcessState()
 
 				char szTitle[MAX_PATH] = "";
 				if( m_iCurrentTreasureCount == 0 )
-					sprintf( szTitle, "잠시 기다려 주세요 . . %d", m_iCurrentStateSec );
+					sprintf( szTitle, STR(1), m_iCurrentStateSec );
 				else
-					sprintf( szTitle, "보물 카드를 %d개 선택해 주세요 . . %d", m_iStartTreasureCount, m_iCurrentStateSec );
+					sprintf( szTitle, STR(2), m_iStartTreasureCount, m_iCurrentStateSec );
 
 				SetTitleText( szTitle );
 			}
@@ -7311,11 +7311,11 @@ void TotalResultRaidCardWnd::ProcessState()
 				char szTitle[MAX_PATH] = "";
 				if( m_iCurrentTreasureCount == 0 )
 				{
-					sprintf( szTitle, "잠시 기다려 주세요 . . %d", m_iCurrentStateSec );
+					sprintf( szTitle, STR(1), m_iCurrentStateSec );
 				}
 				else
 				{
-					sprintf( szTitle, "보물 카드를 %d개 선택해 주세요 . . %d", m_iStartTreasureCount, m_iCurrentStateSec );
+					sprintf( szTitle, STR(2), m_iStartTreasureCount, m_iCurrentStateSec );
 				}
 				SetTitleText( szTitle );
 			}

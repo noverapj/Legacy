@@ -68,13 +68,13 @@ void ioAwakeReleaseWnd::OnRender()
 	g_FontMgr.SetAlignType( TAT_CENTER );
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( m_dwAwakeColor );
-	g_FontMgr.PrintText( iXPos + 103, iYPos + 144, FONT_SIZE_13, "%s의", m_szClassName.c_str() ); 
+	g_FontMgr.PrintText( iXPos + 103, iYPos + 144, FONT_SIZE_13, STR(1), m_szClassName.c_str() ); 
 
 	g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	g_FontMgr.PrintText( iXPos + 103, iYPos + 162, FONT_SIZE_13, "%s이", m_szAwakeName.c_str() ); 
+	g_FontMgr.PrintText( iXPos + 103, iYPos + 162, FONT_SIZE_13, STR(2), m_szAwakeName.c_str() ); 
 
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
-	g_FontMgr.PrintText( iXPos + 103, iYPos + 180, FONT_SIZE_13, "기간만료로 해제되었습니다." ); 	
+	g_FontMgr.PrintText( iXPos + 103, iYPos + 180, FONT_SIZE_13, STR(3) ); 	
 }
 
 void ioAwakeReleaseWnd::iwm_show()
@@ -94,7 +94,7 @@ void ioAwakeReleaseWnd::iwm_show()
 	m_nGradeType = g_UIImageRenderMgr.GetPowerUpGradeType( nClassType );
 
 	char szBuf[MAX_PATH];
-	sprintf_s( szBuf, "%s 해제", m_szAwakeName.c_str() );
+	sprintf_s( szBuf, STR(1), m_szAwakeName.c_str() );
 	SetTitleText( szBuf );
 }
 

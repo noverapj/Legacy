@@ -383,7 +383,7 @@ void ItemSelectInfoWnd::RenderDesc( int iXPos, int iYPos )
 		m_szDescArray[0].SetTextStyle( TS_NORMAL );
 		m_szDescArray[0].SetBkColor( 0, 0, 0 );	
 		m_szDescArray[0].SetTextColor( TCT_DEFAULT_GRAY );
-		m_szDescArray[0].AddTextPiece( FONT_SIZE_13, "없음" );
+		m_szDescArray[0].AddTextPiece( FONT_SIZE_13, STR(1) );
 		m_szDescArray[0].PrintFullTextWidthCut( iXPos, iYPos, TAT_CENTER, INVENTORY_ITEM_INFO_WIDTHCUT_SIZE );
 
 		m_szDescArray[1].SetTextStyle( TS_NORMAL );
@@ -461,7 +461,7 @@ void ItemSelectInfoWnd::OnRenderAfterChild()
 		g_FontMgr.SetTextStyle( TS_NORMAL );
 		g_FontMgr.SetAlignType( TAT_CENTER );
 		g_FontMgr.SetTextColor( TCT_DEFAULT_WHITE );
-		g_FontMgr.PrintText( iXPos + 27, iYPos + 9, FONT_SIZE_11, "보유중" );
+		g_FontMgr.PrintText( iXPos + 27, iYPos + 9, FONT_SIZE_11, STR(1) );
 	}
 }
 //////////////////////////////////////////////////////////////////////////

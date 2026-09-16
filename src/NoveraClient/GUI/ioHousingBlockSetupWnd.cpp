@@ -400,7 +400,7 @@ void ioHousingBlockSetupWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 			if( pState )
 			{
 				if( !pState->SendSetUp() )
-					g_ChatMgr.SetSystemMsg( "여기에는 설치 할 수 없습니다." );
+					g_ChatMgr.SetSystemMsg( STR(1) );
 
 			}
 		}
@@ -412,7 +412,7 @@ void ioHousingBlockSetupWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 			if( pState )
 			{
 				if( !pState->SendRemove() )
-					g_ChatMgr.SetSystemMsg( "선택된 블럭이 없습니다." );
+					g_ChatMgr.SetSystemMsg( STR(2) );
 			}
 		}
 		break;
@@ -485,13 +485,13 @@ void ioHousingBlockSetupWnd::OnBlockDescRender( int nXPos, int nYPos )
 		g_FontMgr.PrintTextWidthCut( nXPos + 247, nYPos + 120, FONT_SIZE_11, 155, " %s", m_Name.c_str() );
 
 	g_FontMgr.SetTextColor( 0xFF73F0FF );
-	g_FontMgr.PrintTextWidthCut( nXPos + 247, nYPos + 136, FONT_SIZE_11, 155, "넓이%d × 깊이%d × 높이%d", m_nWidth, m_nDepth, m_nHeight );
+	g_FontMgr.PrintTextWidthCut( nXPos + 247, nYPos + 136, FONT_SIZE_11, 155, STR(1), m_nWidth, m_nDepth, m_nHeight );
 
 	ioComplexStringPrinter kPrinter;
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( 0xFFF92104 );
-	kPrinter.AddTextPiece( FONT_SIZE_11, "%d개", m_nInvenItemCount );
+	kPrinter.AddTextPiece( FONT_SIZE_11, STR(2), m_nInvenItemCount );
 	kPrinter.PrintFullText( nXPos + 247, nYPos + 152, TAT_CENTER );
 	kPrinter.ClearList();
 }
@@ -502,8 +502,8 @@ void ioHousingBlockSetupWnd::OnRemoveDescRender( int nXPos, int nYPos )
 	g_FontMgr.SetTextStyle( TS_NORMAL );
 	g_FontMgr.SetBkColor( 0, 0, 0 );	
 	g_FontMgr.SetTextColor( TCT_DEFAULT_WHITE );
-	g_FontMgr.PrintText( nXPos + 247, nYPos + 128, FONT_SIZE_11, " 마법진으로 아이템 선택 후" );
+	g_FontMgr.PrintText( nXPos + 247, nYPos + 128, FONT_SIZE_11, STR(1) );
 
 	g_FontMgr.SetTextColor( 0xFFFF9393 );
-	g_FontMgr.PrintText( nXPos + 247, nYPos + 144, FONT_SIZE_11, " D키 입력" );
+	g_FontMgr.PrintText( nXPos + 247, nYPos + 144, FONT_SIZE_11, STR(2) );
 }

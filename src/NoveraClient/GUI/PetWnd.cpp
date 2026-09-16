@@ -123,7 +123,7 @@ void PetWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 			{
 				if( m_pPlayStage && m_pPlayStage->GetModeType() != MT_TRAINING && m_pPlayStage->GetModeType() != MT_HEADQUARTERS && m_pPlayStage->GetModeType() != MT_HOUSE )
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "골드충전은 광장이나 본부에서만 가능합니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(5) );
 					return;
 				}
 			}

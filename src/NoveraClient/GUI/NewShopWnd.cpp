@@ -311,7 +311,7 @@ void NewShopWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 			{
 				if( m_pPlayStage && m_pPlayStage->GetModeType() != MT_TRAINING && m_pPlayStage->GetModeType() != MT_HEADQUARTERS && m_pPlayStage->GetModeType() != MT_HOUSE )
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "골드충전은 광장/개인본부/훈련소에서만 가능합니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 					return;
 				}
 			}
@@ -370,7 +370,7 @@ void NewShopWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 				kPrinter[0].SetTextStyle( TS_NORMAL );
 				kPrinter[0].SetBkColor( 0, 0, 0 );
 				kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-				kPrinter[0].AddTextPiece( FONT_SIZE_12, "상점 첫페이지 바로가기" );
+				kPrinter[0].AddTextPiece( FONT_SIZE_12, STR(3) );
 
 				GlobalTextTooltip *pTooltip = dynamic_cast<GlobalTextTooltip*>( FindChildWnd( ID_HOME_TOOLTIP ) );
 				if( pTooltip )
@@ -2295,9 +2295,9 @@ void NewShopWnd::OnRenderAfterChild()
 		kPrinter.SetTextColor( 130, 198, 255 );	
 		ioEtcItem *pEtcItem = g_EtcItemMgr.FindEtcItem( ioEtcItem::EIT_ETC_CLOVER );
 		if( pEtcItem )
-			kPrinter.AddTextPiece( FONT_SIZE_11, "%s : %s개", pEtcItem->GetName().c_str(), szClover );
+			kPrinter.AddTextPiece( FONT_SIZE_11, STR(5), pEtcItem->GetName().c_str(), szClover );
 		else
-			kPrinter.AddTextPiece( FONT_SIZE_11, "클로버 : %s개", szClover );
+			kPrinter.AddTextPiece( FONT_SIZE_11, STR(6), szClover );
 		kPrinter.SetTextColor( TCT_DEFAULT_LIGHTGRAY );
 		kPrinter.AddTextPiece( FONT_SIZE_11, " / " );
 	}
@@ -2335,7 +2335,7 @@ void NewShopWnd::OnRenderAfterChild()
 		ioEtcItem *pEtcItem = g_EtcItemMgr.FindEtcItem( ioEtcItem::EIT_ETC_MILEAGE_COIN );
 		if( pEtcItem )
 		{
-			kPrinter.AddTextPiece( FONT_SIZE_11, "%s : %s개", pEtcItem->GetName().c_str(), szMileage );
+			kPrinter.AddTextPiece( FONT_SIZE_11, STR(5), pEtcItem->GetName().c_str(), szMileage );
 		}
 		else
 		{

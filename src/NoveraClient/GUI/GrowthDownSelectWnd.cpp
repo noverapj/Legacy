@@ -1067,18 +1067,18 @@ void GrowthAllDownSelectWnd::UpdateData()
 	m_Desc[0].SetTextStyle( TS_NORMAL );
 	m_Desc[0].SetBkColor( TCT_DEFAULT_WHITE );
 	m_Desc[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	m_Desc[0].AddTextPiece( FONT_SIZE_13, "육성포인트 " );
+	m_Desc[0].AddTextPiece( FONT_SIZE_13, STR(1) );
 
 	m_Desc[0].SetTextColor( TCT_DEFAULT_RED );
-	m_Desc[0].AddTextPiece( FONT_SIZE_13, "%s 복구", szPoint );
+	m_Desc[0].AddTextPiece( FONT_SIZE_13, STR(2), szPoint );
 
 	m_Desc[1].SetTextStyle( TS_NORMAL );
 	m_Desc[1].SetBkColor( TCT_DEFAULT_WHITE );
 	m_Desc[1].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	m_Desc[1].AddTextPiece( FONT_SIZE_13, "페소 " );
+	m_Desc[1].AddTextPiece( FONT_SIZE_13, STR(3) );
 
 	m_Desc[1].SetTextColor( TCT_DEFAULT_BLUE );
-	m_Desc[1].AddTextPiece( FONT_SIZE_13, "%s 복구", szPeso );
+	m_Desc[1].AddTextPiece( FONT_SIZE_13, STR(2), szPeso );
 
 	// titles
 	for (int i = 0; i < MAX_TITLE ; i++)
@@ -1169,19 +1169,19 @@ void GrowthAllDownSelectWnd::SendGrowthDown()
 	SelectListBtn *pClassBtn = dynamic_cast<SelectListBtn*>(FindChildWnd(ID_CHANGE_CLASS_BTN));
 	if( !pClassBtn || pClassBtn->GetListMagicCode() <= 0 )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "용병이 선택되지 않았습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 
 	if( g_MyInfo.IsCharRentalToClassType( m_iClassType ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "전투체험 설정이 되어있는 용병은#육성 복구가 불가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return;
 	}
 
 	if( g_MyInfo.IsCharExerciseStyleToClassType( m_iClassType, EXERCISE_RENTAL ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "전투체험 용병으로는 불가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		return;
 	}	
 
@@ -1202,7 +1202,7 @@ void GrowthAllDownSelectWnd::SendGrowthDown()
 
 	if( iTotalLevel <= 0 )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "육성이 없는 용병입니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 		return;
 	}
 
@@ -1213,12 +1213,12 @@ void GrowthAllDownSelectWnd::SendGrowthDown()
 		kPrinter[0].SetTextStyle( TS_NORMAL );
 		kPrinter[0].SetBkColor( 0, 0, 0 );	
 		kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-		kPrinter[0].AddTextPiece( FONT_SIZE_13, "선택하신 용병이 시간육성중이라 복구가 불가능합니다." );
+		kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(5) );
 
 		kPrinter[1].SetTextStyle( TS_NORMAL );
 		kPrinter[1].SetBkColor( 0, 0, 0 );	
 		kPrinter[1].SetTextColor( TCT_DEFAULT_DARKGRAY );
-		kPrinter[1].AddTextPiece( FONT_SIZE_13, "시간육성을 취소 또는 완료후 다시 시도하여 주십시오." );
+		kPrinter[1].AddTextPiece( FONT_SIZE_13, STR(6) );
 
 		g_GUIMgr.SetPrevMsgListBox( NULL, MB_OK, NULL, kPrinter );
 		return;
@@ -1241,19 +1241,19 @@ void GrowthAllDownSelectWnd::CheckSelectBtn()
 	SelectListBtn *pClassBtn = dynamic_cast<SelectListBtn*>(FindChildWnd(ID_CHANGE_CLASS_BTN));
 	if( !pClassBtn || pClassBtn->GetListMagicCode() <= 0 )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "용병이 선택되지 않았습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 
 	if( g_MyInfo.IsCharRentalToClassType( m_iClassType ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "전투체험 설정이 되어있는 용병은#육성 복구가 불가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		return;
 	}
 
 	if( g_MyInfo.IsCharExerciseStyleToClassType( m_iClassType, EXERCISE_RENTAL ) )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "전투체험 용병으로는 불가능합니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		return;
 	}	
 
@@ -1274,7 +1274,7 @@ void GrowthAllDownSelectWnd::CheckSelectBtn()
 
 	if( iTotalLevel <= 0 )
 	{
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "육성이 없는 용병입니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(4) );
 		return;
 	}
 
@@ -1285,12 +1285,12 @@ void GrowthAllDownSelectWnd::CheckSelectBtn()
 		kPrinter[0].SetTextStyle( TS_NORMAL );
 		kPrinter[0].SetBkColor( 0, 0, 0 );	
 		kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-		kPrinter[0].AddTextPiece( FONT_SIZE_13, "선택하신 용병이 시간육성중이라 복구가 불가능합니다." );
+		kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(5) );
 
 		kPrinter[1].SetTextStyle( TS_NORMAL );
 		kPrinter[1].SetBkColor( 0, 0, 0 );	
 		kPrinter[1].SetTextColor( TCT_DEFAULT_DARKGRAY );
-		kPrinter[1].AddTextPiece( FONT_SIZE_13, "시간육성을 취소 또는 완료후 다시 시도하여 주십시오." );
+		kPrinter[1].AddTextPiece( FONT_SIZE_13, STR(6) );
 
 		g_GUIMgr.SetPrevMsgListBox( NULL, MB_OK, NULL, kPrinter );
 		return;
@@ -1301,14 +1301,14 @@ void GrowthAllDownSelectWnd::CheckSelectBtn()
 	kPrinter[0].SetTextStyle( TS_NORMAL );
 	kPrinter[0].SetBkColor( 0, 0, 0 );
 	kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	kPrinter[0].AddTextPiece( FONT_SIZE_13, "육성복구 아이템을" );
+	kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(7) );
 
 	kPrinter[1].SetTextStyle( TS_NORMAL );
 	kPrinter[1].SetBkColor( 0, 0, 0 );
 	kPrinter[1].SetTextColor( TCT_DEFAULT_GRAY );
-	kPrinter[1].AddTextPiece( FONT_SIZE_13, "정말 사용하시겠습니까?" );
+	kPrinter[1].AddTextPiece( FONT_SIZE_13, STR(8) );
 
-	g_GUIMgr.SetPrevMsgListBoxWithTitle( NULL, MB_YESNO, this, kPrinter, "육성복구", "", "사용", "취소" );
+	g_GUIMgr.SetPrevMsgListBoxWithTitle( NULL, MB_YESNO, this, kPrinter, STR(9), "", STR(10), STR(11) );
 }
 
 void GrowthAllDownSelectWnd::GetClassList( vNewShopPullDownItem &rkList )

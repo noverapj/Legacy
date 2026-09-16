@@ -178,7 +178,7 @@ void LadderTeamCreateBtn::OnRender()
 		kPrinter.SetBkColor( 159, 41, 26 );
 
 	kPrinter.SetTextColor( TCT_DEFAULT_WHITE );
-	kPrinter.AddTextPiece( FONT_SIZE_18, "%s ÆÀ ¸¸µé±â", m_szTitle );		
+	kPrinter.AddTextPiece( FONT_SIZE_18, STR(1), m_szTitle );		
 	kPrinter.PrintFullText( iXPos + 159, iYPos + 10, TAT_CENTER );
 
 	int iWidth = kPrinter.GetFullWidth();
@@ -819,14 +819,14 @@ void LadderTeamInfoWnd::SetInfo( SP2Packet &rkPacket )
 		if( m_LadderTeamInfo.m_szTeamPW.IsEmpty() )
 			SafeSprintf( szTitle, sizeof( szTitle ), "%s %d/%d", szBlueCampName.c_str(), m_LadderTeamInfo.m_iCurPlayer, m_LadderTeamInfo.m_iMaxPlayer );
 		else
-			SafeSprintf( szTitle, sizeof( szTitle ), "%s %d/%d(ºñ¹ÐÆÀ)", szBlueCampName.c_str(), m_LadderTeamInfo.m_iCurPlayer, m_LadderTeamInfo.m_iMaxPlayer );
+			SafeSprintf( szTitle, sizeof( szTitle ), STR(5), szBlueCampName.c_str(), m_LadderTeamInfo.m_iCurPlayer, m_LadderTeamInfo.m_iMaxPlayer );
 	}
 	else
 	{
 		if( m_LadderTeamInfo.m_szTeamPW.IsEmpty() )
 			SafeSprintf( szTitle, sizeof( szTitle ), "%s %d/%d", szRedCampName.c_str(), m_LadderTeamInfo.m_iCurPlayer, m_LadderTeamInfo.m_iMaxPlayer );
 		else
-			SafeSprintf( szTitle, sizeof( szTitle ), "%s %d/%d(ºñ¹ÐÆÀ)", szRedCampName.c_str(), m_LadderTeamInfo.m_iCurPlayer, m_LadderTeamInfo.m_iMaxPlayer );
+			SafeSprintf( szTitle, sizeof( szTitle ), STR(5), szRedCampName.c_str(), m_LadderTeamInfo.m_iCurPlayer, m_LadderTeamInfo.m_iMaxPlayer );
 	}
 	SetTitleText( szTitle );	
 
@@ -1259,14 +1259,14 @@ void MyLadderTeamInfoWnd::iwm_show()
 		if( kTeamInfo.m_szTeamPW.IsEmpty() )
 			SafeSprintf( szTitle, sizeof( szTitle ), "%s %d/%d",szBlueCampName.c_str(), kTeamInfo.m_iCurPlayer, kTeamInfo.m_iMaxPlayer );
 		else
-			SafeSprintf( szTitle, sizeof( szTitle ), "%s %d/%d(ºñ¹ÐÆÀ)", szBlueCampName.c_str(), kTeamInfo.m_iCurPlayer, kTeamInfo.m_iMaxPlayer );
+			SafeSprintf( szTitle, sizeof( szTitle ), STR(5), szBlueCampName.c_str(), kTeamInfo.m_iCurPlayer, kTeamInfo.m_iMaxPlayer );
 	}
 	else
 	{
 		if( kTeamInfo.m_szTeamPW.IsEmpty() )
 			SafeSprintf( szTitle, sizeof( szTitle ), "%s %d/%d", szRedCampName.c_str(), kTeamInfo.m_iCurPlayer, kTeamInfo.m_iMaxPlayer );
 		else
-			SafeSprintf( szTitle, sizeof( szTitle ), "%s %d/%d(ºñ¹ÐÆÀ)", szRedCampName.c_str(), kTeamInfo.m_iCurPlayer, kTeamInfo.m_iMaxPlayer );
+			SafeSprintf( szTitle, sizeof( szTitle ), STR(5), szRedCampName.c_str(), kTeamInfo.m_iCurPlayer, kTeamInfo.m_iMaxPlayer );
 	}
 
 	//ÀûÆÀ

@@ -716,7 +716,7 @@ void FishingBaitListWnd::OnRender()
 		}
 
 		if (rkSelectList.m_iIndex == ioEtcItem::EIT_ETC_PCROOM_FISHING_BAIT)
-			g_FontMgr.PrintTextWidthCut( iXPos + m_iListXPos + 5, iYPos + m_iListYPos + ( i * m_iHeightGap ) + 3, FONT_SIZE_12, 96.0f, "%s ∞개", rkSelectList.m_szTitle.c_str() );
+			g_FontMgr.PrintTextWidthCut( iXPos + m_iListXPos + 5, iYPos + m_iListYPos + ( i * m_iHeightGap ) + 3, FONT_SIZE_12, 96.0f, STR(2), rkSelectList.m_szTitle.c_str() );
 		else
 			g_FontMgr.PrintTextWidthCut( iXPos + m_iListXPos + 5, iYPos + m_iListYPos + ( i * m_iHeightGap ) + 3, FONT_SIZE_12, 96.0f, STR(1), rkSelectList.m_szTitle.c_str(), rkSelectList.m_iCount );
 	}
@@ -1653,7 +1653,7 @@ void FishingInventoryWnd::SetUpFishingGround( ioBaseChar* pChar, DWORD dwItemTyp
 
 	if( m_pPlayStage->GetModeType() == MT_TRAINING && m_pPlayStage->GetBlockWorld() != NULL )
 	{
-		g_ChatMgr.SetSystemMsg( "길드 본부 에서는 사용 할 수 없습니다." );
+		g_ChatMgr.SetSystemMsg( STR(8) );
 		return;
 	}
 
@@ -1888,7 +1888,7 @@ void FishingInventoryWnd::UpdateBait()
 		if( pItem )
 		{
 			if (iBaitType == ioEtcItem::EIT_ETC_PCROOM_FISHING_BAIT)
-				SafeSprintf( szTitle, sizeof( szTitle ), "%s ∞개", pItem->GetExtraName().c_str() );
+				SafeSprintf( szTitle, sizeof( szTitle ), STR(5), pItem->GetExtraName().c_str() );
 			else if( !pItem->GetExtraName().IsEmpty() )
 				SafeSprintf( szTitle, sizeof( szTitle ), STR(2), pItem->GetExtraName().c_str(), iBaitCnt );
 			else

@@ -1819,13 +1819,13 @@ void PriateRulletRenewalWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 
 				if( nCount <= 0 )
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "보유한 칼이 없습니다." );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 					return;
 				}
 
 				if ( pRullet->GetCurEnableRewardTurnNumber() >= pRullet->GetMaxEnableRewardTurnNumber() )
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "모든 보상 받기에 성공하셨습니다.# 보상받기 버튼을 눌러주세요." );
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 					return;
 				}
 
@@ -1834,7 +1834,7 @@ void PriateRulletRenewalWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 					DWORD dwIndex = dwID - ID_OAK_HOLE_BUTTON01;
 					if( !pRullet->SendRenewalRulletUse( dwIndex ) )
 					{
-						g_GUIMgr.SetMsgBox( MB_OK, NULL, "이미 칼이 꽃혀 있습니다." );
+						g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 					}
 				}
 			}
@@ -2400,14 +2400,14 @@ void PriateRulletRenewalWnd::PreRender( int iXPos, int iYPos )
 	g_FontMgr.SetTextStyle( TS_OUTLINE_2X );
 	g_FontMgr.SetBkColor( 0xFF2D1C0E );
 	g_FontMgr.SetTextColor( 0xFFFCB12E);
-	g_FontMgr.PrintText( iXPos + 494, iYPos + 91, FONT_SIZE_18, "%d개", m_iStickedSwordCount );
+	g_FontMgr.PrintText( iXPos + 494, iYPos + 91, FONT_SIZE_18, STR(1), m_iStickedSwordCount );
 
 	ioComplexStringPrinter	szText;
 	szText.SetTextStyle( TS_NORMAL );
 	szText.SetTextColor( 0xFF520404 );
-	szText.AddTextPiece( FONT_SIZE_12, "※보상받기 클릭 후 " );
+	szText.AddTextPiece( FONT_SIZE_12, STR(2) );
 	szText.SetTextColor( 0xFF7F0303 );
-	szText.AddTextPiece( FONT_SIZE_12, "랜덤으로 보상 획득" );
+	szText.AddTextPiece( FONT_SIZE_12, STR(3) );
 	szText.PrintFullText( iXPos + 566, iYPos + 358, TAT_CENTER );
 }
 
@@ -2428,14 +2428,14 @@ void PriateRulletRenewalWnd::PlayRender( int iXPos, int iYPos )
 	g_FontMgr.SetTextStyle( TS_OUTLINE_2X );
 	g_FontMgr.SetBkColor( 0xFF2D1C0E );
 	g_FontMgr.SetTextColor( 0xFFFCB12E);
-	g_FontMgr.PrintText( iXPos + 494, iYPos + 91, FONT_SIZE_18, "%d개", m_iStickedSwordCount );
+	g_FontMgr.PrintText( iXPos + 494, iYPos + 91, FONT_SIZE_18, STR(1), m_iStickedSwordCount );
 
 	ioComplexStringPrinter	szText;
 	szText.SetTextStyle( TS_NORMAL );
 	szText.SetTextColor( 0xFF520404 );
-	szText.AddTextPiece( FONT_SIZE_12, "※보상받기 클릭 후 " );
+	szText.AddTextPiece( FONT_SIZE_12, STR(2) );
 	szText.SetTextColor( 0xFF7F0303 );
-	szText.AddTextPiece( FONT_SIZE_12, "랜덤으로 보상 획득" );
+	szText.AddTextPiece( FONT_SIZE_12, STR(3) );
 	szText.PrintFullText( iXPos + 566, iYPos + 358, TAT_CENTER );
 }
 
@@ -2529,14 +2529,14 @@ void PriateRulletRenewalWnd::EndPreRender( int iXPos, int iYPos )
 	g_FontMgr.SetTextStyle( TS_OUTLINE_2X );
 	g_FontMgr.SetBkColor( 0xFF2D1C0E );
 	g_FontMgr.SetTextColor( 0xFFFCB12E);
-	g_FontMgr.PrintText( iXPos + 494, iYPos + 91, FONT_SIZE_18, "%d개", m_iStickedSwordCount );
+	g_FontMgr.PrintText( iXPos + 494, iYPos + 91, FONT_SIZE_18, STR(1), m_iStickedSwordCount );
 
 	ioComplexStringPrinter	szText;
 	szText.SetTextStyle( TS_NORMAL );
 	szText.SetTextColor( 0xFF520404 );
-	szText.AddTextPiece( FONT_SIZE_12, "※보상받기 클릭 후 " );
+	szText.AddTextPiece( FONT_SIZE_12, STR(2) );
 	szText.SetTextColor( 0xFF7F0303 );
-	szText.AddTextPiece( FONT_SIZE_12, "랜덤으로 보상 획득" );
+	szText.AddTextPiece( FONT_SIZE_12, STR(3) );
 	szText.PrintFullText( iXPos + 566, iYPos + 358, TAT_CENTER );
 }
 
@@ -2569,14 +2569,14 @@ void PriateRulletRenewalWnd::RollingRender( int iXPos, int iYPos )
 	g_FontMgr.SetTextStyle( TS_OUTLINE_2X );
 	g_FontMgr.SetBkColor( 0xFF2D1C0E );
 	g_FontMgr.SetTextColor( 0xFFFCB12E);
-	g_FontMgr.PrintText( iXPos + 494, iYPos + 91, FONT_SIZE_18, "%d개", m_iStickedSwordCount );
+	g_FontMgr.PrintText( iXPos + 494, iYPos + 91, FONT_SIZE_18, STR(1), m_iStickedSwordCount );
 
 	ioComplexStringPrinter	szText;
 	szText.SetTextStyle( TS_NORMAL );
 	szText.SetTextColor( 0xFF520404 );
-	szText.AddTextPiece( FONT_SIZE_12, "※보상받기 클릭 후 " );
+	szText.AddTextPiece( FONT_SIZE_12, STR(2) );
 	szText.SetTextColor( 0xFF7F0303 );
-	szText.AddTextPiece( FONT_SIZE_12, "랜덤으로 보상 획득" );
+	szText.AddTextPiece( FONT_SIZE_12, STR(3) );
 	szText.PrintFullText( iXPos + 566, iYPos + 358, TAT_CENTER );
 }
 
@@ -2600,14 +2600,14 @@ void PriateRulletRenewalWnd::RollingEndRender( int iXPos, int iYPos )
 	g_FontMgr.SetTextStyle( TS_OUTLINE_2X );
 	g_FontMgr.SetBkColor( 0xFF2D1C0E );
 	g_FontMgr.SetTextColor( 0xFFFCB12E);
-	g_FontMgr.PrintText( iXPos + 494, iYPos + 91, FONT_SIZE_18, "%d개", m_iStickedSwordCount );
+	g_FontMgr.PrintText( iXPos + 494, iYPos + 91, FONT_SIZE_18, STR(1), m_iStickedSwordCount );
 
 	ioComplexStringPrinter	szText;
 	szText.SetTextStyle( TS_NORMAL );
 	szText.SetTextColor( 0xFF520404 );
-	szText.AddTextPiece( FONT_SIZE_12, "※보상받기 클릭 후 " );
+	szText.AddTextPiece( FONT_SIZE_12, STR(2) );
 	szText.SetTextColor( 0xFF7F0303 );
-	szText.AddTextPiece( FONT_SIZE_12, "랜덤으로 보상 획득" );
+	szText.AddTextPiece( FONT_SIZE_12, STR(3) );
 	szText.PrintFullText( iXPos + 566, iYPos + 358, TAT_CENTER );
 }
 
@@ -2683,12 +2683,12 @@ void PriateRulletRenewalWnd::SetToolTipText( DWORD dwID )
 		kPrinter[0].SetTextStyle( TS_NORMAL );
 		kPrinter[0].SetBkColor( 0, 0, 0 );
 		kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-		kPrinter[0].AddTextPiece( FONT_SIZE_12, "%s", "보상목록" );
+		kPrinter[0].AddTextPiece( FONT_SIZE_12, "%s", STR(1) );
 
 		kPrinter[1].SetTextStyle( TS_NORMAL );
 		kPrinter[1].SetBkColor( 0, 0, 0 );
 		kPrinter[1].SetTextColor( TCT_DEFAULT_GRAY );
-		kPrinter[1].AddTextPiece( FONT_SIZE_12, "%s", "아래 아이템중 랜덤으로 지급" );
+		kPrinter[1].AddTextPiece( FONT_SIZE_12, "%s", STR(2) );
 		for ( int i =  0 ; i< iSize ; ++i )
 		{
 			if ( i+2 >= TEXT_TOOLTIP_LINE )
@@ -2799,9 +2799,9 @@ void PriateRulletRenewalWnd::FailRender( int iXPos, int iYPos )
 		ioComplexStringPrinter	szText;
 		szText.SetTextStyle( TS_NORMAL );
 		szText.SetTextColor( 0xFF520404 );
-		szText.AddTextPiece( FONT_SIZE_12, "※보상받기 클릭 후 " );
+		szText.AddTextPiece( FONT_SIZE_12, STR(1) );
 		szText.SetTextColor( 0xFF7F0303 );
-		szText.AddTextPiece( FONT_SIZE_12, "랜덤으로 보상 획득" );
+		szText.AddTextPiece( FONT_SIZE_12, STR(2) );
 		szText.PrintFullText( iXPos + 566, iYPos + 358, TAT_CENTER );
 	}
 	else if ( m_dwFailStartTime && m_dwFailStartTime + 1250 > dwCurTime )
@@ -2825,11 +2825,11 @@ void PriateRulletRenewalWnd::FailRender( int iXPos, int iYPos )
 		g_FontMgr.SetAlignType( TAT_CENTER );
 		g_FontMgr.SetTextStyle( TS_NORMAL );
 		g_FontMgr.SetTextColor( 0xFF7F3101 );
-		g_FontMgr.PrintText( iXPos + 569, iYPos + 234, FONT_SIZE_13, "아쉽게도 여기까지~" );
-		g_FontMgr.PrintText( iXPos + 569, iYPos + 254, FONT_SIZE_13, "힘내시라고 마지막 상품을 지급해 드립니다." );
+		g_FontMgr.PrintText( iXPos + 569, iYPos + 234, FONT_SIZE_13, STR(3) );
+		g_FontMgr.PrintText( iXPos + 569, iYPos + 254, FONT_SIZE_13, STR(4) );
 
 		g_FontMgr.SetTextColor( 0xFF520404 );
-		g_FontMgr.PrintText( iXPos + 569, iYPos + 358, FONT_SIZE_12, "※ 보관함에서 확인하세요" );
+		g_FontMgr.PrintText( iXPos + 569, iYPos + 358, FONT_SIZE_12, STR(5) );
 
 		if( m_pFailAcceptIcon )
 			m_pFailAcceptIcon->Render( iXPos + 569, iYPos + 316, UI_RENDER_NORMAL, TFO_BILINEAR );
@@ -2850,11 +2850,11 @@ void PriateRulletRenewalWnd::FailRender( int iXPos, int iYPos )
 		g_FontMgr.SetAlignType( TAT_CENTER );
 		g_FontMgr.SetTextStyle( TS_NORMAL );
 		g_FontMgr.SetTextColor( 0xFF7F3101 );
-		g_FontMgr.PrintText( iXPos + 569, iYPos + 234, FONT_SIZE_13, "아쉽게도 여기까지~" );
-		g_FontMgr.PrintText( iXPos + 569, iYPos + 254, FONT_SIZE_13, "힘내시라고 마지막 상품을 지급해 드립니다." );
+		g_FontMgr.PrintText( iXPos + 569, iYPos + 234, FONT_SIZE_13, STR(3) );
+		g_FontMgr.PrintText( iXPos + 569, iYPos + 254, FONT_SIZE_13, STR(4) );
 
 		g_FontMgr.SetTextColor( 0xFF520404 );
-		g_FontMgr.PrintText( iXPos + 569, iYPos + 358, FONT_SIZE_12, "※ 보관함에서 확인하세요" );
+		g_FontMgr.PrintText( iXPos + 569, iYPos + 358, FONT_SIZE_12, STR(5) );
 
 		if( m_pFailAcceptIcon )
 			m_pFailAcceptIcon->Render( iXPos + 569, iYPos + 316, UI_RENDER_NORMAL, TFO_BILINEAR );
@@ -2866,7 +2866,7 @@ void PriateRulletRenewalWnd::FailRender( int iXPos, int iYPos )
 	g_FontMgr.SetTextStyle( TS_OUTLINE_2X );
 	g_FontMgr.SetBkColor( 0xFF2D1C0E );
 	g_FontMgr.SetTextColor( 0xFFFCB12E);
-	g_FontMgr.PrintText( iXPos + 494, iYPos + 91, FONT_SIZE_18, "%d개", m_iStickedSwordCount );
+	g_FontMgr.PrintText( iXPos + 494, iYPos + 91, FONT_SIZE_18, STR(6), m_iStickedSwordCount );
 }
 
 void PriateRulletRenewalWnd::ProcessFailIconTooltip()

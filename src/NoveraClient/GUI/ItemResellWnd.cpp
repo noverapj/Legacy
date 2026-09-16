@@ -101,10 +101,10 @@ void ItemResellWnd::iwm_show()
 		case ACST_SELL_MEDAL:
 		case ACST_SELL_COSTUME:
 		case ACST_SELL_ACCESSORY:
-			pSellBtn->SetTitleText( "팔기" );
+			pSellBtn->SetTitleText( STR(1) );
 			break;
 		case ACST_DISASSEMBLE:
-			pSellBtn->SetTitleText( "분해" );
+			pSellBtn->SetTitleText( STR(2) );
 			break;
 		}
 	}
@@ -233,24 +233,24 @@ void ItemResellWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 					StringCbCopy( szText3, sizeof(szText3), STR(3) );
 					break;
 				case ACST_DISASSEMBLE:
-					StringCbCopy( szText1, sizeof(szText1), "영구장비분해를 입력하세요" );
-					StringCbCopy( szText2, sizeof(szText2), "영구장비분해" );
-					StringCbCopy( szText3, sizeof(szText3), "영구장비분해를 입력하세요" );
+					StringCbCopy( szText1, sizeof(szText1), STR(4) );
+					StringCbCopy( szText2, sizeof(szText2), STR(5) );
+					StringCbCopy( szText3, sizeof(szText3), STR(4) );
 					break;
 				case ACST_SELL_MEDAL:
-					StringCbCopy( szText1, sizeof(szText1), "영구메달팔기를 입력하세요" );
-					StringCbCopy( szText2, sizeof(szText2), "영구메달팔기" );
-					StringCbCopy( szText3, sizeof(szText3), "영구메달팔기를 입력하세요" );
+					StringCbCopy( szText1, sizeof(szText1), STR(6) );
+					StringCbCopy( szText2, sizeof(szText2), STR(7) );
+					StringCbCopy( szText3, sizeof(szText3), STR(6) );
 					break;
 				case ACST_SELL_COSTUME:
-					StringCbCopy( szText1, sizeof(szText1), "영구코스튬팔기를 입력하세요" );
-					StringCbCopy( szText2, sizeof(szText2), "영구코스튬팔기" );
-					StringCbCopy( szText3, sizeof(szText3), "영구코스튬팔기를 입력하세요" );
+					StringCbCopy( szText1, sizeof(szText1), STR(8) );
+					StringCbCopy( szText2, sizeof(szText2), STR(9) );
+					StringCbCopy( szText3, sizeof(szText3), STR(8) );
 					break;
 				case ACST_SELL_ACCESSORY:
-					StringCbCopy( szText1, sizeof(szText1), "액세서리팔기를 입력하세요" );
-					StringCbCopy( szText2, sizeof(szText2), "액세서리팔기" );
-					StringCbCopy( szText3, sizeof(szText3), "액세서리팔기를 입력하세요" );
+					StringCbCopy( szText1, sizeof(szText1), STR(10) );
+					StringCbCopy( szText2, sizeof(szText2), STR(11) );
+					StringCbCopy( szText3, sizeof(szText3), STR(10) );
 					break;
 				}
 
@@ -349,9 +349,9 @@ void ItemResellWnd::OnRender()
 			StringCbCopy( szText3, sizeof(szText3), STR(3) );
 			break;
 		case ACST_DISASSEMBLE:
-			StringCbCopy( szText1, sizeof(szText1), "영구장비분해" );
-			StringCbCopy( szText2, sizeof(szText2), "] 입력후 분해를 누르세요" );
-			StringCbCopy( szText3, sizeof(szText3), "영구장비분해를 입력하세요" );
+			StringCbCopy( szText1, sizeof(szText1), STR(4) );
+			StringCbCopy( szText2, sizeof(szText2), STR(5) );
+			StringCbCopy( szText3, sizeof(szText3), STR(6) );
 
 			iText1YPos = iYPos + 249;
 			iText2YPos = iYPos + 272;
@@ -359,19 +359,19 @@ void ItemResellWnd::OnRender()
 			iEditFrmYPos = iYPos + 268;
 			break;
 		case ACST_SELL_MEDAL:
-			StringCbCopy( szText1, sizeof(szText1), "영구메달팔기" );
-			StringCbCopy( szText2, sizeof(szText2), "] 입력후 팔기를 누르세요" );
-			StringCbCopy( szText3, sizeof(szText3), "영구메달팔기를 입력하세요" );
+			StringCbCopy( szText1, sizeof(szText1), STR(7) );
+			StringCbCopy( szText2, sizeof(szText2), STR(8) );
+			StringCbCopy( szText3, sizeof(szText3), STR(9) );
 			break;
 		case ACST_SELL_COSTUME:
-			StringCbCopy( szText1, sizeof(szText1), "영구코스튬팔기" );
-			StringCbCopy( szText2, sizeof(szText2), "] 입력후 팔기를 누르세요" );
-			StringCbCopy( szText3, sizeof(szText3), "영구코스튬팔기를 입력하세요" );
+			StringCbCopy( szText1, sizeof(szText1), STR(10) );
+			StringCbCopy( szText2, sizeof(szText2), STR(8) );
+			StringCbCopy( szText3, sizeof(szText3), STR(11) );
 			break;
 		case ACST_SELL_ACCESSORY:
-			StringCbCopy( szText1, sizeof(szText1), "액세서리팔기" );
-			StringCbCopy( szText2, sizeof(szText2), "] 입력후 팔기를 누르세요" );
-			StringCbCopy( szText3, sizeof(szText3), "액세서리팔기를 입력하세요" );
+			StringCbCopy( szText1, sizeof(szText1), STR(12) );
+			StringCbCopy( szText2, sizeof(szText2), STR(8) );
+			StringCbCopy( szText3, sizeof(szText3), STR(13) );
 			break;
 		}
 

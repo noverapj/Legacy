@@ -79,19 +79,19 @@ void CloverToolTip::RenderSendInfoString( int iXPos, int iYPos )
 		m_Printer[0].SetTextStyle( TS_NORMAL );
 		m_Printer[0].SetBkColor( 0, 0, 0 );
 		m_Printer[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-		m_Printer[0].AddTextPiece( FONT_SIZE_12, "친구가 된지 " );
+		m_Printer[0].AddTextPiece( FONT_SIZE_12, STR(1) );
 		m_Printer[0].SetTextColor( TCT_DEFAULT_RED );
 		if( pClover->GetAbusingTime() <= 60 )
-			m_Printer[0].AddTextPiece( FONT_SIZE_12, "%d분", pClover->GetAbusingTime() );
+			m_Printer[0].AddTextPiece( FONT_SIZE_12, STR(2), pClover->GetAbusingTime() );
 		else
-			m_Printer[0].AddTextPiece( FONT_SIZE_12, "%d시간", pClover->GetAbusingTime()/60 );
+			m_Printer[0].AddTextPiece( FONT_SIZE_12, STR(3), pClover->GetAbusingTime()/60 );
 		m_Printer[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-		m_Printer[0].AddTextPiece( FONT_SIZE_12, " 후 부터" );
+		m_Printer[0].AddTextPiece( FONT_SIZE_12, STR(4) );
 
 		m_Printer[1].SetTextStyle( TS_NORMAL );
 		m_Printer[1].SetBkColor( 0, 0, 0 );
 		m_Printer[1].SetTextColor( TCT_DEFAULT_DARKGRAY );
-		m_Printer[1].AddTextPiece( FONT_SIZE_12, "클로버를 주고 받을 수 있습니다." );
+		m_Printer[1].AddTextPiece( FONT_SIZE_12, STR(5) );
 
 		ioHashString szRemainTime;
 		pClover->GetFriendRegRemainTime( m_szUserName, szRemainTime );
@@ -100,7 +100,7 @@ void CloverToolTip::RenderSendInfoString( int iXPos, int iYPos )
 		m_Printer[2].SetTextColor( TCT_DEFAULT_RED );
 		m_Printer[2].AddTextPiece( FONT_SIZE_12, "%s", szRemainTime.c_str() );
 		m_Printer[2].SetTextColor( TCT_DEFAULT_DARKGRAY );
-		m_Printer[2].AddTextPiece( FONT_SIZE_12, " 후 부터 보낼 수 있습니다." );
+		m_Printer[2].AddTextPiece( FONT_SIZE_12, STR(6) );
 
 		iWidth = m_Printer[2].GetFullWidth() + SIDE_TEXT_GAP;
 		iHeight = WND_HEIGHT + TEXT_LINE_GAP * 2;
@@ -113,7 +113,7 @@ void CloverToolTip::RenderSendInfoString( int iXPos, int iYPos )
 		m_Printer[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
 		
 		char szBuf[MAX_PATH];
-		sprintf_s( szBuf, "%s 님께 현재까지", m_szUserName.c_str() );
+		sprintf_s( szBuf, STR(7), m_szUserName.c_str() );
 		
 		if( g_FontMgr.GetTextWidth( szBuf, TS_NORMAL, FONT_SIZE_13 ) >= 169 )
 		{
@@ -126,12 +126,12 @@ void CloverToolTip::RenderSendInfoString( int iXPos, int iYPos )
 		m_Printer[1].SetTextStyle( TS_NORMAL );
 		m_Printer[1].SetBkColor( TCT_DEFAULT_DARKGRAY );	
 		m_Printer[1].SetTextColor( 141, 87, 4 );
-		m_Printer[1].AddTextPiece( FONT_SIZE_12, "받은 클로버 : %d", m_iRecvCloverCount );
+		m_Printer[1].AddTextPiece( FONT_SIZE_12, STR(8), m_iRecvCloverCount );
 
 		m_Printer[2].SetTextStyle( TS_NORMAL );
 		m_Printer[2].SetBkColor( TCT_DEFAULT_DARKGRAY );	
 		m_Printer[2].SetTextColor( 17, 114, 34 );
-		m_Printer[2].AddTextPiece( FONT_SIZE_12, "보낸 클로버 : %d", m_iSendCloverCount );
+		m_Printer[2].AddTextPiece( FONT_SIZE_12, STR(9), m_iSendCloverCount );
 
 		m_Printer[3].SetTextStyle( TS_NORMAL );
 		m_Printer[3].SetBkColor( TCT_DEFAULT_DARKGRAY );
@@ -144,7 +144,7 @@ void CloverToolTip::RenderSendInfoString( int iXPos, int iYPos )
 			m_Printer[3].AddTextPiece( FONT_SIZE_12, "%s", szRemainTime.c_str() );
 
 			m_Printer[3].SetTextColor( TCT_DEFAULT_DARKGRAY );
-			m_Printer[3].AddTextPiece( FONT_SIZE_12, " 후 다시 보낼 수 있습니다." );
+			m_Printer[3].AddTextPiece( FONT_SIZE_12, STR(10) );
 		}
 		else
 		{
@@ -152,13 +152,13 @@ void CloverToolTip::RenderSendInfoString( int iXPos, int iYPos )
 			m_Printer[3].SetBkColor( TCT_DEFAULT_DARKGRAY );
 
 			m_Printer[3].SetTextColor( TCT_DEFAULT_BLUE );
-			m_Printer[3].AddTextPiece( FONT_SIZE_12, "클로버를 보내시려면 " );
+			m_Printer[3].AddTextPiece( FONT_SIZE_12, STR(11) );
 
 			m_Printer[3].SetTextColor( TCT_DEFAULT_RED );
-			m_Printer[3].AddTextPiece( FONT_SIZE_12, "클릭" );
+			m_Printer[3].AddTextPiece( FONT_SIZE_12, STR(12) );
 
 			m_Printer[3].SetTextColor( TCT_DEFAULT_BLUE );
-			m_Printer[3].AddTextPiece( FONT_SIZE_12, "하세요." );
+			m_Printer[3].AddTextPiece( FONT_SIZE_12, STR(13) );
 		}
 		
 		iWidth = m_Printer[3].GetFullWidth() + SIDE_TEXT_GAP;
@@ -185,12 +185,12 @@ void CloverToolTip::RenderRecvInfoString( int iXPos, int iYPos )
 	m_Printer[0].SetTextStyle( TS_NORMAL );
 	m_Printer[0].SetBkColor( TCT_DEFAULT_DARKGRAY );	
 	m_Printer[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	m_Printer[0].AddTextPiece( FONT_SIZE_12, "%s 님으로부터", m_szUserName.c_str() );
+	m_Printer[0].AddTextPiece( FONT_SIZE_12, STR(1), m_szUserName.c_str() );
 
 	m_Printer[1].SetTextStyle( TS_NORMAL );
 	m_Printer[1].SetBkColor( TCT_DEFAULT_DARKGRAY );	
 	m_Printer[1].SetTextColor( 141, 87, 4 );
-	m_Printer[1].AddTextPiece( FONT_SIZE_12, "클로버 %d개 도착", m_iRecvWaitCloverCount );
+	m_Printer[1].AddTextPiece( FONT_SIZE_12, STR(2), m_iRecvWaitCloverCount );
 
 	ioHashString szRemainTime;
 	pClover->GetRecvRemainTime( m_szUserName, szRemainTime );
@@ -199,19 +199,19 @@ void CloverToolTip::RenderRecvInfoString( int iXPos, int iYPos )
 	m_Printer[2].SetTextColor( TCT_DEFAULT_RED );
 	m_Printer[2].AddTextPiece( FONT_SIZE_12, "%s", szRemainTime.c_str() );
 	m_Printer[2].SetTextColor( TCT_DEFAULT_DARKGRAY );
-	m_Printer[2].AddTextPiece( FONT_SIZE_12, " 후 사라집니다." );
+	m_Printer[2].AddTextPiece( FONT_SIZE_12, STR(3) );
 
 	m_Printer[3].SetTextStyle( TS_NORMAL );
 	m_Printer[3].SetBkColor( TCT_DEFAULT_DARKGRAY );
 
 	m_Printer[3].SetTextColor( TCT_DEFAULT_BLUE );
-	m_Printer[3].AddTextPiece( FONT_SIZE_12, "클로버를 받으시려면 " );
+	m_Printer[3].AddTextPiece( FONT_SIZE_12, STR(4) );
 
 	m_Printer[3].SetTextColor( TCT_DEFAULT_RED );
-	m_Printer[3].AddTextPiece( FONT_SIZE_12, "클릭" );
+	m_Printer[3].AddTextPiece( FONT_SIZE_12, STR(5) );
 
 	m_Printer[3].SetTextColor( TCT_DEFAULT_BLUE );
-	m_Printer[3].AddTextPiece( FONT_SIZE_12, "하세요." );
+	m_Printer[3].AddTextPiece( FONT_SIZE_12, STR(6) );
 	int iWidth = m_Printer[3].GetFullWidth();
 
 	SetSize( iWidth + SIDE_TEXT_GAP, WND_HEIGHT + TEXT_LINE_GAP * 3 );

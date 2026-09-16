@@ -901,13 +901,13 @@ void AttendanceWnd::OnRender()
 	g_FontMgr.SetTextStyle( TS_NORMAL );
 	g_FontMgr.SetAlignType( TAT_LEFT );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
-	g_FontMgr.PrintText( iXPos + 17, iYPos + 486, FONT_SIZE_11, "※ <개발자K와 출석 Check> 달력은 매월 1일마다 초기화됩니다." );
+	g_FontMgr.PrintText( iXPos + 17, iYPos + 486, FONT_SIZE_11, STR(1) );
 	
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextStyle( TS_NORMAL );
 	g_FontMgr.SetAlignType( TAT_LEFT );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
-	g_FontMgr.PrintText( iXPos + 17, iYPos + 502, FONT_SIZE_11, "※ <출석체크 하기(SPACE)> 버튼을 누르면 선물함으로 보상이 지급됩니다." );
+	g_FontMgr.PrintText( iXPos + 17, iYPos + 502, FONT_SIZE_11, STR(2) );
 };
 
 void AttendanceWnd::OnTtitleRender( int iXPos, int iYPos )
@@ -922,7 +922,7 @@ void AttendanceWnd::OnTtitleRender( int iXPos, int iYPos )
 	else
 		g_FontMgr.PrintText( iXPos + 513, iYPos + 29, FONT_SIZE_26, "%d", m_iCurMonth );
 
-	g_FontMgr.PrintText( iXPos + 539, iYPos + 29, FONT_SIZE_26, "월" );
+	g_FontMgr.PrintText( iXPos + 539, iYPos + 29, FONT_SIZE_26, STR(1) );
 }
 
 void AttendanceWnd::OnCalanderRender( int iXPos, int iYPos )
@@ -931,15 +931,15 @@ void AttendanceWnd::OnCalanderRender( int iXPos, int iYPos )
 	g_FontMgr.SetTextStyle( TS_NORMAL );
 	g_FontMgr.SetAlignType( TAT_LEFT );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_RED );
-	g_FontMgr.PrintText( iXPos + 52, iYPos + 87, FONT_SIZE_12, "일" );
+	g_FontMgr.PrintText( iXPos + 52, iYPos + 87, FONT_SIZE_12, STR(1) );
 
 	g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	g_FontMgr.PrintText( iXPos + 117, iYPos + 87, FONT_SIZE_12, "월" );
-	g_FontMgr.PrintText( iXPos + 182, iYPos + 87, FONT_SIZE_12, "화" );
-	g_FontMgr.PrintText( iXPos + 247, iYPos + 87, FONT_SIZE_12, "수" );
-	g_FontMgr.PrintText( iXPos + 312, iYPos + 87, FONT_SIZE_12, "목" );
-	g_FontMgr.PrintText( iXPos + 377, iYPos + 87, FONT_SIZE_12, "금" );
-	g_FontMgr.PrintText( iXPos + 442, iYPos + 87, FONT_SIZE_12, "토" );
+	g_FontMgr.PrintText( iXPos + 117, iYPos + 87, FONT_SIZE_12, STR(2) );
+	g_FontMgr.PrintText( iXPos + 182, iYPos + 87, FONT_SIZE_12, STR(3) );
+	g_FontMgr.PrintText( iXPos + 247, iYPos + 87, FONT_SIZE_12, STR(4) );
+	g_FontMgr.PrintText( iXPos + 312, iYPos + 87, FONT_SIZE_12, STR(5) );
+	g_FontMgr.PrintText( iXPos + 377, iYPos + 87, FONT_SIZE_12, STR(6) );
+	g_FontMgr.PrintText( iXPos + 442, iYPos + 87, FONT_SIZE_12, STR(7) );
 
 	if( m_pOutLine )
 	{
@@ -1044,7 +1044,7 @@ void AttendanceWnd::OnAccrueTtitleRender( int iXPos, int iYPos )
 	g_FontMgr.SetAlignType( TAT_CENTER );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );	
 	g_FontMgr.SetBkColor( 0xFFFFFF );
-	g_FontMgr.PrintText( iXPos + 602, iYPos + 103, FONT_SIZE_15, "현재 누적 출석 %d일", m_iCurrAccrueTerm );
+	g_FontMgr.PrintText( iXPos + 602, iYPos + 103, FONT_SIZE_15, STR(1), m_iCurrAccrueTerm );
 }
 
 void AttendanceWnd::OnAccrueRewardRender( int iXPos, int iYPos )
@@ -1058,7 +1058,7 @@ void AttendanceWnd::OnAccrueRewardRender( int iXPos, int iYPos )
 	{
 		const AccrueAttendanceReward& rkReward = iter->second;
 		g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
-		g_FontMgr.PrintText( iXPos + 516 + i * 43, iYPos + 140, FONT_SIZE_13, "%d일", rkReward.m_iAccureTerm );
+		g_FontMgr.PrintText( iXPos + 516 + i * 43, iYPos + 140, FONT_SIZE_13, STR(1), rkReward.m_iAccureTerm );
 
 		ioUIRenderImage* pIcon = NULL;
 		ioUIRenderImage* pSubIcon = NULL;
@@ -1128,8 +1128,8 @@ void AttendanceWnd::OnTodayAndAccrueRewardRender( int iXPos, int iYPos )
 	g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 
-	g_FontMgr.PrintText( iXPos + 548, iYPos + 280, FONT_SIZE_13, "오늘의 상품" );
-	g_FontMgr.PrintText( iXPos + 656, iYPos + 280, FONT_SIZE_13, "누적 출석 상품" );
+	g_FontMgr.PrintText( iXPos + 548, iYPos + 280, FONT_SIZE_13, STR(1) );
+	g_FontMgr.PrintText( iXPos + 656, iYPos + 280, FONT_SIZE_13, STR(2) );
 	
 	if( m_TodayRewardIcon )
 	{		

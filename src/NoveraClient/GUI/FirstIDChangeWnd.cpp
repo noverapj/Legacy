@@ -31,8 +31,8 @@
 FirstIDChangeWnd::FirstIDChangeWnd(void)
 {
 	m_pIcon       = NULL;
-	m_szStartEditText = STR(1);//"닉네임을 입력하세요.";
-	m_szErrorEditText = STR(2);//"사용할 수 없는 닉네임입니다.";
+	m_szStartEditText = STR(1);//STR(3);
+	m_szErrorEditText = STR(2);//STR(4);
 }
 
 FirstIDChangeWnd::~FirstIDChangeWnd(void)

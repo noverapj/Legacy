@@ -1894,7 +1894,7 @@ bool ioBaseGUISupport::CheckChangeDirectionForMagicCircle()
 
 bool ioBaseGUISupport::IsEasterEgg()
 {
-	return ( m_pOwner->GetCharName() == "개발자H" );
+	return ( m_pOwner->GetCharName() == STR(1) );
 }
 
 // TeamCircle And Gauge ------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -2454,7 +2454,7 @@ void ioBaseGUISupport::NormalRenderGauge( int iOwnerIconOffsetX, int iOwnerIconO
 						else if( IsEasterEgg() )
 						{
 							g_FontMgr.SetAlignType( TAT_CENTER );
-							g_FontMgr.PrintText( iXPos, (iYPos + UPPER_Y_OFFSET)+LADDER_TITLE_Y_OFFSET, FONT_SIZE_12, "< 세주씨에게 발린자 >" );
+							g_FontMgr.PrintText( iXPos, (iYPos + UPPER_Y_OFFSET)+LADDER_TITLE_Y_OFFSET, FONT_SIZE_12, STR(1) );
 						}
 						else if ( m_dwNamedTitleCode > 0 )
 							g_NamedTitleInfoMgr.RenderNamedTitle( iXPos, (iYPos + UPPER_Y_OFFSET)+LADDER_TITLE_Y_OFFSET, FONT_SIZE_12, m_dwNamedTitleCode, m_nNamedTitleLevel, m_byNamedTitlePremium, eNamedTitleTeamType, m_pNamedTitleMark );
@@ -2513,7 +2513,7 @@ void ioBaseGUISupport::NormalRenderGauge( int iOwnerIconOffsetX, int iOwnerIconO
 						else if( IsEasterEgg() )
 						{
 							g_FontMgr.SetAlignType( TAT_CENTER );
-							g_FontMgr.PrintText( iXPos, (iYPos + UPPER_Y_OFFSET)+LADDER_TITLE_Y_OFFSET, FONT_SIZE_12, "< 세주씨에게 발린자 >" );
+							g_FontMgr.PrintText( iXPos, (iYPos + UPPER_Y_OFFSET)+LADDER_TITLE_Y_OFFSET, FONT_SIZE_12, STR(1) );
 						}
 						else if ( m_dwNamedTitleCode > 0 )
 							g_NamedTitleInfoMgr.RenderNamedTitle( iXPos, (iYPos + UPPER_Y_OFFSET)+LADDER_TITLE_Y_OFFSET, FONT_SIZE_12, m_dwNamedTitleCode, m_nNamedTitleLevel, m_byNamedTitlePremium, eNamedTitleTeamType, m_pNamedTitleMark );
@@ -2693,7 +2693,7 @@ void ioBaseGUISupport::ObserverRenderGauge( int iOwnerIconOffsetX, int iOwnerIco
 						else if( IsEasterEgg() )
 						{
 							g_FontMgr.SetAlignType( TAT_CENTER );
-							g_FontMgr.PrintText( iXPos, (iYPos + NAME_Y_OFFSET)+LADDER_TITLE_Y_OFFSET, FONT_SIZE_12, "< 세주씨에게 발린자 >" );
+							g_FontMgr.PrintText( iXPos, (iYPos + NAME_Y_OFFSET)+LADDER_TITLE_Y_OFFSET, FONT_SIZE_12, STR(1) );
 						}
 						else if ( m_dwNamedTitleCode > 0 )
 							g_NamedTitleInfoMgr.RenderNamedTitle( iXPos, (iYPos + NAME_Y_OFFSET)+LADDER_TITLE_Y_OFFSET, FONT_SIZE_12, m_dwNamedTitleCode, m_nNamedTitleLevel, m_byNamedTitlePremium, eNamedTitleTeamType, m_pNamedTitleMark );
@@ -2751,7 +2751,7 @@ void ioBaseGUISupport::ObserverRenderGauge( int iOwnerIconOffsetX, int iOwnerIco
 					else if( IsEasterEgg() )
 					{
 						g_FontMgr.SetAlignType( TAT_CENTER );
-						g_FontMgr.PrintText( iXPos, (iYPos + NAME_Y_OFFSET)+LADDER_TITLE_Y_OFFSET, FONT_SIZE_12, "< 세주씨에게 발린자 >" );
+						g_FontMgr.PrintText( iXPos, (iYPos + NAME_Y_OFFSET)+LADDER_TITLE_Y_OFFSET, FONT_SIZE_12, STR(1) );
 					}
 					else if ( m_dwNamedTitleCode > 0 )
 						g_NamedTitleInfoMgr.RenderNamedTitle( iXPos, (iYPos + NAME_Y_OFFSET)+LADDER_TITLE_Y_OFFSET, FONT_SIZE_12, m_dwNamedTitleCode, m_nNamedTitleLevel, m_byNamedTitlePremium, eNamedTitleTeamType, m_pNamedTitleMark );
@@ -2852,10 +2852,10 @@ void ioBaseGUISupport::RenderMonsterReward()
 	if( Setting::Check2DInScreen( vPos, iXPos, iYPos ) )
 	{
 		char szExpText[MAX_PATH] = "";
-		SafeSprintf( szExpText, sizeof( szExpText ), "+%d 경험치", m_iMonsterRewardExp );
+		SafeSprintf( szExpText, sizeof( szExpText ), STR(1), m_iMonsterRewardExp );
 
 		char szPesoText[MAX_PATH] = "";
-		SafeSprintf( szPesoText, sizeof( szPesoText ), "+%d 페소", m_iMonsterRewardPeso );
+		SafeSprintf( szPesoText, sizeof( szPesoText ), STR(2), m_iMonsterRewardPeso );
 
 		g_FontMgr.SetTextStyle( TS_OUTLINE_FULL_2X );
 		g_FontMgr.SetBkColor( 0, 0, 0 );

@@ -617,7 +617,7 @@ void MultiSuperGashaponWnd::CheckRollingEnd( DWORD dwCurTime )
 		m_eState = S_END;
 		ShowAddBuy();
 		HideWnd();
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "구매에 실패 하였습니다.# 잠시후 다시 시도해주세요" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		return;
 	}
 	else
@@ -854,14 +854,14 @@ void MultiSuperGashaponWnd::OnExtraItemRender( int iXPos, int iYPos )
 		if( m_pStateOrangeFrm )
 			m_pStateOrangeFrm->Render( iMarkX, iMarkY, UI_RENDER_NORMAL );
 
-		SafeSprintf( szName, sizeof( szName ), "봉인가능" );
+		SafeSprintf( szName, sizeof( szName ), STR(1) );
 	}
 	else if( rkInfo.m_iTradeType == EET_ENABLE )
 	{
 		if( m_pStateGreenFrm )
 			m_pStateGreenFrm->Render( iMarkX, iMarkY, UI_RENDER_NORMAL );
 
-		SafeSprintf( szName, sizeof( szName ), "봉인" );
+		SafeSprintf( szName, sizeof( szName ), STR(2) );
 	}
 
 	g_FontMgr.SetTextStyle( TS_BOLD );
@@ -927,23 +927,23 @@ void MultiSuperGashaponWnd::OnMentBuyRender( int iXPos, int iYPos )
 		kPrinter.SetTextStyle( TS_NORMAL );
 		kPrinter.SetBkColor( 0, 0, 0 );
 		kPrinter.SetTextColor( TCT_DEFAULT_GREEN );
-		kPrinter.AddTextPiece( FONT_SIZE_17, "구매가 완료되었습니다" );
+		kPrinter.AddTextPiece( FONT_SIZE_17, STR(1) );
 		kPrinter.PrintFullText( iXPos + BOUGHT_TEXT_X_OFFSET, iYPos + BOUGHT_TEXT_Y_OFFSET, TAT_CENTER );
 		kPrinter.ClearList();
 
 		kPrinter.SetTextStyle( TS_NORMAL );
 		kPrinter.SetBkColor( 0, 0, 0 );
 		kPrinter.SetTextColor( TCT_DEFAULT_RED );
-		kPrinter.AddTextPiece( FONT_SIZE_12, "선물함" );
+		kPrinter.AddTextPiece( FONT_SIZE_12, STR(2) );
 		kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-		kPrinter.AddTextPiece( FONT_SIZE_12, "에서 확인하세요" );
+		kPrinter.AddTextPiece( FONT_SIZE_12, STR(3) );
 		kPrinter.PrintFullText( pWnd->GetDerivedPosX() + 102, pWnd->GetDerivedPosY() - 36, TAT_CENTER );
 		kPrinter.ClearList();
 
 		kPrinter.SetTextStyle( TS_NORMAL );
 		kPrinter.SetBkColor( 0, 0, 0 );
 		kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
-		kPrinter.AddTextPiece( FONT_SIZE_12, "본상품은 청약철회 제외 상품입니다" );
+		kPrinter.AddTextPiece( FONT_SIZE_12, STR(4) );
 		kPrinter.PrintFullText( pWnd->GetDerivedPosX() + 102, pWnd->GetDerivedPosY() - 20, TAT_CENTER );
 	}
 }
@@ -1215,7 +1215,7 @@ void MultiSuperGashaponToastPopupWnd::iwm_show()
 	m_pSelectedFrm->SetRenderRect( rt );
 
 	/*char szBuf[MAX_PATH];
-	sprintf_e( szBuf, "추가 획득 아이템의 총갯수 %d개", iBonusGoodsCount );
+	SafeSprintf( szBuf, sizeof(szBuf), STR(1), iBonusGoodsCount );
 	SetTitleText( szBuf );
 	//SetTitleOffsetX( 13 );
 	SetTitleOffsetY( TITLE_START_OFFSET + ( ( SLOT_HEIGHT / 2 ) * ( MAX_ITEM_LIST - iBonusGoodsCount ) ) );*/

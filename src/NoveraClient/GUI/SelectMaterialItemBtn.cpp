@@ -135,7 +135,7 @@ void SelectMaterialItemBtn::InitData()
 	m_CountText.ClearList();
 	m_CountText.SetTextStyle( TS_NORMAL );
 	m_CountText.SetTextColor( 153, 153, 153 );
-	m_CountText.AddTextPiece( FONT_SIZE_12, "Àç·á" );
+	m_CountText.AddTextPiece( FONT_SIZE_12, STR(1) );
 }
 
 void SelectMaterialItemBtn::SetData( int iCode, int iCnt )

@@ -390,7 +390,7 @@ void ioNamedTitleInfoManager::OnNamedTitlePremium( SP2Packet &rkPacket )
 			pInvenWnd->ShowNamedTitlePremiumResultWnd( dwCode, 0, 1 );
 	}
 	else
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "칭호 프리미엄 실패: %d", nResult );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1), nResult );
 }
 
 void ioNamedTitleInfoManager::OnNamedTitleEtcUse( SP2Packet &rkPacket )
@@ -410,7 +410,7 @@ void ioNamedTitleInfoManager::OnNamedTitleEtcUse( SP2Packet &rkPacket )
 			pInvenWnd->ShowNamedTitleResultWnd( dwCode, 0, 0 );
 	}
 	else
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "칭호 특별아이템 사용 실패: %d", nResult );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1), nResult );
 }
 
 void ioNamedTitleInfoManager::OnNamedTitleEquip( SP2Packet &rkPacket, ioPlayStage* pPlayStage )
@@ -469,7 +469,7 @@ void ioNamedTitleInfoManager::OnNamedTitleInsertSuccess( SP2Packet &rkPacket )
 	kSlot.m_byStatus = byStatus;
 
 	if ( !pUserNamedTitle->AddNamedTitleSlotData( kSlot ) )
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "칭호 추가 실패" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 }
 
 // 칭호 관련 (칭호 데이터 변경)
@@ -499,7 +499,7 @@ void ioNamedTitleInfoManager::OnNamedTitleUpdateSuccess( SP2Packet &rkPacket )
 	kSlot.m_byStatus = byStatus;
 
 	if ( !pUserNamedTitle->SetNamedTitleSlot( kSlot ) )
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "칭호 정보 변경 실패" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 
 	NamedTitleSelectWnd *pSelectWnd = dynamic_cast<NamedTitleSelectWnd*>( g_GUIMgr.FindWnd( NAMED_TITLE_SELECT_WND ) );
 	if( pSelectWnd && pSelectWnd->IsShow() )

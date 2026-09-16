@@ -299,8 +299,8 @@ bool ioPresentMgr::RecvEtcItem( PresentData &rkData, int &iItemType, ComplexStri
 			break;
 		case SHOP_TAB_TYPE_COSTUME:
 			{
-				szMainTab = "코스튬";
-				szSmallTab = "기능";
+				szMainTab = STR(20);
+				szSmallTab = STR(21);
 				iItemType = ItemRecvSellInfoWnd::ITEM_COSTUME;
 			}
 			break;
@@ -734,7 +734,7 @@ void ioPresentMgr::ApplyPresentRecv( SP2Packet &rkPacket, ioPlayStage *pStage )
 							kDesc.SetTextStyle( TS_NORMAL );
 							kDesc.SetBkColor( 0, 0, 0 );	
 							kDesc.SetTextColor( TCT_DEFAULT_DARKGRAY );
-							kDesc.AddTextPiece( FONT_SIZE_12, "★ 정기에서 확인 및 사용 가능합니다." );
+							kDesc.AddTextPiece( FONT_SIZE_12, STR(43) );
 							vDesc.push_back( kDesc );
 							
 							// MyInven Update
@@ -797,7 +797,7 @@ void ioPresentMgr::ApplyPresentRecv( SP2Packet &rkPacket, ioPlayStage *pStage )
 							kDesc.SetTextStyle( TS_NORMAL );
 							kDesc.SetBkColor( 0, 0, 0 );	
 							kDesc.SetTextColor( TCT_DEFAULT_DARKGRAY );
-							kDesc.AddTextPiece( FONT_SIZE_12, "★ 코스튬 받기" );
+							kDesc.AddTextPiece( FONT_SIZE_12, STR(44) );
 							vDesc.push_back( kDesc );
 
 							// MyInven Update
@@ -823,7 +823,7 @@ void ioPresentMgr::ApplyPresentRecv( SP2Packet &rkPacket, ioPlayStage *pStage )
 							kTitle1.SetTextStyle( TS_NORMAL );
 							kTitle1.SetBkColor( 0, 0, 0 );
 							kTitle1.SetTextColor( TCT_DEFAULT_DARKGRAY );
-							kTitle1.AddTextPiece( FONT_SIZE_17, "보너스 캐쉬" );
+							kTitle1.AddTextPiece( FONT_SIZE_17, STR(45) );
 							vTitle.push_back( kTitle1 );
 
 							ioComplexStringPrinter kTitle2;
@@ -868,7 +868,7 @@ void ioPresentMgr::ApplyPresentRecv( SP2Packet &rkPacket, ioPlayStage *pStage )
 							kDesc.SetTextStyle( TS_NORMAL );
 							kDesc.SetBkColor( 0, 0, 0 );	
 							kDesc.SetTextColor( TCT_DEFAULT_DARKGRAY );
-							kDesc.AddTextPiece( FONT_SIZE_12, "★ 액세서리 받기" );
+							kDesc.AddTextPiece( FONT_SIZE_12, STR(46) );
 							vDesc.push_back( kDesc );
 
 							// MyInven Update
@@ -928,9 +928,9 @@ void ioPresentMgr::ApplyPresentRecv( SP2Packet &rkPacket, ioPlayStage *pStage )
 					ioHashString sSubIcon = pItem->GetSubIconName();
 					ioHashString sTitle= pItem->GetName();
 					ioHashStringVec sDescVec;
-					sDescVec.push_back( "[용병슬롯확장]이 필요합니다." );
-					sDescVec.push_back( "용병 슬롯을 확장하기 위해 구입해주세요." );
-					sDescVec.push_back( "상점 - 특별에서 구입하실 수 있습니다." );
+					sDescVec.push_back( STR(47) );
+					sDescVec.push_back( STR(48) );
+					sDescVec.push_back( STR(49) );
 					if( pPurchaseLeedWnd->SetInfo( ioEtcItem::EIT_ETC_CHAR_SLOT_EXTEND, sIcon, sSubIcon, sTitle, sDescVec ) )
 						pPurchaseLeedWnd->ShowWnd();
 				}
@@ -989,9 +989,9 @@ void ioPresentMgr::ApplyPresentRecv( SP2Packet &rkPacket, ioPlayStage *pStage )
 					ioHashString sSubIcon = pItem->GetSubIconName();
 					ioHashString sTitle= pItem->GetName();
 					ioHashStringVec sDescVec;
-					sDescVec.push_back( "[장비슬롯확장]이 필요합니다." );
-					sDescVec.push_back( "부족한 장비 슬롯을 위해 구입해주세요." );
-					sDescVec.push_back( "상점 - 특별에서 구입하실 수 있습니다." );
+					sDescVec.push_back( STR(50) );
+					sDescVec.push_back( STR(51) );
+					sDescVec.push_back( STR(49) );
 					if( pPurchaseLeedWnd->SetInfo( ioEtcItem::EIT_ETC_EXTRAITEM_SLOT_EXTEND, sIcon, sSubIcon, sTitle, sDescVec ) )
 						pPurchaseLeedWnd->ShowWnd();
 				}
@@ -1006,10 +1006,10 @@ void ioPresentMgr::ApplyPresentRecv( SP2Packet &rkPacket, ioPlayStage *pStage )
 		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(7) );
 		break;
 	case PRESENT_RECV_MAX_COUNT:
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "갯수초과" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(52) );
 		break;
 	case PRESENT_RECV_MAX_SLOT:
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "빈칸없음" );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(53) );
 		break;
 	case PRESENT_RECV_PRESET_FAIL:
 		{
@@ -1017,13 +1017,13 @@ void ioPresentMgr::ApplyPresentRecv( SP2Packet &rkPacket, ioPlayStage *pStage )
 		}
 		break;
 	case PRESENT_RECV_NO_GUILD:
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "길드에 가입 되있지 않습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(54) );
 		break;
 	case PRESENT_RECV_GUILD_ROOM_DISABLE:
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "길드본부가 활성화 되있지 않습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(55) );
 		break;
 	case PRESENT_RECV_PERSONAL_HQ_DISABLE:
-		g_GUIMgr.SetMsgBox( MB_OK, NULL, "개인본부가 활성화 되있지 않습니다." );
+		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(56) );
 		break;
 	case PRESENT_RECV_CUSTOM_MEDAL:
 		{
@@ -1394,7 +1394,7 @@ void ioPresentMgr::ApplyPresentSell( SP2Packet &rkPacket )
 		break;
 	case PRESENT_SELL_NOT_SELL:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "판매 할 수 없는 아이템입니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(30) );
 		}
 		break;
 	}
@@ -1764,7 +1764,7 @@ const ioHashString &ioPresentMgr::GetPresentValue1Text( short iPresentType, int 
 		}
 		break;
 	case PRESENT_BONUS_CASH:
-		szReturn = "보너스캐쉬";
+		szReturn = STR(6);
 		break;
 	case PRESENT_SPIRIT:
 		szReturn = g_SpiritMgr.GetName(iPresentValue1);
@@ -1941,7 +1941,7 @@ const ioHashString &ioPresentMgr::GetPresentValue2Text( short iPresentType, int 
 			Help::ConvertNumToStrComma( iPresentValue2, szConvertNum, sizeof( szConvertNum ) );
 			
 			char szTemp[MAX_PATH] = "";
-			SafeSprintf( szTemp, sizeof( szTemp ), "%s개", szConvertNum );
+			SafeSprintf( szTemp, sizeof( szTemp ), STR(23), szConvertNum );
 			szReturn = szTemp;
 		}
 		break;
@@ -1949,7 +1949,7 @@ const ioHashString &ioPresentMgr::GetPresentValue2Text( short iPresentType, int 
 		{
 			int nPetRank = iPresentValue2%10000;
 			char szTemp[MAX_PATH] = "";
-			SafeSprintf( szTemp, sizeof( szTemp ), "랭크 %s", g_PetInfoMgr.GetRankName( nPetRank ).c_str() );
+			SafeSprintf( szTemp, sizeof( szTemp ), STR(24), g_PetInfoMgr.GetRankName( nPetRank ).c_str() );
 			szReturn = szTemp;
 		}
 		break;
@@ -1978,7 +1978,7 @@ const ioHashString &ioPresentMgr::GetPresentValue2Text( short iPresentType, int 
 			Help::ConvertNumToStrComma( iPresentValue1, szConvertNum, sizeof( szConvertNum ) );
 
 			char szTemp[MAX_PATH] = "";
-			SafeSprintf( szTemp, sizeof( szTemp ), "%s 골드", szConvertNum );
+			SafeSprintf( szTemp, sizeof( szTemp ), STR(25), szConvertNum );
 			szReturn = szTemp;
 		}
 		break;

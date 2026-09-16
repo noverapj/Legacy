@@ -997,7 +997,7 @@ void MessengerWnd::OnRender()
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( 141, 87, 4 );
-	kPrinter.AddTextPiece( FONT_SIZE_12, "나의" );
+	kPrinter.AddTextPiece( FONT_SIZE_12, STR(1) );
 	kPrinter.PrintFullText( iXPos + 23, iYPos + 61, TAT_LEFT );
 	int iXGap = 23 + kPrinter.GetFullWidth();
 	kPrinter.ClearList();
@@ -1045,7 +1045,7 @@ void MessengerWnd::OnRender()
 	kPrinter.SetTextStyle( TS_NORMAL );
 	kPrinter.SetBkColor( 0, 0, 0 );
 	kPrinter.SetTextColor( 17, 114, 34 );
-	kPrinter.AddTextPiece( FONT_SIZE_12, "선물용" );
+	kPrinter.AddTextPiece( FONT_SIZE_12, STR(2) );
 	kPrinter.PrintFullText( iXPos + 299 - iStringWidth - iIconWidth - 2, iYPos + 61, TAT_RIGHT );
 	kPrinter.ClearList();
 }

@@ -159,17 +159,17 @@ void ioItemRechargeManager::ApplyRechargeExtraItem( SP2Packet &rkPacket )
 		break;
 	case EXTRA_ITEM_RECHARGE_TIME_FAIL:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "장비충전중 예외상황이 발생했습니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		}
 		break;
 	case EXTRA_ITEM_RECHARGE_TIME_FAIL_UNKNOWN_ITEM:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "알 수 없는 아이템 입니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		}
 		break;
 	case EXTRA_ITEM_RECHARGE_TIME_FAIL_IMPOSSIBLE:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "사용할 수 없는 아이템 입니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		}
 		break;
 	}
@@ -304,17 +304,17 @@ void ioAccRechargeManager::ApplyRechargeAccessory( SP2Packet &rkPacket )
 		break;
 	case EXTRA_ITEM_RECHARGE_TIME_FAIL:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "액세서리충전중 예외상황이 발생했습니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		}
 		break;
 	case EXTRA_ITEM_RECHARGE_TIME_FAIL_UNKNOWN_ITEM:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "알 수 없는 아이템 입니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 		}
 		break;
 	case EXTRA_ITEM_RECHARGE_TIME_FAIL_IMPOSSIBLE:
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "사용할 수 없는 아이템 입니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3) );
 		}
 		break;
 	}

@@ -1240,7 +1240,7 @@ void GradeAdjustmentWnd::Reinforce()
 		ioUserExtraItem *pExtraItem = g_MyInfo.GetUserExtraItem();
 		if( !pExtraItem )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "아이템 슬롯 에러" );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 			return;
 		}
 
@@ -1248,7 +1248,7 @@ void GradeAdjustmentWnd::Reinforce()
 		ExtraItem.Init();
 		if ( !pExtraItem->GetExtraItem( m_iItemIndex, ExtraItem ) )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "해당 슬롯을 찾을 수 없습니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2) );
 			return;
 
 		}

@@ -266,10 +266,10 @@ void JoinRequestProgressWnd::OnRender()
 	switch( m_eModeType )
 	{
 	case MT_HOUSE:
-		g_FontMgr.PrintText( iXPos + 103, iYPos + 144, FONT_SIZE_13, "개인본부" );
+		g_FontMgr.PrintText( iXPos + 103, iYPos + 144, FONT_SIZE_13, STR(4) );
 		break;
 	case MT_HEADQUARTERS:
-		g_FontMgr.PrintText( iXPos + 103, iYPos + 144, FONT_SIZE_13, "훈련소" );
+		g_FontMgr.PrintText( iXPos + 103, iYPos + 144, FONT_SIZE_13, STR(5) );
 		break;
 	}
 
@@ -1065,10 +1065,10 @@ void GlobalChatWnd::CheckRoomTitle()
 				szRoomText = STR(4);
 				break;
 			case RSTYLE_SHUFFLEROOM:
-				szRoomText = "전투";
+				szRoomText = STR(6);
 				break;
 			case RSTYLE_MATCHROOM:
-				szRoomText = "전투";
+				szRoomText = STR(6);
 				break;
 			}
 		}
@@ -1080,7 +1080,7 @@ void GlobalChatWnd::CheckRoomTitle()
 		break;
 	case MT_HOUSE:
 		{
-			szRoomText = "개인본부";
+			szRoomText = STR(7);
 		}
 		break;
 	}
@@ -3675,7 +3675,7 @@ void CalendarWnd::ModifyCalendar( ioWnd* pDateRequestWnd,
 void CalendarWnd::InitCalendarButton( int iYear, int iMonth, int iDay )
 {
 	char szBuff[MAX_PATH];
-	sprintf_s_e( szBuff, "%d년 %d월", iYear, iMonth );
+	SafeSprintf( szBuff, sizeof(szBuff), STR(1), iYear, iMonth );
 	m_szDate = szBuff;
 
 	int iWeekOfDay = DateHelp::GetWeekDay( iYear, iMonth, iDay );
@@ -3914,16 +3914,16 @@ void CalendarWnd::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 			{
 				if( m_SelectDate.isEmpty() )
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "날짜와 시간을 선택 해주세요");
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1));
 				}
 				else if( !isEnableHour() )
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "올바른 시간을 입력 해주세요");
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(2));
 					SetSelectHour( 0 );
 				}
 				else if( !isEnableMin() )
 				{
-					g_GUIMgr.SetMsgBox( MB_OK, NULL, "올바른 분을 입력 해주세요");
+					g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(3));
 					SetSelectMin( 0 );
 				}
 				else

@@ -58,9 +58,9 @@ void MissionQuestMainWnd::ChangeTitle( DWORD dwID )
 {
 	char szTitle[MAX_PATH] = "";
 	if ( dwID == ID_MISSION_BTN )
-		SetTitleText( "미션" );
+		SetTitleText( STR(1) );
 	else if ( dwID == ID_QUEST_BTN )
-		SetTitleText( "퀘스트" );
+		SetTitleText( STR(2) );
 }
 
 void MissionQuestMainWnd::ChangeRadioWnd( DWORD dwID )
@@ -295,7 +295,7 @@ void MainMissionWnd::UpdateRadioBtn()
 	{
 		//타이틀 세팅
 		int iMaxMission = g_MissionManager.GetMissionCountToType( MDT_DAILY );
-		SafeSprintf( szTitle, sizeof( szTitle ), "일일미션(%d)", iMaxMission );
+		SafeSprintf( szTitle, sizeof( szTitle ), STR(1), iMaxMission );
 		pDailyMission->SetTitleText( szTitle );
 
 		bool bStartSparkle = false;
@@ -326,7 +326,7 @@ void MainMissionWnd::UpdateRadioBtn()
 	{
 		//타이틀 세팅
 		int iMaxMission = g_MissionManager.GetMissionCountToType( MDT_WEEKLY );
-		SafeSprintf( szTitle, sizeof( szTitle ), "주간미션(%d)", iMaxMission );
+		SafeSprintf( szTitle, sizeof( szTitle ), STR(2), iMaxMission );
 		pWeeklyMission->SetTitleText( szTitle );
 
 		bool bStartSparkle = false;
@@ -356,7 +356,7 @@ void MainMissionWnd::UpdateRadioBtn()
 	if( pMonthlyMission )
 	{
 		int iMaxMission = g_MissionManager.GetMissionCountToType( MDT_MONTHLY );
-		SafeSprintf( szTitle, sizeof( szTitle ), "월간미션(%d)", iMaxMission );
+		SafeSprintf( szTitle, sizeof( szTitle ), STR(3), iMaxMission );
 		pMonthlyMission->SetTitleText( szTitle );
 
 		bool bStartSparkle = false;
@@ -567,7 +567,7 @@ void MissionInfoBtn::iwm_command( ioWnd *pWnd, int cmd, DWORD param )
 		}
 		else if( cmd == IOEX_BTNUP )
 		{
-			g_GUIMgr.SetMsgBox( MB_OK, NULL, "미션 진행중 입니다." );
+			g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1) );
 		}
 		break;
 	}
@@ -741,8 +741,8 @@ void MissionInfoBtn::OnRender()
 		g_FontMgr.SetAlignType( TAT_LEFT );
 		g_FontMgr.SetBkColor( 0, 0, 0 );
 		g_FontMgr.SetTextColor( 178, 168, 130 );
-		g_FontMgr.PrintText( iXPos + EMPTY_TEXT_POS_X, iYPos + EMPTY_TEXT_POS_Y, FONT_SIZE_13, "내용없음" );
-		g_FontMgr.PrintText( iXPos + EMPTY_TEXT_POS_X, iYPos + EMPTY_TEXT_POS_Y + EMPTY_TEXT_OFFSET_Y_LING_GAP, FONT_SIZE_13, "미션 대기중" );
+		g_FontMgr.PrintText( iXPos + EMPTY_TEXT_POS_X, iYPos + EMPTY_TEXT_POS_Y, FONT_SIZE_13, STR(1) );
+		g_FontMgr.PrintText( iXPos + EMPTY_TEXT_POS_X, iYPos + EMPTY_TEXT_POS_Y + EMPTY_TEXT_OFFSET_Y_LING_GAP, FONT_SIZE_13, STR(2) );
 		return;
 	}
 
@@ -1628,8 +1628,8 @@ void LobbyMissionInfoBtn::OnRender()
 		g_FontMgr.SetAlignType( TAT_LEFT );
 		g_FontMgr.SetBkColor( 0, 0, 0 );
 		g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY2 );
-		g_FontMgr.PrintText( iXPos + EMPTY_TEXT_POS_X, iYPos + EMPTY_TEXT_POS_Y, FONT_SIZE_11, "내용없음" );
-		g_FontMgr.PrintText( iXPos + EMPTY_TEXT_POS_X, iYPos + EMPTY_TEXT_POS_Y + EMPTY_TEXT_OFFSET_Y_LING_GAP, FONT_SIZE_11, "미션 대기중" );
+		g_FontMgr.PrintText( iXPos + EMPTY_TEXT_POS_X, iYPos + EMPTY_TEXT_POS_Y, FONT_SIZE_11, STR(1) );
+		g_FontMgr.PrintText( iXPos + EMPTY_TEXT_POS_X, iYPos + EMPTY_TEXT_POS_Y + EMPTY_TEXT_OFFSET_Y_LING_GAP, FONT_SIZE_11, STR(2) );
 		return;
 	}
 
@@ -2365,13 +2365,13 @@ bool MissionToolTip::SetInfo( const ioMission* const rkMissionData, const int& i
 
 		char szPresentName[MAX_PATH] = "";
 		if( iPresentType == PRESENT_PESO )
-			sprintf_e( szPresentName, "보상 : %s", g_PresentMgr.GetPresentValue2Text( iPresentType, iPresentValue1, iPresentValue2 ).c_str() );
+			SafeSprintf( szPresentName, sizeof(szPresentName), STR(1), g_PresentMgr.GetPresentValue2Text( iPresentType, iPresentValue1, iPresentValue2 ).c_str() );
 		else
 		{
 			if( iPresentType == PRESENT_MEDALITEM )
-				SafeSprintf( szPresentName, sizeof( szPresentName ), "보상 : %s [메달] %s", g_PresentMgr.GetPresentValue1Text( iPresentType, iPresentValue1, iPresentValue2 ).c_str(), g_PresentMgr.GetPresentValue2Text( iPresentType, iPresentValue1, iPresentValue2 ).c_str() );
+				SafeSprintf( szPresentName, sizeof( szPresentName ), STR(2), g_PresentMgr.GetPresentValue1Text( iPresentType, iPresentValue1, iPresentValue2 ).c_str(), g_PresentMgr.GetPresentValue2Text( iPresentType, iPresentValue1, iPresentValue2 ).c_str() );
 			else
-				sprintf_e( szPresentName, "보상 : %s %s", g_PresentMgr.GetPresentValue1Text( iPresentType, iPresentValue1, iPresentValue2 ).c_str(), g_PresentMgr.GetPresentValue2Text( iPresentType, iPresentValue1, iPresentValue2 ).c_str() );
+				SafeSprintf( szPresentName, sizeof(szPresentName), STR(3), g_PresentMgr.GetPresentValue1Text( iPresentType, iPresentValue1, iPresentValue2 ).c_str(), g_PresentMgr.GetPresentValue2Text( iPresentType, iPresentValue1, iPresentValue2 ).c_str() );
 		}
 
 		m_szPresent.SetTextStyle( TS_NORMAL );
