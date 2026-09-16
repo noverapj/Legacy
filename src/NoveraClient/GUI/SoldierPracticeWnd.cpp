@@ -255,20 +255,9 @@ void PracticeHelpWnd::ProcessTextTick()
 
 	int iMaxLen = strlen( szHelp );
 
-#if defined( SRC_OVERSEAS )
-
-#if defined( MULTI_BYTE_CHECK )
-	if( IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE) szHelp[m_iCurTextTickCount] ) )
-#else
-	if( false && IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE) szHelp[m_iCurTextTickCount] ) )
-#endif
-
-#else
-	if( IsDBCSLeadByte( (BYTE) szHelp[m_iCurTextTickCount] ) )
-#endif
-
+	if( ioText::IsLeadByte( (BYTE) szHelp[m_iCurTextTickCount] ) )
 		m_iCurTextTickCount+=2;
-	else 
+	else
 		m_iCurTextTickCount+=1;
 
 	memcpy( m_vStringTickList[m_iCurTextLineCount].m_szCopyDesc, szHelp, m_iCurTextTickCount );
@@ -306,20 +295,9 @@ void PracticeHelpWnd::ProcessIoStringTick()
 
 	int iMaxLen = strlen( szHelp );
 
-#if defined( SRC_OVERSEAS )
-
-#if defined( MULTI_BYTE_CHECK )
-	if( IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE) szHelp[m_iCurTextTickCount] ) )
-#else
-	if( false && IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE) szHelp[m_iCurTextTickCount] ) )
-#endif
-
-#else
-	if( IsDBCSLeadByte( (BYTE) szHelp[m_iCurTextTickCount] ) || (szHelp[m_iCurTextTickCount] == 92 && szHelp[m_iCurTextTickCount+1] == 110) )
-#endif
-
+	if( ioText::IsLeadByte( (BYTE) szHelp[m_iCurTextTickCount] ) || (szHelp[m_iCurTextTickCount] == 92 && szHelp[m_iCurTextTickCount+1] == 110) )
 		m_iCurTextTickCount+=2;
-	else 
+	else
 		m_iCurTextTickCount+=1;
 
 	char szTickHelp[MAX_BUFFER_SIZE] = "";

@@ -218,17 +218,7 @@ void ioStringManager::LoadData( const char *szPath, const char *szFileName, cons
 		if( eLeadState == LBS_NOT_LEAD || eLeadState == LBS_LEAD_AFTER ) 
 		{
 
-#if defined( SRC_OVERSEAS )
-
-#if defined( MULTI_BYTE_CHECK )
-			if( IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, pPtr[i] ) )
-#else
-			if(false && IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, pPtr[i] ) )
-#endif
-
-#else
-			if( IsDBCSLeadByte( pPtr[i] ) )
-#endif
+			if( ioText::IsLeadByte( (BYTE)pPtr[i] ) )
 
 				eLeadState = LBS_LEAD;
 			else

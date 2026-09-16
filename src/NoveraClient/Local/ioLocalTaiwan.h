@@ -48,6 +48,7 @@ public:
 	virtual bool IsShowRegulation();
 	virtual bool IsFirstIDControlAltCtrl() { return false; }
 	virtual DWORD GetUserSyncIntervalTime() { return 1000; }
+	virtual int GetCountryCodePage() { return 950; }
 
 public:
 	ioLocalTaiwan(void);

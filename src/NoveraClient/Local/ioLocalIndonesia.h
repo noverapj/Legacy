@@ -54,6 +54,7 @@ public:
 	virtual bool IsSendCollisionPos() { return false; }
 	virtual bool IsLimitStartCancel() { return true; }
 	virtual DWORD GetUserSyncIntervalTime() { return 1000; }
+	virtual int GetCountryCodePage() { return 1252; }
 
 	virtual int GetCashPageWidth();
 	virtual int GetCashPageHeight();

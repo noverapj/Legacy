@@ -1702,6 +1702,7 @@ copy "$(TargetDir)\io3DEngine.pdb" "$(TargetDir)\..\..\..\lib\lib_Shipping\</Com
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Shipping|Win32'">WIN32;NDEBUG;_WINDOWS;_MBCS;_USRDLL;IO3D_API</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="EditBox.cpp" />
+    <ClCompile Include="ioTextUtil.cpp" />
     <ClCompile Include="InputBox.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">WIN32;_DEBUG;_WINDOWS;_MBCS;_USRDLL;IO3D_API</PreprocessorDefinitions>
@@ -2131,6 +2132,7 @@ copy "$(TargetDir)\io3DEngine.pdb" "$(TargetDir)\..\..\..\lib\lib_Shipping\</Com
     <ClInclude Include="ioUIRenderImage.h" />
     <ClInclude Include="ioUITitle.h" />
     <ClInclude Include="EditBox.h" />
+    <ClInclude Include="ioTextUtil.h" />
     <ClInclude Include="InputBox.h" />
     <ClInclude Include="ioIME.h" />
     <ClInclude Include="ioEnumDisplayMode.h" />

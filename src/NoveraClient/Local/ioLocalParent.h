@@ -96,6 +96,8 @@ public:
 	virtual bool IsChannelingGetCash(){ return false; }
 	virtual bool IsTwoByteSearch(){ return false; }
 
+	virtual int GetCountryCodePage(){ return 949; }
+
 public:
 	ioLocalParent(void);
 	virtual ~ioLocalParent(void);

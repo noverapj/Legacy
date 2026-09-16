@@ -1366,18 +1366,7 @@ bool SelectExtraGashaponBtn::CheckHanByte( char *szText )
 	for(int i = 0; i < len; i++ )
 	{
 
-#if defined( SRC_OVERSEAS )
-
-#if defined( MULTI_BYTE_CHECK )
-		if( IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)szText[i] ) )
-#else
-		if( false && IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)szText[i] ) )
-#endif
-
-#else
-		if( IsDBCSLeadByte( (BYTE)szText[i] ) )
-#endif
-
+		if( ioText::IsLeadByte( (BYTE)szText[i] ) )
 		{
 			i++;		
 			if(len <= i) // 마지막 한글이 깨진 글자다.

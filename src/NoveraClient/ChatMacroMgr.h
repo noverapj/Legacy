@@ -112,9 +112,7 @@ protected:                      // 채팅 매크로
 	void OnMacroTournamentResult( char *szMacro );
 	void OnMacroOpenPopup( char* szMacro);
 	void OnMacroPracticeCompleted( char* szMacro);
-#if defined( SRC_OVERSEAS )
 	void OnMacroGashaponAllPackage( char *szMacro );
-#endif
 
 	int GetKeyword( IN char *szMacro , OUT char *szKeyword,  int iKeywordSize );
 	int ReturnEtcItemMacro( int iMacroType, char *szMacro );

@@ -103,6 +103,7 @@ __forceinline unsigned int return_PI() { __asm mov eax,   3141592654 };
 
 
 #include "../io3DEngine/ioPrerequisites.h"
+#include "../io3DEngine/ioTextUtil.h"
 
 #include <d3d9.h>
 #include <d3dx9.h>

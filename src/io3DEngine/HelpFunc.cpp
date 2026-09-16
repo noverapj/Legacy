@@ -436,17 +436,7 @@ int StringCutFunc( float fScale, float fWidth, int iTextStyle, OUT char *szDst, 
 		iBack = i;
 		szTemp[iTemp++]   = szSrc[i++];
 
-#if defined( SRC_OVERSEAS )
-
-#if defined( MULTI_BYTE_CHECK )
-		if( IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)szTemp[iTemp - 1] ) )
-#else
-		if(false && IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)szTemp[iTemp - 1] ) )
-#endif
-
-#else
-		if( IsDBCSLeadByte( (BYTE)szTemp[iTemp - 1] ) )
-#endif
+		if( ioText::IsLeadByte( (BYTE)szTemp[iTemp - 1] ) )
 
 			szTemp[iTemp++] = szSrc[i++];
 

@@ -1216,10 +1216,8 @@ void ioPowerUpManager::SetMenuList( ioXMLElement &xElement )
 			if ( iCurTab > iMaxTab )
 				break;
 			PowerUpPullDownItem PullDown;
-#ifdef SRC_OVERSEAS 
 			elem.SetUseStringMgr(true);
 			elem.SetStringMgrKeyName("myinventorywnd");
-#endif
 			PullDown.m_szTitle = elem.GetStringAttribute( "Text" );
 			PullDown.m_iTooltipIdx = g_BasicTooltipMgr.GetToolTipID( elem.GetStringAttribute( "ToolTip" ) );
 			PullDown.SetEnableImageRender( elem.GetBoolAttribute("ShowToolTip") );

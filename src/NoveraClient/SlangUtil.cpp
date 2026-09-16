@@ -47,22 +47,11 @@ inline void CSlangUtil::FilterChar( const char *src, char *dst, char *szFilterCh
 	char *srcp = (char *) src;
 	char *dstp = dst;
 	int iCnt = 0;
-	while (*srcp) 
+	while (*srcp)
 	{
 		// lead byte면 byte filer을 생략 2칸 이동
 
-#if defined( SRC_OVERSEAS )
-
-#if defined( MULTI_BYTE_CHECK )
-		if( IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, *srcp ) )
-#else
-		if( false && IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, *srcp ) ) 
-#endif
-
-#else
-		if( IsDBCSLeadByte(*srcp)) 
-#endif
-
+		if( ioText::IsLeadByte( (BYTE)*srcp ) )
 		{
 			*dstp = *srcp;   
 			dstp += 1;
@@ -129,18 +118,7 @@ inline void CSlangUtil::FilterMultiByteChar( const char *szSrc,
 		if( (iSrcPos + 2) <= iSrcLength )
 		{
 
-#if defined( SRC_OVERSEAS )
-
-#if defined( MULTI_BYTE_CHECK )
-			if( IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, szSrc[iSrcPos] ) )
-#else
-			if( false && IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, szSrc[iSrcPos] ) )
-#endif
-
-#else
-			if( IsDBCSLeadByte(szSrc[iSrcPos]) )
-#endif
-
+			if( ioText::IsLeadByte( (BYTE)szSrc[iSrcPos] ) )
 			{
 				StringCbCopyN( szMultiByte, sizeof(szMultiByte), &szSrc[iSrcPos], 2 );
 
@@ -413,18 +391,7 @@ const char* CSlangUtil::ConvertString( const char* szOriginalStr, bool bSetPreCh
 				{
 					char sz = szCleanUpString.at(i);
 
-#if defined( SRC_OVERSEAS )
-
-#if defined( MULTI_BYTE_CHECK )
-					if( IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, sz ) )
-#else
-					if( false && IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, sz ) )
-#endif
-
-#else
-					if( IsDBCSLeadByte(sz) )
-#endif
-
+					if( ioText::IsLeadByte( (BYTE)sz ) )
 					{
 						iFirstMultiByteArray = i;
 						iCheckArray +=2;
@@ -502,18 +469,7 @@ const char* CSlangUtil::ConvertStringWithPreLine( const char* szOriginalStr )
 		while( iRemovePos < iMaxPos && iRemovePos < iFilteredSize )
 		{
 
-#if defined( SRC_OVERSEAS )
-
-#if defined( MULTI_BYTE_CHECK )
-			if( IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)m_szAppendLineResult[iRemovePos] ) )
-#else
-			if( false && IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)m_szAppendLineResult[iRemovePos] ) )
-#endif
-
-#else
-			if( IsDBCSLeadByte( (BYTE)m_szAppendLineResult[iRemovePos] ) )
-#endif
-
+			if( ioText::IsLeadByte( (BYTE)m_szAppendLineResult[iRemovePos] ) )
 				iRemovePos += 2;
 			else
 				iRemovePos++;
@@ -559,18 +515,7 @@ const char* CSlangUtil::ConvertStringWithPreLine( const char* szOriginalStr )
 		while( iRemovePos < iMaxPos && iRemovePos < iFilteredSize )
 		{
 
-#if defined( SRC_OVERSEAS )
-
-#if defined( MULTI_BYTE_CHECK )
-			if( IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)m_szPreChat[iRemovePos] ) )
-#else
-			if( false && IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)m_szPreChat[iRemovePos] ) )
-#endif
-
-#else
-			if( IsDBCSLeadByte( (BYTE)m_szPreChat[iRemovePos] ) )
-#endif
-
+			if( ioText::IsLeadByte( (BYTE)m_szPreChat[iRemovePos] ) )
 				iRemovePos += 2;
 			else
 				iRemovePos++;
@@ -672,18 +617,7 @@ void CSlangUtil::LoadSlangData()
 				for (int i = 0; i < iReplaceSize ; i++)
 				{
 
-#if defined( SRC_OVERSEAS )
-
-#if defined( MULTI_BYTE_CHECK )
-					if( IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, szReplaceWord[i] ) )
-#else
-					if( false && IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, szReplaceWord[i] ) ) 
-#endif
-
-#else
-					if( IsDBCSLeadByte(szReplaceWord[i]) ) 
-#endif
-
+					if( ioText::IsLeadByte( (BYTE)szReplaceWord[i] ) )
 					{
 						i++;
 						if(iReplaceSize <= i)
@@ -796,18 +730,7 @@ bool CSlangUtil::RePlaceSlang( char * string, char * result, int max_len )
 			for (int j = 0; j < iSlangSize ; j++)
 			{
 
-#if defined( SRC_OVERSEAS )
-
-#if defined( MULTI_BYTE_CHECK )
-				if( IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, slang[j] ) )
-#else
-				if( false && IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, slang[j] ) ) 
-#endif
-
-#else
-				if( IsDBCSLeadByte(slang[j]) ) 
-#endif
-
+				if( ioText::IsLeadByte( (BYTE)slang[j] ) )
 				{
 					replace[j] = '*';
 					j++;

@@ -599,21 +599,10 @@ void ChannelChatWnd::ProcessChannelUser()
 
 	if( m_iChannelUserFrame >= iMaxLen )
 		m_iChannelUserFrame = 0;
-	
-#if defined( SRC_OVERSEAS )
 
-#if defined( MULTI_BYTE_CHECK )
-	if( IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)szDoubleUser[m_iChannelUserFrame] ) )
-#else
-	if( false && IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)szDoubleUser[m_iChannelUserFrame] ) )
-#endif
-
-#else
-	if( IsDBCSLeadByte( (BYTE)szDoubleUser[m_iChannelUserFrame] ) )
-#endif
-
+	if( ioText::IsLeadByte( (BYTE)szDoubleUser[m_iChannelUserFrame] ) )
 		m_iChannelUserFrame+=2;
-	else 
+	else
 		m_iChannelUserFrame+=1;
 
 	Help::StringCutFun( fScale, fWidhtSize, TS_NORMAL, m_szChannelUser, sizeof(m_szChannelUser), &szDoubleUser[m_iChannelUserFrame] );
@@ -1097,20 +1086,9 @@ void GuildChatWnd::ProcessGuildUser()
 	if( m_iGuildUserFrame >= iMaxLen )
 		m_iGuildUserFrame = 0;
 
-#if defined( SRC_OVERSEAS )
-
-#if defined( MULTI_BYTE_CHECK )
-	if( IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)szDoubleUser[m_iGuildUserFrame] ) )	
-#else
-	if( false && IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)szDoubleUser[m_iGuildUserFrame] ) )
-#endif
-
-#else
-	if( IsDBCSLeadByte( (BYTE)szDoubleUser[m_iGuildUserFrame] ) )
-#endif
-
+	if( ioText::IsLeadByte( (BYTE)szDoubleUser[m_iGuildUserFrame] ) )
 		m_iGuildUserFrame+=2;
-	else 
+	else
 		m_iGuildUserFrame+=1;
 
 	Help::StringCutFun( fScale, fWidhtSize, TS_NORMAL, m_szGuildUser, sizeof(m_szGuildUser), &szDoubleUser[m_iGuildUserFrame] );

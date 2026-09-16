@@ -99,13 +99,13 @@ void EditBox::SetString( const char *szText )
 	StringCbCopy( m_szInput, sizeof( m_szInput ), szText );
 
 	// determine required length of new string
-	size_t reqLength = ::MultiByteToWideChar( COUNTRY_CODE_PAGE, 0, szText, strlen(szText), 0, 0 );
+	size_t reqLength = ::MultiByteToWideChar( ioText::GetCodePage(), 0, szText, strlen(szText), 0, 0 );
 
 	// construct new string of required length
 	std::wstring ret( reqLength, L'\0' );
 
 	// convert old string to new string
-	::MultiByteToWideChar( COUNTRY_CODE_PAGE, 0, szText, strlen(szText), &ret[0], (int)ret.length() );
+	::MultiByteToWideChar( ioText::GetCodePage(), 0, szText, strlen(szText), &ret[0], (int)ret.length() );
 
 	SetWindowTextW( m_hEdit, ret.c_str() );
 #else
@@ -144,7 +144,7 @@ const char* EditBox::GetString()
 
 	GetWindowTextW( m_hEdit, &ret[0], MAX_IME_STRING );
 
-	::WideCharToMultiByte( COUNTRY_CODE_PAGE, 0, &ret[0], ret.length(), m_szInput, ret.length(), "*", NULL );
+	::WideCharToMultiByte( ioText::GetCodePage(), 0, &ret[0], ret.length(), m_szInput, ret.length(), "*", NULL );
 #else
 	GetWindowText(m_hEdit, m_szInput, sizeof( m_szInput ) );
 #endif

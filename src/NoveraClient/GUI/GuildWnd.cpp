@@ -495,18 +495,7 @@ bool GuildCreateWnd::IsOnlyEngHanNumText( const char *szText )
 				else
 				{
 
-#if defined( SRC_OVERSEAS )
-
-#if defined( MULTI_BYTE_CHECK )
-					if( IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (byte)szText[i] ) )
-#else
-					if( false && IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (byte)szText[i] ) )
-#endif
-
-#else
-					if( IsDBCSLeadByte( (byte)szText[i] ) )
-#endif
-
+					if( ioText::IsLeadByte( (BYTE)szText[i] ) )
 					{
 						i++;
 						continue;

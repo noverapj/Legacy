@@ -1645,18 +1645,7 @@ int StringCutFun( float fScale, float fWidth, int iTextStyle, OUT char *szDst, i
 		iBack = i;
 		szTemp[iTemp++]   = szSrc[i++];
 
-#if defined( SRC_OVERSEAS )
-
-#if defined( MULTI_BYTE_CHECK )
-		if( IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)szTemp[iTemp - 1] ) )
-#else
-		if( false && IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)szTemp[iTemp - 1] ) )
-#endif
-
-#else
-		if( IsDBCSLeadByte( (BYTE)szTemp[iTemp - 1] ) )
-#endif
-
+		if( ioText::IsLeadByte( (BYTE)szTemp[iTemp - 1] ) )
 			szTemp[iTemp++] = szSrc[i++];
 
 		if( g_FontMgr.GetTextWidth( szTemp, (TextStyle)iTextStyle, fScale ) >= fWidth )
@@ -1889,18 +1878,7 @@ void TextCut( IN const char *pSrc, IN int iCutWidth, IN TextStyle eTextStyle, IN
 
 		szTemp[iTemp++]   = pSrc[iBuf++];
 
-#if defined( SRC_OVERSEAS )
-
-#if defined( MULTI_BYTE_CHECK )
-		if( IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)szTemp[iTemp - 1] ) )
-#else
-		if( false && IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)szTemp[iTemp - 1] ) )
-#endif
-
-#else
-		if( IsDBCSLeadByte( (BYTE)szTemp[iTemp - 1] ) )
-#endif
-
+		if( ioText::IsLeadByte( (BYTE)szTemp[iTemp - 1] ) )
 			szTemp[iTemp++] = pSrc[iBuf++];
 
 		if( g_FontMgr.GetTextWidth( szTemp, eTextStyle, fScale ) >= iCutWidth )
@@ -2466,18 +2444,7 @@ bool CheckHanByte( char *szText )
 	for(int i = 0; i < len; i++ )
 	{
 
-#if defined( SRC_OVERSEAS )
-
-#if defined( MULTI_BYTE_CHECK )
-		if( IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)szText[i] ) )
-#else
-		if( false && IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)szText[i] ) )
-#endif
-
-#else
-		if( IsDBCSLeadByte( (BYTE)szText[i] ) )
-#endif
-
+		if( ioText::IsLeadByte( (BYTE)szText[i] ) )
 		{
 			i++;		
 			if(len <= i) // 마지막 한글이 깨진 글자다.
@@ -2550,18 +2517,7 @@ bool IsOnlyEngHanNumText( const char *szText )
 				else
 				{
 
-#if defined( SRC_OVERSEAS )
-
-#if defined( MULTI_BYTE_CHECK )
-					if( IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (byte)szText[i] ) )
-#else
-					if( false && IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (byte)szText[i] ) )
-#endif
-
-#else
-					if( IsDBCSLeadByte( (byte)szText[i] ) )
-#endif
-
+					if( ioText::IsLeadByte( (BYTE)szText[i] ) )
 					{
 						i++;
 						continue;
@@ -2765,8 +2721,8 @@ int MessageboxShow( HWND hwnd, const char * pStr, const char * pCaption, UINT uT
 	if(pStr && pCaption)
 	{
 #ifdef MESSAGEBOX_UNICODE
-		std::wstring strText = CA2W(pStr, COUNTRY_CODE_PAGE);
-		std::wstring strCaption = CA2W(pCaption, COUNTRY_CODE_PAGE);
+		std::wstring strText = CA2W(pStr, ioText::GetCodePage());
+		std::wstring strCaption = CA2W(pCaption, ioText::GetCodePage());
 		return MessageBoxW( hwnd, strText.c_str(), strCaption.c_str(), uType);
 #else
 		return MessageBox( hwnd, pStr, pCaption, uType);

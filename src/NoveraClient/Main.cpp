@@ -99,9 +99,12 @@ int WINAPI WinMain( HINSTANCE hInstance,
 	ioINIMemoryStatic* pStatics = new ioINIMemoryStatic;
 	ioLocalManager *pLocalMgr = new ioLocalManager;
 	if( pLocalMgr )
-	{		
+	{
 		pLocalMgr->Init();
 		pLocalMgr->ParseCmd( lpCmdLine );
+		ioLocalParent *pInitLocal = g_LocalMgr.GetLocal( ioLocalManager::GetLocalType() );
+		if( pInitLocal )
+			ioText::SetCodePage( pInitLocal->GetCountryCodePage() );
 		LOG(0, "Local Manager Init Complete");
 	}
 

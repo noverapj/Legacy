@@ -934,9 +934,7 @@ public:
 	void OnMacroPracticeCompleted( DWORD dwPracticeResult );
 
 // 개발자 아이디에만 30일 전부터 라이센스에 대한 정보를 팝업창으로 띄움		JCLEE 140718
-#if defined( SRC_OVERSEAS )
 	void CheckLicenseForDev();
-#endif
 
 public:
 	inline DWORD GetGrapplingCheckDelay() const { return m_dwGrapplingCheckDelay; }

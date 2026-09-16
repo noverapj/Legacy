@@ -21,6 +21,7 @@
 #define __EX __declspec(dllexport)
 
 #include "ioPrerequisites.h"
+#include "ioTextUtil.h"
 
 #include <d3d9.h>
 #include <d3dx9.h>

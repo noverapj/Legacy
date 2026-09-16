@@ -338,17 +338,7 @@ void ioFontManager::TextWidthCut( const char *szAdd, float fScale, float fWidth 
 	{
 		szTemp[iTemp++]   = m_szBuffer[iBuf++];
 
-#if defined( SRC_OVERSEAS )
-
-#if defined( MULTI_BYTE_CHECK )
-		if( IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)szTemp[iTemp - 1] ) )
-#else
-		if( false && IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)szTemp[iTemp - 1] ) )
-#endif
-
-#else
-		if( IsDBCSLeadByte( (BYTE)szTemp[iTemp - 1] ) )
-#endif
+		if( ioText::IsLeadByte( (BYTE)szTemp[iTemp - 1] ) )
 
 			szTemp[iTemp++] = m_szBuffer[iBuf++];
 
@@ -379,17 +369,7 @@ void ioFontManager::TextLeftCut( float fScale, float fWidth )
 			break;		
 		}
 
-#if defined( SRC_OVERSEAS )
-
-#if defined( MULTI_BYTE_CHECK )
-		if( IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)m_szBuffer[iBuf] ) )
-#else
-		if( false && IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)m_szBuffer[iBuf] ) )
-#endif
-
-#else
-		if( IsDBCSLeadByte( (BYTE)m_szBuffer[iBuf] ) )
-#endif
+		if( ioText::IsLeadByte( (BYTE)m_szBuffer[iBuf] ) )
 
 			iBuf+=2;
 		else

@@ -624,6 +624,9 @@
     <ClCompile Include="EditBox.cpp">
       <Filter>io3DEngine\InputBox</Filter>
     </ClCompile>
+    <ClCompile Include="ioTextUtil.cpp">
+      <Filter>io3DEngine\InputBox</Filter>
+    </ClCompile>
     <ClCompile Include="InputBox.cpp">
       <Filter>io3DEngine\InputBox</Filter>
     </ClCompile>
@@ -1347,6 +1350,9 @@
       <Filter>io3DEngine\ioWnd3D\UIRender</Filter>
     </ClInclude>
     <ClInclude Include="EditBox.h">
+      <Filter>io3DEngine\InputBox</Filter>
+    </ClInclude>
+    <ClInclude Include="ioTextUtil.h">
       <Filter>io3DEngine\InputBox</Filter>
     </ClInclude>
     <ClInclude Include="InputBox.h">

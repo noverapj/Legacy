@@ -46,6 +46,7 @@ public:
 	virtual bool IsMyHomePage();
 	virtual bool IsShowRegulation();
 	virtual bool IsPCRoomBonusSoldier() { return true; }
+	virtual int GetCountryCodePage() { return 874; }
 
 	virtual void ExitAction();
 	virtual void ShowHackShieldErrorDlg( const ioHashString &rsPrivateID );

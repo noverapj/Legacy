@@ -56,18 +56,7 @@ bool MannerTrialWnd::OnMinusMannerAndTrial()
 		if( !szReason.IsEmpty() )
 		{
 
-#if defined( SRC_OVERSEAS )
-
-#if defined( MULTI_BYTE_CHECK )
-			if( !IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE) szReason.At(0) ) )
-#else
-			if( true || !IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE) szReason.At(0) ) )
-#endif
-
-#else
-			if( !IsDBCSLeadByte( (BYTE) szReason.At(0) ) )
-#endif
-
+			if( !ioText::IsLeadByte( (BYTE) szReason.At(0) ) )
 				iLetterLen = MAX_REASON_LEN;
 		}
 		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(1), iLetterLen );

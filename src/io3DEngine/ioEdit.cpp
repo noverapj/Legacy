@@ -584,25 +584,14 @@ bool ioEdit::CheckHanByte( char *szText ) const
 	for(int i = 0; i < len; i++ )
 	{
 
-#if defined( SRC_OVERSEAS )
-
-#if defined( MULTI_BYTE_CHECK )
-		if( IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)szText[i] ) )
-#else
-		if( false && IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)szText[i] ) )
-#endif
-
-#else
-		if( IsDBCSLeadByte( (BYTE)szText[i] ) )
-#endif
-
+		if( ioText::IsLeadByte( (BYTE)szText[i] ) )
 		{
 			i++;
 			if(len <= i) // 마지막 한글이 깨진 글자다.
 				return true;
 		}
 	}
-	
+
 	return false;
 }
 
@@ -613,18 +602,7 @@ bool ioEdit::CheckConstHanByte( const char *szText ) const
 	for(int i = 0; i < len; i++ )
 	{
 
-#if defined( SRC_OVERSEAS )
-
-#if defined( MULTI_BYTE_CHECK )
-		if( IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)szText[i] ) )
-#else
-		if( false && IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)szText[i] ) )
-#endif
-
-#else
-		if( IsDBCSLeadByte( (BYTE)szText[i] ) )
-#endif
-
+		if( ioText::IsLeadByte( (BYTE)szText[i] ) )
 		{
 			i++;
 			if(len <= i) // 마지막 한글이 깨진 글자다.
@@ -662,20 +640,9 @@ void ioEdit::GetTextLeftCut( char *pSrc, char *pDst, char *pCut, float fWidth )
 
 		pCut[iCut++]   = pSrc[iSrc++];
 
-#if defined( SRC_OVERSEAS )
-
-#if defined( MULTI_BYTE_CHECK )
-		if( IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)pCut[iCut - 1] ) )
-#else
-		if( false && IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)pCut[iCut - 1] ) )
-#endif
-
-#else
-		if( IsDBCSLeadByte( (BYTE)pCut[iCut - 1] ) )
-#endif
-
+		if( ioText::IsLeadByte( (BYTE)pCut[iCut - 1] ) )
 			pCut[iCut++] = pSrc[iSrc++];
-	}	
+	}
 	m_iLeftCutPos = iCut;
 }
 
@@ -699,20 +666,9 @@ void ioEdit::GetTextRightCut( char *pSrc, char *pDst, char *pCut, float fWidth )
 		int iPrevTemp = iTemp;
 		szTemp[iTemp++]   = pSrc[iSrc++];
 
-#if defined( SRC_OVERSEAS )
-
-#if defined( MULTI_BYTE_CHECK )
-		if( IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)szTemp[iTemp - 1] ) )
-#else
-		if( false && IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)szTemp[iTemp - 1] ) )
-#endif
-
-#else
-		if( IsDBCSLeadByte( (BYTE)szTemp[iTemp - 1] ) )
-#endif
-
+		if( ioText::IsLeadByte( (BYTE)szTemp[iTemp - 1] ) )
 			szTemp[iTemp++] = pSrc[iSrc++];
-		
+
 		if( g_FontMgr.GetTextWidth( szTemp, m_TextStyle, m_fScale ) >= fWidth )
 		{
 			int iDstLen = strlen( pDst );

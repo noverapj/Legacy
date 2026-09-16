@@ -57,6 +57,7 @@ public:
 	virtual bool IsShowRegulation();
 
 	virtual bool IsCheckValueServer() { return true; }
+	virtual int GetCountryCodePage() { return 1252; }
 
 public:
 	static void SetEU( bool bEU ) { m_bEU = bEU; }

@@ -55,6 +55,7 @@ public:
 	virtual bool IsLimitStartCancel() { return true; }
 
 	virtual void OnCashPageHide();
+	virtual int GetCountryCodePage() { return 1252; }
 
 public:
 	ioLocalPhilippine(void);

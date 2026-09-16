@@ -569,18 +569,7 @@ void CCustomKeyInfo::Load( const ControlKeys &rkControlKeys )
 		while( iCursor < iTextLen )	// MAX_MACRO_LEN을 넘는 입력제한, '%', '\t' 삭제
 		{
 
-#if defined( SRC_OVERSEAS )
-
-#if defined( MULTI_BYTE_CHECK )
-			if( IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)szBuf[iCursor] ) )
-#else
-			if( false && IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)szBuf[iCursor] ) )
-#endif
-
-#else
-			if( IsDBCSLeadByte( (BYTE)szBuf[iCursor] ) )
-#endif
-
+			if( ioText::IsLeadByte( (BYTE)szBuf[iCursor] ) )
 				iAmount = 2;
 			else
 				iAmount = 1;

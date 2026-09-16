@@ -591,17 +591,7 @@ bool ioIME::IsEnglish(int iCheckPos)
 		else
 		{
 
-#if defined( SRC_OVERSEAS )
-
-#if defined( MULTI_BYTE_CHECK )
-			if( IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, m_szInput[i] ) )
-#else
-			if( false && IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, m_szInput[i] ) )
-#endif
-
-#else
-			if( IsDBCSLeadByte( m_szInput[i] ) )
-#endif
+			if( ioText::IsLeadByte( (BYTE)m_szInput[i] ) )
 
 				type = ctFirst;
 			else

@@ -126,18 +126,7 @@ void MemoInfoListWnd::SplitMemo()
 		int iBack = i;
 		szTemp[iTemp++]   = szMemo[i++];
 
-#if defined( SRC_OVERSEAS )
-
-#if defined( MULTI_BYTE_CHECK )
-		if( IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)szTemp[iTemp - 1] ) )
-#else
-		if( false && IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)szTemp[iTemp - 1] ) )
-#endif
-
-#else
-		if( IsDBCSLeadByte( (BYTE)szTemp[iTemp - 1] ) )
-#endif
-
+		if( ioText::IsLeadByte( (BYTE)szTemp[iTemp - 1] ) )
 			szTemp[iTemp++] = szMemo[i++];
 
 		if( g_FontMgr.GetTextWidth( szTemp, TS_NORMAL, FONT_SIZE_12 ) >= fWidhtSize )

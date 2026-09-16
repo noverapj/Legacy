@@ -442,12 +442,7 @@ int ioFontWorkSpace::CalculateTextWidth( const char *szText, const ioFont *pFont
 
 int ioFontWorkSpace::CalculateTextHeight( const char *szText, const ioFont *pFont, TextStyle eStyle )
 {
-	UINT iCodePage = GetACP();
-
-#if !defined( SRC_OVERSEAS )
-	if( iCodePage == 1252 ) // 1252 : english
-		iCodePage = 949;    // 949  : korean ( 한국어와영어는 폰트 공유 )
-#endif
+	UINT iCodePage = ioText::GetCodePage();
 
 	int iNeedHeight = 0;
 
@@ -546,12 +541,7 @@ void ioFontWorkSpace::WriteTexture( ioTextPiece *pPiece )
 	LineCopyInfo kGlyphInfo;
 	const GlyphImg *pImg = NULL;
 
-	UINT iCodePage = GetACP();
-
-#if !defined( SRC_OVERSEAS )
-	if( iCodePage == 1252 ) // 1252 : english
-		iCodePage = 949;    // 949  : korean ( 한국어와영어는 폰트 공유 )
-#endif
+	UINT iCodePage = ioText::GetCodePage();
 
 	for( int i=0 ; szText[i] != '\0' ; )
 	{

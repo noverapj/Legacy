@@ -2,6 +2,7 @@
 
 #include "ioApplication.h"
 
+#include "ioDateHelp.h"
 #include "ioUIGuide.h"
 #include "GUI/ioMemoManager.h"
 #include "GUI/HackProblemWnd.h"
@@ -1258,9 +1259,7 @@ int ioApplication::Run()
 			SetUnRegHotKey( m_hWnd );
 
 		// 개발자 아이디에만 30일 전부터 라이센스에 대한 정보를 팝업창으로 띄움		JCLEE 140718
-#if defined( SRC_OVERSEAS )
 		CheckLicenseForDev();
-#endif
 
 	}
 #ifndef _DEBUG
@@ -2999,17 +2998,7 @@ bool ioApplication::IsRightID( const char *iid )
 	for(int i = 0;i < iIDSize;i++)
 	{
 
-#if defined( SRC_OVERSEAS )
-
-#if defined( MULTI_BYTE_CHECK )
-		if( IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, iid[i] ) )
-#else
-		if( false && IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, iid[i] ) ) 
-#endif
-
-#else
-		if( IsDBCSLeadByte( iid[i] ) ) 
-#endif
+		if( ioText::IsLeadByte( (BYTE)iid[i] ) )
 		{
 			i++;
 			if(iIDSize <= i) // 마지막 글자가 깨진 글자다.
@@ -15794,18 +15783,7 @@ bool ioApplication::IsNotMakeID( const char *szNewID, OUT ioHashString &rszNotMa
 	for (int i = 0; i < iVecSize ; i++)
 	{
 
-#if defined( SRC_OVERSEAS )
-
-#if defined( MULTI_BYTE_CHECK )
-		if( IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, m_vNotMakeIDVector[i].At( 0 ) ) )
-#else
-		if( false && IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, m_vNotMakeIDVector[i].At( 0 ) ) )
-#endif
-
-#else
-		if( IsDBCSLeadByte( m_vNotMakeIDVector[i].At( 0 ) ) )
-#endif
-
+		if( ioText::IsLeadByte( (BYTE)m_vNotMakeIDVector[i].At( 0 ) ) )
 		{
 			if( _mbsstr( (const unsigned char*)szLwrID, (const unsigned char*)m_vNotMakeIDVector[i].c_str() ) )
 			{
@@ -15819,17 +15797,7 @@ bool ioApplication::IsNotMakeID( const char *szNewID, OUT ioHashString &rszNotMa
 			for (int i2 = 0; i2 < iIDSize ; i2++)
 			{
 
-#if defined( SRC_OVERSEAS )
-
-#if defined( MULTI_BYTE_CHECK )
-				if( IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, szLwrID[i2] ) )
-#else
-				if( false && IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, szLwrID[i2] ) ) 
-#endif
-
-#else
-				if( IsDBCSLeadByte( szLwrID[i2] ) ) 
-#endif
+				if( ioText::IsLeadByte( (BYTE)szLwrID[i2] ) )
 				{
 					i2++;
 				}
@@ -17228,7 +17196,6 @@ luaDef myGlue[] =
 };
 
 // 개발자 아이디에만 30일 전부터 라이센스에 대한 정보를 팝업창으로 띄움		JCLEE 140718
-#if defined( SRC_OVERSEAS )
 void ioApplication::CheckLicenseForDev()
 {
 	if( g_App.IsMeDeveloper( true ) || g_App.IsMeGameMaster() )
@@ -17250,18 +17217,17 @@ void ioApplication::CheckLicenseForDev()
 			iLocalDate = sysTimeLocal.wYear * 10000 + sysTimeLocal.wMonth * 100 + sysTimeLocal.wDay;
 
 			// 30일 전부터 경고 메세지
-			if( 30 >= Help::GetDatePeriod( sysTimeLocal.wYear, sysTimeLocal.wMonth, sysTimeLocal.wDay, 0, 0 
-				, sysTimeLicense.wYear, sysTimeLicense.wMonth, sysTimeLicense.wDay, 0, 0, Help::PT_DAY ) )
+			if( 30 >= DateHelp::GetDatePeriod( sysTimeLocal.wYear, sysTimeLocal.wMonth, sysTimeLocal.wDay, 0, 0
+				, sysTimeLicense.wYear, sysTimeLicense.wMonth, sysTimeLicense.wDay, 0, 0, DateHelp::PT_DAY ) )
 			{
 				char chTemp[256] = {0,};
 				sprintf_s( chTemp, "Warning!!   License Date : %d, Local Date : %d", iLicenseDate, iLocalDate );
 
 				g_GUIMgr.SetMsgBox( MB_OK, NULL, chTemp );
-			}			
+			}
 		}
 	}
 }
-#endif
 
 void ioApplication::OnPopupOpenIndex( SP2Packet& rkPacket )
 {

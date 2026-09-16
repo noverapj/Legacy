@@ -475,11 +475,9 @@ int ChatMacroMgr::MacroProcess( const char *szChat , bool bSysMsg /*= false*/ )
 	case ChatMacro::MACRO_PRACTICE_COMPLETE:
 		OnMacroPracticeCompleted( &szMacro[key_word] );
 		break;
-#if defined( SRC_OVERSEAS )
 	case ChatMacro::MACRO_GASHAPON_GET_ALL:
 		OnMacroGashaponAllPackage( &szMacro[key_word] );
 		break;
-#endif
 
 	default:
 		if( szChat[0] == '/')
@@ -2737,7 +2735,6 @@ bool ChatMacroMgr::CheckCreateStructMacro( char *szMacro )
 }
 
 // 일반 가챠 패키지 전부 보내기		JCLEE 140718
-#if defined( SRC_OVERSEAS )
 void ChatMacroMgr::OnMacroGashaponAllPackage( char *szMacro )
 {
 	if( !g_App.IsMeDeveloper( true ) ) 
@@ -2753,7 +2750,6 @@ void ChatMacroMgr::OnMacroGashaponAllPackage( char *szMacro )
 	kPacket << DEVELOPER_GASHAPON_GET_ALL << dwItemCode;
 	TCPNetwork::SendToServer( kPacket );
 }
-#endif
 
 void ChatMacroMgr::GetFilesFromDirectory( const char *Path, ioHashStringVec &szFileList )
 {

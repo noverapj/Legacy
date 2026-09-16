@@ -426,18 +426,7 @@ void ioCustomSoundMgr::FilterChar( const char *src, char *dst, char *szFilterCha
 		else
 		{
 
-#if defined( SRC_OVERSEAS )
-
-#if defined( MULTI_BYTE_CHECK )
-			if( IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, *srcp ) )
-#else
-			if( false && IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, *srcp) ) 
-#endif
-
-#else
-			if( IsDBCSLeadByte(*srcp)) 
-#endif
-
+			if( ioText::IsLeadByte( (BYTE)*srcp ) )
 			{
 				*dstp = *srcp;   
 				dstp += 1;

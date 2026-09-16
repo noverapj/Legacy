@@ -457,18 +457,7 @@ void ioMovieMaker::TextLeftCut( char szSrc[2048], int iCutWidth, float fScale, c
 			break;		
 		}
 
-#if defined( SRC_OVERSEAS )
-
-#if defined( MULTI_BYTE_CHECK )
-		if( IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)szSrc[iBuf] ) )
-#else
-		if(false && IsDBCSLeadByteEx( COUNTRY_CODE_PAGE, (BYTE)szSrc[iBuf] ) )
-#endif
-
-#else
-		if(IsDBCSLeadByte( (BYTE)szSrc[iBuf] ) )
-#endif
-
+		if( ioText::IsLeadByte( (BYTE)szSrc[iBuf] ) )
 			iBuf+=2;
 		else
 			iBuf+=1;
