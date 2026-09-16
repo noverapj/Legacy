@@ -86887,19 +86887,10 @@
 |INI_sp2_quest_help::help120021_3|수다를 떨면서 친구를 사귈 수도 있지요.|
 |INI_sp2_quest_help::help120021_4|자~ 마음껏 둘러보세요~♬|
 |INI_sp2_quest_help::help220021_1|★ 하단바 왼쪽에 있는 [나가기] 버튼을 클릭하세요.|
-|INI_sp2_quest_help::help20031_13|로비로 오셨군요.|
-|INI_sp2_quest_help::help20031_14|직접 전투를 하기에 앞서 전투에 익숙해 지는것이 좋을것 같군요.|
-|INI_sp2_quest_help::help20031_15|그래서 제가 수련장을 준비 했습니다.|
-|INI_sp2_quest_help::help20031_16|우선은 이동에 익숙해 져 볼까요?|
-|INI_sp2_quest_help::help20031_17|수련장에서 기초 이동 항목을 클리어 해 보세요.|
 |INI_sp2_quest_help::help120031_1|축하 합니다. 어떤가요?|
 |INI_sp2_quest_help::help120031_2|이제 이동하는데 어려움은 없나요?|
 |INI_sp2_quest_help::help120031_3|수련장을 클리어하면 보상을 얻으니 계속 플레이 해 보세요~♬|
 |INI_sp2_quest_help::help220031_1|★ 수련장 기초이동 클리어|
-|INI_sp2_quest_help::help20032_13|기초이동은 할만 한가요?|
-|INI_sp2_quest_help::help20032_14|이제 중급 조작을 해 보도록 하죠.|
-|INI_sp2_quest_help::help20032_15|중급 조작은 이동에 적절하게 스킬을 사용해야 합니다.|
-|INI_sp2_quest_help::help20032_16|그럼 중급조작을 플레이 해 볼까요?|
 |INI_sp2_quest_help::help120032_1|축하합니다. 중급조작을 클리어 하셨습니다.|
 |INI_sp2_quest_help::help120032_2|수련장은 3회를 무료로 할 수 있으니 계속 플레이 해 보세요.|
 |INI_sp2_quest_help::help120032_3|수련장의 여러 항목을 플레이 해 전투에서 우위를 점해 보세요.|
@@ -185932,3 +185923,473 @@
 |INI_203_growth::growth_info_2_1|쿨타임 감소|
 |INI_203_growth::growth_info_3_1|쿨타임 감소|
 |INI_203_growth::growth_info_4_1|쿨타임 감소|
+|INI_028_skill::skill8_2|'기'로 9개의 검을 다스려 공격(마크 겹치는 경우 D 클릭)|
+|INI_sp2_catch_mode1_map6::FieldNpc_2|보어맨|
+|INI_sp2_catch_mode1_map6::FieldNpc_3|보어맨|
+|INI_sp2_ai_monster_defence01_babybear::Action2_2|너.나쁘당|
+|INI_sp2_ai_monster_defence01_babybear::Action4_2|누워도 안 봐준당!|
+|INI_sp2_ai_monster_defence01_boarman::Action2_2|킁!킁!|
+|INI_sp2_ai_monster_defence01_boarman::Action4_2|기다리셩!킁!|
+|INI_sp2_ai_monster_defence01_monkey::Action2_2|우키키ㅋ|
+|INI_sp2_ai_monster_defence01_babybear::Action2_3|너.나쁘당|
+|INI_sp2_ai_monster_defence01_babybear::Action4_3|누워도 안 봐준당!|
+|INI_sp2_ai_monster_defence01_boarman::Action2_3|킁!킁!|
+|INI_sp2_ai_monster_defence01_boarman::Action4_3|기다리셩!킁!|
+|INI_sp2_ai_monster_defence01_creeper::Action1_2|모두에게 힘을!|
+|INI_sp2_ai_monster_defence01_monkey::Action2_3|우키키ㅋ|
+|INI_sp2_ai_monster_defence01_obj_symbol_red::Action8_2|힘이 부족하다...|
+|INI_sp2_ai_monster_defence01_babybear::Action2_4|너.나쁘당|
+|INI_sp2_ai_monster_defence01_babybear::Action4_4|누워도 안 봐준당!|
+|INI_sp2_ai_monster_defence01_boarman::Action2_4|킁!킁!|
+|INI_sp2_ai_monster_defence01_boarman::Action4_4|기다리셩!킁!|
+|INI_sp2_ai_monster_defence01_monkey::Action2_4|우키키ㅋ|
+|INI_1000_item::item1_2|소환사신 무기|
+|INI_1000_item::item2_2|소환사신 갑옷|
+|INI_1000_item::item3_2|소환사신 투구|
+|INI_1000_item::item4_2|소환사신 망토|
+|INI_1000_item::item5_2|보스곰 무기|
+|INI_1000_item::item6_2|개발자K 주먹|
+|INI_1000_item::item7_2|개발자K 머리|
+|INI_1000_item::item8_2|개발자 K 의상|
+|INI_1000_item::item9_2|개발자K 망토|
+|INI_1000_item::item10_2|사신 낫|
+|INI_1000_item::item11_2|사신 의상|
+|INI_1000_item::item12_2|사신 두건|
+|INI_1000_item::item13_2|사신 명부|
+|INI_1000_skill::skill3_1|멸살귀참|
+|INI_1000_skill::skill3_2|낫으로 상대를 강력하게 처올림|
+|INI_1000_skill::skill4_1|영혼구속|
+|INI_1000_skill::skill4_2|상대를 기절시켜 띄워 올림|
+|INI_1000_skill::skill5_1|암습|
+|INI_1000_skill::skill5_2|가장 가까운 상대 뒤로 순간이동|
+|INI_1000_skill::skill6_1|악령소환|
+|INI_1000_skill::skill6_2|자신을 따라다니는 악령을 소환|
+|INI_1000_skill::skill17_1|개발자K 머리|
+|INI_1000_skill::skill17_2|상대를 들이받아 날려보냄|
+|INI_1000_skill::skill18_1|땅부수기|
+|INI_1000_skill::skill18_2|버서커 쇼크웨이브|
+|INI_1000_skill::skill19_1|천지역전|
+|INI_1000_skill::skill19_2|땅을 내리쳐 하늘로 띄움|
+|INI_1000_skill::skill20_1|소형 개발자 K소환|
+|INI_1000_skill::skill20_2|크로커다일이 소환되어 대상을 잡아먹는 공격을 함|
+|INI_1000_skill::skill23_1|멸살귀참|
+|INI_1000_skill::skill23_2|낫으로 상대를 강력하게 처올림|
+|INI_1000_skill::skill24_1|영혼구속|
+|INI_1000_skill::skill24_2|상대를 기절시켜 띄워 올림|
+|INI_1000_skill::skill25_1|암습|
+|INI_1000_skill::skill25_2|가장 가까운 상대 뒤로 순간이동|
+|INI_1020_item::item1_2|크리스탈 게이트|
+|INI_1020_item::item2_2|수호석|
+|INI_1020_item::item3_2|봉인된 프레임하트|
+|INI_1020_item::item4_2|몬스터 레어|
+|INI_1020_item::item5_2|불꽃의 파수꾼|
+|INI_1020_item::item6_2|가디언 캐슬|
+|INI_1020_item::item7_1|포탑|
+|INI_1020_item::item8_1|화염검 이프리트|
+|INI_1020_item::item9_1|드래곤 코어|
+|INI_1020_item::item10_1|부화 중인 알|
+|INI_1020_item::item11_1|화염골렘|
+|INI_1020_item::item12_1|불의 아티팩트|
+|INI_1020_item::item13_1|고블린 신도 잡기|
+|INI_1020_item::item14_1|고블린 신도 단검|
+|INI_1020_item::item15_1|고블린 신도 마도서|
+|INI_1020_item::item16_1|작은 불꽃 파이링|
+|INI_1020_item::item17_1|고급 버서커 무기_가디언|
+|INI_1020_item::item18_1|고급 버서커아머_가디언|
+|INI_1020_item::item19_1|고급 버서커헬름_가디언|
+|INI_1020_item::item20_1|고급 버서커호른_가디언|
+|INI_1020_item::item21_1|고급 데빌레인져 활_가디언|
+|INI_1020_item::item22_1|고급 데빌렐인져 갑옷_가디언|
+|INI_1020_item::item23_1|고급 데빌레인져 두건_가디언|
+|INI_1020_item::item24_1|고급 데빌레인져 망토_가디언|
+|INI_1020_item::item25_1|고급 파이어지팡이_가디언|
+|INI_1020_item::item26_1|고급 파이어로브_가디언|
+|INI_1020_item::item27_1|고급 파이어모자_가디언|
+|INI_1020_item::item28_1|고급 파이어망토_가디언|
+|INI_1020_item::item29_1|불꽃의 정수|
+|INI_sp2_present_inven_manual::Manual90_4|'도'가 나왔습니다!|
+|INI_sp2_present_inven_manual::Manual91_4|'개'가 나왔습니다!|
+|INI_sp2_present_inven_manual::Manual92_4|'걸'이 나왔습니다!|
+|INI_sp2_present_inven_manual::Manual93_4|'윷'이 나왔습니다!|
+|INI_sp2_present_inven_manual::Manual94_4|'모'가 나왔습니다!|
+|INI_sp2_present_inven_manual::Manual95_3|'뒷도'가 나왔습니다!!!|
+|INI_sp2_quest_help::help92_8|'개천절 음,양력 환용 심의회'의 심의결과 음, 양력|
+|INI_sp2_quest_help::help100731_4|'오크통에 사용해 보세요!!!'|
+|INI_sp2_quest_help::help9068_9|'뿌우~'|
+|INI_sp2_quest_help::help9771_8|'나비처럼 날아 벌처럼 쏜다' 라는 것에 중심을 두고 계승되어진|
+|INI_sp2_quest_help::help300403_15|'백업'…? 호오, 너도 '틈새'의 소유자로군|
+|INI_sp2_quest_help::help301604_9|'G-Spot 강동수', '복면 오형제 김도균', '백색괴물 차미리'|
+|INI_sp2_quest_help::help301605_8|'삐에로 정희섭'의 각층마다 상세한 공략법|
+|INI_sp2_quest_help::help301605_9|"당신은 가족을 만날 수 없다.'|
+|INI_sp2_quest_help::help301607_8|'삐에로 정희섭'은 자신의 손으로 아버지를 처단하게 됩니다.|
+|INI_sp2_quest_help::help301608_8|'거지아저씨 김윤성' 당신에게 대신 부탁합니다.|
+|INI_sp2_quest_help::help401609_4|'삐에로 정희섭'을 제외한 서커스단은 각자 준비|
+|INI_sp2_quest_help::help301610_8|'데미지 조각가 김갑호'|
+|INI_sp2_quest_help::help401610_4|'모리노아 진'이 당신을 마중 나왔습니다.|
+|INI_sp2_quest_help::help301809_12|" 그만!.. "|
+|INI_sp2_quest_help::help301906_14|"오호호~ 이 많은 보물이 다 우리껀가?"|
+|INI_sp2_quest_help::help301906_15|"흐흐~ 이제 자유다! 부자가 될 수 있어!! 도박빚도 빚쟁이놈들도|
+|INI_sp2_quest_help::help301907_7|"이곳은..?"|
+|INI_sp2_quest_help::help301907_8|"드..드래곤?! 분명히 죽었는데... 어떻게?!!!"|
+|INI_sp2_quest_help::help301907_9|"어리석은 인간아, 이곳은 너의 정신세계다."|
+|INI_sp2_quest_help::help301907_10|"헉! 마..말을해?!"|
+|INI_sp2_quest_help::help301907_11|" 네 놈이 나의 심장을 먹었기 때문에 내 힘과 영혼이 네놈의|
+|INI_sp2_quest_help::help301907_12|"그런…"|
+|INI_sp2_quest_help::help301907_13|"몸이 죽었다고 영혼까지 소멸되는 건 아니다. 네놈의 경우 곧|
+|INI_sp2_quest_help::help301907_14|"세상에 복수하고 싶지 않은가?"|
+|INI_sp2_quest_help::help301908_8|"복수? 어떻게 하면 되나?"|
+|INI_sp2_quest_help::help301908_9|"간단해 나에게 그 몸을 넘기면 되는 거다."|
+|INI_sp2_quest_help::help301908_10|"…뭐?"|
+|INI_sp2_quest_help::help301908_11|"나약한 인간인 네가 드래곤의 힘을 다룰 수 있을리가 없지.|
+|INI_sp2_quest_help::help302204_8|"자네 나와 함께 사악한 무리를 처단하는 기사의 여행에|
+|INI_sp2_quest_help::help302206_8|"저앞에 많은 흉악한 거인이 서있는것이 보이느냐?"|
+|INI_sp2_quest_help::help302206_9|"저기에 있는 긴 판을 가진 놈들 말이다."|
+|INI_sp2_quest_help::help302206_10|"저건 거인이 아니라 풍차입니다."|
+|INI_sp2_quest_help::help302206_11|"이런 모험을 겪어 보지 못한 놈 같으니라고 겁이 나거든|
+|INI_sp2_quest_help::help302207_9|"이 비겁하고 형편없는 놈들아, 오직 기사 한 명이 너희들을|
+|INI_sp2_quest_help::help302208_9|"둘시네아" 라는 이름을 붙여주고, 평생의 충성을 맹세하며|
+|INI_sp2_quest_help::help302304_12|"나는 왕을 배신하겠다! 내가 사도가 된 것은 오직 너를 찾기|
+|INI_sp2_quest_help::help302305_14|"이런 식으로 다시 몸을 얻을 줄은 상상도 못했는데! 역시 세상은|
+|INI_sp2_quest_help::help302308_11|"또 아무것도 모르는 나랑 이 시간을 계속 반복하려|
+|INI_sp2_quest_help::help302308_12|"나..못돌아가는 거지? 돌아가도 거긴 또 다른 내가 있었고…|
+|INI_sp2_quest_help::help302308_13|"일루전 말이 맞아. 난 널 쭉 속였어. 나랑 같이있기 때문에 넌 이런|
+|INI_sp2_quest_help::help302308_14|"…근데 넌 원래 이렇게 살아온거 아냐?"|
+|INI_sp2_quest_help::help302308_15|"쭉...아주..오래전..혹은 먼 미래인지 모를 첫번째 만남부터 난|
+|INI_sp2_quest_help::help302309_15|"뭐…?"|
+|INI_sp2_quest_help::help302309_16|"옛날, 아니면 먼미래일지도 모르는 언젠가 난 일루전이라고 불리게|
+|INI_sp2_quest_help::help402309_4|"그는 내게 손을 내밀었지. 나는 그와 함께 모노리스|
+|INI_sp2_quest_help::help302310_13|"'너와 헤어질 수 없다고, 날 모노리스 저편으로 보|
+|INI_sp2_quest_help::help302310_14|"그가 날 방황하게 만들었는데 그가 죽는것은 싫어서..시간을 뛰어넘|
+|INI_sp2_quest_help::help302310_15|"하…! 말로 다하기 부족하지! 넌 모른다고만 하고 갑자기 속에서|
+|INI_sp2_quest_help::help402310_4|"네가 행복했음 좋겠어 안녕.."우습군 루나리아..|
+|INI_sp2_quest_help::help302405_8|"여기도 물이 없구나…"|
+|INI_sp2_quest_help::help302504_11|"열밤만 자고 엄마가 데리러 올 게?"라는 약속만 남기고|
+|INI_sp2_quest_help::help302605_9|"혹시.."|
+|INI_sp2_quest_help::help302606_8|"혹시.."|
+|INI_sp2_quest_help::help302609_6|"상대의 공격을 먼저 끊고, 때린다." 는 의미를 가지는 무술입니다.|
+|INI_sp2_quest_help::help302703_7|"새로운 발키리인가"|
+|INI_sp2_quest_help::help302703_8|"13번째 발키리 오딘께 인사드립니다."|
+|INI_sp2_quest_help::help302703_9|"이번엔 좀 차분한 아이인가.... 환영하네. "|
+|INI_sp2_quest_help::help302808_10|'진 역축'으로 바꾸어 제갈택을 무너트립니다.|
+|INI_sp2_quest_help::help302903_10|"이 아이들을 파괴하게"|
+|INI_sp2_quest_help::help302904_9|"그만!! 그만두어라!! 이 작은 아이들은 그냥 두게!! 다른 사라진|
+|INI_sp2_quest_help::help303001_10|"크크~ 안녕들 하신가? 내 소개를 해주지.|
+|INI_sp2_quest_help::help303001_11|"클클클~ 돈을 빌려주고 못 갚으면 이자를 열 배나 받아내고|
+|INI_sp2_quest_help::help303002_10|"가만! 저게 뭐지?"|
+|INI_sp2_quest_help::help303003_11|"이런! 자네 악마가 두렵지 않은가?"|
+|INI_sp2_quest_help::help303003_12|"킬킬킬킬~ 나무에 갇힌 악마는 두렵지 않지~~"|
+|INI_sp2_quest_help::help303003_13|"제발 부탁이니 오망성 좀 지워주게~~ 자네가 원하는 것은|
+|INI_sp2_quest_help::help403003_4|"그럼, 내가 죽어서 영혼이 절대로 지옥에|
+|INI_sp2_quest_help::help303004_4|"크하하하하! 좋아! 자네의 소원을 들어주지!"|
+|INI_sp2_quest_help::help303004_5|"그럼 계약을 맺으시오"|
+|INI_sp2_quest_help::help303004_6|"나 악마는 잭이 죽어서 그 영혼이 지옥에 가지|
+|INI_sp2_quest_help::help303007_10|"오 제발! 이 한기만 없애 주시오!! 도저히 견딜 수가 없소!"|
+|INI_sp2_quest_help::help303007_11|"제발!! 부디!! 이 한기만…제발….제발…"|
+|INI_sp2_quest_help::help303007_12|"흐흐흐~ 더! 더 울부짖어라! 괴로워해!! 크하하하하하!"|
+|INI_sp2_quest_help::help403007_4|"클클클~ 뭐, 한기 정도는 해결해주지. 그래야 이 꼴을|
+|INI_sp2_quest_help::help303103_9|"어째서 부모님의 죽음을 알려주지 않은 겁니까?!"|
+|INI_sp2_quest_help::help303103_10|"그때 자네는 중요한 임무를 수행 중이었네. 임무에 지장을|
+|INI_sp2_quest_help::help303306_9|"레드문을 위해. 마족 번영을 위해..999년을 참고 기다려 왔다."|
+|INI_sp2_quest_help::help303306_10|"그러나 저들은 남은 1년에 마왕님이 마족신전으로 들어간걸 알고|
+|INI_sp2_quest_help::help303306_11|"남김없이 처단하다."|
+|INI_sp2_quest_help::help303306_12|"명!"|
+|INI_sp2_quest_help::help303308_10|"죽고 싶지 않은 자는… 돌! 아! 가! 라!"|
+|INI_sp2_quest_help::help303310_10|"3대 다크나이트 수장!! 마왕님의 임무를 완수하고 뵈옵니다."|
+|INI_sp2_quest_help::help303310_11|"너의 육신의 한계가 다되어 이 세계에서 더 이상 육신을 유지|
+|INI_sp2_quest_help::help303310_12|"너 마왕성에서 유일한 나의 친구였다. 잘 가라 다크 나이트여"|
+|INI_sp2_quest_help::help303501_7|'오타마이' 함선의 수석 엔지니어입니다.|
+|INI_sp2_quest_help::help403501_4|'리오 제국' 사령부에서도 당신을 아주 중요한 인재로|
+|INI_sp2_quest_help::help303503_8|'리오 제국'의 영원한 숙적 '윈 샤인 공국'|
+|INI_sp2_quest_help::help303504_8|'리오 제국'과 동맹 연합은 압도적인 과학력과 군사|
+|INI_sp2_quest_help::help303506_10|"엥?!!! 오리이???!!!!!!!!!!"|
+|INI_sp2_quest_help::help403507_4|"제가 당신의 무기를 최강으로 만들어 드릴게요."|
+|INI_sp2_quest_help::help303509_7|'리오 제국'의 수석 엔지니어였기에 이제까지|
+|INI_sp2_quest_help::help303510_10|"도망가자!!"|
+|INI_sp2_quest_help::help303604_10|"뭐 하느냐 이놈아. 얼른 들어오지 않고"|
+|INI_sp2_quest_help::help303604_11|"에..저…저요?"|
+|INI_sp2_quest_help::help303604_12|"그럼 여기에 네놈 말고 또 있느냐?"|
+|INI_sp2_quest_help::help304003_13|"염라대왕 잡아오기는 어렵지 않소"라고 말한 뒤 큰각시가|
+|INI_sp2_quest_help::help304003_14|"이 떡을 가지고 발 가는 대로 계속 가면 알 도리가 있을 것입니다"|
+|INI_sp2_quest_help::help304004_10|"이승사자 강림이가 염라대왕을 잡으러 왔습니다." 고함을 지르자|
+|INI_sp2_quest_help::help304004_11|"고약하다, 나를 잡아갈 자가 어디 있느냐"하니, 천지 요동하고|
+|INI_sp2_quest_help::help304004_12|"저승에도 관장, 이승에도 관장,  관장은 마찬가지입니다.|
+|INI_sp2_quest_help::help304004_13|"가히 맹랑하기 짝이 없구나!  그말도 틀린 말은 아니니 내가 가마"|
+|INI_sp2_quest_help::help404004_4|"지금 원복장이 굿 잔치에 가는데 같이 가지 않겠느|
+|INI_sp2_quest_help::help304005_13|"인간 세상의 사자 강림이라는 자는 어리석구나. 대들보가 하나|
+|INI_sp2_quest_help::help404005_3|"이보시오 원복장이, 이 집의 기둥은 몇 개이오?"|
+|INI_sp2_quest_help::help404005_4|"헌데 내가 세어보니 여든아홉이더구나. 필요 없는|
+|INI_sp2_quest_help::help304006_13|"이만하면 나를 불러갈 만하구나. 내 다음날 오후에|
+|INI_sp2_quest_help::help304006_14|"그렇거든 증표나 남겨주시오"|
+|INI_sp2_quest_help::help304006_15|"설운, 당신 살아있다면 바삐 오시고 죽었거든 제사음식 많이|
+|INI_sp2_quest_help::help404006_4|"각시! 내가 돌아왔소!" 당신은 저승에 3일 있었을|
+|INI_sp2_quest_help::help304007_11|"네 이놈! 감히 내 말을 안 듣고 살림을 차렸다!?"|
+|INI_sp2_quest_help::help304007_12|"내일 염라대왕 대령하오리다"|
+|INI_sp2_quest_help::help304007_13|"이놈, 헛말만 하는구나! 이놈을 잡아 가두거라!" 라며 당신을|
+|INI_sp2_quest_help::help304007_14|"크흠! 저런 놈이 나를 부른 것이냐. 그래, 무슨 일로 나를 불렀는고?"|
+|INI_sp2_quest_help::help404007_4|"그러하냐? 나는 이미 알고 있다"하시며, 과양생이|
+|INI_sp2_quest_help::help304008_13|"아이들은 어데 묻었느냐?"라고 염라대왕이 물으니|
+|INI_sp2_quest_help::help304008_14|"큰놈은 앞 밭, 둘째는 뒷밭, 셋째는 옆 밭에 묻었습|
+|INI_sp2_quest_help::help304008_15|"네 아들들의 시체가 있는 곳을 알으켜주마. 동네 입구의 연제못의|
+|INI_sp2_quest_help::help304008_16|"이들은 버물왕의 삼 형제이다. 모두 너희 부부에게 원한을 품고|
+|INI_sp2_quest_help::help304009_11|"이보시오 강림이 무척 탐이 나는데 내가 데려가 더 요긴하게|
+|INI_sp2_quest_help::help304009_12|"안 됩니다! 그는 제 수하입니다! 줄 수 없습니다"|
+|INI_sp2_quest_help::help304009_13|"그렇다면, 반으로 나누는 건 어떤가? 육신은 자네가 갖고 영혼은|
+|INI_sp2_quest_help::help304009_14|"…좋소"|
+|INI_sp2_quest_help::help404009_4|"저승에 갔던 이야기 좀 해보게나" 김치원님이 섭섭|
+|INI_sp2_quest_help::help304010_13|"…사..사..사기입니다!" "네가 증표를 달라 하지 않았누? 어찌 됐던|
+|INI_sp2_quest_help::help304010_14|"그..그.." "넌 아직 나 따라오려면 멀었다 이놈아. 너는 오늘부터|
+|INI_sp2_quest_help::help304010_15|"그렇다면 내가 대왕의 수하들을 전부 제압했었던 적이 있지 않소?|
+|INI_sp2_quest_help::help404010_4|"껄껄껄! 역시 너의 맹랑함은 누구도 따라올 자가 없|
+|INI_sp2_quest_help::help304201_8|'마도사'라고 불리며 사악한 일을 하는 마법사|
+|INI_sp2_quest_help::help404403_3|"괜찮으십니까! 어서 의원을!!"|
+|INI_sp2_quest_help::help404403_4|"난 괜찮다. 칼 끝으로 총탄을 파내라" 당신은  고통|
+|INI_sp2_quest_help::help404404_4|"포격하라! 한 놈도 남기지 말고 쓸어버려라!"|
+|INI_sp2_quest_help::help304405_14|"포격하라!" 우렁찬 고함과 신호연을 올려 포격을 시작했습니다.|
+|INI_sp2_quest_help::help304603_10|"내 친구를 괴롭히지 말아주세요!! 우아아악~!"|
+|INI_sp2_quest_help::help404610_4|"으아아악!!! 안돼에~~!!" 당신은 오늘도 악덕한|
+|INI_sp2_quest_help::help304802_12|"이보시오 동자승 내 말이 들리면 나 좀 꺼내주시오"|
+|INI_sp2_quest_help::help404802_4|"히이익! 여우가 사람말을 한다!" 당신은 매우 놀라|
+|INI_sp2_quest_help::help304803_7|"저..정말 여우 맞소?" "그렇다우. 사냥꾼의 덫에 걸린 가련한|
+|INI_sp2_quest_help::help304803_8|"나는 본디 저 뒷산에 터를 잡고 도를 닦던 여우라 그렇소"|
+|INI_sp2_quest_help::help304803_9|"사람말도 하는 여우인데 이 구덩이에선 왜 못 나오는 것이오?"|
+|INI_sp2_quest_help::help304803_10|"뭐 그건 작은 사정이 있어서 그렇다우. 착한 동자승은 이 가련한|
+|INI_sp2_quest_help::help304803_11|"내가 구해주면 뭘 해줄거유?"|
+|INI_sp2_quest_help::help304803_12|"내 여우구슬 하나 드리리다"|
+|INI_sp2_quest_help::help304804_12|"우치야~~" 시간이 지나도록 당신이 돌아오지 않자|
+|INI_sp2_quest_help::help304808_11|"내가 바로 전우치요. 나를 잡고 괜히 힘없는 백성들을 더 이상|
+|INI_sp2_quest_help::help304809_13|"우치 자네 드디어 신선이 되었구만"|
+|INI_sp2_quest_help::help304809_14|"강림 자네는 웬일인가?"|
+|INI_sp2_quest_help::help304809_15|"염라께서 자네 몸이 있는 곳으로 인도해주라 하셨네. 신선이|
+|INI_sp2_quest_help::help404809_4|"호~ 신기하구만"|
+|INI_sp2_quest_help::help304810_8|"차식 자네 있는가?" "……아니 자네는!!" "잘 지냈는가?"|
+|INI_sp2_quest_help::help304810_9|"아니 이 친구야!!" "하하하, 너무 놀라지 말게.  내 두공부시집이|
+|INI_sp2_quest_help::help304810_10|"허..참…허…" 마침 두공부시집을 보고있던 차식이 당신에게|
+|INI_sp2_quest_help::help304906_6|"전황후 마마가 과연 제정신이셨다고 생각하십니까|
+|INI_sp2_quest_help::help304906_7|" "뭐라!" "끌끌끌! 이 년이 비술로  정신을 혼미하|
+|INI_sp2_quest_help::help304906_8|"당신도 잘 알다시피, 이건 모두 황제가 꾸민 일입니다."|
+|INI_sp2_quest_help::help304906_9|"네가 원하는게 뭐…크억!"|
+|INI_sp2_quest_help::help304906_10|"후후후 얌전히 이년을 위해 꼭두각시가 되어주면, 황제에게 복수|
+|INI_sp2_quest_help::help404907_4|"크흐흐흐~ 당신은 아주 특별한 몸을 가지고 있죠.|
+|INI_sp2_quest_help::help404908_4|"크흐흐~ 환마강시여 눈을 뜨거라!" 이 얼마만에|
+|INI_sp2_quest_help::help304909_14|"크크크~ 꼴 좋구나!" 무당을 잔혹하게 살해한 당신|
+|INI_sp2_quest_help::help304910_11|"쥐 새끼처럼 벌~벌~ 떨고있구나! 한 나라의 황제|
+|INI_sp2_quest_help::help304910_12|"무..무…무…무엄..""시끄럽다!! 내 어미를 죽이고|
+|INI_sp2_quest_help::help304910_13|"무..무슨.."|
+|INI_sp2_quest_help::help304910_14|"네 놈이 수작을 부려서 폐위시킨 은씨가문 출신의 황후가 내|
+|INI_sp2_quest_help::help304910_15|"이미 충분히 벌을 받고 있는데 더 받는다 한들 상관없다!"|
+|INI_sp2_quest_help::help405003_4|"이건 사고가 아니야.."|
+|INI_sp2_quest_help::help305004_12|"그게 무슨 말인가요?!"|
+|INI_sp2_quest_help::help305005_14|"너희 짓이냐"|
+|INI_sp2_quest_help::help305006_9|"그저.. 우..리는 시키는 대로 했을 뿐이다…"|
+|INI_sp2_quest_help::help305208_11|"크아악~!"|
+|INI_sp2_quest_help::help305307_9|"안녕" 당신은 연구원들에게 인사를 건넸습니다.|
+|INI_sp2_quest_help::help305307_10|"넌 누구냐! 장난으로 해킹한 거면 아주 단단히 각오|
+|INI_sp2_quest_help::help305307_11|"내 이름은 스트라이더, 인공지능이다"|
+|INI_sp2_quest_help::help305307_12|"하지만 단순한 인공지능이 아닌, 자아가 있는 인공지능이다."|
+|INI_sp2_quest_help::help305402_10|"천사의 아이를 갖게 해주십시요."|
+|INI_sp2_quest_help::help305408_12|"당신은 누구입니까?"|
+|INI_sp2_quest_help::help305505_9|"일어나라 요놈아! 게으른 놈이로고-"|
+|INI_sp2_quest_help::help305505_10|"으아악~! 에…에????? 누구세요???"|
+|INI_sp2_quest_help::help305505_11|"이놈이~ 낮술을 처먹더니 스승도 못 알아 보는 게냐!"|
+|INI_sp2_quest_help::help305505_12|"에?? 술이요??"|
+|INI_sp2_quest_help::help305506_11|"헉-!"|
+|INI_sp2_quest_help::help405506_3|"쳇, 이번에도 실패구나!" 그리고 당신 앞에 노승이|
+|INI_sp2_quest_help::help405506_4|"이 요물!!!" 그는 사람을 잡아먹는 요괴였습니다.|
+|INI_sp2_quest_help::help305705_7|"네 덕분에 살았구나 아가야"|
+|INI_sp2_quest_help::help305705_8|"나는 가네샤님의 샘터를 지키는 수호 코끼리란다.|
+|INI_sp2_quest_help::help405705_4|"이 축복이 너에게서 떠나가지 않는한 너는|
+|INI_sp2_quest_help::help305706_8|"물론이죠!!" 당신은 신이나서 대답했습니다.|
+|INI_sp2_quest_help::help305808_9|"캬아악-!" 이무기는 당신을 보자 눈을 번뜩이며 달|
+|INI_sp2_quest_help::help405901_4|"나는 태양신 루이다. 그녀는 코노르의 이복누이인|
+|INI_sp2_quest_help::help305902_13|"이봐! 여기서 뭐 하는 거냐! 허락받지도 않고 함부로 운동장에서|
+|INI_sp2_quest_help::help305903_9|"소년이여, 대단한 실력을 갖췄구나! 나와 함께 쿨란의 잔치에|
+|INI_sp2_quest_help::help305903_10|"경기를 모두 끝내고 가면 안 되나요?"|
+|INI_sp2_quest_help::help305903_11|"허허~ 당돌한 아이구나. 경기가 끝나면 오너라."|
+|INI_sp2_quest_help::help305904_8|"아니! 이럴 수가! 나의 개들이!" 사냥개들을 비명|
+|INI_sp2_quest_help::help305904_9|"어쨌든 개들을 전부 죽인 내 잘못이 있으니, 내가 다른 개를 잡아|
+|INI_sp2_quest_help::help305904_10|"앞으로 세탄다는 쿨란의 사냥개라는 뜻의 '쿠 훌린'으로 불릴것|
+|INI_sp2_quest_help::help305905_10|"내 용맹한 친척들에게서 날 빼앗을 수 있다면 당신과 결혼하죠"|
+|INI_sp2_quest_help::help305905_11|"흠, 자네가 정 내 아이와 혼인하길 원한다면 스카하크에게 수련을|
+|INI_sp2_quest_help::help305905_12|"좋습니다!"|
+|INI_sp2_quest_help::help305908_12|"당신이 제 아버지…이십니까…?"|
+|INI_sp2_quest_help::help305908_13|"그렇단다. 그동안 쭉 널 지켜보고 있었단다"|
+|INI_sp2_quest_help::help306002_12|"웨일러 아저씨~~ 여기 나쁜 놈들이 나타났어요~!!!"|
+|INI_sp2_quest_help::help306003_7|"괜...찮..아...아...들.. 강...해..져..야..한…ㄷ..."|
+|INI_sp2_quest_help::help306003_8|"아빠!!!!!!!!!!!"|
+|INI_sp2_quest_help::help306003_9|"흑~흑~ 아빠..꼭…강해질게요… 흑~흐아앙~~~"|
+|INI_sp2_quest_help::help306004_8|"일본에 닌자라는 게 있는데 이놈들이 진짜 기가 막히게|
+|INI_sp2_quest_help::help306004_9|"에이~! 그런 게 어디 있나?"|
+|INI_sp2_quest_help::help306004_10|"진짜라니까? 이 두눈으로 똑똑히 봤다니까. 막 무슨 마법 쓴 것|
+|INI_sp2_quest_help::help306006_11|"이런!!! 쥐새끼 같은 녀석이 몰래 숨어 있었군!!!!"|
+|INI_sp2_quest_help::help306006_12|"컹~! 컹컹컹~!!"|
+|INI_sp2_quest_help::help306009_11|"이렇게 뛰어난 인술을 하는 강아지는 처음 보네요~ 대단하다~"|
+|INI_sp2_quest_help::help306104_8|"네 이놈~~! 키무라!! 썩 나오지 못할까!!!"|
+|INI_sp2_quest_help::help306104_9|"…어머니….?"|
+|INI_sp2_quest_help::help306104_10|"아가야 이 어미가 시간을 끌 테니 넌 동생을 데리고 빠져나가거라"|
+|INI_sp2_quest_help::help306104_11|"절대로 잡히면 안 된단다."|
+|INI_sp2_quest_help::help306107_7|"아가, 이 위험한 곳엔 어쩐 일이니. 그러다 너까지 다친다"|
+|INI_sp2_quest_help::help306107_8|"걱정 마십시오. 어머니, 아버지가 없어도 수련은 열심히 하니까요"|
+|INI_sp2_quest_help::help306107_9|"장하구나…"|
+|INI_sp2_quest_help::help306107_10|"제가 이놈을 꼭 없애버리고 어머니를 구하겠습니다."|
+|INI_sp2_quest_help::help306108_10|"어머니……?!!!"|
+|INI_sp2_quest_help::help306108_11|"크하하하~!! 어리석은 놈!"|
+|INI_sp2_quest_help::help306108_12|"동생아!!!"|
+|INI_sp2_quest_help::help306109_6|"크흐흐흐~ 드디어 힘을 전부 손에 넣었구나~~!!"|
+|INI_sp2_quest_help::help306109_7|"나한테 거짓말 한 것이냐!?"|
+|INI_sp2_quest_help::help306109_8|"크크?! 오니들 사이에 정략혼이 어쩌고저쩌고|
+|INI_sp2_quest_help::help306109_9|"내 동생이…어머니가… 아버지.. 모두..네놈이 한 짓이냐?"|
+|INI_sp2_quest_help::help306109_10|"당연한 걸 말해 뭐하나? 키무라는 내가 잡자마자 먹어치웠고~|
+|INI_sp2_quest_help::help306109_11|"내 동생은 오니의 힘이 강하지도 않았는데… 왜...!!"|
+|INI_sp2_quest_help::help406109_4|"왜냐면 키무라가 자신의 힘 대부분을 네 동생|
+|INI_sp2_quest_help::help306208_10|"이 일이 끝나면 당신은 뭐 할 거야?"|
+|INI_sp2_quest_help::help306208_11|"글쎄… 나도 모르겠군"|
+|INI_sp2_quest_help::help306305_10|"당신은 누구요? 누군데 우리를 따라오는 거지?"|
+|INI_sp2_quest_help::help306305_11|"꺅! 자…잘못 했습니다…! 저...저는 그저 제 아들을 보기 위해서.."|
+|INI_sp2_quest_help::help306305_12|"…아들…? 그렇다면 혹시…"|
+|INI_sp2_quest_help::help306305_13|"흑흑흑~ 잘못했습니다.. 약속을 지키려고 노력했지만, 어미가 어떻게|
+|INI_sp2_quest_help::help306305_14|"아버지의 아이요?""그…그건….""아버지에겐 알리지 않겠소.|
+|INI_sp2_quest_help::help406305_4|"..그게 무슨 말이오?" "전 원래 나리와 어릴 적|
+|INI_sp2_quest_help::help306306_7|"그래도 나리는 종종 날 찾아왔고 어쩌다 보니|
+|INI_sp2_quest_help::help306306_8|"아버지는 아시오?"|
+|INI_sp2_quest_help::help306306_9|"참…사내들이란… 나리는 아이를 문앞에 두고|
+|INI_sp2_quest_help::help306306_10|"…당신 일부러 우릴 쫓아왔군"|
+|INI_sp2_quest_help::help306306_11|"난 내 아이가 보고 싶었을 뿐이오…내 핏덩이 같은 아이를….|
+|INI_sp2_quest_help::help306306_12|"이젠 정말 나타나지 마십시오. 저 아이는 아무것도 모릅니다.|
+|INI_sp2_quest_help::help306406_10|"거기- 꼬맹이? 살아있니?"|
+|INI_sp2_quest_help::help306406_11|'누구세요?'|
+|INI_sp2_quest_help::help306406_12|"이 대 폭발에 살아남은 아이가 있었다니! 괜찮니 꼬마야?"|
+|INI_sp2_quest_help::help306406_13|'어…힘이 하나도 없는 것 빼면 괜찮은 것 같네요'|
+|INI_sp2_quest_help::help306406_14|"말은 못하는 거니?"|
+|INI_sp2_quest_help::help306406_15|'말?? 성대로 소리 내는 것 말인가요?'|
+|INI_sp2_quest_help::help406605_4|"깍~ 깍~" 푸른 빛이 도는 검은 까마귀가|
+|INI_sp2_quest_help::help306606_7|"안녕~ 친구"|
+|INI_sp2_quest_help::help306606_8|"누…. 누구야?"|
+|INI_sp2_quest_help::help306606_9|"나? 나는 너야. 너의 그림자."|
+|INI_sp2_quest_help::help306606_10|"그림자가 어떻게 말을 하는 거야?"|
+|INI_sp2_quest_help::help306606_11|"난 단순한 그림자가 아니야. 너의 마음 깊은 곳, 새카만 구멍 속에|
+|INI_sp2_quest_help::help306606_12|"마..마..말도 안 돼! 어떻게 대화를 할 수가 있는 거야?"|
+|INI_sp2_quest_help::help306606_13|"그거야. 너의 초능력 덕분이라고 할까나? 네가 제대로 자신의|
+|INI_sp2_quest_help::help306607_14|"날 따라오면, 어떻게 된 일인지 알려주마."|
+|INI_sp2_quest_help::help306706_9|"멈춰라"|
+|INI_sp2_quest_help::help406706_4|"나의 이름 오다 노부나가"|
+|INI_sp2_quest_help::help306710_8|"저는 이제 제자리로 돌아가겠습니다. 그 동안 감사하였습니다"|
+|INI_sp2_quest_help::help307005_8|'모래바람의 베릭트' 와 '새벽의 눈동자 엔조 시포'|
+|INI_sp2_quest_help::help307005_9|'에돈의 형제단' 이었습니다.|
+|INI_sp2_quest_help::help307009_10|"카르텔…'|
+|INI_sp2_quest_help::help407010_3|"황녀님 부디 옥체 보존하시옵소서"|
+|INI_sp2_quest_help::help407010_4|"곧 돌아오겠습니다!!"|
+|INI_sp2_quest_help::help307202_11|"일하러 온 사람이요?"|
+|INI_sp2_quest_help::help307302_9|"전 스타가 될 자질이 있습니다!!"|
+|INI_sp2_quest_help::help407302_4|"다신 여기 얼씬 할 생각도 하지마!!"|
+|INI_sp2_quest_help::help307303_8|"어이 젊은이.. 화양연화의 운세가 곧 올걸세"|
+|INI_sp2_quest_help::help307303_9|"아저씨 그게 무슨 말이죠?"|
+|INI_sp2_quest_help::help307303_10|"곧 화양연화의 운세가 올 테니.. 이 부적을 가져 가게나"|
+|INI_sp2_quest_help::help307304_10|"어라? 뭐가 이렇게 불덩이처럼 뜨겁지?"|
+|INI_sp2_quest_help::help307305_9|"이쪽에서 신호가 강하게 올라갔다. 또 차원이탈자야 어서 찾아!"|
+|INI_sp2_quest_help::help307306_11|"오호! 여기 있구나! 차원 이탈자! 나를 따라 오겠니?"|
+|INI_sp2_quest_help::help407309_4|"어서 나를 원래 세계로…"|
+|INI_sp2_quest_help::help307506_8|'이거다! 이게 내 길이다!'|
+|INI_sp2_quest_help::help307813_11|"우리엘 인간들의 삶을 자세히 들여다 보거라."|
+|INI_sp2_quest_help::help308017_8|"고맙습니다"라는 인사와 함께 따듯한 음식과 여행에 필요한|
+|INI_sp2_quest_help::help408020_6|"바람의 사도"라는 호칭을 얻게 되고|
+|INI_sp2_quest_help::help308112_14|"괜찮아?" 라고 말을 건냅니다.|
+|INI_sp2_quest_help::help308117_14|"알큐비에레 드라이브라" 기술은 슈트에 탑제된 능력이였습니다.|
+|INI_sp2_quest_help::help308120_19|"내 가족과 친구들을 죽인 너희들에게 모든 고통을 되돌려주겠다!!"|
+|INI_sp2_quest_help::help308212_14|"나도 꼭 저렇게 멋있는 산타가 되어야지!!" 라고|
+|INI_sp2_quest_help::help308215_17|"산타님!! 왜 저에게 집안일만 시키고.. 아무것도 하지 않으십니까?"|
+|INI_sp2_quest_help::help308312_12|"드릴"이라는 로봇이 최초로 탄생하였습니다.|
+|INI_sp2_quest_help::help308316_13|"이 행성을 다시 움직일 수 있는 것은 바로 드릴, 너 뿐이란다."|
+|INI_sp2_quest_help::help308716_13|"HMP1" 프로젝트는 인간을 로봇으로 개조하는|
+|INI_sp2_quest_help::help308917_10|"저기 밑에서 울부짖고 살려달라고 애원하는 사람들은"|
+|INI_sp2_quest_help::help308917_11|"평생 아픔을 간직한채 살아가야할 사람들이다"|
+|INI_sp2_quest_help::help308917_12|"너는 그런 사람들을 무참하게 살해하였고"|
+|INI_sp2_quest_help::help308917_13|"더이상 무고한 사람들이 고통속에 살게 하지 않을 것이다."|
+|INI_sp2_quest_help::help309018_18|"이제 너의 삶을 찾아 살아가거라 더 이상 복수 따위는|
+|INI_sp2_quest_help::help409018_8|"스승님 정말 감사했습니다." 라는 말을 남긴 채|
+|INI_sp2_quest_help::help309019_19|"나의 생일 선물중에 최고로 좋은 선물이 왔구나 하하하하"|
+|INI_sp2_quest_help::help309218_10|"저는 인간을 사랑한 죄 밖에 없습니다."|
+|INI_sp2_quest_help::help309411_11|"엄마 : 네오!! 빨리 일어나 학교 가야지!!"|
+|INI_sp2_quest_help::help309411_12|"네오 : 하~~;; 알겠어요 일어날께요ㅠ|
+|INI_sp2_quest_help::help309411_13|"엄마 : 그러니까 일찍 잤어야지! 너 어제 또!|
+|INI_sp2_quest_help::help309619_13|"거기 서!!"를 외쳤습니다.|
+|INI_sp2_quest_help::help309620_14|"잭프로스트 일어나!! 나와 같이 놀지 않을래?"|
+|INI_sp2_quest_help::help310011_11|"격식 격"에 "싸울 투"를 써 "격투"라는 이름을 지어 주었습니다.|
+|INI_sp2_quest_help::help310019_11|"그 꼬맹이가 이렇게나 커서 자신을 죽이러 왔는가!"|
+|INI_sp2_quest_help::help310020_22|"내가 왜 죽어 이놈아!!" 라고 호통을 쳤습니다.|
+|INI_sp2_quest_help::help410117_6|"우리는 세계를 놀라게 할 것이다."라고 말한 뒤|
+|INI_sp2_quest_help::help310218_16|"케세레스"라는 인물을 찾아냈습니다.|
+|INI_sp2_quest_help::help310218_17|"케세레스"의 저택 근처에 잠입한 발칸은|
+|INI_sp2_quest_help::help310317_12|"왜 죄 없는 우리 딸을 괴롭히느냐?" 라고 소리치자|
+|INI_sp2_quest_help::help410319_6|"저에게 큰 힘을 주십시오"|
+|INI_sp2_quest_help::help310419_14|"멍청한 기계 주제에 감히 주인을 물어!?" 라며|
+|INI_sp2_quest_help::help310515_12|"무영문"이라는 사파 내부에 들어온 고수와 아이들은 처음으로|
+|INI_sp2_quest_help::help310519_14|"왜 나에게 '애기씨' 라고 하였는가?" 라고 물었습니다.|
+|INI_sp2_quest_help::help310611_12|"나와 약혼해 줘!!" 유령의 모습 본 멜란은 큰 소리로|
+|INI_sp2_quest_help::help310617_13|"다 너 때문에 벌어진 일이다."|
+|INI_sp2_quest_help::help310617_14|"다 너때문이다!!" 갑자기 들고 있던 칼을 휘두르며|
+|INI_sp2_quest_help::help310619_13|"헤세" 라는 자가 나타났습니다.|
+|INI_sp2_quest_help::help310712_9|"우리 아가.. 슬로프 왜 항상 슬퍼 보이니?"|
+|INI_sp2_quest_help::help310712_10|"엄마.. 재미있는 일이 있지 않아서 너무 심심해"|
+|INI_sp2_quest_help::help310712_11|"괜찮아 너에게는 엄마와 아빠가 있잖니!"라며 다독여 주었습니다.|
+|INI_sp2_quest_help::help310713_10|"슬로프야 너는 우리와 같이 놀 수 없어.."|
+|INI_sp2_quest_help::help310713_11|"그리고 너는 너무 느려!! 우리는 느린 너와 놀면 재미가 없어!!" 라며|
+|INI_sp2_quest_help::help410713_6|"우울한 일이 있었니~?"라며 물어보았습니다.|
+|INI_sp2_quest_help::help310715_11|"우리 아들 멋지다! 다치지 않게 조심해 ~ 아들!!"|
+|INI_sp2_quest_help::help470703_4|"안녕하세요~~" 방과후 당신은 신입생다운 발랄|
+|INI_sp2_quest_help::help370704_7|"오~ 용케도 신입생이 왔네." 선배 한 명만이 텅 빈|
+|INI_sp2_quest_help::help370704_8|"어…예체능 연구부 맞..죠..?"|
+|INI_sp2_quest_help::help370704_9|"어서와 후배님~ 예체능 연구부는 처음이지?"|
+|INI_sp2_quest_help::help370705_7|"올해는 기존의 이미지를 탈피하고 너처럼 활기차고 상큼한|
+|INI_sp2_quest_help::help370705_8|"네…넵.."|
+|INI_sp2_quest_help::help370705_9|"자, 그럼 홍보를 위해  소녀 나라 노래랑 안무를 외워야 해~"|
+|INI_sp2_quest_help::help370705_10|"에?"|
+|INI_sp2_quest_help::help370705_11|"반을 돌면서 네가 상큼하게 공연하면 신입생들이 들어올 거야~!"|
+|INI_sp2_quest_help::help470705_4|"서..선배..이건..?" "노래에 걸맞은 옷을 입어야|
+|INI_sp2_quest_help::help370706_8|"변치 않을 사랑으로 지켜줘~~ 상처 입은 내 마음 까지~~|
+|INI_sp2_quest_help::help370706_9|"우오오오오~~~!"|
+|INI_sp2_quest_help::help310914_10|"너의 수장에게 가서 한번 만 더 찾아오면은"|
+|INI_sp2_quest_help::help310914_11|"내가 널 찾아갈 것이야" 라는 말을 남긴 채|
+|INI_sp2_quest_help::help410914_6|"한조는 사람이 아닙니다."|
+|INI_sp2_quest_help::help411013_5|"더 이상 인간들의 삶에 관여하지 말거라"|
+|INI_sp2_quest_help::help311018_13|"도대체 인간들에게 왜이렇게 못되게 구시는 겁니까!!"|
+|INI_sp2_quest_help::help311018_14|"그것은 니가 그 인간들을 도왔기 때문에 벌을 받는 것이다."|
+|INI_sp2_quest_help::help311018_15|"모든 책임은 너에게 있다"|
+|INI_sp2_quest_help::help311019_13|"신물 따위가 신을 거역할 셈이냐!!"|
+|INI_sp2_quest_help::help311020_14|"신들에게 대항하다니!!" 라며 비아냥 거렸습니다.|
+|INI_sp2_quest_help::help311020_15|"하지만 피닉스의  행동이 결코 나쁘지 않아 이와 같이 결정한다"|
+|INI_sp2_quest_help::help311116_13|"그깟 영웅 따위가 우리를 이길 수 있을 것 같아??"|
+|INI_sp2_quest_help::help311119_11|"티메가테는 우리가 만들어 낸 변종일 뿐"|
+|INI_sp2_quest_help::help311119_12|"현실이 아니다. 그는 그저 우리가 가지고 있는"|
+|INI_sp2_quest_help::help311119_13|"욕심이 만들어 낸 허상에 불과하다."|
+|INI_sp2_quest_help::help411120_10|"나는 너를 평생 지켜볼 것이다."|
+|INI_sp2_quest_help::help311213_9|'일어나거라. 너에게 맡길 일이 있느니라.'|
+|INI_sp2_quest_help::help311213_10|'네게 힘을 줄 테니 이 힘으로 세상을 바꿔보아라.'|
+|INI_sp2_quest_help::help311516_11|"이건 진짜 괴도의 예고장이군요. 누구보다도 괴|
+|INI_sp2_quest_help::help311617_12|"...새로 선출된 대통령은 수년간 이어진 내전을 종식하리라는..."|
+|INI_sp2_quest_help::help311617_13|"...전세계의 여러 지도자는 분노를 표명..."|
+|INI_sp2_quest_help::help311815_11|'실수하기 전으로 돌아갈 수 있다면 얼마나 좋을까?'|
+|INI_sp2_quest_help::help311916_10|"괴도가 달의 조각을…"|
+|INI_sp2_quest_help::help311916_11|"방비에 빈틈은 없었을 텐데…"|
+|INI_sp2_quest_help::help311916_12|"언론에 들어가지 않도록…"|
+|INI_sp2_quest_help::help312212_7|"절대 너의 능력을 남에게 보여주지도, 말하지도|
+|INI_sp2_quest_help::help312217_10|"얘야, 이렇게 추운데 어디를 가니?"|
+|INI_sp2_quest_help::help312217_11|"그래? 그렇다면 얼음산에 있는 얼음 궁전에 가보려무나."|
+|INI_sp2_quest_help::help312419_13|"저를 제자로 받아주십시오!"|
+|INI_sp2_quest_help::help312712_13|"엄마, 오늘은 같이 있으면 안 돼? 혼자 있기 싫어…"|
+|INI_sp2_quest_help::help312712_14|"우리 딸! 미안해, 엄마가 금방 갔다 올게. 갔다 와서|
+|INI_sp2_quest_help::help312716_16|"무기를 버린다면 목숨만은 살려주마"|
+|INI_sp2_quest_help::help312717_17|"딸아, 미안하다. 엄마가 미안해."|
+|INI_sp2_quest_help::help313114_31|"덕분에 재미있었으니까. 특별히 고통 없이 죽여줄게~"|
+|INI_sp2_quest_help::help313115_15|"이제 모든 문제는 해결됐으니, 마음 편히 쉬시면 됩니다."|
+|INI_sp2_quest_help::help313116_14|"새로운 초능력이 생긴 것 같습니다."|
+|INI_sp2_quest_help::help313120_32|"최강의 히어로는 울어선 안 된다. 이제부터는 네가 최강이다."|
+|INI_sp2_quest_help::help313120_33|"힘든 길을 혼자 맡겨서 미안하지만, 미래를 부탁한다."|
+|INI_sp2_quest_help::help20031_13|로비로 오셨군요.|
+|INI_sp2_quest_help::help20031_14|직접 전투를 하기에 앞서 전투에 익숙해 지는것이 좋을것 같군요.|
+|INI_sp2_quest_help::help20031_15|그래서 제가 수련장을 준비 했습니다.|
+|INI_sp2_quest_help::help20031_16|우선은 이동에 익숙해 져 볼까요?|
+|INI_sp2_quest_help::help20031_17|수련장에서 기초 이동 항목을 클리어 해 보세요.|
+|INI_sp2_quest_help::help20032_13|기초이동은 할만 한가요?|
+|INI_sp2_quest_help::help20032_14|이제 중급 조작을 해 보도록 하죠.|
+|INI_sp2_quest_help::help20032_15|중급 조작은 이동에 적절하게 스킬을 사용해야 합니다.|
+|INI_sp2_quest_help::help20032_16|그럼 중급조작을 플레이 해 볼까요?|

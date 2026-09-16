@@ -22,16 +22,9 @@ $ValuePattern = [regex]'(?m)^(?<pre>[^=\r\n;#\[/][^=\r\n]*=[ \t]*)(?<val>[^\r\n]
 $StrPattern = [regex]'STR\((?<n>\d+)\)'
 $TextEntryPattern = [regex]'^\|([^|]+)\|([^|]*)\|$'
 
-$byBase = @{}
 $allTargets = [System.Collections.Generic.List[string]]::new()
 foreach ($f in (Get-ChildItem $ConfigDir -Recurse -File -Filter "*.ini" | Sort-Object FullName)) {
     $rel = $f.FullName.Substring($ConfigDir.Length + 1)
-    $baseKey = $f.BaseName.ToLowerInvariant()
-    if ($byBase.ContainsKey($baseKey)) {
-        Write-Host "  DUP-SKIP $rel (kept: $($byBase[$baseKey]))"
-        continue
-    }
-    $byBase[$baseKey] = $rel
     $allTargets.Add($rel)
 }
 
@@ -181,7 +174,8 @@ foreach ($rel in $targets) {
         if ($val.Contains('|')) { $reason = 'pipe-in-value' }
         elseif ($val -match 'STR\(') { $reason = 'str-in-value' }
         elseif ($val -match '\\[rn]') { $reason = 'escape-in-value' }
-        elseif ($val.StartsWith('"') -or $val.StartsWith("'")) { $reason = 'quoted-value' }
+        elseif ($val -match '\.(txt|ini|xml)\s*$') { $reason = 'file-ref' }
+        elseif ($m.Groups['pre'].Value -match 'object_item\d+_name\s*=\s*$') { $reason = 'item-ref' }
         if ($reason) {
             $skipped++
             Write-Host "  SKIP $rel [$($valSections[$i])] ($reason): $($val.Substring(0, [Math]::Min(30, $val.Length)))"

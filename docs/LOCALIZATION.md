@@ -163,6 +163,17 @@ supports static OTF/TTF — variable fonts (`fvar`) are untested.
 - Legacy dangling references with no entries (broken since the original
   build): `gashaponpresentlistwnd.xml` `STR(26)` and `gradeadjustmentwnd.xml`
   `STR(1,4-12)` — these windows currently display raw keys
+- ~181 dangling `ini_` refs (98 sections) across champion_ai skill/buff
+  descriptions, field NPC practice AI, inventory manuals, extra item
+  machine sections, field NPC names, and two quest help sections.
+  These refs exist **identically in the original Korean 2020 client
+  shipping** (verified against the raw shipping config): the original
+  developers' build wrote the refs but never shipped the table entries.
+  The Korean text for them exists nowhere in the available sources
+  (shipping raw, base source, and latest KR tables all lack it), so they
+  display raw keys — the same state as the original live Korean client.
+  `scripts/fix-dangling-ini-refs.ps1` automates this check for any future
+  recovery attempt against a raw config source
 - Legacy dangling ini references: mercenary buffs `219MB_SD_Stun`,
   `224MB_Jump_charge_Att_Air`, and `225MB_Dash_att03_defense` are
   referenced by weapon attributes but were never defined in any buff file
