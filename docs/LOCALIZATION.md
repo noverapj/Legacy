@@ -43,6 +43,14 @@ tolerates). Remove the flat files after verifying the split at runtime.
 3. `<Tooltip><Help Text="...">` attribute — `ioGUIManager.cpp` `OnTooltipProperty`
 4. `<ExtraInfo ...>` — all attribute values (the string manager is active while the window parses ExtraInfo)
 5. `<TextBlock Text="...">` (rich label) — `ioRichLabel.cpp`
+6. `<ExtraInfo><LabelInfo Text="...">` — `ioLabelWndEX` / `ioButtonWndEX`
+   `_ParseExtraInfo` opt in via the `SetUseStringMgr` idiom (same pattern as
+   `ioRichLabel`), with the key taken from the parent ExtraInfo element
+7. `<TabTextN Text="...">` — `ioPowerUpManager::SetMenuList` (key is fixed
+   to `myinventorywnd`)
+8. `<NPC><LABEL NpcViewName / NpcGradeTitle>` in `npc_ai_npclist.xml` —
+   `ioNpcMgr::BuildAdditionalNPCLabel` opts in with the key
+   `npc_ai_npclist`
 
 A `STR(n)` without a matching table entry displays the raw key in the UI —
 keep entries and references in sync (`-Mode Verify` below).
@@ -60,7 +68,7 @@ pwsh scripts/xml-str-convert.ps1 -Mode Convert -IncludeFile lobbywnd.xml,newshop
 
 Rules:
 
-- Converts only the five verified routes above; Korean elsewhere in the XML is left untouched
+- Converts only the verified routes above; Korean elsewhere in the XML is left untouched
 - Only values containing hangul are converted — everything else is byte-identical
 - Per-file numbering continues after the highest existing `STR(n)`, so legacy references are never reassigned
 - Strict CP949 round-trip per file; anything that fails to decode is skipped and reported
@@ -148,6 +156,10 @@ supports static OTF/TTF — variable fonts (`fvar`) are untested.
 - 13 multi-line texts (literal `\n` plus color markup) remain hardcoded — the
   table loader would decode their escapes, so they need a separate encoding
   decision before conversion
+- Shop tab labels in `shopwnd.xml` containing a literal `|`
+  (금주의 상품, 신규, 인기, 용병, 장비, 보급, 치장, 모션, 특별, 블럭, 클로버샵)
+  cannot be converted — the `|key|text|` table format has no escaping, so
+  these stay raw Korean until the entry format grows an escape mechanism
 - Legacy dangling references with no entries (broken since the original
   build): `gashaponpresentlistwnd.xml` `STR(26)` and `gradeadjustmentwnd.xml`
   `STR(1,4-12)` — these windows currently display raw keys

@@ -3635,3 +3635,252 @@
 |XML_userlistwnd_7|차단추가|
 |XML_userselectherobonuswnd_1|프리데이 용병 선택|
 |XML_userselectherobonuswnd_2|프리데이 용병 받기(SPACE)|
+|XML_npc_ai_npclist_1|아이언 나이트|
+|XML_npc_ai_npclist_2|아이언 나이트|
+|XML_npc_ai_npclist_3|아이언 나이트|
+|XML_npc_ai_npclist_4|아이언 나이트|
+|XML_npc_ai_npclist_5|아이언 나이트|
+|XML_npc_ai_npclist_6|파이어 메이지|
+|XML_npc_ai_npclist_7|파이어 메이지|
+|XML_npc_ai_npclist_8|파이어 메이지|
+|XML_npc_ai_npclist_9|파이어 메이지|
+|XML_npc_ai_npclist_10|파이어 메이지|
+|XML_npc_ai_npclist_11|세비지 버서커|
+|XML_npc_ai_npclist_12|세비지 버서커|
+|XML_npc_ai_npclist_13|세비지 버서커|
+|XML_npc_ai_npclist_14|세비지 버서커|
+|XML_npc_ai_npclist_15|세비지 버서커|
+|XML_npc_ai_npclist_16|아이스 메이지|
+|XML_npc_ai_npclist_17|아이스 메이지|
+|XML_npc_ai_npclist_18|아이스 메이지|
+|XML_npc_ai_npclist_19|아이스 메이지|
+|XML_npc_ai_npclist_20|아이스 메이지|
+|XML_npc_ai_npclist_21|쉐도우 어쌔신|
+|XML_npc_ai_npclist_22|쉐도우 어쌔신|
+|XML_npc_ai_npclist_23|쉐도우 어쌔신|
+|XML_npc_ai_npclist_24|쉐도우 어쌔신|
+|XML_npc_ai_npclist_25|쉐도우 어쌔신|
+|XML_npc_ai_npclist_26|빅토리 디펜더|
+|XML_npc_ai_npclist_27|빅토리 디펜더|
+|XML_npc_ai_npclist_28|빅토리 디펜더|
+|XML_npc_ai_npclist_29|빅토리 디펜더|
+|XML_npc_ai_npclist_30|빅토리 디펜더|
+|XML_npc_ai_npclist_31|청룡 관우|
+|XML_npc_ai_npclist_32|청룡 관우|
+|XML_npc_ai_npclist_33|청룡 관우|
+|XML_npc_ai_npclist_34|청룡 관우|
+|XML_npc_ai_npclist_35|청룡 관우|
+|XML_npc_ai_npclist_36|와일드 복서|
+|XML_npc_ai_npclist_37|와일드 복서|
+|XML_npc_ai_npclist_38|와일드 복서|
+|XML_npc_ai_npclist_39|와일드 복서|
+|XML_npc_ai_npclist_40|와일드 복서|
+|XML_npc_ai_npclist_41|바이킹 스벤|
+|XML_npc_ai_npclist_42|바이킹 스벤|
+|XML_npc_ai_npclist_43|바이킹 스벤|
+|XML_npc_ai_npclist_44|바이킹 스벤|
+|XML_npc_ai_npclist_45|바이킹 스벤|
+|XML_npc_ai_npclist_46|카게 닌자|
+|XML_npc_ai_npclist_47|카게 닌자|
+|XML_npc_ai_npclist_48|카게 닌자|
+|XML_npc_ai_npclist_49|카게 닌자|
+|XML_npc_ai_npclist_50|카게 닌자|
+|XML_npc_ai_npclist_51|태권 무도가|
+|XML_npc_ai_npclist_52|태권 무도가|
+|XML_npc_ai_npclist_53|태권 무도가|
+|XML_npc_ai_npclist_54|태권 무도가|
+|XML_npc_ai_npclist_55|태권 무도가|
+|XML_npc_ai_npclist_56|암흑 주술사|
+|XML_npc_ai_npclist_57|암흑 주술사|
+|XML_npc_ai_npclist_58|암흑 주술사|
+|XML_npc_ai_npclist_59|암흑 주술사|
+|XML_npc_ai_npclist_60|암흑 주술사|
+|XML_npc_ai_npclist_61|스마일 조커|
+|XML_npc_ai_npclist_62|스마일 조커|
+|XML_npc_ai_npclist_63|스마일 조커|
+|XML_npc_ai_npclist_64|스마일 조커|
+|XML_npc_ai_npclist_65|스마일 조커|
+|XML_npc_ai_npclist_66|아이언 나이트|
+|XML_npc_ai_npclist_67|파이어 메이지|
+|XML_npc_ai_npclist_68|쉐도우 어쌔신|
+|XML_npc_ai_npclist_69|빅토리 디펜더|
+|XML_npc_ai_npclist_70|청룡 관우|
+|XML_npc_ai_npclist_71|바이킹 스벤|
+|XML_npc_ai_npclist_72|태권 무도가|
+|XML_npc_ai_npclist_73|암흑 주술사|
+|XML_npc_ai_npclist_74|타이거|
+|XML_npc_ai_npclist_75|살라딘|
+|XML_npc_ai_npclist_76|진키사라기|
+|XML_npc_ai_npclist_77|네크로멘서|
+|XML_npc_ai_npclist_78|스파르타쿠스|
+|XML_npc_ai_npclist_79|카포에라|
+|XML_npc_ai_npclist_80|라그나|
+|XML_npc_ai_npclist_81|메이|
+|XML_npc_ai_npclist_82|무에타이|
+|XML_npc_ai_npclist_83|그래피티|
+|XML_npc_ai_npclist_84|아이언 나이트|
+|XML_npc_ai_npclist_85|파이어 메이지|
+|XML_npc_ai_npclist_86|쉐도우 어쌔신|
+|XML_npc_ai_npclist_87|빅토리 디펜더|
+|XML_npc_ai_npclist_88|청룡 관우|
+|XML_npc_ai_npclist_89|바이킹 스벤|
+|XML_npc_ai_npclist_90|태권 무도가|
+|XML_npc_ai_npclist_91|암흑 주술사|
+|XML_npc_ai_npclist_92|타이거|
+|XML_npc_ai_npclist_93|살라딘|
+|XML_npc_ai_npclist_94|진키사라기|
+|XML_npc_ai_npclist_95|네크로멘서|
+|XML_npc_ai_npclist_96|스파르타쿠스|
+|XML_npc_ai_npclist_97|카포에라|
+|XML_npc_ai_npclist_98|라그나|
+|XML_npc_ai_npclist_99|메이|
+|XML_npc_ai_npclist_100|무에타이|
+|XML_npc_ai_npclist_101|그래피티|
+|XML_charactercontrolwnd_1|lv10 데스페라도|
+|XML_charactercontrolwnd_2|육성|
+|XML_charactercontrolwnd_3|공격력|
+|XML_charactercontrolwnd_4|이동속도|
+|XML_charactercontrolwnd_5|드랍완화|
+|XML_charactercontrolwnd_6|방어력|
+|XML_charactercontrolwnd_7|무기스킬|
+|XML_charactercontrolwnd_8|투구스킬|
+|XML_charactercontrolwnd_9|갑옷스킬|
+|XML_charactercontrolwnd_10|망토스킬|
+|XML_charactercontrolwnd_11|장비|
+|XML_charactercontrolwnd_12|치장|
+|XML_charactercontrolwnd_13|(영구)|
+|XML_DecoInfoTabWnd_1|정보|
+|XML_DecoInfoTabWnd_2|헤어 치장|
+|XML_DecoInfoTabWnd_3|아래 선택된 용병에게 귀속됨|
+|XML_ETCInfoTabWnd_2|정보|
+|XML_ETCInfoTabWnd_3|특별 아이템|
+|XML_MercenaryEquipInfoTabWnd_1|정보|
+|XML_MercenaryEquipInfoTabWnd_2|난이도 ★★★|
+|XML_MercenaryEquipInfoTabWnd_3|근접 / 추천용병|
+|XML_MercenaryEquipInfoTabWnd_4|스킬영상|
+|XML_MercenaryEquipInfoTabWnd_5|무기|
+|XML_MercenaryEquipInfoTabWnd_6|ASD 스킬|
+|XML_MercenaryEquipInfoTabWnd_7|AD 스킬|
+|XML_MercenaryEquipInfoTabWnd_8|AS 스킬|
+|XML_MercenaryEquipInfoTabWnd_9|이 스킬은 SD 스킬임|
+|XML_MercenaryEquipInfoTabWnd_10|이 스킬은 ASD 스킬임|
+|XML_MercenaryEquipInfoTabWnd_11|이 스킬은 AD 스킬임|
+|XML_MercenaryEquipInfoTabWnd_12|이 스킬은 AS 스킬임|
+|XML_MercenaryEquipInfoTabWnd_13|무기SD|
+|XML_MercenaryEquipInfoTabWnd_14|갑옷ASD|
+|XML_MercenaryEquipInfoTabWnd_15|투구AD|
+|XML_MercenaryEquipInfoTabWnd_16|망토AS|
+|XML_MercenaryInfoWndBase_1|사이보그|
+|XML_MercenaryInfoWndBase_2|닫기 (ESC)|
+|XML_MercenaryInfoWndBase_3|구입 (SPACE)|
+|XML_MercenaryInfoWndBase_4|정보|
+|XML_MercenaryInfoWndBase_5|난이도 ★★★|
+|XML_MercenaryInfoWndBase_6|근접 / 추천용병|
+|XML_MercenaryInfoWndBase_7|스킬영상|
+|XML_MercenaryInfoWndBase_8|무기|
+|XML_MercenaryInfoWndBase_9|ASD 스킬|
+|XML_MercenaryInfoWndBase_10|AD 스킬|
+|XML_MercenaryInfoWndBase_11|AS 스킬|
+|XML_MercenaryInfoWndBase_12|이 스킬은 SD 스킬임|
+|XML_MercenaryInfoWndBase_13|이 스킬은 ASD 스킬임|
+|XML_MercenaryInfoWndBase_14|이 스킬은 AD 스킬임|
+|XML_MercenaryInfoWndBase_15|이 스킬은 AS 스킬임|
+|XML_MercenaryInfoWndBase_16|무기SD|
+|XML_MercenaryInfoWndBase_17|갑옷ASD|
+|XML_MercenaryInfoWndBase_18|투구AD|
+|XML_MercenaryInfoWndBase_19|망토AS|
+|XML_myinventorywnd_83|진화|
+|XML_myinventorywnd_84|분해|
+|XML_myinventorywnd_85|팔기|
+|XML_quicklobbyexitwnd_2|옵션 (F8)|
+|XML_quicklobbyexitwnd_3|나가기|
+|XML_quicklobbyexitwnd_4|게임 종료|
+|XML_QuickLobbyTournament_1|진행중|
+|XML_QuickLobbyTournament_2|휴식중|
+|XML_QuickLobbyTournament_3|휴식중|
+|XML_QuickLobbyTournament_4|모집중|
+|XML_QuickLobbyTournament_5|응원중|
+|XML_QuickLobbyTournament_6|대회중|
+|XML_shopbuywnd_11|구입|
+|XML_shopbuywnd_12|3,759 페소|
+|XML_shopbuywnd_13|3,759 페소|
+|XML_shopbuywnd_14|3,800 골드|
+|XML_shopbuywnd_15|10,000골드|
+|XML_shopbuywnd_16|영구 고용시 블라블라 지급|
+|XML_shopbuywnd_17|구입(SPACE)|
+|XML_shopbuywnd_18|선물|
+|XML_ShopBuyWndFrame_1|사이보그|
+|XML_ShopBuyWndFrame_2|닫기 (ESC)|
+|XML_ShopBuyWndFrame_3|구입 (SPACE)|
+|XML_shopwnd_etctab_16|사이보그|
+|XML_shopwnd_etctab_17|사이보그|
+|XML_shopwnd_etctab_18|사이보그|
+|XML_shopwnd_etctab_19|사이보그|
+|XML_shopwnd_etctab_20|사이보그|
+|XML_shopwnd_etctab_21|사이보그|
+|XML_shopwnd_etctab_22|사이보그|
+|XML_shopwnd_etctab_23|사이보그|
+|XML_shopwnd_etctab_24|사이보그|
+|XML_shopwnd_etctab_25|사이보그|
+|XML_shopwnd_etctab_26|사이보그|
+|XML_shopwnd_etctab_27|사이보그|
+|XML_shopwnd_etctab_28|사이보그|
+|XML_shopwnd_etctab_29|사이보그|
+|XML_shopwnd_etctab_30|사이보그|
+|XML_shopwnd_weeklytab_11|사이보그|
+|XML_shopwnd_weeklytab_12|EXP부스터|
+|XML_shopwnd_weeklytab_13|EXP부스터|
+|XML_shopwnd_weeklytab_14|EXP부스터|
+|XML_shopwnd_weeklytab_15|사이보그|
+|XML_shopwnd_weeklytab_16|EXP부스터|
+|XML_shopwnd_weeklytab_17|EXP부스터|
+|XML_shopwnd_weeklytab_18|EXP부스터|
+|XML_shopwnd_weeklytab_19|사이보그|
+|XML_shopwnd_weeklytab_20|EXP부스터|
+|XML_shopwnd_weeklytab_21|EXP부스터|
+|XML_shopwnd_weeklytab_22|EXP부스터|
+|XML_shopwnd_weeklytab_23|사이보그|
+|XML_shopwnd_weeklytab_24|EXP부스터|
+|XML_shopwnd_weeklytab_25|EXP부스터|
+|XML_shopwnd_weeklytab_26|EXP부스터|
+|XML_shopwnd_weeklytab_27|사이보그|
+|XML_shopwnd_weeklytab_28|EXP부스터|
+|XML_shopwnd_weeklytab_29|EXP부스터|
+|XML_shopwnd_weeklytab_30|EXP부스터|
+|XML_shopwnd_weeklytab_31|사이보그|
+|XML_shopwnd_weeklytab_32|EXP부스터|
+|XML_shopwnd_weeklytab_33|EXP부스터|
+|XML_shopwnd_weeklytab_34|EXP부스터|
+|XML_shopwnd_weeklytab_35|사이보그|
+|XML_shopwnd_weeklytab_36|EXP부스터|
+|XML_shopwnd_weeklytab_37|EXP부스터|
+|XML_shopwnd_weeklytab_38|EXP부스터|
+|XML_shopwnd_weeklytab_39|사이보그|
+|XML_shopwnd_weeklytab_40|EXP부스터|
+|XML_shopwnd_weeklytab_41|EXP부스터|
+|XML_shopwnd_weeklytab_42|EXP부스터|
+|XML_shopwnd_weeklytab_43|사이보그|
+|XML_shopwnd_weeklytab_44|EXP부스터|
+|XML_shopwnd_weeklytab_45|EXP부스터|
+|XML_shopwnd_weeklytab_46|EXP부스터|
+|XML_shopwnd_weeklytab_47|사이보그|
+|XML_shopwnd_weeklytab_48|EXP부스터|
+|XML_shopwnd_weeklytab_49|EXP부스터|
+|XML_shopwnd_weeklytab_50|EXP부스터|
+|XML_shopwnd_1|상점|
+|XML_shopwnd_2|골드충전|
+|XML_shopwnd_3|내아이템|
+|XML_shopwnd_4|내페소 : /|
+|XML_shopwnd_5|내골드 :|
+|XML_shopwnd_6|금주의 상품|
+|XML_shopwnd_7|계급해제|
+|XML_shopwnd_8|용병|
+|XML_shopwnd_9|패키지|
+|XML_shopwnd_10|장비|
+|XML_shopwnd_11|기능|
+|XML_shopwnd_12|치장|
+|XML_shopwnd_13|패키지|
+|XML_shopwnd_14|특별|
+|XML_shopwnd_15|던전|
+|XML_shopwnd_16|이벤트샵|
+|XML_shopwnd_17|이벤트샵|

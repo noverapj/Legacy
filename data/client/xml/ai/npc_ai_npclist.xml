@@ -2,7 +2,7 @@
 <NPCLIST>
 	<NPC id= "100101" NpcType	= "0" RandomAppreance = "1" comment= "아이언 나이트" >  
 		<LABEL
-			NpcViewName 	= "아이언 나이트"
+			NpcViewName 	= "STR(1)"
 			NpcGradeTitle	= "01"
 		/>
 		<REFERENCE
@@ -18,7 +18,7 @@
 	</NPC>
 	<NPC id= "100102" NpcType	= "0" RandomAppreance = "1" comment= "아이언 나이트" > 
 		<LABEL
-			NpcViewName 	= "아이언 나이트"
+			NpcViewName 	= "STR(2)"
 			NpcGradeTitle	= "02"
 		/>
 		<REFERENCE
@@ -35,7 +35,7 @@
 	</NPC>
 	<NPC id= "100103" NpcType	= "0" RandomAppreance = "1" comment= "아이언 나이트" >  
 		<LABEL
-			NpcViewName 	= "아이언 나이트"
+			NpcViewName 	= "STR(3)"
 			NpcGradeTitle	= "03"
 		/>
 		<REFERENCE
@@ -51,7 +51,7 @@
 	</NPC>
 	<NPC id= "100104" NpcType	= "0" RandomAppreance = "1" comment= "아이언 나이트" > 
 		<LABEL
-			NpcViewName 	= "아이언 나이트"
+			NpcViewName 	= "STR(4)"
 			NpcGradeTitle	= "04"
 		/>
 		<REFERENCE
@@ -67,7 +67,7 @@
 	</NPC>
 	<NPC id= "100105" NpcType	= "0" RandomAppreance = "1" comment= "아이언 나이트" >  
 		<LABEL
-			NpcViewName 	= "아이언 나이트"
+			NpcViewName 	= "STR(5)"
 			NpcGradeTitle	= "05"
 		/>
 		<REFERENCE
@@ -83,7 +83,7 @@
 	</NPC>
 	<NPC id= "100401" NpcType	= "0" RandomAppreance = "1" comment= "파이어 메이지" > 
 		<LABEL
-			NpcViewName 	= "파이어 메이지"
+			NpcViewName 	= "STR(6)"
 			NpcGradeTitle	= "01"
 		/>
 		<REFERENCE
@@ -99,7 +99,7 @@
 	</NPC>
 	<NPC id= "100402" NpcType	= "0" RandomAppreance = "1" comment= "파이어 메이지" > 
 		<LABEL
-			NpcViewName 	= "파이어 메이지"
+			NpcViewName 	= "STR(7)"
 			NpcGradeTitle	= "02"
 		/>
 		<REFERENCE
@@ -115,7 +115,7 @@
 	</NPC>
 	<NPC id= "100403" NpcType	= "0" RandomAppreance = "1" comment= "파이어 메이지" > 
 		<LABEL
-			NpcViewName 	= "파이어 메이지"
+			NpcViewName 	= "STR(8)"
 			NpcGradeTitle	= "03"
 		/>
 		<REFERENCE
@@ -131,7 +131,7 @@
 	</NPC>
 		<NPC id= "100404" NpcType	= "0" RandomAppreance = "1" comment= "파이어 메이지" > 
 		<LABEL
-			NpcViewName 	= "파이어 메이지"
+			NpcViewName 	= "STR(9)"
 			NpcGradeTitle	= "04"
 		/>
 		<REFERENCE
@@ -147,7 +147,7 @@
 	</NPC>
 	<NPC id= "100405" NpcType	= "0" RandomAppreance = "1" comment= "파이어 메이지" > 
 		<LABEL
-			NpcViewName 	= "파이어 메이지"
+			NpcViewName 	= "STR(10)"
 			NpcGradeTitle	= "05"
 		/>
 		<REFERENCE
@@ -163,7 +163,7 @@
 	</NPC>
 	<NPC id= "100601" NpcType	= "0" RandomAppreance = "1" comment= "세비지 버서커" >  
 		<LABEL
-			NpcViewName 	= "세비지 버서커"
+			NpcViewName 	= "STR(11)"
 			NpcGradeTitle	= "01"
 		/>
 		<REFERENCE
@@ -179,7 +179,7 @@
 	</NPC>
 	<NPC id= "100602" NpcType	= "0" RandomAppreance = "1" comment= "세비지 버서커" > 
 		<LABEL
-			NpcViewName 	= "세비지 버서커"
+			NpcViewName 	= "STR(12)"
 			NpcGradeTitle	= "02"
 		/>
 		<REFERENCE
@@ -195,7 +195,7 @@
 	</NPC>
 	<NPC id= "100603" NpcType	= "0" RandomAppreance = "1" comment= "세비지 버서커" >  
 		<LABEL
-			NpcViewName 	= "세비지 버서커"
+			NpcViewName 	= "STR(13)"
 			NpcGradeTitle	= "03"
 		/>
 		<REFERENCE
@@ -211,7 +211,7 @@
 	</NPC>
 	<NPC id= "100604" NpcType	= "0" RandomAppreance = "1" comment= "세비지 버서커" > 
 		<LABEL
-			NpcViewName 	= "세비지 버서커"
+			NpcViewName 	= "STR(14)"
 			NpcGradeTitle	= "04"
 		/>
 		<REFERENCE
@@ -227,7 +227,7 @@
 	</NPC>
 	<NPC id= "100605" NpcType	= "0" RandomAppreance = "1" comment= "세비지 버서커" >  
 		<LABEL
-			NpcViewName 	= "세비지 버서커"
+			NpcViewName 	= "STR(15)"
 			NpcGradeTitle	= "05"
 		/>
 		<REFERENCE
@@ -243,7 +243,7 @@
 	</NPC>
 	<NPC id= "100901" NpcType	= "0" RandomAppreance = "1" comment= "아이스 메이지" > 
 		<LABEL
-			NpcViewName 	= "아이스 메이지"
+			NpcViewName 	= "STR(16)"
 			NpcGradeTitle	= "01"
 		/>
 		<REFERENCE
@@ -259,7 +259,7 @@
 	</NPC>
 	<NPC id= "100902" NpcType	= "0" RandomAppreance = "1" comment= "아이스 메이지" > 
 		<LABEL
-			NpcViewName 	= "아이스 메이지"
+			NpcViewName 	= "STR(17)"
 			NpcGradeTitle	= "02"
 		/>
 		<REFERENCE
@@ -275,7 +275,7 @@
 	</NPC>
 	<NPC id= "100903" NpcType	= "0" RandomAppreance = "1" comment= "아이스 메이지" > 
 		<LABEL
-			NpcViewName 	= "아이스 메이지"
+			NpcViewName 	= "STR(18)"
 			NpcGradeTitle	= "03"
 		/>
 		<REFERENCE
@@ -291,7 +291,7 @@
 	</NPC>
 		<NPC id= "100904" NpcType	= "0" RandomAppreance = "1" comment= "아이스 메이지" > 
 		<LABEL
-			NpcViewName 	= "아이스 메이지"
+			NpcViewName 	= "STR(19)"
 			NpcGradeTitle	= "04"
 		/>
 		<REFERENCE
@@ -307,7 +307,7 @@
 	</NPC>
 	<NPC id= "100905" NpcType	= "0" RandomAppreance = "1" comment= "아이스 메이지" > 
 		<LABEL
-			NpcViewName 	= "아이스 메이지"
+			NpcViewName 	= "STR(20)"
 			NpcGradeTitle	= "05"
 		/>
 		<REFERENCE
@@ -323,7 +323,7 @@
 	</NPC>
 	<NPC id= "101201" NpcType	= "0" RandomAppreance = "1" comment= "쉐도우 어쌔신" > 
 		<LABEL
-			NpcViewName 	= "쉐도우 어쌔신"
+			NpcViewName 	= "STR(21)"
 			NpcGradeTitle	= "01"
 		/>
 		<REFERENCE
@@ -339,7 +339,7 @@
 	</NPC>
 	<NPC id= "101202" NpcType	= "0" RandomAppreance = "1" comment= "쉐도우 어쌔신" >
 		<LABEL
-			NpcViewName 	= "쉐도우 어쌔신"
+			NpcViewName 	= "STR(22)"
 			NpcGradeTitle	= "02"
 		/>
 		<REFERENCE
@@ -355,7 +355,7 @@
 	</NPC>
 	<NPC id= "101203" NpcType	= "0" RandomAppreance = "1" comment= "쉐도우 어쌔신" >
 		<LABEL
-			NpcViewName 	= "쉐도우 어쌔신"
+			NpcViewName 	= "STR(23)"
 			NpcGradeTitle	= "03"
 		/>
 		<REFERENCE
@@ -371,7 +371,7 @@
 	</NPC>
 	<NPC id= "101204" NpcType	= "0" RandomAppreance = "1" comment= "쉐도우 어쌔신" > 
 		<LABEL
-			NpcViewName 	= "쉐도우 어쌔신"
+			NpcViewName 	= "STR(24)"
 			NpcGradeTitle	= "04"
 		/>
 		<REFERENCE
@@ -387,7 +387,7 @@
 	</NPC>
 	<NPC id= "101205" NpcType	= "0" RandomAppreance = "1" comment= "쉐도우 어쌔신" > 
 		<LABEL
-			NpcViewName 	= "쉐도우 어쌔신"
+			NpcViewName 	= "STR(25)"
 			NpcGradeTitle	= "05"
 		/>
 		<REFERENCE
@@ -403,7 +403,7 @@
 	</NPC>
 	<NPC id= "101301" NpcType	= "0" RandomAppreance = "1" comment= "빅토리 디펜더" > 
 		<LABEL
-			NpcViewName 	= "빅토리 디펜더"
+			NpcViewName 	= "STR(26)"
 			NpcGradeTitle	= "01"
 		/>
 		<REFERENCE
@@ -419,7 +419,7 @@
 	</NPC>
 	<NPC id= "101302" NpcType	= "0" RandomAppreance = "1" comment= "빅토리 디펜더" > 
 		<LABEL
-			NpcViewName 	= "빅토리 디펜더"
+			NpcViewName 	= "STR(27)"
 			NpcGradeTitle	= "02"
 		/>
 		<REFERENCE
@@ -435,7 +435,7 @@
 	</NPC>
 	<NPC id= "101303" NpcType	= "0" RandomAppreance = "1" comment= "빅토리 디펜더" > 
 		<LABEL
-			NpcViewName 	= "빅토리 디펜더"
+			NpcViewName 	= "STR(28)"
 			NpcGradeTitle	= "03"
 		/>
 		<REFERENCE
@@ -451,7 +451,7 @@
 	</NPC>
 	<NPC id= "101304" NpcType	= "0" RandomAppreance = "1" comment= "빅토리 디펜더" >
 		<LABEL
-			NpcViewName 	= "빅토리 디펜더"
+			NpcViewName 	= "STR(29)"
 			NpcGradeTitle	= "04"
 		/>
 		<REFERENCE
@@ -467,7 +467,7 @@
 	</NPC>
 	<NPC id= "101305" NpcType	= "0" RandomAppreance = "1" comment= "빅토리 디펜더" >
 		<LABEL
-			NpcViewName 	= "빅토리 디펜더"
+			NpcViewName 	= "STR(30)"
 			NpcGradeTitle	= "05"
 		/>
 		<REFERENCE
@@ -483,7 +483,7 @@
 	</NPC>
 	<NPC id= "101401" NpcType	= "0" RandomAppreance = "1" comment= "청룡 관우" > 
 		<LABEL
-			NpcViewName 	= "청룡 관우"
+			NpcViewName 	= "STR(31)"
 			NpcGradeTitle	= "01"
 		/>
 		<REFERENCE
@@ -499,7 +499,7 @@
 	</NPC>
 	<NPC id= "101402" NpcType	= "0" RandomAppreance = "1" comment= "청룡 관우" > 
 		<LABEL
-			NpcViewName 	= "청룡 관우"
+			NpcViewName 	= "STR(32)"
 			NpcGradeTitle	= "02"
 		/>
 		<REFERENCE
@@ -515,7 +515,7 @@
 	</NPC>
 	<NPC id= "101403" NpcType	= "0" RandomAppreance = "1" comment= "청룡 관우" > 
 		<LABEL
-			NpcViewName 	= "청룡 관우"
+			NpcViewName 	= "STR(33)"
 			NpcGradeTitle	= "03"
 		/>
 		<REFERENCE
@@ -531,7 +531,7 @@
 	</NPC>
 	<NPC id= "101404" NpcType	= "0" RandomAppreance = "1" comment= "청룡 관우" > 
 		<LABEL
-			NpcViewName 	= "청룡 관우"
+			NpcViewName 	= "STR(34)"
 			NpcGradeTitle	= "04"
 		/>
 		<REFERENCE
@@ -547,7 +547,7 @@
 	</NPC>
 	<NPC id= "101405" NpcType	= "0" RandomAppreance = "1" comment= "청룡 관우" > 
 		<LABEL
-			NpcViewName 	= "청룡 관우"
+			NpcViewName 	= "STR(35)"
 			NpcGradeTitle	= "05"
 		/>
 		<REFERENCE
@@ -563,7 +563,7 @@
 	</NPC>
 	<NPC id= "101501" NpcType	= "0" RandomAppreance = "1" comment= "와일드 복서" > 
 		<LABEL
-			NpcViewName 	= "와일드 복서"
+			NpcViewName 	= "STR(36)"
 			NpcGradeTitle	= "01"
 		/>
 		<REFERENCE
@@ -579,7 +579,7 @@
 	</NPC>
 	<NPC id= "101502" NpcType	= "0" RandomAppreance = "1" comment= "와일드 복서" > 
 		<LABEL
-			NpcViewName 	= "와일드 복서"
+			NpcViewName 	= "STR(37)"
 			NpcGradeTitle	= "02"
 		/>
 		<REFERENCE
@@ -595,7 +595,7 @@
 	</NPC>
 	<NPC id= "101503" NpcType	= "0" RandomAppreance = "1" comment= "와일드 복서" > 
 		<LABEL
-			NpcViewName 	= "와일드 복서"
+			NpcViewName 	= "STR(38)"
 			NpcGradeTitle	= "03"
 		/>
 		<REFERENCE
@@ -611,7 +611,7 @@
 	</NPC>
 	<NPC id= "101504" NpcType	= "0" RandomAppreance = "1" comment= "와일드 복서" >
 		<LABEL
-			NpcViewName 	= "와일드 복서"
+			NpcViewName 	= "STR(39)"
 			NpcGradeTitle	= "04"
 		/>
 		<REFERENCE
@@ -627,7 +627,7 @@
 	</NPC>
 	<NPC id= "101505" NpcType	= "0" RandomAppreance = "1" comment= "와일드 복서" >
 		<LABEL
-			NpcViewName 	= "와일드 복서"
+			NpcViewName 	= "STR(40)"
 			NpcGradeTitle	= "05"
 		/>
 		<REFERENCE
@@ -643,7 +643,7 @@
 	</NPC>
 	<NPC id= "101601" NpcType	= "0" RandomAppreance = "1" comment= "바이킹 스벤" > 
 		<LABEL
-			NpcViewName 	= "바이킹 스벤"
+			NpcViewName 	= "STR(41)"
 			NpcGradeTitle	= "01"
 		/>
 		<REFERENCE
@@ -659,7 +659,7 @@
 	</NPC>
 	<NPC id= "101602" NpcType	= "0" RandomAppreance = "1" comment= "바이킹 스벤" > 
 		<LABEL
-			NpcViewName 	= "바이킹 스벤"
+			NpcViewName 	= "STR(42)"
 			NpcGradeTitle	= "02"
 		/>
 		<REFERENCE
@@ -675,7 +675,7 @@
 	</NPC>
 	<NPC id= "101603" NpcType	= "0" RandomAppreance = "1" comment= "바이킹 스벤" > 
 		<LABEL
-			NpcViewName 	= "바이킹 스벤"
+			NpcViewName 	= "STR(43)"
 			NpcGradeTitle	= "03"
 		/>
 		<REFERENCE
@@ -691,7 +691,7 @@
 	</NPC>
 	<NPC id= "101604" NpcType	= "0" RandomAppreance = "1" comment= "바이킹 스벤" > 
 		<LABEL
-			NpcViewName 	= "바이킹 스벤"
+			NpcViewName 	= "STR(44)"
 			NpcGradeTitle	= "04"
 		/>
 		<REFERENCE
@@ -707,7 +707,7 @@
 	</NPC>
 	<NPC id= "101605" NpcType	= "0" RandomAppreance = "1" comment= "바이킹 스벤" > 
 		<LABEL
-			NpcViewName 	= "바이킹 스벤"
+			NpcViewName 	= "STR(45)"
 			NpcGradeTitle	= "05"
 		/>
 		<REFERENCE
@@ -723,7 +723,7 @@
 	</NPC>
 	<NPC id= "101701" NpcType	= "0" RandomAppreance = "1" comment= "카게 닌자" > 
 		<LABEL
-			NpcViewName 	= "카게 닌자"
+			NpcViewName 	= "STR(46)"
 			NpcGradeTitle	= "01"
 		/>
 		<REFERENCE
@@ -739,7 +739,7 @@
 	</NPC>
 	<NPC id= "101702" NpcType	= "0" RandomAppreance = "1" comment= "카게 닌자" > 
 		<LABEL
-			NpcViewName 	= "카게 닌자"
+			NpcViewName 	= "STR(47)"
 			NpcGradeTitle	= "02"
 		/>
 		<REFERENCE
@@ -755,7 +755,7 @@
 	</NPC>
 	<NPC id= "101703" NpcType	= "0" RandomAppreance = "1" comment= "카게 닌자" > 
 		<LABEL
-			NpcViewName 	= "카게 닌자"
+			NpcViewName 	= "STR(48)"
 			NpcGradeTitle	= "03"
 		/>
 		<REFERENCE
@@ -771,7 +771,7 @@
 	</NPC>
 	<NPC id= "101704" NpcType	= "0" RandomAppreance = "1" comment= "카게 닌자" >
 		<LABEL
-			NpcViewName 	= "카게 닌자"
+			NpcViewName 	= "STR(49)"
 			NpcGradeTitle	= "04"
 		/>
 		<REFERENCE
@@ -787,7 +787,7 @@
 	</NPC>
 	<NPC id= "101705" NpcType	= "0" RandomAppreance = "1" comment= "카게 닌자" >
 		<LABEL
-			NpcViewName 	= "카게 닌자"
+			NpcViewName 	= "STR(50)"
 			NpcGradeTitle	= "05"
 		/>
 		<REFERENCE
@@ -803,7 +803,7 @@
 	</NPC>
 	<NPC id= "101901" NpcType	= "0" RandomAppreance = "1" comment= "태권 무도가" > 
 		<LABEL
-			NpcViewName 	= "태권 무도가"
+			NpcViewName 	= "STR(51)"
 			NpcGradeTitle	= "01"
 		/>
 		<REFERENCE
@@ -819,7 +819,7 @@
 	</NPC>
 	<NPC id= "101902" NpcType	= "0" RandomAppreance = "1" comment= "태권 무도가" > 
 		<LABEL
-			NpcViewName 	= "태권 무도가"
+			NpcViewName 	= "STR(52)"
 			NpcGradeTitle	= "02"
 		/>
 		<REFERENCE
@@ -835,7 +835,7 @@
 	</NPC>
 	<NPC id= "101903" NpcType	= "0" RandomAppreance = "1" comment= "태권 무도가" > 
 		<LABEL
-			NpcViewName 	= "태권 무도가"
+			NpcViewName 	= "STR(53)"
 			NpcGradeTitle	= "03"
 		/>
 		<REFERENCE
@@ -851,7 +851,7 @@
 	</NPC>
 	<NPC id= "101904" NpcType	= "0" RandomAppreance = "1" comment= "태권 무도가" > 
 		<LABEL
-			NpcViewName 	= "태권 무도가"
+			NpcViewName 	= "STR(54)"
 			NpcGradeTitle	= "04"
 		/>
 		<REFERENCE
@@ -867,7 +867,7 @@
 	</NPC>
 	<NPC id= "101905" NpcType	= "0" RandomAppreance = "1" comment= "태권 무도가" > 
 		<LABEL
-			NpcViewName 	= "태권 무도가"
+			NpcViewName 	= "STR(55)"
 			NpcGradeTitle	= "05"
 		/>
 		<REFERENCE
@@ -883,7 +883,7 @@
 	</NPC>
 	<NPC id= "102001" NpcType	= "0" RandomAppreance = "1" comment= "암흑 주술사" > 
 		<LABEL
-			NpcViewName 	= "암흑 주술사"
+			NpcViewName 	= "STR(56)"
 			NpcGradeTitle	= "01"
 		/>
 		<REFERENCE
@@ -899,7 +899,7 @@
 	</NPC>
 	<NPC id= "102002" NpcType	= "0" RandomAppreance = "1" comment= "암흑 주술사" > 
 		<LABEL
-			NpcViewName 	= "암흑 주술사"
+			NpcViewName 	= "STR(57)"
 			NpcGradeTitle	= "02"
 		/>
 		<REFERENCE
@@ -915,7 +915,7 @@
 	</NPC>
 	<NPC id= "102003" NpcType	= "0" RandomAppreance = "1" comment= "암흑 주술사" > 
 		<LABEL
-			NpcViewName 	= "암흑 주술사"
+			NpcViewName 	= "STR(58)"
 			NpcGradeTitle	= "03"
 		/>
 		<REFERENCE
@@ -931,7 +931,7 @@
 	</NPC>
 	<NPC id= "102004" NpcType	= "0" RandomAppreance = "1" comment= "암흑 주술사" >
 		<LABEL
-			NpcViewName 	= "암흑 주술사"
+			NpcViewName 	= "STR(59)"
 			NpcGradeTitle	= "04"
 		/>
 		<REFERENCE
@@ -947,7 +947,7 @@
 	</NPC>
 	<NPC id= "102005" NpcType	= "0" RandomAppreance = "1" comment= "암흑 주술사" >
 		<LABEL
-			NpcViewName 	= "암흑 주술사"
+			NpcViewName 	= "STR(60)"
 			NpcGradeTitle	= "05"
 		/>
 		<REFERENCE
@@ -963,7 +963,7 @@
 	</NPC>
 	<NPC id= "102101" NpcType	= "0" RandomAppreance = "1" comment= "스마일 조커" > 
 		<LABEL
-			NpcViewName 	= "스마일 조커"
+			NpcViewName 	= "STR(61)"
 			NpcGradeTitle	= "01"
 		/>
 		<REFERENCE
@@ -979,7 +979,7 @@
 	</NPC>
 	<NPC id= "102102" NpcType	= "0" RandomAppreance = "1" comment= "스마일 조커" > 
 		<LABEL
-			NpcViewName 	= "스마일 조커"
+			NpcViewName 	= "STR(62)"
 			NpcGradeTitle	= "02"
 		/>
 		<REFERENCE
@@ -995,7 +995,7 @@
 	</NPC>
 	<NPC id= "102103" NpcType	= "0" RandomAppreance = "1" comment= "스마일 조커" > 
 		<LABEL
-			NpcViewName 	= "스마일 조커"
+			NpcViewName 	= "STR(63)"
 			NpcGradeTitle	= "03"
 		/>
 		<REFERENCE
@@ -1011,7 +1011,7 @@
 	</NPC>
 	<NPC id= "102104" NpcType	= "0" RandomAppreance = "1" comment= "스마일 조커" > 
 		<LABEL
-			NpcViewName 	= "스마일 조커"
+			NpcViewName 	= "STR(64)"
 			NpcGradeTitle	= "04"
 		/>
 		<REFERENCE
@@ -1027,7 +1027,7 @@
 	</NPC>
 	<NPC id= "102105" NpcType	= "0" RandomAppreance = "1" comment= "스마일 조커" > 
 		<LABEL
-			NpcViewName 	= "스마일 조커"
+			NpcViewName 	= "STR(65)"
 			NpcGradeTitle	= "05"
 		/>
 		<REFERENCE
@@ -1045,7 +1045,7 @@
 
 	<NPC id= "100106" NpcType	= "0" RandomAppreance = "1" comment= "아이언 나이트" >  
 		<LABEL
-			NpcViewName 	= "아이언 나이트"
+			NpcViewName 	= "STR(66)"
 			NpcGradeTitle	= "06"
 		/>
 		<REFERENCE
@@ -1062,7 +1062,7 @@
 	
 	<NPC id= "100406" NpcType	= "0" RandomAppreance = "1" comment= "파이어 메이지" > 
 		<LABEL
-			NpcViewName 	= "파이어 메이지"
+			NpcViewName 	= "STR(67)"
 			NpcGradeTitle	= "06"
 		/>
 		<REFERENCE
@@ -1079,7 +1079,7 @@
 	
 	<NPC id= "101206" NpcType	= "0" RandomAppreance = "1" comment= "쉐도우 어쌔신" > 
 		<LABEL
-			NpcViewName 	= "쉐도우 어쌔신"
+			NpcViewName 	= "STR(68)"
 			NpcGradeTitle	= "06"
 		/>
 		<REFERENCE
@@ -1096,7 +1096,7 @@
 	
 	<NPC id= "101306" NpcType	= "0" RandomAppreance = "1" comment= "빅토리 디펜더" >
 		<LABEL
-			NpcViewName 	= "빅토리 디펜더"
+			NpcViewName 	= "STR(69)"
 			NpcGradeTitle	= "06"
 		/>
 		<REFERENCE
@@ -1113,7 +1113,7 @@
 	
 	<NPC id= "101406" NpcType	= "0" RandomAppreance = "1" comment= "청룡 관우" > 
 		<LABEL
-			NpcViewName 	= "청룡 관우"
+			NpcViewName 	= "STR(70)"
 			NpcGradeTitle	= "06"
 		/>
 		<REFERENCE
@@ -1130,7 +1130,7 @@
 	
 	<NPC id= "101606" NpcType	= "0" RandomAppreance = "1" comment= "바이킹 스벤" > 
 		<LABEL
-			NpcViewName 	= "바이킹 스벤"
+			NpcViewName 	= "STR(71)"
 			NpcGradeTitle	= "06"
 		/>
 		<REFERENCE
@@ -1146,7 +1146,7 @@
 	</NPC>
 	<NPC id= "101906" NpcType	= "0" RandomAppreance = "1" comment= "태권 무도가" > 
 		<LABEL
-			NpcViewName 	= "태권 무도가"
+			NpcViewName 	= "STR(72)"
 			NpcGradeTitle	= "06"
 		/>
 		<REFERENCE
@@ -1163,7 +1163,7 @@
 	
    <NPC id= "102006" NpcType	= "0" RandomAppreance = "1" comment= "암흑 주술사" >
 		<LABEL
-			NpcViewName 	= "암흑 주술사"
+			NpcViewName 	= "STR(73)"
 			NpcGradeTitle	= "06"
 		/>
 		<REFERENCE
@@ -1180,7 +1180,7 @@
 		
    <NPC id= "102706" NpcType	= "0" RandomAppreance = "1" comment= "타이거" >
 		<LABEL
-			NpcViewName 	= "타이거"
+			NpcViewName 	= "STR(74)"
 			NpcGradeTitle	= "06"
 		/>
 		<REFERENCE
@@ -1197,7 +1197,7 @@
 		
    <NPC id= "102806" NpcType	= "0" RandomAppreance = "1" comment= "살라딘" >
 		<LABEL
-			NpcViewName 	= "살라딘"
+			NpcViewName 	= "STR(75)"
 			NpcGradeTitle	= "06"
 		/>
 		<REFERENCE
@@ -1214,7 +1214,7 @@
 		
    <NPC id= "103706" NpcType	= "0" RandomAppreance = "1" comment= "진키사라기" >
 		<LABEL
-			NpcViewName 	= "진키사라기"
+			NpcViewName 	= "STR(76)"
 			NpcGradeTitle	= "06"
 		/>
 		<REFERENCE
@@ -1231,7 +1231,7 @@
 		
    <NPC id= "103806" NpcType	= "0" RandomAppreance = "1" comment= "네크로멘서" >
 		<LABEL
-			NpcViewName 	= "네크로멘서"
+			NpcViewName 	= "STR(77)"
 			NpcGradeTitle	= "06"
 		/>
 		<REFERENCE
@@ -1248,7 +1248,7 @@
 		
    <NPC id= "104006" NpcType	= "0" RandomAppreance = "1" comment= "스파르타쿠스" >
 		<LABEL
-			NpcViewName 	= "스파르타쿠스"
+			NpcViewName 	= "STR(78)"
 			NpcGradeTitle	= "06"
 		/>
 		<REFERENCE
@@ -1265,7 +1265,7 @@
 		
    <NPC id= "104906" NpcType	= "0" RandomAppreance = "1" comment= "카포에라" >
 		<LABEL
-			NpcViewName 	= "카포에라"
+			NpcViewName 	= "STR(79)"
 			NpcGradeTitle	= "06"
 		/>
 		<REFERENCE
@@ -1282,7 +1282,7 @@
 		
    <NPC id= "105006" NpcType	= "0" RandomAppreance = "1" comment= "라그나" >
 		<LABEL
-			NpcViewName 	= "라그나"
+			NpcViewName 	= "STR(80)"
 			NpcGradeTitle	= "06"
 		/>
 		<REFERENCE
@@ -1299,7 +1299,7 @@
 		
    <NPC id= "105806" NpcType	= "0" RandomAppreance = "1" comment= "메이" >
 		<LABEL
-			NpcViewName 	= "메이"
+			NpcViewName 	= "STR(81)"
 			NpcGradeTitle	= "06"
 		/>
 		<REFERENCE
@@ -1316,7 +1316,7 @@
 		
    <NPC id= "105906" NpcType	= "0" RandomAppreance = "1" comment= "무에타이" >
 		<LABEL
-			NpcViewName 	= "무에타이"
+			NpcViewName 	= "STR(82)"
 			NpcGradeTitle	= "06"
 		/>
 		<REFERENCE
@@ -1333,7 +1333,7 @@
 					
    <NPC id= "107306" NpcType	= "0" RandomAppreance = "1" comment= "그래피티" >
 		<LABEL
-			NpcViewName 	= "그래피티"
+			NpcViewName 	= "STR(83)"
 			NpcGradeTitle	= "06"
 		/>
 		<REFERENCE
@@ -1350,7 +1350,7 @@
 		
 	<NPC id= "100107" NpcType	= "0" RandomAppreance = "1" comment= "아이언 나이트" >  
 		<LABEL
-			NpcViewName 	= "아이언 나이트"
+			NpcViewName 	= "STR(84)"
 			NpcGradeTitle	= "07"
 		/>
 		<REFERENCE
@@ -1367,7 +1367,7 @@
 	
 	<NPC id= "100407" NpcType	= "0" RandomAppreance = "1" comment= "파이어 메이지" > 
 		<LABEL
-			NpcViewName 	= "파이어 메이지"
+			NpcViewName 	= "STR(85)"
 			NpcGradeTitle	= "07"
 		/>
 		<REFERENCE
@@ -1384,7 +1384,7 @@
 	
 	<NPC id= "101207" NpcType	= "0" RandomAppreance = "1" comment= "쉐도우 어쌔신" > 
 		<LABEL
-			NpcViewName 	= "쉐도우 어쌔신"
+			NpcViewName 	= "STR(86)"
 			NpcGradeTitle	= "07"
 		/>
 		<REFERENCE
@@ -1401,7 +1401,7 @@
 	
 	<NPC id= "101307" NpcType	= "0" RandomAppreance = "1" comment= "빅토리 디펜더" >
 		<LABEL
-			NpcViewName 	= "빅토리 디펜더"
+			NpcViewName 	= "STR(87)"
 			NpcGradeTitle	= "07"
 		/>
 		<REFERENCE
@@ -1418,7 +1418,7 @@
 	
 	<NPC id= "101407" NpcType	= "0" RandomAppreance = "1" comment= "청룡 관우" > 
 		<LABEL
-			NpcViewName 	= "청룡 관우"
+			NpcViewName 	= "STR(88)"
 			NpcGradeTitle	= "07"
 		/>
 		<REFERENCE
@@ -1435,7 +1435,7 @@
 	
 	<NPC id= "101607" NpcType	= "0" RandomAppreance = "1" comment= "바이킹 스벤" > 
 		<LABEL
-			NpcViewName 	= "바이킹 스벤"
+			NpcViewName 	= "STR(89)"
 			NpcGradeTitle	= "07"
 		/>
 		<REFERENCE
@@ -1451,7 +1451,7 @@
 	</NPC>
 	<NPC id= "101907" NpcType	= "0" RandomAppreance = "1" comment= "태권 무도가" > 
 		<LABEL
-			NpcViewName 	= "태권 무도가"
+			NpcViewName 	= "STR(90)"
 			NpcGradeTitle	= "07"
 		/>
 		<REFERENCE
@@ -1468,7 +1468,7 @@
 	
    <NPC id= "102007" NpcType	= "0" RandomAppreance = "1" comment= "암흑 주술사" >
 		<LABEL
-			NpcViewName 	= "암흑 주술사"
+			NpcViewName 	= "STR(91)"
 			NpcGradeTitle	= "07"
 		/>
 		<REFERENCE
@@ -1485,7 +1485,7 @@
 		
    <NPC id= "102707" NpcType	= "0" RandomAppreance = "1" comment= "타이거" >
 		<LABEL
-			NpcViewName 	= "타이거"
+			NpcViewName 	= "STR(92)"
 			NpcGradeTitle	= "07"
 		/>
 		<REFERENCE
@@ -1502,7 +1502,7 @@
 		
    <NPC id= "102807" NpcType	= "0" RandomAppreance = "1" comment= "살라딘" >
 		<LABEL
-			NpcViewName 	= "살라딘"
+			NpcViewName 	= "STR(93)"
 			NpcGradeTitle	= "07"
 		/>
 		<REFERENCE
@@ -1519,7 +1519,7 @@
 		
    <NPC id= "103707" NpcType	= "0" RandomAppreance = "1" comment= "진키사라기" >
 		<LABEL
-			NpcViewName 	= "진키사라기"
+			NpcViewName 	= "STR(94)"
 			NpcGradeTitle	= "07"
 		/>
 		<REFERENCE
@@ -1536,7 +1536,7 @@
 		
    <NPC id= "103807" NpcType	= "0" RandomAppreance = "1" comment= "네크로멘서" >
 		<LABEL
-			NpcViewName 	= "네크로멘서"
+			NpcViewName 	= "STR(95)"
 			NpcGradeTitle	= "07"
 		/>
 		<REFERENCE
@@ -1553,7 +1553,7 @@
 		
    <NPC id= "104007" NpcType	= "0" RandomAppreance = "1" comment= "스파르타쿠스" >
 		<LABEL
-			NpcViewName 	= "스파르타쿠스"
+			NpcViewName 	= "STR(96)"
 			NpcGradeTitle	= "07"
 		/>
 		<REFERENCE
@@ -1570,7 +1570,7 @@
 		
    <NPC id= "104907" NpcType	= "0" RandomAppreance = "1" comment= "카포에라" >
 		<LABEL
-			NpcViewName 	= "카포에라"
+			NpcViewName 	= "STR(97)"
 			NpcGradeTitle	= "07"
 		/>
 		<REFERENCE
@@ -1587,7 +1587,7 @@
 		
    <NPC id= "105007" NpcType	= "0" RandomAppreance = "1" comment= "라그나" >
 		<LABEL
-			NpcViewName 	= "라그나"
+			NpcViewName 	= "STR(98)"
 			NpcGradeTitle	= "07"
 		/>
 		<REFERENCE
@@ -1604,7 +1604,7 @@
 		
    <NPC id= "105807" NpcType	= "0" RandomAppreance = "1" comment= "메이" >
 		<LABEL
-			NpcViewName 	= "메이"
+			NpcViewName 	= "STR(99)"
 			NpcGradeTitle	= "07"
 		/>
 		<REFERENCE
@@ -1621,7 +1621,7 @@
 		
    <NPC id= "105907" NpcType	= "0" RandomAppreance = "1" comment= "무에타이" >
 		<LABEL
-			NpcViewName 	= "무에타이"
+			NpcViewName 	= "STR(100)"
 			NpcGradeTitle	= "07"
 		/>
 		<REFERENCE
@@ -1638,7 +1638,7 @@
 					
    <NPC id= "107307" NpcType	= "0" RandomAppreance = "1" comment= "그래피티" >
 		<LABEL
-			NpcViewName 	= "그래피티"
+			NpcViewName 	= "STR(101)"
 			NpcGradeTitle	= "07"
 		/>
 		<REFERENCE

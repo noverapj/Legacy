@@ -94,6 +94,36 @@ function Find-Spans {
                 }
             }
         }
+        elseif ($name -eq 'LabelInfo' -and $parent -eq 'ExtraInfo') {
+            foreach ($m in $AttrPattern.Matches($header)) {
+                if ($m.Groups[1].Value -eq 'Text') {
+                    $val = [System.Net.WebUtility]::HtmlDecode($m.Groups[2].Value)
+                    if ($Hangeul.IsMatch($val)) {
+                        $spans.Add(@{ Kind='attr'; Start=($lt + $m.Groups[2].Index); End=($lt + $m.Groups[2].Index + $m.Groups[2].Length); Value=$val; Route='LabelInfo' })
+                    }
+                }
+            }
+        }
+        elseif ($name -match '^TabText\d+$') {
+            foreach ($m in $AttrPattern.Matches($header)) {
+                if ($m.Groups[1].Value -eq 'Text') {
+                    $val = [System.Net.WebUtility]::HtmlDecode($m.Groups[2].Value)
+                    if ($Hangeul.IsMatch($val)) {
+                        $spans.Add(@{ Kind='attr'; Start=($lt + $m.Groups[2].Index); End=($lt + $m.Groups[2].Index + $m.Groups[2].Length); Value=$val; Route='TabText' })
+                    }
+                }
+            }
+        }
+        elseif ($name -eq 'LABEL' -and $parent -eq 'NPC') {
+            foreach ($m in $AttrPattern.Matches($header)) {
+                if ($m.Groups[1].Value -eq 'NpcViewName' -or $m.Groups[1].Value -eq 'NpcGradeTitle') {
+                    $val = [System.Net.WebUtility]::HtmlDecode($m.Groups[2].Value)
+                    if ($Hangeul.IsMatch($val)) {
+                        $spans.Add(@{ Kind='attr'; Start=($lt + $m.Groups[2].Index); End=($lt + $m.Groups[2].Index + $m.Groups[2].Length); Value=$val; Route='NpcLabel' })
+                    }
+                }
+            }
+        }
         elseif ($name -eq 'TextBlock') {
             foreach ($m in $AttrPattern.Matches($header)) {
                 if ($m.Groups[1].Value -eq 'Text') {

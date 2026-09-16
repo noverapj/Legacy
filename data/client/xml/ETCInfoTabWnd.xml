@@ -16,7 +16,7 @@
             <Size X="0" Y="0" Width="99" Height="22" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
             <Imagery />
             <ExtraInfo ButtonType="0">
-                <LabelInfo Text="정보" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                <LabelInfo Text="STR(2)" Size="16" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
                 <NormalFrame Template="tap4_off" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
                 <OverFrame Template="tap4_off" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
                 <OverAddFrame Template="tap4_overadd" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
@@ -57,7 +57,7 @@
                         <Size X="8" Y="0" Width="118" Height="27" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                         <Imagery />
                         <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                            <LabelInfo Text="특별 아이템" Size="13" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                            <LabelInfo Text="STR(3)" Size="13" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                             <ToolInfo />
                         </ExtraInfo>
                     </Window>

@@ -35,7 +35,7 @@
         <Size X="91" Y="341" Width="90" Height="14" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
         <Imagery />
         <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-            <LabelInfo Text="lv10 데스페라도" Size="12" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+            <LabelInfo Text="STR(1)" Size="12" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
             <ToolInfo />
         </ExtraInfo>
     </Window>
@@ -52,7 +52,7 @@
             <Size X="0" Y="0" Width="90" Height="22" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
             <Imagery />
             <ExtraInfo ButtonType="0">
-                <LabelInfo Text="육성" Size="14" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                <LabelInfo Text="STR(2)" Size="14" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
                 <NormalFrame Template="tap4_off" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
                 <OverFrame Template="tap4_off" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
                 <OverAddFrame Template="tap4_overadd" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
@@ -77,7 +77,7 @@
                     <Size X="39" Y="6" Width="62" Height="27" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="공격력" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(3)" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -117,7 +117,7 @@
                     <Size X="39" Y="6" Width="62" Height="27" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="이동속도" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(4)" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -157,7 +157,7 @@
                     <Size X="39" Y="6" Width="62" Height="27" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="드랍완화" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(5)" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -197,7 +197,7 @@
                     <Size X="39" Y="6" Width="62" Height="27" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="방어력" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(6)" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -237,7 +237,7 @@
                     <Size X="39" Y="6" Width="62" Height="27" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="무기스킬" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(7)" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -277,7 +277,7 @@
                     <Size X="39" Y="6" Width="62" Height="27" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="투구스킬" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(8)" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -317,7 +317,7 @@
                     <Size X="39" Y="6" Width="62" Height="27" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="갑옷스킬" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(9)" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -357,7 +357,7 @@
                     <Size X="39" Y="6" Width="62" Height="27" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="망토스킬" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(10)" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -384,7 +384,7 @@
             <Size X="91" Y="0" Width="90" Height="22" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
             <Imagery />
             <ExtraInfo ButtonType="0">
-                <LabelInfo Text="장비" Size="14" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                <LabelInfo Text="STR(11)" Size="14" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
                 <NormalFrame Template="tap4_off" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
                 <OverFrame Template="tap4_off" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
                 <OverAddFrame Template="tap4_overadd" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
@@ -515,7 +515,7 @@
             <Size X="182" Y="0" Width="90" Height="22" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
             <Imagery />
             <ExtraInfo ButtonType="0">
-                <LabelInfo Text="치장" Size="14" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+                <LabelInfo Text="STR(12)" Size="14" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ff000000" NormalBKColor="ff000000" OverColor="ff000000" OverBKColor="ff000000" PushColor="ff000000" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
                 <NormalFrame Template="tap4_off" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
                 <OverFrame Template="tap4_off" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
                 <OverAddFrame Template="tap4_overadd" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
@@ -628,7 +628,7 @@
         <Size X="180" Y="341" Width="32" Height="14" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
         <Imagery />
         <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-            <LabelInfo Text="(영구)" Size="12" Color="ff1c26f9" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+            <LabelInfo Text="STR(13)" Size="12" Color="ff1c26f9" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
             <ToolInfo />
         </ExtraInfo>
     </Window>

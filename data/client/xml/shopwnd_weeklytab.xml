@@ -33,7 +33,7 @@
                 <Size X="1" Y="98" Width="105" Height="18" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                 <Imagery />
                 <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                    <LabelInfo Text="사이보그" Size="13" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="102" />
+                    <LabelInfo Text="STR(11)" Size="13" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="102" />
                     <ToolInfo />
                 </ExtraInfo>
             </Window>
@@ -97,7 +97,7 @@
                     <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(12)" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -113,7 +113,7 @@
                     <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(13)" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -129,7 +129,7 @@
                     <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(14)" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -160,7 +160,7 @@
                 <Size X="1" Y="98" Width="105" Height="18" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                 <Imagery />
                 <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                    <LabelInfo Text="사이보그" Size="13" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="102" />
+                    <LabelInfo Text="STR(15)" Size="13" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="102" />
                     <ToolInfo />
                 </ExtraInfo>
             </Window>
@@ -224,7 +224,7 @@
                     <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(16)" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -240,7 +240,7 @@
                     <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(17)" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -256,7 +256,7 @@
                     <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(18)" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -287,7 +287,7 @@
                 <Size X="1" Y="98" Width="105" Height="18" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                 <Imagery />
                 <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                    <LabelInfo Text="사이보그" Size="13" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="102" />
+                    <LabelInfo Text="STR(19)" Size="13" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="102" />
                     <ToolInfo />
                 </ExtraInfo>
             </Window>
@@ -351,7 +351,7 @@
                     <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(20)" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -367,7 +367,7 @@
                     <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(21)" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -383,7 +383,7 @@
                     <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(22)" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -414,7 +414,7 @@
                 <Size X="1" Y="98" Width="105" Height="18" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                 <Imagery />
                 <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                    <LabelInfo Text="사이보그" Size="13" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="102" />
+                    <LabelInfo Text="STR(23)" Size="13" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="102" />
                     <ToolInfo />
                 </ExtraInfo>
             </Window>
@@ -478,7 +478,7 @@
                     <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(24)" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -494,7 +494,7 @@
                     <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(25)" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -510,7 +510,7 @@
                     <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(26)" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -541,7 +541,7 @@
                 <Size X="1" Y="98" Width="105" Height="18" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                 <Imagery />
                 <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                    <LabelInfo Text="사이보그" Size="13" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="102" />
+                    <LabelInfo Text="STR(27)" Size="13" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="102" />
                     <ToolInfo />
                 </ExtraInfo>
             </Window>
@@ -605,7 +605,7 @@
                     <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(28)" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -621,7 +621,7 @@
                     <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(29)" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -637,7 +637,7 @@
                     <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(30)" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -668,7 +668,7 @@
                 <Size X="1" Y="98" Width="105" Height="18" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                 <Imagery />
                 <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                    <LabelInfo Text="사이보그" Size="13" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="102" />
+                    <LabelInfo Text="STR(31)" Size="13" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="102" />
                     <ToolInfo />
                 </ExtraInfo>
             </Window>
@@ -732,7 +732,7 @@
                     <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(32)" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -748,7 +748,7 @@
                     <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(33)" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -764,7 +764,7 @@
                     <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(34)" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -795,7 +795,7 @@
                 <Size X="1" Y="98" Width="105" Height="18" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                 <Imagery />
                 <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                    <LabelInfo Text="사이보그" Size="13" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="102" />
+                    <LabelInfo Text="STR(35)" Size="13" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="102" />
                     <ToolInfo />
                 </ExtraInfo>
             </Window>
@@ -859,7 +859,7 @@
                     <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(36)" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -875,7 +875,7 @@
                     <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(37)" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -891,7 +891,7 @@
                     <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(38)" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -922,7 +922,7 @@
                 <Size X="1" Y="98" Width="105" Height="18" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                 <Imagery />
                 <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                    <LabelInfo Text="사이보그" Size="13" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="102" />
+                    <LabelInfo Text="STR(39)" Size="13" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="102" />
                     <ToolInfo />
                 </ExtraInfo>
             </Window>
@@ -986,7 +986,7 @@
                     <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(40)" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -1002,7 +1002,7 @@
                     <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(41)" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -1018,7 +1018,7 @@
                     <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(42)" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -1049,7 +1049,7 @@
                 <Size X="1" Y="98" Width="105" Height="18" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                 <Imagery />
                 <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                    <LabelInfo Text="사이보그" Size="13" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="102" />
+                    <LabelInfo Text="STR(43)" Size="13" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="102" />
                     <ToolInfo />
                 </ExtraInfo>
             </Window>
@@ -1113,7 +1113,7 @@
                     <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(44)" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -1129,7 +1129,7 @@
                     <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(45)" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -1145,7 +1145,7 @@
                     <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(46)" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -1176,7 +1176,7 @@
                 <Size X="1" Y="98" Width="105" Height="18" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                 <Imagery />
                 <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                    <LabelInfo Text="사이보그" Size="13" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="102" />
+                    <LabelInfo Text="STR(47)" Size="13" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="102" />
                     <ToolInfo />
                 </ExtraInfo>
             </Window>
@@ -1240,7 +1240,7 @@
                     <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(48)" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -1256,7 +1256,7 @@
                     <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(49)" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -1272,7 +1272,7 @@
                     <Size X="23" Y="3" Width="41" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="EXP부스터" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(50)" Size="13" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>

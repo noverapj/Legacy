@@ -488,7 +488,10 @@ void	ioButtonWndEX::_ParseExtraInfo( ioXMLElement& extxml )
 	{
 		if ( strcmp( elem.GetTagName(), "LabelInfo" ) == 0 )
 		{
+			elem.SetStringMgrKeyName( extxml.GetStringMgrKeyName() );
+			elem.SetUseStringMgr( true );
 			const char* text = elem.GetStringAttribute( "Text" );
+			elem.SetUseStringMgr( false );
 			if ( text || strcmp( text, "" ) != 0 )
 			{
 				SetLabelText( text, "" );

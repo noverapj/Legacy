@@ -149,8 +149,11 @@ void ioNpcMgr::BuildAdditionalNPCLabel( FieldNPCData *pData, ioXMLElement* node 
 {
 	if( !node->IsEmpty() )
 	{
+		node->SetStringMgrKeyName( "npc_ai_npclist" );
+		node->SetUseStringMgr( true );
 		pData->m_szNpcViewName	= node->GetStringAttribute_e( "NpcViewName" );
 		pData->m_szGradeTitle	= node->GetStringAttribute_e( "NpcGradeTitle" );
+		node->SetUseStringMgr( false );
 	}
 	else LOG.PrintTimeAndLog( 0, "LABEL node is invalid." );
 }

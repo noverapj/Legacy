@@ -20,7 +20,7 @@
                 <Size X="10" Y="5" Width="60" Height="23" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                 <Imagery />
                 <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                    <LabelInfo Text="구입" Size="16" Color="fffcfcfc" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                    <LabelInfo Text="STR(11)" Size="16" Color="fffcfcfc" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                     <ToolInfo />
                 </ExtraInfo>
             </Window>
@@ -91,7 +91,7 @@
                     <Size X="260" Y="4" Width="93" Height="15" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="3,759 페소" Size="12" Color="ff0000ff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="2" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(12)" Size="12" Color="ff0000ff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="2" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -115,7 +115,7 @@
                     <Size X="260" Y="4" Width="93" Height="15" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="3,759 페소" Size="12" Color="ff0000ff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="2" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(13)" Size="12" Color="ff0000ff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="2" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -139,7 +139,7 @@
                     <Size X="260" Y="4" Width="93" Height="15" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="3,800 골드" Size="12" Color="ffc18c3e" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="2" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(14)" Size="12" Color="ffc18c3e" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="2" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -162,7 +162,7 @@
                     <Size X="260" Y="4" Width="93" Height="15" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                        <LabelInfo Text="10,000골드" Size="12" Color="ffb88547" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="2" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                        <LabelInfo Text="STR(15)" Size="12" Color="ffb88547" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="0" HorzAlign="2" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                         <ToolInfo />
                     </ExtraInfo>
                 </Window>
@@ -171,7 +171,7 @@
                 <Size X="15" Y="117" Width="359" Height="19" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                 <Imagery />
                 <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                    <LabelInfo Text="영구 고용시 블라블라 지급" Size="12" Color="ffff00ff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                    <LabelInfo Text="STR(16)" Size="12" Color="ffff00ff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="0" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                     <ToolInfo />
                 </ExtraInfo>
             </Window>
@@ -186,7 +186,7 @@
                     <Size X="19" Y="12" Width="177" Height="31" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo ButtonType="0">
-                        <LabelInfo Text="구입(SPACE)" Size="13" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ffffffff" NormalBKColor="ffffffff" OverColor="ffffffff" OverBKColor="ffffffff" PushColor="ffffffff" PushBKColor="ffffffff" DisableColor="ffffffff" DisableBKColor="ffffffff" />
+                        <LabelInfo Text="STR(17)" Size="13" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ffffffff" NormalBKColor="ffffffff" OverColor="ffffffff" OverBKColor="ffffffff" PushColor="ffffffff" PushBKColor="ffffffff" DisableColor="ffffffff" DisableBKColor="ffffffff" />
                         <NormalFrame Template="bt006_blue_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
                         <OverFrame Template="bt006_blue_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
                         <OverAddFrame Template="bt_overadd" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
@@ -200,7 +200,7 @@
                     <Size X="197" Y="12" Width="177" Height="31" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
                     <Imagery />
                     <ExtraInfo ButtonType="0">
-                        <LabelInfo Text="선물" Size="13" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ffffffff" NormalBKColor="ffffffff" OverColor="ffffffff" OverBKColor="ffffffff" PushColor="ffffffff" PushBKColor="ffffffff" DisableColor="ffffffff" DisableBKColor="ffffffff" />
+                        <LabelInfo Text="STR(18)" Size="13" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ffffffff" NormalBKColor="ffffffff" OverColor="ffffffff" OverBKColor="ffffffff" PushColor="ffffffff" PushBKColor="ffffffff" DisableColor="ffffffff" DisableBKColor="ffffffff" />
                         <NormalFrame Template="bt006_blue_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
                         <OverFrame Template="bt006_blue_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
                         <OverAddFrame Template="bt_overadd" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />

@@ -36,7 +36,7 @@
                 <Size X="3" Y="108" Width="101" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                 <Imagery />
                 <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                    <LabelInfo Text="사이보그" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
+                    <LabelInfo Text="STR(16)" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
                     <ToolInfo />
                 </ExtraInfo>
             </Window>
@@ -83,7 +83,7 @@
                 <Size X="3" Y="108" Width="101" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                 <Imagery />
                 <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                    <LabelInfo Text="사이보그" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
+                    <LabelInfo Text="STR(17)" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
                     <ToolInfo />
                 </ExtraInfo>
             </Window>
@@ -130,7 +130,7 @@
                 <Size X="3" Y="108" Width="101" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                 <Imagery />
                 <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                    <LabelInfo Text="사이보그" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
+                    <LabelInfo Text="STR(18)" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
                     <ToolInfo />
                 </ExtraInfo>
             </Window>
@@ -177,7 +177,7 @@
                 <Size X="3" Y="108" Width="101" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                 <Imagery />
                 <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                    <LabelInfo Text="사이보그" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
+                    <LabelInfo Text="STR(19)" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
                     <ToolInfo />
                 </ExtraInfo>
             </Window>
@@ -224,7 +224,7 @@
                 <Size X="3" Y="108" Width="101" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                 <Imagery />
                 <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                    <LabelInfo Text="사이보그" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
+                    <LabelInfo Text="STR(20)" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
                     <ToolInfo />
                 </ExtraInfo>
             </Window>
@@ -271,7 +271,7 @@
                 <Size X="3" Y="108" Width="101" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                 <Imagery />
                 <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                    <LabelInfo Text="사이보그" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
+                    <LabelInfo Text="STR(21)" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
                     <ToolInfo />
                 </ExtraInfo>
             </Window>
@@ -318,7 +318,7 @@
                 <Size X="3" Y="108" Width="101" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                 <Imagery />
                 <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                    <LabelInfo Text="사이보그" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
+                    <LabelInfo Text="STR(22)" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
                     <ToolInfo />
                 </ExtraInfo>
             </Window>
@@ -365,7 +365,7 @@
                 <Size X="3" Y="108" Width="101" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                 <Imagery />
                 <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                    <LabelInfo Text="사이보그" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
+                    <LabelInfo Text="STR(23)" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
                     <ToolInfo />
                 </ExtraInfo>
             </Window>
@@ -412,7 +412,7 @@
                 <Size X="3" Y="108" Width="101" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                 <Imagery />
                 <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                    <LabelInfo Text="사이보그" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
+                    <LabelInfo Text="STR(24)" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
                     <ToolInfo />
                 </ExtraInfo>
             </Window>
@@ -459,7 +459,7 @@
                 <Size X="3" Y="108" Width="101" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                 <Imagery />
                 <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                    <LabelInfo Text="사이보그" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
+                    <LabelInfo Text="STR(25)" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
                     <ToolInfo />
                 </ExtraInfo>
             </Window>
@@ -506,7 +506,7 @@
                 <Size X="3" Y="108" Width="101" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                 <Imagery />
                 <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                    <LabelInfo Text="사이보그" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
+                    <LabelInfo Text="STR(26)" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
                     <ToolInfo />
                 </ExtraInfo>
             </Window>
@@ -553,7 +553,7 @@
                 <Size X="3" Y="108" Width="101" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                 <Imagery />
                 <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                    <LabelInfo Text="사이보그" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
+                    <LabelInfo Text="STR(27)" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
                     <ToolInfo />
                 </ExtraInfo>
             </Window>
@@ -600,7 +600,7 @@
                 <Size X="5" Y="108" Width="101" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                 <Imagery />
                 <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                    <LabelInfo Text="사이보그" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
+                    <LabelInfo Text="STR(28)" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
                     <ToolInfo />
                 </ExtraInfo>
             </Window>
@@ -647,7 +647,7 @@
                 <Size X="3" Y="108" Width="101" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                 <Imagery />
                 <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                    <LabelInfo Text="사이보그" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
+                    <LabelInfo Text="STR(29)" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
                     <ToolInfo />
                 </ExtraInfo>
             </Window>
@@ -694,7 +694,7 @@
                 <Size X="3" Y="108" Width="101" Height="17" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
                 <Imagery />
                 <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                    <LabelInfo Text="사이보그" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
+                    <LabelInfo Text="STR(30)" Size="14" Color="ff000000" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="2" PrintWidthCutSize="100" />
                     <ToolInfo />
                 </ExtraInfo>
             </Window>

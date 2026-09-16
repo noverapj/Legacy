@@ -681,9 +681,9 @@
 			</PullDownItem>		
 			<PowerUpPullDownItem>
 				<MaxTab Max="3"/>
-				<TabText1 Text="진화" ToolTip = "powerup_tooltip.xml" ShowToolTip="true" ManualIndex = "802"/>
-				<TabText2 Text = "분해" />
-				<TabText3 Text= "팔기" />
+				<TabText1 Text="STR(83)" ToolTip = "powerup_tooltip.xml" ShowToolTip="true" ManualIndex = "802"/>
+				<TabText2 Text = "STR(84)" />
+				<TabText3 Text= "STR(85)" />
 			</PowerUpPullDownItem>
 		</ExtraInfo>
 	

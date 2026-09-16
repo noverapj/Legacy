@@ -48,7 +48,7 @@
             <Size X="0" Y="0" Width="40" Height="16" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
             <Imagery />
             <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                <LabelInfo Text="진행중" Size="11" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                <LabelInfo Text="STR(1)" Size="11" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                 <ToolInfo />
             </ExtraInfo>
         </Window>
@@ -65,7 +65,7 @@
             <Size X="0" Y="0" Width="40" Height="16" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
             <Imagery />
             <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                <LabelInfo Text="휴식중" Size="11" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                <LabelInfo Text="STR(2)" Size="11" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                 <ToolInfo />
             </ExtraInfo>
         </Window>
@@ -82,7 +82,7 @@
             <Size X="0" Y="0" Width="40" Height="16" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
             <Imagery />
             <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                <LabelInfo Text="휴식중" Size="11" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                <LabelInfo Text="STR(3)" Size="11" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                 <ToolInfo />
             </ExtraInfo>
         </Window>
@@ -99,7 +99,7 @@
             <Size X="0" Y="0" Width="40" Height="16" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
             <Imagery />
             <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                <LabelInfo Text="모집중" Size="11" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                <LabelInfo Text="STR(4)" Size="11" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                 <ToolInfo />
             </ExtraInfo>
         </Window>
@@ -116,7 +116,7 @@
             <Size X="0" Y="0" Width="40" Height="16" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
             <Imagery />
             <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                <LabelInfo Text="응원중" Size="11" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                <LabelInfo Text="STR(5)" Size="11" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                 <ToolInfo />
             </ExtraInfo>
         </Window>
@@ -133,7 +133,7 @@
             <Size X="0" Y="0" Width="40" Height="16" CheckParentOutSide="false" XAlign="Left" YAlign="Top" />
             <Imagery />
             <ExtraInfo AlignStyle="0" LabelOffsetX="0" LabelOffsetY="0">
-                <LabelInfo Text="대회중" Size="11" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
+                <LabelInfo Text="STR(6)" Size="11" Color="ffffffff" BKColor="ff000000" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" />
                 <ToolInfo />
             </ExtraInfo>
         </Window>

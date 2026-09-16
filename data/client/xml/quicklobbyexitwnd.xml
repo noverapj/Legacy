@@ -48,7 +48,7 @@
         <Size X="17" Y="54" Width="186" Height="31" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
         <Imagery />
         <ExtraInfo ButtonType="0">
-            <LabelInfo Text="옵션 (F8)" Size="13" Alpha="255" Style="5" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ffffffff" NormalBKColor="ff12304e" OverColor="ffffffff" OverBKColor="ff12304e" PushColor="ffffffff" PushBKColor="ff12304b" DisableColor="ff000000" DisableBKColor="ff000000" />
+            <LabelInfo Text="STR(2)" Size="13" Alpha="255" Style="5" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ffffffff" NormalBKColor="ff12304e" OverColor="ffffffff" OverBKColor="ff12304e" PushColor="ffffffff" PushBKColor="ff12304b" DisableColor="ff000000" DisableBKColor="ff000000" />
             <NormalFrame Template="bt006_blue_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
             <OverFrame Template="bt006_blue_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
             <OverAddFrame Template="bt_overadd" RenderType="3" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
@@ -62,7 +62,7 @@
         <Size X="17" Y="87" Width="186" Height="31" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
         <Imagery />
         <ExtraInfo ButtonType="0">
-            <LabelInfo Text="나가기" Size="13" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ffb91600" NormalBKColor="ff000000" OverColor="ffb91600" OverBKColor="ff000000" PushColor="ffb91600" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+            <LabelInfo Text="STR(3)" Size="13" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ffb91600" NormalBKColor="ff000000" OverColor="ffb91600" OverBKColor="ff000000" PushColor="ffb91600" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
             <NormalFrame Template="bt006_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
             <OverFrame Template="bt006_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
             <OverAddFrame Template="bt_overadd" RenderType="3" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
@@ -76,7 +76,7 @@
         <Size X="17" Y="87" Width="186" Height="31" CheckParentOutSide="true" XAlign="Left" YAlign="Top" />
         <Imagery />
         <ExtraInfo ButtonType="0">
-            <LabelInfo Text="게임 종료" Size="13" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ffb91600" NormalBKColor="ff000000" OverColor="ffb91600" OverBKColor="ff000000" PushColor="ffb91600" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
+            <LabelInfo Text="STR(4)" Size="13" Alpha="255" Style="0" DisableStyle="0" VertAlign="1" HorzAlign="1" Gap="0" PrintTextStyle="0" PrintWidthCutSize="0" NormalColor="ffb91600" NormalBKColor="ff000000" OverColor="ffb91600" OverBKColor="ff000000" PushColor="ffb91600" PushBKColor="ff000000" DisableColor="ff000000" DisableBKColor="ff000000" />
             <NormalFrame Template="bt006_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
             <OverFrame Template="bt006_gray_nor" RenderType="0" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
             <OverAddFrame Template="bt_overadd" RenderType="3" GrayRenderType="0" TextureFilterOption="0" Color="ffffffff" />
