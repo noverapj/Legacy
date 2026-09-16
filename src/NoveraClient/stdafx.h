@@ -74,23 +74,6 @@ __forceinline unsigned int return_PI() { __asm mov eax,   3141592654 };
 
 #endif
 
-// 국가 코드 페이지. 기본은 Korean 949
-#if defined( SRC_INDONESIA )
-#define COUNTRY_CODE_PAGE	1252
-#elif defined( SRC_NA )
-#define COUNTRY_CODE_PAGE	1252
-#elif defined( SRC_TAIWAN )
-#define COUNTRY_CODE_PAGE	950
-#elif defined( SRC_THAILAND )
-#define COUNTRY_CODE_PAGE	874
-#elif defined( SRC_EU )
-#define COUNTRY_CODE_PAGE	1252
-#elif defined( SRC_LATIN )
-#define COUNTRY_CODE_PAGE	1250
-#else
-#define COUNTRY_CODE_PAGE	949
-#endif
-
 #define SKILLCOOL_COUNT
 
 #define ID_HOTKEY_PS				"Hot_Key_Ps"

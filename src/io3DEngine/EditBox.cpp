@@ -76,17 +76,10 @@ void EditBox::Create( HWND hWnd, HINSTANCE hInstance )
 	DWORD dwS;
 	dwS = WS_CHILD|ES_LEFT|ES_MULTILINE|WS_VISIBLE;
 
-#if defined( SRC_OVERSEAS )
 	// edit창이 커야 CompositionWindow 위치 설정이 가능하다, CompositionWindow 위치가 edit창을 벗어 나면 독립 윈도우로 출력됨
-	m_hEdit = CreateWindowW(L"edit", L"ls-edit", dwS, 0, 0, 1280, 1027, hWnd, NULL, hInstance, NULL); 	
-	SendMessage(m_hEdit, EM_LIMITTEXT, MAX_IME_STRING, 0);	
+	m_hEdit = CreateWindowW(L"edit", L"ls-edit", dwS, 0, 0, 1280, 1027, hWnd, NULL, hInstance, NULL);
+	SendMessage(m_hEdit, EM_LIMITTEXT, MAX_IME_STRING, 0);
 	m_EditProc = (WNDPROC)SetWindowLongW(m_hEdit, GWL_WNDPROC, (LONG)EditProc);
-#else
-	// edit창이 커야 CompositionWindow 위치 설정이 가능하다, CompositionWindow 위치가 edit창을 벗어 나면 독립 윈도우로 출력됨
-	m_hEdit = CreateWindow("edit", "ls-edit", dwS, 0, 0, 1280, 1027, hWnd, NULL, hInstance, NULL);
-	SendMessage(m_hEdit, EM_LIMITTEXT, MAX_IME_STRING, 0);	
-	m_EditProc = (WNDPROC)SetWindowLong(m_hEdit, GWL_WNDPROC, (LONG)EditProc);
-#endif
 
 	ShowWindow( m_hEdit , SW_HIDE );
 }
@@ -94,8 +87,6 @@ void EditBox::Create( HWND hWnd, HINSTANCE hInstance )
 
 void EditBox::SetString( const char *szText )
 {
-
-#if defined( SRC_OVERSEAS )
 	StringCbCopy( m_szInput, sizeof( m_szInput ), szText );
 
 	// determine required length of new string
@@ -108,10 +99,6 @@ void EditBox::SetString( const char *szText )
 	::MultiByteToWideChar( ioText::GetCodePage(), 0, szText, strlen(szText), &ret[0], (int)ret.length() );
 
 	SetWindowTextW( m_hEdit, ret.c_str() );
-#else
-	StringCbCopy( m_szInput, sizeof( m_szInput ), szText );
-	SetWindowText( m_hEdit, m_szInput );
-#endif
 
 	SendMessage(m_hEdit, EM_SETSEL , MAX_IME_STRING, -1 ); // 커서를 끝으로
 	m_iCurCaretPos = strlen( m_szInput );
@@ -138,16 +125,11 @@ void EditBox::ClearString()
 
 const char* EditBox::GetString()
 {
-
-#if defined( SRC_OVERSEAS )
 	std::wstring ret( MAX_IME_STRING, L'\0' );
 
 	GetWindowTextW( m_hEdit, &ret[0], MAX_IME_STRING );
 
 	::WideCharToMultiByte( ioText::GetCodePage(), 0, &ret[0], ret.length(), m_szInput, ret.length(), "*", NULL );
-#else
-	GetWindowText(m_hEdit, m_szInput, sizeof( m_szInput ) );
-#endif
 
 	m_iCurCaretPos = strlen( m_szInput );
 	return m_szInput;

@@ -82,23 +82,6 @@
 #define SAFERELEASE(x)		if(x != NULL) { x->Release(); x = NULL; }
 #define USE_LIST_ARQUMENTS_TEXT_FUNCTION // 해외버전은 가변인자 사용하면 안되므로 주석 처리해서 테스트
 
-// 국가 코드 페이지. 기본은 Korean 949
-#if defined( SRC_INDONESIA )
-#define COUNTRY_CODE_PAGE	1252
-#elif defined( SRC_NA )
-#define COUNTRY_CODE_PAGE	1252
-#elif defined( SRC_TAIWAN )
-#define COUNTRY_CODE_PAGE	950
-#elif defined( SRC_THAILAND )
-#define COUNTRY_CODE_PAGE	874
-#elif defined( SRC_EU )
-#define COUNTRY_CODE_PAGE	1252
-#elif defined( SRC_LATIN )
-#define COUNTRY_CODE_PAGE	1250
-#else
-#define COUNTRY_CODE_PAGE	949
-#endif
-
 template <typename type>					// RADtoDEG
 type  RADtoDEG (type val) {return (type) (val * 57.2957795132);}
 template <typename type>					// DEGtoRAD
