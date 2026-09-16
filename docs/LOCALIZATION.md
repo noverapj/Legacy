@@ -172,6 +172,13 @@ supports static OTF/TTF — variable fonts (`fvar`) are untested.
   The Korean text for them exists nowhere in the available sources
   (shipping raw, base source, and latest KR tables all lack it), so they
   display raw keys — the same state as the original live Korean client.
+- ~245 dangling `exe_` refs (pre-existing dev STR(n) calls whose entries
+  were never shipped in the original exe_ table): EtcHelpFunc
+  `GetRemainTime`/`GetGrowthTitle`, ioUserEtcItem, NewShopBuyWnd,
+  ioEtcItem, PracticeToolTip, ioBaseChar, ioNProtect, and others.
+  Same phenomenon as the ini_ dangling refs — the dev's original build
+  wrote the refs but the entries are absent from the shipped table, so
+  those UI slots display raw keys in the original client too.
 - Legacy dangling ini references: mercenary buffs `219MB_SD_Stun`,
   `224MB_Jump_charge_Att_Air`, and `225MB_Dash_att03_defense` are
   referenced by weapon attributes but were never defined in any buff file
