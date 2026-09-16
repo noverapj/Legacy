@@ -10880,6 +10880,10 @@ void ioApplication::OnChannelChat( SP2Packet &rkPacket )
 	ioHashString szID, szMsg;
 	rkPacket >> iIndex >> szID >> szMsg;
 
+	char szWireBuf[MAX_PATH] = "";
+	Help::FromWire( szMsg.c_str(), szWireBuf, MAX_PATH );
+	szMsg = szWireBuf;
+
 	g_MannerTrialChatMgr.Add( ioMannerTrialChatManager::TT_CHANNEL_CHAT, szID.c_str(), szMsg.c_str() ); // 욕필터전에 할것
 
 	char szChatBuf[MAX_PATH] = "";
@@ -11900,6 +11904,10 @@ void ioApplication::OnGuildChat( SP2Packet &rkPacket )
 	ioHashString szID, szMsg;
 	rkPacket >> dwGuildIndex >> szID >> szMsg;
 
+	char szWireBuf[MAX_PATH] = "";
+	Help::FromWire( szMsg.c_str(), szWireBuf, MAX_PATH );
+	szMsg = szWireBuf;
+
 	g_MannerTrialChatMgr.Add( ioMannerTrialChatManager::TT_GUILD_CHAT, szID.c_str(), szMsg.c_str() ); // 욕필터전에 할것
 
 	char szChatBuf[MAX_PATH] = "";
@@ -12345,6 +12353,10 @@ void ioApplication::OnWholeServerChat( SP2Packet &rkPacket )
 	ioHashString szID, szChat;
 	rkPacket >> szID >> szChat;
 
+	char szWireBuf[MAX_PATH] = "";
+	Help::FromWire( szChat.c_str(), szWireBuf, MAX_PATH );
+	szChat = szWireBuf;
+
 	g_MannerTrialChatMgr.Add( ioMannerTrialChatManager::TT_WHOLE_SERVER_CHAT, szID.c_str(), szChat.c_str() ); // 욕필터전에 할것
 
 	char szChatBuf[MAX_PATH] = "";
@@ -12361,6 +12373,10 @@ void ioApplication::OnWholeServerRainbowChat( SP2Packet &rkPacket )
 {
 	ioHashString szID, szChat;
 	rkPacket >> szID >> szChat;
+
+	char szWireBuf[MAX_PATH] = "";
+	Help::FromWire( szChat.c_str(), szWireBuf, MAX_PATH );
+	szChat = szWireBuf;
 
 	g_MannerTrialChatMgr.Add( ioMannerTrialChatManager::TT_WHOLE_SERVER_RAINBOW_CHAT, szID.c_str(), szChat.c_str() ); // 욕필터전에 할것
 

@@ -2851,6 +2851,74 @@ float GetAniRateByTime( DWORD dwCurTime, DWORD dwFullTime, AniRateType eType, bo
 	return min(fReturn, 1.0f);
 }
 
+std::string ToWire( const char *szLocalText )
+{
+	std::string strWire;
+
+	if( !szLocalText || szLocalText[0] == '\0' )
+		return strWire;
+
+	int iWideLen = MultiByteToWideChar( ioText::GetCodePage(), 0, szLocalText, -1, NULL, 0 );
+	if( iWideLen <= 0 )
+		return strWire;
+
+	std::vector< wchar_t > vecWide( iWideLen );
+	if( MultiByteToWideChar( ioText::GetCodePage(), 0, szLocalText, -1, &vecWide[0], iWideLen ) <= 0 )
+		return strWire;
+
+	int iUtf8Len = WideCharToMultiByte( CP_UTF8, 0, &vecWide[0], -1, NULL, 0, NULL, NULL );
+	if( iUtf8Len <= 0 )
+		return strWire;
+
+	std::vector< char > vecUtf8( iUtf8Len );
+	if( WideCharToMultiByte( CP_UTF8, 0, &vecWide[0], -1, &vecUtf8[0], iUtf8Len, NULL, NULL ) > 0 )
+		strWire.assign( &vecUtf8[0] );
+
+	return strWire;
+}
+
+bool FromWire( const char *szWireText, OUT char *szOut, int iOutSize )
+{
+	if( !szOut || iOutSize <= 0 )
+		return false;
+
+	szOut[0] = '\0';
+
+	if( !szWireText || szWireText[0] == '\0' )
+		return false;
+
+	int iWideLen = MultiByteToWideChar( CP_UTF8, MB_ERR_INVALID_CHARS, szWireText, -1, NULL, 0 );
+	if( iWideLen <= 0 )
+	{
+		StringCbCopy( szOut, iOutSize, szWireText );
+		return false;
+	}
+
+	std::vector< wchar_t > vecWide( iWideLen );
+	if( MultiByteToWideChar( CP_UTF8, MB_ERR_INVALID_CHARS, szWireText, -1, &vecWide[0], iWideLen ) <= 0 )
+	{
+		StringCbCopy( szOut, iOutSize, szWireText );
+		return false;
+	}
+
+	int iLocalLen = WideCharToMultiByte( ioText::GetCodePage(), 0, &vecWide[0], -1, NULL, 0, "?", NULL );
+	if( iLocalLen <= 0 )
+	{
+		StringCbCopy( szOut, iOutSize, szWireText );
+		return false;
+	}
+
+	std::vector< char > vecLocal( iLocalLen );
+	if( WideCharToMultiByte( ioText::GetCodePage(), 0, &vecWide[0], -1, &vecLocal[0], iLocalLen, "?", NULL ) > 0 )
+	{
+		StringCbCopy( szOut, iOutSize, &vecLocal[0] );
+		return true;
+	}
+
+	StringCbCopy( szOut, iOutSize, szWireText );
+	return false;
+}
+
 
 } // namespace Help End
 

@@ -44,6 +44,8 @@ public:
 
 	virtual const char* GetFontFileName();
 
+	virtual int GetCountryCodePage() { return 936; }
+
 public:
 	ioLocalChina(void);
 	virtual ~ioLocalChina(void);

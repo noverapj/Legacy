@@ -200,6 +200,13 @@ namespace Help
 	void SplitTextWidth( std::string szSource, StringVector& szOutSplitList, int iCutWith, TextStyle eStyle, float fTextScale );
 	bool IsOnlyEngHanNumText( const char *szText );
 
+	// Local runtime codepage -> UTF-8 wire format (cross-locale chat).
+	std::string ToWire( const char *szLocalText );
+
+	// UTF-8 wire format -> local runtime codepage.
+	// Invalid UTF-8 (legacy single-charset sender) passes through unchanged.
+	bool FromWire( const char *szWireText, OUT char *szOut, int iOutSize );
+
 	// Char와 충돌체크(공간에 대한것) 여부
 	bool CheckCharColState( DWORD dwStartTime, DWORD dwEndTime,
 							DWORD dwSkipType, bool bTeamOnly, bool bDefense,

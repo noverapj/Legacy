@@ -329,7 +329,7 @@ void ChannelChatWnd::SendChat()
 
 	m_bSettingScrollPos = true;
 	SP2Packet kPacket( CTPK_CHANNEL_CHAT );
-	kPacket << m_iChannelIdx << szChat;
+	kPacket << m_iChannelIdx << Help::ToWire( szChat ).c_str();
 	TCPNetwork::SendToServer( kPacket );
 
 	g_ChatMgr.SendChatLog( ioMannerTrialChatManager::TT_CHANNEL_CHAT, g_MyInfo.GetPublicID().c_str(), szChat, MT_NONE, m_iChannelIdx );
@@ -934,7 +934,7 @@ void GuildChatWnd::SendChat()
 			if ( g_GuildChatMgr.GetUserSize() > 1 )
 			{
 				SP2Packet kPacket( CTPK_GUILD_CHAT );
-				kPacket << g_GuildInfo.GetGuildIndex() << szChat;
+				kPacket << g_GuildInfo.GetGuildIndex() << Help::ToWire( szChat ).c_str();
 				TCPNetwork::SendToServer( kPacket );
 
 				g_ChatMgr.SendChatLog( ioMannerTrialChatManager::TT_GUILD_CHAT, g_MyInfo.GetPublicID().c_str(), szChat, MT_NONE, g_GuildInfo.GetGuildIndex() );

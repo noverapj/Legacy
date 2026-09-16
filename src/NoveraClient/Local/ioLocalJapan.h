@@ -46,6 +46,8 @@ public:
 	virtual bool IsShowFirstSoldierSelectWnd() { return true; }
 	virtual bool IsHeadquarterWebPage() { return true; }
 
+	virtual int GetCountryCodePage() { return 932; }
+
 public:
 	ioLocalJapan(void);
 	virtual ~ioLocalJapan(void);

@@ -2256,6 +2256,10 @@ void ioMyRoomMode::OnServerLobbyChat( SP2Packet &rkPacket )
 	ioHashString szID, szChat;
 	rkPacket >> iChatType >> szID >> szChat;
 
+	char szWireBuf[MAX_PATH] = "";
+	Help::FromWire( szChat.c_str(), szWireBuf, MAX_PATH );
+	szChat = szWireBuf;
+
 	g_MannerTrialChatMgr.Add( ioMannerTrialChatManager::TT_SERVER_LOBBY_CHAT, szID.c_str(), szChat.c_str() ); // 욕필터전에 할것
 
 	char szChatBuf[MAX_PATH] = "";

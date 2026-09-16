@@ -275,7 +275,7 @@ void ioMemoManager::SendMemo( ioHashString szFromID, ioHashString szMemo )
 	}
 
 	SP2Packet kPacket( CTPK_MEMO_SEND_MSG );
-	kPacket << szFromID << szOwnerMemo;
+	kPacket << szFromID << Help::ToWire( szOwnerMemo.c_str() ).c_str();
 	TCPNetwork::SendToServer( kPacket );
 
 	g_ChatMgr.SendChatLog( ioMannerTrialChatManager::TT_MEMO, g_MyInfo.GetPublicID().c_str(), szOwnerMemo.c_str(), MT_NONE, -1 );
@@ -296,8 +296,12 @@ void ioMemoManager::OnlineMemo( SP2Packet &rkPacket )
 {
 	DWORD dwTime;
 	bool bOnline;
-	ioHashString szFromID, szMsg;	
+	ioHashString szFromID, szMsg;
 	rkPacket >> szFromID >> szMsg >> dwTime >> bOnline;
+
+	char szWireBuf[MAX_PATH] = "";
+	Help::FromWire( szMsg.c_str(), szWireBuf, MAX_PATH );
+	szMsg = szWireBuf;
 
 	if( szFromID.IsEmpty() ) return;
 	if( g_BlackListManager.IsBlackList(szFromID) )
@@ -328,8 +332,13 @@ void ioMemoManager::OfflineMemo( SP2Packet &rkPacket )
 	{
 		DWORD dwTime;
 		bool bOnline;
-		ioHashString szFromID, szMsg;	
+		ioHashString szFromID, szMsg;
 		rkPacket >> szFromID >> szMsg >> dwTime >> bOnline;
+
+		char szWireBuf[MAX_PATH] = "";
+		Help::FromWire( szMsg.c_str(), szWireBuf, MAX_PATH );
+		szMsg = szWireBuf;
+
 		if( szFromID.IsEmpty() ) continue;
 		if( g_BlackListManager.IsBlackList(szFromID) ) continue;
 

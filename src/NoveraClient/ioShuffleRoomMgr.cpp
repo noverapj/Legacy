@@ -809,7 +809,7 @@ void ioShuffleRoomMgr::SendShuffleRoomAnn( const char *szChat )
 	SP2Packet kPacket( CUPK_CHAT );
 	kPacket << CT_ANNOUNCE;
 	kPacket << g_MyInfo.GetPublicID();
-	kPacket << szChat;
+	kPacket << Help::ToWire( szChat ).c_str();
 
 	SendShuffleRoomP2P( kPacket );
 }

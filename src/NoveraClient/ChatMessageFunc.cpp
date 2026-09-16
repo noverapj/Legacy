@@ -104,7 +104,7 @@ void SendChatMsg( TeamType eTeam, const char *szID, const char *szChat, ModeType
 	kPacket << CT_ALL;
 	kPacket << (int)eTeam;
 	kPacket << szID;
-	kPacket << szChat;
+	kPacket << Help::ToWire( szChat ).c_str();
 	kPacket << g_ChatMgr.IsNoChatSound();
 	kPacket << bCustomSound;
 
@@ -121,7 +121,7 @@ void SendServerLobbyChatMsg( const char *szID, const char *szChat )
 	// 패킷 전송 TCP
 	SP2Packet kPacket( CTPK_SERVER_LOBBY_CHAT );
 	kPacket << szID;
-	kPacket << szChat;
+	kPacket << Help::ToWire( szChat ).c_str();
 	TCPNetwork::SendToServer( kPacket );
 
 	g_ChatMgr.SendChatLog( ioMannerTrialChatManager::TT_SERVER_LOBBY_CHAT, szID, szChat, MT_MYROOM );
@@ -137,7 +137,7 @@ void SendTeamChatMsg( TeamType eTeam, const char *szID, const char *szChat, Mode
 	kPacket << CT_TEAM;
 	kPacket << (int)eTeam;
 	kPacket << szID;
-	kPacket << szChat;
+	kPacket << Help::ToWire( szChat ).c_str();
 	kPacket << g_ChatMgr.IsNoChatSound();
 	kPacket << bCustomSound;
 	
@@ -156,7 +156,7 @@ void SendPartyChatMsg( TeamType eTeam, const char *szID, const char *szChat )
 	kPacket << CT_PARTY;
 	kPacket << (int)eTeam;
 	kPacket << szID;
-	kPacket << szChat;
+	kPacket << Help::ToWire( szChat ).c_str();
 	kPacket << g_ChatMgr.IsNoChatSound();
 	TCPNetwork::SendToServer( kPacket );
 
@@ -172,7 +172,7 @@ void SendLadderChatMsg( const char *szID, const char *szChat )
 	SP2Packet kPacket( CTPK_RELAY_CHAT );
 	kPacket << CT_LADDER;;
 	kPacket << szID;
-	kPacket << szChat;
+	kPacket << Help::ToWire( szChat ).c_str();
 	kPacket << g_ChatMgr.IsNoChatSound();
 	TCPNetwork::SendToServer( kPacket );
 
@@ -187,7 +187,7 @@ void SendAnnChatMsg( const char *szID, const char *szChat )
 	SP2Packet kPacket( CUPK_CHAT );
 	kPacket << CT_ANNOUNCE;
 	kPacket << szID;
-	kPacket << szChat;
+	kPacket << Help::ToWire( szChat ).c_str();
 
 	P2PNetwork::SendToAllPlayingUser( kPacket );
 }
@@ -200,7 +200,7 @@ void SendWholeServerChatMsg( const char *szID, const char *szChat )
 	// 패킷 전송 TCP
 	SP2Packet kPacket( CTPK_ETCITEM_USE );
 	kPacket << (int)ioEtcItem::EIT_ETC_WHOLE_CHAT;
-	kPacket << szChat;
+	kPacket << Help::ToWire( szChat ).c_str();
 	TCPNetwork::SendToServer( kPacket );
 
 	g_ChatMgr.SendChatLog( ioMannerTrialChatManager::TT_WHOLE_SERVER_CHAT, szID, szChat, MT_NONE );
@@ -214,7 +214,7 @@ void SendWholeServerRainbowChatMsg( const char *szID, const char *szChat )
 	// 패킷 전송 TCP
 	SP2Packet kPacket( CTPK_ETCITEM_USE );
 	kPacket << (int)ioEtcItem::EIT_ETC_RAINBOW_WHOLE_CHAT;
-	kPacket << szChat;
+	kPacket << Help::ToWire( szChat ).c_str();
 	TCPNetwork::SendToServer( kPacket );
 
 	g_ChatMgr.SendChatLog( ioMannerTrialChatManager::TT_WHOLE_SERVER_RAINBOW_CHAT, szID, szChat, MT_NONE );

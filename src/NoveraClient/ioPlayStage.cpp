@@ -19040,6 +19040,8 @@ void ioPlayStage::OnChat( SP2Packet &rkPacket )
 		rkPacket >> iTeam;
 		rkPacket >> szID;
 		rkPacket >> szChat;
+		Help::FromWire( szChat.c_str(), szChatBuf, MAX_PATH );
+		szChat = szChatBuf;
 		rkPacket >> bNoChatSound;
 		rkPacket >> bCusomSound;
 
@@ -19062,6 +19064,8 @@ void ioPlayStage::OnChat( SP2Packet &rkPacket )
 		rkPacket >> iTeam;
 		rkPacket >> szID;
 		rkPacket >> szChat;
+		Help::FromWire( szChat.c_str(), szChatBuf, MAX_PATH );
+		szChat = szChatBuf;
 		rkPacket >> bNoChatSound;
 		rkPacket >> bCusomSound;
 
@@ -19086,6 +19090,8 @@ void ioPlayStage::OnChat( SP2Packet &rkPacket )
 	{
 		rkPacket >> szID;
 		rkPacket >> szChat;
+		Help::FromWire( szChat.c_str(), szChatBuf, MAX_PATH );
+		szChat = szChatBuf;
 
 		char szAnn[MAX_PATH] = "";
 		sprintf( szAnn, "%s", szChat.c_str() );
@@ -23805,6 +23811,8 @@ void ioPlayStage::OnRelayChat( SP2Packet &rkPacket )
 			rkPacket >> iTeam;
 			rkPacket >> szID;
 			rkPacket >> szChat;
+			Help::FromWire( szChat.c_str(), szChatBuf, MAX_PATH );
+			szChat = szChatBuf;
 			rkPacket >> bNoSound;
 
 			g_MannerTrialChatMgr.Add( ioMannerTrialChatManager::TT_BATTLE_CHAT, szID.c_str(), szChat.c_str() ); // 욕필터전에 할것
@@ -23823,6 +23831,8 @@ void ioPlayStage::OnRelayChat( SP2Packet &rkPacket )
 
 			rkPacket >> szID;
 			rkPacket >> szChat;
+			Help::FromWire( szChat.c_str(), szChatBuf, MAX_PATH );
+			szChat = szChatBuf;
 			rkPacket >> bNoSound;
 
 			g_MannerTrialChatMgr.Add( ioMannerTrialChatManager::TT_LADDER_CHAT, szID.c_str(), szChat.c_str() ); // 욕필터전에 할것
