@@ -344,7 +344,6 @@ protected:
 	BYTE   m_MaxPlayer;
 
 protected:
-	bool IsOnlyEngHanNumText( const char *szText );     //영문, 한글, 숫자만 가능
 	void InitEditWnd();
 	void SendTeamCreate();
 

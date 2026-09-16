@@ -169,8 +169,6 @@ protected:
 	ioWnd *m_pNameEdit;
 	DWORD  m_dwMarkID;
 
-
-	bool IsOnlyEngHanNumText( const char *szText );     //영문, 한글, 숫자만 가능
 	void CreateGuild();
 
 public:

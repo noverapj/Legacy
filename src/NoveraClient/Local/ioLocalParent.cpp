@@ -32,7 +32,8 @@ bool ioLocalParent::IsRightNewID( const char *szID )
 	{
 		if ((!COMPARE(szID[i], 'A', 'Z'+1)) &&
 			(!COMPARE(szID[i], 'a', 'z'+1)) &&
-			(!COMPARE(szID[i], '0', '9'+1)) )
+			(!COMPARE(szID[i], '0', '9'+1)) &&
+			szID[i] != '-' && szID[i] != '_' )
 		{
 			return false;
 		}

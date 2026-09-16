@@ -464,50 +464,6 @@ void GuildCreateWnd::AddRenderFrame( const ioHashString &szType, ioUIRenderFrame
 	}
 }
 
-bool GuildCreateWnd::IsOnlyEngHanNumText( const char *szText )
-{
-	int iSize = strlen( szText );
-	if( iSize < 1 )	return false;
-
-	ioLocalParent *pLocal = g_LocalMgr.GetLocal( ioLocalManager::GetLocalType() );
-	if( !pLocal ) 
-		 return false;
-
-	for(int i = 0;i < iSize;i++)
-	{
-		if( !COMPARE( szText[i], 'A', 'Z'+1) && !COMPARE( szText[i], 'a', 'z'+1 ) && !COMPARE( szText[i], '0', '9'+1 ) && szText[i] != '-' )
-		{
-			if( i < iSize - 1 )
-			{
-				if( pLocal->IsCheckKorean() )
-				{
-					// 한글 깨진 경우
-					if( (byte)szText[i] == 0xa4 && (byte)szText[i+1] >= 0xa1 && (byte)szText[i+1] <= 0xd3 )
-					{
-						return false;
-					}
-					if( (byte)szText[i] >= 0xb0 && (byte)szText[i] <= 0xc8 && (byte)szText[i+1] >= 0xa1 && (byte)szText[i+1] <= 0xfe )
-					{
-						i++;
-						continue;
-					}
-				}
-				else
-				{
-
-					if( ioText::IsLeadByte( (BYTE)szText[i] ) )
-					{
-						i++;
-						continue;
-					}
-				}
-			}
-			return false;
-		}
-	}
-	return true;
-}
-
 void GuildCreateWnd::CreateGuild()
 {
 	if( g_App.IsMouseBusy() ) return;	
@@ -577,7 +533,7 @@ void GuildCreateWnd::CreateGuild()
 		return;
 	}
 
-	if( !IsOnlyEngHanNumText( szGuildName.c_str() ) )
+	if( !Help::IsOnlyEngHanNumText( szGuildName.c_str() ) )
 	{
 		g_GUIMgr.SetMsgBox( MB_OK, NULL, STR(13) );		
 		return;

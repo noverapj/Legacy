@@ -1791,49 +1791,6 @@ void TournamentTeamCreateWnd::iwm_hide()
 	m_pPreEdit = NULL;
 }
 
-bool TournamentTeamCreateWnd::IsOnlyEngHanNumText( const char *szText )
-{
-	int iSize = strlen( szText );
-	if( iSize < 1 )	return false;
-
-	ioLocalParent *pLocal = g_LocalMgr.GetLocal( ioLocalManager::GetLocalType() );
-	if( !pLocal ) 
-		return false;
-
-	for(int i = 0;i < iSize;i++)
-	{
-		if( !COMPARE( szText[i], 'A', 'Z'+1) && !COMPARE( szText[i], 'a', 'z'+1 ) && !COMPARE( szText[i], '0', '9'+1 ) && szText[i] != '-' )
-		{
-			if( i < iSize - 1 )
-			{
-				if( pLocal->IsCheckKorean() )
-				{
-					// 한글 깨진 경우
-					if( (byte)szText[i] == 0xa4 && (byte)szText[i+1] >= 0xa1 && (byte)szText[i+1] <= 0xd3 )
-					{
-						return false;
-					}
-					if( (byte)szText[i] >= 0xb0 && (byte)szText[i] <= 0xc8 && (byte)szText[i+1] >= 0xa1 && (byte)szText[i+1] <= 0xfe )
-					{
-						i++;
-						continue;
-					}
-				}
-				else
-				{
-					if( ioText::IsLeadByte( (BYTE)szText[i] ) )
-					{
-						i++;
-						continue;
-					}
-				}
-			}
-			return false;
-		}
-	}
-	return true;
-}
-
 void TournamentTeamCreateWnd::InitEditWnd()
 {
 	ioEdit *pEdit = (ioEdit*)m_pNameEdit;
@@ -1931,7 +1888,7 @@ void TournamentTeamCreateWnd::SendTeamCreate()
 		return;
 	}
 
-	if( !IsOnlyEngHanNumText( szTeamName.c_str() ) )
+	if( !Help::IsOnlyEngHanNumText( szTeamName.c_str() ) )
 	{
 		InitEditWnd();
 		g_GUIMgr.SetMsgBox( MB_OK, NULL, "사용이 금지된 이름입니다(2)" );			
