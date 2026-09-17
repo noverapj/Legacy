@@ -29,6 +29,9 @@ ioEdit::ioEdit()
 	memset( m_szText, 0, MAX_EDIT_TEXT );
 	m_szMultiText.clear();
 
+	memset( m_wszText, 0, sizeof( m_wszText ) );
+	m_bWideText = false;
+
 	m_dwTextColor = D3DCOLOR_XRGB( 255, 255, 255 );
 	m_dwBkColor	  = D3DCOLOR_XRGB( 0, 0, 0 );
 	m_TextStyle	= TS_NORMAL;
@@ -156,6 +159,41 @@ void ioEdit::SetText( const char *szText )
 		strncpy( m_szText, szText, MAX_EDIT_TEXT-1 );
 	}
 
+	// keep the wide display valid only while the text matches its native mirror
+	// (i.e. the user did not modify a prefilled cross-charset value)
+	if( m_bWideText )
+	{
+		char szMirror[MAX_EDIT_TEXT] = "";
+		WideCharToMultiByte( ioText::GetCodePage(), 0, m_wszText, -1, szMirror, MAX_EDIT_TEXT, "?", NULL );
+		if( strcmp( szMirror, m_szText ) != 0 )
+		{
+			m_bWideText = false;
+			m_wszText[0] = L'\0';
+		}
+	}
+
+	SetTextSplit();
+}
+
+void ioEdit::SetTextWide( const wchar_t *szText )
+{
+	if( !szText )
+		return;
+
+	memset( m_szText, 0, MAX_EDIT_TEXT );
+	memset( m_wszText, 0, sizeof( m_wszText ) );
+
+	int iLen = 0;
+	while( szText[iLen] != L'\0' && iLen < MAX_EDIT_TEXT-1 )
+	{
+		m_wszText[iLen] = szText[iLen];
+		++iLen;
+	}
+	m_wszText[iLen] = L'\0';
+
+	WideCharToMultiByte( ioText::GetCodePage(), 0, m_wszText, -1, m_szText, MAX_EDIT_TEXT, "?", NULL );
+	m_bWideText = true;
+
 	SetTextSplit();
 }
 
@@ -178,6 +216,9 @@ void ioEdit::ClearString()
 	m_vSplitText.clear();
 	m_szMultiText.clear();
 	m_vMultiText.clear();
+
+	memset( m_wszText, 0, sizeof( m_wszText ) );
+	m_bWideText = false;
 }
 
 void ioEdit::SetKeyFocus()
@@ -371,6 +412,15 @@ void ioEdit::RenderMultiLine()
 	}
 	else
 	{
+		// cross-charset wide value : render losslessly when not editing
+		// (while focused the input box is the live native source)
+		if( m_bWideText && !m_bKeyFocus )
+		{
+			if( m_wszText[0] != L'\0' )
+				g_FontMgr.PrintTextWide( xPos, yPos, m_fScale, m_wszText );
+			return;
+		}
+
 		iCaretPos = g_InputBox.GetCaretPos() - m_iLeftCutPos;
 
 		int iPrevLen  = 0;

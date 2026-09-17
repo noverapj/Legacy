@@ -656,6 +656,11 @@ void MemoListWnd::SetUserID( const char *szID )
 		pEdit->SetKeyFocus();
 		g_InputBox.SetString( szID );
 		pEdit->KillKeyFocus();
+
+		// lossless cross-charset display of the prefilled target
+		std::wstring wszID = Help::NameToWide( m_szOriginalTargetID.c_str() );
+		if( !wszID.empty() )
+			pEdit->SetTextWide( wszID.c_str() );
 	}	
 
 	ioHashString szMemoDefault = "";

@@ -20,6 +20,12 @@ protected:
 	int     m_iMaxLine;
 	char	m_szText[ MAX_EDIT_TEXT ];
 
+	// wide (UTF-16) display text for cross-charset prefilled values (names).
+	// while editing, the input box (native) is the live source - the wide
+	// buffer only drives rendering in the unfocused state.
+	wchar_t	m_wszText[ MAX_EDIT_TEXT ];
+	bool	m_bWideText;
+
 	int     m_iPrevLeftCut;
 	int     m_iLeftCutPos;
 	ioHashStringVec m_vSplitText;
@@ -126,6 +132,10 @@ public:
 public:
 	void SetText( const char *szText );
 	const char* GetText() const;
+
+	void SetTextWide( const wchar_t *szText );
+	const wchar_t* GetTextWide() const { return m_wszText; }
+	bool HasWideText() const { return m_bWideText; }
 
 	void ClearString();
 

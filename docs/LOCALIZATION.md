@@ -176,7 +176,8 @@ input (native CP949/874/936...)
 - Typed target inputs: memo recipient, friend application, channel
   invite — `ToWire()` at the packet
 - Prefilled memo target: `MemoListWnd` stashes the original UTF-8 name
-  (`m_szOriginalTargetID`); if the user does not modify the prefilled
+  (`m_szOriginalTargetID`) and renders it losslessly via
+  `ioEdit::SetTextWide`; if the user does not modify the prefilled
   edit text the **original bytes** are sent (byte-exact cross-charset
   reply); `ioMemoManager::SendMemo` takes an optional `szWireFromID`
   for that path
@@ -292,10 +293,12 @@ validates against `ID_NUMBER_WIRE` and walks **UTF-8 sequences**
 - Room titles are player-typed but were not converted at input yet
   (F5 covered identity names only) — cross-locale room titles still
   render in the creator's charset; needs a follow-up input sweep
-- Edit boxes hold native text: a prefilled cross-charset name displays
-  as `??` inside the edit (the **send** is byte-exact via the shadow
-  buffer). Full fix is a wide EditBox internal refactor — planned as
-  the next dedicated phase
+- Edit boxes display native text while **editing** (the IME input box is the
+  live native source); a prefilled cross-charset name renders losslessly via
+  `ioEdit::SetTextWide` when the edit is not focused (the **send** is
+  byte-exact via the shadow buffer). Typing a non-native-charset script
+  (e.g. Thai on a KR-codepage client) still requires the wide IME input
+  chain — a possible future phase beyond F6
 - Banned-word / not-make-ID lists are CP949-encoded data files; they
   will not match UTF-8 names until UTF-8 versions of the lists are
   shipped (data follow-up, no code change needed)
