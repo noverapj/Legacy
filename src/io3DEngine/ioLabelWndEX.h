@@ -38,6 +38,7 @@ title 관련 Set / Get 인터페이스를 반복적으로 정의하기 위한 매크로
 	void SetLabelPrintWidthCutSize( float size ) { if ( member ) member->SetWidthCutSize( size ); }\
 	float GetLabelPrintWidthCutSize() const { if ( member ) return member->GetWidthCutSize(); return 0; }\
 	void SetLabelText( const char* text, const char* delims = "#" ) { if ( member ) member->SetText( text, delims ); }\
+	void SetLabelTextWide( const wchar_t* text ) { if ( member ) member->SetTextWide( text ); }\
 	const char* GetLabelText() const { if ( member ) return member->GetText(); return 0; }
 
 

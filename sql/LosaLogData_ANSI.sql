@@ -178,7 +178,7 @@ GO
 CREATE TABLE [dbo].[log_buy_item_accessory](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickName] [nvarchar](20) NOT NULL,
+	[nickName] [varchar](30) NOT NULL,
 	[userLevel] [int] NOT NULL,
 	[itemCode] [int] NOT NULL,
 	[eventType] [int] NOT NULL,
@@ -201,7 +201,7 @@ GO
 CREATE TABLE [dbo].[log_buy_item_class](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickName] [varchar](20) NOT NULL,
+	[nickName] [varchar](30) NOT NULL,
 	[userLevel] [int] NOT NULL,
 	[classType] [int] NOT NULL,
 	[limitType] [int] NOT NULL,
@@ -220,7 +220,7 @@ GO
 CREATE TABLE [dbo].[log_buy_item_costume](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickName] [nvarchar](20) NOT NULL,
+	[nickName] [varchar](30) NOT NULL,
 	[userLevel] [int] NOT NULL,
 	[itemCode] [int] NOT NULL,
 	[eventType] [int] NOT NULL,
@@ -244,7 +244,7 @@ GO
 CREATE TABLE [dbo].[log_buy_item_decoration](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickName] [varchar](20) NOT NULL,
+	[nickName] [varchar](30) NOT NULL,
 	[classType] [int] NOT NULL,
 	[kindred] [int] NOT NULL,
 	[itemType] [int] NOT NULL,
@@ -264,7 +264,7 @@ GO
 CREATE TABLE [dbo].[log_buy_item_equip](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickName] [varchar](20) NOT NULL,
+	[nickName] [varchar](30) NOT NULL,
 	[itemType] [int] NOT NULL,
 	[itemCode] [int] NOT NULL,
 	[reinforce] [int] NOT NULL,
@@ -285,7 +285,7 @@ GO
 CREATE TABLE [dbo].[log_buy_item_gold](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickName] [varchar](20) NOT NULL,
+	[nickName] [varchar](30) NOT NULL,
 	[userLevel] [int] NOT NULL,
 	[itemType] [int] NOT NULL,
 	[itemCode] [int] NOT NULL,
@@ -307,7 +307,7 @@ GO
 CREATE TABLE [dbo].[log_buy_item_sbox](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickName] [nvarchar](20) NOT NULL,
+	[nickName] [varchar](30) NOT NULL,
 	[userLevel] [int] NOT NULL,
 	[presentType] [smallint] NOT NULL,
 	[value1] [int] NOT NULL,
@@ -348,7 +348,7 @@ GO
 CREATE TABLE [dbo].[log_data_accessory_upgrade](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickName] [nvarchar](20) NOT NULL,
+	[nickName] [varchar](30) NOT NULL,
 	[userLevel] [int] NOT NULL,
 	[itemCode] [int] NOT NULL,
 	[nowUpgradeValue] [int] NOT NULL,
@@ -366,7 +366,7 @@ GO
 CREATE TABLE [dbo].[log_data_awake](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickName] [nvarchar](20) NOT NULL,
+	[nickName] [varchar](30) NOT NULL,
 	[userLevel] [int] NOT NULL,
 	[classType] [int] NOT NULL,
 	[pieceCode] [int] NOT NULL,
@@ -389,7 +389,7 @@ GO
 CREATE TABLE [dbo].[log_data_cardmatching](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[AccountIDX] [int] NOT NULL,
-	[NickName] [nvarchar](20) NOT NULL,
+	[NickName] [varchar](30) NOT NULL,
 	[UserLevel] [int] NOT NULL,
 	[LogType] [int] NOT NULL,
 	[MissionType] [int] NOT NULL,
@@ -417,7 +417,7 @@ GO
 CREATE TABLE [dbo].[log_data_character](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickName] [varchar](20) NOT NULL,
+	[nickName] [varchar](30) NOT NULL,
 	[playType] [int] NOT NULL,
 	[modeType] [int] NOT NULL,
 	[subType1] [int] NOT NULL,
@@ -575,7 +575,7 @@ GO
 CREATE TABLE [dbo].[log_data_gear_upgrade](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickName] [nvarchar](20) NOT NULL,
+	[nickName] [varchar](30) NOT NULL,
 	[userLevel] [int] NOT NULL,
 	[gearCode] [int] NOT NULL,
 	[nowUpgradeValue] [tinyint] NOT NULL,
@@ -599,7 +599,7 @@ GO
 CREATE TABLE [dbo].[log_data_league_present](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickName] [nvarchar](20) NOT NULL,
+	[nickName] [varchar](30) NOT NULL,
 	[leagueIDX] [int] NOT NULL,
 	[currentRound] [tinyint] NOT NULL,
 	[presentCode1] [int] NOT NULL,
@@ -617,7 +617,7 @@ GO
 CREATE TABLE [dbo].[log_data_localinfo](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickName] [varchar](20) NOT NULL,
+	[nickName] [varchar](30) NOT NULL,
 	[userLevel] [int] NOT NULL,
 	[os] [nvarchar](100) NOT NULL,
 	[ie] [nvarchar](100) NOT NULL,
@@ -641,7 +641,7 @@ GO
 CREATE TABLE [dbo].[log_data_matchmode](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[AccountIDX] [int] NOT NULL,
-	[nickName] [nvarchar](20) NOT NULL,
+	[nickName] [varchar](30) NOT NULL,
 	[userLevel] [int] NOT NULL,
 	[Tier1] [int] NOT NULL,
 	[Tier2] [int] NOT NULL,
@@ -664,7 +664,7 @@ GO
 CREATE TABLE [dbo].[log_data_matchmode2](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[AccountIDX] [int] NOT NULL,
-	[nickName] [nvarchar](20) NOT NULL,
+	[nickName] [varchar](30) NOT NULL,
 	[userLevel] [int] NOT NULL,
 	[Tier1] [int] NOT NULL,
 	[Tier2] [int] NOT NULL,
@@ -690,7 +690,7 @@ GO
 CREATE TABLE [dbo].[log_data_medal](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickName] [varchar](20) NOT NULL,
+	[nickName] [varchar](30) NOT NULL,
 	[medalType] [int] NOT NULL,
 	[limitType] [int] NOT NULL,
 	[logType] [int] NOT NULL,
@@ -711,7 +711,7 @@ GO
 CREATE TABLE [dbo].[log_data_medal_extend](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickName] [varchar](20) NOT NULL,
+	[nickName] [varchar](30) NOT NULL,
 	[userLevel] [int] NOT NULL,
 	[classType] [int] NOT NULL,
 	[slotNum] [tinyint] NOT NULL,
@@ -728,7 +728,7 @@ GO
 CREATE TABLE [dbo].[log_data_oakbarrel](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[AccountIDX] [int] NOT NULL,
-	[NickName] [nvarchar](20) NOT NULL,
+	[NickName] [varchar](30) NOT NULL,
 	[UserLevel] [int] NOT NULL,
 	[ItemType] [int] NOT NULL,
 	[ItemCode] [int] NOT NULL,
@@ -751,7 +751,7 @@ GO
 CREATE TABLE [dbo].[log_data_pcroom](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickName] [varchar](20) NOT NULL,
+	[nickName] [varchar](30) NOT NULL,
 	[playTime] [int] NOT NULL,
 	[userIP] [varchar](15) NOT NULL,
 	[pcnum] [int] NOT NULL,
@@ -768,7 +768,7 @@ GO
 CREATE TABLE [dbo].[log_data_peso](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickName] [varchar](20) NOT NULL,
+	[nickName] [varchar](30) NOT NULL,
 	[peso] [int] NOT NULL,
 	[logType] [int] NOT NULL,
 	[regDate] [datetime] NOT NULL
@@ -782,7 +782,7 @@ GO
 CREATE TABLE [dbo].[log_data_pet](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickName] [nvarchar](20) NOT NULL,
+	[nickName] [varchar](30) NOT NULL,
 	[userLevel] [int] NOT NULL,
 	[petIDX] [int] NOT NULL,
 	[petCode] [int] NOT NULL,
@@ -810,7 +810,7 @@ GO
 CREATE TABLE [dbo].[log_data_piece_divide](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickName] [nvarchar](20) NOT NULL,
+	[nickName] [varchar](30) NOT NULL,
 	[userLevel] [int] NOT NULL,
 	[itemType] [int] NOT NULL,
 	[itemCode] [int] NOT NULL,
@@ -827,7 +827,7 @@ GO
 CREATE TABLE [dbo].[log_data_piece_mix](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickName] [nvarchar](20) NOT NULL,
+	[nickName] [varchar](30) NOT NULL,
 	[userLevel] [int] NOT NULL,
 	[mixType] [smallint] NOT NULL,
 	[mixCode] [int] NOT NULL,
@@ -863,7 +863,7 @@ GO
 CREATE TABLE [dbo].[log_data_play](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickName] [varchar](20) NOT NULL,
+	[nickName] [varchar](30) NOT NULL,
 	[playType] [int] NOT NULL,
 	[modeType] [int] NOT NULL,
 	[subType1] [int] NOT NULL,
@@ -897,7 +897,7 @@ GO
 CREATE TABLE [dbo].[log_data_play_old](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickName] [varchar](20) NOT NULL,
+	[nickName] [varchar](30) NOT NULL,
 	[playType] [int] NOT NULL,
 	[modeType] [int] NOT NULL,
 	[subType1] [int] NOT NULL,
@@ -922,7 +922,7 @@ GO
 CREATE TABLE [dbo].[log_data_quest](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickName] [varchar](20) NOT NULL,
+	[nickName] [varchar](30) NOT NULL,
 	[userLevel] [int] NOT NULL,
 	[mainIDX] [int] NOT NULL,
 	[subIDX] [int] NOT NULL,
@@ -938,7 +938,7 @@ GO
 CREATE TABLE [dbo].[log_data_quest_vfun](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickName] [varchar](20) NOT NULL,
+	[nickName] [varchar](30) NOT NULL,
 	[userLevel] [int] NOT NULL,
 	[mainIDX] [int] NOT NULL,
 	[subIDX] [int] NOT NULL,
@@ -985,7 +985,7 @@ GO
 CREATE TABLE [dbo].[log_data_spirit_change](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[AccountIDX] [int] NOT NULL,
-	[NickName] [nvarchar](20) NOT NULL,
+	[NickName] [varchar](30) NOT NULL,
 	[UserLevel] [int] NOT NULL,
 	[SetSpiritCode] [int] NOT NULL,
 	[SetSpiritCount] [int] NOT NULL,
@@ -1008,7 +1008,7 @@ GO
 CREATE TABLE [dbo].[log_data_spirit_divide](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[AccountIDX] [int] NOT NULL,
-	[NickName] [nvarchar](20) NOT NULL,
+	[NickName] [varchar](30) NOT NULL,
 	[UserLevel] [int] NOT NULL,
 	[HeroType] [int] NOT NULL,
 	[SpiritCode] [int] NOT NULL,
@@ -1031,7 +1031,7 @@ GO
 CREATE TABLE [dbo].[log_data_spirit_mix](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[AccountIDX] [int] NOT NULL,
-	[NickName] [nvarchar](20) NOT NULL,
+	[NickName] [varchar](30) NOT NULL,
 	[UserLevel] [int] NOT NULL,
 	[HeroType] [int] NOT NULL,
 	[SpiritCode] [int] NOT NULL,
@@ -1054,7 +1054,7 @@ GO
 CREATE TABLE [dbo].[log_data_spirit_obtain](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[AccountIDX] [int] NOT NULL,
-	[NickName] [nvarchar](20) NOT NULL,
+	[NickName] [varchar](30) NOT NULL,
 	[UserLevel] [int] NOT NULL,
 	[SpiritCode] [int] NOT NULL,
 	[SpiritCount] [int] NOT NULL,
@@ -1076,7 +1076,7 @@ GO
 CREATE TABLE [dbo].[log_data_spirit_peso](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[AccountIDX] [int] NOT NULL,
-	[NickName] [nvarchar](20) NOT NULL,
+	[NickName] [varchar](30) NOT NULL,
 	[UserLevel] [int] NOT NULL,
 	[PieceCount] [int] NOT NULL,
 	[DimensionCount] [int] NOT NULL,
@@ -1097,7 +1097,7 @@ GO
 CREATE TABLE [dbo].[log_data_time](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickName] [varchar](20) NOT NULL,
+	[nickName] [varchar](30) NOT NULL,
 	[playTime] [int] NOT NULL,
 	[logType] [int] NOT NULL,
 	[regDate] [datetime] NOT NULL
@@ -1111,7 +1111,7 @@ GO
 CREATE TABLE [dbo].[log_data_trade](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickname] [varchar](20) NOT NULL,
+	[nickname] [varchar](30) NOT NULL,
 	[itemType] [int] NOT NULL,
 	[value1] [int] NOT NULL,
 	[value2] [int] NOT NULL,
@@ -1130,7 +1130,7 @@ GO
 CREATE TABLE [dbo].[log_data_tutorial](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickName] [varchar](20) NOT NULL,
+	[nickName] [varchar](30) NOT NULL,
 	[step] [int] NOT NULL,
 	[playTime] [int] NOT NULL,
 	[regDate] [datetime] NOT NULL
@@ -1175,7 +1175,7 @@ GO
 CREATE TABLE [dbo].[log_event_bingo](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickName] [nvarchar](20) NOT NULL,
+	[nickName] [varchar](30) NOT NULL,
 	[choiceType] [tinyint] NOT NULL,
 	[number] [tinyint] NOT NULL,
 	[stateType] [tinyint] NOT NULL,
@@ -1190,7 +1190,7 @@ GO
 CREATE TABLE [dbo].[log_event_cash](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickName] [nvarchar](20) NOT NULL,
+	[nickName] [varchar](30) NOT NULL,
 	[userLevel] [int] NOT NULL,
 	[itemCode] [int] NOT NULL,
 	[amount] [int] NOT NULL,
@@ -1309,7 +1309,7 @@ GO
 CREATE TABLE [dbo].[log_present](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickname] [varchar](20) NOT NULL,
+	[nickname] [varchar](30) NOT NULL,
 	[receiveIDX] [int] NOT NULL,
 	[presentType] [smallint] NOT NULL,
 	[value1] [int] NOT NULL,
@@ -1401,7 +1401,7 @@ GO
 CREATE TABLE [dbo].[Log_use_item](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickname] [varchar](20) NOT NULL,
+	[nickname] [varchar](30) NOT NULL,
 	[itemType] [int] NOT NULL,
 	[itemCode] [int] NOT NULL,
 	[rowIDX] [int] NOT NULL,
@@ -1474,7 +1474,7 @@ GO
 CREATE TABLE [dbo].[TBL_LOG_HACK](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[AccountIDX] [int] NOT NULL,
-	[NickName] [nvarchar](20) NOT NULL,
+	[NickName] [varchar](30) NOT NULL,
 	[UserLevel] [int] NOT NULL,
 	[PlayType] [int] NOT NULL,
 	[ModeType] [int] NOT NULL,
@@ -2433,7 +2433,7 @@ GO
 CREATE PROCEDURE [dbo].[backup_log_item_gold_add]
 (
 	@accountIDX int
-,	@nickName varchar(20)
+,	@nickName varchar(30)
 ,	@userLevel int
 ,	@itemType int
 ,	@itemCode int
@@ -2663,7 +2663,7 @@ GO
 CREATE PROCEDURE [dbo].[log_data_accessory_upgrade_add]      
 (      
  @accountIDX    INT,   -- 유저 인덱스      
- @nickName    NVARCHAR(20), -- 유저 닉네임      
+ @nickName    varchar(30), -- 유저 닉네임      
  @userLevel    INT,   -- 유저 레벨      
  @itemCode    INT,   -- 강화 악세서리 코드    
  @nowUpgradeValue  INT,  -- 업그레이드 전 강화 값      
@@ -2695,7 +2695,7 @@ GO
 CREATE PROCEDURE [dbo].[log_data_awake_add]
 (
 	@accountIDX		INT,			-- 사용자 고유키
-	@nickName		NVARCHAR(20),	-- 닉네임
+	@nickName		varchar(30),	-- 닉네임
 	@userLevel		INT,			-- 유저 레벨
 	@classType		INT,			-- 용병 코드
 	@pieceCode		INT,			-- 조각 코드
@@ -2763,7 +2763,7 @@ GO
 CREATE PROCEDURE [dbo].[log_data_character_add]
 (
 	@accountIDX int
-,	@nickName varchar(20)
+,	@nickName varchar(30)
 ,	@playType int
 ,	@modeType int
 ,	@subType1 int
@@ -2952,7 +2952,7 @@ GO
 CREATE PROCEDURE [dbo].[log_data_gear_upgrade_add]
 (
 	@accountIDX				INT,			-- 유저 인덱스
-	@nickName				NVARCHAR(20),	-- 유저 닉네임
+	@nickName				varchar(30),	-- 유저 닉네임
 	@userLevel				INT,			-- 유저 레벨
 	@gearCode				INT,			-- 강화 장비 코드
 	@nowUpgradeValue		TINYINT,		-- 업그레이드 전 강화 값
@@ -2984,7 +2984,7 @@ GO
 CREATE PROCEDURE [dbo].[log_data_league_present_add]
 (
 	@accountIDX int
-,	@nickName nvarchar(20)
+,	@nickName varchar(30)
 ,	@leagueIDX int
 ,	@currentRound tinyint
 ,	@presentCode1 int
@@ -3011,7 +3011,7 @@ GO
 CREATE PROCEDURE [dbo].[log_data_localinfo_add]
 (
 	@accountIDX int
-,	@nickName varchar(20)
+,	@nickName varchar(30)
 ,	@userLevel int
 ,	@os nvarchar(100)
 ,	@ie nvarchar(100)
@@ -3043,7 +3043,7 @@ GO
 CREATE PROCEDURE [dbo].[log_data_localinfo_add_2]
 (
 	@accountIDX int
-,	@nickName varchar(20)
+,	@nickName varchar(30)
 ,	@userLevel int
 ,	@os nvarchar(100)
 ,	@ie nvarchar(100)
@@ -3154,7 +3154,7 @@ GO
 CREATE PROCEDURE [dbo].[log_data_medal_add]
 (
 	@accountIDX int
-,	@nickName varchar(20)
+,	@nickName varchar(30)
 ,	@medalType int
 ,	@limitType int
 ,	@logType int
@@ -3172,7 +3172,7 @@ GO
 CREATE PROCEDURE [dbo].[log_data_medal_extend_add]
 (
 	@accountIDX int
-,	@nickName varchar(20)
+,	@nickName varchar(30)
 ,	@userLevel int
 ,	@classType int
 ,	@slotNum tinyint
@@ -3233,7 +3233,7 @@ GO
 CREATE PROCEDURE [dbo].[log_data_pcroom_add]
 (
 	@accountIDX int
-,	@nickName varchar(20)
+,	@nickName varchar(30)
 ,	@playTime int
 ,	@userIP varchar(15)
 ,	@pcnum int
@@ -3253,7 +3253,7 @@ GO
 CREATE PROCEDURE [dbo].[log_data_peso_add]
 (
 	@accountIDX int
-,	@nickName varchar(20)
+,	@nickName varchar(30)
 ,	@peso int
 ,	@logType int
 )
@@ -3270,7 +3270,7 @@ GO
 CREATE PROCEDURE [dbo].[log_data_pet_add]
 
 	@ACCOUNT_IDX	INT,			-- 사용자 고유키
-	@NICKNAME		NVARCHAR(20),	-- 닉네임
+	@NICKNAME		varchar(30),	-- 닉네임
 	@USERLEVEL		INT,			-- 유저 레벨
 	@PET_IDX		INT,			-- 펫 고유키
 	@PTE_CODE		INT,			-- 펫 인덱스
@@ -3301,7 +3301,7 @@ GO
 CREATE PROCEDURE [dbo].[log_data_piece_divide_add]
 (
 	@accountIDX int
-,	@nickName nvarchar(20)
+,	@nickName varchar(30)
 ,	@userLevel int
 ,	@itemType int
 ,	@itemCode int
@@ -3327,7 +3327,7 @@ GO
 CREATE PROCEDURE [dbo].[log_data_piece_mix_add]
 (
 	@accountIDX int
-,	@nickName nvarchar(20)
+,	@nickName varchar(30)
 ,	@userLevel int
 ,	@mixType smallint
 ,	@mixCode int
@@ -3356,7 +3356,7 @@ GO
 CREATE PROCEDURE [dbo].[log_data_piece_obtain_add]
 (
 	@accountIDX int
-,	@nickName nvarchar(20)
+,	@nickName varchar(30)
 ,	@userLevel int
 ,	@playTime int
 ,	@step tinyint
@@ -3393,7 +3393,7 @@ GO
 CREATE PROCEDURE [dbo].[log_data_play_add]
 
 	@accountIDX			INT,
-	@nickName			VARCHAR(20),
+	@nickName			varchar(30),
 	@playType			INT,
 	@modeType			INT,
 	@subType1			INT,
@@ -3473,7 +3473,7 @@ GO
 CREATE PROCEDURE [dbo].[log_data_quest_add]
 (
 	@accountIDX int
-,	@nickName varchar(20)
+,	@nickName varchar(30)
 ,	@userLevel int
 ,	@mainIDX int
 ,	@subIDX int
@@ -3492,7 +3492,7 @@ GO
 CREATE PROCEDURE [dbo].[log_data_quest_vfun_add]
 (
 	@accountIDX int
-,	@nickName varchar(20)
+,	@nickName varchar(30)
 ,	@userLevel int
 ,	@mainIDX int
 ,	@subIDX int
@@ -3715,7 +3715,7 @@ GO
 CREATE PROCEDURE [dbo].[log_data_time_add]
 (
 	@accountIDX int
-,	@nickName varchar(20)
+,	@nickName varchar(30)
 ,	@playTime int
 ,	@logType int
 )
@@ -3732,7 +3732,7 @@ GO
 CREATE PROCEDURE [dbo].[log_data_trade_add]
 (
 	@accountIDX int
-,	@nickname varchar(20)
+,	@nickname varchar(30)
 ,	@itemType int
 ,	@value1 int
 ,	@value2 int
@@ -3754,7 +3754,7 @@ GO
 CREATE PROCEDURE [dbo].[log_data_tutorial_add]
 (
 	@accountIDX int
-,	@nickName varchar(20)
+,	@nickName varchar(30)
 ,	@step int
 ,	@playTime int
 )
@@ -3851,7 +3851,7 @@ GO
 CREATE PROCEDURE [dbo].[log_event_cash_add]
 (
 	@accountIDX int
-,	@nickName nvarchar(20)
+,	@nickName varchar(30)
 ,	@userLevel int
 ,	@itemCode int
 ,	@amount int
@@ -4001,7 +4001,7 @@ GO
 CREATE PROCEDURE [dbo].[log_item_accessory_add]
 
 	@accountIDX		INT,
-	@nickName		NVARCHAR(20),
+	@nickName		varchar(30),
 	@userLevel		INT,
 	@itemCode		INT,
 	@eventType		INT,
@@ -4028,7 +4028,7 @@ GO
 CREATE PROCEDURE [dbo].[log_item_class_add]
 (
 	@accountIDX int
-,	@nickName varchar(20)
+,	@nickName varchar(30)
 ,	@userLevel int
 ,	@classType int
 ,	@limitType int
@@ -4049,7 +4049,7 @@ GO
 CREATE PROCEDURE [dbo].[log_item_costume_add]
 (
 	@accountIDX INT
-,	@nickName NVARCHAR(20)
+,	@nickName varchar(30)
 ,	@userLevel INT
 ,	@itemCode INT
 ,	@eventType INT
@@ -4076,7 +4076,7 @@ GO
 CREATE PROCEDURE [dbo].[log_item_decoration_add]
 (
 	@accountIDX int
-,	@nickName varchar(20)
+,	@nickName varchar(30)
 ,	@classType int
 ,	@kindred int
 ,	@itemType int
@@ -4098,7 +4098,7 @@ GO
 CREATE PROCEDURE [dbo].[log_item_equip_add]
 (
 	@accountIDX int
-,	@nickName varchar(20)
+,	@nickName varchar(30)
 ,	@itemType int
 ,	@itemCode int
 ,	@reinforce int
@@ -4121,7 +4121,7 @@ GO
 CREATE PROCEDURE [dbo].[log_item_gold_add]
 (
 	@accountIDX int
-,	@nickName varchar(20)
+,	@nickName varchar(30)
 ,	@userLevel int
 ,	@itemType int
 ,	@itemCode int
@@ -4152,7 +4152,7 @@ GO
 CREATE PROCEDURE [dbo].[log_item_sbox_add]
 (
 	@accountIDX INT
-,	@nickName NVARCHAR(20)
+,	@nickName varchar(30)
 ,	@userLevel INT
 ,	@presentType SMALLINT
 ,	@value1 INT
@@ -4184,7 +4184,7 @@ GO
 CREATE PROCEDURE [dbo].[log_item_special_add]
 (
 	@accountIDX int
-,	@nickName varchar(20)
+,	@nickName varchar(30)
 ,	@itemType int
 ,	@itemValue int
 ,	@eventType int
@@ -4204,7 +4204,7 @@ GO
 CREATE PROCEDURE [dbo].[log_present_add]
 (
 	@accountIDX int
-,	@nickname varchar(20)
+,	@nickname varchar(30)
 ,	@receiveIDX int
 ,	@presentType smallint
 ,	@value1 int

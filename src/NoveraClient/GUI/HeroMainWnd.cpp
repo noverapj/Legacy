@@ -1593,8 +1593,9 @@ void HeroMatchHistoryBtn::OnRender()
 			iCurrentXPos += 19;
 		
 			// 아이디
-			g_FontMgr.PrintTextWidthCut( iXPos + 64 + iCurrentXPos, iYPos + 10, FONT_SIZE_12, 110.0f, m_HeroHistory.m_szNickName.c_str() );
-			iCurrentXPos += min( 110.0f, g_FontMgr.GetTextWidth( m_HeroHistory.m_szNickName.c_str(), TS_NORMAL, FONT_SIZE_12 ) ) + 3;
+			std::wstring wszName = Help::NameToWide( m_HeroHistory.m_szNickName.c_str() );
+			g_FontMgr.PrintTextWidthCutWide( iXPos + 64 + iCurrentXPos, iYPos + 10, FONT_SIZE_12, 110.0f, wszName.c_str() );
+			iCurrentXPos += min( 110.0f, g_FontMgr.GetTextWidthWide( wszName.c_str(), TS_NORMAL, FONT_SIZE_12 ) ) + 3;
 
 			// 길드마크
 			DWORD dwGuildIndex, dwGuildMark;
@@ -1910,7 +1911,8 @@ void HeroMatchTop100Btn::OnRender()
 			// 닉네임
 			g_FontMgr.SetAlignType( TAT_LEFT );
 			g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY ); 			
-			g_FontMgr.PrintTextWidthCut( iXPos + 66, iYPos + 5, FONT_SIZE_12, 80.0f, kInfo.m_szName.c_str() );
+			std::wstring wszName = Help::NameToWide( kInfo.m_szName.c_str() );
+			g_FontMgr.PrintTextWidthCutWide( iXPos + 66, iYPos + 5, FONT_SIZE_12, 80.0f, wszName.c_str() );
 
 			// 승패
 			g_FontMgr.SetAlignType( TAT_CENTER );

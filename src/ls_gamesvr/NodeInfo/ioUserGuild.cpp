@@ -128,7 +128,7 @@ void ioUserGuild::SetGuildUserData( CQueryResultData *query_data )
 		PACKET_GUARD_BREAK( query_data->GetValue( kUserData.m_dwTableIndex, sizeof(DWORD) ) );	//테이블 인덱스
 		PACKET_GUARD_BREAK( query_data->GetValue( kUserData.m_dwUserIndex, sizeof(DWORD) ) );		//유저 인덱스
 		PACKET_GUARD_BREAK( query_data->GetValue( kUserData.m_iUserLevel, sizeof(int) ) );		//유저 레벨
-		PACKET_GUARD_BREAK( query_data->GetValue( szStringVal, ID_NUM_PLUS_ONE ) );				//유저 닉네임
+		PACKET_GUARD_BREAK( query_data->GetValue( szStringVal, ID_NUM_WIRE_PLUS_ONE ) );				//유저 닉네임
 		kUserData.m_szUserID = szStringVal;
 		memset( szStringVal, 0, MAX_PATH );
 		PACKET_GUARD_BREAK( query_data->GetValue( szStringVal, GUILD_POS_NUM_PLUS_ONE ) );       //유저 직책

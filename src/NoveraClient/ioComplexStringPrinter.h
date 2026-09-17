@@ -21,6 +21,10 @@ private:
 		float fYOffset;
 		float fWidth;
 		std::string szText;
+		std::wstring szWideText;
+		bool bWide;
+
+		tagTextPiece() : bWide(false) {}
 	}TextPiece;
 
 	typedef std::vector< TextPiece > TextPieceList;
@@ -70,6 +74,9 @@ public:
 	void AddTextPiece( float fScale, const char *szSource, const char *szArg1, const char *szArg2, const char *szArg3 );
 	void AddTextPiece( float fScale, const char *szSource, int iArg1, int iArg2, int iArg3, int iArg4 );
 	void AddTextPiece( float fScale, const char *szSource, int iArg1, int iArg2, int iArg3, int iArg4, int iArg5 );
+
+	// wide (UTF-16) piece for cross-script names.
+	void AddTextPieceWide( float fScale, const wchar_t *szSource );
 #ifdef USE_LIST_ARQUMENTS_TEXT_FUNCTION
 	void AddTextPieceWithYOffset( float fScale, float fYOffset, const char *szSource, ... );
 #else

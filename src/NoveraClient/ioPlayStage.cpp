@@ -8408,7 +8408,8 @@ void ioPlayStage::RenderOwnerCharState()
 			g_FontMgr.SetAlignType( TAT_LEFT );
 			g_FontMgr.SetTextStyle( TS_SHADOW );
 			g_FontMgr.SetTextColor( 255, 255, 0 );
-			g_FontMgr.PrintText( FLOAT1, 320.0f + ( iIndex * 40.0f ), 0.7f, (*iter)->GetCharName().c_str() );
+			std::wstring wszListName = Help::NameToWide( (*iter)->GetCharName().c_str() );
+			g_FontMgr.PrintTextWide( FLOAT1, 320.0f + ( iIndex * 40.0f ), 0.7f, wszListName.c_str() );
 
 			g_FontMgr.SetAlignType( TAT_LEFT );
 			g_FontMgr.SetTextStyle( TS_SHADOW );

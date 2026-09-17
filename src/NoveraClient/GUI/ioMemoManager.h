@@ -119,7 +119,7 @@ class ioMemoManager : public Singleton< ioMemoManager >
 	public:
 	void SendOfflineMemo();
 	void SendUserLogin( ioHashString szName );
-	void SendMemo( ioHashString szFromID, ioHashString szMemo );
+	void SendMemo( ioHashString szFromID, ioHashString szMemo, const char *szWireFromID = NULL );
 
 	public:
 	void OnlineMemo( SP2Packet &rkPacket );

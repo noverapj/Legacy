@@ -71,6 +71,14 @@ void ioFTFaceImpl::FreeFTFace()
 	}
 	m_GlyphMap.clear();
 
+	WideGlyphMap::iterator wIter, wEnd;
+	wEnd = m_WideGlyphMap.end();
+	for( wIter=m_WideGlyphMap.begin() ; wIter!=wEnd ; ++wIter )
+	{
+		delete wIter->second;
+	}
+	m_WideGlyphMap.clear();
+
 	if( m_FTFace )
 	{
 		FT_Done_Face( m_FTFace );
@@ -141,6 +149,25 @@ void ioFTFaceImpl::SetWhiteSpaceSize( int iSize )
 		pWhite = iter->second;
 		pWhite->iAdvance  = iSize;
 		pWhite->iWidth    = iSize;
+	}
+
+	WideGlyphMap::iterator wIter = m_WideGlyphMap.find( wWhiteSpace );
+	if( wIter == m_WideGlyphMap.end() )
+	{
+		GlyphImg *pWhiteWide = new GlyphImg;
+		pWhiteWide->iBearingX = 0;
+		pWhiteWide->iBearingY = m_iMaxGlyphBearingY;
+		pWhiteWide->iAdvance  = iSize;
+		pWhiteWide->iWidth    = iSize;
+		pWhiteWide->iHeight   = m_iMaxGlyphHeight;
+		pWhiteWide->pBuf = NULL;
+
+		m_WideGlyphMap.insert( WideGlyphMap::value_type( wWhiteSpace, pWhiteWide ) );
+	}
+	else
+	{
+		wIter->second->iAdvance = iSize;
+		wIter->second->iWidth   = iSize;
 	}
 }
 
@@ -250,6 +277,20 @@ const GlyphImg* ioFTFaceImpl::AddNewGlyphImg( WORD wCode )
 	if( !IsValidGlyph( ftGlyph ) )
 		return NULL;
 
+	GlyphImg *pNewGlyph = PackGlyphBitmap( ftGlyph );
+	if( !pNewGlyph )
+		return NULL;
+
+	m_GlyphMap.insert( GlyphMap::value_type( wCode, pNewGlyph ) );
+
+	return pNewGlyph;
+}
+
+GlyphImg* ioFTFaceImpl::PackGlyphBitmap( FT_GlyphSlot ftGlyph )
+{
+	if( !ftGlyph )
+		return NULL;
+
 	GlyphImg *pNewGlyph = new GlyphImg;
 
 	pNewGlyph->iBearingX = ftGlyph->metrics.horiBearingX >> 6;
@@ -324,8 +365,6 @@ const GlyphImg* ioFTFaceImpl::AddNewGlyphImg( WORD wCode )
 		}
 	}
 
-	m_GlyphMap.insert( GlyphMap::value_type( wCode, pNewGlyph ) );
-
 	return pNewGlyph;
 }
 
@@ -363,6 +402,55 @@ FT_GlyphSlot ioFTFaceImpl::FindGlyphSlot( WORD wCode )
 
 	return NULL;
 
+}
+
+FT_GlyphSlot ioFTFaceImpl::FindGlyphSlotWide( wchar_t wChar )
+{
+	if( m_FTFace )
+	{
+		WORD wCode = ConvertToCharCode( wChar );
+
+		if( FT_Get_Char_Index( m_FTFace, wCode ) == 0 )
+			return NULL;
+
+		FT_Error ftError = FT_Load_Char( m_FTFace, wCode, FT_LOAD_RENDER | FT_LOAD_TARGET_NORMAL );
+		if( ftError == 0 )
+		{
+			return m_FTFace->glyph;
+		}
+	}
+
+	return NULL;
+}
+
+const GlyphImg* ioFTFaceImpl::AddNewWideGlyphImg( wchar_t wChar )
+{
+	FT_GlyphSlot ftGlyph = FindGlyphSlotWide( wChar );
+	if( !IsValidGlyph( ftGlyph ) )
+	{
+		m_WideGlyphMap.insert( WideGlyphMap::value_type( wChar, (GlyphImg*)NULL ) );
+		return NULL;
+	}
+
+	GlyphImg *pNewGlyph = PackGlyphBitmap( ftGlyph );
+	if( !pNewGlyph )
+	{
+		m_WideGlyphMap.insert( WideGlyphMap::value_type( wChar, (GlyphImg*)NULL ) );
+		return NULL;
+	}
+
+	m_WideGlyphMap.insert( WideGlyphMap::value_type( wChar, pNewGlyph ) );
+
+	return pNewGlyph;
+}
+
+const GlyphImg* ioFTFaceImpl::GetGlyphImgWide( wchar_t wChar )
+{
+	WideGlyphMap::iterator iter = m_WideGlyphMap.find( wChar );
+	if( iter != m_WideGlyphMap.end() )
+		return iter->second;
+
+	return AddNewWideGlyphImg( wChar );
 }
 
 bool ioFTFaceImpl::IsValidGlyph( FT_GlyphSlot ftGlyph )

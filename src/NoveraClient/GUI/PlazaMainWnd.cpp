@@ -1016,8 +1016,9 @@ void PlazaInviteList::OnRender()
 			g_LevelMgr.RenderGrade( m_szName, iXPos + 4, iYPos + 2, m_iGradeLevel, TEAM_PRIVATE_1 );
 			g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
 		}
-		g_FontMgr.PrintTextWidthCut( iXPos + 23, iYPos + 3, FONT_SIZE_12, 133.0f, m_szName.c_str() );
-		int iRealNameSize = g_FontMgr.GetTextWidthCutSize( m_szName.c_str(), TS_NORMAL, FONT_SIZE_12, 133.0f );
+		std::wstring wszName = Help::NameToWide( m_szName.c_str() );
+		g_FontMgr.PrintTextWidthCutWide( iXPos + 23, iYPos + 3, FONT_SIZE_12, 133.0f, wszName.c_str() );
+		int iRealNameSize = g_FontMgr.GetTextWidthCutSizeWide( wszName.c_str(), TS_NORMAL, FONT_SIZE_12, 133.0f );
 		g_GuildMarkMgr.RenderSmallMark( m_dwGuildIndex, m_dwGuildMark, iXPos + 23 + iRealNameSize + 3, iYPos + 4 );
 		if( m_dwGuildIndex != 0 )
 			iRealNameSize += 16;
@@ -2376,8 +2377,9 @@ void PlazaInvitedBtn::OnRender()
 			g_LevelMgr.RenderGrade( iXPos + 4, iYPos + 2, m_iGradeLevel, TEAM_PRIVATE_1 );
 			g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
 		}
-		g_FontMgr.PrintTextWidthCut( iXPos + 23, iYPos + 3, FONT_SIZE_12, 59.0f, m_szName.c_str() );
-		
+		std::wstring wszName = Help::NameToWide( m_szName.c_str() );
+		g_FontMgr.PrintTextWidthCutWide( iXPos + 23, iYPos + 3, FONT_SIZE_12, 59.0f, wszName.c_str() );
+
 		m_PingStep.RenderPing( iXPos + 85, iYPos + 2, m_iPingStep, false );
 	}
 }
@@ -4020,12 +4022,13 @@ void LobbyPlazaInfoWnd::OnRender()
 	g_FontMgr.SetBkColor( 12, 66, 111 );
 	g_FontMgr.SetTextColor( 255, 255, 255 );
 
+	std::wstring wszMyName = Help::NameToWide( g_MyInfo.GetPublicID().c_str() );
 	if ( m_bIsNoviceGrade )
-		g_FontMgr.PrintTextWidthCut( iXPos + 59, iYPos + 11, FONT_SIZE_17, 105.0f, g_MyInfo.GetPublicID().c_str() );
+		g_FontMgr.PrintTextWidthCutWide( iXPos + 59, iYPos + 11, FONT_SIZE_17, 105.0f, wszMyName.c_str() );
 	else
 	{
 		g_LevelMgr.RenderGrade( g_MyInfo.GetPublicID(), iXPos + 14, iYPos + 14, g_MyInfo.GetGradeLevel(), TEAM_PRIVATE_2 );
-		g_FontMgr.PrintTextWidthCut( iXPos + 32, iYPos + 11, FONT_SIZE_17, 115.0f, g_MyInfo.GetPublicID().c_str() );
+		g_FontMgr.PrintTextWidthCutWide( iXPos + 32, iYPos + 11, FONT_SIZE_17, 115.0f, wszMyName.c_str() );
 	}
 }
 

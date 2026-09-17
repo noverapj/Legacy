@@ -129,7 +129,8 @@ void InviteProgressWnd::OnRender()
 	else
 	{
 		g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
-		g_FontMgr.PrintText( iXPos + 103, iYPos + 144, FONT_SIZE_13, m_szName.c_str() );
+		std::wstring wszName = Help::NameToWide( m_szName.c_str() );
+		g_FontMgr.PrintTextWide( iXPos + 103, iYPos + 144, FONT_SIZE_13, wszName.c_str() );
 
 		g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
 		if( m_bComplete )

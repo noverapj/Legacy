@@ -154,16 +154,16 @@ void MemoInfoListWnd::SetNickNameBtnTitle( const ioHashString &szName, bool bFro
 	ioWnd *pNickName = FindChildWnd( ID_NICK_NAME );
 	if( pNickName )
 	{
-		char szDst[MAX_PATH];
-		memset( szDst, 0, sizeof( szDst ) );
-		Help::StringCutFun( FONT_SIZE_12, 125.0f, TS_NORMAL, szDst, sizeof( szDst ), m_szUserID.c_str() );				
-		char szTitle[MAX_PATH] = "";
+		wchar_t wszDst[MAX_PATH];
+		memset( wszDst, 0, sizeof( wszDst ) );
+		Help::WideStringCut( FONT_SIZE_12, 125.0f, TS_NORMAL, wszDst, MAX_PATH, m_szUserID.c_str() );
+		wchar_t wszTitle[MAX_PATH];
 		if( !bFrom )
-			SafeSprintf( szTitle, sizeof( szTitle ), STR(1), szDst );
+			Help::FormatWideFromWide( wszTitle, MAX_PATH, STR(1), wszDst );
 		else
-			SafeSprintf( szTitle, sizeof( szTitle ), STR(2), szDst );
-		pNickName->SetTitleText( szTitle );
-		pNickName->SetSize( g_FontMgr.GetTextWidthCutSize( szTitle, TS_NORMAL, FONT_SIZE_12, 125.0f ) + 15, pNickName->GetHeight() );
+			Help::FormatWideFromWide( wszTitle, MAX_PATH, STR(2), wszDst );
+		pNickName->SetTitleTextWide( wszTitle );
+		pNickName->SetSize( (int)g_FontMgr.GetTextWidthCutSizeWide( wszTitle, TS_NORMAL, FONT_SIZE_12, 125.0f ) + 15, pNickName->GetHeight() );
 	}
 }
 
@@ -618,7 +618,23 @@ void MemoListWnd::SendMemo()
 		return;
 	}
 
-	g_MemoManager.SendMemo( szName, szMemo  );
+	// resolve recipient: prefilled original (byte-exact UTF-8) or typed input
+	const char *szWireFromID = NULL;
+	if( !m_szOriginalTargetID.IsEmpty() )
+	{
+		char szStashNative[MAX_PATH] = "";
+		if( Help::FromWire( m_szOriginalTargetID.c_str(), szStashNative, sizeof( szStashNative ) ) )
+		{
+			if( strcmp( szStashNative, szName ) == 0 )
+				szWireFromID = m_szOriginalTargetID.c_str();
+		}
+		else if( m_szOriginalTargetID == szName )
+		{
+			szWireFromID = m_szOriginalTargetID.c_str();
+		}
+	}
+
+	g_MemoManager.SendMemo( szName, szMemo, szWireFromID );
 	
 	pMemoEdit->ClearString();
 	pMemoEdit->SetKeyFocus();
@@ -627,9 +643,15 @@ void MemoListWnd::SendMemo()
 
 void MemoListWnd::SetUserID( const char *szID )
 {
+	m_szOriginalTargetID = szID;
+
 	ioEdit *pEdit = (ioEdit*)FindChildWnd( ID_EDIT_ID );
 	if( pEdit )
 	{
+		char szLocalID[MAX_PATH] = "";
+		if( Help::FromWire( szID, szLocalID, sizeof( szLocalID ) ) )
+			szID = szLocalID;
+
 		pEdit->ClearString();
 		pEdit->SetKeyFocus();
 		g_InputBox.SetString( szID );

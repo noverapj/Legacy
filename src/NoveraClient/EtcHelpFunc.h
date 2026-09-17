@@ -207,6 +207,18 @@ namespace Help
 	// Invalid UTF-8 (legacy single-charset sender) passes through unchanged.
 	bool FromWire( const char *szWireText, OUT char *szOut, int iOutSize );
 
+	// UTF-8 wire format -> UTF-16 wide (name display).
+	// Invalid UTF-8 (legacy single-charset data) is decoded with the local runtime codepage instead.
+	std::wstring NameToWide( const char *szName );
+
+	// Composite wide text: native STR format + UTF-8 name argument(s).
+	bool FormatWide( OUT wchar_t *szOut, int iOutSize, const char *szLocalFormat, const char *szUTF8Name );
+	bool FormatWide2( OUT wchar_t *szOut, int iOutSize, const char *szLocalFormat, const char *szUTF8Name1, const char *szUTF8Name2 );
+	bool FormatWideFromWide( OUT wchar_t *szOut, int iOutSize, const char *szLocalFormat, const wchar_t *szWideName );
+
+	// Wide variant of StringCutFun: UTF-8 name -> width-cut UTF-16 (no "...").
+	int WideStringCut( float fScale, float fWidth, int iTextStyle, OUT wchar_t *szDst, int iDstSize, const char *szUTF8Src );
+
 	// Char와 충돌체크(공간에 대한것) 여부
 	bool CheckCharColState( DWORD dwStartTime, DWORD dwEndTime,
 							DWORD dwSkipType, bool bTeamOnly, bool bDefense,

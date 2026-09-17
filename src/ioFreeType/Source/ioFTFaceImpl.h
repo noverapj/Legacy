@@ -16,6 +16,9 @@ protected:
 	typedef std::map< WORD, GlyphImg* > GlyphMap;
 	GlyphMap m_GlyphMap;
 
+	typedef std::map< wchar_t, GlyphImg* > WideGlyphMap;
+	WideGlyphMap m_WideGlyphMap;
+
 	int m_iMaxGlyphWidth;
 	int m_iMaxGlyphHeight;
 	int m_iMaxGlyphBearingY;
@@ -39,6 +42,7 @@ public:
 
 public:
 	virtual const GlyphImg* GetGlyphImg( WORD wCode );
+	virtual const GlyphImg* GetGlyphImgWide( wchar_t wChar );
 
 	virtual int GetGlyphAdvance( WORD wCode );
 	virtual int GetGlyphImgWidth( WORD wCode );
@@ -61,7 +65,10 @@ public:
 
 protected:
 	FT_GlyphSlot FindGlyphSlot( WORD wCode );
+	FT_GlyphSlot FindGlyphSlotWide( wchar_t wChar );
 	const GlyphImg* AddNewGlyphImg( WORD wCode );
+	const GlyphImg* AddNewWideGlyphImg( wchar_t wChar );
+	GlyphImg* PackGlyphBitmap( FT_GlyphSlot ftGlyph );
 
 	bool IsValidGlyph( FT_GlyphSlot ftGlyph );
 

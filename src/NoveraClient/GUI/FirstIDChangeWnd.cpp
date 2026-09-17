@@ -166,7 +166,7 @@ void FirstIDChangeWnd::CheckNewID()
 	if( g_App.IsMouseBusy() )
 		return;
 
-	char szTempPublicID[ID_NUM_PLUS_ONE]="";
+ 		char szTempPublicID[ID_NUM_WIRE_PLUS_ONE]="";
 	StringCbPrintf( szTempPublicID , sizeof( szTempPublicID ), "%s#", g_MyInfo.GetPrivateID().c_str() );
 	if( g_MyInfo.GetPublicID() != szTempPublicID )
 	{
@@ -263,7 +263,7 @@ void FirstIDChangeWnd::SendNewID()
 	}
 
 	SP2Packet kPacket( CTPK_FIRST_CHANGE_ID );
-	kPacket << m_szNewID;
+	kPacket << Help::ToWire( m_szNewID.c_str() ).c_str();
 	TCPNetwork::SendToServer( kPacket );
 	TCPNetwork::MouseBusy( true );
 	m_dwSendTime = FRAMEGETTIME();

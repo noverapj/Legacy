@@ -1728,12 +1728,13 @@ void LobbyTradeInfoWnd::OnRender()
 	g_FontMgr.SetBkColor( 12, 66, 111 );
 	g_FontMgr.SetTextColor( 255, 255, 255 );
 
+	std::wstring wszMyName = Help::NameToWide( g_MyInfo.GetPublicID().c_str() );
 	if ( m_bIsNoviceGrade )
-		g_FontMgr.PrintTextWidthCut( iXPos + 59, iYPos + 11, FONT_SIZE_17, 105.0f, g_MyInfo.GetPublicID().c_str() );
+		g_FontMgr.PrintTextWidthCutWide( iXPos + 59, iYPos + 11, FONT_SIZE_17, 105.0f, wszMyName.c_str() );
 	else
 	{
 		g_LevelMgr.RenderGrade( g_MyInfo.GetPublicID(), iXPos + 14, iYPos + 14, g_MyInfo.GetGradeLevel(), TEAM_PRIVATE_2 );
-		g_FontMgr.PrintTextWidthCut( iXPos + 32, iYPos + 11, FONT_SIZE_17, 115.0f, g_MyInfo.GetPublicID().c_str() );
+		g_FontMgr.PrintTextWidthCutWide( iXPos + 32, iYPos + 11, FONT_SIZE_17, 115.0f, wszMyName.c_str() );
 	}
 }
 

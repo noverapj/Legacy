@@ -289,7 +289,7 @@ void MatchManager::DBToData( CQueryResultData *query_data )
 	{
 		stTopRank st;
 		char szNick[MAX_PATH]="";
-		PACKET_GUARD_BREAK( query_data->GetValue( szNick, ID_NUM_PLUS_ONE ) );
+		PACKET_GUARD_BREAK( query_data->GetValue( szNick, ID_NUM_WIRE_PLUS_ONE ) );
 		PACKET_GUARD_BREAK( query_data->GetValue( st.m_iUserIndex, sizeof(st.m_iUserIndex) ) );
 		PACKET_GUARD_BREAK( query_data->GetValue( st.m_iRanking, sizeof(st.m_iRanking) ) );
 		PACKET_GUARD_BREAK( query_data->GetValue( st.m_iMatchPoint, sizeof(st.m_iMatchPoint) ) );

@@ -16,6 +16,11 @@ class ioBroadCastRelayModule;
 #else
 #define ID_NUMBER       20
 #define ID_NUM_PLUS_ONE 21
+
+// wire (UTF-8) capacity for id buffers.
+// CJK chars use 3 bytes in UTF-8 vs 2 in CP949, so the wire budget is 1.5x the native one.
+#define ID_NUMBER_WIRE         30
+#define ID_NUM_WIRE_PLUS_ONE   31
 #endif
 
 #define PW_NUMBER       12
@@ -457,7 +462,7 @@ struct SendRelayInsertData : Relayheader // 릴레이 서버에게 보낼때 쓰는 전용
 	DWORD		 m_dwUserIndex;
 	char         m_szPublicIP[STR_IP_MAX];
 	int          m_iClientPort;
-	char         m_szPublicID[ID_NUM_PLUS_ONE];
+	char         m_szPublicID[ID_NUM_WIRE_PLUS_ONE];
 };
 struct RemoveData :Relayheader
 {

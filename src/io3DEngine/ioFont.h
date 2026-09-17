@@ -12,12 +12,17 @@ class ioFont : public ioResource
 {
 protected:
 	ioFTFace *m_pFTFace;
-	
+
+	// cross-script fallback faces (Noto CJK, Noto Thai). owned by ioFont.
+	ioFTFace *m_pFallbackFace1;
+	ioFTFace *m_pFallbackFace2;
+
 	int m_iFontSize;
 	int m_iWhiteSpaceSize;
 
 public:
 	void SetFTFace( ioFTFace *pFace );
+	void SetFallbackFaces( ioFTFace *pFace1, ioFTFace *pFace2 );
 	void SetFontSize( int iSize );
 	void SetWhiteSpaceSize( int iSize );
 
@@ -26,6 +31,7 @@ protected:
 
 public:
 	const GlyphImg* GetGlyphImg( WORD wCode ) const;
+	const GlyphImg* GetGlyphImgWide( wchar_t wChar ) const;
 
 	int GetAdvance( WORD wCode ) const;
 	int GetImgWidth( WORD wCode ) const;

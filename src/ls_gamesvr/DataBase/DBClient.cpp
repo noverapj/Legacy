@@ -645,7 +645,7 @@ void DBClient::OnSelectUserLoginInfo( const DWORD dwAgentID, const DWORD dwThrea
 
 	v_FT.Write( szPrivateID.c_str(), szPrivateID.Length(), TRUE );
 
-	v_VT.push_back(GetValueType(vChar,ID_NUM_PLUS_ONE));          //유저 아이디
+	v_VT.push_back(GetValueType(vChar,ID_NUM_WIRE_PLUS_ONE));          //유저 아이디
 	v_VT.push_back(GetValueType(vChar,LOGIN_KEY_PLUS_ONE));       //로그인 키
 	v_VT.push_back(GetValueType(vINT64,sizeof(__int64)));         //게임서버ID
 	v_VT.push_back(GetValueType(vTimeStamp,sizeof(DBTIMESTAMP))); //로그인 키 생성 날짜,시간.
@@ -655,7 +655,7 @@ void DBClient::OnSelectUserLoginInfo( const DWORD dwAgentID, const DWORD dwThrea
 
 	CQueryData query_data;	
 	query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	query_data.SetReturnData( szPrivateID.c_str(), ID_NUM_PLUS_ONE );
+	query_data.SetReturnData( szPrivateID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetData( 
 		dwThreadID,
 		_RESULT_CHECK,
@@ -699,12 +699,12 @@ void DBClient::OnSelectUpdateUserLoginInfo( const DWORD dwAgentID, const DWORD d
 
 	v_FT.Write( szPrivateID.c_str(), szPrivateID.Length(), TRUE );
 	v_FT.Write( serverId );
-	v_VT.push_back(GetValueType(vChar,ID_NUM_PLUS_ONE));          //유저 아이디
+	v_VT.push_back(GetValueType(vChar,ID_NUM_WIRE_PLUS_ONE));          //유저 아이디
 	v_VT.push_back(GetValueType(vINT64,sizeof(__int64)));         //게임서버ID
 
 	CQueryData query_data;	
 	query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	query_data.SetReturnData( szPrivateID.c_str(), ID_NUM_PLUS_ONE );
+	query_data.SetReturnData( szPrivateID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetData( 
 		dwThreadID,
 		_RESULT_CHECK,
@@ -819,8 +819,8 @@ void DBClient::OnSelectUserData( const DWORD dwAgentID, const DWORD dwThreadID, 
 
 	v_FT.Write( szPrivateID.c_str(), szPrivateID.Length(), TRUE );
 	v_VT.push_back(GetValueType(vLONG,sizeof(LONG)));             //유저 고유 인덱스
-	v_VT.push_back(GetValueType(vChar,ID_NUM_PLUS_ONE));          //유저 아이디
-	v_VT.push_back(GetValueType(vChar,ID_NUM_PLUS_ONE));          //유저 닉네임
+	v_VT.push_back(GetValueType(vChar,ID_NUM_WIRE_PLUS_ONE));          //유저 아이디
+	v_VT.push_back(GetValueType(vChar,ID_NUM_WIRE_PLUS_ONE));          //유저 닉네임
 	v_VT.push_back(GetValueType(vLONG,sizeof(LONG)));             //훈련하기
 	v_VT.push_back(GetValueType(vINT64,sizeof(__int64)));         //유저 머니
 	v_VT.push_back(GetValueType(vLONG,sizeof(LONG)));             //접속횟수
@@ -855,7 +855,7 @@ void DBClient::OnSelectUserData( const DWORD dwAgentID, const DWORD dwThreadID, 
 
 	CQueryData query_data;
 	query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	query_data.SetReturnData( szPrivateID.c_str(), ID_NUM_PLUS_ONE );
+	query_data.SetReturnData( szPrivateID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetData( 
 		dwThreadID,
 		_RESULT_CHECK,
@@ -1057,7 +1057,7 @@ void DBClient::OnLoginSelectControlKeys( const DWORD dwAgentID, const DWORD dwTh
 
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIdx, sizeof(DWORD) );
 	query_data.SetData( 
 		dwThreadID, 
@@ -1100,7 +1100,7 @@ void DBClient::OnLoginSelectAllAwardData( const DWORD dwAgentID, const DWORD dwT
 
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIdx, sizeof(DWORD) );
 	query_data.SetData( 
 		dwThreadID, 
@@ -1136,7 +1136,7 @@ void DBClient::OnLoginSelectAwardExpert( const DWORD dwAgentID, const DWORD dwTh
 
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIdx, sizeof(DWORD) );
 	query_data.SetData( 
 		dwThreadID, 
@@ -1178,7 +1178,7 @@ void DBClient::OnLoginSelectAllClassExpert( const DWORD dwAgentID, const DWORD d
 
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIdx, sizeof(int) );
 	query_data.SetData( 
 		dwThreadID, 
@@ -1236,7 +1236,7 @@ void DBClient::OnLoginSelectUserRecord( const DWORD dwAgentID, const DWORD dwThr
 
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIdx, sizeof(int) );
 	query_data.SetData( 
 		dwThreadID, 
@@ -1279,7 +1279,7 @@ void DBClient::OnLoginSelectAllEtcItemData( const DWORD dwAgentID, const DWORD d
 
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIdx, sizeof(DWORD) );
 	query_data.SetData( 
 		dwThreadID, 
@@ -1330,7 +1330,7 @@ void DBClient::OnLoginSelectAllExtraItemData( const DWORD dwAgentID, const DWORD
 
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIdx, sizeof(DWORD) );
 	query_data.SetData( 
 		dwThreadID, 
@@ -1374,7 +1374,7 @@ void DBClient::OnLoginSelectAllPetData( const DWORD dwAgentID, const DWORD dwThr
 	
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIdx, sizeof(int) );
 	query_data.SetData( 
 		dwThreadID, 
@@ -1416,7 +1416,7 @@ void DBClient::OnLoginSelectAllQuestCompleteData( const DWORD dwAgentID, const D
 
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIdx, sizeof(DWORD) );
 	query_data.SetData( 
 		dwThreadID, 
@@ -1460,7 +1460,7 @@ void DBClient::OnLoginSelectAllQuestData( const DWORD dwAgentID, const DWORD dwT
 
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIdx, sizeof(DWORD) );
 	query_data.SetData( 
 		dwThreadID, 
@@ -1525,7 +1525,7 @@ void DBClient::OnLoginSelectAllCharData( const DWORD dwAgentID, const DWORD dwTh
 
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIdx, sizeof(int) );
 	query_data.SetData( 
 		dwThreadID, 
@@ -1623,7 +1623,7 @@ void DBClient::OnLoginSelectAllGrowth( const DWORD dwAgentID, const DWORD dwThre
 
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIdx, sizeof(int) );
 	query_data.SetData( 
 		dwThreadID, 
@@ -1667,7 +1667,7 @@ void DBClient::OnLoginSelectAllMedalItemData( const DWORD dwAgentID, const DWORD
 
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIdx, sizeof(DWORD) );
 	query_data.SetData( 
 		dwThreadID, 
@@ -1710,7 +1710,7 @@ void DBClient::OnLoginSelectAllExMedalSlotData( const DWORD dwAgentID, const DWO
 
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIdx, sizeof(DWORD) );
 	query_data.SetData( 
 		dwThreadID, 
@@ -1750,7 +1750,7 @@ void DBClient::OnLoginSelectAllEventData( const DWORD dwAgentID, const DWORD dwT
 
 	CQueryData query_data;
 	query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIdx, sizeof(int) );
 	query_data.SetData( 
 		dwThreadID, 
@@ -1796,7 +1796,7 @@ void DBClient::OnLoginSelectAllAlchemicData( const DWORD dwAgentID, const DWORD 
 
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIdx, sizeof(DWORD) );
 	
 	query_data.SetData( dwThreadID, _RESULT_CHECK,
@@ -1888,7 +1888,7 @@ void DBClient::OnSelectCharIndex( const DWORD dwAgentID, const DWORD dwThreadID,
 
 	CQueryData query_data;
 	query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &user_index, sizeof(int) );
 	query_data.SetReturnData( &iMsgResult, sizeof(int) );
 	query_data.SetReturnData( &iLogType, sizeof(int) );
@@ -1952,7 +1952,7 @@ void DBClient::OnSelectCharData( const DWORD dwAgentID, const DWORD dwThreadID, 
 
 	CQueryData query_data;
 	query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	//query_data.SetReturnData( &dwUserIndex, sizeof(int) );
 	query_data.SetReturnData( &iMsgResult, sizeof(int) );
 	query_data.SetReturnData( &char_index, sizeof(int) );
@@ -2229,7 +2229,7 @@ void DBClient::OnSelectCharRentalHistory( const DWORD dwAgentID, const DWORD dwT
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
 	query_data.SetReturnData( &dwRentUserIdx, sizeof(int) );
-	query_data.SetReturnData( rkRequestID.c_str(), ID_NUM_PLUS_ONE );
+	query_data.SetReturnData( rkRequestID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &iClassType, sizeof(int) );
 	query_data.SetData( 
 		dwThreadID, 
@@ -2309,7 +2309,7 @@ void DBClient::OnSelectClassExpertIndex( const DWORD dwAgentID, const DWORD dwTh
 
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIdx, sizeof(DWORD) );
 	query_data.SetData( 
 		dwThreadID, 
@@ -2412,7 +2412,7 @@ void DBClient::OnSelectInvenIndex( const DWORD dwAgentID, const DWORD dwThreadID
 
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIdx, sizeof(DWORD) );
 	query_data.SetReturnData( &bBuyCash, sizeof( bool ) );
 	query_data.SetReturnData( &iBuyPrice, sizeof( int ) );
@@ -2525,7 +2525,7 @@ void DBClient::OnSelectEtcItemIndex( const DWORD dwAgentID, const DWORD dwThread
 
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIdx, sizeof( int ) );
 	query_data.SetReturnData( &bBuyCash, sizeof( bool ) );
 	query_data.SetReturnData( &iBuyPrice, sizeof( int ) );
@@ -2637,7 +2637,7 @@ void DBClient::OnSelectExtraItemIndex( const DWORD dwAgentID, const DWORD dwThre
 
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIdx, sizeof( int ) );
 	query_data.SetReturnData( &bBuyCash, sizeof( bool ) );
 	query_data.SetReturnData( &iBuyPrice, sizeof( int ) );
@@ -2781,7 +2781,7 @@ void DBClient::OnSelectAwardIndex( const DWORD dwAgentID, const DWORD dwThreadID
 
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIdx, sizeof(int) );
 	query_data.SetData( 
 		dwThreadID, 
@@ -2882,7 +2882,7 @@ void DBClient::OnSelectGrowthIndex( const DWORD dwAgentID, const DWORD dwThreadI
 
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIdx, sizeof(int) );
 	query_data.SetData( 
 		dwThreadID, 
@@ -2981,7 +2981,7 @@ void DBClient::OnSelectFishDataIndex( const DWORD dwAgentID, const DWORD dwThrea
 	CQueryData query_data;
 	query_data.SetReturnData( &dwUserIdx, sizeof(int) );
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetData( 
 		dwThreadID, 
 		_RESULT_CHECK, 
@@ -3021,7 +3021,7 @@ void DBClient::OnSelectAllFishData( const DWORD dwAgentID, const DWORD dwThreadI
 
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &user_index, sizeof(int) );
 	query_data.SetData( 
 		dwThreadID, 
@@ -3090,7 +3090,7 @@ void DBClient::OnSelectFriendList( const DWORD dwAgentID, const DWORD dwThreadID
 	v_FT.Write( iSelectCount );
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );				 //테이블 인덱스
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );				 //친구 인덱스
-	v_VT.push_back( GetValueType( vChar, ID_NUM_PLUS_ONE ) );            //친구 닉네임
+	v_VT.push_back( GetValueType( vChar, ID_NUM_WIRE_PLUS_ONE ) );            //친구 닉네임
 	v_VT.push_back( GetValueType( vTimeStamp, sizeof(DBTIMESTAMP) ) );   //친구 수락 시간
 	v_VT.push_back( GetValueType( vLONG, sizeof( LONG ) ) );			// 보낸갯수
 	v_VT.push_back( GetValueType( vLONG, sizeof( LONG ) ) );			// 보낸 시간
@@ -3099,7 +3099,7 @@ void DBClient::OnSelectFriendList( const DWORD dwAgentID, const DWORD dwThreadID
 	v_VT.push_back( GetValueType( vLONG, sizeof( LONG ) ) );			// 받기전갯수
 
 	CQueryData query_data;
-	query_data.SetReturnData( szPublicID.c_str(), ID_NUM_PLUS_ONE );
+	query_data.SetReturnData( szPublicID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetData( 
 		dwThreadID, 
 		_RESULT_CHECK, 
@@ -3135,7 +3135,7 @@ void DBClient::OnSelectFriendRequestList( const DWORD dwAgentID, const DWORD dwT
 	v_FT.Write( iSelectCount );
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );				 //테이블 인덱스
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );				 //친구 인덱스
-	v_VT.push_back( GetValueType( vChar, ID_NUM_PLUS_ONE ) );            //친구 닉네임
+	v_VT.push_back( GetValueType( vChar, ID_NUM_WIRE_PLUS_ONE ) );            //친구 닉네임
 
 	CQueryData query_data;
 	query_data.SetReturnData( &dwUserIndex, sizeof(DWORD) );
@@ -3173,7 +3173,7 @@ void DBClient::OnSelectFriendApplication( const DWORD dwAgentID, const DWORD dwT
 
 	CQueryData query_data;
 	query_data.SetReturnData( &dwUserIndex, sizeof(DWORD) );
-	query_data.SetReturnData( szFriendID.c_str(), ID_NUM_PLUS_ONE );
+	query_data.SetReturnData( szFriendID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetData( 
 		dwThreadID, 
 		_RESULT_CHECK, 
@@ -3203,12 +3203,12 @@ void DBClient::OnSelectUserIDCheck( const DWORD dwAgentID, const DWORD dwThreadI
 	vVALUETYPE v_VT;
 
 	v_FT.Write( szUserPublicID.c_str(), szUserPublicID.Length(), TRUE );
-	v_VT.push_back( GetValueType( vChar, ID_NUM_PLUS_ONE ) );	//유저 아이디
-	v_VT.push_back( GetValueType( vChar, ID_NUM_PLUS_ONE ) );	//유저 닉네임
+	v_VT.push_back( GetValueType( vChar, ID_NUM_WIRE_PLUS_ONE ) );	//유저 아이디
+	v_VT.push_back( GetValueType( vChar, ID_NUM_WIRE_PLUS_ONE ) );	//유저 닉네임
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );		//유저 어카운트 인덱스	
 
 	CQueryData query_data;
-	query_data.SetReturnData( szPublicID.c_str(), ID_NUM_PLUS_ONE );
+	query_data.SetReturnData( szPublicID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetData( 
 		dwThreadID, 
 		_RESULT_CHECK, 
@@ -3274,10 +3274,10 @@ void DBClient::OnSelectInsertFriend( const DWORD dwAgentID, const DWORD dwThread
 
 	CQueryData query_data;
 	query_data.SetReturnData( &dwUserIndex, sizeof(DWORD) );
-	query_data.SetReturnData( szUserName.c_str(), ID_NUM_PLUS_ONE );
+	query_data.SetReturnData( szUserName.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwTableIndex, sizeof(DWORD) );
 	query_data.SetReturnData( &dwFriendIndex, sizeof(DWORD) );
-	query_data.SetReturnData( szFriendName.c_str(), ID_NUM_PLUS_ONE );
+	query_data.SetReturnData( szFriendName.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetData( 
 		dwThreadID, 
 		_RESULT_CHECK, 
@@ -3310,8 +3310,8 @@ void DBClient::OnDeleteFriend( const DWORD dwAgentID, const DWORD dwThreadID, co
 	v_FT.Write( szFriendPublicID.c_str(), szFriendPublicID.Length(), TRUE );
 
 	CQueryData query_data;
-	query_data.SetReturnData( szUserID.c_str(), ID_NUM_PLUS_ONE );
-	query_data.SetReturnData( szFriendPublicID.c_str(), ID_NUM_PLUS_ONE );
+	query_data.SetReturnData( szUserID.c_str(), ID_NUM_WIRE_PLUS_ONE );
+	query_data.SetReturnData( szFriendPublicID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetData( 
 		dwThreadID, 
 		_RESULT_CHECK, 
@@ -3346,7 +3346,7 @@ void DBClient::OnSelectFriendDeveloperInsert( const DWORD dwAgentID, const DWORD
 
 	CQueryData query_data;
 	query_data.SetReturnData( &dwUserIndex, sizeof(DWORD) );
-	query_data.SetReturnData( szUserName.c_str(), ID_NUM_PLUS_ONE );
+	query_data.SetReturnData( szUserName.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetData( 
 		dwThreadID, 
 		_RESULT_CHECK, 
@@ -3625,7 +3625,7 @@ void DBClient::OnSelectQuestIndex( const DWORD dwAgentID, const DWORD dwThreadID
 
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIdx, sizeof(int) );
 	query_data.SetData( 
 		dwThreadID, 
@@ -3766,7 +3766,7 @@ void DBClient::OnSelectQuestCompleteIndex( const DWORD dwAgentID, const DWORD dw
 
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIdx, sizeof(int) );
 	query_data.SetData( 
 		dwThreadID, 
@@ -4371,7 +4371,7 @@ void DBClient::OnSelectUserGuildInfo( const DWORD dwAgentID, const DWORD dwThrea
 
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIdx, sizeof(DWORD) );
 	query_data.SetData( 
 		dwThreadID, 
@@ -4533,7 +4533,7 @@ void DBClient::OnSelectGuildEntryDelayMember( const DWORD dwAgentID, const DWORD
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );				// TABLE INDEX
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );				// USER INDEX
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );				// USER LEVEL
-	v_VT.push_back( GetValueType( vChar, ID_NUM_PLUS_ONE ) );			// USER NICK
+	v_VT.push_back( GetValueType( vChar, ID_NUM_WIRE_PLUS_ONE ) );			// USER NICK
 
 	CQueryData query_data;
 	query_data.SetReturnData( &dwUserIndex, sizeof(DWORD) );
@@ -4570,7 +4570,7 @@ void DBClient::OnSelectGuildMemberList( const DWORD dwAgentID, const DWORD dwThr
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );				// TABLE INDEX
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );				// USER INDEX
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );				// USER LEVEL
-	v_VT.push_back( GetValueType( vChar, ID_NUM_PLUS_ONE ) );			// USER NICK
+	v_VT.push_back( GetValueType( vChar, ID_NUM_WIRE_PLUS_ONE ) );			// USER NICK
 	v_VT.push_back( GetValueType( vChar, GUILD_POS_NUM_PLUS_ONE ) );	// USER POSITION
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );				// USER CAMP POINT
 	
@@ -4610,7 +4610,7 @@ void DBClient::OnSelectGuildMemberListEx( const DWORD dwAgentID, const DWORD dwT
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );				// TABLE INDEX
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );				// USER INDEX
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );				// USER LEVEL
-	v_VT.push_back( GetValueType( vChar, ID_NUM_PLUS_ONE ) );			// USER NICK
+	v_VT.push_back( GetValueType( vChar, ID_NUM_WIRE_PLUS_ONE ) );			// USER NICK
 	v_VT.push_back( GetValueType( vChar, GUILD_POS_NUM_PLUS_ONE ) );	// USER POSITION
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );				// USER CAMP POINT
 
@@ -4651,7 +4651,7 @@ void DBClient::OnSelectGuildMarkBlockInfo( const DWORD dwAgentID, const DWORD dw
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );				// USER INDEX
 
 	CQueryData query_data;
-	query_data.SetReturnData( szDeveloperID.c_str(), ID_NUM_PLUS_ONE );
+	query_data.SetReturnData( szDeveloperID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwGuildIndex, sizeof(DWORD) );
 	query_data.SetReturnData( &dwGuildMark, sizeof(DWORD) );
 	query_data.SetData( 
@@ -5042,7 +5042,7 @@ void DBClient::OnUpdateGuildPositionChange( const DWORD dwAgentID, const DWORD d
 	query_data.SetReturnData( &dwUserIndex, sizeof( DWORD ) );
 	query_data.SetReturnData( &dwTargetIndex, sizeof( DWORD ) );
 	query_data.SetReturnData( &dwGuildIndex, sizeof( DWORD ) );
-	query_data.SetReturnData( szTargetID.c_str(), ID_NUM_PLUS_ONE );
+	query_data.SetReturnData( szTargetID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( szPosition.c_str(), GUILD_POS_NUM_PLUS_ONE );
 	query_data.SetData( 
 		dwThreadID, 
@@ -5109,7 +5109,7 @@ void DBClient::OnSelectGuildSimpleData( const DWORD dwAgentID, const DWORD dwThr
 	
 	CQueryData query_data;
 	query_data.SetReturnData( &dwUserIndex, sizeof(DWORD) );
-	query_data.SetReturnData( szGuildUserID.c_str(), ID_NUM_PLUS_ONE );
+	query_data.SetReturnData( szGuildUserID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetData( 
 		dwThreadID, 
 		_RESULT_CHECK, 
@@ -5591,7 +5591,7 @@ void DBClient::OnSelectPresentData( const DWORD dwAgentID, const DWORD dwThreadI
 	v_FT.Write( dwSelectCount );
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );				 //선물 인덱스
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );				 //선물 보낸 유저인덱스
-	v_VT.push_back( GetValueType( vChar, ID_NUM_PLUS_ONE ) );            //선물 보낸 유저 닉네임
+	v_VT.push_back( GetValueType( vChar, ID_NUM_WIRE_PLUS_ONE ) );            //선물 보낸 유저 닉네임
 	v_VT.push_back( GetValueType( vSHORT, sizeof(short) ) );             //선물 타입
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );               //선물 변수1
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );               //선물 변수2
@@ -5725,7 +5725,7 @@ void DBClient::OnSelectUserIndexAndPresentCnt( const DWORD dwAgentID, const DWOR
 	v_FT.Write( rszRecvPublicID.c_str(), rszRecvPublicID.Length(), TRUE );
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );				 //선물 받을 유저인덱스
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );               //선물 받을 유저의 현재 선물 갯수
-	v_VT.push_back( GetValueType( vChar, ID_NUM_PLUS_ONE ) );            //선물 받을 유저의 PrivateID
+	v_VT.push_back( GetValueType( vChar, ID_NUM_WIRE_PLUS_ONE ) );            //선물 받을 유저의 PrivateID
 
 	CQueryData query_data;
 	query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
@@ -5733,7 +5733,7 @@ void DBClient::OnSelectUserIndexAndPresentCnt( const DWORD dwAgentID, const DWOR
 	query_data.SetReturnData( &iPresentType, sizeof(short) );
 	query_data.SetReturnData( &iBuyValue1, sizeof(int) );
 	query_data.SetReturnData( &iBuyValue2, sizeof(int) );
-	query_data.SetReturnData( rszRecvPublicID.c_str(), ID_NUM_PLUS_ONE );
+	query_data.SetReturnData( rszRecvPublicID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetData( 
 		dwThreadID, 
 		_RESULT_CHECK, 
@@ -5819,7 +5819,7 @@ void DBClient::OnSelectUserEntry( const DWORD dwAgentID, const DWORD dwThreadID,
 
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIndex, sizeof(int) );
 	query_data.SetData( 
 		dwThreadID, 
@@ -5888,7 +5888,7 @@ void DBClient::OnSelectPublicIDExist( const DWORD dwAgentID, const DWORD dwThrea
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIdx, sizeof(int) );
-	query_data.SetReturnData( szNewPublicID.c_str(), ID_NUM_PLUS_ONE );
+	query_data.SetReturnData( szNewPublicID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetData( 
 		dwThreadID, 
 		_RESULT_CHECK, 
@@ -5969,11 +5969,11 @@ void DBClient::OnSelectChangedPublicID( const DWORD dwAgentID, const DWORD dwThr
 	vVALUETYPE v_VT;
 
 	v_FT.Write( dwUserIndex );
-	v_VT.push_back(GetValueType(vChar,ID_NUM_PLUS_ONE)); // 변경이 완료된 public id
+	v_VT.push_back(GetValueType(vChar,ID_NUM_WIRE_PLUS_ONE)); // 변경이 완료된 public id
 
 	CQueryData query_data;
 	query_data.SetReturnData( &dwUserIndex, sizeof( DWORD ) );
-	query_data.SetReturnData( rszNewPublicID.c_str(), ID_NUM_PLUS_ONE );
+	query_data.SetReturnData( rszNewPublicID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetData( 
 		dwThreadID, 
 		_RESULT_CHECK, 
@@ -6054,7 +6054,7 @@ void DBClient::OnSelectMemberConut( const DWORD dwAgentID, const DWORD dwThreadI
 
 	CQueryData query_data;	
 	query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	query_data.SetReturnData( szPrivateID.c_str(), ID_NUM_PLUS_ONE );
+	query_data.SetReturnData( szPrivateID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetData( 
 		dwThreadID,
 		_RESULT_CHECK,
@@ -6120,9 +6120,9 @@ void DBClient::OnSelectFirstPublicIDExist( const DWORD dwAgentID, const DWORD dw
 
 	CQueryData query_data;
 	query_data.SetReturnData( &dwUserIndex, sizeof( DWORD ) );
-	query_data.SetReturnData( szPublicID.c_str(), ID_NUM_PLUS_ONE );
+	query_data.SetReturnData( szPublicID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	query_data.SetReturnData( szNewPublicID.c_str(), ID_NUM_PLUS_ONE );
+	query_data.SetReturnData( szNewPublicID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetData( 
 		dwThreadID, 
 		_RESULT_CHECK, 
@@ -6184,13 +6184,13 @@ void DBClient::OnSelectChangedFirstPublicID( const DWORD dwAgentID, const DWORD 
 	vVALUETYPE v_VT;
 
 	v_FT.Write( dwUserIndex );
-	v_VT.push_back(GetValueType(vChar,ID_NUM_PLUS_ONE)); // 변경이 완료된 public id
+	v_VT.push_back(GetValueType(vChar,ID_NUM_WIRE_PLUS_ONE)); // 변경이 완료된 public id
 
 	CQueryData query_data;
 	query_data.SetReturnData( &dwUserIndex, sizeof( DWORD ) );
-	query_data.SetReturnData( szPublicID.c_str(), ID_NUM_PLUS_ONE );
+	query_data.SetReturnData( szPublicID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	query_data.SetReturnData( szNewPublicID.c_str(), ID_NUM_PLUS_ONE );
+	query_data.SetReturnData( szNewPublicID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetData( 
 		dwThreadID, 
 		_RESULT_CHECK, 
@@ -6289,7 +6289,7 @@ void DBClient::OnSelectMedalItemIndex( const DWORD dwAgentID, const DWORD dwThre
 
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIdx, sizeof(int) );
 	query_data.SetReturnData( &iLogType, sizeof( int ) );
 	query_data.SetReturnData( &iLimitTime, sizeof( int ) );
@@ -6386,7 +6386,7 @@ void DBClient::OnSelectExMedalSlotIndex( const DWORD dwAgentID, const DWORD dwTh
 
 	CQueryData query_data;
 // 	query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-// 	query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+// 	query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIdx, sizeof(int) );
 	query_data.SetReturnData( &iLogType, sizeof( int ) );
 	query_data.SetData( 
@@ -6458,7 +6458,7 @@ void DBClient::OnSelectHeroData( const DWORD dwAgentID, const DWORD dwThreadID, 
 
 	CQueryData query_data;
 	query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIdx, sizeof(DWORD) );
 	query_data.SetData( 
 		dwThreadID, 
@@ -6492,7 +6492,7 @@ void DBClient::OnSelectHeroTop100Data( int iMinNumber, int iMaxNumber )
 	v_FT.Write( iMaxNumber );
 	v_VT.push_back(GetValueType(vLONG,sizeof(LONG)));     //유저 인덱스
 	v_VT.push_back(GetValueType(vLONG,sizeof(LONG)));     //유저 레벨
-	v_VT.push_back(GetValueType(vChar,ID_NUM_PLUS_ONE));  //유저 아이디
+	v_VT.push_back(GetValueType(vChar,ID_NUM_WIRE_PLUS_ONE));  //유저 아이디
 	v_VT.push_back(GetValueType(vLONG,sizeof(LONG)));     //유저 칭호
 	v_VT.push_back(GetValueType(vLONG,sizeof(LONG)));     //유저 승
 	v_VT.push_back(GetValueType(vLONG,sizeof(LONG)));     //유저 패
@@ -6534,7 +6534,7 @@ void DBClient::OnSelectItemCustomUniqueIndex( const DWORD dwAgentID, const DWORD
 
 	CQueryData query_data;
 	query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIdx, sizeof(DWORD) );
 	query_data.SetData( 
 		dwThreadID, 
@@ -6620,7 +6620,7 @@ void DBClient::OnSelectCreateTradeIndex( const DWORD dwAgentID, const DWORD dwTh
 
 	CQueryData query_data;
 	query_data.SetReturnData( &dwUserIndex, sizeof(DWORD) );					// 등록자 인덱스
-	query_data.SetReturnData( rkUserNick.c_str(), ID_NUM_PLUS_ONE );			// 등록자 닉네임
+	query_data.SetReturnData( rkUserNick.c_str(), ID_NUM_WIRE_PLUS_ONE );			// 등록자 닉네임
 	query_data.SetReturnData( &dwItemType, sizeof(DWORD) );						// 아이템 타입
 	query_data.SetReturnData( &dwItemMagicCode, sizeof(DWORD) );				// 코드
 	query_data.SetReturnData( &dwItemValue, sizeof(DWORD) );					// value
@@ -6665,7 +6665,7 @@ void DBClient::OnTradeItemComplete( const DWORD dwAgentID, const DWORD dwThreadI
 	query_data.SetReturnData( &dwBuyUserIndex, sizeof(DWORD) );					// 구매자 인덱스
 	query_data.SetReturnData( &dwTradeIndex, sizeof(DWORD) );					// 인덱스
 	query_data.SetReturnData( &dwRegisterUserIndex, sizeof(DWORD) );			// 등록자 인덱스
-	query_data.SetReturnData( rkUserNick.c_str(), ID_NUM_PLUS_ONE );			// 등록자 닉네임
+	query_data.SetReturnData( rkUserNick.c_str(), ID_NUM_WIRE_PLUS_ONE );			// 등록자 닉네임
 	query_data.SetReturnData( &dwItemType, sizeof(DWORD) );						// 아이템 타입
 	query_data.SetReturnData( &dwItemMagicCode, sizeof(DWORD) );				// 코드
 	query_data.SetReturnData( &dwItemValue, sizeof(DWORD) );					// value
@@ -6706,7 +6706,7 @@ void DBClient::OnTradeItemCancel( const DWORD dwAgentID, const DWORD dwThreadID,
 	CQueryData query_data;
 	query_data.SetReturnData( &dwTradeIndex, sizeof(DWORD) );					// 인덱스
 	query_data.SetReturnData( &dwRegisterUserIndex, sizeof(DWORD) );			// 등록자 인덱스
-	query_data.SetReturnData( rkUserNick.c_str(), ID_NUM_PLUS_ONE );			// 등록자 닉네임
+	query_data.SetReturnData( rkUserNick.c_str(), ID_NUM_WIRE_PLUS_ONE );			// 등록자 닉네임
 	query_data.SetReturnData( &dwItemType, sizeof(DWORD) );						// 아이템 타입
 	query_data.SetReturnData( &dwItemMagicCode, sizeof(DWORD) );				// 코드
 	query_data.SetReturnData( &dwItemValue, sizeof(DWORD) );					// value
@@ -6830,7 +6830,7 @@ void DBClient::OnDBServerTest()
 			char szTempGUID[USER_GUID_NUM_PLUS_ONE]="";
 			Help::GetGUID( szTempGUID, sizeof(szTempGUID) );
 
-			char szTempID[ID_NUM_PLUS_ONE] = "";
+			char szTempID[ID_NUM_WIRE_PLUS_ONE] = "";
 			sprintf_s( szTempID, "-T%d", i );
 			OnLoginSelectControlKeys( i, i, szTempGUID, szTempID, dwUserIndex );
 			OnLoginSelectAllAwardData( i, i, szTempGUID, szTempID, dwUserIndex );
@@ -6905,7 +6905,7 @@ void DBClient::OnSelectHeadquartersDataCount( const DWORD dwAgentID, const DWORD
 
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );		
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );	
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );	
 	query_data.SetReturnData( &dwUserIdx, sizeof(DWORD) );			
 	query_data.SetData( 
 		dwThreadID, 
@@ -6977,7 +6977,7 @@ void DBClient::OnSelectHeadquartersData( const DWORD dwAgentID, const DWORD dwTh
 
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );		
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );	
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );	
 	query_data.SetReturnData( &dwUserIdx, sizeof(DWORD) );			
 	query_data.SetData( 
 		dwThreadID, 
@@ -7054,7 +7054,7 @@ void DBClient::OnSelectUserBirthDate( const DWORD dwAgentID, const DWORD dwThrea
 
 	CQueryData query_data;
 	query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );		
-	query_data.SetReturnData( szPrivateID.c_str(), ID_NUM_PLUS_ONE );			
+	query_data.SetReturnData( szPrivateID.c_str(), ID_NUM_WIRE_PLUS_ONE );			
 	query_data.SetData( 
 		dwThreadID, 
 		_RESULT_CHECK, 
@@ -7093,7 +7093,7 @@ void DBClient::OnSelectUserSelectShutDown( const DWORD dwAgentID, const DWORD dw
 
 	CQueryData query_data;
 	query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );		
-	query_data.SetReturnData( szPrivateID.c_str(), ID_NUM_PLUS_ONE );			
+	query_data.SetReturnData( szPrivateID.c_str(), ID_NUM_WIRE_PLUS_ONE );			
 	query_data.SetData( 
 		dwThreadID, 
 		_RESULT_CHECK, 
@@ -7128,7 +7128,7 @@ void DBClient::OnSelectFriendRecommendData( const DWORD dwAgentID, const DWORD d
 
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );		
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );	
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );	
 	query_data.SetReturnData( &dwUserIdx, sizeof(DWORD) );			
 	query_data.SetData( 
 		dwThreadID, 
@@ -7196,14 +7196,14 @@ void DBClient::OnSelectDisconnectCheck( const DWORD dwAgentID, const DWORD dwThr
 	vVALUETYPE v_VT;
 
 	v_FT.Write( szPrivateID.c_str(), szPrivateID.Length(), TRUE );
-	v_VT.push_back(GetValueType(vChar,ID_NUM_PLUS_ONE));          //유저 아이디
+	v_VT.push_back(GetValueType(vChar,ID_NUM_WIRE_PLUS_ONE));          //유저 아이디
 	v_VT.push_back(GetValueType(vChar,LOGIN_KEY_PLUS_ONE));       //로그인 키
 	v_VT.push_back(GetValueType(vINT64,sizeof(__int64)));         //게임서버ID
 	v_VT.push_back(GetValueType(vTimeStamp,sizeof(DBTIMESTAMP))); //로그인 키 생성 날짜,시간.
 
 	CQueryData query_data;	
 	query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	query_data.SetReturnData( szPrivateID.c_str(), ID_NUM_PLUS_ONE );
+	query_data.SetReturnData( szPrivateID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetData( 
 		dwThreadID,
 		_RESULT_CHECK,
@@ -7328,7 +7328,7 @@ void DBClient::OnSelectAlchemicIndex( const DWORD dwAgentID, const DWORD dwThrea
 
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIdx, sizeof(int) );
 	query_data.SetData( dwThreadID, _RESULT_CHECK,
 						DBAGENT_ALCHEMIC_DATA_CREATE_INDEX, _SELECTDB, 
@@ -7526,7 +7526,7 @@ void DBClient::OnSelectTournamentTeamMember( const DWORD dwAgentID, const DWORD 
 	// - 테이블인덱스, 유저인덱스, 닉네임, 레벨, 진영포인트, 길드인덱스
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );
-	v_VT.push_back( GetValueType( vChar, ID_NUM_PLUS_ONE ) );
+	v_VT.push_back( GetValueType( vChar, ID_NUM_WIRE_PLUS_ONE ) );
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );
@@ -7561,7 +7561,7 @@ void DBClient::OnSelectTournamentTeamAppList( const DWORD dwAgentID, const DWORD
 	// - 테이블인덱스, 유저인덱스, 닉네임, 레벨, 길드인덱스, 진영 타입
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );
-	v_VT.push_back( GetValueType( vChar, ID_NUM_PLUS_ONE ) );
+	v_VT.push_back( GetValueType( vChar, ID_NUM_WIRE_PLUS_ONE ) );
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );
 	v_VT.push_back( GetValueType( vChar, sizeof(BYTE) ) );
@@ -7714,7 +7714,7 @@ void DBClient::OnSelectTournamentTeamAppAgreeMember( const DWORD dwAgentID, cons
 	// - 테이블인덱스, 유저인덱스, 닉네임, 레벨, 진영포인트, 길드인덱스
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );
-	v_VT.push_back( GetValueType( vChar, ID_NUM_PLUS_ONE ) );
+	v_VT.push_back( GetValueType( vChar, ID_NUM_WIRE_PLUS_ONE ) );
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );
@@ -7868,7 +7868,7 @@ void DBClient::OnSelectTournamentHistoryUserList( DWORD dwHistoryIndex )
 
 	vVALUETYPE v_VT;
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );      // 유저 인덱스
-	v_VT.push_back( GetValueType( vChar, ID_NUM_PLUS_ONE ) );	// 닉네임
+	v_VT.push_back( GetValueType( vChar, ID_NUM_WIRE_PLUS_ONE ) );	// 닉네임
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );      // 레벨
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );      // 용병타입
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );      // 성별
@@ -7995,7 +7995,7 @@ void DBClient::OnInsertTournamentCustomAdd( const DWORD dwAgentID, const DWORD d
 	CQueryData query_data;
 	query_data.SetReturnData( &dwUserIndex, sizeof(DWORD) );
 	query_data.SetReturnData( &dwUseEtcItem, sizeof(DWORD) );
-	query_data.SetReturnData( szPublicID.c_str(), ID_NUM_PLUS_ONE );
+	query_data.SetReturnData( szPublicID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetData( dwThreadID, _RESULT_CHECK, DBAGENT_TOURNAMENT_CUSTOM_DATA_ADD, _SELECTDB, queryId, v_FT,	v_VT );
 
 	SP2Packet kPacket( DTPK_QUERY );
@@ -8018,7 +8018,7 @@ void DBClient::OnSelectTournamentCustomReward( const DWORD dwAgentID, const DWOR
 
 	vVALUETYPE v_VT;
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );					// 테이블 인덱스
-	v_VT.push_back( GetValueType( vChar, ID_NUM_PLUS_ONE ) );				// 주최자 닉네임
+	v_VT.push_back( GetValueType( vChar, ID_NUM_WIRE_PLUS_ONE ) );				// 주최자 닉네임
 	v_VT.push_back( GetValueType( vChar, TOURNAMENT_TITLE_NUM_PLUS_ONE ) );	// 리그명
 	v_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );					// 라운드
 	v_VT.push_back( GetValueType( vSHORT, sizeof(short) ) );				// 맥스라운드
@@ -9206,7 +9206,7 @@ void DBClient::OnLoginSelectCostumeData( const int iPrecCostumeIndex, const DWOR
 
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIdx, sizeof(DWORD) );
 	query_data.SetData( 
 		dwThreadID, 
@@ -9508,7 +9508,7 @@ void DBClient::OnLoginSelectMissionData( const DWORD dwAgentID, const DWORD dwTh
 
 	CQueryData query_data;
 	//query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );
-	//query_data.SetReturnData( szID.c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( szID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwUserIdx, sizeof(DWORD) );
 	query_data.SetData( 
 		dwThreadID, 
@@ -9986,7 +9986,7 @@ void DBClient::OnSelectUserChannelingKeyValue( const DWORD dwAgentID, const DWOR
 
 	CQueryData query_data;
 	query_data.SetReturnData( szUserGUID.c_str(), USER_GUID_NUM_PLUS_ONE );		
-	query_data.SetReturnData( szPrivateID.c_str(), ID_NUM_PLUS_ONE );	
+	query_data.SetReturnData( szPrivateID.c_str(), ID_NUM_WIRE_PLUS_ONE );	
 	query_data.SetReturnData( &iChannelingType, sizeof(int) );
 	query_data.SetData( 
 		dwThreadID, 
@@ -10076,7 +10076,7 @@ void DBClient::OnRetrieveOrDeleteBlock(const DWORD dwGuildIndex, const DWORD dwR
 	query_data.SetReturnData( &dwRoomIndex, sizeof(DWORD) );
 	query_data.SetReturnData( &dwItemIndex, sizeof(__int64) );
 	query_data.SetReturnData( &byState, sizeof(BYTE) );
-	query_data.SetReturnData( szPublicID.c_str(), ID_NUM_PLUS_ONE );
+	query_data.SetReturnData( szPublicID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 
 	query_data.SetData( 
 		dwGuildIndex, 
@@ -10132,7 +10132,7 @@ void DBClient::OnConstructOrMoveBlock(const DWORD dwGuildIndex, const DWORD dwRo
 	query_data.SetReturnData( &iXZ, sizeof(int) );
 	query_data.SetReturnData( &iY, sizeof(int) );
 	query_data.SetReturnData( &byDirection, sizeof(BYTE) );
-	query_data.SetReturnData( szPublicID.c_str(), ID_NUM_PLUS_ONE );
+	query_data.SetReturnData( szPublicID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 
 	query_data.SetData( 
 		dwGuildIndex, 
@@ -10325,7 +10325,7 @@ void DBClient::OnPersonalHQConstructBlock(const DWORD dwAgentID, const DWORD dwT
 	query_data.SetReturnData( &iXZ, sizeof(int) );
 	query_data.SetReturnData( &iY, sizeof(int) );
 	query_data.SetReturnData( &byDirection, sizeof(BYTE) );
-	query_data.SetReturnData( szPublicID.c_str(), ID_NUM_PLUS_ONE );
+	query_data.SetReturnData( szPublicID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 
 	query_data.SetData( 
 		dwThreadID, 
@@ -10369,7 +10369,7 @@ void DBClient::OnPersonalHQRetrieveBlock(const DWORD dwAgentID, const DWORD dwTh
 	query_data.SetReturnData( &dwItemIndex, sizeof(__int64) );
 	query_data.SetReturnData( &dwItemCode, sizeof(DWORD) );
 	query_data.SetReturnData( &byState, sizeof(BYTE) );
-	query_data.SetReturnData( szPublicID.c_str(), ID_NUM_PLUS_ONE );
+	query_data.SetReturnData( szPublicID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 
 	query_data.SetData( 
 		dwThreadID, 

@@ -217,6 +217,15 @@ void ioWnd::SetTitleText( const char *szTitle, const char *szDelim, int iGap )
 	}
 }
 
+void ioWnd::SetTitleTextWide( const wchar_t *szTitle, int iGap )
+{
+	if( m_pUITitle )
+	{
+		m_pUITitle->SetFontGap( iGap );
+		m_pUITitle->SetTextWide( szTitle );
+	}
+}
+
 void ioWnd::SetTitleColor( DWORD dwTextColor, DWORD dwBkColor )
 {
 	if( m_pUITitle )

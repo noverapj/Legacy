@@ -691,8 +691,9 @@ void LadderTeamInfoBtn::OnRender()
 			else
 				g_FontMgr.SetTextColor( TCT_DEFAULT_RED );
 		}
-		g_FontMgr.PrintTextWidthCut( iXPos + 23, iYPos + 3, FONT_SIZE_12, 205.0f, m_szName.c_str() );
-		int iRealNameSize = min( 205.0f, g_FontMgr.GetTextWidth( m_szName.c_str(), TS_NORMAL, FONT_SIZE_12 ) );
+		std::wstring wszName = Help::NameToWide( m_szName.c_str() );
+		g_FontMgr.PrintTextWidthCutWide( iXPos + 23, iYPos + 3, FONT_SIZE_12, 205.0f, wszName.c_str() );
+		int iRealNameSize = min( 205.0f, g_FontMgr.GetTextWidthWide( wszName.c_str(), TS_NORMAL, FONT_SIZE_12 ) );
 		DWORD dwGuildIndex, dwGuildMark;
 		g_UserInfoMgr.GetGuildInfo( m_szName, dwGuildIndex, dwGuildMark );
 		g_GuildMarkMgr.RenderSmallMark( dwGuildIndex, dwGuildMark, iXPos + 23 + iRealNameSize + 3, iYPos + 4 );

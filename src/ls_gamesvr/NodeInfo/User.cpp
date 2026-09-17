@@ -5915,7 +5915,7 @@ int User::SetPresentPetItem( int iPetCode, int iPetLevel, int iPetRank, DWORD dw
 	DWORD dwUserIndex = GetUserIndex();
 
 	query_data.SetReturnData( &dwUserIndex, sizeof( DWORD ) );
-	//query_data.SetReturnData( GetPublicID().c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( GetPublicID().c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwPacketID, sizeof( DWORD ) );
 	query_data.SetReturnData( &dwPacketType, sizeof( DWORD ) );
 	query_data.SetReturnData( &dwIndex, sizeof( DWORD ) );
@@ -16798,7 +16798,7 @@ void User::OnFirstChangeID( SP2Packet &rkPacket )
 		return;
 	}
 
-	char szTempPublicID[ID_NUM_PLUS_ONE]="";
+	char szTempPublicID[ID_NUM_WIRE_PLUS_ONE]="";
 		StringCbPrintf( szTempPublicID , sizeof( szTempPublicID ), "%s#", GetPrivateID().c_str() );
 		if( GetPublicID() != szTempPublicID )
 		{
@@ -34552,7 +34552,7 @@ bool User::OnPetEggUse( SP2Packet &rkPacket, bool &bCash, int &iType )
 	DWORD dwUserIndex = GetUserIndex();
 
 	query_data.SetReturnData( &dwUserIndex, sizeof( DWORD ) );
-	//query_data.SetReturnData( GetPublicID().c_str(), ID_NUM_PLUS_ONE );
+	//query_data.SetReturnData( GetPublicID().c_str(), ID_NUM_WIRE_PLUS_ONE );
 	query_data.SetReturnData( &dwPacketID, sizeof( DWORD ) );
 	query_data.SetReturnData( &dwPacketTYpe, sizeof( DWORD ) );
 	query_data.SetReturnData( &iType, sizeof( int ) );

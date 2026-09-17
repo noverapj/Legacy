@@ -5,9 +5,9 @@
 #define HASH_CONST	5381
 
 #ifdef THAILAND_LONG_ID
-#define DEFAULT_CAPACITY	44 // SetReturnData() size을 사용하므로 ID_NUM_PLUS_ONE 길이 보다 길어야함
+#define DEFAULT_CAPACITY	64 // SetReturnData() size을 사용하므로 ID_NUM_WIRE_PLUS_ONE 길이 보다 길어야함
 #else
-#define DEFAULT_CAPACITY	32 // SetReturnData() size을 사용하므로 ID_NUM_PLUS_ONE 길이 보다 길어야함
+#define DEFAULT_CAPACITY	32 // SetReturnData() size을 사용하므로 ID_NUM_WIRE_PLUS_ONE 길이 보다 길어야함
 #endif
 
 // Original version is www.gamza.net

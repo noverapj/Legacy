@@ -1910,7 +1910,7 @@ void TournamentTeamCreateWnd::SendTeamCreate()
 	}
 
 	SP2Packet kPacket( CTPK_TOURNAMENT_TEAM_CREATE );
-	kPacket << pTournament->GetIndex() << szTeamName << pTournament->GetMaxPlayer();
+	kPacket << pTournament->GetIndex() << Help::ToWire( szTeamName.c_str() ).c_str() << pTournament->GetMaxPlayer();
 	TCPNetwork::SendToServer( kPacket );
 	TCPNetwork::MouseBusy( true );
 	
@@ -3958,7 +3958,8 @@ void TournamentTeamInvitedWnd::OnRender()
 	g_FontMgr.PrintText( iXPos + 16, iYPos + 99, FONT_SIZE_12, STR(3) );
 	g_FontMgr.PrintText( iXPos + 16, iYPos + 117, FONT_SIZE_12, STR(4) );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GREEN );
-	g_FontMgr.PrintTextWidthCut( iXPos + 63, iYPos + 117, FONT_SIZE_12, 127.0f, m_szUserName.c_str() );
+	std::wstring wszUserName = Help::NameToWide( m_szUserName.c_str() );
+	g_FontMgr.PrintTextWidthCutWide( iXPos + 63, iYPos + 117, FONT_SIZE_12, 127.0f, wszUserName.c_str() );
 }
 
 void TournamentTeamInvitedWnd::iwm_show()
@@ -4195,7 +4196,8 @@ void TournamentTeamEntryDelayUserBtn::OnRender()
 
 			g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
 		}
-		g_FontMgr.PrintTextWidthCut( iXPos + 23, iYPos + 3, FONT_SIZE_12, 79.0f, m_szUserID.c_str() );
+		std::wstring wszUserID = Help::NameToWide( m_szUserID.c_str() );
+		g_FontMgr.PrintTextWidthCutWide( iXPos + 23, iYPos + 3, FONT_SIZE_12, 79.0f, wszUserID.c_str() );
 	}	
 }
 
@@ -5070,7 +5072,8 @@ void TournamentTeamAlarmWnd::OnRender()
 		g_FontMgr.PrintText( iXPos + 16, iYPos + 99, FONT_SIZE_12, STR(3) );
 		g_FontMgr.PrintText( iXPos + 16, iYPos + 117, FONT_SIZE_12, STR(4) );
 		g_FontMgr.SetTextColor( TCT_DEFAULT_GREEN );
-		g_FontMgr.PrintTextWidthCut( iXPos + 63, iYPos + 117, FONT_SIZE_12, 127.0f, m_szUserName.c_str() );
+		std::wstring wszUserName = Help::NameToWide( m_szUserName.c_str() );
+		g_FontMgr.PrintTextWidthCutWide( iXPos + 63, iYPos + 117, FONT_SIZE_12, 127.0f, wszUserName.c_str() );
 	}
 	else if( m_dwAlarmType == ALARM_TYPE_LEAVE_USER )
 	{
@@ -5078,7 +5081,8 @@ void TournamentTeamAlarmWnd::OnRender()
 		g_FontMgr.PrintText( iXPos + 16, iYPos + 99, FONT_SIZE_12, STR(5) );
 		g_FontMgr.PrintText( iXPos + 16, iYPos + 117, FONT_SIZE_12, STR(6) );
 		g_FontMgr.SetTextColor( TCT_DEFAULT_GREEN );
-		g_FontMgr.PrintTextWidthCut( iXPos + 63, iYPos + 117, FONT_SIZE_12, 127.0f, m_szUserName.c_str() );
+		std::wstring wszUserName = Help::NameToWide( m_szUserName.c_str() );
+		g_FontMgr.PrintTextWidthCutWide( iXPos + 63, iYPos + 117, FONT_SIZE_12, 127.0f, wszUserName.c_str() );
 	}
 }
 //////////////////////////////////////////////////////////////////////////
@@ -6435,7 +6439,8 @@ void CustomTournamentDelayCreateTeamListBtn::OnRender()
 			g_LevelMgr.RenderGrade( m_szUserID, iXPos + 4, iYPos + 2, m_iUserLevel, TEAM_PRIVATE_1 );
 			g_FontMgr.SetTextColor( TCT_DEFAULT_GRAY );
 		}
-		g_FontMgr.PrintTextWidthCut( iXPos + 23, iYPos + 3, FONT_SIZE_12, 79.0f, m_szUserID.c_str() );
+		std::wstring wszUserID = Help::NameToWide( m_szUserID.c_str() );
+		g_FontMgr.PrintTextWidthCutWide( iXPos + 23, iYPos + 3, FONT_SIZE_12, 79.0f, wszUserID.c_str() );
 	}
 }
 

@@ -1319,7 +1319,9 @@ void ioSP2ChatManager::SetChatMsg( TeamType eTeam, const char *szID, const char 
 			kPrinter.SetTextColor( GetChatRedIDColor() );
 		}
 	}	
-	kPrinter.AddTextPiece( GetChatFontScale(), STR(2), szID );
+	wchar_t wszChatID[MAX_PATH];
+	Help::FormatWide( wszChatID, MAX_PATH, STR(2), szID );
+	kPrinter.AddTextPieceWide( GetChatFontScale(), wszChatID );
 
 	AddChatSplitItem( STR(1), kPrinter, szID, szChat, CT_ALL, bCustomSound );
 
@@ -1349,7 +1351,9 @@ void ioSP2ChatManager::SetServerLobbyChatMsg( TeamType eTeam, const char *szID, 
 	kPrinter.SetTextStyle( GetTextStyle() );
 	kPrinter.SetBkColor( GetChatBkColor() );
 	kPrinter.SetTextColor( GetChatColor() );
-	kPrinter.AddTextPiece( GetChatFontScale(), STR(1), szID );
+	wchar_t wszChatID[MAX_PATH];
+	Help::FormatWide( wszChatID, MAX_PATH, STR(1), szID );
+	kPrinter.AddTextPieceWide( GetChatFontScale(), wszChatID );
 	AddChatSplitItem( STR(2), kPrinter, szID, szChat, CT_SERVER_LOBBY, false );
 
 	if( !bNoChatSound )
@@ -1402,7 +1406,9 @@ void ioSP2ChatManager::SetTeamChatMsg( TeamType eTeam, const char *szID, const c
 			kPrinter.SetTextColor( GetChatRedIDColor() );
 		}
 	}
-	kPrinter.AddTextPiece( GetChatFontScale(), STR(2), szID );
+	wchar_t wszChatID[MAX_PATH];
+	Help::FormatWide( wszChatID, MAX_PATH, STR(2), szID );
+	kPrinter.AddTextPieceWide( GetChatFontScale(), wszChatID );
 
 	AddChatSplitItem( STR(1), kPrinter, szID, szChat, CT_TEAM, bCustomSound );
 
@@ -1429,7 +1435,9 @@ void ioSP2ChatManager::SetPartyChatMsg( TeamType eTeam, const char *szID, const 
 	kPrinter.SetTextStyle( GetTextStyle() );
 	kPrinter.SetBkColor( GetChatBkColor() );
 	kPrinter.SetTextColor( GetChatColor() );
-	kPrinter.AddTextPiece( GetChatFontScale(), STR(2), szID );
+	wchar_t wszChatID[MAX_PATH];
+	Help::FormatWide( wszChatID, MAX_PATH, STR(2), szID );
+	kPrinter.AddTextPieceWide( GetChatFontScale(), wszChatID );
 
 	AddChatSplitItem( STR(1), kPrinter, szID, szChat, CT_PARTY );
 
@@ -1456,7 +1464,9 @@ void ioSP2ChatManager::SetLadderChatMsg( const char *szID, const char *szChat, b
 	kPrinter.SetTextStyle( GetTextStyle() );
 	kPrinter.SetBkColor( GetChatBkColor() );
 	kPrinter.SetTextColor( GetChatColor() );
-	kPrinter.AddTextPiece( GetChatFontScale(), STR(2), szID );
+	wchar_t wszChatID[MAX_PATH];
+	Help::FormatWide( wszChatID, MAX_PATH, STR(2), szID );
+	kPrinter.AddTextPieceWide( GetChatFontScale(), wszChatID );
 
 	AddChatSplitItem( STR(1), kPrinter, szID, szChat, CT_LADDER );
 
@@ -1726,7 +1736,9 @@ void ioSP2ChatManager::SetWholeServerChatMsg( const char *szID, const char *szCh
 	kPrinter.SetTextStyle( GetTextStyle() );
 	kPrinter.SetBkColor( GetChatBkColor() );
 	kPrinter.SetTextColor( GetChatColor() );
-	kPrinter.AddTextPiece( GetChatFontScale(), STR(2), szID );
+	wchar_t wszChatID[MAX_PATH];
+	Help::FormatWide( wszChatID, MAX_PATH, STR(2), szID );
+	kPrinter.AddTextPieceWide( GetChatFontScale(), wszChatID );
 	AddChatSplitItem( STR(1), kPrinter, szID, szChat, CT_WHOLE_SERVER, false );
 
 	if( !bNoChatSound )
@@ -1756,7 +1768,9 @@ void ioSP2ChatManager::SetWholeServerRainbowChatMsg( const char *szID, const cha
 	kPrinter.SetTextStyle( GetTextStyle() );
 	kPrinter.SetBkColor( GetChatBkColor() );
 	kPrinter.SetTextColor( GetChatColor() );
-	kPrinter.AddTextPiece( GetChatFontScale(), STR(2), szID );
+	wchar_t wszChatID[MAX_PATH];
+	Help::FormatWide( wszChatID, MAX_PATH, STR(2), szID );
+	kPrinter.AddTextPieceWide( GetChatFontScale(), wszChatID );
 	AddChatSplitItem( STR(1), kPrinter, szID, szChat, CT_WHOLE_SERVER_RAINBOW, false );
 
 	if( !bNoChatSound )
@@ -1957,7 +1971,7 @@ void ioSP2ChatManager::SetLastScoreMsg( TeamType eTeam, ioHashString szName )
 		else
 			kPrinter.SetTextColor( GetChatRedIDColor() );
 
-		kPrinter.AddTextPiece( GetChatFontScale(), szName.c_str() );
+		kPrinter.AddTextPieceWide( GetChatFontScale(), Help::NameToWide( szName.c_str() ).c_str() );
 		
 		kPrinter.SetTextColor( GetChatColor() );
 		kPrinter.AddTextPiece( GetChatFontScale(), STR(2) );
@@ -2003,7 +2017,7 @@ void ioSP2ChatManager::SetScoreMsg( TeamType eTeam, ioHashString szName, bool bP
 		else
 			kPrinter.SetTextColor( GetChatRedIDColor() );
 
-		kPrinter.AddTextPiece( GetChatFontScale(), szName.c_str() );
+		kPrinter.AddTextPieceWide( GetChatFontScale(), Help::NameToWide( szName.c_str() ).c_str() );
 		
 		kPrinter.SetTextColor( GetChatColor() );
 		kPrinter.AddTextPiece( GetChatFontScale(), STR(2) );
@@ -2057,7 +2071,7 @@ void ioSP2ChatManager::SetSymbolDieMsg( TeamType eTeam, const ioHashString &szNa
 			kPrinter.SetTextColor( GetChatRedIDColor() );
 	}
 
-	kPrinter.AddTextPiece( GetChatFontScale(), szName.c_str() );
+	kPrinter.AddTextPieceWide( GetChatFontScale(), Help::NameToWide( szName.c_str() ).c_str() );
 
 	kPrinter.SetTextColor( GetChatColor() );
 	kPrinter.AddTextPiece( GetChatFontScale(), STR(2) );
@@ -2086,7 +2100,7 @@ void ioSP2ChatManager::SetGetCrownMsg( TeamType eTeam, const ioHashString &szNam
 	else
 		kPrinter.SetTextColor( GetChatRedIDColor() );
 
-	kPrinter.AddTextPiece( GetChatFontScale(), szName.c_str() );
+	kPrinter.AddTextPieceWide( GetChatFontScale(), Help::NameToWide( szName.c_str() ).c_str() );
 
 	kPrinter.SetTextColor( GetChatColor() );
 	kPrinter.AddTextPiece( GetChatFontScale(), STR(2) );
@@ -2199,7 +2213,7 @@ void ioSP2ChatManager::SetDropFlagMsg( TeamType eTeam, const ioHashString &szNam
 	else
 		kPrinter.SetTextColor( GetChatRedIDColor() );
 
-	kPrinter.AddTextPiece( GetChatFontScale(), szName.c_str() );
+	kPrinter.AddTextPieceWide( GetChatFontScale(), Help::NameToWide( szName.c_str() ).c_str() );
 
 	kPrinter.SetTextColor( GetChatColor() );
 	kPrinter.AddTextPiece( GetChatFontScale(), STR(2) );
@@ -2228,7 +2242,7 @@ void ioSP2ChatManager::SetPickupFlagMsg( TeamType eTeam, const ioHashString &szN
 	else
 		kPrinter.SetTextColor( GetChatRedIDColor() );
 
-	kPrinter.AddTextPiece( GetChatFontScale(), szName.c_str() );
+	kPrinter.AddTextPieceWide( GetChatFontScale(), Help::NameToWide( szName.c_str() ).c_str() );
 
 	kPrinter.SetTextColor( GetChatColor() );
 	kPrinter.AddTextPiece( GetChatFontScale(), STR(2) );
@@ -2257,7 +2271,7 @@ void ioSP2ChatManager::SetBadPingFlagDropMsg( TeamType eTeam, const ioHashString
 	else
 		kPrinter.SetTextColor( GetChatRedIDColor() );
 
-	kPrinter.AddTextPiece( GetChatFontScale(), szName.c_str() );
+	kPrinter.AddTextPieceWide( GetChatFontScale(), Help::NameToWide( szName.c_str() ).c_str() );
 
 	kPrinter.SetTextColor( GetChatColor() );
 	kPrinter.AddTextPiece( GetChatFontScale(), STR(2) );
@@ -2289,7 +2303,9 @@ void ioSP2ChatManager::SetGoalMsg( TeamType eGoalTeam, TeamType eAttackerTeam, c
 		else if( eGoalTeam == TEAM_RED )
 			kPrinter.SetTextColor( GetChatRedIDColor() );
 
-		kPrinter.AddTextPiece( GetChatFontScale(), STR(1), szName.c_str() );
+		wchar_t wszGoalName[MAX_PATH];
+		Help::FormatWide( wszGoalName, MAX_PATH, STR(1), szName.c_str() );
+		kPrinter.AddTextPieceWide( GetChatFontScale(), wszGoalName );
 
 		kPrinter.SetTextColor( GetChatColor() );
 		kPrinter.AddTextPiece( GetChatFontScale(), STR(2) );
@@ -2301,7 +2317,9 @@ void ioSP2ChatManager::SetGoalMsg( TeamType eGoalTeam, TeamType eAttackerTeam, c
 			else if( eGoalTeam == TEAM_RED )
 				kPrinter.SetTextColor( GetChatRedIDColor() );
 
-			kPrinter.AddTextPiece( GetChatFontScale(), STR(3), szAssist.c_str() );
+			wchar_t wszAssistName[MAX_PATH];
+			Help::FormatWide( wszAssistName, MAX_PATH, STR(3), szAssist.c_str() );
+			kPrinter.AddTextPieceWide( GetChatFontScale(), wszAssistName );
 
 			kPrinter.SetTextColor( GetChatColor() );
 			kPrinter.AddTextPiece( GetChatFontScale(), STR(4) );
@@ -2329,7 +2347,9 @@ void ioSP2ChatManager::SetGoalMsg( TeamType eGoalTeam, TeamType eAttackerTeam, c
 		else if( eAttackerTeam == TEAM_RED )
 			kPrinter.SetTextColor( GetChatRedIDColor() );
 
-		kPrinter.AddTextPiece( GetChatFontScale(), STR(8), szName.c_str() );
+		wchar_t wszGoalName[MAX_PATH];
+		Help::FormatWide( wszGoalName, MAX_PATH, STR(8), szName.c_str() );
+		kPrinter.AddTextPieceWide( GetChatFontScale(), wszGoalName );
 
 		kPrinter.SetTextColor( GetChatColor() );
 		kPrinter.AddTextPiece( GetChatFontScale(), STR(9) );
@@ -2377,7 +2397,7 @@ void ioSP2ChatManager::SetJoinUserChatMsg( const char *szID, TeamType eTeam, int
 			kPrinter.SetTextColor( GetChatRedIDColor() );
 	}
 	
-	kPrinter.AddTextPiece( GetChatFontScale(), szID );
+	kPrinter.AddTextPieceWide( GetChatFontScale(), Help::NameToWide( szID ).c_str() );
 	
 	kPrinter.SetTextColor( GetChatColor() );
 	kPrinter.AddTextPiece( GetChatFontScale(), STR(2) );
@@ -2466,7 +2486,7 @@ void ioSP2ChatManager::SetOutUserChatMsg( const char *szID, TeamType eTeam )
 		else
 			kPrinter.SetTextColor( GetChatRedIDColor() );
 	}
-	kPrinter.AddTextPiece( GetChatFontScale(), szID );
+	kPrinter.AddTextPieceWide( GetChatFontScale(), Help::NameToWide( szID ).c_str() );
 
 	kPrinter.SetTextColor( GetChatColor() );
 	kPrinter.AddTextPiece( GetChatFontScale(), STR(2) );
@@ -2508,7 +2528,7 @@ void ioSP2ChatManager::SetKickUserChatMsg( const char *szID, TeamType eTeam )
 		kPrinter.SetTextColor( GetChatBlueIDColor() );
 	else
 		kPrinter.SetTextColor( GetChatRedIDColor() );
-	kPrinter.AddTextPiece( GetChatFontScale(), szID );
+	kPrinter.AddTextPieceWide( GetChatFontScale(), Help::NameToWide( szID ).c_str() );
 
 	kPrinter.SetTextColor( GetChatColor() );
 	kPrinter.AddTextPiece( GetChatFontScale(), STR(2) );
@@ -2534,7 +2554,7 @@ void ioSP2ChatManager::SetBadNetworkKickUserChatMsg( const char *szID, TeamType 
 		kPrinter.SetTextColor( GetChatBlueIDColor() );
 	else
 		kPrinter.SetTextColor( GetChatRedIDColor() );
-	kPrinter.AddTextPiece( GetChatFontScale(), szID );
+	kPrinter.AddTextPieceWide( GetChatFontScale(), Help::NameToWide( szID ).c_str() );
 
 	kPrinter.SetTextColor( GetChatColor() );
 	kPrinter.AddTextPiece( GetChatFontScale(), STR(1) );
@@ -2556,7 +2576,7 @@ void ioSP2ChatManager::SetKickHighLevelUserChatMsg( const char *szID, TeamType e
 	kPrinterOne.SetTextStyle( GetTextStyle() );
 	kPrinterOne.SetBkColor( GetChatBkColor() );		
 	kPrinterOne.SetTextColor( eTeam == TEAM_BLUE ? GetChatBlueIDColor() : GetChatRedIDColor() );	
-	kPrinterOne.AddTextPiece( GetChatFontScale(), szID );
+	kPrinterOne.AddTextPieceWide( GetChatFontScale(), Help::NameToWide( szID ).c_str() );
 
 	kPrinterOne.SetTextColor( GetChatColor() );
 	kPrinterOne.AddTextPiece( GetChatFontScale(), STR(1) );
@@ -2586,7 +2606,7 @@ void ioSP2ChatManager::SetKickLowLevelUserChatMsg( const char *szID, TeamType eT
 	kPrinter.SetBkColor( GetChatBkColor() );	
 	kPrinter.SetTextColor( eTeam == TEAM_BLUE ? GetChatBlueIDColor() : GetChatRedIDColor() );	
 	kPrinter.SetTextColor( GetChatRedIDColor() );
-	kPrinter.AddTextPiece( GetChatFontScale(), szID );
+	kPrinter.AddTextPieceWide( GetChatFontScale(), Help::NameToWide( szID ).c_str() );
 	kPrinter.SetTextColor( GetChatColor() );
 	kPrinter.AddTextPiece( GetChatFontScale(), STR(1) );
 
@@ -2608,7 +2628,7 @@ void ioSP2ChatManager::SetKickSysError( const char *szID, TeamType eTeam )
 	kPrinter.SetBkColor( GetChatBkColor() );	
 	kPrinter.SetTextColor( eTeam == TEAM_BLUE ? GetChatBlueIDColor() : GetChatRedIDColor() );	
 	kPrinter.SetTextColor( GetChatRedIDColor() );
-	kPrinter.AddTextPiece( GetChatFontScale(), szID );
+	kPrinter.AddTextPieceWide( GetChatFontScale(), Help::NameToWide( szID ).c_str() );
 	kPrinter.SetTextColor( GetChatColor() );
 	kPrinter.AddTextPiece( GetChatFontScale(), STR(1) );
 

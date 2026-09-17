@@ -554,7 +554,7 @@ void GuildCreateWnd::CreateGuild()
 
 	SP2Packet kPacket( CTPK_ETCITEM_USE );
 	kPacket << (int)ioEtcItem::EIT_ETC_GUILD_CREATE;
-	kPacket << szGuildName << m_dwMarkID - ID_MARK_SELECT1;
+	kPacket << Help::ToWire( szGuildName.c_str() ).c_str() << m_dwMarkID - ID_MARK_SELECT1;
 	TCPNetwork::SendToServer( kPacket );
 	TCPNetwork::MouseBusy( true );
 	HideWnd();
@@ -3734,7 +3734,8 @@ void GuildInvitedWnd::OnRender()
     g_FontMgr.PrintText( iXPos + 16, iYPos + 99, FONT_SIZE_12, STR(5) );
 	g_FontMgr.PrintText( iXPos + 16, iYPos + 117, FONT_SIZE_12, STR(6) );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_GREEN );
-	g_FontMgr.PrintTextWidthCut( iXPos + 63, iYPos + 117, FONT_SIZE_12, 133.0f, m_szUserName.c_str() );
+	std::wstring wszUserName = Help::NameToWide( m_szUserName.c_str() );
+	g_FontMgr.PrintTextWidthCutWide( iXPos + 63, iYPos + 117, FONT_SIZE_12, 133.0f, wszUserName.c_str() );
 }
 
 void GuildInvitedWnd::iwm_show()

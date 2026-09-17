@@ -64,7 +64,8 @@ void GashaponPresentListBtn::OnRender()
 		
 	for(int i = 0;i < iSize;i++)
 	{
-		g_FontMgr.PrintTextWidthCut( iXPos+X_TEXT_OFFSET, iYPos+Y_TEXT_OFFSET+iYAdd+( i*(Y_OFFSET_LING_GAP+iYGapAdd) ), FONT_SIZE_13, 104.0f, m_szNameList[i].c_str() );
+		std::wstring wszName = Help::NameToWide( m_szNameList[i].c_str() );
+		g_FontMgr.PrintTextWidthCutWide( iXPos+X_TEXT_OFFSET, iYPos+Y_TEXT_OFFSET+iYAdd+( i*(Y_OFFSET_LING_GAP+iYGapAdd) ), FONT_SIZE_13, 104.0f, wszName.c_str() );
 	}
 }
 

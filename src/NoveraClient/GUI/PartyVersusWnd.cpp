@@ -757,7 +757,8 @@ void PartyMemberList::OnRender()
 				g_FontMgr.SetBkColor( 126, 34, 22 );
 		}
 		g_FontMgr.SetTextColor( 255, 255, 255 );
-		g_FontMgr.PrintTextWidthCut( iXPos + 44, iYPos + 110, FONT_SIZE_11, 80.0f, m_szName.c_str() );
+		std::wstring wszName = Help::NameToWide( m_szName.c_str() );
+		g_FontMgr.PrintTextWidthCutWide( iXPos + 44, iYPos + 110, FONT_SIZE_11, 80.0f, wszName.c_str() );
 		if( !m_bAI )
 		{
 			int iPingYPos = iYPos;
@@ -4848,8 +4849,9 @@ void PartyBattleSimpleBtn::OnRender()
 			else
 				g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
 		}
-		g_FontMgr.PrintTextWidthCut( iXPos + 23, iYPos + 3, FONT_SIZE_12, 103.0f, m_szName.c_str() );
-		int iRealNameSize = min( 103.0f, g_FontMgr.GetTextWidth( m_szName.c_str(), TS_NORMAL, FONT_SIZE_12 ) );
+		std::wstring wszName = Help::NameToWide( m_szName.c_str() );
+		g_FontMgr.PrintTextWidthCutWide( iXPos + 23, iYPos + 3, FONT_SIZE_12, 103.0f, wszName.c_str() );
+		int iRealNameSize = min( 103.0f, g_FontMgr.GetTextWidthWide( wszName.c_str(), TS_NORMAL, FONT_SIZE_12 ) );
 		DWORD dwGuildIndex, dwGuildMark;
 		g_UserInfoMgr.GetGuildInfo( m_szName, dwGuildIndex, dwGuildMark );
 		g_GuildMarkMgr.RenderSmallMark( dwGuildIndex, dwGuildMark, iXPos + 23 + iRealNameSize + 3, iYPos + 4 );
@@ -5872,8 +5874,9 @@ void PartyObserverBtn::OnRender()
 			g_LevelMgr.RenderGrade( iXPos + 4, iYPos + 2, m_iGradeLevel, TEAM_PRIVATE_1 );
 			g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
 		}
-		g_FontMgr.PrintTextWidthCut( iXPos + 23, iYPos + 3, FONT_SIZE_12, 128.0f, m_szName.c_str() );
-		int iRealNameSize = min( 128.0f, g_FontMgr.GetTextWidth( m_szName.c_str(), TS_NORMAL, FONT_SIZE_12 ) );
+		std::wstring wszName = Help::NameToWide( m_szName.c_str() );
+		g_FontMgr.PrintTextWidthCutWide( iXPos + 23, iYPos + 3, FONT_SIZE_12, 128.0f, wszName.c_str() );
+		int iRealNameSize = min( 128.0f, g_FontMgr.GetTextWidthWide( wszName.c_str(), TS_NORMAL, FONT_SIZE_12 ) );
 		DWORD dwGuildIndex, dwGuildMark;
 		g_UserInfoMgr.GetGuildInfo( m_szName, dwGuildIndex, dwGuildMark );
 		g_GuildMarkMgr.RenderSmallMark( dwGuildIndex, dwGuildMark, iXPos + 23 + iRealNameSize + 3, iYPos + 4 );
@@ -6433,8 +6436,9 @@ void PartyInviteList::OnRender()
 			g_LevelMgr.RenderGrade( m_szName, iXPos + 4, iYPos + 2, m_iGradeLevel, TEAM_PRIVATE_1 );
 			g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
 		}
-		g_FontMgr.PrintTextWidthCut( iXPos + 23, iYPos + 3, FONT_SIZE_12, 133.0f, m_szName.c_str() );
-		int iRealNameSize = g_FontMgr.GetTextWidthCutSize( m_szName.c_str(), TS_NORMAL, FONT_SIZE_12, 133.0f );
+		std::wstring wszName = Help::NameToWide( m_szName.c_str() );
+		g_FontMgr.PrintTextWidthCutWide( iXPos + 23, iYPos + 3, FONT_SIZE_12, 133.0f, wszName.c_str() );
+		int iRealNameSize = g_FontMgr.GetTextWidthCutSizeWide( wszName.c_str(), TS_NORMAL, FONT_SIZE_12, 133.0f );
 		g_GuildMarkMgr.RenderSmallMark( m_dwGuildIndex, m_dwGuildMark, iXPos + 23 + iRealNameSize + 3, iYPos + 4 );
 		if( m_dwGuildIndex != 0 )
 			iRealNameSize += 16;

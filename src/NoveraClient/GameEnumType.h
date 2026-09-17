@@ -1093,6 +1093,16 @@ EquipItemExtendType GetEquipItemExtendType( int iItemCode );
 #define ID_NUM_PLUS_ONE 21
 #endif
 
+// wire (UTF-8) capacity for id buffers.
+// CJK chars use 3 bytes in UTF-8 vs 2 in CP949, so the wire budget is 1.5x the native one.
+#ifdef THAILAND_LONG_ID
+#define ID_NUMBER_WIRE         60
+#define ID_NUM_WIRE_PLUS_ONE   61
+#else
+#define ID_NUMBER_WIRE         30
+#define ID_NUM_WIRE_PLUS_ONE   31
+#endif
+
 #define MAX_CHAR_GROWTH	4
 #define MAX_ITEM_GROWTH 4
 #define CUR_GROWTH_CNT 4

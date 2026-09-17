@@ -291,11 +291,11 @@ void UserBot::ApplyDBUserData( CQueryResultData *query_data )
 {
 	//SELECT
 	int  user_idx = 0;
-	char szDBID[ID_NUM_PLUS_ONE] = "";
-	char nick_name[ID_NUM_PLUS_ONE] = "";
+	char szDBID[ID_NUM_WIRE_PLUS_ONE] = "";
+	char nick_name[ID_NUM_WIRE_PLUS_ONE] = "";
 	query_data->GetValue(user_idx,sizeof(int));
-	query_data->GetValue(szDBID,ID_NUM_PLUS_ONE);
-	query_data->GetValue(nick_name,ID_NUM_PLUS_ONE);
+	query_data->GetValue(szDBID,ID_NUM_WIRE_PLUS_ONE);
+	query_data->GetValue(nick_name,ID_NUM_WIRE_PLUS_ONE);
 
 	// 대문자가 들어오는 경우를 막기 위한 임시 방지 코드	JCLEE 140507
 	CString strDbID;

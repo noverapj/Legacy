@@ -5460,7 +5460,7 @@ CREATE TABLE [dbo].[userLeagueRewardUserDB](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
 	[leagueIDX] [int] NOT NULL,
-	[sendNickname] [nvarchar](20) COLLATE Korean_Wansung_CI_AS NOT NULL,
+	[sendNickname] [varchar](30) COLLATE Korean_Wansung_CI_AS NOT NULL,
 	[leagueName] [nvarchar](20) COLLATE Korean_Wansung_CI_AS NOT NULL,
 	[roundnum] [int] NOT NULL,
 	[maxRound] [smallint] NOT NULL,
@@ -5959,7 +5959,7 @@ GO
 CREATE TABLE [dbo].[userLeagueWinnerInfoDB](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickName] [nvarchar](20) COLLATE Korean_Wansung_CI_AS NOT NULL,
+	[nickName] [varchar](30) COLLATE Korean_Wansung_CI_AS NOT NULL,
 	[userLevel] [int] NOT NULL,
 	[historyIDX] [int] NOT NULL,
 	[teamIDX] [int] NOT NULL,
@@ -6417,7 +6417,7 @@ GO
 CREATE TABLE [dbo].[userMemberDB](
 	[accountIDX] [int] IDENTITY(2001,1) NOT NULL,
 	[userID] [varchar](12) COLLATE Korean_Wansung_CI_AS NOT NULL,
-	[nickName] [varchar](20) COLLATE Korean_Wansung_CI_AS NOT NULL,
+	[nickName] [varchar](30) COLLATE Korean_Wansung_CI_AS NOT NULL,
 	[userPWD] [varchar](24) COLLATE Korean_Wansung_CI_AS NOT NULL,
 	[email] [varchar](50) COLLATE Korean_Wansung_CI_AS NOT NULL,
 	[mailling] [tinyint] NOT NULL,
@@ -8314,7 +8314,7 @@ GO
 CREATE TABLE [dbo].[userRankingDB_award_top100](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickName] [varchar](20) COLLATE Korean_Wansung_CI_AS NULL,
+	[nickName] [varchar](30) COLLATE Korean_Wansung_CI_AS NULL,
 	[userLevel] [int] NULL,
 	[guildIDX] [int] NULL,
 	[awardType] [int] NOT NULL,
@@ -8351,13 +8351,13 @@ CREATE TABLE [dbo].[userRankingDB_award_top3](
 	[awardType] [int] NOT NULL,
 	[rank1_accountIDX] [int] NOT NULL,
 	[rank1_userLevel] [int] NOT NULL,
-	[rank1_nickName] [varchar](20) COLLATE Korean_Wansung_CI_AS NOT NULL,
+	[rank1_nickName] [varchar](30) COLLATE Korean_Wansung_CI_AS NOT NULL,
 	[rank2_accountIDX] [int] NOT NULL,
 	[rank2_userLevel] [int] NOT NULL,
-	[rank2_nickName] [varchar](20) COLLATE Korean_Wansung_CI_AS NOT NULL,
+	[rank2_nickName] [varchar](30) COLLATE Korean_Wansung_CI_AS NOT NULL,
 	[rank3_accountIDX] [int] NOT NULL,
 	[rank3_userLevel] [int] NOT NULL,
-	[rank3_nickName] [varchar](20) COLLATE Korean_Wansung_CI_AS NOT NULL,
+	[rank3_nickName] [varchar](30) COLLATE Korean_Wansung_CI_AS NOT NULL,
 	[dateIDX] [char](8) COLLATE Korean_Wansung_CI_AS NOT NULL
 ) ON [PRIMARY]
 GO
@@ -8496,7 +8496,7 @@ GO
 CREATE TABLE [dbo].[userRankingDB_class_top100](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickName] [varchar](20) COLLATE Korean_Wansung_CI_AS NULL,
+	[nickName] [varchar](30) COLLATE Korean_Wansung_CI_AS NULL,
 	[userLevel] [int] NULL,
 	[guildIDX] [int] NULL,
 	[classType] [int] NOT NULL,
@@ -8558,13 +8558,13 @@ CREATE TABLE [dbo].[userRankingDB_class_top3](
 	[classType] [int] NOT NULL,
 	[rank1_accountIDX] [int] NOT NULL,
 	[rank1_userLevel] [int] NOT NULL,
-	[rank1_nickName] [varchar](20) COLLATE Korean_Wansung_CI_AS NOT NULL,
+	[rank1_nickName] [varchar](30) COLLATE Korean_Wansung_CI_AS NOT NULL,
 	[rank2_accountIDX] [int] NOT NULL,
 	[rank2_userLevel] [int] NOT NULL,
-	[rank2_nickName] [varchar](20) COLLATE Korean_Wansung_CI_AS NOT NULL,
+	[rank2_nickName] [varchar](30) COLLATE Korean_Wansung_CI_AS NOT NULL,
 	[rank3_accountIDX] [int] NOT NULL,
 	[rank3_userLevel] [int] NOT NULL,
-	[rank3_nickName] [varchar](20) COLLATE Korean_Wansung_CI_AS NOT NULL,
+	[rank3_nickName] [varchar](30) COLLATE Korean_Wansung_CI_AS NOT NULL,
 	[dateIDX] [char](8) COLLATE Korean_Wansung_CI_AS NOT NULL
 ) ON [PRIMARY]
 GO
@@ -8598,7 +8598,7 @@ GO
 
 CREATE TABLE [dbo].[userRankingDB_classgroup](
 	[accountIDX] [int] NOT NULL,
-	[nickName] [nvarchar](20) COLLATE Korean_Wansung_CI_AS NULL,
+	[nickName] [varchar](30) COLLATE Korean_Wansung_CI_AS NULL,
 	[userLevel] [int] NOT NULL,
 	[expert] [int] NOT NULL,
 	[ranking_8day] [int] NOT NULL,
@@ -8684,7 +8684,7 @@ GO
 CREATE TABLE [dbo].[userRankingDB_classgroup_top10000](
 	[idx] [int] IDENTITY(1,1) NOT NULL,
 	[accountIDX] [int] NOT NULL,
-	[nickName] [nvarchar](20) COLLATE Korean_Wansung_CI_AS NULL,
+	[nickName] [varchar](30) COLLATE Korean_Wansung_CI_AS NULL,
 	[userLevel] [int] NOT NULL,
 	[expert] [int] NOT NULL,
 	[rank_now] [int] NOT NULL,
@@ -10563,7 +10563,7 @@ CREATE TABLE userRankingDB_award_top100
 (
 	idx			int	IDENTITY(1,1)	NOT	NULL
 ,	accountIDX	int				NOT	NULL
-,	nickName		varchar(20)		NULL
+,	nickName		varchar(30)		NULL
 ,	userLevel		int				NULL
 ,	guildIDX		int				NULL
 ,	awardType	int				NOT	NULL		DEFAULT(0)
@@ -10847,7 +10847,7 @@ CREATE TABLE userRankingDB_classgroup_top10000
 (
 	idx			int	IDENTITY(1,1)	NOT	NULL
 ,	accountIDX	int				NOT	NULL
-,	nickName		nvarchar(20)		NULL
+,	nickName		varchar(30)		NULL
 ,	userLevel		int				NOT	NULL
 ,	expert		int				NOT	NULL
 ,	rank_now		int				NOT	NULL
@@ -10902,7 +10902,7 @@ CREATE TABLE userRankingDB_class_top100
 (
 	idx			int	IDENTITY(1,1)	NOT	NULL
 ,	accountIDX	int				NOT	NULL
-,	nickName		varchar(20)		NULL
+,	nickName		varchar(30)		NULL
 ,	userLevel		int				NULL
 ,	guildIDX		int				NULL
 ,	classType		int				NOT	NULL		DEFAULT(0)
@@ -11326,7 +11326,7 @@ GO
 CREATE PROCEDURE [dbo].[create_LSNC_member_add]    
 (    
  @userID varchar(12)    
-, @nickName varchar(20)    
+, @nickName varchar(30)    
 )    
 AS    
     
@@ -11411,7 +11411,7 @@ GO
 create PROCEDURE [dbo].[create_LSNC_member_add_2015]      
 (      
  @userID varchar(12)      
-, @nickName varchar(20)      
+, @nickName varchar(30)      
 )      
 AS      
       
@@ -11514,7 +11514,7 @@ GO
 CREATE PROCEDURE [dbo].[create_member_add]
 (
 	@userID varchar(12)
-,	@nickName varchar(20)
+,	@nickName varchar(30)
 )
 AS
 
@@ -11717,7 +11717,7 @@ GO
 CREATE PROCEDURE [dbo].[create_member_add_2014]
 (
 	@userID varchar(20)
-,	@nickName varchar(20)
+,	@nickName varchar(30)
 )
 AS
 
@@ -11951,7 +11951,7 @@ GO
 CREATE PROCEDURE [dbo].[create_member_add_2014_v1411]
 (
 	@userID varchar(20)
-,	@nickName varchar(20)
+,	@nickName varchar(30)
 )
 AS
 
@@ -12180,7 +12180,7 @@ GO
 CREATE PROCEDURE [dbo].[crreate_lsid_member_add]
 
 	@USERID			VARCHAR(20),	
-	@NICKNAME		VARCHAR(20)
+	@NICKNAME		varchar(30)
 
 AS
 
@@ -16731,7 +16731,7 @@ GO
 CREATE PROCEDURE [dbo].[game_friend_save]
 (
 	@userAccIDX int
-,	@friendNickName varchar(20)
+,	@friendNickName varchar(30)
 )
 AS
 
@@ -18503,7 +18503,7 @@ GO
 
 CREATE PROCEDURE [dbo].[game_guild_user_nick_get_data]
 (
-	@nickname varchar(20)
+	@nickname varchar(30)
 )
 AS
 	SELECT guildIDX FROM userGuildInfoDB WITH(NOLOCK) WHERE accountIDX=(SELECT accountIDX FROM userMemberDB WITH(NOLOCK) WHERE nickName=@nickname) and guildJoinType=1
@@ -22031,7 +22031,7 @@ DECLARE @rt10A int, @rt10B int, @rt10C int, @rt10D int
 DECLARE @rt11A int, @rt11B int, @rt11C int, @rt11D int
 DECLARE @infoIDX int
 DECLARE @maxRound smallint
-DECLARE @sendNickName nvarchar(20)
+DECLARE @sendNickName varchar(30)
 DECLARE @leagueName nvarchar(20)
 DECLARE @teamList table (accountIDX int, currentRound tinyint)
 
@@ -22648,7 +22648,7 @@ GO
 
 CREATE PROCEDURE [dbo].[game_managetool_user_block]
 (
-	@nickName NVARCHAR(20)
+	@nickName varchar(30)
 ,	@limitType TINYINT
 ,	@limitDate DATETIME
 ,	@reportNick NVARCHAR(20)
@@ -23152,8 +23152,8 @@ GO
 CREATE PROCEDURE [dbo].[game_member_change_userNickname]
 (
 	@accountIDX int
-,	@nickname varchar(20)
-,	@chageNickname varchar(20)
+,	@nickname varchar(30)
+,	@chageNickname varchar(30)
 ,	@itemType int
 ,	@itemCode int
 ,	@itemRowIDX varchar(12)
@@ -23201,7 +23201,7 @@ GO
 
 CREATE PROCEDURE [dbo].[game_member_get_count]
 (
-	@nickname varchar(20)
+	@nickname varchar(30)
 )
 AS
 	SELECT count(*) FROM userMemberDB WITH(NOLOCK) WHERE nickname=@nickname
@@ -25222,7 +25222,7 @@ GO
 
 CREATE PROCEDURE [dbo].[game_present_count]
 (
-	@nickName varchar(20)
+	@nickName varchar(30)
 )
 AS
 
@@ -25664,7 +25664,7 @@ GO
 CREATE PROCEDURE [dbo].[game_quest_board_add]
 (
 	@accountIDX int
-,	@nickname varchar(20)
+,	@nickname varchar(30)
 ,	@gameLevel int
 ,	@questIDX int
 ,	@userIP varchar(16)
@@ -26396,7 +26396,7 @@ CREATE PROCEDURE [dbo].[game_region_compen_delete]
 (
 	@idx int
 ,	@accountIDX int
-,	@nickName varchar(20)
+,	@nickName varchar(30)
 ,	@peso int
 )
 AS
@@ -28454,7 +28454,7 @@ GO
 
 CREATE PROCEDURE [dbo].[manage_block_id_get_data]
 (
-	@nickname varchar(20)
+	@nickname varchar(30)
 )
 As
 	SELECT accountIDX, userType FROM userMemberDB WHERE nickName=@nickname
@@ -30024,7 +30024,7 @@ GO
 
 CREATE PROCEDURE [dbo].[manage_get_accountIDX]
 (
-	@nickname varchar(20)
+	@nickname varchar(30)
 )
 As
 	SELECT accountIDX FROM userMemberDB WITH(NOLOCK) WHERE nickname = @nickname
@@ -30043,7 +30043,7 @@ GO
 
 CREATE PROCEDURE [dbo].[manage_get_accountIDX_from_nickname]
 (
-	@nickname varchar(20)
+	@nickname varchar(30)
 )
 AS
 	SELECT accountIDX FROM userMemberDB WITH(NOLOCK) WHERE nickname=@nickname
@@ -30062,7 +30062,7 @@ GO
 
 CREATE PROCEDURE [dbo].[manage_get_accountIDX_innick]
 (
-	@nickName varchar(20)
+	@nickName varchar(30)
 )
 As
 	SELECT accountIDX FROM userMemberDB WITH(NOLOCK) WHERE nickName = @nickName
@@ -30667,7 +30667,7 @@ GO
 
 CREATE PROCEDURE [dbo].[manage_present_item_get_accountIDX]
 (
-	@nickName varchar(20)
+	@nickName varchar(30)
 )
 AS
 
@@ -30873,7 +30873,7 @@ GO
 
 CREATE PROCEDURE [dbo].[manage_singo_log_get_limitdata]
 (
-	@nickname varchar(20)
+	@nickname varchar(30)
 )
 AS
 	SELECT accountIDX, limitType, limitDate FROM userMemberDB WITH(NOLOCK)
@@ -36649,7 +36649,7 @@ CREATE PROCEDURE  [dbo].[web_event_city_champion_memchk]
 	-- Add the parameters for the stored procedure here
 	@aType				char(1),
 	@strLoginID			varchar(20),
-	@strNickName		nvarchar(20),
+	@strNickName		varchar(30),
 	@intCpCode			int,
 	@rtnVal				int		Output
 AS
@@ -38483,7 +38483,7 @@ GO
 
 CREATE PROCEDURE [dbo].[web_get_accountIDX_to_nickname]
 (
-	@nickName varchar(20)
+	@nickName varchar(30)
 )
 As
 	SELECT accountIDX FROM userMemberDB WITH(NOLOCK) WHERE nickName = @nickName
@@ -40777,7 +40777,7 @@ GO
 
 CREATE Procedure [dbo].[web_member_nickname_count]
 (
-	@nickname varchar(20)
+	@nickname varchar(30)
 )
 As
 	Select count(*) From userMemberDB where nickName = @nickname
@@ -40906,7 +40906,7 @@ CREATE PROCEDURE [dbo].[web_memberout_add]
 (
 	@accountIDX int
 ,	@userID varchar(12)
-,	@nickName varchar(20)
+,	@nickName varchar(30)
 ,	@userName varchar(10)
 ,	@userJumin1 varchar(12)
 ,	@userJumin2 varchar(14)
@@ -41079,7 +41079,7 @@ CREATE PROCEDURE [dbo].[web_memberout_add_channeling]
 (
 	@accountIDX int
 ,	@userID varchar(12)
-,	@nickName varchar(20)
+,	@nickName varchar(30)
 ,	@userName varchar(10)
 ,	@userJumin1 varchar(12)
 ,	@userJumin2 varchar(14)
@@ -45254,7 +45254,7 @@ CREATE TABLE userRankingDB_class_top100
 (
 	idx			int	IDENTITY(1,1)	NOT	NULL
 ,	accountIDX	int				NOT	NULL
-,	nickName		varchar(20)		NULL
+,	nickName		varchar(30)		NULL
 ,	userLevel		int				NULL
 ,	guildIDX		int				NULL
 ,	classType		int				NOT	NULL		DEFAULT(0)

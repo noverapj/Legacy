@@ -801,7 +801,7 @@ void DBClient::OnSelectTradeItemInfo( int iIndex, int iSelectCount )
 	// 기본 정보
 	m_VT.push_back( GetValueType( vLONG, sizeof(DWORD) ) );				// 거래품 인덱스
 	m_VT.push_back( GetValueType( vLONG, sizeof(DWORD) ) );				// 거래품 등록유저 인덱스
-	m_VT.push_back( GetValueType( vChar, ID_NUM_PLUS_ONE ) );			// 거래품 등록유저 닉네임
+	m_VT.push_back( GetValueType( vChar, ID_NUM_WIRE_PLUS_ONE ) );			// 거래품 등록유저 닉네임
 
 	m_VT.push_back( GetValueType( vLONG, sizeof(DWORD) ) );				// 거래품 타입
 	m_VT.push_back( GetValueType( vLONG, sizeof(DWORD) ) );				// 거래품 구분자
@@ -1192,7 +1192,7 @@ void DBClient::OnSelectTournamentConfirmUserList( DWORD dwTourIndex, DWORD dwLas
 
 	// - 유저인덱스, 닉네임, 레벨
 	m_VT.push_back( GetValueType( vLONG, sizeof(DWORD) ) );				
-	m_VT.push_back( GetValueType( vChar, ID_NUM_PLUS_ONE ) );				
+	m_VT.push_back( GetValueType( vChar, ID_NUM_WIRE_PLUS_ONE ) );				
 	m_VT.push_back( GetValueType( vLONG, sizeof(DWORD) ) );				
 
 	m_Query.SetReturnData( &dwTourIndex, sizeof(DWORD) );
@@ -1364,7 +1364,7 @@ void DBClient::OnUserBlock( const ioHashString& szPublicID, BYTE byLimitType, CT
 	m_VT.push_back( GetValueType(vLONG, sizeof(LONG)) );
 
 	m_Query.SetReturnData( &dwMgrToolIndex, sizeof(DWORD) );
-	m_Query.SetReturnData( szPublicID.c_str(), ID_NUM_PLUS_ONE );
+	m_Query.SetReturnData( szPublicID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	
 	m_Query.SetData( ++m_iDBAgentThreadID, _RESULT_CHECK, DBAGENT_USERBLOCK_SET, _INSERTDB, iQueryID, m_FT, m_VT );
 
@@ -1397,7 +1397,7 @@ void DBClient::OnChangeUserBlock(const int ClientNumber, const ioHashString& szP
 
 	m_Query.SetReturnData( &ClientNumber, sizeof(int) );
 	m_Query.SetReturnData( &dwMgrToolIndex, sizeof(DWORD) );
-	m_Query.SetReturnData( szPublicID.c_str(), ID_NUM_PLUS_ONE );
+	m_Query.SetReturnData( szPublicID.c_str(), ID_NUM_WIRE_PLUS_ONE );
 	
 	m_Query.SetData( ++m_iDBAgentThreadID, _RESULT_CHECK, DBAGENT_CHANGE_USERBLOCK_SET, _INSERTDB, iQueryID, m_FT, m_VT );
 
@@ -1575,7 +1575,7 @@ void DBClient::OnSelectPracticeInfoList( DWORD dwUserIndex, int iPracticeIndex, 
 	// 기본 정보
 	m_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );					//수련장 인덱스
 	m_VT.push_back( GetValueType( vLONG, sizeof(DWORD) ) );					//유저 인덱스
-	m_VT.push_back( GetValueType( vChar, ID_NUM_PLUS_ONE ) );		
+	m_VT.push_back( GetValueType( vChar, ID_NUM_WIRE_PLUS_ONE ) );		
 	m_VT.push_back( GetValueType( vLONG, sizeof(LONG) ) );					//수련장 타임
 	m_VT.push_back( GetValueType(vTimeStamp,sizeof(DBTIMESTAMP))); //접속 날짜.
 

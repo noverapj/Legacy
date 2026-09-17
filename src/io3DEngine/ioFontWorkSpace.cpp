@@ -90,6 +90,8 @@ ioTextPiece::ioTextPiece()
 {
 	m_pFont = NULL;
 
+	m_bWideText = false;
+
 	m_dwTextColor = 0xffffffff;
 	m_dwBkColor   = 0xff000000;
 	m_TextStyle   = TS_NORMAL;
@@ -108,6 +110,29 @@ ioTextPiece::ioTextPiece( ioFont *pFont, const char *szText )
  : m_Text( szText )
 {
 	m_pFont = pFont;
+
+	m_bWideText = false;
+
+	m_dwTextColor = 0xffffffff;
+	m_dwBkColor   = 0xff000000;
+	m_TextStyle   = TS_NORMAL;
+	m_iFontGap    = 0;
+
+	m_pTex = NULL;
+
+	m_iWidth  = 0;
+	m_iHeight = 0;
+	m_iFirstBearingX = 0;
+
+	m_iUpdateCnt = 0;
+}
+
+ioTextPiece::ioTextPiece( ioFont *pFont, const wchar_t *szText )
+ : m_WideText( szText )
+{
+	m_pFont = pFont;
+
+	m_bWideText = true;
 
 	m_dwTextColor = 0xffffffff;
 	m_dwBkColor   = 0xff000000;
@@ -129,30 +154,48 @@ ioTextPiece::~ioTextPiece()
 
 bool ioTextPiece::operator<( const ioTextPiece &rhs ) const
 {
-	if( m_Text < rhs.m_Text )
+	if( m_bWideText != rhs.m_bWideText )
+		return m_bWideText < rhs.m_bWideText;
+
+	bool bTextLess;
+	if( m_bWideText )
+		bTextLess = m_WideText < rhs.m_WideText;
+	else
+		bTextLess = m_Text < rhs.m_Text;
+
+	if( bTextLess )
 		return true;
-	else if( m_Text == rhs.m_Text )
+	else
 	{
-		if( m_dwTextColor < rhs.m_dwTextColor )
-			return true;
-		else if( m_dwTextColor == rhs.m_dwTextColor )
+		bool bTextEqual;
+		if( m_bWideText )
+			bTextEqual = m_WideText == rhs.m_WideText;
+		else
+			bTextEqual = m_Text == rhs.m_Text;
+
+		if( bTextEqual )
 		{
-			if( m_TextStyle < rhs.m_TextStyle )
+			if( m_dwTextColor < rhs.m_dwTextColor )
 				return true;
-			else if( m_TextStyle == rhs.m_TextStyle )
+			else if( m_dwTextColor == rhs.m_dwTextColor )
 			{
-				if( m_dwBkColor < rhs.m_dwBkColor )
+				if( m_TextStyle < rhs.m_TextStyle )
 					return true;
-				else if( m_dwBkColor == rhs.m_dwBkColor )
+				else if( m_TextStyle == rhs.m_TextStyle )
 				{
-					if( m_iFontGap < rhs.m_iFontGap )
+					if( m_dwBkColor < rhs.m_dwBkColor )
 						return true;
-					else if( m_iFontGap == rhs.m_iFontGap )
+					else if( m_dwBkColor == rhs.m_dwBkColor )
 					{
-						return m_pFont < rhs.m_pFont;
+						if( m_iFontGap < rhs.m_iFontGap )
+							return true;
+						else if( m_iFontGap == rhs.m_iFontGap )
+						{
+							return m_pFont < rhs.m_pFont;
+						}
 					}
-				}
-			}			
+				}			
+			}
 		}
 	}
 
@@ -221,6 +264,38 @@ ioFontWorkSpace::~ioFontWorkSpace()
 }
 
 ioTextPiece* ioFontWorkSpace::GetTextPiece( ioFont *pFont, const char *szText )
+{
+	ioTextPiece kFindPiece( pFont, szText );
+	kFindPiece.m_dwTextColor = m_dwTextColor;
+	kFindPiece.m_dwBkColor   = m_dwBkColor;
+	kFindPiece.m_TextStyle   = m_TextStyle;
+	kFindPiece.m_iFontGap    = m_iFontGap;
+
+	ioTextPiece *pPiece = NULL;
+	ioTextPieceSet::iterator iter = m_PieceList.find( &kFindPiece );
+	if( iter != m_PieceList.end() )
+	{
+		pPiece = *iter;
+		pPiece->m_iUpdateCnt = g_FrameTimer.GetFrameCounter();
+	}
+
+	if( !pPiece )
+	{
+		pPiece = new ioTextPiece( pFont, szText );
+		pPiece->m_dwTextColor = m_dwTextColor;
+		pPiece->m_dwBkColor   = m_dwBkColor;
+		pPiece->m_TextStyle   = m_TextStyle;
+		pPiece->m_iFontGap    = m_iFontGap;
+		pPiece->m_iUpdateCnt  = g_FrameTimer.GetFrameCounter();
+		m_PieceList.insert( pPiece );
+
+		WriteTexture( pPiece );	
+	}
+
+	return pPiece;
+}
+
+ioTextPiece* ioFontWorkSpace::GetTextPieceWide( ioFont *pFont, const wchar_t *szText )
 {
 	ioTextPiece kFindPiece( pFont, szText );
 	kFindPiece.m_dwTextColor = m_dwTextColor;
@@ -440,6 +515,56 @@ int ioFontWorkSpace::CalculateTextWidth( const char *szText, const ioFont *pFont
 	return CalculateTextWidth( szText, pFont, m_TextStyle, m_iFontGap );
 }
 
+int ioFontWorkSpace::CalculateTextWidthWide( const wchar_t *szText,
+											 const ioFont *pFont,
+											 TextStyle eStyle,
+											 int iFontGap )
+{
+	bool bFirstChar = true;
+	int iNeedWidth = 0;
+
+	const GlyphImg *pImg = NULL;
+	for( int i=0 ; szText[i] != L'\0' ; i++ )
+	{
+		pImg = pFont->GetGlyphImgWide( szText[i] );
+		if( !pImg ) continue;
+
+		if( pImg->iBearingX < 0 && bFirstChar )
+		{
+			iNeedWidth += pImg->iAdvance - pImg->iBearingX;
+		}
+		else
+		{
+			iNeedWidth += pImg->iAdvance;
+		}
+
+		if( !bFirstChar )
+		{
+			iNeedWidth += iFontGap;
+		}
+
+		bFirstChar = false;
+	}
+
+	if( pImg )
+	{
+		// 마지막 글자가 iAdvance 보다 삐져 나오는 경우
+		if( pImg->NeedOriginDrawWidth() > pImg->iAdvance )
+		{
+			iNeedWidth += pImg->NeedOriginDrawWidth() - pImg->iAdvance;
+		}
+	}
+
+	iNeedWidth += GetStyleAddPixel( eStyle ).x;
+
+	return iNeedWidth;
+}
+
+int ioFontWorkSpace::CalculateTextWidthWide( const wchar_t *szText, const ioFont *pFont )
+{
+	return CalculateTextWidthWide( szText, pFont, m_TextStyle, m_iFontGap );
+}
+
 int ioFontWorkSpace::CalculateTextHeight( const char *szText, const ioFont *pFont, TextStyle eStyle )
 {
 	UINT iCodePage = ioText::GetCodePage();
@@ -536,47 +661,84 @@ void ioFontWorkSpace::WriteTexture( ioTextPiece *pPiece )
 	int iNeedHeight = pFont->GetMaxHeight();
 
 	bool bFirstChar = true;
-	const char* szText = pPiece->m_Text.c_str();
 
 	LineCopyInfo kGlyphInfo;
 	const GlyphImg *pImg = NULL;
 
 	UINT iCodePage = ioText::GetCodePage();
 
-	for( int i=0 ; szText[i] != '\0' ; )
+	if( pPiece->m_bWideText )
 	{
-		WORD wCode = (BYTE)szText[i++];
-		if( IsDBCSLeadByteEx( iCodePage, (BYTE)wCode )  && szText[i] != NULL )
+		const wchar_t* szWideText = pPiece->m_WideText.c_str();
+		for( int i=0 ; szWideText[i] != L'\0' ; i++ )
 		{
-			wCode = wCode << 8 | (BYTE)szText[i++];
+			pImg = pFont->GetGlyphImgWide( szWideText[i] );
+			if( !pImg ) continue;
+
+			kGlyphInfo.pImg    = pImg;
+			kGlyphInfo.iStartX = 0;
+
+			if( pImg->iBearingX < 0 && bFirstChar )
+			{
+				pPiece->m_iFirstBearingX = pImg->iBearingX;
+
+				kGlyphInfo.iStartX = -pImg->iBearingX;
+				iNeedWidth += pImg->iAdvance - pImg->iBearingX;
+			}
+			else
+			{
+				kGlyphInfo.iStartX = iNeedWidth + pImg->iBearingX;
+				iNeedWidth += pImg->iAdvance;
+			}
+
+			if( !bFirstChar )
+			{
+				iNeedWidth += pPiece->m_iFontGap;
+			}
+
+			m_LineCopyList.push_back( kGlyphInfo );
+			bFirstChar = false;
 		}
+	}
+	else
+	{
+		const char* szText = pPiece->m_Text.c_str();
 
-		pImg = pFont->GetGlyphImg( wCode );
-		if( !pImg ) continue;
-
-		kGlyphInfo.pImg    = pImg;
-		kGlyphInfo.iStartX = 0;
-
-		if( pImg->iBearingX < 0 && bFirstChar )
+		for( int i=0 ; szText[i] != '\0' ; )
 		{
-			pPiece->m_iFirstBearingX = pImg->iBearingX;
+			WORD wCode = (BYTE)szText[i++];
+			if( IsDBCSLeadByteEx( iCodePage, (BYTE)wCode )  && szText[i] != NULL )
+			{
+				wCode = wCode << 8 | (BYTE)szText[i++];
+			}
 
-			kGlyphInfo.iStartX = -pImg->iBearingX;
-			iNeedWidth += pImg->iAdvance - pImg->iBearingX;
-		}
-		else
-		{
-			kGlyphInfo.iStartX = iNeedWidth + pImg->iBearingX;
-			iNeedWidth += pImg->iAdvance;
-		}
+			pImg = pFont->GetGlyphImg( wCode );
+			if( !pImg ) continue;
 
-		if( !bFirstChar )
-		{
-			iNeedWidth += pPiece->m_iFontGap;
-		}
+			kGlyphInfo.pImg    = pImg;
+			kGlyphInfo.iStartX = 0;
 
-		m_LineCopyList.push_back( kGlyphInfo );
-		bFirstChar = false;
+			if( pImg->iBearingX < 0 && bFirstChar )
+			{
+				pPiece->m_iFirstBearingX = pImg->iBearingX;
+
+				kGlyphInfo.iStartX = -pImg->iBearingX;
+				iNeedWidth += pImg->iAdvance - pImg->iBearingX;
+			}
+			else
+			{
+				kGlyphInfo.iStartX = iNeedWidth + pImg->iBearingX;
+				iNeedWidth += pImg->iAdvance;
+			}
+
+			if( !bFirstChar )
+			{
+				iNeedWidth += pPiece->m_iFontGap;
+			}
+
+			m_LineCopyList.push_back( kGlyphInfo );
+			bFirstChar = false;
+		}
 	}
 
 	if( pImg )

@@ -132,7 +132,7 @@ void ioUserPresent::DBtoPresentData( CQueryResultData *query_data )
 		PresentData kData;
 		query_data->GetValue( kData.m_dwIndex, sizeof( DWORD ) );
 		query_data->GetValue( kData.m_dwSendUserIndex, sizeof( DWORD ) );
-		query_data->GetValue( kData.m_szSendID, ID_NUM_PLUS_ONE );
+		query_data->GetValue( kData.m_szSendID, ID_NUM_WIRE_PLUS_ONE );
 		query_data->GetValue( kData.m_iPresentType, sizeof( short ) );
 		query_data->GetValue( kData.m_iPresentValue1, sizeof( int ) );
 		query_data->GetValue( kData.m_iPresentValue2, sizeof( int ) );

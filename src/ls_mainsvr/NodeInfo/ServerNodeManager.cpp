@@ -1069,12 +1069,12 @@ void ServerNodeManager::OnResultSelectPracticeInfoList( CQueryResultData *query_
 
 	int   iCount = 0;
 	DWORD dwLastIndex = PRACTICE_LOAD_START_INDEX;
-	char szUserNick[ID_NUM_PLUS_ONE] = "";
+	char szUserNick[ID_NUM_WIRE_PLUS_ONE] = "";
 	while( query_data->IsExist() )
 	{
 		if(!query_data->GetValue( iPracticeIDX ))		return;
 		if(!query_data->GetValue( dwUserIndex ))		return;
-		if(!query_data->GetValue( szUserNick, ID_NUM_PLUS_ONE ))			break;
+		if(!query_data->GetValue( szUserNick, ID_NUM_WIRE_PLUS_ONE ))			break;
 		if(!query_data->GetValue( iPracticeTime ))		return;
 		if(!query_data->GetValue( (char*)&dts, sizeof(DBTIMESTAMP) ))		return;
 		
@@ -1122,7 +1122,7 @@ void ServerNodeManager::OnResultPractice_BlockUserList( CQueryResultData *query_
 
 	int   iCount = 0;
 	DWORD dwLastIndex = PRACTICE_LOAD_START_INDEX;
-	char szUserNick[ID_NUM_PLUS_ONE] = "";
+	char szUserNick[ID_NUM_WIRE_PLUS_ONE] = "";
 	while( query_data->IsExist() )
 	{
 		if(!query_data->GetValue( dwUserIndex ))		return;

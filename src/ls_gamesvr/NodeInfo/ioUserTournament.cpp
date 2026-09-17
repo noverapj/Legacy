@@ -198,8 +198,8 @@ void ioUserTournament::DBtoUserData( DWORD dwTeamIndex, CQueryResultData *query_
 		query_data->GetValue( kUserData.m_dwTableIndex, sizeof(DWORD) );
 		query_data->GetValue( kUserData.m_dwUserIndex, sizeof(DWORD) );
 
-		char szUserNick[ID_NUM_PLUS_ONE] = "";
-		query_data->GetValue( szUserNick, ID_NUM_PLUS_ONE );
+		char szUserNick[ID_NUM_WIRE_PLUS_ONE] = "";
+		query_data->GetValue( szUserNick, ID_NUM_WIRE_PLUS_ONE );
 		kUserData.m_szNick = szUserNick;
 
 		query_data->GetValue( kUserData.m_iGradeLevel, sizeof(int) );

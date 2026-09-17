@@ -41,6 +41,8 @@ class ioTextPiece
 {
 public:
 	ioHashString m_Text;
+	std::wstring m_WideText;
+	bool	m_bWideText;
 	ioFont	*m_pFont;
 
 public:
@@ -75,6 +77,7 @@ public:
 public:
 	ioTextPiece();
 	ioTextPiece( ioFont *pFont, const char *szText );
+	ioTextPiece( ioFont *pFont, const wchar_t *szText );
 	~ioTextPiece();
 };
 
@@ -144,10 +147,12 @@ public:
 	void SetTextColor( DWORD dwColor ) { m_dwTextColor = dwColor; }
 	void SetBkColor( DWORD dwColor ) { m_dwBkColor = dwColor; }
 	void SetTextStyle( TextStyle eStyle ) { m_TextStyle = eStyle; }
+	TextStyle GetTextStyle() const { return m_TextStyle; }
 	void SetFontGap( int iFontGap ) { m_iFontGap = iFontGap; }
 
 public:
 	ioTextPiece* GetTextPiece( ioFont *pFont, const char *szText );
+	ioTextPiece* GetTextPieceWide( ioFont *pFont, const wchar_t *szText );
 	POINT GetStyleAddPixel( TextStyle eStyle );
 	POINT GetStyleAddTailPixel( TextStyle eStyle );
 
@@ -158,6 +163,13 @@ public:
 							int iFontGap );
 
 	int CalculateTextWidth( const char *szText, const ioFont *pFont );
+
+	int CalculateTextWidthWide( const wchar_t *szText,
+							   const ioFont *pFont,
+							   TextStyle eStyle,
+							   int iFontGap );
+
+	int CalculateTextWidthWide( const wchar_t *szText, const ioFont *pFont );
 
 	int CalculateTextHeight( const char *szText, const ioFont *pFont, TextStyle eStyle );
 

@@ -975,7 +975,7 @@ void CustomTournamentCreateWnd::SendCreateTournament()
 		kPacket << 0;
 	}
 
-	kPacket << m_szTournamentName;							//대회명(hashstring)
+	kPacket << Help::ToWire( m_szTournamentName.c_str() ).c_str();	//대회명(hashstring)
 	kPacket << m_CurTournamentScale.m_iTournamentRound;		//맥스라운드(대회 토너먼트 라운드, 2^n의 n값)(short)
 	kPacket << m_CurBanner.m_Index;							//배너2 : 하단의 큰배너(int)
 	kPacket << m_CurBannerMark.m_Index;						//배너1 : 상단의 작은 배너(int)

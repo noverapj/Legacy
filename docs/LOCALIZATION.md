@@ -151,6 +151,110 @@ supports static OTF/TTF — variable fonts (`fvar`) are untested.
    original CN client — a future swap to Noto Sans SC would remove that
    licensing concern
 
+## Name pipeline (cross-locale identities)
+
+Player-facing identity strings — nicknames (PublicID), guild names,
+tournament/team names — follow a **canonical UTF-8** design so a single
+global-community server works: the name is created as UTF-8, stored as
+UTF-8, transmitted as UTF-8, and converted to UTF-16 **only at the render
+boundary**. Names are lookup keys (`ioHashString`), so there is no
+conversion at packet boundaries at all — bytes round-trip exactly.
+
+```
+input (native CP949/874/936...)
+  --Help::ToWire()--> UTF-8 canonical --raw--> packets/DB/render cache
+                                                   |
+                     Help::NameToWide() --> UTF-16 wide draw (glyph fallback)
+```
+
+### Input conversion (native → UTF-8)
+
+- Creation: `FirstIDChangeWnd`, `IDChangeWnd`/`ChangeNameWnd` (nickname and
+  guild-name change items), guild creation (`GuildWnd`), tournament and
+  team creation — validation runs on the native input first, then
+  `Help::ToWire()` at the packet
+- Typed target inputs: memo recipient, friend application, channel
+  invite — `ToWire()` at the packet
+- Prefilled memo target: `MemoListWnd` stashes the original UTF-8 name
+  (`m_szOriginalTargetID`); if the user does not modify the prefilled
+  edit text the **original bytes** are sent (byte-exact cross-charset
+  reply); `ioMemoManager::SendMemo` takes an optional `szWireFromID`
+  for that path
+- Names that arrive from the server (friend/guild/tournament lists,
+  kill feed) are already UTF-8 and are echoed back **raw** — never
+  re-converted
+
+### Wire budget (length policy)
+
+The native UX gate stays `ID_NUMBER` (20 native bytes = 10 Hangul chars,
+unchanged); the **wire form** of the same name is 3 bytes per Hangul
+char, so all wire-side buffers use a separate budget:
+
+| Macro | Non-TH | TH build |
+|---|---|---|
+| `ID_NUMBER_WIRE` / `ID_NUM_WIRE_PLUS_ONE` | 30 / 31 | 60 / 61 |
+
+Defined in the client (`NoveraClient/GameEnumType.h`) and in every
+server `Define.h` (gamesvr, billingsvr, mainsvr, filewritesvr);
+`ls_relaysvr` mirrors it as `PUBLICID_MAX 31`. The relay join/leave
+structs carry `m_szPublicID[31]` in gamesvr and filewritesvr — **all
+server binaries must be rebuilt together** (layout change 21→31).
+
+The server acceptance gate (`ioMainProcess::IsRightID` in gamesvr)
+validates against `ID_NUMBER_WIRE` and walks **UTF-8 sequences**
+(rejects broken/half characters). `IsNotMakeID` matches with byte-level
+`strstr`.
+
+### Display conversion (UTF-8 → wide render)
+
+- `Help::NameToWide()` — UTF-8 → UTF-16, with legacy single-charset
+  data falling back to runtime-codepage decode
+- Engine wide render path: `ioFontManager::PrintTextWide` /
+  `PrintTextWidthCutWide`, `GetTextWidthWide` (2 and 4-param),
+  `GetTextWidthCutSizeWide`, `ioFontWorkSpace::GetTextPieceWide` +
+  `CalculateTextWidthWide`, `ioUITitle::SetTextWide` /
+  `ioWnd::SetTitleTextWide`, label macro `SetLabelTextWide`
+- Composites (chat sender prefix, system messages with names):
+  `ioComplexStringPrinter::AddTextPieceWide` pieces —
+  `Help::FormatWide` / `FormatWide2` / `FormatWideFromWide` +
+  `Help::WideStringCut` (mirror of `StringCutFun`)
+- **Font fallback chain**: every loaded font gets size-matched fallback
+  faces loaded from `lostsaga.ttf` (Noto CJK: Hangul, Han, Kana) and
+  `thailand.ttf` (Noto Thai); a missing glyph (FT char index 0) falls
+  through to the next face, so a KR client renders Thai names and a TH
+  client renders Korean names
+- Covered surfaces: world nameplate (`ioBaseGUISupport` normal +
+  observer, the six dummy-char copies), in-game round list, observer
+  lists, result screens, party/plaza/ladder/HQ/house/trade/tournament
+  rosters, hero history, present list, chat (7 chat types + join/leave/
+  kick/score/flag/goal messages), manner window, kick vote, memo
+  windows, guild invite
+
+### Server + DB notes
+
+- ~300 server-side name/ID buffer bindings widened to the wire budget
+  (gamesvr DB layer, UserNodeManager, mainsvr DB layer, tournament,
+  trade, ranking)
+- DB schema (all 20 files in `sql/`, including `linux/` and `windows/`
+  variants): every nickname column and stored-proc parameter widened
+  `varchar(20) -> varchar(30)` **and converted `nvarchar`/`nchar` →
+  `varchar`** — UTF-8 names are raw bytes; the nvarchar driver
+  conversion path would re-encode and corrupt them. Log DBs included.
+  The `lite/` SQLite variant has no nickname columns.
+
+### Test matrix
+
+| Case | Expected |
+|---|---|
+| Create KR nickname on KR client | 10 Hangul chars accepted (native gate), stored/echoed as 30 UTF-8 bytes |
+| Create TH nickname on TH client | Thai chars accepted, wire bytes ≤ 30 |
+| KR player in room, TH client | Nameplate + lists render Hangul via Noto CJK fallback |
+| TH player, KR client | Name renders via Noto Thai fallback (or `?` only if fallback font missing) |
+| Chat sender cross-locale | Sender prefix renders in sender script; chat text as before (F2 wire rules) |
+| Whisper/memo reply to cross-charset name | Reply reaches target byte-exact (shadow buffer) |
+| Rename while in-room | Guild/friend/memo lists re-key on the echoed name; relay structs 31-byte |
+| Guild/tournament/team names | Creation validation native, display wide, DB varchar(30) |
+
 ## Known gaps
 
 - 13 multi-line texts (literal `\n` plus color markup) remain hardcoded — the
@@ -185,3 +289,20 @@ supports static OTF/TTF — variable fonts (`fvar`) are untested.
 - `xml/xml/` is excluded by the converter (stale duplicate of two windows)
 - English locale: `us/` only has `app.txt` — `xml_` and `ini_` content
   shows raw keys there until `us/ui.txt` and `us/config.txt` are filled
+- Room titles are player-typed but were not converted at input yet
+  (F5 covered identity names only) — cross-locale room titles still
+  render in the creator's charset; needs a follow-up input sweep
+- Edit boxes hold native text: a prefilled cross-charset name displays
+  as `??` inside the edit (the **send** is byte-exact via the shadow
+  buffer). Full fix is a wide EditBox internal refactor — planned as
+  the next dedicated phase
+- Banned-word / not-make-ID lists are CP949-encoded data files; they
+  will not match UTF-8 names until UTF-8 versions of the lists are
+  shipped (data follow-up, no code change needed)
+- Account `userID varchar(12)` columns are out of scope of the name
+  pipeline (separate identity, separate policy)
+- Untraced display windows kept narrow pending verification:
+  `ioBingoRewardWnd`, `EnablePowerupListWnd`, `ioExtraItemListWnd`
+  (callers not found — likely rare/unused)
+- `ioSP2ChatManager::SendChatLog` writes a mixed-encoding log line
+  (UTF-8 name + native chat text) to the log server as raw bytes

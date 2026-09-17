@@ -160,9 +160,12 @@ void MannerTrialWnd::OnRender()
 	g_FontMgr.SetTextStyle( TS_NORMAL );
 	g_FontMgr.SetAlignType( TAT_LEFT );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_RED );
-	g_FontMgr.PrintTextWidthCut( iXPos + 17, iYPos + 53, FONT_SIZE_13, 340.0f, STR(11), m_szTargetID.c_str() );
+	wchar_t wszMannerName[MAX_PATH];
+	Help::FormatWide( wszMannerName, MAX_PATH, STR(11), m_szTargetID.c_str() );
+	g_FontMgr.PrintTextWidthCutWide( iXPos + 17, iYPos + 53, FONT_SIZE_13, 340.0f, wszMannerName );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_BLUE );
-	g_FontMgr.PrintTextWidthCut( iXPos + 17, iYPos + 71, FONT_SIZE_13, 340.0f, STR(12), g_MyInfo.GetPublicID().c_str() );
+	Help::FormatWide( wszMannerName, MAX_PATH, STR(12), g_MyInfo.GetPublicID().c_str() );
+	g_FontMgr.PrintTextWidthCutWide( iXPos + 17, iYPos + 71, FONT_SIZE_13, 340.0f, wszMannerName );
 
 	enum { MAX_LINE = 5, };
 	ioComplexStringPrinter kPrinter[MAX_LINE];

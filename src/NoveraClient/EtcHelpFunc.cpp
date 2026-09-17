@@ -2919,6 +2919,99 @@ bool FromWire( const char *szWireText, OUT char *szOut, int iOutSize )
 	return false;
 }
 
+std::wstring NameToWide( const char *szName )
+{
+	std::wstring strWide;
+
+	if( !szName || szName[0] == '\0' )
+		return strWide;
+
+	int iWideLen = MultiByteToWideChar( CP_UTF8, MB_ERR_INVALID_CHARS, szName, -1, NULL, 0 );
+	if( iWideLen <= 0 )
+		iWideLen = MultiByteToWideChar( ioText::GetCodePage(), 0, szName, -1, NULL, 0 );
+
+	if( iWideLen <= 0 )
+		return strWide;
+
+	std::vector< wchar_t > vecWide( iWideLen );
+	int iResult = MultiByteToWideChar( CP_UTF8, MB_ERR_INVALID_CHARS, szName, -1, &vecWide[0], iWideLen );
+	if( iResult <= 0 )
+		iResult = MultiByteToWideChar( ioText::GetCodePage(), 0, szName, -1, &vecWide[0], iWideLen );
+
+	if( iResult > 0 )
+		strWide.assign( &vecWide[0] );
+
+	return strWide;
+}
+
+static bool s_FormatWideImpl( OUT wchar_t *szOut, int iOutSize, const char *szLocalFormat, const wchar_t *szWideName1, const wchar_t *szWideName2 )
+{
+	if( !szOut || iOutSize <= 0 )
+		return false;
+
+	szOut[0] = L'\0';
+
+	if( !szLocalFormat || szLocalFormat[0] == '\0' )
+		return false;
+
+	int iWideLen = MultiByteToWideChar( ioText::GetCodePage(), 0, szLocalFormat, -1, NULL, 0 );
+	if( iWideLen <= 0 )
+		return false;
+
+	std::vector< wchar_t > vecFormat( iWideLen );
+	if( MultiByteToWideChar( ioText::GetCodePage(), 0, szLocalFormat, -1, &vecFormat[0], iWideLen ) <= 0 )
+		return false;
+
+	StringCchPrintfW( szOut, iOutSize, &vecFormat[0], szWideName1 ? szWideName1 : L"", szWideName2 ? szWideName2 : L"" );
+	return true;
+}
+
+bool FormatWide( OUT wchar_t *szOut, int iOutSize, const char *szLocalFormat, const char *szUTF8Name )
+{
+	std::wstring strName = NameToWide( szUTF8Name );
+	return s_FormatWideImpl( szOut, iOutSize, szLocalFormat, strName.c_str(), NULL );
+}
+
+bool FormatWide2( OUT wchar_t *szOut, int iOutSize, const char *szLocalFormat, const char *szUTF8Name1, const char *szUTF8Name2 )
+{
+	std::wstring strName1 = NameToWide( szUTF8Name1 );
+	std::wstring strName2 = NameToWide( szUTF8Name2 );
+	return s_FormatWideImpl( szOut, iOutSize, szLocalFormat, strName1.c_str(), strName2.c_str() );
+}
+
+bool FormatWideFromWide( OUT wchar_t *szOut, int iOutSize, const char *szLocalFormat, const wchar_t *szWideName )
+{
+	return s_FormatWideImpl( szOut, iOutSize, szLocalFormat, szWideName, NULL );
+}
+
+int WideStringCut( float fScale, float fWidth, int iTextStyle, OUT wchar_t *szDst, int iDstSize, const char *szUTF8Src )
+{
+	std::wstring strWide = NameToWide( szUTF8Src );
+
+	int iLen = (int)strWide.length();
+	wchar_t szTemp[MAX_PATH * 2];
+	memset( szTemp, 0, sizeof( szTemp ) );
+
+	int iBack = 0;
+	int iTemp = 0;
+	int i = 0;
+	for( ; i < iLen ; )
+	{
+		if( iTemp >= (MAX_PATH*2) )
+			return iBack;
+
+		iBack = i;
+		szTemp[iTemp++] = strWide[i++];
+
+		if( g_FontMgr.GetTextWidthWide( szTemp, (TextStyle)iTextStyle, fScale ) >= fWidth )
+			return iBack;
+
+		StringCchCopyW( szDst, iDstSize, szTemp );
+	}
+
+	return iLen;
+}
+
 
 } // namespace Help End
 

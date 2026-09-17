@@ -1500,7 +1500,7 @@ void ChannelInviteWnd::OnChannelInvite()
 				}
 
 				SP2Packet kPacket( CTPK_CHANNEL_INVITE );
-				kPacket << m_iChannelIdx << szHasID;
+				kPacket << m_iChannelIdx << Help::ToWire( szHasID.c_str() ).c_str();
 				TCPNetwork::SendToServer( kPacket );
 				HideWnd();
 			}	
@@ -1929,7 +1929,7 @@ void FriendApplicationWnd::OnApplicationFriend()
 
 		TCPNetwork::MouseBusy( true );
 		SP2Packet kPacket( CTPK_FRIEND_APPLICATION );
-		kPacket << szName;
+		kPacket << Help::ToWire( szName ).c_str();
 		TCPNetwork::SendToServer( kPacket );
 		HideWnd();
 	}	
@@ -2574,7 +2574,9 @@ void CharRentalRequestWnd::OnRender()
 	kPrinter.SetTextColor( TCT_DEFAULT_DARKGRAY );
 	kPrinter.AddTextPiece( FONT_SIZE_13, STR(1) );
 	kPrinter.SetTextColor( TCT_DEFAULT_GREEN );
-	kPrinter.AddTextPiece( FONT_SIZE_13, STR(2), sg_szUserID.c_str() );
+	wchar_t wszWhisperID[MAX_PATH];
+	Help::FormatWide( wszWhisperID, MAX_PATH, STR(2), sg_szUserID.c_str() );
+	kPrinter.AddTextPieceWide( FONT_SIZE_13, wszWhisperID );
 	kPrinter.PrintFullTextWidthCut( iXPos + 57, iYPos + 53, TAT_LEFT, 135.0f );
 	kPrinter.ClearList();
 
@@ -2791,7 +2793,9 @@ void CharRentalAcquireWnd::OnRender()
 	g_FontMgr.PrintText( iXPos + 103, iYPos + 243, FONT_SIZE_13, STR(6) );
 
 	g_FontMgr.SetTextColor( TCT_DEFAULT_RED );
-	g_FontMgr.PrintText( iXPos + 103, iYPos + 261, FONT_SIZE_13, STR(7), m_szOwnerName.c_str() );
+	wchar_t wszOwnerName[MAX_PATH];
+	Help::FormatWide( wszOwnerName, MAX_PATH, STR(7), m_szOwnerName.c_str() );
+	g_FontMgr.PrintTextWide( iXPos + 103, iYPos + 261, FONT_SIZE_13, wszOwnerName );
 }
 
 void CharRentalAcquireWnd::SetRentalAcquire( const ioHashString &rkOwnerName, int iClassType )

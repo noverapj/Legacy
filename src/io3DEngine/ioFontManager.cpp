@@ -120,6 +120,12 @@ ioFontManager::ioFontManager()
 	m_pWorkSpace = new ioFontWorkSpace;
 	m_pCurFont = NULL;
 
+	m_pFallbackCJKBuf  = NULL;
+	m_dwFallbackCJKSize  = 0;
+	m_pFallbackThaiBuf = NULL;
+	m_dwFallbackThaiSize = 0;
+	m_bFallbackLoaded  = false;
+
 	m_AlignType = TAT_LEFT;
 	m_VertAlignType = TVA_TOP;
 	m_fScale	  = 1.0f;
@@ -134,6 +140,18 @@ ioFontManager::~ioFontManager()
 	DestroyAll();
 
 	ioFTManager::DestroyManager();
+
+	if( m_pFallbackCJKBuf )
+	{
+		delete [] m_pFallbackCJKBuf;
+		m_pFallbackCJKBuf = NULL;
+	}
+
+	if( m_pFallbackThaiBuf )
+	{
+		delete [] m_pFallbackThaiBuf;
+		m_pFallbackThaiBuf = NULL;
+	}
 }
 
 ioResource* ioFontManager::CreateImpl( const ioHashString &name, bool bThread )
@@ -203,7 +221,76 @@ bool ioFontManager::LoadFile( const ioHashString &name, ioFont *pFont )
 	}
 
 	pFont->SetFTFace( pFace );
+
+	// cross-script fallback faces (Noto CJK, Noto Thai) for wide name rendering.
+	// each font gets its own fallback face instances, size-matched via ioFont::SetFontSize.
+	if( LoadFallbackBuffers() )
+	{
+		char szFBName[MAX_PATH];
+
+		ioFTFace *pFallback1 = NULL;
+		ioFTFace *pFallback2 = NULL;
+
+		if( m_pFallbackCJKBuf )
+		{
+			wsprintf( szFBName, "%s_FB_CJK", name.c_str() );
+			pFallback1 = pFTMgr->OpenNewFaceFromMemory( szFBName,
+														m_pFallbackCJKBuf,
+														m_dwFallbackCJKSize,
+														0 );
+		}
+
+		if( m_pFallbackThaiBuf )
+		{
+			wsprintf( szFBName, "%s_FB_THAI", name.c_str() );
+			pFallback2 = pFTMgr->OpenNewFaceFromMemory( szFBName,
+														m_pFallbackThaiBuf,
+														m_dwFallbackThaiSize,
+														0 );
+		}
+
+		pFont->SetFallbackFaces( pFallback1, pFallback2 );
+	}
+
 	return true;
+}
+
+bool ioFontManager::LoadFallbackBuffers()
+{
+	if( m_bFallbackLoaded )
+		return ( m_pFallbackCJKBuf != NULL || m_pFallbackThaiBuf != NULL );
+
+	m_bFallbackLoaded = true;
+
+	char szPath[MAX_PATH];
+
+	ioBinaryStream kStream;
+	wsprintf( szPath, "%s/%s", m_szStartDir, "lostsaga.ttf" );
+	if( g_ResourceLoader.LoadStream( szPath, &kStream ) && kStream.GetSize() > 0 )
+	{
+		m_dwFallbackCJKSize = kStream.GetSize();
+		m_pFallbackCJKBuf = new BYTE[ m_dwFallbackCJKSize ];
+		CopyMemory( m_pFallbackCJKBuf, kStream.GetPtr(), m_dwFallbackCJKSize );
+	}
+	else
+	{
+		LOG.PrintTimeAndLog( 0, "ioFontManager::LoadFallbackBuffers - lostsaga.ttf Load Failed" );
+	}
+
+	ioBinaryStream kStream2;
+	wsprintf( szPath, "%s/%s", m_szStartDir, "thailand.ttf" );
+	if( g_ResourceLoader.LoadStream( szPath, &kStream2 ) && kStream2.GetSize() > 0 )
+	{
+		m_dwFallbackThaiSize = kStream2.GetSize();
+		m_pFallbackThaiBuf = new BYTE[ m_dwFallbackThaiSize ];
+		CopyMemory( m_pFallbackThaiBuf, kStream2.GetPtr(), m_dwFallbackThaiSize );
+	}
+	else
+	{
+		LOG.PrintTimeAndLog( 0, "ioFontManager::LoadFallbackBuffers - thailand.ttf Load Failed" );
+	}
+
+	return ( m_pFallbackCJKBuf != NULL || m_pFallbackThaiBuf != NULL );
 }
 
 ioFontManager& ioFontManager::GetSingleton()
@@ -875,6 +962,161 @@ void ioFontManager::PrintByAlign( float x, float y )
 	}
 }
 
+void ioFontManager::PrintByAlignWide( float x, float y, const wchar_t *szText )
+{
+	if( !m_pCurFont || !m_pUIRenderer || !m_pWorkSpace )
+		return;
+
+	ioTextPiece *pPiece = m_pWorkSpace->GetTextPieceWide( m_pCurFont, szText );
+	if( !pPiece )	return;
+
+	switch( m_AlignType )
+	{
+	case TAT_CENTER:
+		x -= pPiece->m_iWidth * ( m_fScale * FLOAT05 );
+		break;
+	case TAT_RIGHT:
+		x -= pPiece->m_iWidth * m_fScale;
+		break;
+	}
+
+	switch ( m_VertAlignType )
+	{
+	case TVA_CENTER:
+		y -= ( pPiece->m_iHeight * m_fScale * FLOAT05 );
+		break;
+
+	case TVA_BOTTOM:
+		y -= ( pPiece->m_iHeight * m_fScale );
+		break;
+	}
+
+	ioFontQuad *pQuad = new ioFontQuad;
+	if( pQuad )
+	{
+		pQuad->m_iDrawX = x;
+		pQuad->m_iDrawY = y;
+		pQuad->m_fDrawScale = m_fScale;
+		pQuad->m_dwTextAlpha = m_dwTextAlpha;
+		pQuad->m_pPiece = pPiece;
+
+		m_pUIRenderer->AddUIQuad( pQuad );
+	}
+}
+
+void ioFontManager::PrintTextWide( float x, float y, float fScale, const wchar_t *szText )
+{
+	SetTextWide( x, y, fScale, 255, szText );
+}
+
+void ioFontManager::SetTextWide( float x, float y, float fScale, BYTE bAlpha, const wchar_t *szText )
+{
+	m_dwTextAlpha = (bAlpha << 24) | 0xffffff;
+
+	SetScale( fScale );
+	PrintByAlignWide( x, y, szText );
+}
+
+float ioFontManager::GetTextWidthWide( const wchar_t *szText, float fScale )
+{
+	if( m_pWorkSpace && m_pCurFont )
+	{
+		int iWidth = m_pWorkSpace->CalculateTextWidthWide( szText, m_pCurFont );
+		return (float)iWidth * fScale;
+	}
+
+	return 0.0f;
+}
+
+float ioFontManager::GetTextWidthWide( const wchar_t *szText, TextStyle eStyle, float fScale, int iFontGap )
+{
+	if( m_pWorkSpace && m_pCurFont )
+	{
+		int iWidth = m_pWorkSpace->CalculateTextWidthWide( szText, m_pCurFont, eStyle, iFontGap );
+		return (float)iWidth * fScale;
+	}
+
+	return 0.0f;
+}
+
+TextStyle ioFontManager::GetTextStyle()
+{
+	if( m_pWorkSpace )
+		return m_pWorkSpace->GetTextStyle();
+
+	return TS_NORMAL;
+}
+
+void ioFontManager::CutWideTextForWidth( const wchar_t *szText, TextStyle eStyle, float fScale, float fWidth, wchar_t *szOut, int iOutSize )
+{
+	if( !szOut || iOutSize <= 0 )
+		return;
+
+	szOut[0] = L'\0';
+
+	if( !szText )
+		return;
+
+	const wchar_t *szDot = L"...";
+	float fDotWidth = GetTextWidthWide( szDot, eStyle, fScale );
+
+	float fCutWidth = fWidth - fDotWidth;
+	if( fCutWidth < 0.0f )
+		fCutWidth = 0.0f;
+
+	wchar_t szTemp[FONT_BUFFER_SIZE];
+	int iTemp = 0;
+	int iFitLen = 0;
+
+	for( int i=0 ; szText[i] != L'\0' && iTemp < FONT_BUFFER_SIZE-1 ; i++ )
+	{
+		szTemp[iTemp++] = szText[i];
+		szTemp[iTemp] = L'\0';
+
+		if( GetTextWidthWide( szTemp, eStyle, fScale ) >= fCutWidth )
+			break;
+
+		iFitLen = iTemp;
+	}
+
+	int iOut = 0;
+	for( int i=0 ; i<iFitLen && iOut < iOutSize-1 ; i++ )
+		szOut[iOut++] = szText[i];
+
+	for( int i=0 ; szDot[i] != L'\0' && iOut < iOutSize-1 ; i++ )
+		szOut[iOut++] = szDot[i];
+
+	szOut[iOut] = L'\0';
+}
+
+void ioFontManager::PrintTextWidthCutWide( float x, float y, float fScale, float fWidth, const wchar_t *szText )
+{
+	if( !szText )
+		return;
+
+	if( GetTextWidthWide( szText, fScale ) < fWidth )
+	{
+		PrintTextWide( x, y, fScale, szText );
+		return;
+	}
+
+	wchar_t szCut[FONT_BUFFER_SIZE];
+	CutWideTextForWidth( szText, GetTextStyle(), fScale, fWidth, szCut, FONT_BUFFER_SIZE );
+
+	PrintTextWide( x, y, fScale, szCut );
+}
+
+float ioFontManager::GetTextWidthCutSizeWide( const wchar_t *szText, TextStyle eStyle, float fScale, float fWidth )
+{
+	float fCutSize = GetTextWidthWide( szText, eStyle, fScale );
+	if( fCutSize < fWidth )
+		return fCutSize;
+
+	wchar_t szCut[FONT_BUFFER_SIZE];
+	CutWideTextForWidth( szText, eStyle, fScale, fWidth, szCut, FONT_BUFFER_SIZE );
+
+	return GetTextWidthWide( szCut, eStyle, fScale );
+}
 
 float ioFontManager::GetTextWidth( const char *szText,
 								   TextStyle eStyle,

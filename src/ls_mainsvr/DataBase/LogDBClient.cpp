@@ -372,7 +372,7 @@ void LogDBClient::OnInsertTournamentRewardSet( DWORD dwTourIndex, const ioHashSt
 
 	m_FT.Begin( WE_LOG_DATA_LEAGUE_PRESENT );
 	m_FT.Append( dwOwnerIndex );
-	m_FT.Append( rkOwnerID.c_str(), ID_NUM_PLUS_ONE, TRUE );
+	m_FT.Append( rkOwnerID.c_str(), ID_NUM_WIRE_PLUS_ONE, TRUE );
 	m_FT.Append( dwTourIndex );
 	m_FT.Append( (uint8)TourPos );
 	m_FT.Append( dwReward1 );

@@ -409,7 +409,8 @@ void ioObserverRedWnd::OnRedRender( int iXPos, int iYPos, int iSlot, const Round
 		g_FontMgr.SetTextColor( TCT_DEFAULT_WHITE );
 
 	g_FontMgr.SetTextStyle( TS_OUTLINE_FULL_2X );
-	g_FontMgr.PrintTextWidthCut( iXPos+NAME_XPOS, iYPos+NAME_YPOS, FONT_SIZE_15, 111.0f, rkInfo.m_szName.c_str() );
+	std::wstring wszName = Help::NameToWide( rkInfo.m_szName.c_str() );
+	g_FontMgr.PrintTextWidthCutWide( iXPos+NAME_XPOS, iYPos+NAME_YPOS, FONT_SIZE_15, 111.0f, wszName.c_str() );
 
 
 	//Add
@@ -498,7 +499,8 @@ void ioObserverRedWnd::OnOtherRender( int iXPos, int iYPos, int iSlot, const Rou
 		g_FontMgr.SetTextColor( TCT_DEFAULT_WHITE );
 
 	g_FontMgr.SetTextStyle( TS_OUTLINE_FULL_2X );
-	g_FontMgr.PrintTextWidthCut( iXPos+NAME_XPOS, iYPos+NAME_YPOS, FONT_SIZE_15, 111.0f, rkInfo.m_szName.c_str() );
+	std::wstring wszName = Help::NameToWide( rkInfo.m_szName.c_str() );
+	g_FontMgr.PrintTextWidthCutWide( iXPos+NAME_XPOS, iYPos+NAME_YPOS, FONT_SIZE_15, 111.0f, wszName.c_str() );
 
 	//Add
 	m_pAddGauge->SetReverseFormatting( ioUIRenderImage::RF_HORZ_REVERSE );
@@ -990,7 +992,8 @@ void ioObserverBlueWnd::OnBlueRender( int iXPos, int iYPos, int iSlot, const Rou
 		g_FontMgr.SetTextColor( TCT_DEFAULT_WHITE );
 
 	g_FontMgr.SetTextStyle( TS_OUTLINE_FULL_2X );
-	g_FontMgr.PrintTextWidthCut( iXPos+NAME_XPOS, iYPos+NAME_YPOS, FONT_SIZE_15, 111.0f, rkInfo.m_szName.c_str() );
+	std::wstring wszName = Help::NameToWide( rkInfo.m_szName.c_str() );
+	g_FontMgr.PrintTextWidthCutWide( iXPos+NAME_XPOS, iYPos+NAME_YPOS, FONT_SIZE_15, 111.0f, wszName.c_str() );
 
 	//Add
 	m_pAddGauge->Render( iXPos, iYPos, UI_RENDER_ADD );
@@ -1085,7 +1088,8 @@ void ioObserverBlueWnd::OnOtherRender( int iXPos, int iYPos, int iSlot, const Ro
 
 
 	g_FontMgr.SetTextStyle( TS_OUTLINE_FULL_2X );
-	g_FontMgr.PrintTextWidthCut( iXPos+NAME_XPOS, iYPos+NAME_YPOS, FONT_SIZE_15, 111.0f, rkInfo.m_szName.c_str() );
+	std::wstring wszName = Help::NameToWide( rkInfo.m_szName.c_str() );
+	g_FontMgr.PrintTextWidthCutWide( iXPos+NAME_XPOS, iYPos+NAME_YPOS, FONT_SIZE_15, 111.0f, wszName.c_str() );
 
 	//Add
 	m_pAddGauge->Render( iXPos, iYPos, UI_RENDER_ADD );

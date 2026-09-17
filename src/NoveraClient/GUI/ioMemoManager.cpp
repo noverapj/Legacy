@@ -264,7 +264,7 @@ void ioMemoManager::SendUserLogin( ioHashString szName )
 	m_UserLoginList.SendUserLogin( szName );
 }
 
-void ioMemoManager::SendMemo( ioHashString szFromID, ioHashString szMemo )
+void ioMemoManager::SendMemo( ioHashString szFromID, ioHashString szMemo, const char *szWireFromID )
 {
 	char szMemoBuf[MAX_PATH] = "";
 	ioHashString szOwnerMemo = szMemo;
@@ -275,7 +275,10 @@ void ioMemoManager::SendMemo( ioHashString szFromID, ioHashString szMemo )
 	}
 
 	SP2Packet kPacket( CTPK_MEMO_SEND_MSG );
-	kPacket << szFromID << Help::ToWire( szOwnerMemo.c_str() ).c_str();
+	if( szWireFromID )
+		kPacket << szWireFromID << Help::ToWire( szOwnerMemo.c_str() ).c_str();
+	else
+		kPacket << Help::ToWire( szFromID.c_str() ).c_str() << Help::ToWire( szOwnerMemo.c_str() ).c_str();
 	TCPNetwork::SendToServer( kPacket );
 
 	g_ChatMgr.SendChatLog( ioMannerTrialChatManager::TT_MEMO, g_MyInfo.GetPublicID().c_str(), szOwnerMemo.c_str(), MT_NONE, -1 );

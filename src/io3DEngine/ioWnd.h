@@ -141,6 +141,7 @@ public:
 	IoUIText* CreateUIText();
 
 	void SetTitleText( const char *szTitle, const char *szDelim = "", int iGap = 0 );
+	void SetTitleTextWide( const wchar_t *szTitle, int iGap = 0 );
 	const char* GetTitleText();
 
 	// 모든 상태의 색을 바꾼다 편의용함수, 특정 상태만 바꾸려면 ioUITitle에 직접 접근

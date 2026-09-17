@@ -3044,10 +3044,10 @@ void UserNodeManager::OnResultSelectUserLoginInfo( CQueryResultData *query_data 
 
 	//보낸 유저의 아이디.
 	char szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	char szUserID[ID_NUM_PLUS_ONE] = "";
+	char szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 
 	PACKET_GUARD_VOID( query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE ) );
-	PACKET_GUARD_VOID( query_data->GetValue(szUserID,ID_NUM_PLUS_ONE) );
+	PACKET_GUARD_VOID( query_data->GetValue(szUserID,ID_NUM_WIRE_PLUS_ONE) );
 
 	User *pUser = GetUserNodeByGUID( szUserGUID );
 	if(pUser == NULL)
@@ -3059,7 +3059,7 @@ void UserNodeManager::OnResultSelectUserLoginInfo( CQueryResultData *query_data 
 	ioLocalParent *pLocal = g_LocalMgr.GetLocal( ioLocalManager::GetLocalType() );
 
 	//SELECT
-	char szDbID[ID_NUM_PLUS_ONE] = "";
+	char szDbID[ID_NUM_WIRE_PLUS_ONE] = "";
 	char szDbLoginKey[LOGIN_KEY_PLUS_ONE] = "";
 	__int64  iDbServerID = 0;
 	DBTIMESTAMP dts;
@@ -3067,8 +3067,8 @@ void UserNodeManager::OnResultSelectUserLoginInfo( CQueryResultData *query_data 
 	char szConnectIP[LOGIN_KEY_PLUS_ONE] = "";
 #endif //__OHTG_LOGIN_IP_CHECK__
 
-	//PACKET_GUARD_VOID( query_data->GetValue(szDbID,ID_NUM_PLUS_ONE) );
-	if( !query_data->GetValue(szDbID,ID_NUM_PLUS_ONE) )
+	//PACKET_GUARD_VOID( query_data->GetValue(szDbID,ID_NUM_WIRE_PLUS_ONE) );
+	if( !query_data->GetValue(szDbID,ID_NUM_WIRE_PLUS_ONE) )
 	{
 		LOG.PrintTimeAndLog( LOG_DEBUG_LEVEL,"OnResultSelectUserLoginInfo UserPrivateID size OVER Error %s %s", szUserID, szUserGUID );
 		return;
@@ -3180,9 +3180,9 @@ void UserNodeManager::OnResultSelectUpdateUserLoginInfo( CQueryResultData *query
 
 	//보낸 유저의 아이디.
 	char szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	char szUserID[ID_NUM_PLUS_ONE] = "";
+	char szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	PACKET_GUARD_VOID( query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE ) );
-	PACKET_GUARD_VOID( query_data->GetValue(szUserID,ID_NUM_PLUS_ONE) );
+	PACKET_GUARD_VOID( query_data->GetValue(szUserID,ID_NUM_WIRE_PLUS_ONE) );
 	User *pUser = GetUserNodeByGUID( szUserGUID );
 	if(pUser == NULL)
 	{
@@ -3191,9 +3191,9 @@ void UserNodeManager::OnResultSelectUpdateUserLoginInfo( CQueryResultData *query
 	}
 
 	//SELECT
-	char szDbID[ID_NUM_PLUS_ONE] = "";
+	char szDbID[ID_NUM_WIRE_PLUS_ONE] = "";
 	__int64  iDbServerID = 0;
-	PACKET_GUARD_VOID( query_data->GetValue(szDbID,ID_NUM_PLUS_ONE) );
+	PACKET_GUARD_VOID( query_data->GetValue(szDbID,ID_NUM_WIRE_PLUS_ONE) );
 	PACKET_GUARD_VOID( query_data->GetValue(iDbServerID,sizeof(__int64)) );
 
 
@@ -3277,9 +3277,9 @@ void UserNodeManager::OnResultSelectUserData(CQueryResultData *query_data)
 	}
 
 	char szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	char szUserID[ID_NUM_PLUS_ONE] = "";
+	char szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	PACKET_GUARD_VOID( query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE ) );
-	PACKET_GUARD_VOID( query_data->GetValue(szUserID,ID_NUM_PLUS_ONE) );       //보낸 유저의 아이디.
+	PACKET_GUARD_VOID( query_data->GetValue(szUserID,ID_NUM_WIRE_PLUS_ONE) );       //보낸 유저의 아이디.
 	User *pUser = GetUserNodeByGUID( szUserGUID );
 	if(pUser == NULL)
 	{
@@ -3296,11 +3296,11 @@ void UserNodeManager::OnResultSelectUserData(CQueryResultData *query_data)
 
 	//SELECT
 	int  user_idx = 0;
-	char szDBID[ID_NUM_PLUS_ONE] = "";
-	char nick_name[ID_NUM_PLUS_ONE] = "";
+	char szDBID[ID_NUM_WIRE_PLUS_ONE] = "";
+	char nick_name[ID_NUM_WIRE_PLUS_ONE] = "";
 	PACKET_GUARD_VOID( query_data->GetValue(user_idx,sizeof(int)) );
-	PACKET_GUARD_VOID( query_data->GetValue(szDBID,ID_NUM_PLUS_ONE) );
-	PACKET_GUARD_VOID( query_data->GetValue(nick_name,ID_NUM_PLUS_ONE) );
+	PACKET_GUARD_VOID( query_data->GetValue(szDBID,ID_NUM_WIRE_PLUS_ONE) );
+	PACKET_GUARD_VOID( query_data->GetValue(nick_name,ID_NUM_WIRE_PLUS_ONE) );
 
 	int result = CONNECT_OK;
 	if( pUser->GetPrivateID() != szDBID )
@@ -3643,9 +3643,9 @@ void UserNodeManager::OnResultLoginSelectControlKeys(CQueryResultData *query_dat
 	// Return Data..
 	DWORD  dwUserIdx = 0;
 	//char   szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	//char   szUserID[ID_NUM_PLUS_ONE] = "";
+	//char   szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	//PACKET_GUARD_VOID( query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE ) );
-	//PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_PLUS_ONE ) );    //보낸 유저의 아이디.
+	//PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE ) );    //보낸 유저의 아이디.
 	PACKET_GUARD_VOID( query_data->GetValue( dwUserIdx, sizeof(int) ) );		 //캐릭터 주인 인덱스
 
 	User *pUser = GetUserNode(dwUserIdx);
@@ -3688,9 +3688,9 @@ void UserNodeManager::OnResultLoginSelectAllAwardData(CQueryResultData *query_da
 	// Return Data..
 	DWORD  dwUserIdx = 0;
 	//char   szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	//char   szUserID[ID_NUM_PLUS_ONE] = "";
+	//char   szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	//query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE );
-	//query_data->GetValue( szUserID, ID_NUM_PLUS_ONE );       //보낸 유저의 아이디.
+	//query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE );       //보낸 유저의 아이디.
 	query_data->GetValue( dwUserIdx, sizeof(int) );		 //캐릭터 주인 인덱스
 
 	User *pUser = GetUserNode(dwUserIdx);
@@ -3724,9 +3724,9 @@ void UserNodeManager::OnResultLoginSelectAwardExpert(CQueryResultData *query_dat
 	// Return Data..
 	DWORD  dwUserIdx = 0;
 	//char   szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	//char   szUserID[ID_NUM_PLUS_ONE] = "";
+	//char   szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	//PACKET_GUARD_VOID( query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE ) );
-	//PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_PLUS_ONE ) );    //보낸 유저의 아이디.
+	//PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE ) );    //보낸 유저의 아이디.
 	PACKET_GUARD_VOID( query_data->GetValue( dwUserIdx, sizeof(int) ) );		 //캐릭터 주인 인덱스
 
 	User *pUser = GetUserNode(dwUserIdx);
@@ -3762,9 +3762,9 @@ void UserNodeManager::OnResultLoginSelectAllClassExpert(CQueryResultData *query_
 	// Return Data..
 	DWORD  dwUserIdx = 0;
 	//char   szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	//char   szUserID[ID_NUM_PLUS_ONE] = "";
+	//char   szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	//PACKET_GUARD_VOID( query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE ) );
-	//PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_PLUS_ONE ) );       //보낸 유저의 아이디.
+	//PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE ) );       //보낸 유저의 아이디.
 	PACKET_GUARD_VOID( query_data->GetValue( dwUserIdx, sizeof(int) ) );		 //캐릭터 주인 인덱스
 
 	User *pUser = GetUserNode(dwUserIdx);
@@ -3798,9 +3798,9 @@ void UserNodeManager::OnResultLoginSelectUserRecord(CQueryResultData *query_data
 	// Return Data..
 	DWORD  dwUserIdx = 0;
 	//char   szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	//char   szUserID[ID_NUM_PLUS_ONE] = "";
+	//char   szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	//PACKET_GUARD_VOID ( query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE ) );
-	//PACKET_GUARD_VOID ( query_data->GetValue( szUserID, ID_NUM_PLUS_ONE ) );       //보낸 유저의 아이디.
+	//PACKET_GUARD_VOID ( query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE ) );       //보낸 유저의 아이디.
 	PACKET_GUARD_VOID ( query_data->GetValue( dwUserIdx, sizeof(int) ) );		 //캐릭터 주인 인덱스
 
 	User *pUser = GetUserNode(dwUserIdx);
@@ -3926,9 +3926,9 @@ void UserNodeManager::OnResultLoginSelectAllExtraItemData(CQueryResultData *quer
 	// Return Data..
 	DWORD  dwUserIdx = 0;
 	//char   szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	//char   szUserID[ID_NUM_PLUS_ONE] = "";
+	//char   szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	//PACKET_GUARD_VOID( query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE ) );
-	//PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_PLUS_ONE ) );       //보낸 유저의 아이디.
+	//PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE ) );       //보낸 유저의 아이디.
 	PACKET_GUARD_VOID( query_data->GetValue( dwUserIdx, sizeof(int) ) );		 //캐릭터 주인 인덱스
 
 	int iDBSelectCount = query_data->GetResultCount();
@@ -3982,9 +3982,9 @@ void UserNodeManager::OnResultLoginSelectAllQuestCompleteData(CQueryResultData *
 	// Return Data..
 	DWORD  dwUserIdx = 0;
 	//char   szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	//char   szUserID[ID_NUM_PLUS_ONE] = "";
+	//char   szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	//PACKET_GUARD_VOID( query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE ) );
-	//PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_PLUS_ONE ) );       //보낸 유저의 아이디.
+	//PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE ) );       //보낸 유저의 아이디.
 	PACKET_GUARD_VOID( query_data->GetValue( dwUserIdx, sizeof(int) ) );		 //캐릭터 주인 인덱스
 
 	User *pUser = GetUserNode(dwUserIdx);
@@ -4018,9 +4018,9 @@ void UserNodeManager::OnResultLoginSelectAllQuestData(CQueryResultData *query_da
 	// Return Data..
 	DWORD  dwUserIdx = 0;
 	//char   szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	//char   szUserID[ID_NUM_PLUS_ONE] = "";
+	//char   szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	//PACKET_GUARD_VOID( query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE ) );
-	//PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_PLUS_ONE ) );       //보낸 유저의 아이디.
+	//PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE ) );       //보낸 유저의 아이디.
 	PACKET_GUARD_VOID( query_data->GetValue( dwUserIdx, sizeof(int) ) );		 //캐릭터 주인 인덱스
 
 	User *pUser = GetUserNode(dwUserIdx);
@@ -4353,9 +4353,9 @@ void UserNodeManager::OnResultLoginSelectAllGrowth(CQueryResultData *query_data)
 	// Return Data..
 	int  iUserIndex = 0;
 	//char szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	//char szUserID[ID_NUM_PLUS_ONE] = "";
+	//char szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	//PACKET_GUARD_VOID( query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE ) );
-	//PACKET_GUARD_VOID( query_data->GetValue(szUserID,ID_NUM_PLUS_ONE) );       //보낸 유저의 아이디.
+	//PACKET_GUARD_VOID( query_data->GetValue(szUserID,ID_NUM_WIRE_PLUS_ONE) );       //보낸 유저의 아이디.
 	PACKET_GUARD_VOID( query_data->GetValue(iUserIndex, sizeof(int)) );		 //캐릭터 주인 인덱스
 
 	User *pUser = GetUserNode(iUserIndex);
@@ -4388,9 +4388,9 @@ void UserNodeManager::OnResultLoginSelectAllMedalItemData(CQueryResultData *quer
 	// Return Data..
 	DWORD  dwUserIdx = 0;
 	//char   szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	//char   szUserID[ID_NUM_PLUS_ONE] = "";
+	//char   szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	//PACKET_GUARD_VOID( query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE ) );
-	//PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_PLUS_ONE ) );    //보낸 유저의 아이디.
+	//PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE ) );    //보낸 유저의 아이디.
 	PACKET_GUARD_VOID( query_data->GetValue( dwUserIdx, sizeof(int) ) );		 //캐릭터 주인 인덱스
 
 	User *pUser = GetUserNode(dwUserIdx);
@@ -4421,9 +4421,9 @@ void UserNodeManager::OnResultLoginSelectAllExMedalSlotData(CQueryResultData *qu
 	// Return Data..
 	DWORD  dwUserIdx = 0;
 	//char   szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	//char   szUserID[ID_NUM_PLUS_ONE] = "";
+	//char   szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	//PACKET_GUARD_VOID( query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE ) );
-	//PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_PLUS_ONE ) );    //보낸 유저의 아이디.
+	//PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE ) );    //보낸 유저의 아이디.
 	PACKET_GUARD_VOID( query_data->GetValue( dwUserIdx, sizeof(int) ) );		 //캐릭터 주인 인덱스
 
 	User *pUser = GetUserNode(dwUserIdx);
@@ -4454,9 +4454,9 @@ void UserNodeManager::OnResultLoginSelectAllEventData( CQueryResultData *query_d
 	// Return Data..
 	int  iUserIndex = 0;
 	char szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	//char szUserID[ID_NUM_PLUS_ONE] = "";
+	//char szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	PACKET_GUARD_VOID( query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE ) );
-	//PACKET_GUARD_VOID( query_data->GetValue(szUserID,ID_NUM_PLUS_ONE) );       //보낸 유저의 아이디.
+	//PACKET_GUARD_VOID( query_data->GetValue(szUserID,ID_NUM_WIRE_PLUS_ONE) );       //보낸 유저의 아이디.
 	PACKET_GUARD_VOID( query_data->GetValue(iUserIndex,sizeof(int)) );		 //유저의 인덱스
 
 	User *pUser = GetUserNode(iUserIndex);
@@ -4589,14 +4589,14 @@ void UserNodeManager::OnResultSelectCharIndex(CQueryResultData *query_data)
 	}
 
 	char szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	char szUserID[ID_NUM_PLUS_ONE] = "";
+	char szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	int  iResult = 0;
 	int  iLogType  = -1;
 	int  iBuyPrice = 0;
 	DWORD dwUserIdx = 0;
 
 	PACKET_GUARD_VOID( query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE ) );
-	//PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_PLUS_ONE ) );       //보낸 유저의 아이디.
+	//PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE ) );       //보낸 유저의 아이디.
 	PACKET_GUARD_VOID( query_data->GetValue( dwUserIdx, sizeof( int ) ) );
 	PACKET_GUARD_VOID( query_data->GetValue( iResult, sizeof( int ) ) );           //생성 결과
 	PACKET_GUARD_VOID( query_data->GetValue( iLogType, sizeof( int ) ) );          
@@ -4638,13 +4638,13 @@ void UserNodeManager::OnResultSelectCharData(CQueryResultData *query_data)
 	// Return Data..
 	int  char_index = 0;
 	char szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	char szUserID[ID_NUM_PLUS_ONE] = "";
+	char szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	int  iResult = 0;
 	int  iLogType  = -1;
 	int  iBuyPrice = 0;
 
 	PACKET_GUARD_VOID( query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE ) );
-	//PACKET_GUARD_VOID( query_data->GetValue(szUserID,ID_NUM_PLUS_ONE) );       //보낸 유저의 아이디.
+	//PACKET_GUARD_VOID( query_data->GetValue(szUserID,ID_NUM_WIRE_PLUS_ONE) );       //보낸 유저의 아이디.
 	
 	PACKET_GUARD_VOID( query_data->GetValue(iResult,sizeof(int)) );           //생성 결과
 	PACKET_GUARD_VOID( query_data->GetValue(char_index,sizeof(int)) );		 //캐릭터 인덱스
@@ -4924,10 +4924,10 @@ void UserNodeManager::OnResultSelectCharRentalHistory(CQueryResultData *query_da
 	int iClassType = 0;
 	DWORD dwUserIndex = 0;
 	//char szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	char szTargetID[ID_NUM_PLUS_ONE] = "";
+	char szTargetID[ID_NUM_WIRE_PLUS_ONE] = "";
 	//query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE );
 	query_data->GetValue( dwUserIndex, sizeof(int) );
-	query_data->GetValue( szTargetID, ID_NUM_PLUS_ONE );    
+	query_data->GetValue( szTargetID, ID_NUM_WIRE_PLUS_ONE );    
 	query_data->GetValue( iClassType, sizeof(int) );
 
 	User *pUser = GetUserNode(dwUserIndex);
@@ -5048,10 +5048,10 @@ void UserNodeManager::OnResultSelectClassExpertIndex(CQueryResultData *query_dat
 	// Return Data..
 	DWORD  dwClassInfoIdx = 0;
 	//char szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	//char   szUserID[ID_NUM_PLUS_ONE] = "";
+	//char   szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	DWORD dwUserIdx = 0;
 	//query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE );
-	//query_data->GetValue( szUserID, ID_NUM_PLUS_ONE );
+	//query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE );
 	query_data->GetValue( dwUserIdx, sizeof(int) );        
 	query_data->GetValue( dwClassInfoIdx, sizeof(int) );	 
 
@@ -5099,14 +5099,14 @@ void UserNodeManager::OnResultSelectInvenIndex(CQueryResultData *query_data)
 	// Return Data..
 	DWORD  dwInvenIdx = 0;
 	//char   szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	//char   szUserID[ID_NUM_PLUS_ONE] = "";
+	//char   szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	DWORD dwUserIdx = 0;
 	bool   bBuyCash  = false;
 	int    iBuyPrice = 0;
 	int    iLogType  = 0;
 
 	//query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE );
-	//query_data->GetValue( szUserID, ID_NUM_PLUS_ONE );        //보낸 유저의 아이디.
+	//query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE );        //보낸 유저의 아이디.
 	query_data->GetValue( dwUserIdx,  sizeof( int ) );
 	query_data->GetValue( bBuyCash, sizeof( bool ) );      
 	query_data->GetValue( iBuyPrice, sizeof( int ) );     
@@ -5202,11 +5202,11 @@ void UserNodeManager::OnResultSelectEtcItemIndex(CQueryResultData *query_data)
 	DWORD  dwIndex = 0;
 	DWORD  dwUserIdx	= 0;
 	//char   szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	//char   szUserID[ID_NUM_PLUS_ONE] = "";
+	//char   szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	bool   bBuyCash  = false;
 	int    iBuyPrice = 0;
 	//query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE );
-	//query_data->GetValue( szUserID, ID_NUM_PLUS_ONE );    //보낸 유저의 아이디.
+	//query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE );    //보낸 유저의 아이디.
 	query_data->GetValue( dwUserIdx, sizeof( int ) );    
 	query_data->GetValue( bBuyCash, sizeof( bool ) );      
 	query_data->GetValue( iBuyPrice, sizeof( int ) );    
@@ -5309,21 +5309,21 @@ void UserNodeManager::OnResultSelectUserIndexAndPresentCnt( CQueryResultData *qu
 	short iPresentType = 0;
 	int   iBuyValue1   = 0;
 	int   iBuyValue2   = 0;
-	char  szRecvPublicID[ID_NUM_PLUS_ONE] = "";
+	char  szRecvPublicID[ID_NUM_WIRE_PLUS_ONE] = "";
 	query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE );
 	query_data->GetValue( dwUserIndex, sizeof(DWORD) );
 	query_data->GetValue( iPresentType, sizeof(short) );
 	query_data->GetValue( iBuyValue1, sizeof(int) );
 	query_data->GetValue( iBuyValue2, sizeof(int) );
-	query_data->GetValue( szRecvPublicID, ID_NUM_PLUS_ONE );
+	query_data->GetValue( szRecvPublicID, ID_NUM_WIRE_PLUS_ONE );
 	
 	// 받은 정보
 	DWORD dwRecvUserIndex = 0;
 	int   iRecvPresentCnt = 0;
-	char  szRecvPrivateID[ID_NUM_PLUS_ONE] = "";
+	char  szRecvPrivateID[ID_NUM_WIRE_PLUS_ONE] = "";
 	query_data->GetValue( dwRecvUserIndex, sizeof(DWORD) );
 	query_data->GetValue( iRecvPresentCnt, sizeof(int) );
-	query_data->GetValue( szRecvPrivateID, ID_NUM_PLUS_ONE ); 
+	query_data->GetValue( szRecvPrivateID, ID_NUM_WIRE_PLUS_ONE ); 
 
 	User *pUser = GetUserNode(dwUserIndex);
 	if( pUser == NULL )
@@ -5373,9 +5373,9 @@ void UserNodeManager::OnResultSelectAwardIndex(CQueryResultData *query_data)
 	DWORD  dwInvenIdx = 0;
 	DWORD dwUserIdx = 0;
 	//char   szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	//char   szUserID[ID_NUM_PLUS_ONE] = "";
+	//char   szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	//query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE );
-	//query_data->GetValue( szUserID, ID_NUM_PLUS_ONE );        //보낸 유저의 아이디.
+	//query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE );        //보낸 유저의 아이디.
 
 	query_data->GetValue( dwUserIdx, sizeof(int) );
 	query_data->GetValue( dwInvenIdx, sizeof(int) );		 //새로운 인벤토리 인덱스
@@ -5426,9 +5426,9 @@ void UserNodeManager::OnResultSelectGrowthIndex(CQueryResultData *query_data)
 	DWORD  dwClassInfoIdx = 0;
 	DWORD dwUserIdx = 0;
 	//char szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	//char szUserID[ID_NUM_PLUS_ONE] = "";
+	//char szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	//query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE );
-	//query_data->GetValue( szUserID, ID_NUM_PLUS_ONE );
+	//query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE );
 	query_data->GetValue( dwUserIdx, sizeof(int) );
 	query_data->GetValue( dwClassInfoIdx, sizeof(int) );
 
@@ -5477,9 +5477,9 @@ void UserNodeManager::OnResultSelectFishDataIndex(CQueryResultData *query_data)
 	DWORD  dwClassInfoIdx = 0;
 	DWORD dwUserIdx = 0;
 	//char szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	//char szUserID[ID_NUM_PLUS_ONE] = "";
+	//char szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	//query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE );
-	//query_data->GetValue( szUserID, ID_NUM_PLUS_ONE );        
+	//query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE );        
 	query_data->GetValue( dwUserIdx, sizeof(int) );
 	query_data->GetValue( dwClassInfoIdx, sizeof(int) );
 
@@ -5509,9 +5509,9 @@ void UserNodeManager::OnResultSelectAllFishData(CQueryResultData *query_data)
 	// Return Data..
 	int  iUserIndex = 0;
 	//char szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	//char szUserID[ID_NUM_PLUS_ONE] = "";
+	//char szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	//query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE );
-	//query_data->GetValue(szUserID,ID_NUM_PLUS_ONE);       //보낸 유저의 아이디.
+	//query_data->GetValue(szUserID,ID_NUM_WIRE_PLUS_ONE);       //보낸 유저의 아이디.
 	query_data->GetValue(iUserIndex,sizeof(int));		 //캐릭터 주인 인덱스
 
 	User *pUser = GetUserNode(iUserIndex);
@@ -5563,14 +5563,14 @@ void UserNodeManager::OnResultSelectExtraItemIndex(CQueryResultData *query_data)
 	DWORD  dwInvenIdx = 0;
 	DWORD  dwUserIdx  = 0;
 	//char   szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	//char   szUserID[ID_NUM_PLUS_ONE] = "";
+	//char   szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	bool   bBuyCash  = false;
 	int    iBuyPrice = 0;
 	int    iLogType = 0;
 	int    iMachineCode = 0;
 	int    iPeriodTime  = 0;
 	//query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE );
-	//query_data->GetValue( szUserID, ID_NUM_PLUS_ONE );        //보낸 유저의 아이디.
+	//query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE );        //보낸 유저의 아이디.
 	query_data->GetValue( dwUserIdx, sizeof( int ) );       
 	query_data->GetValue( bBuyCash, sizeof( bool ) );      
 	query_data->GetValue( iBuyPrice, sizeof( int ) );       
@@ -5669,8 +5669,8 @@ void UserNodeManager::OnResultSelectFriendList(CQueryResultData *query_data)
 		return;
 	}
 
-	char szID[ID_NUM_PLUS_ONE] = "";
-	query_data->GetValue( szID, ID_NUM_PLUS_ONE );       // 보낸 유저의 아이디.
+	char szID[ID_NUM_WIRE_PLUS_ONE] = "";
+	query_data->GetValue( szID, ID_NUM_WIRE_PLUS_ONE );       // 보낸 유저의 아이디.
 
 	User *pUser = GetUserNodeByPublicID( szID );
 	if( pUser == NULL )
@@ -5689,7 +5689,7 @@ void UserNodeManager::OnResultSelectFriendList(CQueryResultData *query_data)
 	{
 		int  iIndex = 0;
 		DWORD dwUserIndex = 0;
-		char szName[ID_NUM_PLUS_ONE] = "";
+		char szName[ID_NUM_WIRE_PLUS_ONE] = "";
 		DBTIMESTAMP dts;
 
 		int iSendCount = 0;
@@ -5701,7 +5701,7 @@ void UserNodeManager::OnResultSelectFriendList(CQueryResultData *query_data)
 
 		query_data->GetValue( iIndex, sizeof(int) );			 //테이블 인덱스
 		query_data->GetValue( dwUserIndex, sizeof(DWORD) );      //친구 인덱스
-		query_data->GetValue( szName, ID_NUM_PLUS_ONE );		 //친구 닉네임	
+		query_data->GetValue( szName, ID_NUM_WIRE_PLUS_ONE );		 //친구 닉네임	
 		query_data->GetValue( (char*)&dts, sizeof(DBTIMESTAMP) );//친구 수락한 시간		                                    
 		CTime RegTime( Help::GetSafeValueForCTimeConstructor( dts.year, dts.month, dts.day, dts.hour, dts.minute, dts.second ) );
 
@@ -5756,10 +5756,10 @@ void UserNodeManager::OnResultSelectFriendRequestList(CQueryResultData *query_da
 	while( query_data->IsExist() )
 	{
 		DWORD dwTableIndex, dwUserIndex;
-		char szUserID[ID_NUM_PLUS_ONE] = "";
+		char szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 		query_data->GetValue( dwTableIndex, sizeof(DWORD) );		//테이블 인덱스
 		query_data->GetValue( dwUserIndex, sizeof(DWORD) );			//친구 인덱스
-		query_data->GetValue( szUserID, ID_NUM_PLUS_ONE );			//친구 닉네임	
+		query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE );			//친구 닉네임	
 		
 		vTableIndex.push_back( dwTableIndex );
 		vUserIndex.push_back( dwUserIndex );
@@ -5791,9 +5791,9 @@ void UserNodeManager::OnResultSelectFriendApplication(CQueryResultData *query_da
 	}
 
 	DWORD dwUserIndex;
-	char  szFriendID[ID_NUM_PLUS_ONE] = "";
+	char  szFriendID[ID_NUM_WIRE_PLUS_ONE] = "";
 	query_data->GetValue( dwUserIndex, sizeof(DWORD) );
-	query_data->GetValue( szFriendID, ID_NUM_PLUS_ONE );
+	query_data->GetValue( szFriendID, ID_NUM_WIRE_PLUS_ONE );
 
 	int iResult;
 	query_data->GetValue( iResult, sizeof(int) );
@@ -5825,13 +5825,13 @@ void UserNodeManager::OnResultSelectInsertFriend(CQueryResultData *query_data)
 	}
 
 	DWORD dwUserIndex, dwTableIndex, dwFriendIndex;
-	char szUserID[ID_NUM_PLUS_ONE] = "";
-	char szFriendID[ID_NUM_PLUS_ONE] = "";
+	char szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
+	char szFriendID[ID_NUM_WIRE_PLUS_ONE] = "";
 	query_data->GetValue( dwUserIndex, sizeof(DWORD) );
-	query_data->GetValue( szUserID, ID_NUM_PLUS_ONE );
+	query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE );
 	query_data->GetValue( dwTableIndex, sizeof(DWORD) );
 	query_data->GetValue( dwFriendIndex, sizeof(DWORD) );
-	query_data->GetValue( szFriendID, ID_NUM_PLUS_ONE );
+	query_data->GetValue( szFriendID, ID_NUM_WIRE_PLUS_ONE );
 
 	int iResult;
 	query_data->GetValue( iResult, sizeof(int) );
@@ -5876,11 +5876,11 @@ void UserNodeManager::OnResultDeleteFriend(CQueryResultData *query_data)
 		return;
 	}
 
-	char  szFriendID[ID_NUM_PLUS_ONE] = "";
-	query_data->GetValue( szFriendID, ID_NUM_PLUS_ONE );
+	char  szFriendID[ID_NUM_WIRE_PLUS_ONE] = "";
+	query_data->GetValue( szFriendID, ID_NUM_WIRE_PLUS_ONE );
 
-	char szUserID[ID_NUM_PLUS_ONE] = "";
-	query_data->GetValue( szUserID, ID_NUM_PLUS_ONE);
+	char szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
+	query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE);
 
 	UserParent *pUserParent = GetGlobalUserNode( szUserID );
 	if( pUserParent )
@@ -5916,9 +5916,9 @@ void UserNodeManager::OnResultSelectFriendDeveloperInsert(CQueryResultData *quer
 	}
 
 	DWORD dwUserIndex;
-	char  szFriendID[ID_NUM_PLUS_ONE] = "";
+	char  szFriendID[ID_NUM_WIRE_PLUS_ONE] = "";
 	query_data->GetValue( dwUserIndex, sizeof(DWORD) );
-	query_data->GetValue( szFriendID, ID_NUM_PLUS_ONE );
+	query_data->GetValue( szFriendID, ID_NUM_WIRE_PLUS_ONE );
 
 	int iResult;
 	query_data->GetValue( iResult, sizeof(int) );
@@ -6046,8 +6046,8 @@ void UserNodeManager::OnResultSelectUserIDCheck(CQueryResultData *query_data)
 		return;
 	}
 
-	char szID[ID_NUM_PLUS_ONE] = "";
-	query_data->GetValue( szID, ID_NUM_PLUS_ONE );       //보낸 유저의 아이디.
+	char szID[ID_NUM_WIRE_PLUS_ONE] = "";
+	query_data->GetValue( szID, ID_NUM_WIRE_PLUS_ONE );       //보낸 유저의 아이디.
 
 	User *pUser = GetUserNodeByPublicID( szID );
 	if( pUser == NULL )
@@ -6056,10 +6056,10 @@ void UserNodeManager::OnResultSelectUserIDCheck(CQueryResultData *query_data)
 		return;
 	}
 
-	char szPrivateID[ID_NUM_PLUS_ONE] = "";
-	char szPublicID[ID_NUM_PLUS_ONE]  = "";
-	query_data->GetValue( szPrivateID, ID_NUM_PLUS_ONE );
-	query_data->GetValue( szPublicID, ID_NUM_PLUS_ONE );
+	char szPrivateID[ID_NUM_WIRE_PLUS_ONE] = "";
+	char szPublicID[ID_NUM_WIRE_PLUS_ONE]  = "";
+	query_data->GetValue( szPrivateID, ID_NUM_WIRE_PLUS_ONE );
+	query_data->GetValue( szPublicID, ID_NUM_WIRE_PLUS_ONE );
 
 	int iAccountIndex = -1;
 	query_data->GetValue( iAccountIndex, sizeof(iAccountIndex) );
@@ -6155,9 +6155,9 @@ void UserNodeManager::OnResultSelectQuestIndex(CQueryResultData *query_data)
 	DWORD  dwQuestIdx = 0;
 	DWORD  dwUserIdx = 0;
 	//char   szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	//char   szUserID[ID_NUM_PLUS_ONE] = "";
+	//char   szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	//query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE );
-	//query_data->GetValue( szUserID, ID_NUM_PLUS_ONE );        //보낸 유저의 아이디.
+	//query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE );        //보낸 유저의 아이디.
 	query_data->GetValue( dwUserIdx, sizeof(int) );
 
 	query_data->GetValue( dwQuestIdx, sizeof(int) );
@@ -6213,9 +6213,9 @@ void UserNodeManager::OnResultSelectQuestCompleteIndex(CQueryResultData *query_d
 	DWORD  dwQuestIdx = 0;
 	DWORD  dwUserIdx = 0;
 	//char   szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	//char   szUserID[ID_NUM_PLUS_ONE] = "";
+	//char   szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	//query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE );
-	//query_data->GetValue( szUserID, ID_NUM_PLUS_ONE );        //보낸 유저의 아이디.
+	//query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE );        //보낸 유저의 아이디.
 	query_data->GetValue( dwUserIdx, sizeof(int) );
 	query_data->GetValue( dwQuestIdx, sizeof(int) );
 
@@ -6646,7 +6646,7 @@ void UserNodeManager::OnResultSelectGuildEntryDelayMember(CQueryResultData *quer
 	DWORD dwTableIndex[GUILD_MAX_ENTRY_DELAY_USER];
 	DWORD dwMemberIndex[GUILD_MAX_ENTRY_DELAY_USER];
 	int   iMemberLevel[GUILD_MAX_ENTRY_DELAY_USER];
-	char  szMemberID[GUILD_MAX_ENTRY_DELAY_USER][ID_NUM_PLUS_ONE];	
+	char  szMemberID[GUILD_MAX_ENTRY_DELAY_USER][ID_NUM_WIRE_PLUS_ONE];	
 	memset( dwTableIndex, 0, sizeof( dwTableIndex ) );
 	memset( dwMemberIndex, 0, sizeof( dwMemberIndex ) );
 	memset( iMemberLevel, 0, sizeof( iMemberLevel ) );
@@ -6657,7 +6657,7 @@ void UserNodeManager::OnResultSelectGuildEntryDelayMember(CQueryResultData *quer
 		PACKET_GUARD_BREAK( query_data->GetValue( dwTableIndex[iCount], sizeof(int) ) );	//테이블 인덱스
 		PACKET_GUARD_BREAK( query_data->GetValue( dwMemberIndex[iCount], sizeof(int) ) );	//유저 인덱스
 		PACKET_GUARD_BREAK( query_data->GetValue( iMemberLevel[iCount], sizeof(int) ) );	//유저 레벨
-		PACKET_GUARD_BREAK( query_data->GetValue( szMemberID[iCount], ID_NUM_PLUS_ONE ) );//유저 닉네임
+		PACKET_GUARD_BREAK( query_data->GetValue( szMemberID[iCount], ID_NUM_WIRE_PLUS_ONE ) );//유저 닉네임
 		iCount++;
 		if( iCount >= GUILD_MAX_ENTRY_DELAY_USER )
 			break;
@@ -6711,7 +6711,7 @@ void UserNodeManager::OnResultSelectGuildMemberList(CQueryResultData *query_data
 		query_data->GetValue( kTempUserData.m_dwTableIndex, sizeof(int) );			//테이블 인덱스
 		query_data->GetValue( kTempUserData.m_dwUserIndex, sizeof(int) );			//유저 인덱스
 		query_data->GetValue( kTempUserData.m_iGradeLevel, sizeof(int) );			//유저 레벨
-		query_data->GetValue( kTempUserData.m_szUserID, ID_NUM_PLUS_ONE );			//유저 닉네임
+		query_data->GetValue( kTempUserData.m_szUserID, ID_NUM_WIRE_PLUS_ONE );			//유저 닉네임
 		query_data->GetValue( kTempUserData.m_szUserPos, GUILD_POS_NUM_PLUS_ONE );	//유저 직책
 		query_data->GetValue( kTempUserData.m_iLadderPoint, sizeof(int) );			//유저 진영포인트
 		
@@ -6816,9 +6816,9 @@ void UserNodeManager::OnResultSelectGuildMarkBlockInfo(CQueryResultData *query_d
 	}
 
 	// Return Data
-	char szDeveloperID[ID_NUM_PLUS_ONE] = "";
+	char szDeveloperID[ID_NUM_WIRE_PLUS_ONE] = "";
 	DWORD dwGuildIndex, dwGuildMark;
-	query_data->GetValue( szDeveloperID, ID_NUM_PLUS_ONE );
+	query_data->GetValue( szDeveloperID, ID_NUM_WIRE_PLUS_ONE );
 	query_data->GetValue( dwGuildIndex, sizeof(DWORD) );
 	query_data->GetValue( dwGuildMark, sizeof(DWORD) );
 
@@ -7334,8 +7334,8 @@ void UserNodeManager::OnResultUpdateGuildPositionChange(CQueryResultData *query_
 	query_data->GetValue( dwUserIndex, sizeof(DWORD) );
 	query_data->GetValue( dwTargetIndex, sizeof(DWORD) );
 	query_data->GetValue( dwGuildIndex, sizeof(DWORD) );
-	char szTargetID[ID_NUM_PLUS_ONE] = "";
-	query_data->GetValue( szTargetID, ID_NUM_PLUS_ONE );	
+	char szTargetID[ID_NUM_WIRE_PLUS_ONE] = "";
+	query_data->GetValue( szTargetID, ID_NUM_WIRE_PLUS_ONE );	
 
 	char  szGuildPos[GUILD_POS_NUM_PLUS_ONE] = "";
 	query_data->GetValue( szGuildPos, GUILD_POS_NUM_PLUS_ONE );	
@@ -7434,8 +7434,8 @@ void UserNodeManager::OnResultSelectGuildSimpleData(CQueryResultData *query_data
 
     DWORD dwUserIndex = 0, dwGuildIndex = 0;
 	query_data->GetValue( dwUserIndex, sizeof(DWORD) );
-	char szGuildUserID[ID_NUM_PLUS_ONE] = "";
-	query_data->GetValue( szGuildUserID, ID_NUM_PLUS_ONE );	
+	char szGuildUserID[ID_NUM_WIRE_PLUS_ONE] = "";
+	query_data->GetValue( szGuildUserID, ID_NUM_WIRE_PLUS_ONE );	
 	if(query_data->GetResultCount() > 0)
 	{
 		query_data->GetValue( dwGuildIndex, sizeof(DWORD) );
@@ -7573,10 +7573,10 @@ void UserNodeManager::OnResultSelectUserEntry(CQueryResultData *query_data)
 
 // 	char szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
 // 	query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE );
-	char szPublicID[ID_NUM_PLUS_ONE] = "";
+	char szPublicID[ID_NUM_WIRE_PLUS_ONE] = "";
 	DWORD dwUserIdx = 0;
 
-	query_data->GetValue( szPublicID, ID_NUM_PLUS_ONE );       //보낸 유저의 아이디.
+	query_data->GetValue( szPublicID, ID_NUM_WIRE_PLUS_ONE );       //보낸 유저의 아이디.
 	query_data->GetValue( dwUserIdx, sizeof(int) );
 
 	User *pUser = GetUserNode(dwUserIdx);
@@ -7648,10 +7648,10 @@ void UserNodeManager::OnResultSelectPublicIDExist( CQueryResultData *query_data 
 	//query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE ); // 보낸 정보. 
 
 	DWORD dwUserIdx = 0;
-	char szNewPublicID[ID_NUM_PLUS_ONE]="";
+	char szNewPublicID[ID_NUM_WIRE_PLUS_ONE]="";
 
 	query_data->GetValue( dwUserIdx, sizeof(int) );
-	query_data->GetValue( szNewPublicID, ID_NUM_PLUS_ONE );
+	query_data->GetValue( szNewPublicID, ID_NUM_WIRE_PLUS_ONE );
 	
 	DWORD dwExistCnt = 0;
 	query_data->GetValue( dwExistCnt, sizeof(DWORD) );          // 받은 정보.
@@ -7710,12 +7710,12 @@ void UserNodeManager::OnResultSelectChangedPublicID( CQueryResultData *query_dat
 	}
 
 	DWORD dwUserIndex = 0;
-	char  szNewPublicID[ID_NUM_PLUS_ONE]="";
+	char  szNewPublicID[ID_NUM_WIRE_PLUS_ONE]="";
 	query_data->GetValue( dwUserIndex, sizeof(DWORD) );         // 보낸 정보. 
-	query_data->GetValue( szNewPublicID, ID_NUM_PLUS_ONE );
+	query_data->GetValue( szNewPublicID, ID_NUM_WIRE_PLUS_ONE );
 
-	char  szPublicID[ID_NUM_PLUS_ONE]="";
-	query_data->GetValue( szPublicID, ID_NUM_PLUS_ONE );        // 받은 정보.
+	char  szPublicID[ID_NUM_WIRE_PLUS_ONE]="";
+	query_data->GetValue( szPublicID, ID_NUM_WIRE_PLUS_ONE );        // 받은 정보.
 
 	if( strcmp( szPublicID, szNewPublicID ) != 0 || strcmp( szPublicID, "") == 0 )
 	{
@@ -7801,9 +7801,9 @@ void UserNodeManager::OnResultSelectMemberCount( CQueryResultData *query_data )
 
 	//보낸 유저의 아이디.
 	char szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	char szPrivateID[ID_NUM_PLUS_ONE] = "";
+	char szPrivateID[ID_NUM_WIRE_PLUS_ONE] = "";
 	query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE );
-	query_data->GetValue(szPrivateID,ID_NUM_PLUS_ONE);       
+	query_data->GetValue(szPrivateID,ID_NUM_WIRE_PLUS_ONE);       
 	User *pUser = GetUserNodeByGUID( szUserGUID );
 	if(pUser == NULL)
 	{
@@ -7831,7 +7831,7 @@ void UserNodeManager::OnResultSelectMemberCount( CQueryResultData *query_data )
 		//	pLocal->SendUserInfo( pUser );
 
 		// 임시 publid id는 private id + #
-		char szTempPublicID[ID_NUM_PLUS_ONE]="";
+		char szTempPublicID[ID_NUM_WIRE_PLUS_ONE]="";
 		StringCbPrintf( szTempPublicID, sizeof( szTempPublicID ), "%s#", pUser->GetPrivateID().c_str() );
 		g_DBClient.OnInsertMember( pUser->GetUserDBAgentID(), pUser->GetAgentThreadID(), pUser->GetPrivateID(), ioHashString( szTempPublicID ) );
 		g_DBClient.OnSelectUserLoginInfo(  pUser->GetUserDBAgentID(), pUser->GetAgentThreadID(), pUser->GetGUID(), pUser->GetPrivateID());
@@ -7857,13 +7857,13 @@ void UserNodeManager::OnResultSelectFirstPublicIDExist( CQueryResultData *query_
 	}
 
 	DWORD dwUserIndex = 0;
-	char szPublicID[ID_NUM_PLUS_ONE]="";
+	char szPublicID[ID_NUM_WIRE_PLUS_ONE]="";
 	char szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	char szNewPublicID[ID_NUM_PLUS_ONE]="";
+	char szNewPublicID[ID_NUM_WIRE_PLUS_ONE]="";
 	query_data->GetValue( dwUserIndex, sizeof(DWORD) );         // 보낸 정보. 
-	query_data->GetValue( szPublicID, ID_NUM_PLUS_ONE );
+	query_data->GetValue( szPublicID, ID_NUM_WIRE_PLUS_ONE );
 	query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE ); 
-	query_data->GetValue( szNewPublicID, ID_NUM_PLUS_ONE );
+	query_data->GetValue( szNewPublicID, ID_NUM_WIRE_PLUS_ONE );
 
 	DWORD dwExistCnt = 0;
 	query_data->GetValue( dwExistCnt, sizeof(DWORD) );          // 받은 정보.
@@ -7885,7 +7885,7 @@ void UserNodeManager::OnResultSelectFirstPublicIDExist( CQueryResultData *query_
 		return;
 	}
 
-	char szTempPublicID[ID_NUM_PLUS_ONE]="";
+	char szTempPublicID[ID_NUM_WIRE_PLUS_ONE]="";
 	StringCbPrintf( szTempPublicID , sizeof( szTempPublicID ), "%s#", pUser->GetPrivateID().c_str() );
 	if( pUser->GetPublicID() != szTempPublicID )
 	{
@@ -7921,16 +7921,16 @@ void UserNodeManager::OnResultSelectChangedFirstPublicID( CQueryResultData *quer
 	}
 
 	DWORD dwUserIndex = 0;
-	char szPublicID[ID_NUM_PLUS_ONE]="";
+	char szPublicID[ID_NUM_WIRE_PLUS_ONE]="";
 	char szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	char szNewPublicID[ID_NUM_PLUS_ONE]="";
+	char szNewPublicID[ID_NUM_WIRE_PLUS_ONE]="";
 	query_data->GetValue( dwUserIndex, sizeof(DWORD) );         // 보낸 정보. 
-	query_data->GetValue( szPublicID, ID_NUM_PLUS_ONE );
+	query_data->GetValue( szPublicID, ID_NUM_WIRE_PLUS_ONE );
 	query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE ); 
-	query_data->GetValue( szNewPublicID, ID_NUM_PLUS_ONE );
+	query_data->GetValue( szNewPublicID, ID_NUM_WIRE_PLUS_ONE );
 
-	char  szReturnPublicID[ID_NUM_PLUS_ONE]="";
-	query_data->GetValue( szReturnPublicID, ID_NUM_PLUS_ONE );        // 받은 정보.
+	char  szReturnPublicID[ID_NUM_WIRE_PLUS_ONE]="";
+	query_data->GetValue( szReturnPublicID, ID_NUM_WIRE_PLUS_ONE );        // 받은 정보.
 
 	User *pUser = GetUserNode(dwUserIndex);
 	if( pUser == NULL )
@@ -7949,7 +7949,7 @@ void UserNodeManager::OnResultSelectChangedFirstPublicID( CQueryResultData *quer
 		return;
 	}
 
-	char szTempPublicID[ID_NUM_PLUS_ONE]="";
+	char szTempPublicID[ID_NUM_WIRE_PLUS_ONE]="";
 	StringCbPrintf( szTempPublicID , sizeof( szTempPublicID ), "%s#", pUser->GetPrivateID().c_str() );
 	if( pUser->GetPublicID() != szTempPublicID )
 	{
@@ -8002,12 +8002,12 @@ void UserNodeManager::OnResultSelectMedalItemIndex(CQueryResultData *query_data)
 	// Return Data..
 	DWORD  dwInvenIdx = 0;
 // 	char   szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-// 	char   szUserID[ID_NUM_PLUS_ONE] = "";
+// 	char   szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	int    iLogType   = 0;
 	int    iLimitTime = 0;
 	DWORD dwUserIdx = 0;
 // 	query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE );
-// 	query_data->GetValue( szUserID, ID_NUM_PLUS_ONE );        //보낸 유저의 아이디.
+// 	query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE );        //보낸 유저의 아이디.
 	query_data->GetValue( dwUserIdx, sizeof(int) );
 	query_data->GetValue( iLogType, sizeof( int ) );    
 	query_data->GetValue( iLimitTime, sizeof( int ) );      
@@ -8083,12 +8083,12 @@ void UserNodeManager::OnResultSelectExMedalSlotIndex(CQueryResultData *query_dat
 	// Return Data..
 	DWORD  dwInvenIdx = 0;
 // 	char   szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-// 	char   szUserID[ID_NUM_PLUS_ONE] = "";
+// 	char   szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	int    iLogType   = 0;
 	DWORD dwUserIdx = 0;
 
 // 	query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE );
-// 	query_data->GetValue( szUserID, ID_NUM_PLUS_ONE );        //보낸 유저의 아이디. 
+// 	query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE );        //보낸 유저의 아이디. 
 	query_data->GetValue( dwUserIdx, sizeof(int) );
 	query_data->GetValue( iLogType, sizeof( int ) );    
 	query_data->GetValue( dwInvenIdx, sizeof(int) );		 //새로운 인벤토리 인덱스
@@ -8152,9 +8152,9 @@ void UserNodeManager::OnResultSelectHeroData(CQueryResultData *query_data)
 	// Return Data..
 	DWORD  dwUserIdx = 0;
 	char   szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	char   szUserID[ID_NUM_PLUS_ONE] = "";
+	char   szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	PACKET_GUARD_VOID( query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE ) );
-	PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_PLUS_ONE ) );    //보낸 유저의 아이디.
+	PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE ) );    //보낸 유저의 아이디.
 	PACKET_GUARD_VOID( query_data->GetValue( dwUserIdx, sizeof(int) ) );		 //캐릭터 주인 인덱스
 
 	UserParent *pUserParent = GetGlobalUserNode( dwUserIdx );
@@ -8223,9 +8223,9 @@ void UserNodeManager::OnResultSelectItemCustomUniqueIndex(CQueryResultData *quer
 	// Return Data..
 	DWORD  dwUserIdx = 0;
 	char   szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	char   szUserID[ID_NUM_PLUS_ONE] = "";
+	char   szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE );
-	query_data->GetValue( szUserID, ID_NUM_PLUS_ONE );    //보낸 유저의 아이디.
+	query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE );    //보낸 유저의 아이디.
 	query_data->GetValue( dwUserIdx, sizeof(int) );		 //캐릭터 주인 인덱스
 
 	User *pUser = GetUserNode( dwUserIdx );
@@ -8375,7 +8375,7 @@ void UserNodeManager::OnResultSelectCreateTradeIndex(CQueryResultData *query_dat
 	ioHashString szRegisterUserNick, szRegisterIP;
 
 	query_data->GetValue( dwRegisterUserIndex, sizeof(DWORD) );
-	query_data->GetValue( szRegisterUserNick, ID_NUM_PLUS_ONE );
+	query_data->GetValue( szRegisterUserNick, ID_NUM_WIRE_PLUS_ONE );
 
 	query_data->GetValue( dwItemType, sizeof(DWORD) );
 	query_data->GetValue( dwItemMagicCode, sizeof(DWORD) );
@@ -8529,7 +8529,7 @@ void UserNodeManager::OnResultTradeItemComplete(CQueryResultData *query_data)
 	query_data->GetValue( dwBuyUserIndex, sizeof(DWORD) );
 	query_data->GetValue( dwTradeIndex, sizeof(DWORD) );
 	query_data->GetValue( dwRegisterUserIndex, sizeof(DWORD) );
-	query_data->GetValue( szRegisterUserNick, ID_NUM_PLUS_ONE );
+	query_data->GetValue( szRegisterUserNick, ID_NUM_WIRE_PLUS_ONE );
 
 	query_data->GetValue( dwItemType, sizeof(DWORD) );
 	query_data->GetValue( dwItemMagicCode, sizeof(DWORD) );
@@ -8694,7 +8694,7 @@ void UserNodeManager::OnResultTradeItemCancel(CQueryResultData *query_data)
 
 	query_data->GetValue( dwTradeIndex, sizeof(DWORD) );
 	query_data->GetValue( dwRegisterUserIndex, sizeof(DWORD) );
-	query_data->GetValue( szRegisterUserNick, ID_NUM_PLUS_ONE );
+	query_data->GetValue( szRegisterUserNick, ID_NUM_WIRE_PLUS_ONE );
 
 	query_data->GetValue( dwItemType, sizeof(DWORD) );
 	query_data->GetValue( dwItemMagicCode, sizeof(DWORD) );
@@ -8803,10 +8803,10 @@ void UserNodeManager::OnResultSelectHeadquartersDataCount(CQueryResultData *quer
 	}
 
 	DWORD dwUserIndex = 0;
-	//char szUserID[ID_NUM_PLUS_ONE] = "";
+	//char szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	//char szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
 	//PACKET_GUARD_VOID( query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE ) );
-	//PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_PLUS_ONE ) );
+	//PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE ) );
 	PACKET_GUARD_VOID( query_data->GetValue( dwUserIndex, sizeof(LONG) ) );
 
 	User *pUser = GetUserNode(dwUserIndex);
@@ -8849,10 +8849,10 @@ void UserNodeManager::OnResultSelectHeadquartersData(CQueryResultData *query_dat
 	}
 
 	DWORD dwUserIndex = 0;
-	//char szUserID[ID_NUM_PLUS_ONE] = "";
+	//char szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	//char szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
 	//PACKET_GUARD_VOID( query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE ) );
-	//PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_PLUS_ONE ) );       
+	//PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE ) );       
 	PACKET_GUARD_VOID( query_data->GetValue( dwUserIndex, sizeof(LONG) ) );
 
 	User *pUser = GetUserNode(dwUserIndex);
@@ -8888,10 +8888,10 @@ void UserNodeManager::OnResultSelectUserBirthDate( CQueryResultData* query_data 
 		return;
 	}
 
-	char szPrivateID[ID_NUM_PLUS_ONE] = "";
+	char szPrivateID[ID_NUM_WIRE_PLUS_ONE] = "";
 	char szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
 	PACKET_GUARD_VOID( query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE ) );
-	PACKET_GUARD_VOID( query_data->GetValue( szPrivateID, ID_NUM_PLUS_ONE ) );
+	PACKET_GUARD_VOID( query_data->GetValue( szPrivateID, ID_NUM_WIRE_PLUS_ONE ) );
 
 	User *pUser = GetUserNodeByGUID( szUserGUID );
 	if( pUser == NULL ) 
@@ -8955,10 +8955,10 @@ void UserNodeManager::OnResultSelectUserSelectShutDown( CQueryResultData* query_
 		return;
 	}
 
-	char szPrivateID[ID_NUM_PLUS_ONE] = "";
+	char szPrivateID[ID_NUM_WIRE_PLUS_ONE] = "";
 	char szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
 	PACKET_GUARD_VOID( query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE ) );
-	PACKET_GUARD_VOID( query_data->GetValue( szPrivateID, ID_NUM_PLUS_ONE ) );
+	PACKET_GUARD_VOID( query_data->GetValue( szPrivateID, ID_NUM_WIRE_PLUS_ONE ) );
 
 	User *pUser = GetUserNodeByGUID( szUserGUID );
 	if( pUser == NULL ) 
@@ -9022,10 +9022,10 @@ void UserNodeManager::OnResultSelectFriendRecommendData(CQueryResultData *query_
 	}
 
 	DWORD dwUserIndex = 0;
-	//char szUserID[ID_NUM_PLUS_ONE] = "";
+	//char szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	//char szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
 	//PACKET_GUARD_VOID( query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE ) );
-	//PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_PLUS_ONE ) );       
+	//PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE ) );       
 	PACKET_GUARD_VOID( query_data->GetValue( dwUserIndex, sizeof(LONG) ) );
 
 	User *pUser = GetUserNode(dwUserIndex);
@@ -9064,9 +9064,9 @@ void UserNodeManager::OnResultSelectDisconnectCheck( CQueryResultData *query_dat
 
 	//보낸 유저의 아이디.
 	char szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	char szUserID[ID_NUM_PLUS_ONE] = "";
+	char szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE );
-	query_data->GetValue( szUserID,ID_NUM_PLUS_ONE );       
+	query_data->GetValue( szUserID,ID_NUM_WIRE_PLUS_ONE );       
 	User *pUser = GetUserNodeByGUID( szUserGUID );
 	if(pUser == NULL)
 	{
@@ -9077,12 +9077,12 @@ void UserNodeManager::OnResultSelectDisconnectCheck( CQueryResultData *query_dat
 	ioLocalParent *pLocal = g_LocalMgr.GetLocal( ioLocalManager::GetLocalType() );
 
 	//SELECT
-	char szDbID[ID_NUM_PLUS_ONE] = "";
+	char szDbID[ID_NUM_WIRE_PLUS_ONE] = "";
 	char szDbLoginKey[LOGIN_KEY_PLUS_ONE] = "";
 	__int64  iDbServerID = 0;
 	DBTIMESTAMP dts;
 
-	query_data->GetValue( szDbID,ID_NUM_PLUS_ONE );
+	query_data->GetValue( szDbID,ID_NUM_WIRE_PLUS_ONE );
 	query_data->GetValue( szDbLoginKey,LOGIN_KEY_PLUS_ONE );
 	query_data->GetValue( iDbServerID,sizeof(__int64) );
 	query_data->GetValue( (char*)&dts, sizeof(DBTIMESTAMP) );
@@ -9252,10 +9252,10 @@ void UserNodeManager::OnResultSelectAlchemicIndex(CQueryResultData *query_data)
 	DWORD  dwInvenIdx = 0;
 	DWORD dwUserIdx = 0;
 // 	char   szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-// 	char   szUserID[ID_NUM_PLUS_ONE] = "";
+// 	char   szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 // 
 // 	query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE );
-// 	query_data->GetValue( szUserID, ID_NUM_PLUS_ONE );        //보낸 유저의 아이디.
+// 	query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE );        //보낸 유저의 아이디.
 	query_data->GetValue( dwUserIdx, sizeof(int) );
 	query_data->GetValue( dwInvenIdx, sizeof(LONG) );		 //새로운 인벤토리 인덱스
 
@@ -9300,10 +9300,10 @@ void UserNodeManager::OnResultLoginSelectAllAlchemicData(CQueryResultData *query
 	// Return Data..
 	DWORD  dwUserIdx = 0;
 	//char   szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	//char   szUserID[ID_NUM_PLUS_ONE] = "";
+	//char   szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 
 	//PACKET_GUARD_VOID( query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE ) );
-	//PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_PLUS_ONE ) );       //보낸 유저의 아이디.
+	//PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE ) );       //보낸 유저의 아이디.
 	PACKET_GUARD_VOID( query_data->GetValue( dwUserIdx, sizeof(LONG) ) );		 //캐릭터 주인 인덱스
 
 	User *pUser = GetUserNode(dwUserIdx);
@@ -9524,8 +9524,8 @@ void UserNodeManager::OnResultSelectTournamentTeamAppList(CQueryResultData *quer
 		query_data->GetValue( kUserData.m_dwTableIndex, sizeof(DWORD) );
 		query_data->GetValue( kUserData.m_dwUserIndex, sizeof(DWORD) );
 
-		char szUserNick[ID_NUM_PLUS_ONE] = "";
-		query_data->GetValue( szUserNick, ID_NUM_PLUS_ONE );
+		char szUserNick[ID_NUM_WIRE_PLUS_ONE] = "";
+		query_data->GetValue( szUserNick, ID_NUM_WIRE_PLUS_ONE );
 		kUserData.m_szNick = szUserNick;
 
 		query_data->GetValue( kUserData.m_iGradeLevel, sizeof(int) );
@@ -9678,8 +9678,8 @@ void UserNodeManager::OnResultSelectTournamentTeamAppAgreeMember(CQueryResultDat
 		query_data->GetValue( kUserData.m_dwTableIndex, sizeof(DWORD) );
 		query_data->GetValue( kUserData.m_dwUserIndex, sizeof(DWORD) );
 
-		char szUserNick[ID_NUM_PLUS_ONE] = "";
-		query_data->GetValue( szUserNick, ID_NUM_PLUS_ONE );
+		char szUserNick[ID_NUM_WIRE_PLUS_ONE] = "";
+		query_data->GetValue( szUserNick, ID_NUM_WIRE_PLUS_ONE );
 		kUserData.m_szNick = szUserNick;
 
 		query_data->GetValue( kUserData.m_iGradeLevel, sizeof(int) );
@@ -9952,10 +9952,10 @@ void UserNodeManager::OnResultInsertTournamentCustomAdd(CQueryResultData *query_
 	}
 
 	DWORD dwUserIndex, dwUseEtcItem;
-	char szPublicID[ID_NUM_PLUS_ONE] = "";
+	char szPublicID[ID_NUM_WIRE_PLUS_ONE] = "";
 	query_data->GetValue( dwUserIndex, sizeof( DWORD ) );
 	query_data->GetValue( dwUseEtcItem, sizeof( DWORD ) );
-	query_data->GetValue( szPublicID, ID_NUM_PLUS_ONE );
+	query_data->GetValue( szPublicID, ID_NUM_WIRE_PLUS_ONE );
 
 	// 생성된 토너먼트 인덱스
 	DWORD dwTourIndex;
@@ -10053,14 +10053,14 @@ void UserNodeManager::OnResultSelectTournamentCustomReward(CQueryResultData *que
 	{		
 		// - 테이블인덱스, 리그명, 라운드, 최대라운드, 보상1, 보상2, 보상3, 보상4
 		DWORD dwTableIndex;
-		char  szNickName[ID_NUM_PLUS_ONE] = "";
+		char  szNickName[ID_NUM_WIRE_PLUS_ONE] = "";
 		char  szTourName[TOURNAMENT_TITLE_NUM_PLUS_ONE] = "";
 		int   iCurrentRound;
 		short MaxRound;
 		DWORD dwReward1, dwReward2, dwReward3, dwReward4;
 
 		PACKET_GUARD_BREAK( query_data->GetValue( dwTableIndex, sizeof(DWORD) ) );
-		PACKET_GUARD_BREAK( query_data->GetValue( szNickName, ID_NUM_PLUS_ONE ) );
+		PACKET_GUARD_BREAK( query_data->GetValue( szNickName, ID_NUM_WIRE_PLUS_ONE ) );
 		PACKET_GUARD_BREAK( query_data->GetValue( szTourName, TOURNAMENT_TITLE_NUM_PLUS_ONE ) );
 		PACKET_GUARD_BREAK( query_data->GetValue( iCurrentRound, sizeof(int) ) );
 		PACKET_GUARD_BREAK( query_data->GetValue( MaxRound, sizeof(short) ) );
@@ -10568,10 +10568,10 @@ void UserNodeManager::OnResultLoginSelectAllPetItemData( CQueryResultData* query
 
 	int iUserIndex = 0;
 	//char szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	//char szUserID[ID_NUM_PLUS_ONE] = "";
+	//char szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 
 	//PACKET_GUARD_VOID( query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE ) );
-	//PACKET_GUARD_VOID( query_data->GetValue(szUserID,ID_NUM_PLUS_ONE) );       //보낸 유저의 아이디.
+	//PACKET_GUARD_VOID( query_data->GetValue(szUserID,ID_NUM_WIRE_PLUS_ONE) );       //보낸 유저의 아이디.
 	PACKET_GUARD_VOID( query_data->GetValue(iUserIndex,sizeof(int)) );		 //펫 주인 인덱스
 
 	User *pUser = GetUserNode(iUserIndex);
@@ -10874,7 +10874,7 @@ void UserNodeManager::ProcessInsertPetData( User *pUser, CQueryResultData &query
 		return;
 	}
 
-	//query_data.GetValue( szUserID, ID_NUM_PLUS_ONE );        //보낸 유저의 아이디. 
+	//query_data.GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE );        //보낸 유저의 아이디. 
 	query_data.GetValue( dwPacketID, sizeof( DWORD ) );
 
 	//결과 응답패킷 파싱
@@ -11059,9 +11059,9 @@ void UserNodeManager::OnResultLoginSelectCostumeData(CQueryResultData* query_dat
 	// Return Data..
 	DWORD  dwUserIdx = 0;
 	//char   szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	//char   szUserID[ID_NUM_PLUS_ONE] = "";
+	//char   szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	//PACKET_GUARD_VOID( query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE ) );
-	//PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_PLUS_ONE ) );       //보낸 유저의 아이디.
+	//PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE ) );       //보낸 유저의 아이디.
 	PACKET_GUARD_VOID( query_data->GetValue( dwUserIdx, sizeof(int) ) );		 //주인 인덱스
 
 	int iDBSelectCount = query_data->GetResultCount();
@@ -11234,9 +11234,9 @@ void UserNodeManager::OnResultLoginSelectAccessoryData(CQueryResultData* query_d
 	// Return Data..
 	DWORD  dwUserIdx = 0;
 	//char   szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	//char   szUserID[ID_NUM_PLUS_ONE] = "";
+	//char   szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	//PACKET_GUARD_VOID( query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE ) );
-	//PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_PLUS_ONE ) );       //보낸 유저의 아이디.
+	//PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE ) );       //보낸 유저의 아이디.
 	PACKET_GUARD_VOID( query_data->GetValue( dwUserIdx, sizeof(int) ) );		 //주인 인덱스
 
 	int iDBSelectCount = query_data->GetResultCount();
@@ -11400,9 +11400,9 @@ void UserNodeManager::OnResultGetMissionData(CQueryResultData *query_data)
 	// Return Data..
 	DWORD  dwUserIdx = 0;
 	//char   szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	//char   szUserID[ID_NUM_PLUS_ONE] = "";
+	//char   szUserID[ID_NUM_WIRE_PLUS_ONE] = "";
 	//PACKET_GUARD_VOID( query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE ) );
-	//PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_PLUS_ONE ) );       //보낸 유저의 아이디.
+	//PACKET_GUARD_VOID( query_data->GetValue( szUserID, ID_NUM_WIRE_PLUS_ONE ) );       //보낸 유저의 아이디.
 	PACKET_GUARD_VOID( query_data->GetValue( dwUserIdx, sizeof(int) ) );		 //주인 인덱스
 
 	//User *pUser = GetUserNodeByGUID( szUserGUID );
@@ -11684,12 +11684,12 @@ void UserNodeManager::OnResultSelectUserChannelingKeyValue(CQueryResultData *que
 
 
 	char szUserGUID[USER_GUID_NUM_PLUS_ONE]="";
-	char szPrivateID[ID_NUM_PLUS_ONE] = "";
+	char szPrivateID[ID_NUM_WIRE_PLUS_ONE] = "";
 	char szUserChannelingKey[CHANNELING_KEY_VALUE_PLUS_ONE] = "";
 	int iChannelingType = 0;
 
 	PACKET_GUARD_VOID( query_data->GetValue( szUserGUID, USER_GUID_NUM_PLUS_ONE ) );
-	PACKET_GUARD_VOID( query_data->GetValue( szPrivateID,ID_NUM_PLUS_ONE) );
+	PACKET_GUARD_VOID( query_data->GetValue( szPrivateID,ID_NUM_WIRE_PLUS_ONE) );
 	PACKET_GUARD_VOID( query_data->GetValue( iChannelingType, sizeof(int) ) );
 	PACKET_GUARD_VOID( query_data->GetValue( szUserChannelingKey,CHANNELING_KEY_VALUE_PLUS_ONE) );
 
@@ -11937,13 +11937,13 @@ void UserNodeManager::OnResultGuildBlockRetrieveORDelete(CQueryResultData *query
 	DWORD dwRoomIndex		= 0;
 	__int64	i64ItemIndex	= 0;
 	BYTE byState			= 0;
-	char szPublicID[ID_NUM_PLUS_ONE] = "";
+	char szPublicID[ID_NUM_WIRE_PLUS_ONE] = "";
 
 	PACKET_GUARD_VOID( query_data->GetValue( dwGuildIndex, sizeof(DWORD) ) );
 	PACKET_GUARD_VOID( query_data->GetValue( dwRoomIndex, sizeof(DWORD) ) );
 	PACKET_GUARD_VOID( query_data->GetValue( i64ItemIndex, sizeof(__int64) ) );
 	PACKET_GUARD_VOID( query_data->GetValue( byState, sizeof(BYTE) ) );
-	PACKET_GUARD_VOID( query_data->GetValue( szPublicID, ID_NUM_PLUS_ONE ) );
+	PACKET_GUARD_VOID( query_data->GetValue( szPublicID, ID_NUM_WIRE_PLUS_ONE ) );
 
 	GuildRoomInfos* pInfo = g_GuildRoomBlockMgr.GetGuildRoomInfos(dwGuildIndex);
 	if( !pInfo )
@@ -11997,7 +11997,7 @@ void UserNodeManager::OnResultGuildBlockConstructORMove(CQueryResultData *query_
 	int iXZIndex			= 0;
 	int iY					= 0;
 	BYTE byDirection		= 0;
-	char szPublicID[ID_NUM_PLUS_ONE] = "";
+	char szPublicID[ID_NUM_WIRE_PLUS_ONE] = "";
 
 	PACKET_GUARD_VOID( query_data->GetValue( dwGuildIndex, sizeof(DWORD) ) );
 	PACKET_GUARD_VOID( query_data->GetValue( dwRoomIndex, sizeof(DWORD) ) );
@@ -12007,7 +12007,7 @@ void UserNodeManager::OnResultGuildBlockConstructORMove(CQueryResultData *query_
 	PACKET_GUARD_VOID( query_data->GetValue( iXZIndex, sizeof(int) ) );
 	PACKET_GUARD_VOID( query_data->GetValue( iY, sizeof(int) ) );
 	PACKET_GUARD_VOID( query_data->GetValue( byDirection, sizeof(BYTE) ) );
-	PACKET_GUARD_VOID( query_data->GetValue( szPublicID, ID_NUM_PLUS_ONE ) );
+	PACKET_GUARD_VOID( query_data->GetValue( szPublicID, ID_NUM_WIRE_PLUS_ONE ) );
 
 	GuildRoomInfos* pInfo = g_GuildRoomBlockMgr.GetGuildRoomInfos(dwGuildIndex);
 	if( !pInfo )
@@ -12346,7 +12346,7 @@ void UserNodeManager::OnResultPersonalHQConstruct(CQueryResultData *query_data)
 	int iXZIndex			= 0;
 	int iY					= 0;
 	BYTE byDirection		= 0;
-	char szPublicID[ID_NUM_PLUS_ONE] = "";
+	char szPublicID[ID_NUM_WIRE_PLUS_ONE] = "";
 
 	PACKET_GUARD_VOID( query_data->GetValue( dwUserIndex, sizeof(DWORD) ) );
 	PACKET_GUARD_VOID( query_data->GetValue( dwRoomIndex, sizeof(DWORD) ) );
@@ -12354,7 +12354,7 @@ void UserNodeManager::OnResultPersonalHQConstruct(CQueryResultData *query_data)
 	PACKET_GUARD_VOID( query_data->GetValue( iXZIndex, sizeof(int) ) );
 	PACKET_GUARD_VOID( query_data->GetValue( iY, sizeof(int) ) );
 	PACKET_GUARD_VOID( query_data->GetValue( byDirection, sizeof(BYTE) ) );
-	PACKET_GUARD_VOID( query_data->GetValue( szPublicID, ID_NUM_PLUS_ONE ) );
+	PACKET_GUARD_VOID( query_data->GetValue( szPublicID, ID_NUM_WIRE_PLUS_ONE ) );
 
 	PersonalHomeInfo* pInfo = g_PersonalRoomBlockMgr.GetPersonalRoomInfo(dwUserIndex);
 	if( !pInfo )
@@ -12423,14 +12423,14 @@ void UserNodeManager::OnResultPersonalHQRetrieve(CQueryResultData *query_data)
 	__int64	i64ItemIndex	= 0;
 	DWORD dwItemCode		= 0;
 	BYTE byState			= 0;
-	char szPublicID[ID_NUM_PLUS_ONE] = "";
+	char szPublicID[ID_NUM_WIRE_PLUS_ONE] = "";
 
 	PACKET_GUARD_VOID( query_data->GetValue( dwUserIndex, sizeof(DWORD) ) );
 	PACKET_GUARD_VOID( query_data->GetValue( dwRoomIndex, sizeof(DWORD) ) );
 	PACKET_GUARD_VOID( query_data->GetValue( i64ItemIndex, sizeof(__int64) ) );
 	PACKET_GUARD_VOID( query_data->GetValue( dwItemCode, sizeof(DWORD) ) );
 	PACKET_GUARD_VOID( query_data->GetValue( byState, sizeof(BYTE) ) );
-	PACKET_GUARD_VOID( query_data->GetValue( szPublicID, ID_NUM_PLUS_ONE ) );
+	PACKET_GUARD_VOID( query_data->GetValue( szPublicID, ID_NUM_WIRE_PLUS_ONE ) );
 
 	PersonalHomeInfo* pInfo = g_PersonalRoomBlockMgr.GetPersonalRoomInfo(dwUserIndex);
 	if( !pInfo )

@@ -167,10 +167,13 @@ void IDChangeWnd::OnRender()
 	g_FontMgr.SetAlignType( TAT_RIGHT );
 	g_FontMgr.SetBkColor( 0, 0, 0 );
 	g_FontMgr.SetTextColor( TCT_DEFAULT_DARKGRAY );
-	g_FontMgr.PrintText( iXPos+RIGHT_X, iYPos+RIGHT_Y, FONT_SIZE_13, STR(7), m_szNewName.c_str() );
+	wchar_t wszNewID[MAX_PATH];
+	Help::FormatWide( wszNewID, MAX_PATH, STR(7), m_szNewName.c_str() );
+	g_FontMgr.PrintTextWide( iXPos+RIGHT_X, iYPos+RIGHT_Y, FONT_SIZE_13, wszNewID );
 
 	g_FontMgr.SetTextColor( TCT_DEFAULT_LIGHTGRAY );
-	g_FontMgr.PrintText( iXPos+RIGHT_X, iYPos+RIGHT_Y+21, FONT_SIZE_13, STR(8), g_MyInfo.GetPublicID().c_str() );
+	Help::FormatWide( wszNewID, MAX_PATH, STR(8), g_MyInfo.GetPublicID().c_str() );
+	g_FontMgr.PrintTextWide( iXPos+RIGHT_X, iYPos+RIGHT_Y+21, FONT_SIZE_13, wszNewID );
 }
 
 void IDChangeWnd::SetExit()

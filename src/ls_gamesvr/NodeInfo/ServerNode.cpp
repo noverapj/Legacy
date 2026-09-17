@@ -6976,7 +6976,7 @@ void ServerNode::OnRelayControl( SP2Packet & kPacket )
 
 void ServerNode::RequestRelayServerConnect( SP2Packet & kPacket )
 {
-	char publicID[ID_NUM_PLUS_ONE];
+	char publicID[ID_NUM_WIRE_PLUS_ONE];
 	kPacket >> publicID;
 //	LOG.PrintTimeAndLog(0,"Relay::%s:%d[%s]\n",m_szPublicIP,m_iServerPort,publicID);
 //	Information("Relay::%s:%d[%s]\n",m_szPublicIP,m_iServerPort,publicID);
@@ -7036,7 +7036,7 @@ void ServerNode::RequestRelayServerConnect(const char* publicID)
 }
 void ServerNode::OnChangeAddress( SP2Packet & kPacket )
 {
-	char szPublicID[ID_NUM_PLUS_ONE];
+	char szPublicID[ID_NUM_WIRE_PLUS_ONE];
 	char szIpaddr[STR_IP_MAX];	
 	int  iPort;
 	DWORD dwUserIndex;

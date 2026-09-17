@@ -2434,14 +2434,15 @@ void ioBaseGUISupport::NormalRenderGauge( int iOwnerIconOffsetX, int iOwnerIconO
 					{
 						g_FontMgr.SetAlignType( TAT_LEFT );
 
-						DWORD dwGuildIndex, dwGuildMark;
-						g_UserInfoMgr.GetGuildInfo( g_MyInfo.GetPublicID(), dwGuildIndex, dwGuildMark );
-						int iNameWidth = g_FontMgr.GetTextWidth( g_MyInfo.GetPublicID().c_str(), TS_BOLD_OUTLINE_FULL, FONT_SIZE_12 );
-						int iHalfWidth = ( iNameWidth + 20 + g_GuildMarkMgr.GetGuildSmallMarkSize( dwGuildIndex, dwGuildMark ) + 1 ) / 2;	// 20 은 계급사이즈
+					DWORD dwGuildIndex, dwGuildMark;
+					g_UserInfoMgr.GetGuildInfo( g_MyInfo.GetPublicID(), dwGuildIndex, dwGuildMark );
+					std::wstring wszMyName = Help::NameToWide( g_MyInfo.GetPublicID().c_str() );
+					int iNameWidth = g_FontMgr.GetTextWidthWide( wszMyName.c_str(), TS_BOLD_OUTLINE_FULL, FONT_SIZE_12 );
+					int iHalfWidth = ( iNameWidth + 20 + g_GuildMarkMgr.GetGuildSmallMarkSize( dwGuildIndex, dwGuildMark ) + 1 ) / 2;	// 20 은 계급사이즈
 
-						if(!bPractice)
-							g_LevelMgr.RenderGrade( g_MyInfo.GetPublicID(), iXPos - iHalfWidth, iYPos + UPPER_Y_OFFSET, m_pOwner->GetLevel(), TEAM_BLUE );
-						g_FontMgr.PrintText( iXPos - iHalfWidth + 20 - 2, iYPos + UPPER_Y_OFFSET, FONT_SIZE_12, g_MyInfo.GetPublicID().c_str() );
+					if(!bPractice)
+						g_LevelMgr.RenderGrade( g_MyInfo.GetPublicID(), iXPos - iHalfWidth, iYPos + UPPER_Y_OFFSET, m_pOwner->GetLevel(), TEAM_BLUE );
+					g_FontMgr.PrintTextWide( iXPos - iHalfWidth + 20 - 2, iYPos + UPPER_Y_OFFSET, FONT_SIZE_12, wszMyName.c_str() );
 
 						g_GuildMarkMgr.RenderSmallMark( dwGuildIndex, dwGuildMark, ( iXPos - iHalfWidth ) + 20 + iNameWidth + 2, iYPos + GUILD_Y_OFFSET );
 
@@ -2465,16 +2466,15 @@ void ioBaseGUISupport::NormalRenderGauge( int iOwnerIconOffsetX, int iOwnerIconO
 				}
 				else
 				{
-					g_FontMgr.SetAlignType( TAT_LEFT );
-					const int& iOwnerLevel = m_pOwner->GetLevel();
-					const ioHashString& szOwnerName = m_pOwner->GetCharName().c_str();
-					char szCharName[MAX_PATH] = "";
-					sprintf( szCharName, "%s", szOwnerName.c_str() );
-					DWORD dwGuildIndex, dwGuildMark;
-					g_UserInfoMgr.GetGuildInfo( szOwnerName, dwGuildIndex, dwGuildMark );
-					int iGuildSmallMarkSize = g_GuildMarkMgr.GetGuildSmallMarkSize( dwGuildIndex, dwGuildMark );
-					int iNameWidth = g_FontMgr.GetTextWidth( szCharName, TS_BOLD_OUTLINE_FULL, FONT_SIZE_12 );
-					int iHalfWidth = ( iNameWidth + 20 + iGuildSmallMarkSize + 1 ) / 2;	// 20 은 계급사이즈
+				g_FontMgr.SetAlignType( TAT_LEFT );
+				const int& iOwnerLevel = m_pOwner->GetLevel();
+				const ioHashString& szOwnerName = m_pOwner->GetCharName().c_str();
+				std::wstring wszOwnerName = Help::NameToWide( szOwnerName.c_str() );
+				DWORD dwGuildIndex, dwGuildMark;
+				g_UserInfoMgr.GetGuildInfo( szOwnerName, dwGuildIndex, dwGuildMark );
+				int iGuildSmallMarkSize = g_GuildMarkMgr.GetGuildSmallMarkSize( dwGuildIndex, dwGuildMark );
+				int iNameWidth = g_FontMgr.GetTextWidthWide( wszOwnerName.c_str(), TS_BOLD_OUTLINE_FULL, FONT_SIZE_12 );
+				int iHalfWidth = ( iNameWidth + 20 + iGuildSmallMarkSize + 1 ) / 2;	// 20 은 계급사이즈
 
 					if(!bPractice)
 					{
@@ -2494,13 +2494,13 @@ void ioBaseGUISupport::NormalRenderGauge( int iOwnerIconOffsetX, int iOwnerIconO
 							break;
 						}
 					}
-					if(!bPractice)
-					{
-						g_FontMgr.PrintText( iXPos - iHalfWidth + 20 - 2, iYPos + UPPER_Y_OFFSET, FONT_SIZE_12, szCharName );
-						g_GuildMarkMgr.RenderSmallMark( dwGuildIndex, dwGuildMark, ( iXPos - iHalfWidth ) + 20 + iNameWidth + 2, iYPos + GUILD_Y_OFFSET );
-					}
-					else
-						g_FontMgr.PrintText( iXPos - iHalfWidth + 20 - 10, iYPos + UPPER_Y_OFFSET, FONT_SIZE_12, szCharName );
+				if(!bPractice)
+				{
+					g_FontMgr.PrintTextWide( iXPos - iHalfWidth + 20 - 2, iYPos + UPPER_Y_OFFSET, FONT_SIZE_12, wszOwnerName.c_str() );
+					g_GuildMarkMgr.RenderSmallMark( dwGuildIndex, dwGuildMark, ( iXPos - iHalfWidth ) + 20 + iNameWidth + 2, iYPos + GUILD_Y_OFFSET );
+				}
+				else
+					g_FontMgr.PrintTextWide( iXPos - iHalfWidth + 20 - 10, iYPos + UPPER_Y_OFFSET, FONT_SIZE_12, wszOwnerName.c_str() );
 
 					if(!bPractice)
 					{
@@ -2674,13 +2674,14 @@ void ioBaseGUISupport::ObserverRenderGauge( int iOwnerIconOffsetX, int iOwnerIco
 					{
 						g_FontMgr.SetAlignType( TAT_LEFT );
 
-						DWORD dwGuildIndex, dwGuildMark;
-						g_UserInfoMgr.GetGuildInfo( g_MyInfo.GetPublicID(), dwGuildIndex, dwGuildMark );
-						int iNameWidth = g_FontMgr.GetTextWidth( g_MyInfo.GetPublicID().c_str(), TS_BOLD_OUTLINE_FULL, FONT_SIZE_14 );
-						int iHalfWidth = ( iNameWidth + 20 + g_GuildMarkMgr.GetGuildSmallMarkSize( dwGuildIndex, dwGuildMark ) + 1 ) / 2;	// 20 은 계급사이즈
-						if(!bPractice)
-						g_LevelMgr.RenderGrade( g_MyInfo.GetPublicID(), iXPos - iHalfWidth, iYPos + UPPER_Y_OFFSET, m_pOwner->GetLevel(), TEAM_BLUE );
-						g_FontMgr.PrintText( iXPos - iHalfWidth + 20 - 2, iYPos + NAME_Y_OFFSET, FONT_SIZE_14, g_MyInfo.GetPublicID().c_str() );
+					DWORD dwGuildIndex, dwGuildMark;
+					g_UserInfoMgr.GetGuildInfo( g_MyInfo.GetPublicID(), dwGuildIndex, dwGuildMark );
+					std::wstring wszMyName = Help::NameToWide( g_MyInfo.GetPublicID().c_str() );
+					int iNameWidth = g_FontMgr.GetTextWidthWide( wszMyName.c_str(), TS_BOLD_OUTLINE_FULL, FONT_SIZE_14 );
+					int iHalfWidth = ( iNameWidth + 20 + g_GuildMarkMgr.GetGuildSmallMarkSize( dwGuildIndex, dwGuildMark ) + 1 ) / 2;	// 20 은 계급사이즈
+					if(!bPractice)
+					g_LevelMgr.RenderGrade( g_MyInfo.GetPublicID(), iXPos - iHalfWidth, iYPos + UPPER_Y_OFFSET, m_pOwner->GetLevel(), TEAM_BLUE );
+					g_FontMgr.PrintTextWide( iXPos - iHalfWidth + 20 - 2, iYPos + NAME_Y_OFFSET, FONT_SIZE_14, wszMyName.c_str() );
 
 						g_GuildMarkMgr.RenderSmallMark( dwGuildIndex, dwGuildMark, ( iXPos - iHalfWidth ) + 20 + iNameWidth + 2, iYPos + GUILD_Y_OFFSET );
 
@@ -2704,15 +2705,14 @@ void ioBaseGUISupport::ObserverRenderGauge( int iOwnerIconOffsetX, int iOwnerIco
 				}
 				else
 				{
-					g_FontMgr.SetAlignType( TAT_LEFT );
+				g_FontMgr.SetAlignType( TAT_LEFT );
 
-					char szCharName[MAX_PATH] = "";
-					const ioHashString& szOwnerName = m_pOwner->GetCharName().c_str();
-					sprintf( szCharName, "%s", szOwnerName.c_str() );
-					DWORD dwGuildIndex, dwGuildMark;
-					g_UserInfoMgr.GetGuildInfo( szOwnerName, dwGuildIndex, dwGuildMark );
-					int iNameWidth = g_FontMgr.GetTextWidth( szCharName, TS_BOLD_OUTLINE_FULL, FONT_SIZE_12 );
-					int iHalfWidth = ( iNameWidth + 20+ g_GuildMarkMgr.GetGuildSmallMarkSize( dwGuildIndex, dwGuildMark ) + 1 ) / 2;	// 20 은 계급사이즈
+				const ioHashString& szOwnerName = m_pOwner->GetCharName().c_str();
+				std::wstring wszOwnerName = Help::NameToWide( szOwnerName.c_str() );
+				DWORD dwGuildIndex, dwGuildMark;
+				g_UserInfoMgr.GetGuildInfo( szOwnerName, dwGuildIndex, dwGuildMark );
+				int iNameWidth = g_FontMgr.GetTextWidthWide( wszOwnerName.c_str(), TS_BOLD_OUTLINE_FULL, FONT_SIZE_12 );
+				int iHalfWidth = ( iNameWidth + 20+ g_GuildMarkMgr.GetGuildSmallMarkSize( dwGuildIndex, dwGuildMark ) + 1 ) / 2;	// 20 은 계급사이즈
 
 					if(!bPractice)
 					{
@@ -2732,13 +2732,13 @@ void ioBaseGUISupport::ObserverRenderGauge( int iOwnerIconOffsetX, int iOwnerIco
 							break;
 						}
 					}
-					if(!bPractice)
-					{
-						g_FontMgr.PrintText( iXPos - iHalfWidth + 20 - 2, iYPos + NAME_Y_OFFSET, FONT_SIZE_12, szCharName );
-						g_GuildMarkMgr.RenderSmallMark( dwGuildIndex, dwGuildMark, ( iXPos - iHalfWidth ) + 20 + iNameWidth + 2, iYPos + GUILD_Y_OFFSET );
-					}
-					else
-						g_FontMgr.PrintText( iXPos - iHalfWidth + 20 - 10, iYPos + NAME_Y_OFFSET, FONT_SIZE_12, szCharName );
+				if(!bPractice)
+				{
+					g_FontMgr.PrintTextWide( iXPos - iHalfWidth + 20 - 2, iYPos + NAME_Y_OFFSET, FONT_SIZE_12, wszOwnerName.c_str() );
+					g_GuildMarkMgr.RenderSmallMark( dwGuildIndex, dwGuildMark, ( iXPos - iHalfWidth ) + 20 + iNameWidth + 2, iYPos + GUILD_Y_OFFSET );
+				}
+				else
+					g_FontMgr.PrintTextWide( iXPos - iHalfWidth + 20 - 10, iYPos + NAME_Y_OFFSET, FONT_SIZE_12, wszOwnerName.c_str() );
 
 					if(!bPractice)
 					{

@@ -147,7 +147,7 @@ void MgrToolNodeManager::ApplyUserBlockDB( CQueryResultData *pQueryData )
 	LONG lSuccess;
 	
 	if( !pQueryData->GetValue( (DWORD)dwMgrToolIndex ) ) return;
-	if( !pQueryData->GetValue( szPublicID, ID_NUM_PLUS_ONE ) ) return ;
+	if( !pQueryData->GetValue( szPublicID, ID_NUM_WIRE_PLUS_ONE ) ) return ;
 	if( !pQueryData->GetValue( lSuccess ) ) return ;
 
 	if( 1 == lSuccess)
@@ -180,7 +180,7 @@ void MgrToolNodeManager::ApplyChangeUserBlockDB( CQueryResultData *pQueryData )
 	
 	if( !pQueryData->GetValue( (int)ClientNumber ) ) return;
 	if( !pQueryData->GetValue( (DWORD)dwMgrToolIndex ) ) return;
-	if( !pQueryData->GetValue( szPublicID, ID_NUM_PLUS_ONE ) ) return ;
+	if( !pQueryData->GetValue( szPublicID, ID_NUM_WIRE_PLUS_ONE ) ) return ;
 	if( !pQueryData->GetValue( lSuccess ) ) return ;
 
 	if( 1 == lSuccess)

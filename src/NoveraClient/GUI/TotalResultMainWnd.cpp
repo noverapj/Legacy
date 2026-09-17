@@ -330,7 +330,8 @@ void AwardSlotNameBtn::OnRender()
 		}
 		break;
 	}
-	g_FontMgr.PrintTextWidthCut( ( iXPos + iStartX ) + 15, iYPos + 3, FONT_SIZE_12, FLOAT100, m_szName.c_str() );
+	std::wstring wszName = Help::NameToWide( m_szName.c_str() );
+	g_FontMgr.PrintTextWidthCutWide( ( iXPos + iStartX ) + 15, iYPos + 3, FONT_SIZE_12, FLOAT100, wszName.c_str() );
 }
 ////////////////////////////////////////////////////////////////////////////
 int AwardSlotWnd::sg_iMyAwardCount = 0;
@@ -4506,8 +4507,9 @@ void ResultScoreUserWnd::OnRenderUser( int iXPos, int iYPos, ModeType eType )
 			g_FontMgr.SetTextColor( TCT_DEFAULT_BLUE );
 		else
 			g_FontMgr.SetTextColor( TCT_DEFAULT_RED );
-		g_FontMgr.PrintTextWidthCut( iXPos + 23, iYPos + 4, FONT_SIZE_12, 76.0f, kInfo.m_szName.c_str() );
-		int iIDWidth = g_FontMgr.GetTextWidthCutSize( kInfo.m_szName.c_str(), TS_NORMAL, FONT_SIZE_12, 76.0f );
+		std::wstring wszName = Help::NameToWide( kInfo.m_szName.c_str() );
+		g_FontMgr.PrintTextWidthCutWide( iXPos + 23, iYPos + 4, FONT_SIZE_12, 76.0f, wszName.c_str() );
+		int iIDWidth = g_FontMgr.GetTextWidthCutSizeWide( wszName.c_str(), TS_NORMAL, FONT_SIZE_12, 76.0f );
 
 		// 길드마크
 		int iGuildMarkWidth = 0;
@@ -5176,7 +5178,8 @@ void ResultRaidScoreUserBtn::OnRender()
 		g_FontMgr.SetAlignType( TAT_LEFT );
 		g_FontMgr.SetBkColor( 24, 66, 120 );
 		g_FontMgr.SetTextColor( TCT_DEFAULT_WHITE );
-		g_FontMgr.PrintTextWidthCut( iXPos + 23, iYPos + 147, FONT_SIZE_12, 75.0f, m_FinalUser.m_szName.c_str() );
+		std::wstring wszFinalName = Help::NameToWide( m_FinalUser.m_szName.c_str() );
+		g_FontMgr.PrintTextWidthCutWide( iXPos + 23, iYPos + 147, FONT_SIZE_12, 75.0f, wszFinalName.c_str() );
 		
 		OnRenderRank( iXPos, iYPos );
 

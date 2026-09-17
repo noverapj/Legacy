@@ -512,11 +512,13 @@ void KickVoteProgressWnd::OnRender()
 		kPrinter.SetTextColor( dwTeamColor );
 		kPrinter.AddTextPiece( FONT_SIZE_13, STR(4) );
 	}
-	char szCutName[MAX_PATH] = "";
-	memset( szCutName, 0, sizeof( szCutName ) );
-	Help::StringCutFun( FONT_SIZE_13, 130.0f, TS_NORMAL, szCutName, sizeof( szCutName ), m_szKickUserName.c_str() );
+	wchar_t wszCutName[MAX_PATH];
+	memset( wszCutName, 0, sizeof( wszCutName ) );
+	Help::WideStringCut( FONT_SIZE_13, 130.0f, TS_NORMAL, wszCutName, MAX_PATH, m_szKickUserName.c_str() );
 	kPrinter.SetTextColor( dwTeamColor );
-	kPrinter.AddTextPiece( FONT_SIZE_13, STR(5), szCutName );
+	wchar_t wszKickMent[MAX_PATH];
+	Help::FormatWideFromWide( wszKickMent, MAX_PATH, STR(5), wszCutName );
+	kPrinter.AddTextPieceWide( FONT_SIZE_13, wszKickMent );
 
 	kPrinter.SetTextColor( TCT_DEFAULT_GRAY );
 	kPrinter.AddTextPiece( FONT_SIZE_13, "- " );
@@ -535,9 +537,12 @@ void KickVoteProgressWnd::OnRender()
 	else if( m_eProposalTeam == TEAM_RED )
 		kPrinter.AddTextPiece( FONT_SIZE_13, STR(7) );
 
-	memset( szCutName, 0, sizeof( szCutName ) );
-	Help::StringCutFun( FONT_SIZE_13, 230.0f, TS_NORMAL, szCutName, sizeof( szCutName ), m_szProposalName.c_str() );
-	kPrinter.AddTextPiece( FONT_SIZE_13, STR(8), szCutName );
+	wchar_t wszCutProposal[MAX_PATH];
+	memset( wszCutProposal, 0, sizeof( wszCutProposal ) );
+	Help::WideStringCut( FONT_SIZE_13, 230.0f, TS_NORMAL, wszCutProposal, MAX_PATH, m_szProposalName.c_str() );
+	wchar_t wszProposalMent[MAX_PATH];
+	Help::FormatWideFromWide( wszProposalMent, MAX_PATH, STR(8), wszCutProposal );
+	kPrinter.AddTextPieceWide( FONT_SIZE_13, wszProposalMent );
 	kPrinter.PrintFullText( iXPos + 62, iYPos + 61, TAT_LEFT );
 	kPrinter.ClearList();
 }

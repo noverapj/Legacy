@@ -23,6 +23,8 @@ ioUITitle::ioUITitle()
 	m_TextVertAlign = TVA_TOP;
 	m_PrintTextStyle = PTS_NORMAL;
 
+	m_bWideText = false;
+
 	m_bVisible = true;
 }
 
@@ -117,6 +119,8 @@ void ioUITitle::SetFontGap( int iGap )
 void ioUITitle::SetText( const char *szText, const char *szDelims )
 {
 	m_vTextList.clear();
+	m_vWideTextList.clear();
+	m_bWideText = false;
 
 	if( strcmp( szDelims, "" ) )
 	{
@@ -132,6 +136,18 @@ void ioUITitle::SetText( const char *szText, const char *szDelims )
 	{
 		m_vTextList.push_back( ioHashString(szText) );
 	}
+}
+
+void ioUITitle::SetTextWide( const wchar_t *szText )
+{
+	m_vTextList.clear();
+	m_vWideTextList.clear();
+	m_bWideText = true;
+
+	if( !szText || szText[0] == L'\0' )
+		return;
+
+	m_vWideTextList.push_back( std::wstring( szText ) );
 }
 
 void ioUITitle::PrintNormal( int iXPos, int iYPos )
@@ -164,7 +180,11 @@ void ioUITitle::Print( int iXPos, int iYPos, DWORD dwTextColor, DWORD dwBkColor,
 	if( !m_bVisible )
 		return;
 
-	if( m_vTextList.empty() )	return;
+	if( m_bWideText )
+	{
+		if( m_vWideTextList.empty() )	return;
+	}
+	else if( m_vTextList.empty() )	return;
 
 	iXPos += m_iXOffset;
 	iYPos += m_iYOffset;
@@ -179,7 +199,7 @@ void ioUITitle::Print( int iXPos, int iYPos, DWORD dwTextColor, DWORD dwBkColor,
 	g_FontMgr.SetFontGap( m_iFontGap );
 
 	int iStartY = iYPos;
-	int iTextCount = m_vTextList.size();
+	int iTextCount = m_bWideText ? (int)m_vWideTextList.size() : (int)m_vTextList.size();
 
 	switch( m_TextVertAlign )
 	{
@@ -195,24 +215,37 @@ void ioUITitle::Print( int iXPos, int iYPos, DWORD dwTextColor, DWORD dwBkColor,
 
 	float fScale = (float)m_iSize / (float)g_FontMgr.GetFontSize();
 
-	for( int i=0 ; i<iTextCount ; i++ )
+	if( m_bWideText )
 	{
-		if( m_vTextList[i].IsEmpty() )
-			continue;
+		for( int i=0 ; i<iTextCount ; i++ )
+		{
+			if( m_vWideTextList[i].empty() )
+				continue;
 
-		if( m_PrintTextStyle == PTS_NORMAL )
-		{
-			if( m_iAlphaRate == MAX_ALPHA_RATE )
-				g_FontMgr.PrintText( iXPos, iStartY + m_iVertGap * i, fScale, m_vTextList[i].c_str() );
-			else
-				g_FontMgr.PrintTextAlpha( iXPos, iStartY + m_iVertGap * i, fScale, m_iAlphaRate, m_vTextList[i].c_str() );
+			g_FontMgr.PrintTextWide( iXPos, iStartY + m_iVertGap * i, fScale, m_vWideTextList[i].c_str() );
 		}
-		else if( m_PrintTextStyle == PTS_WIDTHCUT )
+	}
+	else
+	{
+		for( int i=0 ; i<iTextCount ; i++ )
 		{
-			if( m_iAlphaRate == MAX_ALPHA_RATE )
-				g_FontMgr.PrintTextWidthCut( iXPos, iStartY + m_iVertGap * i, fScale, m_fWidthCutSize, m_vTextList[i].c_str() );
-			else
-				g_FontMgr.PrintTextWidthCutAlpha( iXPos, iStartY + m_iVertGap * i, fScale, m_fWidthCutSize, m_iAlphaRate, m_vTextList[i].c_str() );
+			if( m_vTextList[i].IsEmpty() )
+				continue;
+
+			if( m_PrintTextStyle == PTS_NORMAL )
+			{
+				if( m_iAlphaRate == MAX_ALPHA_RATE )
+					g_FontMgr.PrintText( iXPos, iStartY + m_iVertGap * i, fScale, m_vTextList[i].c_str() );
+				else
+					g_FontMgr.PrintTextAlpha( iXPos, iStartY + m_iVertGap * i, fScale, m_iAlphaRate, m_vTextList[i].c_str() );
+			}
+			else if( m_PrintTextStyle == PTS_WIDTHCUT )
+			{
+				if( m_iAlphaRate == MAX_ALPHA_RATE )
+					g_FontMgr.PrintTextWidthCut( iXPos, iStartY + m_iVertGap * i, fScale, m_fWidthCutSize, m_vTextList[i].c_str() );
+				else
+					g_FontMgr.PrintTextWidthCutAlpha( iXPos, iStartY + m_iVertGap * i, fScale, m_fWidthCutSize, m_iAlphaRate, m_vTextList[i].c_str() );
+			}
 		}
 	}
 

@@ -117,6 +117,25 @@ void ioComplexStringPrinter::SetTextPiece( float fScale, float fYOffset )
 	m_fFullWidth += kPiece.fWidth;
 }
 
+void ioComplexStringPrinter::AddTextPieceWide( float fScale, const wchar_t *szSource )
+{
+	if( !szSource || szSource[0] == L'\0' )
+		return;
+
+	TextPiece kPiece;
+	kPiece.dwTextColor = m_dwTextColor;
+	kPiece.dwBkColor   = m_dwBkColor;
+	kPiece.eStyle      = m_TextStyle;
+	kPiece.fScale      = fScale;
+	kPiece.fYOffset    = 0.0f;
+	kPiece.fWidth      = g_FontMgr.GetTextWidthWide( szSource, m_TextStyle, fScale );
+	kPiece.szWideText  = szSource;
+	kPiece.bWide       = true;
+	m_vPieceList.push_back( kPiece );
+
+	m_fFullWidth += kPiece.fWidth;
+}
+
 void ioComplexStringPrinter::SetTextPieceWithoutXOffset( float fScale, float fYOffset )
 {
 	if( strcmp( m_szBuffer, "" ) == 0 )
@@ -494,7 +513,11 @@ void ioComplexStringPrinter::PrintFullText( float fXPos,
 		g_FontMgr.SetBkColor( rkPiece.dwBkColor );
 		g_FontMgr.SetTextStyle( rkPiece.eStyle );
 
-		if( bAlpha == 255 )
+		if( rkPiece.bWide )
+		{
+			g_FontMgr.PrintTextWide( fStartX, fYPos + rkPiece.fYOffset, rkPiece.fScale, rkPiece.szWideText.c_str() );
+		}
+		else if( bAlpha == 255 )
 		{
 			g_FontMgr.PrintText( fStartX, fYPos + rkPiece.fYOffset, rkPiece.fScale, rkPiece.szText.c_str() );
 		}
@@ -536,7 +559,11 @@ void ioComplexStringPrinter::PrintFullModifyText( float fXPos,
 		g_FontMgr.SetBkColor( rkPiece.dwBkColor );
 		g_FontMgr.SetTextStyle( eStyle );
 
-		if( bAlpha == 255 )
+		if( rkPiece.bWide )
+		{
+			g_FontMgr.PrintTextWide( fStartX, fYPos + rkPiece.fYOffset, rkPiece.fScale, rkPiece.szWideText.c_str() );
+		}
+		else if( bAlpha == 255 )
 		{
 			g_FontMgr.PrintText( fStartX, fYPos + rkPiece.fYOffset, rkPiece.fScale, rkPiece.szText.c_str() );
 		}
@@ -561,14 +588,35 @@ void ioComplexStringPrinter::PrintFullTextWidthCut( float fXPos,
 		m_fFullWidth = 0;
 		std::string szFullString;
 		float fScale = 0.0f;
+		bool bHasWidePiece = false;
 		int iPieceCnt = m_vPieceList.size();
 		for( int i=0 ; i<iPieceCnt ; i++ )
 		{
 			const TextPiece &rkPiece = m_vPieceList[i];
+			if( rkPiece.bWide )
+			{
+				bHasWidePiece = true;
+				continue;
+			}
 			szFullString += rkPiece.szText;
 			fScale        = rkPiece.fScale;
 		}
-		m_fFullWidth = g_FontMgr.GetTextWidthCutSize( szFullString.c_str(), m_TextStyle, fScale, fWidth );
+
+		if( bHasWidePiece )
+		{
+			// mixed wide/narrow pieces: approximate the cut width per piece
+			float fRemain = fWidth;
+			for( int i=0 ; i<iPieceCnt && fRemain > 0.0f ; i++ )
+			{
+				float fPieceWidth = min( m_vPieceList[i].fWidth, fRemain );
+				m_fFullWidth += fPieceWidth;
+				fRemain      -= fPieceWidth;
+			}
+		}
+		else
+		{
+			m_fFullWidth = g_FontMgr.GetTextWidthCutSize( szFullString.c_str(), m_TextStyle, fScale, fWidth );
+		}
 	}
 
 	float fStartX = fXPos;
@@ -593,7 +641,11 @@ void ioComplexStringPrinter::PrintFullTextWidthCut( float fXPos,
 		g_FontMgr.SetBkColor( rkPiece.dwBkColor );
 		g_FontMgr.SetTextStyle( rkPiece.eStyle );
 
-		if( bAlpha == 255 )
+		if( rkPiece.bWide )
+		{
+			g_FontMgr.PrintTextWidthCutWide( fStartX, fYPos + rkPiece.fYOffset, rkPiece.fScale, fWidth, rkPiece.szWideText.c_str() );
+		}
+		else if( bAlpha == 255 )
 		{
 			g_FontMgr.PrintTextWidthCut( fStartX, fYPos + rkPiece.fYOffset, rkPiece.fScale, fWidth, rkPiece.szText.c_str() );
 		}
@@ -635,16 +687,23 @@ float ioComplexStringPrinter::PrintFullTextWidthDirectCut( float fXPos,
 		g_FontMgr.SetBkColor( rkPiece.dwBkColor );
 		g_FontMgr.SetTextStyle( rkPiece.eStyle );
 
-		char szDst[MAX_PATH] = "";
-		memset( szDst, 0, sizeof( szDst ) );
-		Help::StringCutFun( rkPiece.fScale, fWidth, rkPiece.eStyle, szDst, sizeof(szDst), rkPiece.szText.c_str() );
-		if( bAlpha == 255 )
+		if( rkPiece.bWide )
 		{
-			g_FontMgr.PrintText( fStartX, fYPos + rkPiece.fYOffset, rkPiece.fScale, szDst );
+			g_FontMgr.PrintTextWidthCutWide( fStartX, fYPos + rkPiece.fYOffset, rkPiece.fScale, fWidth, rkPiece.szWideText.c_str() );
 		}
 		else
 		{
-			g_FontMgr.PrintTextAlpha( fStartX, fYPos + rkPiece.fYOffset, rkPiece.fScale, bAlpha, szDst );
+			char szDst[MAX_PATH] = "";
+			memset( szDst, 0, sizeof( szDst ) );
+			Help::StringCutFun( rkPiece.fScale, fWidth, rkPiece.eStyle, szDst, sizeof(szDst), rkPiece.szText.c_str() );
+			if( bAlpha == 255 )
+			{
+				g_FontMgr.PrintText( fStartX, fYPos + rkPiece.fYOffset, rkPiece.fScale, szDst );
+			}
+			else
+			{
+				g_FontMgr.PrintTextAlpha( fStartX, fYPos + rkPiece.fYOffset, rkPiece.fScale, bAlpha, szDst );
+			}
 		}
 
 		fStartX += rkPiece.fWidth;

@@ -979,8 +979,9 @@ int RoundStateUserWnd::OnRenderGradeAndNick( const RoundInfo &rkInfo, int iXPos,
 		g_FontMgr.SetTextColor( TCT_DEFAULT_BLUE );
 	else
 		g_FontMgr.SetTextColor( TCT_DEFAULT_RED );
-	g_FontMgr.PrintTextWidthCut( iXPos + 18, iYPos + 2, FONT_SIZE_12, m_iNameLimit, rkInfo.m_szName.c_str() );
-	return 18 + g_FontMgr.GetTextWidthCutSize( rkInfo.m_szName.c_str(), TS_NORMAL, FONT_SIZE_12, m_iNameLimit );
+	std::wstring wszName = Help::NameToWide( rkInfo.m_szName.c_str() );
+	g_FontMgr.PrintTextWidthCutWide( iXPos + 18, iYPos + 2, FONT_SIZE_12, m_iNameLimit, wszName.c_str() );
+	return 18 + g_FontMgr.GetTextWidthCutSizeWide( wszName.c_str(), TS_NORMAL, FONT_SIZE_12, m_iNameLimit );
 }
 
 int RoundStateUserWnd::OnRenderGuildMark( const RoundInfo &rkInfo, int iXPos, int iYPos )

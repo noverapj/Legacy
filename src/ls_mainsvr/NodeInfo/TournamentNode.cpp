@@ -1900,9 +1900,9 @@ void TournamentNode::ApplyTournamentConfirmUserListDB( CQueryResultData *pQueryD
 		ConfirmUserData kUserData;
 		
 		// - 유저인덱스, 닉네임, 레벨
-		char szUserNick[ID_NUM_PLUS_ONE] = "";
+		char szUserNick[ID_NUM_WIRE_PLUS_ONE] = "";
 		if(!pQueryData->GetValue( kUserData.m_dwUserIndex )) break;
-		if(!pQueryData->GetValue( szUserNick, ID_NUM_PLUS_ONE ))			break;
+		if(!pQueryData->GetValue( szUserNick, ID_NUM_WIRE_PLUS_ONE ))			break;
 		if(!pQueryData->GetValue( kUserData.m_iGradeLevel ))	break;
 
 		kUserData.m_szNickName = szUserNick;

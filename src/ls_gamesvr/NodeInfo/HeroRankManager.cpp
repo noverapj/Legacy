@@ -70,7 +70,7 @@ void HeroRankManager::DBtoData( CQueryResultData *query_data )
 		kRankData.m_iRank = iStartRank++;
 		query_data->GetValue( kRankData.m_dwUserIndex, sizeof(DWORD) );    //유저 인덱스
 		query_data->GetValue( kRankData.m_iGradeLevel, sizeof(int) );	   //유저 계급
-		query_data->GetValue( kRankData.m_szPublicID, ID_NUM_PLUS_ONE );   //유저 닉네임
+		query_data->GetValue( kRankData.m_szPublicID, ID_NUM_WIRE_PLUS_ONE );   //유저 닉네임
 		query_data->GetValue( kRankData.m_iHeroTitle, sizeof(int) );       //유저 칭호
 		query_data->GetValue( kRankData.m_iHeroWin, sizeof(int) );		   //영웅전 승
 		query_data->GetValue( kRankData.m_iHeroLose, sizeof(int) );        //영웅전 패

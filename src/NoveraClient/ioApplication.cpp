@@ -9823,7 +9823,9 @@ void ioApplication::OnFriendApplication( SP2Packet &rkPacket )
 			kPrinter[0].SetTextStyle( TS_NORMAL );
 			kPrinter[0].SetBkColor( 0, 0, 0 );	
 			kPrinter[0].SetTextColor( TCT_DEFAULT_DARKGRAY );
-			kPrinter[0].AddTextPiece( FONT_SIZE_13, STR(9), szFriendID.c_str() );
+			wchar_t wszFriendID[MAX_PATH];
+			Help::FormatWide( wszFriendID, MAX_PATH, STR(9), szFriendID.c_str() );
+			kPrinter[0].AddTextPieceWide( FONT_SIZE_13, wszFriendID );
 
 			kPrinter[1].SetTextStyle( TS_NORMAL );
 			kPrinter[1].SetBkColor( 0, 0, 0 );	
@@ -12872,7 +12874,7 @@ void ioApplication::OnFirstChangeID( SP2Packet &rkPacket )
 		if( pWnd )
 			pWnd->HideWnd();
  		
- 		char szTempPublicID[ID_NUM_PLUS_ONE]="";
+ 		char szTempPublicID[ID_NUM_WIRE_PLUS_ONE]="";
  		StringCbPrintf( szTempPublicID, sizeof( szTempPublicID ), "%s#", g_MyInfo.GetPrivateID().c_str() );
 		ioHashString sTempPulicID = szTempPublicID;
  

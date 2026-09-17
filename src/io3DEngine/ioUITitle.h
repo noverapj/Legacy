@@ -5,6 +5,9 @@
 
 #include "io3DCommon.h"
 
+#include <string>
+#include <vector>
+
 class __EX ioUITitle
 {
 public:
@@ -34,6 +37,10 @@ protected:
 	PrintTextStyle m_PrintTextStyle;
 
 	ioHashStringVec m_vTextList;
+
+	// wide (UTF-16) text path for cross-script names
+	std::vector< std::wstring > m_vWideTextList;
+	bool m_bWideText;
 
 	struct TitleColor
 	{
@@ -81,6 +88,7 @@ public:
 
 	void SetFontGap( int iGap );
 	void SetText( const char *szText, const char *szDelims );
+	void SetTextWide( const wchar_t *szText );
 
 	void SetPrintTextStyle( PrintTextStyle ePrintStyle ) { m_PrintTextStyle = ePrintStyle; }
 	void SetWidthCutSize(float fWidthCutSize) { m_fWidthCutSize = fWidthCutSize; }

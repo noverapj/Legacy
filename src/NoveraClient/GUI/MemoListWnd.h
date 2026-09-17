@@ -90,6 +90,9 @@ protected:
 	int m_iMaxPage;
 	ioWnd *m_pPreEdit;
 
+	// original UTF-8 target from a prefilled list name (cross-charset reply support)
+	ioHashString m_szOriginalTargetID;
+
 	void UpdateSetPage( int iNewPage );
 	void SendMemo();
 

@@ -52,7 +52,7 @@ void TradeNode::CreateTradeItem( CQueryResultData *pQueryData )
 	// 기본 정보
 	if(!pQueryData->GetValue( m_dwTradeIndex ))				return;	// 거래품 인덱스
 	if(!pQueryData->GetValue( m_dwRegisterUserIndex ))		return;	// 등록자 인덱스
-	if(!pQueryData->GetValue( m_szRegisterUserNick, ID_NUM_PLUS_ONE ))		return;	// 등록자 닉네임
+	if(!pQueryData->GetValue( m_szRegisterUserNick, ID_NUM_WIRE_PLUS_ONE ))		return;	// 등록자 닉네임
 	if(!pQueryData->GetValue( m_dwItemType ))				return;	// 거래품 타입
 	if(!pQueryData->GetValue( m_dwItemMagicCode ))			return;	// 거래품 구분자
 	if(!pQueryData->GetValue( m_dwItemValue ))				return;	// 거래품 value

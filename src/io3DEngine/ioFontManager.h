@@ -27,6 +27,7 @@ public:
 
 protected:
 	bool LoadFile( const ioHashString &name, ioFont *pFont );
+	bool LoadFallbackBuffers();
 
 public:
 	static ioFontManager& GetSingleton();
@@ -51,10 +52,18 @@ protected:
 	// 폰트 사용을 위해서 참조용 메모리도 계속 메모리에 유지해야 함.
 	ioMemFile m_MemFile;
 
+	// persistent buffers for cross-script fallback fonts (wide name rendering)
+	BYTE *m_pFallbackCJKBuf;
+	DWORD m_dwFallbackCJKSize;
+	BYTE *m_pFallbackThaiBuf;
+	DWORD m_dwFallbackThaiSize;
+	bool m_bFallbackLoaded;
+
 protected:
 	void SetText( float x, float y, float fScale, BYTE bAlpha );
 	void SetTextWidthCut( float x, float y, float fScale, float fWidth, BYTE bAlpha );
 	void SetTextLeftCut( float x, float y, float fScale, float fWidth, BYTE bAlpha );
+	void SetTextWide( float x, float y, float fScale, BYTE bAlpha, const wchar_t *szText );
 
 public:
 	void Initialize( ioUIRenderer *pRenderer );
@@ -169,9 +178,22 @@ public:
 	float GetTextHeight( const char *szText, TextStyle eStyle, float fScale, int iFontGap = 0 );
 	float GetTextWidth( const char *szText, float fScale );
 
+public:
+	// wide text (UTF-16) render path for cross-script names.
+	void PrintTextWide( float x, float y, float fScale, const wchar_t *szText );
+	void PrintTextWidthCutWide( float x, float y, float fScale, float fWidth, const wchar_t *szText );
+	float GetTextWidthWide( const wchar_t *szText, float fScale );
+	float GetTextWidthWide( const wchar_t *szText, TextStyle eStyle, float fScale, int iFontGap = 0 );
+	float GetTextWidthCutSizeWide( const wchar_t *szText, TextStyle eStyle, float fScale, float fWidth );
+	TextStyle GetTextStyle();
+
+protected:
+	void CutWideTextForWidth( const wchar_t *szText, TextStyle eStyle, float fScale, float fWidth, wchar_t *szOut, int iOutSize );
+
 protected:
 	void SetScale( float fScale );
 	void PrintByAlign( float x, float y );
+	void PrintByAlignWide( float x, float y, const wchar_t *szText );
 
 protected:
 	

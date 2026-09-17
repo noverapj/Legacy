@@ -373,7 +373,7 @@ void ChangeNameWnd::SendNewName()
 	{
 		SP2Packet kPacket( CTPK_ETCITEM_USE );
 		kPacket << (int)m_dwEtcType;
-		kPacket << m_szNewName;
+		kPacket << Help::ToWire( m_szNewName.c_str() ).c_str();
 		TCPNetwork::SendToServer( kPacket );
 		TCPNetwork::MouseBusy( true );
 	}
@@ -381,7 +381,7 @@ void ChangeNameWnd::SendNewName()
 	{
 		SP2Packet kPacket( CTPK_ETCITEM_USE );
 		kPacket << (int)ioEtcItem::EIT_ETC_GUILD_NAME_CHANGE;
-		kPacket << g_GuildInfo.GetGuildIndex() << m_szNewName;
+		kPacket << g_GuildInfo.GetGuildIndex() << Help::ToWire( m_szNewName.c_str() ).c_str();
 		TCPNetwork::SendToServer( kPacket );
 		TCPNetwork::MouseBusy( true );
 	}

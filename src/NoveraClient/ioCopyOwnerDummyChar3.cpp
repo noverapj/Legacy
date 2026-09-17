@@ -1984,11 +1984,12 @@ void ioCopyOwnerDummyChar3::RenderGaugeOwnerInfo()
 
 					DWORD dwGuildIndex, dwGuildMark;
 					g_UserInfoMgr.GetGuildInfo( g_MyInfo.GetPublicID(), dwGuildIndex, dwGuildMark );
-					int iNameWidth = g_FontMgr.GetTextWidth( g_MyInfo.GetPublicID().c_str(), TS_BOLD_OUTLINE_FULL, FONT_SIZE_12 );
+					std::wstring wszMyName = Help::NameToWide( g_MyInfo.GetPublicID().c_str() );
+					int iNameWidth = g_FontMgr.GetTextWidthWide( wszMyName.c_str(), TS_BOLD_OUTLINE_FULL, FONT_SIZE_12 );
 					int iHalfWidth = ( iNameWidth + 20 + g_GuildMarkMgr.GetGuildSmallMarkSize( dwGuildIndex, dwGuildMark ) + 1 ) / 2;	// 20 은 계급사이즈
 
 					g_LevelMgr.RenderGrade( g_MyInfo.GetPublicID(), iXPos - iHalfWidth, iYPos + UPPER_Y_OFFSET, pOwner->GetLevel(), TEAM_BLUE );
-					g_FontMgr.PrintText( iXPos - iHalfWidth + 20 - 2, iYPos + UPPER_Y_OFFSET, FONT_SIZE_12, g_MyInfo.GetPublicID().c_str() );
+					g_FontMgr.PrintTextWide( iXPos - iHalfWidth + 20 - 2, iYPos + UPPER_Y_OFFSET, FONT_SIZE_12, wszMyName.c_str() );
 
 					g_GuildMarkMgr.RenderSmallMark( dwGuildIndex, dwGuildMark, ( iXPos - iHalfWidth ) + 20 + iNameWidth + 2, iYPos + GUILD_Y_OFFSET );
 

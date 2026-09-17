@@ -1077,7 +1077,7 @@ void ioMainProcess::LoadNotMakeID()
 
 bool ioMainProcess::IsNotMakeID( const char *szNewID )
 {
-	char szLwrID[ID_NUM_PLUS_ONE]="";
+	char szLwrID[ID_NUM_WIRE_PLUS_ONE]="";
 	StringCbCopy( szLwrID, sizeof( szLwrID ), szNewID );
 	_strlwr_s( szLwrID, sizeof(szLwrID) );
 	int iVecSize = m_vNotMakeIDVector.size();
@@ -1085,17 +1085,21 @@ bool ioMainProcess::IsNotMakeID( const char *szNewID )
 	{
 		if( IsDBCSLeadByte( m_vNotMakeIDVector[i].At( 0 ) ) )
 		{
-			if( _mbsstr( (const unsigned char*)szLwrID, (const unsigned char*)m_vNotMakeIDVector[i].c_str() ) )
+			// byte-level substring : valid for UTF-8 names when the banned list is stored in UTF-8
+			if( strstr( szLwrID, m_vNotMakeIDVector[i].c_str() ) )
 				return true;
 		}
 		else if( m_vNotMakeIDVector[i].Length() == 1 )
 		{
 			int iIDSize = strlen( szLwrID );
 			for (int i2 = 0; i2 < iIDSize ; i2++)
-			{	
-				if( IsDBCSLeadByte( szLwrID[i2] ) ) 
+			{
+				if( (BYTE)szLwrID[i2] & 0x80 )	// UTF-8 multibyte sequence : skip to its end
 				{
 					i2++;
+					while( i2 < iIDSize && ((BYTE)szLwrID[i2] & 0xC0) == 0x80 )
+						i2++;
+					i2--;	// for-loop increment
 				}
 				else
 				{
@@ -1300,7 +1304,7 @@ bool ioMainProcess::ProcessUDPPacket( sockaddr_in *client_addr, SP2Packet &rkPac
 	case CUPK_CHECK_FLAG_PING: 	// 2018-03-15 by bckim, 깃발모드 추가
 #endif // FLAG_MODE_BY_BCKIM	
 		{
-			char szPublicID[ID_NUM_PLUS_ONE] = "";
+			char szPublicID[ID_NUM_WIRE_PLUS_ONE] = "";
 			rkPacket >> szPublicID;
 			User *pUser = g_UserNodeManager.GetUserNodeByPublicID( szPublicID );
 			if( !pUser) return false;	
@@ -1515,16 +1519,35 @@ bool ioMainProcess::IsRightID( const char *iid )
 {
 	enum { MIN_ID_NUMBER = 4, };
 	int iIDSize = strlen( iid );
-	if( (iIDSize > ID_NUMBER) || (iIDSize < MIN_ID_NUMBER) )
+	if( (iIDSize > ID_NUMBER_WIRE) || (iIDSize < MIN_ID_NUMBER) )
 		return false;
 
-	for(int i = 0;i < iIDSize;i++)
+	// UTF-8 sequence walk : reject broken multi-byte sequences (half characters)
+	for(int i = 0; i < iIDSize;)
 	{
-		if( IsDBCSLeadByte( iid[i] ) ) 
+		if( (BYTE)iid[i] < 0x80 )
 		{
 			i++;
-			if(iIDSize <= i) // 마지막 글자가 깨진 글자다.
+		}
+		else if( (BYTE)iid[i] < 0xC2 )		// invalid lead byte
+		{
+			return false;
+		}
+		else if( (BYTE)iid[i] < 0xE0 )		// 2-byte sequence
+		{
+			if( i+1 >= iIDSize || ((BYTE)iid[i+1] & 0xC0) != 0x80 )
 				return false;
+			i += 2;
+		}
+		else if( (BYTE)iid[i] < 0xF0 )		// 3-byte sequence
+		{
+			if( i+2 >= iIDSize || ((BYTE)iid[i+1] & 0xC0) != 0x80 || ((BYTE)iid[i+2] & 0xC0) != 0x80 )
+				return false;
+			i += 3;
+		}
+		else								// 4-byte and above : out of name range
+		{
+			return false;
 		}
 	}
 	return true;

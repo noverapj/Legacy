@@ -311,7 +311,7 @@ void ioHeadquartersMode::InitMode( int iMapIndex )
 		ioLocalParent *pLocal = g_LocalMgr.GetLocal( ioLocalManager::GetLocalType() );
 		if( pLocal && pLocal->IsShowFirstIDWnd() )
 		{
-			char szTempPublicID[ID_NUM_PLUS_ONE]="";
+			char szTempPublicID[ID_NUM_WIRE_PLUS_ONE]="";
 			StringCbPrintf( szTempPublicID, sizeof( szTempPublicID ), "%s#", g_MyInfo.GetPrivateID() );
 
 			if( g_MyInfo.GetPublicID() == szTempPublicID  )

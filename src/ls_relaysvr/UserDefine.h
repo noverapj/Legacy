@@ -27,7 +27,8 @@
 /************************************************************************/
 #define STR_IP_MAX 64
 #define STR_USERID_MAX 128
-#define PUBLICID_MAX 21
+// wire (UTF-8) capacity: must stay in sync with ID_NUM_WIRE_PLUS_ONE of the game/filewrite servers
+#define PUBLICID_MAX 31
 
 /************************************************************************/
 /* Enum                                                                     */

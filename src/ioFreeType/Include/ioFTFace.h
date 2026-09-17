@@ -16,6 +16,7 @@ public:
 
 public:
 	virtual const GlyphImg* GetGlyphImg( WORD wCode ) = 0;
+	virtual const GlyphImg* GetGlyphImgWide( wchar_t wChar ) = 0;
 
 	virtual int GetGlyphAdvance( WORD wCode ) = 0;
 	virtual int GetGlyphImgWidth( WORD wCode ) = 0;
